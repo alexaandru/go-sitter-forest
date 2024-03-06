@@ -465,6 +465,19 @@
     "revision": ""
   },
   {
+    "language": "dtd",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+    "files": [
+      "parser.c",
+      "scanner.c",
+      "common/scanner.h"
+    ],
+    "srcRoot": "dtd",
+    "maintainedBy": "@ObserverOfTime",
+    "reference": "master",
+    "revision": "c23bd31d0aa72bfc01238b2546d5e823d8006709"
+  },
+  {
     "language": "ebnf",
     "url": "https://github.com/RubixDev/ebnf",
     "files": [
@@ -1635,8 +1648,9 @@
     "files": [
       "parser.c",
       "scanner.c",
-      "scanner.h"
+      "common/scanner.h"
     ],
+    "srcRoot": "ocaml",
     "maintainedBy": "@undu",
     "reference": "master",
     "revision": "9965d208337d88bbf1a38ad0b0fe49e5f5ec9677"
@@ -1645,12 +1659,14 @@
     "language": "ocaml_interface",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "common/scanner.h"
     ],
+    "srcRoot": "interface",
     "maintainedBy": "@undu",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "9965d208337d88bbf1a38ad0b0fe49e5f5ec9677"
   },
   {
     "language": "ocamllex",
@@ -1729,14 +1745,14 @@
   },
   {
     "language": "perl",
-    "skip": true,
-    "doc": "is currently broken, it does not store the generated artifacts in the repo. The repo must be cloned, artifacts generated and copied manually",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
+    "doc": "is currently broken, it does not store the generated artifacts in the repo. The repo must be cloned, artifacts generated and copied manually",
     "files": [
       "scanner.c",
       "tsp_unicode.h"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
+    "skip": true,
     "reference": "master",
     "revision": "ce78903240204fe2a9e192deeed77eccf4c0f575"
   },
@@ -1745,8 +1761,10 @@
     "url": "https://github.com/tree-sitter/tree-sitter-php",
     "files": [
       "parser.c",
-      "scanner.c"
+      "scanner.c",
+      "common/scanner.h"
     ],
+    "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
     "reference": "master",
     "revision": "365fd18542aaba90466580f8400e4ba3fb71c5fb"
@@ -1755,12 +1773,14 @@
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "common/scanner.h"
     ],
+    "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "365fd18542aaba90466580f8400e4ba3fb71c5fb"
   },
   {
     "language": "phpdoc",
@@ -1953,11 +1973,13 @@
     "url": "https://github.com/tree-sitter/tree-sitter-python",
     "files": [
       "parser.c",
-      "scanner.c"
+      "scanner.c",
+      "src/tree_sitter/array.h",
+      "src/tree_sitter/alloc.h"
     ],
     "maintainedBy": "@stsewd, @theHamsta",
     "reference": "master",
-    "revision": "22d3f87bdafac2782e907330babe4af574f5d0b4"
+    "revision": "03e88c170cb23142559a406b6e7621c4af3128f5"
   },
   {
     "language": "ql",
@@ -2320,14 +2342,14 @@
   },
   {
     "language": "sql",
-    "skip": true,
-    "doc": "They don't commit the generated parser files to the main branch",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
+    "doc": "They don't commit the generated parser files to the main branch",
     "files": [
       "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
+    "skip": true,
     "reference": "main",
     "revision": "da2d1eff425b146d3c8cab7be8dfa98b11d896dc"
   },
@@ -2597,6 +2619,19 @@
     "revision": ""
   },
   {
+    "language": "tsx",
+    "url": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "files": [
+      "parser.c",
+      "scanner.c",
+      "common/scanner.h"
+    ],
+    "srcRoot": "tsx",
+    "maintainedBy": "@steelsojka",
+    "reference": "master",
+    "revision": "198e2ea43d1c4ddd76ee883f4eae15f4201cd241"
+  },
+  {
     "language": "turtle",
     "url": "https://github.com/BonaBeavis/tree-sitter-turtle",
     "files": [
@@ -2623,8 +2658,10 @@
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
     "files": [
       "parser.c",
-      "scanner.c"
+      "scanner.c",
+      "common/scanner.h"
     ],
+    "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
     "reference": "master",
     "revision": "198e2ea43d1c4ddd76ee883f4eae15f4201cd241"
@@ -2833,8 +2870,10 @@
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
     "files": [
       "parser.c",
-      "scanner.c"
+      "scanner.c",
+      "common/scanner.h"
     ],
+    "srcRoot": "xml",
     "maintainedBy": "@ObserverOfTime",
     "reference": "master",
     "revision": "c23bd31d0aa72bfc01238b2546d5e823d8006709"

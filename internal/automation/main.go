@@ -5,408 +5,206 @@ package main
 import (
 	"bytes"
 	"cmp"
-	"context"
 	"encoding/json"
-	"flag"
 	"fmt"
 	"io"
+	"maps"
 	"net/http"
 	"os"
-	"os/exec"
+	"path"
+	"path/filepath"
 	"slices"
 	"strings"
-	"sync"
-	"text/tabwriter"
+
+	"github.com/alexaandru/go-tree-sitter-parsers/internal/automation/grammar"
+	"golang.org/x/sync/errgroup"
 )
 
-var defaultLogger *Logger
-
-func init() {
-	defaultLogger = NewLogger()
-}
-
-const grammarsJson = "internal/automation/grammars.json"
-
-type GrammarVersion struct {
-	Reference string `json:"reference"`
-	Revision  string `json:"revision"`
-}
-
-type Grammar struct {
-	Language     string   `json:"language"`
-	Skip         bool     `json:"skip,omitempty"`
-	Doc          string   `json:"doc,omitempty"`
-	URL          string   `json:"url"`
-	Files        []string `json:"files"`
-	MaintainedBy string   `json:"maintainedBy,omitempty"`
-	Pending      bool     `json:"pending,omitempty"`
-	Experimental bool     `json:"experimental,omitempty"`
-	*GrammarVersion
-}
-
-func (g *Grammar) ContentURL() string {
-	return fmt.Sprintf(
-		"https://raw.githubusercontent.com/%s",
-		strings.TrimPrefix(g.URL, "https://github.com/"),
-	)
-}
-
-func (g *Grammar) FetchNewVersion() *GrammarVersion {
-	if strings.HasPrefix(g.Reference, "v") {
-		tag, rev := fetchLastTag(g.URL)
-		if tag != g.Reference {
-			return &GrammarVersion{
-				Reference: tag,
-				Revision:  rev,
-			}
-		}
-	} else {
-		rev := fetchLastCommit(g.URL, g.Reference)
-		if rev != g.Revision {
-			return &GrammarVersion{
-				Reference: g.Reference,
-				Revision:  rev,
-			}
-		}
+var (
+	errUnknownCmd = fmt.Errorf("unknown command! Must be one of: check-updates, update-all, [force-]update <lang>")
+	grammarsJson  = filepath.Join("internal", "automation", "grammars.json")
+	grammars      []*grammar.Grammar
+	replaceMap    = map[string]string{
+		`"../../common/scanner.h"`: `"scanner.h"`,
+		`"tree_sitter/parser.h"`:   `"parser.h"`,
+		`"tree_sitter/array.h"`:    `"array.h"`, // Needed for Python.
+		`"tree_sitter/alloc.h"`:    `"alloc.h"`, // Needed for Python.
 	}
-	return nil
-}
+)
 
-func root(args []string) error {
-	if len(args) < 1 {
-		return fmt.Errorf("sub-command expected")
+func checkUpdates() error {
+	if err := fetchNewVersions(); err != nil {
+		return err
 	}
 
-	ctx := context.Background()
-	s := NewUpdateService()
+	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Reference", "Status", strings.Repeat("─", 100))
 
-	switch args[0] {
-	case "check-updates":
-		fs := flag.NewFlagSet("check-updates", flag.ExitOnError)
-		flagsParse(fs, args[1:])
-
-		s.CheckUpdates(ctx)
-	case "update":
-		if len(args) < 2 {
-			return fmt.Errorf("language argument is missing")
+	for _, gr := range grammars {
+		if gr.Pending {
+			continue
 		}
 
-		fs := flag.NewFlagSet("update", flag.ExitOnError)
-		force := fs.Bool("force", false, "re-download grammar even if revision is the same")
-		flagsParse(fs, args[2:])
+		status := "(up-to-date)"
+		if nextVersion := gr.NewVersion(); nextVersion != nil && gr.Reference == nextVersion.Reference {
+			status = fmt.Sprintf("(update available: %s -> %s)", gr.Revision, nextVersion.Revision)
+		} else if nextVersion != nil {
+			status = fmt.Sprintf("(update available: %s -> %s)", gr.Reference, nextVersion.Reference)
+		}
 
-		s.Update(ctx, args[1], *force)
-	case "update-all":
-		fs := flag.NewFlagSet("update-all", flag.ExitOnError)
-		flagsParse(fs, args[1:])
-
-		s.UpdateAll(ctx)
-	default:
-		return fmt.Errorf("unknown sub-command")
+		fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
 	}
 
 	return nil
 }
 
-func main() {
-	if err := root(os.Args[1:]); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+func fetchNewVersions() error {
+	g := new(errgroup.Group)
+
+	for _, gr := range grammars {
+		g.Go(func() error { return gr.FetchNewVersion() })
 	}
+
+	return g.Wait()
 }
 
-type UpdateService struct {
-	grammars    []*Grammar
-	grammarsMap map[string]*Grammar
-}
-
-func NewUpdateService() *UpdateService {
-	b, err := os.ReadFile(grammarsJson)
-	if err != nil {
-		logAndExit(defaultLogger, err.Error(), "file", grammarsJson)
+func update(lang string, force bool) (err error) {
+	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
+		return x.Language == lang
+	})
+	if i < 0 {
+		return fmt.Errorf("grammar %q not found", lang)
 	}
 
-	var grammars []*Grammar
-	err = json.Unmarshal(b, &grammars)
-	if err != nil {
-		logAndExit(defaultLogger, fmt.Sprintf("unmarshaling grammars file error: %w", err), "file", grammarsJson)
+	gr := grammars[i]
+	if err = gr.FetchNewVersion(); err != nil {
+		return
 	}
 
-	grammarsMap := make(map[string]*Grammar, len(grammars))
-	for _, g := range grammars {
-		grammarsMap[g.Language] = g
-	}
-
-	return &UpdateService{grammars, grammarsMap}
-}
-
-func (s *UpdateService) CheckUpdates(ctx context.Context) {
-	newVersions := s.fetchNewVersions()
-	w := tabwriter.NewWriter(os.Stdout, 0, 0, 3, ' ', 0)
-	for i, g := range s.grammars {
-		nextVersion := newVersions[i]
-		fmt.Fprintf(w, "%s\t%s\t", g.Language, g.Reference)
-		if nextVersion == nil {
-			fmt.Fprintf(w, "(up-to-date)")
-		} else if g.Reference == nextVersion.Reference {
-			fmt.Fprintf(w, "(update available: %s -> %s)", g.Revision, nextVersion.Revision)
-		} else {
-			fmt.Fprintf(w, "(update available: %s -> %s)", g.Reference, nextVersion.Reference)
-		}
-		fmt.Fprintln(w)
-	}
-	w.Flush()
-}
-
-func (s *UpdateService) fetchNewVersions() []*GrammarVersion {
-	results := make([]*GrammarVersion, len(s.grammars))
-	wg := sync.WaitGroup{}
-	wg.Add(len(s.grammars))
-
-	for i, g := range s.grammars {
-		go func(i int, g *Grammar) {
-			defer wg.Done()
-			results[i] = g.FetchNewVersion()
-		}(i, g)
-	}
-
-	wg.Wait()
-
-	return results
-}
-
-func (s *UpdateService) Update(ctx context.Context, language string, force bool) {
-	logger := getLogger(ctx).With("language", language)
-
-	grammar, ok := s.grammarsMap[language]
-	if !ok {
-		logAndExit(logger, "grammar not found")
-	}
-
-	logger = logger.With("reference", grammar.Reference)
-	ctx = context.WithValue(ctx, loggerCtxKey, logger)
-
-	v := grammar.FetchNewVersion()
-	if v == nil {
+	if v := gr.NewVersion(); v == nil {
 		if !force {
-			logAndExit(logger, "grammar is not outdated")
+			quit("grammar is not outdated")
 		} else {
-			logger.Warn("re-downloading up-to-date grammar")
+			fmt.Println("re-downloading up-to-date grammar")
 		}
 	} else {
-		grammar.Reference = v.Reference
-		grammar.Revision = v.Revision
+		gr.Version = v
 	}
 
-	s.downloadGrammar(ctx, grammar)
-	s.writeGrammarsFile(ctx)
-	s.updateParsersMd(ctx)
+	if err = downloadGrammar(gr); err != nil {
+		return
+	}
+
+	return writeGrammarsFile()
 }
 
-func (s *UpdateService) UpdateAll(ctx context.Context) {
-	newVersions := s.fetchNewVersions()
+func updateAll() (err error) {
+	if err = fetchNewVersions(); err != nil {
+		return
+	}
 
-	wg := sync.WaitGroup{}
-	for i, g := range s.grammars {
-		if g.Skip {
-			fmt.Printf("Skipping %q: %s\n", g.Language, g.Doc)
+	g := new(errgroup.Group)
+	for _, gr := range grammars {
+		if gr.Skip {
+			fmt.Printf("Skipping %q: %s\n", gr.Language, gr.Doc)
 
 			continue
 		}
 
-		if g.Pending {
+		if gr.Pending {
 			continue
 		}
 
-		v := newVersions[i]
+		v := gr.NewVersion()
 		if v == nil {
 			continue
 		}
 
-		wg.Add(1)
-		g.Reference = v.Reference
-		g.Revision = v.Revision
+		gr.Version = v
 
-		go func(g *Grammar) {
-			defer wg.Done()
-
-			s.downloadGrammar(ctx, g)
-		}(g)
+		g.Go(func() error { return downloadGrammar(gr) })
 	}
 
-	wg.Wait()
-
-	s.writeGrammarsFile(ctx)
-	s.updateParsersMd(ctx)
-}
-
-func (s *UpdateService) downloadGrammar(ctx context.Context, g *Grammar) {
-	logger := getLogger(ctx).With("language", g.Language, "reference", g.Reference)
-	logger.Info("downloading")
-
-	ctx = context.WithValue(ctx, loggerCtxKey, logger)
-	s.makeDir(ctx, g.Language)
-
-	switch g.Language {
-	case "ocaml":
-		s.downloadOcaml(ctx, g)
-	case "typescript":
-		s.downloadTypescript(ctx, g)
-	case "yaml":
-		s.downloadYaml(ctx, g)
-	case "xml":
-		s.downloadXML(ctx, g)
-	case "php":
-		s.downloadPhp(ctx, g)
-	case "python":
-		s.downloadPython(ctx, g)
-	default:
-		s.defaultGrammarDownload(ctx, g)
+	if err = g.Wait(); err != nil {
+		return
 	}
 
-	logger.Info("successfully downloaded")
+	return writeGrammarsFile()
 }
 
-func (s *UpdateService) makeDir(ctx context.Context, path string) {
-	err := os.MkdirAll(path, 0755)
+func downloadGrammar(gr *grammar.Grammar) (err error) {
+	if err = makeDir(gr.Language); err != nil {
+		return
+	}
+
+	defer fmt.Println("successfully downloaded")
+
+	g := new(errgroup.Group)
+
+	for src, dst := range gr.FilesMap() {
+		g.Go(func() error { return downloadFile(src, dst) })
+	}
+
+	if err = g.Wait(); err != nil {
+		return
+	}
+
+	if gr.Language == "yaml" {
+		err = fixYaml(gr)
+	}
+
+	return
+}
+
+func downloadFile(url, toPath string) error {
+	b, err := fetchFile(url)
 	if err != nil {
-		logAndExit(getLogger(ctx), err.Error(), "path", path)
+		return err
 	}
-}
-
-func (s *UpdateService) defaultGrammarDownload(ctx context.Context, g *Grammar) {
-	url := g.ContentURL()
-
-	s.downloadFile(
-		ctx,
-		fmt.Sprintf("%s/%s/src/tree_sitter/parser.h", url, g.Revision),
-		fmt.Sprintf("%s/parser.h", g.Language),
-		nil,
-	)
-
-	for _, f := range g.Files {
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/src/%s", url, g.Revision, f),
-			fmt.Sprintf("%s/%s", g.Language, f),
-			map[string]string{
-				`<tree_sitter/parser.h>`: `"parser.h"`,
-				`"tree_sitter/parser.h"`: `"parser.h"`,
-			},
-		)
-	}
-}
-
-func (s *UpdateService) downloadPhp(ctx context.Context, g *Grammar) {
-	url := g.ContentURL()
-
-	s.downloadFile(
-		ctx,
-		fmt.Sprintf("%s/%s/php/src/tree_sitter/parser.h", url, g.Revision),
-		fmt.Sprintf("%s/parser.h", g.Language),
-		nil,
-	)
-
-	s.downloadFile(
-		ctx,
-		fmt.Sprintf("%s/%s/common/scanner.h", url, g.Revision),
-		fmt.Sprintf("%s/scanner.h", g.Language),
-		nil,
-	)
-
-	for _, f := range g.Files {
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/php/src/%s", url, g.Revision, f),
-			fmt.Sprintf("%s/%s", g.Language, f),
-			map[string]string{
-				`<tree_sitter/parser.h>`:   `"parser.h"`,
-				`"tree_sitter/parser.h"`:   `"parser.h"`,
-				`"../../common/scanner.h"`: `"scanner.h"`,
-			},
-		)
-	}
-}
-
-func (s *UpdateService) downloadPython(ctx context.Context, g *Grammar) {
-	url := g.ContentURL()
-	repl := map[string]string{}
-
-	for _, x := range []string{"parser.h", "array.h", "alloc.h"} {
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/src/tree_sitter/%s", url, g.Revision, x),
-			fmt.Sprintf("%s/parser.h", g.Language),
-			nil,
-		)
-
-		repl[fmt.Sprintf(`<tree_sitter/%s>`, x)] = fmt.Sprintf(`"%s"`, x)
-		repl[fmt.Sprintf(`"tree_sitter/%s"`, x)] = fmt.Sprintf(`"%s"`, x)
-	}
-
-	for _, f := range g.Files {
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/src/%s", url, g.Revision, f),
-			fmt.Sprintf("%s/%s", g.Language, f),
-			repl,
-		)
-	}
-}
-
-func (s *UpdateService) downloadFile(ctx context.Context, url, toPath string, replaceMap map[string]string) {
-	b := s.fetchFile(ctx, url)
 
 	for old, new := range replaceMap {
 		b = bytes.ReplaceAll(b, []byte(old), []byte(new))
 	}
 
-	err := os.WriteFile(toPath, b, 0644)
-	if err != nil {
-		logAndExit(getLogger(ctx), err.Error(), "path", toPath)
-	}
+	return os.WriteFile(toPath, b, 0o644)
 }
 
-func (s *UpdateService) fetchFile(ctx context.Context, url string) []byte {
-	logger := getLogger(ctx).With("url", url)
-	logger.Debug("fetching")
+func fetchFile(url string) (b []byte, err error) {
+	var resp *http.Response
 
-	resp, err := http.Get(url)
-	if err != nil {
-		logAndExit(logger, err.Error())
+	if resp, err = http.Get(url); err != nil {
+		return
 	}
+
 	defer resp.Body.Close()
 
-	if resp.StatusCode != 200 {
-		logAndExit(logger, "incorrect response status code", "statusCode", resp.StatusCode)
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("incorrect response status code: %d when downloading %q", resp.StatusCode, url)
 	}
 
-	b, err := io.ReadAll(resp.Body)
-	if err != nil {
-		logAndExit(logger, err.Error())
-	}
-	return b
+	return io.ReadAll(resp.Body)
 }
 
-func (s *UpdateService) writeGrammarsFile(ctx context.Context) {
-	slices.SortFunc(s.grammars, func(a, b *Grammar) int {
+func writeGrammarsFile() error {
+	slices.SortFunc(grammars, func(a, b *grammar.Grammar) int {
 		return cmp.Compare(strings.ToLower(a.Language), strings.ToLower(b.Language))
 	})
 
-	b, err := json.MarshalIndent(s.grammars, "", "  ")
+	b, err := json.MarshalIndent(grammars, "", "  ")
 	if err != nil {
-		logAndExit(getLogger(ctx), fmt.Sprintf("marshaling grammars file error: %w", err))
+		return fmt.Errorf("marshaling grammars file error: %w", err)
 	}
-	err = os.WriteFile(grammarsJson, b, 0644)
-	if err != nil {
-		logAndExit(getLogger(ctx), err.Error(), "file", grammarsJson)
+
+	if err = os.WriteFile(grammarsJson, b, 0o644); err != nil {
+		return err
 	}
+
+	return updateParsersMd()
 }
 
-func (s *UpdateService) updateParsersMd(ctx context.Context) {
+func updateParsersMd() error {
 	f, err := os.Create("PARSERS.md")
 	if err != nil {
-		logAndExit(getLogger(ctx), fmt.Sprintf("creating PARSERS.md error: %w", err))
+		return fmt.Errorf("creating PARSERS.md error: %v", err)
 	}
 
 	planned, implemented := 0, 0
@@ -418,7 +216,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
 `
-	for _, gr := range s.grammars {
+	for _, gr := range grammars {
 		lang := gr.Language
 		if lang == "query" {
 			lang = "Tree-Sitter query language"
@@ -445,271 +243,89 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 
 	text += "<!--parserinfo-->\n"
 
-	if _, err = f.WriteString(fmt.Sprintf(text, implemented, planned)); err != nil {
-		logAndExit(getLogger(ctx), fmt.Sprintf("writing PARSERS.md error: %w", err))
+	if _, err = fmt.Fprintf(f, text, implemented, planned); err != nil {
+		return fmt.Errorf("writing PARSERS.md error: %v", err)
 	}
 
 	if err = f.Close(); err != nil {
-		logAndExit(getLogger(ctx), fmt.Sprintf("saving PARSERS.md error: %w", err))
-	}
-}
-
-// ocaml is special since its folder structure is different from the other ones
-func (s *UpdateService) downloadOcaml(ctx context.Context, g *Grammar) {
-	fileMapping := map[string]string{
-		"parser.c":  "ocaml/src/parser.c",
-		"scanner.c": "ocaml/src/scanner.c",
-		"scanner.h": "common/scanner.h",
+		return fmt.Errorf("saving PARSERS.md error: %v", err)
 	}
 
-	url := g.ContentURL()
-	s.downloadFile(
-		ctx,
-		fmt.Sprintf("%s/%s/ocaml/src/tree_sitter/parser.h", url, g.Revision),
-		fmt.Sprintf("%s/parser.h", g.Language),
-		nil,
-	)
-
-	for _, f := range g.Files {
-		fp, ok := fileMapping[f]
-		if !ok {
-			logAndExit(getLogger(ctx), "mapping for file not found", "file", f)
-		}
-
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/%s", url, g.Revision, fp),
-			fmt.Sprintf("%s/%s", g.Language, f),
-			map[string]string{
-				`<tree_sitter/parser.h>`:   `"parser.h"`,
-				`"../../common/scanner.h"`: `"scanner.h"`,
-			},
-		)
-	}
-}
-
-// typescript is special as it contains 2 different grammars
-func (s *UpdateService) downloadXML(ctx context.Context, g *Grammar) {
-	url := g.ContentURL()
-
-	langs := []string{"xml", "dtd"}
-	for _, lang := range langs {
-		s.makeDir(ctx, fmt.Sprintf("%s/%s", g.Language, lang))
-
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/common/scanner.h", url, g.Revision),
-			fmt.Sprintf("%s/%s/scanner.h", g.Language, lang),
-			map[string]string{
-				`"tree_sitter/parser.h"`: `"parser.h"`,
-			},
-		)
-
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/%s/src/tree_sitter/parser.h", url, g.Revision, lang),
-			fmt.Sprintf("%s/%s/parser.h", g.Language, lang),
-			nil,
-		)
-
-		for _, f := range g.Files {
-			s.downloadFile(
-				ctx,
-				fmt.Sprintf("%s/%s/%s/src/%s", url, g.Revision, lang, f),
-				fmt.Sprintf("%s/%s/%s", g.Language, lang, f),
-				map[string]string{
-					`"tree_sitter/parser.h"`:   `"parser.h"`,
-					`"../../common/scanner.h"`: `"scanner.h"`,
-				},
-			)
-		}
-	}
-}
-
-func (s *UpdateService) downloadTypescript(ctx context.Context, g *Grammar) {
-	url := g.ContentURL()
-
-	langs := []string{"typescript", "tsx"}
-	for _, lang := range langs {
-		s.makeDir(ctx, fmt.Sprintf("%s/%s", g.Language, lang))
-
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/common/scanner.h", url, g.Revision),
-			fmt.Sprintf("%s/%s/scanner.h", g.Language, lang),
-			map[string]string{
-				`<tree_sitter/parser.h>`: `"parser.h"`,
-			},
-		)
-		s.downloadFile(
-			ctx,
-			fmt.Sprintf("%s/%s/%s/src/tree_sitter/parser.h", url, g.Revision, lang),
-			fmt.Sprintf("%s/%s/parser.h", g.Language, lang),
-			nil,
-		)
-
-		for _, f := range g.Files {
-			s.downloadFile(
-				ctx,
-				fmt.Sprintf("%s/%s/%s/src/%s", url, g.Revision, lang, f),
-				fmt.Sprintf("%s/%s/%s", g.Language, lang, f),
-				map[string]string{
-					`"tree_sitter/parser.h"`:   `"parser.h"`,
-					`"../../common/scanner.h"`: `"scanner.h"`,
-				},
-			)
-		}
-	}
+	return nil
 }
 
 // for yaml grammar scanner.cc includes schema.generated.cc file
 // it causes cgo to compile schema.generated.cc twice and throw duplicate symbols error
-func (s *UpdateService) downloadYaml(ctx context.Context, g *Grammar) {
-	s.defaultGrammarDownload(ctx, g)
+func fixYaml(gr *grammar.Grammar) error {
+	f1 := path.Join(gr.Language, "schema.generated.cc")
+	f2 := path.Join(gr.Language, "scanner.cc")
 
-	f1 := fmt.Sprintf("%s/schema.generated.cc", g.Language)
-	f2 := fmt.Sprintf("%s/scanner.cc", g.Language)
+	f1b, err := os.ReadFile(f1)
+	if err != nil {
+		return err
+	}
 
-	f1b, _ := os.ReadFile(f1)
-	f2b, _ := os.ReadFile(f2)
-	os.Remove(f1)
+	f2b, err := os.ReadFile(f2)
+	if err != nil {
+		return err
+	}
+
+	if err = os.Remove(f1); err != nil {
+		return err
+	}
 
 	// combine both files into one
-	b := bytes.Join([][]byte{
-		[]byte(`#include "parser.h"`),
-		f1b,
-		f2b,
-	}, []byte("\n"))
+	b := bytes.Join([][]byte{[]byte(`#include "parser.h"`), f1b, f2b}, []byte("\n"))
 	// remove include expression
 	b = bytes.ReplaceAll(b, []byte(`#include "./schema.generated.cc"`), []byte(""))
 
-	_ = os.WriteFile(fmt.Sprintf("%s/scanner.cc", g.Language), b, 0644)
+	return os.WriteFile(fmt.Sprintf("%s/scanner.cc", gr.Language), b, 0o644)
 }
 
-func logAndExit(logger *Logger, msg string, args ...interface{}) {
-	logger.Error(msg, args...)
-	os.Exit(1)
-}
+func main() {
+	args := os.Args[1:]
+	if len(args) < 1 {
+		die("command expected")
+	}
 
-// Git
+	var err error
 
-func fetchLastTag(repository string) (string, string) {
-	cmd := exec.Command("git", "ls-remote", "--tags", "--sort", "-v:refname", repository, "v*")
-	b, err := cmd.Output()
+	switch cmd := args[0]; cmd {
+	case "check-updates":
+		err = checkUpdates()
+	case "update", "force-update":
+		if len(args) < 2 {
+			die("language argument is missing")
+		}
+
+		err = update(args[1], cmd == "force-update")
+	case "update-all":
+		err = updateAll()
+	default:
+		err = errUnknownCmd
+	}
+
 	if err != nil {
-		logAndExit(defaultLogger, err.Error())
+		die(err)
 	}
-	line := strings.SplitN(string(b), "\n", 2)[0]
-	parts := strings.Split(line, "\t")
-
-	tag := strings.TrimRight(strings.Split(parts[1], "/")[2], "^{}")
-	rev := strings.Split(parts[0], "^")[0]
-
-	return tag, rev
 }
 
-func fetchLastCommit(repository, branch string) string {
-	cmd := exec.Command("git", "ls-remote", "--heads", repository, fmt.Sprint("refs/heads/", branch))
-	b, err := cmd.Output()
+func init() {
+	b, err := os.ReadFile(grammarsJson)
 	if err != nil {
-		logAndExit(defaultLogger, err.Error())
+		die(err)
 	}
 
-	return strings.Split(string(b), "\t")[0]
-}
-
-// Logging
-
-type loggerCtxType string
-
-const loggerCtxKey loggerCtxType = "loggerCtx"
-
-func getLogger(ctx context.Context) *Logger {
-	v := ctx.Value(loggerCtxKey)
-	if v == nil {
-		return defaultLogger
-	}
-	logger, ok := v.(*Logger)
-	if !ok {
-		return defaultLogger
-	}
-	return logger
-}
-
-// minimal structured logger to avoid external dependencies
-// implements subset of golang.org/x/exp/slog interface
-type Logger struct {
-	level   Level
-	records map[string]interface{}
-}
-
-func NewLogger() *Logger {
-	return &Logger{LevelInfo, make(map[string]interface{})}
-}
-
-type Level int
-
-const (
-	LevelDebug Level = -4
-	LevelInfo  Level = 0
-	LevelWarn  Level = 4
-	LevelError Level = 8
-)
-
-func (l *Logger) With(args ...interface{}) *Logger {
-	records := make(map[string]interface{})
-	for k, v := range l.records {
-		records[k] = v
+	err = json.Unmarshal(b, &grammars)
+	if err != nil {
+		die(err)
 	}
 
-	i := 0
-	for i < len(args)-1 {
-		records[args[i].(string)] = args[i+1]
-		i += 2
+	newMap := maps.Clone(replaceMap)
+	for k, v := range replaceMap {
+		k = `<` + strings.Trim(k, `"`) + `>`
+		newMap[k] = v
 	}
 
-	return &Logger{l.level, records}
-}
-
-func (l *Logger) Error(msg string, args ...interface{}) {
-	l.log(LevelError, msg, args...)
-}
-
-func (l *Logger) Warn(msg string, args ...interface{}) {
-	l.log(LevelWarn, msg, args...)
-}
-
-func (l *Logger) Info(msg string, args ...interface{}) {
-	l.log(LevelInfo, msg, args...)
-}
-
-func (l *Logger) Debug(msg string, args ...interface{}) {
-	l.log(LevelDebug, msg, args...)
-}
-
-func (l *Logger) log(level Level, msg string, args ...interface{}) {
-	if level < l.level {
-		return
-	}
-
-	printArgs := []interface{}{msg}
-	for k, v := range l.records {
-		printArgs = append(printArgs, fmt.Sprintf("%v=%v", k, v))
-	}
-	for k, v := range args {
-		printArgs = append(printArgs, fmt.Sprintf("%v=%v", k, v))
-	}
-
-	fmt.Println(printArgs...)
-}
-
-// CLI
-
-func flagsParse(fs *flag.FlagSet, args []string) {
-	debug := fs.Bool("debug", false, "enable debug output")
-	fs.Parse(args)
-
-	if *debug {
-		defaultLogger.level = LevelDebug
-	}
+	replaceMap = newMap
 }

@@ -1,6 +1,6 @@
 # Supported Parsers
 
-This is the list of all parsers, both implemented (52) and planned (213).
+This is the list of all parsers, both implemented (56) and planned (211).
 The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
@@ -48,6 +48,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) (maintained by @rydesun)
 - [ ] [doxygen](https://github.com/amaanq/tree-sitter-doxygen) (maintained by @amaanq)
+- [x] [dtd](https://github.com/tree-sitter-grammars/tree-sitter-xml) (maintained by @ObserverOfTime)
 - [ ] [ebnf](https://github.com/RubixDev/ebnf) (maintained by @RubixDev)
 - [ ] [eds](https://github.com/uyha/tree-sitter-eds) (maintained by @uyha)
 - [ ] [eex](https://github.com/connorlay/tree-sitter-eex) (maintained by @connorlay)
@@ -156,7 +157,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [ ] [objc](https://github.com/amaanq/tree-sitter-objc) (maintained by @amaanq)
 - [ ] [objdump](https://github.com/ColinKennedy/tree-sitter-objdump) (maintained by @ColinKennedy)
 - [x] [ocaml](https://github.com/tree-sitter/tree-sitter-ocaml) (maintained by @undu)
-- [ ] [ocaml_interface](https://github.com/tree-sitter/tree-sitter-ocaml) (maintained by @undu)
+- [x] [ocaml_interface](https://github.com/tree-sitter/tree-sitter-ocaml) (maintained by @undu)
 - [ ] [ocamllex](https://github.com/atom-ocaml/tree-sitter-ocamllex) (maintained by @undu)
 - [ ] [odin](https://github.com/amaanq/tree-sitter-odin) (maintained by @amaanq)
 - [ ] [org](https://github.com/milisims/tree-sitter-org)
@@ -166,7 +167,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [ ] [pem](https://github.com/ObserverOfTime/tree-sitter-pem) (maintained by @ObserverOfTime)
 - [x] [perl](https://github.com/tree-sitter-perl/tree-sitter-perl) (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [php](https://github.com/tree-sitter/tree-sitter-php) (maintained by @tk-shirasaka)
-- [ ] [php_only](https://github.com/tree-sitter/tree-sitter-php) (maintained by @tk-shirasaka)
+- [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) (maintained by @tk-shirasaka)
 - [ ] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) (maintained by @mikehaertl)
 - [ ] [pioasm](https://github.com/leo60228/tree-sitter-pioasm) (maintained by @leo60228)
 - [ ] [pip requirements](https://github.com/ObserverOfTime/tree-sitter-requirements) (maintained by @ObserverOfTime)
@@ -243,6 +244,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [ ] [todotxt](https://github.com/arnarg/tree-sitter-todotxt.git) (maintained by @arnarg)
 - [x] [toml](https://github.com/ikatyang/tree-sitter-toml) (maintained by @tk-shirasaka)
 - [ ] [tsv](https://github.com/amaanq/tree-sitter-csv) (maintained by @amaanq)
+- [x] [tsx](https://github.com/tree-sitter/tree-sitter-typescript) (maintained by @steelsojka)
 - [ ] [turtle](https://github.com/BonaBeavis/tree-sitter-turtle) (maintained by @BonaBeavis)
 - [ ] [twig](https://github.com/gbprod/tree-sitter-twig) (maintained by @gbprod)
 - [x] [typescript](https://github.com/tree-sitter/tree-sitter-typescript) (maintained by @steelsojka)
