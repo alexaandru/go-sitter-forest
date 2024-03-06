@@ -1,0 +1,25 @@
+package javascript_test
+
+import (
+	"context"
+	"testing"
+
+	"github.com/alexaandru/go-tree-sitter-parsers/javascript"
+	sitter "github.com/smacker/go-tree-sitter"
+)
+
+const (
+	code     = "let a = 1"
+	expected = "(program (lexical_declaration (variable_declarator name: (identifier) value: (number))))"
+)
+
+func TestGrammar(t *testing.T) {
+	n, err := sitter.ParseCtx(context.Background(), []byte(code), javascript.GetLanguage())
+	if err != nil {
+		t.Fatalf("Expected no error got %v", err)
+	}
+
+	if act := n.String(); act != expected {
+		t.Fatalf("Expected %q got %q", expected, act)
+	}
+}

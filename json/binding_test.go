@@ -1,0 +1,30 @@
+package json_test
+
+import (
+	"context"
+	"testing"
+
+	"github.com/alexaandru/go-tree-sitter-parsers/json"
+	sitter "github.com/smacker/go-tree-sitter"
+)
+
+const (
+	code = `
+{
+  "name": "John Doe",
+  "age": 30
+}
+`
+	expected = "(document (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number))))"
+)
+
+func TestGrammar(t *testing.T) {
+	n, err := sitter.ParseCtx(context.Background(), []byte(code), json.GetLanguage())
+	if err != nil {
+		t.Fatalf("Expected no error got %v", err)
+	}
+
+	if act := n.String(); act != expected {
+		t.Fatalf("Expected %q got %q", expected, act)
+	}
+}
