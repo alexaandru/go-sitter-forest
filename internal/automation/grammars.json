@@ -13,12 +13,12 @@
     "language": "agda",
     "url": "https://github.com/tree-sitter/tree-sitter-agda",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@Decodetalkers",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "d3dc807692e6bca671d4491b3bf5c67eeca8c016"
   },
   {
     "language": "angular",
@@ -37,21 +37,21 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "apex",
     "maintainedBy": "@aheber",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
   {
     "language": "arduino",
     "url": "https://github.com/ObserverOfTime/tree-sitter-arduino",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "72eee09b501f42a039b757c969a9f32e2b61d2a7"
   },
   {
     "language": "asm",
@@ -60,20 +60,20 @@
       "parser.c"
     ],
     "maintainedBy": "@RubixDev",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "6ace266be7ad6bf486a95427ca3fc949aff66211"
   },
   {
     "language": "astro",
     "url": "https://github.com/virchau13/tree-sitter-astro",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "tag.h"
     ],
     "maintainedBy": "@virchau13",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "dfa0893bdc4bdfada102043404758c66e3580568"
   },
   {
     "language": "authzed",

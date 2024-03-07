@@ -1,17 +1,17 @@
 # Supported Parsers
 
-This is the list of all parsers, both implemented (56) and planned (211).
+This is the list of all parsers, both implemented (61) and planned (206).
 The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
 - [x] [ada](https://github.com/briot/tree-sitter-ada) (maintained by @briot)
-- [ ] [agda](https://github.com/tree-sitter/tree-sitter-agda) (maintained by @Decodetalkers)
+- [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) (maintained by @Decodetalkers)
 - [ ] [angular](https://github.com/dlvandenberg/tree-sitter-angular) (maintained by @dlvandenberg)
-- [ ] [apex](https://github.com/aheber/tree-sitter-sfapex) (maintained by @aheber)
-- [ ] [arduino](https://github.com/ObserverOfTime/tree-sitter-arduino) (maintained by @ObserverOfTime)
-- [ ] [asm](https://github.com/RubixDev/tree-sitter-asm) (maintained by @RubixDev)
-- [ ] [astro](https://github.com/virchau13/tree-sitter-astro) (maintained by @virchau13)
+- [x] [apex](https://github.com/aheber/tree-sitter-sfapex) (maintained by @aheber)
+- [x] [arduino](https://github.com/ObserverOfTime/tree-sitter-arduino) (maintained by @ObserverOfTime)
+- [x] [asm](https://github.com/RubixDev/tree-sitter-asm) (maintained by @RubixDev)
+- [x] [astro](https://github.com/virchau13/tree-sitter-astro) (maintained by @virchau13)
 - [ ] [authzed](https://github.com/mleonidas/tree-sitter-authzed) (maintained by @mattpolzin)
 - [ ] [awk](https://github.com/Beaglefoot/tree-sitter-awk)
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) (maintained by @TravonteD)

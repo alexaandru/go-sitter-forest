@@ -4,6 +4,11 @@ import (
 	sitter "github.com/smacker/go-tree-sitter"
 
 	"github.com/alexaandru/go-tree-sitter-parsers/ada"
+	"github.com/alexaandru/go-tree-sitter-parsers/agda"
+	"github.com/alexaandru/go-tree-sitter-parsers/apex"
+	"github.com/alexaandru/go-tree-sitter-parsers/arduino"
+	"github.com/alexaandru/go-tree-sitter-parsers/asm"
+	"github.com/alexaandru/go-tree-sitter-parsers/astro"
 	"github.com/alexaandru/go-tree-sitter-parsers/bash"
 	"github.com/alexaandru/go-tree-sitter-parsers/c"
 	"github.com/alexaandru/go-tree-sitter-parsers/c_sharp"
@@ -62,10 +67,16 @@ import (
 
 var langNameFuncs = map[string]func() *sitter.Language{
 	"ada":             ada.GetLanguage,
+	"agda":            agda.GetLanguage,
+	"apex":            apex.GetLanguage,
+	"arduino":         arduino.GetLanguage,
+	"asm":             asm.GetLanguage,
+	"astro":           astro.GetLanguage,
 	"bash":            bash.GetLanguage,
 	"c":               c.GetLanguage,
-	"clojure":         clojure.GetLanguage,
 	"c_sharp":         c_sharp.GetLanguage,
+	"clojure":         clojure.GetLanguage,
+	"commonlisp":      commonlisp.GetLanguage,
 	"cpp":             cpp.GetLanguage,
 	"css":             css.GetLanguage,
 	"cue":             cue.GetLanguage,
@@ -89,7 +100,6 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"javascript":      javascript.GetLanguage,
 	"json":            json.GetLanguage,
 	"kotlin":          kotlin.GetLanguage,
-	"commonlisp":      commonlisp.GetLanguage,
 	"lua":             lua.GetLanguage,
 	"make":            make.GetLanguage,
 	"ocaml":           ocaml.GetLanguage,
