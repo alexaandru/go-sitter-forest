@@ -120,12 +120,12 @@
     "language": "beancount",
     "url": "https://github.com/polarmutex/tree-sitter-beancount",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@polarmutex",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "1f19abf1e162e1828013cb5434c6cf30f4054e80"
   },
   {
     "language": "bibtex",

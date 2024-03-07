@@ -13,6 +13,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/awk"
 	"github.com/alexaandru/go-tree-sitter-parsers/bash"
 	"github.com/alexaandru/go-tree-sitter-parsers/bass"
+	"github.com/alexaandru/go-tree-sitter-parsers/beancount"
 	"github.com/alexaandru/go-tree-sitter-parsers/c"
 	"github.com/alexaandru/go-tree-sitter-parsers/c_sharp"
 	"github.com/alexaandru/go-tree-sitter-parsers/clojure"
@@ -79,6 +80,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"awk":             awk.GetLanguage,
 	"bash":            bash.GetLanguage,
 	"bass":            bass.GetLanguage,
+	"beancount":       beancount.GetLanguage,
 	"c":               c.GetLanguage,
 	"c_sharp":         c_sharp.GetLanguage,
 	"clojure":         clojure.GetLanguage,
