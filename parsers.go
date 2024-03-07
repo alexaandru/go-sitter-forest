@@ -116,35 +116,6 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/kconfig"
 	"github.com/alexaandru/go-tree-sitter-parsers/kdl"
 	"github.com/alexaandru/go-tree-sitter-parsers/kotlin"
-	"github.com/alexaandru/go-tree-sitter-parsers/lua"
-	"github.com/alexaandru/go-tree-sitter-parsers/make"
-	"github.com/alexaandru/go-tree-sitter-parsers/ocaml"
-	"github.com/alexaandru/go-tree-sitter-parsers/ocaml_interface"
-	"github.com/alexaandru/go-tree-sitter-parsers/pascal"
-	"github.com/alexaandru/go-tree-sitter-parsers/perl"
-	"github.com/alexaandru/go-tree-sitter-parsers/php"
-	"github.com/alexaandru/go-tree-sitter-parsers/php_only"
-	"github.com/alexaandru/go-tree-sitter-parsers/proto"
-	"github.com/alexaandru/go-tree-sitter-parsers/psv"
-	"github.com/alexaandru/go-tree-sitter-parsers/python"
-	"github.com/alexaandru/go-tree-sitter-parsers/query"
-	"github.com/alexaandru/go-tree-sitter-parsers/r"
-	"github.com/alexaandru/go-tree-sitter-parsers/risor"
-	"github.com/alexaandru/go-tree-sitter-parsers/ruby"
-	"github.com/alexaandru/go-tree-sitter-parsers/rust"
-	"github.com/alexaandru/go-tree-sitter-parsers/scala"
-	"github.com/alexaandru/go-tree-sitter-parsers/sql"
-	"github.com/alexaandru/go-tree-sitter-parsers/starlark"
-	"github.com/alexaandru/go-tree-sitter-parsers/svelte"
-	"github.com/alexaandru/go-tree-sitter-parsers/toml"
-	"github.com/alexaandru/go-tree-sitter-parsers/tsv"
-	"github.com/alexaandru/go-tree-sitter-parsers/tsx"
-	"github.com/alexaandru/go-tree-sitter-parsers/typescript"
-	"github.com/alexaandru/go-tree-sitter-parsers/vue"
-	"github.com/alexaandru/go-tree-sitter-parsers/xml"
-	"github.com/alexaandru/go-tree-sitter-parsers/yaml"
-	"github.com/alexaandru/go-tree-sitter-parsers/zig"
-
 	"github.com/alexaandru/go-tree-sitter-parsers/kusto"
 	"github.com/alexaandru/go-tree-sitter-parsers/lalrpop"
 	"github.com/alexaandru/go-tree-sitter-parsers/ledger"
@@ -152,10 +123,12 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/linkerscript"
 	"github.com/alexaandru/go-tree-sitter-parsers/liquidsoap"
 	"github.com/alexaandru/go-tree-sitter-parsers/llvm"
+	"github.com/alexaandru/go-tree-sitter-parsers/lua"
 	"github.com/alexaandru/go-tree-sitter-parsers/luadoc"
 	"github.com/alexaandru/go-tree-sitter-parsers/luap"
 	"github.com/alexaandru/go-tree-sitter-parsers/luau"
 	"github.com/alexaandru/go-tree-sitter-parsers/m68k"
+	"github.com/alexaandru/go-tree-sitter-parsers/make"
 	"github.com/alexaandru/go-tree-sitter-parsers/markdown"
 	"github.com/alexaandru/go-tree-sitter-parsers/markdown_inline"
 	"github.com/alexaandru/go-tree-sitter-parsers/matlab"
@@ -173,6 +146,80 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/nqc"
 	"github.com/alexaandru/go-tree-sitter-parsers/objc"
 	"github.com/alexaandru/go-tree-sitter-parsers/objdump"
+	"github.com/alexaandru/go-tree-sitter-parsers/ocaml"
+	"github.com/alexaandru/go-tree-sitter-parsers/ocaml_interface"
+	"github.com/alexaandru/go-tree-sitter-parsers/ocamllex"
+	"github.com/alexaandru/go-tree-sitter-parsers/odin"
+	"github.com/alexaandru/go-tree-sitter-parsers/org"
+	"github.com/alexaandru/go-tree-sitter-parsers/pascal"
+	"github.com/alexaandru/go-tree-sitter-parsers/passwd"
+	"github.com/alexaandru/go-tree-sitter-parsers/pem"
+	"github.com/alexaandru/go-tree-sitter-parsers/perl"
+	"github.com/alexaandru/go-tree-sitter-parsers/php"
+	"github.com/alexaandru/go-tree-sitter-parsers/php_only"
+	"github.com/alexaandru/go-tree-sitter-parsers/phpdoc"
+	"github.com/alexaandru/go-tree-sitter-parsers/pioasm"
+	"github.com/alexaandru/go-tree-sitter-parsers/po"
+	"github.com/alexaandru/go-tree-sitter-parsers/poe_filter"
+	"github.com/alexaandru/go-tree-sitter-parsers/pony"
+	"github.com/alexaandru/go-tree-sitter-parsers/printf"
+	"github.com/alexaandru/go-tree-sitter-parsers/prisma"
+	"github.com/alexaandru/go-tree-sitter-parsers/promql"
+	"github.com/alexaandru/go-tree-sitter-parsers/properties"
+	"github.com/alexaandru/go-tree-sitter-parsers/proto"
+	"github.com/alexaandru/go-tree-sitter-parsers/prql"
+	"github.com/alexaandru/go-tree-sitter-parsers/psv"
+	"github.com/alexaandru/go-tree-sitter-parsers/pug"
+	"github.com/alexaandru/go-tree-sitter-parsers/puppet"
+	"github.com/alexaandru/go-tree-sitter-parsers/purescript"
+	"github.com/alexaandru/go-tree-sitter-parsers/pymanifest"
+	"github.com/alexaandru/go-tree-sitter-parsers/python"
+	"github.com/alexaandru/go-tree-sitter-parsers/ql"
+	"github.com/alexaandru/go-tree-sitter-parsers/qmljs"
+	"github.com/alexaandru/go-tree-sitter-parsers/query"
+	"github.com/alexaandru/go-tree-sitter-parsers/r"
+	"github.com/alexaandru/go-tree-sitter-parsers/racket"
+	"github.com/alexaandru/go-tree-sitter-parsers/rasi"
+	"github.com/alexaandru/go-tree-sitter-parsers/rbs"
+	"github.com/alexaandru/go-tree-sitter-parsers/re2c"
+	"github.com/alexaandru/go-tree-sitter-parsers/readline"
+	"github.com/alexaandru/go-tree-sitter-parsers/regex"
+	"github.com/alexaandru/go-tree-sitter-parsers/rego"
+	"github.com/alexaandru/go-tree-sitter-parsers/requirements"
+	"github.com/alexaandru/go-tree-sitter-parsers/risor"
+	"github.com/alexaandru/go-tree-sitter-parsers/rnoweb"
+	"github.com/alexaandru/go-tree-sitter-parsers/robot"
+	"github.com/alexaandru/go-tree-sitter-parsers/ron"
+	"github.com/alexaandru/go-tree-sitter-parsers/ruby"
+	"github.com/alexaandru/go-tree-sitter-parsers/rust"
+	"github.com/alexaandru/go-tree-sitter-parsers/scala"
+	"github.com/alexaandru/go-tree-sitter-parsers/scheme"
+	"github.com/alexaandru/go-tree-sitter-parsers/scss"
+	"github.com/alexaandru/go-tree-sitter-parsers/slang"
+	"github.com/alexaandru/go-tree-sitter-parsers/slint"
+	"github.com/alexaandru/go-tree-sitter-parsers/smithy"
+	"github.com/alexaandru/go-tree-sitter-parsers/snakemake"
+	"github.com/alexaandru/go-tree-sitter-parsers/solidity"
+	"github.com/alexaandru/go-tree-sitter-parsers/soql"
+	"github.com/alexaandru/go-tree-sitter-parsers/sosl"
+	"github.com/alexaandru/go-tree-sitter-parsers/sourcepawn"
+	"github.com/alexaandru/go-tree-sitter-parsers/sparql"
+	"github.com/alexaandru/go-tree-sitter-parsers/sql"
+	"github.com/alexaandru/go-tree-sitter-parsers/squirrel"
+	"github.com/alexaandru/go-tree-sitter-parsers/ssh_config"
+	"github.com/alexaandru/go-tree-sitter-parsers/starlark"
+	"github.com/alexaandru/go-tree-sitter-parsers/strace"
+	"github.com/alexaandru/go-tree-sitter-parsers/styled"
+	"github.com/alexaandru/go-tree-sitter-parsers/supercollider"
+	"github.com/alexaandru/go-tree-sitter-parsers/svelte"
+	"github.com/alexaandru/go-tree-sitter-parsers/toml"
+	"github.com/alexaandru/go-tree-sitter-parsers/tsv"
+	"github.com/alexaandru/go-tree-sitter-parsers/tsx"
+	"github.com/alexaandru/go-tree-sitter-parsers/typescript"
+	"github.com/alexaandru/go-tree-sitter-parsers/vue"
+	"github.com/alexaandru/go-tree-sitter-parsers/xml"
+	"github.com/alexaandru/go-tree-sitter-parsers/yaml"
+	"github.com/alexaandru/go-tree-sitter-parsers/zig"
 )
 
 var langNameFuncs = map[string]func() *sitter.Language{
@@ -321,21 +368,69 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"objdump":            objdump.GetLanguage,
 	"ocaml":              ocaml.GetLanguage,
 	"ocaml_interface":    ocaml_interface.GetLanguage,
+	"ocamllex":           ocamllex.GetLanguage,
+	"odin":               odin.GetLanguage,
+	"org":                org.GetLanguage,
 	"pascal":             pascal.GetLanguage,
+	"passwd":             passwd.GetLanguage,
+	"pem":                pem.GetLanguage,
 	"perl":               perl.GetLanguage,
 	"php":                php.GetLanguage,
 	"php_only":           php_only.GetLanguage,
+	"phpdoc":             phpdoc.GetLanguage,
+	"pioasm":             pioasm.GetLanguage,
+	"po":                 po.GetLanguage,
+	"poe_filter":         poe_filter.GetLanguage,
+	"pony":               pony.GetLanguage,
+	"printf":             printf.GetLanguage,
+	"prisma":             prisma.GetLanguage,
+	"promql":             promql.GetLanguage,
+	"properties":         properties.GetLanguage,
 	"proto":              proto.GetLanguage,
+	"prql":               prql.GetLanguage,
 	"psv":                psv.GetLanguage,
+	"pug":                pug.GetLanguage,
+	"puppet":             puppet.GetLanguage,
+	"purescript":         purescript.GetLanguage,
+	"pymanifest":         pymanifest.GetLanguage,
 	"python":             python.GetLanguage,
+	"ql":                 ql.GetLanguage,
+	"qmljs":              qmljs.GetLanguage,
 	"query":              query.GetLanguage,
 	"r":                  r.GetLanguage,
+	"racket":             racket.GetLanguage,
+	"rasi":               rasi.GetLanguage,
+	"rbs":                rbs.GetLanguage,
+	"re2c":               re2c.GetLanguage,
+	"readline":           readline.GetLanguage,
+	"regex":              regex.GetLanguage,
+	"rego":               rego.GetLanguage,
+	"requirements":       requirements.GetLanguage,
 	"risor":              risor.GetLanguage,
+	"rnoweb":             rnoweb.GetLanguage,
+	"robot":              robot.GetLanguage,
+	"ron":                ron.GetLanguage,
 	"ruby":               ruby.GetLanguage,
 	"rust":               rust.GetLanguage,
 	"scala":              scala.GetLanguage,
+	"scheme":             scheme.GetLanguage,
+	"scss":               scss.GetLanguage,
+	"slang":              slang.GetLanguage,
+	"slint":              slint.GetLanguage,
+	"smithy":             smithy.GetLanguage,
+	"snakemake":          snakemake.GetLanguage,
+	"solidity":           solidity.GetLanguage,
+	"soql":               soql.GetLanguage,
+	"sosl":               sosl.GetLanguage,
+	"sourcepawn":         sourcepawn.GetLanguage,
+	"sparql":             sparql.GetLanguage,
 	"sql":                sql.GetLanguage,
+	"squirrel":           squirrel.GetLanguage,
+	"ssh_config":         ssh_config.GetLanguage,
 	"starlark":           starlark.GetLanguage,
+	"strace":             strace.GetLanguage,
+	"styled":             styled.GetLanguage,
+	"supercollider":      supercollider.GetLanguage,
 	"svelte":             svelte.GetLanguage,
 	"toml":               toml.GetLanguage,
 	"tsv":                tsv.GetLanguage,

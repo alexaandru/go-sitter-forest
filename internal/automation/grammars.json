@@ -1626,33 +1626,33 @@
     "language": "ocamllex",
     "url": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@undu",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "4b9898ccbf198602bb0dec9cd67cc1d2c0a4fad2"
   },
   {
     "language": "odin",
     "url": "https://github.com/amaanq/tree-sitter-odin",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "f94c590ed5263e11f1e492d1b53356f8c8459b66"
   },
   {
     "language": "org",
     "url": "https://github.com/milisims/tree-sitter-org",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "64cfbc213f5a83da17632c95382a5a0a2f3357c1"
   },
   {
     "language": "pascal",
@@ -1671,20 +1671,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
-  },
-  {
-    "language": "Path of Exile item filter",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
-    "files": [
-      "parser.c"
-    ],
-    "maintainedBy": "@ObserverOfTime",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "20239395eacdc2e0923a7e5683ad3605aee7b716"
   },
   {
     "language": "pem",
@@ -1693,9 +1681,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "217ff2af3f2db15a79ab7e3d21ea1e0c17e71a1a"
   },
   {
     "language": "perl",
@@ -1740,34 +1727,23 @@
     "language": "phpdoc",
     "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@mikehaertl",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "f285e338d328a03920a9bfd8dda78585c7ddcca3"
   },
   {
     "language": "pioasm",
     "url": "https://github.com/leo60228/tree-sitter-pioasm",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@leo60228",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
-  },
-  {
-    "language": "pip requirements",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
-    "files": [
-      "parser.c"
-    ],
-    "maintainedBy": "@ObserverOfTime",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "924aadaf5dea2a6074d72027b064f939acf32e20"
   },
   {
     "language": "po",
@@ -1776,31 +1752,43 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
+    "reference": "main",
+    "revision": "d6aed225290bc71a15ab6f06305cb11419360c56"
+  },
+  {
+    "language": "pod",
+    "url": "https://github.com/tree-sitter-perl/tree-sitter-pod",
+    "doc": "Doesn't store generated parser",
+    "files": [
+      "parser.c"
+    ],
+    "maintainedBy": "@RabbiVeesh, @LeoNerd",
+    "skip": true,
     "pending": true,
     "reference": "master",
     "revision": ""
   },
   {
-    "language": "pod",
-    "url": "https://github.com/tree-sitter-perl/tree-sitter-pod",
+    "language": "poe_filter",
+    "url": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
+    "doc": "Path of Exile item filter",
     "files": [
       "parser.c"
     ],
-    "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "pending": true,
+    "maintainedBy": "@ObserverOfTime",
     "reference": "master",
-    "revision": ""
+    "revision": "592476d81f95d2451f2ca107dc872224c76fecdf"
   },
   {
     "language": "pony",
     "url": "https://github.com/amaanq/tree-sitter-pony",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq, @mfelsche",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "16f930b250433cfcd4fb4144df92bb98ad344c20"
   },
   {
     "language": "printf",
@@ -1809,9 +1797,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "0e0aceabbf607ea09e03562f5d8a56f048ddea3d"
   },
   {
     "language": "prisma",
@@ -1820,9 +1807,8 @@
       "parser.c"
     ],
     "maintainedBy": "@elianiva",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "eca2596a355b1a9952b4f80f8f9caed300a272b5"
   },
   {
     "language": "promql",
@@ -1831,20 +1817,19 @@
       "parser.c"
     ],
     "maintainedBy": "@MichaHoffmann",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "77625d78eebc3ffc44d114a07b2f348dff3061b0"
   },
   {
     "language": "properties",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-properties",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "9d09f5f200c356c50c4103d36441309fd61b48d1"
   },
   {
     "language": "proto",
@@ -1863,9 +1848,8 @@
       "parser.c"
     ],
     "maintainedBy": "@matthias-Q",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "09e158cd3650581c0af4c49c2e5b10c4834c8646"
   },
   {
     "language": "psv",
@@ -1882,12 +1866,12 @@
     "language": "pug",
     "url": "https://github.com/zealot128/tree-sitter-pug",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@zealot128",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "a7ff31a38908df9b9f34828d21d6ca5e12413e18"
   },
   {
     "language": "puppet",
@@ -1896,31 +1880,31 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "5849f9694197a6e822872945b415429c285fdd54"
   },
   {
     "language": "purescript",
     "url": "https://github.com/postsolar/tree-sitter-purescript",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "unicode.h"
     ],
     "maintainedBy": "@postsolar",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "daf9b3e2be18b0b2996a1281f7783e0d041d8b80"
   },
   {
-    "language": "PyPA manifest",
+    "language": "pymanifest",
     "url": "https://github.com/ObserverOfTime/tree-sitter-pymanifest",
+    "doc": "PyPA manifest",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "e3b82b78721aee07f676dac8473ae69db51debcf"
   },
   {
     "language": "python",
@@ -1942,9 +1926,8 @@
       "parser.c"
     ],
     "maintainedBy": "@pwntester",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "ff04ba61857ba05b80221e71b423b2728dbebe1e"
   },
   {
     "language": "qmldir",
@@ -1961,12 +1944,13 @@
     "language": "qmljs",
     "url": "https://github.com/yuja/tree-sitter-qmljs",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "typescript-scanner.h"
     ],
     "maintainedBy": "@Decodetalkers",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "9fa49ff3315987f715ce5666ff979a7742fa8a98"
   },
   {
     "language": "query",
@@ -1993,11 +1977,11 @@
     "language": "racket",
     "url": "https://github.com/6cdh/tree-sitter-racket",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "e4ba1a9674a3b4dd7905d04f194ae6f8331be342"
   },
   {
     "language": "rasi",
@@ -2006,9 +1990,8 @@
       "parser.c"
     ],
     "maintainedBy": "@Fymyte",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "43196d934a9a6ab3c7093a8683efd0111bb03db1"
   },
   {
     "language": "rbs",
@@ -2017,9 +2000,8 @@
       "parser.c"
     ],
     "maintainedBy": "@joker1007",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "519a61132a51222e3ce73d3b7ef07465f587f346"
   },
   {
     "language": "re2c",
@@ -2028,9 +2010,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "47aa19cf5f7aba2ed30e2b377f7172df76e819a6"
   },
   {
     "language": "readline",
@@ -2039,9 +2020,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ribru17",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "e436eaef452266a3d00c195f0eb757d6502c767a"
   },
   {
     "language": "regex",
@@ -2050,9 +2030,8 @@
       "parser.c"
     ],
     "maintainedBy": "@theHamsta",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "ba22e4e0cb42b2ef066948d0ea030ac509cef733"
   },
   {
     "language": "rego",
@@ -2061,9 +2040,19 @@
       "parser.c"
     ],
     "maintainedBy": "@FallenAngel97",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "9ac75e71b2d791e0aadeef68098319d86a2a14cf"
+  },
+  {
+    "language": "requirements",
+    "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
+    "doc": "pip requirements",
+    "files": [
+      "parser.c"
+    ],
+    "maintainedBy": "@ObserverOfTime",
+    "reference": "master",
+    "revision": "8666a4dfeb3107144398158bc3dd7a3f59d89ccb"
   },
   {
     "language": "risor",
@@ -2079,12 +2068,12 @@
     "language": "rnoweb",
     "url": "https://github.com/bamonroe/tree-sitter-rnoweb",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@bamonroe",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "502c1126dc6777f09af5bef16e72a42f75bd081e"
   },
   {
     "language": "robot",
@@ -2093,31 +2082,32 @@
       "parser.c"
     ],
     "maintainedBy": "@Hubro",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "322e4cc65754d2b3fdef4f2f8a71e0762e3d13af"
   },
   {
     "language": "ron",
     "url": "https://github.com/amaanq/tree-sitter-ron",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "ce6086b2c9e8e71065b8129d6c2289c5f66d1879"
   },
   {
     "language": "rst",
     "url": "https://github.com/stsewd/tree-sitter-rst",
+    "doc": "It's complicated, has multiple scanner.c files",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@stsewd",
-    "pending": true,
+    "skip": true,
     "reference": "master",
-    "revision": ""
+    "revision": "3ba9eb9b5a47aadb1f2356a3cab0dd3d2bd00b4b"
   },
   {
     "language": "ruby",
@@ -2170,31 +2160,30 @@
     "files": [
       "parser.c"
     ],
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "85b6188fb77c03dfb01d13e58e2844450506860c"
   },
   {
     "language": "scss",
     "url": "https://github.com/serenadeai/tree-sitter-scss",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@elianiva",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "c478c6868648eff49eb04a4df90d703dc45b312a"
   },
   {
     "language": "slang",
     "url": "https://github.com/theHamsta/tree-sitter-slang",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "0cdfb1741323f38e9a33798674145c22cfc0092b"
   },
   {
     "language": "slint",
@@ -2203,9 +2192,8 @@
       "parser.c"
     ],
     "maintainedBy": "@hunger",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "cdb307898345cb0465922be447a063b9c294afca"
   },
   {
     "language": "smali",
@@ -2225,19 +2213,18 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq, @keynmol",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "8327eb84d55639ffbe08c9dc82da7fff72a1ad07"
   },
   {
     "language": "snakemake",
     "url": "https://github.com/osthomas/tree-sitter-snakemake",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "65a6c3b4671877821082164da0a310851b211953"
   },
   {
     "language": "solidity",
@@ -2246,9 +2233,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "5cb506ae419c4ad620c77210fd47500d3d169dbc"
   },
   {
     "language": "soql",
@@ -2256,10 +2242,10 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "soql",
     "maintainedBy": "@aheber",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
   {
     "language": "sosl",
@@ -2267,21 +2253,21 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "sosl",
     "maintainedBy": "@aheber",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
   {
     "language": "sourcepawn",
     "url": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@Sarrus1",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "3ca89fdf998340a7973e276b39516d8902950f86"
   },
   {
     "language": "sparql",
@@ -2290,9 +2276,8 @@
       "parser.c"
     ],
     "maintainedBy": "@BonaBeavis",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "05f949d3c1c15e3261473a244d3ce87777374dec"
   },
   {
     "language": "sql",
@@ -2311,12 +2296,12 @@
     "language": "squirrel",
     "url": "https://github.com/amaanq/tree-sitter-squirrel",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "e8b5835296f931bcaa1477d3c5a68a0c5c2ba034"
   },
   {
     "language": "ssh_config",
@@ -2325,9 +2310,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "514695df4985f56455b8f139a319453a2325cdcf"
   },
   {
     "language": "starlark",
@@ -2347,31 +2331,30 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "d819cdd5dbe455bd3c859193633c8d91c0df7c36"
   },
   {
     "language": "styled",
     "url": "https://github.com/mskelton/tree-sitter-styled",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@mskelton",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "5e52758b32e02adca16bb93f95b3f9c050c72b56"
   },
   {
     "language": "supercollider",
     "url": "https://github.com/madskjeldgaard/tree-sitter-supercollider",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@madskjeldgaard",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "3b35bd0fded4423c8fb30e9585c7bacbcd0e8095"
   },
   {
     "language": "surface",

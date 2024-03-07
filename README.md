@@ -51,9 +51,14 @@ Exceptions:
   (pun intended) but otherwise the language name is "go";
 - `func` language, same problem as above, so package name is actually `FunC`
   (but everything else is `func` as normal: folder, lang name, etc.);
+- `Pip requirements` is named `requirements`;
 - `query` is listed as "Tree-Sitter Query Language" in the parsers listing,
   for clarity, but otherwise it is referred to as `query` everywhere (Go package
   name, grammars.json, queries, etc.).
+
+and so on. Search [grammar.json](/tree/master/internal/automation/grammars.json) for
+your grammar of interest, as the languages with less straightforward names
+usually have "doc" entry to point to the full name.
 
 ## Roadmap
 
