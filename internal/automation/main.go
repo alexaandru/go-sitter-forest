@@ -252,8 +252,7 @@ func updateParsersMd() error {
 	planned, implemented := 0, 0
 	text := `# Supported Parsers
 
-This is the list of all parsers, both implemented (%d) and planned (%d).
-The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
+The list of all parsers, both added (%d) and planned (%d).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->

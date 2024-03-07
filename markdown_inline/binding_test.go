@@ -1,0 +1,25 @@
+package markdown_inline_test
+
+import (
+	"context"
+	"testing"
+
+	"github.com/alexaandru/go-tree-sitter-parsers/markdown_inline"
+	sitter "github.com/smacker/go-tree-sitter"
+)
+
+const (
+	code     = "**Hello _World_**"
+	expected = "(inline (strong_emphasis (emphasis_delimiter) (emphasis_delimiter) (emphasis (emphasis_delimiter) (emphasis_delimiter)) (emphasis_delimiter) (emphasis_delimiter)))"
+)
+
+func TestGrammar(t *testing.T) {
+	n, err := sitter.ParseCtx(context.Background(), []byte(code), markdown_inline.GetLanguage())
+	if err != nil {
+		t.Fatalf("Expected no error got %v", err)
+	}
+
+	if act := n.String(); act != expected {
+		t.Fatalf("Expected %q got %q", expected, act)
+	}
+}

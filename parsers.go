@@ -144,6 +144,35 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/xml"
 	"github.com/alexaandru/go-tree-sitter-parsers/yaml"
 	"github.com/alexaandru/go-tree-sitter-parsers/zig"
+
+	"github.com/alexaandru/go-tree-sitter-parsers/kusto"
+	"github.com/alexaandru/go-tree-sitter-parsers/lalrpop"
+	"github.com/alexaandru/go-tree-sitter-parsers/ledger"
+	"github.com/alexaandru/go-tree-sitter-parsers/leo"
+	"github.com/alexaandru/go-tree-sitter-parsers/linkerscript"
+	"github.com/alexaandru/go-tree-sitter-parsers/liquidsoap"
+	"github.com/alexaandru/go-tree-sitter-parsers/llvm"
+	"github.com/alexaandru/go-tree-sitter-parsers/luadoc"
+	"github.com/alexaandru/go-tree-sitter-parsers/luap"
+	"github.com/alexaandru/go-tree-sitter-parsers/luau"
+	"github.com/alexaandru/go-tree-sitter-parsers/m68k"
+	"github.com/alexaandru/go-tree-sitter-parsers/markdown"
+	"github.com/alexaandru/go-tree-sitter-parsers/markdown_inline"
+	"github.com/alexaandru/go-tree-sitter-parsers/matlab"
+	"github.com/alexaandru/go-tree-sitter-parsers/menhir"
+	"github.com/alexaandru/go-tree-sitter-parsers/mermaid"
+	"github.com/alexaandru/go-tree-sitter-parsers/meson"
+	"github.com/alexaandru/go-tree-sitter-parsers/muttrc"
+	"github.com/alexaandru/go-tree-sitter-parsers/nasm"
+	"github.com/alexaandru/go-tree-sitter-parsers/nickel"
+	"github.com/alexaandru/go-tree-sitter-parsers/nim"
+	"github.com/alexaandru/go-tree-sitter-parsers/nim_format_string"
+	"github.com/alexaandru/go-tree-sitter-parsers/ninja"
+	"github.com/alexaandru/go-tree-sitter-parsers/nix"
+	"github.com/alexaandru/go-tree-sitter-parsers/norg"
+	"github.com/alexaandru/go-tree-sitter-parsers/nqc"
+	"github.com/alexaandru/go-tree-sitter-parsers/objc"
+	"github.com/alexaandru/go-tree-sitter-parsers/objdump"
 )
 
 var langNameFuncs = map[string]func() *sitter.Language{
@@ -260,8 +289,36 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"kconfig":            kconfig.GetLanguage,
 	"kdl":                kdl.GetLanguage,
 	"kotlin":             kotlin.GetLanguage,
+	"kusto":              kusto.GetLanguage,
+	"lalrpop":            lalrpop.GetLanguage,
+	"ledger":             ledger.GetLanguage,
+	"leo":                leo.GetLanguage,
+	"linkerscript":       linkerscript.GetLanguage,
+	"liquidsoap":         liquidsoap.GetLanguage,
+	"llvm":               llvm.GetLanguage,
 	"lua":                lua.GetLanguage,
+	"luadoc":             luadoc.GetLanguage,
+	"luap":               luap.GetLanguage,
+	"luau":               luau.GetLanguage,
+	"m68k":               m68k.GetLanguage,
 	"make":               make.GetLanguage,
+	"markdown":           markdown.GetLanguage,
+	"markdown_inline":    markdown_inline.GetLanguage,
+	"matlab":             matlab.GetLanguage,
+	"menhir":             menhir.GetLanguage,
+	"mermaid":            mermaid.GetLanguage,
+	"meson":              meson.GetLanguage,
+	"muttrc":             muttrc.GetLanguage,
+	"nasm":               nasm.GetLanguage,
+	"nickel":             nickel.GetLanguage,
+	"nim":                nim.GetLanguage,
+	"nim_format_string":  nim_format_string.GetLanguage,
+	"ninja":              ninja.GetLanguage,
+	"nix":                nix.GetLanguage,
+	"norg":               norg.GetLanguage,
+	"nqc":                nqc.GetLanguage,
+	"objc":               objc.GetLanguage,
+	"objdump":            objdump.GetLanguage,
 	"ocaml":              ocaml.GetLanguage,
 	"ocaml_interface":    ocaml_interface.GetLanguage,
 	"pascal":             pascal.GetLanguage,

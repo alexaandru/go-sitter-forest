@@ -1262,31 +1262,31 @@
       "parser.c"
     ],
     "maintainedBy": "@Willem-J-an",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "8353a1296607d6ba33db7c7e312226e5fc83e8ce"
   },
   {
     "language": "lalrpop",
     "url": "https://github.com/traxys/tree-sitter-lalrpop",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "scanner_table.h"
     ],
     "maintainedBy": "@traxys",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "456dec2990ed7e9595eca82f85db14a1db46e126"
   },
   {
     "language": "latex",
     "url": "https://github.com/latex-lsp/tree-sitter-latex",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "841f89ffbba9650529a40fb867f3456bf92bf9b1"
   },
   {
     "language": "ledger",
@@ -1295,9 +1295,8 @@
       "parser.c"
     ],
     "maintainedBy": "@cbarrete",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "8a841fb20ce683bfbb3469e6ba67f2851cfdf94a"
   },
   {
     "language": "leo",
@@ -1306,9 +1305,8 @@
       "parser.c"
     ],
     "maintainedBy": "@r001",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "304611b5eaf53aca07459a0a03803b83b6dfd3b3"
   },
   {
     "language": "linkerscript",
@@ -1317,20 +1315,19 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "f99011a3554213b654985a4b0a65b3b032ec4621"
   },
   {
     "language": "liquidsoap",
     "url": "https://github.com/savonet/tree-sitter-liquidsoap",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.cc"
     ],
     "maintainedBy": "@toots",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "fb062bfc7ca09a741820debb7cb8a75a557b30f9"
   },
   {
     "language": "llvm",
@@ -1339,9 +1336,8 @@
       "parser.c"
     ],
     "maintainedBy": "@benwilliamgraham",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "1b96e58faf558ce057d4dc664b904528aee743cb"
   },
   {
     "language": "lua",
@@ -1355,37 +1351,36 @@
     "revision": "04c9579dcb917255b2e5f8199df4ae7f587d472f"
   },
   {
-    "language": "lua patterns",
-    "url": "https://github.com/amaanq/tree-sitter-luap",
-    "files": [
-      "parser.c"
-    ],
-    "maintainedBy": "@amaanq",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
-  },
-  {
     "language": "luadoc",
     "url": "https://github.com/amaanq/tree-sitter-luadoc",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "873612aadd3f684dd4e631bdf42ea8990c57634e"
+  },
+  {
+    "language": "luap",
+    "url": "https://github.com/amaanq/tree-sitter-luap",
+    "doc": "lua patterns",
+    "files": [
+      "parser.c"
+    ],
+    "maintainedBy": "@amaanq",
+    "reference": "master",
+    "revision": "31461ae9bd0866cb5117cfe5de71189854fd0f3e"
   },
   {
     "language": "luau",
     "url": "https://github.com/amaanq/tree-sitter-luau",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "e5f7a020967407f73959592decdb147bb5fc30bb"
   },
   {
     "language": "m68k",
@@ -1394,9 +1389,8 @@
       "parser.c"
     ],
     "maintainedBy": "@grahambates",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "d097b123f19c6eaba2bf181c05420d88b9fc489d"
   },
   {
     "language": "make",
@@ -1409,48 +1403,52 @@
     "revision": "a4b9187417d6be349ee5fd4b6e77b4172c6827dd"
   },
   {
-    "language": "markdown (basic highlighting)",
+    "language": "markdown",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
+    "doc": "markdown (basic highlighting)",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
+    "srcRoot": "tree-sitter-markdown",
     "maintainedBy": "@MDeiml",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "split_parser",
+    "revision": "2821521a4e6eab37b63dff6a8e169cd88554047d"
   },
   {
-    "language": "markdown_inline (needed for full highlighting)",
+    "language": "markdown_inline",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
+    "doc": "markdown_inline (needed for full highlighting)",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
+    "srcRoot": "tree-sitter-markdown-inline",
     "maintainedBy": "@MDeiml",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "split_parser",
+    "revision": "2821521a4e6eab37b63dff6a8e169cd88554047d"
   },
   {
     "language": "matlab",
     "url": "https://github.com/acristoffers/tree-sitter-matlab",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@acristoffers",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "79d8b25f57b48f83ae1333aff6723b83c9532e37"
   },
   {
     "language": "menhir",
     "url": "https://github.com/Kerl13/tree-sitter-menhir",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@Kerl13",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "be8866a6bcc2b563ab0de895af69daeffa88fe70"
   },
   {
     "language": "mermaid",
@@ -1458,9 +1456,8 @@
     "files": [
       "parser.c"
     ],
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "e8dac87a9f789b23a2c7ab8e55b485a2f5927b98"
   },
   {
     "language": "meson",
@@ -1469,17 +1466,18 @@
       "parser.c"
     ],
     "maintainedBy": "@Decodetalkers",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "d6ec8ce0963c3c8180161391f15d8f7d415f650d"
   },
   {
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
+    "doc": "Does not store generated files in the repo",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@artagnon",
+    "skip": true,
     "pending": true,
     "reference": "master",
     "revision": ""
@@ -1491,9 +1489,8 @@
       "parser.c"
     ],
     "maintainedBy": "@Freed-Wu",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "67d9e23ca7aa22d9bce9d16c53d2c927dff5159a"
   },
   {
     "language": "nasm",
@@ -1502,30 +1499,29 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "3bc691d2cfba44bea339a775ad496c8bc552c60d"
   },
   {
     "language": "nickel",
     "url": "https://github.com/nickel-lang/tree-sitter-nickel",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "58baf89db8fdae54a84bcf22c80ff10ee3f929ed"
   },
   {
     "language": "nim",
     "url": "https://github.com/alaviss/tree-sitter-nim",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@aMOPel",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "f5cec6a841b585e4e7388a120ded07e60ae19c43"
   },
   {
     "language": "nim_format_string",
@@ -1534,9 +1530,8 @@
       "parser.c"
     ],
     "maintainedBy": "@aMOPel",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "d45f75022d147cda056e98bfba68222c9c8eca3a"
   },
   {
     "language": "ninja",
@@ -1545,31 +1540,30 @@
       "parser.c"
     ],
     "maintainedBy": "@alemuller",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "0a95cfdc0745b6ae82f60d3a339b37f19b7b9267"
   },
   {
     "language": "nix",
     "url": "https://github.com/cstrahan/tree-sitter-nix",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@leo60228",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "763168fa916a333a459434f1424b5d30645f015d"
   },
   {
     "language": "norg",
     "url": "https://github.com/nvim-neorg/tree-sitter-norg",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.cc"
     ],
     "maintainedBy": "@JoeyGrajciar, @vhyrro",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "014073fe8016d1ac440c51d22c77e3765d8f6855"
   },
   {
     "language": "nqc",
@@ -1578,9 +1572,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "14e6da1627aaef21d2b2aa0c37d04269766dcc1d"
   },
   {
     "language": "objc",
@@ -1589,20 +1582,19 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "62e61b6f5c0289c376d61a8c91faf6435cde9012"
   },
   {
     "language": "objdump",
     "url": "https://github.com/ColinKennedy/tree-sitter-objdump",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@ColinKennedy",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "28d3b2e25a0b1881d1b47ed1924ca276c7003d45"
   },
   {
     "language": "ocaml",
