@@ -10,6 +10,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/asm"
 	"github.com/alexaandru/go-tree-sitter-parsers/astro"
 	"github.com/alexaandru/go-tree-sitter-parsers/authzed"
+	"github.com/alexaandru/go-tree-sitter-parsers/awk"
 	"github.com/alexaandru/go-tree-sitter-parsers/bash"
 	"github.com/alexaandru/go-tree-sitter-parsers/c"
 	"github.com/alexaandru/go-tree-sitter-parsers/c_sharp"
@@ -74,6 +75,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"asm":             asm.GetLanguage,
 	"astro":           astro.GetLanguage,
 	"authzed":         authzed.GetLanguage,
+	"awk":             awk.GetLanguage,
 	"bash":            bash.GetLanguage,
 	"c":               c.GetLanguage,
 	"c_sharp":         c_sharp.GetLanguage,

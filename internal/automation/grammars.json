@@ -89,11 +89,11 @@
     "language": "awk",
     "url": "https://github.com/Beaglefoot/tree-sitter-awk",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "207b04974c83d8d25a947e4d09763675c4617da7"
   },
   {
     "language": "bash",
