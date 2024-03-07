@@ -63,7 +63,7 @@ usually have "doc" entry to point to the full name.
 ## Roadmap
 
 - add all the remaining parsers (and keep them up to date);
-- find a way to automate currently not-automated parsers: perl and sql - they do not
+- find a way to automate currently not-automated parsers: perl, sql & co. - they do not
   commit the generated files to the repo, so the current automation doesn't work on them;
 - (maybe) add nvim_treesitter queries in here too, as a submodule.
   Parsers are of limited use without a complementary set of good queries;

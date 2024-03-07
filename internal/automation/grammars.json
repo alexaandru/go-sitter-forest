@@ -2363,9 +2363,8 @@
       "parser.c"
     ],
     "maintainedBy": "@connorlay",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "f4586b35ac8548667a9aaa4eae44456c1f43d032"
   },
   {
     "language": "svelte",
@@ -2382,10 +2381,12 @@
   {
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
+    "doc": "Doesn't save generated parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@alex-pinkus",
+    "skip": true,
     "pending": true,
     "reference": "master",
     "revision": ""
@@ -2397,9 +2398,8 @@
       "parser.c"
     ],
     "maintainedBy": "@RaafatTurki",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "440d5f913d9465c9c776a1bd92334d32febcf065"
   },
   {
     "language": "systemtap",
@@ -2408,9 +2408,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ok-ryoko",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "1af543a96d060b1f808982037bfc54cc02218edd"
   },
   {
     "language": "t32",
@@ -2427,31 +2426,33 @@
     "language": "tablegen",
     "url": "https://github.com/amaanq/tree-sitter-tablegen",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "300f6a490e71f895e644ed2deec6920860a2e107"
   },
   {
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@lewis6991",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "56ad1fa6a34ba800e5495d1025a9b0fda338d5b8"
   },
   {
     "language": "teal",
     "url": "https://github.com/euclidianAce/tree-sitter-teal",
+    "doc": "Doesn't save parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@euclidianAce",
+    "skip": true,
     "pending": true,
     "reference": "master",
     "revision": ""
@@ -2460,12 +2461,12 @@
     "language": "templ",
     "url": "https://github.com/vrischmann/tree-sitter-templ",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "592faa3186ef857c92e4bd1c31d73c07a4a334db"
   },
   {
     "language": "textproto",
@@ -2474,9 +2475,8 @@
       "parser.c"
     ],
     "maintainedBy": "@Porter",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "8dacf02aa402892c91079f8577998ed5148c0496"
   },
   {
     "language": "thrift",
@@ -2485,31 +2485,31 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq, @duskmoon314",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "d4deb1bd9e848f2dbe81103a151d99e8546de480"
   },
   {
     "language": "tiger",
     "url": "https://github.com/ambroisie/tree-sitter-tiger",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@ambroisie",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "a7f11d946b44244f71df41d2a78af0665d618dae"
   },
   {
     "language": "tlaplus",
     "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.cc"
     ],
     "maintainedBy": "@ahelwer, @susliko",
     "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "aaf5bb5c1df0a6e583bb51efa519a9ac788b2ad8"
   },
   {
     "language": "tmux",
@@ -2518,20 +2518,18 @@
       "parser.c"
     ],
     "maintainedBy": "@Freed-Wu",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "10737f5dc4d8e68c9667f11a6996688a1185755f"
   },
   {
     "language": "todotxt",
-    "url": "https://github.com/arnarg/tree-sitter-todotxt.git",
+    "url": "https://github.com/arnarg/tree-sitter-todotxt",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@arnarg",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "3937c5cd105ec4127448651a21aef45f52d19609"
   },
   {
     "language": "toml",
@@ -2575,9 +2573,8 @@
       "parser.c"
     ],
     "maintainedBy": "@BonaBeavis",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "085437f5cb117703b7f520dd92161140a684f092"
   },
   {
     "language": "twig",
@@ -2586,9 +2583,8 @@
       "parser.c"
     ],
     "maintainedBy": "@gbprod",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "eaf80e6af969e25993576477a9dbdba3e48c1305"
   },
   {
     "language": "typescript",
@@ -2610,20 +2606,20 @@
       "parser.c"
     ],
     "maintainedBy": "@Teddytrombone",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "43b221c0b76e77244efdaa9963e402a17c930fbc"
   },
   {
     "language": "typst",
     "url": "https://github.com/uben0/tree-sitter-typst",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "unicode.h"
     ],
     "maintainedBy": "@uben0, @RaafatTurki",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "3c3e5f8e0caeba6157e26a1bedf8321e1da62799"
   },
   {
     "language": "udev",
@@ -2632,9 +2628,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "8f58696e79092b4ad6bf197415bbd0970acf15cd"
   },
   {
     "language": "ungrammar",
@@ -2643,17 +2638,18 @@
       "parser.c"
     ],
     "maintainedBy": "@Philipp-M, @amaanq",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "debd26fed283d80456ebafa33a06957b0c52e451"
   },
   {
     "language": "unison",
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
+    "doc": "Doesn't save generated parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@tapegram",
+    "skip": true,
     "pending": true,
     "reference": "master",
     "revision": ""
@@ -2665,20 +2661,20 @@
       "parser.c"
     ],
     "maintainedBy": "@ColinKennedy",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7"
   },
   {
-    "language": "uxn tal",
+    "language": "uxntal",
     "url": "https://github.com/amaanq/tree-sitter-uxntal",
+    "doc": "uxn tal",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "4c5ecd6326ebd61f6f9a22a370cbd100e0d601da"
   },
   {
     "language": "v",
@@ -2686,8 +2682,8 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "tree_sitter_v",
     "maintainedBy": "@kkharji, @amaanq",
-    "pending": true,
     "reference": "main",
     "revision": "be121f724e4f3e2159dfa193c876be605c1de7fa"
   },
@@ -2698,9 +2694,8 @@
       "parser.c"
     ],
     "maintainedBy": "@Prince781",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "8f690bfa639f2b83d1fb938ed3dd98a7ba453e8b"
   },
   {
     "language": "verilog",
@@ -2709,9 +2704,8 @@
       "parser.c"
     ],
     "maintainedBy": "@zegervdv",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "2dfddfcb891f74a1cdb9d8ce480a997d11846e17"
   },
   {
     "language": "vhs",
@@ -2720,20 +2714,20 @@
       "parser.c"
     ],
     "maintainedBy": "@caarlos0",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "9534865e614c95eb9418e5e73f061c32fa4d9540"
   },
   {
     "language": "vim",
     "url": "https://github.com/neovim/tree-sitter-vim",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c",
+      "keywords.h"
     ],
     "maintainedBy": "@clason",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "bc1364d922952138957a62105171ed68e73fbb6c"
   },
   {
     "language": "vimdoc",
@@ -2742,9 +2736,8 @@
       "parser.c"
     ],
     "maintainedBy": "@clason",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "016ad75faa854e4e13bc40c517015183b795eed9"
   },
   {
     "language": "vue",
@@ -2762,33 +2755,36 @@
     "language": "wgsl",
     "url": "https://github.com/szebniok/tree-sitter-wgsl",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@szebniok",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "40259f3c77ea856841a4e0c4c807705f3e4a2b65"
   },
   {
     "language": "wgsl_bevy",
     "url": "https://github.com/theHamsta/tree-sitter-wgsl-bevy",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "cbd58ee33e24f46d16b9882b001eefb25a958ee2"
   },
   {
     "language": "wing",
     "url": "https://github.com/winglang/wing",
+    "doc": "Doesn't save generated parser",
     "files": [
       "parser.c"
     ],
+    "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
+    "skip": true,
     "pending": true,
-    "reference": "master",
+    "reference": "main",
     "revision": ""
   },
   {
@@ -2798,9 +2794,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "2383cc69a2c42cfade41c7cb971fb3862bec6df1"
   },
   {
     "language": "xml",
@@ -2834,20 +2829,19 @@
       "parser.c"
     ],
     "maintainedBy": "@Hubro",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "2c0e6be8dd4dcb961c345fa35c309ad4f5bd3502"
   },
   {
     "language": "yuck",
     "url": "https://github.com/Philipp-M/tree-sitter-yuck",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@Philipp-M, @amaanq",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "c348825d3f86dec71dee0e1223c6bd73114e3579"
   },
   {
     "language": "zathurarc",
@@ -2856,9 +2850,8 @@
       "parser.c"
     ],
     "maintainedBy": "@Freed-Wu",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "353bdf25e7af9c2830e254977fd3fb57ccaa8203"
   },
   {
     "language": "zig",

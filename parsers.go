@@ -211,14 +211,46 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/strace"
 	"github.com/alexaandru/go-tree-sitter-parsers/styled"
 	"github.com/alexaandru/go-tree-sitter-parsers/supercollider"
+	"github.com/alexaandru/go-tree-sitter-parsers/surface"
 	"github.com/alexaandru/go-tree-sitter-parsers/svelte"
+	"github.com/alexaandru/go-tree-sitter-parsers/sxhkdrc"
+	"github.com/alexaandru/go-tree-sitter-parsers/systemtap"
+	"github.com/alexaandru/go-tree-sitter-parsers/tablegen"
+	"github.com/alexaandru/go-tree-sitter-parsers/tcl"
+	"github.com/alexaandru/go-tree-sitter-parsers/templ"
+	"github.com/alexaandru/go-tree-sitter-parsers/textproto"
+	"github.com/alexaandru/go-tree-sitter-parsers/thrift"
+	"github.com/alexaandru/go-tree-sitter-parsers/tiger"
+	"github.com/alexaandru/go-tree-sitter-parsers/tlaplus"
+	"github.com/alexaandru/go-tree-sitter-parsers/tmux"
+	"github.com/alexaandru/go-tree-sitter-parsers/todotxt"
 	"github.com/alexaandru/go-tree-sitter-parsers/toml"
 	"github.com/alexaandru/go-tree-sitter-parsers/tsv"
 	"github.com/alexaandru/go-tree-sitter-parsers/tsx"
+	"github.com/alexaandru/go-tree-sitter-parsers/turtle"
+	"github.com/alexaandru/go-tree-sitter-parsers/twig"
 	"github.com/alexaandru/go-tree-sitter-parsers/typescript"
+	"github.com/alexaandru/go-tree-sitter-parsers/typoscript"
+	"github.com/alexaandru/go-tree-sitter-parsers/typst"
+	"github.com/alexaandru/go-tree-sitter-parsers/udev"
+	"github.com/alexaandru/go-tree-sitter-parsers/ungrammar"
+	"github.com/alexaandru/go-tree-sitter-parsers/usd"
+	"github.com/alexaandru/go-tree-sitter-parsers/uxntal"
+	"github.com/alexaandru/go-tree-sitter-parsers/v"
+	"github.com/alexaandru/go-tree-sitter-parsers/vala"
+	"github.com/alexaandru/go-tree-sitter-parsers/verilog"
+	"github.com/alexaandru/go-tree-sitter-parsers/vhs"
+	"github.com/alexaandru/go-tree-sitter-parsers/vim"
+	"github.com/alexaandru/go-tree-sitter-parsers/vimdoc"
 	"github.com/alexaandru/go-tree-sitter-parsers/vue"
+	"github.com/alexaandru/go-tree-sitter-parsers/wgsl"
+	"github.com/alexaandru/go-tree-sitter-parsers/wgsl_bevy"
+	"github.com/alexaandru/go-tree-sitter-parsers/xcompose"
 	"github.com/alexaandru/go-tree-sitter-parsers/xml"
 	"github.com/alexaandru/go-tree-sitter-parsers/yaml"
+	"github.com/alexaandru/go-tree-sitter-parsers/yang"
+	"github.com/alexaandru/go-tree-sitter-parsers/yuck"
+	"github.com/alexaandru/go-tree-sitter-parsers/zathurarc"
 	"github.com/alexaandru/go-tree-sitter-parsers/zig"
 )
 
@@ -233,8 +265,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"awk":                awk.GetLanguage,
 	"bash":               bash.GetLanguage,
 	"bass":               bass.GetLanguage,
-	// FIXME: beancount and org cannot be used by the same app, as they both define some common methods.
-	//"beancount":          beancount.GetLanguage,
+    // FIXME: beancount and org cannot be used by the same app, as they both define some common methods.
+    // "beancount":          beancount.GetLanguage,
 	"bibtex":             bibtex.GetLanguage,
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,
@@ -432,14 +464,46 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"strace":             strace.GetLanguage,
 	"styled":             styled.GetLanguage,
 	"supercollider":      supercollider.GetLanguage,
+	"surface":            surface.GetLanguage,
 	"svelte":             svelte.GetLanguage,
+	"sxhkdrc":            sxhkdrc.GetLanguage,
+	"systemtap":          systemtap.GetLanguage,
+	"tablegen":           tablegen.GetLanguage,
+	"tcl":                tcl.GetLanguage,
+	"templ":              templ.GetLanguage,
+	"textproto":          textproto.GetLanguage,
+	"thrift":             thrift.GetLanguage,
+	"tiger":              tiger.GetLanguage,
+	"tlaplus":            tlaplus.GetLanguage,
+	"tmux":               tmux.GetLanguage,
+	"todotxt":            todotxt.GetLanguage,
 	"toml":               toml.GetLanguage,
 	"tsv":                tsv.GetLanguage,
 	"tsx":                tsx.GetLanguage,
+	"turtle":             turtle.GetLanguage,
+	"twig":               twig.GetLanguage,
 	"typescript":         typescript.GetLanguage,
+	"typoscript":         typoscript.GetLanguage,
+	"typst":              typst.GetLanguage,
+	"udev":               udev.GetLanguage,
+	"ungrammar":          ungrammar.GetLanguage,
+	"usd":                usd.GetLanguage,
+	"uxntal":             uxntal.GetLanguage,
+	"v":                  v.GetLanguage,
+	"vala":               vala.GetLanguage,
+	"verilog":            verilog.GetLanguage,
+	"vhs":                vhs.GetLanguage,
+	"vim":                vim.GetLanguage,
+	"vimdoc":             vimdoc.GetLanguage,
 	"vue":                vue.GetLanguage,
+	"wgsl":               wgsl.GetLanguage,
+	"wgsl_bevy":          wgsl_bevy.GetLanguage,
+	"xcompose":           xcompose.GetLanguage,
 	"xml":                xml.GetLanguage,
 	"yaml":               yaml.GetLanguage,
+	"yang":               yang.GetLanguage,
+	"yuck":               yuck.GetLanguage,
+	"zathurarc":          zathurarc.GetLanguage,
 	"zig":                zig.GetLanguage,
 }
 
