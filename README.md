@@ -49,6 +49,8 @@ This keeps things simple and consistent.
 Exceptions:
 - `go` actually has the package `golang` because `package go` does not go well in Go
   (pun intended) but otherwise the language name is "go";
+- `func` language, same problem as above, so package name is actually `FunC`
+  (but everything else is `func` as normal: folder, lang name, etc.);
 - `query` is listed as "Tree-Sitter Query Language" in the parsers listing,
   for clarity, but otherwise it is referred to as `query` everywhere (Go package
   name, grammars.json, queries, etc.).

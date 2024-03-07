@@ -44,21 +44,77 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/dot"
 	"github.com/alexaandru/go-tree-sitter-parsers/doxygen"
 	"github.com/alexaandru/go-tree-sitter-parsers/dtd"
+	"github.com/alexaandru/go-tree-sitter-parsers/ebnf"
+	"github.com/alexaandru/go-tree-sitter-parsers/eds"
+	"github.com/alexaandru/go-tree-sitter-parsers/eex"
 	"github.com/alexaandru/go-tree-sitter-parsers/elixir"
 	"github.com/alexaandru/go-tree-sitter-parsers/elm"
+	"github.com/alexaandru/go-tree-sitter-parsers/elsa"
+	"github.com/alexaandru/go-tree-sitter-parsers/elvish"
+	"github.com/alexaandru/go-tree-sitter-parsers/embedded_template"
 	"github.com/alexaandru/go-tree-sitter-parsers/erlang"
+	"github.com/alexaandru/go-tree-sitter-parsers/facility"
+	"github.com/alexaandru/go-tree-sitter-parsers/faust"
 	"github.com/alexaandru/go-tree-sitter-parsers/fennel"
+	"github.com/alexaandru/go-tree-sitter-parsers/fidl"
+	"github.com/alexaandru/go-tree-sitter-parsers/firrtl"
+	"github.com/alexaandru/go-tree-sitter-parsers/fish"
+	"github.com/alexaandru/go-tree-sitter-parsers/foam"
+	"github.com/alexaandru/go-tree-sitter-parsers/forth"
+	"github.com/alexaandru/go-tree-sitter-parsers/fortran"
+	"github.com/alexaandru/go-tree-sitter-parsers/fsh"
+	FunC "github.com/alexaandru/go-tree-sitter-parsers/func"
+	"github.com/alexaandru/go-tree-sitter-parsers/gdscript"
+	"github.com/alexaandru/go-tree-sitter-parsers/gdshader"
+	"github.com/alexaandru/go-tree-sitter-parsers/git_config"
+	"github.com/alexaandru/go-tree-sitter-parsers/git_rebase"
+	"github.com/alexaandru/go-tree-sitter-parsers/gitattributes"
+	"github.com/alexaandru/go-tree-sitter-parsers/gitcommit"
+	"github.com/alexaandru/go-tree-sitter-parsers/gitignore"
+	"github.com/alexaandru/go-tree-sitter-parsers/gleam"
+	"github.com/alexaandru/go-tree-sitter-parsers/glimmer"
+	"github.com/alexaandru/go-tree-sitter-parsers/glsl"
+	"github.com/alexaandru/go-tree-sitter-parsers/gn"
+	"github.com/alexaandru/go-tree-sitter-parsers/gnuplot"
+	"github.com/alexaandru/go-tree-sitter-parsers/godot_resource"
 	"github.com/alexaandru/go-tree-sitter-parsers/golang"
 	"github.com/alexaandru/go-tree-sitter-parsers/gomod"
 	"github.com/alexaandru/go-tree-sitter-parsers/gosum"
 	"github.com/alexaandru/go-tree-sitter-parsers/gotmpl"
 	"github.com/alexaandru/go-tree-sitter-parsers/gowork"
+	"github.com/alexaandru/go-tree-sitter-parsers/gpg"
+	"github.com/alexaandru/go-tree-sitter-parsers/graphql"
+	"github.com/alexaandru/go-tree-sitter-parsers/gstlaunch"
+	"github.com/alexaandru/go-tree-sitter-parsers/hack"
+	"github.com/alexaandru/go-tree-sitter-parsers/hare"
 	"github.com/alexaandru/go-tree-sitter-parsers/haskell"
+	"github.com/alexaandru/go-tree-sitter-parsers/haskell_persistent"
 	"github.com/alexaandru/go-tree-sitter-parsers/hcl"
+	"github.com/alexaandru/go-tree-sitter-parsers/heex"
+	"github.com/alexaandru/go-tree-sitter-parsers/helm"
+	"github.com/alexaandru/go-tree-sitter-parsers/hjson"
+	"github.com/alexaandru/go-tree-sitter-parsers/hlsl"
+	"github.com/alexaandru/go-tree-sitter-parsers/hlsplaylist"
+	"github.com/alexaandru/go-tree-sitter-parsers/hocon"
+	"github.com/alexaandru/go-tree-sitter-parsers/hoon"
 	"github.com/alexaandru/go-tree-sitter-parsers/html"
+	"github.com/alexaandru/go-tree-sitter-parsers/htmldjango"
+	"github.com/alexaandru/go-tree-sitter-parsers/http"
+	"github.com/alexaandru/go-tree-sitter-parsers/hurl"
+	"github.com/alexaandru/go-tree-sitter-parsers/hyprlang"
+	"github.com/alexaandru/go-tree-sitter-parsers/ini"
+	"github.com/alexaandru/go-tree-sitter-parsers/ispc"
+	"github.com/alexaandru/go-tree-sitter-parsers/janet_simple"
 	"github.com/alexaandru/go-tree-sitter-parsers/java"
 	"github.com/alexaandru/go-tree-sitter-parsers/javascript"
+	"github.com/alexaandru/go-tree-sitter-parsers/jq"
+	"github.com/alexaandru/go-tree-sitter-parsers/jsdoc"
 	"github.com/alexaandru/go-tree-sitter-parsers/json"
+	"github.com/alexaandru/go-tree-sitter-parsers/json5"
+	"github.com/alexaandru/go-tree-sitter-parsers/jsonnet"
+	"github.com/alexaandru/go-tree-sitter-parsers/julia"
+	"github.com/alexaandru/go-tree-sitter-parsers/kconfig"
+	"github.com/alexaandru/go-tree-sitter-parsers/kdl"
 	"github.com/alexaandru/go-tree-sitter-parsers/kotlin"
 	"github.com/alexaandru/go-tree-sitter-parsers/lua"
 	"github.com/alexaandru/go-tree-sitter-parsers/make"
@@ -91,91 +147,147 @@ import (
 )
 
 var langNameFuncs = map[string]func() *sitter.Language{
-	"ada":             ada.GetLanguage,
-	"agda":            agda.GetLanguage,
-	"apex":            apex.GetLanguage,
-	"arduino":         arduino.GetLanguage,
-	"asm":             asm.GetLanguage,
-	"astro":           astro.GetLanguage,
-	"authzed":         authzed.GetLanguage,
-	"awk":             awk.GetLanguage,
-	"bash":            bash.GetLanguage,
-	"bass":            bass.GetLanguage,
-	"beancount":       beancount.GetLanguage,
-	"bibtex":          bibtex.GetLanguage,
-	"bicep":           bicep.GetLanguage,
-	"bitbake":         bitbake.GetLanguage,
-	"c":               c.GetLanguage,
-	"c_sharp":         c_sharp.GetLanguage,
-	"cairo":           cairo.GetLanguage,
-	"capnp":           capnp.GetLanguage,
-	"chatito":         chatito.GetLanguage,
-	"clojure":         clojure.GetLanguage,
-	"cmake":           cmake.GetLanguage,
-	"commonlisp":      commonlisp.GetLanguage,
-	"cooklang":        cooklang.GetLanguage,
-	"corn":            corn.GetLanguage,
-	"cpon":            cpon.GetLanguage,
-	"cpp":             cpp.GetLanguage,
-	"crystal":         crystal.GetLanguage,
-	"css":             css.GetLanguage,
-	"csv":             csv.GetLanguage,
-	"cuda":            cuda.GetLanguage,
-	"cue":             cue.GetLanguage,
-	"d":               d.GetLanguage,
-	"dart":            dart.GetLanguage,
-	"devicetree":      devicetree.GetLanguage,
-	"dhall":           dhall.GetLanguage,
-	"diff":            diff.GetLanguage,
-	"disassembly":     disassembly.GetLanguage,
-	"dockerfile":      dockerfile.GetLanguage,
-	"dot":             dot.GetLanguage,
-	"doxygen":         doxygen.GetLanguage,
-	"dtd":             dtd.GetLanguage,
-	"elixir":          elixir.GetLanguage,
-	"elm":             elm.GetLanguage,
-	"erlang":          erlang.GetLanguage,
-	"fennel":          fennel.GetLanguage,
-	"go":              golang.GetLanguage,
-	"gomod":           gomod.GetLanguage,
-	"gosum":           gosum.GetLanguage,
-	"gotmpl":          gotmpl.GetLanguage,
-	"gowork":          gowork.GetLanguage,
-	"haskell":         haskell.GetLanguage,
-	"hcl":             hcl.GetLanguage,
-	"html":            html.GetLanguage,
-	"java":            java.GetLanguage,
-	"javascript":      javascript.GetLanguage,
-	"json":            json.GetLanguage,
-	"kotlin":          kotlin.GetLanguage,
-	"lua":             lua.GetLanguage,
-	"make":            make.GetLanguage,
-	"ocaml":           ocaml.GetLanguage,
-	"ocaml_interface": ocaml_interface.GetLanguage,
-	"pascal":          pascal.GetLanguage,
-	"perl":            perl.GetLanguage,
-	"php":             php.GetLanguage,
-	"php_only":        php_only.GetLanguage,
-	"proto":           proto.GetLanguage,
-	"psv":             psv.GetLanguage,
-	"python":          python.GetLanguage,
-	"query":           query.GetLanguage,
-	"r":               r.GetLanguage,
-	"risor":           risor.GetLanguage,
-	"ruby":            ruby.GetLanguage,
-	"rust":            rust.GetLanguage,
-	"scala":           scala.GetLanguage,
-	"sql":             sql.GetLanguage,
-	"starlark":        starlark.GetLanguage,
-	"svelte":          svelte.GetLanguage,
-	"toml":            toml.GetLanguage,
-	"tsv":             tsv.GetLanguage,
-	"tsx":             tsx.GetLanguage,
-	"typescript":      typescript.GetLanguage,
-	"vue":             vue.GetLanguage,
-	"xml":             xml.GetLanguage,
-	"yaml":            yaml.GetLanguage,
-	"zig":             zig.GetLanguage,
+	"ada":                ada.GetLanguage,
+	"agda":               agda.GetLanguage,
+	"apex":               apex.GetLanguage,
+	"arduino":            arduino.GetLanguage,
+	"asm":                asm.GetLanguage,
+	"astro":              astro.GetLanguage,
+	"authzed":            authzed.GetLanguage,
+	"awk":                awk.GetLanguage,
+	"bash":               bash.GetLanguage,
+	"bass":               bass.GetLanguage,
+	"beancount":          beancount.GetLanguage,
+	"bibtex":             bibtex.GetLanguage,
+	"bicep":              bicep.GetLanguage,
+	"bitbake":            bitbake.GetLanguage,
+	"c":                  c.GetLanguage,
+	"c_sharp":            c_sharp.GetLanguage,
+	"cairo":              cairo.GetLanguage,
+	"capnp":              capnp.GetLanguage,
+	"chatito":            chatito.GetLanguage,
+	"clojure":            clojure.GetLanguage,
+	"cmake":              cmake.GetLanguage,
+	"commonlisp":         commonlisp.GetLanguage,
+	"cooklang":           cooklang.GetLanguage,
+	"corn":               corn.GetLanguage,
+	"cpon":               cpon.GetLanguage,
+	"cpp":                cpp.GetLanguage,
+	"crystal":            crystal.GetLanguage,
+	"css":                css.GetLanguage,
+	"csv":                csv.GetLanguage,
+	"cuda":               cuda.GetLanguage,
+	"cue":                cue.GetLanguage,
+	"d":                  d.GetLanguage,
+	"dart":               dart.GetLanguage,
+	"devicetree":         devicetree.GetLanguage,
+	"dhall":              dhall.GetLanguage,
+	"diff":               diff.GetLanguage,
+	"disassembly":        disassembly.GetLanguage,
+	"dockerfile":         dockerfile.GetLanguage,
+	"dot":                dot.GetLanguage,
+	"doxygen":            doxygen.GetLanguage,
+	"dtd":                dtd.GetLanguage,
+	"ebnf":               ebnf.GetLanguage,
+	"eds":                eds.GetLanguage,
+	"eex":                eex.GetLanguage,
+	"elixir":             elixir.GetLanguage,
+	"elm":                elm.GetLanguage,
+	"elsa":               elsa.GetLanguage,
+	"elvish":             elvish.GetLanguage,
+	"embedded_template":  embedded_template.GetLanguage,
+	"erlang":             erlang.GetLanguage,
+	"facility":           facility.GetLanguage,
+	"faust":              faust.GetLanguage,
+	"fennel":             fennel.GetLanguage,
+	"fidl":               fidl.GetLanguage,
+	"firrtl":             firrtl.GetLanguage,
+	"fish":               fish.GetLanguage,
+	"foam":               foam.GetLanguage,
+	"forth":              forth.GetLanguage,
+	"fortran":            fortran.GetLanguage,
+	"fsh":                fsh.GetLanguage,
+	"func":               FunC.GetLanguage,
+	"gdscript":           gdscript.GetLanguage,
+	"gdshader":           gdshader.GetLanguage,
+	"git_config":         git_config.GetLanguage,
+	"git_rebase":         git_rebase.GetLanguage,
+	"gitattributes":      gitattributes.GetLanguage,
+	"gitcommit":          gitcommit.GetLanguage,
+	"gitignore":          gitignore.GetLanguage,
+	"gleam":              gleam.GetLanguage,
+	"glimmer":            glimmer.GetLanguage,
+	"glsl":               glsl.GetLanguage,
+	"gn":                 gn.GetLanguage,
+	"gnuplot":            gnuplot.GetLanguage,
+	"go":                 golang.GetLanguage,
+	"godot_resource":     godot_resource.GetLanguage,
+	"gomod":              gomod.GetLanguage,
+	"gosum":              gosum.GetLanguage,
+	"gotmpl":             gotmpl.GetLanguage,
+	"gowork":             gowork.GetLanguage,
+	"gpg":                gpg.GetLanguage,
+	"graphql":            graphql.GetLanguage,
+	"gstlaunch":          gstlaunch.GetLanguage,
+	"hack":               hack.GetLanguage,
+	"hare":               hare.GetLanguage,
+	"haskell":            haskell.GetLanguage,
+	"haskell_persistent": haskell_persistent.GetLanguage,
+	"hcl":                hcl.GetLanguage,
+	"heex":               heex.GetLanguage,
+	"helm":               helm.GetLanguage,
+	"hjson":              hjson.GetLanguage,
+	"hlsl":               hlsl.GetLanguage,
+	"hlsplaylist":        hlsplaylist.GetLanguage,
+	"hocon":              hocon.GetLanguage,
+	"hoon":               hoon.GetLanguage,
+	"html":               html.GetLanguage,
+	"htmldjango":         htmldjango.GetLanguage,
+	"http":               http.GetLanguage,
+	"hurl":               hurl.GetLanguage,
+	"hyprlang":           hyprlang.GetLanguage,
+	"ini":                ini.GetLanguage,
+	"ispc":               ispc.GetLanguage,
+	"janet_simple":       janet_simple.GetLanguage,
+	"java":               java.GetLanguage,
+	"javascript":         javascript.GetLanguage,
+	"jq":                 jq.GetLanguage,
+	"jsdoc":              jsdoc.GetLanguage,
+	"json":               json.GetLanguage,
+	"json5":              json5.GetLanguage,
+	"jsonnet":            jsonnet.GetLanguage,
+	"julia":              julia.GetLanguage,
+	"kconfig":            kconfig.GetLanguage,
+	"kdl":                kdl.GetLanguage,
+	"kotlin":             kotlin.GetLanguage,
+	"lua":                lua.GetLanguage,
+	"make":               make.GetLanguage,
+	"ocaml":              ocaml.GetLanguage,
+	"ocaml_interface":    ocaml_interface.GetLanguage,
+	"pascal":             pascal.GetLanguage,
+	"perl":               perl.GetLanguage,
+	"php":                php.GetLanguage,
+	"php_only":           php_only.GetLanguage,
+	"proto":              proto.GetLanguage,
+	"psv":                psv.GetLanguage,
+	"python":             python.GetLanguage,
+	"query":              query.GetLanguage,
+	"r":                  r.GetLanguage,
+	"risor":              risor.GetLanguage,
+	"ruby":               ruby.GetLanguage,
+	"rust":               rust.GetLanguage,
+	"scala":              scala.GetLanguage,
+	"sql":                sql.GetLanguage,
+	"starlark":           starlark.GetLanguage,
+	"svelte":             svelte.GetLanguage,
+	"toml":               toml.GetLanguage,
+	"tsv":                tsv.GetLanguage,
+	"tsx":                tsx.GetLanguage,
+	"typescript":         typescript.GetLanguage,
+	"vue":                vue.GetLanguage,
+	"xml":                xml.GetLanguage,
+	"yaml":               yaml.GetLanguage,
+	"zig":                zig.GetLanguage,
 }
 
 var langNames []string
