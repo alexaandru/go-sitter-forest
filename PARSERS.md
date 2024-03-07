@@ -1,6 +1,6 @@
 # Supported Parsers
 
-This is the list of all parsers, both implemented (61) and planned (206).
+This is the list of all parsers, both implemented (62) and planned (205).
 The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
@@ -12,7 +12,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [x] [arduino](https://github.com/ObserverOfTime/tree-sitter-arduino) (maintained by @ObserverOfTime)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) (maintained by @RubixDev)
 - [x] [astro](https://github.com/virchau13/tree-sitter-astro) (maintained by @virchau13)
-- [ ] [authzed](https://github.com/mleonidas/tree-sitter-authzed) (maintained by @mattpolzin)
+- [x] [authzed](https://github.com/mleonidas/tree-sitter-authzed) (maintained by @mattpolzin)
 - [ ] [awk](https://github.com/Beaglefoot/tree-sitter-awk)
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) (maintained by @TravonteD)
 - [ ] [bass](https://github.com/vito/tree-sitter-bass) (maintained by @amaanq)

@@ -82,9 +82,8 @@
       "parser.c"
     ],
     "maintainedBy": "@mattpolzin",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "1dec7e1af96c56924e3322cd85fdce15d0a31d00"
   },
   {
     "language": "awk",

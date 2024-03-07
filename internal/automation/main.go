@@ -136,6 +136,10 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 		return
 	}
 
+	if err = createBindingFilesIfMissing(gr.Language); err != nil {
+		return
+	}
+
 	defer fmt.Println("successfully downloaded")
 
 	g := new(errgroup.Group)
@@ -153,6 +157,34 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 	}
 
 	return
+}
+
+// creates a map between file paths to write to and corresponding content
+func mkBindingMap(lang string) (out map[string]string) {
+	out = map[string]string{}
+	for k, v := range tplBindings {
+		out[filepath.Join(lang, k)] = fmt.Sprintf(v, lang, lang, lang)
+	}
+
+	return
+}
+
+func createBindingFilesIfMissing(lang string) (err error) {
+	for toPath, content := range mkBindingMap(lang) {
+		if found, err := fileExists(toPath); err != nil {
+			return err
+		} else if !found {
+			if err = createBindingFile(toPath, content); err != nil {
+				return err
+			}
+		}
+	}
+
+	return
+}
+
+func createBindingFile(toPath, content string) error {
+	return os.WriteFile(toPath, []byte(content), 0o644)
 }
 
 func downloadFile(lang, url, toPath string) error {

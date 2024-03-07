@@ -63,6 +63,4 @@ Exceptions:
 - (maybe) expose them also as plugins? Since the end goal is ~260+ parsers,
   embedding them all in a binary will be "unpleasant" to say the least. If I
   can make it easier for end users to generate them all as plugins, that would
-  be nice;
-- generate the binding files as part of automation (it's OK for tests to have
-  some dummy data and FAIL to signal end users that they need to update them).
+  be nice.
