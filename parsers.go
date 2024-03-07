@@ -15,6 +15,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/bass"
 	"github.com/alexaandru/go-tree-sitter-parsers/beancount"
 	"github.com/alexaandru/go-tree-sitter-parsers/bibtex"
+	"github.com/alexaandru/go-tree-sitter-parsers/bicep"
 	"github.com/alexaandru/go-tree-sitter-parsers/c"
 	"github.com/alexaandru/go-tree-sitter-parsers/c_sharp"
 	"github.com/alexaandru/go-tree-sitter-parsers/clojure"
@@ -83,6 +84,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"bass":            bass.GetLanguage,
 	"beancount":       beancount.GetLanguage,
 	"bibtex":          bibtex.GetLanguage,
+	"bicep":           bicep.GetLanguage,
 	"c":               c.GetLanguage,
 	"c_sharp":         c_sharp.GetLanguage,
 	"clojure":         clojure.GetLanguage,
