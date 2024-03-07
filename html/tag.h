@@ -153,7 +153,7 @@ typedef struct {
     String custom_tag_name;
 } Tag;
 
-const TagMap TAG_TYPES_BY_TAG_NAME[126] = {
+const TagMap TAG_TYPES_BY_TAG_NAME_html[126] = {
     {"AREA",       AREA      },
     {"BASE",       BASE      },
     {"BASEFONT",   BASEFONT  },
@@ -291,8 +291,8 @@ static const TagType TAG_TYPES_NOT_ALLOWED_IN_PARAGRAPHS[] = {
 
 static TagType get_tag_from_string(const char *tag_name) {
     for (int i = 0; i < 126; i++) {
-        if (strcmp(TAG_TYPES_BY_TAG_NAME[i].tag_name, tag_name) == 0) {
-            return TAG_TYPES_BY_TAG_NAME[i].tag_value;
+        if (strcmp(TAG_TYPES_BY_TAG_NAME_html[i].tag_name, tag_name) == 0) {
+            return TAG_TYPES_BY_TAG_NAME_html[i].tag_value;
         }
     }
     return CUSTOM;

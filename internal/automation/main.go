@@ -141,7 +141,7 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 	g := new(errgroup.Group)
 
 	for src, dst := range gr.FilesMap() {
-		g.Go(func() error { return downloadFile(src, dst) })
+		g.Go(func() error { return downloadFile(gr.Language, src, dst) })
 	}
 
 	if err = g.Wait(); err != nil {
@@ -155,13 +155,21 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 	return
 }
 
-func downloadFile(url, toPath string) error {
+func downloadFile(lang, url, toPath string) error {
 	b, err := fetchFile(url)
 	if err != nil {
 		return err
 	}
 
-	for old, new := range replaceMap {
+	reMap := maps.Clone(replaceMap)
+
+	if filepath.Base(toPath) == "tag.h" {
+		// This identifier is common across tag.h files and causes issues.
+		// It needs it's own unique name per lang.
+		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
+	}
+
+	for old, new := range reMap {
 		b = bytes.ReplaceAll(b, []byte(old), []byte(new))
 	}
 

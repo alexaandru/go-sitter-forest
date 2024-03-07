@@ -42,15 +42,16 @@ all of them.
 ### Naming Convention
 
 The lang name used is the same as tree sitter lang name (lower case, underscore
-instead of spaces) and the same as the query folder name, with a couple of
-exceptions:
-- `go` actually has the package `golang` because `package go` does not go well in Go
-  (pun intended);
-- `query` is listed as "Tree-Sitter Query Language" in the parsers listing,
-  for clarity, but otherwise it is referred to as `query` everywhere (Go package
-  name, queries, etc.).
+instead of spaces) and the same as the query folder name.
 
 This keeps things simple and consistent.
+
+Exceptions:
+- `go` actually has the package `golang` because `package go` does not go well in Go
+  (pun intended) but otherwise the language name is "go";
+- `query` is listed as "Tree-Sitter Query Language" in the parsers listing,
+  for clarity, but otherwise it is referred to as `query` everywhere (Go package
+  name, grammars.json, queries, etc.).
 
 ## Roadmap
 
@@ -59,15 +60,9 @@ This keeps things simple and consistent.
   commit the generated files to the repo, so the current automation doesn't work on them;
 - (maybe) add nvim_treesitter queries in here too, as a submodule.
   Parsers are of limited use without a complementary set of good queries;
-- (maybe) add some way to only pull in selected "collections" of parsers, guarded
-  by build tags. For now I don't mind pulling them all in, but as the list grows
-  it will probably get annoying;
 - (maybe) expose them also as plugins? Since the end goal is ~260+ parsers,
   embedding them all in a binary will be "unpleasant" to say the least. If I
   can make it easier for end users to generate them all as plugins, that would
   be nice;
 - generate the binding files as part of automation (it's OK for tests to have
-  some dummy data and FAIL to signal end users that they need to update them);
-- extend the grammar json so that we can eliminate the special cases in automation,
-  and pass any instructions necessary for special cases via json itself;
-- what else...?
+  some dummy data and FAIL to signal end users that they need to update them).
