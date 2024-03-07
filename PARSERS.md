@@ -1,6 +1,6 @@
 # Supported Parsers
 
-This is the list of all parsers, both implemented (65) and planned (202).
+This is the list of all parsers, both implemented (66) and planned (201).
 The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
@@ -17,7 +17,7 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) (maintained by @TravonteD)
 - [x] [bass](https://github.com/vito/tree-sitter-bass) (maintained by @amaanq)
 - [x] [beancount](https://github.com/polarmutex/tree-sitter-beancount) (maintained by @polarmutex)
-- [ ] [bibtex](https://github.com/latex-lsp/tree-sitter-bibtex) (maintained by @theHamsta, @clason)
+- [x] [bibtex](https://github.com/latex-lsp/tree-sitter-bibtex) (maintained by @theHamsta, @clason)
 - [ ] [bicep](https://github.com/amaanq/tree-sitter-bicep) (maintained by @amaanq)
 - [ ] [bitbake](https://github.com/amaanq/tree-sitter-bitbake) (maintained by @amaanq)
 - [ ] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint.git) (maintained by @gabmus)

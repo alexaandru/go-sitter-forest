@@ -134,9 +134,8 @@
       "parser.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"
   },
   {
     "language": "bicep",
