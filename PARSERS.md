@@ -1,6 +1,6 @@
 # Supported Parsers
 
-This is the list of all parsers, both implemented (82) and planned (185).
+This is the list of all parsers, both implemented (86) and planned (181).
 The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
@@ -41,13 +41,13 @@ The end goal is parity with [nvim_treesitter](https://github.com/nvim-treesitter
 - [x] [cue](https://github.com/eonpatapon/tree-sitter-cue) (maintained by @amaanq)
 - [x] [d](https://github.com/gdamore/tree-sitter-d) (maintained by @amaanq)
 - [x] [dart](https://github.com/UserNobody14/tree-sitter-dart) (maintained by @akinsho)
-- [ ] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) (maintained by @jedrzejboczar)
-- [ ] [dhall](https://github.com/jbellerb/tree-sitter-dhall) (maintained by @amaanq)
+- [x] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) (maintained by @jedrzejboczar)
+- [x] [dhall](https://github.com/jbellerb/tree-sitter-dhall) (maintained by @amaanq)
 - [x] [diff](https://github.com/the-mikedavis/tree-sitter-diff) (maintained by @gbprod)
-- [ ] [disassembly](https://github.com/ColinKennedy/tree-sitter-disassembly) (maintained by @ColinKennedy)
+- [x] [disassembly](https://github.com/ColinKennedy/tree-sitter-disassembly) (maintained by @ColinKennedy)
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) (maintained by @rydesun)
-- [ ] [doxygen](https://github.com/amaanq/tree-sitter-doxygen) (maintained by @amaanq)
+- [x] [doxygen](https://github.com/amaanq/tree-sitter-doxygen) (maintained by @amaanq)
 - [x] [dtd](https://github.com/tree-sitter-grammars/tree-sitter-xml) (maintained by @ObserverOfTime)
 - [ ] [ebnf](https://github.com/RubixDev/ebnf) (maintained by @RubixDev)
 - [ ] [eds](https://github.com/uyha/tree-sitter-eds) (maintained by @uyha)

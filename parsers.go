@@ -36,9 +36,13 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/cue"
 	"github.com/alexaandru/go-tree-sitter-parsers/d"
 	"github.com/alexaandru/go-tree-sitter-parsers/dart"
+	"github.com/alexaandru/go-tree-sitter-parsers/devicetree"
+	"github.com/alexaandru/go-tree-sitter-parsers/dhall"
 	"github.com/alexaandru/go-tree-sitter-parsers/diff"
+	"github.com/alexaandru/go-tree-sitter-parsers/disassembly"
 	"github.com/alexaandru/go-tree-sitter-parsers/dockerfile"
 	"github.com/alexaandru/go-tree-sitter-parsers/dot"
+	"github.com/alexaandru/go-tree-sitter-parsers/doxygen"
 	"github.com/alexaandru/go-tree-sitter-parsers/dtd"
 	"github.com/alexaandru/go-tree-sitter-parsers/elixir"
 	"github.com/alexaandru/go-tree-sitter-parsers/elm"
@@ -120,9 +124,13 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"cue":             cue.GetLanguage,
 	"d":               d.GetLanguage,
 	"dart":            dart.GetLanguage,
+	"devicetree":      devicetree.GetLanguage,
+	"dhall":           dhall.GetLanguage,
 	"diff":            diff.GetLanguage,
+	"disassembly":     disassembly.GetLanguage,
 	"dockerfile":      dockerfile.GetLanguage,
 	"dot":             dot.GetLanguage,
+	"doxygen":         doxygen.GetLanguage,
 	"dtd":             dtd.GetLanguage,
 	"elixir":          elixir.GetLanguage,
 	"elm":             elm.GetLanguage,

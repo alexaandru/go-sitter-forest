@@ -390,20 +390,19 @@
       "parser.c"
     ],
     "maintainedBy": "@jedrzejboczar",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "2087a5b965db2a9efabab958a27fd8ddf43038a2"
   },
   {
     "language": "dhall",
     "url": "https://github.com/jbellerb/tree-sitter-dhall",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "affb6ee38d629c9296749767ab832d69bb0d9ea8"
   },
   {
     "language": "diff",
@@ -419,12 +418,12 @@
     "language": "disassembly",
     "url": "https://github.com/ColinKennedy/tree-sitter-disassembly",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@ColinKennedy",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "0229c0211dba909c5d45129ac784a3f4d49c243a"
   },
   {
     "language": "dockerfile",
@@ -450,12 +449,12 @@
     "language": "doxygen",
     "url": "https://github.com/amaanq/tree-sitter-doxygen",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "a750758da90955c86fcc22fcbb6fa44a7d009865"
   },
   {
     "language": "dtd",
