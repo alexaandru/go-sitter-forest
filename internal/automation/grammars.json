@@ -113,9 +113,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "c9ba4568af24cd3403029730687c0a43d1350a43"
   },
   {
     "language": "beancount",
