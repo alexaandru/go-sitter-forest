@@ -25,10 +25,12 @@ var (
 	grammarsJson  = filepath.Join("internal", "automation", "grammars.json")
 	grammars      []*grammar.Grammar
 	replaceMap    = map[string]string{
-		`"../../common/scanner.h"`: `"scanner.h"`,
-		`"tree_sitter/parser.h"`:   `"parser.h"`,
-		`"tree_sitter/array.h"`:    `"array.h"`, // Needed for Python.
-		`"tree_sitter/alloc.h"`:    `"alloc.h"`, // Needed for Python.
+		`"../../common/scanner.h"`:       `"scanner.h"`,
+		`"tree_sitter/parser.h"`:         `"parser.h"`,
+		`"tree_sitter_comment/parser.c"`: `"parser.c"`, // Needed for Comment.
+		`"tree_sitter_comment/tokens.h"`: `"tokens.h"`, // Needed for Comment.
+		`"tree_sitter/array.h"`:          `"array.h"`,  // Needed for Python.
+		`"tree_sitter/alloc.h"`:          `"alloc.h"`,  // Needed for Python.
 	}
 )
 

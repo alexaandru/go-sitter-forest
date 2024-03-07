@@ -152,12 +152,12 @@
     "language": "bitbake",
     "url": "https://github.com/amaanq/tree-sitter-bitbake",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a"
   },
   {
     "language": "blueprint",
@@ -195,12 +195,12 @@
     "language": "cairo",
     "url": "https://github.com/amaanq/tree-sitter-cairo",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef"
   },
   {
     "language": "capnp",
@@ -209,9 +209,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
   },
   {
     "language": "chatito",
@@ -220,9 +219,8 @@
       "parser.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "fe7a2a75d3d74c1215141b7a7ebebb57ae17a370"
   },
   {
     "language": "clojure",
@@ -238,23 +236,24 @@
     "language": "cmake",
     "url": "https://github.com/uyha/tree-sitter-cmake",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@uyha",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "f8de25f30757a2def006a7c144354710fe63dcf3"
   },
   {
     "language": "comment",
     "url": "https://github.com/stsewd/tree-sitter-comment",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@stsewd",
     "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "aefcc2813392eb6ffe509aa0fc8b4e9b57413ee1"
   },
   {
     "language": "commonlisp",
@@ -270,12 +269,12 @@
     "language": "cooklang",
     "url": "https://github.com/addcninblue/tree-sitter-cooklang",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@addcninblue",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "81c2a8667846b1e60db68b5601d864fe00fd1d3a"
   },
   {
     "language": "corn",
@@ -284,9 +283,8 @@
       "parser.c"
     ],
     "maintainedBy": "@jakestanger",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "604d73c38d4c28ca68e9e441ffd405d68cb63051"
   },
   {
     "language": "cpon",
@@ -295,9 +293,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "f4b3cbc8b0bd4e13035d39940fef09f1392e8739"
   },
   {
     "language": "cpp",
@@ -317,9 +314,8 @@
       "parser.c"
     ],
     "maintainedBy": "@devnote-dev",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "61cc201c8eb3b6fd4d4eb3e0ac6c303a580eeb6b"
   },
   {
     "language": "css",
@@ -338,21 +334,21 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "csv",
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
   {
     "language": "cuda",
     "url": "https://github.com/theHamsta/tree-sitter-cuda",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "221179d4287a2c24c08e4c67ff383ef67dc32156"
   },
   {
     "language": "cue",
@@ -369,23 +365,23 @@
     "language": "d",
     "url": "https://github.com/gdamore/tree-sitter-d",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "a33d400f025d6bbd37b4c681c93054976f579890"
   },
   {
     "language": "dart",
     "url": "https://github.com/UserNobody14/tree-sitter-dart",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@akinsho",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "1a31399a08aefc93bc4cdbfadc0cb619136f86c1"
   },
   {
     "language": "devicetree",
@@ -1916,10 +1912,10 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "psv",
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
   {
     "language": "pug",
@@ -2019,7 +2015,7 @@
     ],
     "maintainedBy": "@steelsojka",
     "reference": "master",
-    "revision": "a0ccc351e5e868ec1f8135e97aa3b53c663cf2df"
+    "revision": "176a380df78800167565118bb0dadfc961abbd43"
   },
   {
     "language": "r",
@@ -2610,10 +2606,10 @@
     "files": [
       "parser.c"
     ],
+    "srcRoot": "tsv",
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
   {
     "language": "tsx",

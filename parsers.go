@@ -16,13 +16,26 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/beancount"
 	"github.com/alexaandru/go-tree-sitter-parsers/bibtex"
 	"github.com/alexaandru/go-tree-sitter-parsers/bicep"
+	"github.com/alexaandru/go-tree-sitter-parsers/bitbake"
 	"github.com/alexaandru/go-tree-sitter-parsers/c"
 	"github.com/alexaandru/go-tree-sitter-parsers/c_sharp"
+	"github.com/alexaandru/go-tree-sitter-parsers/cairo"
+	"github.com/alexaandru/go-tree-sitter-parsers/capnp"
+	"github.com/alexaandru/go-tree-sitter-parsers/chatito"
 	"github.com/alexaandru/go-tree-sitter-parsers/clojure"
+	"github.com/alexaandru/go-tree-sitter-parsers/cmake"
 	"github.com/alexaandru/go-tree-sitter-parsers/commonlisp"
+	"github.com/alexaandru/go-tree-sitter-parsers/cooklang"
+	"github.com/alexaandru/go-tree-sitter-parsers/corn"
+	"github.com/alexaandru/go-tree-sitter-parsers/cpon"
 	"github.com/alexaandru/go-tree-sitter-parsers/cpp"
+	"github.com/alexaandru/go-tree-sitter-parsers/crystal"
 	"github.com/alexaandru/go-tree-sitter-parsers/css"
+	"github.com/alexaandru/go-tree-sitter-parsers/csv"
+	"github.com/alexaandru/go-tree-sitter-parsers/cuda"
 	"github.com/alexaandru/go-tree-sitter-parsers/cue"
+	"github.com/alexaandru/go-tree-sitter-parsers/d"
+	"github.com/alexaandru/go-tree-sitter-parsers/dart"
 	"github.com/alexaandru/go-tree-sitter-parsers/diff"
 	"github.com/alexaandru/go-tree-sitter-parsers/dockerfile"
 	"github.com/alexaandru/go-tree-sitter-parsers/dot"
@@ -52,6 +65,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/php"
 	"github.com/alexaandru/go-tree-sitter-parsers/php_only"
 	"github.com/alexaandru/go-tree-sitter-parsers/proto"
+	"github.com/alexaandru/go-tree-sitter-parsers/psv"
 	"github.com/alexaandru/go-tree-sitter-parsers/python"
 	"github.com/alexaandru/go-tree-sitter-parsers/query"
 	"github.com/alexaandru/go-tree-sitter-parsers/r"
@@ -63,6 +77,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/starlark"
 	"github.com/alexaandru/go-tree-sitter-parsers/svelte"
 	"github.com/alexaandru/go-tree-sitter-parsers/toml"
+	"github.com/alexaandru/go-tree-sitter-parsers/tsv"
 	"github.com/alexaandru/go-tree-sitter-parsers/tsx"
 	"github.com/alexaandru/go-tree-sitter-parsers/typescript"
 	"github.com/alexaandru/go-tree-sitter-parsers/vue"
@@ -85,13 +100,26 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"beancount":       beancount.GetLanguage,
 	"bibtex":          bibtex.GetLanguage,
 	"bicep":           bicep.GetLanguage,
+	"bitbake":         bitbake.GetLanguage,
 	"c":               c.GetLanguage,
 	"c_sharp":         c_sharp.GetLanguage,
+	"cairo":           cairo.GetLanguage,
+	"capnp":           capnp.GetLanguage,
+	"chatito":         chatito.GetLanguage,
 	"clojure":         clojure.GetLanguage,
+	"cmake":           cmake.GetLanguage,
 	"commonlisp":      commonlisp.GetLanguage,
+	"cooklang":        cooklang.GetLanguage,
+	"corn":            corn.GetLanguage,
+	"cpon":            cpon.GetLanguage,
 	"cpp":             cpp.GetLanguage,
+	"crystal":         crystal.GetLanguage,
 	"css":             css.GetLanguage,
+	"csv":             csv.GetLanguage,
+	"cuda":            cuda.GetLanguage,
 	"cue":             cue.GetLanguage,
+	"d":               d.GetLanguage,
+	"dart":            dart.GetLanguage,
 	"diff":            diff.GetLanguage,
 	"dockerfile":      dockerfile.GetLanguage,
 	"dot":             dot.GetLanguage,
@@ -121,6 +149,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"php":             php.GetLanguage,
 	"php_only":        php_only.GetLanguage,
 	"proto":           proto.GetLanguage,
+	"psv":             psv.GetLanguage,
 	"python":          python.GetLanguage,
 	"query":           query.GetLanguage,
 	"r":               r.GetLanguage,
@@ -132,6 +161,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"starlark":        starlark.GetLanguage,
 	"svelte":          svelte.GetLanguage,
 	"toml":            toml.GetLanguage,
+	"tsv":             tsv.GetLanguage,
 	"tsx":             tsx.GetLanguage,
 	"typescript":      typescript.GetLanguage,
 	"vue":             vue.GetLanguage,
