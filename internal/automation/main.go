@@ -16,7 +16,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/internal/automation/grammar"
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"golang.org/x/sync/errgroup"
 )
 
@@ -270,7 +270,7 @@ func updateParsersMd() error {
 	planned, implemented := 0, 0
 	text := `# %d Supported Parsers
 
-%d parsers left to add (pending).
+%d parsers pending
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->

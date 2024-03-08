@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/pymanifest"
+	"github.com/alexaandru/go-sitter-forest/pymanifest"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

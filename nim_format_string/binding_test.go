@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/nim_format_string"
+	"github.com/alexaandru/go-sitter-forest/nim_format_string"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

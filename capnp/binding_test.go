@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/capnp"
+	"github.com/alexaandru/go-sitter-forest/capnp"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/clojure"
+	"github.com/alexaandru/go-sitter-forest/clojure"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

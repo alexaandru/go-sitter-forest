@@ -1,6 +1,6 @@
 # 258 Supported Parsers
 
-9 parsers left to add (pending).
+9 parsers pending
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->

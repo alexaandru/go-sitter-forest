@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/embedded_template"
+	"github.com/alexaandru/go-sitter-forest/embedded_template"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

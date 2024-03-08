@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/phpdoc"
+	"github.com/alexaandru/go-sitter-forest/phpdoc"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

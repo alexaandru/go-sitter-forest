@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/rnoweb"
+	"github.com/alexaandru/go-sitter-forest/rnoweb"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/gnuplot"
+	"github.com/alexaandru/go-sitter-forest/gnuplot"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

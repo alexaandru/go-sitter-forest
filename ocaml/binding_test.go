@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/ocaml"
+	"github.com/alexaandru/go-sitter-forest/ocaml"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

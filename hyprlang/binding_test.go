@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/hyprlang"
+	"github.com/alexaandru/go-sitter-forest/hyprlang"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

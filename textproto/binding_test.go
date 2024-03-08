@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/textproto"
+	"github.com/alexaandru/go-sitter-forest/textproto"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

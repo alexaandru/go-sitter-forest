@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/qmljs"
+	"github.com/alexaandru/go-sitter-forest/qmljs"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

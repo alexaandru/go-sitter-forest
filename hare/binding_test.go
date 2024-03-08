@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/hare"
+	"github.com/alexaandru/go-sitter-forest/hare"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

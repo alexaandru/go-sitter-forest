@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/haskell_persistent"
+	"github.com/alexaandru/go-sitter-forest/haskell_persistent"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

@@ -1,4 +1,4 @@
-module github.com/alexaandru/go-tree-sitter-parsers
+module github.com/alexaandru/go-sitter-forest
 
 go 1.22.1
 

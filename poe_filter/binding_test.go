@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/poe_filter"
+	"github.com/alexaandru/go-sitter-forest/poe_filter"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

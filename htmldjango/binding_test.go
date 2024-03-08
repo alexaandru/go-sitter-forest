@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/htmldjango"
+	"github.com/alexaandru/go-sitter-forest/htmldjango"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

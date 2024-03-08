@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/verilog"
+	"github.com/alexaandru/go-sitter-forest/verilog"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

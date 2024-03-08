@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/objc"
+	"github.com/alexaandru/go-sitter-forest/objc"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

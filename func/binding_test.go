@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	FunC "github.com/alexaandru/go-tree-sitter-parsers/func"
+	FunC "github.com/alexaandru/go-sitter-forest/func"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 

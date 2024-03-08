@@ -1,4 +1,5 @@
-# Go Bindings for Tree Sitter Parsers
+# a Go Sitter Forest 🌳
+_Where a Gopher wanders around and meets lots of 🌳 Sitters..._
 
 First of all, giving credits where they are due:
 
@@ -51,7 +52,7 @@ import (
     "fmt"
     "context"
 
-    "github.com/alexaandru/go-tree-sitter-parsers/ada"
+    "github.com/alexaandru/go-sitter-forest/ada"
     sitter "github.com/smacker/go-tree-sitter"
 )
 
@@ -76,7 +77,7 @@ size **will be huge**, as in 200MB+ huge) then you can use the root package, i.e
 ```Go
 package main
 
-import parsers "github.com/alexaandru/go-tree-sitter-parsers"
+import parsers "github.com/alexaandru/go-sitter-forest"
 
 func main() {
     lang := parsers.Lang("go") // or any other
