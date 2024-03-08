@@ -12,7 +12,14 @@ import (
 // exposes both typescript and tsx) each one will need its own separate
 // Grammar entry in the grammar.json file.
 type Grammar struct {
+	// Language name. The same as folder name and nvim_treesitter query name.
+	// In rare cases where it cannot also be used as go package name
+	// (such as `package go` or `package func`) a capitalzed version of the
+	// name is used (Go and FunC respectively).
 	Language string `json:"language"`
+	// Sometimes the name used for the lang can be unclear.
+	// In those cases an alternate name for the language is also recorded.
+	AltName string `json:"altName,omitempty"`
 	// At the tile of writing this it MUST be a Github repo URL.
 	URL string `json:"url"`
 	// Optional documentation. Typically used for grammars with
@@ -39,6 +46,10 @@ type Grammar struct {
 	Pending bool `json:"pending,omitempty"`
 	// Flag to mark this grammar as experimental.
 	Experimental bool `json:"experimental,omitempty"`
+	// Some parsers to not ship the generated files.
+	// In those cases tree-sitter is needed to generate them,
+	// before they can be copied over. This flag indicates those cases.
+	NeedsGenerate bool `json:"needsGenerate,omitempty"`
 
 	*Version
 	newVersion *Version

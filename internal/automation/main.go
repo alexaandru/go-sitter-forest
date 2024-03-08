@@ -99,22 +99,36 @@ func update(lang string, force bool) (err error) {
 	return writeGrammarsFile()
 }
 
+// TODO: DRY: refactor the duplication between updateAll and Update.
 func updateAll() (err error) {
 	if err = fetchNewVersions(); err != nil {
 		return
 	}
 
+	upd, notUpd := 0, 0
+
 	g := new(errgroup.Group)
 	for _, gr := range grammars {
-		if gr.Skip {
-			fmt.Printf("Skipping %q: %s\n", gr.Language, gr.Doc)
+		skipReason := ""
+
+		switch {
+		case gr.Skip:
+			skipReason = gr.Doc
+		case gr.NeedsGenerate:
+			skipReason = "needs the parser to be generated (not currently supported)"
+		case gr.Pending:
+			skipReason = "not implemented (pending)"
+		}
+
+		if skipReason != "" {
+			fmt.Printf("Skipping %-18q%s\n", gr.Language, skipReason)
+
+			notUpd++
 
 			continue
 		}
 
-		if gr.Pending {
-			continue
-		}
+		upd++
 
 		v := gr.NewVersion()
 		if v == nil {
@@ -129,6 +143,8 @@ func updateAll() (err error) {
 	if err = g.Wait(); err != nil {
 		return
 	}
+
+	fmt.Printf("\nUpdated %d languages, skipped %d\n", upd, notUpd)
 
 	return writeGrammarsFile()
 }
@@ -259,8 +275,8 @@ The list of all parsers, both added (%d) and planned (%d).
 `
 	for _, gr := range grammars {
 		lang := gr.Language
-		if lang == "query" {
-			lang = "Tree-Sitter query language"
+		if gr.AltName != "" {
+			lang = gr.AltName
 		}
 
 		checked := "x"
@@ -342,6 +358,8 @@ func main() {
 		err = update(args[1], cmd == "force-update")
 	case "update-all":
 		err = updateAll()
+	case "update-json":
+		err = writeGrammarsFile()
 	default:
 		err = errUnknownCmd
 	}

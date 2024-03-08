@@ -77,7 +77,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/gn"
 	"github.com/alexaandru/go-tree-sitter-parsers/gnuplot"
 	"github.com/alexaandru/go-tree-sitter-parsers/godot_resource"
-	"github.com/alexaandru/go-tree-sitter-parsers/golang"
+	Go "github.com/alexaandru/go-tree-sitter-parsers/go"
 	"github.com/alexaandru/go-tree-sitter-parsers/gomod"
 	"github.com/alexaandru/go-tree-sitter-parsers/gosum"
 	"github.com/alexaandru/go-tree-sitter-parsers/gotmpl"
@@ -329,7 +329,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"glsl":               glsl.GetLanguage,
 	"gn":                 gn.GetLanguage,
 	"gnuplot":            gnuplot.GetLanguage,
-	"go":                 golang.GetLanguage,
+	"go":                 Go.GetLanguage,
 	"godot_resource":     godot_resource.GetLanguage,
 	"gomod":              gomod.GetLanguage,
 	"gosum":              gosum.GetLanguage,

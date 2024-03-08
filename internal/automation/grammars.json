@@ -92,6 +92,7 @@
       "parser.c",
       "scanner.c"
     ],
+    "maintainedBy": "@Beaglefoot",
     "reference": "master",
     "revision": "207b04974c83d8d25a947e4d09763675c4617da7"
   },
@@ -548,6 +549,7 @@
     "files": [
       "parser.c"
     ],
+    "maintainedBy": "@maxbrunsfeld",
     "reference": "master",
     "revision": "6d791b897ecda59baa0689a85a9906348a2a6414"
   },
@@ -688,8 +690,8 @@
   },
   {
     "language": "gdscript",
+    "altName": "Godot (gdscript)",
     "url": "https://github.com/PrestonKnopp/tree-sitter-gdscript",
-    "doc": "Godot (gdscript)",
     "files": [
       "parser.c",
       "scanner.c"
@@ -772,8 +774,8 @@
   },
   {
     "language": "glimmer",
+    "altName": "Glimmer and Ember",
     "url": "https://github.com/alexlafroscia/tree-sitter-glimmer",
-    "doc": "Glimmer and Ember",
     "files": [
       "parser.c",
       "scanner.c"
@@ -794,8 +796,8 @@
   },
   {
     "language": "gn",
+    "altName": "GN (Generate Ninja)",
     "url": "https://github.com/amaanq/tree-sitter-gn",
-    "doc": "GN (Generate Ninja)",
     "files": [
       "parser.c",
       "scanner.c"
@@ -826,8 +828,8 @@
   },
   {
     "language": "godot_resource",
+    "altName": "Godot Resources (gdresource)",
     "url": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
-    "doc": "Godot Resources (gdresource)",
     "files": [
       "parser.c",
       "scanner.c"
@@ -924,6 +926,7 @@
       "parser.c",
       "scanner.c"
     ],
+    "maintainedBy": "@aosq",
     "reference": "main",
     "revision": "fca1e294f6dce8ec5659233a6a21f5bd0ed5b4f2"
   },
@@ -969,7 +972,7 @@
     ],
     "maintainedBy": "@MichaHoffmann",
     "reference": "main",
-    "revision": "e135399cb31b95fac0760b094556d1d5ce84acf0"
+    "revision": "e936d3fef8bac884661472dce71ad82284761eb1"
   },
   {
     "language": "heex",
@@ -1180,17 +1183,6 @@
     "revision": "3b129203f4b72d532f58e72c5310c0a7db3b8e6d"
   },
   {
-    "language": "JSON with comments",
-    "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc.git",
-    "files": [
-      "parser.c"
-    ],
-    "maintainedBy": "@WhyNotHugo",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
-  },
-  {
     "language": "json5",
     "url": "https://github.com/Joakker/tree-sitter-json5",
     "files": [
@@ -1199,6 +1191,18 @@
     "maintainedBy": "@Joakker",
     "reference": "master",
     "revision": "c23f7a9b1ee7d45f516496b1e0e4be067264fa0d"
+  },
+  {
+    "language": "jsonc",
+    "altName": "JSON with comments",
+    "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc.git",
+    "files": [
+      "parser.c"
+    ],
+    "maintainedBy": "@WhyNotHugo",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "jsonnet",
@@ -1362,8 +1366,8 @@
   },
   {
     "language": "luap",
+    "altName": "lua patterns",
     "url": "https://github.com/amaanq/tree-sitter-luap",
-    "doc": "lua patterns",
     "files": [
       "parser.c"
     ],
@@ -1404,8 +1408,8 @@
   },
   {
     "language": "markdown",
+    "altName": "markdown (basic highlighting)",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
-    "doc": "markdown (basic highlighting)",
     "files": [
       "parser.c",
       "scanner.c"
@@ -1417,8 +1421,8 @@
   },
   {
     "language": "markdown_inline",
+    "altName": "markdown_inline (needed for full highlighting)",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
-    "doc": "markdown_inline (needed for full highlighting)",
     "files": [
       "parser.c",
       "scanner.c"
@@ -1456,6 +1460,7 @@
     "files": [
       "parser.c"
     ],
+    "maintainedBy": "@monaqa",
     "reference": "master",
     "revision": "e8dac87a9f789b23a2c7ab8e55b485a2f5927b98"
   },
@@ -1472,13 +1477,12 @@
   {
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
-    "doc": "Does not store generated files in the repo",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@artagnon",
-    "skip": true,
     "pending": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
@@ -1509,6 +1513,7 @@
       "parser.c",
       "scanner.c"
     ],
+    "maintainedBy": "@ErinvanderVeen, @yannham",
     "reference": "main",
     "revision": "58baf89db8fdae54a84bcf22c80ff10ee3f929ed"
   },
@@ -1651,6 +1656,7 @@
       "parser.c",
       "scanner.c"
     ],
+    "maintainedBy": "@milisims",
     "reference": "main",
     "revision": "64cfbc213f5a83da17632c95382a5a0a2f3357c1"
   },
@@ -1687,13 +1693,12 @@
   {
     "language": "perl",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
-    "doc": "is currently broken, it does not store the generated artifacts in the repo. The repo must be cloned, artifacts generated and copied manually",
     "files": [
       "scanner.c",
       "tsp_unicode.h"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "skip": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": "ce78903240204fe2a9e192deeed77eccf4c0f575"
   },
@@ -1758,20 +1763,19 @@
   {
     "language": "pod",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-pod",
-    "doc": "Doesn't store generated parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "skip": true,
     "pending": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
   {
     "language": "poe_filter",
+    "altName": "Path of Exile item filter",
     "url": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
-    "doc": "Path of Exile item filter",
     "files": [
       "parser.c"
     ],
@@ -1897,8 +1901,8 @@
   },
   {
     "language": "pymanifest",
+    "altName": "PyPA manifest",
     "url": "https://github.com/ObserverOfTime/tree-sitter-pymanifest",
-    "doc": "PyPA manifest",
     "files": [
       "parser.c"
     ],
@@ -1954,6 +1958,7 @@
   },
   {
     "language": "query",
+    "altName": "Tree-Sitter query language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
     "files": [
       "parser.c"
@@ -1980,6 +1985,7 @@
       "parser.c",
       "scanner.c"
     ],
+    "maintainedBy": "@6cdh",
     "reference": "main",
     "revision": "e4ba1a9674a3b4dd7905d04f194ae6f8331be342"
   },
@@ -2045,8 +2051,8 @@
   },
   {
     "language": "requirements",
+    "altName": "pip requirements",
     "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
-    "doc": "pip requirements",
     "files": [
       "parser.c"
     ],
@@ -2160,6 +2166,7 @@
     "files": [
       "parser.c"
     ],
+    "maintainedBy": "@6cdh",
     "reference": "main",
     "revision": "85b6188fb77c03dfb01d13e58e2844450506860c"
   },
@@ -2223,6 +2230,7 @@
       "parser.c",
       "scanner.c"
     ],
+    "maintainedBy": "@osthomas",
     "reference": "main",
     "revision": "65a6c3b4671877821082164da0a310851b211953"
   },
@@ -2282,13 +2290,12 @@
   {
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
-    "doc": "They don't commit the generated parser files to the main branch",
     "files": [
       "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "skip": true,
+    "needsGenerate": true,
     "reference": "main",
     "revision": "da2d1eff425b146d3c8cab7be8dfa98b11d896dc"
   },
@@ -2381,13 +2388,12 @@
   {
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
-    "doc": "Doesn't save generated parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@alex-pinkus",
-    "skip": true,
     "pending": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
@@ -2447,13 +2453,12 @@
   {
     "language": "teal",
     "url": "https://github.com/euclidianAce/tree-sitter-teal",
-    "doc": "Doesn't save parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@euclidianAce",
-    "skip": true,
     "pending": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
@@ -2644,13 +2649,12 @@
   {
     "language": "unison",
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
-    "doc": "Doesn't save generated parser",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@tapegram",
-    "skip": true,
     "pending": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
@@ -2666,8 +2670,8 @@
   },
   {
     "language": "uxntal",
+    "altName": "uxn tal",
     "url": "https://github.com/amaanq/tree-sitter-uxntal",
-    "doc": "uxn tal",
     "files": [
       "parser.c",
       "scanner.c"
@@ -2776,14 +2780,13 @@
   {
     "language": "wing",
     "url": "https://github.com/winglang/wing",
-    "doc": "Doesn't save generated parser",
     "files": [
       "parser.c"
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "skip": true,
     "pending": true,
+    "needsGenerate": true,
     "reference": "main",
     "revision": ""
   },

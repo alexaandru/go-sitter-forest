@@ -5,6 +5,10 @@ update-all:
 	@echo Updating all ...
 	@go run -tags tools ./internal/automation update-all
 
+update-grammars.json:
+	@echo Updating grammars.json ...
+	@go run -tags tools ./internal/automation update-json
+
 update-%: %
 	@echo Updating lang $* ...
 	@go run -tags tools ./internal/automation update $*

@@ -1,4 +1,4 @@
-package golang
+package Go
 
 //#include "parser.h"
 //TSLanguage *tree_sitter_go();

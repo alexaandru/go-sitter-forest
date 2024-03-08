@@ -1,10 +1,10 @@
-package golang_test
+package Go_test
 
 import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-tree-sitter-parsers/golang"
+	Go "github.com/alexaandru/go-tree-sitter-parsers/go"
 	sitter "github.com/smacker/go-tree-sitter"
 )
 
@@ -30,7 +30,7 @@ func (p Person) Speak() string {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), golang.GetLanguage())
+	n, err := sitter.ParseCtx(context.Background(), []byte(code), Go.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}
