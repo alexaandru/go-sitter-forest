@@ -2,19 +2,19 @@ check-updates:
 	@go run -tags tools ./internal/automation check-updates
 
 update-all:
-	@echo Updating all ...
+	@echo "Updating all (applicable) languages ..."
 	@go run -tags tools ./internal/automation update-all
 
 update-grammars.json:
-	@echo Updating grammars.json ...
+	@echo "Updating grammars.json ..."
 	@go run -tags tools ./internal/automation update-json
 
 update-%: %
-	@echo Updating lang $* ...
+	@echo "Updating $* language ..."
 	@go run -tags tools ./internal/automation update $*
 
 force-update-%: %
-	@echo "Updating lang (forced) $*" ...
+	@echo "Force updating $* language" ...
 	@go run -tags tools ./internal/automation force-update $*
 
 test:

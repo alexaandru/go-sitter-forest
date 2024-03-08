@@ -105,7 +105,7 @@ func updateAll() (err error) {
 		return
 	}
 
-	upd, notUpd := 0, 0
+	chk, upd, notUpd := 0, 0, 0
 
 	g := new(errgroup.Group)
 	for _, gr := range grammars {
@@ -128,12 +128,14 @@ func updateAll() (err error) {
 			continue
 		}
 
-		upd++
+		chk++
 
 		v := gr.NewVersion()
 		if v == nil {
 			continue
 		}
+
+		upd++
 
 		gr.Version = v
 
@@ -144,7 +146,7 @@ func updateAll() (err error) {
 		return
 	}
 
-	fmt.Printf("\nUpdated %d languages, skipped %d\n", upd, notUpd)
+	fmt.Printf("\nVerified %d in total: %d updated; %d skipped.\n", chk, upd, notUpd)
 
 	return writeGrammarsFile()
 }
