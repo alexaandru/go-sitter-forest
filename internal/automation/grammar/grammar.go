@@ -70,7 +70,7 @@ type Version struct {
 	Revision  string `json:"revision"`
 }
 
-const guc = "https://raw.githubusercontent.com/%s"
+const guc = "https://raw.githubusercontent.com/%s/%s/"
 
 // FetchNewVersion attempts to fetch a new version, for the grammar.
 // If there is a new version, then gr.newVersion will be populated
@@ -119,8 +119,6 @@ func (gr *Grammar) FilesMap() map[string]string {
 	}
 
 	out := map[string]string{}
-	url += "/" + gr.Revision + "/"
-
 	add := func(pat string) {
 		var k, v string
 
@@ -146,9 +144,11 @@ func (gr *Grammar) FilesMap() map[string]string {
 func (gr *Grammar) contentURL() string {
 	switch {
 	case strings.Contains(gr.URL, "github.com"):
-		return fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"))
+		return fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"), gr.Revision)
 	case strings.Contains(gr.URL, "gitlab.com"):
-		return gr.URL + "/-/raw/"
+		return fmt.Sprintf("%s/-/raw/%s/", gr.URL, gr.Reference)
+	case strings.Contains(gr.URL, "git.sr.ht"):
+		return fmt.Sprintf("%s/blob/%s/", gr.URL, gr.Revision)
 	default:
 		return "unrecognized source code hosting"
 	}

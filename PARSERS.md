@@ -1,6 +1,6 @@
-# Supported Parsers
+# 258 Supported Parsers
 
-The list of all parsers, both added (257) and planned (10).
+9 parsers left to add (pending).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -210,7 +210,7 @@ The list of all parsers, both added (257) and planned (10).
 - [x] [scss](https://github.com/serenadeai/tree-sitter-scss) (maintained by @elianiva)
 - [x] [slang](https://github.com/theHamsta/tree-sitter-slang) (maintained by @theHamsta)
 - [x] [slint](https://github.com/slint-ui/tree-sitter-slint) (maintained by @hunger)
-- [ ] [smali](https://git.sr.ht/~yotam/tree-sitter-smali) (maintained by @amaanq)
+- [x] [smali](https://git.sr.ht/~yotam/tree-sitter-smali) (maintained by @amaanq)
 - [x] [smithy](https://github.com/indoorvivants/tree-sitter-smithy) (maintained by @amaanq, @keynmol)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) (maintained by @osthomas)
 - [x] [solidity](https://github.com/JoranHonig/tree-sitter-solidity) (maintained by @amaanq)

@@ -2154,6 +2154,7 @@
     ],
     "maintainedBy": "@WhyNotHugo",
     "pending": true,
+    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
@@ -2203,12 +2204,12 @@
     "language": "smali",
     "url": "https://git.sr.ht/~yotam/tree-sitter-smali",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5"
   },
   {
     "language": "smithy",

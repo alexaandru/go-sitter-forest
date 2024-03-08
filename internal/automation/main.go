@@ -266,9 +266,9 @@ func updateParsersMd() error {
 	}
 
 	planned, implemented := 0, 0
-	text := `# Supported Parsers
+	text := `# %d Supported Parsers
 
-The list of all parsers, both added (%d) and planned (%d).
+%d parsers left to add (pending).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->

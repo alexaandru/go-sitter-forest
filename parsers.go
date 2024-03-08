@@ -201,6 +201,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/scss"
 	"github.com/alexaandru/go-tree-sitter-parsers/slang"
 	"github.com/alexaandru/go-tree-sitter-parsers/slint"
+	"github.com/alexaandru/go-tree-sitter-parsers/smali"
 	"github.com/alexaandru/go-tree-sitter-parsers/smithy"
 	"github.com/alexaandru/go-tree-sitter-parsers/snakemake"
 	"github.com/alexaandru/go-tree-sitter-parsers/solidity"
@@ -459,6 +460,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"scss":               scss.GetLanguage,
 	"slang":              slang.GetLanguage,
 	"slint":              slint.GetLanguage,
+	"smali":              smali.GetLanguage,
 	"smithy":             smithy.GetLanguage,
 	"snakemake":          snakemake.GetLanguage,
 	"solidity":           solidity.GetLanguage,
