@@ -17,6 +17,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/bibtex"
 	"github.com/alexaandru/go-tree-sitter-parsers/bicep"
 	"github.com/alexaandru/go-tree-sitter-parsers/bitbake"
+	"github.com/alexaandru/go-tree-sitter-parsers/blueprint"
 	"github.com/alexaandru/go-tree-sitter-parsers/c"
 	"github.com/alexaandru/go-tree-sitter-parsers/c_sharp"
 	"github.com/alexaandru/go-tree-sitter-parsers/cairo"
@@ -63,6 +64,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/forth"
 	"github.com/alexaandru/go-tree-sitter-parsers/fortran"
 	"github.com/alexaandru/go-tree-sitter-parsers/fsh"
+	"github.com/alexaandru/go-tree-sitter-parsers/fusion"
 	FunC "github.com/alexaandru/go-tree-sitter-parsers/func"
 	"github.com/alexaandru/go-tree-sitter-parsers/gdscript"
 	"github.com/alexaandru/go-tree-sitter-parsers/gdshader"
@@ -111,6 +113,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/jsdoc"
 	"github.com/alexaandru/go-tree-sitter-parsers/json"
 	"github.com/alexaandru/go-tree-sitter-parsers/json5"
+	"github.com/alexaandru/go-tree-sitter-parsers/jsonc"
 	"github.com/alexaandru/go-tree-sitter-parsers/jsonnet"
 	"github.com/alexaandru/go-tree-sitter-parsers/julia"
 	"github.com/alexaandru/go-tree-sitter-parsers/kconfig"
@@ -175,6 +178,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/pymanifest"
 	"github.com/alexaandru/go-tree-sitter-parsers/python"
 	"github.com/alexaandru/go-tree-sitter-parsers/ql"
+	"github.com/alexaandru/go-tree-sitter-parsers/qmldir"
 	"github.com/alexaandru/go-tree-sitter-parsers/qmljs"
 	"github.com/alexaandru/go-tree-sitter-parsers/query"
 	"github.com/alexaandru/go-tree-sitter-parsers/r"
@@ -215,6 +219,7 @@ import (
 	"github.com/alexaandru/go-tree-sitter-parsers/svelte"
 	"github.com/alexaandru/go-tree-sitter-parsers/sxhkdrc"
 	"github.com/alexaandru/go-tree-sitter-parsers/systemtap"
+	"github.com/alexaandru/go-tree-sitter-parsers/t32"
 	"github.com/alexaandru/go-tree-sitter-parsers/tablegen"
 	"github.com/alexaandru/go-tree-sitter-parsers/tcl"
 	"github.com/alexaandru/go-tree-sitter-parsers/templ"
@@ -270,6 +275,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"bibtex":             bibtex.GetLanguage,
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,
+	"blueprint":          blueprint.GetLanguage,
 	"c":                  c.GetLanguage,
 	"c_sharp":            c_sharp.GetLanguage,
 	"cairo":              cairo.GetLanguage,
@@ -316,6 +322,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"forth":              forth.GetLanguage,
 	"fortran":            fortran.GetLanguage,
 	"fsh":                fsh.GetLanguage,
+	"fusion":             fusion.GetLanguage,
 	"func":               FunC.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
 	"gdshader":           gdshader.GetLanguage,
@@ -364,6 +371,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"jsdoc":              jsdoc.GetLanguage,
 	"json":               json.GetLanguage,
 	"json5":              json5.GetLanguage,
+	"jsonc":              jsonc.GetLanguage,
 	"jsonnet":            jsonnet.GetLanguage,
 	"julia":              julia.GetLanguage,
 	"kconfig":            kconfig.GetLanguage,
@@ -428,6 +436,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"pymanifest":         pymanifest.GetLanguage,
 	"python":             python.GetLanguage,
 	"ql":                 ql.GetLanguage,
+	"qmldir":             qmldir.GetLanguage,
 	"qmljs":              qmljs.GetLanguage,
 	"query":              query.GetLanguage,
 	"r":                  r.GetLanguage,
@@ -468,6 +477,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"svelte":             svelte.GetLanguage,
 	"sxhkdrc":            sxhkdrc.GetLanguage,
 	"systemtap":          systemtap.GetLanguage,
+	"t32":                t32.GetLanguage,
 	"tablegen":           tablegen.GetLanguage,
 	"tcl":                tcl.GetLanguage,
 	"templ":              templ.GetLanguage,

@@ -17,14 +17,18 @@ type Grammar struct {
 	// (such as `package go` or `package func`) a capitalzed version of the
 	// name is used (Go and FunC respectively).
 	Language string `json:"language"`
+
 	// Sometimes the name used for the lang can be unclear.
 	// In those cases an alternate name for the language is also recorded.
 	AltName string `json:"altName,omitempty"`
+
 	// At the tile of writing this it MUST be a Github repo URL.
 	URL string `json:"url"`
+
 	// Optional documentation. Typically used for grammars with
 	// problems (like Perl and SQL which are currently manually updated).
 	Doc string `json:"doc,omitempty"`
+
 	// List of files of interest from the repo.
 	// They can be just filenames, in which case they will be
 	// fetch from the "source" folder, otherwise, if they include
@@ -32,20 +36,26 @@ type Grammar struct {
 	// Most of the time, just "parser.c" is enough.
 	// You MUST NOT pass "parser.h", that is inferred automatically.
 	Files []string `json:"files"`
+
 	// Normally the root for src folder is the root of the repo.
 	// However, there are repos hosting multiple grammars, in which
 	// case they will have a diffrent source for each. If that's the
 	// case, use SrcRoot to indicate that root folder for src (but NOT
 	// including src).
 	SrcRoot string `json:"srcRoot,omitempty"`
+
 	// Repo maintainers.
 	MaintainedBy string `json:"maintainedBy,omitempty"`
+
 	// Flag to skip this grammar from updates (but not from checks).
 	Skip bool `json:"skip,omitempty"`
+
 	// Flag to completly ignore this grammar, as not-yet-implemented.
 	Pending bool `json:"pending,omitempty"`
+
 	// Flag to mark this grammar as experimental.
 	Experimental bool `json:"experimental,omitempty"`
+
 	// Some parsers to not ship the generated files.
 	// In those cases tree-sitter is needed to generate them,
 	// before they can be copied over. This flag indicates those cases.
@@ -134,7 +144,14 @@ func (gr *Grammar) FilesMap() map[string]string {
 }
 
 func (gr *Grammar) contentURL() string {
-	return fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"))
+	switch {
+	case strings.Contains(gr.URL, "github.com"):
+		return fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"))
+	case strings.Contains(gr.URL, "gitlab.com"):
+		return gr.URL + "/-/raw/"
+	default:
+		return "unrecognized source code hosting"
+	}
 }
 
 func fetchLastTag(repository string) (tag string, rev string, err error) {

@@ -1,6 +1,6 @@
 # Supported Parsers
 
-The list of all parsers, both added (251) and planned (16).
+The list of all parsers, both added (257) and planned (10).
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -19,7 +19,7 @@ The list of all parsers, both added (251) and planned (16).
 - [x] [bibtex](https://github.com/latex-lsp/tree-sitter-bibtex) (maintained by @theHamsta, @clason)
 - [x] [bicep](https://github.com/amaanq/tree-sitter-bicep) (maintained by @amaanq)
 - [x] [bitbake](https://github.com/amaanq/tree-sitter-bitbake) (maintained by @amaanq)
-- [ ] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint.git) (maintained by @gabmus)
+- [x] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint) (maintained by @gabmus)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) (maintained by @amaanq)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) (maintained by @Luxed)
 - [x] [cairo](https://github.com/amaanq/tree-sitter-cairo) (maintained by @amaanq)
@@ -68,7 +68,7 @@ The list of all parsers, both added (251) and planned (16).
 - [x] [fortran](https://github.com/stadelmanma/tree-sitter-fortran) (maintained by @amaanq)
 - [x] [fsh](https://github.com/mgramigna/tree-sitter-fsh) (maintained by @mgramigna)
 - [x] [func](https://github.com/amaanq/tree-sitter-func) (maintained by @amaanq)
-- [ ] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion.git) (maintained by @jirgn)
+- [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) (maintained by @jirgn)
 - [x] [Godot (gdscript)](https://github.com/PrestonKnopp/tree-sitter-gdscript) (maintained by @PrestonKnopp)
 - [x] [gdshader](https://github.com/GodOfAvacyn/tree-sitter-gdshader) (maintained by @godofavacyn)
 - [x] [git_config](https://github.com/the-mikedavis/tree-sitter-git-config) (maintained by @amaanq)
@@ -117,7 +117,7 @@ The list of all parsers, both added (251) and planned (16).
 - [x] [jsdoc](https://github.com/tree-sitter/tree-sitter-jsdoc) (maintained by @steelsojka)
 - [x] [json](https://github.com/tree-sitter/tree-sitter-json) (maintained by @steelsojka)
 - [x] [json5](https://github.com/Joakker/tree-sitter-json5) (maintained by @Joakker)
-- [ ] [JSON with comments](https://gitlab.com/WhyNotHugo/tree-sitter-jsonc.git) (maintained by @WhyNotHugo)
+- [x] [JSON with comments](https://gitlab.com/WhyNotHugo/tree-sitter-jsonc) (maintained by @WhyNotHugo)
 - [x] [jsonnet](https://github.com/sourcegraph/tree-sitter-jsonnet) (maintained by @nawordar)
 - [x] [julia](https://github.com/tree-sitter/tree-sitter-julia) (maintained by @theHamsta)
 - [x] [kconfig](https://github.com/amaanq/tree-sitter-kconfig) (maintained by @amaanq)
@@ -185,7 +185,7 @@ The list of all parsers, both added (251) and planned (16).
 - [x] [PyPA manifest](https://github.com/ObserverOfTime/tree-sitter-pymanifest) (maintained by @ObserverOfTime)
 - [x] [python](https://github.com/tree-sitter/tree-sitter-python) (maintained by @stsewd, @theHamsta)
 - [x] [ql](https://github.com/tree-sitter/tree-sitter-ql) (maintained by @pwntester)
-- [ ] [qmldir](https://github.com/Decodetalkers/tree-sitter-qmldir) (maintained by @amaanq)
+- [x] [qmldir](https://github.com/Decodetalkers/tree-sitter-qmldir) (maintained by @amaanq)
 - [x] [qmljs](https://github.com/yuja/tree-sitter-qmljs) (maintained by @Decodetalkers)
 - [x] [Tree-Sitter query language](https://github.com/tree-sitter-grammars/tree-sitter-query) (maintained by @steelsojka)
 - [x] [r](https://github.com/r-lib/tree-sitter-r) (maintained by @echasnovski)
@@ -230,7 +230,7 @@ The list of all parsers, both added (251) and planned (16).
 - [ ] [swift](https://github.com/alex-pinkus/tree-sitter-swift) (maintained by @alex-pinkus)
 - [x] [sxhkdrc](https://github.com/RaafatTurki/tree-sitter-sxhkdrc) (maintained by @RaafatTurki)
 - [x] [systemtap](https://github.com/ok-ryoko/tree-sitter-systemtap) (maintained by @ok-ryoko)
-- [ ] [t32](https://gitlab.com/xasc/tree-sitter-t32.git) (maintained by @xasc)
+- [x] [t32](https://gitlab.com/xasc/tree-sitter-t32) (maintained by @xasc)
 - [x] [tablegen](https://github.com/amaanq/tree-sitter-tablegen) (maintained by @amaanq)
 - [x] [tcl](https://github.com/tree-sitter-grammars/tree-sitter-tcl) (maintained by @lewis6991)
 - [ ] [teal](https://github.com/euclidianAce/tree-sitter-teal) (maintained by @euclidianAce)
@@ -238,7 +238,7 @@ The list of all parsers, both added (251) and planned (16).
 - [x] [textproto](https://github.com/PorterAtGoogle/tree-sitter-textproto) (maintained by @Porter)
 - [x] [thrift](https://github.com/duskmoon314/tree-sitter-thrift) (maintained by @amaanq, @duskmoon314)
 - [x] [tiger](https://github.com/ambroisie/tree-sitter-tiger) (maintained by @ambroisie)
-- [ ] [tlaplus](https://github.com/tlaplus-community/tree-sitter-tlaplus) (maintained by @ahelwer, @susliko)
+- [x] [tlaplus](https://github.com/tlaplus-community/tree-sitter-tlaplus) (maintained by @ahelwer, @susliko)
 - [x] [tmux](https://github.com/Freed-Wu/tree-sitter-tmux) (maintained by @Freed-Wu)
 - [x] [todotxt](https://github.com/arnarg/tree-sitter-todotxt) (maintained by @arnarg)
 - [x] [toml](https://github.com/ikatyang/tree-sitter-toml) (maintained by @tk-shirasaka)

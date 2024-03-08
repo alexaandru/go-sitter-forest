@@ -162,14 +162,13 @@
   },
   {
     "language": "blueprint",
-    "url": "https://gitlab.com/gabmus/tree-sitter-blueprint.git",
+    "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@gabmus",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "863cea9f83ad5637300478e0559262f1e791684b"
   },
   {
     "language": "c",
@@ -679,14 +678,14 @@
   },
   {
     "language": "fusion",
-    "url": "https://gitlab.com/jirgn/tree-sitter-fusion.git",
+    "url": "https://gitlab.com/jirgn/tree-sitter-fusion",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@jirgn",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "19db2f47ba4c3a0f6238d4ae0e2abfca16e61dd6"
   },
   {
     "language": "gdscript",
@@ -1195,14 +1194,13 @@
   {
     "language": "jsonc",
     "altName": "JSON with comments",
-    "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc.git",
+    "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
     "files": [
       "parser.c"
     ],
     "maintainedBy": "@WhyNotHugo",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "02b01653c8a1c198ae7287d566efa86a135b30d5"
   },
   {
     "language": "jsonnet",
@@ -1940,9 +1938,8 @@
       "parser.c"
     ],
     "maintainedBy": "@amaanq",
-    "pending": true,
     "reference": "master",
-    "revision": ""
+    "revision": "6b2b5e41734bd6f07ea4c36ac20fb6f14061c841"
   },
   {
     "language": "qmljs",
@@ -2419,14 +2416,14 @@
   },
   {
     "language": "t32",
-    "url": "https://gitlab.com/xasc/tree-sitter-t32.git",
+    "url": "https://gitlab.com/xasc/tree-sitter-t32",
     "files": [
-      "parser.c"
+      "parser.c",
+      "scanner.c"
     ],
     "maintainedBy": "@xasc",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "reference": "main",
+    "revision": "0a457a557be7779336bc8ac2b396e73797bc68f7"
   },
   {
     "language": "tablegen",
@@ -2512,7 +2509,6 @@
       "scanner.cc"
     ],
     "maintainedBy": "@ahelwer, @susliko",
-    "pending": true,
     "reference": "main",
     "revision": "aaf5bb5c1df0a6e583bb51efa519a9ac788b2ad8"
   },
