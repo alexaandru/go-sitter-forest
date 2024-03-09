@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package dhall
 
 //#include "parser.h"

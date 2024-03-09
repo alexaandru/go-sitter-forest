@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package proto_test
 
 import (

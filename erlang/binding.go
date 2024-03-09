@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package erlang
 
 //#include "parser.h"

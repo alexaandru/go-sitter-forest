@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package disassembly_test
 
 import (

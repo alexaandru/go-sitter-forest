@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hlsplaylist_test
 
 import (

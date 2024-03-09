@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package verilog_test
 
 import (

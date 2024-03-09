@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hack
 
 //#include "parser.h"

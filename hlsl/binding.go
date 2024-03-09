@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hlsl
 
 //#include "parser.h"

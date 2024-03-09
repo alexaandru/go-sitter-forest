@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package devicetree
 
 //#include "parser.h"

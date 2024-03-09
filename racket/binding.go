@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package racket
 
 //#include "parser.h"

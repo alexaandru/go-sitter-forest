@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package kotlin_test
 
 import (
@@ -9,8 +11,7 @@ import (
 )
 
 const (
-	code = `
-import java.time.LocalDateTime
+	code = `import java.time.LocalDateTime
 
 fun main(args: Array<String>) {
 

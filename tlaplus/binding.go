@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tlaplus
 
 //#include "parser.h"

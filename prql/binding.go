@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package prql
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package supercollider_test
 
 import (

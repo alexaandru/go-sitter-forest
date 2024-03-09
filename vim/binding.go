@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package vim
 
 //#include "parser.h"

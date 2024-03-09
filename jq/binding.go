@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package jq
 
 //#include "parser.h"

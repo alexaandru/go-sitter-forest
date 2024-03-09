@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package puppet_test
 
 import (

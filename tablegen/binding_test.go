@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tablegen_test
 
 import (

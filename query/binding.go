@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package query
 
 //#include "parser.h"

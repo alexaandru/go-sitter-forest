@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package scheme_test
 
 import (

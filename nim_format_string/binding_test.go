@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nim_format_string_test
 
 import (

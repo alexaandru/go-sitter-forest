@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tlaplus_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package julia_test
 
 import (

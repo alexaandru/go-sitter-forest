@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gotmpl_test
 
 import (

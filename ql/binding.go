@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ql
 
 //#include "parser.h"

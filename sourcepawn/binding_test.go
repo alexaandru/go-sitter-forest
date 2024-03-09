@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package sourcepawn_test
 
 import (

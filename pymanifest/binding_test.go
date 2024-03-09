@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pymanifest_test
 
 import (

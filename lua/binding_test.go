@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package lua_test
 
 import (

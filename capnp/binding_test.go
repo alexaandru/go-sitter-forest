@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package capnp_test
 
 import (

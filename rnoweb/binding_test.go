@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package rnoweb_test
 
 import (

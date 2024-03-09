@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package menhir_test
 
 import (

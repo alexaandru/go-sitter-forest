@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package rasi_test
 
 import (

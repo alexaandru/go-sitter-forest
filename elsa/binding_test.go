@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package elsa_test
 
 import (

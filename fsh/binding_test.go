@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package fsh_test
 
 import (

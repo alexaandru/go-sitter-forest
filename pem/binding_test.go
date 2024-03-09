@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pem_test
 
 import (

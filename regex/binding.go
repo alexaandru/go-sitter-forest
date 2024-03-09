@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package regex
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package supercollider
 
 //#include "parser.h"

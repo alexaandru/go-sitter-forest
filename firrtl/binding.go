@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package firrtl
 
 //#include "parser.h"

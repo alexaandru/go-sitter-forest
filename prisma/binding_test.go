@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package prisma_test
 
 import (

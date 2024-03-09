@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package embedded_template_test
 
 import (

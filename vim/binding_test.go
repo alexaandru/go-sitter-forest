@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package vim_test
 
 import (

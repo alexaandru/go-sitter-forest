@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ebnf_test
 
 import (

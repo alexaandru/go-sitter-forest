@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ocaml_interface_test
 
 import (

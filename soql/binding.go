@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package soql
 
 //#include "parser.h"

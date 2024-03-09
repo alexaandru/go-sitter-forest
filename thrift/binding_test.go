@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package thrift_test
 
 import (

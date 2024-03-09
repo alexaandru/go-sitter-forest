@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pioasm_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package scala
 
 //#include "parser.h"

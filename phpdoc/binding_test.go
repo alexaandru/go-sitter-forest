@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package phpdoc_test
 
 import (

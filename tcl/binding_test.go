@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tcl_test
 
 import (

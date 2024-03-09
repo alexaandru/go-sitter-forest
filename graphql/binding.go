@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package graphql
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package re2c
 
 //#include "parser.h"

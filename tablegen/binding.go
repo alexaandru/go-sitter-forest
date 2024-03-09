@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tablegen
 
 //#include "parser.h"

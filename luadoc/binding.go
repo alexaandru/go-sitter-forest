@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package luadoc
 
 //#include "parser.h"

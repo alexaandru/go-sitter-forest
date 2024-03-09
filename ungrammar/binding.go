@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ungrammar
 
 //#include "parser.h"

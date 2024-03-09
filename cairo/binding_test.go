@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cairo_test
 
 import (

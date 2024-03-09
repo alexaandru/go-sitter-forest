@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cooklang
 
 //#include "parser.h"

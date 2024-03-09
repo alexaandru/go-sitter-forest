@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package prql_test
 
 import (

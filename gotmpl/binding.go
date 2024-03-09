@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gotmpl
 
 //#include "parser.h"

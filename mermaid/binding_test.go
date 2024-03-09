@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package mermaid_test
 
 import (

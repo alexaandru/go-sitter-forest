@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package r_test
 
 import (

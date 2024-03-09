@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package elvish
 
 //#include "parser.h"

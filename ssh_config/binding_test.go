@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ssh_config_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tsx
 
 //#include "parser.h"

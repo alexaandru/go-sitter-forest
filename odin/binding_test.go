@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package odin_test
 
 import (

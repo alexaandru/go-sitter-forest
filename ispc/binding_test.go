@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ispc_test
 
 import (

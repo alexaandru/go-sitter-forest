@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package rust_test
 
 import (

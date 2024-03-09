@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package liquidsoap
 
 //#include "parser.h"

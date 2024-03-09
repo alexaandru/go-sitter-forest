@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package turtle_test
 
 import (

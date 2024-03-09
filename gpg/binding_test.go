@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gpg_test
 
 import (

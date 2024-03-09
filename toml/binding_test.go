@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package toml_test
 
 import (

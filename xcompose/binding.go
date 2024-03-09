@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package xcompose
 
 //#include "parser.h"

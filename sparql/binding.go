@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package sparql
 
 //#include "parser.h"

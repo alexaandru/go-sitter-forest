@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package typescript
 
 //#include "parser.h"

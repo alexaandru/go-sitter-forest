@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hcl_test
 
 import (

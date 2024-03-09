@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package llvm_test
 
 import (

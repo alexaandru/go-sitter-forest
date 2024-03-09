@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package markdown
 
 //#include "parser.h"

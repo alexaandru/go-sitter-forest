@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package glimmer
 
 //#include "parser.h"

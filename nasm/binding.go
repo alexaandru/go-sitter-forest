@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nasm
 
 //#include "parser.h"

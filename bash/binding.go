@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bash
 
 //#include "parser.h"

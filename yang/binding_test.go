@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package yang_test
 
 import (

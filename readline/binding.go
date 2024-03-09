@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package readline
 
 //#include "parser.h"

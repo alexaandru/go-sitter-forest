@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package zathurarc
 
 //#include "parser.h"

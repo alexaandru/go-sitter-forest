@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package git_config_test
 
 import (

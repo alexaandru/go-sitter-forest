@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package python
 
 //#include "parser.h"

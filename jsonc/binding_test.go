@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package jsonc_test
 
 import (

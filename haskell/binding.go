@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package haskell
 
 //#include "parser.h"

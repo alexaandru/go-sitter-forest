@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package FunC_test
 
 import (

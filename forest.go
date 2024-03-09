@@ -1,6 +1,10 @@
-package parsers
+package forest
 
 import (
+	_ "embed"
+	enc_json "encoding/json"
+	"slices"
+
 	sitter "github.com/smacker/go-tree-sitter"
 
 	"github.com/alexaandru/go-sitter-forest/ada"
@@ -13,6 +17,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/awk"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
+
 	//"github.com/alexaandru/go-sitter-forest/beancount"
 	"github.com/alexaandru/go-sitter-forest/bibtex"
 	"github.com/alexaandru/go-sitter-forest/bicep"
@@ -64,8 +70,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/forth"
 	"github.com/alexaandru/go-sitter-forest/fortran"
 	"github.com/alexaandru/go-sitter-forest/fsh"
-	"github.com/alexaandru/go-sitter-forest/fusion"
 	FunC "github.com/alexaandru/go-sitter-forest/func"
+	"github.com/alexaandru/go-sitter-forest/fusion"
 	"github.com/alexaandru/go-sitter-forest/gdscript"
 	"github.com/alexaandru/go-sitter-forest/gdshader"
 	"github.com/alexaandru/go-sitter-forest/git_config"
@@ -78,14 +84,15 @@ import (
 	"github.com/alexaandru/go-sitter-forest/glsl"
 	"github.com/alexaandru/go-sitter-forest/gn"
 	"github.com/alexaandru/go-sitter-forest/gnuplot"
-	"github.com/alexaandru/go-sitter-forest/godot_resource"
 	Go "github.com/alexaandru/go-sitter-forest/go"
+	"github.com/alexaandru/go-sitter-forest/godot_resource"
 	"github.com/alexaandru/go-sitter-forest/gomod"
 	"github.com/alexaandru/go-sitter-forest/gosum"
 	"github.com/alexaandru/go-sitter-forest/gotmpl"
 	"github.com/alexaandru/go-sitter-forest/gowork"
 	"github.com/alexaandru/go-sitter-forest/gpg"
 	"github.com/alexaandru/go-sitter-forest/graphql"
+	"github.com/alexaandru/go-sitter-forest/groovy"
 	"github.com/alexaandru/go-sitter-forest/gstlaunch"
 	"github.com/alexaandru/go-sitter-forest/hack"
 	"github.com/alexaandru/go-sitter-forest/hare"
@@ -121,6 +128,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/kotlin"
 	"github.com/alexaandru/go-sitter-forest/kusto"
 	"github.com/alexaandru/go-sitter-forest/lalrpop"
+	"github.com/alexaandru/go-sitter-forest/latex"
 	"github.com/alexaandru/go-sitter-forest/ledger"
 	"github.com/alexaandru/go-sitter-forest/leo"
 	"github.com/alexaandru/go-sitter-forest/linkerscript"
@@ -260,6 +268,11 @@ import (
 	"github.com/alexaandru/go-sitter-forest/zig"
 )
 
+//go:embed grammars.json
+var info []byte
+
+// FIXME: beancount and org cannot be used by the same app, as they both define some common methods.
+// "beancount":          beancount.GetLanguage,
 var langNameFuncs = map[string]func() *sitter.Language{
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
@@ -271,8 +284,6 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"awk":                awk.GetLanguage,
 	"bash":               bash.GetLanguage,
 	"bass":               bass.GetLanguage,
-    // FIXME: beancount and org cannot be used by the same app, as they both define some common methods.
-    // "beancount":          beancount.GetLanguage,
 	"bibtex":             bibtex.GetLanguage,
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,
@@ -323,8 +334,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"forth":              forth.GetLanguage,
 	"fortran":            fortran.GetLanguage,
 	"fsh":                fsh.GetLanguage,
-	"fusion":             fusion.GetLanguage,
 	"func":               FunC.GetLanguage,
+	"fusion":             fusion.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
 	"gdshader":           gdshader.GetLanguage,
 	"git_config":         git_config.GetLanguage,
@@ -345,6 +356,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"gowork":             gowork.GetLanguage,
 	"gpg":                gpg.GetLanguage,
 	"graphql":            graphql.GetLanguage,
+	"groovy":             groovy.GetLanguage,
 	"gstlaunch":          gstlaunch.GetLanguage,
 	"hack":               hack.GetLanguage,
 	"hare":               hare.GetLanguage,
@@ -380,6 +392,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"kotlin":             kotlin.GetLanguage,
 	"kusto":              kusto.GetLanguage,
 	"lalrpop":            lalrpop.GetLanguage,
+	"latex":              latex.GetLanguage,
 	"ledger":             ledger.GetLanguage,
 	"leo":                leo.GetLanguage,
 	"linkerscript":       linkerscript.GetLanguage,
@@ -519,7 +532,10 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"zig":                zig.GetLanguage,
 }
 
-var langNames []string
+var (
+	langNames []string
+	grammars  []*grammar.Grammar
+)
 
 // Lang returns the corresponding TS language function for name.
 // Language name must follow the TS convention (lowercase, letters only).
@@ -537,4 +553,29 @@ func SupportedLangs() []string {
 	}
 
 	return langNames
+}
+
+func Info(name string) *grammar.Grammar {
+	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
+		return x.Language == name
+	})
+
+	if i < 0 {
+		return nil
+	}
+
+	gr := grammars[i]
+
+	if gr.Skip || gr.Pending {
+		return nil
+	}
+
+	return gr
+}
+
+func init() {
+	grammars = []*grammar.Grammar{}
+	if err := enc_json.Unmarshal(info, &grammars); err != nil {
+		panic(err)
+	}
 }

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tmux
 
 //#include "parser.h"

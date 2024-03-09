@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package typoscript_test
 
 import (

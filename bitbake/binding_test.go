@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bitbake_test
 
 import (

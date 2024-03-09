@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package svelte
 
 //#include "parser.h"

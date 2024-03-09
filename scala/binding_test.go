@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package scala_test
 
 import (

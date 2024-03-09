@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package todotxt_test
 
 import (

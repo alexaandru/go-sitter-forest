@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package htmldjango
 
 //#include "parser.h"

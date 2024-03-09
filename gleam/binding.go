@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gleam
 
 //#include "parser.h"

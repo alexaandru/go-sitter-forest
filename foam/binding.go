@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package foam
 
 //#include "parser.h"

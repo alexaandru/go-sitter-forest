@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nickel
 
 //#include "parser.h"

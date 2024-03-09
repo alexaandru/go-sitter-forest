@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package janet_simple_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nim
 
 //#include "parser.h"

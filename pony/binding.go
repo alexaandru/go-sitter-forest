@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pony
 
 //#include "parser.h"

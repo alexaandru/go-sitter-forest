@@ -25,7 +25,7 @@ instead of spaces) and the same as the query folder name.
 This keeps things simple and consistent.
 
 In rare cases, the Go package name differs from the language name: 
-- `go` actually has the package `Go` because `package go` does not go well in Go
+- `go` actually has the package name `Go` because `package go` does not go well in Go
   (pun intended) but otherwise the language name remains "go";
 - `func` language, same problem as above, so package name is actually `FunC`
   (but everything else is `func` as normal: folder, lang name, etc.).
@@ -33,7 +33,7 @@ In rare cases, the Go package name differs from the language name:
 Also, some languages may have names that are not very straightforward acronyms.
 In those cases, an `altName` field will be populated, i.e. `requirements` lang
 has an `altName` of `Pip requirements`, `query` has `Tree-Sitter Query Language`
-and so on. Search [grammar.json](/internal/automation/grammars.json) for
+and so on. Search [grammar.json](grammars.json) for
 your grammar of interest.
 
 ## Usage
@@ -78,14 +78,14 @@ size **will be huge**, as in 200MB+ huge) then you can use the root package, i.e
 package main
 
 import (
-    parsers "github.com/alexaandru/go-sitter-forest"
+    forest "github.com/alexaandru/go-sitter-forest"
     sitter "github.com/smacker/go-tree-sitter"
 )
 
 func main() {
     content := []byte("your source code goes here")
     parser := sitter.NewParser()
-    parser.SetLanguage(parsers.Lang("ada"))
+    parser.SetLanguage(forest.Lang("ada"))
 
     // ...
 }
@@ -94,6 +94,25 @@ func main() {
 this way you can fetch and use any of the parsers, without having to manually import
 all of them. You should rarely need this though, unless you're writing a text editor
 or something.
+
+A third way, and perhaps the most convenient, is to use the included [Plugins.make](Plugins.make)
+makefile, which allows easy creation of any and all plugins. Simply copy it to
+your repo, and then you can easily `make -f Plugins.make plugin-ada`, etc. or
+use the `plugin-all` target which creates all the plugins.
+
+Then you can selectively use them in your app using the [plugins mechanism](https://pkg.go.dev/plugin).
+
+**IMPORTANT:** You must use `-trimpath` when building your app, when using plugins
+(the [Plugins.make](Plugins.make) file already includes it, but the app that uses them also needs it).
+
+### Info
+
+Besides getting the `GetLanguage()` function for each lang, you can also retrieve
+it's information (it's corresponding `grammars.json` entry) via the `Info()` function
+available in all 3 usage modes: library, "bulk loader" (forest package) and plugin.
+
+The returned `Grammar` type implements `Stringer` so it should give a nice summary
+when printed (to screen or logs, etc.).
 
 ## Parser Code Changes
 
@@ -122,12 +141,8 @@ performed to the code, changes which are detailed below:
 
 ## Roadmap
 
-- add all the remaining parsers (and keep them up to date);
-- find a way to automate currently not-automated parsers: perl, sql & co. - they do not
-  commit the generated files to the repo, so the current automation doesn't work on them;
-- (maybe) add nvim_treesitter queries in here too, as a submodule.
-  Parsers are of limited use without a complementary set of good queries;
-- (maybe) expose them also as plugins? Since the end goal is ~260+ parsers,
-  embedding them all in a binary will be "unpleasant" to say the least. If I
-  can make it easier for end users to generate them all as plugins, that would
-  be nice.
+- add the remaining parsers;
+- fix identifier clash between `beancount` and `org` (currently they cannot both
+  be imported by the same app);
+- resolve any remaining TODO and FIXME items;
+- automate the ones that need regeneration (have `NeedsGenerate == true`).

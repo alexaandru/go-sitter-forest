@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package twig
 
 //#include "parser.h"

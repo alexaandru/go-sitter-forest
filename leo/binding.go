@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package leo
 
 //#include "parser.h"

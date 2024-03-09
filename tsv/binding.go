@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tsv
 
 //#include "parser.h"

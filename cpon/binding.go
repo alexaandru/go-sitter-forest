@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cpon
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package dart_test
 
 import (

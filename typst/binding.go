@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package typst
 
 //#include "parser.h"

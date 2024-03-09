@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package erlang_test
 
 import (

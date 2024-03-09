@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package godot_resource_test
 
 import (

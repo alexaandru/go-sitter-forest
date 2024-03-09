@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package proto
 
 //#include "parser.h"

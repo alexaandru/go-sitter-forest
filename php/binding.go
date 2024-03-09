@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package php
 
 //#include "parser.h"

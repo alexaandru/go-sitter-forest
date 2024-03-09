@@ -1,5 +1,3 @@
-//go:build tools
-
 package main
 
 import (
@@ -15,17 +13,35 @@ import (
 	"path/filepath"
 	"slices"
 	"strings"
+	"sync"
 
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"golang.org/x/sync/errgroup"
 )
 
-const force = true
+type Grammars []*grammar.Grammar
+
+func (gx Grammars) Find(lang string) (i int, err error) {
+	i = slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
+		return x.Language == lang
+	})
+
+	if i < 0 {
+		err = fmt.Errorf("grammar %q not found", lang)
+	}
+
+	return
+}
+
+const (
+	force   = true
+	plugFmt = "%s:\n\t@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/%s"
+)
 
 var (
-	errUnknownCmd = fmt.Errorf("unknown command! Must be one of: check-updates, update-all, [force-]update <lang>")
-	grammarsJson  = filepath.Join("internal", "automation", "grammars.json")
-	grammars      []*grammar.Grammar
+	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings, create-plugins, update-grammars")
+	grammarsJson  = "grammars.json"
+	grammars      = Grammars{}
 	replaceMap    = map[string]string{
 		`"../../common/scanner.h"`:       `"scanner.h"`,
 		`"tree_sitter/parser.h"`:         `"parser.h"`,
@@ -37,15 +53,11 @@ var (
 )
 
 func checkUpdates() error {
-	if err := fetchNewVersions(); err != nil {
-		return err
-	}
-
 	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Reference", "Status", strings.Repeat("─", 100))
 
-	for _, gr := range grammars {
-		if gr.Pending {
-			continue
+	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+		if err = gr.FetchNewVersion(); err != nil {
+			return
 		}
 
 		status := "(up-to-date)"
@@ -56,101 +68,92 @@ func checkUpdates() error {
 		}
 
 		fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
-	}
 
-	return nil
-}
-
-func fetchNewVersions() error {
-	g := new(errgroup.Group)
-
-	for _, gr := range grammars {
-		g.Go(func() error { return gr.FetchNewVersion() })
-	}
-
-	return g.Wait()
-}
-
-func update(lang string, force bool) (err error) {
-	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
-		return x.Language == lang
+		return nil
 	})
-	if i < 0 {
-		return fmt.Errorf("grammar %q not found", lang)
+}
+
+func updateAll() (err error) {
+	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+		return update(gr, !force)
+	})
+}
+
+func updateBindings() error {
+	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+		return createBindings(gr.Language, force)
+	})
+}
+
+func createPlugins() (err error) {
+	mkFileContent := []string{}
+	mkFileTargets := []string{}
+	mux := sync.Mutex{}
+
+	err = forEachGrammar(func(gr *grammar.Grammar) (err error) {
+		mux.Lock()
+		defer mux.Unlock()
+
+		target := "plugin-" + gr.Language
+		mkFileTargets = append(mkFileTargets, target)
+		mkFileContent = append(mkFileContent, fmt.Sprintf(plugFmt, target, gr.Language))
+
+		return createPlugin(gr.Language)
+	})
+	if err != nil {
+		return
 	}
 
-	gr := grammars[i]
+	slices.Sort(mkFileContent)
+	slices.Sort(mkFileTargets)
+
+	content := slices.Concat([]string{"plugin-all: " + strings.Join(mkFileTargets, " ")}, mkFileContent)
+
+	return os.WriteFile("Plugins.make", []byte(strings.Join(content, "\n\n")), 0o644)
+}
+
+func updateGrammars() (err error) {
+	slices.SortFunc(grammars, func(a, b *grammar.Grammar) int {
+		return cmp.Compare(strings.ToLower(a.Language), strings.ToLower(b.Language))
+	})
+
+	if err = writeJSON(grammarsJson, grammars); err != nil {
+		return
+	}
+
+	err = forEachGrammar(func(gr *grammar.Grammar) error {
+		return writeJSON(filepath.Join(gr.Language, "grammar.json"), gr)
+	})
+	if err != nil {
+		return
+	}
+
+	return updateParsersMd()
+}
+
+func update(gr *grammar.Grammar, force bool) (err error) {
+	if gr.NeedsGenerate {
+		return
+	}
+
 	if err = gr.FetchNewVersion(); err != nil {
 		return
 	}
 
 	if v := gr.NewVersion(); v == nil {
 		if !force {
-			quit("grammar is not outdated")
-		} else {
-			fmt.Println("re-downloading up-to-date grammar")
+			fmt.Printf("%-20sgrammar is not outdated\n", gr.Language)
+
+			return
 		}
+
+		fmt.Printf("%-20sre-downloading up-to-date grammar: ", gr.Language)
 	} else {
+		fmt.Printf("%-20supdating\n", gr.Language)
 		gr.Version = v
 	}
 
-	if err = downloadGrammar(gr); err != nil {
-		return
-	}
-
-	return writeGrammarsFile()
-}
-
-// TODO: DRY: refactor the duplication between updateAll and Update.
-func updateAll() (err error) {
-	if err = fetchNewVersions(); err != nil {
-		return
-	}
-
-	chk, upd, notUpd := 0, 0, 0
-
-	g := new(errgroup.Group)
-	for _, gr := range grammars {
-		skipReason := ""
-
-		switch {
-		case gr.Skip:
-			skipReason = gr.Doc
-		case gr.NeedsGenerate:
-			skipReason = "needs the parser to be generated (not currently supported)"
-		case gr.Pending:
-			skipReason = "not implemented (pending)"
-		}
-
-		if skipReason != "" {
-			fmt.Printf("Skipping %-18q%s\n", gr.Language, skipReason)
-
-			notUpd++
-
-			continue
-		}
-
-		chk++
-
-		v := gr.NewVersion()
-		if v == nil {
-			continue
-		}
-
-		upd++
-
-		gr.Version = v
-
-		g.Go(func() error { return downloadGrammar(gr) })
-	}
-
-	if err = g.Wait(); err != nil {
-		return
-	}
-
-	fmt.Printf("\nVerified %d in total: %d updated; %d skipped.\n", chk, upd, notUpd)
-
-	return writeGrammarsFile()
+	return downloadGrammar(gr)
 }
 
 func downloadGrammar(gr *grammar.Grammar) (err error) {
@@ -158,11 +161,13 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 		return
 	}
 
-	if err = createBindingFilesIfMissing(gr.Language); err != nil {
+	if err = createBindings(gr.Language); err != nil {
 		return
 	}
 
-	defer fmt.Println("successfully downloaded")
+	if err = createPlugin(gr.Language); err != nil {
+		return
+	}
 
 	g := new(errgroup.Group)
 
@@ -178,49 +183,12 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 		err = fixYaml(gr)
 	}
 
-	return
-}
-
-// creates a map between file paths to write to and corresponding content
-func mkBindingMap(lang string) (out map[string]string) {
-	out = map[string]string{}
-	for k, v := range tplBindings {
-		pack := lang
-
-		switch lang {
-		case "go":
-			pack = "Go"
-		case "func":
-			pack = "FunC"
-		}
-
-		if k == "binding.go" {
-			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, lang, lang)
-		} else {
-			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, pack, pack)
-		}
-	}
+	fmt.Println("OK")
 
 	return
 }
 
-func updateBindings() error {
-	g := new(errgroup.Group)
-
-	for _, gr := range grammars {
-		if gr.Skip || gr.Pending {
-			continue
-		}
-
-		g.Go(func() error {
-			return createBindingFilesIfMissing(gr.Language, force)
-		})
-	}
-
-	return g.Wait()
-}
-
-func createBindingFilesIfMissing(lang string, opts ...bool) (err error) {
+func createBindings(lang string, opts ...bool) (err error) {
 	force := false
 	if len(opts) > 0 {
 		force = opts[0]
@@ -241,6 +209,19 @@ func createBindingFilesIfMissing(lang string, opts ...bool) (err error) {
 
 func createBindingFile(toPath, content string) error {
 	return os.WriteFile(toPath, []byte(content), 0o644)
+}
+
+func createPlugin(lang string) error {
+	toPath := filepath.Join(lang, "plugin.go")
+	if ok, _ := fileExists(toPath); ok {
+		return nil
+	}
+
+	if err := makeDir(filepath.Dir(toPath)); err != nil {
+		return err
+	}
+
+	return os.WriteFile(toPath, []byte(fmt.Sprintf(bindingTpl, "//go:build plugin", "main", lang, lang)), 0o644)
 }
 
 func downloadFile(lang, url, toPath string) error {
@@ -280,34 +261,6 @@ func fetchFile(url string) (b []byte, err error) {
 	return io.ReadAll(resp.Body)
 }
 
-func writeGrammarsFile() error {
-	slices.SortFunc(grammars, func(a, b *grammar.Grammar) int {
-		return cmp.Compare(strings.ToLower(a.Language), strings.ToLower(b.Language))
-	})
-
-	if err := writeJSON(grammarsJson, grammars); err != nil {
-		return err
-	}
-
-	g := new(errgroup.Group)
-
-	for _, gr := range grammars {
-		if gr.Pending || gr.Skip {
-			continue
-		}
-
-		g.Go(func() error {
-			return writeJSON(filepath.Join(gr.Language, "grammar.json"), gr)
-		})
-	}
-
-	if err := g.Wait(); err != nil {
-		return err
-	}
-
-	return updateParsersMd()
-}
-
 func writeJSON(fname string, content any) error {
 	b, err := json.MarshalIndent(content, "", "  ")
 	if err != nil {
@@ -320,13 +273,13 @@ func writeJSON(fname string, content any) error {
 func updateParsersMd() error {
 	f, err := os.Create("PARSERS.md")
 	if err != nil {
-		return fmt.Errorf("creating PARSERS.md error: %v", err)
+		return fmt.Errorf("creating PARSERS.md error: %w", err)
 	}
 
 	planned, implemented := 0, 0
 	text := `# %d Supported Parsers
 
-%d parsers pending
+%d pending
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -359,18 +312,18 @@ func updateParsersMd() error {
 	text += "<!--parserinfo-->\n"
 
 	if _, err = fmt.Fprintf(f, text, implemented, planned); err != nil {
-		return fmt.Errorf("writing PARSERS.md error: %v", err)
+		return fmt.Errorf("writing PARSERS.md error: %w", err)
 	}
 
 	if err = f.Close(); err != nil {
-		return fmt.Errorf("saving PARSERS.md error: %v", err)
+		return fmt.Errorf("saving PARSERS.md error: %w", err)
 	}
 
 	return nil
 }
 
-// for yaml grammar scanner.cc includes schema.generated.cc file
-// it causes cgo to compile schema.generated.cc twice and throw duplicate symbols error
+// For yaml grammar scanner.cc includes schema.generated.cc file and it causes
+// cgo to compile schema.generated.cc twice and throw duplicate symbols error.
 func fixYaml(gr *grammar.Grammar) error {
 	f1 := path.Join(gr.Language, "schema.generated.cc")
 	f2 := path.Join(gr.Language, "scanner.cc")
@@ -408,20 +361,52 @@ func main() {
 	switch cmd := args[0]; cmd {
 	case "check-updates":
 		err = checkUpdates()
-	case "update", "force-update":
-		if len(args) < 2 {
-			die("language argument is missing")
+	case "update-all":
+		fmt.Println("Updating all (applicable) languages ...")
+
+		if err = updateAll(); err != nil {
+			break
 		}
 
-		err = update(args[1], cmd == "force-update")
-	case "update-all":
-		err = updateAll()
+		err = updateGrammars()
 	case "update-bindings":
+		fmt.Println("Updating all languages' binding.go files ...")
+
 		err = updateBindings()
-	case "update-json":
-		err = writeGrammarsFile()
+	case "create-plugins":
+		fmt.Println("Creating plugins for all languages ...")
+
+		err = createPlugins()
+	case "update-grammars":
+		fmt.Println("Updating grammars.json ...")
+
+		err = updateGrammars()
 	default:
-		err = errUnknownCmd
+		i, lang, force := 0, "", false
+
+		switch {
+		case strings.HasPrefix(cmd, "update-"):
+			lang = cmd[7:]
+		case strings.HasPrefix(cmd, "force-update-"):
+			force = true
+			lang = cmd[13:]
+		}
+
+		if lang == "" {
+			err = errUnknownCmd
+
+			break
+		}
+
+		if i, err = grammars.Find(lang); err != nil {
+			break
+		}
+
+		if err = update(grammars[i], force); err != nil {
+			break
+		}
+
+		err = updateGrammars()
 	}
 
 	if err != nil {
@@ -441,6 +426,7 @@ func init() {
 	}
 
 	newMap := maps.Clone(replaceMap)
+
 	for k, v := range replaceMap {
 		k = `<` + strings.Trim(k, `"`) + `>`
 		newMap[k] = v

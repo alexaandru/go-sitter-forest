@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package xml_test
 
 import (

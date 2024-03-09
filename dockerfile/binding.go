@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package dockerfile
 
 //#include "parser.h"

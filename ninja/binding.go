@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ninja
 
 //#include "parser.h"

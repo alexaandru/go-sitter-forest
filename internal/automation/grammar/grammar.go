@@ -39,7 +39,7 @@ type Grammar struct {
 
 	// Normally the root for src folder is the root of the repo.
 	// However, there are repos hosting multiple grammars, in which
-	// case they will have a diffrent source for each. If that's the
+	// case they will have a different source for each. If that's the
 	// case, use SrcRoot to indicate that root folder for src (but NOT
 	// including src).
 	SrcRoot string `json:"srcRoot,omitempty"`
@@ -99,7 +99,7 @@ func (gr *Grammar) FetchNewVersion() (err error) {
 	return
 }
 
-// NewVersion retuns the new version, if one is available.
+// NewVersion returns the new version, if one is available.
 func (gr *Grammar) NewVersion() *Version {
 	return gr.newVersion
 }
@@ -122,11 +122,12 @@ func (gr *Grammar) FilesMap() map[string]string {
 	add := func(pat string) {
 		var k, v string
 
-		if strings.Contains(pat, "/") {
+		switch {
+		case strings.Contains(pat, "/"):
 			k, v = pat, path.Base(pat)
-		} else if pat == "parser.h" {
+		case pat == "parser.h":
 			k, v = path.Join(src, "tree_sitter", pat), pat
-		} else {
+		default:
 			k, v = path.Join(src, pat), pat
 		}
 
@@ -134,6 +135,7 @@ func (gr *Grammar) FilesMap() map[string]string {
 	}
 
 	add("parser.h")
+
 	for _, f := range gr.Files {
 		add(f)
 	}

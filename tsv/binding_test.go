@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package tsv_test
 
 import (

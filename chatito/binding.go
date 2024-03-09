@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package chatito
 
 //#include "parser.h"

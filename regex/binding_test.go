@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package regex_test
 
 import (

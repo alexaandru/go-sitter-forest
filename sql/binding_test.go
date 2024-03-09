@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package sql_test
 
 import (

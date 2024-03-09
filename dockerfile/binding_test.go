@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package dockerfile_test
 
 import (
@@ -9,8 +11,9 @@ import (
 )
 
 const (
-	code     = "FROM microsoft/nanoserver"
-	expected = "(source_file (from_instruction (image_spec name: (image_name))) (MISSING \"\n\"))"
+	code = `FROM microsoft/nanoserver
+`
+	expected = "(source_file (from_instruction (image_spec name: (image_name))))"
 )
 
 func TestGrammar(t *testing.T) {

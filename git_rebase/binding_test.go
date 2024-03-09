@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package git_rebase_test
 
 import (

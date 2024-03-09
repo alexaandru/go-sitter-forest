@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package squirrel_test
 
 import (

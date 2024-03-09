@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package leo_test
 
 import (

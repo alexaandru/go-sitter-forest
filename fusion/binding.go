@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package fusion
 
 //#include "parser.h"

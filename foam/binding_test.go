@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package foam_test
 
 import (

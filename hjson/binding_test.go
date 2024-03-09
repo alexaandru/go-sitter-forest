@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hjson_test
 
 import (

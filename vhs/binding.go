@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package vhs
 
 //#include "parser.h"

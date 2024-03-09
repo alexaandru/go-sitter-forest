@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package awk
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package awk_test
 
 import (

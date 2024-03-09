@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gomod
 
 //#include "parser.h"

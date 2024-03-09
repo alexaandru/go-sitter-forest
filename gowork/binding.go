@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gowork
 
 //#include "parser.h"

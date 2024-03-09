@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package objc_test
 
 import (

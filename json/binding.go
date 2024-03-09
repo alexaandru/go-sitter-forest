@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package json
 
 //#include "parser.h"

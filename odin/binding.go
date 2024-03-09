@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package odin
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package luadoc_test
 
 import (

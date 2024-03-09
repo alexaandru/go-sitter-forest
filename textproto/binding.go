@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package textproto
 
 //#include "parser.h"

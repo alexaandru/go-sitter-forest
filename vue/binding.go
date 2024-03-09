@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package vue
 
 //#include "parser.h"

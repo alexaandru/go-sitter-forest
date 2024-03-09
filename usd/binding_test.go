@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package usd_test
 
 import (

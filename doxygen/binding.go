@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package doxygen
 
 //#include "parser.h"

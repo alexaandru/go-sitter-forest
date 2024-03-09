@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package systemtap_test
 
 import (

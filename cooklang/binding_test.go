@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cooklang_test
 
 import (

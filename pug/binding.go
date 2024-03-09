@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pug
 
 //#include "parser.h"

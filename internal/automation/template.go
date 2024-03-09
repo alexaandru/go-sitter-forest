@@ -1,7 +1,14 @@
 package main
 
+import (
+	"fmt"
+	"path/filepath"
+)
+
 const (
-	bTpl = `package %s
+	bindingTpl = `%s
+
+package %s
 
 //#include "parser.h"
 //TSLanguage *tree_sitter_%s();
@@ -37,7 +44,9 @@ func init() {
 	}
 }
 `
-	btTpl = `package %s_test
+	bindingTestTpl = `//go:build !plugin
+
+package %s_test
 
 import (
 	"context"
@@ -66,6 +75,29 @@ func TestGrammar(t *testing.T) {
 )
 
 var tplBindings = map[string]string{
-	"binding.go":      bTpl,
-	"binding_test.go": btTpl,
+	"binding.go":      bindingTpl,
+	"binding_test.go": bindingTestTpl,
+}
+
+// Creates a map between file paths to write to and corresponding content.
+func mkBindingMap(lang string) (out map[string]string) {
+	out = map[string]string{}
+	for k, v := range tplBindings {
+		pack := lang
+
+		switch lang {
+		case "go":
+			pack = "Go"
+		case "func":
+			pack = "FunC"
+		}
+
+		if k == "binding.go" {
+			out[filepath.Join(lang, k)] = fmt.Sprintf(v, "//go:build !plugin", pack, lang, lang)
+		} else {
+			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, pack, pack)
+		}
+	}
+
+	return
 }

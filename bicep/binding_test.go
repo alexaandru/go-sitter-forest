@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bicep_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package kdl
 
 //#include "parser.h"

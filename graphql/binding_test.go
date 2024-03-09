@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package graphql_test
 
 import (

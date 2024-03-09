@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package commonlisp
 
 //#include "parser.h"

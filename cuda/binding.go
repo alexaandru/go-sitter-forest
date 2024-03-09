@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cuda
 
 //#include "parser.h"

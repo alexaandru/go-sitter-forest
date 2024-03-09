@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package diff
 
 //#include "parser.h"

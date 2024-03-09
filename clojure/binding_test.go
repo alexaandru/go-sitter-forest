@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package clojure_test
 
 import (

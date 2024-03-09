@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package m68k_test
 
 import (

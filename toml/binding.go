@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package toml
 
 //#include "parser.h"

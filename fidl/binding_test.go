@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package fidl_test
 
 import (

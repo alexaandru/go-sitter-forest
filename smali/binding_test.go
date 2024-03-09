@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package smali_test
 
 import (

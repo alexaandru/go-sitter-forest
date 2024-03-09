@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package risor_test
 
 import (

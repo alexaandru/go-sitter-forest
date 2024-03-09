@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package norg
 
 //#include "parser.h"

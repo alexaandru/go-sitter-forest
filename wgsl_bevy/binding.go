@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package wgsl_bevy
 
 //#include "parser.h"

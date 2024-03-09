@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package perl_test
 
 import (

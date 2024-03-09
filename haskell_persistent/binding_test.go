@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package haskell_persistent_test
 
 import (

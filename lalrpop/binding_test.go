@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package lalrpop_test
 
 import (

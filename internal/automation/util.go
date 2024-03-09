@@ -3,7 +3,26 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
+	"golang.org/x/sync/errgroup"
 )
+
+func forEachGrammar(fn func(gr *grammar.Grammar) error) error {
+	g := new(errgroup.Group)
+
+	for _, gr := range grammars {
+		if gr.Skip || gr.Pending {
+			continue
+		}
+
+		g.Go(func() error {
+			return fn(gr)
+		})
+	}
+
+	return g.Wait()
+}
 
 func makeDir(path string) error {
 	return os.MkdirAll(path, 0o755)
@@ -21,14 +40,7 @@ func fileExists(path string) (ok bool, err error) {
 	return
 }
 
-func die(msg any, rest ...any) {
-	fmt.Printf(fmt.Sprint(msg), rest...)
-	fmt.Println()
+func die(msg any) {
+	fmt.Println(msg)
 	os.Exit(1)
-}
-
-func quit(msg any, rest ...any) {
-	fmt.Printf(fmt.Sprint(msg), rest...)
-	fmt.Println()
-	os.Exit(0)
 }

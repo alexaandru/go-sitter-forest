@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nix
 
 //#include "parser.h"

@@ -1,28 +1,17 @@
-check-updates:
-	@go run -tags tools ./internal/automation check-updates
+check-updates update-all update-bindings create-plugins update-grammars:
+	@go run ./internal/automation $@
 
-update-all:
-	@echo "Updating all (applicable) languages ..."
-	@go run -tags tools ./internal/automation update-all
+update-% force-update-%:
+	@go run ./internal/automation $@
 
-update-grammars:
-	@echo "Updating grammars.json ..."
-	@go run -tags tools ./internal/automation update-json
+test: check_parsers.go
+	@go test -vet=all -cover -covermode=atomic -coverprofile=unit.cov ./...
 
-update-bindings:
-	@echo "Updating all languages' binding.go files ..."
-	@go run -tags tools ./internal/automation update-bindings
+cover_map: test
+	@go-cover-treemap -coverprofile unit.cov > unit.svg
 
-update-%: %
-	@echo "Updating $* language ..."
-	@go run -tags tools ./internal/automation update $*
-
-force-update-%: %
-	@echo "Force updating $* language" ...
-	@go run -tags tools ./internal/automation force-update $*
-
-test:
-	@go test -vet=all ./...
+check_parsers.go:
+	@diff <(grep GetLanguage forest.go|cut -f2 -d'"'|sort) <(jq -r '.[]|select(.skip == null and .pending == null)|.language' grammars.json|sort)
 
 tests_with_bad_test_cases:
 	@echo These tests have the test case with errors in them or are plainly skipped.
@@ -31,4 +20,4 @@ tests_with_bad_test_cases:
 	@echo
 	@grep -lE "(ERROR|Skip)" */binding_test.go
 
-.DEFAULT: update-all
+include Plugins.make

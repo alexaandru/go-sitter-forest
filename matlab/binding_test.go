@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package matlab_test
 
 import (

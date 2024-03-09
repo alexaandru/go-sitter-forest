@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package kconfig_test
 
 import (

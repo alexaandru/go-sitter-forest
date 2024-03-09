@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nix_test
 
 import (

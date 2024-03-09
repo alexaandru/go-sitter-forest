@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gstlaunch_test
 
 import (

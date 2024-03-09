@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package agda
 
 //#include "parser.h"

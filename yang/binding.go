@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package yang
 
 //#include "parser.h"

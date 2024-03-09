@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package surface
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package t32
 
 //#include "parser.h"

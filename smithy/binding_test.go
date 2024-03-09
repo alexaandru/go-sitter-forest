@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package smithy_test
 
 import (

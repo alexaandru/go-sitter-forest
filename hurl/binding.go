@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hurl
 
 //#include "parser.h"

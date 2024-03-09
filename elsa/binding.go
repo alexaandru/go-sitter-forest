@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package elsa
 
 //#include "parser.h"

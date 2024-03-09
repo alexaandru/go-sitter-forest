@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package elm_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hyprlang
 
 //#include "parser.h"

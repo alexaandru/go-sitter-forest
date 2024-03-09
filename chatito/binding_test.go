@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package chatito_test
 
 import (
@@ -23,8 +25,9 @@ const (
 
 ~[whatsUp]
     whats up
-    how is it going`
-	expected = "(source (intent_def (intent) (arguments (argument key: (string) (eq) value: (string))) (intent_body (alias_ref (alias)) (slot_ref (slot)) (alias_ref (alias)))) (alias_def (alias) (alias_body (word) (word))) (slot_def (slot) (slot_body (word) (word))) (alias_def (alias) (alias_body (word) (word) (word) (word) (word) (word) (MISSING _eol))))"
+    how is it going
+`
+	expected = "(source (intent_def (intent) (arguments (argument key: (string) (eq) value: (string))) (intent_body (alias_ref (alias)) (slot_ref (slot)) (alias_ref (alias)))) (alias_def (alias) (alias_body (word) (word))) (slot_def (slot) (slot_body (word) (word))) (alias_def (alias) (alias_body (word) (word) (word) (word) (word) (word))))"
 )
 
 func TestGrammar(t *testing.T) {

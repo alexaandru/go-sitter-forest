@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package sosl_test
 
 import (

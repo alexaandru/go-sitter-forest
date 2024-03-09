@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package linkerscript
 
 //#include "parser.h"

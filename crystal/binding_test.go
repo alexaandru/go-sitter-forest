@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package crystal_test
 
 import (

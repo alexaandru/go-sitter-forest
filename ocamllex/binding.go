@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ocamllex
 
 //#include "parser.h"

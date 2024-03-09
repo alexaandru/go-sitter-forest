@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package mermaid
 
 //#include "parser.h"

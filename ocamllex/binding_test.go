@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ocamllex_test
 
 import (

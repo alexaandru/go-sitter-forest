@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pem
 
 //#include "parser.h"

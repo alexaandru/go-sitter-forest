@@ -51,7 +51,7 @@
     ],
     "maintainedBy": "@ObserverOfTime",
     "reference": "master",
-    "revision": "72eee09b501f42a039b757c969a9f32e2b61d2a7"
+    "revision": "e3a0a7f60e544afc478b72cdda7ffc0f2f889db0"
   },
   {
     "language": "asm",
@@ -126,7 +126,7 @@
     ],
     "maintainedBy": "@polarmutex",
     "reference": "master",
-    "revision": "1f19abf1e162e1828013cb5434c6cf30f4054e80"
+    "revision": "6c665e7cf15d76a1687959643868a78fb381458d"
   },
   {
     "language": "bibtex",
@@ -1611,7 +1611,7 @@
     "srcRoot": "ocaml",
     "maintainedBy": "@undu",
     "reference": "master",
-    "revision": "9965d208337d88bbf1a38ad0b0fe49e5f5ec9677"
+    "revision": "712d9bfa1d537c5899dde5538767ed2d8bb37a93"
   },
   {
     "language": "ocaml_interface",
@@ -1624,7 +1624,7 @@
     "srcRoot": "interface",
     "maintainedBy": "@undu",
     "reference": "master",
-    "revision": "9965d208337d88bbf1a38ad0b0fe49e5f5ec9677"
+    "revision": "712d9bfa1d537c5899dde5538767ed2d8bb37a93"
   },
   {
     "language": "ocamllex",
@@ -1956,7 +1956,7 @@
   },
   {
     "language": "query",
-    "altName": "Tree-Sitter query language",
+    "altName": "Tree-Sitter Query Language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
     "files": [
       "parser.c"

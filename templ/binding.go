@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package templ
 
 //#include "parser.h"

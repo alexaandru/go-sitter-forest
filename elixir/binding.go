@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package elixir
 
 //#include "parser.h"

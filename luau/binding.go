@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package luau
 
 //#include "parser.h"

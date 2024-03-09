@@ -1,6 +1,6 @@
 {
   "language": "query",
-  "altName": "Tree-Sitter query language",
+  "altName": "Tree-Sitter Query Language",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
   "files": [
     "parser.c"

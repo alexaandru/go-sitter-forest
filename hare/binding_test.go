@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hare_test
 
 import (

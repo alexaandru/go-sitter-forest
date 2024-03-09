@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cuda_test
 
 import (
@@ -17,7 +19,8 @@ __global__ void cuda_hello(){
 int main() {
     cuda_hello<<<1,1>>>(); 
     return 0;
-}`
+}
+`
 	expected = "(translation_unit (function_definition type: (primitive_type) declarator: (function_declarator declarator: (identifier) parameters: (parameter_list)) body: (compound_statement (expression_statement (call_expression function: (identifier) arguments: (argument_list (string_literal (string_content) (escape_sequence))))))) (function_definition type: (primitive_type) declarator: (function_declarator declarator: (identifier) parameters: (parameter_list)) body: (compound_statement (expression_statement (call_expression function: (identifier) (kernel_call_syntax (number_literal) (number_literal)) arguments: (argument_list))) (return_statement (number_literal)))))"
 )
 

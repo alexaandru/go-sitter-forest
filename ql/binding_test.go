@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ql_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package rnoweb
 
 //#include "parser.h"

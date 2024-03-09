@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cpon_test
 
 import (

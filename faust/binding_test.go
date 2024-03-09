@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package faust_test
 
 import (

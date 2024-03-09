@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package hoon_test
 
 import (

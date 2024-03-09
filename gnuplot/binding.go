@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gnuplot
 
 //#include "parser.h"

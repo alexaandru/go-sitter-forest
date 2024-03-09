@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package styled
 
 //#include "parser.h"

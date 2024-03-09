@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package elixir_test
 
 import (

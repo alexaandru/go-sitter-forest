@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package forth_test
 
 import (

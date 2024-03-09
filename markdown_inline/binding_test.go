@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package markdown_inline_test
 
 import (

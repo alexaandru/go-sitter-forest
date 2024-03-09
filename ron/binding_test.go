@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ron_test
 
 import (

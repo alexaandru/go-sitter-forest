@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package astro_test
 
 import (

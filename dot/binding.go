@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package dot
 
 //#include "parser.h"

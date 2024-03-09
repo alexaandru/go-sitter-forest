@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package uxntal_test
 
 import (

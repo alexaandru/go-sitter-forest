@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package sosl
 
 //#include "parser.h"

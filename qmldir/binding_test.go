@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package qmldir_test
 
 import (

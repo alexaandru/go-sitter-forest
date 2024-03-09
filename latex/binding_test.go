@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package latex_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package udev_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package poe_filter_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package rego_test
 
 import (

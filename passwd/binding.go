@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package passwd
 
 //#include "parser.h"

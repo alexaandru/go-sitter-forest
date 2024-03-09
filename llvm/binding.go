@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package llvm
 
 //#include "parser.h"

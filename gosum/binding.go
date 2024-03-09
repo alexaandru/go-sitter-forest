@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gosum
 
 //#include "parser.h"

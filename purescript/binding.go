@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package purescript
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gitcommit
 
 //#include "parser.h"

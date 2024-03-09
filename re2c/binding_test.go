@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package re2c_test
 
 import (

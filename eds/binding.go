@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package eds
 
 //#include "parser.h"

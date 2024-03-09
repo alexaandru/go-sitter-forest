@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package psv_test
 
 import (

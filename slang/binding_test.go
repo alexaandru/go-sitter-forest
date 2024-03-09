@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package slang_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package fidl
 
 //#include "parser.h"

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bash_test
 
 import (

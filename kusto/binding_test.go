@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package kusto_test
 
 import (

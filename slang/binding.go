@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package slang
 
 //#include "parser.h"

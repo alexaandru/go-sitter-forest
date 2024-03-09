@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package eex
 
 //#include "parser.h"

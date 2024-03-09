@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package kconfig
 
 //#include "parser.h"

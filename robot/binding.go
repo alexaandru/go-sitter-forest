@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package robot
 
 //#include "parser.h"

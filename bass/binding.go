@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bass
 
 //#include "parser.h"

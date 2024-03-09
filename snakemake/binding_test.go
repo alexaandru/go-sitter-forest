@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package snakemake_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package agda_test
 
 import (

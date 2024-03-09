@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package risor
 
 //#include "parser.h"

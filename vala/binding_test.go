@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package vala_test
 
 import (

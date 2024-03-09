@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package promql
 
 //#include "parser.h"

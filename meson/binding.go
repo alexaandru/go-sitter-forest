@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package meson
 
 //#include "parser.h"

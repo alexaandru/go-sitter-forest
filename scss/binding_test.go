@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package scss_test
 
 import (

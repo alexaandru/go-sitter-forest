@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package crystal
 
 //#include "parser.h"

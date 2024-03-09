@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package c_sharp
 
 //#include "parser.h"

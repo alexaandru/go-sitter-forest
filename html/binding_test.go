@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package html_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package sxhkdrc
 
 //#include "parser.h"

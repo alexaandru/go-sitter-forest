@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package muttrc_test
 
 import (

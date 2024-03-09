@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package fish_test
 
 import (

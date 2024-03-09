@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package fennel
 
 //#include "parser.h"

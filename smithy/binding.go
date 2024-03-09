@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package smithy
 
 //#include "parser.h"

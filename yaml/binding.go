@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package yaml
 
 //#include "parser.h"

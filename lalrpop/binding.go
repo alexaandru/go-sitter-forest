@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package lalrpop
 
 //#include "parser.h"

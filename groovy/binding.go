@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package groovy
 
 //#include "parser.h"

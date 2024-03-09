@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ada
 
 //#include "parser.h"

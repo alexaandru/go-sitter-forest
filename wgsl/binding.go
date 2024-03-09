@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package wgsl
 
 //#include "parser.h"

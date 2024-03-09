@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cue_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package Go_test
 
 import (

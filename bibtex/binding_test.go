@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bibtex_test
 
 import (

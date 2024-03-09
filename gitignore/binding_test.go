@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package gitignore_test
 
 import (

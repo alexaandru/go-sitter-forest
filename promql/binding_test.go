@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package promql_test
 
 import (

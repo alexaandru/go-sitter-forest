@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package bass_test
 
 import (

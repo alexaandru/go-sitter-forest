@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package solidity
 
 //#include "parser.h"

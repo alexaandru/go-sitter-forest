@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package cue
 
 //#include "parser.h"

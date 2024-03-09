@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package ini
 
 //#include "parser.h"

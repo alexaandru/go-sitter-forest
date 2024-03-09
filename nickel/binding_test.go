@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package nickel_test
 
 import (

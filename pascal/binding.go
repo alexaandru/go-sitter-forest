@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pascal
 
 //#include "parser.h"

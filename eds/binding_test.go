@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package eds_test
 
 import (

@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package systemtap
 
 //#include "parser.h"

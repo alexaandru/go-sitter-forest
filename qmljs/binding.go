@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package qmljs
 
 //#include "parser.h"

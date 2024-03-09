@@ -1,3 +1,5 @@
+//go:build !plugin
+
 package pascal_test
 
 import (
