@@ -1,0 +1,10 @@
+{
+  "language": "pascal",
+  "url": "https://github.com/Isopod/tree-sitter-pascal",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Isopod",
+  "reference": "master",
+  "revision": "9e995404ddff8319631d72d4b46552e737206912"
+}

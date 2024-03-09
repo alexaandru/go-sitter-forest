@@ -1,0 +1,10 @@
+{
+  "language": "xcompose",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-xcompose",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "2383cc69a2c42cfade41c7cb971fb3862bec6df1"
+}

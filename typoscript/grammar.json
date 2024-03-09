@@ -1,0 +1,10 @@
+{
+  "language": "typoscript",
+  "url": "https://github.com/Teddytrombone/tree-sitter-typoscript",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Teddytrombone",
+  "reference": "main",
+  "revision": "43b221c0b76e77244efdaa9963e402a17c930fbc"
+}

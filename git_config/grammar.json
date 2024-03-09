@@ -1,0 +1,10 @@
+{
+  "language": "git_config",
+  "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "9c2a1b7894e6d9eedfe99805b829b4ecd871375e"
+}

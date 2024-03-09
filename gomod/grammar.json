@@ -1,0 +1,10 @@
+{
+  "language": "gomod",
+  "url": "https://github.com/camdencheek/tree-sitter-go-mod",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@camdencheek",
+  "reference": "main",
+  "revision": "bbe2fe3be4b87e06a613e685250f473d2267f430"
+}

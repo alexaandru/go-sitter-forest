@@ -1,0 +1,10 @@
+{
+  "language": "blueprint",
+  "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@gabmus",
+  "reference": "master",
+  "revision": "863cea9f83ad5637300478e0559262f1e791684b"
+}

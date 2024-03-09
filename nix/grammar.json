@@ -1,0 +1,11 @@
+{
+  "language": "nix",
+  "url": "https://github.com/cstrahan/tree-sitter-nix",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@leo60228",
+  "reference": "master",
+  "revision": "763168fa916a333a459434f1424b5d30645f015d"
+}

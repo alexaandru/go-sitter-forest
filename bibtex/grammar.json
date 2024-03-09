@@ -1,0 +1,10 @@
+{
+  "language": "bibtex",
+  "url": "https://github.com/latex-lsp/tree-sitter-bibtex",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@theHamsta, @clason",
+  "reference": "master",
+  "revision": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "tlaplus",
+  "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
+  "files": [
+    "parser.c",
+    "scanner.cc"
+  ],
+  "maintainedBy": "@ahelwer, @susliko",
+  "reference": "main",
+  "revision": "aaf5bb5c1df0a6e583bb51efa519a9ac788b2ad8"
+}

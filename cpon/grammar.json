@@ -1,0 +1,10 @@
+{
+  "language": "cpon",
+  "url": "https://github.com/amaanq/tree-sitter-cpon",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "f4b3cbc8b0bd4e13035d39940fef09f1392e8739"
+}

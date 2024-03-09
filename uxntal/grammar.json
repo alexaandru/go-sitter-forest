@@ -1,0 +1,12 @@
+{
+  "language": "uxntal",
+  "altName": "uxn tal",
+  "url": "https://github.com/amaanq/tree-sitter-uxntal",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "4c5ecd6326ebd61f6f9a22a370cbd100e0d601da"
+}

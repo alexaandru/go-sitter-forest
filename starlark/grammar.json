@@ -1,0 +1,11 @@
+{
+  "language": "starlark",
+  "url": "https://github.com/amaanq/tree-sitter-starlark",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "b31a616aac5d05f927f3f9dd809789db7805b632"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "elsa",
+  "url": "https://github.com/glapa-grossklag/tree-sitter-elsa",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@glapa-grossklag, @amaanq",
+  "reference": "main",
+  "revision": "0a66b2b3f3c1915e67ad2ef9f7dbd2a84820d9d7"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "leo",
+  "url": "https://github.com/r001/tree-sitter-leo",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@r001",
+  "reference": "main",
+  "revision": "304611b5eaf53aca07459a0a03803b83b6dfd3b3"
+}

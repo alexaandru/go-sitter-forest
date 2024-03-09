@@ -1,0 +1,10 @@
+{
+  "language": "asm",
+  "url": "https://github.com/RubixDev/tree-sitter-asm",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@RubixDev",
+  "reference": "main",
+  "revision": "6ace266be7ad6bf486a95427ca3fc949aff66211"
+}

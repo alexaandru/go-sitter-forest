@@ -1,0 +1,10 @@
+{
+  "language": "go",
+  "url": "https://github.com/tree-sitter/tree-sitter-go",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@theHamsta, @WinWisely268",
+  "reference": "master",
+  "revision": "fd577c4358c28cbcb6748bbf65354cc85f1cf7a4"
+}

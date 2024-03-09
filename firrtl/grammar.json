@@ -1,0 +1,11 @@
+{
+  "language": "firrtl",
+  "url": "https://github.com/amaanq/tree-sitter-firrtl",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "2b5adae629c8cba528c7b1e4aa67a8ae28934ea5"
+}

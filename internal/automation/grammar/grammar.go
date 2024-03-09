@@ -154,6 +154,10 @@ func (gr *Grammar) contentURL() string {
 	}
 }
 
+func (gr *Grammar) String() string {
+	return fmt.Sprintf(`%s, src: "%s@%s", sha: %q`, gr.Language, gr.URL, gr.Reference, gr.Revision)
+}
+
 func fetchLastTag(repository string) (tag string, rev string, err error) {
 	cmd := exec.Command("git", "ls-remote", "--tags", "--sort", "-v:refname", repository, "v*")
 

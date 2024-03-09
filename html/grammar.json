@@ -1,0 +1,12 @@
+{
+  "language": "html",
+  "url": "https://github.com/tree-sitter/tree-sitter-html",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "tag.h"
+  ],
+  "maintainedBy": "@TravonteD",
+  "reference": "master",
+  "revision": "b5d9758e22b4d3d25704b72526670759a9e4d195"
+}

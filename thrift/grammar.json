@@ -1,0 +1,10 @@
+{
+  "language": "thrift",
+  "url": "https://github.com/duskmoon314/tree-sitter-thrift",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq, @duskmoon314",
+  "reference": "main",
+  "revision": "d4deb1bd9e848f2dbe81103a151d99e8546de480"
+}

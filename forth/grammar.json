@@ -1,0 +1,10 @@
+{
+  "language": "forth",
+  "url": "https://github.com/AlexanderBrevig/tree-sitter-forth",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "90189238385cf636b9ee99ce548b9e5b5e569d48"
+}

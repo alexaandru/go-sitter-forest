@@ -1,0 +1,11 @@
+{
+  "language": "smali",
+  "url": "https://git.sr.ht/~yotam/tree-sitter-smali",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5"
+}

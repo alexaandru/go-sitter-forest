@@ -1,0 +1,11 @@
+{
+  "language": "beancount",
+  "url": "https://github.com/polarmutex/tree-sitter-beancount",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@polarmutex",
+  "reference": "master",
+  "revision": "1f19abf1e162e1828013cb5434c6cf30f4054e80"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "fsh",
+  "url": "https://github.com/mgramigna/tree-sitter-fsh",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@mgramigna",
+  "reference": "main",
+  "revision": "fa3347712f7a59ed02ccf508284554689c6cde28"
+}

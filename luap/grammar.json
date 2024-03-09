@@ -1,0 +1,11 @@
+{
+  "language": "luap",
+  "altName": "lua patterns",
+  "url": "https://github.com/amaanq/tree-sitter-luap",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "31461ae9bd0866cb5117cfe5de71189854fd0f3e"
+}

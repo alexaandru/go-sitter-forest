@@ -1,0 +1,10 @@
+{
+  "language": "ql",
+  "url": "https://github.com/tree-sitter/tree-sitter-ql",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@pwntester",
+  "reference": "master",
+  "revision": "ff04ba61857ba05b80221e71b423b2728dbebe1e"
+}

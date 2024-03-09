@@ -1,0 +1,11 @@
+{
+  "language": "styled",
+  "url": "https://github.com/mskelton/tree-sitter-styled",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@mskelton",
+  "reference": "main",
+  "revision": "5e52758b32e02adca16bb93f95b3f9c050c72b56"
+}

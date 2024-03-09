@@ -1,0 +1,10 @@
+{
+  "language": "pem",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-pem",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "217ff2af3f2db15a79ab7e3d21ea1e0c17e71a1a"
+}

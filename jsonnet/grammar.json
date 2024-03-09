@@ -1,0 +1,11 @@
+{
+  "language": "jsonnet",
+  "url": "https://github.com/sourcegraph/tree-sitter-jsonnet",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@nawordar",
+  "reference": "main",
+  "revision": "d34615fa12cc1d1cfc1f1f1a80acc9db80ee4596"
+}

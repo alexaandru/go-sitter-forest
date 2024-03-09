@@ -1,0 +1,10 @@
+{
+  "language": "todotxt",
+  "url": "https://github.com/arnarg/tree-sitter-todotxt",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@arnarg",
+  "reference": "main",
+  "revision": "3937c5cd105ec4127448651a21aef45f52d19609"
+}

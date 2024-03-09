@@ -1,0 +1,10 @@
+{
+  "language": "http",
+  "url": "https://github.com/rest-nvim/tree-sitter-http",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "6824a247d1326079aab4fa9f9164e9319678081d"
+}

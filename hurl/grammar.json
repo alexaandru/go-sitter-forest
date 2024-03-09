@@ -1,0 +1,10 @@
+{
+  "language": "hurl",
+  "url": "https://github.com/pfeiferj/tree-sitter-hurl",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@pfeiferj",
+  "reference": "main",
+  "revision": "cd1a0ada92cc73dd0f4d7eedc162be4ded758591"
+}

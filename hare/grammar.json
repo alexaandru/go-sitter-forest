@@ -1,0 +1,10 @@
+{
+  "language": "hare",
+  "url": "https://github.com/amaanq/tree-sitter-hare",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "3d4af179414525a35dd069ba0208c9b71093d8b3"
+}

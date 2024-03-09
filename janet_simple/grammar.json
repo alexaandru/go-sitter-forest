@@ -1,0 +1,11 @@
+{
+  "language": "janet_simple",
+  "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@sogaiu",
+  "reference": "master",
+  "revision": "51271e260346878e1a1aa6c506ce6a797b7c25e2"
+}

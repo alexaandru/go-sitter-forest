@@ -1,0 +1,10 @@
+{
+  "language": "printf",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-printf",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "main",
+  "revision": "0e0aceabbf607ea09e03562f5d8a56f048ddea3d"
+}

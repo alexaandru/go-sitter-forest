@@ -1,0 +1,10 @@
+{
+  "language": "twig",
+  "url": "https://github.com/gbprod/tree-sitter-twig",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@gbprod",
+  "reference": "main",
+  "revision": "eaf80e6af969e25993576477a9dbdba3e48c1305"
+}

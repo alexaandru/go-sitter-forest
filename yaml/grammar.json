@@ -1,0 +1,12 @@
+{
+  "language": "yaml",
+  "url": "https://github.com/ikatyang/tree-sitter-yaml",
+  "files": [
+    "parser.c",
+    "scanner.cc",
+    "schema.generated.cc"
+  ],
+  "maintainedBy": "@stsewd",
+  "reference": "master",
+  "revision": "0e36bed171768908f331ff7dff9d956bae016efb"
+}

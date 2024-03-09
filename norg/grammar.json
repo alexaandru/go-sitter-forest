@@ -1,0 +1,11 @@
+{
+  "language": "norg",
+  "url": "https://github.com/nvim-neorg/tree-sitter-norg",
+  "files": [
+    "parser.c",
+    "scanner.cc"
+  ],
+  "maintainedBy": "@JoeyGrajciar, @vhyrro",
+  "reference": "main",
+  "revision": "014073fe8016d1ac440c51d22c77e3765d8f6855"
+}

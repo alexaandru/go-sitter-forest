@@ -1,0 +1,10 @@
+{
+  "language": "puppet",
+  "url": "https://github.com/amaanq/tree-sitter-puppet",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "5849f9694197a6e822872945b415429c285fdd54"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "commonlisp",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@theHamsta",
+  "reference": "master",
+  "revision": "cf10fc38bc24faf0549d59217ff37c789973dfdc"
+}

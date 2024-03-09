@@ -1,0 +1,10 @@
+{
+  "language": "surface",
+  "url": "https://github.com/connorlay/tree-sitter-surface",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@connorlay",
+  "reference": "main",
+  "revision": "f4586b35ac8548667a9aaa4eae44456c1f43d032"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "nickel",
+  "url": "https://github.com/nickel-lang/tree-sitter-nickel",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@ErinvanderVeen, @yannham",
+  "reference": "main",
+  "revision": "58baf89db8fdae54a84bcf22c80ff10ee3f929ed"
+}

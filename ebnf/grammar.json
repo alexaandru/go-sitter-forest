@@ -1,0 +1,11 @@
+{
+  "language": "ebnf",
+  "url": "https://github.com/RubixDev/ebnf",
+  "files": [
+    "parser.c"
+  ],
+  "srcRoot": "crates/tree-sitter-ebnf",
+  "maintainedBy": "@RubixDev",
+  "reference": "main",
+  "revision": "8e635b0b723c620774dfb8abf382a7f531894b40"
+}

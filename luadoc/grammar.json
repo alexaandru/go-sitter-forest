@@ -1,0 +1,10 @@
+{
+  "language": "luadoc",
+  "url": "https://github.com/amaanq/tree-sitter-luadoc",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "873612aadd3f684dd4e631bdf42ea8990c57634e"
+}

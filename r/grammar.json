@@ -1,0 +1,11 @@
+{
+  "language": "r",
+  "url": "https://github.com/r-lib/tree-sitter-r",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@echasnovski",
+  "reference": "main",
+  "revision": "c55f8b4dfaa32c80ddef6c0ac0e79b05cb0cbf57"
+}

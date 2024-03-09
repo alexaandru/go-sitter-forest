@@ -1,0 +1,11 @@
+{
+  "language": "luau",
+  "url": "https://github.com/amaanq/tree-sitter-luau",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "e5f7a020967407f73959592decdb147bb5fc30bb"
+}

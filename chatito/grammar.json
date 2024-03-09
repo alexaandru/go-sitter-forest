@@ -1,0 +1,10 @@
+{
+  "language": "chatito",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-chatito",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "fe7a2a75d3d74c1215141b7a7ebebb57ae17a370"
+}

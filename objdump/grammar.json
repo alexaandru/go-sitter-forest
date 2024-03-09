@@ -1,0 +1,11 @@
+{
+  "language": "objdump",
+  "url": "https://github.com/ColinKennedy/tree-sitter-objdump",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@ColinKennedy",
+  "reference": "master",
+  "revision": "28d3b2e25a0b1881d1b47ed1924ca276c7003d45"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "rasi",
+  "url": "https://github.com/Fymyte/tree-sitter-rasi",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Fymyte",
+  "reference": "main",
+  "revision": "43196d934a9a6ab3c7093a8683efd0111bb03db1"
+}

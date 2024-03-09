@@ -1,0 +1,11 @@
+{
+  "language": "menhir",
+  "url": "https://github.com/Kerl13/tree-sitter-menhir",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@Kerl13",
+  "reference": "master",
+  "revision": "be8866a6bcc2b563ab0de895af69daeffa88fe70"
+}

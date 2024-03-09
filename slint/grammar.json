@@ -1,0 +1,10 @@
+{
+  "language": "slint",
+  "url": "https://github.com/slint-ui/tree-sitter-slint",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@hunger",
+  "reference": "master",
+  "revision": "cdb307898345cb0465922be447a063b9c294afca"
+}

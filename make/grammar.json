@@ -1,0 +1,10 @@
+{
+  "language": "make",
+  "url": "https://github.com/alemuller/tree-sitter-make",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@lewis6991",
+  "reference": "main",
+  "revision": "a4b9187417d6be349ee5fd4b6e77b4172c6827dd"
+}

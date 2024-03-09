@@ -1,0 +1,10 @@
+{
+  "language": "m68k",
+  "url": "https://github.com/grahambates/tree-sitter-m68k",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@grahambates",
+  "reference": "master",
+  "revision": "d097b123f19c6eaba2bf181c05420d88b9fc489d"
+}

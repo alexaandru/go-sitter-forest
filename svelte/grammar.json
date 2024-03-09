@@ -1,0 +1,12 @@
+{
+  "language": "svelte",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "tag.h"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "04a126d9210def99f06d9ab84a255110b862d47c"
+}

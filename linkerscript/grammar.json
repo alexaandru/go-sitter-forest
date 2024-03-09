@@ -1,0 +1,10 @@
+{
+  "language": "linkerscript",
+  "url": "https://github.com/amaanq/tree-sitter-linkerscript",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "f99011a3554213b654985a4b0a65b3b032ec4621"
+}

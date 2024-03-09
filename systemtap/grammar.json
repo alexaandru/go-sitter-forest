@@ -1,0 +1,10 @@
+{
+  "language": "systemtap",
+  "url": "https://github.com/ok-ryoko/tree-sitter-systemtap",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ok-ryoko",
+  "reference": "main",
+  "revision": "1af543a96d060b1f808982037bfc54cc02218edd"
+}

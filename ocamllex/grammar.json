@@ -1,0 +1,11 @@
+{
+  "language": "ocamllex",
+  "url": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@undu",
+  "reference": "master",
+  "revision": "4b9898ccbf198602bb0dec9cd67cc1d2c0a4fad2"
+}

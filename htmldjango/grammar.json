@@ -1,0 +1,10 @@
+{
+  "language": "htmldjango",
+  "url": "https://github.com/interdependence/tree-sitter-htmldjango",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "main",
+  "revision": "8873e3df89f9ea1d33f6235e516b600009288557"
+}

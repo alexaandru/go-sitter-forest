@@ -1,0 +1,10 @@
+{
+  "language": "zathurarc",
+  "url": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Freed-Wu",
+  "reference": "main",
+  "revision": "353bdf25e7af9c2830e254977fd3fb57ccaa8203"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "v",
+  "url": "https://github.com/vlang/v-analyzer",
+  "files": [
+    "parser.c"
+  ],
+  "srcRoot": "tree_sitter_v",
+  "maintainedBy": "@kkharji, @amaanq",
+  "reference": "main",
+  "revision": "be121f724e4f3e2159dfa193c876be605c1de7fa"
+}

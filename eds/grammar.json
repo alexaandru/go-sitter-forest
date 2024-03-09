@@ -1,0 +1,10 @@
+{
+  "language": "eds",
+  "url": "https://github.com/uyha/tree-sitter-eds",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@uyha",
+  "reference": "main",
+  "revision": "fde62029d4c715562230070b9af51a9500c2ce10"
+}

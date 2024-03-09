@@ -1,0 +1,10 @@
+{
+  "language": "scheme",
+  "url": "https://github.com/6cdh/tree-sitter-scheme",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@6cdh",
+  "reference": "main",
+  "revision": "85b6188fb77c03dfb01d13e58e2844450506860c"
+}

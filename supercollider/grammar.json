@@ -1,0 +1,11 @@
+{
+  "language": "supercollider",
+  "url": "https://github.com/madskjeldgaard/tree-sitter-supercollider",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@madskjeldgaard",
+  "reference": "main",
+  "revision": "3b35bd0fded4423c8fb30e9585c7bacbcd0e8095"
+}

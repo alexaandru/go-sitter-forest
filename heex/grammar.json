@@ -1,0 +1,10 @@
+{
+  "language": "heex",
+  "url": "https://github.com/connorlay/tree-sitter-heex",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@connorlay",
+  "reference": "main",
+  "revision": "4a36c9a388505180da6ee0eda1d8afb8c83481c8"
+}

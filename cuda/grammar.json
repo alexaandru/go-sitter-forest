@@ -1,0 +1,11 @@
+{
+  "language": "cuda",
+  "url": "https://github.com/theHamsta/tree-sitter-cuda",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@theHamsta",
+  "reference": "master",
+  "revision": "221179d4287a2c24c08e4c67ff383ef67dc32156"
+}

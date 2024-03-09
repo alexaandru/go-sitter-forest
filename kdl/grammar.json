@@ -1,0 +1,11 @@
+{
+  "language": "kdl",
+  "url": "https://github.com/amaanq/tree-sitter-kdl",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "49fb89a854d93b58a65a19724ac307195ca11941"
+}

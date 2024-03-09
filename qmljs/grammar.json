@@ -1,0 +1,12 @@
+{
+  "language": "qmljs",
+  "url": "https://github.com/yuja/tree-sitter-qmljs",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "typescript-scanner.h"
+  ],
+  "maintainedBy": "@Decodetalkers",
+  "reference": "master",
+  "revision": "9fa49ff3315987f715ce5666ff979a7742fa8a98"
+}

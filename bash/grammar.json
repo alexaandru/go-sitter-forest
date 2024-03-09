@@ -1,0 +1,11 @@
+{
+  "language": "bash",
+  "url": "https://github.com/tree-sitter/tree-sitter-bash",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@TravonteD",
+  "reference": "master",
+  "revision": "975bc70ad95dbbf2733872bc2e0a059c055db983"
+}

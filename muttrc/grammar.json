@@ -1,0 +1,10 @@
+{
+  "language": "muttrc",
+  "url": "https://github.com/neomutt/tree-sitter-muttrc",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Freed-Wu",
+  "reference": "main",
+  "revision": "67d9e23ca7aa22d9bce9d16c53d2c927dff5159a"
+}

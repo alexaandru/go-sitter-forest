@@ -1,0 +1,11 @@
+{
+  "language": "liquidsoap",
+  "url": "https://github.com/savonet/tree-sitter-liquidsoap",
+  "files": [
+    "parser.c",
+    "scanner.cc"
+  ],
+  "maintainedBy": "@toots",
+  "reference": "main",
+  "revision": "fb062bfc7ca09a741820debb7cb8a75a557b30f9"
+}

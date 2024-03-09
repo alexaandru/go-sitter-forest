@@ -1,0 +1,11 @@
+{
+  "language": "javascript",
+  "url": "https://github.com/tree-sitter/tree-sitter-javascript",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@steelsojka",
+  "reference": "master",
+  "revision": "51aed7263d33bee46b0a8a5e165ffcb690d5aca8"
+}

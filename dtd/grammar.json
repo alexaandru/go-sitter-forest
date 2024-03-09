@@ -1,0 +1,13 @@
+{
+  "language": "dtd",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "common/scanner.h"
+  ],
+  "srcRoot": "dtd",
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "c23bd31d0aa72bfc01238b2546d5e823d8006709"
+}

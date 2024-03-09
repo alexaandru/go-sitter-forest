@@ -1,0 +1,10 @@
+{
+  "language": "jq",
+  "url": "https://github.com/flurie/tree-sitter-jq",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "main",
+  "revision": "13990f530e8e6709b7978503da9bc8701d366791"
+}

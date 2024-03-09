@@ -1,0 +1,10 @@
+{
+  "language": "strace",
+  "url": "https://github.com/sigmaSd/tree-sitter-strace",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "d819cdd5dbe455bd3c859193633c8d91c0df7c36"
+}

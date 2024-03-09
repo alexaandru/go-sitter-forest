@@ -1,0 +1,11 @@
+{
+  "language": "tsv",
+  "url": "https://github.com/amaanq/tree-sitter-csv",
+  "files": [
+    "parser.c"
+  ],
+  "srcRoot": "tsv",
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
+}

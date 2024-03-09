@@ -1,0 +1,11 @@
+{
+  "language": "cue",
+  "url": "https://github.com/eonpatapon/tree-sitter-cue",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "cdfe1a8594fe5be45c883a385ab543acc646d018"
+}

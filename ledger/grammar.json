@@ -1,0 +1,10 @@
+{
+  "language": "ledger",
+  "url": "https://github.com/cbarrete/tree-sitter-ledger",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@cbarrete",
+  "reference": "master",
+  "revision": "8a841fb20ce683bfbb3469e6ba67f2851cfdf94a"
+}

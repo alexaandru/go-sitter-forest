@@ -1,0 +1,10 @@
+{
+  "language": "graphql",
+  "url": "https://github.com/bkegley/tree-sitter-graphql",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@bkegley",
+  "reference": "master",
+  "revision": "5e66e961eee421786bdda8495ed1db045e06b5fe"
+}

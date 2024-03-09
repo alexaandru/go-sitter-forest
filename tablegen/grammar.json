@@ -1,0 +1,11 @@
+{
+  "language": "tablegen",
+  "url": "https://github.com/amaanq/tree-sitter-tablegen",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "300f6a490e71f895e644ed2deec6920860a2e107"
+}

@@ -1,0 +1,12 @@
+{
+  "language": "typst",
+  "url": "https://github.com/uben0/tree-sitter-typst",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "unicode.h"
+  ],
+  "maintainedBy": "@uben0, @RaafatTurki",
+  "reference": "master",
+  "revision": "3c3e5f8e0caeba6157e26a1bedf8321e1da62799"
+}

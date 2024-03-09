@@ -1,0 +1,11 @@
+{
+  "language": "squirrel",
+  "url": "https://github.com/amaanq/tree-sitter-squirrel",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "e8b5835296f931bcaa1477d3c5a68a0c5c2ba034"
+}

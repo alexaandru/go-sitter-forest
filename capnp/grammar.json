@@ -1,0 +1,10 @@
+{
+  "language": "capnp",
+  "url": "https://github.com/amaanq/tree-sitter-capnp",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
+}

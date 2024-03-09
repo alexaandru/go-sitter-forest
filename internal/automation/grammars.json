@@ -183,6 +183,7 @@
   {
     "language": "c_sharp",
     "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
+    "doc": "The parser is incomplete, it may return a partial or wrong AST!",
     "files": [
       "parser.c",
       "scanner.c"

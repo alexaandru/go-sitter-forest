@@ -1,0 +1,10 @@
+{
+  "language": "diff",
+  "url": "https://github.com/the-mikedavis/tree-sitter-diff",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@gbprod",
+  "reference": "main",
+  "revision": "c165725c28e69b36c5799ff0e458713a844f1aaf"
+}

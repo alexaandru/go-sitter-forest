@@ -1,0 +1,11 @@
+{
+  "language": "racket",
+  "url": "https://github.com/6cdh/tree-sitter-racket",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@6cdh",
+  "reference": "main",
+  "revision": "e4ba1a9674a3b4dd7905d04f194ae6f8331be342"
+}

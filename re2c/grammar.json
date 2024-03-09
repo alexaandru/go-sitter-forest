@@ -1,0 +1,10 @@
+{
+  "language": "re2c",
+  "url": "https://github.com/amaanq/tree-sitter-re2c",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "47aa19cf5f7aba2ed30e2b377f7172df76e819a6"
+}

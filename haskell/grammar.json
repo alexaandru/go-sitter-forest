@@ -1,0 +1,12 @@
+{
+  "language": "haskell",
+  "url": "https://github.com/tree-sitter/tree-sitter-haskell",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "unicode.h"
+  ],
+  "maintainedBy": "@mrcjkb",
+  "reference": "master",
+  "revision": "6b5ec205c9d4f23eb36a163f1edc4f2db8c98e4a"
+}

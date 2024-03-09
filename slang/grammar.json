@@ -1,0 +1,11 @@
+{
+  "language": "slang",
+  "url": "https://github.com/theHamsta/tree-sitter-slang",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@theHamsta",
+  "reference": "master",
+  "revision": "0cdfb1741323f38e9a33798674145c22cfc0092b"
+}

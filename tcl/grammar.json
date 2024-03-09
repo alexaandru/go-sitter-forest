@@ -1,0 +1,11 @@
+{
+  "language": "tcl",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@lewis6991",
+  "reference": "main",
+  "revision": "56ad1fa6a34ba800e5495d1025a9b0fda338d5b8"
+}

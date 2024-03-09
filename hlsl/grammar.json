@@ -1,0 +1,11 @@
+{
+  "language": "hlsl",
+  "url": "https://github.com/theHamsta/tree-sitter-hlsl",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@theHamsta",
+  "reference": "master",
+  "revision": "ee24be127560f0de0c4741e382416f45ab47eb76"
+}

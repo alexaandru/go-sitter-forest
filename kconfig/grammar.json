@@ -1,0 +1,11 @@
+{
+  "language": "kconfig",
+  "url": "https://github.com/amaanq/tree-sitter-kconfig",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "486fea71f61ad9f3fd4072a118402e97fe88d26c"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "gitattributes",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-gitattributes",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "41940e199ba5763abea1d21b4f717014b45f01ea"
+}

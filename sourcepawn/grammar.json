@@ -1,0 +1,11 @@
+{
+  "language": "sourcepawn",
+  "url": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@Sarrus1",
+  "reference": "main",
+  "revision": "3ca89fdf998340a7973e276b39516d8902950f86"
+}

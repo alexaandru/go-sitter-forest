@@ -1,0 +1,11 @@
+{
+  "language": "jsdoc",
+  "url": "https://github.com/tree-sitter/tree-sitter-jsdoc",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@steelsojka",
+  "reference": "master",
+  "revision": "6a6cf9e7341af32d8e2b2e24a37fbfebefc3dc55"
+}

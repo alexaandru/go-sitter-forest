@@ -1,0 +1,11 @@
+{
+  "language": "fortran",
+  "url": "https://github.com/stadelmanma/tree-sitter-fortran",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "f73d473e3530862dee7cbb38520f28824e7804f6"
+}

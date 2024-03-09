@@ -1,0 +1,11 @@
+{
+  "language": "groovy",
+  "url": "https://github.com/murtaza64/tree-sitter-groovy",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@murtaza64",
+  "reference": "main",
+  "revision": "3c25d1ce6c1eb9da34215060372792dc9f439b0c"
+}

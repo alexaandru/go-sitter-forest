@@ -1,0 +1,11 @@
+{
+  "language": "scss",
+  "url": "https://github.com/serenadeai/tree-sitter-scss",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@elianiva",
+  "reference": "master",
+  "revision": "c478c6868648eff49eb04a4df90d703dc45b312a"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "gleam",
+  "url": "https://github.com/gleam-lang/tree-sitter-gleam",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "2012f294baacf30e7a62414754021284377366c6"
+}

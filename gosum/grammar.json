@@ -1,0 +1,10 @@
+{
+  "language": "gosum",
+  "url": "https://github.com/amaanq/tree-sitter-go-sum",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "e2ac513b2240c7ff1069ae33b2df29ce90777c11"
+}

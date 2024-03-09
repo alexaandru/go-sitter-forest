@@ -1,0 +1,10 @@
+{
+  "language": "fennel",
+  "url": "https://github.com/alexmozaidze/tree-sitter-fennel",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@alexmozaidze",
+  "reference": "main",
+  "revision": "215e3913524abc119daa9db7cf6ad2f2f5620189"
+}

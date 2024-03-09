@@ -1,0 +1,12 @@
+{
+  "language": "astro",
+  "url": "https://github.com/virchau13/tree-sitter-astro",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "tag.h"
+  ],
+  "maintainedBy": "@virchau13",
+  "reference": "master",
+  "revision": "dfa0893bdc4bdfada102043404758c66e3580568"
+}

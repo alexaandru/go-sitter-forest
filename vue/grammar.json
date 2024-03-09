@@ -1,0 +1,12 @@
+{
+  "language": "vue",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-vue",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "tag.h"
+  ],
+  "maintainedBy": "@WhyNotHugo, @lucario387",
+  "reference": "main",
+  "revision": "3b9d52087100bdfce43dad2ca46d75b0e21613f6"
+}

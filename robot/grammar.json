@@ -1,0 +1,10 @@
+{
+  "language": "robot",
+  "url": "https://github.com/Hubro/tree-sitter-robot",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Hubro",
+  "reference": "master",
+  "revision": "322e4cc65754d2b3fdef4f2f8a71e0762e3d13af"
+}

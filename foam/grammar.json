@@ -1,0 +1,11 @@
+{
+  "language": "foam",
+  "url": "https://github.com/FoamScience/tree-sitter-foam",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@FoamScience",
+  "reference": "master",
+  "revision": "04664b40c0dadb7ef37028acf3422c63271d377b"
+}

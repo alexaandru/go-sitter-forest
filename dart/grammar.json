@@ -1,0 +1,11 @@
+{
+  "language": "dart",
+  "url": "https://github.com/UserNobody14/tree-sitter-dart",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@akinsho",
+  "reference": "master",
+  "revision": "1a31399a08aefc93bc4cdbfadc0cb619136f86c1"
+}

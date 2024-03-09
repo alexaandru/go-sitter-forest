@@ -1,0 +1,10 @@
+{
+  "language": "bass",
+  "url": "https://github.com/vito/tree-sitter-bass",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "c9ba4568af24cd3403029730687c0a43d1350a43"
+}

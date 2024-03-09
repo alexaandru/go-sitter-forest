@@ -1,0 +1,11 @@
+{
+  "language": "pioasm",
+  "url": "https://github.com/leo60228/tree-sitter-pioasm",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@leo60228",
+  "reference": "main",
+  "revision": "924aadaf5dea2a6074d72027b064f939acf32e20"
+}

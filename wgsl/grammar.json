@@ -1,0 +1,11 @@
+{
+  "language": "wgsl",
+  "url": "https://github.com/szebniok/tree-sitter-wgsl",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@szebniok",
+  "reference": "master",
+  "revision": "40259f3c77ea856841a4e0c4c807705f3e4a2b65"
+}

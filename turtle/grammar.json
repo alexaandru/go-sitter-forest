@@ -1,0 +1,10 @@
+{
+  "language": "turtle",
+  "url": "https://github.com/BonaBeavis/tree-sitter-turtle",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@BonaBeavis",
+  "reference": "main",
+  "revision": "085437f5cb117703b7f520dd92161140a684f092"
+}

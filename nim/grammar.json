@@ -1,0 +1,11 @@
+{
+  "language": "nim",
+  "url": "https://github.com/alaviss/tree-sitter-nim",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@aMOPel",
+  "reference": "main",
+  "revision": "f5cec6a841b585e4e7388a120ded07e60ae19c43"
+}

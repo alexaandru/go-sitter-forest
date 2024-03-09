@@ -1,0 +1,10 @@
+{
+  "language": "hocon",
+  "url": "https://github.com/antosha417/tree-sitter-hocon",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@antosha417",
+  "reference": "master",
+  "revision": "c390f10519ae69fdb03b3e5764f5592fb6924bcc"
+}

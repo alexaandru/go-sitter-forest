@@ -1,0 +1,11 @@
+{
+  "language": "ruby",
+  "url": "https://github.com/tree-sitter/tree-sitter-ruby",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@TravonteD",
+  "reference": "master",
+  "revision": "22a0bb2678755a3714e194609862ea7f4516e807"
+}

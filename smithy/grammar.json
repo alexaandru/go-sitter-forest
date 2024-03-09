@@ -1,0 +1,10 @@
+{
+  "language": "smithy",
+  "url": "https://github.com/indoorvivants/tree-sitter-smithy",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq, @keynmol",
+  "reference": "main",
+  "revision": "8327eb84d55639ffbe08c9dc82da7fff72a1ad07"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "textproto",
+  "url": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Porter",
+  "reference": "main",
+  "revision": "8dacf02aa402892c91079f8577998ed5148c0496"
+}

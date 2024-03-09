@@ -1,0 +1,11 @@
+{
+  "language": "helm",
+  "url": "https://github.com/ngalaiko/tree-sitter-go-template",
+  "files": [
+    "parser.c"
+  ],
+  "srcRoot": "dialects/helm",
+  "maintainedBy": "@qvalentin",
+  "reference": "master",
+  "revision": "17144a77be0acdecebd9d557398883569fed41de"
+}

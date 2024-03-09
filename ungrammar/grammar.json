@@ -1,0 +1,10 @@
+{
+  "language": "ungrammar",
+  "url": "https://github.com/Philipp-M/tree-sitter-ungrammar",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Philipp-M, @amaanq",
+  "reference": "main",
+  "revision": "debd26fed283d80456ebafa33a06957b0c52e451"
+}

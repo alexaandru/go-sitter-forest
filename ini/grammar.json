@@ -1,0 +1,10 @@
+{
+  "language": "ini",
+  "url": "https://github.com/justinmk/tree-sitter-ini",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@theHamsta",
+  "reference": "master",
+  "revision": "bcb84a2d4bcd6f55b911c42deade75c8f90cb0c5"
+}

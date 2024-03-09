@@ -1,0 +1,10 @@
+{
+  "language": "nim_format_string",
+  "url": "https://github.com/aMOPel/tree-sitter-nim-format-string",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@aMOPel",
+  "reference": "master",
+  "revision": "d45f75022d147cda056e98bfba68222c9c8eca3a"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "po",
+  "url": "https://github.com/erasin/tree-sitter-po",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "d6aed225290bc71a15ab6f06305cb11419360c56"
+}

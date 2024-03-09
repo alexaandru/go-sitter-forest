@@ -1,0 +1,11 @@
+{
+  "language": "dhall",
+  "url": "https://github.com/jbellerb/tree-sitter-dhall",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "affb6ee38d629c9296749767ab832d69bb0d9ea8"
+}

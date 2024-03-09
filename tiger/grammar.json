@@ -1,0 +1,11 @@
+{
+  "language": "tiger",
+  "url": "https://github.com/ambroisie/tree-sitter-tiger",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@ambroisie",
+  "reference": "main",
+  "revision": "a7f11d946b44244f71df41d2a78af0665d618dae"
+}

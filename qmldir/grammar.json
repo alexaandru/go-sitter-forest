@@ -1,0 +1,10 @@
+{
+  "language": "qmldir",
+  "url": "https://github.com/Decodetalkers/tree-sitter-qmldir",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "6b2b5e41734bd6f07ea4c36ac20fb6f14061c841"
+}

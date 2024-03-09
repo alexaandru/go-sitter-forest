@@ -1,0 +1,10 @@
+{
+  "language": "git_rebase",
+  "url": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@gbprod",
+  "reference": "main",
+  "revision": "d8a4207ebbc47bd78bacdf48f883db58283f9fd8"
+}

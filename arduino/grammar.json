@@ -1,0 +1,11 @@
+{
+  "language": "arduino",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-arduino",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "72eee09b501f42a039b757c969a9f32e2b61d2a7"
+}

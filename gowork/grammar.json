@@ -1,0 +1,10 @@
+{
+  "language": "gowork",
+  "url": "https://github.com/omertuc/tree-sitter-go-work",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@omertuc",
+  "reference": "main",
+  "revision": "949a8a470559543857a62102c84700d291fc984c"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "hlsplaylist",
+  "url": "https://github.com/Freed-Wu/tree-sitter-hlsplaylist",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Freed-Wu",
+  "reference": "main",
+  "revision": "5be34b0f6ea01b24f017c2c715729a3a919f57fd"
+}

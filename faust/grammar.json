@@ -1,0 +1,10 @@
+{
+  "language": "faust",
+  "url": "https://github.com/khiner/tree-sitter-faust",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@khiner",
+  "reference": "main",
+  "revision": "f3b9274514b5f9bf6b0dd4a01c30f9cc15c58bc4"
+}

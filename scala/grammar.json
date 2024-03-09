@@ -1,0 +1,12 @@
+{
+  "language": "scala",
+  "url": "https://github.com/tree-sitter/tree-sitter-scala",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "stack.h"
+  ],
+  "maintainedBy": "@stevanmilic",
+  "reference": "master",
+  "revision": "e02f003d78dc269fef287b9b7b9963dc1f26bd7e"
+}

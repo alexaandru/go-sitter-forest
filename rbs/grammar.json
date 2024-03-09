@@ -1,0 +1,10 @@
+{
+  "language": "rbs",
+  "url": "https://github.com/joker1007/tree-sitter-rbs",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@joker1007",
+  "reference": "main",
+  "revision": "519a61132a51222e3ce73d3b7ef07465f587f346"
+}

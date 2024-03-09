@@ -1,0 +1,13 @@
+{
+  "language": "python",
+  "url": "https://github.com/tree-sitter/tree-sitter-python",
+  "files": [
+    "parser.c",
+    "scanner.c",
+    "src/tree_sitter/array.h",
+    "src/tree_sitter/alloc.h"
+  ],
+  "maintainedBy": "@stsewd, @theHamsta",
+  "reference": "master",
+  "revision": "03e88c170cb23142559a406b6e7621c4af3128f5"
+}

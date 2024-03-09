@@ -1,0 +1,10 @@
+{
+  "language": "corn",
+  "url": "https://github.com/jakestanger/tree-sitter-corn",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@jakestanger",
+  "reference": "master",
+  "revision": "604d73c38d4c28ca68e9e441ffd405d68cb63051"
+}

@@ -1,0 +1,10 @@
+{
+  "language": "vala",
+  "url": "https://github.com/vala-lang/tree-sitter-vala",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@Prince781",
+  "reference": "master",
+  "revision": "8f690bfa639f2b83d1fb938ed3dd98a7ba453e8b"
+}

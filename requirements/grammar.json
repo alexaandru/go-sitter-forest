@@ -1,0 +1,11 @@
+{
+  "language": "requirements",
+  "altName": "pip requirements",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "8666a4dfeb3107144398158bc3dd7a3f59d89ccb"
+}

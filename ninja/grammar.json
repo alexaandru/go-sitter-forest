@@ -1,0 +1,10 @@
+{
+  "language": "ninja",
+  "url": "https://github.com/alemuller/tree-sitter-ninja",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@alemuller",
+  "reference": "main",
+  "revision": "0a95cfdc0745b6ae82f60d3a339b37f19b7b9267"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "bitbake",
+  "url": "https://github.com/amaanq/tree-sitter-bitbake",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a"
+}

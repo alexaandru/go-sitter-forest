@@ -1,0 +1,12 @@
+{
+  "language": "glimmer",
+  "altName": "Glimmer and Ember",
+  "url": "https://github.com/alexlafroscia/tree-sitter-glimmer",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@NullVoxPopuli",
+  "reference": "main",
+  "revision": "f9746dc1d0707717fbba84cb5c22a71586af23e1"
+}

@@ -1,0 +1,12 @@
+{
+  "language": "c_sharp",
+  "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
+  "doc": "The parser is incomplete, it may return a partial or wrong AST!",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@Luxed",
+  "reference": "master",
+  "revision": "4b4e82ca0a30376ae605e77a0d8a3c803c9f9327"
+}

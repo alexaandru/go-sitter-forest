@@ -1,0 +1,11 @@
+{
+  "language": "pymanifest",
+  "altName": "PyPA manifest",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-pymanifest",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "e3b82b78721aee07f676dac8473ae69db51debcf"
+}

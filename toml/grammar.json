@@ -1,0 +1,11 @@
+{
+  "language": "toml",
+  "url": "https://github.com/ikatyang/tree-sitter-toml",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@tk-shirasaka",
+  "reference": "master",
+  "revision": "8bd2056818b21860e3d756b5a58c4f6e05fb744e"
+}

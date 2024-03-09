@@ -1,0 +1,11 @@
+{
+  "language": "kotlin",
+  "url": "https://github.com/fwcd/tree-sitter-kotlin",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@SalBakraa",
+  "reference": "main",
+  "revision": "4e909d6cc9ac96b4eaecb3fb538eaca48e9e9ee9"
+}

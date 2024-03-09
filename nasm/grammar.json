@@ -1,0 +1,10 @@
+{
+  "language": "nasm",
+  "url": "https://github.com/naclsn/tree-sitter-nasm",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "main",
+  "revision": "3bc691d2cfba44bea339a775ad496c8bc552c60d"
+}

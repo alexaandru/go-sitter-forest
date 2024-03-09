@@ -1,0 +1,10 @@
+{
+  "language": "ssh_config",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-ssh-config",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "514695df4985f56455b8f139a319453a2325cdcf"
+}

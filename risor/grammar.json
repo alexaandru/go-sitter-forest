@@ -1,0 +1,10 @@
+{
+  "language": "risor",
+  "url": "https://github.com/applejag/tree-sitter-risor",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@applejag",
+  "reference": "main",
+  "revision": "98f7c0d45176925338f91489964e0a0d819477a5"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "hoon",
+  "url": "https://github.com/urbit-pilled/tree-sitter-hoon",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@urbit-pilled",
+  "reference": "master",
+  "revision": "0135187126370cbf112d759a50eab4a5c913a827"
+}

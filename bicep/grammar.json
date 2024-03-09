@@ -1,0 +1,11 @@
+{
+  "language": "bicep",
+  "url": "https://github.com/amaanq/tree-sitter-bicep",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "c3451d1049c80074b18078ba50007b7c00e063f8"
+}

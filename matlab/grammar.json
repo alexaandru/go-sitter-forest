@@ -1,0 +1,11 @@
+{
+  "language": "matlab",
+  "url": "https://github.com/acristoffers/tree-sitter-matlab",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@acristoffers",
+  "reference": "main",
+  "revision": "79d8b25f57b48f83ae1333aff6723b83c9532e37"
+}

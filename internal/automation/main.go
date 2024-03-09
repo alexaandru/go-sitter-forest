@@ -20,6 +20,8 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
+const force = true
+
 var (
 	errUnknownCmd = fmt.Errorf("unknown command! Must be one of: check-updates, update-all, [force-]update <lang>")
 	grammarsJson  = filepath.Join("internal", "automation", "grammars.json")
@@ -183,17 +185,51 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 func mkBindingMap(lang string) (out map[string]string) {
 	out = map[string]string{}
 	for k, v := range tplBindings {
-		out[filepath.Join(lang, k)] = fmt.Sprintf(v, lang, lang, lang)
+		pack := lang
+
+		switch lang {
+		case "go":
+			pack = "Go"
+		case "func":
+			pack = "FunC"
+		}
+
+		if k == "binding.go" {
+			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, lang, lang)
+		} else {
+			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, pack, pack)
+		}
 	}
 
 	return
 }
 
-func createBindingFilesIfMissing(lang string) (err error) {
+func updateBindings() error {
+	g := new(errgroup.Group)
+
+	for _, gr := range grammars {
+		if gr.Skip || gr.Pending {
+			continue
+		}
+
+		g.Go(func() error {
+			return createBindingFilesIfMissing(gr.Language, force)
+		})
+	}
+
+	return g.Wait()
+}
+
+func createBindingFilesIfMissing(lang string, opts ...bool) (err error) {
+	force := false
+	if len(opts) > 0 {
+		force = opts[0]
+	}
+
 	for toPath, content := range mkBindingMap(lang) {
 		if found, err := fileExists(toPath); err != nil {
-			return err
-		} else if !found {
+			return err // Allow force overwriting of the binding.go file alone.
+		} else if !found || (force && filepath.Base(toPath) == "binding.go") {
 			if err = createBindingFile(toPath, content); err != nil {
 				return err
 			}
@@ -249,16 +285,36 @@ func writeGrammarsFile() error {
 		return cmp.Compare(strings.ToLower(a.Language), strings.ToLower(b.Language))
 	})
 
-	b, err := json.MarshalIndent(grammars, "", "  ")
-	if err != nil {
-		return fmt.Errorf("marshaling grammars file error: %w", err)
+	if err := writeJSON(grammarsJson, grammars); err != nil {
+		return err
 	}
 
-	if err = os.WriteFile(grammarsJson, b, 0o644); err != nil {
+	g := new(errgroup.Group)
+
+	for _, gr := range grammars {
+		if gr.Pending || gr.Skip {
+			continue
+		}
+
+		g.Go(func() error {
+			return writeJSON(filepath.Join(gr.Language, "grammar.json"), gr)
+		})
+	}
+
+	if err := g.Wait(); err != nil {
 		return err
 	}
 
 	return updateParsersMd()
+}
+
+func writeJSON(fname string, content any) error {
+	b, err := json.MarshalIndent(content, "", "  ")
+	if err != nil {
+		return err
+	}
+
+	return os.WriteFile(fname, b, 0o644)
 }
 
 func updateParsersMd() error {
@@ -360,6 +416,8 @@ func main() {
 		err = update(args[1], cmd == "force-update")
 	case "update-all":
 		err = updateAll()
+	case "update-bindings":
+		err = updateBindings()
 	case "update-json":
 		err = writeGrammarsFile()
 	default:

@@ -1,0 +1,10 @@
+{
+  "language": "usd",
+  "url": "https://github.com/ColinKennedy/tree-sitter-usd",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ColinKennedy",
+  "reference": "master",
+  "revision": "ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7"
+}

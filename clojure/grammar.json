@@ -1,0 +1,10 @@
+{
+  "language": "clojure",
+  "url": "https://github.com/sogaiu/tree-sitter-clojure",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@NoahTheDuke",
+  "reference": "master",
+  "revision": "6e41628e9d18b19caea1cb1d72aae4ccff5bdfe9"
+}

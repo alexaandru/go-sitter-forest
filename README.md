@@ -77,12 +77,17 @@ size **will be huge**, as in 200MB+ huge) then you can use the root package, i.e
 ```Go
 package main
 
-import parsers "github.com/alexaandru/go-sitter-forest"
+import (
+    parsers "github.com/alexaandru/go-sitter-forest"
+    sitter "github.com/smacker/go-tree-sitter"
+)
 
 func main() {
-    lang := parsers.Lang("go") // or any other
+    content := []byte("your source code goes here")
+    parser := sitter.NewParser()
+    parser.SetLanguage(parsers.Lang("ada"))
 
-    // Do something fun with lang in here...
+    // ...
 }
 ```
 

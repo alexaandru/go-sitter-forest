@@ -1,0 +1,10 @@
+{
+  "language": "regex",
+  "url": "https://github.com/tree-sitter/tree-sitter-regex",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@theHamsta",
+  "reference": "master",
+  "revision": "ba22e4e0cb42b2ef066948d0ea030ac509cef733"
+}

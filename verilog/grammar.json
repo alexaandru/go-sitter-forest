@@ -1,0 +1,10 @@
+{
+  "language": "verilog",
+  "url": "https://github.com/tree-sitter/tree-sitter-verilog",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@zegervdv",
+  "reference": "master",
+  "revision": "2dfddfcb891f74a1cdb9d8ce480a997d11846e17"
+}

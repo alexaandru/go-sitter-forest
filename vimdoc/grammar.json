@@ -1,0 +1,10 @@
+{
+  "language": "vimdoc",
+  "url": "https://github.com/neovim/tree-sitter-vimdoc",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@clason",
+  "reference": "master",
+  "revision": "016ad75faa854e4e13bc40c517015183b795eed9"
+}

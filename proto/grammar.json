@@ -1,0 +1,10 @@
+{
+  "language": "proto",
+  "url": "https://github.com/treywood/tree-sitter-proto",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@treywood",
+  "reference": "main",
+  "revision": "e9f6b43f6844bd2189b50a422d4e2094313f6aa3"
+}

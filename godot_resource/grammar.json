@@ -1,0 +1,12 @@
+{
+  "language": "godot_resource",
+  "altName": "Godot Resources (gdresource)",
+  "url": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@pierpo",
+  "reference": "master",
+  "revision": "b6ef0768711086a86b3297056f9ffb5cc1d77b4a"
+}

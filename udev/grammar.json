@@ -1,0 +1,10 @@
+{
+  "language": "udev",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-udev",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "8f58696e79092b4ad6bf197415bbd0970acf15cd"
+}

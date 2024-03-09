@@ -1,0 +1,10 @@
+{
+  "language": "llvm",
+  "url": "https://github.com/benwilliamgraham/tree-sitter-llvm",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@benwilliamgraham",
+  "reference": "main",
+  "revision": "1b96e58faf558ce057d4dc664b904528aee743cb"
+}

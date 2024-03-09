@@ -1,0 +1,10 @@
+{
+  "language": "embedded_template",
+  "url": "https://github.com/tree-sitter/tree-sitter-embedded-template",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@maxbrunsfeld",
+  "reference": "master",
+  "revision": "6d791b897ecda59baa0689a85a9906348a2a6414"
+}

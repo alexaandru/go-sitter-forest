@@ -1,0 +1,11 @@
+{
+  "language": "poe_filter",
+  "altName": "Path of Exile item filter",
+  "url": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@ObserverOfTime",
+  "reference": "master",
+  "revision": "592476d81f95d2451f2ca107dc872224c76fecdf"
+}

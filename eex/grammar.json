@@ -1,0 +1,10 @@
+{
+  "language": "eex",
+  "url": "https://github.com/connorlay/tree-sitter-eex",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@connorlay",
+  "reference": "main",
+  "revision": "f742f2fe327463335e8671a87c0b9b396905d1d1"
+}

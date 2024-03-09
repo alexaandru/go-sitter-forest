@@ -1,0 +1,11 @@
+{
+  "language": "rust",
+  "url": "https://github.com/tree-sitter/tree-sitter-rust",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "master",
+  "revision": "2d7bac5164c344c95530c16dd5c8fa1319e34308"
+}

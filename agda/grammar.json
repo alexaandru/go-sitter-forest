@@ -1,0 +1,11 @@
+{
+  "language": "agda",
+  "url": "https://github.com/tree-sitter/tree-sitter-agda",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@Decodetalkers",
+  "reference": "master",
+  "revision": "d3dc807692e6bca671d4491b3bf5c67eeca8c016"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "haskell_persistent",
+  "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@lykahb",
+  "reference": "master",
+  "revision": "577259b4068b2c281c9ebf94c109bd50a74d5857"
+}

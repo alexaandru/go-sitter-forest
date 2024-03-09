@@ -1,0 +1,12 @@
+{
+  "language": "sql",
+  "url": "https://github.com/DerekStride/tree-sitter-sql",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@DerekStride",
+  "needsGenerate": true,
+  "reference": "main",
+  "revision": "da2d1eff425b146d3c8cab7be8dfa98b11d896dc"
+}

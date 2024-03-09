@@ -1,0 +1,12 @@
+{
+  "language": "perl",
+  "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
+  "files": [
+    "scanner.c",
+    "tsp_unicode.h"
+  ],
+  "maintainedBy": "@RabbiVeesh, @LeoNerd",
+  "needsGenerate": true,
+  "reference": "master",
+  "revision": "ce78903240204fe2a9e192deeed77eccf4c0f575"
+}

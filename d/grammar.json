@@ -1,0 +1,11 @@
+{
+  "language": "d",
+  "url": "https://github.com/gdamore/tree-sitter-d",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@amaanq",
+  "reference": "main",
+  "revision": "a33d400f025d6bbd37b4c681c93054976f579890"
+}

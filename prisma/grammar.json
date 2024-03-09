@@ -1,0 +1,10 @@
+{
+  "language": "prisma",
+  "url": "https://github.com/victorhqc/tree-sitter-prisma",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@elianiva",
+  "reference": "master",
+  "revision": "eca2596a355b1a9952b4f80f8f9caed300a272b5"
+}

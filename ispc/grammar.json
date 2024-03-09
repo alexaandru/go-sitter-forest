@@ -1,0 +1,10 @@
+{
+  "language": "ispc",
+  "url": "https://github.com/fab4100/tree-sitter-ispc",
+  "files": [
+    "parser.c"
+  ],
+  "maintainedBy": "@fab4100",
+  "reference": "master",
+  "revision": "9b2f9aec2106b94b4e099fe75e73ebd8ae707c04"
+}

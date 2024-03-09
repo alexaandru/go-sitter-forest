@@ -1,0 +1,11 @@
+{
+  "language": "lua",
+  "url": "https://github.com/MunifTanjim/tree-sitter-lua",
+  "files": [
+    "parser.c",
+    "scanner.c"
+  ],
+  "maintainedBy": "@MunifTanjim",
+  "reference": "main",
+  "revision": "04c9579dcb917255b2e5f8199df4ae7f587d472f"
+}
