@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/alexaandru/go-sitter-forest/json5"
-	sitter "github.com/smacker/go-tree-sitter"
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 const (

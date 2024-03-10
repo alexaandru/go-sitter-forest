@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/alexaandru/go-sitter-forest/python"
-	sitter "github.com/smacker/go-tree-sitter"
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 const (
