@@ -5,10 +5,15 @@ update-% force-update-%:
 	@go run ./internal/automation $@
 
 test: check_parsers.go
-	@go test -vet=all -cover -covermode=atomic -coverprofile=unit.cov ./...
+	@go list -f '{{.Dir}}' -m | xargs go test -vet=all -cover ./...
 
 cover_map: test
 	@go-cover-treemap -coverprofile unit.cov > unit.svg
+
+check_submodules:
+	@echo "The list below shows all langs that do NOT have a Go module"
+	@echo "(no putput below this line == success)"
+	@find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -exec test -e "{}/go.mod" ';' -print
 
 check_parsers.go:
 	@diff <(grep GetLanguage forest.go|cut -f2 -d'"'|sort) <(jq -r '.[]|select(.skip == null and .pending == null)|.language' grammars.json|sort)
@@ -21,3 +26,4 @@ tests_with_bad_test_cases:
 	@grep -lE "(ERROR|Skip)" */binding_test.go
 
 include Plugins.make
+include BulkWork.make

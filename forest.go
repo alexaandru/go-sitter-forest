@@ -5,7 +5,7 @@ import (
 	enc_json "encoding/json"
 	"slices"
 
-	sitter "github.com/smacker/go-tree-sitter"
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
 
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"

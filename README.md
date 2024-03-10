@@ -49,25 +49,22 @@ You can use the parsers in here exactly the same way (import them one by one, et
 package main
 
 import (
-    "fmt"
-    "context"
+	"context"
+	"fmt"
 
-    "github.com/alexaandru/go-sitter-forest/ada"
-    sitter "github.com/smacker/go-tree-sitter"
+	"github.com/alexaandru/go-sitter-forest/ada"
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 func main() {
-    content := []byte("your source code goes here")
-    parser := sitter.NewParser()
-    parser.SetLanguage(ada.GetLanguage())
-
-    tree, err := parser.ParseCtx(context.TODO(), nil, content);
-    if err != nil {
-        fmt.Println(err)
-    } else {
-        // Do something interesting with the parsed tree...
-        fmt.Println(tree)
-    }
+	content := []byte("your source code goes here")
+	node, err := sitter.ParseCtx(context.TODO(), content, ada.GetLanguage())
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		// Do something interesting with the parsed tree...
+		fmt.Println(node)
+	}
 }
 ```
 
@@ -79,7 +76,7 @@ package main
 
 import (
     forest "github.com/alexaandru/go-sitter-forest"
-    sitter "github.com/smacker/go-tree-sitter"
+    sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 func main() {
