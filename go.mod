@@ -11,13 +11,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/astro v1.4.1
 	github.com/alexaandru/go-sitter-forest/authzed v1.4.1
 	github.com/alexaandru/go-sitter-forest/awk v1.4.1
-	github.com/alexaandru/go-sitter-forest/bash v1.4.1
+	github.com/alexaandru/go-sitter-forest/bash v1.4.2
 	github.com/alexaandru/go-sitter-forest/bass v1.4.1
 	github.com/alexaandru/go-sitter-forest/bibtex v1.4.1
 	github.com/alexaandru/go-sitter-forest/bicep v1.4.1
 	github.com/alexaandru/go-sitter-forest/bitbake v1.4.1
 	github.com/alexaandru/go-sitter-forest/blueprint v1.4.1
-	github.com/alexaandru/go-sitter-forest/c v1.4.1
+	github.com/alexaandru/go-sitter-forest/c v1.4.2
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.4.1
 	github.com/alexaandru/go-sitter-forest/cairo v1.4.1
 	github.com/alexaandru/go-sitter-forest/capnp v1.4.1
@@ -107,8 +107,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/ini v1.4.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.4.1
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.4.1
-	github.com/alexaandru/go-sitter-forest/java v1.4.1
-	github.com/alexaandru/go-sitter-forest/javascript v1.4.1
+	github.com/alexaandru/go-sitter-forest/java v1.4.2
+	github.com/alexaandru/go-sitter-forest/javascript v1.4.2
 	github.com/alexaandru/go-sitter-forest/jq v1.4.1
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.4.1
 	github.com/alexaandru/go-sitter-forest/json v1.4.1
@@ -127,7 +127,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.4.1
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.4.1
 	github.com/alexaandru/go-sitter-forest/llvm v1.4.1
-	github.com/alexaandru/go-sitter-forest/lua v1.4.1
+	github.com/alexaandru/go-sitter-forest/lua v1.4.2
 	github.com/alexaandru/go-sitter-forest/luadoc v1.4.1
 	github.com/alexaandru/go-sitter-forest/luap v1.4.1
 	github.com/alexaandru/go-sitter-forest/luau v1.4.1
@@ -159,8 +159,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.4.1
 	github.com/alexaandru/go-sitter-forest/pem v1.4.1
 	github.com/alexaandru/go-sitter-forest/perl v1.4.1
-	github.com/alexaandru/go-sitter-forest/php v1.4.1
-	github.com/alexaandru/go-sitter-forest/php_only v1.4.1
+	github.com/alexaandru/go-sitter-forest/php v1.4.2
+	github.com/alexaandru/go-sitter-forest/php_only v1.4.2
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.4.1
 	github.com/alexaandru/go-sitter-forest/pioasm v1.4.1
 	github.com/alexaandru/go-sitter-forest/po v1.4.1
@@ -195,13 +195,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.4.1
 	github.com/alexaandru/go-sitter-forest/robot v1.4.1
 	github.com/alexaandru/go-sitter-forest/ron v1.4.1
-	github.com/alexaandru/go-sitter-forest/ruby v1.4.1
-	github.com/alexaandru/go-sitter-forest/rust v1.4.1
+	github.com/alexaandru/go-sitter-forest/ruby v1.4.2
+	github.com/alexaandru/go-sitter-forest/rust v1.4.2
 	github.com/alexaandru/go-sitter-forest/scala v1.4.1
 	github.com/alexaandru/go-sitter-forest/scheme v1.4.1
 	github.com/alexaandru/go-sitter-forest/scss v1.4.1
 	github.com/alexaandru/go-sitter-forest/slang v1.4.1
-	github.com/alexaandru/go-sitter-forest/slint v1.4.1
+	github.com/alexaandru/go-sitter-forest/slint v1.4.2
 	github.com/alexaandru/go-sitter-forest/smali v1.4.1
 	github.com/alexaandru/go-sitter-forest/smithy v1.4.1
 	github.com/alexaandru/go-sitter-forest/snakemake v1.4.1
@@ -228,15 +228,15 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.4.1
 	github.com/alexaandru/go-sitter-forest/thrift v1.4.1
 	github.com/alexaandru/go-sitter-forest/tiger v1.4.1
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.4.1
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.4.2
 	github.com/alexaandru/go-sitter-forest/tmux v1.4.1
 	github.com/alexaandru/go-sitter-forest/todotxt v1.4.1
 	github.com/alexaandru/go-sitter-forest/toml v1.4.1
 	github.com/alexaandru/go-sitter-forest/tsv v1.4.1
-	github.com/alexaandru/go-sitter-forest/tsx v1.4.1
+	github.com/alexaandru/go-sitter-forest/tsx v1.4.2
 	github.com/alexaandru/go-sitter-forest/turtle v1.4.1
 	github.com/alexaandru/go-sitter-forest/twig v1.4.1
-	github.com/alexaandru/go-sitter-forest/typescript v1.4.1
+	github.com/alexaandru/go-sitter-forest/typescript v1.4.2
 	github.com/alexaandru/go-sitter-forest/typoscript v1.4.1
 	github.com/alexaandru/go-sitter-forest/typst v1.4.1
 	github.com/alexaandru/go-sitter-forest/udev v1.4.1
@@ -248,7 +248,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/verilog v1.4.1
 	github.com/alexaandru/go-sitter-forest/vhs v1.4.1
 	github.com/alexaandru/go-sitter-forest/vim v1.4.1
-	github.com/alexaandru/go-sitter-forest/vimdoc v1.4.1
+	github.com/alexaandru/go-sitter-forest/vimdoc v1.4.2
 	github.com/alexaandru/go-sitter-forest/vue v1.4.1
 	github.com/alexaandru/go-sitter-forest/wgsl v1.4.1
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.4.1
