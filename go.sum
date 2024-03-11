@@ -18,6 +18,8 @@ github.com/alexaandru/go-sitter-forest/bash v1.4.2 h1:AhCR877YEBhkBMm+/OLhgME6mB
 github.com/alexaandru/go-sitter-forest/bash v1.4.2/go.mod h1:ovmTG4ZDvMqsK7TLErZsJoAEeL+pCYkHGIB45zWGTEE=
 github.com/alexaandru/go-sitter-forest/bass v1.4.1 h1:Sg22aZD0ewLfNpwWNRc+rMjZPPHFlm4qhOqfwBVcM/U=
 github.com/alexaandru/go-sitter-forest/bass v1.4.1/go.mod h1:9b/ij861/YcWgfWTqrzPrFMM6DQv32hqQjgiPYUhoNk=
+github.com/alexaandru/go-sitter-forest/beancount v1.4.1 h1:6ENtOdiWe4HB7nlyzKkyEKz5zUa76418AwIxUGPZFKQ=
+github.com/alexaandru/go-sitter-forest/beancount v1.4.1/go.mod h1:Dgp/jQzQJOoqb+Ke2XyN9CKq0Zi55Oqa2PPM0BURHSw=
 github.com/alexaandru/go-sitter-forest/bibtex v1.4.1 h1:pE23C4GmM6eemFr1dwF67ddNcftZo04xLX4/nSxiCbY=
 github.com/alexaandru/go-sitter-forest/bibtex v1.4.1/go.mod h1:w6Ui7P/pSTaD7/3fw9ljBpywuFdfaGd3oCnYPkF9Gx0=
 github.com/alexaandru/go-sitter-forest/bicep v1.4.1 h1:5pvqG87o3oR4gZOS9XHN2hCXZr153FNm0L4e05ZEzmg=
@@ -300,8 +302,8 @@ github.com/alexaandru/go-sitter-forest/ocamllex v1.4.1 h1:N9tFKhV73AopQwhLQHEIsu
 github.com/alexaandru/go-sitter-forest/ocamllex v1.4.1/go.mod h1:j6BAaP7QjzDIUMEeyGt5afGBS4aHE7OGleBg4pHdxRw=
 github.com/alexaandru/go-sitter-forest/odin v1.4.1 h1:zgKquSEZqxRvSjn9KWIKxIwMW+lFA5QGLHpz+zHuEzQ=
 github.com/alexaandru/go-sitter-forest/odin v1.4.1/go.mod h1:mznP0nHWJe0oFbmPWCXFuYmOOhqIVE5uyBAB2f8D/+M=
-github.com/alexaandru/go-sitter-forest/org v1.4.1 h1:Yi6HAd/jQYZ8wOATTVhPq9qfsCJnNBnKvaMKknT9gq8=
-github.com/alexaandru/go-sitter-forest/org v1.4.1/go.mod h1:MTABpyulgK2rleXBAR91+6O6lI0VoutRBKo7Kl6Q54U=
+github.com/alexaandru/go-sitter-forest/org v1.4.2 h1:a9WGzVKLHaungOcMY9VC7C7Vi1r9ChyF1vbzR24Z+9A=
+github.com/alexaandru/go-sitter-forest/org v1.4.2/go.mod h1:MTABpyulgK2rleXBAR91+6O6lI0VoutRBKo7Kl6Q54U=
 github.com/alexaandru/go-sitter-forest/pascal v1.4.1 h1:zJEPNCQaDoYWvj4lWGPfD7fCW79gZX+ZodSBRn7C/8w=
 github.com/alexaandru/go-sitter-forest/pascal v1.4.1/go.mod h1:VauGdUuLKV3K72DwNC1T2HG8ZQmVujNTZdxSV6y7v58=
 github.com/alexaandru/go-sitter-forest/passwd v1.4.1 h1:IgeM66HbDz5kNglWF5Ic9eqmUkQzoevPyNPbVcLDH/A=

@@ -13,6 +13,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awk v1.4.1
 	github.com/alexaandru/go-sitter-forest/bash v1.4.2
 	github.com/alexaandru/go-sitter-forest/bass v1.4.1
+	github.com/alexaandru/go-sitter-forest/beancount v1.4.1
 	github.com/alexaandru/go-sitter-forest/bibtex v1.4.1
 	github.com/alexaandru/go-sitter-forest/bicep v1.4.1
 	github.com/alexaandru/go-sitter-forest/bitbake v1.4.1
@@ -154,7 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.4.1
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.4.1
 	github.com/alexaandru/go-sitter-forest/odin v1.4.1
-	github.com/alexaandru/go-sitter-forest/org v1.4.1
+	github.com/alexaandru/go-sitter-forest/org v1.4.2
 	github.com/alexaandru/go-sitter-forest/pascal v1.4.1
 	github.com/alexaandru/go-sitter-forest/passwd v1.4.1
 	github.com/alexaandru/go-sitter-forest/pem v1.4.1
@@ -259,10 +260,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/yuck v1.4.1
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.4.1
 	github.com/alexaandru/go-sitter-forest/zig v1.4.1
+	github.com/alexaandru/go-tree-sitter-bare v1.0.0
 	golang.org/x/sync v0.6.0
 )
-
-require github.com/alexaandru/go-tree-sitter-bare v1.0.0
 
 retract (
 	v1.4.1 // Yes, messed up again...
