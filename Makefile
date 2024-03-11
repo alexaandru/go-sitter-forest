@@ -5,7 +5,9 @@ update-% force-update-%:
 	@go run ./internal/automation $@
 
 test: check_parsers.go
-	@go list -f '{{.Dir}}' -m | xargs go test -vet=all -cover ./...
+	@go list -f '{{.Dir}}' -m | xargs go test -vet=all -cover -covermode=atomic -coverprofile=parsers.cov
+	@go test -vet=all -cover -covermode=atomic -coverprofile=forest.cov .
+	@gocovmerge parsers.cov forest.cov > unit.cov
 
 cover_map: test
 	@go-cover-treemap -coverprofile unit.cov > unit.svg

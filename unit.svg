@@ -1,0 +1,3263 @@
+
+<svg 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 1028.000000 640.000000" 
+	style="background: white none repeat scroll 0% 0%;"
+>
+
+<g>
+	<rect x="20.000000" y="20.000000" width="988.000000" height="600.000000" style="fill: rgba(195, 229, 123, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(28.000000,35.600000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">github.com/alexaandru/go-sitter-forest</text>
+		
+</g>
+
+
+<g>
+	<rect x="28.000000" y="208.257627" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="237.667797" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="267.077966" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="296.488136" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="325.898305" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="355.308475" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="384.718644" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="414.128814" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="443.538983" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="472.949153" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="502.359322" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="531.769492" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="561.179661" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="28.000000" y="590.589831" width="65.375635" height="21.410169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="101.375635" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,57.200000) scale(0.108185)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">blueprint/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,105.400000) scale(0.180309)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">c/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,153.600000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">c_sharp/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,201.800000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cairo/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,250.000000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">capnp/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,298.200000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">chatito/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,346.400000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">clojure/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,394.600000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cmake/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,442.800000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">commonlisp/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,491.000000) scale(0.113879)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cooklang/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,539.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">corn/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="101.375635" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(109.375635,587.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cpon/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,57.200000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cpp/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,105.400000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">crystal/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,153.600000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">css/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,201.800000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">csv/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,250.000000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cuda/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,298.200000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">cue/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,346.400000) scale(0.180309)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">d/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,394.600000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">dart/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,442.800000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">devicetree/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,491.000000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">dhall/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,539.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">diff/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="146.147208" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(154.147208,587.400000) scale(0.098350)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">disassembly/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,57.200000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">dockerfile/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,105.400000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">dot/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,153.600000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">doxygen/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,201.800000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">dtd/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,250.000000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ebnf/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,298.200000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">eds/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,346.400000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">eex/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,394.600000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">elixir/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,442.800000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">elm/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,491.000000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">elsa/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,539.200000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">elvish/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="190.918782" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(198.918782,587.400000) scale(0.077275)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">embedded_template/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,57.200000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">erlang/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,105.400000) scale(0.113879)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">facility/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,153.600000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">faust/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,201.800000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">fennel/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,250.000000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">fidl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,298.200000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">firrtl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,346.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">fish/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,394.600000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">foam/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="28.000000" y="41.600000" width="65.375635" height="158.657627" style="fill: rgba(125, 199, 101, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(36.000000,57.200000) scale(0.571477)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">forest.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,442.800000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">forth/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,491.000000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">fortran/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,539.200000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">fsh/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="235.690355" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(243.690355,587.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">func/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,57.200000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">fusion/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,105.400000) scale(0.113879)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gdscript/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,153.600000) scale(0.113879)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gdshader/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,201.800000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">git_config/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,250.000000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">git_rebase/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,298.200000) scale(0.090154)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gitattributes/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,346.400000) scale(0.108185)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gitcommit/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,394.600000) scale(0.108185)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gitignore/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,442.800000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gleam/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,491.000000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">glimmer/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,539.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">glsl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="280.461929" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(288.461929,587.400000) scale(0.166439)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gn/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,57.200000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gnuplot/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,105.400000) scale(0.166439)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">go/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,153.600000) scale(0.086548)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">godot_resource/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,201.800000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gomod/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,250.000000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gosum/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,298.200000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gotmpl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,346.400000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gowork/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,394.600000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gpg/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,442.800000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">graphql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,491.000000) scale(0.127277)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">groovy/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,539.200000) scale(0.108185)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">gstlaunch/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="325.233503" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(333.233503,587.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hack/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,57.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hare/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,105.400000) scale(0.120206)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">haskell/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,153.600000) scale(0.074611)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">haskell_persistent/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,201.800000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hcl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,250.000000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">heex/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,298.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">helm/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,346.400000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hjson/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,394.600000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hlsl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,442.800000) scale(0.098350)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hlsplaylist/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,491.000000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hocon/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,539.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hoon/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="370.005076" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(378.005076,587.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">html/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="41.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,57.200000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">htmldjango/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="89.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,105.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">http/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="138.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,153.600000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hurl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="186.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,201.800000) scale(0.113879)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">hyprlang/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="234.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,250.000000) scale(0.154550)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ini/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="282.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,298.200000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ispc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="330.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,346.400000) scale(0.094074)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">janet_simple/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="379.000000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,394.600000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">java/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="427.200000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,442.800000) scale(0.103034)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">javascript/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="475.400000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,491.000000) scale(0.166439)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">jq/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="523.600000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,539.200000) scale(0.135232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">jsdoc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="414.776650" y="571.800000" width="36.771574" height="40.200000" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(422.776650,587.400000) scale(0.144247)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">json/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,57.200000) scale(0.141304)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">json5/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="505.252538" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(513.252538,57.200000) scale(0.141304)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">jsonc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="550.956853" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(558.956853,57.200000) scale(0.125604)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">jsonnet/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="596.661168" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(604.661168,57.200000) scale(0.141304)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">julia/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="642.365482" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(650.365482,57.200000) scale(0.125604)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">kconfig/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="688.069797" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(696.069797,57.200000) scale(0.161490)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">kdl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="733.774112" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(741.774112,57.200000) scale(0.132992)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">kotlin/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="779.478426" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(787.478426,57.200000) scale(0.141304)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">kusto/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="825.182741" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(833.182741,57.200000) scale(0.125604)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">lalrpop/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="870.887056" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(878.887056,57.200000) scale(0.141304)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">latex/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="916.591371" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(924.591371,57.200000) scale(0.132992)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ledger/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="962.295685" y="41.600000" width="37.704315" height="39.216327" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(970.295685,57.200000) scale(0.161490)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">leo/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="88.816327" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,104.416327) scale(0.093699)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">linkerscript/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="137.105751" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,152.705751) scale(0.102622)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">liquidsoap/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="185.395176" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,200.995176) scale(0.143671)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">llvm/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="233.684601" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,249.284601) scale(0.153934)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">lua/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="281.974026" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,297.574026) scale(0.126769)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">luadoc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="330.263451" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,345.863451) scale(0.143671)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">luap/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="378.552876" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,394.152876) scale(0.143671)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">luau/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="426.842301" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,442.442301) scale(0.143671)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">m68k/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="475.131725" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,490.731725) scale(0.143671)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">make/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="523.421150" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,539.021150) scale(0.113425)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">markdown/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="459.548223" y="571.710575" width="36.688663" height="40.289425" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(467.548223,587.310575) scale(0.082887)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">markdown_inline/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,104.416327) scale(0.133558)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">matlab/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="550.033533" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(558.033533,104.416327) scale(0.133558)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">menhir/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="595.830180" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(603.830180,104.416327) scale(0.126138)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">mermaid/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="641.626827" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(649.626827,104.416327) scale(0.141905)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">meson/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="687.423473" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(695.423473,104.416327) scale(0.133558)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">muttrc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="733.220120" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(741.220120,104.416327) scale(0.151366)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">nasm/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="779.016767" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(787.016767,104.416327) scale(0.133558)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">nickel/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="824.813413" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(832.813413,104.416327) scale(0.162177)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">nim/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="870.610060" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(878.610060,104.416327) scale(0.081089)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">nim_format_string/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="916.406707" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(924.406707,104.416327) scale(0.141905)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ninja/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="962.203353" y="88.816327" width="37.796647" height="39.121132" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(970.203353,104.416327) scale(0.162177)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">nix/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="135.937459" width="36.580806" height="40.406254" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,151.537459) scale(0.142922)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">norg/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="184.343713" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,199.943713) scale(0.153131)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">nqc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="232.749967" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,248.349967) scale(0.142922)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">objc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="281.156221" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,296.756221) scale(0.119102)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">objdump/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="329.562475" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,345.162475) scale(0.133990)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ocaml/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="377.968729" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,393.568729) scale(0.082455)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ocaml_interface/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="426.374984" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,441.974984) scale(0.112833)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ocamllex/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="474.781238" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,490.381238) scale(0.142922)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">odin/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="523.187492" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,538.787492) scale(0.153131)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">org/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="504.236887" y="571.593746" width="36.580806" height="40.406254" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(512.236887,587.193746) scale(0.126108)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">pascal/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,151.537459) scale(0.134303)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">passwd/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="594.735924" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(602.735924,151.537459) scale(0.163082)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">pem/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="640.654155" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(648.654155,151.537459) scale(0.152210)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">perl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="686.572385" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(694.572385,151.537459) scale(0.163082)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">php/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="732.490616" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(740.490616,151.537459) scale(0.120166)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">php_only/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="778.408847" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(786.408847,151.537459) scale(0.134303)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">phpdoc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="824.327077" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(832.327077,151.537459) scale(0.134303)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">pioasm/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="870.245308" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(878.245308,151.537459) scale(0.175627)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">po/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="916.163539" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(924.163539,151.537459) scale(0.108721)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">poe_filter/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="962.081769" y="135.937459" width="37.918231" height="38.996363" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(970.081769,151.537459) scale(0.152210)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">pony/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="182.933822" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,198.533822) scale(0.125227)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">printf/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="231.496731" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,247.096731) scale(0.125227)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">prisma/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="280.059639" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,295.659639) scale(0.125227)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">promql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="328.622548" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,344.222548) scale(0.101374)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">properties/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="377.185457" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,392.785457) scale(0.133053)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">proto/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="425.748365" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,441.348365) scale(0.141924)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">prql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="474.311274" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,489.911274) scale(0.152061)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">psv/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="522.874183" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,538.474183) scale(0.152061)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">pug/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="548.817693" y="571.437091" width="36.436997" height="40.562909" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(556.817693,587.037091) scale(0.125227)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">puppet/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,198.533822) scale(0.109538)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">purescript/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="639.337503" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(647.337503,198.533822) scale(0.109538)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">pymanifest/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="685.420315" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(693.420315,198.533822) scale(0.135311)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">python/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="731.503127" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(739.503127,198.533822) scale(0.176946)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="777.585939" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(785.585939,198.533822) scale(0.135311)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">qmldir/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="823.668751" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(831.668751,198.533822) scale(0.143768)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">qmljs/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="869.751564" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(877.751564,198.533822) scale(0.143768)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">query/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="915.834376" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(923.834376,198.533822) scale(0.191691)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">r/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="961.917188" y="182.933822" width="38.082812" height="38.828519" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(969.917188,198.533822) scale(0.135311)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">racket/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="229.762341" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,245.362341) scale(0.140552)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">rasi/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="278.542048" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,294.142048) scale(0.150592)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">rbs/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="327.321756" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,342.921756) scale(0.140552)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">re2c/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="376.101463" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,391.701463) scale(0.110962)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">readline/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="424.881171" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,440.481171) scale(0.131768)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">regex/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="473.660878" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,489.260878) scale(0.140552)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">rego/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="522.440585" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,538.040585) scale(0.091664)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">requirements/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="593.254691" y="571.220293" width="36.239500" height="40.779707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(601.254691,586.820293) scale(0.131768)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">risor/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,245.362341) scale(0.136723)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">rnoweb/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="683.807416" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(691.807416,245.362341) scale(0.145268)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">robot/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="730.120643" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(738.120643,245.362341) scale(0.166021)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ron/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="776.433869" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(784.433869,245.362341) scale(0.154953)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ruby/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="822.747095" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(830.747095,245.362341) scale(0.154953)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">rust/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="869.060321" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(877.060321,245.362341) scale(0.145268)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">scala/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="915.373548" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(923.373548,245.362341) scale(0.136723)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">scheme/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="961.686774" y="229.762341" width="38.313226" height="38.595541" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(969.686774,245.362341) scale(0.154953)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">scss/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="276.357882" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,291.957882) scale(0.129937)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">slang/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="325.449614" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,341.049614) scale(0.129937)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">slint/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="374.541345" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,390.141345) scale(0.129937)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">smali/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="423.633076" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,439.233076) scale(0.122294)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">smithy/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="472.724807" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,488.324807) scale(0.103950)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">snakemake/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="521.816538" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,537.416538) scale(0.109421)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">solidity/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="637.494190" y="570.908269" width="35.958316" height="41.091731" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(645.494190,586.508269) scale(0.138599)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">soql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,291.957882) scale(0.157289)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">sosl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="728.102149" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(736.102149,291.957882) scale(0.112349)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">sourcepawn/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="774.751790" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(782.751790,291.957882) scale(0.138785)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">sparql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="821.401432" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(829.401432,291.957882) scale(0.168524)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">sql/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="868.051074" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(876.051074,291.957882) scale(0.124176)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">squirrel/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="914.700716" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(922.700716,291.957882) scale(0.112349)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ssh_config/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="961.350358" y="276.357882" width="38.649642" height="38.259516" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(969.350358,291.957882) scale(0.124176)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">starlark/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="322.617398" width="35.539666" height="41.563767" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,338.217398) scale(0.119728)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">strace/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="372.181165" width="35.539666" height="41.563767" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,387.781165) scale(0.119728)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">styled/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="421.744932" width="35.539666" height="41.563767" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,437.344932) scale(0.084808)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">supercollider/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="471.308699" width="35.539666" height="41.563767" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,486.908699) scale(0.113077)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">surface/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="520.872466" width="35.539666" height="41.563767" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,536.472466) scale(0.119728)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">svelte/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="681.452507" y="570.436233" width="35.539666" height="41.563767" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(689.452507,586.036233) scale(0.113077)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">sxhkdrc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="724.992172" y="322.617398" width="39.167971" height="37.751169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(732.992172,338.217398) scale(0.120667)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">systemtap/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="772.160144" y="322.617398" width="39.167971" height="37.751169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(780.160144,338.217398) scale(0.172381)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">t32/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="819.328115" y="322.617398" width="39.167971" height="37.751169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(827.328115,338.217398) scale(0.127017)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tablegen/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="866.496086" y="322.617398" width="39.167971" height="37.751169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(874.496086,338.217398) scale(0.172381)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tcl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="913.664057" y="322.617398" width="39.167971" height="37.751169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(921.664057,338.217398) scale(0.150833)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">templ/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="960.832029" y="322.617398" width="39.167971" height="37.751169" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(968.832029,338.217398) scale(0.120667)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">textproto/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="724.992172" y="368.368568" width="34.879974" height="42.326286" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(732.992172,383.968568) scale(0.115686)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">thrift/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="724.992172" y="418.694854" width="34.879974" height="42.326286" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(732.992172,434.294854) scale(0.122916)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tiger/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="724.992172" y="469.021141" width="34.879974" height="42.326286" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(732.992172,484.621141) scale(0.109259)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tlaplus/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="724.992172" y="519.347427" width="34.879974" height="42.326286" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(732.992172,534.947427) scale(0.131111)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tmux/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="724.992172" y="569.673714" width="34.879974" height="42.326286" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(732.992172,585.273714) scale(0.109259)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">todotxt/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="767.872146" y="368.368568" width="40.025571" height="36.934184" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(775.872146,383.968568) scale(0.166844)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">toml/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="815.897717" y="368.368568" width="40.025571" height="36.934184" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(823.897717,383.968568) scale(0.178762)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tsv/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="863.923288" y="368.368568" width="40.025571" height="36.934184" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(871.923288,383.968568) scale(0.178762)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">tsx/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="911.948859" y="368.368568" width="40.025571" height="36.934184" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(919.948859,383.968568) scale(0.147216)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">turtle/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="959.974429" y="368.368568" width="40.025571" height="36.934184" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(967.974429,383.968568) scale(0.166844)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">twig/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="767.872146" y="413.302752" width="33.761366" height="43.674312" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(775.872146,428.902752) scale(0.088102)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">typescript/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="767.872146" y="464.977064" width="33.761366" height="43.674312" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(775.872146,480.577064) scale(0.088102)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">typoscript/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="767.872146" y="516.651376" width="33.761366" height="43.674312" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(775.872146,532.251376) scale(0.115634)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">typst/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="767.872146" y="568.325688" width="33.761366" height="43.674312" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(775.872146,583.925688) scale(0.123343)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">udev/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="809.633512" y="413.302752" width="41.591622" height="35.515210" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(817.633512,428.902752) scale(0.133290)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">ungrammar/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="859.225134" y="413.302752" width="41.591622" height="35.515210" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(867.225134,428.902752) scale(0.190414)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">usd/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="908.816756" y="413.302752" width="41.591622" height="35.515210" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(916.816756,428.902752) scale(0.156811)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">uxntal/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="958.408378" y="413.302752" width="41.591622" height="35.515210" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(966.408378,428.902752) scale(0.222149)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">v/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="809.633512" y="456.817962" width="44.897730" height="32.795509" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(817.633512,472.417962) scale(0.200679)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">vala/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="809.633512" y="497.613472" width="44.897730" height="32.795509" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(817.633512,513.213472) scale(0.167232)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">verilog/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="809.633512" y="538.408981" width="44.897730" height="32.795509" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(817.633512,554.008981) scale(0.215013)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">vhs/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="809.633512" y="579.204491" width="44.897730" height="32.795509" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(817.633512,594.804491) scale(0.215013)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">vim/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="862.531242" y="456.817962" width="40.489586" height="36.504192" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(870.531242,472.417962) scale(0.150059)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">vimdoc/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="911.020828" y="456.817962" width="40.489586" height="36.504192" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(919.020828,472.417962) scale(0.182214)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">vue/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="959.510414" y="456.817962" width="40.489586" height="36.504192" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(967.510414,472.417962) scale(0.170067)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">wgsl/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="862.531242" y="501.322154" width="46.550784" height="31.559282" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(870.531242,516.922154) scale(0.159119)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">wgsl_bevy/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="862.531242" y="540.881436" width="46.550784" height="31.559282" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(870.531242,556.481436) scale(0.167493)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">xcompose/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="862.531242" y="580.440718" width="46.550784" height="31.559282" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(870.531242,596.040718) scale(0.227312)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">xml/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="917.082026" y="501.322154" width="37.458987" height="39.471138" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(925.082026,516.922154) scale(0.149021)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">yaml/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="962.541013" y="501.322154" width="37.458987" height="39.471138" style="fill: rgba(165, 0, 38, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(970.541013,516.922154) scale(0.149021)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">yang/binding.go</text>
+		
+</g>
+
+
+<g>
+	<rect x="917.082026" y="548.793293" width="52.611982" height="27.603354" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="917.082026" y="584.396646" width="52.611982" height="27.603354" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+</g>
+
+
+<g>
+	<rect x="977.694009" y="548.793293" width="22.305991" height="63.206707" style="fill: rgba(184, 225, 116, 65535);opacity:1;fill-opacity:1;stroke:rgba(128,128,128,65535);stroke-width:1px;stroke-opacity:1;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(985.694009,564.393293) scale(0.046920)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0, 65535); fill-opacity: 1; white-space: pre;" 
+	data-math="N">zig/binding.go</text>
+		
+</g>
+
+</svg>
