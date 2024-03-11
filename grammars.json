@@ -105,7 +105,7 @@
     ],
     "maintainedBy": "@TravonteD",
     "reference": "master",
-    "revision": "975bc70ad95dbbf2733872bc2e0a059c055db983"
+    "revision": "e318c3ee08e164861d3e987669bb575b42094066"
   },
   {
     "language": "bass",
@@ -178,7 +178,7 @@
     ],
     "maintainedBy": "@amaanq",
     "reference": "master",
-    "revision": "652433fce487d8c3943207da38e3e65e4550e288"
+    "revision": "70c0ddee618f4967c49143636c34982dd3375f89"
   },
   {
     "language": "c_sharp",
@@ -242,7 +242,7 @@
     ],
     "maintainedBy": "@uyha",
     "reference": "master",
-    "revision": "f8de25f30757a2def006a7c144354710fe63dcf3"
+    "revision": "7dc15823107831729c64a917c796a93cf5c6a7e3"
   },
   {
     "language": "comment",
@@ -1138,7 +1138,7 @@
     ],
     "maintainedBy": "@p00f",
     "reference": "master",
-    "revision": "99b29f1ed957b3b424b6e21f57bd21a9732a622a"
+    "revision": "5e62fbb519b608dfd856000fdc66536304c414de"
   },
   {
     "language": "javascript",
@@ -1149,7 +1149,7 @@
     ],
     "maintainedBy": "@steelsojka",
     "reference": "master",
-    "revision": "51aed7263d33bee46b0a8a5e165ffcb690d5aca8"
+    "revision": "de1e682289a417354df5b4437a3e4f92e0722a0f"
   },
   {
     "language": "jq",
@@ -1351,7 +1351,7 @@
     ],
     "maintainedBy": "@MunifTanjim",
     "reference": "main",
-    "revision": "04c9579dcb917255b2e5f8199df4ae7f587d472f"
+    "revision": "a24dab177e58c9c6832f96b9a73102a0cfbced4a"
   },
   {
     "language": "luadoc",
@@ -1712,7 +1712,7 @@
     "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
     "reference": "master",
-    "revision": "365fd18542aaba90466580f8400e4ba3fb71c5fb"
+    "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
   },
   {
     "language": "php_only",
@@ -1725,7 +1725,7 @@
     "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
     "reference": "master",
-    "revision": "365fd18542aaba90466580f8400e4ba3fb71c5fb"
+    "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
   },
   {
     "language": "phpdoc",
@@ -1920,7 +1920,7 @@
     ],
     "maintainedBy": "@stsewd, @theHamsta",
     "reference": "master",
-    "revision": "03e88c170cb23142559a406b6e7621c4af3128f5"
+    "revision": "0f9047c857ed0990931b1f899c7d3bf403703147"
   },
   {
     "language": "ql",
@@ -2122,7 +2122,7 @@
     ],
     "maintainedBy": "@TravonteD",
     "reference": "master",
-    "revision": "22a0bb2678755a3714e194609862ea7f4516e807"
+    "revision": "9d86f3761bb30e8dcc81e754b81d3ce91848477e"
   },
   {
     "language": "rust",
@@ -2133,7 +2133,7 @@
     ],
     "maintainedBy": "@amaanq",
     "reference": "master",
-    "revision": "2d7bac5164c344c95530c16dd5c8fa1319e34308"
+    "revision": "3a56481f8d13b6874a28752502a58520b9139dc7"
   },
   {
     "language": "scala",
@@ -2145,7 +2145,7 @@
     ],
     "maintainedBy": "@stevanmilic",
     "reference": "master",
-    "revision": "e02f003d78dc269fef287b9b7b9963dc1f26bd7e"
+    "revision": "71ee31cd2157eda9c3893b0b5e7ca1123de34865"
   },
   {
     "language": "scfg",
@@ -2199,7 +2199,7 @@
     ],
     "maintainedBy": "@hunger",
     "reference": "master",
-    "revision": "cdb307898345cb0465922be447a063b9c294afca"
+    "revision": "f5fa844d2adbcfdc7a0ec4daae4539887959d9ff"
   },
   {
     "language": "smali",
@@ -2512,7 +2512,7 @@
     ],
     "maintainedBy": "@ahelwer, @susliko",
     "reference": "main",
-    "revision": "aaf5bb5c1df0a6e583bb51efa519a9ac788b2ad8"
+    "revision": "3896a5be761f04ffb22a841b2a0672f7a8a43ef9"
   },
   {
     "language": "tmux",
@@ -2567,7 +2567,7 @@
     "srcRoot": "tsx",
     "maintainedBy": "@steelsojka",
     "reference": "master",
-    "revision": "198e2ea43d1c4ddd76ee883f4eae15f4201cd241"
+    "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
   },
   {
     "language": "turtle",
@@ -2600,7 +2600,7 @@
     "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
     "reference": "master",
-    "revision": "198e2ea43d1c4ddd76ee883f4eae15f4201cd241"
+    "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
   },
   {
     "language": "typoscript",
@@ -2739,7 +2739,7 @@
     ],
     "maintainedBy": "@clason",
     "reference": "master",
-    "revision": "016ad75faa854e4e13bc40c517015183b795eed9"
+    "revision": "90a396267e117835c778bdbda6f7db86b601d829"
   },
   {
     "language": "vue",
