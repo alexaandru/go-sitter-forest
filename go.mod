@@ -264,4 +264,7 @@ require (
 
 require github.com/alexaandru/go-tree-sitter-bare v1.0.0
 
-retract v1.4.0 // Messed up with rebase.
+retract (
+	v1.4.1 // Yes, messed up again...
+	v1.4.0 // Messed up with rebase.
+)
