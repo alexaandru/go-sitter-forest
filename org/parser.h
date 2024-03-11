@@ -120,8 +120,8 @@ struct TSLanguage {
     void *(*create)(void);
     void (*destroy)(void *);
     bool (*scan)(void *, TSLexer *, const bool *symbol_whitelist);
-    unsigned (*serialize)(void *, char *);
-    void (*deserialize)(void *, const char *, unsigned);
+    unsigned (*serialize_org)(void *, char *);
+    void (*deserialize_org)(void *, const char *, unsigned);
   } external_scanner;
   const TSStateId *primary_state_ids;
 };

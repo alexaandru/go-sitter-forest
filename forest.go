@@ -17,9 +17,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/awk"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
-	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
-
-	//"github.com/alexaandru/go-sitter-forest/beancount"
+	"github.com/alexaandru/go-sitter-forest/beancount"
 	"github.com/alexaandru/go-sitter-forest/bibtex"
 	"github.com/alexaandru/go-sitter-forest/bicep"
 	"github.com/alexaandru/go-sitter-forest/bitbake"
@@ -112,6 +110,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/hurl"
 	"github.com/alexaandru/go-sitter-forest/hyprlang"
 	"github.com/alexaandru/go-sitter-forest/ini"
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/ispc"
 	"github.com/alexaandru/go-sitter-forest/janet_simple"
 	"github.com/alexaandru/go-sitter-forest/java"
@@ -271,8 +270,6 @@ import (
 //go:embed grammars.json
 var info []byte
 
-// FIXME: beancount and org cannot be used by the same app, as they both define some common methods.
-// "beancount":          beancount.GetLanguage,
 var langNameFuncs = map[string]func() *sitter.Language{
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
@@ -284,6 +281,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"awk":                awk.GetLanguage,
 	"bash":               bash.GetLanguage,
 	"bass":               bass.GetLanguage,
+	"beancount":          beancount.GetLanguage,
 	"bibtex":             bibtex.GetLanguage,
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,

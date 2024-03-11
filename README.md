@@ -119,9 +119,9 @@ For transparency, any and all changes made to the parsers' (and, to be clear, I
 include in this term ALL the files coming from parsers, not just parser.c) files
 are documented below.
 
-For one thing ALL changes are fully automated, no change is ever made manually,
-so inspecting the automation should give you a clear picture of all the changes
-performed to the code, changes which are detailed below:
+For one thing ALL changes are fully automated (any exceptions are noted below),
+no change is ever made manually, so inspecting the automation should give you a
+clear picture of all the changes performed to the code, changes which are detailed below:
 
 - the include paths are rewritten to use a flat structure (i.e. `"tree_sitter/parser.h"`
   becomes `"parser.h"`); This makes the automation simpler as we download all files from
@@ -136,7 +136,14 @@ performed to the code, changes which are detailed below:
   - `TAG_TYPES_BY_TAG_NAME_astro`;
   - `TAG_TYPES_BY_TAG_NAME_html`;
   - `TAG_TYPES_BY_TAG_NAME_svelte`;
-  - `TAG_TYPES_BY_TAG_NAME_vue`.
+  - `TAG_TYPES_BY_TAG_NAME_vue`;
+- **EXCEPTION** MANUAL changes:
+  - `org` and `beancount` parsers conflict at scanner level. There were several
+    functions that clashed between the two, as a result, as a POC for a future automated
+    fix for this, I manually renamed the offending identifiers in `org` parser by
+    appending the `_org` suffix to them (i.e. `serialize` -> `serialize_org`, etc.);
+    If this works well, it will be turned into an automated fix as well, and this
+    manual exception removed.
 
 ## Roadmap
 
