@@ -92,7 +92,9 @@ this way you can fetch and use any of the parsers, without having to manually im
 all of them. You should rarely need this though, unless you're writing a text editor
 or something.
 
-A third way, and perhaps the most convenient, is to use the included [Plugins.make](Plugins.make)
+A third way, ~and perhaps the most convenient~ (no, it's not, it's \~200MB with all
+parsers built into the binary whereas all parsers built as plugins take \~1.65GB),
+is to use the included [Plugins.make](Plugins.make)
 makefile, which allows easy creation of any and all plugins. Simply copy it to
 your repo, and then you can easily `make -f Plugins.make plugin-ada`, etc. or
 use the `plugin-all` target which creates all the plugins.
