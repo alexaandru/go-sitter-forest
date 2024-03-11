@@ -138,6 +138,13 @@ performed to the code, changes which are detailed below:
 
 ## Roadmap
 
+- need some automation around working with so many Go modules, in particular:
+  - updating tag on a parser after a parser update;
+  - updating forest (root package) to point to the latest tag of a parser after
+    a parser update;
+  - updating the tag for the forest itself;
+  - also need to update the parsers automation to create a Go module for a new
+    parser automatically;
 - add the remaining parsers;
 - fix identifier clash between `beancount` and `org` (currently they cannot both
   be imported by the same app);
