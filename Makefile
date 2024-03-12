@@ -27,5 +27,10 @@ tests_with_bad_test_cases:
 	@echo
 	@grep -lE "(ERROR|Skip)" */binding_test.go
 
+clean:
+	@rm -fv *.cov
+
+.PHONY: clean
+
 include Plugins.make
 include BulkWork.make
