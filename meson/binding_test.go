@@ -26,7 +26,7 @@ buildtype = get_option('buildtype')
 host_system = host_machine.system()
 prefix = get_option('prefix')
 `
-	expected = "(source_file (normal_command command: (identifier) (comment) (variableunit (string)) (variableunit (string)) (comment) (pair key: (identifier) value: (string)) (pair key: (identifier) value: (string)) (pair key: (identifier) value: (list (variableunit (string))))) (operatorunit (identifier) (normal_command command: (identifier) (variableunit (string)))) (operatorunit (identifier) (expression_statement object: (identifier) function: (normal_command command: (identifier)))) (operatorunit (identifier) (variableunit (normal_command command: (identifier) (variableunit (string))))))"
+	expected = "(source_file (normal_command command: (identifier) (comment) (variableunit (string)) (variableunit (string)) (comment) (pair key: (identifier) value: (string)) (pair key: (identifier) value: (string)) (pair key: (identifier) value: (list (string)))) (operatorunit (identifier) (normal_command command: (identifier) (variableunit (string)))) (operatorunit (identifier) (expression_statement object: (identifier) function: (normal_command command: (identifier)))) (operatorunit (identifier) (normal_command command: (identifier) (variableunit (string)))))"
 )
 
 func TestGrammar(t *testing.T) {

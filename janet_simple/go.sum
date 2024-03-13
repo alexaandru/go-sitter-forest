@@ -1,10 +1,2 @@
-github.com/alexaandru/go-tree-sitter-bare v1.0.0 h1:/78Lxf/PV4C0uGjlf22z/aqSUZjWttEjjcEzae8E8v0=
-github.com/alexaandru/go-tree-sitter-bare v1.0.0/go.mod h1:6c+KKFRWBbuY3hzLL2i4/p81BQ8xv3GxKkztZKtHQD8=
-github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
-github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
-github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
-github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
-gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
-gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
+github.com/alexaandru/go-tree-sitter-bare v1.1.0 h1:9lIu0YxNIdsiI5Kli4qCVkTQW2wTZjiKD3JqMI5hxeA=
+github.com/alexaandru/go-tree-sitter-bare v1.1.0/go.mod h1:PTUvlXZbRX3x0NbgFgkL8TSwdce2d1ST7yUYotifxLk=
