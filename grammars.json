@@ -94,18 +94,20 @@
     ],
     "maintainedBy": "@Beaglefoot",
     "reference": "master",
-    "revision": "207b04974c83d8d25a947e4d09763675c4617da7"
+    "revision": "fb13a07bcda19e797627782bc59ae8cd87e7dd58"
   },
   {
     "language": "bash",
     "url": "https://github.com/tree-sitter/tree-sitter-bash",
     "files": [
       "parser.c",
-      "scanner.c"
+      "scanner.c",
+      "src/tree_sitter/alloc.h",
+      "src/tree_sitter/array.h"
     ],
     "maintainedBy": "@TravonteD",
     "reference": "master",
-    "revision": "e318c3ee08e164861d3e987669bb575b42094066"
+    "revision": "f3f26f47a126797c011c311cec9d449d855c3eab"
   },
   {
     "language": "bass",
@@ -178,7 +180,7 @@
     ],
     "maintainedBy": "@amaanq",
     "reference": "master",
-    "revision": "70c0ddee618f4967c49143636c34982dd3375f89"
+    "revision": "371fd0bf0650581b6e49f06f438c88c419859696"
   },
   {
     "language": "c_sharp",
@@ -360,7 +362,7 @@
     ],
     "maintainedBy": "@amaanq",
     "reference": "main",
-    "revision": "cdfe1a8594fe5be45c883a385ab543acc646d018"
+    "revision": "8a5f273bfa281c66354da562f2307c2d394b6c81"
   },
   {
     "language": "d",
@@ -1256,7 +1258,7 @@
     ],
     "maintainedBy": "@SalBakraa",
     "reference": "main",
-    "revision": "4e909d6cc9ac96b4eaecb3fb538eaca48e9e9ee9"
+    "revision": "aa1130ebfde68ed70366c58d9d318e6656220111"
   },
   {
     "language": "kusto",
@@ -1920,7 +1922,7 @@
     ],
     "maintainedBy": "@stsewd, @theHamsta",
     "reference": "master",
-    "revision": "0f9047c857ed0990931b1f899c7d3bf403703147"
+    "revision": "b8a4c64121ba66b460cb878e934e3157ecbfb124"
   },
   {
     "language": "ql",
@@ -1985,7 +1987,7 @@
     ],
     "maintainedBy": "@6cdh",
     "reference": "main",
-    "revision": "e4ba1a9674a3b4dd7905d04f194ae6f8331be342"
+    "revision": "b5a2fe74cac87dc5342b366f50db71d421e7cf8f"
   },
   {
     "language": "rasi",
@@ -2145,7 +2147,7 @@
     ],
     "maintainedBy": "@stevanmilic",
     "reference": "master",
-    "revision": "71ee31cd2157eda9c3893b0b5e7ca1123de34865"
+    "revision": "70b4fe63c4973b04cc7bd40c6b7646d9c2430db8"
   },
   {
     "language": "scfg",
@@ -2167,7 +2169,7 @@
     ],
     "maintainedBy": "@6cdh",
     "reference": "main",
-    "revision": "85b6188fb77c03dfb01d13e58e2844450506860c"
+    "revision": "6c77a5bcfb9baceeaa79ef67354b2d501b37b085"
   },
   {
     "language": "scss",
@@ -2241,7 +2243,7 @@
     ],
     "maintainedBy": "@amaanq",
     "reference": "master",
-    "revision": "5cb506ae419c4ad620c77210fd47500d3d169dbc"
+    "revision": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02"
   },
   {
     "language": "soql",

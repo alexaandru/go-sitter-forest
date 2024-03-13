@@ -24,7 +24,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 5
 #define PRODUCTION_ID_COUNT 1
 
-enum {
+enum ts_symbol_identifiers {
   aux_sym__skip_token1 = 1,
   sym_dot = 2,
   aux_sym_comment_token1 = 3,
@@ -4932,20 +4932,6 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [254] = {.lex_state = 0, .external_lex_state = 1},
   [255] = {.lex_state = 226},
   [256] = {.lex_state = 0},
-};
-
-enum {
-  ts_external_token__here_string_body = 0,
-};
-
-static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
-  [ts_external_token__here_string_body] = sym__here_string_body,
-};
-
-static const bool ts_external_scanner_states[2][EXTERNAL_TOKEN_COUNT] = {
-  [1] = {
-    [ts_external_token__here_string_body] = true,
-  },
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
@@ -16204,6 +16190,20 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [1004] = {.entry = {.count = 1, .reusable = true}}, SHIFT(159),
   [1006] = {.entry = {.count = 1, .reusable = true}}, SHIFT(188),
   [1008] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
+};
+
+enum ts_external_scanner_symbol_identifiers {
+  ts_external_token__here_string_body = 0,
+};
+
+static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
+  [ts_external_token__here_string_body] = sym__here_string_body,
+};
+
+static const bool ts_external_scanner_states[2][EXTERNAL_TOKEN_COUNT] = {
+  [1] = {
+    [ts_external_token__here_string_body] = true,
+  },
 };
 
 #ifdef __cplusplus

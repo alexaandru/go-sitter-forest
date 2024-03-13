@@ -3,9 +3,11 @@
   "url": "https://github.com/tree-sitter/tree-sitter-bash",
   "files": [
     "parser.c",
-    "scanner.c"
+    "scanner.c",
+    "src/tree_sitter/alloc.h",
+    "src/tree_sitter/array.h"
   ],
   "maintainedBy": "@TravonteD",
   "reference": "master",
-  "revision": "e318c3ee08e164861d3e987669bb575b42094066"
+  "revision": "f3f26f47a126797c011c311cec9d449d855c3eab"
 }
