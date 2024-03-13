@@ -147,10 +147,6 @@ func TestAllParsers(t *testing.T) {
 
 			lang := filepath.Dir(fpath)
 
-			if lang == "kotlin" {
-				t.Skip("That test currently fails")
-			}
-
 			code, exp = stripCode(code), stripExp(exp)
 			if exp == "IMPLEMENT ME" {
 				exp = ""

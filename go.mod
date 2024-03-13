@@ -10,8 +10,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/asm v1.4.1
 	github.com/alexaandru/go-sitter-forest/astro v1.4.1
 	github.com/alexaandru/go-sitter-forest/authzed v1.4.1
-	github.com/alexaandru/go-sitter-forest/awk v1.4.1
-	github.com/alexaandru/go-sitter-forest/bash v1.4.2
+	github.com/alexaandru/go-sitter-forest/awk v1.4.2
+	github.com/alexaandru/go-sitter-forest/bash v1.4.3
 	github.com/alexaandru/go-sitter-forest/bass v1.4.1
 	github.com/alexaandru/go-sitter-forest/beancount v1.4.1
 	github.com/alexaandru/go-sitter-forest/bibtex v1.4.1
@@ -119,7 +119,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/julia v1.4.1
 	github.com/alexaandru/go-sitter-forest/kconfig v1.4.1
 	github.com/alexaandru/go-sitter-forest/kdl v1.4.1
-	github.com/alexaandru/go-sitter-forest/kotlin v1.4.1
+	github.com/alexaandru/go-sitter-forest/kotlin v1.4.2
 	github.com/alexaandru/go-sitter-forest/kusto v1.4.1
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.4.1
 	github.com/alexaandru/go-sitter-forest/latex v1.4.1
@@ -184,7 +184,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmljs v1.4.1
 	github.com/alexaandru/go-sitter-forest/query v1.4.1
 	github.com/alexaandru/go-sitter-forest/r v1.4.1
-	github.com/alexaandru/go-sitter-forest/racket v1.4.1
+	github.com/alexaandru/go-sitter-forest/racket v1.4.2
 	github.com/alexaandru/go-sitter-forest/rasi v1.4.1
 	github.com/alexaandru/go-sitter-forest/rbs v1.4.1
 	github.com/alexaandru/go-sitter-forest/re2c v1.4.1
@@ -198,8 +198,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/ron v1.4.1
 	github.com/alexaandru/go-sitter-forest/ruby v1.4.2
 	github.com/alexaandru/go-sitter-forest/rust v1.4.2
-	github.com/alexaandru/go-sitter-forest/scala v1.4.1
-	github.com/alexaandru/go-sitter-forest/scheme v1.4.1
+	github.com/alexaandru/go-sitter-forest/scala v1.4.2
+	github.com/alexaandru/go-sitter-forest/scheme v1.4.2
 	github.com/alexaandru/go-sitter-forest/scss v1.4.1
 	github.com/alexaandru/go-sitter-forest/slang v1.4.1
 	github.com/alexaandru/go-sitter-forest/slint v1.4.2
