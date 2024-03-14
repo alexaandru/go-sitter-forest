@@ -11,12 +11,31 @@ import (
 )
 
 const (
-	code     = ""
-	expected = "IMPLEMENT ME"
+	code = `
+\documentclass{article}
+
+\begin{document}
+
+<<initialize>>=
+count = 0
+sum = 0
+@
+
+\title{Example Rnoweb Document}
+\author{Your Name}
+
+\maketitle
+
+\section{Introduction}
+
+<<sum of a and b>>=
+a + b
+@
+`
+	expected = "(source_file (latex) (rchunk (renv_sig_beg) (renv_sig_end) (renv_content)) (latex) (ERROR (renv_sig_beg)) (latex))"
 )
 
 func TestGrammar(t *testing.T) {
-	t.Skip("TODO")
 	n, err := sitter.ParseCtx(context.Background(), []byte(code), rnoweb.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)

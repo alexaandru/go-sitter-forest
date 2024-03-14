@@ -11,12 +11,16 @@ import (
 )
 
 const (
-	code     = ""
-	expected = "IMPLEMENT ME"
+	code = `
+StormEvents
+| where EventType == "Tornado"
+| summarize count() by State
+| order by count_ desc
+`
+	expected = "(source_file (tabular_expression (source (identifier)) (operation (pipe) (operator) (binary_expression (identifier) (string))) (operation (pipe) (operator) (function_call (identifier)) (sub_operator) (identifier)) (operation (pipe) (operator) (sort_by (identifier) (sort_keyword)))))"
 )
 
 func TestGrammar(t *testing.T) {
-	t.Skip("TODO")
 	n, err := sitter.ParseCtx(context.Background(), []byte(code), kusto.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)

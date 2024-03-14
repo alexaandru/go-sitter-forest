@@ -11,12 +11,19 @@ import (
 )
 
 const (
-	code     = ""
-	expected = "IMPLEMENT ME"
+	code = `
+*** Test Cases ***
+Verify Google Search
+    Open Browser    https://www.google.com    chrome
+    Input Text    name=q    Robot Framework
+    Click Button    name=btnK
+    Page Should Contain    Robot Framework
+    Close Browser
+`
+	expected = "(source_file (section (test_cases_section (section_header) (test_case_definition (name) (body (statement (keyword_invocation (keyword) (arguments (argument (text_chunk)) (argument (text_chunk))))) (statement (keyword_invocation (keyword) (arguments (argument (text_chunk)) (argument (text_chunk))))) (statement (keyword_invocation (keyword) (arguments (argument (text_chunk))))) (statement (keyword_invocation (keyword) (arguments (argument (text_chunk))))) (statement (keyword_invocation (keyword))))))))"
 )
 
 func TestGrammar(t *testing.T) {
-	t.Skip("TODO")
 	n, err := sitter.ParseCtx(context.Background(), []byte(code), robot.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)

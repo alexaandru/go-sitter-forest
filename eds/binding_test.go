@@ -11,12 +11,18 @@ import (
 )
 
 const (
-	code     = ""
-	expected = "IMPLEMENT ME"
+	code = `
+[FileInfo]
+ParameterName = "File"
+ObjectType = "FileObject"
+DataType = "String"
+AccessType = "ReadOnly"
+Comments = "This section contains information about the file."
+`
+	expected = "(source_file (section (section_name) (statement (key) (value)) (statement (key) (value)) (statement (key) (value)) (statement (key) (value)) (statement (key) (value))))"
 )
 
 func TestGrammar(t *testing.T) {
-	t.Skip("TODO: no clue about this one")
 	n, err := sitter.ParseCtx(context.Background(), []byte(code), eds.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)

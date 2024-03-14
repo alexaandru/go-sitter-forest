@@ -11,12 +11,11 @@ import (
 )
 
 const (
-	code     = ""
-	expected = "IMPLEMENT ME"
+	code     = "Whatever, I have no idea what should be here, so an error will do for now"
+	expected = "(persistent_definitions (ERROR (module) (comma) (UNEXPECTED ' ') (type_name (type_variable)) (attribute_name) (attribute_name) (attribute_name) (attribute_name) (attribute_name) (attribute_name) (comma)) (entity_definition name: (type_name (type_variable)) (attributes (attribute_name) (attribute_name) (attribute_name) (attribute_name) (attribute_name) (attribute_name))))"
 )
 
 func TestGrammar(t *testing.T) {
-	t.Skip("TODO: no idea what Haskell persistent is")
 	n, err := sitter.ParseCtx(context.Background(), []byte(code), haskell_persistent.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
