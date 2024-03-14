@@ -1,10 +1,9 @@
 {
   "language": "thrift",
   "url": "https://github.com/duskmoon314/tree-sitter-thrift",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq, @duskmoon314",
+  "skip": true,
   "reference": "main",
   "revision": "d4deb1bd9e848f2dbe81103a151d99e8546de480"
 }

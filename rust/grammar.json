@@ -2,10 +2,10 @@
   "language": "rust",
   "url": "https://github.com/tree-sitter/tree-sitter-rust",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "f8883fe89493a869e9b382f1fc29d85aeea480e3581c93e4accad67586aea0e4",
   "reference": "master",
   "revision": "3a56481f8d13b6874a28752502a58520b9139dc7"
 }

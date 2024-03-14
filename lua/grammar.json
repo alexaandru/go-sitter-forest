@@ -2,10 +2,10 @@
   "language": "lua",
   "url": "https://github.com/MunifTanjim/tree-sitter-lua",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@MunifTanjim",
+  "grammarSha": "eee78d05feab0fc0b7cea0925e7c84684e5ac64243a209b1dbb8ec8a3e561bca",
   "reference": "main",
   "revision": "a24dab177e58c9c6832f96b9a73102a0cfbced4a"
 }

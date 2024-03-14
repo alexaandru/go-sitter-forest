@@ -32,7 +32,7 @@ sum = 0
 a + b
 @
 `
-	expected = "(source_file (latex) (rchunk (renv_sig_beg) (renv_sig_end) (renv_content)) (latex) (ERROR (renv_sig_beg)) (latex))"
+	expected = "(source_file (latex) (rchunk (renv_sig_options label: (renv_label)) (renv_content)) (latex) (ERROR (renv_key) (renv_key)) (latex))"
 )
 
 func TestGrammar(t *testing.T) {

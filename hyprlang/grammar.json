@@ -1,10 +1,8 @@
 {
   "language": "hyprlang",
   "url": "https://github.com/luckasRanarison/tree-sitter-hyprlang",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@luckasRanarison",
+  "grammarSha": "79ccae0a8ec5924217f1ec0786679604c3403ad58c24f42ddb074c207bd1e8af",
   "reference": "master",
   "revision": "fc1d331586e4da2b5f5bcfa89d630ebafe66458b"
 }

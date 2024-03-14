@@ -1,11 +1,12 @@
 {
   "language": "cairo",
   "url": "https://github.com/amaanq/tree-sitter-cairo",
+  "doc": "grammar.js has local deps",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef"
 }

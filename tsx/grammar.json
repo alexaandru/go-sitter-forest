@@ -1,13 +1,14 @@
 {
   "language": "tsx",
   "url": "https://github.com/tree-sitter/tree-sitter-typescript",
+  "doc": "grammar.js has local deps",
   "files": [
-    "parser.c",
     "scanner.c",
     "common/scanner.h"
   ],
   "srcRoot": "tsx",
   "maintainedBy": "@steelsojka",
+  "skip": true,
   "reference": "master",
   "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
 }

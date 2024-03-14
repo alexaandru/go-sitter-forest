@@ -1,10 +1,9 @@
 {
   "language": "hare",
   "url": "https://github.com/amaanq/tree-sitter-hare",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "3d4af179414525a35dd069ba0208c9b71093d8b3"
 }

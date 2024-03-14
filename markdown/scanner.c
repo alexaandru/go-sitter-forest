@@ -236,7 +236,7 @@ static inline Block pop_block(Scanner *s) {
 }
 
 // Write the whole state of a Scanner to a byte buffer
-static unsigned serialize(Scanner *s, char *buffer) {
+static unsigned serialize_markdown(Scanner *s, char *buffer) {
     unsigned size = 0;
     buffer[size++] = (char)s->state;
     buffer[size++] = (char)s->matched;
@@ -254,7 +254,7 @@ static unsigned serialize(Scanner *s, char *buffer) {
 
 // Read the whole state of a Scanner from a byte buffer
 // `serizalize` and `deserialize` should be fully symmetric.
-static void deserialize(Scanner *s, const char *buffer, unsigned length) {
+static void deserialize_markdown(Scanner *s, const char *buffer, unsigned length) {
     s->open_blocks.size = 0;
     s->open_blocks.capacity = 0;
     s->state = 0;
@@ -1306,7 +1306,7 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
     return true;
 }
 
-static bool scan(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_markdown(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
     // A normal tree-sitter rule decided that the current branch is invalid and
     // now "requests" an error to stop the branch
     if (valid_symbols[TRIGGER_ERROR]) {
@@ -1500,7 +1500,7 @@ static bool scan(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
             }
             bool all_will_be_matched = s->matched == s->open_blocks.size;
             if (!lexer->eof(lexer) &&
-                !scan(s, lexer, paragraph_interrupt_symbols)) {
+                !scan_markdown(s, lexer, paragraph_interrupt_symbols)) {
                 s->matched = matched_temp;
                 // If the last line break ended a paragraph and no new block
                 // opened, the last line break should have been a soft line
@@ -1565,7 +1565,7 @@ void *tree_sitter_markdown_external_scanner_create(void) {
 #else
     assert(ATX_H6_MARKER == ATX_H1_MARKER + 5);
 #endif
-    deserialize(s, NULL, 0);
+    deserialize_markdown(s, NULL, 0);
 
     return s;
 }
@@ -1574,20 +1574,20 @@ bool tree_sitter_markdown_external_scanner_scan(void *payload, TSLexer *lexer,
                                                 const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
     scanner->simulate = false;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_markdown(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_markdown_external_scanner_serialize(void *payload,
                                                          char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    return serialize(scanner, buffer);
+    return serialize_markdown(scanner, buffer);
 }
 
 void tree_sitter_markdown_external_scanner_deserialize(void *payload,
                                                        char *buffer,
                                                        unsigned length) {
     Scanner *scanner = (Scanner *)payload;
-    deserialize(scanner, buffer, length);
+    deserialize_markdown(scanner, buffer, length);
 }
 
 void tree_sitter_markdown_external_scanner_destroy(void *payload) {

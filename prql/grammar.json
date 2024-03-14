@@ -1,10 +1,8 @@
 {
   "language": "prql",
   "url": "https://github.com/PRQL/tree-sitter-prql",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@matthias-Q",
+  "grammarSha": "b7030737aabdb8a48a3cb3dc8b0b386b47397e6ad3fb689b0797902d0d56125d",
   "reference": "main",
   "revision": "09e158cd3650581c0af4c49c2e5b10c4834c8646"
 }

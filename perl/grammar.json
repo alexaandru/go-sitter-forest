@@ -1,12 +1,13 @@
 {
   "language": "perl",
   "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
+  "doc": "grammar.js has local deps",
   "files": [
     "scanner.c",
     "tsp_unicode.h"
   ],
   "maintainedBy": "@RabbiVeesh, @LeoNerd",
-  "needsGenerate": true,
+  "skip": true,
   "reference": "master",
-  "revision": "ce78903240204fe2a9e192deeed77eccf4c0f575"
+  "revision": "35e58380131853a4f453325286d397c8c6fc08e4"
 }

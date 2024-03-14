@@ -1,10 +1,8 @@
 {
   "language": "muttrc",
   "url": "https://github.com/neomutt/tree-sitter-muttrc",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@Freed-Wu",
+  "grammarSha": "fe155063ba38c3078ebdffb2f793518ef7ee8a6d65978823ba0adb0f1b47be25",
   "reference": "main",
   "revision": "67d9e23ca7aa22d9bce9d16c53d2c927dff5159a"
 }

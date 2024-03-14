@@ -1,10 +1,8 @@
 {
   "language": "vimdoc",
   "url": "https://github.com/neovim/tree-sitter-vimdoc",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@clason",
+  "grammarSha": "b93d5350022d3cab23c1128c9d587a9d91c8cfa7988a8602408611faa731ab64",
   "reference": "master",
-  "revision": "90a396267e117835c778bdbda6f7db86b601d829"
+  "revision": "f431bfa7d433f4d629943147817193a4fccbd303"
 }

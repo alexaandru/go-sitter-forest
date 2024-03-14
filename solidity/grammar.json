@@ -1,10 +1,8 @@
 {
   "language": "solidity",
   "url": "https://github.com/JoranHonig/tree-sitter-solidity",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "3971adac94ae4238fdf09af0451a6ef80dde5e76abd0908d37c9b0f6c8e3039f",
   "reference": "master",
   "revision": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02"
 }

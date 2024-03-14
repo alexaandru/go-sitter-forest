@@ -1,10 +1,8 @@
 {
   "language": "dockerfile",
   "url": "https://github.com/camdencheek/tree-sitter-dockerfile",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@camdencheek",
+  "grammarSha": "360977c5acb9d95ba45a011b3ebe96ff2b17eca3e9f8a0a5c3af71bdbe647ecb",
   "reference": "main",
   "revision": "33e22c33bcdbfc33d42806ee84cfd0b1248cc392"
 }

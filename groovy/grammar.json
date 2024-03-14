@@ -2,10 +2,10 @@
   "language": "groovy",
   "url": "https://github.com/murtaza64/tree-sitter-groovy",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@murtaza64",
+  "grammarSha": "e9e09e3353d28f32256f0e10585629a133ca0e4b4e4ad1943b1511d159fe5a94",
   "reference": "main",
   "revision": "3c25d1ce6c1eb9da34215060372792dc9f439b0c"
 }

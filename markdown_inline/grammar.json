@@ -2,12 +2,13 @@
   "language": "markdown_inline",
   "altName": "markdown_inline (needed for full highlighting)",
   "url": "https://github.com/MDeiml/tree-sitter-markdown",
+  "doc": "grammar.js has local deps",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "srcRoot": "tree-sitter-markdown-inline",
   "maintainedBy": "@MDeiml",
+  "skip": true,
   "reference": "split_parser",
-  "revision": "2821521a4e6eab37b63dff6a8e169cd88554047d"
+  "revision": "b2f01981a76e3251f5b660378136c248ed106b81"
 }

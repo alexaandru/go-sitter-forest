@@ -2,10 +2,10 @@
   "language": "jsdoc",
   "url": "https://github.com/tree-sitter/tree-sitter-jsdoc",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@steelsojka",
+  "grammarSha": "d11c646efdcf092e332b4629f19dfcc52c099315bde56eecee2e406b872969af",
   "reference": "master",
   "revision": "6a6cf9e7341af32d8e2b2e24a37fbfebefc3dc55"
 }

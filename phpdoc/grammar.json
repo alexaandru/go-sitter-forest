@@ -1,11 +1,12 @@
 {
   "language": "phpdoc",
   "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
+  "doc": "grammar.js throws error",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@mikehaertl",
+  "skip": true,
   "reference": "master",
   "revision": "f285e338d328a03920a9bfd8dda78585c7ddcca3"
 }

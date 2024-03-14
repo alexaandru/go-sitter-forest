@@ -54,7 +54,7 @@ typedef struct {
     vec org_section_stack;
 } Scanner;
 
-unsigned serialize(Scanner *scanner, char *buffer) {
+unsigned serialize_beancount(Scanner *scanner, char *buffer) {
     size_t i = 0;
 
     size_t indent_count = scanner->indent_length_stack.length - 1;
@@ -84,7 +84,7 @@ unsigned serialize(Scanner *scanner, char *buffer) {
     return i;
 }
 
-void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+void deserialize_beancount(Scanner *scanner, const char *buffer, unsigned length) {
     VEC_CLEAR(scanner->org_section_stack);
     VEC_PUSH(scanner->org_section_stack, 0);
     VEC_CLEAR(scanner->indent_length_stack);
@@ -119,7 +119,7 @@ static bool in_error_recovery(const bool *valid_symbols) {
             && valid_symbols[END_OF_FILE]);
 }
 
-bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+bool scan_beancount(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
 
     if (in_error_recovery(valid_symbols))
         return false;
@@ -176,7 +176,7 @@ bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
 
 void *tree_sitter_beancount_external_scanner_create() {
     Scanner *scanner = (Scanner *)calloc(1, sizeof(Scanner));
-    deserialize(scanner, NULL, 0);
+    deserialize_beancount(scanner, NULL, 0);
     return scanner;
 }
 
@@ -184,20 +184,20 @@ bool tree_sitter_beancount_external_scanner_scan(void *payload,
                                                  TSLexer *lexer,
                                                  const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_beancount(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_beancount_external_scanner_serialize(void *payload,
                                                           char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    return serialize(scanner, buffer);
+    return serialize_beancount(scanner, buffer);
 }
 
 void tree_sitter_beancount_external_scanner_deserialize(void *payload,
                                                         const char *buffer,
                                                         unsigned length) {
     Scanner *scanner = (Scanner *)payload;
-    deserialize(scanner, buffer, length);
+    deserialize_beancount(scanner, buffer, length);
 }
 
 void tree_sitter_beancount_external_scanner_destroy(void *payload) {

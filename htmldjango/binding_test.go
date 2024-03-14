@@ -16,7 +16,7 @@ const (
     Do something with k and v here...
 {% endfor %}
 `
-	expected = "(template (paired_statement (tag_name) (variable (variable_name)) (variable (variable_name)) (keyword_operator) (variable (variable_name)) (content) (tag_name) (end_paired_statement)))"
+	expected = "(template (paired_statement (tag_name) (variable (variable_name)) (variable (variable_name)) (keyword_operator) (variable (variable_name)) (content) (tag_name) (end_paired_statement)) (content))"
 )
 
 func TestGrammar(t *testing.T) {

@@ -1,10 +1,9 @@
 {
   "language": "fennel",
   "url": "https://github.com/alexmozaidze/tree-sitter-fennel",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@alexmozaidze",
+  "skip": true,
   "reference": "main",
   "revision": "215e3913524abc119daa9db7cf6ad2f2f5620189"
 }

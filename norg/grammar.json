@@ -2,10 +2,10 @@
   "language": "norg",
   "url": "https://github.com/nvim-neorg/tree-sitter-norg",
   "files": [
-    "parser.c",
     "scanner.cc"
   ],
   "maintainedBy": "@JoeyGrajciar, @vhyrro",
+  "grammarSha": "fa83a4ce377afd4947c3fff440dd3b225506cb5f57aab9b871f29e7348d106c2",
   "reference": "main",
   "revision": "014073fe8016d1ac440c51d22c77e3765d8f6855"
 }

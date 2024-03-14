@@ -93,7 +93,7 @@ static void read_line(String *str, TSLexer *lexer) {
 // Suppose terminator is `T`, newline (\n) is `$`,
 // It should accept "#<<T$T" or "#<<T$...$T", where `...`
 // is the string content.
-static bool scan(TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_racket(TSLexer *lexer, const bool *valid_symbols) {
     if (!valid_symbols[HERE_STRING_BODY]) {
         return false;
     }
@@ -146,7 +146,7 @@ void tree_sitter_racket_external_scanner_deserialize(void *payload,
 bool tree_sitter_racket_external_scanner_scan(void *payload,
                                               TSLexer *lexer,
                                               const bool *valid_symbols) {
-    return scan(lexer, valid_symbols);
+    return scan_racket(lexer, valid_symbols);
 }
 
 void tree_sitter_racket_external_scanner_destroy(void *payload) {

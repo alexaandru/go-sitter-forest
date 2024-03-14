@@ -2,10 +2,10 @@
   "language": "cpp",
   "url": "https://github.com/tree-sitter/tree-sitter-cpp",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta",
+  "grammarSha": "d19dedb944148eb7ff16513772f4a9df485adc2f3fc49e7a63a7b6e17ca401a9",
   "reference": "master",
   "revision": "e0c1678a78731e78655b7d953efb4daecf58be46"
 }

@@ -1,11 +1,10 @@
 {
   "language": "sosl",
   "url": "https://github.com/aheber/tree-sitter-sfapex",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js has local deps",
   "srcRoot": "sosl",
   "maintainedBy": "@aheber",
+  "skip": true,
   "reference": "main",
   "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
 }

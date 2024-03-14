@@ -1,10 +1,8 @@
 {
   "language": "glsl",
   "url": "https://github.com/theHamsta/tree-sitter-glsl",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@theHamsta",
+  "grammarSha": "5a2b0404779a6b451f7da1e1ca71d46d3bbdf0faebf60c336bdf9d033ed1257c",
   "reference": "master",
   "revision": "284bed0e2f1d9f700756b96512baf33483642ff0"
 }

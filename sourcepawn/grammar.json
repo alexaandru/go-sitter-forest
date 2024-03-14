@@ -2,10 +2,10 @@
   "language": "sourcepawn",
   "url": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@Sarrus1",
+  "grammarSha": "826e5c3834e7284b9fd712752750ada8b6caec38d1983c4e96a2e98527fb4e4a",
   "reference": "main",
   "revision": "3ca89fdf998340a7973e276b39516d8902950f86"
 }

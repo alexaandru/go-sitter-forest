@@ -2,10 +2,10 @@
   "language": "racket",
   "url": "https://github.com/6cdh/tree-sitter-racket",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@6cdh",
+  "grammarSha": "2326ca8a89f5d8dd025445baf6e6af6b5f0ef6786759d7a4efaa61abe73b0562",
   "reference": "main",
-  "revision": "b5a2fe74cac87dc5342b366f50db71d421e7cf8f"
+  "revision": "d9858a0f607578814f2d34662ad4bc21aa37a455"
 }

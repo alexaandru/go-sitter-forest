@@ -1,2 +1,5 @@
 /go.work*
 *.cov
+auto.log
+/tmp
+/node_modules

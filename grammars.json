@@ -2,10 +2,8 @@
   {
     "language": "ada",
     "url": "https://github.com/briot/tree-sitter-ada",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@briot",
+    "grammarSha": "ca1332a3760addee888b313a46ba580b13e54e99b22652447ccd22d2ffc92cf6",
     "reference": "master",
     "revision": "ba0894efa03beb70780156b91e28c716b7a4764d"
   },
@@ -13,10 +11,10 @@
     "language": "agda",
     "url": "https://github.com/tree-sitter/tree-sitter-agda",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@Decodetalkers",
+    "grammarSha": "cec88b01595c69bf14deaa72a1bb52b88061bb7b777a2e9f17084514a6072e35",
     "reference": "master",
     "revision": "d3dc807692e6bca671d4491b3bf5c67eeca8c016"
   },
@@ -24,21 +22,21 @@
     "language": "angular",
     "url": "https://github.com/dlvandenberg/tree-sitter-angular",
     "files": [
-      "parser.c"
+      "scanner.c",
+      "tag.h"
     ],
     "maintainedBy": "@dlvandenberg",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "grammarSha": "5f901117be38b5e09e5825117ff22a9156e41387a273296d8219add735945d93",
+    "reference": "main",
+    "revision": "62179d7bbfb5fd8a8f7298495ac654d252a1bd52"
   },
   {
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "apex",
     "maintainedBy": "@aheber",
+    "skip": true,
     "reference": "main",
     "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
@@ -46,20 +44,18 @@
     "language": "arduino",
     "url": "https://github.com/ObserverOfTime/tree-sitter-arduino",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
     "reference": "master",
     "revision": "e3a0a7f60e544afc478b72cdda7ffc0f2f889db0"
   },
   {
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@RubixDev",
+    "grammarSha": "93ed7801eea2ba9d777bf049f90ff19aa86b94c84a5a93608c243b87e05c918d",
     "reference": "main",
     "revision": "6ace266be7ad6bf486a95427ca3fc949aff66211"
   },
@@ -67,21 +63,19 @@
     "language": "astro",
     "url": "https://github.com/virchau13/tree-sitter-astro",
     "files": [
-      "parser.c",
       "scanner.c",
       "tag.h"
     ],
     "maintainedBy": "@virchau13",
+    "grammarSha": "905d45ca602bc95b4cefe38ec13e33313b40a2fbac533901f47aa0525fd7fb6d",
     "reference": "master",
     "revision": "dfa0893bdc4bdfada102043404758c66e3580568"
   },
   {
     "language": "authzed",
     "url": "https://github.com/mleonidas/tree-sitter-authzed",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@mattpolzin",
+    "grammarSha": "0accde10565f40ed8fd61d0ce2ee8f53b38502e098eb874fee11b9ca6da04e19",
     "reference": "main",
     "revision": "1dec7e1af96c56924e3322cd85fdce15d0a31d00"
   },
@@ -89,33 +83,30 @@
     "language": "awk",
     "url": "https://github.com/Beaglefoot/tree-sitter-awk",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@Beaglefoot",
+    "grammarSha": "a9074597f237e6ad04274822189bb14bddbf70be1c4d7a21a3e1b4d70dc16204",
     "reference": "master",
-    "revision": "fb13a07bcda19e797627782bc59ae8cd87e7dd58"
+    "revision": "ba7472152d79a8c916550c80fdbfd5724d07a0c9"
   },
   {
     "language": "bash",
     "url": "https://github.com/tree-sitter/tree-sitter-bash",
     "files": [
-      "parser.c",
-      "scanner.c",
-      "src/tree_sitter/alloc.h",
-      "src/tree_sitter/array.h"
+      "scanner.c"
     ],
     "maintainedBy": "@TravonteD",
+    "grammarSha": "e1e7ed6840a2a692a1bd5f352ff85b38d065cdca200f95b1288230fb621ff2d7",
     "reference": "master",
     "revision": "f3f26f47a126797c011c311cec9d449d855c3eab"
   },
   {
     "language": "bass",
     "url": "https://github.com/vito/tree-sitter-bass",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "main",
     "revision": "c9ba4568af24cd3403029730687c0a43d1350a43"
   },
@@ -123,115 +114,108 @@
     "language": "beancount",
     "url": "https://github.com/polarmutex/tree-sitter-beancount",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@polarmutex",
+    "grammarSha": "3936057afc425915a80e78cbcf7c90b464d3d1231ddc0fde0cf0ce25a1bda615",
     "reference": "master",
     "revision": "6c665e7cf15d76a1687959643868a78fb381458d"
   },
   {
     "language": "bibtex",
     "url": "https://github.com/latex-lsp/tree-sitter-bibtex",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta, @clason",
+    "grammarSha": "8b153a42b82a394a2ee455264d95a654296a5991f5047fefed95b0ca7e9094cd",
     "reference": "master",
     "revision": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"
   },
   {
     "language": "bicep",
     "url": "https://github.com/amaanq/tree-sitter-bicep",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "c3451d1049c80074b18078ba50007b7c00e063f8"
   },
   {
     "language": "bitbake",
     "url": "https://github.com/amaanq/tree-sitter-bitbake",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a"
   },
   {
     "language": "blueprint",
     "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@gabmus",
+    "skip": true,
     "reference": "master",
     "revision": "863cea9f83ad5637300478e0559262f1e791684b"
   },
   {
     "language": "c",
     "url": "https://github.com/tree-sitter/tree-sitter-c",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "56ab1350a74fb57bec6125ac47c6d1cca11709410677fc4f2eed986f4c624fdc",
     "reference": "master",
     "revision": "371fd0bf0650581b6e49f06f438c88c419859696"
   },
   {
     "language": "c_sharp",
     "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
-    "doc": "The parser is incomplete, it may return a partial or wrong AST!",
+    "doc": "OOM",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@Luxed",
+    "skip": true,
     "reference": "master",
     "revision": "4b4e82ca0a30376ae605e77a0d8a3c803c9f9327"
   },
   {
     "language": "cairo",
     "url": "https://github.com/amaanq/tree-sitter-cairo",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef"
   },
   {
     "language": "capnp",
     "url": "https://github.com/amaanq/tree-sitter-capnp",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
   },
   {
     "language": "chatito",
     "url": "https://github.com/ObserverOfTime/tree-sitter-chatito",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "18d0205daf6e17480dc79d1dd9ed02af7fa64299a5137a7542f6abd35b426161",
     "reference": "master",
     "revision": "fe7a2a75d3d74c1215141b7a7ebebb57ae17a370"
   },
   {
     "language": "clojure",
     "url": "https://github.com/sogaiu/tree-sitter-clojure",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@NoahTheDuke",
+    "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
     "reference": "master",
     "revision": "6e41628e9d18b19caea1cb1d72aae4ccff5bdfe9"
   },
@@ -239,10 +223,10 @@
     "language": "cmake",
     "url": "https://github.com/uyha/tree-sitter-cmake",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@uyha",
+    "grammarSha": "9f7f9d8bc2da2f5353ab5a63780694f6b59c727cf66d8bceb589f5d74a25e499",
     "reference": "master",
     "revision": "7dc15823107831729c64a917c796a93cf5c6a7e3"
   },
@@ -250,21 +234,19 @@
     "language": "comment",
     "url": "https://github.com/stsewd/tree-sitter-comment",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@stsewd",
     "pending": true,
     "reference": "master",
-    "revision": "aefcc2813392eb6ffe509aa0fc8b4e9b57413ee1"
+    "revision": ""
   },
   {
     "language": "commonlisp",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has external dep that I cannot currently install: tree-sitter-clojure",
     "maintainedBy": "@theHamsta",
+    "skip": true,
     "reference": "master",
     "revision": "cf10fc38bc24faf0549d59217ff37c789973dfdc"
   },
@@ -272,30 +254,27 @@
     "language": "cooklang",
     "url": "https://github.com/addcninblue/tree-sitter-cooklang",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@addcninblue",
+    "grammarSha": "6d86c3f8705e8505c56f7040e417887ba25676adb17d7e21f5728572a921f0a0",
     "reference": "master",
     "revision": "81c2a8667846b1e60db68b5601d864fe00fd1d3a"
   },
   {
     "language": "corn",
     "url": "https://github.com/jakestanger/tree-sitter-corn",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@jakestanger",
+    "grammarSha": "86936e6c3350fb7c0461466e28ce6eab4a8cec9bc1e3bc778e4990dc7d914e62",
     "reference": "master",
     "revision": "604d73c38d4c28ca68e9e441ffd405d68cb63051"
   },
   {
     "language": "cpon",
     "url": "https://github.com/amaanq/tree-sitter-cpon",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "f4b3cbc8b0bd4e13035d39940fef09f1392e8739"
   },
@@ -303,20 +282,18 @@
     "language": "cpp",
     "url": "https://github.com/tree-sitter/tree-sitter-cpp",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "d19dedb944148eb7ff16513772f4a9df485adc2f3fc49e7a63a7b6e17ca401a9",
     "reference": "master",
     "revision": "e0c1678a78731e78655b7d953efb4daecf58be46"
   },
   {
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@devnote-dev",
+    "grammarSha": "020f2eab82bdc80417848496ffdbaf9865795893653639f94c536c35503914c3",
     "reference": "main",
     "revision": "61cc201c8eb3b6fd4d4eb3e0ac6c303a580eeb6b"
   },
@@ -324,21 +301,20 @@
     "language": "css",
     "url": "https://github.com/tree-sitter/tree-sitter-css",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@TravonteD",
+    "grammarSha": "abcc352261881ad95945a2bc659d7fa46bc0b043e3c55514cd36a7c08090e482",
     "reference": "master",
     "revision": "02b4ee757654b7d54fe35352fd8e53a8a4385d42"
   },
   {
     "language": "csv",
     "url": "https://github.com/amaanq/tree-sitter-csv",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "csv",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
@@ -346,10 +322,10 @@
     "language": "cuda",
     "url": "https://github.com/theHamsta/tree-sitter-cuda",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "b29685ffd70b98583a5e7bec30f2b399b65e96116693799d834b0458af7f3f48",
     "reference": "master",
     "revision": "221179d4287a2c24c08e4c67ff383ef67dc32156"
   },
@@ -357,10 +333,10 @@
     "language": "cue",
     "url": "https://github.com/eonpatapon/tree-sitter-cue",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "d8f1b7a23e9699b56ec5ef20b221c49e787e78c97e1a2db075ff42158faf6423",
     "reference": "main",
     "revision": "8a5f273bfa281c66354da562f2307c2d394b6c81"
   },
@@ -368,52 +344,49 @@
     "language": "d",
     "url": "https://github.com/gdamore/tree-sitter-d",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "b7da4c69323d8e47bb1ba375653fcb2c01fe753171222db033698b6da45b7e48",
     "reference": "main",
     "revision": "a33d400f025d6bbd37b4c681c93054976f579890"
   },
   {
     "language": "dart",
     "url": "https://github.com/UserNobody14/tree-sitter-dart",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@akinsho",
+    "skip": true,
     "reference": "master",
     "revision": "1a31399a08aefc93bc4cdbfadc0cb619136f86c1"
   },
   {
     "language": "devicetree",
     "url": "https://github.com/joelspadin/tree-sitter-devicetree",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@jedrzejboczar",
+    "grammarSha": "9ecd7ff631a9e1bdc64c30f4136b0c2bd3cefd1c21d1794174fc966eee8e9495",
     "reference": "main",
-    "revision": "2087a5b965db2a9efabab958a27fd8ddf43038a2"
+    "revision": "fb07e6044ffd36932c57a5be01ba5d6b8a9337bb"
   },
   {
     "language": "dhall",
     "url": "https://github.com/jbellerb/tree-sitter-dhall",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "e83d846f22773339e144a7d1adf75211f36420d723cca9d674483af008cdb175",
     "reference": "master",
     "revision": "affb6ee38d629c9296749767ab832d69bb0d9ea8"
   },
   {
     "language": "diff",
     "url": "https://github.com/the-mikedavis/tree-sitter-diff",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@gbprod",
+    "grammarSha": "217ecf26bb3ecf00922f8bb3c12a416318fd14906d0f2b738901703b5bc56bfd",
     "reference": "main",
     "revision": "c165725c28e69b36c5799ff0e458713a844f1aaf"
   },
@@ -421,30 +394,26 @@
     "language": "disassembly",
     "url": "https://github.com/ColinKennedy/tree-sitter-disassembly",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ColinKennedy",
+    "grammarSha": "bdfb14107c21d966d83e3677c764a074aa3b769bf8815dfbecd730a042ad97f0",
     "reference": "master",
     "revision": "0229c0211dba909c5d45129ac784a3f4d49c243a"
   },
   {
     "language": "dockerfile",
     "url": "https://github.com/camdencheek/tree-sitter-dockerfile",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@camdencheek",
+    "grammarSha": "360977c5acb9d95ba45a011b3ebe96ff2b17eca3e9f8a0a5c3af71bdbe647ecb",
     "reference": "main",
     "revision": "33e22c33bcdbfc33d42806ee84cfd0b1248cc392"
   },
   {
     "language": "dot",
     "url": "https://github.com/rydesun/tree-sitter-dot",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@rydesun",
+    "grammarSha": "da720e90310ab42445030c0b22121a04b081ccea605ec5511f17d028373c05a1",
     "reference": "main",
     "revision": "9ab85550c896d8b294d9b9ca1e30698736f08cea"
   },
@@ -452,65 +421,61 @@
     "language": "doxygen",
     "url": "https://github.com/amaanq/tree-sitter-doxygen",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "f2ba11a29232234e38380d1261d3d66944b922475e5db02857520d017d24a9fe",
     "reference": "master",
     "revision": "a750758da90955c86fcc22fcbb6fa44a7d009865"
   },
   {
     "language": "dtd",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "dtd",
     "maintainedBy": "@ObserverOfTime",
+    "skip": true,
     "reference": "master",
-    "revision": "c23bd31d0aa72bfc01238b2546d5e823d8006709"
+    "revision": "29485b6587cacb99555c19ca53bea78b9e54ffd4"
   },
   {
     "language": "ebnf",
     "url": "https://github.com/RubixDev/ebnf",
-    "files": [
-      "parser.c"
-    ],
     "srcRoot": "crates/tree-sitter-ebnf",
     "maintainedBy": "@RubixDev",
+    "grammarSha": "df3ebc35ed8068754d76ec15b9c27f31217bab69f01be8c3db7b783d86c6417e",
     "reference": "main",
     "revision": "8e635b0b723c620774dfb8abf382a7f531894b40"
   },
   {
     "language": "eds",
     "url": "https://github.com/uyha/tree-sitter-eds",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@uyha",
+    "grammarSha": "e7b06b7fc0edf8ea5d22d4161783d3444a31e143df7f90a8df4686e9e6c6213e",
     "reference": "main",
     "revision": "fde62029d4c715562230070b9af51a9500c2ce10"
   },
   {
     "language": "eex",
     "url": "https://github.com/connorlay/tree-sitter-eex",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@connorlay",
+    "grammarSha": "6a04d086c0315019d8bf4efd0484936176d085b7a7c674e8dd92dddbebfdb870",
     "reference": "main",
     "revision": "f742f2fe327463335e8671a87c0b9b396905d1d1"
   },
   {
     "language": "elixir",
     "url": "https://github.com/elixir-lang/tree-sitter-elixir",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@connorlay",
+    "skip": true,
     "reference": "main",
     "revision": "511ea5e0088779e4bdd76e12963ab9a5fe99983a"
   },
@@ -518,101 +483,88 @@
     "language": "elm",
     "url": "https://github.com/elm-tooling/tree-sitter-elm",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@zweimach",
+    "grammarSha": "5975e9b252eb5f65a54ea5d84013f504cb557d2d7b727520f5999dcefd600ff8",
     "reference": "main",
     "revision": "09dbf221d7491dc8d8839616b27c21b9c025c457"
   },
   {
     "language": "elsa",
     "url": "https://github.com/glapa-grossklag/tree-sitter-elsa",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@glapa-grossklag, @amaanq",
+    "grammarSha": "33370fb33f48c3f2ead7025a22364554f4d66574ac05bad528b4d4778f84942f",
     "reference": "main",
     "revision": "0a66b2b3f3c1915e67ad2ef9f7dbd2a84820d9d7"
   },
   {
     "language": "elvish",
     "url": "https://github.com/elves/tree-sitter-elvish",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@elves",
+    "grammarSha": "dcf540b33305d75524dd956b893f996aed3e6e044b16d99b9681c482c22ec2fe",
     "reference": "main",
     "revision": "5e7210d945425b77f82cbaebc5af4dd3e1ad40f5"
   },
   {
     "language": "embedded_template",
     "url": "https://github.com/tree-sitter/tree-sitter-embedded-template",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@maxbrunsfeld",
+    "grammarSha": "c01fcca9b045c3968e18feadb20c4bb9b98ee2a5fabc335020d523290e611665",
     "reference": "master",
     "revision": "6d791b897ecda59baa0689a85a9906348a2a6414"
   },
   {
     "language": "erlang",
     "url": "https://github.com/WhatsApp/tree-sitter-erlang",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal",
     "maintainedBy": "@filmor",
+    "skip": true,
     "reference": "main",
     "revision": "54b6f814f43c4eac81eeedefaa7cc8762fec6683"
   },
   {
     "language": "facility",
     "url": "https://github.com/FacilityApi/tree-sitter-facility",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@bryankenote",
+    "grammarSha": "a9d865275658ce30b3775fb63a62fbdb4681c758e61e3de4eb99d1083158a398",
     "reference": "master",
     "revision": "a52579670e2b14ec03d410c3c980fafaf6d659c4"
   },
   {
     "language": "faust",
     "url": "https://github.com/khiner/tree-sitter-faust",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@khiner",
+    "grammarSha": "df27ded872f96efd65c28ad96e22311d0b133eb16a3c24242470941ec5c8289d",
     "reference": "main",
     "revision": "f3b9274514b5f9bf6b0dd4a01c30f9cc15c58bc4"
   },
   {
     "language": "fennel",
     "url": "https://github.com/alexmozaidze/tree-sitter-fennel",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@alexmozaidze",
+    "skip": true,
     "reference": "main",
     "revision": "215e3913524abc119daa9db7cf6ad2f2f5620189"
   },
   {
     "language": "fidl",
     "url": "https://github.com/google/tree-sitter-fidl",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@chaopeng",
+    "grammarSha": "21a258e2c5d3413847a9c716253712bfb85973107ca18bb41cb9458576fa06be",
     "reference": "main",
     "revision": "0a8910f293268e27ff554357c229ba172b0eaed2"
   },
   {
     "language": "firrtl",
     "url": "https://github.com/amaanq/tree-sitter-firrtl",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "2b5adae629c8cba528c7b1e4aa67a8ae28934ea5"
   },
@@ -620,10 +572,10 @@
     "language": "fish",
     "url": "https://github.com/ram02z/tree-sitter-fish",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ram02z",
+    "grammarSha": "744bb5158b47bfa5660df0b61e9e7952f1552e51e2491e92517a4150398dc3f7",
     "reference": "master",
     "revision": "f9176908c9eb2e11eb684d79e1d00f3b29bd65c9"
   },
@@ -631,20 +583,18 @@
     "language": "foam",
     "url": "https://github.com/FoamScience/tree-sitter-foam",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@FoamScience",
+    "grammarSha": "85b049335450477ef7ae5380ef3b440e7c74a310c67f822c20fc84435cffabbe",
     "reference": "master",
     "revision": "04664b40c0dadb7ef37028acf3422c63271d377b"
   },
   {
     "language": "forth",
     "url": "https://github.com/AlexanderBrevig/tree-sitter-forth",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "3ff134c9cd47a612c29faf03d8efd8c98ec7d59cafc00a787fb88a06f331c087",
     "reference": "main",
     "revision": "90189238385cf636b9ee99ce548b9e5b5e569d48"
   },
@@ -652,30 +602,28 @@
     "language": "fortran",
     "url": "https://github.com/stadelmanma/tree-sitter-fortran",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "9e890f16f6794641cb9caadf55a1325b7ed0372d4e4e21b55dc26815443037cd",
     "reference": "master",
     "revision": "f73d473e3530862dee7cbb38520f28824e7804f6"
   },
   {
     "language": "fsh",
     "url": "https://github.com/mgramigna/tree-sitter-fsh",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@mgramigna",
+    "skip": true,
     "reference": "main",
     "revision": "fa3347712f7a59ed02ccf508284554689c6cde28"
   },
   {
     "language": "func",
     "url": "https://github.com/amaanq/tree-sitter-func",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "0834e35ecf8b23fbf9ad15b088af6a897e19d4a8"
   },
@@ -683,10 +631,10 @@
     "language": "fusion",
     "url": "https://gitlab.com/jirgn/tree-sitter-fusion",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@jirgn",
+    "grammarSha": "968f5db13182d2cedb50d512b5ad6a98f0f92d1c6625f549c73e6fe276064862",
     "reference": "main",
     "revision": "19db2f47ba4c3a0f6238d4ae0e2abfca16e61dd6"
   },
@@ -695,50 +643,42 @@
     "altName": "Godot (gdscript)",
     "url": "https://github.com/PrestonKnopp/tree-sitter-gdscript",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@PrestonKnopp",
+    "grammarSha": "26cc6cc18ef5c83dfa6dfdb50ea4db2c286a3dbf18c8f2b67db66d8ac635e291",
     "reference": "master",
     "revision": "b5dea4d852db65f0872d849c24533eb121e03c76"
   },
   {
     "language": "gdshader",
     "url": "https://github.com/GodOfAvacyn/tree-sitter-gdshader",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@godofavacyn",
+    "grammarSha": "3b8e5c148d7c189be38818da5c0afe237fab685626150d726ec32d0b14d8711d",
     "reference": "main",
     "revision": "ffd9f958df13cae04593781d7d2562295a872455"
   },
   {
     "language": "git_config",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "0a6a46bc0cf042dd45b10584b8e574a89e4cd0ccc995d53fed2f7efcc2b2119b",
     "reference": "main",
     "revision": "9c2a1b7894e6d9eedfe99805b829b4ecd871375e"
   },
   {
     "language": "git_rebase",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@gbprod",
+    "grammarSha": "7a4953e1d9e40f40c819fed8e8998845eab38976d32daf9a339ef131b99dd5b9",
     "reference": "main",
     "revision": "d8a4207ebbc47bd78bacdf48f883db58283f9fd8"
   },
   {
     "language": "gitattributes",
     "url": "https://github.com/ObserverOfTime/tree-sitter-gitattributes",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "a9ef77390db0868e1c246ff010377b0bbc7742b21771c094303ef63e5bd1176d",
     "reference": "master",
     "revision": "41940e199ba5763abea1d21b4f717014b45f01ea"
   },
@@ -746,20 +686,18 @@
     "language": "gitcommit",
     "url": "https://github.com/gbprod/tree-sitter-gitcommit",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@gbprod",
+    "grammarSha": "33a847d5632c66fa412c59f89e677dc2458df15993c682f7cd19c16937f85d74",
     "reference": "main",
-    "revision": "247406593c835065828230bdcecd933138691f68"
+    "revision": "523a1a4f0f674eff7fbf46addfa6ef7644151aae"
   },
   {
     "language": "gitignore",
     "url": "https://github.com/shunsambongi/tree-sitter-gitignore",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "e9175700860229aff28750afa3e21bdb7b44a724cda2d11a562b4fc6ff0f3714",
     "reference": "main",
     "revision": "f4685bf11ac466dd278449bcfe5fd014e94aa504"
   },
@@ -767,10 +705,10 @@
     "language": "gleam",
     "url": "https://github.com/gleam-lang/tree-sitter-gleam",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "270162e8114bd814a7c300cbc49f09e710d096823bd9bece34ccfc2c3e5ca2b3",
     "reference": "main",
     "revision": "2012f294baacf30e7a62414754021284377366c6"
   },
@@ -779,20 +717,18 @@
     "altName": "Glimmer and Ember",
     "url": "https://github.com/alexlafroscia/tree-sitter-glimmer",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@NullVoxPopuli",
+    "grammarSha": "bf47982447f60cfc433628ecce6de689516cf5da6434a278d87916053c7e6d97",
     "reference": "main",
     "revision": "f9746dc1d0707717fbba84cb5c22a71586af23e1"
   },
   {
     "language": "glsl",
     "url": "https://github.com/theHamsta/tree-sitter-glsl",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "5a2b0404779a6b451f7da1e1ca71d46d3bbdf0faebf60c336bdf9d033ed1257c",
     "reference": "master",
     "revision": "284bed0e2f1d9f700756b96512baf33483642ff0"
   },
@@ -801,30 +737,27 @@
     "altName": "GN (Generate Ninja)",
     "url": "https://github.com/amaanq/tree-sitter-gn",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "fbaf5fc27fa5cb9489842b0768d8f43d5d2f8610a497a49c814d645b2c32de02",
     "reference": "master",
     "revision": "bc06955bc1e3c9ff8e9b2b2a55b38b94da923c05"
   },
   {
     "language": "gnuplot",
     "url": "https://github.com/dpezto/tree-sitter-gnuplot",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js throws error",
     "maintainedBy": "@dpezto",
+    "skip": true,
     "reference": "release",
     "revision": "7549f6faf5cc9fb8cf78054a7af356a6b003c6f3"
   },
   {
     "language": "go",
     "url": "https://github.com/tree-sitter/tree-sitter-go",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta, @WinWisely268",
+    "grammarSha": "5f2fedb7ded88ec80c3c35dfdd9c878a1da8174ee9a3d2a9146cc43993123fd7",
     "reference": "master",
     "revision": "fd577c4358c28cbcb6748bbf65354cc85f1cf7a4"
   },
@@ -833,70 +766,59 @@
     "altName": "Godot Resources (gdresource)",
     "url": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@pierpo",
+    "grammarSha": "5f6dee498be649b5ddb4563f337f2671ba9f51140a5b631a4396e12c47e4f400",
     "reference": "master",
     "revision": "b6ef0768711086a86b3297056f9ffb5cc1d77b4a"
   },
   {
     "language": "gomod",
     "url": "https://github.com/camdencheek/tree-sitter-go-mod",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@camdencheek",
+    "grammarSha": "5e96409a9b0f3241a586ab12138e75df6992a2d860574b1b008acc6b46ae2474",
     "reference": "main",
     "revision": "bbe2fe3be4b87e06a613e685250f473d2267f430"
   },
   {
     "language": "gosum",
     "url": "https://github.com/amaanq/tree-sitter-go-sum",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "c8e57d0bad6bf049ac323fff4f8215b6b250e31c38b40e6f9993f3c5a9138971",
     "reference": "master",
     "revision": "e2ac513b2240c7ff1069ae33b2df29ce90777c11"
   },
   {
     "language": "gotmpl",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@qvalentin",
+    "skip": true,
     "reference": "master",
     "revision": "17144a77be0acdecebd9d557398883569fed41de"
   },
   {
     "language": "gowork",
     "url": "https://github.com/omertuc/tree-sitter-go-work",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@omertuc",
+    "grammarSha": "4b5e4c85ae52a3950681b835060deb86c1fbb5ea359b2164f4a522ed402f00e3",
     "reference": "main",
     "revision": "949a8a470559543857a62102c84700d291fc984c"
   },
   {
     "language": "gpg",
     "url": "https://github.com/ObserverOfTime/tree-sitter-gpg-config",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
     "reference": "master",
     "revision": "f99323fb8f3f10b6c69db0c2f6d0a14bd7330675"
   },
   {
     "language": "graphql",
     "url": "https://github.com/bkegley/tree-sitter-graphql",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@bkegley",
+    "grammarSha": "67120043a4d9c4e70c38fee8edb67fc3f48a785cc5e7101f6d56fcf1d55d9acf",
     "reference": "master",
     "revision": "5e66e961eee421786bdda8495ed1db045e06b5fe"
   },
@@ -904,20 +826,18 @@
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@murtaza64",
+    "grammarSha": "e9e09e3353d28f32256f0e10585629a133ca0e4b4e4ad1943b1511d159fe5a94",
     "reference": "main",
     "revision": "3c25d1ce6c1eb9da34215060372792dc9f439b0c"
   },
   {
     "language": "gstlaunch",
     "url": "https://github.com/theHamsta/tree-sitter-gstlaunch",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "7956e7055e92a57957ee34377ddffdfb7f05de9af035372009f55bece270a21f",
     "reference": "master",
     "revision": "2c0d9c94d35e37aa63fa5002163c8480985b3e5b"
   },
@@ -925,85 +845,83 @@
     "language": "hack",
     "url": "https://github.com/slackhq/tree-sitter-hack",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@aosq",
+    "grammarSha": "b6126a8b2bdf34eb861fc00a2653ec5a4d20b4b4ee77a16bbef698c3b97dd1bc",
     "reference": "main",
     "revision": "fca1e294f6dce8ec5659233a6a21f5bd0ed5b4f2"
   },
   {
     "language": "hare",
     "url": "https://github.com/amaanq/tree-sitter-hare",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "3d4af179414525a35dd069ba0208c9b71093d8b3"
   },
   {
     "language": "haskell",
     "url": "https://github.com/tree-sitter/tree-sitter-haskell",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "unicode.h"
     ],
     "maintainedBy": "@mrcjkb",
+    "skip": true,
     "reference": "master",
     "revision": "6b5ec205c9d4f23eb36a163f1edc4f2db8c98e4a"
   },
   {
     "language": "haskell_persistent",
     "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@lykahb",
+    "skip": true,
     "reference": "master",
     "revision": "577259b4068b2c281c9ebf94c109bd50a74d5857"
   },
   {
     "language": "hcl",
     "url": "https://github.com/MichaHoffmann/tree-sitter-hcl",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@MichaHoffmann",
+    "skip": true,
     "reference": "main",
     "revision": "e936d3fef8bac884661472dce71ad82284761eb1"
   },
   {
     "language": "heex",
     "url": "https://github.com/connorlay/tree-sitter-heex",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@connorlay",
+    "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
     "reference": "main",
-    "revision": "4a36c9a388505180da6ee0eda1d8afb8c83481c8"
+    "revision": "b5ad6e34eea18a15bbd1466ca707a17f9bff7b93"
   },
   {
     "language": "helm",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "dialects/helm",
     "maintainedBy": "@qvalentin",
+    "skip": true,
     "reference": "master",
     "revision": "17144a77be0acdecebd9d557398883569fed41de"
   },
   {
     "language": "hjson",
     "url": "https://github.com/winston0410/tree-sitter-hjson",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@winston0410",
+    "skip": true,
     "reference": "master",
     "revision": "02fa3b79b3ff9a296066da6277adfc3f26cbc9e0"
   },
@@ -1011,30 +929,27 @@
     "language": "hlsl",
     "url": "https://github.com/theHamsta/tree-sitter-hlsl",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
     "revision": "ee24be127560f0de0c4741e382416f45ab47eb76"
   },
   {
     "language": "hlsplaylist",
     "url": "https://github.com/Freed-Wu/tree-sitter-hlsplaylist",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Freed-Wu",
+    "grammarSha": "cfd93557c3bdb0168f78e74e06885a687b2a90ecb39d490fabed99ede1a56a17",
     "reference": "main",
     "revision": "5be34b0f6ea01b24f017c2c715729a3a919f57fd"
   },
   {
     "language": "hocon",
     "url": "https://github.com/antosha417/tree-sitter-hocon",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@antosha417",
+    "skip": true,
     "reference": "master",
     "revision": "c390f10519ae69fdb03b3e5764f5592fb6924bcc"
   },
@@ -1042,10 +957,10 @@
     "language": "hoon",
     "url": "https://github.com/urbit-pilled/tree-sitter-hoon",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@urbit-pilled",
+    "grammarSha": "df579dbc8cb058ff2a47d25462d5ead852ed61a360003cf87f924743e0094026",
     "reference": "master",
     "revision": "0135187126370cbf112d759a50eab4a5c913a827"
   },
@@ -1053,71 +968,59 @@
     "language": "html",
     "url": "https://github.com/tree-sitter/tree-sitter-html",
     "files": [
-      "parser.c",
       "scanner.c",
       "tag.h"
     ],
     "maintainedBy": "@TravonteD",
+    "grammarSha": "24a745bb29af676860649cfa0ea42fdde9f24afef5921065e5b2a66e9ea76dab",
     "reference": "master",
-    "revision": "b5d9758e22b4d3d25704b72526670759a9e4d195"
+    "revision": "b285e25c1ba8729399ce4f15ac5375cf6c3aa5be"
   },
   {
     "language": "htmldjango",
     "url": "https://github.com/interdependence/tree-sitter-htmldjango",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "3f8d1cc38aa19a4cbeda808b4728adc440ade97b0a09f3c3d19b526cbb737fd5",
     "reference": "main",
-    "revision": "8873e3df89f9ea1d33f6235e516b600009288557"
+    "revision": "ea71012d3fe14dd0b69f36be4f96bdfe9155ebae"
   },
   {
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "0ac0b9d4fcddeb0ff858aaebe2e7dfd3bfece54dc1a47cf07e54ec645c3c1cd6",
     "reference": "main",
     "revision": "6824a247d1326079aab4fa9f9164e9319678081d"
   },
   {
     "language": "hurl",
     "url": "https://github.com/pfeiferj/tree-sitter-hurl",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@pfeiferj",
+    "grammarSha": "a19ebedd736c7d2f7a3ce5aa07324dbdffa54cb68eab680d9ceebc8bc3b7a019",
     "reference": "main",
     "revision": "cd1a0ada92cc73dd0f4d7eedc162be4ded758591"
   },
   {
     "language": "hyprlang",
     "url": "https://github.com/luckasRanarison/tree-sitter-hyprlang",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@luckasRanarison",
+    "grammarSha": "79ccae0a8ec5924217f1ec0786679604c3403ad58c24f42ddb074c207bd1e8af",
     "reference": "master",
     "revision": "fc1d331586e4da2b5f5bcfa89d630ebafe66458b"
   },
   {
     "language": "ini",
     "url": "https://github.com/justinmk/tree-sitter-ini",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "7ddb44f842e45d6d24d156a2a625f43f86fc36f608994b0393529c61c7698a99",
     "reference": "master",
     "revision": "bcb84a2d4bcd6f55b911c42deade75c8f90cb0c5"
   },
   {
     "language": "ispc",
     "url": "https://github.com/fab4100/tree-sitter-ispc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@fab4100",
+    "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
     "reference": "master",
     "revision": "9b2f9aec2106b94b4e099fe75e73ebd8ae707c04"
   },
@@ -1125,20 +1028,18 @@
     "language": "janet_simple",
     "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@sogaiu",
+    "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
     "revision": "51271e260346878e1a1aa6c506ce6a797b7c25e2"
   },
   {
     "language": "java",
     "url": "https://github.com/tree-sitter/tree-sitter-java",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@p00f",
+    "grammarSha": "0dd59b84c0d40944f7328d3b8b928d566e7a16a3333f96780f1a9d24d979d324",
     "reference": "master",
     "revision": "5e62fbb519b608dfd856000fdc66536304c414de"
   },
@@ -1146,20 +1047,18 @@
     "language": "javascript",
     "url": "https://github.com/tree-sitter/tree-sitter-javascript",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
+    "grammarSha": "d9e9cd75b7542364583556968d92e0d23af22fc2fbdc3638f3cc305623b1c096",
     "reference": "master",
     "revision": "de1e682289a417354df5b4437a3e4f92e0722a0f"
   },
   {
     "language": "jq",
     "url": "https://github.com/flurie/tree-sitter-jq",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "618ea236fc5e2b79ff461bb189c81d5d6444154f83c1979d650dd451f1f5845c",
     "reference": "main",
     "revision": "13990f530e8e6709b7978503da9bc8701d366791"
   },
@@ -1167,30 +1066,27 @@
     "language": "jsdoc",
     "url": "https://github.com/tree-sitter/tree-sitter-jsdoc",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
+    "grammarSha": "d11c646efdcf092e332b4629f19dfcc52c099315bde56eecee2e406b872969af",
     "reference": "master",
     "revision": "6a6cf9e7341af32d8e2b2e24a37fbfebefc3dc55"
   },
   {
     "language": "json",
     "url": "https://github.com/tree-sitter/tree-sitter-json",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@steelsojka",
+    "grammarSha": "a5f8ed7ccb7595192972f171bedebb2ad5ddbbd6c4a41326ad8c5104650a1263",
     "reference": "master",
     "revision": "3b129203f4b72d532f58e72c5310c0a7db3b8e6d"
   },
   {
     "language": "json5",
     "url": "https://github.com/Joakker/tree-sitter-json5",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@Joakker",
+    "skip": true,
     "reference": "master",
     "revision": "c23f7a9b1ee7d45f516496b1e0e4be067264fa0d"
   },
@@ -1198,10 +1094,9 @@
     "language": "jsonc",
     "altName": "JSON with comments",
     "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@WhyNotHugo",
+    "skip": true,
     "reference": "main",
     "revision": "02b01653c8a1c198ae7287d566efa86a135b30d5"
   },
@@ -1209,10 +1104,10 @@
     "language": "jsonnet",
     "url": "https://github.com/sourcegraph/tree-sitter-jsonnet",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@nawordar",
+    "grammarSha": "c1db3cca6f39128484024a11e21cc13e4b5a21477da0047abca2485f9f780cf5",
     "reference": "main",
     "revision": "d34615fa12cc1d1cfc1f1f1a80acc9db80ee4596"
   },
@@ -1220,10 +1115,10 @@
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "9a64491e0a7dafde83f525f82fed3ed3e95e2cab92b746e239f7784dd40f5fbd",
     "reference": "master",
     "revision": "e84f10db8eeb8b9807786bfc658808edaa1b4fa2"
   },
@@ -1231,10 +1126,10 @@
     "language": "kconfig",
     "url": "https://github.com/amaanq/tree-sitter-kconfig",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "47150496c6c18055eded0f6676ca9463ace24c66ce9d550cf80bf57b7b3fa38f",
     "reference": "master",
     "revision": "486fea71f61ad9f3fd4072a118402e97fe88d26c"
   },
@@ -1242,10 +1137,10 @@
     "language": "kdl",
     "url": "https://github.com/amaanq/tree-sitter-kdl",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "eaf0c321d4cfb3ecb7ca09631a1e76d60b4212581ddfc3b919301bfe485eabcd",
     "reference": "master",
     "revision": "49fb89a854d93b58a65a19724ac307195ca11941"
   },
@@ -1253,32 +1148,31 @@
     "language": "kotlin",
     "url": "https://github.com/fwcd/tree-sitter-kotlin",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@SalBakraa",
+    "grammarSha": "eefacb19e9c6c72aade72c9ced86316541a68476c6d4d33174e2ebaec8d3c2c1",
     "reference": "main",
-    "revision": "aa1130ebfde68ed70366c58d9d318e6656220111"
+    "revision": "260afd9a92bac51b3a4546303103c3d40a430639"
   },
   {
     "language": "kusto",
     "url": "https://github.com/Willem-J-an/tree-sitter-kusto",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Willem-J-an",
+    "grammarSha": "f5933024921cc30620aa4f7a25ed95a0959847211f54feb19b9eb86534ce6dca",
     "reference": "master",
     "revision": "8353a1296607d6ba33db7c7e312226e5fc83e8ce"
   },
   {
     "language": "lalrpop",
     "url": "https://github.com/traxys/tree-sitter-lalrpop",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c",
       "scanner_table.h"
     ],
     "maintainedBy": "@traxys",
+    "skip": true,
     "reference": "master",
     "revision": "456dec2990ed7e9595eca82f85db14a1db46e126"
   },
@@ -1286,40 +1180,34 @@
     "language": "latex",
     "url": "https://github.com/latex-lsp/tree-sitter-latex",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
+    "grammarSha": "12123d1ff1a3d01742f585d723ec1a56b83bb21c7cb3103681249bba881e2c0c",
     "reference": "master",
     "revision": "841f89ffbba9650529a40fb867f3456bf92bf9b1"
   },
   {
     "language": "ledger",
     "url": "https://github.com/cbarrete/tree-sitter-ledger",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@cbarrete",
+    "grammarSha": "a9d4eee520bcc9f0e0c3a05c772d5ed31192ca3cec62f20988103b58b714e5c9",
     "reference": "master",
     "revision": "8a841fb20ce683bfbb3469e6ba67f2851cfdf94a"
   },
   {
     "language": "leo",
     "url": "https://github.com/r001/tree-sitter-leo",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@r001",
+    "grammarSha": "5e31e7dd25ad477f0b964bca5f65222b5ac28faeda408320180f257182a38b36",
     "reference": "main",
     "revision": "304611b5eaf53aca07459a0a03803b83b6dfd3b3"
   },
   {
     "language": "linkerscript",
     "url": "https://github.com/amaanq/tree-sitter-linkerscript",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "6a4b083d98ba1c09baa00fba81216d067af13a91cf5bcce2fde4fbd198353900",
     "reference": "master",
     "revision": "f99011a3554213b654985a4b0a65b3b032ec4621"
   },
@@ -1327,20 +1215,18 @@
     "language": "liquidsoap",
     "url": "https://github.com/savonet/tree-sitter-liquidsoap",
     "files": [
-      "parser.c",
       "scanner.cc"
     ],
     "maintainedBy": "@toots",
+    "grammarSha": "6aa8c1d4781326a9b278e715f3eca2e5dc3df3f99ae4a2246f679be23f1642b0",
     "reference": "main",
     "revision": "fb062bfc7ca09a741820debb7cb8a75a557b30f9"
   },
   {
     "language": "llvm",
     "url": "https://github.com/benwilliamgraham/tree-sitter-llvm",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@benwilliamgraham",
+    "grammarSha": "dfb920500200e4527f5823896f0547d01d1c3958dfe0f01c3d7b744877f8d1fb",
     "reference": "main",
     "revision": "1b96e58faf558ce057d4dc664b904528aee743cb"
   },
@@ -1348,20 +1234,18 @@
     "language": "lua",
     "url": "https://github.com/MunifTanjim/tree-sitter-lua",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@MunifTanjim",
+    "grammarSha": "eee78d05feab0fc0b7cea0925e7c84684e5ac64243a209b1dbb8ec8a3e561bca",
     "reference": "main",
     "revision": "a24dab177e58c9c6832f96b9a73102a0cfbced4a"
   },
   {
     "language": "luadoc",
     "url": "https://github.com/amaanq/tree-sitter-luadoc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "c137cb2a941c104d4028ba2b592f78fd4c4e9b344bcfd4b8802c9089090bbe86",
     "reference": "master",
     "revision": "873612aadd3f684dd4e631bdf42ea8990c57634e"
   },
@@ -1369,41 +1253,36 @@
     "language": "luap",
     "altName": "lua patterns",
     "url": "https://github.com/amaanq/tree-sitter-luap",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "75f056c7064aef3e22af7896b11734fc6e9ffaa4639bb55a1813d7791fe063ea",
     "reference": "master",
     "revision": "31461ae9bd0866cb5117cfe5de71189854fd0f3e"
   },
   {
     "language": "luau",
     "url": "https://github.com/amaanq/tree-sitter-luau",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "e5f7a020967407f73959592decdb147bb5fc30bb"
   },
   {
     "language": "m68k",
     "url": "https://github.com/grahambates/tree-sitter-m68k",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@grahambates",
+    "grammarSha": "696cdc46e1d0c27c8e68eba91a3ecc23bf94bc04822d8bdbf4f0d03bf80e1836",
     "reference": "master",
     "revision": "d097b123f19c6eaba2bf181c05420d88b9fc489d"
   },
   {
     "language": "make",
     "url": "https://github.com/alemuller/tree-sitter-make",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@lewis6991",
+    "grammarSha": "80402e3642fc46a08de1fbac9ea634da0075d57b854b6c19f215016a4ba3a59b",
     "reference": "main",
     "revision": "a4b9187417d6be349ee5fd4b6e77b4172c6827dd"
   },
@@ -1411,36 +1290,38 @@
     "language": "markdown",
     "altName": "markdown (basic highlighting)",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "srcRoot": "tree-sitter-markdown",
     "maintainedBy": "@MDeiml",
+    "skip": true,
     "reference": "split_parser",
-    "revision": "2821521a4e6eab37b63dff6a8e169cd88554047d"
+    "revision": "b2f01981a76e3251f5b660378136c248ed106b81"
   },
   {
     "language": "markdown_inline",
     "altName": "markdown_inline (needed for full highlighting)",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "srcRoot": "tree-sitter-markdown-inline",
     "maintainedBy": "@MDeiml",
+    "skip": true,
     "reference": "split_parser",
-    "revision": "2821521a4e6eab37b63dff6a8e169cd88554047d"
+    "revision": "b2f01981a76e3251f5b660378136c248ed106b81"
   },
   {
     "language": "matlab",
     "url": "https://github.com/acristoffers/tree-sitter-matlab",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@acristoffers",
+    "grammarSha": "ce1ecced0150a36e24a7079e59d0f3b55533f514340e013ee4065bded13b3d8f",
     "reference": "main",
     "revision": "79d8b25f57b48f83ae1333aff6723b83c9532e37"
   },
@@ -1448,62 +1329,53 @@
     "language": "menhir",
     "url": "https://github.com/Kerl13/tree-sitter-menhir",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@Kerl13",
+    "grammarSha": "eccc43fcb300c2888616a180c5ec0e1c318243f9ad1fbaa46b00aa19ea57a0ed",
     "reference": "master",
     "revision": "be8866a6bcc2b563ab0de895af69daeffa88fe70"
   },
   {
     "language": "mermaid",
     "url": "https://github.com/monaqa/tree-sitter-mermaid",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@monaqa",
+    "grammarSha": "e517c9d2711c266b231b716558256809a32db310359fa635d3f06066c97807ce",
     "reference": "master",
     "revision": "e8dac87a9f789b23a2c7ab8e55b485a2f5927b98"
   },
   {
     "language": "meson",
     "url": "https://github.com/Decodetalkers/tree-sitter-meson",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@Decodetalkers",
+    "skip": true,
     "reference": "master",
     "revision": "d6ec8ce0963c3c8180161391f15d8f7d415f650d"
   },
   {
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@artagnon",
     "pending": true,
-    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
   {
     "language": "muttrc",
     "url": "https://github.com/neomutt/tree-sitter-muttrc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Freed-Wu",
+    "grammarSha": "fe155063ba38c3078ebdffb2f793518ef7ee8a6d65978823ba0adb0f1b47be25",
     "reference": "main",
     "revision": "67d9e23ca7aa22d9bce9d16c53d2c927dff5159a"
   },
   {
     "language": "nasm",
     "url": "https://github.com/naclsn/tree-sitter-nasm",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has errors: repetition operator missing expression: {[rR][eE][xX]}",
     "maintainedBy": "@ObserverOfTime",
+    "skip": true,
     "reference": "main",
     "revision": "3bc691d2cfba44bea339a775ad496c8bc552c60d"
   },
@@ -1511,41 +1383,39 @@
     "language": "nickel",
     "url": "https://github.com/nickel-lang/tree-sitter-nickel",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ErinvanderVeen, @yannham",
+    "grammarSha": "5a0fe7ce530f28abf0f9a4ef15488fb6225bbddc3507c8409ea4667361b92be3",
     "reference": "main",
     "revision": "58baf89db8fdae54a84bcf22c80ff10ee3f929ed"
   },
   {
     "language": "nim",
     "url": "https://github.com/alaviss/tree-sitter-nim",
+    "doc": "high memory usage, must be compiled on its own",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@aMOPel",
+    "skip": true,
+    "grammarSha": "e4d4285b41b99c749866c57170b7a51cb01df519cabdf5c187f3fe8b9cb932de",
     "reference": "main",
     "revision": "f5cec6a841b585e4e7388a120ded07e60ae19c43"
   },
   {
     "language": "nim_format_string",
     "url": "https://github.com/aMOPel/tree-sitter-nim-format-string",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@aMOPel",
+    "grammarSha": "5bc636c61c08e467de8631a2fe3c3c5d85f1684e9ed0ab0c95cbb8e410bfbdcf",
     "reference": "master",
     "revision": "d45f75022d147cda056e98bfba68222c9c8eca3a"
   },
   {
     "language": "ninja",
     "url": "https://github.com/alemuller/tree-sitter-ninja",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@alemuller",
+    "grammarSha": "6778081b91d51b0b9f55c73e3a33d5bc6d277b7986647f964263e33ec187de91",
     "reference": "main",
     "revision": "0a95cfdc0745b6ae82f60d3a339b37f19b7b9267"
   },
@@ -1553,10 +1423,10 @@
     "language": "nix",
     "url": "https://github.com/cstrahan/tree-sitter-nix",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@leo60228",
+    "grammarSha": "9405b063baad43af3f6a94aac79d4de1fe7523525d61f6e488e9e99e11e6a0d5",
     "reference": "master",
     "revision": "763168fa916a333a459434f1424b5d30645f015d"
   },
@@ -1564,30 +1434,27 @@
     "language": "norg",
     "url": "https://github.com/nvim-neorg/tree-sitter-norg",
     "files": [
-      "parser.c",
       "scanner.cc"
     ],
     "maintainedBy": "@JoeyGrajciar, @vhyrro",
+    "grammarSha": "fa83a4ce377afd4947c3fff440dd3b225506cb5f57aab9b871f29e7348d106c2",
     "reference": "main",
     "revision": "014073fe8016d1ac440c51d22c77e3765d8f6855"
   },
   {
     "language": "nqc",
     "url": "https://github.com/amaanq/tree-sitter-nqc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "9c4164103e924312e970cba1c2078ff33b122985de47e816febe26684fe11f1d",
     "reference": "master",
     "revision": "14e6da1627aaef21d2b2aa0c37d04269766dcc1d"
   },
   {
     "language": "objc",
     "url": "https://github.com/amaanq/tree-sitter-objc",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js throws error",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "62e61b6f5c0289c376d61a8c91faf6435cde9012"
   },
@@ -1595,10 +1462,10 @@
     "language": "objdump",
     "url": "https://github.com/ColinKennedy/tree-sitter-objdump",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ColinKennedy",
+    "grammarSha": "647cced066e575a86b5e14197679af0160c4ad94565ba5e40a20d6c6ab36727f",
     "reference": "master",
     "revision": "28d3b2e25a0b1881d1b47ed1924ca276c7003d45"
   },
@@ -1606,12 +1473,12 @@
     "language": "ocaml",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "ocaml",
     "maintainedBy": "@undu",
+    "grammarSha": "66ef8b53fdbfedd8ef1efae1a37bc6b5542324e20f4a8636bce3687189ff60bf",
     "reference": "master",
     "revision": "712d9bfa1d537c5899dde5538767ed2d8bb37a93"
   },
@@ -1619,12 +1486,12 @@
     "language": "ocaml_interface",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "interface",
     "maintainedBy": "@undu",
+    "grammarSha": "796bc61b6863341a316ab5a33d9554ea702eb3237de34ff07648109f394b4ba9",
     "reference": "master",
     "revision": "712d9bfa1d537c5899dde5538767ed2d8bb37a93"
   },
@@ -1632,21 +1499,22 @@
     "language": "ocamllex",
     "url": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@undu",
+    "grammarSha": "69b48d27d0ec0c6c9088cb3e276c4055b0e3291006882f0cad3d391efdf685b1",
     "reference": "master",
     "revision": "4b9898ccbf198602bb0dec9cd67cc1d2c0a4fad2"
   },
   {
     "language": "odin",
     "url": "https://github.com/amaanq/tree-sitter-odin",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "f94c590ed5263e11f1e492d1b53356f8c8459b66"
   },
@@ -1654,89 +1522,87 @@
     "language": "org",
     "url": "https://github.com/milisims/tree-sitter-org",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@milisims",
+    "grammarSha": "944dce2455d4355b0219a9e29390f8b204bb8216aaa3158e2fa7600b02ac7e41",
     "reference": "main",
     "revision": "64cfbc213f5a83da17632c95382a5a0a2f3357c1"
   },
   {
     "language": "pascal",
     "url": "https://github.com/Isopod/tree-sitter-pascal",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Isopod",
+    "grammarSha": "e36dd555838cb89851cff368a772629ccb7d9b2eb01726a2dc5c36792eb9f31c",
     "reference": "master",
     "revision": "9e995404ddff8319631d72d4b46552e737206912"
   },
   {
     "language": "passwd",
     "url": "https://github.com/ath3/tree-sitter-passwd",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "b1d74b5455e31c1691d2cde887c414811ecd1d569934c0eab4bc10c542b5f58e",
     "reference": "main",
     "revision": "20239395eacdc2e0923a7e5683ad3605aee7b716"
   },
   {
     "language": "pem",
     "url": "https://github.com/ObserverOfTime/tree-sitter-pem",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "15d39dc1718ffd7b05a726517c1a748995e22cf8352e49c87adcfb5dcea50159",
     "reference": "master",
     "revision": "217ff2af3f2db15a79ab7e3d21ea1e0c17e71a1a"
   },
   {
     "language": "perl",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
+    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c",
       "tsp_unicode.h"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "needsGenerate": true,
+    "skip": true,
     "reference": "master",
-    "revision": "ce78903240204fe2a9e192deeed77eccf4c0f575"
+    "revision": "35e58380131853a4f453325286d397c8c6fc08e4"
   },
   {
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
+    "skip": true,
     "reference": "master",
     "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
   },
   {
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
+    "skip": true,
     "reference": "master",
     "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
   },
   {
     "language": "phpdoc",
     "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
+    "doc": "grammar.js throws error",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@mikehaertl",
+    "skip": true,
     "reference": "master",
     "revision": "f285e338d328a03920a9bfd8dda78585c7ddcca3"
   },
@@ -1744,20 +1610,19 @@
     "language": "pioasm",
     "url": "https://github.com/leo60228/tree-sitter-pioasm",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@leo60228",
+    "grammarSha": "4e2b2a6c4ff924e0c604e6230e866cb6042ca2c3f1d6056211d34c2a08cfe4da",
     "reference": "main",
     "revision": "924aadaf5dea2a6074d72027b064f939acf32e20"
   },
   {
     "language": "po",
     "url": "https://github.com/erasin/tree-sitter-po",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "main",
     "revision": "d6aed225290bc71a15ab6f06305cb11419360c56"
   },
@@ -1765,63 +1630,55 @@
     "language": "pod",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-pod",
     "files": [
-      "parser.c"
+      "scanner.c"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "pending": true,
-    "needsGenerate": true,
-    "reference": "master",
-    "revision": ""
+    "grammarSha": "dd95d29a211b31d2c6955dc178d244fbecd322d8acc9d0fc77c7eeb53247dc30",
+    "reference": "main",
+    "revision": "7ef08cb706b6ab4878228cc28c4f9689e3cb86aa"
   },
   {
     "language": "poe_filter",
     "altName": "Path of Exile item filter",
     "url": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "a58fba5ad81765c871e4fffd7958a8de00efa851840ebf1f0b1323c3d8c7d1ac",
     "reference": "master",
     "revision": "592476d81f95d2451f2ca107dc872224c76fecdf"
   },
   {
     "language": "pony",
     "url": "https://github.com/amaanq/tree-sitter-pony",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq, @mfelsche",
+    "skip": true,
     "reference": "master",
     "revision": "16f930b250433cfcd4fb4144df92bb98ad344c20"
   },
   {
     "language": "printf",
     "url": "https://github.com/ObserverOfTime/tree-sitter-printf",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
     "reference": "main",
     "revision": "0e0aceabbf607ea09e03562f5d8a56f048ddea3d"
   },
   {
     "language": "prisma",
     "url": "https://github.com/victorhqc/tree-sitter-prisma",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@elianiva",
+    "grammarSha": "7aac91f8a611e05f48e647fa19a2be54ce84796b5debc022331ab15fb69d62d7",
     "reference": "master",
     "revision": "eca2596a355b1a9952b4f80f8f9caed300a272b5"
   },
   {
     "language": "promql",
     "url": "https://github.com/MichaHoffmann/tree-sitter-promql",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@MichaHoffmann",
+    "grammarSha": "8c9ad18e98d5060dd1a33c9eeb0973631dfe373656e3ead2dfc2ee46935ca117",
     "reference": "main",
     "revision": "77625d78eebc3ffc44d114a07b2f348dff3061b0"
   },
@@ -1829,41 +1686,36 @@
     "language": "properties",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-properties",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "96028b79d50a79bcf15d910845ccda66be1efcdf28b3aad04be8ecd2ae930625",
     "reference": "master",
     "revision": "9d09f5f200c356c50c4103d36441309fd61b48d1"
   },
   {
     "language": "proto",
     "url": "https://github.com/treywood/tree-sitter-proto",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@treywood",
+    "grammarSha": "d14600c4784ec5f98287868569085648b0873710157981ca57c8252eb22a13fd",
     "reference": "main",
     "revision": "e9f6b43f6844bd2189b50a422d4e2094313f6aa3"
   },
   {
     "language": "prql",
     "url": "https://github.com/PRQL/tree-sitter-prql",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@matthias-Q",
+    "grammarSha": "b7030737aabdb8a48a3cb3dc8b0b386b47397e6ad3fb689b0797902d0d56125d",
     "reference": "main",
     "revision": "09e158cd3650581c0af4c49c2e5b10c4834c8646"
   },
   {
     "language": "psv",
     "url": "https://github.com/amaanq/tree-sitter-csv",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "psv",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
@@ -1871,32 +1723,32 @@
     "language": "pug",
     "url": "https://github.com/zealot128/tree-sitter-pug",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@zealot128",
+    "grammarSha": "5e7d216121a92712130b58ff6a2b574083d4256f495faae47c11bba4e57d2c5b",
     "reference": "master",
     "revision": "a7ff31a38908df9b9f34828d21d6ca5e12413e18"
   },
   {
     "language": "puppet",
     "url": "https://github.com/amaanq/tree-sitter-puppet",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "5849f9694197a6e822872945b415429c285fdd54"
   },
   {
     "language": "purescript",
     "url": "https://github.com/postsolar/tree-sitter-purescript",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "unicode.h"
     ],
     "maintainedBy": "@postsolar",
+    "skip": true,
     "reference": "main",
     "revision": "daf9b3e2be18b0b2996a1281f7783e0d041d8b80"
   },
@@ -1904,10 +1756,8 @@
     "language": "pymanifest",
     "altName": "PyPA manifest",
     "url": "https://github.com/ObserverOfTime/tree-sitter-pymanifest",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "f0d50e3e03ba68358eeeac016575ae42ead06ab8fb106447b405f9c6ae4e4a04",
     "reference": "master",
     "revision": "e3b82b78721aee07f676dac8473ae69db51debcf"
   },
@@ -1915,32 +1765,26 @@
     "language": "python",
     "url": "https://github.com/tree-sitter/tree-sitter-python",
     "files": [
-      "parser.c",
-      "scanner.c",
-      "src/tree_sitter/array.h",
-      "src/tree_sitter/alloc.h"
+      "scanner.c"
     ],
     "maintainedBy": "@stsewd, @theHamsta",
+    "grammarSha": "9a77a8055fd5cf26327a95b26fd4d9e4556284bbc579013b054ac6a468e0033b",
     "reference": "master",
     "revision": "b8a4c64121ba66b460cb878e934e3157ecbfb124"
   },
   {
     "language": "ql",
     "url": "https://github.com/tree-sitter/tree-sitter-ql",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@pwntester",
+    "grammarSha": "758524d418fde3eb51eda6418a71289effa101bbfe72fafa3e2747597daa6ade",
     "reference": "master",
     "revision": "ff04ba61857ba05b80221e71b423b2728dbebe1e"
   },
   {
     "language": "qmldir",
     "url": "https://github.com/Decodetalkers/tree-sitter-qmldir",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "5640f359dd610e35037c85414d38e56443cbad1fbe8f4d0640f3643ac31f7f19",
     "reference": "master",
     "revision": "6b2b5e41734bd6f07ea4c36ac20fb6f14061c841"
   },
@@ -1948,11 +1792,11 @@
     "language": "qmljs",
     "url": "https://github.com/yuja/tree-sitter-qmljs",
     "files": [
-      "parser.c",
       "scanner.c",
       "typescript-scanner.h"
     ],
     "maintainedBy": "@Decodetalkers",
+    "grammarSha": "25337d059d8208f5212f24981ae02bbef564f1a4d6b601227378aa75dba485dc",
     "reference": "master",
     "revision": "9fa49ff3315987f715ce5666ff979a7742fa8a98"
   },
@@ -1960,21 +1804,21 @@
     "language": "query",
     "altName": "Tree-Sitter Query Language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@steelsojka",
+    "skip": true,
     "reference": "master",
     "revision": "176a380df78800167565118bb0dadfc961abbd43"
   },
   {
     "language": "r",
     "url": "https://github.com/r-lib/tree-sitter-r",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@echasnovski",
+    "skip": true,
     "reference": "main",
     "revision": "c55f8b4dfaa32c80ddef6c0ac0e79b05cb0cbf57"
   },
@@ -1982,70 +1826,59 @@
     "language": "racket",
     "url": "https://github.com/6cdh/tree-sitter-racket",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@6cdh",
+    "grammarSha": "2326ca8a89f5d8dd025445baf6e6af6b5f0ef6786759d7a4efaa61abe73b0562",
     "reference": "main",
-    "revision": "b5a2fe74cac87dc5342b366f50db71d421e7cf8f"
+    "revision": "d9858a0f607578814f2d34662ad4bc21aa37a455"
   },
   {
     "language": "rasi",
     "url": "https://github.com/Fymyte/tree-sitter-rasi",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Fymyte",
+    "grammarSha": "676d6b0179ec3189b2cc8ef47dc7543906eec01200f290dfd8169ae93584c4ab",
     "reference": "main",
     "revision": "43196d934a9a6ab3c7093a8683efd0111bb03db1"
   },
   {
     "language": "rbs",
     "url": "https://github.com/joker1007/tree-sitter-rbs",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@joker1007",
+    "skip": true,
     "reference": "main",
     "revision": "519a61132a51222e3ce73d3b7ef07465f587f346"
   },
   {
     "language": "re2c",
     "url": "https://github.com/amaanq/tree-sitter-re2c",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "c5cccbda55131250d0ebab3c13b6ba6ccc8df6af84ae33637c900e10c1ccf53a",
     "reference": "master",
     "revision": "47aa19cf5f7aba2ed30e2b377f7172df76e819a6"
   },
   {
     "language": "readline",
     "url": "https://github.com/ribru17/tree-sitter-readline",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ribru17",
+    "grammarSha": "f1213c3a674435fb8dc01b8b557fc6065803d40486d6afe723d7e7ba28969d2a",
     "reference": "master",
     "revision": "e436eaef452266a3d00c195f0eb757d6502c767a"
   },
   {
     "language": "regex",
     "url": "https://github.com/tree-sitter/tree-sitter-regex",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "ea0b0da14f795171450c7b4fc279e97dd9bf7924e16483915ab0d4bc66446f05",
     "reference": "master",
     "revision": "ba22e4e0cb42b2ef066948d0ea030ac509cef733"
   },
   {
     "language": "rego",
     "url": "https://github.com/FallenAngel97/tree-sitter-rego",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@FallenAngel97",
+    "grammarSha": "6ef054a81d5fe7ac899d333780953ceecd3057dc9055328f14c76deffea36f50",
     "reference": "master",
     "revision": "9ac75e71b2d791e0aadeef68098319d86a2a14cf"
   },
@@ -2053,20 +1886,16 @@
     "language": "requirements",
     "altName": "pip requirements",
     "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "afae79c0e1e13a296c79b5696af84a9dfebed0479f64b3edc5783d9987df10b6",
     "reference": "master",
     "revision": "8666a4dfeb3107144398158bc3dd7a3f59d89ccb"
   },
   {
     "language": "risor",
     "url": "https://github.com/applejag/tree-sitter-risor",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@applejag",
+    "grammarSha": "a2ff693bc0f7ffd4954cf0a940afbff4e06fb78a897f3aafbd1894e67f14057b",
     "reference": "main",
     "revision": "98f7c0d45176925338f91489964e0a0d819477a5"
   },
@@ -2074,31 +1903,30 @@
     "language": "rnoweb",
     "url": "https://github.com/bamonroe/tree-sitter-rnoweb",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@bamonroe",
+    "grammarSha": "0613d18e63b791dfec07c6451b4e7f80032df854053847d77373896a55d53d47",
     "reference": "master",
-    "revision": "502c1126dc6777f09af5bef16e72a42f75bd081e"
+    "revision": "1a74dc0ed731ad07db39f063e2c5a6fe528cae7f"
   },
   {
     "language": "robot",
     "url": "https://github.com/Hubro/tree-sitter-robot",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Hubro",
+    "grammarSha": "fcfe10a0ec522652409a8346417865907a7b480e16483f71cd270d4eee592ad7",
     "reference": "master",
     "revision": "322e4cc65754d2b3fdef4f2f8a71e0762e3d13af"
   },
   {
     "language": "ron",
     "url": "https://github.com/amaanq/tree-sitter-ron",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "ce6086b2c9e8e71065b8129d6c2289c5f66d1879"
   },
@@ -2107,11 +1935,10 @@
     "url": "https://github.com/stsewd/tree-sitter-rst",
     "doc": "It's complicated, has multiple scanner.c files",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@stsewd",
-    "skip": true,
+    "pending": true,
     "reference": "master",
     "revision": "3ba9eb9b5a47aadb1f2356a3cab0dd3d2bd00b4b"
   },
@@ -2119,10 +1946,10 @@
     "language": "ruby",
     "url": "https://github.com/tree-sitter/tree-sitter-ruby",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@TravonteD",
+    "grammarSha": "15aff47c001b7cc46db9628613a3313a3e64279d078459308b16f8903a263a2a",
     "reference": "master",
     "revision": "9d86f3761bb30e8dcc81e754b81d3ce91848477e"
   },
@@ -2130,10 +1957,10 @@
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "f8883fe89493a869e9b382f1fc29d85aeea480e3581c93e4accad67586aea0e4",
     "reference": "master",
     "revision": "3a56481f8d13b6874a28752502a58520b9139dc7"
   },
@@ -2141,44 +1968,38 @@
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
     "files": [
-      "parser.c",
       "scanner.c",
       "stack.h"
     ],
     "maintainedBy": "@stevanmilic",
+    "grammarSha": "8c7dc985f69d8106c5e95ff76d6d30a3c0951fb3a5c80f363a0c4ef9338d4114",
     "reference": "master",
     "revision": "70b4fe63c4973b04cc7bd40c6b7646d9c2430db8"
   },
   {
     "language": "scfg",
     "url": "https://git.sr.ht/~rockorager/tree-sitter-scfg",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@WhyNotHugo",
-    "pending": true,
-    "needsGenerate": true,
-    "reference": "master",
-    "revision": ""
+    "grammarSha": "bf371a3f393b5b01a5b1949511e6cf9dd352a19274caa8a374df348b3bd1f93c",
+    "reference": "main",
+    "revision": "6deae0cbb458c849a4d1e2985093e9c9c32d7fd0"
   },
   {
     "language": "scheme",
     "url": "https://github.com/6cdh/tree-sitter-scheme",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@6cdh",
+    "grammarSha": "05f7a7ef1fb277bc46e698b947f90489e78959703cc2db44c6067de86a2bca81",
     "reference": "main",
-    "revision": "6c77a5bcfb9baceeaa79ef67354b2d501b37b085"
+    "revision": "184e7596ee0cbaef79230cae1b4ee5bb4fbad314"
   },
   {
     "language": "scss",
     "url": "https://github.com/serenadeai/tree-sitter-scss",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@elianiva",
+    "grammarSha": "d1549f616df3363837d5557bd39004d24d46df56a14a1affd3aa7decf6967bfc",
     "reference": "master",
     "revision": "c478c6868648eff49eb04a4df90d703dc45b312a"
   },
@@ -2186,41 +2007,39 @@
     "language": "slang",
     "url": "https://github.com/theHamsta/tree-sitter-slang",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
+    "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
     "revision": "0cdfb1741323f38e9a33798674145c22cfc0092b"
   },
   {
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@hunger",
+    "grammarSha": "519a758a731a59fc5e26ca82586a4443106638e1f3fac3d81ac8bb6fe34ff7de",
     "reference": "master",
     "revision": "f5fa844d2adbcfdc7a0ec4daae4539887959d9ff"
   },
   {
     "language": "smali",
     "url": "https://git.sr.ht/~yotam/tree-sitter-smali",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5"
   },
   {
     "language": "smithy",
     "url": "https://github.com/indoorvivants/tree-sitter-smithy",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq, @keynmol",
+    "skip": true,
     "reference": "main",
     "revision": "8327eb84d55639ffbe08c9dc82da7fff72a1ad07"
   },
@@ -2228,42 +2047,38 @@
     "language": "snakemake",
     "url": "https://github.com/osthomas/tree-sitter-snakemake",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@osthomas",
+    "grammarSha": "dff6dd41360e7ec55c11ae5b36e595c49f53e9234cdbcf8d9bccc66fa4cd8f60",
     "reference": "main",
     "revision": "65a6c3b4671877821082164da0a310851b211953"
   },
   {
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "3971adac94ae4238fdf09af0451a6ef80dde5e76abd0908d37c9b0f6c8e3039f",
     "reference": "master",
     "revision": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02"
   },
   {
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "soql",
     "maintainedBy": "@aheber",
+    "skip": true,
     "reference": "main",
     "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
   {
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "sosl",
     "maintainedBy": "@aheber",
+    "skip": true,
     "reference": "main",
     "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
@@ -2271,20 +2086,19 @@
     "language": "sourcepawn",
     "url": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@Sarrus1",
+    "grammarSha": "826e5c3834e7284b9fd712752750ada8b6caec38d1983c4e96a2e98527fb4e4a",
     "reference": "main",
     "revision": "3ca89fdf998340a7973e276b39516d8902950f86"
   },
   {
     "language": "sparql",
     "url": "https://github.com/BonaBeavis/tree-sitter-sparql",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js throws error",
     "maintainedBy": "@BonaBeavis",
+    "skip": true,
     "reference": "main",
     "revision": "05f949d3c1c15e3261473a244d3ce87777374dec"
   },
@@ -2292,32 +2106,31 @@
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "needsGenerate": true,
+    "grammarSha": "a91985aca9832983f52a67de6c5778f2c0c45f0b1d02d3a7b84f93fe9b5f9255",
     "reference": "main",
-    "revision": "da2d1eff425b146d3c8cab7be8dfa98b11d896dc"
+    "revision": "b6b1f7f7e70e869c655705c591cbdf3e8a807ad6"
   },
   {
     "language": "squirrel",
     "url": "https://github.com/amaanq/tree-sitter-squirrel",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "e8b5835296f931bcaa1477d3c5a68a0c5c2ba034"
   },
   {
     "language": "ssh_config",
     "url": "https://github.com/ObserverOfTime/tree-sitter-ssh-config",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@ObserverOfTime",
+    "skip": true,
     "reference": "master",
     "revision": "514695df4985f56455b8f139a319453a2325cdcf"
   },
@@ -2325,20 +2138,18 @@
     "language": "starlark",
     "url": "https://github.com/amaanq/tree-sitter-starlark",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "33ea96a44600d31b8c17fb5ea021bc98fa02503482c1c3f7dd202ac3f2ddb971",
     "reference": "master",
     "revision": "b31a616aac5d05f927f3f9dd809789db7805b632"
   },
   {
     "language": "strace",
     "url": "https://github.com/sigmaSd/tree-sitter-strace",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "2a74d3dd62f23213ec71abb790b89e6b43ebf1d75dd1797c068a2ce5b1d36358",
     "reference": "master",
     "revision": "d819cdd5dbe455bd3c859193633c8d91c0df7c36"
   },
@@ -2346,31 +2157,30 @@
     "language": "styled",
     "url": "https://github.com/mskelton/tree-sitter-styled",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@mskelton",
+    "grammarSha": "e47c79e14d31ac7774cf20ff7582297a41b47b1dfe56006b112a4e3e2e0528fa",
     "reference": "main",
     "revision": "5e52758b32e02adca16bb93f95b3f9c050c72b56"
   },
   {
     "language": "supercollider",
     "url": "https://github.com/madskjeldgaard/tree-sitter-supercollider",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@madskjeldgaard",
+    "skip": true,
     "reference": "main",
     "revision": "3b35bd0fded4423c8fb30e9585c7bacbcd0e8095"
   },
   {
     "language": "surface",
     "url": "https://github.com/connorlay/tree-sitter-surface",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@connorlay",
+    "grammarSha": "94c36d90c5e6e531bf696f05d87bca4ded4ef0c0e6b732c23dc29578170fd620",
     "reference": "main",
     "revision": "f4586b35ac8548667a9aaa4eae44456c1f43d032"
   },
@@ -2378,11 +2188,11 @@
     "language": "svelte",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",
     "files": [
-      "parser.c",
       "scanner.c",
       "tag.h"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "2df2f1ff283178873a52079b157cd21d9be43c613a550fd79947732d5199fec3",
     "reference": "master",
     "revision": "04a126d9210def99f06d9ab84a255110b862d47c"
   },
@@ -2390,31 +2200,26 @@
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
     "files": [
-      "parser.c"
+      "scanner.c"
     ],
     "maintainedBy": "@alex-pinkus",
-    "pending": true,
-    "needsGenerate": true,
-    "reference": "master",
-    "revision": ""
+    "grammarSha": "b7755aa95cab95babdcefc8397739e09c986ca583ea080f4d153590d3b97ab76",
+    "reference": "main",
+    "revision": "78a736d77094b0b3c35e811e6765c4d38a72724e"
   },
   {
     "language": "sxhkdrc",
     "url": "https://github.com/RaafatTurki/tree-sitter-sxhkdrc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@RaafatTurki",
+    "grammarSha": "80eee0f4554a5a9a056e01252ad634c0762fb0a8c1dbcd1b1bbc2cb54cf5a4ad",
     "reference": "master",
     "revision": "440d5f913d9465c9c776a1bd92334d32febcf065"
   },
   {
     "language": "systemtap",
     "url": "https://github.com/ok-ryoko/tree-sitter-systemtap",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ok-ryoko",
+    "grammarSha": "9dfc950938c773f2bc9bb78d8f0605f81e93e2dff5ae65a797395736fca4ee0a",
     "reference": "main",
     "revision": "1af543a96d060b1f808982037bfc54cc02218edd"
   },
@@ -2422,21 +2227,22 @@
     "language": "t32",
     "url": "https://gitlab.com/xasc/tree-sitter-t32",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@xasc",
+    "grammarSha": "dbbd3f0dea16a698f601d9c86b9316c08d5f28e586e6373ebc17313036441c08",
     "reference": "main",
     "revision": "0a457a557be7779336bc8ac2b396e73797bc68f7"
   },
   {
     "language": "tablegen",
     "url": "https://github.com/amaanq/tree-sitter-tablegen",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "300f6a490e71f895e644ed2deec6920860a2e107"
   },
@@ -2444,10 +2250,10 @@
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@lewis6991",
+    "grammarSha": "d61014d737366f78f4210a6b6365b10191866989c99e6b555ec8d441bb13a47d",
     "reference": "main",
     "revision": "56ad1fa6a34ba800e5495d1025a9b0fda338d5b8"
   },
@@ -2455,42 +2261,38 @@
     "language": "teal",
     "url": "https://github.com/euclidianAce/tree-sitter-teal",
     "files": [
-      "parser.c"
+      "scanner.c"
     ],
     "maintainedBy": "@euclidianAce",
-    "pending": true,
-    "needsGenerate": true,
-    "reference": "master",
-    "revision": ""
+    "grammarSha": "a2a8f60f650edcbabf1e24efbe5702fd668b1ff92e12b6822641e410cf683e12",
+    "reference": "main",
+    "revision": "33482c92a0dfa694491d34e167a1d2f52b0dccb1"
   },
   {
     "language": "templ",
     "url": "https://github.com/vrischmann/tree-sitter-templ",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
+    "grammarSha": "472d6ee90ec9abb6139e6b28005327996bb8f1de5c757639ab356de81dcd633e",
     "reference": "master",
     "revision": "592faa3186ef857c92e4bd1c31d73c07a4a334db"
   },
   {
     "language": "textproto",
     "url": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Porter",
+    "grammarSha": "6d1adc2304eadc200dccd7844a5c2ec472fda69617bf8a282d4e2728904ba6f4",
     "reference": "main",
     "revision": "8dacf02aa402892c91079f8577998ed5148c0496"
   },
   {
     "language": "thrift",
     "url": "https://github.com/duskmoon314/tree-sitter-thrift",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq, @duskmoon314",
+    "skip": true,
     "reference": "main",
     "revision": "d4deb1bd9e848f2dbe81103a151d99e8546de480"
   },
@@ -2498,10 +2300,10 @@
     "language": "tiger",
     "url": "https://github.com/ambroisie/tree-sitter-tiger",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@ambroisie",
+    "grammarSha": "85c67802125a4a995da9d4adb723d7a2b1379e26d84fe481b8aaa34d58faf4bd",
     "reference": "main",
     "revision": "a7f11d946b44244f71df41d2a78af0665d618dae"
   },
@@ -2509,108 +2311,100 @@
     "language": "tlaplus",
     "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
     "files": [
-      "parser.c",
       "scanner.cc"
     ],
     "maintainedBy": "@ahelwer, @susliko",
+    "grammarSha": "a9ca8b481a6fbc6e0c560754cee8990291f91098f2e9db3dde21a96216c1c0fc",
     "reference": "main",
     "revision": "3896a5be761f04ffb22a841b2a0672f7a8a43ef9"
   },
   {
     "language": "tmux",
     "url": "https://github.com/Freed-Wu/tree-sitter-tmux",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Freed-Wu",
+    "grammarSha": "f96e3376961a1acd57d442034d92e7025b30496dc041df4b268206cd4d535b5d",
     "reference": "main",
     "revision": "10737f5dc4d8e68c9667f11a6996688a1185755f"
   },
   {
     "language": "todotxt",
     "url": "https://github.com/arnarg/tree-sitter-todotxt",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@arnarg",
+    "grammarSha": "57fcca3fa5f0b2e820116df26e5020fcdd506d7b5ef18b33f21ee925f860723b",
     "reference": "main",
     "revision": "3937c5cd105ec4127448651a21aef45f52d19609"
   },
   {
     "language": "toml",
     "url": "https://github.com/ikatyang/tree-sitter-toml",
+    "doc": "require() of ES Module is not supported",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@tk-shirasaka",
+    "skip": true,
     "reference": "master",
     "revision": "8bd2056818b21860e3d756b5a58c4f6e05fb744e"
   },
   {
     "language": "tsv",
     "url": "https://github.com/amaanq/tree-sitter-csv",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "srcRoot": "tsv",
     "maintainedBy": "@amaanq",
+    "skip": true,
     "reference": "master",
     "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
   {
     "language": "tsx",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "tsx",
     "maintainedBy": "@steelsojka",
+    "skip": true,
     "reference": "master",
     "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
   },
   {
     "language": "turtle",
     "url": "https://github.com/BonaBeavis/tree-sitter-turtle",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@BonaBeavis",
+    "grammarSha": "9e5fd31b7fb9cc23832a695b3f7ae44730151b7f262d28e2eaa5a2d2e248b0b2",
     "reference": "main",
     "revision": "085437f5cb117703b7f520dd92161140a684f092"
   },
   {
     "language": "twig",
     "url": "https://github.com/gbprod/tree-sitter-twig",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@gbprod",
+    "grammarSha": "c2245f31a52c6034a7af09d8c06fab0a9810fe55bd683ec0e63b51946c2c6369",
     "reference": "main",
     "revision": "eaf80e6af969e25993576477a9dbdba3e48c1305"
   },
   {
     "language": "typescript",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
+    "skip": true,
     "reference": "master",
     "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
   },
   {
     "language": "typoscript",
     "url": "https://github.com/Teddytrombone/tree-sitter-typoscript",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Teddytrombone",
+    "grammarSha": "60569ad8b4b835c2603c2ec55f03d575905d2cf9bebff8343edc7838294913a9",
     "reference": "main",
     "revision": "43b221c0b76e77244efdaa9963e402a17c930fbc"
   },
@@ -2618,53 +2412,45 @@
     "language": "typst",
     "url": "https://github.com/uben0/tree-sitter-typst",
     "files": [
-      "parser.c",
       "scanner.c",
       "unicode.h"
     ],
     "maintainedBy": "@uben0, @RaafatTurki",
+    "grammarSha": "fc2f3e5bf1c9e326b79ae35ebadc033efdea0e8b19f82b703921f00c538c3a40",
     "reference": "master",
     "revision": "3c3e5f8e0caeba6157e26a1bedf8321e1da62799"
   },
   {
     "language": "udev",
     "url": "https://github.com/ObserverOfTime/tree-sitter-udev",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "d27349ddfe8a5b6436ea78e029bbd507dcc936a083967af382d64b2375126dad",
     "reference": "master",
     "revision": "8f58696e79092b4ad6bf197415bbd0970acf15cd"
   },
   {
     "language": "ungrammar",
     "url": "https://github.com/Philipp-M/tree-sitter-ungrammar",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Philipp-M, @amaanq",
+    "grammarSha": "61592f44491139dd73362f8b3752e9cfde7ec232515f2144e43e80b61b566abb",
     "reference": "main",
     "revision": "debd26fed283d80456ebafa33a06957b0c52e451"
   },
   {
     "language": "unison",
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js has local deps",
     "maintainedBy": "@tapegram",
     "pending": true,
-    "needsGenerate": true,
     "reference": "master",
     "revision": ""
   },
   {
     "language": "usd",
     "url": "https://github.com/ColinKennedy/tree-sitter-usd",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@ColinKennedy",
+    "skip": true,
     "reference": "master",
     "revision": "ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7"
   },
@@ -2673,85 +2459,77 @@
     "altName": "uxn tal",
     "url": "https://github.com/amaanq/tree-sitter-uxntal",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
+    "grammarSha": "b2b1014a102caf7a82ee879b378d66ab78d39b65c4db7c338fc3653b8f903b28",
     "reference": "master",
     "revision": "4c5ecd6326ebd61f6f9a22a370cbd100e0d601da"
   },
   {
     "language": "v",
     "url": "https://github.com/vlang/v-analyzer",
-    "files": [
-      "parser.c"
-    ],
+    "doc": "grammar.js throws error",
     "srcRoot": "tree_sitter_v",
     "maintainedBy": "@kkharji, @amaanq",
+    "skip": true,
     "reference": "main",
-    "revision": "be121f724e4f3e2159dfa193c876be605c1de7fa"
+    "revision": "0cf2108de92d043a684a963199d772899486089b"
   },
   {
     "language": "vala",
     "url": "https://github.com/vala-lang/tree-sitter-vala",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Prince781",
+    "grammarSha": "6cb1d0b274ffd263d8f422e2e206844186e1fea912ab529a2a137080be568883",
     "reference": "master",
     "revision": "8f690bfa639f2b83d1fb938ed3dd98a7ba453e8b"
   },
   {
     "language": "verilog",
     "url": "https://github.com/tree-sitter/tree-sitter-verilog",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@zegervdv",
+    "grammarSha": "f2572173a0ff3bd53745bd0ed92c2eaa4c73d1a4972770ab5b60201a4e0ccbf5",
     "reference": "master",
     "revision": "2dfddfcb891f74a1cdb9d8ce480a997d11846e17"
   },
   {
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@caarlos0",
+    "grammarSha": "f39e9aa3fabcc3d33ed27321469dea0e99a02c3ac80fccf7de3e7638f32d9601",
     "reference": "main",
     "revision": "9534865e614c95eb9418e5e73f061c32fa4d9540"
   },
   {
     "language": "vim",
     "url": "https://github.com/neovim/tree-sitter-vim",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "keywords.h"
     ],
     "maintainedBy": "@clason",
+    "skip": true,
     "reference": "master",
     "revision": "052279cd5e1d73b075640c64cef97e7bdcd32611"
   },
   {
     "language": "vimdoc",
     "url": "https://github.com/neovim/tree-sitter-vimdoc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@clason",
+    "grammarSha": "b93d5350022d3cab23c1128c9d587a9d91c8cfa7988a8602408611faa731ab64",
     "reference": "master",
-    "revision": "90a396267e117835c778bdbda6f7db86b601d829"
+    "revision": "f431bfa7d433f4d629943147817193a4fccbd303"
   },
   {
     "language": "vue",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-vue",
     "files": [
-      "parser.c",
       "scanner.c",
       "tag.h"
     ],
     "maintainedBy": "@WhyNotHugo, @lucario387",
+    "grammarSha": "6d0c8fe145d98b55a4d782590d847a95b449e9bdaa556b2f5f33b16bffe2cb1a",
     "reference": "main",
     "revision": "3b9d52087100bdfce43dad2ca46d75b0e21613f6"
   },
@@ -2759,21 +2537,22 @@
     "language": "wgsl",
     "url": "https://github.com/szebniok/tree-sitter-wgsl",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@szebniok",
+    "grammarSha": "ff09adbea051c0a85fdd2b1bd69f7565590a3c5dfac7e918ddc3df12b2bb8e86",
     "reference": "master",
     "revision": "40259f3c77ea856841a4e0c4c807705f3e4a2b65"
   },
   {
     "language": "wgsl_bevy",
     "url": "https://github.com/theHamsta/tree-sitter-wgsl-bevy",
+    "doc": "grammar.js throws error",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
+    "skip": true,
     "reference": "master",
     "revision": "cbd58ee33e24f46d16b9882b001eefb25a958ee2"
   },
@@ -2781,88 +2560,82 @@
     "language": "wing",
     "url": "https://github.com/winglang/wing",
     "files": [
-      "parser.c"
+      "scanner.c"
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "pending": true,
-    "needsGenerate": true,
+    "grammarSha": "3378a202d64a06e73b0c725293c57be94a7ad1d9e103d6550390a1594a5d7aa5",
     "reference": "main",
-    "revision": ""
+    "revision": "d9beaf168149dff81314631f6def484869a63e2e"
   },
   {
     "language": "xcompose",
     "url": "https://github.com/ObserverOfTime/tree-sitter-xcompose",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@ObserverOfTime",
+    "grammarSha": "707d9f9c857a48b695a50fc6c30aca0972ebcae0dd971fd6254fdeae47ba1937",
     "reference": "master",
     "revision": "2383cc69a2c42cfade41c7cb971fb3862bec6df1"
   },
   {
     "language": "xml",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+    "doc": "grammar.js has local deps",
     "files": [
-      "parser.c",
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "xml",
     "maintainedBy": "@ObserverOfTime",
+    "skip": true,
     "reference": "master",
-    "revision": "c23bd31d0aa72bfc01238b2546d5e823d8006709"
+    "revision": "29485b6587cacb99555c19ca53bea78b9e54ffd4"
   },
   {
     "language": "yaml",
     "url": "https://github.com/ikatyang/tree-sitter-yaml",
+    "doc": "grammar.js throws error",
     "files": [
-      "parser.c",
       "scanner.cc",
       "schema.generated.cc"
     ],
     "maintainedBy": "@stsewd",
+    "skip": true,
     "reference": "master",
     "revision": "0e36bed171768908f331ff7dff9d956bae016efb"
   },
   {
     "language": "yang",
     "url": "https://github.com/Hubro/tree-sitter-yang",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Hubro",
+    "grammarSha": "f939643c72b8221d5db2b4044895222fb5c2d355aae681b8fa2a90c8c0d1e35b",
     "reference": "master",
     "revision": "2c0e6be8dd4dcb961c345fa35c309ad4f5bd3502"
   },
   {
     "language": "yuck",
     "url": "https://github.com/Philipp-M/tree-sitter-yuck",
+    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
-      "parser.c",
       "scanner.c"
     ],
     "maintainedBy": "@Philipp-M, @amaanq",
+    "skip": true,
     "reference": "main",
     "revision": "c348825d3f86dec71dee0e1223c6bd73114e3579"
   },
   {
     "language": "zathurarc",
     "url": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@Freed-Wu",
+    "grammarSha": "5559fb09bbdd432463e11d4c2f0f5cc1bb759c0f8b34ac3aa9833371bb2a30a9",
     "reference": "main",
     "revision": "353bdf25e7af9c2830e254977fd3fb57ccaa8203"
   },
   {
     "language": "zig",
     "url": "https://github.com/maxxnino/tree-sitter-zig",
-    "files": [
-      "parser.c"
-    ],
     "maintainedBy": "@maxxnino",
+    "grammarSha": "5109259c9af66a75d93c1033e202b4191ba32b270923414b2a8f02d13eb252ff",
     "reference": "main",
     "revision": "0d08703e4c3f426ec61695d7617415fff97029bd"
   }

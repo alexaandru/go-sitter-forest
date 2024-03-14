@@ -1,11 +1,12 @@
 {
   "language": "bicep",
   "url": "https://github.com/amaanq/tree-sitter-bicep",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "c3451d1049c80074b18078ba50007b7c00e063f8"
 }

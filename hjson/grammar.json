@@ -1,10 +1,9 @@
 {
   "language": "hjson",
   "url": "https://github.com/winston0410/tree-sitter-hjson",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js has local deps",
   "maintainedBy": "@winston0410",
+  "skip": true,
   "reference": "master",
   "revision": "02fa3b79b3ff9a296066da6277adfc3f26cbc9e0"
 }

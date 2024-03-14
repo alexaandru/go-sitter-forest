@@ -1,10 +1,8 @@
 {
   "language": "rego",
   "url": "https://github.com/FallenAngel97/tree-sitter-rego",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@FallenAngel97",
+  "grammarSha": "6ef054a81d5fe7ac899d333780953ceecd3057dc9055328f14c76deffea36f50",
   "reference": "master",
   "revision": "9ac75e71b2d791e0aadeef68098319d86a2a14cf"
 }

@@ -1,10 +1,8 @@
 {
   "language": "heex",
   "url": "https://github.com/connorlay/tree-sitter-heex",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@connorlay",
+  "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
   "reference": "main",
-  "revision": "4a36c9a388505180da6ee0eda1d8afb8c83481c8"
+  "revision": "b5ad6e34eea18a15bbd1466ca707a17f9bff7b93"
 }

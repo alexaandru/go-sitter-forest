@@ -2,10 +2,10 @@
   "language": "cmake",
   "url": "https://github.com/uyha/tree-sitter-cmake",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@uyha",
+  "grammarSha": "9f7f9d8bc2da2f5353ab5a63780694f6b59c727cf66d8bceb589f5d74a25e499",
   "reference": "master",
   "revision": "7dc15823107831729c64a917c796a93cf5c6a7e3"
 }

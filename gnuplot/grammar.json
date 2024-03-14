@@ -1,10 +1,9 @@
 {
   "language": "gnuplot",
   "url": "https://github.com/dpezto/tree-sitter-gnuplot",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js throws error",
   "maintainedBy": "@dpezto",
+  "skip": true,
   "reference": "release",
   "revision": "7549f6faf5cc9fb8cf78054a7af356a6b003c6f3"
 }

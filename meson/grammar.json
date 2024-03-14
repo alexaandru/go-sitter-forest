@@ -1,10 +1,9 @@
 {
   "language": "meson",
   "url": "https://github.com/Decodetalkers/tree-sitter-meson",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js has local deps",
   "maintainedBy": "@Decodetalkers",
+  "skip": true,
   "reference": "master",
   "revision": "d6ec8ce0963c3c8180161391f15d8f7d415f650d"
 }

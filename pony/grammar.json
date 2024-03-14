@@ -1,11 +1,12 @@
 {
   "language": "pony",
   "url": "https://github.com/amaanq/tree-sitter-pony",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq, @mfelsche",
+  "skip": true,
   "reference": "master",
   "revision": "16f930b250433cfcd4fb4144df92bb98ad344c20"
 }

@@ -1,10 +1,8 @@
 {
   "language": "java",
   "url": "https://github.com/tree-sitter/tree-sitter-java",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@p00f",
+  "grammarSha": "0dd59b84c0d40944f7328d3b8b928d566e7a16a3333f96780f1a9d24d979d324",
   "reference": "master",
   "revision": "5e62fbb519b608dfd856000fdc66536304c414de"
 }

@@ -1,11 +1,12 @@
 {
   "language": "dart",
   "url": "https://github.com/UserNobody14/tree-sitter-dart",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@akinsho",
+  "skip": true,
   "reference": "master",
   "revision": "1a31399a08aefc93bc4cdbfadc0cb619136f86c1"
 }

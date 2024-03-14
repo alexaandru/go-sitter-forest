@@ -2,10 +2,10 @@
   "language": "nickel",
   "url": "https://github.com/nickel-lang/tree-sitter-nickel",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@ErinvanderVeen, @yannham",
+  "grammarSha": "5a0fe7ce530f28abf0f9a4ef15488fb6225bbddc3507c8409ea4667361b92be3",
   "reference": "main",
   "revision": "58baf89db8fdae54a84bcf22c80ff10ee3f929ed"
 }

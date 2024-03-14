@@ -1,10 +1,9 @@
 {
   "language": "puppet",
   "url": "https://github.com/amaanq/tree-sitter-puppet",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "5849f9694197a6e822872945b415429c285fdd54"
 }

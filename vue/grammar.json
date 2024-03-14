@@ -2,11 +2,11 @@
   "language": "vue",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-vue",
   "files": [
-    "parser.c",
     "scanner.c",
     "tag.h"
   ],
   "maintainedBy": "@WhyNotHugo, @lucario387",
+  "grammarSha": "6d0c8fe145d98b55a4d782590d847a95b449e9bdaa556b2f5f33b16bffe2cb1a",
   "reference": "main",
   "revision": "3b9d52087100bdfce43dad2ca46d75b0e21613f6"
 }

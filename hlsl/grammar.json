@@ -2,10 +2,10 @@
   "language": "hlsl",
   "url": "https://github.com/theHamsta/tree-sitter-hlsl",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta",
+  "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
   "reference": "master",
   "revision": "ee24be127560f0de0c4741e382416f45ab47eb76"
 }

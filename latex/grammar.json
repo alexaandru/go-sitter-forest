@@ -2,10 +2,10 @@
   "language": "latex",
   "url": "https://github.com/latex-lsp/tree-sitter-latex",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta, @clason",
+  "grammarSha": "12123d1ff1a3d01742f585d723ec1a56b83bb21c7cb3103681249bba881e2c0c",
   "reference": "master",
   "revision": "841f89ffbba9650529a40fb867f3456bf92bf9b1"
 }

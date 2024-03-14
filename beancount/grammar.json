@@ -2,10 +2,10 @@
   "language": "beancount",
   "url": "https://github.com/polarmutex/tree-sitter-beancount",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@polarmutex",
+  "grammarSha": "3936057afc425915a80e78cbcf7c90b464d3d1231ddc0fde0cf0ce25a1bda615",
   "reference": "master",
   "revision": "6c665e7cf15d76a1687959643868a78fb381458d"
 }

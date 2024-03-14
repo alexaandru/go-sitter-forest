@@ -1,11 +1,12 @@
 {
   "language": "wgsl_bevy",
   "url": "https://github.com/theHamsta/tree-sitter-wgsl-bevy",
+  "doc": "grammar.js throws error",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta",
+  "skip": true,
   "reference": "master",
   "revision": "cbd58ee33e24f46d16b9882b001eefb25a958ee2"
 }

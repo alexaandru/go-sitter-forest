@@ -1,5 +1,11 @@
 #include "parser.h"
 
+#ifdef _MSC_VER
+#define UNUSED __pragma(warning(suppress : 4101))
+#else
+#define UNUSED __attribute__((unused))
+#endif
+
 // For explanation of the tokens see grammar.js
 typedef enum {
     ERROR,
@@ -28,7 +34,7 @@ static bool is_punctuation(char chr) {
 // State bitflags used with `Scanner.state`
 
 // TODO
-static const uint8_t STATE_EMPHASIS_DELIMITER_MOD_3 = 0x3;
+static UNUSED const uint8_t STATE_EMPHASIS_DELIMITER_MOD_3 = 0x3;
 // Current delimiter run is opening
 static const uint8_t STATE_EMPHASIS_DELIMITER_IS_OPEN = 0x1 << 2;
 
@@ -61,7 +67,7 @@ typedef struct {
 } Scanner;
 
 // Write the whole state of a Scanner to a byte buffer
-static unsigned serialize(Scanner *s, char *buffer) {
+static unsigned serialize_markdown_inline(Scanner *s, char *buffer) {
     unsigned size = 0;
     buffer[size++] = (char)s->state;
     buffer[size++] = (char)s->code_span_delimiter_length;
@@ -72,7 +78,7 @@ static unsigned serialize(Scanner *s, char *buffer) {
 
 // Read the whole state of a Scanner from a byte buffer
 // `serizalize` and `deserialize` should be fully symmetric.
-static void deserialize(Scanner *s, const char *buffer, unsigned length) {
+static void deserialize_markdown_inline(Scanner *s, const char *buffer, unsigned length) {
     s->state = 0;
     s->code_span_delimiter_length = 0;
     s->latex_span_delimiter_length = 0;
@@ -331,7 +337,7 @@ static bool parse_underscore(Scanner *s, TSLexer *lexer,
     return false;
 }
 
-static bool scan(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_markdown_inline(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
     // A normal tree-sitter rule decided that the current branch is invalid and
     // now "requests" an error to stop the branch
     if (valid_symbols[TRIGGER_ERROR]) {
@@ -362,27 +368,27 @@ static bool scan(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
 
 void *tree_sitter_markdown_inline_external_scanner_create() {
     Scanner *s = (Scanner *)malloc(sizeof(Scanner));
-    deserialize(s, NULL, 0);
+    deserialize_markdown_inline(s, NULL, 0);
     return s;
 }
 
 bool tree_sitter_markdown_inline_external_scanner_scan(
     void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_markdown_inline(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_markdown_inline_external_scanner_serialize(void *payload,
                                                                 char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    return serialize(scanner, buffer);
+    return serialize_markdown_inline(scanner, buffer);
 }
 
 void tree_sitter_markdown_inline_external_scanner_deserialize(void *payload,
                                                               char *buffer,
                                                               unsigned length) {
     Scanner *scanner = (Scanner *)payload;
-    deserialize(scanner, buffer, length);
+    deserialize_markdown_inline(scanner, buffer, length);
 }
 
 void tree_sitter_markdown_inline_external_scanner_destroy(void *payload) {

@@ -2,11 +2,11 @@
   "language": "astro",
   "url": "https://github.com/virchau13/tree-sitter-astro",
   "files": [
-    "parser.c",
     "scanner.c",
     "tag.h"
   ],
   "maintainedBy": "@virchau13",
+  "grammarSha": "905d45ca602bc95b4cefe38ec13e33313b40a2fbac533901f47aa0525fd7fb6d",
   "reference": "master",
   "revision": "dfa0893bdc4bdfada102043404758c66e3580568"
 }

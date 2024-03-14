@@ -1,7 +1,6 @@
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -16,7 +15,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 9
 #define PRODUCTION_ID_COUNT 25
 
-enum {
+enum ts_symbol_identifiers {
   sym_identifier = 1,
   anon_sym_SEMI = 2,
   anon_sym_COMMA = 3,
@@ -1336,7 +1335,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
 };
 
-enum {
+enum ts_field_identifiers {
   field_argument = 1,
   field_arguments = 2,
   field_condition = 3,
@@ -2726,9 +2725,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '|') ADVANCE(33);
       if (lookahead == '}') ADVANCE(59);
       if (lookahead == '~') ADVANCE(41);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(66);
       if (('A' <= lookahead && lookahead <= '_') ||
@@ -2753,7 +2750,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(58);
       if (lookahead == '|') ADVANCE(10);
       if (lookahead == '~') ADVANCE(41);
-      if (lookahead == '\t' ||
+      if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(1)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(66);
       if (('A' <= lookahead && lookahead <= 'Z') ||
@@ -2776,7 +2773,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '[') ADVANCE(54);
       if (lookahead == '{') ADVANCE(58);
       if (lookahead == '~') ADVANCE(40);
-      if (lookahead == '\t' ||
+      if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(2)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(66);
       if (('A' <= lookahead && lookahead <= 'Z') ||
@@ -2805,10 +2802,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '|') ADVANCE(33);
       if (lookahead == '}') ADVANCE(59);
       if (lookahead == '~') ADVANCE(9);
-      if (lookahead == '\t' ||
-          lookahead == ' ') SKIP(3)
       if (lookahead == '\n' ||
           lookahead == '\r') ADVANCE(56);
+      if (('\t' <= lookahead && lookahead <= '\f') ||
+          lookahead == ' ') SKIP(3)
       END_STATE();
     case 4:
       if (lookahead == '&') ADVANCE(50);
@@ -2826,9 +2823,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '|') ADVANCE(10);
       if (lookahead == '}') ADVANCE(59);
       if (lookahead == '~') ADVANCE(9);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(5)
       END_STATE();
     case 6:
@@ -2842,10 +2837,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '|') ADVANCE(10);
       if (lookahead == '}') ADVANCE(59);
       if (lookahead == '~') ADVANCE(9);
-      if (lookahead == '\t' ||
-          lookahead == ' ') SKIP(6)
       if (lookahead == '\n' ||
           lookahead == '\r') ADVANCE(56);
+      if (('\t' <= lookahead && lookahead <= '\f') ||
+          lookahead == ' ') SKIP(6)
       END_STATE();
     case 7:
       if (lookahead == '(') ADVANCE(19);
@@ -2861,10 +2856,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(58);
       if (lookahead == '}') ADVANCE(59);
       if (lookahead == '~') ADVANCE(40);
-      if (lookahead == '\t' ||
-          lookahead == ' ') SKIP(7)
       if (lookahead == '\n' ||
           lookahead == '\r') ADVANCE(56);
+      if (('\t' <= lookahead && lookahead <= '\f') ||
+          lookahead == ' ') SKIP(7)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(66);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
@@ -2916,7 +2911,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(58);
       if (lookahead == '|') ADVANCE(33);
       if (lookahead == '~') ADVANCE(41);
-      if (lookahead == '\t' ||
+      if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(14)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(66);
       if (('A' <= lookahead && lookahead <= 'Z') ||
@@ -2942,9 +2937,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(58);
       if (lookahead == '}') ADVANCE(59);
       if (lookahead == '~') ADVANCE(40);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(15)
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(66);
       if (('A' <= lookahead && lookahead <= 'Z') ||
@@ -3238,9 +3231,7 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       if (lookahead == 's') ADVANCE(12);
       if (lookahead == 't') ADVANCE(13);
       if (lookahead == 'w') ADVANCE(14);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0)
       END_STATE();
     case 1:
@@ -4928,115 +4919,6 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [1216] = {.lex_state = 15, .external_lex_state = 5},
   [1217] = {.lex_state = 15, .external_lex_state = 5},
   [1218] = {.lex_state = 15, .external_lex_state = 5},
-};
-
-enum {
-  ts_external_token_comment = 0,
-  ts_external_token_line_continuation = 1,
-  ts_external_token_command_name = 2,
-  ts_external_token_command_argument = 3,
-  ts_external_token__single_quote_string_start = 4,
-  ts_external_token__single_quote_string_end = 5,
-  ts_external_token__double_quote_string_start = 6,
-  ts_external_token__double_quote_string_end = 7,
-  ts_external_token_formatting_sequence = 8,
-  ts_external_token_escape_sequence = 9,
-  ts_external_token_string_content = 10,
-  ts_external_token__entry_delimiter = 11,
-  ts_external_token__multioutput_variable_start = 12,
-  ts_external_token_error_sentinel = 13,
-};
-
-static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
-  [ts_external_token_comment] = sym_comment,
-  [ts_external_token_line_continuation] = sym_line_continuation,
-  [ts_external_token_command_name] = sym_command_name,
-  [ts_external_token_command_argument] = sym_command_argument,
-  [ts_external_token__single_quote_string_start] = sym__single_quote_string_start,
-  [ts_external_token__single_quote_string_end] = sym__single_quote_string_end,
-  [ts_external_token__double_quote_string_start] = sym__double_quote_string_start,
-  [ts_external_token__double_quote_string_end] = sym__double_quote_string_end,
-  [ts_external_token_formatting_sequence] = sym_formatting_sequence,
-  [ts_external_token_escape_sequence] = sym_escape_sequence,
-  [ts_external_token_string_content] = sym_string_content,
-  [ts_external_token__entry_delimiter] = sym__entry_delimiter,
-  [ts_external_token__multioutput_variable_start] = sym__multioutput_variable_start,
-  [ts_external_token_error_sentinel] = sym_error_sentinel,
-};
-
-static const bool ts_external_scanner_states[11][EXTERNAL_TOKEN_COUNT] = {
-  [1] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token_command_name] = true,
-    [ts_external_token_command_argument] = true,
-    [ts_external_token__single_quote_string_start] = true,
-    [ts_external_token__single_quote_string_end] = true,
-    [ts_external_token__double_quote_string_start] = true,
-    [ts_external_token__double_quote_string_end] = true,
-    [ts_external_token_formatting_sequence] = true,
-    [ts_external_token_escape_sequence] = true,
-    [ts_external_token_string_content] = true,
-    [ts_external_token__entry_delimiter] = true,
-    [ts_external_token__multioutput_variable_start] = true,
-    [ts_external_token_error_sentinel] = true,
-  },
-  [2] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token_command_name] = true,
-    [ts_external_token__single_quote_string_start] = true,
-    [ts_external_token__double_quote_string_start] = true,
-    [ts_external_token__multioutput_variable_start] = true,
-  },
-  [3] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token__single_quote_string_start] = true,
-    [ts_external_token__double_quote_string_start] = true,
-  },
-  [4] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token__single_quote_string_start] = true,
-    [ts_external_token__double_quote_string_start] = true,
-    [ts_external_token__entry_delimiter] = true,
-  },
-  [5] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-  },
-  [6] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token__entry_delimiter] = true,
-  },
-  [7] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token__multioutput_variable_start] = true,
-  },
-  [8] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token_command_argument] = true,
-  },
-  [9] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token__single_quote_string_end] = true,
-    [ts_external_token_formatting_sequence] = true,
-    [ts_external_token_escape_sequence] = true,
-    [ts_external_token_string_content] = true,
-  },
-  [10] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_line_continuation] = true,
-    [ts_external_token__double_quote_string_end] = true,
-    [ts_external_token_formatting_sequence] = true,
-    [ts_external_token_escape_sequence] = true,
-    [ts_external_token_string_content] = true,
-  },
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
@@ -47300,6 +47182,115 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [2505] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_otherwise_clause, 3),
 };
 
+enum ts_external_scanner_symbol_identifiers {
+  ts_external_token_comment = 0,
+  ts_external_token_line_continuation = 1,
+  ts_external_token_command_name = 2,
+  ts_external_token_command_argument = 3,
+  ts_external_token__single_quote_string_start = 4,
+  ts_external_token__single_quote_string_end = 5,
+  ts_external_token__double_quote_string_start = 6,
+  ts_external_token__double_quote_string_end = 7,
+  ts_external_token_formatting_sequence = 8,
+  ts_external_token_escape_sequence = 9,
+  ts_external_token_string_content = 10,
+  ts_external_token__entry_delimiter = 11,
+  ts_external_token__multioutput_variable_start = 12,
+  ts_external_token_error_sentinel = 13,
+};
+
+static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
+  [ts_external_token_comment] = sym_comment,
+  [ts_external_token_line_continuation] = sym_line_continuation,
+  [ts_external_token_command_name] = sym_command_name,
+  [ts_external_token_command_argument] = sym_command_argument,
+  [ts_external_token__single_quote_string_start] = sym__single_quote_string_start,
+  [ts_external_token__single_quote_string_end] = sym__single_quote_string_end,
+  [ts_external_token__double_quote_string_start] = sym__double_quote_string_start,
+  [ts_external_token__double_quote_string_end] = sym__double_quote_string_end,
+  [ts_external_token_formatting_sequence] = sym_formatting_sequence,
+  [ts_external_token_escape_sequence] = sym_escape_sequence,
+  [ts_external_token_string_content] = sym_string_content,
+  [ts_external_token__entry_delimiter] = sym__entry_delimiter,
+  [ts_external_token__multioutput_variable_start] = sym__multioutput_variable_start,
+  [ts_external_token_error_sentinel] = sym_error_sentinel,
+};
+
+static const bool ts_external_scanner_states[11][EXTERNAL_TOKEN_COUNT] = {
+  [1] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token_command_name] = true,
+    [ts_external_token_command_argument] = true,
+    [ts_external_token__single_quote_string_start] = true,
+    [ts_external_token__single_quote_string_end] = true,
+    [ts_external_token__double_quote_string_start] = true,
+    [ts_external_token__double_quote_string_end] = true,
+    [ts_external_token_formatting_sequence] = true,
+    [ts_external_token_escape_sequence] = true,
+    [ts_external_token_string_content] = true,
+    [ts_external_token__entry_delimiter] = true,
+    [ts_external_token__multioutput_variable_start] = true,
+    [ts_external_token_error_sentinel] = true,
+  },
+  [2] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token_command_name] = true,
+    [ts_external_token__single_quote_string_start] = true,
+    [ts_external_token__double_quote_string_start] = true,
+    [ts_external_token__multioutput_variable_start] = true,
+  },
+  [3] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token__single_quote_string_start] = true,
+    [ts_external_token__double_quote_string_start] = true,
+  },
+  [4] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token__single_quote_string_start] = true,
+    [ts_external_token__double_quote_string_start] = true,
+    [ts_external_token__entry_delimiter] = true,
+  },
+  [5] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+  },
+  [6] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token__entry_delimiter] = true,
+  },
+  [7] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token__multioutput_variable_start] = true,
+  },
+  [8] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token_command_argument] = true,
+  },
+  [9] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token__single_quote_string_end] = true,
+    [ts_external_token_formatting_sequence] = true,
+    [ts_external_token_escape_sequence] = true,
+    [ts_external_token_string_content] = true,
+  },
+  [10] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_line_continuation] = true,
+    [ts_external_token__double_quote_string_end] = true,
+    [ts_external_token_formatting_sequence] = true,
+    [ts_external_token_escape_sequence] = true,
+    [ts_external_token_string_content] = true,
+  },
+};
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -47310,10 +47301,12 @@ unsigned tree_sitter_matlab_external_scanner_serialize(void *, char *);
 void tree_sitter_matlab_external_scanner_deserialize(void *, const char *, unsigned);
 
 #ifdef _WIN32
-#define extern __declspec(dllexport)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_matlab(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_matlab() {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

@@ -1,10 +1,8 @@
 {
   "language": "corn",
   "url": "https://github.com/jakestanger/tree-sitter-corn",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@jakestanger",
+  "grammarSha": "86936e6c3350fb7c0461466e28ce6eab4a8cec9bc1e3bc778e4990dc7d914e62",
   "reference": "master",
   "revision": "604d73c38d4c28ca68e9e441ffd405d68cb63051"
 }

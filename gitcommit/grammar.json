@@ -2,10 +2,10 @@
   "language": "gitcommit",
   "url": "https://github.com/gbprod/tree-sitter-gitcommit",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@gbprod",
+  "grammarSha": "33a847d5632c66fa412c59f89e677dc2458df15993c682f7cd19c16937f85d74",
   "reference": "main",
-  "revision": "247406593c835065828230bdcecd933138691f68"
+  "revision": "523a1a4f0f674eff7fbf46addfa6ef7644151aae"
 }

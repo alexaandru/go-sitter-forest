@@ -2,10 +2,10 @@
   "language": "d",
   "url": "https://github.com/gdamore/tree-sitter-d",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "b7da4c69323d8e47bb1ba375653fcb2c01fe753171222db033698b6da45b7e48",
   "reference": "main",
   "revision": "a33d400f025d6bbd37b4c681c93054976f579890"
 }

@@ -9,6 +9,8 @@ import (
 
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
+
+	//"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/arduino"
 	"github.com/alexaandru/go-sitter-forest/asm"
@@ -170,6 +172,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/phpdoc"
 	"github.com/alexaandru/go-sitter-forest/pioasm"
 	"github.com/alexaandru/go-sitter-forest/po"
+
+	//"github.com/alexaandru/go-sitter-forest/pod"
 	"github.com/alexaandru/go-sitter-forest/poe_filter"
 	"github.com/alexaandru/go-sitter-forest/pony"
 	"github.com/alexaandru/go-sitter-forest/printf"
@@ -204,6 +208,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ruby"
 	"github.com/alexaandru/go-sitter-forest/rust"
 	"github.com/alexaandru/go-sitter-forest/scala"
+
+	//"github.com/alexaandru/go-sitter-forest/scfg"
 	"github.com/alexaandru/go-sitter-forest/scheme"
 	"github.com/alexaandru/go-sitter-forest/scss"
 	"github.com/alexaandru/go-sitter-forest/slang"
@@ -225,11 +231,15 @@ import (
 	"github.com/alexaandru/go-sitter-forest/supercollider"
 	"github.com/alexaandru/go-sitter-forest/surface"
 	"github.com/alexaandru/go-sitter-forest/svelte"
+
+	//"github.com/alexaandru/go-sitter-forest/swift"
 	"github.com/alexaandru/go-sitter-forest/sxhkdrc"
 	"github.com/alexaandru/go-sitter-forest/systemtap"
 	"github.com/alexaandru/go-sitter-forest/t32"
 	"github.com/alexaandru/go-sitter-forest/tablegen"
 	"github.com/alexaandru/go-sitter-forest/tcl"
+
+	//"github.com/alexaandru/go-sitter-forest/teal"
 	"github.com/alexaandru/go-sitter-forest/templ"
 	"github.com/alexaandru/go-sitter-forest/textproto"
 	"github.com/alexaandru/go-sitter-forest/thrift"
@@ -258,6 +268,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/vue"
 	"github.com/alexaandru/go-sitter-forest/wgsl"
 	"github.com/alexaandru/go-sitter-forest/wgsl_bevy"
+
+	//"github.com/alexaandru/go-sitter-forest/wing"
 	"github.com/alexaandru/go-sitter-forest/xcompose"
 	"github.com/alexaandru/go-sitter-forest/xml"
 	"github.com/alexaandru/go-sitter-forest/yaml"
@@ -271,8 +283,9 @@ import (
 var info []byte
 
 var langNameFuncs = map[string]func() *sitter.Language{
-	"ada":                ada.GetLanguage,
-	"agda":               agda.GetLanguage,
+	"ada":  ada.GetLanguage,
+	"agda": agda.GetLanguage,
+	//"angular":            angular.GetLanguage,
 	"apex":               apex.GetLanguage,
 	"arduino":            arduino.GetLanguage,
 	"asm":                asm.GetLanguage,
@@ -433,101 +446,106 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"phpdoc":             phpdoc.GetLanguage,
 	"pioasm":             pioasm.GetLanguage,
 	"po":                 po.GetLanguage,
-	"poe_filter":         poe_filter.GetLanguage,
-	"pony":               pony.GetLanguage,
-	"printf":             printf.GetLanguage,
-	"prisma":             prisma.GetLanguage,
-	"promql":             promql.GetLanguage,
-	"properties":         properties.GetLanguage,
-	"proto":              proto.GetLanguage,
-	"prql":               prql.GetLanguage,
-	"psv":                psv.GetLanguage,
-	"pug":                pug.GetLanguage,
-	"puppet":             puppet.GetLanguage,
-	"purescript":         purescript.GetLanguage,
-	"pymanifest":         pymanifest.GetLanguage,
-	"python":             python.GetLanguage,
-	"ql":                 ql.GetLanguage,
-	"qmldir":             qmldir.GetLanguage,
-	"qmljs":              qmljs.GetLanguage,
-	"query":              query.GetLanguage,
-	"r":                  r.GetLanguage,
-	"racket":             racket.GetLanguage,
-	"rasi":               rasi.GetLanguage,
-	"rbs":                rbs.GetLanguage,
-	"re2c":               re2c.GetLanguage,
-	"readline":           readline.GetLanguage,
-	"regex":              regex.GetLanguage,
-	"rego":               rego.GetLanguage,
-	"requirements":       requirements.GetLanguage,
-	"risor":              risor.GetLanguage,
-	"rnoweb":             rnoweb.GetLanguage,
-	"robot":              robot.GetLanguage,
-	"ron":                ron.GetLanguage,
-	"ruby":               ruby.GetLanguage,
-	"rust":               rust.GetLanguage,
-	"scala":              scala.GetLanguage,
-	"scheme":             scheme.GetLanguage,
-	"scss":               scss.GetLanguage,
-	"slang":              slang.GetLanguage,
-	"slint":              slint.GetLanguage,
-	"smali":              smali.GetLanguage,
-	"smithy":             smithy.GetLanguage,
-	"snakemake":          snakemake.GetLanguage,
-	"solidity":           solidity.GetLanguage,
-	"soql":               soql.GetLanguage,
-	"sosl":               sosl.GetLanguage,
-	"sourcepawn":         sourcepawn.GetLanguage,
-	"sparql":             sparql.GetLanguage,
-	"sql":                sql.GetLanguage,
-	"squirrel":           squirrel.GetLanguage,
-	"ssh_config":         ssh_config.GetLanguage,
-	"starlark":           starlark.GetLanguage,
-	"strace":             strace.GetLanguage,
-	"styled":             styled.GetLanguage,
-	"supercollider":      supercollider.GetLanguage,
-	"surface":            surface.GetLanguage,
-	"svelte":             svelte.GetLanguage,
-	"sxhkdrc":            sxhkdrc.GetLanguage,
-	"systemtap":          systemtap.GetLanguage,
-	"t32":                t32.GetLanguage,
-	"tablegen":           tablegen.GetLanguage,
-	"tcl":                tcl.GetLanguage,
-	"templ":              templ.GetLanguage,
-	"textproto":          textproto.GetLanguage,
-	"thrift":             thrift.GetLanguage,
-	"tiger":              tiger.GetLanguage,
-	"tlaplus":            tlaplus.GetLanguage,
-	"tmux":               tmux.GetLanguage,
-	"todotxt":            todotxt.GetLanguage,
-	"toml":               toml.GetLanguage,
-	"tsv":                tsv.GetLanguage,
-	"tsx":                tsx.GetLanguage,
-	"turtle":             turtle.GetLanguage,
-	"twig":               twig.GetLanguage,
-	"typescript":         typescript.GetLanguage,
-	"typoscript":         typoscript.GetLanguage,
-	"typst":              typst.GetLanguage,
-	"udev":               udev.GetLanguage,
-	"ungrammar":          ungrammar.GetLanguage,
-	"usd":                usd.GetLanguage,
-	"uxntal":             uxntal.GetLanguage,
-	"v":                  v.GetLanguage,
-	"vala":               vala.GetLanguage,
-	"verilog":            verilog.GetLanguage,
-	"vhs":                vhs.GetLanguage,
-	"vim":                vim.GetLanguage,
-	"vimdoc":             vimdoc.GetLanguage,
-	"vue":                vue.GetLanguage,
-	"wgsl":               wgsl.GetLanguage,
-	"wgsl_bevy":          wgsl_bevy.GetLanguage,
-	"xcompose":           xcompose.GetLanguage,
-	"xml":                xml.GetLanguage,
-	"yaml":               yaml.GetLanguage,
-	"yang":               yang.GetLanguage,
-	"yuck":               yuck.GetLanguage,
-	"zathurarc":          zathurarc.GetLanguage,
-	"zig":                zig.GetLanguage,
+	//"pod":                pod.GetLanguage,
+	"poe_filter":   poe_filter.GetLanguage,
+	"pony":         pony.GetLanguage,
+	"printf":       printf.GetLanguage,
+	"prisma":       prisma.GetLanguage,
+	"promql":       promql.GetLanguage,
+	"properties":   properties.GetLanguage,
+	"proto":        proto.GetLanguage,
+	"prql":         prql.GetLanguage,
+	"psv":          psv.GetLanguage,
+	"pug":          pug.GetLanguage,
+	"puppet":       puppet.GetLanguage,
+	"purescript":   purescript.GetLanguage,
+	"pymanifest":   pymanifest.GetLanguage,
+	"python":       python.GetLanguage,
+	"ql":           ql.GetLanguage,
+	"qmldir":       qmldir.GetLanguage,
+	"qmljs":        qmljs.GetLanguage,
+	"query":        query.GetLanguage,
+	"r":            r.GetLanguage,
+	"racket":       racket.GetLanguage,
+	"rasi":         rasi.GetLanguage,
+	"rbs":          rbs.GetLanguage,
+	"re2c":         re2c.GetLanguage,
+	"readline":     readline.GetLanguage,
+	"regex":        regex.GetLanguage,
+	"rego":         rego.GetLanguage,
+	"requirements": requirements.GetLanguage,
+	"risor":        risor.GetLanguage,
+	"rnoweb":       rnoweb.GetLanguage,
+	"robot":        robot.GetLanguage,
+	"ron":          ron.GetLanguage,
+	"ruby":         ruby.GetLanguage,
+	"rust":         rust.GetLanguage,
+	"scala":        scala.GetLanguage,
+	//"scfg":               scfg.GetLanguage,
+	"scheme":        scheme.GetLanguage,
+	"scss":          scss.GetLanguage,
+	"slang":         slang.GetLanguage,
+	"slint":         slint.GetLanguage,
+	"smali":         smali.GetLanguage,
+	"smithy":        smithy.GetLanguage,
+	"snakemake":     snakemake.GetLanguage,
+	"solidity":      solidity.GetLanguage,
+	"soql":          soql.GetLanguage,
+	"sosl":          sosl.GetLanguage,
+	"sourcepawn":    sourcepawn.GetLanguage,
+	"sparql":        sparql.GetLanguage,
+	"sql":           sql.GetLanguage,
+	"squirrel":      squirrel.GetLanguage,
+	"ssh_config":    ssh_config.GetLanguage,
+	"starlark":      starlark.GetLanguage,
+	"strace":        strace.GetLanguage,
+	"styled":        styled.GetLanguage,
+	"supercollider": supercollider.GetLanguage,
+	"surface":       surface.GetLanguage,
+	"svelte":        svelte.GetLanguage,
+	//"swift":              swift.GetLanguage,
+	"sxhkdrc":   sxhkdrc.GetLanguage,
+	"systemtap": systemtap.GetLanguage,
+	"t32":       t32.GetLanguage,
+	"tablegen":  tablegen.GetLanguage,
+	"tcl":       tcl.GetLanguage,
+	//"teal":               teal.GetLanguage,
+	"templ":      templ.GetLanguage,
+	"textproto":  textproto.GetLanguage,
+	"thrift":     thrift.GetLanguage,
+	"tiger":      tiger.GetLanguage,
+	"tlaplus":    tlaplus.GetLanguage,
+	"tmux":       tmux.GetLanguage,
+	"todotxt":    todotxt.GetLanguage,
+	"toml":       toml.GetLanguage,
+	"tsv":        tsv.GetLanguage,
+	"tsx":        tsx.GetLanguage,
+	"turtle":     turtle.GetLanguage,
+	"twig":       twig.GetLanguage,
+	"typescript": typescript.GetLanguage,
+	"typoscript": typoscript.GetLanguage,
+	"typst":      typst.GetLanguage,
+	"udev":       udev.GetLanguage,
+	"ungrammar":  ungrammar.GetLanguage,
+	"usd":        usd.GetLanguage,
+	"uxntal":     uxntal.GetLanguage,
+	"v":          v.GetLanguage,
+	"vala":       vala.GetLanguage,
+	"verilog":    verilog.GetLanguage,
+	"vhs":        vhs.GetLanguage,
+	"vim":        vim.GetLanguage,
+	"vimdoc":     vimdoc.GetLanguage,
+	"vue":        vue.GetLanguage,
+	"wgsl":       wgsl.GetLanguage,
+	"wgsl_bevy":  wgsl_bevy.GetLanguage,
+	//"wing":               wing.GetLanguage,
+	"xcompose":  xcompose.GetLanguage,
+	"xml":       xml.GetLanguage,
+	"yaml":      yaml.GetLanguage,
+	"yang":      yang.GetLanguage,
+	"yuck":      yuck.GetLanguage,
+	"zathurarc": zathurarc.GetLanguage,
+	"zig":       zig.GetLanguage,
 }
 
 var (

@@ -1,10 +1,9 @@
 {
   "language": "gotmpl",
   "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js has local deps",
   "maintainedBy": "@qvalentin",
+  "skip": true,
   "reference": "master",
   "revision": "17144a77be0acdecebd9d557398883569fed41de"
 }

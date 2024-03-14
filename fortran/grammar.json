@@ -2,10 +2,10 @@
   "language": "fortran",
   "url": "https://github.com/stadelmanma/tree-sitter-fortran",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "9e890f16f6794641cb9caadf55a1325b7ed0372d4e4e21b55dc26815443037cd",
   "reference": "master",
   "revision": "f73d473e3530862dee7cbb38520f28824e7804f6"
 }

@@ -1,10 +1,9 @@
 {
   "language": "nasm",
   "url": "https://github.com/naclsn/tree-sitter-nasm",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js has errors: repetition operator missing expression: {[rR][eE][xX]}",
   "maintainedBy": "@ObserverOfTime",
+  "skip": true,
   "reference": "main",
   "revision": "3bc691d2cfba44bea339a775ad496c8bc552c60d"
 }

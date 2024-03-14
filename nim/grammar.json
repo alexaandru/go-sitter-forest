@@ -1,11 +1,13 @@
 {
   "language": "nim",
   "url": "https://github.com/alaviss/tree-sitter-nim",
+  "doc": "high memory usage, must be compiled on its own",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@aMOPel",
+  "skip": true,
+  "grammarSha": "e4d4285b41b99c749866c57170b7a51cb01df519cabdf5c187f3fe8b9cb932de",
   "reference": "main",
   "revision": "f5cec6a841b585e4e7388a120ded07e60ae19c43"
 }

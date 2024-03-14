@@ -1,7 +1,6 @@
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -6208,13 +6207,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(aux_sym_file_token1);
       if (!eof && (0 <= lookahead && lookahead <= '\t') ||
           (11 <= lookahead && lookahead <= 31) ||
-          lookahead == '"' ||
+          (lookahead == '"' ||
           lookahead == '*' ||
           lookahead == '<' ||
           lookahead == '>' ||
           lookahead == '?' ||
           lookahead == '|' ||
-          (127 <= lookahead && lookahead <= 159)) ADVANCE(1043);
+          (127 <= lookahead && lookahead <= 159))) ADVANCE(1043);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(1021);
       END_STATE();
@@ -10513,10 +10512,12 @@ static const TSParseActionEntry ts_parse_actions[] = {
 extern "C" {
 #endif
 #ifdef _WIN32
-#define extern __declspec(dllexport)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_poe_filter(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_poe_filter() {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

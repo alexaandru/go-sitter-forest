@@ -2,12 +2,10 @@
   "language": "python",
   "url": "https://github.com/tree-sitter/tree-sitter-python",
   "files": [
-    "parser.c",
-    "scanner.c",
-    "src/tree_sitter/array.h",
-    "src/tree_sitter/alloc.h"
+    "scanner.c"
   ],
   "maintainedBy": "@stsewd, @theHamsta",
+  "grammarSha": "9a77a8055fd5cf26327a95b26fd4d9e4556284bbc579013b054ac6a468e0033b",
   "reference": "master",
   "revision": "b8a4c64121ba66b460cb878e934e3157ecbfb124"
 }

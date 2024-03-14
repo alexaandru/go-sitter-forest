@@ -1,11 +1,12 @@
 {
   "language": "tablegen",
   "url": "https://github.com/amaanq/tree-sitter-tablegen",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "300f6a490e71f895e644ed2deec6920860a2e107"
 }

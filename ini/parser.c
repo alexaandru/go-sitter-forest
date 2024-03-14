@@ -1,7 +1,6 @@
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -16,7 +15,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 4
 #define PRODUCTION_ID_COUNT 4
 
-enum {
+enum ts_symbol_identifiers {
   anon_sym_LBRACK = 1,
   aux_sym_section_name_token1 = 2,
   anon_sym_RBRACK = 3,
@@ -160,7 +159,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
 };
 
-enum {
+enum ts_field_identifiers {
   field_blank = 1,
 };
 
@@ -237,7 +236,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '#' ||
           lookahead == ';') ADVANCE(16);
       if (lookahead != 0 &&
-          lookahead != '\r') ADVANCE(12);
+          (lookahead < 11 || '\r' < lookahead)) ADVANCE(12);
       END_STATE();
     case 1:
       if (lookahead == '\n') ADVANCE(11);
@@ -274,7 +273,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '#' ||
           lookahead == ';') ADVANCE(16);
       if (lookahead != 0 &&
-          lookahead != '\r' &&
+          (lookahead < 11 || '\r' < lookahead) &&
           lookahead != '=') ADVANCE(12);
       END_STATE();
     case 5:
@@ -307,9 +306,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 10:
       ACCEPT_TOKEN(anon_sym_RBRACK);
       if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
+          (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != ' ' &&
           lookahead != '#' &&
           lookahead != ';' &&
@@ -322,9 +319,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 12:
       ACCEPT_TOKEN(aux_sym_setting_token1);
       if (lookahead != 0 &&
-          lookahead != '\t' &&
-          lookahead != '\n' &&
-          lookahead != '\r' &&
+          (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != ' ' &&
           lookahead != '#' &&
           lookahead != ';' &&
@@ -777,10 +772,12 @@ static const TSParseActionEntry ts_parse_actions[] = {
 extern "C" {
 #endif
 #ifdef _WIN32
-#define extern __declspec(dllexport)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_ini(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_ini() {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

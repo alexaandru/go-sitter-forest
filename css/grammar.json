@@ -2,10 +2,10 @@
   "language": "css",
   "url": "https://github.com/tree-sitter/tree-sitter-css",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@TravonteD",
+  "grammarSha": "abcc352261881ad95945a2bc659d7fa46bc0b043e3c55514cd36a7c08090e482",
   "reference": "master",
   "revision": "02b4ee757654b7d54fe35352fd8e53a8a4385d42"
 }

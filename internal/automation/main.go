@@ -3,12 +3,16 @@ package main
 import (
 	"bytes"
 	"cmp"
+	"context"
+	"crypto/sha256"
 	"encoding/json"
 	"fmt"
 	"io"
+	"log/slog"
 	"maps"
 	"net/http"
 	"os"
+	"os/exec"
 	"path"
 	"path/filepath"
 	"slices"
@@ -17,39 +21,31 @@ import (
 
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"golang.org/x/sync/errgroup"
+	"golang.org/x/sync/semaphore"
 )
 
-type Grammars []*grammar.Grammar
-
-func (gx Grammars) Find(lang string) (i int, err error) {
-	i = slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
-		return x.Language == lang
-	})
-
-	if i < 0 {
-		err = fmt.Errorf("grammar %q not found", lang)
-	}
-
-	return
-}
-
 const (
-	force   = true
-	plugFmt = "%s:\n\t@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/%s"
+	force        = true
+	plugFmt      = "%s:\n\t@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/%s"
+	grammarsJSON = "grammars.json"
+	grammarJSON  = "grammar.json"
+	grammarJS    = "grammar.js"
 )
 
 var (
 	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings, create-plugins, update-grammars")
-	grammarsJson  = "grammars.json"
 	grammars      = Grammars{}
 	replaceMap    = map[string]string{
 		`"../../common/scanner.h"`:       `"scanner.h"`,
 		`"tree_sitter/parser.h"`:         `"parser.h"`,
 		`"tree_sitter_comment/parser.c"`: `"parser.c"`, // Needed for Comment.
 		`"tree_sitter_comment/tokens.h"`: `"tokens.h"`, // Needed for Comment.
-		`"tree_sitter/array.h"`:          `"array.h"`,  // Needed for Python.
-		`"tree_sitter/alloc.h"`:          `"alloc.h"`,  // Needed for Python.
+		`"tree_sitter/array.h"`:          `"array.h"`,
+		`"tree_sitter/alloc.h"`:          `"alloc.h"`,
 	}
+
+	logFile *os.File
+	logger  *slog.Logger
 )
 
 func checkUpdates() error {
@@ -69,7 +65,7 @@ func checkUpdates() error {
 
 		fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
 
-		return nil
+		return
 	})
 }
 
@@ -90,7 +86,7 @@ func createPlugins() (err error) {
 	mkFileTargets := []string{}
 	mux := sync.Mutex{}
 
-	err = forEachGrammar(func(gr *grammar.Grammar) (err error) {
+	if err = forEachGrammar(func(gr *grammar.Grammar) error {
 		mux.Lock()
 		defer mux.Unlock()
 
@@ -99,32 +95,31 @@ func createPlugins() (err error) {
 		mkFileContent = append(mkFileContent, fmt.Sprintf(plugFmt, target, gr.Language))
 
 		return createPlugin(gr.Language)
-	})
-	if err != nil {
+	}); err != nil {
 		return
 	}
 
 	slices.Sort(mkFileContent)
 	slices.Sort(mkFileTargets)
 
-	content := slices.Concat([]string{"plugin-all: " + strings.Join(mkFileTargets, " ")}, mkFileContent)
+	content := slices.Concat([]string{"plugin-all: " + strings.Join(mkFileTargets, " ")},
+		mkFileContent)
 
 	return os.WriteFile("Plugins.make", []byte(strings.Join(content, "\n\n")), 0o644)
 }
 
 func updateGrammars() (err error) {
 	slices.SortFunc(grammars, func(a, b *grammar.Grammar) int {
-		return cmp.Compare(strings.ToLower(a.Language), strings.ToLower(b.Language))
+		return cmp.Compare(a.Language, b.Language)
 	})
 
-	if err = writeJSON(grammarsJson, grammars); err != nil {
+	if err = writeJSON(grammarsJSON, grammars); err != nil {
 		return
 	}
 
-	err = forEachGrammar(func(gr *grammar.Grammar) error {
-		return writeJSON(filepath.Join(gr.Language, "grammar.json"), gr)
-	})
-	if err != nil {
+	if err = forEachGrammar(func(gr *grammar.Grammar) error {
+		return writeJSON(filepath.Join(gr.Language, grammarJSON), gr)
+	}); err != nil {
 		return
 	}
 
@@ -132,31 +127,86 @@ func updateGrammars() (err error) {
 }
 
 func update(gr *grammar.Grammar, force bool) (err error) {
-	if gr.NeedsGenerate {
-		return
-	}
-
 	if err = gr.FetchNewVersion(); err != nil {
 		return
 	}
 
-	if v := gr.NewVersion(); v == nil {
-		if !force {
-			fmt.Printf("%-20sgrammar is not outdated\n", gr.Language)
+	msg, newSha, v := "", "", gr.NewVersion()
 
+	if !gr.Skip {
+		if newSha, err = downloadGrammar(gr); err != nil {
 			return
 		}
+	}
 
-		fmt.Printf("%-20sre-downloading up-to-date grammar: ", gr.Language)
+	if v != nil {
+		msg, gr.Version = fmt.Sprintf("new version (%q -> %q)", gr.Revision, v.Revision), v
+	} else if newSha != "" && newSha != gr.GrammarSha {
+		msg = fmt.Sprintf("grammar sha differs (%q -> %q)", gr.GrammarSha, newSha)
+	} else if force {
+		msg = "forced update"
 	} else {
-		fmt.Printf("%-20supdating\n", gr.Language)
+		fmt.Printf("%-20snothing to do\n", gr.Language)
+
+		return
+	}
+
+	fmt.Printf("%-20s%s\n", gr.Language, msg)
+
+	if err = downloadFiles(gr); err != nil {
+		return
+	}
+
+	if gr.Skip {
+		gr.GrammarSha = ""
+
+		return
+	}
+
+	if newSha != "" {
+		gr.GrammarSha = newSha
+		err = regenerateGrammar(gr)
+	}
+
+	return
+}
+
+func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
+	// We need to temporarily alter gr in here.
+	gr := *grRO
+
+	src, dst := grammarJS, filepath.Join("tmp", gr.Language, grammarJS)
+	if gr.SrcRoot != "" {
+		src = path.Join(gr.SrcRoot, grammarJS)
+	}
+
+	if err = makeDir(filepath.Dir(dst)); err != nil {
+		return
+	}
+
+	v := gr.NewVersion()
+	if gr.Revision == "" && v != nil {
 		gr.Version = v
 	}
 
-	return downloadGrammar(gr)
+	url := gr.ContentURL() + src
+
+	var b []byte
+
+	if b, err = fetchFile(url); err != nil {
+		return
+	}
+
+	newSha = fmt.Sprintf("%x", sha256.Sum256(b))
+	err = os.WriteFile(dst, b, 0o644)
+
+	return
 }
 
-func downloadGrammar(gr *grammar.Grammar) (err error) {
+func downloadFiles(gr *grammar.Grammar) (err error) {
+	// NOTE: If we skip parser generation, then we must download it.
+	downloadParser := gr.Skip
+
 	if err = makeDir(gr.Language); err != nil {
 		return
 	}
@@ -171,7 +221,7 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 
 	g := new(errgroup.Group)
 
-	for src, dst := range gr.FilesMap() {
+	for src, dst := range gr.FilesMap(downloadParser) {
 		g.Go(func() error { return downloadFile(gr.Language, src, dst) })
 	}
 
@@ -183,7 +233,53 @@ func downloadGrammar(gr *grammar.Grammar) (err error) {
 		err = fixYaml(gr)
 	}
 
-	fmt.Println("OK")
+	return
+}
+
+var sem = semaphore.NewWeighted(4)
+
+func regenerateGrammar(gr *grammar.Grammar) (err error) {
+	if err = sem.Acquire(context.TODO(), 1); err != nil {
+		return
+	}
+
+	defer sem.Release(1)
+
+	tmpPath := filepath.Join("tmp", gr.Language)
+	cmd := exec.Command("npx", "tree-sitter", "generate")
+	cmd.Dir = tmpPath
+
+	var (
+		b      []byte
+		hFiles []string
+	)
+
+	if b, err = cmd.CombinedOutput(); err != nil {
+		fmt.Println(string(b))
+
+		return
+	}
+
+	if hFiles, err = filepath.Glob(filepath.Join(tmpPath, "src", "tree_sitter", "*.h")); err != nil {
+		return
+	}
+
+	files := append(hFiles, filepath.Join(tmpPath, "src", "parser.c"))
+	filesMap := map[string]string{}
+
+	for _, file := range files {
+		filesMap[file] = filepath.Join(gr.Language, filepath.Base(file))
+	}
+
+	for src, dst := range filesMap {
+		if b, err = os.ReadFile(src); err != nil {
+			return
+		}
+
+		if err = putFile(b, gr.Language, dst); err != nil {
+			return
+		}
+	}
 
 	return
 }
@@ -227,15 +323,34 @@ func createPlugin(lang string) error {
 func downloadFile(lang, url, toPath string) error {
 	b, err := fetchFile(url)
 	if err != nil {
+		file := path.Base(url)
+		if file == "alloc.h" || file == "array.h" {
+			logger.Warn("header file not found", "file", file, "lang", lang)
+
+			return nil
+		}
+
 		return err
 	}
 
+	return putFile(b, lang, toPath)
+}
+
+func putFile(b []byte, lang, toPath string) error {
 	reMap := maps.Clone(replaceMap)
 
-	if filepath.Base(toPath) == "tag.h" {
+	switch filepath.Base(toPath) {
+	case "tag.h":
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
+	case "scanner.c":
+		// These identifiers clash between org and beancount parsers.
+		// They also need their own unique name per lang.
+		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
+		reMap[" deserialize("] = fmt.Sprintf(" deserialize_%s(", lang)
+		reMap[" scan("] = fmt.Sprintf(" scan_%s(", lang)
+		reMap["!scan("] = fmt.Sprintf("!scan_%s(", lang)
 	}
 
 	for old, new := range reMap {
@@ -270,16 +385,17 @@ func writeJSON(fname string, content any) error {
 	return os.WriteFile(fname, b, 0o644)
 }
 
+// TODO: DRY.
 func updateParsersMd() error {
 	f, err := os.Create("PARSERS.md")
 	if err != nil {
 		return fmt.Errorf("creating PARSERS.md error: %w", err)
 	}
 
-	planned, implemented := 0, 0
+	planned, skipped, implemented := 0, 0, 0
 	text := `# %d Supported Parsers
 
-%d pending
+%d pending, %d skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -297,21 +413,34 @@ func updateParsersMd() error {
 
 		maint := ""
 		if x := gr.MaintainedBy; x != "" {
-			maint = fmt.Sprintf(" (maintained by %s)", x)
+			doc := ""
+			if gr.Doc != "" {
+				doc = "; ❌" + gr.Doc
+			}
+
+			maint = fmt.Sprintf(" (maintained by %s%s)", x, doc)
 		}
 
 		if gr.Pending {
 			planned++
+		} else if gr.Skip {
+			implemented++
+			skipped++
 		} else {
 			implemented++
 		}
 
-		text += fmt.Sprintf("- [%s] [%s](%s)%s\n", checked, lang, gr.URL, maint)
+		attr := ""
+		if gr.GrammarSha != "" {
+			attr = " ✔️ "
+		}
+
+		text += fmt.Sprintf("- [%s] [%s](%s)%s%s\n", checked, lang, gr.URL, attr, maint)
 	}
 
-	text += "<!--parserinfo-->\n"
+	text += "<!--parserinfo-->\n\nLegend: ✔️ parser files regenerated from grammar.js.\n\n(the ones where parser regeneration is skipped still work but they may (or not) be generated with the exact same TreeSitter version as the sitter library)\n"
 
-	if _, err = fmt.Fprintf(f, text, implemented, planned); err != nil {
+	if _, err = fmt.Fprintf(f, text, implemented, planned, skipped); err != nil {
 		return fmt.Errorf("writing PARSERS.md error: %w", err)
 	}
 
@@ -351,6 +480,8 @@ func fixYaml(gr *grammar.Grammar) error {
 }
 
 func main() {
+	defer logFile.Close()
+
 	args := os.Args[1:]
 	if len(args) < 1 {
 		die("command expected")
@@ -415,7 +546,7 @@ func main() {
 }
 
 func init() {
-	b, err := os.ReadFile(grammarsJson)
+	b, err := os.ReadFile(grammarsJSON)
 	if err != nil {
 		die(err)
 	}
@@ -433,4 +564,10 @@ func init() {
 	}
 
 	replaceMap = newMap
+
+	if logFile, err = os.OpenFile("auto.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0o640); err != nil {
+		die(err)
+	}
+
+	logger = slog.New(slog.NewJSONHandler(logFile, nil))
 }

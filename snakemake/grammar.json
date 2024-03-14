@@ -2,10 +2,10 @@
   "language": "snakemake",
   "url": "https://github.com/osthomas/tree-sitter-snakemake",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@osthomas",
+  "grammarSha": "dff6dd41360e7ec55c11ae5b36e595c49f53e9234cdbcf8d9bccc66fa4cd8f60",
   "reference": "main",
   "revision": "65a6c3b4671877821082164da0a310851b211953"
 }

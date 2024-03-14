@@ -2,10 +2,10 @@
   "language": "disassembly",
   "url": "https://github.com/ColinKennedy/tree-sitter-disassembly",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@ColinKennedy",
+  "grammarSha": "bdfb14107c21d966d83e3677c764a074aa3b769bf8815dfbecd730a042ad97f0",
   "reference": "master",
   "revision": "0229c0211dba909c5d45129ac784a3f4d49c243a"
 }

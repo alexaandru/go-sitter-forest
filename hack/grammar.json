@@ -2,10 +2,10 @@
   "language": "hack",
   "url": "https://github.com/slackhq/tree-sitter-hack",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@aosq",
+  "grammarSha": "b6126a8b2bdf34eb861fc00a2653ec5a4d20b4b4ee77a16bbef698c3b97dd1bc",
   "reference": "main",
   "revision": "fca1e294f6dce8ec5659233a6a21f5bd0ed5b4f2"
 }

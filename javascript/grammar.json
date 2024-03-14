@@ -2,10 +2,10 @@
   "language": "javascript",
   "url": "https://github.com/tree-sitter/tree-sitter-javascript",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@steelsojka",
+  "grammarSha": "d9e9cd75b7542364583556968d92e0d23af22fc2fbdc3638f3cc305623b1c096",
   "reference": "master",
   "revision": "de1e682289a417354df5b4437a3e4f92e0722a0f"
 }

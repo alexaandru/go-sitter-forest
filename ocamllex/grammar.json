@@ -2,10 +2,10 @@
   "language": "ocamllex",
   "url": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@undu",
+  "grammarSha": "69b48d27d0ec0c6c9088cb3e276c4055b0e3291006882f0cad3d391efdf685b1",
   "reference": "master",
   "revision": "4b9898ccbf198602bb0dec9cd67cc1d2c0a4fad2"
 }

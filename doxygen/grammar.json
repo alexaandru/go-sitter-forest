@@ -2,10 +2,10 @@
   "language": "doxygen",
   "url": "https://github.com/amaanq/tree-sitter-doxygen",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "f2ba11a29232234e38380d1261d3d66944b922475e5db02857520d017d24a9fe",
   "reference": "master",
   "revision": "a750758da90955c86fcc22fcbb6fa44a7d009865"
 }

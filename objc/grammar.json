@@ -1,10 +1,9 @@
 {
   "language": "objc",
   "url": "https://github.com/amaanq/tree-sitter-objc",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js throws error",
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "62e61b6f5c0289c376d61a8c91faf6435cde9012"
 }

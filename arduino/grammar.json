@@ -2,10 +2,10 @@
   "language": "arduino",
   "url": "https://github.com/ObserverOfTime/tree-sitter-arduino",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@ObserverOfTime",
+  "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
   "reference": "master",
   "revision": "e3a0a7f60e544afc478b72cdda7ffc0f2f889db0"
 }

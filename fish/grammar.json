@@ -2,10 +2,10 @@
   "language": "fish",
   "url": "https://github.com/ram02z/tree-sitter-fish",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@ram02z",
+  "grammarSha": "744bb5158b47bfa5660df0b61e9e7952f1552e51e2491e92517a4150398dc3f7",
   "reference": "master",
   "revision": "f9176908c9eb2e11eb684d79e1d00f3b29bd65c9"
 }

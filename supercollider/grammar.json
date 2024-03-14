@@ -1,11 +1,12 @@
 {
   "language": "supercollider",
   "url": "https://github.com/madskjeldgaard/tree-sitter-supercollider",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@madskjeldgaard",
+  "skip": true,
   "reference": "main",
   "revision": "3b35bd0fded4423c8fb30e9585c7bacbcd0e8095"
 }

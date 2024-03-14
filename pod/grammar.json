@@ -1,0 +1,11 @@
+{
+  "language": "pod",
+  "url": "https://github.com/tree-sitter-perl/tree-sitter-pod",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@RabbiVeesh, @LeoNerd",
+  "grammarSha": "dd95d29a211b31d2c6955dc178d244fbecd322d8acc9d0fc77c7eeb53247dc30",
+  "reference": "main",
+  "revision": "7ef08cb706b6ab4878228cc28c4f9689e3cb86aa"
+}

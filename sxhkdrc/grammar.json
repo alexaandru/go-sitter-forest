@@ -1,10 +1,8 @@
 {
   "language": "sxhkdrc",
   "url": "https://github.com/RaafatTurki/tree-sitter-sxhkdrc",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@RaafatTurki",
+  "grammarSha": "80eee0f4554a5a9a056e01252ad634c0762fb0a8c1dbcd1b1bbc2cb54cf5a4ad",
   "reference": "master",
   "revision": "440d5f913d9465c9c776a1bd92334d32febcf065"
 }

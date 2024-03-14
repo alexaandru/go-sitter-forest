@@ -2,10 +2,10 @@
   "language": "janet_simple",
   "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@sogaiu",
+  "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
   "reference": "master",
   "revision": "51271e260346878e1a1aa6c506ce6a797b7c25e2"
 }

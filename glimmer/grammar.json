@@ -3,10 +3,10 @@
   "altName": "Glimmer and Ember",
   "url": "https://github.com/alexlafroscia/tree-sitter-glimmer",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@NullVoxPopuli",
+  "grammarSha": "bf47982447f60cfc433628ecce6de689516cf5da6434a278d87916053c7e6d97",
   "reference": "main",
   "revision": "f9746dc1d0707717fbba84cb5c22a71586af23e1"
 }

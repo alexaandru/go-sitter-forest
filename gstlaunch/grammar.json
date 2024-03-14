@@ -1,10 +1,8 @@
 {
   "language": "gstlaunch",
   "url": "https://github.com/theHamsta/tree-sitter-gstlaunch",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@theHamsta",
+  "grammarSha": "7956e7055e92a57957ee34377ddffdfb7f05de9af035372009f55bece270a21f",
   "reference": "master",
   "revision": "2c0d9c94d35e37aa63fa5002163c8480985b3e5b"
 }

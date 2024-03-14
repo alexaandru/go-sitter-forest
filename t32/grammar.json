@@ -2,10 +2,10 @@
   "language": "t32",
   "url": "https://gitlab.com/xasc/tree-sitter-t32",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@xasc",
+  "grammarSha": "dbbd3f0dea16a698f601d9c86b9316c08d5f28e586e6373ebc17313036441c08",
   "reference": "main",
   "revision": "0a457a557be7779336bc8ac2b396e73797bc68f7"
 }

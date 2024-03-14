@@ -1,10 +1,8 @@
 {
   "language": "robot",
   "url": "https://github.com/Hubro/tree-sitter-robot",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@Hubro",
+  "grammarSha": "fcfe10a0ec522652409a8346417865907a7b480e16483f71cd270d4eee592ad7",
   "reference": "master",
   "revision": "322e4cc65754d2b3fdef4f2f8a71e0762e3d13af"
 }

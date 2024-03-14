@@ -2,10 +2,10 @@
   "language": "pioasm",
   "url": "https://github.com/leo60228/tree-sitter-pioasm",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@leo60228",
+  "grammarSha": "4e2b2a6c4ff924e0c604e6230e866cb6042ca2c3f1d6056211d34c2a08cfe4da",
   "reference": "main",
   "revision": "924aadaf5dea2a6074d72027b064f939acf32e20"
 }

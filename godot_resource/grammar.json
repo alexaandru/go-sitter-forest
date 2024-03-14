@@ -3,10 +3,10 @@
   "altName": "Godot Resources (gdresource)",
   "url": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@pierpo",
+  "grammarSha": "5f6dee498be649b5ddb4563f337f2671ba9f51140a5b631a4396e12c47e4f400",
   "reference": "master",
   "revision": "b6ef0768711086a86b3297056f9ffb5cc1d77b4a"
 }

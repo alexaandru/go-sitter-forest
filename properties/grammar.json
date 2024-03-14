@@ -2,10 +2,10 @@
   "language": "properties",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-properties",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@ObserverOfTime",
+  "grammarSha": "96028b79d50a79bcf15d910845ccda66be1efcdf28b3aad04be8ecd2ae930625",
   "reference": "master",
   "revision": "9d09f5f200c356c50c4103d36441309fd61b48d1"
 }

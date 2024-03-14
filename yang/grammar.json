@@ -1,10 +1,8 @@
 {
   "language": "yang",
   "url": "https://github.com/Hubro/tree-sitter-yang",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@Hubro",
+  "grammarSha": "f939643c72b8221d5db2b4044895222fb5c2d355aae681b8fa2a90c8c0d1e35b",
   "reference": "master",
   "revision": "2c0e6be8dd4dcb961c345fa35c309ad4f5bd3502"
 }

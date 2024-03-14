@@ -2,10 +2,10 @@
   "language": "pug",
   "url": "https://github.com/zealot128/tree-sitter-pug",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@zealot128",
+  "grammarSha": "5e7d216121a92712130b58ff6a2b574083d4256f495faae47c11bba4e57d2c5b",
   "reference": "master",
   "revision": "a7ff31a38908df9b9f34828d21d6ca5e12413e18"
 }

@@ -1,10 +1,9 @@
 {
   "language": "erlang",
   "url": "https://github.com/WhatsApp/tree-sitter-erlang",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal",
   "maintainedBy": "@filmor",
+  "skip": true,
   "reference": "main",
   "revision": "54b6f814f43c4eac81eeedefaa7cc8762fec6683"
 }

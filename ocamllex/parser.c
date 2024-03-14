@@ -1,7 +1,6 @@
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -16,7 +15,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 7
 #define PRODUCTION_ID_COUNT 4
 
-enum {
+enum ts_symbol_identifiers {
   sym__identifier = 1,
   anon_sym_rule = 2,
   anon_sym_and = 3,
@@ -29,7 +28,7 @@ enum {
   anon_sym_SQUOTE = 10,
   aux_sym_character_token1 = 11,
   anon_sym_DQUOTE = 12,
-  anon_sym_ = 13,
+  anon_sym_SPACE = 13,
   anon_sym_LF = 14,
   anon_sym_TAB = 15,
   aux_sym_string_token1 = 16,
@@ -99,7 +98,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_SQUOTE] = "'",
   [aux_sym_character_token1] = "character_token1",
   [anon_sym_DQUOTE] = "\"",
-  [anon_sym_] = " ",
+  [anon_sym_SPACE] = " ",
   [anon_sym_LF] = "\n",
   [anon_sym_TAB] = "\t",
   [aux_sym_string_token1] = "string_token1",
@@ -169,7 +168,7 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_SQUOTE] = anon_sym_SQUOTE,
   [aux_sym_character_token1] = aux_sym_character_token1,
   [anon_sym_DQUOTE] = anon_sym_DQUOTE,
-  [anon_sym_] = anon_sym_,
+  [anon_sym_SPACE] = anon_sym_SPACE,
   [anon_sym_LF] = anon_sym_LF,
   [anon_sym_TAB] = anon_sym_TAB,
   [aux_sym_string_token1] = aux_sym_string_token1,
@@ -278,7 +277,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [anon_sym_] = {
+  [anon_sym_SPACE] = {
     .visible = true,
     .named = false,
   },
@@ -497,7 +496,7 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
   },
 };
 
-enum {
+enum ts_field_identifiers {
   field_name = 1,
   field_regexp = 2,
 };
@@ -658,9 +657,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(16);
       if (lookahead == '|') ADVANCE(42);
       if (lookahead == '}') ADVANCE(17);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0)
       if (lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(45);
@@ -668,10 +665,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 1:
       if (lookahead == '\t') ADVANCE(25);
       if (lookahead == '\n') ADVANCE(24);
-      if (lookahead == '\r') ADVANCE(26);
       if (lookahead == ' ') ADVANCE(23);
       if (lookahead == '"') ADVANCE(22);
       if (lookahead == '\\') ADVANCE(2);
+      if ((11 <= lookahead && lookahead <= '\r')) ADVANCE(26);
       if (lookahead != 0) ADVANCE(27);
       END_STATE();
     case 2:
@@ -691,9 +688,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 3:
       if (lookahead == '\\') ADVANCE(4);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(21);
       if (lookahead != 0 &&
           lookahead != '\'') ADVANCE(20);
@@ -770,9 +765,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 21:
       ACCEPT_TOKEN(aux_sym_character_token1);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(21);
       if (lookahead != 0 &&
           lookahead != '\'' &&
@@ -782,7 +775,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_DQUOTE);
       END_STATE();
     case 23:
-      ACCEPT_TOKEN(anon_sym_);
+      ACCEPT_TOKEN(anon_sym_SPACE);
       END_STATE();
     case 24:
       ACCEPT_TOKEN(anon_sym_LF);
@@ -792,9 +785,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 26:
       ACCEPT_TOKEN(aux_sym_string_token1);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(26);
       if (lookahead != 0 &&
           lookahead != '"' &&
@@ -884,9 +875,7 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'p') ADVANCE(5);
       if (lookahead == 'r') ADVANCE(6);
       if (lookahead == 's') ADVANCE(7);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0)
       END_STATE();
     case 1:
@@ -1093,49 +1082,6 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [94] = {.lex_state = 0, .external_lex_state = 2},
   [95] = {.lex_state = 0, .external_lex_state = 2},
   [96] = {.lex_state = 0, .external_lex_state = 2},
-};
-
-enum {
-  ts_external_token_comment = 0,
-  ts_external_token_ocaml = 1,
-  ts_external_token_DQUOTE = 2,
-  ts_external_token__null = 3,
-};
-
-static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
-  [ts_external_token_comment] = sym_comment,
-  [ts_external_token_ocaml] = sym_ocaml,
-  [ts_external_token_DQUOTE] = anon_sym_DQUOTE,
-  [ts_external_token__null] = sym__null,
-};
-
-static const bool ts_external_scanner_states[7][EXTERNAL_TOKEN_COUNT] = {
-  [1] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_ocaml] = true,
-    [ts_external_token_DQUOTE] = true,
-    [ts_external_token__null] = true,
-  },
-  [2] = {
-    [ts_external_token_comment] = true,
-  },
-  [3] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_DQUOTE] = true,
-  },
-  [4] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_DQUOTE] = true,
-    [ts_external_token__null] = true,
-  },
-  [5] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token__null] = true,
-  },
-  [6] = {
-    [ts_external_token_comment] = true,
-    [ts_external_token_ocaml] = true,
-  },
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
@@ -1907,7 +1853,7 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_escape_sequence_token3,
       aux_sym_escape_sequence_token4,
     ACTIONS(89), 6,
-      anon_sym_,
+      anon_sym_SPACE,
       anon_sym_LF,
       anon_sym_TAB,
       aux_sym_string_token1,
@@ -1929,7 +1875,7 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_escape_sequence_token3,
       aux_sym_escape_sequence_token4,
     ACTIONS(97), 6,
-      anon_sym_,
+      anon_sym_SPACE,
       anon_sym_LF,
       anon_sym_TAB,
       aux_sym_string_token1,
@@ -1951,7 +1897,7 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_escape_sequence_token3,
       aux_sym_escape_sequence_token4,
     ACTIONS(108), 6,
-      anon_sym_,
+      anon_sym_SPACE,
       anon_sym_LF,
       anon_sym_TAB,
       aux_sym_string_token1,
@@ -1964,7 +1910,7 @@ static const uint16_t ts_small_parse_table[] = {
       sym__null,
     ACTIONS(112), 11,
       anon_sym_DQUOTE,
-      anon_sym_,
+      anon_sym_SPACE,
       anon_sym_LF,
       anon_sym_TAB,
       aux_sym_string_token1,
@@ -2765,6 +2711,49 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [231] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
 };
 
+enum ts_external_scanner_symbol_identifiers {
+  ts_external_token_comment = 0,
+  ts_external_token_ocaml = 1,
+  ts_external_token_DQUOTE = 2,
+  ts_external_token__null = 3,
+};
+
+static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
+  [ts_external_token_comment] = sym_comment,
+  [ts_external_token_ocaml] = sym_ocaml,
+  [ts_external_token_DQUOTE] = anon_sym_DQUOTE,
+  [ts_external_token__null] = sym__null,
+};
+
+static const bool ts_external_scanner_states[7][EXTERNAL_TOKEN_COUNT] = {
+  [1] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_ocaml] = true,
+    [ts_external_token_DQUOTE] = true,
+    [ts_external_token__null] = true,
+  },
+  [2] = {
+    [ts_external_token_comment] = true,
+  },
+  [3] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_DQUOTE] = true,
+  },
+  [4] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_DQUOTE] = true,
+    [ts_external_token__null] = true,
+  },
+  [5] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token__null] = true,
+  },
+  [6] = {
+    [ts_external_token_comment] = true,
+    [ts_external_token_ocaml] = true,
+  },
+};
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -2775,10 +2764,12 @@ unsigned tree_sitter_ocamllex_external_scanner_serialize(void *, char *);
 void tree_sitter_ocamllex_external_scanner_deserialize(void *, const char *, unsigned);
 
 #ifdef _WIN32
-#define extern __declspec(dllexport)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_ocamllex(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_ocamllex() {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

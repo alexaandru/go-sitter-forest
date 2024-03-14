@@ -19,7 +19,7 @@ enum TokenType {
 
 /// Advance the lexer if the next token matches the given character
 #define advance_if_eq(lexer, chr) \
-    if ((lexer)->lookahead == (chr)) advance((lexer)); else return false
+    if (!lexer->eof(lexer) && (lexer)->lookahead == (chr)) advance((lexer)); else return false
 
 /// Advance the lexer to the next token
 static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
@@ -27,7 +27,7 @@ static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 /// Check if the character is valid in a name
 /// TODO: explicitly follow https://www.w3.org/TR/xml11/#NT-Name
 static inline bool is_valid_name_char(wchar_t chr) {
-    return iswalnum(chr) || chr == '_' || chr == ':' || chr == '.' || chr == '-' || chr == L'·';
+    return iswalnum(chr) || chr == '_' || chr == ':' || chr == '.' || chr == '-' || chr == 0xB7;
 }
 
 /// Check if the character is valid to start a name
@@ -37,8 +37,8 @@ static inline bool is_valid_name_start_char(wchar_t chr) {
 }
 
 /// Check if the lexer matches the given word
-static inline bool check_word(TSLexer *lexer, const char *const word) {
-    for (int j = 0; word[j] != '\0'; ++j) {
+static inline bool check_word(TSLexer *lexer, const char *const word, unsigned length) {
+    for (unsigned j = 0; j < length; ++j) {
         advance_if_eq(lexer, word[j]);
     }
     return true;
@@ -68,9 +68,9 @@ static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
                         bool last_char_hyphen = lexer->lookahead == '-';
                         advance(lexer);
                         if (last_char_hyphen) {
-                            if (valid_symbols[XML_MODEL] && check_word(lexer, "model"))
+                            if (valid_symbols[XML_MODEL] && check_word(lexer, "model", 5))
                                 return false;
-                            if (valid_symbols[XML_STYLESHEET] && check_word(lexer, "stylesheet"))
+                            if (valid_symbols[XML_STYLESHEET] && check_word(lexer, "stylesheet", 10))
                                 return false;
                         }
                     } else {

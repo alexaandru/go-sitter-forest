@@ -2,10 +2,10 @@
   "language": "cooklang",
   "url": "https://github.com/addcninblue/tree-sitter-cooklang",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@addcninblue",
+  "grammarSha": "6d86c3f8705e8505c56f7040e417887ba25676adb17d7e21f5728572a921f0a0",
   "reference": "master",
   "revision": "81c2a8667846b1e60db68b5601d864fe00fd1d3a"
 }

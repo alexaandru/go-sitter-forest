@@ -2,10 +2,10 @@
   "language": "agda",
   "url": "https://github.com/tree-sitter/tree-sitter-agda",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@Decodetalkers",
+  "grammarSha": "cec88b01595c69bf14deaa72a1bb52b88061bb7b777a2e9f17084514a6072e35",
   "reference": "master",
   "revision": "d3dc807692e6bca671d4491b3bf5c67eeca8c016"
 }

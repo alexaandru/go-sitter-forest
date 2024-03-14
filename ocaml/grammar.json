@@ -2,12 +2,12 @@
   "language": "ocaml",
   "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
   "files": [
-    "parser.c",
     "scanner.c",
     "common/scanner.h"
   ],
   "srcRoot": "ocaml",
   "maintainedBy": "@undu",
+  "grammarSha": "66ef8b53fdbfedd8ef1efae1a37bc6b5542324e20f4a8636bce3687189ff60bf",
   "reference": "master",
   "revision": "712d9bfa1d537c5899dde5538767ed2d8bb37a93"
 }

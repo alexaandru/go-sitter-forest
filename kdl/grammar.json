@@ -2,10 +2,10 @@
   "language": "kdl",
   "url": "https://github.com/amaanq/tree-sitter-kdl",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "eaf0c321d4cfb3ecb7ca09631a1e76d60b4212581ddfc3b919301bfe485eabcd",
   "reference": "master",
   "revision": "49fb89a854d93b58a65a19724ac307195ca11941"
 }

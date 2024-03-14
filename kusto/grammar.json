@@ -1,10 +1,8 @@
 {
   "language": "kusto",
   "url": "https://github.com/Willem-J-an/tree-sitter-kusto",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@Willem-J-an",
+  "grammarSha": "f5933024921cc30620aa4f7a25ed95a0959847211f54feb19b9eb86534ce6dca",
   "reference": "master",
   "revision": "8353a1296607d6ba33db7c7e312226e5fc83e8ce"
 }

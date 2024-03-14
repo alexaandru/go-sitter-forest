@@ -1,10 +1,8 @@
 {
   "language": "mermaid",
   "url": "https://github.com/monaqa/tree-sitter-mermaid",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@monaqa",
+  "grammarSha": "e517c9d2711c266b231b716558256809a32db310359fa635d3f06066c97807ce",
   "reference": "master",
   "revision": "e8dac87a9f789b23a2c7ab8e55b485a2f5927b98"
 }

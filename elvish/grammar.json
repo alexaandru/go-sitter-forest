@@ -1,10 +1,8 @@
 {
   "language": "elvish",
   "url": "https://github.com/elves/tree-sitter-elvish",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@elves",
+  "grammarSha": "dcf540b33305d75524dd956b893f996aed3e6e044b16d99b9681c482c22ec2fe",
   "reference": "main",
   "revision": "5e7210d945425b77f82cbaebc5af4dd3e1ad40f5"
 }

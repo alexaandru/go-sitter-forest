@@ -1,10 +1,8 @@
 {
   "language": "fidl",
   "url": "https://github.com/google/tree-sitter-fidl",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@chaopeng",
+  "grammarSha": "21a258e2c5d3413847a9c716253712bfb85973107ca18bb41cb9458576fa06be",
   "reference": "main",
   "revision": "0a8910f293268e27ff554357c229ba172b0eaed2"
 }

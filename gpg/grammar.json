@@ -1,10 +1,8 @@
 {
   "language": "gpg",
   "url": "https://github.com/ObserverOfTime/tree-sitter-gpg-config",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@ObserverOfTime",
+  "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
   "reference": "master",
   "revision": "f99323fb8f3f10b6c69db0c2f6d0a14bd7330675"
 }

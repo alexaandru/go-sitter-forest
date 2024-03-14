@@ -1,11 +1,10 @@
 {
   "language": "v",
   "url": "https://github.com/vlang/v-analyzer",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js throws error",
   "srcRoot": "tree_sitter_v",
   "maintainedBy": "@kkharji, @amaanq",
+  "skip": true,
   "reference": "main",
-  "revision": "be121f724e4f3e2159dfa193c876be605c1de7fa"
+  "revision": "0cf2108de92d043a684a963199d772899486089b"
 }

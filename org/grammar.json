@@ -2,10 +2,10 @@
   "language": "org",
   "url": "https://github.com/milisims/tree-sitter-org",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@milisims",
+  "grammarSha": "944dce2455d4355b0219a9e29390f8b204bb8216aaa3158e2fa7600b02ac7e41",
   "reference": "main",
   "revision": "64cfbc213f5a83da17632c95382a5a0a2f3357c1"
 }

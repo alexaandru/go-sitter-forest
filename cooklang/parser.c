@@ -1,7 +1,6 @@
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -16,7 +15,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 7
 #define PRODUCTION_ID_COUNT 1
 
-enum {
+enum ts_symbol_identifiers {
   aux_sym_recipe_token1 = 1,
   anon_sym_GT_GT = 2,
   anon_sym_COLON = 3,
@@ -1020,7 +1019,7 @@ static inline bool aux_sym__alphabetic_token1_character_set_1(int32_t c) {
                 ? (c < 67828
                   ? (c >= 67808 && c <= 67826)
                   : c <= 67829)
-                : (c <= 67861 || (c >= 67872 && c <= 67880)))))))))))))));
+                : (c <= 67861 || (c >= 67872 && c <= 67883)))))))))))))));
 }
 
 static inline bool aux_sym__alphabetic_token1_character_set_2(int32_t c) {
@@ -1420,7 +1419,7 @@ static inline bool aux_sym__alphabetic_token1_character_set_2(int32_t c) {
                 ? (c < 67828
                   ? (c >= 67808 && c <= 67826)
                   : c <= 67829)
-                : (c <= 67861 || (c >= 67872 && c <= 67880)))))))))))))));
+                : (c <= 67861 || (c >= 67872 && c <= 67883)))))))))))))));
 }
 
 static inline bool aux_sym__alphabetic_token1_character_set_3(int32_t c) {
@@ -1870,7 +1869,7 @@ static inline bool aux_sym__alphabetic_token1_character_set_3(int32_t c) {
                 ? (c < 67828
                   ? (c >= 67808 && c <= 67826)
                   : c <= 67829)
-                : (c <= 67861 || (c >= 67872 && c <= 67880)))))))))))))));
+                : (c <= 67861 || (c >= 67872 && c <= 67883)))))))))))))));
 }
 
 static inline bool aux_sym__alphabetic_token1_character_set_4(int32_t c) {
@@ -2322,13 +2321,13 @@ static inline bool aux_sym__alphabetic_token1_character_set_4(int32_t c) {
                 ? (c < 67828
                   ? (c >= 67808 && c <= 67826)
                   : c <= 67829)
-                : (c <= 67861 || (c >= 67872 && c <= 67880)))))))))))))));
+                : (c <= 67861 || (c >= 67872 && c <= 67883)))))))))))))));
 }
 
 static inline bool aux_sym__alphabetic_token2_character_set_1(int32_t c) {
   return (c < 3655
-    ? (c < 2759
-      ? (c < 2362
+    ? (c < 2750
+      ? (c < 2275
         ? (c < 1840
           ? (c < 1648
             ? (c < 1425
@@ -2357,80 +2356,78 @@ static inline bool aux_sym__alphabetic_token2_character_set_1(int32_t c) {
               ? (c < 2137
                 ? (c >= 2089 && c <= 2093)
                 : c <= 2139)
-              : (c <= 2207 || (c < 2275
-                ? (c >= 2250 && c <= 2273)
-                : c <= 2307)))))))
-        : (c <= 2364 || (c < 2561
-          ? (c < 2494
-            ? (c < 2402
-              ? (c < 2385
-                ? (c >= 2366 && c <= 2383)
-                : c <= 2391)
-              : (c <= 2403 || (c < 2492
-                ? (c >= 2433 && c <= 2435)
-                : c <= 2492)))
-            : (c <= 2500 || (c < 2519
-              ? (c < 2507
-                ? (c >= 2503 && c <= 2504)
-                : c <= 2509)
-              : (c <= 2519 || (c < 2558
-                ? (c >= 2530 && c <= 2531)
-                : c <= 2558)))))
-          : (c <= 2563 || (c < 2672
-            ? (c < 2631
-              ? (c < 2622
-                ? c == 2620
-                : c <= 2626)
-              : (c <= 2632 || (c < 2641
-                ? (c >= 2635 && c <= 2637)
-                : c <= 2641)))
-            : (c <= 2673 || (c < 2748
-              ? (c < 2689
-                ? c == 2677
-                : c <= 2691)
-              : (c <= 2748 || (c >= 2750 && c <= 2757)))))))))
-      : (c <= 2761 || (c < 3201
-        ? (c < 3006
-          ? (c < 2878
-            ? (c < 2810
-              ? (c < 2786
-                ? (c >= 2763 && c <= 2765)
-                : c <= 2787)
-              : (c <= 2815 || (c < 2876
-                ? (c >= 2817 && c <= 2819)
-                : c <= 2876)))
-            : (c <= 2884 || (c < 2901
-              ? (c < 2891
-                ? (c >= 2887 && c <= 2888)
-                : c <= 2893)
-              : (c <= 2903 || (c < 2946
-                ? (c >= 2914 && c <= 2915)
-                : c <= 2946)))))
-          : (c <= 3010 || (c < 3134
-            ? (c < 3031
-              ? (c < 3018
-                ? (c >= 3014 && c <= 3016)
-                : c <= 3021)
-              : (c <= 3031 || (c < 3132
-                ? (c >= 3072 && c <= 3076)
-                : c <= 3132)))
-            : (c <= 3140 || (c < 3157
-              ? (c < 3146
-                ? (c >= 3142 && c <= 3144)
-                : c <= 3149)
-              : (c <= 3158 || (c >= 3170 && c <= 3171)))))))
-        : (c <= 3203 || (c < 3402
-          ? (c < 3298
-            ? (c < 3270
-              ? (c < 3262
-                ? c == 3260
-                : c <= 3268)
-              : (c <= 3272 || (c < 3285
-                ? (c >= 3274 && c <= 3277)
-                : c <= 3286)))
-            : (c <= 3299 || (c < 3387
+              : (c <= 2207 || (c >= 2250 && c <= 2273)))))))
+        : (c <= 2307 || (c < 2558
+          ? (c < 2492
+            ? (c < 2385
+              ? (c < 2366
+                ? (c >= 2362 && c <= 2364)
+                : c <= 2383)
+              : (c <= 2391 || (c < 2433
+                ? (c >= 2402 && c <= 2403)
+                : c <= 2435)))
+            : (c <= 2492 || (c < 2507
+              ? (c < 2503
+                ? (c >= 2494 && c <= 2500)
+                : c <= 2504)
+              : (c <= 2509 || (c < 2530
+                ? c == 2519
+                : c <= 2531)))))
+          : (c <= 2558 || (c < 2641
+            ? (c < 2622
+              ? (c < 2620
+                ? (c >= 2561 && c <= 2563)
+                : c <= 2620)
+              : (c <= 2626 || (c < 2635
+                ? (c >= 2631 && c <= 2632)
+                : c <= 2637)))
+            : (c <= 2641 || (c < 2689
+              ? (c < 2677
+                ? (c >= 2672 && c <= 2673)
+                : c <= 2677)
+              : (c <= 2691 || c == 2748))))))))
+      : (c <= 2757 || (c < 3170
+        ? (c < 2946
+          ? (c < 2876
+            ? (c < 2786
+              ? (c < 2763
+                ? (c >= 2759 && c <= 2761)
+                : c <= 2765)
+              : (c <= 2787 || (c < 2817
+                ? (c >= 2810 && c <= 2815)
+                : c <= 2819)))
+            : (c <= 2876 || (c < 2891
+              ? (c < 2887
+                ? (c >= 2878 && c <= 2884)
+                : c <= 2888)
+              : (c <= 2893 || (c < 2914
+                ? (c >= 2901 && c <= 2903)
+                : c <= 2915)))))
+          : (c <= 2946 || (c < 3132
+            ? (c < 3018
+              ? (c < 3014
+                ? (c >= 3006 && c <= 3010)
+                : c <= 3016)
+              : (c <= 3021 || (c < 3072
+                ? c == 3031
+                : c <= 3076)))
+            : (c <= 3132 || (c < 3146
+              ? (c < 3142
+                ? (c >= 3134 && c <= 3140)
+                : c <= 3144)
+              : (c <= 3149 || (c >= 3157 && c <= 3158)))))))
+        : (c <= 3171 || (c < 3402
+          ? (c < 3285
+            ? (c < 3262
+              ? (c < 3260
+                ? (c >= 3201 && c <= 3203)
+                : c <= 3260)
+              : (c <= 3268 || (c < 3274
+                ? (c >= 3270 && c <= 3272)
+                : c <= 3277)))
+            : (c <= 3286 || (c < 3387
               ? (c < 3328
-                ? c == 3315
+                ? (c >= 3298 && c <= 3299)
                 : c <= 3331)
               : (c <= 3388 || (c < 3398
                 ? (c >= 3390 && c <= 3396)
@@ -2456,7 +2453,7 @@ static inline bool aux_sym__alphabetic_token2_character_set_1(int32_t c) {
               ? (c < 3764
                 ? c == 3761
                 : c <= 3772)
-              : (c <= 3790 || (c < 3893
+              : (c <= 3789 || (c < 3893
                 ? (c >= 3864 && c <= 3865)
                 : c <= 3893)))
             : (c <= 3895 || (c < 3981
@@ -2570,7 +2567,7 @@ static inline bool aux_sym__alphabetic_token2_character_set_1(int32_t c) {
 }
 
 static inline bool aux_sym__alphabetic_token2_character_set_2(int32_t c) {
-  return (c < 3655
+  return (c < 3761
     ? (c < 2748
       ? (c < 2200
         ? (c < 1767
@@ -2667,7 +2664,7 @@ static inline bool aux_sym__alphabetic_token2_character_set_2(int32_t c) {
               : (c <= 3144 || (c < 3157
                 ? (c >= 3146 && c <= 3149)
                 : c <= 3158)))))))
-        : (c <= 3171 || (c < 3398
+        : (c <= 3171 || (c < 3402
           ? (c < 3285
             ? (c < 3262
               ? (c < 3260
@@ -2676,36 +2673,36 @@ static inline bool aux_sym__alphabetic_token2_character_set_2(int32_t c) {
               : (c <= 3268 || (c < 3274
                 ? (c >= 3270 && c <= 3272)
                 : c <= 3277)))
-            : (c <= 3286 || (c < 3328
-              ? (c < 3315
+            : (c <= 3286 || (c < 3387
+              ? (c < 3328
                 ? (c >= 3298 && c <= 3299)
-                : c <= 3315)
-              : (c <= 3331 || (c < 3390
-                ? (c >= 3387 && c <= 3388)
-                : c <= 3396)))))
-          : (c <= 3400 || (c < 3535
-            ? (c < 3426
-              ? (c < 3415
-                ? (c >= 3402 && c <= 3405)
-                : c <= 3415)
-              : (c <= 3427 || (c < 3530
-                ? (c >= 3457 && c <= 3459)
-                : c <= 3530)))
-            : (c <= 3540 || (c < 3570
-              ? (c < 3544
-                ? c == 3542
-                : c <= 3551)
-              : (c <= 3571 || (c < 3636
-                ? c == 3633
-                : c <= 3642)))))))))))
-    : (c <= 3662 || (c < 7380
+                : c <= 3331)
+              : (c <= 3388 || (c < 3398
+                ? (c >= 3390 && c <= 3396)
+                : c <= 3400)))))
+          : (c <= 3405 || (c < 3542
+            ? (c < 3457
+              ? (c < 3426
+                ? c == 3415
+                : c <= 3427)
+              : (c <= 3459 || (c < 3535
+                ? c == 3530
+                : c <= 3540)))
+            : (c <= 3542 || (c < 3633
+              ? (c < 3570
+                ? (c >= 3544 && c <= 3551)
+                : c <= 3571)
+              : (c <= 3633 || (c < 3655
+                ? (c >= 3636 && c <= 3642)
+                : c <= 3662)))))))))))
+    : (c <= 3761 || (c < 7380
       ? (c < 5938
         ? (c < 4038
           ? (c < 3897
             ? (c < 3864
-              ? (c < 3764
-                ? c == 3761
-                : (c <= 3772 || (c >= 3784 && c <= 3790)))
+              ? (c < 3784
+                ? (c >= 3764 && c <= 3772)
+                : c <= 3789)
               : (c <= 3865 || (c < 3895
                 ? c == 3893
                 : c <= 3895)))
@@ -4359,7 +4356,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   switch (state) {
     case 0:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '#') ADVANCE(22);
       if (lookahead == '%') ADVANCE(24);
       if (lookahead == '-') ADVANCE(13);
@@ -4374,9 +4371,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(20);
       if (lookahead == '}') ADVANCE(21);
       if (lookahead == '~') ADVANCE(23);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (aux_sym__punctuation_token1_character_set_1(lookahead)) ADVANCE(34);
@@ -4386,9 +4381,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 1:
       if (lookahead == '-') ADVANCE(17);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(1);
       if (lookahead != 0) ADVANCE(2);
       END_STATE();
@@ -4398,7 +4391,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 3:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '\t') ADVANCE(33);
       if (lookahead == ' ') ADVANCE(32);
       if (lookahead == '#') ADVANCE(22);
@@ -4408,8 +4401,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '@') ADVANCE(19);
       if (lookahead == '[') ADVANCE(35);
       if (lookahead == '~') ADVANCE(23);
-      if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(3)
+      if (('\n' <= lookahead && lookahead <= '\r')) SKIP(3)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (lookahead == 160 ||
           lookahead == 5760 ||
@@ -4424,7 +4416,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 4:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '\t') ADVANCE(33);
       if (lookahead == ' ') ADVANCE(32);
       if (lookahead == '#') ADVANCE(22);
@@ -4432,8 +4424,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '0') ADVANCE(28);
       if (lookahead == '@') ADVANCE(19);
       if (lookahead == '~') ADVANCE(23);
-      if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(4)
+      if (('\n' <= lookahead && lookahead <= '\r')) SKIP(4)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (lookahead == 160 ||
           lookahead == 5760 ||
@@ -4448,7 +4439,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 5:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '\t') ADVANCE(33);
       if (lookahead == ' ') ADVANCE(32);
       if (lookahead == '%') ADVANCE(24);
@@ -4458,8 +4449,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '0') ADVANCE(28);
       if (lookahead == '{') ADVANCE(20);
       if (lookahead == '}') ADVANCE(21);
-      if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(5)
+      if (('\n' <= lookahead && lookahead <= '\r')) SKIP(5)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (lookahead == 160 ||
           lookahead == 5760 ||
@@ -4473,7 +4463,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 6:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '\t') ADVANCE(33);
       if (lookahead == ' ') ADVANCE(32);
       if (lookahead == '%') ADVANCE(24);
@@ -4481,8 +4471,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '.') ADVANCE(26);
       if (lookahead == '/') ADVANCE(25);
       if (lookahead == '0') ADVANCE(28);
-      if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(6)
+      if (('\n' <= lookahead && lookahead <= '\r')) SKIP(6)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (lookahead == 160 ||
           lookahead == 5760 ||
@@ -4497,13 +4486,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 7:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '\t') ADVANCE(33);
       if (lookahead == ' ') ADVANCE(32);
       if (lookahead == '-') ADVANCE(13);
       if (lookahead == '0') ADVANCE(28);
-      if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(7)
+      if (('\n' <= lookahead && lookahead <= '\r')) SKIP(7)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (lookahead == 160 ||
           lookahead == 5760 ||
@@ -4518,15 +4506,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 8:
       if (eof) ADVANCE(9);
-      if (lookahead == 0) ADVANCE(10);
+      if (!eof && (lookahead == 0)) ADVANCE(10);
       if (lookahead == '-') ADVANCE(13);
       if (lookahead == '0') ADVANCE(28);
       if (lookahead == ':') ADVANCE(12);
       if (lookahead == ']') ADVANCE(18);
       if (lookahead == '{') ADVANCE(20);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(8)
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(27);
       if (aux_sym__alphabetic_token2_character_set_2(lookahead)) ADVANCE(30);
@@ -4551,7 +4537,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 14:
       ACCEPT_TOKEN(aux_sym_comment_token1);
       if (lookahead == '\t' ||
-          lookahead == '\r' ||
+          (11 <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(14);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(15);
@@ -4832,20 +4818,6 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [181] = {.lex_state = 0},
   [182] = {.lex_state = 8},
   [183] = {.lex_state = 8},
-};
-
-enum {
-  ts_external_token__newline = 0,
-};
-
-static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
-  [ts_external_token__newline] = sym__newline,
-};
-
-static const bool ts_external_scanner_states[2][EXTERNAL_TOKEN_COUNT] = {
-  [1] = {
-    [ts_external_token__newline] = true,
-  },
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
@@ -8337,6 +8309,20 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [563] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
 };
 
+enum ts_external_scanner_symbol_identifiers {
+  ts_external_token__newline = 0,
+};
+
+static const TSSymbol ts_external_scanner_symbol_map[EXTERNAL_TOKEN_COUNT] = {
+  [ts_external_token__newline] = sym__newline,
+};
+
+static const bool ts_external_scanner_states[2][EXTERNAL_TOKEN_COUNT] = {
+  [1] = {
+    [ts_external_token__newline] = true,
+  },
+};
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -8347,10 +8333,12 @@ unsigned tree_sitter_cooklang_external_scanner_serialize(void *, char *);
 void tree_sitter_cooklang_external_scanner_deserialize(void *, const char *, unsigned);
 
 #ifdef _WIN32
-#define extern __declspec(dllexport)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_cooklang(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_cooklang() {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

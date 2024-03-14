@@ -2,11 +2,11 @@
   "language": "scala",
   "url": "https://github.com/tree-sitter/tree-sitter-scala",
   "files": [
-    "parser.c",
     "scanner.c",
     "stack.h"
   ],
   "maintainedBy": "@stevanmilic",
+  "grammarSha": "8c7dc985f69d8106c5e95ff76d6d30a3c0951fb3a5c80f363a0c4ef9338d4114",
   "reference": "master",
   "revision": "70b4fe63c4973b04cc7bd40c6b7646d9c2430db8"
 }

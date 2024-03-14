@@ -1,10 +1,8 @@
 {
   "language": "devicetree",
   "url": "https://github.com/joelspadin/tree-sitter-devicetree",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@jedrzejboczar",
+  "grammarSha": "9ecd7ff631a9e1bdc64c30f4136b0c2bd3cefd1c21d1794174fc966eee8e9495",
   "reference": "main",
-  "revision": "2087a5b965db2a9efabab958a27fd8ddf43038a2"
+  "revision": "fb07e6044ffd36932c57a5be01ba5d6b8a9337bb"
 }

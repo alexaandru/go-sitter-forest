@@ -1,10 +1,8 @@
 {
   "language": "authzed",
   "url": "https://github.com/mleonidas/tree-sitter-authzed",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@mattpolzin",
+  "grammarSha": "0accde10565f40ed8fd61d0ce2ee8f53b38502e098eb874fee11b9ca6da04e19",
   "reference": "main",
   "revision": "1dec7e1af96c56924e3322cd85fdce15d0a31d00"
 }

@@ -1,11 +1,12 @@
 {
   "language": "hcl",
   "url": "https://github.com/MichaHoffmann/tree-sitter-hcl",
+  "doc": "grammar.js has local deps",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@MichaHoffmann",
+  "skip": true,
   "reference": "main",
   "revision": "e936d3fef8bac884661472dce71ad82284761eb1"
 }

@@ -1,0 +1,12 @@
+{
+  "language": "wing",
+  "url": "https://github.com/winglang/wing",
+  "files": [
+    "scanner.c"
+  ],
+  "srcRoot": "libs/tree-sitter-wing",
+  "maintainedBy": "@gshpychka, @MarkMcCulloh",
+  "grammarSha": "3378a202d64a06e73b0c725293c57be94a7ad1d9e103d6550390a1594a5d7aa5",
+  "reference": "main",
+  "revision": "d9beaf168149dff81314631f6def484869a63e2e"
+}

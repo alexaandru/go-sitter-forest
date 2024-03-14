@@ -2,10 +2,9 @@
   "language": "query",
   "altName": "Tree-Sitter Query Language",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@steelsojka",
+  "skip": true,
   "reference": "master",
   "revision": "176a380df78800167565118bb0dadfc961abbd43"
 }

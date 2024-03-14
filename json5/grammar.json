@@ -1,10 +1,9 @@
 {
   "language": "json5",
   "url": "https://github.com/Joakker/tree-sitter-json5",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js has local deps",
   "maintainedBy": "@Joakker",
+  "skip": true,
   "reference": "master",
   "revision": "c23f7a9b1ee7d45f516496b1e0e4be067264fa0d"
 }

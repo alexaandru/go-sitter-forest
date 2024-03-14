@@ -1,11 +1,12 @@
 {
   "language": "smali",
   "url": "https://git.sr.ht/~yotam/tree-sitter-smali",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "master",
   "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5"
 }

@@ -4,10 +4,12 @@ check-updates update-all update-bindings create-plugins update-grammars:
 update-% force-update-%:
 	@go run ./internal/automation $@
 
-test: check_parsers.go
+test_only:
 	@go list -f '{{.Dir}}' -m | xargs go test -vet=all -cover -covermode=atomic -coverprofile=parsers.cov
 	@go test -vet=all -cover -covermode=atomic -coverprofile=forest.cov .
 	@gocovmerge parsers.cov forest.cov > unit.cov
+
+test: check_forest test_only
 
 cover_map: test
 	@go-cover-treemap -coverprofile unit.cov > unit.svg
@@ -17,8 +19,8 @@ check_submodules:
 	@echo "(no putput below this line == success)"
 	@find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -exec test -e "{}/go.mod" ';' -print
 
-check_parsers.go:
-	@diff <(grep GetLanguage forest.go|cut -f2 -d'"'|sort) <(jq -r '.[]|select(.skip == null and .pending == null)|.language' grammars.json|sort)
+check_forest:
+	@diff <(grep GetLanguage forest.go|cut -f2 -d'"'|sort) <(jq -r '.[]|select(.pending == null)|.language' grammars.json|sort)
 
 tests_with_bad_test_cases:
 	@echo These tests have the test case with errors in them or are plainly skipped.
@@ -28,7 +30,7 @@ tests_with_bad_test_cases:
 	@grep -lE "(ERROR|Skip)" */binding_test.go
 
 clean:
-	@rm -fv *.cov
+	@rm -rfv *.cov tmp
 
 .PHONY: clean
 

@@ -35,7 +35,7 @@ type Grammar struct {
 	// a slash, they will be considered repo absolute paths.
 	// Most of the time, just "parser.c" is enough.
 	// You MUST NOT pass "parser.h", that is inferred automatically.
-	Files []string `json:"files"`
+	Files []string `json:"files,omitempty"`
 
 	// Normally the root for src folder is the root of the repo.
 	// However, there are repos hosting multiple grammars, in which
@@ -47,7 +47,12 @@ type Grammar struct {
 	// Repo maintainers.
 	MaintainedBy string `json:"maintainedBy,omitempty"`
 
-	// Flag to skip this grammar from updates (but not from checks).
+	// Flag to skip this grammar from certain operations.
+	// Currently this flag is used to skip parser regeneration from `grammar.js`,
+	// for the files that cannot be regenerated. That way, they continue to use
+	// the parser files provided by their repo, which may or may not be generated
+	// with the latest version of TreeSitter, which is the whole point of doing
+	// the regeneration locally.
 	Skip bool `json:"skip,omitempty"`
 
 	// Flag to completly ignore this grammar, as not-yet-implemented.
@@ -56,10 +61,9 @@ type Grammar struct {
 	// Flag to mark this grammar as experimental.
 	Experimental bool `json:"experimental,omitempty"`
 
-	// Some parsers to not ship the generated files.
-	// In those cases tree-sitter is needed to generate them,
-	// before they can be copied over. This flag indicates those cases.
-	NeedsGenerate bool `json:"needsGenerate,omitempty"`
+	// Holds the SHA256 of the `grammar.js` file.
+	// Is used for determining if regeneration of parser files is needed.
+	GrammarSha string `json:"grammarSha,omitempty"`
 
 	*Version
 	newVersion *Version
@@ -104,6 +108,8 @@ func (gr *Grammar) NewVersion() *Version {
 	return gr.newVersion
 }
 
+var parserFiles = []string{"parser.c", "parser.h", "array.h", "alloc.h"}
+
 // FilesMap returns a map between remote files (to download) and local files (to save to).
 // Features:
 //   - determines the source inside repo based on default (src) or provided SrcRoot field;
@@ -112,8 +118,8 @@ func (gr *Grammar) NewVersion() *Version {
 //   - maps filepaths (has / in name) to root of repo;
 //   - destination for all files is a file (no subfolders, everything is flattened out)
 //     inside the gr.Language folder.
-func (gr *Grammar) FilesMap() map[string]string {
-	url, src := gr.contentURL(), "src"
+func (gr *Grammar) FilesMap(downloadParser bool) map[string]string {
+	url, src := gr.ContentURL(), "src"
 	if gr.SrcRoot != "" {
 		src = path.Join(gr.SrcRoot, src)
 	}
@@ -125,7 +131,7 @@ func (gr *Grammar) FilesMap() map[string]string {
 		switch {
 		case strings.Contains(pat, "/"):
 			k, v = pat, path.Base(pat)
-		case pat == "parser.h":
+		case pat == "parser.h" || pat == "alloc.h" || pat == "array.h":
 			k, v = path.Join(src, "tree_sitter", pat), pat
 		default:
 			k, v = path.Join(src, pat), pat
@@ -134,16 +140,19 @@ func (gr *Grammar) FilesMap() map[string]string {
 		out[url+k] = path.Join(gr.Language, v)
 	}
 
-	add("parser.h")
+	files := gr.Files
+	if downloadParser {
+		files = append(parserFiles)
+	}
 
-	for _, f := range gr.Files {
+	for _, f := range files {
 		add(f)
 	}
 
 	return out
 }
 
-func (gr *Grammar) contentURL() string {
+func (gr *Grammar) ContentURL() string {
 	switch {
 	case strings.Contains(gr.URL, "github.com"):
 		return fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"), gr.Revision)

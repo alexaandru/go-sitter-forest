@@ -1,85 +1,39 @@
 #include "scanner.h"
+#include "array.h"
 
-#include <assert.h>
 #include <string.h>
 
 /// The default capacity of strings
 #define STRING_CAP 16
 
-/// Return the maximum of two numbers
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
+typedef Array(char) String;
 
-/// Free a container's data field
-#define FREE_DATA(container) \
-    do { \
-        if ((container)->data != NULL) { \
-            free((container)->data); \
-            (container)->data = NULL; \
-        } \
-    } while (0)
-
-typedef struct {
-    uint32_t len;
-    uint32_t cap;
-    char *data;
-} String;
-
-typedef struct {
-    uint32_t len;
-    uint32_t cap;
-    String *data;
-} Vector;
+typedef Array(String) Vector;
 
 /// Create a new String instance
-#define String() { .len = 0, .cap = STRING_CAP, .data = calloc(STRING_CAP + 1, sizeof(char)) }
+#define String() { ts_calloc(STRING_CAP + 1, sizeof(char)), 0, STRING_CAP }
 
-/// Resize a vector to the given capacity
-static inline void vec_resize(Vector *vec, uint32_t cap) {
-    if (cap > vec->cap && cap > 0) {
-        void *tmp = realloc(vec->data, cap * sizeof *vec->data);
-        assert(tmp != NULL);
-        vec->data = tmp;
-        vec->cap = cap;
-    }
+#ifndef _WIN32
+static inline uint32_t max(uint32_t a, uint32_t b) {
+    return a > b ? a : b;
+}
+#endif
+
+static inline bool string_equals(String *a, String b) {
+    return strcmp(a->contents, b.contents) == 0;
 }
 
-/// Push data to a vector
-static inline void vec_push(Vector *vec, String data) {
-    if (vec->cap == vec->len)
-        vec_resize(vec, MAX(STRING_CAP, vec->len << 1));
-    vec->data[vec->len++] = data;
-}
-
-/// Return the last element of a vector
-static inline String *vec_tail(Vector *vec) {
-    return &vec->data[vec->len - 1];
-}
-
-/// Remove the last element of a vector
-static inline void vec_pop(Vector *vec) {
-    FREE_DATA(vec_tail(vec));
-    vec->len -= 1;
-}
-
-/// Clear the data of a vector
-static inline void vec_clear(Vector *vec) {
-    for (uint32_t i = 0; i < vec->len; ++i) {
-        FREE_DATA(&vec->data[i]);
-    }
-    vec->len = 0;
-}
-
-/// Push a character to a string
 static inline void string_push(String *string, char data) {
-    if (string->cap == string->len) {
-        uint32_t cap = MAX(STRING_CAP, string->len << 1);
-        void *tmp = realloc(string->data, (cap + 1) * sizeof *string->data);
-        assert(tmp != NULL);
-        string->data = (char *)tmp;
-        memset(string->data + string->len, 0, (cap + 1 - string->len) * sizeof *string->data);
-        string->cap = cap;
+    if (string->capacity == string->size) {
+        uint32_t cap = max(STRING_CAP, string->size << 1);
+        void *tmp = ts_realloc(string->contents, (cap + 1) * sizeof *string->contents);
+        if (tmp == NULL) abort();
+
+        string->contents = (char *)tmp;
+        memset(string->contents + string->size, 0, (cap + 1 - string->size) * sizeof *string->contents);
+        string->capacity = cap;
     }
-    string->data[string->len++] = data;
+    array_push(string, data);
 }
 
 static String scan_tag_name(TSLexer *lexer) {
@@ -96,44 +50,42 @@ static String scan_tag_name(TSLexer *lexer) {
 }
 
 static bool scan_start_tag_name(Vector *tags, TSLexer *lexer) {
-    String tag = scan_tag_name(lexer);
-    if (tag.len == 0) {
-        FREE_DATA(&tag);
+    String tag_name = scan_tag_name(lexer);
+    if (tag_name.size == 0) {
+        array_delete(&tag_name);
         return false;
     }
 
     lexer->result_symbol = START_TAG_NAME;
-    vec_push(tags, tag);
+    array_push(tags, tag_name);
     return true;
 }
 
 static bool scan_end_tag_name(Vector *tags, TSLexer *lexer) {
     String tag_name = scan_tag_name(lexer);
-    if (tag_name.len == 0) {
-        FREE_DATA(&tag_name);
+    if (tag_name.size == 0) {
+        array_delete(&tag_name);
         return false;
     }
-    if (tags->len > 0 && strcmp(vec_tail(tags)->data, tag_name.data) == 0) {
-        vec_pop(tags);
+
+    if (tags->size > 0 && string_equals(array_back(tags), tag_name)) {
+        array_delete(&array_pop(tags));
         lexer->result_symbol = END_TAG_NAME;
     } else {
         lexer->result_symbol = ERRONEOUS_END_NAME;
     }
-    FREE_DATA(&tag_name);
-    return true;
+    array_delete(&tag_name);
+    return lexer->result_symbol == END_TAG_NAME;
 }
 
 static bool scan_self_closing_tag_delimiter(Vector *tags, TSLexer *lexer) {
     advance(lexer);
-    if (lexer->lookahead == '>') {
-        advance(lexer);
-        if (tags->len > 0) {
-            vec_pop(tags);
-            lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
-        }
-        return true;
+    advance_if_eq(lexer, '>');
+    if (tags->size > 0) {
+        array_delete(&array_pop(tags));
+        lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
     }
-    return false;
+    return true;
 }
 
 /// Check if the lexer is in error recovery mode
@@ -199,20 +151,25 @@ static bool scan_cdata(TSLexer *lexer) {
 bool tree_sitter_xml_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Vector *tags = (Vector *)payload;
 
-    if (in_error_recovery(valid_symbols))
+    if (in_error_recovery(valid_symbols)) {
         return false;
+    }
 
-    if (valid_symbols[PI_TARGET])
+    if (valid_symbols[PI_TARGET]) {
         return scan_pi_target(lexer, valid_symbols);
+    }
 
-    if (valid_symbols[PI_CONTENT])
+    if (valid_symbols[PI_CONTENT]) {
         return scan_pi_content(lexer);
+    }
 
-    if (valid_symbols[CHAR_DATA] && scan_char_data(lexer))
+    if (valid_symbols[CHAR_DATA] && scan_char_data(lexer)) {
         return true;
+    }
 
-    if (valid_symbols[CDATA] && scan_cdata(lexer))
+    if (valid_symbols[CDATA] && scan_cdata(lexer)) {
         return true;
+    }
 
     switch (lexer->lookahead) {
         case '<':
@@ -224,44 +181,51 @@ bool tree_sitter_xml_external_scanner_scan(void *payload, TSLexer *lexer, const 
             }
             break;
         case '/':
-            if (valid_symbols[SELF_CLOSING_TAG_DELIMITER])
+            if (valid_symbols[SELF_CLOSING_TAG_DELIMITER]) {
                 return scan_self_closing_tag_delimiter(tags, lexer);
+            }
             break;
         case '\0':
             break;
         default:
-            if (valid_symbols[START_TAG_NAME])
+            if (valid_symbols[START_TAG_NAME]) {
                 return scan_start_tag_name(tags, lexer);
-            if (valid_symbols[END_TAG_NAME])
+            }
+            if (valid_symbols[END_TAG_NAME]) {
                 return scan_end_tag_name(tags, lexer);
+            }
     }
 
     return false;
 }
 
 void *tree_sitter_xml_external_scanner_create() {
-    return calloc(1, sizeof(Vector));
+    Vector *tags = (Vector *)ts_calloc(1, sizeof(Vector));
+    if (tags == NULL) abort();
+    array_init(tags);
+    return tags;
 }
 
 void tree_sitter_xml_external_scanner_destroy(void *payload) {
     Vector *tags = (Vector *)payload;
-    for (uint32_t i = 0; i < tags->len; ++i) {
-        FREE_DATA(&tags->data[i]);
+    for (uint32_t i = 0; i < tags->size; ++i) {
+        array_delete(array_get(tags, i));
     }
-    FREE_DATA(tags);
+    array_delete(tags);
+    ts_free(tags);
 }
 
 unsigned tree_sitter_xml_external_scanner_serialize(void *payload, char *buffer) {
     Vector *tags = (Vector *)payload;
-    uint32_t tag_count = tags->len > UINT16_MAX ? UINT16_MAX : tags->len;
+    uint32_t tag_count = tags->size > UINT16_MAX ? UINT16_MAX : tags->size;
     uint32_t serialized_tag_count = 0, size = sizeof tag_count;
 
     memcpy(&buffer[size], &tag_count, size);
     size += sizeof tag_count;
 
     for (; serialized_tag_count < tag_count; ++serialized_tag_count) {
-        String tag = tags->data[serialized_tag_count];
-        uint32_t name_length = tag.len;
+        String *tag = array_get(tags, serialized_tag_count);
+        uint32_t name_length = tag->size;
         if (name_length > UINT8_MAX) {
             name_length = UINT8_MAX;
         }
@@ -269,7 +233,10 @@ unsigned tree_sitter_xml_external_scanner_serialize(void *payload, char *buffer)
             break;
         }
         buffer[size++] = (char)name_length;
-        strncpy(&buffer[size], tag.data, name_length);
+        if (name_length > 0) {
+            memcpy(&buffer[size], tag->contents, name_length);
+        }
+        array_delete(tag);
         size += name_length;
     }
 
@@ -279,34 +246,39 @@ unsigned tree_sitter_xml_external_scanner_serialize(void *payload, char *buffer)
 
 void tree_sitter_xml_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Vector *tags = (Vector *)payload;
-    vec_clear(tags);
 
-    if (length > 0) {
-        uint32_t size = 0, tag_count = 0, serialized_tag_count = 0;
+    for (unsigned i = 0; i < tags->size; ++i) {
+        array_delete(array_get(tags, i));
+    }
+    array_delete(tags);
 
-        memcpy(&serialized_tag_count, &buffer[size], sizeof serialized_tag_count);
-        size += sizeof serialized_tag_count;
+    if (length == 0) return;
 
-        memcpy(&tag_count, &buffer[size], sizeof tag_count);
-        size += sizeof tag_count;
+    uint32_t size = 0, tag_count = 0, serialized_tag_count = 0;
+    memcpy(&serialized_tag_count, &buffer[size], sizeof serialized_tag_count);
+    size += sizeof serialized_tag_count;
+    memcpy(&tag_count, &buffer[size], sizeof tag_count);
+    size += sizeof tag_count;
 
-        vec_resize(tags, tag_count);
-        if (tag_count > 0) {
-            uint32_t iter = 0;
-            for (; iter < serialized_tag_count; ++iter) {
-                String tag = tags->data[iter];
-                tag.len = tag.cap = (unsigned)buffer[size++];
-                tag.data = (char *)calloc(1, (tag.len + 1) * sizeof(char));
-                strncpy(tag.data, &buffer[size], tag.len);
-                size += tag.len;
-                vec_push(tags, tag);
-            }
-            // add zero tags if we didn't read enough, this is because the
-            // buffer had no more room but we held more tags.
-            for (; iter < tag_count; ++iter) {
-                String tag = String();
-                vec_push(tags, tag);
-            }
+    if (tag_count == 0) return;
+
+    array_reserve(tags, tag_count);
+
+    uint32_t iter = 0;
+    for (; iter < serialized_tag_count; ++iter) {
+        String tag = String();
+        tag.size = (uint8_t)buffer[size++];
+        if (tag.size > 0) {
+            array_reserve(&tag, tag.size + 1);
+            memcpy(tag.contents, &buffer[size], tag.size);
+            size += tag.size;
         }
+        array_push(tags, tag);
+    }
+    // add zero tags if we didn't read enough, this is because the
+    // buffer had no more room but we held more tags.
+    for (; iter < tag_count; ++iter) {
+        String tag = String();
+        array_push(tags, tag);
     }
 }

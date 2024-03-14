@@ -2,11 +2,10 @@
   "language": "sql",
   "url": "https://github.com/DerekStride/tree-sitter-sql",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@DerekStride",
-  "needsGenerate": true,
+  "grammarSha": "a91985aca9832983f52a67de6c5778f2c0c45f0b1d02d3a7b84f93fe9b5f9255",
   "reference": "main",
-  "revision": "da2d1eff425b146d3c8cab7be8dfa98b11d896dc"
+  "revision": "b6b1f7f7e70e869c655705c591cbdf3e8a807ad6"
 }

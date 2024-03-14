@@ -2,10 +2,10 @@
   "language": "slang",
   "url": "https://github.com/theHamsta/tree-sitter-slang",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta",
+  "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
   "reference": "master",
   "revision": "0cdfb1741323f38e9a33798674145c22cfc0092b"
 }

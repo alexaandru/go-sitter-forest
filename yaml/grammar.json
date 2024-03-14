@@ -1,12 +1,13 @@
 {
   "language": "yaml",
   "url": "https://github.com/ikatyang/tree-sitter-yaml",
+  "doc": "grammar.js throws error",
   "files": [
-    "parser.c",
     "scanner.cc",
     "schema.generated.cc"
   ],
   "maintainedBy": "@stsewd",
+  "skip": true,
   "reference": "master",
   "revision": "0e36bed171768908f331ff7dff9d956bae016efb"
 }

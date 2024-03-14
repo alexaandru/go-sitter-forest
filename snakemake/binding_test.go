@@ -21,7 +21,7 @@ rule bwa_map:
     shell:
         "bwa mem {input} | samtools view -Sb - > {output}"
 `
-	expected = "(module (rule_definition name: (identifier) body: (rule_body (directive arguments: (directive_parameters (string (string_start) (string_content) (string_end)) (string (string_start) (string_content) (string_end)))) (directive arguments: (directive_parameters (string (string_start) (string_content) (string_end)))) (directive arguments: (directive_parameters (string (string_start) (wildcard (identifier)) (wildcard (identifier)) (string_end)))))))"
+	expected = "(module (rule_definition name: (identifier) body: (rule_body (directive (ERROR (string (string_start) (string_content) (string_end)) (string (string_start) (string_content) (string_end)) (identifier) (string (string_start) (string_content) (string_end)) (identifier)) arguments: (directive_parameters (string (string_start) (wildcard (identifier)) (wildcard (identifier)) (string_end)) (MISSING _DISALLOW_WC))))))"
 )
 
 func TestGrammar(t *testing.T) {

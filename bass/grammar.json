@@ -1,10 +1,9 @@
 {
   "language": "bass",
   "url": "https://github.com/vito/tree-sitter-bass",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq",
+  "skip": true,
   "reference": "main",
   "revision": "c9ba4568af24cd3403029730687c0a43d1350a43"
 }

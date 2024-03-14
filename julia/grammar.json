@@ -2,10 +2,10 @@
   "language": "julia",
   "url": "https://github.com/tree-sitter/tree-sitter-julia",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta",
+  "grammarSha": "9a64491e0a7dafde83f525f82fed3ed3e95e2cab92b746e239f7784dd40f5fbd",
   "reference": "master",
   "revision": "e84f10db8eeb8b9807786bfc658808edaa1b4fa2"
 }

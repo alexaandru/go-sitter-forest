@@ -2,10 +2,10 @@
   "language": "rnoweb",
   "url": "https://github.com/bamonroe/tree-sitter-rnoweb",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@bamonroe",
+  "grammarSha": "0613d18e63b791dfec07c6451b4e7f80032df854053847d77373896a55d53d47",
   "reference": "master",
-  "revision": "502c1126dc6777f09af5bef16e72a42f75bd081e"
+  "revision": "1a74dc0ed731ad07db39f063e2c5a6fe528cae7f"
 }

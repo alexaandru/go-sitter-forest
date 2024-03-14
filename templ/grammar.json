@@ -2,10 +2,10 @@
   "language": "templ",
   "url": "https://github.com/vrischmann/tree-sitter-templ",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@vrischmann",
+  "grammarSha": "472d6ee90ec9abb6139e6b28005327996bb8f1de5c757639ab356de81dcd633e",
   "reference": "master",
   "revision": "592faa3186ef857c92e4bd1c31d73c07a4a334db"
 }

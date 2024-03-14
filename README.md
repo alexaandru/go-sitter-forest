@@ -1,4 +1,5 @@
 # a Go Sitter Forest 🌳
+
 _Where a Gopher wanders around and meets lots of 🌳 Sitters..._
 
 First of all, giving credits where they are due:
@@ -17,6 +18,28 @@ PARSERS.md file, etc/).
 See [Parsers](PARSERS.md) for a list of supported (and planned) parsers.
 The end goal is (at least) parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
+## Versions & Status
+
+Latest [tree-sitter](https://github.com/tree-sitter/tree-sitter) version is `v0.22.1`. [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare)
+`v1.1.0` uses that latest version (and this project uses that
+latest version of `go-tree-sitter-bare`).
+
+As for the parsers in this repo:
+
+- most of the parsers were updated to regenerate the `parser.{c,h}` files
+  using the latest `tree-sitter` (they are marked with a heavy checkmark
+  in [PARSERS.md](PARSERS.md) and they do NOT have the `skip` flag set
+  in [grammars.json](grammars.json); this is preferred way going further;
+- the other parsers could not yet be regenerated locally. They can still
+  be used just fine, but they will use whatever `parser.{c,h}` files they
+  have in the upstream repo, which may or may not have been compiled with
+  the latest `tree-sitter` version. In general they should work too though,
+  that's how this project started, with downloaded files only, after all.
+  All parsers have tests and they all pass.
+
+So there it is, we try to converge towards using the same `tree-sitter`
+version everywhere.
+
 ## Naming Convention
 
 The lang name used is the same as tree sitter lang name (lower case, underscore
@@ -24,7 +47,8 @@ instead of spaces) and the same as the query folder name.
 
 This keeps things simple and consistent.
 
-In rare cases, the Go package name differs from the language name: 
+In rare cases, the Go package name differs from the language name:
+
 - `go` actually has the package name `Go` because `package go` does not go well in Go
   (pun intended) but otherwise the language name remains "go";
 - `func` language, same problem as above, so package name is actually `FunC`
@@ -108,7 +132,9 @@ Then you can selectively use them in your app using the [plugins mechanism](http
 
 Besides getting the `GetLanguage()` function for each lang, you can also retrieve
 it's information (it's corresponding `grammars.json` entry) via the `Info()` function
-available in all 3 usage modes: library, "bulk loader" (forest package) and plugin.
+available in all 3 usage modes: library, "bulk loader" (forest package) and plugin,
+though the format differs between them (bulk loader returns a Grammar object whereas
+in the other two modes, it returns a string holding the raw JSON, for simplicity).
 
 The returned `Grammar` type implements `Stringer` so it should give a nice summary
 when printed (to screen or logs, etc.).
@@ -124,8 +150,8 @@ no change is ever made manually, so inspecting the automation should give you a
 clear picture of all the changes performed to the code, changes which are detailed below:
 
 - the include paths are rewritten to use a flat structure (i.e. `"tree_sitter/parser.h"`
-  becomes `"parser.h"`); This makes the automation simpler as we download all files from
-  whatever folders are on the source on a single folder on destination;
+  becomes `"parser.h"`); This is needed so that the files are part of the same package,
+  plus it also makes automation simpler;
 - for YAML, the grammar `scanner.cc` includes `schema.generated.cc` file which causes `cgo`
   to compile schema.generated.cc twice and throw duplicate symbols error. The solution
   chosen was to copy the content `schema.generated.cc` into `scanner.cc` and set the former
@@ -137,33 +163,20 @@ clear picture of all the changes performed to the code, changes which are detail
   - `TAG_TYPES_BY_TAG_NAME_html`;
   - `TAG_TYPES_BY_TAG_NAME_svelte`;
   - `TAG_TYPES_BY_TAG_NAME_vue`;
-- **EXCEPTION** MANUAL changes:
-  - `org` and `beancount` parsers conflict at scanner level. There were several
-    functions that clashed between the two, as a result, as a POC for a future automated
-    fix for this, I manually renamed the offending identifiers in `org` parser by
-    appending the `_org` suffix to them (i.e. `serialize` -> `serialize_org`, etc.);
-    If this works well, it will be turned into an automated fix as well, and this
-    manual exception removed.
+- for parsers that define `serialize()`, `deserialize()` and `scan()` in `scanner.c`
+  (i.e. `org` and `beancount`): the offending identifiers are renamed by appending
+  the `_<lang>` suffix to them (i.e. `serialize` -> `serialize_org`, etc.);
+- **EXCEPTION MANUAL CHANGE**: `poe_filter/parser.c` is currently invalid upon generation
+  (is missing a right paren at line 6216, col 50 - I added it manually).
 
 ## Roadmap
 
-- the current automation is nice & easy to use but also a bit... "lacking":
-  it mechanically downloads whatever parser files are in there discounting
-  the fact that they may be (and likely are) generated with a different
-  `tree-sitter` version, then the version of the `tree-sitter` the sitter Go
-  library is based upon, which at the time of writing this is 0.20.9;
-  So we need a plan to keep them in sync:
-  - repurpose the automation to download THE GRAMMAR + dependencies (C files
-    manually created and NOT generated by `tree-sitter`, like custom scanners,
-    etc.);
-  - recompile them using a `tree-sitter` package that matches the version of
-    the Go sitter library;
-  - use the resulted parser files;
-- switching to the above model will also naturally enable the remaining 9
-  parsers which need precisely that: their files to be regenerated using
-  `tree-sitter`;
+- resolve the issues that prevent us from rebuilding all parsers from grammars:
+  - many have local deps that also need to be downloaded (and local paths adjusted);
+  - many have the same error related to a decimal regex;
+  - some of them throw errors;
 - need some automation around working with so many Go modules, in particular:
-  - updating tag on a parser after a parser update;
+  - updating tag on a parser after a parser update to its next major/minor/path no.;
   - updating forest (root package) to point to the latest tag of a parser after
     a parser update;
   - updating the tag for the forest itself;

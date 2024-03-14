@@ -3,10 +3,10 @@
   "altName": "GN (Generate Ninja)",
   "url": "https://github.com/amaanq/tree-sitter-gn",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
+  "grammarSha": "fbaf5fc27fa5cb9489842b0768d8f43d5d2f8610a497a49c814d645b2c32de02",
   "reference": "master",
   "revision": "bc06955bc1e3c9ff8e9b2b2a55b38b94da923c05"
 }

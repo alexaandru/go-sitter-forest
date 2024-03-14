@@ -2,11 +2,11 @@
   "language": "typst",
   "url": "https://github.com/uben0/tree-sitter-typst",
   "files": [
-    "parser.c",
     "scanner.c",
     "unicode.h"
   ],
   "maintainedBy": "@uben0, @RaafatTurki",
+  "grammarSha": "fc2f3e5bf1c9e326b79ae35ebadc033efdea0e8b19f82b703921f00c538c3a40",
   "reference": "master",
   "revision": "3c3e5f8e0caeba6157e26a1bedf8321e1da62799"
 }

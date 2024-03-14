@@ -12,7 +12,7 @@ func forEachGrammar(fn func(gr *grammar.Grammar) error) error {
 	g := new(errgroup.Group)
 
 	for _, gr := range grammars {
-		if gr.Skip || gr.Pending {
+		if gr.Pending {
 			continue
 		}
 
@@ -41,6 +41,10 @@ func fileExists(path string) (ok bool, err error) {
 }
 
 func die(msg any) {
+	if logFile != nil {
+		logFile.Close()
+	}
+
 	fmt.Println(msg)
 	os.Exit(1)
 }

@@ -2,12 +2,10 @@
   "language": "bash",
   "url": "https://github.com/tree-sitter/tree-sitter-bash",
   "files": [
-    "parser.c",
-    "scanner.c",
-    "src/tree_sitter/alloc.h",
-    "src/tree_sitter/array.h"
+    "scanner.c"
   ],
   "maintainedBy": "@TravonteD",
+  "grammarSha": "e1e7ed6840a2a692a1bd5f352ff85b38d065cdca200f95b1288230fb621ff2d7",
   "reference": "master",
   "revision": "f3f26f47a126797c011c311cec9d449d855c3eab"
 }

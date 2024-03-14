@@ -1,10 +1,8 @@
 {
   "language": "facility",
   "url": "https://github.com/FacilityApi/tree-sitter-facility",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@bryankenote",
+  "grammarSha": "a9d865275658ce30b3775fb63a62fbdb4681c758e61e3de4eb99d1083158a398",
   "reference": "master",
   "revision": "a52579670e2b14ec03d410c3c980fafaf6d659c4"
 }

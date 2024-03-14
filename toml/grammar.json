@@ -1,11 +1,12 @@
 {
   "language": "toml",
   "url": "https://github.com/ikatyang/tree-sitter-toml",
+  "doc": "require() of ES Module is not supported",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@tk-shirasaka",
+  "skip": true,
   "reference": "master",
   "revision": "8bd2056818b21860e3d756b5a58c4f6e05fb744e"
 }

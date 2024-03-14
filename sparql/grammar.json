@@ -1,10 +1,9 @@
 {
   "language": "sparql",
   "url": "https://github.com/BonaBeavis/tree-sitter-sparql",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js throws error",
   "maintainedBy": "@BonaBeavis",
+  "skip": true,
   "reference": "main",
   "revision": "05f949d3c1c15e3261473a244d3ce87777374dec"
 }

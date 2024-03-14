@@ -1,10 +1,9 @@
 {
   "language": "usd",
   "url": "https://github.com/ColinKennedy/tree-sitter-usd",
-  "files": [
-    "parser.c"
-  ],
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@ColinKennedy",
+  "skip": true,
   "reference": "master",
   "revision": "ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7"
 }

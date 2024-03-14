@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@muniftanjim/tree-sitter-lua": "^0.0.19",
+    "regexp-util": "^2.0.0",
+    "tree-sitter-c": "^0.21.0",
+    "tree-sitter-cli": "^0.22.1",
+    "tree-sitter-cpp": "^0.20.5",
+    "tree-sitter-css": "^0.20.0",
+    "tree-sitter-go": "^0.20.0",
+    "tree-sitter-hlsl": "git://github.com/theHamsta/tree-sitter-hlsl.git",
+    "tree-sitter-html": "^0.20.1",
+    "tree-sitter-javascript": "^0.20.4",
+    "tree-sitter-php": "0.22.1",
+    "tree-sitter-python": "^0.21.0",
+    "tree-sitter-typescript": "^0.20.5",
+    "tree-sitter-wgsl": "^0.0.6"
+  }
+}

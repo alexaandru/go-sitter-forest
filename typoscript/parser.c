@@ -1,7 +1,6 @@
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
 
@@ -24,7 +23,7 @@
 #define MAX_ALIAS_SEQUENCE_LENGTH 11
 #define PRODUCTION_ID_COUNT 8
 
-enum {
+enum ts_symbol_identifiers {
   aux_sym__block_item_token1 = 1,
   anon_sym_EQ = 2,
   anon_sym_LF = 3,
@@ -948,9 +947,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 13:
       if (lookahead == '<') ADVANCE(198);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(13);
       END_STATE();
     case 14:
@@ -963,8 +960,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '>') ADVANCE(196);
       if (lookahead == '\t' ||
           lookahead == ' ') ADVANCE(311);
-      if (lookahead == '\n' ||
-          lookahead == '\r') ADVANCE(312);
+      if (('\n' <= lookahead && lookahead <= '\r')) ADVANCE(312);
       END_STATE();
     case 17:
       if (lookahead == 'A') ADVANCE(53);
@@ -1571,9 +1567,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 194:
       ACCEPT_TOKEN(anon_sym_EQ);
       if (lookahead == '<') ADVANCE(198);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(13);
       END_STATE();
     case 195:
@@ -2345,14 +2339,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(aux_sym_import_legacy_token1);
       if (lookahead == '\t' ||
           lookahead == ' ') ADVANCE(308);
-      if (lookahead == '\n' ||
-          lookahead == '\r') ADVANCE(309);
+      if (('\n' <= lookahead && lookahead <= '\r')) ADVANCE(309);
       END_STATE();
     case 309:
       ACCEPT_TOKEN(aux_sym_import_legacy_token1);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(309);
       END_STATE();
     case 310:
@@ -2362,14 +2353,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(aux_sym_import_legacy_token2);
       if (lookahead == '\t' ||
           lookahead == ' ') ADVANCE(311);
-      if (lookahead == '\n' ||
-          lookahead == '\r') ADVANCE(312);
+      if (('\n' <= lookahead && lookahead <= '\r')) ADVANCE(312);
       END_STATE();
     case 312:
       ACCEPT_TOKEN(aux_sym_import_legacy_token2);
-      if (lookahead == '\t' ||
-          lookahead == '\n' ||
-          lookahead == '\r' ||
+      if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(312);
       END_STATE();
     case 313:
@@ -4302,10 +4290,12 @@ static const TSParseActionEntry ts_parse_actions[] = {
 extern "C" {
 #endif
 #ifdef _WIN32
-#define extern __declspec(dllexport)
+#define TS_PUBLIC __declspec(dllexport)
+#else
+#define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-extern const TSLanguage *tree_sitter_typoscript(void) {
+TS_PUBLIC const TSLanguage *tree_sitter_typoscript() {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

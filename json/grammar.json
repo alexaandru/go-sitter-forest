@@ -1,10 +1,8 @@
 {
   "language": "json",
   "url": "https://github.com/tree-sitter/tree-sitter-json",
-  "files": [
-    "parser.c"
-  ],
   "maintainedBy": "@steelsojka",
+  "grammarSha": "a5f8ed7ccb7595192972f171bedebb2ad5ddbbd6c4a41326ad8c5104650a1263",
   "reference": "master",
   "revision": "3b129203f4b72d532f58e72c5310c0a7db3b8e6d"
 }

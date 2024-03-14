@@ -1,11 +1,12 @@
 {
   "language": "elixir",
   "url": "https://github.com/elixir-lang/tree-sitter-elixir",
+  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
-    "parser.c",
     "scanner.c"
   ],
   "maintainedBy": "@connorlay",
+  "skip": true,
   "reference": "main",
   "revision": "511ea5e0088779e4bdd76e12963ab9a5fe99983a"
 }
