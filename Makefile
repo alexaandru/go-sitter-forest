@@ -30,7 +30,7 @@ tests_with_bad_test_cases:
 	@grep -lE "(ERROR|Skip)" */binding_test.go
 
 clean:
-	@rm -rfv *.cov tmp
+	@rm -rfv *.cov tmp auto.log
 
 .PHONY: clean
 

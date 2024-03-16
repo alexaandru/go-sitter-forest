@@ -1006,7 +1006,7 @@
     "maintainedBy": "@luckasRanarison",
     "grammarSha": "79ccae0a8ec5924217f1ec0786679604c3403ad58c24f42ddb074c207bd1e8af",
     "reference": "master",
-    "revision": "fc1d331586e4da2b5f5bcfa89d630ebafe66458b"
+    "revision": "27af9b74acf89fa6bed4fb8cb8631994fcb2e6f3"
   },
   {
     "language": "ini",
@@ -1351,7 +1351,7 @@
     "maintainedBy": "@Decodetalkers",
     "skip": true,
     "reference": "master",
-    "revision": "d6ec8ce0963c3c8180161391f15d8f7d415f650d"
+    "revision": "3ebd060b1a2eec450ff46b73428c63f9148a07ff"
   },
   {
     "language": "mlir",
@@ -2474,7 +2474,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "0cf2108de92d043a684a963199d772899486089b"
+    "revision": "59d104a4f3a860c71bdd93f6c897a2139b0f369b"
   },
   {
     "language": "vala",
