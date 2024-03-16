@@ -172,7 +172,7 @@ func TestAllParsers(t *testing.T) {
 		})
 	}
 
-	if exp, x := 257, len(SupportedLangs()); x != exp {
+	if exp, x := 263, len(SupportedLangs()); x != exp {
 		t.Fatalf("Expected supported langs to be %d got %d", exp, x)
 	}
 }
