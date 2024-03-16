@@ -76,19 +76,19 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/alexaandru/go-sitter-forest/ada"
+	"github.com/alexaandru/go-sitter-forest/go"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 func main() {
-	content := []byte("your source code goes here")
-	node, err := sitter.ParseCtx(context.TODO(), content, ada.GetLanguage())
+	content := []byte("package main; func main() { println(`It works!`) }")
+	node, err := sitter.ParseCtx(context.TODO(), content, go.GetLanguage())
 	if err != nil {
-		fmt.Println(err)
-	} else {
-		// Do something interesting with the parsed tree...
-		fmt.Println(node)
+		panic(err)
 	}
+
+	// Do something interesting with the parsed tree...
+	fmt.Println(node)
 }
 ```
 
@@ -99,16 +99,25 @@ size **will be huge**, as in 200MB+ huge) then you can use the root package, i.e
 package main
 
 import (
-    forest "github.com/alexaandru/go-sitter-forest"
-    sitter "github.com/alexaandru/go-tree-sitter-bare"
+	"context"
+	"fmt"
+
+	forest "github.com/alexaandru/go-sitter-forest"
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 func main() {
-    content := []byte("your source code goes here")
-    parser := sitter.NewParser()
-    parser.SetLanguage(forest.Lang("ada"))
+	content := []byte("package main; func main() { println(`It works!`) }")
+	parser := sitter.NewParser()
+	parser.SetLanguage(forest.Lang("go")())
 
-    // ...
+	tree, err := parser.ParseCtx(context.TODO(), nil, content)
+	if err != nil {
+		panic(err)
+	}
+
+	// Do something interesting with the parsed tree...
+	fmt.Println(tree.RootNode())
 }
 ```
 
