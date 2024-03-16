@@ -140,7 +140,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/matlab v1.5.5
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.5
 	github.com/alexaandru/go-sitter-forest/mermaid v1.5.5
-	github.com/alexaandru/go-sitter-forest/meson v1.5.5
+	github.com/alexaandru/go-sitter-forest/meson v1.5.6
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.5
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.5
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.5
@@ -249,7 +249,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.5
 	github.com/alexaandru/go-sitter-forest/usd v1.5.5
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.5
-	github.com/alexaandru/go-sitter-forest/v v1.5.5
+	github.com/alexaandru/go-sitter-forest/v v1.5.6
 	github.com/alexaandru/go-sitter-forest/vala v1.5.5
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.5
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.5
