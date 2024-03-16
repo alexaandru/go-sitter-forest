@@ -72,16 +72,6 @@ func TestGrammar(t *testing.T) {
 `
 )
 
-// The function of this test file is merely to force compiling
-// this very package during tests and ensure it does not fail.
-// If there is any clashing between variables defined in different
-// parsers, they will crash here.
-func TestThatItRunsAtAll(t *testing.T) {
-	if !true {
-		t.Fatal("oh no")
-	}
-}
-
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)

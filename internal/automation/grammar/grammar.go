@@ -142,7 +142,7 @@ func (gr *Grammar) FilesMap(downloadParser bool) map[string]string {
 
 	files := gr.Files
 	if downloadParser {
-		files = append(parserFiles)
+		files = append(files, parserFiles...)
 	}
 
 	for _, f := range files {

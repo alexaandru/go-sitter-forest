@@ -62,7 +62,8 @@ your grammar of interest.
 
 ## Usage
 
-See the [README](https://github.com/smacker/go-tree-sitter/blob/master/README.md) in go-tree-sitter.
+See the [README](https://github.com/smacker/go-tree-sitter/blob/master/README.md) in go-tree-sitter,
+as well as the `example_*.go` files in this repo.
 
 This repo only gives you the `GetLanguage()` part, you will still use the parent
 repo for all your interactions with the tree.
@@ -76,13 +77,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/alexaandru/go-sitter-forest/go"
+	Go "github.com/alexaandru/go-sitter-forest/go"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 func main() {
 	content := []byte("package main; func main() { println(`It works!`) }")
-	node, err := sitter.ParseCtx(context.TODO(), content, go.GetLanguage())
+	node, err := sitter.ParseCtx(context.TODO(), content, Go.GetLanguage())
 	if err != nil {
 		panic(err)
 	}

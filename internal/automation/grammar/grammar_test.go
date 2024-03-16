@@ -20,7 +20,7 @@ func TestContentURL(t *testing.T) {
 
 			gr := Grammar{URL: tc.url, Version: &Version{Reference: tc.ref, Revision: tc.rev}}
 
-			if act := gr.contentURL(); act != tc.exp {
+			if act := gr.ContentURL(); act != tc.exp {
 				t.Fatalf("Expected %q got %q", tc.exp, act)
 			}
 		})
