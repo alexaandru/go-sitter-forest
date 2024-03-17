@@ -153,8 +153,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/nqc v1.5.5
 	github.com/alexaandru/go-sitter-forest/objc v1.5.5
 	github.com/alexaandru/go-sitter-forest/objdump v1.5.5
-	github.com/alexaandru/go-sitter-forest/ocaml v1.5.5
-	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.5
+	github.com/alexaandru/go-sitter-forest/ocaml v1.5.6
+	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.6
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.5.5
 	github.com/alexaandru/go-sitter-forest/odin v1.5.5
 	github.com/alexaandru/go-sitter-forest/org v1.5.5
