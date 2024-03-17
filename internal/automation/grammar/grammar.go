@@ -1,6 +1,7 @@
 package grammar
 
 import (
+	"errors"
 	"fmt"
 	"os/exec"
 	"path"
@@ -9,59 +10,52 @@ import (
 
 // Grammar holds all the information related to one language grammar.
 // If a repository exposes multiple languages (like typescript which
-// exposes both typescript and tsx) each one will need its own separate
-// Grammar entry in the grammar.json file.
+// exposes both typescript and tsx) each one will have its own separate
+// Grammar definition.
 type Grammar struct {
 	// Language name. The same as folder name and nvim_treesitter query name.
-	// In rare cases where it cannot also be used as go package name
-	// (such as `package go` or `package func`) a capitalzed version of the
-	// name is used (Go and FunC respectively).
 	Language string `json:"language"`
 
-	// Sometimes the name used for the lang can be unclear.
-	// In those cases an alternate name for the language is also recorded.
+	// AltName is used when the language name is unclear by itself.
 	AltName string `json:"altName,omitempty"`
 
-	// At the tile of writing this it MUST be a Github repo URL.
+	// URL holds the parser repo URL.
 	URL string `json:"url"`
 
-	// Optional documentation. Typically used for grammars with
-	// problems (like Perl and SQL which are currently manually updated).
+	// Doc holds maintenance related notes. Typically used for grammars with
+	// problems.
 	Doc string `json:"doc,omitempty"`
 
-	// List of files of interest from the repo.
-	// They can be just filenames, in which case they will be
-	// fetch from the "source" folder, otherwise, if they include
+	// Files holds a list of files of interest from the repo.
+	//
+	// It MUST NOT include parser generated files (parser.c, parser.h,
+	// alloc.h, array.h) nor `grammar.js` which are automatically
+	// inferred.
+	// Only manual files (scanner.c or .js deps for grammar.js).
+	//
+	// They can be bare filenames, in which case they will be
+	// fetched from the "source" folder, otherwise, if they include
 	// a slash, they will be considered repo absolute paths.
-	// Most of the time, just "parser.c" is enough.
-	// You MUST NOT pass "parser.h", that is inferred automatically.
 	Files []string `json:"files,omitempty"`
 
-	// Normally the root for src folder is the root of the repo.
-	// However, there are repos hosting multiple grammars, in which
-	// case they will have a different source for each. If that's the
-	// case, use SrcRoot to indicate that root folder for src (but NOT
-	// including src).
+	// SrcRoot holds the source root when it differs from the default (src).
+	// Particularly useful for repos that expose multiple grammars.
 	SrcRoot string `json:"srcRoot,omitempty"`
 
-	// Repo maintainers.
+	// MaintainedBy indicates the repo maintainers.
 	MaintainedBy string `json:"maintainedBy,omitempty"`
 
-	// Flag to skip this grammar from certain operations.
-	// Currently this flag is used to skip parser regeneration from `grammar.js`,
+	// SkipGenerate flag is used to skip parser regeneration from `grammar.js`,
 	// for the files that cannot be regenerated. That way, they continue to use
 	// the parser files provided by their repo, which may or may not be generated
 	// with the latest version of TreeSitter, which is the whole point of doing
 	// the regeneration locally.
-	Skip bool `json:"skip,omitempty"`
+	SkipGenerate bool `json:"skip,omitempty"`
 
-	// Flag to completly ignore this grammar, as not-yet-implemented.
+	// Pending indicates to completly ignore this grammar, as not-yet-implemented.
 	Pending bool `json:"pending,omitempty"`
 
-	// Flag to mark this grammar as experimental.
-	Experimental bool `json:"experimental,omitempty"`
-
-	// Holds the SHA256 of the `grammar.js` file.
+	// GrammarSha holds the SHA256 of the `grammar.js` (and all .js deps: TBD).
 	// Is used for determining if regeneration of parser files is needed.
 	GrammarSha string `json:"grammarSha,omitempty"`
 
@@ -76,31 +70,22 @@ type Version struct {
 
 const guc = "https://raw.githubusercontent.com/%s/%s/"
 
+var errUnkHosting = errors.New("unrecognized source code hosting")
+
 // FetchNewVersion attempts to fetch a new version, for the grammar.
 // If there is a new version, then gr.newVersion will be populated
 // and can be used for the upgrade.
-func (gr *Grammar) FetchNewVersion() (err error) {
-	var tag, rev string
-
-	if strings.HasPrefix(gr.Reference, "v") {
-		if tag, rev, err = fetchLastTag(gr.URL); err != nil {
-			return
-		}
-
-		if tag != gr.Reference {
-			gr.newVersion = &Version{Reference: tag, Revision: rev}
-		}
-	} else {
-		if rev, err = fetchLastCommit(gr.URL, gr.Reference); err != nil {
-			return
-		}
-
-		if rev != gr.Revision {
-			gr.newVersion = &Version{Reference: gr.Reference, Revision: rev}
-		}
+func (gr *Grammar) FetchNewVersion() error {
+	rev, err := fetchLastCommit(gr.URL, gr.Reference)
+	if err != nil {
+		return err
 	}
 
-	return
+	if rev != gr.Revision {
+		gr.newVersion = &Version{Reference: gr.Reference, Revision: rev}
+	}
+
+	return nil
 }
 
 // NewVersion returns the new version, if one is available.
@@ -118,13 +103,19 @@ var parserFiles = []string{"parser.c", "parser.h", "array.h", "alloc.h"}
 //   - maps filepaths (has / in name) to root of repo;
 //   - destination for all files is a file (no subfolders, everything is flattened out)
 //     inside the gr.Language folder.
-func (gr *Grammar) FilesMap(downloadParser bool) map[string]string {
-	url, src := gr.ContentURL(), "src"
+func (gr *Grammar) FilesMap() (out map[string]string, err error) {
+	var url string
+
+	if url, err = gr.ContentURL(); err != nil {
+		return
+	}
+
+	src := "src"
 	if gr.SrcRoot != "" {
 		src = path.Join(gr.SrcRoot, src)
 	}
 
-	out := map[string]string{}
+	out = map[string]string{}
 	add := func(pat string) {
 		var k, v string
 
@@ -141,7 +132,7 @@ func (gr *Grammar) FilesMap(downloadParser bool) map[string]string {
 	}
 
 	files := gr.Files
-	if downloadParser {
+	if gr.SkipGenerate {
 		files = append(files, parserFiles...)
 	}
 
@@ -149,42 +140,26 @@ func (gr *Grammar) FilesMap(downloadParser bool) map[string]string {
 		add(f)
 	}
 
-	return out
+	return
 }
 
-func (gr *Grammar) ContentURL() string {
+func (gr *Grammar) ContentURL() (url string, err error) {
 	switch {
 	case strings.Contains(gr.URL, "github.com"):
-		return fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"), gr.Revision)
+		url = fmt.Sprintf(guc, strings.TrimPrefix(gr.URL, "https://github.com/"), gr.Revision)
 	case strings.Contains(gr.URL, "gitlab.com"):
-		return fmt.Sprintf("%s/-/raw/%s/", gr.URL, gr.Reference)
+		url = fmt.Sprintf("%s/-/raw/%s/", gr.URL, gr.Reference)
 	case strings.Contains(gr.URL, "git.sr.ht"):
-		return fmt.Sprintf("%s/blob/%s/", gr.URL, gr.Revision)
+		url = fmt.Sprintf("%s/blob/%s/", gr.URL, gr.Revision)
 	default:
-		return "unrecognized source code hosting"
+		err = errUnkHosting
 	}
+
+	return
 }
 
 func (gr *Grammar) String() string {
 	return fmt.Sprintf(`%s, src: "%s@%s", sha: %q`, gr.Language, gr.URL, gr.Reference, gr.Revision)
-}
-
-func fetchLastTag(repository string) (tag string, rev string, err error) {
-	cmd := exec.Command("git", "ls-remote", "--tags", "--sort", "-v:refname", repository, "v*")
-
-	var b []byte
-
-	if b, err = cmd.Output(); err != nil {
-		return
-	}
-
-	line := strings.SplitN(string(b), "\n", 2)[0]
-	parts := strings.Split(line, "\t")
-
-	tag = strings.TrimRight(strings.Split(parts[1], "/")[2], "^{}")
-	rev = strings.Split(parts[0], "^")[0]
-
-	return
 }
 
 func fetchLastCommit(repository, branch string) (sha string, err error) {

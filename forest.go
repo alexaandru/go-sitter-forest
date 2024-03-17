@@ -576,7 +576,7 @@ func Info(name string) *grammar.Grammar {
 
 	gr := grammars[i]
 
-	if gr.Skip || gr.Pending {
+	if gr.SkipGenerate || gr.Pending {
 		return nil
 	}
 

@@ -134,7 +134,7 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 
 	msg, newSha, v := "", "", gr.NewVersion()
 
-	if !gr.Skip {
+	if !gr.SkipGenerate {
 		if newSha, err = downloadGrammar(gr); err != nil {
 			return
 		}
@@ -158,7 +158,7 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 		return
 	}
 
-	if gr.Skip {
+	if gr.SkipGenerate {
 		gr.GrammarSha = ""
 
 		return
@@ -190,7 +190,13 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		gr.Version = v
 	}
 
-	url := gr.ContentURL() + src
+	var url string
+
+	if url, err = gr.ContentURL(); err != nil {
+		return
+	}
+
+	url += src
 
 	var b []byte
 
@@ -205,9 +211,6 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 }
 
 func downloadFiles(gr *grammar.Grammar) (err error) {
-	// NOTE: If we skip parser generation, then we must download it.
-	downloadParser := gr.Skip
-
 	if err = makeDir(gr.Language); err != nil {
 		return
 	}
@@ -222,7 +225,13 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 
 	g := new(errgroup.Group)
 
-	for src, dst := range gr.FilesMap(downloadParser) {
+	var files map[string]string
+
+	if files, err = gr.FilesMap(); err != nil {
+		return
+	}
+
+	for src, dst := range files {
 		g.Go(func() error { return downloadFile(gr.Language, src, dst) })
 	}
 
@@ -424,7 +433,7 @@ func updateParsersMd() error {
 
 		if gr.Pending {
 			planned++
-		} else if gr.Skip {
+		} else if gr.SkipGenerate {
 			implemented++
 			skipped++
 		} else {
