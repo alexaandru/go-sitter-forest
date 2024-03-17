@@ -58,10 +58,10 @@ func checkUpdates() error {
 		}
 
 		status := "(up-to-date)"
-		if nextVersion := gr.NewVersion(); nextVersion != nil && gr.Reference == nextVersion.Reference {
+		if nextVersion := gr.NewVersion(); nextVersion != nil {
 			status = fmt.Sprintf("(update available: %s -> %s)", gr.Revision, nextVersion.Revision)
-		} else if nextVersion != nil {
-			status = fmt.Sprintf("(update available: %s -> %s)", gr.Reference, nextVersion.Reference)
+		} else if !gr.SkipGenerate && gr.GrammarSha == "" {
+			status = "(grammar was never re-generated)"
 		}
 
 		fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
@@ -71,13 +71,13 @@ func checkUpdates() error {
 }
 
 func updateAll() (err error) {
-	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+	return forEachGrammar(func(gr *grammar.Grammar) error {
 		return update(gr, !force)
 	})
 }
 
 func updateBindings() error {
-	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+	return forEachGrammar(func(gr *grammar.Grammar) error {
 		return createBindings(gr.Language, force)
 	})
 }
@@ -159,8 +159,6 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 	}
 
 	if gr.SkipGenerate {
-		gr.GrammarSha = ""
-
 		return
 	}
 
@@ -395,7 +393,6 @@ func writeJSON(fname string, content any) error {
 	return os.WriteFile(fname, b, 0o644)
 }
 
-// TODO: DRY.
 func updateParsersMd() error {
 	f, err := os.Create("PARSERS.md")
 	if err != nil {

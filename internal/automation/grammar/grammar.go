@@ -1,6 +1,7 @@
 package grammar
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"os/exec"
@@ -168,8 +169,27 @@ func fetchLastCommit(repository, branch string) (sha string, err error) {
 	var b []byte
 
 	if b, err = cmd.Output(); err != nil {
+		err = fmt.Errorf("fetching %s@%s: %w: %s", repository, branch, err, string(err.(*exec.ExitError).Stderr))
+
 		return
 	}
 
-	return strings.Split(string(b), "\t")[0], nil
+	// FIXME: Use a regex instead.
+
+	lines := bytes.Split(b, []byte{'\n'})
+	line := lines[0]
+	if bytes.HasPrefix(line, []byte("warning:")) {
+		// FIXME: Send this line to the log file.
+		// fmt.Println(string(line))
+
+		if len(lines) > 1 {
+			line = lines[1]
+		} else {
+			err = fmt.Errorf("cannot get sha for %s", repository)
+
+			return
+		}
+	}
+
+	return strings.Split(string(line), "\t")[0], nil
 }

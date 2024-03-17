@@ -144,8 +144,8 @@ func TestFetchLastCommit(t *testing.T) {
 		expLen      int
 		err         error
 	}{
-		{"", "", 0, fmt.Errorf("exit status 128")},
-		{"bogus URL", "", 0, fmt.Errorf("exit status 128")},
+		{"", "", 0, fmt.Errorf("fetching @: exit status 128: fatal: no path specified; see 'git help pull' for valid url syntax\n")},
+		{"bogus URL", "", 0, fmt.Errorf("fetching bogus URL@: exit status 128: fatal: 'bogus URL' does not appear to be a git repository\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n")},
 		{testURL, "", 0, nil},
 		{testURL, "bogus", 0, nil},
 		{testURL, "main", 40, nil},
@@ -159,7 +159,7 @@ func TestFetchLastCommit(t *testing.T) {
 			if err == nil && tc.err != nil ||
 				err != nil && tc.err == nil ||
 				err != nil && tc.err != nil && err.Error() != tc.err.Error() {
-				t.Fatalf("Expected error %v got %v", tc.err, err)
+				t.Fatalf("Expected error %q got %q", tc.err.Error(), err.Error())
 			} else if act := len(act); err == nil && act != tc.expLen {
 				t.Fatalf("Expected to commit sha len to be %d was %d", tc.expLen, act)
 			}
