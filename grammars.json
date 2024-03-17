@@ -979,9 +979,9 @@
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
     "maintainedBy": "@amaanq",
-    "grammarSha": "266225ff52ef59f1e43885361b2833a798714d854eefb46d9815bec67db80314",
+    "grammarSha": "de2c4e9c5c51e4953dfa8a112b550632d2a38462578b5a5ade26a64ab7bf2e1a",
     "reference": "main",
-    "revision": "e1c1085f1b36a19e82892cc1fc912cc9c968bb26"
+    "revision": "32cff4657d63e54d2b1bd02e1dca94dc43f737e7"
   },
   {
     "language": "hurl",
@@ -1465,9 +1465,9 @@
     ],
     "srcRoot": "grammars/ocaml",
     "maintainedBy": "@undu",
-    "grammarSha": "66ef8b53fdbfedd8ef1efae1a37bc6b5542324e20f4a8636bce3687189ff60bf",
+    "grammarSha": "d037d8679f552e5ac8916ec007321b72269b5fcddf85223e9a3de006ef4645e6",
     "reference": "master",
-    "revision": "d33ad2685500008cb89a93714e2f867dd8af8fe3"
+    "revision": "dabe60a96553fbbda0a58b6ccda12b7d44047cb5"
   },
   {
     "language": "ocaml_interface",
@@ -1478,9 +1478,9 @@
     ],
     "srcRoot": "grammars/interface",
     "maintainedBy": "@undu",
-    "grammarSha": "796bc61b6863341a316ab5a33d9554ea702eb3237de34ff07648109f394b4ba9",
+    "grammarSha": "c1266c73f244302b4a70f77a04f11fa7002768e27f6e5ec0799c28ae5ebc548e",
     "reference": "master",
-    "revision": "d33ad2685500008cb89a93714e2f867dd8af8fe3"
+    "revision": "dabe60a96553fbbda0a58b6ccda12b7d44047cb5"
   },
   {
     "language": "ocamllex",
@@ -2001,9 +2001,9 @@
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
     "maintainedBy": "@hunger",
-    "grammarSha": "519a758a731a59fc5e26ca82586a4443106638e1f3fac3d81ac8bb6fe34ff7de",
+    "grammarSha": "2262121904eee68680240515108d83bd57e5bf036107248dd48557e7f370ff10",
     "reference": "master",
-    "revision": "f5fa844d2adbcfdc7a0ec4daae4539887959d9ff"
+    "revision": "acc77c93ef4b73ba8c3a581b8c99d95b55f7178b"
   },
   {
     "language": "smali",
@@ -2496,9 +2496,9 @@
     "language": "vimdoc",
     "url": "https://github.com/neovim/tree-sitter-vimdoc",
     "maintainedBy": "@clason",
-    "grammarSha": "b93d5350022d3cab23c1128c9d587a9d91c8cfa7988a8602408611faa731ab64",
+    "grammarSha": "d58e82f1a3c1ef8e453beb0d4fe3a087bcf75b789fce2fbb9579be08b053d99a",
     "reference": "master",
-    "revision": "f431bfa7d433f4d629943147817193a4fccbd303"
+    "revision": "cee98887944bfe979c95386785ae388d8ecb3715"
   },
   {
     "language": "vue",
@@ -2619,4 +2619,3 @@
     "revision": "0d08703e4c3f426ec61695d7617415fff97029bd"
   }
 ]
-

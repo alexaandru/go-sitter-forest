@@ -219,11 +219,17 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	for _, file := range extractDeps(grc) {
 		var b []byte
 
+		base := path.Base(file)
+		if base == "grammar.js" {
+			// We must also check to not overwrite grammar.js file when pulling deps.
+			base = "grammar2.js"
+		}
+
 		// NOTE: Here we download from URLs with ../ ./ etc. in them.
 		// Looks fine for Github, untested for the others though.
-		fsrc, fdst := url+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, path.Base(file))
+		fsrc, fdst := url+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, base)
 
-		replMap[file] = path.Base(file)
+		replMap[file] = base
 
 		if b, err = fetchFile(fsrc); err != nil {
 			return
@@ -239,7 +245,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 			return "", fmt.Errorf("file %s already exists", fdst)
 		}
 
-		shas[path.Base(file)] = fmt.Sprintf("%x", sha256.Sum256(b))
+		shas[base] = fmt.Sprintf("%x", sha256.Sum256(b))
 		if err = os.WriteFile(fdst, b, 0o644); err != nil {
 			return
 		}
@@ -592,6 +598,10 @@ func main() {
 	case "check-updates":
 		err = checkUpdates()
 	case "update-all":
+		err = fmt.Errorf("update is now broken, as it only checks grammar.js sha, but the sha is combined, so those with deps will ALWAYS appear as not update, TOO WASTEFUL")
+
+		break
+
 		fmt.Println("Updating all (applicable) languages ...")
 
 		if err = updateAll(); err != nil {
