@@ -37,6 +37,7 @@ var (
 	grammars      = Grammars{}
 	replaceMap    = map[string]string{
 		`"../../common/scanner.h"`:       `"scanner.h"`,
+		`"../../../include/scanner.h"`:   `"scanner.h"`,
 		`"tree_sitter/parser.h"`:         `"parser.h"`,
 		`"tree_sitter_comment/parser.c"`: `"parser.c"`, // Needed for Comment.
 		`"tree_sitter_comment/tokens.h"`: `"tokens.h"`, // Needed for Comment.
@@ -185,7 +186,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	}
 
 	v := gr.NewVersion()
-	if gr.Revision == "" && v != nil {
+	if v != nil {
 		gr.Version = v
 	}
 
@@ -344,7 +345,7 @@ func putFile(b []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c":
+	case "scanner.c", "scanner.h":
 		// These identifiers clash between org and beancount parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)

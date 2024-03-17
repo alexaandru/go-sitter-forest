@@ -1,9 +1,10 @@
 #ifndef TREE_SITTER_OCAML_SCANNER_H_
 #define TREE_SITTER_OCAML_SCANNER_H_
 
+#include "parser.h"
+
 #include <assert.h>
 #include <string.h>
-#include "parser.h"
 #include <wctype.h>
 
 enum TokenType {
@@ -311,7 +312,7 @@ static void destroy(Scanner *scanner) {
   free(scanner);
 }
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_ocaml(Scanner *scanner, char *buffer) {
   buffer[0] = scanner->in_string;
   if (scanner->quoted_string_id_length >=
       TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
@@ -320,7 +321,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
   return quoted_string_id_copy(scanner, buffer + 1) + 1;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_ocaml(Scanner *scanner, const char *buffer, unsigned length) {
   if (length > 0) {
     scanner->in_string = buffer[0];
     quoted_string_id_assign(scanner, buffer + 1, length - 1);
@@ -330,7 +331,7 @@ static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
   }
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_ocaml(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
   if (valid_symbols[LEFT_QUOTED_STRING_DELIM] &&
       (iswlower(lexer->lookahead) || lexer->lookahead == '_' ||
        lexer->lookahead == '|')) {
