@@ -263,6 +263,13 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		return
 	}
 
+	// If there's only one sha, return it.
+	if len(shas) == 1 {
+		for _, v := range shas {
+			return v, nil
+		}
+	}
+
 	keys := []string{}
 
 	for k := range shas {
@@ -598,10 +605,6 @@ func main() {
 	case "check-updates":
 		err = checkUpdates()
 	case "update-all":
-		err = fmt.Errorf("update is now broken, as it only checks grammar.js sha, but the sha is combined, so those with deps will ALWAYS appear as not update, TOO WASTEFUL")
-
-		break
-
 		fmt.Println("Updating all (applicable) languages ...")
 
 		if err = updateAll(); err != nil {
