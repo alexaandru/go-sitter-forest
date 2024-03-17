@@ -17,11 +17,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.5
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.5
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.5
-	github.com/alexaandru/go-sitter-forest/bitbake v1.5.5
+	github.com/alexaandru/go-sitter-forest/bitbake v1.5.6
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.5
 	github.com/alexaandru/go-sitter-forest/c v1.5.5
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.5
-	github.com/alexaandru/go-sitter-forest/cairo v1.5.5
+	github.com/alexaandru/go-sitter-forest/cairo v1.5.6
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.5
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.5
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.5
@@ -33,7 +33,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cpp v1.5.5
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.5
 	github.com/alexaandru/go-sitter-forest/css v1.5.5
-	github.com/alexaandru/go-sitter-forest/csv v1.5.5
+	github.com/alexaandru/go-sitter-forest/csv v1.5.6
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.5
 	github.com/alexaandru/go-sitter-forest/cue v1.5.5
 	github.com/alexaandru/go-sitter-forest/d v1.5.5
@@ -65,7 +65,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.5.5
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.5
 	github.com/alexaandru/go-sitter-forest/fsh v1.5.5
-	github.com/alexaandru/go-sitter-forest/func v1.5.5
+	github.com/alexaandru/go-sitter-forest/func v1.5.6
 	github.com/alexaandru/go-sitter-forest/fusion v1.5.5
 	github.com/alexaandru/go-sitter-forest/gdscript v1.5.5
 	github.com/alexaandru/go-sitter-forest/gdshader v1.5.5
@@ -83,7 +83,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.5
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.5
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.5
-	github.com/alexaandru/go-sitter-forest/gotmpl v1.5.5
+	github.com/alexaandru/go-sitter-forest/gotmpl v1.5.6
 	github.com/alexaandru/go-sitter-forest/gowork v1.5.5
 	github.com/alexaandru/go-sitter-forest/gpg v1.5.5
 	github.com/alexaandru/go-sitter-forest/graphql v1.5.5
@@ -93,13 +93,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/hare v1.5.5
 	github.com/alexaandru/go-sitter-forest/haskell v1.5.5
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.5
-	github.com/alexaandru/go-sitter-forest/hcl v1.5.5
+	github.com/alexaandru/go-sitter-forest/hcl v1.5.6
 	github.com/alexaandru/go-sitter-forest/heex v1.5.5
-	github.com/alexaandru/go-sitter-forest/helm v1.5.5
-	github.com/alexaandru/go-sitter-forest/hjson v1.5.5
+	github.com/alexaandru/go-sitter-forest/helm v1.5.6
+	github.com/alexaandru/go-sitter-forest/hjson v1.5.6
 	github.com/alexaandru/go-sitter-forest/hlsl v1.5.5
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.5.5
-	github.com/alexaandru/go-sitter-forest/hocon v1.5.5
+	github.com/alexaandru/go-sitter-forest/hocon v1.5.6
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.5
 	github.com/alexaandru/go-sitter-forest/html v1.5.5
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.5
@@ -114,8 +114,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/jq v1.5.5
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.5
 	github.com/alexaandru/go-sitter-forest/json v1.5.5
-	github.com/alexaandru/go-sitter-forest/json5 v1.5.5
-	github.com/alexaandru/go-sitter-forest/jsonc v1.5.5
+	github.com/alexaandru/go-sitter-forest/json5 v1.5.6
+	github.com/alexaandru/go-sitter-forest/jsonc v1.5.6
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.5
 	github.com/alexaandru/go-sitter-forest/julia v1.5.5
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.5
@@ -141,6 +141,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.5
 	github.com/alexaandru/go-sitter-forest/mermaid v1.5.5
 	github.com/alexaandru/go-sitter-forest/meson v1.5.6
+	github.com/alexaandru/go-sitter-forest/mlir v1.5.5
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.5
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.5
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.5
@@ -160,9 +161,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.5
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.5
 	github.com/alexaandru/go-sitter-forest/pem v1.5.5
-	github.com/alexaandru/go-sitter-forest/perl v1.5.5
-	github.com/alexaandru/go-sitter-forest/php v1.5.5
-	github.com/alexaandru/go-sitter-forest/php_only v1.5.5
+	github.com/alexaandru/go-sitter-forest/perl v1.5.6
+	github.com/alexaandru/go-sitter-forest/php v1.5.6
+	github.com/alexaandru/go-sitter-forest/php_only v1.5.6
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.5
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.5
 	github.com/alexaandru/go-sitter-forest/po v1.5.5
@@ -175,7 +176,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/properties v1.5.5
 	github.com/alexaandru/go-sitter-forest/proto v1.5.5
 	github.com/alexaandru/go-sitter-forest/prql v1.5.5
-	github.com/alexaandru/go-sitter-forest/psv v1.5.5
+	github.com/alexaandru/go-sitter-forest/psv v1.5.6
 	github.com/alexaandru/go-sitter-forest/pug v1.5.5
 	github.com/alexaandru/go-sitter-forest/puppet v1.5.5
 	github.com/alexaandru/go-sitter-forest/purescript v1.5.5
@@ -216,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.5
 	github.com/alexaandru/go-sitter-forest/sql v1.5.5
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.5
-	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.5
+	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.6
 	github.com/alexaandru/go-sitter-forest/starlark v1.5.5
 	github.com/alexaandru/go-sitter-forest/strace v1.5.5
 	github.com/alexaandru/go-sitter-forest/styled v1.5.5
@@ -238,11 +239,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.5
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.5
 	github.com/alexaandru/go-sitter-forest/toml v1.5.5
-	github.com/alexaandru/go-sitter-forest/tsv v1.5.5
-	github.com/alexaandru/go-sitter-forest/tsx v1.5.5
+	github.com/alexaandru/go-sitter-forest/tsv v1.5.6
+	github.com/alexaandru/go-sitter-forest/tsx v1.5.6
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.5
 	github.com/alexaandru/go-sitter-forest/twig v1.5.5
-	github.com/alexaandru/go-sitter-forest/typescript v1.5.5
+	github.com/alexaandru/go-sitter-forest/typescript v1.5.6
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.5
 	github.com/alexaandru/go-sitter-forest/typst v1.5.5
 	github.com/alexaandru/go-sitter-forest/udev v1.5.5

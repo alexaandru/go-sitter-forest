@@ -146,6 +146,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/menhir"
 	"github.com/alexaandru/go-sitter-forest/mermaid"
 	"github.com/alexaandru/go-sitter-forest/meson"
+	"github.com/alexaandru/go-sitter-forest/mlir"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
 	"github.com/alexaandru/go-sitter-forest/nasm"
 	"github.com/alexaandru/go-sitter-forest/nickel"
@@ -415,6 +416,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"menhir":             menhir.GetLanguage,
 	"mermaid":            mermaid.GetLanguage,
 	"meson":              meson.GetLanguage,
+	"mlir":               mlir.GetLanguage,
 	"muttrc":             muttrc.GetLanguage,
 	"nasm":               nasm.GetLanguage,
 	"nickel":             nickel.GetLanguage,
