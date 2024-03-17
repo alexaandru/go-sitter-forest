@@ -15,6 +15,7 @@ import (
 	"os/exec"
 	"path"
 	"path/filepath"
+	"regexp"
 	"slices"
 	"strings"
 	"sync"
@@ -170,9 +171,18 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 	return
 }
 
+// downloads the grammar.js file and any local dependencies
+// (files that are required by it).
 func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	// We need to temporarily alter gr in here.
-	gr := *grRO
+	gr, shas := *grRO, map[string]string{}
+
+	oldFiles, _ := filepath.Glob(filepath.Join("tmp", gr.Language, "*.js"))
+	for _, file := range oldFiles {
+		if err = os.Remove(file); err != nil {
+			return
+		}
+	}
 
 	src, dst := grammarJS, filepath.Join("tmp", gr.Language, grammarJS)
 	if gr.SrcRoot != "" {
@@ -194,18 +204,100 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		return
 	}
 
-	url += src
+	grammarJsUrl := url + src
 
-	var b []byte
+	var grc []byte
 
-	if b, err = fetchFile(url); err != nil {
+	if grc, err = fetchFile(grammarJsUrl); err != nil {
 		return
 	}
 
-	newSha = fmt.Sprintf("%x", sha256.Sum256(b))
-	err = os.WriteFile(dst, b, 0o644)
+	shas[grammarJS] = fmt.Sprintf("%x", sha256.Sum256(grc))
+	replMap := map[string]string{}
 
-	return
+	// TODO: For some (apex) we'll need to do the deps extraction recursively.
+	for _, file := range extractDeps(grc) {
+		var b []byte
+
+		// NOTE: Here we download from URLs with ../ ./ etc. in them.
+		// Looks fine for Github, untested for the others though.
+		fsrc, fdst := url+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, path.Base(file))
+
+		replMap[file] = path.Base(file)
+
+		if b, err = fetchFile(fsrc); err != nil {
+			return
+		}
+
+		var ok bool
+
+		if ok, err = fileExists(fdst); err != nil {
+			return
+		}
+
+		if ok {
+			return "", fmt.Errorf("file %s already exists", fdst)
+		}
+
+		shas[path.Base(file)] = fmt.Sprintf("%x", sha256.Sum256(b))
+		if err = os.WriteFile(fdst, b, 0o644); err != nil {
+			return
+		}
+	}
+
+	for k, v := range replMap {
+		v = "./" + v
+		grc = bytes.ReplaceAll(grc, []byte(k), []byte(v))
+
+		k = k[:len(k)-3]
+		grc = bytes.ReplaceAll(grc, []byte(k), []byte(v))
+	}
+
+	if err = os.WriteFile(dst, grc, 0o644); err != nil {
+		return
+	}
+
+	keys := []string{}
+
+	for k := range shas {
+		keys = append(keys, k)
+	}
+
+	slices.Sort(keys)
+
+	n := sha256.New()
+
+	for _, k := range keys {
+		if _, err = n.Write([]byte(shas[k])); err != nil {
+			return
+		}
+	}
+
+	return fmt.Sprintf("%x", n.Sum(nil)), nil
+}
+
+var rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
+
+func extractDeps(content []byte) (files []string) {
+	raw := rxReq.FindAllStringSubmatch(string(content), -1)
+	if len(raw) == 0 {
+		return nil
+	}
+
+	x := []string{}
+	for _, m := range raw {
+		if z := m[1]; z != "" {
+			if !strings.HasSuffix(z, ".js") {
+				// TODO: Others (dtd, xml) when unsuffixed may be missing a
+				// `/index.js` instead of just `.js`.
+				z += ".js"
+			}
+
+			x = append(x, z)
+		}
+	}
+
+	return x
 }
 
 func downloadFiles(gr *grammar.Grammar) (err error) {

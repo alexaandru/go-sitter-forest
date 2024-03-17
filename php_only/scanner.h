@@ -128,7 +128,7 @@ static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 
 static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_php_only(Scanner *scanner, char *buffer) {
     unsigned size = 0;
 
     buffer[size++] = (char)scanner->open_heredocs.len;
@@ -147,7 +147,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
     return size;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_php_only(Scanner *scanner, const char *buffer, unsigned length) {
     unsigned size = 0;
     scanner->has_leading_whitespace = false;
     VEC_CLEAR(scanner->open_heredocs);
@@ -435,7 +435,7 @@ static String scan_heredoc_word(TSLexer *lexer) {
     return result;
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_php_only(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     const bool is_error_recovery = valid_symbols[SENTINEL_ERROR];
 
     if (is_error_recovery) {
@@ -575,17 +575,17 @@ static inline void *external_scanner_create() {
 
 static inline unsigned external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    return serialize(scanner, buffer);
+    return serialize_php_only(scanner, buffer);
 }
 
 static inline void external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
-    deserialize(scanner, buffer, length);
+    deserialize_php_only(scanner, buffer, length);
 }
 
 static inline bool external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_php_only(scanner, lexer, valid_symbols);
 }
 
 static inline void external_scanner_destroy(void *payload) {

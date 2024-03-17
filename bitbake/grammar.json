@@ -1,12 +1,11 @@
 {
   "language": "bitbake",
   "url": "https://github.com/amaanq/tree-sitter-bitbake",
-  "doc": "grammar.js has local deps",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "23cf815323d1ee76ae37f28bb9759c80136072c49f224afed5b57fadf310a54d",
   "reference": "master",
   "revision": "7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a"
 }

@@ -1,9 +1,8 @@
 {
   "language": "func",
   "url": "https://github.com/amaanq/tree-sitter-func",
-  "doc": "grammar.js has local deps",
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "7e70d7a0b369d37193ce3eb428b7279c927b3c9e66d62d396a5cd9a7bc1cd5ad",
   "reference": "master",
   "revision": "0834e35ecf8b23fbf9ad15b088af6a897e19d4a8"
 }

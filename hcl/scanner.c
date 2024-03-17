@@ -120,7 +120,7 @@ static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 
 static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
 
-static unsigned serialize(Scanner *scanner, char *buf) {
+static unsigned serialize_hcl(Scanner *scanner, char *buf) {
     unsigned size = 0;
 
     if (scanner->context_stack.len > CHAR_MAX) {
@@ -146,7 +146,7 @@ static unsigned serialize(Scanner *scanner, char *buf) {
     return size;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_hcl(Scanner *scanner, const char *buffer, unsigned length) {
     VEC_CLEAR(scanner->context_stack);
 
     if (length == 0) {
@@ -229,7 +229,7 @@ static inline bool in_interpolation_context(Scanner *scanner) {
 
 static inline bool in_directive_context(Scanner *scanner) { return in_context_type(scanner, TEMPLATE_DIRECTIVE); }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     bool has_leading_whitespace_with_newline = false;
     while (iswspace(lexer->lookahead)) {
         if (lexer->lookahead == '\n') {
@@ -395,17 +395,17 @@ void *tree_sitter_hcl_external_scanner_create() {
 
 unsigned tree_sitter_hcl_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    return serialize(scanner, buffer);
+    return serialize_hcl(scanner, buffer);
 }
 
 void tree_sitter_hcl_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
-    deserialize(scanner, buffer, length);
+    deserialize_hcl(scanner, buffer, length);
 }
 
 bool tree_sitter_hcl_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_hcl(scanner, lexer, valid_symbols);
 }
 
 void tree_sitter_hcl_external_scanner_destroy(void *payload) {

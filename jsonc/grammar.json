@@ -2,9 +2,8 @@
   "language": "jsonc",
   "altName": "JSON with comments",
   "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
-  "doc": "grammar.js has local deps",
   "maintainedBy": "@WhyNotHugo",
-  "skip": true,
+  "grammarSha": "6035b6db743505dc7478feda9c82323ebc104631eb65aaf4dec319ad5d5e84b4",
   "reference": "main",
   "revision": "02b01653c8a1c198ae7287d566efa86a135b30d5"
 }

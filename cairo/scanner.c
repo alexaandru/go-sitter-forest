@@ -32,7 +32,7 @@ typedef struct {
     uint8_t pst;
 } Scanner;
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     if (valid_symbols[FAILURE]) {
         return false;
     }
@@ -214,7 +214,7 @@ void *tree_sitter_cairo_external_scanner_create() {
 bool tree_sitter_cairo_external_scanner_scan(void *payload, TSLexer *lexer,
                                              const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_cairo(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_cairo_external_scanner_serialize(void *payload,

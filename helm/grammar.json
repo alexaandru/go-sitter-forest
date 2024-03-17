@@ -1,10 +1,9 @@
 {
   "language": "helm",
   "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-  "doc": "grammar.js has local deps",
   "srcRoot": "dialects/helm",
   "maintainedBy": "@qvalentin",
-  "skip": true,
+  "grammarSha": "5f82b46836084d5dc221a6ad61207005c9b3453a571883cfe1461c63ec5003e8",
   "reference": "master",
   "revision": "17144a77be0acdecebd9d557398883569fed41de"
 }

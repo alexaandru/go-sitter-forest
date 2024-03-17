@@ -1,9 +1,8 @@
 {
   "language": "ssh_config",
   "url": "https://github.com/ObserverOfTime/tree-sitter-ssh-config",
-  "doc": "grammar.js has local deps",
   "maintainedBy": "@ObserverOfTime",
-  "skip": true,
+  "grammarSha": "ad74ebeaa308cbb1e796f684afa1c886b28382cd43e2a86629101b917065961d",
   "reference": "master",
   "revision": "514695df4985f56455b8f139a319453a2325cdcf"
 }

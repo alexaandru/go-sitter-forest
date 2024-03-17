@@ -1,9 +1,8 @@
 {
   "language": "hocon",
   "url": "https://github.com/antosha417/tree-sitter-hocon",
-  "doc": "grammar.js has local deps",
   "maintainedBy": "@antosha417",
-  "skip": true,
+  "grammarSha": "961b03e39050011b3bb2dd94f6bda0a9a231d84335216300c25e75451cc23451",
   "reference": "master",
   "revision": "c390f10519ae69fdb03b3e5764f5592fb6924bcc"
 }

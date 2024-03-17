@@ -144,12 +144,11 @@
   {
     "language": "bitbake",
     "url": "https://github.com/amaanq/tree-sitter-bitbake",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "23cf815323d1ee76ae37f28bb9759c80136072c49f224afed5b57fadf310a54d",
     "reference": "master",
     "revision": "7e0e2ac6f1d0da1a91ab84f35edddfdfece54f1a"
   },
@@ -185,12 +184,11 @@
   {
     "language": "cairo",
     "url": "https://github.com/amaanq/tree-sitter-cairo",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "ee9f1325072e4de73b0ee583f7c3aa3ba6dc9257a762e9be29647ddf2c975629",
     "reference": "master",
     "revision": "6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef"
   },
@@ -311,10 +309,9 @@
   {
     "language": "csv",
     "url": "https://github.com/amaanq/tree-sitter-csv",
-    "doc": "grammar.js has local deps",
     "srcRoot": "csv",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "eacebfc9353209f7a298af08e26c2b9dd09593533893171ecf921a0a389a879f",
     "reference": "master",
     "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
@@ -621,9 +618,8 @@
   {
     "language": "func",
     "url": "https://github.com/amaanq/tree-sitter-func",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "7e70d7a0b369d37193ce3eb428b7279c927b3c9e66d62d396a5cd9a7bc1cd5ad",
     "reference": "master",
     "revision": "0834e35ecf8b23fbf9ad15b088af6a897e19d4a8"
   },
@@ -792,9 +788,8 @@
   {
     "language": "gotmpl",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@qvalentin",
-    "skip": true,
+    "grammarSha": "1025e828ff6d271b9d2e899ea4bfbe39af3f43f53266b69e1e46676c7c150d82",
     "reference": "master",
     "revision": "17144a77be0acdecebd9d557398883569fed41de"
   },
@@ -889,12 +884,11 @@
   {
     "language": "hcl",
     "url": "https://github.com/MichaHoffmann/tree-sitter-hcl",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@MichaHoffmann",
-    "skip": true,
+    "grammarSha": "2e76e0b9fd2eae42513fb5a1e774fa8e9d021c5e92e5b431cf908467f2c926f1",
     "reference": "main",
     "revision": "e936d3fef8bac884661472dce71ad82284761eb1"
   },
@@ -909,19 +903,17 @@
   {
     "language": "helm",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-    "doc": "grammar.js has local deps",
     "srcRoot": "dialects/helm",
     "maintainedBy": "@qvalentin",
-    "skip": true,
+    "grammarSha": "5f82b46836084d5dc221a6ad61207005c9b3453a571883cfe1461c63ec5003e8",
     "reference": "master",
     "revision": "17144a77be0acdecebd9d557398883569fed41de"
   },
   {
     "language": "hjson",
     "url": "https://github.com/winston0410/tree-sitter-hjson",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@winston0410",
-    "skip": true,
+    "grammarSha": "7a823a51fdcbc0c8338b2202dbf50263a190d15190281e0b050967755b509b2d",
     "reference": "master",
     "revision": "02fa3b79b3ff9a296066da6277adfc3f26cbc9e0"
   },
@@ -947,9 +939,8 @@
   {
     "language": "hocon",
     "url": "https://github.com/antosha417/tree-sitter-hocon",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@antosha417",
-    "skip": true,
+    "grammarSha": "961b03e39050011b3bb2dd94f6bda0a9a231d84335216300c25e75451cc23451",
     "reference": "master",
     "revision": "c390f10519ae69fdb03b3e5764f5592fb6924bcc"
   },
@@ -1084,9 +1075,8 @@
   {
     "language": "json5",
     "url": "https://github.com/Joakker/tree-sitter-json5",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@Joakker",
-    "skip": true,
+    "grammarSha": "16d997b5ffbbd2e81541f30400291f0352350c273f4f0c13d3d695d864acae4b",
     "reference": "master",
     "revision": "c23f7a9b1ee7d45f516496b1e0e4be067264fa0d"
   },
@@ -1094,9 +1084,8 @@
     "language": "jsonc",
     "altName": "JSON with comments",
     "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@WhyNotHugo",
-    "skip": true,
+    "grammarSha": "6035b6db743505dc7478feda9c82323ebc104631eb65aaf4dec319ad5d5e84b4",
     "reference": "main",
     "revision": "02b01653c8a1c198ae7287d566efa86a135b30d5"
   },
@@ -1347,20 +1336,18 @@
   {
     "language": "meson",
     "url": "https://github.com/Decodetalkers/tree-sitter-meson",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@Decodetalkers",
-    "skip": true,
+    "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "reference": "master",
     "revision": "3ebd060b1a2eec450ff46b73428c63f9148a07ff"
   },
   {
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@artagnon",
-    "pending": true,
+    "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": ""
+    "revision": "c8629729bebfa23023c2d7a14ed1a7eec3042a1a"
   },
   {
     "language": "muttrc",
@@ -1556,41 +1543,38 @@
   {
     "language": "perl",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c",
       "tsp_unicode.h"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "skip": true,
+    "grammarSha": "d299352fae31627d57177c5fdbe4022213e5dab2e95574b1ce7268b99aa0d2d6",
     "reference": "master",
     "revision": "35e58380131853a4f453325286d397c8c6fc08e4"
   },
   {
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
-    "skip": true,
+    "grammarSha": "f6add9f1297a755d7f3bdc6a2b903771ca7f36856eeac1715c9c5d78368a8d2f",
     "reference": "master",
     "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
   },
   {
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
-    "skip": true,
+    "grammarSha": "b0df0a0ba9e9b48d082f5fd3c075452ab87175ec8cdab33e758d53d68ac2a036",
     "reference": "master",
     "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
   },
@@ -1712,10 +1696,9 @@
   {
     "language": "psv",
     "url": "https://github.com/amaanq/tree-sitter-csv",
-    "doc": "grammar.js has local deps",
     "srcRoot": "psv",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "f20b7fbe1c7956fdcfd124fafee7be24faeb54b860e24e33c3fc1d673d5dae5d",
     "reference": "master",
     "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
@@ -2128,9 +2111,8 @@
   {
     "language": "ssh_config",
     "url": "https://github.com/ObserverOfTime/tree-sitter-ssh-config",
-    "doc": "grammar.js has local deps",
     "maintainedBy": "@ObserverOfTime",
-    "skip": true,
+    "grammarSha": "ad74ebeaa308cbb1e796f684afa1c886b28382cd43e2a86629101b917065961d",
     "reference": "master",
     "revision": "514695df4985f56455b8f139a319453a2325cdcf"
   },
@@ -2349,24 +2331,22 @@
   {
     "language": "tsv",
     "url": "https://github.com/amaanq/tree-sitter-csv",
-    "doc": "grammar.js has local deps",
     "srcRoot": "tsv",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "8178a32aa21eb39021e7772830ac0eefd367f3243bfc92d27ffa0150712b033e",
     "reference": "master",
     "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
   },
   {
     "language": "tsx",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "tsx",
     "maintainedBy": "@steelsojka",
-    "skip": true,
+    "grammarSha": "83db0bd94470e2edd9ce66964334c1c83e3da5beda151d023648d3dc5da0ff1e",
     "reference": "master",
     "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
   },
@@ -2389,14 +2369,13 @@
   {
     "language": "typescript",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
-    "doc": "grammar.js has local deps",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
-    "skip": true,
+    "grammarSha": "9d89aeb5ee675f77fa33319071c629e55c1053487b1366cd553af2ff9506a53a",
     "reference": "master",
     "revision": "b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b"
   },
@@ -2640,3 +2619,4 @@
     "revision": "0d08703e4c3f426ec61695d7617415fff97029bd"
   }
 ]
+

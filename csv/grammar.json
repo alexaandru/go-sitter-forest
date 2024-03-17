@@ -1,10 +1,9 @@
 {
   "language": "csv",
   "url": "https://github.com/amaanq/tree-sitter-csv",
-  "doc": "grammar.js has local deps",
   "srcRoot": "csv",
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "eacebfc9353209f7a298af08e26c2b9dd09593533893171ecf921a0a389a879f",
   "reference": "master",
   "revision": "cda48a5e890b30619da5bc3ff55be1b1d3d08c8d"
 }
