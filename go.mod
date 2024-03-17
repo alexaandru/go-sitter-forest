@@ -103,7 +103,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.5
 	github.com/alexaandru/go-sitter-forest/html v1.5.5
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.5
-	github.com/alexaandru/go-sitter-forest/http v1.5.5
+	github.com/alexaandru/go-sitter-forest/http v1.5.6
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.5
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.5
 	github.com/alexaandru/go-sitter-forest/ini v1.5.5

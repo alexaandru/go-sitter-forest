@@ -32,7 +32,7 @@ Content-Type: application/json
 	"id": 3
 }
 `
-	expected = "(document (comment) (variable_declaration identifier: (identifier)) (comment) (comment) (ERROR (method (const_spec))) (variable (identifier)) (ERROR (identifier)) (comment) (ERROR (method (const_spec))) (variable (identifier)) (variable (identifier)) (comment) (ERROR (method (const_spec))) (variable (identifier)) (ERROR (identifier) (identifier)) (header name: (name) value: (value)) (json_body (MISSING \"json_body_token2\")))"
+	expected = "(document (comment) (ERROR (identifier) (identifier) (identifier)) (comment) (comment) (request (method) (target_url (variable name: (identifier)) (path (identifier)))) (comment) (request (method) (ERROR (variable name: (identifier))) (target_url (variable name: (identifier)))) (comment) (request (method) (target_url (variable name: (identifier)) (path (identifier) (identifier))) (header name: (name) value: (value)) (json_body)))"
 )
 
 func TestGrammar(t *testing.T) {
