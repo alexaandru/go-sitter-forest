@@ -2,7 +2,7 @@
   "language": "markdown_inline",
   "altName": "markdown_inline (needed for full highlighting)",
   "url": "https://github.com/MDeiml/tree-sitter-markdown",
-  "doc": "grammar.js has local deps",
+  "doc": "grammar.js has recursive local deps",
   "files": [
     "scanner.c"
   ],

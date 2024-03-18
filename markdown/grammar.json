@@ -2,7 +2,7 @@
   "language": "markdown",
   "altName": "markdown (basic highlighting)",
   "url": "https://github.com/MDeiml/tree-sitter-markdown",
-  "doc": "grammar.js has local deps",
+  "doc": "grammar.js has recursive local deps",
   "files": [
     "scanner.c"
   ],

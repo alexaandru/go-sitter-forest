@@ -1,7 +1,7 @@
 {
   "language": "soql",
   "url": "https://github.com/aheber/tree-sitter-sfapex",
-  "doc": "grammar.js has local deps",
+  "doc": "grammar.js has recursive local deps",
   "srcRoot": "soql",
   "maintainedBy": "@aheber",
   "skip": true,

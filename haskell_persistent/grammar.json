@@ -1,7 +1,7 @@
 {
   "language": "haskell_persistent",
   "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
-  "doc": "grammar.js has local deps",
+  "doc": "grammar.js has recursive local deps",
   "files": [
     "scanner.c"
   ],

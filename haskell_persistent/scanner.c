@@ -62,7 +62,7 @@ static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 
 static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_haskell_persistent(Scanner *scanner, char *buffer) {
   size_t size = 0;
   for (int iter = 1; iter < scanner->indents.len &&
                      size < TREE_SITTER_SERIALIZATION_BUFFER_SIZE;
@@ -72,7 +72,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
   return size;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_haskell_persistent(Scanner *scanner, const char *buffer, unsigned length) {
   VEC_CLEAR(scanner->indents);
   VEC_PUSH(scanner->indents, 0);
 
@@ -87,7 +87,7 @@ static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
   }
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_haskell_persistent(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
   lexer->mark_end(lexer);
 
   bool found_end_of_line = false;
@@ -161,20 +161,20 @@ void *tree_sitter_haskell_persistent_external_scanner_create() {
 bool tree_sitter_haskell_persistent_external_scanner_scan(
     void *payload, TSLexer *lexer, const bool *valid_symbols) {
   Scanner *scanner = (Scanner *)payload;
-  return scan(scanner, lexer, valid_symbols);
+  return scan_haskell_persistent(scanner, lexer, valid_symbols);
 }
 
 unsigned
 tree_sitter_haskell_persistent_external_scanner_serialize(void *payload,
                                                           char *buffer) {
   Scanner *scanner = (Scanner *)payload;
-  return serialize(scanner, buffer);
+  return serialize_haskell_persistent(scanner, buffer);
 }
 
 void tree_sitter_haskell_persistent_external_scanner_deserialize(
     void *payload, const char *buffer, unsigned length) {
   Scanner *scanner = (Scanner *)payload;
-  deserialize(scanner, buffer, length);
+  deserialize_haskell_persistent(scanner, buffer, length);
 }
 
 void tree_sitter_haskell_persistent_external_scanner_destroy(void *payload) {

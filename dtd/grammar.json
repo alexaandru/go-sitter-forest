@@ -1,7 +1,7 @@
 {
   "language": "dtd",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
-  "doc": "grammar.js has local deps",
+  "doc": "grammar.js has folder/index.js local deps",
   "files": [
     "scanner.c",
     "common/scanner.h"

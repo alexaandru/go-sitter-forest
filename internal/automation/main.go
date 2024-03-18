@@ -193,6 +193,13 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		return
 	}
 
+	if gr.Language == "vim" {
+		// NOTE: Apparently, vim fails to create the src folder when needed.
+		if err = makeDir(filepath.Join(filepath.Dir(dst), "src")); err != nil {
+			return
+		}
+	}
+
 	v := gr.NewVersion()
 	if v != nil {
 		gr.Version = v
