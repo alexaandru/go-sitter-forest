@@ -100,8 +100,8 @@ github.com/alexaandru/go-sitter-forest/elvish v1.5.5 h1:T3T+j0MzOJ0KC7Dzk/T8pMce
 github.com/alexaandru/go-sitter-forest/elvish v1.5.5/go.mod h1:0bjW6Z8MVl0whRSOYBfnti2cYmRXCdDpSB1WudB48Z8=
 github.com/alexaandru/go-sitter-forest/embedded_template v1.5.5 h1:+TNth+lgTZye3MraIz2b5GvsUAmCM00rLDQXOeq5jig=
 github.com/alexaandru/go-sitter-forest/embedded_template v1.5.5/go.mod h1:G/bTgPyw+LXhOE4gdBSlKMSuXogSrcoNf+kDYEEDmbw=
-github.com/alexaandru/go-sitter-forest/erlang v1.5.5 h1:onH15OcmW7t7iQVDcrNWQ657J9lyJvkF5R4SQc0/d6k=
-github.com/alexaandru/go-sitter-forest/erlang v1.5.5/go.mod h1:XlaEk9dEnvLD7AM51QTZfyavay67cUVdD1DBs3yTonQ=
+github.com/alexaandru/go-sitter-forest/erlang v1.5.6 h1:C8iUEfruVKF1O8hN90psWNXKX+zp3clTn5n8YHPOfc0=
+github.com/alexaandru/go-sitter-forest/erlang v1.5.6/go.mod h1:XlaEk9dEnvLD7AM51QTZfyavay67cUVdD1DBs3yTonQ=
 github.com/alexaandru/go-sitter-forest/facility v1.5.5 h1:KzPCRwBvZGWLyo21ILeojOAN4e//mzWhfcbKa6Lz7C0=
 github.com/alexaandru/go-sitter-forest/facility v1.5.5/go.mod h1:79LYV7x9XnLkkLTGPfIFsjP3x3uj1bxpxtOH8SDjJYo=
 github.com/alexaandru/go-sitter-forest/faust v1.5.5 h1:cupG+3tOCwp32Ibmou+SvNmYZ6Sa7Avn4DFctUdhg2o=
@@ -198,8 +198,8 @@ github.com/alexaandru/go-sitter-forest/html v1.5.5 h1:3Wllt+r62BxE1+FwkN8BSn6ess
 github.com/alexaandru/go-sitter-forest/html v1.5.5/go.mod h1:a6TV2xFRADnpV5qdEEDD7a0HPcjeEH4o4fyMvMDCeeY=
 github.com/alexaandru/go-sitter-forest/htmldjango v1.5.5 h1:y1yFfLXXH5GWgSQVjOo4Xe9wKQyxASjZGpjP8xV4nWk=
 github.com/alexaandru/go-sitter-forest/htmldjango v1.5.5/go.mod h1:2JcHzM6SSc5jFk7nwOb95Rd7rWPeYgszoy8NPH63Msc=
-github.com/alexaandru/go-sitter-forest/http v1.5.7 h1:cQud78HVnqHtez9elARX3p8VxZ/byJ+71L+LEbg7we4=
-github.com/alexaandru/go-sitter-forest/http v1.5.7/go.mod h1:dXXdOok8gNthKviPnCIAtDbB6GnUmdYjUWCEfXR8XjM=
+github.com/alexaandru/go-sitter-forest/http v1.5.8 h1:RReNuWeRO/edO4tnWnbMk3YQ5EuZH0gtcVK0qqkRI4g=
+github.com/alexaandru/go-sitter-forest/http v1.5.8/go.mod h1:dXXdOok8gNthKviPnCIAtDbB6GnUmdYjUWCEfXR8XjM=
 github.com/alexaandru/go-sitter-forest/hurl v1.5.5 h1:fJLZaQxdCC8VccGwENNM5afLBrXOKdPyqhmTO+dspIA=
 github.com/alexaandru/go-sitter-forest/hurl v1.5.5/go.mod h1:TSbLEJw1eeZE7uVGCnlMzupurEebLNCk5VDOWi2n3Rs=
 github.com/alexaandru/go-sitter-forest/hyprlang v1.5.5 h1:Wjes/cb3o8RNxJV6ggUteosUikRLSuXKeam6zVuZvSI=
