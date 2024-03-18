@@ -49,7 +49,7 @@ static bool is_bracket_argument(TSLexer *lexer) {
   return false;
 }
 
-static bool scan(void *payload, TSLexer *lexer, bool const *valid_symbols) {
+static bool scan_cmake(void *payload, TSLexer *lexer, bool const *valid_symbols) {
   skip_wspace(lexer);
 
   if (lexer->lookahead != '#' && valid_symbols[BRACKET_ARGUMENT]) {
@@ -91,5 +91,5 @@ void tree_sitter_cmake_external_scanner_deserialize(void *payload,
 
 bool tree_sitter_cmake_external_scanner_scan(void *payload, TSLexer *lexer,
                                              bool const *valid_symbols) {
-  return scan(payload, lexer, valid_symbols);
+  return scan_cmake(payload, lexer, valid_symbols);
 }

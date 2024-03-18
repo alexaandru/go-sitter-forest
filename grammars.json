@@ -49,7 +49,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
     "reference": "master",
-    "revision": "e3a0a7f60e544afc478b72cdda7ffc0f2f889db0"
+    "revision": "94219a5ac207a0fadd680b285378d08669d5bbc8"
   },
   {
     "language": "asm",
@@ -226,7 +226,7 @@
     "maintainedBy": "@uyha",
     "grammarSha": "9f7f9d8bc2da2f5353ab5a63780694f6b59c727cf66d8bceb589f5d74a25e499",
     "reference": "master",
-    "revision": "7dc15823107831729c64a917c796a93cf5c6a7e3"
+    "revision": "ce71cae5e022f0fa9031f067673d139d8e9dd63e"
   },
   {
     "language": "comment",
@@ -437,7 +437,7 @@
     "maintainedBy": "@ObserverOfTime",
     "skip": true,
     "reference": "master",
-    "revision": "29485b6587cacb99555c19ca53bea78b9e54ffd4"
+    "revision": "ab85469fedbf4f32da9310dd76dcedba059fc482"
   },
   {
     "language": "ebnf",
@@ -979,9 +979,9 @@
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
     "maintainedBy": "@amaanq",
-    "grammarSha": "266225ff52ef59f1e43885361b2833a798714d854eefb46d9815bec67db80314",
+    "grammarSha": "0a795adc7795426fd8750f50097053899563dce823edf20db3fb9498b8b57518",
     "reference": "main",
-    "revision": "32cff4657d63e54d2b1bd02e1dca94dc43f737e7"
+    "revision": "c98247ff34ae690629c4754add1d6daecfcd9388"
   },
   {
     "language": "hurl",
@@ -1347,7 +1347,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "c8629729bebfa23023c2d7a14ed1a7eec3042a1a"
+    "revision": "3da76a44a6a5db05aef03966a2045c7c73571d77"
   },
   {
     "language": "muttrc",
@@ -2187,7 +2187,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "b7755aa95cab95babdcefc8397739e09c986ca583ea080f4d153590d3b97ab76",
     "reference": "main",
-    "revision": "071b7cc9a4a4e978c08069fcc6c61f811730395c"
+    "revision": "a8cf05cd49b3b97d70a03fd65c9c279fc76662f7"
   },
   {
     "language": "sxhkdrc",
@@ -2545,7 +2545,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "3378a202d64a06e73b0c725293c57be94a7ad1d9e103d6550390a1594a5d7aa5",
     "reference": "main",
-    "revision": "52f0e8fa054c8b42baa9f0c088f6d90dc039575f"
+    "revision": "8f3d8031b47ee95b9d1ca1e1562c4da74b1d3e2d"
   },
   {
     "language": "xcompose",
@@ -2567,7 +2567,7 @@
     "maintainedBy": "@ObserverOfTime",
     "skip": true,
     "reference": "master",
-    "revision": "29485b6587cacb99555c19ca53bea78b9e54ffd4"
+    "revision": "ab85469fedbf4f32da9310dd76dcedba059fc482"
   },
   {
     "language": "yaml",

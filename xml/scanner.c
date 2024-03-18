@@ -13,11 +13,9 @@ typedef Array(String) Vector;
 /// Create a new String instance
 #define String() { ts_calloc(STRING_CAP + 1, sizeof(char)), 0, STRING_CAP }
 
-#ifndef _WIN32
 static inline uint32_t max(uint32_t a, uint32_t b) {
     return a > b ? a : b;
 }
-#endif
 
 static inline bool string_equals(String *a, String b) {
     return strcmp(a->contents, b.contents) == 0;

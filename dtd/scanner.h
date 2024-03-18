@@ -21,6 +21,11 @@ enum TokenType {
 #define advance_if_eq(lexer, chr) \
     if (!lexer->eof(lexer) && (lexer)->lookahead == (chr)) advance((lexer)); else return false
 
+#ifdef _WIN32
+#undef max
+#undef min
+#endif
+
 /// Advance the lexer to the next token
 static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
 
