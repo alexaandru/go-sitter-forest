@@ -2525,12 +2525,11 @@
   {
     "language": "wgsl_bevy",
     "url": "https://github.com/theHamsta/tree-sitter-wgsl-bevy",
-    "doc": "grammar.js throws error",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "skip": true,
+    "grammarSha": "b3121fb63be59a217a5bc48ccc95d37f166184e800a72465a73c2a418a4ac92c",
     "reference": "master",
     "revision": "cbd58ee33e24f46d16b9882b001eefb25a958ee2"
   },
@@ -2618,4 +2617,3 @@
     "revision": "0d08703e4c3f426ec61695d7617415fff97029bd"
   }
 ]
-

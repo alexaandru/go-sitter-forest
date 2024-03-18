@@ -1,6 +1,6 @@
 # 264 Supported Parsers
 
-3 pending, 52 skipped regeneration
+3 pending, 51 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -258,14 +258,14 @@
 - [x] [vala](https://github.com/vala-lang/tree-sitter-vala) ✔️  (maintained by @Prince781)
 - [x] [verilog](https://github.com/tree-sitter/tree-sitter-verilog) ✔️  (maintained by @zegervdv)
 - [x] [vhs](https://github.com/charmbracelet/tree-sitter-vhs) ✔️  (maintained by @caarlos0)
-- [x] [vim](https://github.com/neovim/tree-sitter-vim) ✔️  (maintained by @clason; ❌grammar.js has local deps)
+- [x] [vim](https://github.com/neovim/tree-sitter-vim) ✔️  (maintained by @clason)
 - [x] [vimdoc](https://github.com/neovim/tree-sitter-vimdoc) ✔️  (maintained by @clason)
 - [x] [vue](https://github.com/tree-sitter-grammars/tree-sitter-vue) ✔️  (maintained by @WhyNotHugo, @lucario387)
 - [x] [wgsl](https://github.com/szebniok/tree-sitter-wgsl) ✔️  (maintained by @szebniok)
-- [x] [wgsl_bevy](https://github.com/theHamsta/tree-sitter-wgsl-bevy) (maintained by @theHamsta; ❌grammar.js throws error)
+- [x] [wgsl_bevy](https://github.com/theHamsta/tree-sitter-wgsl-bevy) ✔️  (maintained by @theHamsta)
 - [x] [wing](https://github.com/winglang/wing) ✔️  (maintained by @gshpychka, @MarkMcCulloh)
 - [x] [xcompose](https://github.com/ObserverOfTime/tree-sitter-xcompose) ✔️  (maintained by @ObserverOfTime)
-- [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) (maintained by @ObserverOfTime; ❌grammar.js has local deps)
+- [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) (maintained by @ObserverOfTime; ❌grammar.js has recursive local deps)
 - [x] [yaml](https://github.com/ikatyang/tree-sitter-yaml) (maintained by @stsewd; ❌grammar.js throws error)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️  (maintained by @Hubro)
 - [x] [yuck](https://github.com/Philipp-M/tree-sitter-yuck) (maintained by @Philipp-M, @amaanq; ❌grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+})

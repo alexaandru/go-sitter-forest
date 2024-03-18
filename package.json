@@ -15,6 +15,6 @@
     "tree-sitter-php": "0.22.1",
     "tree-sitter-python": "^0.21.0",
     "tree-sitter-typescript": "^0.20.5",
-    "tree-sitter-wgsl": "^0.0.6"
+    "tree-sitter-wgsl": "git://github.com/szebniok/tree-sitter-wgsl.git"
   }
 }

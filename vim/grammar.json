@@ -1,7 +1,6 @@
 {
   "language": "vim",
   "url": "https://github.com/neovim/tree-sitter-vim",
-  "doc": "grammar.js has local deps",
   "files": [
     "scanner.c",
     "keywords.h"
