@@ -500,8 +500,8 @@ github.com/alexaandru/go-sitter-forest/verilog v1.5.5 h1:bLxnLyw9zaWPYd2xXOtX74F
 github.com/alexaandru/go-sitter-forest/verilog v1.5.5/go.mod h1:NQayDlS37vWeepfO6cRGSeBDgR9K/WusWcEeXI7/v3g=
 github.com/alexaandru/go-sitter-forest/vhs v1.5.5 h1:vUbtTmV4GmWCzBEmPTjDbABMNXkOXTNuPEYK8hRvJsA=
 github.com/alexaandru/go-sitter-forest/vhs v1.5.5/go.mod h1:nwy1MV1yxRF616iO2Nt+mxIVi+GrDhh5QD34Y23GwBY=
-github.com/alexaandru/go-sitter-forest/vim v1.5.5 h1:UjTNJVphRQqxeNrSZYPk33YKhlLt1PPvPKB9ymaZIaw=
-github.com/alexaandru/go-sitter-forest/vim v1.5.5/go.mod h1:GxQOPnx5H01IZ4K4twE7Ts8I9iGWCPCCM4QPj2CD+ks=
+github.com/alexaandru/go-sitter-forest/vim v1.5.6 h1:50UZr7aBR3RVt5A0wT5JdXgQjqL+BONzHZp4EgSi7vE=
+github.com/alexaandru/go-sitter-forest/vim v1.5.6/go.mod h1:GxQOPnx5H01IZ4K4twE7Ts8I9iGWCPCCM4QPj2CD+ks=
 github.com/alexaandru/go-sitter-forest/vimdoc v1.5.5 h1:uUJQiBO+oNQ5tB6VuzzwYm7ekfBJN9Zm+8lTtt88aNI=
 github.com/alexaandru/go-sitter-forest/vimdoc v1.5.5/go.mod h1:4wNUDNcvYpqYcLPDTVB3Jj9a6h57pmTB+dAt826ZuU8=
 github.com/alexaandru/go-sitter-forest/vue v1.5.5 h1:vzSkn+IiV3A/sxeCx20YE/d7SUbhLAiFpkaLNcEuR0g=

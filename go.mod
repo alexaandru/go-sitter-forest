@@ -254,7 +254,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vala v1.5.5
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.5
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.5
-	github.com/alexaandru/go-sitter-forest/vim v1.5.5
+	github.com/alexaandru/go-sitter-forest/vim v1.5.6
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.5
 	github.com/alexaandru/go-sitter-forest/vue v1.5.5
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.5
