@@ -257,6 +257,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/uxntal"
 	"github.com/alexaandru/go-sitter-forest/v"
 	"github.com/alexaandru/go-sitter-forest/vala"
+	"github.com/alexaandru/go-sitter-forest/vento"
 	"github.com/alexaandru/go-sitter-forest/verilog"
 	"github.com/alexaandru/go-sitter-forest/vhs"
 	"github.com/alexaandru/go-sitter-forest/vim"
@@ -528,6 +529,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"v":                  v.GetLanguage,
 	"vala":               vala.GetLanguage,
 	"verilog":            verilog.GetLanguage,
+	"vento":              vento.GetLanguage,
 	"vhs":                vhs.GetLanguage,
 	"vim":                vim.GetLanguage,
 	"vimdoc":             vimdoc.GetLanguage,

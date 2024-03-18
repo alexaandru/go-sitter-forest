@@ -23,16 +23,16 @@ bool is_trim_marker(char c) {
 
 void skip_whitespace(TSLexer *lexer) {
   while (iswspace(lexer->lookahead)) {
-    lexer->advance(lexer, true);
+    lexer->advance_vento(lexer, true);
   }
 }
 
-void skip(TSLexer *lexer) {
-  lexer->advance(lexer, true);
+void skip_vento(TSLexer *lexer) {
+  lexer->advance_vento(lexer, true);
 }
 
-void advance(TSLexer *lexer) {
-  lexer->advance(lexer, false);
+void advance_vento(TSLexer *lexer) {
+  lexer->advance_vento(lexer, false);
 }
 
 bool tree_sitter_vento_external_scanner_scan(
@@ -65,11 +65,11 @@ bool tree_sitter_vento_external_scanner_scan(
       }
 
       if (lexer->lookahead == '{') {
-        advance(lexer);
+        advance_vento(lexer);
         depth++;
 
       } else if (lexer->lookahead == '}') {
-        advance(lexer);
+        advance_vento(lexer);
 
         if (depth > 1) {
           lexer->mark_end(lexer);
@@ -78,17 +78,17 @@ bool tree_sitter_vento_external_scanner_scan(
 
       } else if (lexer->lookahead == '|') {
         lexer->mark_end(lexer);
-        advance(lexer);
+        advance_vento(lexer);
 
         if (lexer->lookahead == '>') {
-          advance(lexer);
+          advance_vento(lexer);
 
           lexer->result_symbol = CODE;
           return true;
         }
       } else {
         const bool skip = iswspace(lexer->lookahead) || is_trim_marker(lexer->lookahead);
-        advance(lexer);
+        advance_vento(lexer);
         if (!skip) {
           lexer->mark_end(lexer);
         }

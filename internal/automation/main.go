@@ -464,13 +464,16 @@ func putFile(b []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.h":
+	case "scanner.c", "scanner.h", "parser.h":
 		// These identifiers clash between org and beancount parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
 		reMap[" deserialize("] = fmt.Sprintf(" deserialize_%s(", lang)
 		reMap[" scan("] = fmt.Sprintf(" scan_%s(", lang)
 		reMap["!scan("] = fmt.Sprintf("!scan_%s(", lang)
+		reMap["advance("] = fmt.Sprintf("advance_%s(", lang)
+		reMap["void (*advance)(TSLexer *, bool)"] = fmt.Sprintf("void (*advance_%s)(TSLexer *, bool)", lang)
+		reMap[" skip("] = fmt.Sprintf(" skip_%s(", lang)
 	}
 
 	for old, new := range reMap {
