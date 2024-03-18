@@ -25,8 +25,8 @@ void tree_sitter_wing_external_scanner_deserialize(void * p,
 /**
  * Skip the current token and move to the next one (does not add consumed char to the current token)
  */
-static void skip(TSLexer * lexer) {
-  lexer -> advance(lexer, true);
+static void skip_wing(TSLexer * lexer) {
+  lexer -> advance_wing(lexer, true);
 }
 
 /**
@@ -38,28 +38,28 @@ static void skip(TSLexer * lexer) {
 static bool scan_whitespace_and_comments(TSLexer * lexer) {
   for (;;) {
     while (iswspace(lexer -> lookahead)) {
-      skip(lexer);
+      skip_wing(lexer);
     }
 
     if (lexer -> lookahead == '/') {
-      skip(lexer);
+      skip_wing(lexer);
 
       if (lexer -> lookahead == '/') {
-        skip(lexer);
+        skip_wing(lexer);
         while (lexer -> lookahead != 0 && lexer -> lookahead != '\n') {
-          skip(lexer);
+          skip_wing(lexer);
         }
       } else if (lexer -> lookahead == '*') {
-        skip(lexer);
+        skip_wing(lexer);
         while (lexer -> lookahead != 0) {
           if (lexer -> lookahead == '*') {
-            skip(lexer);
+            skip_wing(lexer);
             if (lexer -> lookahead == '/') {
-              skip(lexer);
+              skip_wing(lexer);
               break;
             }
           } else {
-            skip(lexer);
+            skip_wing(lexer);
           }
         }
       } else {
@@ -100,10 +100,10 @@ static bool scan_automatic_semicolon(TSLexer * lexer) {
       break;
     if (!iswspace(lexer -> lookahead))
       return false;
-    skip(lexer);
+    skip_wing(lexer);
   }
 
-  skip(lexer);
+  skip_wing(lexer);
 
   if (!scan_whitespace_and_comments(lexer))
     return false;
@@ -129,22 +129,22 @@ static bool scan_automatic_semicolon(TSLexer * lexer) {
 
     // Insert a semicolon before `--` and `++`, but not before binary `+` or `-`.
   case '+':
-    skip(lexer);
+    skip_wing(lexer);
     return lexer -> lookahead == '+';
   case '-':
-    skip(lexer);
+    skip_wing(lexer);
     return lexer -> lookahead == '-';
 
     // Don't insert a semicolon before `!=`, but do insert one before a unary `!`.
   case '!':
-    skip(lexer);
+    skip_wing(lexer);
     return lexer -> lookahead != '=';
 
     // Don't insert a semicolon before `in` (unless it's part of an identifier)
   case 'i':
-    skip(lexer);
+    skip_wing(lexer);
     if (lexer -> lookahead == 'n') {
-      skip(lexer);
+      skip_wing(lexer);
       if (!iswidentifier(lexer -> lookahead))
         return false;
     }
@@ -152,9 +152,9 @@ static bool scan_automatic_semicolon(TSLexer * lexer) {
 
     // Don't insert a semicolon before `as` (unless it's part of an identifier)
   case 'a':
-    skip(lexer);
+    skip_wing(lexer);
     if (lexer -> lookahead == 's') {
-      skip(lexer);
+      skip_wing(lexer);
       if (!iswidentifier(lexer -> lookahead))
         return false;
     }
@@ -182,10 +182,10 @@ static bool scan_automatic_block(TSLexer * lexer) {
       return true;
     if (!iswspace(lexer -> lookahead))
       return false;
-    skip(lexer);
+    skip_wing(lexer);
   }
 
-  skip(lexer);
+  skip_wing(lexer);
 
   if (!scan_whitespace_and_comments(lexer))
     return false;
