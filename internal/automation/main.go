@@ -31,6 +31,7 @@ const (
 	grammarsJSON = "grammars.json"
 	grammarJSON  = "grammar.json"
 	grammarJS    = "grammar.js"
+	upToDate     = "(up-to-date)"
 )
 
 var (
@@ -58,14 +59,16 @@ func checkUpdates() error {
 			return
 		}
 
-		status := "(up-to-date)"
+		status := upToDate
 		if nextVersion := gr.NewVersion(); nextVersion != nil {
 			status = fmt.Sprintf("(update available: %s -> %s)", gr.Revision, nextVersion.Revision)
 		} else if !gr.SkipGenerate && gr.GrammarSha == "" {
 			status = "(grammar was never re-generated)"
 		}
 
-		fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
+		if status != upToDate {
+			fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
+		}
 
 		return
 	})
@@ -148,8 +151,6 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 	} else if force {
 		msg = "forced update"
 	} else {
-		fmt.Printf("%-20snothing to do\n", gr.Language)
-
 		return
 	}
 

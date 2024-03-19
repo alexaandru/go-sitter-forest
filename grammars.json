@@ -55,9 +55,9 @@
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
     "maintainedBy": "@RubixDev",
-    "grammarSha": "93ed7801eea2ba9d777bf049f90ff19aa86b94c84a5a93608c243b87e05c918d",
+    "grammarSha": "c97794dbedb011e75336f573a3c3ceb354ef4b3903ce2e8651205d5ea20083ea",
     "reference": "main",
-    "revision": "6ace266be7ad6bf486a95427ca3fc949aff66211"
+    "revision": "f4032c9dbcc10dfbf9b302b2a449148483293593"
   },
   {
     "language": "astro",
@@ -704,9 +704,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "270162e8114bd814a7c300cbc49f09e710d096823bd9bece34ccfc2c3e5ca2b3",
+    "grammarSha": "a941e7df9af155ce6e68f1e43d058c16ea19454fb79e95e892cad0836381b014",
     "reference": "main",
-    "revision": "2012f294baacf30e7a62414754021284377366c6"
+    "revision": "bcf9c45b56cbe46e9dac5eee0aee75df270000ac"
   },
   {
     "language": "glimmer",
@@ -965,7 +965,7 @@
     "maintainedBy": "@TravonteD",
     "grammarSha": "24a745bb29af676860649cfa0ea42fdde9f24afef5921065e5b2a66e9ea76dab",
     "reference": "master",
-    "revision": "b285e25c1ba8729399ce4f15ac5375cf6c3aa5be"
+    "revision": "4e5f3345f74cda667ee8dd94b17184a592ce0374"
   },
   {
     "language": "htmldjango",
@@ -2554,7 +2554,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "3378a202d64a06e73b0c725293c57be94a7ad1d9e103d6550390a1594a5d7aa5",
     "reference": "main",
-    "revision": "26077392524d01e53dfdfa3c0644013a3c75fb57"
+    "revision": "ed54e0cd92ba1b9325e1e96f39c4b8babfbe9fa5"
   },
   {
     "language": "xcompose",

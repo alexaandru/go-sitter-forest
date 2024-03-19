@@ -20,7 +20,7 @@ bool tree_sitter_gleam_external_scanner_scan(void * payload, TSLexer *lexer, con
         return false;
       }
       has_content = true;
-      lexer->advance(lexer, false);
+      lexer->advance_gleam(lexer, false);
     }
     lexer->result_symbol = QUOTED_CONTENT;
     return has_content;
