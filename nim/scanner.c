@@ -312,7 +312,7 @@ struct state {
   struct indent_vec layout_stack;
 };
 
-static struct state* state_new(void)
+static struct state* state_new_nim(void)
 {
   struct state* result = calloc(1, sizeof(struct state));
   if (!result) {
@@ -386,19 +386,19 @@ _nonnull_(1) _pure_ static bool context_eof(struct context* self)
   return self->_lexer->eof(self->_lexer);
 }
 
-_nonnull_(1) static uint32_t context_advance(struct context* self, bool skip)
+_nonnull_(1) static uint32_t context_advance_nim(struct context* self, bool skip)
 {
   self->advance_counter += (int)!context_eof(self);
   if (!context_eof(self)) {
     self->flags &= ~FLAG_AFTER_NEWLINE;
   }
-  self->_lexer->advance(self->_lexer, skip);
+  self->_lexer->advance_nim(self->_lexer, skip);
   return self->_lexer->lookahead;
 }
 
 _nonnull_(1) static uint32_t context_consume(struct context* self, bool skip)
 {
-  uint32_t result = context_advance(self, skip);
+  uint32_t result = context_advance_nim(self, skip);
   context_mark_end(self);
   return result;
 }
@@ -476,14 +476,14 @@ _nonnull_(1) static size_t scan_spaces(struct context* ctx, bool force_update)
     case ' ':
       indent += (int)(indent != INVALID_INDENT_VALUE);
       spaces++;
-      context_advance(ctx, true);
+      context_advance_nim(ctx, true);
       break;
     case '\n':
     case '\r':
       update_indent = true;
       indent = 0;
       spaces++;
-      context_advance(ctx, true);
+      context_advance_nim(ctx, true);
       break;
     case '\0':
       if (context_eof(ctx)) {
@@ -516,7 +516,7 @@ LEX_FN(lex_long_string_quote)
   context_consume(ctx, false);
   uint8_t count = 1;
   while (context_lookahead(ctx) == '"' && count < 3) {
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     count++;
   }
 
@@ -550,7 +550,7 @@ LEX_FN(lex_comment_content)
       case '\r':
         goto exit_short_comment_loop;
       default:
-        context_advance(ctx, false);
+        context_advance_nim(ctx, false);
       }
     }
 
@@ -561,20 +561,20 @@ exit_short_comment_loop:
 
   uint32_t nesting = 0;
   while (!context_eof(ctx)) {
-    if (context_lookahead(ctx) == '#' && context_advance(ctx, false) == '[') {
+    if (context_lookahead(ctx) == '#' && context_advance_nim(ctx, false) == '[') {
       nesting++;
       DBG_F("block comment nest level: %" PRIu32 "\n", nesting);
     }
     context_mark_end(ctx);
     if (context_lookahead(ctx) == ']') {
-      if (context_advance(ctx, false) == '#') {
+      if (context_advance_nim(ctx, false) == '#') {
         if (nesting > 0) {
           DBG_F("block comment terminate nest level: %" PRIu32 "\n", nesting);
           nesting--;
         }
         else if (valid_tokens_test(
                      ctx->valid_tokens, BLOCK_DOC_COMMENT_CONTENT)) {
-          if (context_advance(ctx, false) == '#') {
+          if (context_advance_nim(ctx, false) == '#') {
             return context_finish(ctx, BLOCK_DOC_COMMENT_CONTENT);
           }
         }
@@ -584,7 +584,7 @@ exit_short_comment_loop:
       }
       continue;
     }
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
   }
 
   return false;
@@ -618,7 +618,7 @@ LEX_FN(lex_init)
 _nonnull_(1) static void skip_underscore(struct context* ctx)
 {
   if (context_lookahead(ctx) == '_') {
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
   }
 }
 
@@ -631,7 +631,7 @@ LEX_FN(scan_continuing_keyword, bool scan_do)
 {
 #define NEXT_OR_FAIL(chr)                          \
   do {                                             \
-    context_advance(ctx, false);                   \
+    context_advance_nim(ctx, false);                   \
     skip_underscore(ctx);                          \
     if (!chrcaseeq(context_lookahead(ctx), chr)) { \
       return false;                                \
@@ -646,15 +646,15 @@ LEX_FN(scan_continuing_keyword, bool scan_do)
 
 #define FINISH_IF_END                              \
   do {                                             \
-    context_advance(ctx, false);                   \
+    context_advance_nim(ctx, false);                   \
     return !is_identifier(context_lookahead(ctx)); \
   } while (false)
 
   if (context_lookahead(ctx) == 'e') {
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     skip_underscore(ctx);
     if (chrcaseeq(context_lookahead(ctx), 'l')) {
-      context_advance(ctx, false);
+      context_advance_nim(ctx, false);
       skip_underscore(ctx);
       if (chrcaseeq(context_lookahead(ctx), 's')) {
         NEXT_OR_FAIL('e');
@@ -709,10 +709,10 @@ LEX_FN(lex_case_of)
   }
 
   skip_underscore(ctx);
-  switch (context_advance(ctx, false)) {
+  switch (context_advance_nim(ctx, false)) {
   case 'f':
   case 'F':
-    if (is_identifier(context_advance(ctx, false))) {
+    if (is_identifier(context_advance_nim(ctx, false))) {
       return false;
     }
     context_mark_end(ctx);
@@ -827,7 +827,7 @@ LEX_FN(lex_inline_layout)
   case '}':
     break;
   case '.':
-    if (context_advance(ctx, false) == '}') {
+    if (context_advance_nim(ctx, false) == '}') {
       break;
     }
     return false;
@@ -931,23 +931,23 @@ _nonnull_(1) static enum token_type
 
   switch (first_character) {
   case '.':
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     state = OS_DOT;
     break;
   case '=':
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     state = OS_EQUAL;
     break;
   case ':':
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     state = OS_COLON;
     break;
   case '-':
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     state = OS_MINUS;
     break;
   case '*':
-    context_advance(ctx, false);
+    context_advance_nim(ctx, false);
     state = OS_STAR;
     break;
   default:
@@ -969,7 +969,7 @@ _nonnull_(1) static enum token_type
       switch (context_lookahead(ctx)) {
       case ':':
         state = OS_COLON_COLON;
-        context_advance(ctx, false);
+        context_advance_nim(ctx, false);
         break;
       default:
         state = OS_REGULAR;
@@ -982,7 +982,7 @@ _nonnull_(1) static enum token_type
     case OS_MINUS:
     case OS_REGULAR:
       state = OS_REGULAR;
-      context_advance(ctx, false);
+      context_advance_nim(ctx, false);
       break;
     }
   }
@@ -1065,7 +1065,7 @@ void* tree_sitter_nim_external_scanner_create(void)
   debug_mode = getenv("TREE_SITTER_DEBUG");
 #endif
 
-  struct state* state = state_new();
+  struct state* state = state_new_nim();
   if (!state) {
     DBG("error: could not allocate a new state object!");
   }

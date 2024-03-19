@@ -253,6 +253,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/typst"
 	"github.com/alexaandru/go-sitter-forest/udev"
 	"github.com/alexaandru/go-sitter-forest/ungrammar"
+	"github.com/alexaandru/go-sitter-forest/unison"
 	"github.com/alexaandru/go-sitter-forest/usd"
 	"github.com/alexaandru/go-sitter-forest/uxntal"
 	"github.com/alexaandru/go-sitter-forest/v"
@@ -524,6 +525,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"typst":              typst.GetLanguage,
 	"udev":               udev.GetLanguage,
 	"ungrammar":          ungrammar.GetLanguage,
+	"unison":             unison.GetLanguage,
 	"usd":                usd.GetLanguage,
 	"uxntal":             uxntal.GetLanguage,
 	"v":                  v.GetLanguage,
