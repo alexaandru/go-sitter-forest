@@ -221,6 +221,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/sourcepawn"
 	"github.com/alexaandru/go-sitter-forest/sparql"
 	"github.com/alexaandru/go-sitter-forest/sql"
+	"github.com/alexaandru/go-sitter-forest/sqlite"
 	"github.com/alexaandru/go-sitter-forest/squirrel"
 	"github.com/alexaandru/go-sitter-forest/ssh_config"
 	"github.com/alexaandru/go-sitter-forest/starlark"
@@ -493,6 +494,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"sourcepawn":         sourcepawn.GetLanguage,
 	"sparql":             sparql.GetLanguage,
 	"sql":                sql.GetLanguage,
+	"sqlite":             sqlite.GetLanguage,
 	"squirrel":           squirrel.GetLanguage,
 	"ssh_config":         ssh_config.GetLanguage,
 	"starlark":           starlark.GetLanguage,

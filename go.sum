@@ -424,6 +424,8 @@ github.com/alexaandru/go-sitter-forest/sparql v1.5.5 h1:6W31BOIs7avXbS3a4lqkRdwA
 github.com/alexaandru/go-sitter-forest/sparql v1.5.5/go.mod h1:6e4iK3SVq82fiDHmio4nmoYA/6tJxplfTKz8zQB+1eY=
 github.com/alexaandru/go-sitter-forest/sql v1.5.5 h1:a2oz2aaWGZSnMxsFevh/Nt6LbSZqHHQw8yPlzNDpOxE=
 github.com/alexaandru/go-sitter-forest/sql v1.5.5/go.mod h1:3ifVbW12vESAtFe7LlnTtSgohUT7hjWYw5OCJzeF6O0=
+github.com/alexaandru/go-sitter-forest/sqlite v1.5.5 h1:NlkxhT2UDTVIP7qJlxd/yeo70eaFqH6VY/5844gHMRM=
+github.com/alexaandru/go-sitter-forest/sqlite v1.5.5/go.mod h1:5BZ3EO6zOKUJM1U4uoofdvfG93mXaqvAwv/T451p8LA=
 github.com/alexaandru/go-sitter-forest/squirrel v1.5.5 h1:ZXWj7C46r7E5zXXNktHEhYjaTZIwqHhO8uU2PvExrqY=
 github.com/alexaandru/go-sitter-forest/squirrel v1.5.5/go.mod h1:C5xePAosyEEAL/0g5u/hxOT7UdgiYzALrB45zZuLZck=
 github.com/alexaandru/go-sitter-forest/ssh_config v1.5.6 h1:YPoXJ8EBN3QWMTJrH+pXM43nWXxE5UTom/IMvQZy9Ys=

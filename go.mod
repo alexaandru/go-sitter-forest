@@ -216,6 +216,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.5
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.5
 	github.com/alexaandru/go-sitter-forest/sql v1.5.5
+	github.com/alexaandru/go-sitter-forest/sqlite v1.5.5
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.5
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.6
 	github.com/alexaandru/go-sitter-forest/starlark v1.5.5
