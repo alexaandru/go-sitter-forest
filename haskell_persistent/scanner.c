@@ -58,9 +58,9 @@ typedef struct {
   indent_vec indents;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_haskell_persistent(TSLexer *lexer) { lexer->advance_haskell_persistent(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_haskell_persistent(TSLexer *lexer) { lexer->advance_haskell_persistent(lexer, true); }
 
 static unsigned serialize_haskell_persistent(Scanner *scanner, char *buffer) {
   size_t size = 0;
@@ -96,23 +96,23 @@ static bool scan_haskell_persistent(Scanner *scanner, TSLexer *lexer, const bool
     if (lexer->lookahead == '\n') {
       found_end_of_line = true;
       indent_length = 0;
-      skip(lexer);
+      skip_haskell_persistent(lexer);
     } else if (lexer->lookahead == ' ') {
       indent_length++;
-      skip(lexer);
+      skip_haskell_persistent(lexer);
     } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
       indent_length = 0;
-      skip(lexer);
+      skip_haskell_persistent(lexer);
     } else if (lexer->lookahead == '\t') {
       indent_length += 8;
-      skip(lexer);
+      skip_haskell_persistent(lexer);
     } else if (lexer->lookahead == '\\') {
-      skip(lexer);
+      skip_haskell_persistent(lexer);
       if (lexer->lookahead == '\r') {
-        skip(lexer);
+        skip_haskell_persistent(lexer);
       }
       if (lexer->lookahead == '\n') {
-        skip(lexer);
+        skip_haskell_persistent(lexer);
       } else {
         return false;
       }

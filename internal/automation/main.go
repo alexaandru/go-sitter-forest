@@ -224,7 +224,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	replMap := map[string]string{}
 
 	// TODO: For some (apex) we'll need to do the deps extraction recursively.
-	for _, file := range extractDeps(grc) {
+	for _, file := range extractDeps(gr.Language, grc) {
 		var b []byte
 
 		base := path.Base(file)
@@ -264,7 +264,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		grc = bytes.ReplaceAll(grc, []byte(k), []byte(v))
 
 		k = k[:len(k)-3]
-		grc = bytes.ReplaceAll(grc, []byte(k), []byte(v))
+		grc = bytes.ReplaceAll(grc, []byte("'"+k+"'"), []byte("'"+v+"'"))
 	}
 
 	if err = os.WriteFile(dst, grc, 0o644); err != nil {
@@ -299,7 +299,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 
 var rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
 
-func extractDeps(content []byte) (files []string) {
+func extractDeps(lang string, content []byte) (files []string) {
 	raw := rxReq.FindAllStringSubmatch(string(content), -1)
 	if len(raw) == 0 {
 		return nil
@@ -316,6 +316,24 @@ func extractDeps(content []byte) (files []string) {
 
 			x = append(x, z)
 		}
+	}
+
+	// TODO: Rather than adding each recursive dep in here, make a
+	// generic mechanism that can reuse Files (so that we can extract
+	// from them either .c/.h files or .js files, as extra deps).
+	switch lang {
+	case "apex":
+		x = append(x, "../common/soql-grammar.js")
+	case "sosl":
+		x = append(x, "../common/soql-grammar.js", "../common/common.js")
+	case "soql":
+		x = append(x, "../common/common.js")
+	case "haskell", "haskell_persistent", "purescript":
+		x = append(x, "./grammar/util.js")
+	case "markdown", "markdown_inline":
+		x = append(x, "../common/html_entities.json")
+	case "unison":
+		x = append(x, "./grammar/precedences.js", "./grammar/function-application.js")
 	}
 
 	return x
@@ -350,8 +368,13 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 		return
 	}
 
-	if gr.Language == "yaml" {
-		err = fixYaml(gr)
+	// For these grammars 1st file is included into the 2nd file and it causes
+	// cgo to compile the 1st one twice and throw duplicate symbols error.
+	switch gr.Language {
+	case "yaml":
+		err = combineFiles("schema.generated.cc", "scanner.cc", gr, `#include "parser.h"`)
+	case "unison":
+		err = combineFiles("maybe.c", "scanner.c", gr)
 	}
 
 	return
@@ -465,13 +488,16 @@ func putFile(b []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.h", "parser.h":
+	case "scanner.c", "scanner.cc", "scanner.h", "parser.h":
 		// These identifiers clash between org and beancount parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
 		reMap[" deserialize("] = fmt.Sprintf(" deserialize_%s(", lang)
+		reMap["->serialize("] = fmt.Sprintf("->serialize_%s(", lang)
+		reMap["->deserialize("] = fmt.Sprintf("->deserialize_%s(", lang)
 		reMap[" scan("] = fmt.Sprintf(" scan_%s(", lang)
 		reMap["!scan("] = fmt.Sprintf("!scan_%s(", lang)
+		reMap["->scan("] = fmt.Sprintf("->scan_%s(", lang)
 		reMap["advance("] = fmt.Sprintf("advance_%s(", lang)
 		reMap["void (*advance)(TSLexer *, bool)"] = fmt.Sprintf("void (*advance_%s)(TSLexer *, bool)", lang)
 		reMap[" skip("] = fmt.Sprintf(" skip_%s(", lang)
@@ -574,11 +600,14 @@ func updateParsersMd() error {
 	return nil
 }
 
-// For yaml grammar scanner.cc includes schema.generated.cc file and it causes
-// cgo to compile schema.generated.cc twice and throw duplicate symbols error.
-func fixYaml(gr *grammar.Grammar) error {
-	f1 := path.Join(gr.Language, "schema.generated.cc")
-	f2 := path.Join(gr.Language, "scanner.cc")
+func combineFiles(from, into string, gr *grammar.Grammar, opts ...string) error {
+	extra := ""
+	if len(opts) > 0 {
+		extra = opts[0]
+	}
+
+	f1 := path.Join(gr.Language, from)
+	f2 := path.Join(gr.Language, into)
 
 	f1b, err := os.ReadFile(f1)
 	if err != nil {
@@ -595,11 +624,12 @@ func fixYaml(gr *grammar.Grammar) error {
 	}
 
 	// combine both files into one
-	b := bytes.Join([][]byte{[]byte(`#include "parser.h"`), f1b, f2b}, []byte("\n"))
+	b := bytes.Join([][]byte{[]byte(extra), f1b, f2b}, []byte("\n"))
 	// remove include expression
-	b = bytes.ReplaceAll(b, []byte(`#include "./schema.generated.cc"`), []byte(""))
+	b = bytes.ReplaceAll(b, []byte(`#include "./`+from+`"`), []byte(""))
+	b = bytes.ReplaceAll(b, []byte(`#include "`+from+`"`), []byte(""))
 
-	return os.WriteFile(fmt.Sprintf("%s/scanner.cc", gr.Language), b, 0o644)
+	return os.WriteFile(filepath.Join(gr.Language, into), b, 0o644)
 }
 
 func main() {

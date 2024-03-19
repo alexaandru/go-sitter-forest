@@ -314,7 +314,7 @@ static bool error(TSLexer *lexer) {
 // Advance the lexer one character
 // Also keeps track of the current column, counting tabs as spaces with tab stop
 // 4 See https://github.github.com/gfm/#tabs
-static size_t advance(Scanner *s, TSLexer *lexer) {
+static size_t advance_markdown(Scanner *s, TSLexer *lexer) {
     size_t size = 1;
     if (lexer->lookahead == '\t') {
         size = 4 - s->column;
@@ -322,7 +322,7 @@ static size_t advance(Scanner *s, TSLexer *lexer) {
     } else {
         s->column = (s->column + 1) % 4;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_markdown(lexer, false);
     return size;
 }
 
@@ -336,7 +336,7 @@ static bool match(Scanner *s, TSLexer *lexer, Block block) {
         case INDENTED_CODE_BLOCK:
             while (s->indentation < 4) {
                 if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                    s->indentation += advance(s, lexer);
+                    s->indentation += advance_markdown(s, lexer);
                 } else {
                     break;
                 }
@@ -365,7 +365,7 @@ static bool match(Scanner *s, TSLexer *lexer, Block block) {
         case LIST_ITEM_MAX_INDENTATION:
             while (s->indentation < list_item_indentation(block)) {
                 if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                    s->indentation += advance(s, lexer);
+                    s->indentation += advance_markdown(s, lexer);
                 } else {
                     break;
                 }
@@ -381,13 +381,13 @@ static bool match(Scanner *s, TSLexer *lexer, Block block) {
             break;
         case BLOCK_QUOTE:
             while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                s->indentation += advance(s, lexer);
+                s->indentation += advance_markdown(s, lexer);
             }
             if (lexer->lookahead == '>') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 s->indentation = 0;
                 if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                    s->indentation += advance(s, lexer) - 1;
+                    s->indentation += advance_markdown(s, lexer) - 1;
                 }
                 return true;
             }
@@ -404,7 +404,7 @@ static bool parse_fenced_code_block(Scanner *s, const char delimiter,
     // count the number of backticks
     uint8_t level = 0;
     while (lexer->lookahead == delimiter) {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         level++;
     }
     mark_end(s, lexer);
@@ -434,7 +434,7 @@ static bool parse_fenced_code_block(Scanner *s, const char delimiter,
                     info_string_has_backtick = true;
                     break;
                 }
-                advance(s, lexer);
+                advance_markdown(s, lexer);
             }
         }
         // If it does not then choose to interpret this as the start of a fenced
@@ -456,7 +456,7 @@ static bool parse_fenced_code_block(Scanner *s, const char delimiter,
 }
 
 static bool parse_star(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
-    advance(s, lexer);
+    advance_markdown(s, lexer);
     mark_end(s, lexer);
     // Otherwise count the number of stars permitting whitespaces between them.
     size_t star_count = 1;
@@ -473,12 +473,12 @@ static bool parse_star(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
                 mark_end(s, lexer);
             }
             star_count++;
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         } else if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
             if (star_count == 1) {
-                extra_indentation += advance(s, lexer);
+                extra_indentation += advance_markdown(s, lexer);
             } else {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
             }
         } else {
             break;
@@ -540,15 +540,15 @@ static bool parse_star(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
 
 static bool parse_thematic_break_underscore(Scanner *s, TSLexer *lexer,
                                             const bool *valid_symbols) {
-    advance(s, lexer);
+    advance_markdown(s, lexer);
     mark_end(s, lexer);
     size_t underscore_count = 1;
     for (;;) {
         if (lexer->lookahead == '_') {
             underscore_count++;
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         } else if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         } else {
             break;
         }
@@ -566,10 +566,10 @@ static bool parse_thematic_break_underscore(Scanner *s, TSLexer *lexer,
 static bool parse_block_quote(Scanner *s, TSLexer *lexer,
                               const bool *valid_symbols) {
     if (valid_symbols[BLOCK_QUOTE_START]) {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         s->indentation = 0;
         if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-            s->indentation += advance(s, lexer) - 1;
+            s->indentation += advance_markdown(s, lexer) - 1;
         }
         lexer->result_symbol = BLOCK_QUOTE_START;
         if (!s->simulate)
@@ -585,7 +585,7 @@ static bool parse_atx_heading(Scanner *s, TSLexer *lexer,
         mark_end(s, lexer);
         uint16_t level = 0;
         while (lexer->lookahead == '#' && level <= 6) {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             level++;
         }
         if (level <= 6 &&
@@ -606,10 +606,10 @@ static bool parse_setext_underline(Scanner *s, TSLexer *lexer,
         s->matched == s->open_blocks.size) {
         mark_end(s, lexer);
         while (lexer->lookahead == '=') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         if (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
             lexer->result_symbol = SETEXT_H1_UNDERLINE;
@@ -625,15 +625,15 @@ static bool parse_plus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
         (valid_symbols[LIST_MARKER_PLUS] ||
          valid_symbols[LIST_MARKER_PLUS_DONT_INTERRUPT] ||
          valid_symbols[PLUS_METADATA])) {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         if (valid_symbols[PLUS_METADATA] && lexer->lookahead == '+') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             if (lexer->lookahead != '+') {
                 return false;
             }
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
             }
             if (lexer->lookahead != '\n' && lexer->lookahead != '\r') {
                 return false;
@@ -641,35 +641,35 @@ static bool parse_plus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
             for (;;) {
                 // advance over newline
                 if (lexer->lookahead == '\r') {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                     if (lexer->lookahead == '\n') {
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                     }
                 } else {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 // check for pluses
                 size_t plus_count = 0;
                 while (lexer->lookahead == '+') {
                     plus_count++;
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 if (plus_count == 3) {
                     // if exactly 3 check if next symbol (after eventual
                     // whitespace) is newline
                     while (lexer->lookahead == ' ' ||
                            lexer->lookahead == '\t') {
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                     }
                     if (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
                         // if so also consume newline
                         if (lexer->lookahead == '\r') {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                             if (lexer->lookahead == '\n') {
-                                advance(s, lexer);
+                                advance_markdown(s, lexer);
                             }
                         } else {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                         }
                         mark_end(s, lexer);
                         lexer->result_symbol = PLUS_METADATA;
@@ -679,7 +679,7 @@ static bool parse_plus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
                 // otherwise consume rest of line
                 while (lexer->lookahead != '\n' && lexer->lookahead != '\r' &&
                        !lexer->eof(lexer)) {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 // if end of file is reached, then this is not metadata
                 if (lexer->eof(lexer)) {
@@ -689,7 +689,7 @@ static bool parse_plus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
         } else {
             uint8_t extra_indentation = 0;
             while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                extra_indentation += advance(s, lexer);
+                extra_indentation += advance_markdown(s, lexer);
             }
             bool dont_interrupt = false;
             if (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
@@ -731,26 +731,26 @@ static bool parse_ordered_list_marker(Scanner *s, TSLexer *lexer,
          valid_symbols[LIST_MARKER_DOT_DONT_INTERRUPT])) {
         size_t digits = 1;
         bool dont_interrupt = lexer->lookahead != '1';
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         while (isdigit(lexer->lookahead)) {
             dont_interrupt = true;
             digits++;
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         if (digits >= 1 && digits <= 9) {
             bool dot = false;
             bool parenthesis = false;
             if (lexer->lookahead == '.') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 dot = true;
             } else if (lexer->lookahead == ')') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 parenthesis = true;
             }
             if (dot || parenthesis) {
                 uint8_t extra_indentation = 0;
                 while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                    extra_indentation += advance(s, lexer);
+                    extra_indentation += advance_markdown(s, lexer);
                 }
                 bool line_end =
                     lexer->lookahead == '\n' || lexer->lookahead == '\r';
@@ -808,13 +808,13 @@ static bool parse_minus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
                     mark_end(s, lexer);
                 }
                 minus_count++;
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 minus_after_whitespace = whitespace_after_minus;
             } else if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
                 if (minus_count == 1) {
-                    extra_indentation += advance(s, lexer);
+                    extra_indentation += advance_markdown(s, lexer);
                 } else {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 whitespace_after_minus = true;
             } else {
@@ -876,35 +876,35 @@ static bool parse_minus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
             for (;;) {
                 // advance over newline
                 if (lexer->lookahead == '\r') {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                     if (lexer->lookahead == '\n') {
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                     }
                 } else {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 // check for minuses
                 minus_count = 0;
                 while (lexer->lookahead == '-') {
                     minus_count++;
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 if (minus_count == 3) {
                     // if exactly 3 check if next symbol (after eventual
                     // whitespace) is newline
                     while (lexer->lookahead == ' ' ||
                            lexer->lookahead == '\t') {
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                     }
                     if (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
                         // if so also consume newline
                         if (lexer->lookahead == '\r') {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                             if (lexer->lookahead == '\n') {
-                                advance(s, lexer);
+                                advance_markdown(s, lexer);
                             }
                         } else {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                         }
                         mark_end(s, lexer);
                         lexer->result_symbol = MINUS_METADATA;
@@ -914,7 +914,7 @@ static bool parse_minus(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
                 // otherwise consume rest of line
                 while (lexer->lookahead != '\n' && lexer->lookahead != '\r' &&
                        !lexer->eof(lexer)) {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 // if end of file is reached, then this is not metadata
                 if (lexer->eof(lexer)) {
@@ -941,9 +941,9 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
           valid_symbols[HTML_BLOCK_7_START])) {
         return false;
     }
-    advance(s, lexer);
+    advance_markdown(s, lexer);
     if (lexer->lookahead == '?' && valid_symbols[HTML_BLOCK_3_START]) {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         lexer->result_symbol = HTML_BLOCK_3_START;
         if (!s->simulate)
             push_block(s, ANONYMOUS);
@@ -951,11 +951,11 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
     }
     if (lexer->lookahead == '!') {
         // could be block 2
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         if (lexer->lookahead == '-') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             if (lexer->lookahead == '-' && valid_symbols[HTML_BLOCK_2_START]) {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 lexer->result_symbol = HTML_BLOCK_2_START;
                 if (!s->simulate)
                     push_block(s, ANONYMOUS);
@@ -963,26 +963,26 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
             }
         } else if ('A' <= lexer->lookahead && lexer->lookahead <= 'Z' &&
                    valid_symbols[HTML_BLOCK_4_START]) {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             lexer->result_symbol = HTML_BLOCK_4_START;
             if (!s->simulate)
                 push_block(s, ANONYMOUS);
             return true;
         } else if (lexer->lookahead == '[') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             if (lexer->lookahead == 'C') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 if (lexer->lookahead == 'D') {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                     if (lexer->lookahead == 'A') {
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                         if (lexer->lookahead == 'T') {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                             if (lexer->lookahead == 'A') {
-                                advance(s, lexer);
+                                advance_markdown(s, lexer);
                                 if (lexer->lookahead == '[' &&
                                     valid_symbols[HTML_BLOCK_5_START]) {
-                                    advance(s, lexer);
+                                    advance_markdown(s, lexer);
                                     lexer->result_symbol = HTML_BLOCK_5_START;
                                     if (!s->simulate)
                                         push_block(s, ANONYMOUS);
@@ -997,7 +997,7 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
     }
     bool starting_slash = lexer->lookahead == '/';
     if (starting_slash) {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     }
     char name[11];
     size_t name_length = 0;
@@ -1007,7 +1007,7 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
         } else {
             name_length = 12;
         }
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     }
     if (name_length == 0) {
         return false;
@@ -1038,9 +1038,9 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
             }
         }
         if (!next_symbol_valid && lexer->lookahead == '/') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             if (lexer->lookahead == '>') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 tag_closed = true;
             }
         }
@@ -1065,7 +1065,7 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
     if (!tag_closed) {
         // tag name (continued)
         while (iswalnum((wint_t)lexer->lookahead) || lexer->lookahead == '-') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         if (!starting_slash) {
             // attributes
@@ -1074,10 +1074,10 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
                 // whitespace
                 while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
                     had_whitespace = true;
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 if (lexer->lookahead == '/') {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                     break;
                 }
                 if (lexer->lookahead == '>') {
@@ -1092,40 +1092,40 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
                     return false;
                 }
                 had_whitespace = false;
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 while (iswalnum((wint_t)lexer->lookahead) ||
                        lexer->lookahead == '_' || lexer->lookahead == '.' ||
                        lexer->lookahead == ':' || lexer->lookahead == '-') {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 // attribute value specification
                 // optional whitespace
                 while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
                     had_whitespace = true;
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
                 // =
                 if (lexer->lookahead == '=') {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                     had_whitespace = false;
                     // optional whitespace
                     while (lexer->lookahead == ' ' ||
                            lexer->lookahead == '\t') {
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                     }
                     // attribute value
                     if (lexer->lookahead == '\'' || lexer->lookahead == '"') {
                         char delimiter = (char)lexer->lookahead;
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                         while (lexer->lookahead != delimiter &&
                                lexer->lookahead != '\n' &&
                                lexer->lookahead != '\r' && !lexer->eof(lexer)) {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                         }
                         if (lexer->lookahead != delimiter) {
                             return false;
                         }
-                        advance(s, lexer);
+                        advance_markdown(s, lexer);
                     } else {
                         // unquoted attribute value
                         bool had_one = false;
@@ -1139,7 +1139,7 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
                                lexer->lookahead != '`' &&
                                lexer->lookahead != '\n' &&
                                lexer->lookahead != '\r' && !lexer->eof(lexer)) {
-                            advance(s, lexer);
+                            advance_markdown(s, lexer);
                             had_one = true;
                         }
                         if (!had_one) {
@@ -1150,16 +1150,16 @@ static bool parse_html_block(Scanner *s, TSLexer *lexer,
             }
         } else {
             while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
             }
         }
         if (lexer->lookahead != '>') {
             return false;
         }
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     }
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     }
     if (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
         lexer->result_symbol = HTML_BLOCK_7_START;
@@ -1187,25 +1187,25 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
     bool empty = true;
     if (lexer->lookahead == '|') {
         starting_pipe = true;
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     }
     while (lexer->lookahead != '\r' && lexer->lookahead != '\n' &&
            !lexer->eof(lexer)) {
         if (lexer->lookahead == '|') {
             cell_count++;
             ending_pipe = true;
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         } else {
             if (lexer->lookahead != ' ' && lexer->lookahead != '\t') {
                 ending_pipe = false;
             }
             if (lexer->lookahead == '\\') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
                 if (is_punctuation((char)lexer->lookahead)) {
-                    advance(s, lexer);
+                    advance_markdown(s, lexer);
                 }
             } else {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
             }
         }
     }
@@ -1219,11 +1219,11 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
     // check the following line for a delimiter row
     // parse a newline
     if (lexer->lookahead == '\n') {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     } else if (lexer->lookahead == '\r') {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
         if (lexer->lookahead == '\n') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
     } else {
         return false;
@@ -1232,7 +1232,7 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
     s->column = 0;
     for (;;) {
         if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-            s->indentation += advance(s, lexer);
+            s->indentation += advance_markdown(s, lexer);
         } else {
             break;
         }
@@ -1250,19 +1250,19 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
     // check if delimiter row has the same number of cells and at least one pipe
     size_t delimiter_cell_count = 0;
     if (lexer->lookahead == '|') {
-        advance(s, lexer);
+        advance_markdown(s, lexer);
     }
     for (;;) {
         while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         if (lexer->lookahead == '|') {
             delimiter_cell_count++;
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             continue;
         }
         if (lexer->lookahead == ':') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             if (lexer->lookahead != '-') {
                 return false;
             }
@@ -1270,7 +1270,7 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
         bool had_one_minus = false;
         while (lexer->lookahead == '-') {
             had_one_minus = true;
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         if (had_one_minus) {
             delimiter_cell_count++;
@@ -1279,16 +1279,16 @@ static bool parse_pipe_table(Scanner *s, TSLexer *lexer,
             if (!had_one_minus) {
                 return false;
             }
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         if (lexer->lookahead == '|') {
             if (!had_one_minus) {
                 delimiter_cell_count++;
             }
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             continue;
         }
         if (lexer->lookahead != '\r' && lexer->lookahead != '\n') {
@@ -1342,7 +1342,7 @@ static bool scan_markdown(Scanner *s, TSLexer *lexer, const bool *valid_symbols)
         // lot of parsing quite a bit easier.
         for (;;) {
             if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                s->indentation += advance(s, lexer);
+                s->indentation += advance_markdown(s, lexer);
             } else {
                 break;
             }
@@ -1466,12 +1466,12 @@ static bool scan_markdown(Scanner *s, TSLexer *lexer, const bool *valid_symbols)
          valid_symbols[PIPE_TABLE_LINE_ENDING]) &&
         (lexer->lookahead == '\n' || lexer->lookahead == '\r')) {
         if (lexer->lookahead == '\r') {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
             if (lexer->lookahead == '\n') {
-                advance(s, lexer);
+                advance_markdown(s, lexer);
             }
         } else {
-            advance(s, lexer);
+            advance_markdown(s, lexer);
         }
         s->indentation = 0;
         s->column = 0;
@@ -1481,7 +1481,7 @@ static bool scan_markdown(Scanner *s, TSLexer *lexer, const bool *valid_symbols)
             lexer->mark_end(lexer);
             for (;;) {
                 if (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                    s->indentation += advance(s, lexer);
+                    s->indentation += advance_markdown(s, lexer);
                 } else {
                     break;
                 }

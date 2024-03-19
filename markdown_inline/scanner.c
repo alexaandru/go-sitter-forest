@@ -99,7 +99,7 @@ static bool parse_leaf_delimiter(TSLexer *lexer, uint8_t *delimiter_length,
                                  const TokenType close_token) {
     uint8_t level = 0;
     while (lexer->lookahead == delimiter) {
-        lexer->advance(lexer, false);
+        lexer->advance_markdown_inline(lexer, false);
         level++;
     }
     lexer->mark_end(lexer);
@@ -121,7 +121,7 @@ static bool parse_leaf_delimiter(TSLexer *lexer, uint8_t *delimiter_length,
                 }
                 close_level = 0;
             }
-            lexer->advance(lexer, false);
+            lexer->advance_markdown_inline(lexer, false);
         }
         if (close_level == level) {
             *delimiter_length = level;
@@ -151,7 +151,7 @@ static bool parse_dollar(Scanner *s, TSLexer *lexer,
 }
 
 static bool parse_star(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
-    lexer->advance(lexer, false);
+    lexer->advance_markdown_inline(lexer, false);
     // If `num_emphasis_delimiters_left` is not zero then we already decided
     // that this should be part of an emphasis delimiter run, so interpret it as
     // such.
@@ -176,7 +176,7 @@ static bool parse_star(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
     uint8_t star_count = 1;
     while (lexer->lookahead == '*') {
         star_count++;
-        lexer->advance(lexer, false);
+        lexer->advance_markdown_inline(lexer, false);
     }
     bool line_end = lexer->lookahead == '\n' || lexer->lookahead == '\r' ||
                     lexer->eof(lexer);
@@ -213,7 +213,7 @@ static bool parse_star(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
 }
 
 static bool parse_tilde(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
-    lexer->advance(lexer, false);
+    lexer->advance_markdown_inline(lexer, false);
     // If `num_emphasis_delimiters_left` is not zero then we already decided
     // that this should be part of an emphasis delimiter run, so interpret it as
     // such.
@@ -238,7 +238,7 @@ static bool parse_tilde(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
     uint8_t star_count = 1;
     while (lexer->lookahead == '~') {
         star_count++;
-        lexer->advance(lexer, false);
+        lexer->advance_markdown_inline(lexer, false);
     }
     bool line_end = lexer->lookahead == '\n' || lexer->lookahead == '\r' ||
                     lexer->eof(lexer);
@@ -276,7 +276,7 @@ static bool parse_tilde(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
 
 static bool parse_underscore(Scanner *s, TSLexer *lexer,
                              const bool *valid_symbols) {
-    lexer->advance(lexer, false);
+    lexer->advance_markdown_inline(lexer, false);
     // If `num_emphasis_delimiters_left` is not zero then we already decided
     // that this should be part of an emphasis delimiter run, so interpret it as
     // such.
@@ -301,7 +301,7 @@ static bool parse_underscore(Scanner *s, TSLexer *lexer,
     uint8_t underscore_count = 1;
     while (lexer->lookahead == '_') {
         underscore_count++;
-        lexer->advance(lexer, false);
+        lexer->advance_markdown_inline(lexer, false);
     }
     bool line_end = lexer->lookahead == '\n' || lexer->lookahead == '\r' ||
                     lexer->eof(lexer);

@@ -33,10 +33,9 @@
   {
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "doc": "grammar.js has recursive local deps",
     "srcRoot": "apex",
     "maintainedBy": "@aheber",
-    "skip": true,
+    "grammarSha": "cfd28d5b3d85b71a2a9492bca27cba277dcdfdf51ad012834e5671c8d466f8d3",
     "reference": "main",
     "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
@@ -242,9 +241,8 @@
   {
     "language": "commonlisp",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
-    "doc": "grammar.js has external dep that I cannot currently install: tree-sitter-clojure",
     "maintainedBy": "@theHamsta",
-    "skip": true,
+    "grammarSha": "e61ab3af74a8952b292a88030a3b58c4779c4756d50fe8686debe81b628b6b1b",
     "reference": "master",
     "revision": "cf10fc38bc24faf0549d59217ff37c789973dfdc"
   },
@@ -859,25 +857,23 @@
   {
     "language": "haskell",
     "url": "https://github.com/tree-sitter/tree-sitter-haskell",
-    "doc": "grammar.js has recursive local deps",
     "files": [
       "scanner.c",
       "unicode.h"
     ],
     "maintainedBy": "@mrcjkb",
-    "skip": true,
+    "grammarSha": "576e32fbc42f7926537e84b6584ee5137d18b314eba3bbadac578dc06c51beb6",
     "reference": "master",
     "revision": "6b5ec205c9d4f23eb36a163f1edc4f2db8c98e4a"
   },
   {
     "language": "haskell_persistent",
     "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
-    "doc": "grammar.js has recursive local deps",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@lykahb",
-    "skip": true,
+    "grammarSha": "7ccf1eab60aa5a4532dc416eb8f4143ac3a0d60cf5079314b3b426ce49c4885a",
     "reference": "master",
     "revision": "577259b4068b2c281c9ebf94c109bd50a74d5857"
   },
@@ -1279,13 +1275,12 @@
     "language": "markdown",
     "altName": "markdown (basic highlighting)",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
-    "doc": "grammar.js has recursive local deps",
     "files": [
       "scanner.c"
     ],
     "srcRoot": "tree-sitter-markdown",
     "maintainedBy": "@MDeiml",
-    "skip": true,
+    "grammarSha": "ea981bad5bc253fb4275ca89330ed0c81c74e139599b5af599bcad2293b329f8",
     "reference": "split_parser",
     "revision": "b2f01981a76e3251f5b660378136c248ed106b81"
   },
@@ -1293,13 +1288,12 @@
     "language": "markdown_inline",
     "altName": "markdown_inline (needed for full highlighting)",
     "url": "https://github.com/MDeiml/tree-sitter-markdown",
-    "doc": "grammar.js has recursive local deps",
     "files": [
       "scanner.c"
     ],
     "srcRoot": "tree-sitter-markdown-inline",
     "maintainedBy": "@MDeiml",
-    "skip": true,
+    "grammarSha": "3d91ba0e2969e5e8fdd46296fed79252c9c1614b9d3484966af27ece9586d7da",
     "reference": "split_parser",
     "revision": "b2f01981a76e3251f5b660378136c248ed106b81"
   },
@@ -1725,13 +1719,12 @@
   {
     "language": "purescript",
     "url": "https://github.com/postsolar/tree-sitter-purescript",
-    "doc": "grammar.js has recursive local deps",
     "files": [
       "scanner.c",
       "unicode.h"
     ],
     "maintainedBy": "@postsolar",
-    "skip": true,
+    "grammarSha": "ee8ba2d9a1011b4ed7856dce8bca3c7011ee0c3a64309df94b848221a52cf9b5",
     "reference": "main",
     "revision": "daf9b3e2be18b0b2996a1281f7783e0d041d8b80"
   },
@@ -2048,20 +2041,18 @@
   {
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "doc": "grammar.js has recursive local deps",
     "srcRoot": "soql",
     "maintainedBy": "@aheber",
-    "skip": true,
+    "grammarSha": "e4153b305dac0fc85acfb71f7e4666f111b267fc27df3b94a74b94af559ad1f6",
     "reference": "main",
     "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
   {
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "doc": "grammar.js has recursive local deps",
     "srcRoot": "sosl",
     "maintainedBy": "@aheber",
-    "skip": true,
+    "grammarSha": "f314108f523cec98ab852aef5ea3e2cd4c019255a9e0d225c49880e1c00b8285",
     "reference": "main",
     "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
   },
@@ -2418,11 +2409,14 @@
   {
     "language": "unison",
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
-    "doc": "grammar.js has recursive local deps",
+    "files": [
+      "scanner.c",
+      "maybe.c"
+    ],
     "maintainedBy": "@tapegram",
-    "pending": true,
+    "grammarSha": "3961fa8d7b20c5f28c8377afc1cf92cb2531b58c908b8d9241be0fac928851a0",
     "reference": "master",
-    "revision": ""
+    "revision": "fb49b8125509c079e08f345758c03a427129010e"
   },
   {
     "language": "usd",
@@ -2567,7 +2561,7 @@
   {
     "language": "xml",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
-    "doc": "grammar.js has recursive local deps",
+    "doc": "grammar.js has folder/index.js local deps",
     "files": [
       "scanner.c",
       "common/scanner.h"

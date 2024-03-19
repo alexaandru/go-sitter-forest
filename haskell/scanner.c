@@ -23,9 +23,9 @@
 #define SHORT_SCANNER if (res.finished) return res;
 #define PEEK state->lexer->lookahead
 // Move the parser position one character to the right.
-#define S_ADVANCE state->lexer->advance(state->lexer, false)
+#define S_ADVANCE state->lexer->advance_haskell(state->lexer, false)
 // Move the parser position one character to the right, treating the consumed character as whitespace.
-#define S_SKIP state->lexer->advance(state->lexer, true)
+#define S_SKIP state->lexer->advance_haskell(state->lexer, true)
 #define SYM(s) (state->symbols[s])
 
 #ifdef DEBUG

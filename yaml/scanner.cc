@@ -347,10 +347,10 @@ struct Scanner {
   ResultSchema rlt_sch;
 
   Scanner() {
-    deserialize(NULL, 0);
+    deserialize_yaml(NULL, 0);
   }
 
-  unsigned serialize(char *buffer) {
+  unsigned serialize_yaml(char *buffer) {
     size_t i = 0;
     buffer[i++] = row;
     buffer[i++] = col;
@@ -368,7 +368,7 @@ struct Scanner {
     return i;
   }
 
-  void deserialize(const char *buffer, unsigned length) {
+  void deserialize_yaml(const char *buffer, unsigned length) {
     row = 0;
     col = 0;
     blk_imp_row = -1;
@@ -395,27 +395,27 @@ struct Scanner {
   void adv(TSLexer *lexer) {
     cur_col++;
     cur_chr = lexer->lookahead;
-    lexer->advance(lexer, false);
+    lexer->advance_yaml(lexer, false);
   }
 
   void adv_nwl(TSLexer *lexer) {
     cur_row++;
     cur_col = 0;
     cur_chr = lexer->lookahead;
-    lexer->advance(lexer, false);
+    lexer->advance_yaml(lexer, false);
   }
 
   void skp(TSLexer *lexer) {
     cur_col++;
     cur_chr = lexer->lookahead;
-    lexer->advance(lexer, true);
+    lexer->advance_yaml(lexer, true);
   }
 
   void skp_nwl(TSLexer *lexer) {
     cur_row++;
     cur_col = 0;
     cur_chr = lexer->lookahead;
-    lexer->advance(lexer, true);
+    lexer->advance_yaml(lexer, true);
   }
 
   void mrk_end(TSLexer *lexer) {
@@ -862,7 +862,7 @@ struct Scanner {
     return false;
   }
 
-  bool scan(TSLexer *lexer, const bool *valid_symbols) {
+  bool scan_yaml(TSLexer *lexer, const bool *valid_symbols) {
     init();
     MRK_END();
 
@@ -1170,17 +1170,17 @@ void tree_sitter_yaml_external_scanner_destroy(void *payload) {
 
 unsigned tree_sitter_yaml_external_scanner_serialize(void *payload, char *buffer) {
   Scanner *scanner = static_cast<Scanner *>(payload);
-  return scanner->serialize(buffer);
+  return scanner->serialize_yaml(buffer);
 }
 
 void tree_sitter_yaml_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
   Scanner *scanner = static_cast<Scanner *>(payload);
-  scanner->deserialize(buffer, length);
+  scanner->deserialize_yaml(buffer, length);
 }
 
 bool tree_sitter_yaml_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
   Scanner *scanner = static_cast<Scanner *>(payload);
-  return scanner->scan(lexer, valid_symbols);
+  return scanner->scan_yaml(lexer, valid_symbols);
 }
 
 }

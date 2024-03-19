@@ -1,9 +1,8 @@
 {
   "language": "commonlisp",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
-  "doc": "grammar.js has external dep that I cannot currently install: tree-sitter-clojure",
   "maintainedBy": "@theHamsta",
-  "skip": true,
+  "grammarSha": "e61ab3af74a8952b292a88030a3b58c4779c4756d50fe8686debe81b628b6b1b",
   "reference": "master",
   "revision": "cf10fc38bc24faf0549d59217ff37c789973dfdc"
 }

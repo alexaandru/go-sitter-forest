@@ -1,10 +1,9 @@
 {
   "language": "sosl",
   "url": "https://github.com/aheber/tree-sitter-sfapex",
-  "doc": "grammar.js has recursive local deps",
   "srcRoot": "sosl",
   "maintainedBy": "@aheber",
-  "skip": true,
+  "grammarSha": "f314108f523cec98ab852aef5ea3e2cd4c019255a9e0d225c49880e1c00b8285",
   "reference": "main",
   "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
 }

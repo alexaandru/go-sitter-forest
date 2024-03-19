@@ -2,13 +2,12 @@
   "language": "markdown",
   "altName": "markdown (basic highlighting)",
   "url": "https://github.com/MDeiml/tree-sitter-markdown",
-  "doc": "grammar.js has recursive local deps",
   "files": [
     "scanner.c"
   ],
   "srcRoot": "tree-sitter-markdown",
   "maintainedBy": "@MDeiml",
-  "skip": true,
+  "grammarSha": "ea981bad5bc253fb4275ca89330ed0c81c74e139599b5af599bcad2293b329f8",
   "reference": "split_parser",
   "revision": "b2f01981a76e3251f5b660378136c248ed106b81"
 }

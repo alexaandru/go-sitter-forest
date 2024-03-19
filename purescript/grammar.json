@@ -1,13 +1,12 @@
 {
   "language": "purescript",
   "url": "https://github.com/postsolar/tree-sitter-purescript",
-  "doc": "grammar.js has recursive local deps",
   "files": [
     "scanner.c",
     "unicode.h"
   ],
   "maintainedBy": "@postsolar",
-  "skip": true,
+  "grammarSha": "ee8ba2d9a1011b4ed7856dce8bca3c7011ee0c3a64309df94b848221a52cf9b5",
   "reference": "main",
   "revision": "daf9b3e2be18b0b2996a1281f7783e0d041d8b80"
 }

@@ -1,10 +1,9 @@
 {
   "language": "apex",
   "url": "https://github.com/aheber/tree-sitter-sfapex",
-  "doc": "grammar.js has recursive local deps",
   "srcRoot": "apex",
   "maintainedBy": "@aheber",
-  "skip": true,
+  "grammarSha": "cfd28d5b3d85b71a2a9492bca27cba277dcdfdf51ad012834e5671c8d466f8d3",
   "reference": "main",
   "revision": "857077f9e6bb04df0f769c18d32bfe036911adc8"
 }
