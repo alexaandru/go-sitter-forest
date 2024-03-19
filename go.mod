@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.5.5
 	github.com/alexaandru/go-sitter-forest/apex v1.5.5
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.5
-	github.com/alexaandru/go-sitter-forest/asm v1.5.5
+	github.com/alexaandru/go-sitter-forest/asm v1.5.6
 	github.com/alexaandru/go-sitter-forest/astro v1.5.5
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.5
 	github.com/alexaandru/go-sitter-forest/awk v1.5.5
@@ -74,7 +74,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.5.5
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.5
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.5
-	github.com/alexaandru/go-sitter-forest/gleam v1.5.5
+	github.com/alexaandru/go-sitter-forest/gleam v1.5.6
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.5
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.5
 	github.com/alexaandru/go-sitter-forest/gn v1.5.5
@@ -101,7 +101,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.5.5
 	github.com/alexaandru/go-sitter-forest/hocon v1.5.6
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.5
-	github.com/alexaandru/go-sitter-forest/html v1.5.5
+	github.com/alexaandru/go-sitter-forest/html v1.5.6
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.5
 	github.com/alexaandru/go-sitter-forest/http v1.5.8
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.5
