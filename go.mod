@@ -91,7 +91,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.5
 	github.com/alexaandru/go-sitter-forest/hack v1.5.5
 	github.com/alexaandru/go-sitter-forest/hare v1.5.5
-	github.com/alexaandru/go-sitter-forest/haskell v1.5.6
+	github.com/alexaandru/go-sitter-forest/haskell v1.5.7
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.6
 	github.com/alexaandru/go-sitter-forest/hcl v1.5.6
 	github.com/alexaandru/go-sitter-forest/heex v1.5.5
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.5
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.5
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.5
-	github.com/alexaandru/go-sitter-forest/nim v1.5.5
+	github.com/alexaandru/go-sitter-forest/nim v1.5.6
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.5
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.5
 	github.com/alexaandru/go-sitter-forest/nix v1.5.5
@@ -179,7 +179,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/psv v1.5.6
 	github.com/alexaandru/go-sitter-forest/pug v1.5.5
 	github.com/alexaandru/go-sitter-forest/puppet v1.5.5
-	github.com/alexaandru/go-sitter-forest/purescript v1.5.6
+	github.com/alexaandru/go-sitter-forest/purescript v1.5.7
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.5.5
 	github.com/alexaandru/go-sitter-forest/python v1.5.5
 	github.com/alexaandru/go-sitter-forest/ql v1.5.5
@@ -248,7 +248,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typst v1.5.5
 	github.com/alexaandru/go-sitter-forest/udev v1.5.5
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.5
-	github.com/alexaandru/go-sitter-forest/unison v1.5.5
+	github.com/alexaandru/go-sitter-forest/unison v1.5.6
 	github.com/alexaandru/go-sitter-forest/usd v1.5.5
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.5
 	github.com/alexaandru/go-sitter-forest/v v1.5.6
