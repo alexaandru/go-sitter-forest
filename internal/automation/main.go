@@ -178,7 +178,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	// We need to temporarily alter gr in here.
 	gr, shas := *grRO, map[string]string{}
 
-	oldFiles, _ := filepath.Glob(filepath.Join("tmp", gr.Language, "*.js"))
+	oldFiles, _ := filepath.Glob(filepath.Join("tmp", gr.Language, "*.*"))
 	for _, file := range oldFiles {
 		if err = os.Remove(file); err != nil {
 			return

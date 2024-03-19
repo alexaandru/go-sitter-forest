@@ -3,13 +3,13 @@
 
 enum TokenType { BRACKET_ARGUMENT, BRACKET_COMMENT, LINE_COMMENT };
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_cmake(TSLexer *lexer) { lexer->advance_cmake(lexer, true); }
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_cmake(TSLexer *lexer) { lexer->advance_cmake(lexer, false); }
 
 static void skip_wspace(TSLexer *lexer) {
   while (iswspace(lexer->lookahead)) {
-    skip(lexer);
+    skip_cmake(lexer);
   }
 }
 
@@ -17,12 +17,12 @@ static bool is_bracket_argument(TSLexer *lexer) {
   if (lexer->lookahead != '[') {
     return false;
   }
-  advance(lexer);
+  advance_cmake(lexer);
 
   int open_level = 0;
   while (lexer->lookahead == '=') {
     ++open_level;
-    advance(lexer);
+    advance_cmake(lexer);
   }
 
   if (lexer->lookahead != '[') {
@@ -30,18 +30,18 @@ static bool is_bracket_argument(TSLexer *lexer) {
   }
 
   while (lexer->lookahead != '\0') {
-    advance(lexer);
+    advance_cmake(lexer);
     if (lexer->lookahead == ']') {
-      advance(lexer);
+      advance_cmake(lexer);
 
       int close_level = 0;
       while (lexer->lookahead == '=') {
         ++close_level;
-        advance(lexer);
+        advance_cmake(lexer);
       }
 
       if (lexer->lookahead == ']' && close_level == open_level) {
-        advance(lexer);
+        advance_cmake(lexer);
         return true;
       }
     }
@@ -60,13 +60,13 @@ static bool scan_cmake(void *payload, TSLexer *lexer, bool const *valid_symbols)
   }
   if (lexer->lookahead == '#' &&
       (valid_symbols[BRACKET_COMMENT] || valid_symbols[LINE_COMMENT])) {
-    advance(lexer);
+    advance_cmake(lexer);
     if (is_bracket_argument(lexer)) {
       lexer->result_symbol = BRACKET_COMMENT;
       return true;
     } else {
       while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
-        advance(lexer);
+        advance_cmake(lexer);
       }
       lexer->result_symbol = LINE_COMMENT;
       return true;
