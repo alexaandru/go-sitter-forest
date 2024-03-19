@@ -2088,6 +2088,14 @@
     "revision": "b6b1f7f7e70e869c655705c591cbdf3e8a807ad6"
   },
   {
+    "language": "sqlite",
+    "url": "https://github.com/johndoe-o/tree-sitter-sqlite",
+    "maintainedBy": "@johndoe-o",
+    "grammarSha": "a82cfcf385779c3624b09e9eb31672349a046f94369ed7a67e3b4b8f6d92bf94",
+    "reference": "main",
+    "revision": "f9e7a2b3144bab5aca777606415a06f44f8d8aa2"
+  },
+  {
     "language": "squirrel",
     "url": "https://github.com/amaanq/tree-sitter-squirrel",
     "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",

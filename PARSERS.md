@@ -1,4 +1,4 @@
-# 266 Supported Parsers
+# 267 Supported Parsers
 
 2 pending, 42 skipped regeneration
 
@@ -219,6 +219,7 @@
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️  (maintained by @Sarrus1)
 - [x] [sparql](https://github.com/BonaBeavis/tree-sitter-sparql) (maintained by @BonaBeavis; ❌grammar.js throws error)
 - [x] [sql](https://github.com/DerekStride/tree-sitter-sql) ✔️  (maintained by @DerekStride)
+- [x] [sqlite](https://github.com/johndoe-o/tree-sitter-sqlite) ✔️  (maintained by @johndoe-o)
 - [x] [squirrel](https://github.com/amaanq/tree-sitter-squirrel) (maintained by @amaanq; ❌grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+})
 - [x] [ssh_config](https://github.com/ObserverOfTime/tree-sitter-ssh-config) ✔️  (maintained by @ObserverOfTime)
 - [x] [starlark](https://github.com/amaanq/tree-sitter-starlark) ✔️  (maintained by @amaanq)
