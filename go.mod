@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.5.5
 	github.com/alexaandru/go-sitter-forest/apex v1.5.6
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.5
-	github.com/alexaandru/go-sitter-forest/asm v1.5.6
+	github.com/alexaandru/go-sitter-forest/asm v1.5.7
 	github.com/alexaandru/go-sitter-forest/astro v1.5.5
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.5
 	github.com/alexaandru/go-sitter-forest/awk v1.5.5
@@ -75,7 +75,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.5
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.5
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.6
-	github.com/alexaandru/go-sitter-forest/glimmer v1.5.5
+	github.com/alexaandru/go-sitter-forest/glimmer v1.5.6
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.5
 	github.com/alexaandru/go-sitter-forest/gn v1.5.5
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.5
@@ -162,8 +162,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.5
 	github.com/alexaandru/go-sitter-forest/pem v1.5.5
 	github.com/alexaandru/go-sitter-forest/perl v1.5.6
-	github.com/alexaandru/go-sitter-forest/php v1.5.6
-	github.com/alexaandru/go-sitter-forest/php_only v1.5.6
+	github.com/alexaandru/go-sitter-forest/php v1.5.7
+	github.com/alexaandru/go-sitter-forest/php_only v1.5.7
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.5
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.5
 	github.com/alexaandru/go-sitter-forest/po v1.5.5
@@ -246,7 +246,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.5.5
 	github.com/alexaandru/go-sitter-forest/typescript v1.5.6
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.5
-	github.com/alexaandru/go-sitter-forest/typst v1.5.5
+	github.com/alexaandru/go-sitter-forest/typst v1.5.6
 	github.com/alexaandru/go-sitter-forest/udev v1.5.5
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.5
 	github.com/alexaandru/go-sitter-forest/unison v1.5.6
@@ -258,7 +258,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.5
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.5
 	github.com/alexaandru/go-sitter-forest/vim v1.5.6
-	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.5
+	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.6
 	github.com/alexaandru/go-sitter-forest/vue v1.5.5
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.5
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.6
