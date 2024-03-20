@@ -124,9 +124,9 @@ typedef struct {
 
 typedef enum { Error, End } ScanContentResult;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_php(TSLexer *lexer) { lexer->advance_php(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_php(TSLexer *lexer) { lexer->advance_php(lexer, true); }
 
 static unsigned serialize_php(Scanner *scanner, char *buffer) {
     unsigned size = 0;
@@ -174,16 +174,16 @@ static void deserialize_php(Scanner *scanner, const char *buffer, unsigned lengt
 static inline bool scan_whitespace(TSLexer *lexer) {
     for (;;) {
         while (iswspace(lexer->lookahead)) {
-            advance(lexer);
+            advance_php(lexer);
         }
 
         if (lexer->lookahead == '/') {
-            advance(lexer);
+            advance_php(lexer);
 
             if (lexer->lookahead == '/') {
-                advance(lexer);
+                advance_php(lexer);
                 while (lexer->lookahead != 0 && lexer->lookahead != '\n') {
-                    advance(lexer);
+                    advance_php(lexer);
                 }
             } else {
                 return false;
@@ -210,7 +210,7 @@ static inline bool is_escapable_sequence(TSLexer *lexer) {
 
     // Hex
     if (letter == 'x') {
-        advance(lexer);
+        advance_php(lexer);
         return iswxdigit(lexer->lookahead);
     }
 
@@ -235,7 +235,7 @@ static inline bool scan_nowdoc_string(Scanner *scanner, TSLexer *lexer) {
     // While PHP requires the nowdoc end tag to be the very first on a new line,
     // there may be an arbitrary amount of whitespace before the closing token
     while (iswspace(lexer->lookahead)) {
-        advance(lexer);
+        advance_php(lexer);
         has_consumed_content = true;
     }
 
@@ -247,7 +247,7 @@ static inline bool scan_nowdoc_string(Scanner *scanner, TSLexer *lexer) {
         if (lexer->lookahead != heredoc_tag.data[i]) {
             break;
         }
-        advance(lexer);
+        advance_php(lexer);
         has_consumed_content = true;
 
         end_tag_matched = (i == heredoc_tag.len - 1 && (iswspace(lexer->lookahead) || lexer->lookahead == ';' ||
@@ -257,7 +257,7 @@ static inline bool scan_nowdoc_string(Scanner *scanner, TSLexer *lexer) {
     if (end_tag_matched) {
         // There may be an arbitrary amount of white space after the end tag
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\r' && lexer->lookahead != '\n') {
-            advance(lexer);
+            advance_php(lexer);
             has_consumed_content = true;
         }
 
@@ -281,7 +281,7 @@ static inline bool scan_nowdoc_string(Scanner *scanner, TSLexer *lexer) {
                 if (lexer->eof(lexer)) {
                     return false;
                 }
-                advance(lexer);
+                advance_php(lexer);
         }
     }
 
@@ -297,7 +297,7 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
         // line, there may be an arbitrary amount of whitespace before the
         // closing token However, we should not consume \r or \n
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\r' && lexer->lookahead != '\n') {
-            advance(lexer);
+            advance_php(lexer);
             has_consumed_content = true;
         }
 
@@ -310,7 +310,7 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 break;
             }
             has_consumed_content = true;
-            advance(lexer);
+            advance_php(lexer);
 
             end_tag_matched = (i == heredoc_tag.len - 1 && (iswspace(lexer->lookahead) || lexer->lookahead == ';' ||
                                                             lexer->lookahead == ',' || lexer->lookahead == ')'));
@@ -320,7 +320,7 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
             // There may be an arbitrary amount of white space after the end tag
             // However, we should not consume \r or \n
             while (iswspace(lexer->lookahead) && lexer->lookahead != '\r' && lexer->lookahead != '\n') {
-                advance(lexer);
+                advance_php(lexer);
                 has_consumed_content = true;
             }
 
@@ -342,28 +342,28 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 if (!is_heredoc && !is_execution_string) {
                     return has_content;
                 }
-                advance(lexer);
+                advance_php(lexer);
                 break;
             case '`':
                 if (is_execution_string) {
                     return has_content;
                 }
-                advance(lexer);
+                advance_php(lexer);
                 break;
             case '\n':
             case '\r':
                 if (is_heredoc) {
                     return has_content;
                 }
-                advance(lexer);
+                advance_php(lexer);
                 break;
             case '\\':
-                advance(lexer);
+                advance_php(lexer);
 
                 // \{ should not be interpreted as an escape sequence, but both
                 // should be consumed as normal characters
                 if (lexer->lookahead == '{') {
-                    advance(lexer);
+                    advance_php(lexer);
                     break;
                 }
 
@@ -372,7 +372,7 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 }
 
                 if (is_heredoc && lexer->lookahead == '\\') {
-                    advance(lexer);
+                    advance_php(lexer);
                     break;
                 }
 
@@ -381,7 +381,7 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 }
                 break;
             case '$':
-                advance(lexer);
+                advance_php(lexer);
 
                 if (is_valid_name_char(lexer) || lexer->lookahead == '{') {
                     return has_content;
@@ -389,9 +389,9 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 break;
             case '-':
                 if (is_after_variable) {
-                    advance(lexer);
+                    advance_php(lexer);
                     if (lexer->lookahead == '>') {
-                        advance(lexer);
+                        advance_php(lexer);
                         if (is_valid_name_char(lexer)) {
                             return has_content;
                         }
@@ -403,10 +403,10 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 if (is_after_variable) {
                     return has_content;
                 }
-                advance(lexer);
+                advance_php(lexer);
                 break;
             case '{':
-                advance(lexer);
+                advance_php(lexer);
                 if (lexer->lookahead == '$') {
                     return has_content;
                 }
@@ -415,7 +415,7 @@ static bool scan_encapsed_part_string(Scanner *scanner, TSLexer *lexer, bool is_
                 if (lexer->eof(lexer)) {
                     return false;
                 }
-                advance(lexer);
+                advance_php(lexer);
         }
 
         is_after_variable = false;
@@ -429,7 +429,7 @@ static String scan_heredoc_word(TSLexer *lexer) {
 
     while (is_valid_name_char(lexer)) {
         STRING_PUSH(result, lexer->lookahead);
-        advance(lexer);
+        advance_php(lexer);
     }
 
     return result;
@@ -509,7 +509,7 @@ static bool scan_php(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
         Heredoc heredoc = VEC_BACK(scanner->open_heredocs);
 
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_php(lexer);
         }
 
         String word = scan_heredoc_word(lexer);
@@ -538,7 +538,7 @@ static bool scan_php(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
         Heredoc heredoc;
 
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_php(lexer);
         }
 
         heredoc.word = scan_heredoc_word(lexer);
@@ -559,7 +559,7 @@ static bool scan_php(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
             return false;
         }
 
-        advance(lexer);
+        advance_php(lexer);
 
         return lexer->lookahead == '>';
     }

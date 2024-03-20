@@ -54,9 +54,9 @@
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
     "maintainedBy": "@RubixDev",
-    "grammarSha": "c97794dbedb011e75336f573a3c3ceb354ef4b3903ce2e8651205d5ea20083ea",
+    "grammarSha": "3233815920b7ad41b952f4c8f8b1675e85735c1bf1d48416816681d80de03cb5",
     "reference": "main",
-    "revision": "f4032c9dbcc10dfbf9b302b2a449148483293593"
+    "revision": "f7158e1c22bdb4bf2c3e139c0ec3050d142cde6d"
   },
   {
     "language": "astro",
@@ -716,7 +716,7 @@
     "maintainedBy": "@NullVoxPopuli",
     "grammarSha": "bf47982447f60cfc433628ecce6de689516cf5da6434a278d87916053c7e6d97",
     "reference": "main",
-    "revision": "5dc6d1040e8ff8978ff3680e818d85447bbc10aa"
+    "revision": "6b25d265c990139353e1f7f97baf84987ebb7bf0"
   },
   {
     "language": "glsl",
@@ -1557,7 +1557,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "f6add9f1297a755d7f3bdc6a2b903771ca7f36856eeac1715c9c5d78368a8d2f",
     "reference": "master",
-    "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
+    "revision": "b1eb65e04cf31a5df611fea139ad54d611599dc4"
   },
   {
     "language": "php_only",
@@ -1570,7 +1570,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "b0df0a0ba9e9b48d082f5fd3c075452ab87175ec8cdab33e758d53d68ac2a036",
     "reference": "master",
-    "revision": "ad414fa5497328e96ef992d80896f19c77584f7c"
+    "revision": "b1eb65e04cf31a5df611fea139ad54d611599dc4"
   },
   {
     "language": "phpdoc",
@@ -2394,9 +2394,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@uben0, @RaafatTurki",
-    "grammarSha": "fc2f3e5bf1c9e326b79ae35ebadc033efdea0e8b19f82b703921f00c538c3a40",
+    "grammarSha": "03ff65b03ee164ac7f84cf6f9e00ccb640ed0dd9c62cb6561083c9602600b070",
     "reference": "master",
-    "revision": "3c3e5f8e0caeba6157e26a1bedf8321e1da62799"
+    "revision": "f457c77edffd4b93190794355ff5acf7acfb99c6"
   },
   {
     "language": "udev",
@@ -2508,9 +2508,9 @@
     "language": "vimdoc",
     "url": "https://github.com/neovim/tree-sitter-vimdoc",
     "maintainedBy": "@clason",
-    "grammarSha": "b93d5350022d3cab23c1128c9d587a9d91c8cfa7988a8602408611faa731ab64",
+    "grammarSha": "1f451d3c8db9b4ee856807912b67c79a69820df1b8acde6cfbdd7f3b370005b4",
     "reference": "master",
-    "revision": "cee98887944bfe979c95386785ae388d8ecb3715"
+    "revision": "66f4fee37b07cff0dd3400089eebccd02e61e5c2"
   },
   {
     "language": "vue",
@@ -2556,7 +2556,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "8dfd1bcabf08673d0122e14d4d6d0369756096fb"
+    "revision": "9a77bb6c1f4d65a9e8cd19585361b9a0786d5565"
   },
   {
     "language": "xcompose",

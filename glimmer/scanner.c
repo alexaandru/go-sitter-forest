@@ -12,16 +12,16 @@ void tree_sitter_glimmer_external_scanner_reset(void *p) {}
 unsigned tree_sitter_glimmer_external_scanner_serialize(void *p, char *buffer) { return 0; }
 void tree_sitter_glimmer_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_glimmer(TSLexer *lexer) { lexer->advance_glimmer(lexer, false); }
 
 static bool scan_html_comment(TSLexer *lexer) {
     // Ensure the next characters are `!--`
     if (lexer->lookahead != '!') return false;
-    advance(lexer);
+    advance_glimmer(lexer);
     if (lexer->lookahead != '-') return false;
-    advance(lexer);
+    advance_glimmer(lexer);
     if (lexer->lookahead != '-') return false;
-    advance(lexer);
+    advance_glimmer(lexer);
 
     // Consume characters until we read `-->`
     unsigned dashes = 0;
@@ -33,14 +33,14 @@ static bool scan_html_comment(TSLexer *lexer) {
             case '>':
                 if (dashes >= 2) {
                     lexer->result_symbol = COMMENT;
-                    advance(lexer);
+                    advance_glimmer(lexer);
                     lexer->mark_end(lexer);
                     return true;
                 }
             default:
                 dashes = 0;
         }
-        advance(lexer);
+        advance_glimmer(lexer);
     }
 
     return false;
@@ -62,7 +62,7 @@ static bool scan_multi_line_handlebars_comment(TSLexer *lexer) {
                 ++brackets;
                 if (dashes >= 2 && brackets == 2) {
                     lexer->result_symbol = COMMENT;
-                    advance(lexer);
+                    advance_glimmer(lexer);
                     lexer->mark_end(lexer);
                     return true;
                 } else {
@@ -72,7 +72,7 @@ static bool scan_multi_line_handlebars_comment(TSLexer *lexer) {
                 dashes = 0;
                 brackets = 0;
         }
-        advance(lexer);
+        advance_glimmer(lexer);
     }
 
     return false;
@@ -87,7 +87,7 @@ static bool scan_single_line_handlebars_comment(TSLexer *lexer) {
                 ++brackets;
                 if (brackets == 2) {
                     lexer->result_symbol = COMMENT;
-                    advance(lexer);
+                    advance_glimmer(lexer);
                     lexer->mark_end(lexer);
                     return true;
                 } else {
@@ -96,7 +96,7 @@ static bool scan_single_line_handlebars_comment(TSLexer *lexer) {
             default:
                 brackets = 0;
         }
-        advance(lexer);
+        advance_glimmer(lexer);
     }
 
     return false;
@@ -106,21 +106,21 @@ static bool scan_single_line_handlebars_comment(TSLexer *lexer) {
 static bool scan_handlebars_comment(TSLexer *lexer) {
     // Ensure the next characters are `{!`
     if (lexer->lookahead != '{') return false;
-    advance(lexer);
+    advance_glimmer(lexer);
     if (lexer->lookahead != '!') return false;
-    advance(lexer);
+    advance_glimmer(lexer);
 
     // Handle either multi-line or single-line comment
     switch (lexer->lookahead) {
         // Multi-Line Comment
         case '-':
-            advance(lexer);
+            advance_glimmer(lexer);
 
             return scan_multi_line_handlebars_comment(lexer);
 
         // Single-Line Comment
         default:
-            advance(lexer);
+            advance_glimmer(lexer);
 
             return scan_single_line_handlebars_comment(lexer);
     }
@@ -132,20 +132,20 @@ bool tree_sitter_glimmer_external_scanner_scan(void *payload, TSLexer *lexer,
                                                   const bool *valid_symbols) {
     // Eat whitespace
     while (iswspace(lexer->lookahead)) {
-      lexer->advance(lexer, true);
+      lexer->advance_glimmer(lexer, true);
     }
 
     if (valid_symbols[COMMENT]) {
         switch (lexer->lookahead) {
             case '<':
                 lexer->mark_end(lexer);
-                advance(lexer);
+                advance_glimmer(lexer);
 
                 return scan_html_comment(lexer);
 
             case '{':
                 lexer->mark_end(lexer);
-                advance(lexer);
+                advance_glimmer(lexer);
 
                 return scan_handlebars_comment(lexer);
 
