@@ -224,7 +224,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/styled v1.5.5
 	github.com/alexaandru/go-sitter-forest/supercollider v1.5.5
 	github.com/alexaandru/go-sitter-forest/surface v1.5.5
-	github.com/alexaandru/go-sitter-forest/svelte v1.5.5
+	github.com/alexaandru/go-sitter-forest/svelte v1.5.6
 	github.com/alexaandru/go-sitter-forest/swift v1.5.5
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.5
 	github.com/alexaandru/go-sitter-forest/systemtap v1.5.5
