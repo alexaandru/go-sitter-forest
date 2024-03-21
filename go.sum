@@ -8,8 +8,8 @@ github.com/alexaandru/go-sitter-forest/apex v1.5.6 h1:wP2eicYDaeUtw88t1QJe1W3Y88
 github.com/alexaandru/go-sitter-forest/apex v1.5.6/go.mod h1:/mbLqiwBLvIrTLwHvcs6nMCE6mVr4k/686VdyXBQB5w=
 github.com/alexaandru/go-sitter-forest/arduino v1.5.5 h1:mCt7TNdg9+bQY0GHaE7oVVAWalE42UgjqY/aLdKYe8I=
 github.com/alexaandru/go-sitter-forest/arduino v1.5.5/go.mod h1:184zumqoB14Rs04t24JcRxdHLZLvIPWka+XPPY5NTVU=
-github.com/alexaandru/go-sitter-forest/asm v1.5.7 h1:SdFvCRBwSDNmBd+WYZ39/7OJ95zWtpBgVSRAg6pPUJI=
-github.com/alexaandru/go-sitter-forest/asm v1.5.7/go.mod h1:njRrpIdcwLLWMeUOCz7DHzukE+1Qu0ka4xOKDPjX5LA=
+github.com/alexaandru/go-sitter-forest/asm v1.5.8 h1:0324/fbbRuVLTTZyGA+DSfqnJ6RFYcfuAe/GBZHXmRE=
+github.com/alexaandru/go-sitter-forest/asm v1.5.8/go.mod h1:njRrpIdcwLLWMeUOCz7DHzukE+1Qu0ka4xOKDPjX5LA=
 github.com/alexaandru/go-sitter-forest/astro v1.5.5 h1:g7l1+PYuWbi7q0M0BYp64zn9zBfvQAkmnVjGSl0QuM0=
 github.com/alexaandru/go-sitter-forest/astro v1.5.5/go.mod h1:peo/JmEzwIvOgYWwig2aHdE2oYbkVeM3iaRYlbrOFEQ=
 github.com/alexaandru/go-sitter-forest/authzed v1.5.5 h1:ZT5pyaTp4UR5/2PDYNvbvmYmPyAx6IKHdyjTjld0PXQ=
@@ -496,8 +496,8 @@ github.com/alexaandru/go-sitter-forest/usd v1.5.5 h1:85v/EJs1yKwb8myJTZhFfWYpsp/
 github.com/alexaandru/go-sitter-forest/usd v1.5.5/go.mod h1:vw+LykUvQ1u+YF137/1b5PQ2XIRkR6UB0XQyb8/veDU=
 github.com/alexaandru/go-sitter-forest/uxntal v1.5.5 h1:sl6Q3AhbNR32IdpyMHywTqwTnWijTebrTww31oFritk=
 github.com/alexaandru/go-sitter-forest/uxntal v1.5.5/go.mod h1:mTlLzG9v56IdPmVGR+OjQOUdcnNrQlFCvhAk0FQs84U=
-github.com/alexaandru/go-sitter-forest/v v1.5.6 h1:3O+HWCeKFGu3WWp0Vvf61r0yy4MOgo6x7OmktBXkmqI=
-github.com/alexaandru/go-sitter-forest/v v1.5.6/go.mod h1:Alp+K2Vi1U/K5/8ZRelb+kCu5q5V0mhT7WdVmdKgcbQ=
+github.com/alexaandru/go-sitter-forest/v v1.5.7 h1:UeueQ4leUy8DV/zYIm7ICwGkBFLFgIuPqft/2BDGu10=
+github.com/alexaandru/go-sitter-forest/v v1.5.7/go.mod h1:Alp+K2Vi1U/K5/8ZRelb+kCu5q5V0mhT7WdVmdKgcbQ=
 github.com/alexaandru/go-sitter-forest/vala v1.5.5 h1:esNtx8FXFtnr+H2zIQc6aChAkln1uP5qNtuqOKn3qzE=
 github.com/alexaandru/go-sitter-forest/vala v1.5.5/go.mod h1:0KLDUk1UiX75P59fm3baqn4gzF0s4vC3piSfoBRdiVU=
 github.com/alexaandru/go-sitter-forest/vento v1.5.6 h1:7oxR0RZOYQ5/4BCx+S9xxeJF0NpvKtFbsnyfqNoGNss=
