@@ -49,7 +49,7 @@ match_escape(TSLexer *lexer)
 	assert(lexer->lookahead == '\\');
 
 	// now we parsing an escape
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 	switch (lexer->lookahead) {
 	case '\'':
 	case '"':
@@ -62,39 +62,39 @@ match_escape(TSLexer *lexer)
 	case 'r':
 	case 't':
 	case 'v':
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		return (true);
 	case 'x':
 		for (int i = 0; i < 2; i++) { // expect two hex digits
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
 			    !isxdigit(lexer->lookahead)) {
 				return (false);
 			}
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		return (true);
 
 	case 'u':
 		for (int i = 0; i < 4; i++) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
 			    !isxdigit(lexer->lookahead)) {
 				return (false);
 			}
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		return (true);
 
 	case 'U':
 		for (int i = 0; i < 8; i++) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
 			    !isxdigit(lexer->lookahead)) {
 				return (false);
 			}
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		return (true);
 
 	case '0': // octal
@@ -106,7 +106,7 @@ match_escape(TSLexer *lexer)
 	case '6':
 	case '7':
 		for (int i = 0; i < 3; i++) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			if (lexer->lookahead < '0' || lexer->lookahead > '7')
 				break;
 		}
@@ -114,7 +114,7 @@ match_escape(TSLexer *lexer)
 
 	case '&': // HTML entity - we don't validate the names
 		for (int i = 0; i < 64; i++) { // no names longer than this
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			if (lexer->lookahead == ';') {
 				if (i < 2) {
 					// need at least 2 characters in an
@@ -128,7 +128,7 @@ match_escape(TSLexer *lexer)
 				return (false);
 			}
 		}
-		lexer->advance(lexer, true);
+		lexer->advance_d(lexer, true);
 		return (true);
 
 	case '`':
@@ -141,18 +141,18 @@ static bool
 match_char_literal(TSLexer *lexer)
 {
 	assert(lexer->lookahead == '\'');
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 	if (lexer->lookahead == '\'') {
 		// syntax error
 		return (false);
 	}
 	if (lexer->lookahead != '\\') {
 		// simple unescaped character
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		if (lexer->lookahead != '\'') {
 			return (false); // closing single quote missing
 		}
-		lexer->advance(lexer, false); // to get the closer
+		lexer->advance_d(lexer, false); // to get the closer
 		lexer->mark_end(lexer);
 		lexer->result_symbol = L_CHAR;
 		return (true);
@@ -161,7 +161,7 @@ match_char_literal(TSLexer *lexer)
 	if ((!match_escape(lexer)) || (lexer->lookahead != '\'')) {
 		return (false);
 	}
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 	lexer->mark_end(lexer);
 	lexer->result_symbol = L_CHAR;
 	return (true); // missing closing quote
@@ -180,7 +180,7 @@ match_string_suffix(TSLexer *lexer)
 	if ((c == 'c') || (c == 'd') || (c == 'w')) {
 		// special string form
 		// advance so we include the suffix
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 	// and mark the end (regardless whether we did or did not)
 	lexer->mark_end(lexer);
@@ -192,7 +192,7 @@ match_dq_string(TSLexer *lexer)
 	int c = lexer->lookahead;
 	assert(c == '"');
 
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 
 	while ((c = lexer->lookahead) != 0) {
 
@@ -206,11 +206,11 @@ match_dq_string(TSLexer *lexer)
 		if (c == '"') {
 			// end of string!
 			lexer->result_symbol = L_STRING;
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			match_string_suffix(lexer);
 			return (true);
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 	// unterminated
 	return (false);
@@ -221,15 +221,15 @@ match_raw_string(TSLexer *lexer, int quote, int token)
 {
 	int c = lexer->lookahead;
 	assert(c == quote);
-	lexer->advance(lexer, false); // skip over starting quote
+	lexer->advance_d(lexer, false); // skip over starting quote
 	while ((c = lexer->lookahead) != 0) {
 		if (c == quote) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			lexer->result_symbol = token;
 			match_string_suffix(lexer);
 			return (true);
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 	// unterminated
 	return (false);
@@ -241,7 +241,7 @@ match_delimited_string(TSLexer *lexer, int start, int end)
 	int  c;
 	int  nest  = 0;
 	bool first = true;
-	lexer->advance(lexer, false); // skip opener
+	lexer->advance_d(lexer, false); // skip opener
 	while ((c = lexer->lookahead) != 0) {
 		if (c == start && start != 0) {
 			// nesting, increase the nest level
@@ -251,20 +251,20 @@ match_delimited_string(TSLexer *lexer, int start, int end)
 			if (nest > 0) {
 				nest--;
 			} else if (!first) {
-				lexer->advance(lexer, false);
+				lexer->advance_d(lexer, false);
 				if ((c = lexer->lookahead) != '"') {
 					// do *not* advance, we already did
 					// this ensures e.g. }}" will work
 					continue;
 				}
-				lexer->advance(lexer, false);
+				lexer->advance_d(lexer, false);
 				lexer->result_symbol = L_STRING;
 				match_string_suffix(lexer);
 				return (true);
 			}
 		}
 		first = false;
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 	return (false);
 }
@@ -287,7 +287,7 @@ match_heredoc_string(TSLexer *lexer)
 			break;
 		}
 		identifier[i++] = c;
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 	if (i == 0) {
 		return (false);
@@ -299,10 +299,10 @@ match_heredoc_string(TSLexer *lexer)
 
 	while ((c = lexer->lookahead) != 0) {
 		while ((!is_eol(c)) && (c != 0)) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			c = lexer->lookahead;
 		}
-		lexer->advance(lexer, false); // advance past the newline
+		lexer->advance_d(lexer, false); // advance past the newline
 
 		j = 0;
 		while (((c = lexer->lookahead) != 0) && (j < i)) {
@@ -310,7 +310,7 @@ match_heredoc_string(TSLexer *lexer)
 				// no match
 				break;
 			}
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			j++;
 		}
 		if (j == i) {
@@ -339,7 +339,7 @@ match_eof(TSLexer *lexer)
 			if (lexer->lookahead != want[i]) {
 				return (false);
 			}
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			c = lexer->lookahead;
 		}
 		if (isalnum(c) || (c == '_') || (c > 0x7f && !is_eol(c))) {
@@ -348,7 +348,7 @@ match_eof(TSLexer *lexer)
 	}
 	// eat entire file
 	while (lexer->lookahead != 0) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 
 	lexer->mark_end(lexer);
@@ -362,7 +362,7 @@ match_hash_or_shebang(TSLexer *lexer, const bool *valid)
 	int c = lexer->lookahead;
 	assert(c == '#');
 	if (valid[SHEBANG] || valid[DIRECTIVE]) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 		if (valid[SHEBANG] && c == '!') {
 			lexer->result_symbol = SHEBANG;
@@ -372,11 +372,11 @@ match_hash_or_shebang(TSLexer *lexer, const bool *valid)
 			return (false);
 		}
 		while ((!is_eol(c)) && (c)) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			c = lexer->lookahead;
 		}
 		// consume the newline
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		lexer->mark_end(lexer);
 		return (true);
 	} else {
@@ -396,7 +396,7 @@ match_line_comment(TSLexer *lexer, const bool *valid)
 		return (false);
 	}
 	while ((!is_eol(c)) && (c)) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 	}
 	lexer->mark_end(lexer);
@@ -415,7 +415,7 @@ match_block_comment(TSLexer *lexer, const bool *valid)
 	}
 	int state = 0;
 	while (c != 0) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 		switch (state) {
 		case 0:
@@ -426,7 +426,7 @@ match_block_comment(TSLexer *lexer, const bool *valid)
 		case 1:
 			if (c == '/') {
 				// closing comment, hurrah!
-				lexer->advance(lexer, false);
+				lexer->advance_d(lexer, false);
 				lexer->mark_end(lexer);
 				lexer->result_symbol = COMMENT;
 				return (true);
@@ -453,7 +453,7 @@ match_nest_comment(TSLexer *lexer, const bool *valid)
 	}
 
 	while (!lexer->eof(lexer)) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 		switch (prev) {
 		case '/':
@@ -467,7 +467,7 @@ match_nest_comment(TSLexer *lexer, const bool *valid)
 				nest--;
 				if (nest == 0) {
 					// outtermost closing comment, hurrah!
-					lexer->advance(lexer, false);
+					lexer->advance_d(lexer, false);
 					lexer->mark_end(lexer);
 					lexer->result_symbol = COMMENT;
 					return (true);
@@ -537,7 +537,7 @@ match_number_suffix(TSLexer *lexer, const bool *valid, bool is_float)
 			break;
 		}
 		if (!done) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 		}
 	}
 
@@ -583,7 +583,7 @@ match_number(TSLexer *lexer, const bool *valid)
 	bool in_exp    = false;
 
 	if (c == '.') {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 
 		// at this point, we either have a digit, or
@@ -600,18 +600,18 @@ match_number(TSLexer *lexer, const bool *valid)
 		// a dot (making this a floating point number) or a digit or an
 		// underscore. if it is anything else, then we have just the
 		// value 0 (but it might have a suffix -- for example 0f)
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 		switch (c) {
 		case 'b':
 		case 'B':
 			is_bin = true;
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			break;
 		case 'x':
 		case 'X':
 			is_hex = true;
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			break;
 		default:
 			has_digit = true;
@@ -633,13 +633,13 @@ match_number(TSLexer *lexer, const bool *valid)
 			break;
 		}
 		if ((is_bin) && ((c == '0') || (c == '1'))) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			lexer->mark_end(lexer);
 			has_digit = true;
 			continue;
 		} else if (isdigit(c) ||
 		    (is_hex && (!in_exp) && (isxdigit(c)))) {
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			lexer->mark_end(lexer);
 			has_digit = true;
 			continue;
@@ -658,7 +658,7 @@ match_number(TSLexer *lexer, const bool *valid)
 				break;
 			}
 			lexer->mark_end(lexer);
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			c = lexer->lookahead;
 			// if the next character is a valid digit (note that
 			// binary doesn't support this, then we're good
@@ -686,7 +686,7 @@ match_number(TSLexer *lexer, const bool *valid)
 
 		case '_':
 			// an embedded (or possibly trailing) underscore.
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			continue;
 
 		case 'e':
@@ -702,10 +702,10 @@ match_number(TSLexer *lexer, const bool *valid)
 			if ((!is_hex) && (c == 'p' || c == 'P')) {
 				return (false);
 			}
-			lexer->advance(lexer, false);
+			lexer->advance_d(lexer, false);
 			c = lexer->lookahead;
 			if ((c == '+') || (c == '-')) {
-				lexer->advance(lexer, false);
+				lexer->advance_d(lexer, false);
 			}
 			has_digit = false; // so we need
 			in_exp    = true;
@@ -731,19 +731,19 @@ match_not_in_is(TSLexer *lexer, const bool *valid)
 		return (false);
 	}
 	assert(lexer->lookahead == '!');
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 	// eat intervening whitespace... usually there isn't any
 	while ((c = lexer->lookahead) != 0) {
 		if (!isspace(c) && !is_eol(c)) {
 			break;
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 	}
 
 	if (lexer->lookahead != 'i') {
 		return (false);
 	}
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 	switch (lexer->lookahead) {
 	case 'n':
 		token = NOT_IN;
@@ -757,7 +757,7 @@ match_not_in_is(TSLexer *lexer, const bool *valid)
 	if (!valid[token]) {
 		return (false);
 	}
-	lexer->advance(lexer, false);
+	lexer->advance_d(lexer, false);
 	c = lexer->lookahead;
 	if (isalnum(c) || ((c > 0x7F) && (!is_eol(c)))) {
 		return (false);
@@ -797,7 +797,7 @@ tree_sitter_d_external_scanner_scan(
 	int c = lexer->lookahead;
 	// consume whitespace -- we also skip newlines here
 	while ((isspace(c) || is_eol(c)) && (c)) {
-		lexer->advance(lexer, true);
+		lexer->advance_d(lexer, true);
 		c = lexer->lookahead;
 	}
 
@@ -828,7 +828,7 @@ tree_sitter_d_external_scanner_scan(
 	}
 
 	if ((c == 'r') && (valid[L_STRING])) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		if (lexer->lookahead == '"') {
 			return (match_raw_string(lexer, '"', L_STRING));
 		}
@@ -836,11 +836,11 @@ tree_sitter_d_external_scanner_scan(
 	}
 
 	if ((c == 'q') && (valid[L_STRING])) {
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		if (lexer->lookahead != '"') {
 			return (false);
 		}
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		switch ((c = lexer->lookahead)) {
 		case '(':
 			return (match_delimited_string(lexer, '(', ')'));
@@ -871,7 +871,7 @@ tree_sitter_d_external_scanner_scan(
 
 	if (c == '/') {
 		// can be one of three comment forms, or /, or /=
-		lexer->advance(lexer, false);
+		lexer->advance_d(lexer, false);
 		c = lexer->lookahead;
 		if (c == '/') {
 			return (match_line_comment(lexer, valid));

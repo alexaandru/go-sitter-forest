@@ -54,9 +54,9 @@
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
     "maintainedBy": "@RubixDev",
-    "grammarSha": "3233815920b7ad41b952f4c8f8b1675e85735c1bf1d48416816681d80de03cb5",
+    "grammarSha": "64149acf1f12ed144e30bdfeaa39fc1b24504333437b568ce43a6b3c24f70765",
     "reference": "main",
-    "revision": "f7158e1c22bdb4bf2c3e139c0ec3050d142cde6d"
+    "revision": "62e49328113ff318128c640bf0cf6dd3d3d51553"
   },
   {
     "language": "astro",
@@ -166,7 +166,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "56ab1350a74fb57bec6125ac47c6d1cca11709410677fc4f2eed986f4c624fdc",
     "reference": "master",
-    "revision": "371fd0bf0650581b6e49f06f438c88c419859696"
+    "revision": "72084f447c2051e01a7cd6c6e0477ec71a9297ed"
   },
   {
     "language": "c_sharp",
@@ -344,7 +344,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "b7da4c69323d8e47bb1ba375653fcb2c01fe753171222db033698b6da45b7e48",
     "reference": "main",
-    "revision": "a33d400f025d6bbd37b4c681c93054976f579890"
+    "revision": "322d119d50ebe6d0a323dfb00c4aeba31a44fb6f"
   },
   {
     "language": "dart",
@@ -2455,7 +2455,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "46f809776e90ef6f039c8a45008644822dc292e2"
+    "revision": "366d30c2438ca396f2f8304d891ca22e7c14b922"
   },
   {
     "language": "vala",
@@ -2556,7 +2556,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "9a77bb6c1f4d65a9e8cd19585361b9a0786d5565"
+    "revision": "a43b5524b0adbb553d874a6ea8d08a2d791f56c5"
   },
   {
     "language": "xcompose",

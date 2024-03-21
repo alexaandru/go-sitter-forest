@@ -2,7 +2,7 @@
   "language": "asm",
   "url": "https://github.com/RubixDev/tree-sitter-asm",
   "maintainedBy": "@RubixDev",
-  "grammarSha": "3233815920b7ad41b952f4c8f8b1675e85735c1bf1d48416816681d80de03cb5",
+  "grammarSha": "64149acf1f12ed144e30bdfeaa39fc1b24504333437b568ce43a6b3c24f70765",
   "reference": "main",
-  "revision": "f7158e1c22bdb4bf2c3e139c0ec3050d142cde6d"
+  "revision": "62e49328113ff318128c640bf0cf6dd3d3d51553"
 }
