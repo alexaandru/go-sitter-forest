@@ -557,11 +557,11 @@ var (
 
 // Lang returns the corresponding TS language function for name.
 // Language name must follow the TS convention (lowercase, letters only).
-func Lang(name string) func() *sitter.Language {
-	return langNameFuncs[name]
+func GetLanguage(lang string) func() *sitter.Language {
+	return langNameFuncs[lang]
 }
 
-func SupportedLangs() []string {
+func SupportedLanguages() []string {
 	if langNames != nil {
 		return langNames
 	}
@@ -573,9 +573,9 @@ func SupportedLangs() []string {
 	return langNames
 }
 
-func Info(name string) *grammar.Grammar {
+func Info(lang string) *grammar.Grammar {
 	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
-		return x.Language == name
+		return x.Language == lang
 	})
 
 	if i < 0 {

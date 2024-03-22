@@ -52,7 +52,7 @@ var (
 )
 
 func checkUpdates() error {
-	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Reference", "Status", strings.Repeat("─", 100))
+	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Branch", "Status", strings.Repeat("─", 100))
 
 	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
 		if err = gr.FetchNewVersion(); err != nil {
@@ -634,7 +634,10 @@ func updateParsersMd() error {
 		text += fmt.Sprintf("- [%s] [%s](%s)%s%s\n", checked, lang, gr.URL, attr, maint)
 	}
 
-	text += "<!--parserinfo-->\n\nLegend: ✔️ parser files regenerated from grammar.js.\n\n(the ones where parser regeneration is skipped still work but they may (or not) be generated with the exact same TreeSitter version as the sitter library)\n"
+	text += "<!--parserinfo-->\n\nLegend:\n" +
+		"- [x] ✔️ parser files regenerated from `grammar.js`;\n" +
+		"- [x] ❌ parser files copied from the repo;\n" +
+		"- [ ] parser not implemented (pending).\n"
 
 	if _, err = fmt.Fprintf(f, text, implemented, planned, skipped); err != nil {
 		return fmt.Errorf("writing PARSERS.md error: %w", err)

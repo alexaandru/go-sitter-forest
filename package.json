@@ -1,4 +1,8 @@
 {
+  "engines": {
+    "npm": ">=10.2.4",
+    "node": ">=20.11.1"
+  },
   "dependencies": {
     "@muniftanjim/tree-sitter-lua": "^0.0.19",
     "regexp-util": "^2.0.0",

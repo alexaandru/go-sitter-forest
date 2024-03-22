@@ -275,6 +275,7 @@
 - [x] [zig](https://github.com/maxxnino/tree-sitter-zig) ✔️  (maintained by @maxxnino)
 <!--parserinfo-->
 
-Legend: ✔️ parser files regenerated from grammar.js.
-
-(the ones where parser regeneration is skipped still work but they may (or not) be generated with the exact same TreeSitter version as the sitter library)
+Legend:
+- [x] ✔️ parser files regenerated from `grammar.js`;
+- [x] ❌ parser files copied from the repo;
+- [ ] parser not implemented (pending).

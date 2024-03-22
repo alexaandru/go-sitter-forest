@@ -1,5 +1,7 @@
 # vim:set ft=make:
 
+# Various helper targets to assist with working with so many Go modules.
+
 FIND_PARSERS = find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -path ./tmp ! -path ./node_modules ! -path .
 
 go_get_latest:
@@ -13,3 +15,8 @@ list_all_parsers:
 
 list_parsers_without_modules:
 	@$(FIND_PARSERS) ! -exec test -e "{}/go.mod" ';' -print
+
+clean:
+	@rm -rfv *.cov tmp auto.log
+
+.PHONY: clean

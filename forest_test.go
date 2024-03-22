@@ -42,34 +42,6 @@ func Info() string {
 	return string(info)
 }
 `
-	bindingTestTpl = `//go:build !plugin
-
-package %s_test
-
-import (
-	"context"
-	"testing"
-
-	"github.com/alexaandru/go-sitter-forest/%s"
-	sitter "github.com/alexaandru/go-tree-sitter-bare"
-)
-
-const (
-	code     = ""
-	expected = "IMPLEMENT ME"
-)
-
-func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), %s.GetLanguage())
-	if err != nil {
-		t.Fatalf("Expected no error got %%v", err)
-	}
-
-	if act := n.String(); act != expected {
-		t.Fatalf("Expected %%q got %%q", expected, act)
-	}
-}
-`
 )
 
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
@@ -146,7 +118,7 @@ func TestAllParsers(t *testing.T) {
 				t.Skip("Not implemented")
 			}
 
-			fn := Lang(lang)
+			fn := GetLanguage(lang)
 			if fn == nil {
 				t.Skipf("Language %q does not have a function available", lang)
 			}
@@ -162,7 +134,7 @@ func TestAllParsers(t *testing.T) {
 		})
 	}
 
-	if exp, x := 267, len(SupportedLangs()); x != exp {
+	if exp, x := 267, len(SupportedLanguages()); x != exp {
 		t.Fatalf("Expected supported langs to be %d got %d", exp, x)
 	}
 }
