@@ -1,7 +1,7 @@
 {
   "language": "objc",
   "url": "https://github.com/amaanq/tree-sitter-objc",
-  "doc": "grammar.js throws error",
+  "doc": "grammar.js throws error: Unresolved conflict for symbol sequence",
   "maintainedBy": "@amaanq",
   "skip": true,
   "reference": "master",

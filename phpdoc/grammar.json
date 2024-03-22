@@ -1,7 +1,7 @@
 {
   "language": "phpdoc",
   "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
-  "doc": "grammar.js throws error",
+  "doc": "grammar.js throws error: TypeError: Cannot read properties of undefined (reading 'namespace_aliasing_clause')",
   "files": [
     "scanner.c"
   ],
