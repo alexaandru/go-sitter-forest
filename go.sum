@@ -100,8 +100,8 @@ github.com/alexaandru/go-sitter-forest/elvish v1.5.5 h1:T3T+j0MzOJ0KC7Dzk/T8pMce
 github.com/alexaandru/go-sitter-forest/elvish v1.5.5/go.mod h1:0bjW6Z8MVl0whRSOYBfnti2cYmRXCdDpSB1WudB48Z8=
 github.com/alexaandru/go-sitter-forest/embedded_template v1.5.5 h1:+TNth+lgTZye3MraIz2b5GvsUAmCM00rLDQXOeq5jig=
 github.com/alexaandru/go-sitter-forest/embedded_template v1.5.5/go.mod h1:G/bTgPyw+LXhOE4gdBSlKMSuXogSrcoNf+kDYEEDmbw=
-github.com/alexaandru/go-sitter-forest/erlang v1.5.6 h1:C8iUEfruVKF1O8hN90psWNXKX+zp3clTn5n8YHPOfc0=
-github.com/alexaandru/go-sitter-forest/erlang v1.5.6/go.mod h1:XlaEk9dEnvLD7AM51QTZfyavay67cUVdD1DBs3yTonQ=
+github.com/alexaandru/go-sitter-forest/erlang v1.5.7 h1:lSLTpkHge8dcjJ1h3kvFmTZd52lePeXK/9ZTKvnF49w=
+github.com/alexaandru/go-sitter-forest/erlang v1.5.7/go.mod h1:XlaEk9dEnvLD7AM51QTZfyavay67cUVdD1DBs3yTonQ=
 github.com/alexaandru/go-sitter-forest/facility v1.5.5 h1:KzPCRwBvZGWLyo21ILeojOAN4e//mzWhfcbKa6Lz7C0=
 github.com/alexaandru/go-sitter-forest/facility v1.5.5/go.mod h1:79LYV7x9XnLkkLTGPfIFsjP3x3uj1bxpxtOH8SDjJYo=
 github.com/alexaandru/go-sitter-forest/faust v1.5.5 h1:cupG+3tOCwp32Ibmou+SvNmYZ6Sa7Avn4DFctUdhg2o=
