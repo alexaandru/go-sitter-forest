@@ -225,7 +225,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	replMap := map[string]string{
 		// Patching broken grammars so that they compile.
 		// This is a bit "brute-force", but seems to do the job :-)
-		`/u{[\da-fA-F]+}/,`: "",
+		`/u{[\da-fA-F]+}/,`:  `/x[\da-fA-F]+/,`,
+		`/u{[0-9a-fA-F]+}/,`: `/x[0-9a-fA-F]+/,`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
@@ -276,7 +277,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	}
 
 	for k, v := range replMap {
-		if v != "" {
+		if strings.HasSuffix(v, ".js") {
 			v = "./" + v
 		}
 
