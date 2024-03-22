@@ -21,20 +21,20 @@ void tree_sitter_smali_external_scanner_deserialize(void       *payload,
                                                     const char *buffer,
                                                     unsigned    length) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_smali(TSLexer *lexer) { lexer->advance_smali(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_smali(TSLexer *lexer) { lexer->advance_smali(lexer, true); }
 
 bool tree_sitter_smali_external_scanner_scan(void *payload, TSLexer *lexer,
                                              const bool *valid_symbols) {
     if (valid_symbols[L]) {
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_smali(lexer);
         }
 
         if (lexer->lookahead == 'L') {
             lexer->result_symbol = L;
-            advance(lexer);
+            advance_smali(lexer);
             return true;
         }
     }
@@ -44,7 +44,7 @@ bool tree_sitter_smali_external_scanner_scan(void *payload, TSLexer *lexer,
         lexer->result_symbol = CLASS_IDENTIFIER;
         while (iswalnum(lexer->lookahead) || lexer->lookahead == '_' ||
                lexer->lookahead == '-' || lexer->lookahead == '$') {
-            advance(lexer);
+            advance_smali(lexer);
         }
         return true;
     }

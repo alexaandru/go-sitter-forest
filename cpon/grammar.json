@@ -1,9 +1,8 @@
 {
   "language": "cpon",
   "url": "https://github.com/amaanq/tree-sitter-cpon",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "559879feb11840fa1c0ba6ee0544ee0f7d92b695b6ce44f41c780f7f5f36bc1a",
   "reference": "master",
   "revision": "f4b3cbc8b0bd4e13035d39940fef09f1392e8739"
 }

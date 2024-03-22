@@ -1,12 +1,11 @@
 {
   "language": "squirrel",
   "url": "https://github.com/amaanq/tree-sitter-squirrel",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "6c786e3c5ad14e2e07e8da2cd8f1f29175744daea08174bdac1f40ef3a1112e9",
   "reference": "master",
   "revision": "e8b5835296f931bcaa1477d3c5a68a0c5c2ba034"
 }

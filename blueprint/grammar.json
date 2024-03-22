@@ -1,9 +1,8 @@
 {
   "language": "blueprint",
   "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@gabmus",
-  "skip": true,
+  "grammarSha": "62ffa8feae3d815bce1b7506cae95a69aabdbe761d7cce0e765c89a0ab38b7a5",
   "reference": "master",
   "revision": "863cea9f83ad5637300478e0559262f1e791684b"
 }

@@ -34,9 +34,9 @@ enum TokenType {
   QUOTED_ATOM_START
 };
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_elixir(TSLexer *lexer) { lexer->advance_elixir(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_elixir(TSLexer *lexer) { lexer->advance_elixir(lexer, true); }
 
 // Note: some checks require several lexer steps of lookahead
 // and alter its state, for these we use names check_*
@@ -60,7 +60,7 @@ static inline bool is_digit(int32_t c) { return '0' <= c && c <= '9'; }
 
 static inline bool check_keyword_end(TSLexer *lexer) {
   if (lexer->lookahead == ':') {
-    advance(lexer);
+    advance_elixir(lexer);
     return is_whitespace(lexer->lookahead);
   }
   return false;
@@ -72,13 +72,13 @@ static bool check_operator_end(TSLexer *lexer) {
     return !check_keyword_end(lexer);
   }
   while (is_inline_whitespace(lexer->lookahead)) {
-    advance(lexer);
+    advance_elixir(lexer);
   }
   // Operator identifier with arity
   if (lexer->lookahead == '/') {
-    advance(lexer);
+    advance_elixir(lexer);
     while (is_whitespace(lexer->lookahead)) {
-      advance(lexer);
+      advance_elixir(lexer);
     }
     if (is_digit(lexer->lookahead)) {
       return false;
@@ -175,13 +175,13 @@ static bool scan_quoted_content(TSLexer *lexer, const QuotedContentInfo *info) {
     bool newline = false;
 
     if (is_newline(lexer->lookahead)) {
-      advance(lexer);
+      advance_elixir(lexer);
 
       has_content = true;
       newline = true;
 
       while (is_whitespace(lexer->lookahead)) {
-        advance(lexer);
+        advance_elixir(lexer);
       }
     }
 
@@ -191,7 +191,7 @@ static bool scan_quoted_content(TSLexer *lexer, const QuotedContentInfo *info) {
       uint8_t length = 1;
 
       while (length < info->delimiter_length) {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == info->end_delimiter) {
           length++;
         } else {
@@ -204,12 +204,12 @@ static bool scan_quoted_content(TSLexer *lexer, const QuotedContentInfo *info) {
       }
     } else {
       if (lexer->lookahead == '#') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (info->supports_interpol && lexer->lookahead == '{') {
           return has_content;
         }
       } else if (lexer->lookahead == '\\') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (is_heredoc && lexer->lookahead == '\n') {
           // We need to know about the newline to correctly recognise
           // heredoc end delimiter, so we intentionally ignore
@@ -224,7 +224,7 @@ static bool scan_quoted_content(TSLexer *lexer, const QuotedContentInfo *info) {
         // want to treat all the scanned content as quoted content.
         return has_content;
       } else {
-        advance(lexer);
+        advance_elixir(lexer);
       }
     }
   }
@@ -233,10 +233,10 @@ static bool scan_quoted_content(TSLexer *lexer, const QuotedContentInfo *info) {
 }
 
 static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
-  advance(lexer);
+  advance_elixir(lexer);
 
   while (is_whitespace(lexer->lookahead)) {
-    advance(lexer);
+    advance_elixir(lexer);
   }
 
   // Note we include all the whitespace after newline, so that the
@@ -250,9 +250,9 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
 
   if (lexer->lookahead == 'd' && valid_symbols[NEWLINE_BEFORE_DO]) {
     lexer->result_symbol = NEWLINE_BEFORE_DO;
-    advance(lexer);
+    advance_elixir(lexer);
     if (lexer->lookahead == 'o') {
-      advance(lexer);
+      advance_elixir(lexer);
       return is_token_end(lexer->lookahead);
     }
     return false;
@@ -263,11 +263,11 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
 
     // &&, &&&
     if (lexer->lookahead == '&') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '&') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '&') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
@@ -275,29 +275,29 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // =, ==, ===, =~, =>
     } else if (lexer->lookahead == '=') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '=') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '=') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
         }
       } else if (lexer->lookahead == '~') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else {
         return check_operator_end(lexer);
       }
       // ::
     } else if (lexer->lookahead == ':') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == ':') {
-        advance(lexer);
+        advance_elixir(lexer);
         // Ignore ::: atom
         if (lexer->lookahead == ':')
           return false;
@@ -305,11 +305,11 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // ++, +++
     } else if (lexer->lookahead == '+') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '+') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '+') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
@@ -317,44 +317,44 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // --, ---, ->
     } else if (lexer->lookahead == '-') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '-') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '-') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
         }
       } else if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       }
       // <, <=, <-, <>, <~, <~>, <|>, <<<, <<~
     } else if (lexer->lookahead == '<') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '=' || lexer->lookahead == '-' ||
           lexer->lookahead == '>') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else if (lexer->lookahead == '~') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '>') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
         }
       } else if (lexer->lookahead == '|') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '>') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         }
       } else if (lexer->lookahead == '<') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '<' || lexer->lookahead == '~') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         }
       } else {
@@ -362,14 +362,14 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // >, >=, >>>
     } else if (lexer->lookahead == '>') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '=') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '>') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         }
       } else {
@@ -377,21 +377,21 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // ^^^
     } else if (lexer->lookahead == '^') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '^') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '^') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         }
       }
       // !=, !==
     } else if (lexer->lookahead == '!') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '=') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '=') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
@@ -399,11 +399,11 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // ~>, ~>>
     } else if (lexer->lookahead == '~') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '>') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
@@ -411,44 +411,44 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // |, ||, |||, |>
     } else if (lexer->lookahead == '|') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '|') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == '|') {
-          advance(lexer);
+          advance_elixir(lexer);
           return check_operator_end(lexer);
         } else {
           return check_operator_end(lexer);
         }
       } else if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else {
         return check_operator_end(lexer);
       }
       // *, **
     } else if (lexer->lookahead == '*') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '*') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else {
         return check_operator_end(lexer);
       }
       // / //
     } else if (lexer->lookahead == '/') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '/') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       } else {
         return check_operator_end(lexer);
       }
       // ., ..
     } else if (lexer->lookahead == '.') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '.') {
-        advance(lexer);
+        advance_elixir(lexer);
         // Ignore ... identifier
         if (lexer->lookahead == '.')
           return false;
@@ -458,62 +458,62 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
       }
       // double slash
     } else if (lexer->lookahead == '\\') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '\\') {
-        advance(lexer);
+        advance_elixir(lexer);
         return check_operator_end(lexer);
       }
       // when
     } else if (lexer->lookahead == 'w') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == 'h') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == 'e') {
-          advance(lexer);
+          advance_elixir(lexer);
           if (lexer->lookahead == 'n') {
-            advance(lexer);
+            advance_elixir(lexer);
             return is_token_end(lexer->lookahead) && check_operator_end(lexer);
           }
         }
       }
       // and
     } else if (lexer->lookahead == 'a') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == 'n') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == 'd') {
-          advance(lexer);
+          advance_elixir(lexer);
           return is_token_end(lexer->lookahead) && check_operator_end(lexer);
         }
       }
       // or
     } else if (lexer->lookahead == 'o') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == 'r') {
-        advance(lexer);
+        advance_elixir(lexer);
         return is_token_end(lexer->lookahead) && check_operator_end(lexer);
       }
       // in
     } else if (lexer->lookahead == 'i') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == 'n') {
-        advance(lexer);
+        advance_elixir(lexer);
         return is_token_end(lexer->lookahead) && check_operator_end(lexer);
       }
       // not in
     } else if (lexer->lookahead == 'n') {
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == 'o') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == 't') {
-          advance(lexer);
+          advance_elixir(lexer);
           while (is_inline_whitespace(lexer->lookahead)) {
-            advance(lexer);
+            advance_elixir(lexer);
           }
           if (lexer->lookahead == 'i') {
-            advance(lexer);
+            advance_elixir(lexer);
             if (lexer->lookahead == 'n') {
-              advance(lexer);
+              advance_elixir(lexer);
               return is_token_end(lexer->lookahead) &&
                      check_operator_end(lexer);
             }
@@ -526,7 +526,7 @@ static bool scan_newline(TSLexer *lexer, const bool *valid_symbols) {
   return false;
 }
 
-static bool scan(TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_elixir(TSLexer *lexer, const bool *valid_symbols) {
   int8_t quoted_content_info_idx = find_quoted_token_info(valid_symbols);
 
   // Quoted content, which matches any character except for close
@@ -541,7 +541,7 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
 
   while (is_inline_whitespace(lexer->lookahead)) {
     skipped_whitespace = true;
-    skip(lexer);
+    skip_elixir(lexer);
   }
 
   // Newline, which is either tokenized as a special newline or ignored
@@ -556,7 +556,7 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
   if (lexer->lookahead == '+') {
     if (skipped_whitespace && valid_symbols[BEFORE_UNARY_OPERATOR]) {
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '+' || lexer->lookahead == ':' ||
           lexer->lookahead == '/') {
         return false;
@@ -572,7 +572,7 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
     if (skipped_whitespace && valid_symbols[BEFORE_UNARY_OPERATOR]) {
       lexer->mark_end(lexer);
       lexer->result_symbol = BEFORE_UNARY_OPERATOR;
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == '-' || lexer->lookahead == '>' ||
           lexer->lookahead == ':' || lexer->lookahead == '/') {
         return false;
@@ -586,18 +586,18 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
   } else if (lexer->lookahead == 'n') {
     if (valid_symbols[NOT_IN]) {
       lexer->result_symbol = NOT_IN;
-      advance(lexer);
+      advance_elixir(lexer);
       if (lexer->lookahead == 'o') {
-        advance(lexer);
+        advance_elixir(lexer);
         if (lexer->lookahead == 't') {
-          advance(lexer);
+          advance_elixir(lexer);
           while (is_inline_whitespace(lexer->lookahead)) {
-            advance(lexer);
+            advance_elixir(lexer);
           }
           if (lexer->lookahead == 'i') {
-            advance(lexer);
+            advance_elixir(lexer);
             if (lexer->lookahead == 'n') {
-              advance(lexer);
+              advance_elixir(lexer);
               return is_token_end(lexer->lookahead);
             }
           }
@@ -607,7 +607,7 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
     // quoted atom start
   } else if (lexer->lookahead == ':') {
     if (valid_symbols[QUOTED_ATOM_START]) {
-      advance(lexer);
+      advance_elixir(lexer);
       lexer->mark_end(lexer);
       lexer->result_symbol = QUOTED_ATOM_START;
       if (lexer->lookahead == '"' || lexer->lookahead == '\'') {
@@ -623,7 +623,7 @@ void *tree_sitter_elixir_external_scanner_create() { return NULL; }
 
 bool tree_sitter_elixir_external_scanner_scan(void *payload, TSLexer *lexer,
                                               const bool *valid_symbols) {
-  return scan(lexer, valid_symbols);
+  return scan_elixir(lexer, valid_symbols);
 }
 
 unsigned tree_sitter_elixir_external_scanner_serialize(void *payload,

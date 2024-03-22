@@ -1,12 +1,11 @@
 {
   "language": "r",
   "url": "https://github.com/r-lib/tree-sitter-r",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@echasnovski",
-  "skip": true,
+  "grammarSha": "176af8dec2220d6f6d40470b0f9a175211a8969a49c28e312310e92dd2066370",
   "reference": "main",
   "revision": "c55f8b4dfaa32c80ddef6c0ac0e79b05cb0cbf57"
 }

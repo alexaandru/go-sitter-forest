@@ -1,12 +1,11 @@
 {
   "language": "yuck",
   "url": "https://github.com/Philipp-M/tree-sitter-yuck",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@Philipp-M, @amaanq",
-  "skip": true,
+  "grammarSha": "c9b6dd5d97be4306824ec48587ee58c21698ec5220a092f14623dcb04522608c",
   "reference": "main",
   "revision": "c348825d3f86dec71dee0e1223c6bd73114e3579"
 }

@@ -1,12 +1,11 @@
 {
   "language": "firrtl",
   "url": "https://github.com/amaanq/tree-sitter-firrtl",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "ae531520f1fcf6ab20ec561ed45fea5f4239a19e8c05b787949cf80b46585c7a",
   "reference": "master",
   "revision": "2b5adae629c8cba528c7b1e4aa67a8ae28934ea5"
 }

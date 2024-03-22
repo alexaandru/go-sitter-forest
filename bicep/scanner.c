@@ -12,9 +12,9 @@ typedef struct {
     uint8_t quote_before_end_count;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_bicep(TSLexer *lexer) { lexer->advance_bicep(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_bicep(TSLexer *lexer) { lexer->advance_bicep(lexer, true); }
 
 void *tree_sitter_bicep_external_scanner_create() {
     Scanner *scanner = (Scanner *)calloc(sizeof(Scanner), 1);
@@ -49,10 +49,10 @@ bool tree_sitter_bicep_external_scanner_scan(void *payload, TSLexer *lexer, cons
 
     if (valid_symbols[EXTERNAL_ASTERISK]) {
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_bicep(lexer);
         }
         if (lexer->lookahead == '*') {
-            advance(lexer);
+            advance_bicep(lexer);
             lexer->mark_end(lexer);
             lexer->result_symbol = EXTERNAL_ASTERISK;
             if (lexer->lookahead == ':') {
@@ -70,7 +70,7 @@ bool tree_sitter_bicep_external_scanner_scan(void *payload, TSLexer *lexer, cons
             if (lexer->lookahead == '\'') {
                 if (scanner->quote_before_end_count > 0) {
                     while (scanner->quote_before_end_count > 0) {
-                        advance(lexer);
+                        advance_bicep(lexer);
                         scanner->quote_before_end_count--;
                     }
 
@@ -80,19 +80,19 @@ bool tree_sitter_bicep_external_scanner_scan(void *payload, TSLexer *lexer, cons
 
                 lexer->mark_end(lexer);
                 // printf("mark_end\n");
-                advance(lexer);
+                advance_bicep(lexer);
                 if (lexer->lookahead == '\'') {
                     // printf("two single quotes\n");
-                    advance(lexer);
+                    advance_bicep(lexer);
                     if (lexer->lookahead == '\'') {
                         // printf("three single quotes\n");
-                        advance(lexer);
+                        advance_bicep(lexer);
                         // printf("lexer->lookahead: %d\n", lexer->lookahead);
 
                         // how many quotes to advance on the next external scanner invocation
                         while (lexer->lookahead == '\'') {
                             scanner->quote_before_end_count++;
-                            advance(lexer);
+                            advance_bicep(lexer);
                         }
 
                         // printf("scanner->quote_before_end_count: %d\n", scanner->quote_before_end_count);
@@ -102,7 +102,7 @@ bool tree_sitter_bicep_external_scanner_scan(void *payload, TSLexer *lexer, cons
                     }
                 }
             }
-            advance(lexer);
+            advance_bicep(lexer);
             advanced_once = true;
         }
     }

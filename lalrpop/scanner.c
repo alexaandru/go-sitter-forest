@@ -64,8 +64,8 @@ void tree_sitter_lalrpop_external_scanner_deserialize(void *payload,
                                                       unsigned length) {
 }
 
-static void advance(TSLexer *lexer) {
-	lexer->advance(lexer, false);
+static void advance_lalrpop(TSLexer *lexer) {
+	lexer->advance_lalrpop(lexer, false);
 }
 
 static bool string_literal(TSLexer *lexer, char quote) {
@@ -77,7 +77,7 @@ static bool string_literal(TSLexer *lexer, char quote) {
 			return false;
 		}
 		if (lexer->lookahead == quote) {
-			advance(lexer);
+			advance_lalrpop(lexer);
 			return true;
 		}
 
@@ -87,7 +87,7 @@ static bool string_literal(TSLexer *lexer, char quote) {
 			escape = lexer->lookahead == '\\';
 		}
 
-		advance(lexer);
+		advance_lalrpop(lexer);
 	}
 
 	return false;
@@ -96,14 +96,14 @@ static bool string_literal(TSLexer *lexer, char quote) {
 static bool take_until_terminating(TSLexer *lexer, char terminator) {
 	for (;;) {
 		if (lexer->lookahead == terminator) {
-			advance(lexer);
+			advance_lalrpop(lexer);
 			return true;
 		}
 		if (lexer->lookahead == 0) {
 			return false;
 		}
 
-		advance(lexer);
+		advance_lalrpop(lexer);
 	}
 }
 
@@ -113,13 +113,13 @@ static bool lifetime_or_char_literal(TSLexer *lexer) {
 	}
 
 	if (lexer->lookahead == '\\') {
-		advance(lexer); // Consume the backslash
-		advance(lexer); // Consume the escaped char
+		advance_lalrpop(lexer); // Consume the backslash
+		advance_lalrpop(lexer); // Consume the escaped char
 		return take_until_terminating(lexer, '\'');
 	}
-	advance(lexer); // Consume the lookahead
+	advance_lalrpop(lexer); // Consume the lookahead
 	if (lexer->lookahead == '\'') {
-		advance(lexer); // it was a char literal, Consume the quote
+		advance_lalrpop(lexer); // it was a char literal, Consume the quote
 	}
 	return true;
 
@@ -144,26 +144,26 @@ static bool code(TSLexer *lexer, const char *open_delims,
 	for (;;) {
 		switch (lexer->lookahead) {
 		case '"':
-			advance(lexer);
+			advance_lalrpop(lexer);
 			if (!string_literal(lexer, '"')) {
 				return false;
 			}
 			continue;
 		case '\'':
-			advance(lexer);
+			advance_lalrpop(lexer);
 			if (!lifetime_or_char_literal(lexer)) {
 				return false;
 			}
 			continue;
 		case 'r':
-			advance(lexer);
+			advance_lalrpop(lexer);
 			if (lexer->lookahead == '#') {
 				return false;
 				/* abort(); */
 			}
 			continue;
 		case '/':
-			advance(lexer);
+			advance_lalrpop(lexer);
 			if (lexer->lookahead == '/') {
 				take_until_terminating(lexer, '\n');
 			}
@@ -185,7 +185,7 @@ static bool code(TSLexer *lexer, const char *open_delims,
 			}
 			break;
 		}
-		advance(lexer);
+		advance_lalrpop(lexer);
 	}
 }
 
@@ -228,7 +228,7 @@ static bool is_xid_continue(int32_t chr) {
 static bool match_word(TSLexer *lexer, const char *word, size_t len) {
 	while (len > 0) {
 		if (lexer->lookahead == *word) {
-			advance(lexer);
+			advance_lalrpop(lexer);
 			len--;
 			word++;
 		} else {
@@ -248,14 +248,14 @@ static bool regex_literal(TSLexer *lexer, size_t consumed_hash) {
 	size_t hash_count = consumed_hash;
 	while (lexer->lookahead == '#') {
 		hash_count++;
-		advance(lexer);
+		advance_lalrpop(lexer);
 	}
 
 	if (lexer->lookahead != '"') {
 		return false;
 	}
 
-	advance(lexer); // we are now in the string contents
+	advance_lalrpop(lexer); // we are now in the string contents
 
 	size_t state = 0;
 	for (;;) {
@@ -264,11 +264,11 @@ static bool regex_literal(TSLexer *lexer, size_t consumed_hash) {
 		}
 
 		if (lexer->lookahead == '"') {
-			advance(lexer);
+			advance_lalrpop(lexer);
 
 			size_t closing_hashes = 0;
 			while (lexer->lookahead == '#' && closing_hashes < hash_count) {
-				advance(lexer);
+				advance_lalrpop(lexer);
 				closing_hashes++;
 			}
 
@@ -276,7 +276,7 @@ static bool regex_literal(TSLexer *lexer, size_t consumed_hash) {
 				return true;
 			}
 		} else {
-			advance(lexer);
+			advance_lalrpop(lexer);
 		}
 	}
 }
@@ -284,22 +284,22 @@ static bool regex_literal(TSLexer *lexer, size_t consumed_hash) {
 bool tree_sitter_lalrpop_external_scanner_scan(void *payload, TSLexer *lexer,
                                                const bool *valid_symbols) {
 	while (iswspace(lexer->lookahead)) {
-		lexer->advance(lexer, true);
+		lexer->advance_lalrpop(lexer, true);
 	}
 
 	if (valid_symbols[NORMAL_ACTION] && lexer->lookahead == '=') {
-		advance(lexer);
+		advance_lalrpop(lexer);
 		lexer->result_symbol = NORMAL_ACTION;
 
 		if (lexer->lookahead != '>') {
 			goto string_content;
 		}
 
-		advance(lexer);
+		advance_lalrpop(lexer);
 
 		if (lexer->lookahead == '?') {
 			lexer->result_symbol = FAILIBLE_ACTION;
-			advance(lexer);
+			advance_lalrpop(lexer);
 		}
 
 		// =>@R or =>@L
@@ -308,7 +308,7 @@ bool tree_sitter_lalrpop_external_scanner_scan(void *payload, TSLexer *lexer,
 		}
 
 		while (iswspace(lexer->lookahead)) {
-			lexer->advance(lexer, true);
+			lexer->advance_lalrpop(lexer, true);
 		}
 
 		if (code(lexer, "([{", "}])")) {
@@ -320,13 +320,13 @@ bool tree_sitter_lalrpop_external_scanner_scan(void *payload, TSLexer *lexer,
 
 	if (valid_symbols[REGEX_LITERAL] || valid_symbols[MACRO_ID]) {
 		if (lexer->lookahead == 'r') {
-			advance(lexer);
+			advance_lalrpop(lexer);
 
 			if (lexer->lookahead == '"') {
 				return regex_literal(lexer, 0);
 			}
 			if (lexer->lookahead == '#') {
-				advance(lexer);
+				advance_lalrpop(lexer);
 				if (lexer->lookahead == '#' || lexer->lookahead == '"') {
 					return regex_literal(lexer, 1);
 				}
@@ -340,13 +340,13 @@ bool tree_sitter_lalrpop_external_scanner_scan(void *payload, TSLexer *lexer,
 			goto string_content;
 		}
 
-		advance(lexer);
+		advance_lalrpop(lexer);
 		while (is_xid_continue(lexer->lookahead)) {
-			advance(lexer);
+			advance_lalrpop(lexer);
 		}
 
 		while (iswspace(lexer->lookahead)) {
-			lexer->advance(lexer, true);
+			lexer->advance_lalrpop(lexer, true);
 		}
 
 		return lexer->lookahead == '<';
@@ -379,7 +379,7 @@ string_content:
 				return false;
 			}
 			has_content = true;
-			advance(lexer);
+			advance_lalrpop(lexer);
 		}
 		lexer->result_symbol = STRING_CONTENT;
 		return has_content;

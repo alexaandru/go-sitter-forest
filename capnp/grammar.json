@@ -1,9 +1,8 @@
 {
   "language": "capnp",
   "url": "https://github.com/amaanq/tree-sitter-capnp",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "adf7b38ad7bdbe764758e3d93dfc5c902e37a2cabeaacd6bb0ddccd0887d63ea",
   "reference": "master",
   "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
 }

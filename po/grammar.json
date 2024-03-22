@@ -1,9 +1,8 @@
 {
   "language": "po",
   "url": "https://github.com/erasin/tree-sitter-po",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "a1eb430e768662afe7e917b0d03daf3729bbcbe1a883cb407e1af8c5f3c6e567",
   "reference": "main",
   "revision": "d6aed225290bc71a15ab6f06305cb11419360c56"
 }

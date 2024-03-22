@@ -10,7 +10,7 @@ void tree_sitter_supercollider_external_scanner_reset(void *p) {}
 unsigned tree_sitter_supercollider_external_scanner_serialize(void *p, char *buffer) { return 0; }
 void tree_sitter_supercollider_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_supercollider(TSLexer *lexer) { lexer->advance_supercollider(lexer, false); }
 
 static bool is_num_char(int32_t c) { return c == '_' || iswdigit(c); }
 
@@ -18,13 +18,13 @@ bool tree_sitter_supercollider_external_scanner_scan(
     void *payload, TSLexer *lexer, const bool *valid_symbols) {
 
   while (iswspace(lexer->lookahead))
-    lexer->advance(lexer, true);
+    lexer->advance_supercollider(lexer, true);
 
   if (lexer->lookahead == '/') {
-    advance(lexer);
+    advance_supercollider(lexer);
     if (lexer->lookahead != '*')
       return false;
-    advance(lexer);
+    advance_supercollider(lexer);
 
     bool after_star = false;
     unsigned nesting_depth = 1;
@@ -36,12 +36,12 @@ bool tree_sitter_supercollider_external_scanner_scan(
 		/* lexer->result_symbol = STRING; */
 		/* break; */
       case '*':
-        advance(lexer);
+        advance_supercollider(lexer);
         after_star = true;
         break;
       case '/':
         if (after_star) {
-          advance(lexer);
+          advance_supercollider(lexer);
           after_star = false;
           nesting_depth--;
           if (nesting_depth == 0) {
@@ -49,16 +49,16 @@ bool tree_sitter_supercollider_external_scanner_scan(
             return true;
           }
         } else {
-          advance(lexer);
+          advance_supercollider(lexer);
           after_star = false;
           if (lexer->lookahead == '*') {
             nesting_depth++;
-            advance(lexer);
+            advance_supercollider(lexer);
           }
         }
         break;
       default:
-        advance(lexer);
+        advance_supercollider(lexer);
         after_star = false;
         break;
       }

@@ -50,7 +50,7 @@ typedef struct {
     indent_vec *indents;
 } Scanner;
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_firrtl(TSLexer *lexer) { lexer->advance_firrtl(lexer, true); }
 
 bool tree_sitter_firrtl_external_scanner_scan(void *payload, TSLexer *lexer,
                                               const bool *valid_symbols) {
@@ -64,29 +64,29 @@ bool tree_sitter_firrtl_external_scanner_scan(void *payload, TSLexer *lexer,
         if (lexer->lookahead == '\n') {
             found_end_of_line = true;
             indent_length = 0;
-            skip(lexer);
+            skip_firrtl(lexer);
         } else if (lexer->lookahead == ' ') {
             indent_length++;
-            skip(lexer);
+            skip_firrtl(lexer);
         } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
             indent_length = 0;
-            skip(lexer);
+            skip_firrtl(lexer);
         } else if (lexer->lookahead == '\t') {
             indent_length += 8;
-            skip(lexer);
+            skip_firrtl(lexer);
         } else if (lexer->lookahead == '#') {
             while (lexer->lookahead && lexer->lookahead != '\n') {
-                skip(lexer);
+                skip_firrtl(lexer);
             }
-            skip(lexer);
+            skip_firrtl(lexer);
             indent_length = 0;
         } else if (lexer->lookahead == '\\') {
-            skip(lexer);
+            skip_firrtl(lexer);
             if (lexer->lookahead == '\r') {
-                skip(lexer);
+                skip_firrtl(lexer);
             }
             if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
-                skip(lexer);
+                skip_firrtl(lexer);
             } else {
                 return false;
             }

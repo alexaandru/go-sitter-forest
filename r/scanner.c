@@ -4,7 +4,7 @@ enum TokenType {
     RAW_STRING_LITERAL,
 };
 
-static bool scan(TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_r(TSLexer *lexer, const bool *valid_symbols) {
     // scan a raw string literal; see R source code for implementation:
     // https://github.com/wch/r-source/blob/52b730f217c12ba3d95dee0cd1f330d1977b5ea3/src/main/gram.y#L3102
 
@@ -13,19 +13,19 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
     if (prefix != 'r' && prefix != 'R') {
         return false;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_r(lexer, false);
 
     // check for quote character
     char quote = lexer->lookahead;
     if (quote != '"' && quote != '\'') {
         return false;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_r(lexer, false);
 
     // start counting '-' characters
     int hyphen_count = 0;
     while (lexer->lookahead == '-') {
-        lexer->advance(lexer, false);
+        lexer->advance_r(lexer, false);
         hyphen_count += 1;
     }
 
@@ -35,25 +35,25 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
     char closing_bracket = 0;
     if (opening_bracket == '(') {
         closing_bracket = ')';
-        lexer->advance(lexer, false);
+        lexer->advance_r(lexer, false);
     } else if (opening_bracket == '[') {
         closing_bracket = ']';
-        lexer->advance(lexer, false);
+        lexer->advance_r(lexer, false);
     } else if (opening_bracket == '{') {
         closing_bracket = '}';
-        lexer->advance(lexer, false);
+        lexer->advance_r(lexer, false);
     } else {
         return false;
     }
 
     // we're in the body of the raw string; start looping until
     // we find the matching closing bracket
-    for (; lexer->lookahead != 0; lexer->advance(lexer, false)) {
+    for (; lexer->lookahead != 0; lexer->advance_r(lexer, false)) {
         // consume a closing bracket
         if (lexer->lookahead != closing_bracket) {
             continue;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_r(lexer, false);
 
         // consume hyphens
         bool hyphens_ok = true;
@@ -62,7 +62,7 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
                 hyphens_ok = false;
                 break;
             }
-            lexer->advance(lexer, false);
+            lexer->advance_r(lexer, false);
         }
 
         if (!hyphens_ok) {
@@ -73,7 +73,7 @@ static bool scan(TSLexer *lexer, const bool *valid_symbols) {
         if (lexer->lookahead != quote) {
             continue;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_r(lexer, false);
 
         // success!
         lexer->result_symbol = RAW_STRING_LITERAL;
@@ -89,7 +89,7 @@ void *tree_sitter_r_external_scanner_create() { return NULL; }
 
 bool tree_sitter_r_external_scanner_scan(void *payload, TSLexer *lexer,
                                          const bool *valid_symbols) {
-    return scan(lexer, valid_symbols);
+    return scan_r(lexer, valid_symbols);
 }
 
 unsigned tree_sitter_r_external_scanner_serialize(void *payload, char *buffer) {

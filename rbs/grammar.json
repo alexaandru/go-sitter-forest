@@ -1,9 +1,8 @@
 {
   "language": "rbs",
   "url": "https://github.com/joker1007/tree-sitter-rbs",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@joker1007",
-  "skip": true,
+  "grammarSha": "dc304da06a29add92f3c69247c9e2447712b16bf0377fb1b6b793de1c36d1f69",
   "reference": "main",
   "revision": "519a61132a51222e3ce73d3b7ef07465f587f346"
 }

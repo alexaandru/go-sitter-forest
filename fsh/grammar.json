@@ -1,9 +1,8 @@
 {
   "language": "fsh",
   "url": "https://github.com/mgramigna/tree-sitter-fsh",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "maintainedBy": "@mgramigna",
-  "skip": true,
+  "grammarSha": "aea81c008423f1b762b7ebeaa05aa9e803a00cad64a564ae4ade0c9209b8c61e",
   "reference": "main",
   "revision": "fa3347712f7a59ed02ccf508284554689c6cde28"
 }

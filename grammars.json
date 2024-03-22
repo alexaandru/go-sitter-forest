@@ -103,9 +103,8 @@
   {
     "language": "bass",
     "url": "https://github.com/vito/tree-sitter-bass",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "f1e1c7ec9367c37016944e67a384cc86b759a44fc5ad281d5b05a84b76c73853",
     "reference": "main",
     "revision": "c9ba4568af24cd3403029730687c0a43d1350a43"
   },
@@ -131,12 +130,11 @@
   {
     "language": "bicep",
     "url": "https://github.com/amaanq/tree-sitter-bicep",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "4aeee8b5193766b67f58cf9d06cf0532b062ecd9a9cbe073b3ec007e75bac835",
     "reference": "master",
     "revision": "c3451d1049c80074b18078ba50007b7c00e063f8"
   },
@@ -154,9 +152,8 @@
   {
     "language": "blueprint",
     "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@gabmus",
-    "skip": true,
+    "grammarSha": "62ffa8feae3d815bce1b7506cae95a69aabdbe761d7cce0e765c89a0ab38b7a5",
     "reference": "master",
     "revision": "863cea9f83ad5637300478e0559262f1e791684b"
   },
@@ -194,9 +191,8 @@
   {
     "language": "capnp",
     "url": "https://github.com/amaanq/tree-sitter-capnp",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "adf7b38ad7bdbe764758e3d93dfc5c902e37a2cabeaacd6bb0ddccd0887d63ea",
     "reference": "master",
     "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
   },
@@ -268,9 +264,8 @@
   {
     "language": "cpon",
     "url": "https://github.com/amaanq/tree-sitter-cpon",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "559879feb11840fa1c0ba6ee0544ee0f7d92b695b6ce44f41c780f7f5f36bc1a",
     "reference": "master",
     "revision": "f4b3cbc8b0bd4e13035d39940fef09f1392e8739"
   },
@@ -349,12 +344,11 @@
   {
     "language": "dart",
     "url": "https://github.com/UserNobody14/tree-sitter-dart",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@akinsho",
-    "skip": true,
+    "grammarSha": "9b459377e5d193e0d64f333bbeab7c3344e2013f82f341ccde47867a84a743cd",
     "reference": "master",
     "revision": "1a31399a08aefc93bc4cdbfadc0cb619136f86c1"
   },
@@ -464,12 +458,11 @@
   {
     "language": "elixir",
     "url": "https://github.com/elixir-lang/tree-sitter-elixir",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@connorlay",
-    "skip": true,
+    "grammarSha": "007cba71a47a37329002e13573400f077ba4d2609236703c794fe28b54262602",
     "reference": "main",
     "revision": "511ea5e0088779e4bdd76e12963ab9a5fe99983a"
   },
@@ -551,12 +544,11 @@
   {
     "language": "firrtl",
     "url": "https://github.com/amaanq/tree-sitter-firrtl",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "ae531520f1fcf6ab20ec561ed45fea5f4239a19e8c05b787949cf80b46585c7a",
     "reference": "master",
     "revision": "2b5adae629c8cba528c7b1e4aa67a8ae28934ea5"
   },
@@ -604,9 +596,8 @@
   {
     "language": "fsh",
     "url": "https://github.com/mgramigna/tree-sitter-fsh",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@mgramigna",
-    "skip": true,
+    "grammarSha": "aea81c008423f1b762b7ebeaa05aa9e803a00cad64a564ae4ade0c9209b8c61e",
     "reference": "main",
     "revision": "fa3347712f7a59ed02ccf508284554689c6cde28"
   },
@@ -845,9 +836,8 @@
   {
     "language": "hare",
     "url": "https://github.com/amaanq/tree-sitter-hare",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "cda65405f31f1e7f5117d24949685971791e40a2ca1a86fea5d812b0d282a2de",
     "reference": "master",
     "revision": "3d4af179414525a35dd069ba0208c9b71093d8b3"
   },
@@ -1148,13 +1138,12 @@
   {
     "language": "lalrpop",
     "url": "https://github.com/traxys/tree-sitter-lalrpop",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c",
       "scanner_table.h"
     ],
     "maintainedBy": "@traxys",
-    "skip": true,
+    "grammarSha": "444c46db5bdae3b36465f323ecc0069c9a011bcd19082359ef5a6e2a97bca491",
     "reference": "master",
     "revision": "456dec2990ed7e9595eca82f85db14a1db46e126"
   },
@@ -1243,12 +1232,11 @@
   {
     "language": "luau",
     "url": "https://github.com/amaanq/tree-sitter-luau",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "0e25584861adf6be1439036331d1166f2ac9e63b03b65d451d75cb1014a27490",
     "reference": "master",
     "revision": "e5f7a020967407f73959592decdb147bb5fc30bb"
   },
@@ -1487,12 +1475,11 @@
   {
     "language": "odin",
     "url": "https://github.com/amaanq/tree-sitter-odin",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "48dc3ac828046aa66c79f895e43c4d73f580e451067b25fda3ab084cb76780a0",
     "reference": "master",
     "revision": "f94c590ed5263e11f1e492d1b53356f8c8459b66"
   },
@@ -1595,9 +1582,8 @@
   {
     "language": "po",
     "url": "https://github.com/erasin/tree-sitter-po",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "a1eb430e768662afe7e917b0d03daf3729bbcbe1a883cb407e1af8c5f3c6e567",
     "reference": "main",
     "revision": "d6aed225290bc71a15ab6f06305cb11419360c56"
   },
@@ -1624,12 +1610,11 @@
   {
     "language": "pony",
     "url": "https://github.com/amaanq/tree-sitter-pony",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq, @mfelsche",
-    "skip": true,
+    "grammarSha": "64510538eebb9b9465d3c5c9a2d66c82042a09a56235b2da517dad11ca1d79eb",
     "reference": "master",
     "revision": "16f930b250433cfcd4fb4144df92bb98ad344c20"
   },
@@ -1707,9 +1692,8 @@
   {
     "language": "puppet",
     "url": "https://github.com/amaanq/tree-sitter-puppet",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "fd6aba1e868c3021e966c25a5e46ad57cf2855edfea1130b8400f3c1b96c425e",
     "reference": "master",
     "revision": "5849f9694197a6e822872945b415429c285fdd54"
   },
@@ -1777,21 +1761,19 @@
     "language": "query",
     "altName": "Tree-Sitter Query Language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@steelsojka",
-    "skip": true,
+    "grammarSha": "048e27ad12b16f5870dac68e59c0e9fa5118a20572a9787d9cc66c10fd21c175",
     "reference": "master",
     "revision": "176a380df78800167565118bb0dadfc961abbd43"
   },
   {
     "language": "r",
     "url": "https://github.com/r-lib/tree-sitter-r",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@echasnovski",
-    "skip": true,
+    "grammarSha": "176af8dec2220d6f6d40470b0f9a175211a8969a49c28e312310e92dd2066370",
     "reference": "main",
     "revision": "c55f8b4dfaa32c80ddef6c0ac0e79b05cb0cbf57"
   },
@@ -1817,9 +1799,8 @@
   {
     "language": "rbs",
     "url": "https://github.com/joker1007/tree-sitter-rbs",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@joker1007",
-    "skip": true,
+    "grammarSha": "dc304da06a29add92f3c69247c9e2447712b16bf0377fb1b6b793de1c36d1f69",
     "reference": "main",
     "revision": "519a61132a51222e3ce73d3b7ef07465f587f346"
   },
@@ -1894,12 +1875,11 @@
   {
     "language": "ron",
     "url": "https://github.com/amaanq/tree-sitter-ron",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "dfb66147e6d4a869c9fbf13ea47a46d00159d0a2e8177cc9c60e1e0ca6ae39c7",
     "reference": "master",
     "revision": "ce6086b2c9e8e71065b8129d6c2289c5f66d1879"
   },
@@ -1998,21 +1978,19 @@
   {
     "language": "smali",
     "url": "https://git.sr.ht/~yotam/tree-sitter-smali",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "750d92db099bc6bea0e5eb540ea0cada41a69c8255164e75793c124a19bbdcb7",
     "reference": "master",
     "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5"
   },
   {
     "language": "smithy",
     "url": "https://github.com/indoorvivants/tree-sitter-smithy",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq, @keynmol",
-    "skip": true,
+    "grammarSha": "12c1ad079dfb5766855747efdc1792c1bbb2d51d119115558a719bf80caeace5",
     "reference": "main",
     "revision": "8327eb84d55639ffbe08c9dc82da7fff72a1ad07"
   },
@@ -2095,12 +2073,11 @@
   {
     "language": "squirrel",
     "url": "https://github.com/amaanq/tree-sitter-squirrel",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "6c786e3c5ad14e2e07e8da2cd8f1f29175744daea08174bdac1f40ef3a1112e9",
     "reference": "master",
     "revision": "e8b5835296f931bcaa1477d3c5a68a0c5c2ba034"
   },
@@ -2145,12 +2122,11 @@
   {
     "language": "supercollider",
     "url": "https://github.com/madskjeldgaard/tree-sitter-supercollider",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@madskjeldgaard",
-    "skip": true,
+    "grammarSha": "f28e3c6cc9a34944ea1a78e7b2c73c90ee37b7e5ae778f9d592c74ad44ad3884",
     "reference": "main",
     "revision": "3b35bd0fded4423c8fb30e9585c7bacbcd0e8095"
   },
@@ -2215,12 +2191,11 @@
   {
     "language": "tablegen",
     "url": "https://github.com/amaanq/tree-sitter-tablegen",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "skip": true,
+    "grammarSha": "7cae2632fe3ae9504d3f444abe3e4fffbbdf0b810a1b27e4a25534d2ee63e7dd",
     "reference": "master",
     "revision": "300f6a490e71f895e644ed2deec6920860a2e107"
   },
@@ -2268,9 +2243,8 @@
   {
     "language": "thrift",
     "url": "https://github.com/duskmoon314/tree-sitter-thrift",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@amaanq, @duskmoon314",
-    "skip": true,
+    "grammarSha": "4a84e7b02e51a9fceebc2f42544ac819e611d2af2cfd9e2fed0a54cdfa35dd8d",
     "reference": "main",
     "revision": "d4deb1bd9e848f2dbe81103a151d99e8546de480"
   },
@@ -2426,9 +2400,8 @@
   {
     "language": "usd",
     "url": "https://github.com/ColinKennedy/tree-sitter-usd",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@ColinKennedy",
-    "skip": true,
+    "grammarSha": "78689e3a93068e55db981d43c3f1c11bd6bd840856f57c6d578b645efe4e4c82",
     "reference": "master",
     "revision": "ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7"
   },
@@ -2600,12 +2573,11 @@
   {
     "language": "yuck",
     "url": "https://github.com/Philipp-M/tree-sitter-yuck",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@Philipp-M, @amaanq",
-    "skip": true,
+    "grammarSha": "c9b6dd5d97be4306824ec48587ee58c21698ec5220a092f14623dcb04522608c",
     "reference": "main",
     "revision": "c348825d3f86dec71dee0e1223c6bd73114e3579"
   },

@@ -14,9 +14,9 @@ typedef struct {
     int quote_count;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_pony(TSLexer *lexer) { lexer->advance_pony(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_pony(TSLexer *lexer) { lexer->advance_pony(lexer, true); }
 
 void *tree_sitter_pony_external_scanner_create() {
     return calloc(1, sizeof(Scanner));
@@ -53,18 +53,18 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
     if (valid_symbols[TYPE_ARGS_START]) {
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\0' &&
                lexer->lookahead != '\n') {
-            advance(lexer);
+            advance_pony(lexer);
         }
 
         if (lexer->lookahead == '[') {
-            advance(lexer);
+            advance_pony(lexer);
             lexer->result_symbol = TYPE_ARGS_START;
             return true;
         }
     }
 
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_pony(lexer);
     }
 
     // Multiline string content can have anything,
@@ -81,7 +81,7 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
                     // without prior knowledge of quotes
                     if (scanner->quote_count == 0) {
                         while (lexer->lookahead == '"') {
-                            advance(lexer);
+                            advance_pony(lexer);
                             scanner->quote_count++;
                         }
 
@@ -112,7 +112,7 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
                         // We returned from the last iteration with a quote
                         // count > 3, so we must mark n-3 quotes as content
                         for (int i = 0; i < scanner->quote_count - 3; i++) {
-                            advance(lexer);
+                            advance_pony(lexer);
                         }
                         // Extend the current token with `mark_end`
                         lexer->mark_end(lexer);
@@ -139,11 +139,11 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
                     if (lexer->eof(lexer)) {
                         return false;
                     }
-                    advance(lexer);
+                    advance_pony(lexer);
                     has_content = true;
                     break;
                 default:
-                    advance(lexer);
+                    advance_pony(lexer);
                     has_content = true;
                     break;
             }
@@ -151,15 +151,15 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
     }
 
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_pony(lexer);
     }
 
     if (lexer->lookahead == '/') {
-        advance(lexer);
+        advance_pony(lexer);
         if (lexer->lookahead != '*') {
             return false;
         }
-        advance(lexer);
+        advance_pony(lexer);
 
         bool after_star = false;
         unsigned nesting_depth = 1;
@@ -168,12 +168,12 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
                 case '\0':
                     return false;
                 case '*':
-                    advance(lexer);
+                    advance_pony(lexer);
                     after_star = true;
                     break;
                 case '/':
                     if (after_star) {
-                        advance(lexer);
+                        advance_pony(lexer);
                         after_star = false;
                         nesting_depth--;
                         if (nesting_depth == 0) {
@@ -181,16 +181,16 @@ bool tree_sitter_pony_external_scanner_scan(void *payload, TSLexer *lexer,
                             return true;
                         }
                     } else {
-                        advance(lexer);
+                        advance_pony(lexer);
                         after_star = false;
                         if (lexer->lookahead == '*') {
                             nesting_depth++;
-                            advance(lexer);
+                            advance_pony(lexer);
                         }
                     }
                     break;
                 default:
-                    advance(lexer);
+                    advance_pony(lexer);
                     after_star = false;
                     break;
             }

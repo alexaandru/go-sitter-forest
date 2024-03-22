@@ -13,9 +13,9 @@ enum {
     BRACKET,
 };
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_odin(TSLexer *lexer) { lexer->advance_odin(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_odin(TSLexer *lexer) { lexer->advance_odin(lexer, true); }
 
 void *tree_sitter_odin_external_scanner_create() { return NULL; }
 
@@ -26,12 +26,12 @@ void tree_sitter_odin_external_scanner_deserialize(void *payload, const char *bu
 bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     if (valid_symbols[FLOAT]) {
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\n') {
-            skip(lexer);
+            skip_odin(lexer);
         }
 
         if (!valid_symbols[NEWLINE]) { // skip newlines too
             while (iswspace(lexer->lookahead)) {
-                skip(lexer);
+                skip_odin(lexer);
             }
         }
 
@@ -57,9 +57,9 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
                     } else {
                         lexer->mark_end(lexer);
                         found_decimal = true;
-                        advance(lexer);
+                        advance_odin(lexer);
                         if (lexer->lookahead == '.') {
-                            advance(lexer);
+                            advance_odin(lexer);
                             goto newline;
                         }
                         lexer->mark_end(lexer);
@@ -77,7 +77,7 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
                     }
                     if ((found_decimal || found_exponent) &&
                         (found_number_after_decimal || found_number_before_decimal)) {
-                        advance(lexer);
+                        advance_odin(lexer);
                         lexer->result_symbol = FLOAT;
                         lexer->mark_end(lexer);
                         return true;
@@ -91,7 +91,7 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
                         return true;
                     } else if (found_number_before_decimal || found_number_after_decimal) {
                         found_exponent = true;
-                        advance(lexer);
+                        advance_odin(lexer);
                     } else {
                         goto newline;
                     }
@@ -99,14 +99,14 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
                 case '+':
                 case '-':
                     if (i == 0 || (found_exponent && !found_number_after_expontent)) {
-                        advance(lexer);
+                        advance_odin(lexer);
                     } else {
                         goto newline;
                     }
                     break;
                 default:
                     if (isdigit(lexer->lookahead)) {
-                        advance(lexer);
+                        advance_odin(lexer);
                         if (found_decimal) {
                             found_number_after_decimal = true;
                         } else {
@@ -133,20 +133,20 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
 
     if (valid_symbols[NL_COMMA]) {
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\n') {
-            skip(lexer);
+            skip_odin(lexer);
         }
 
         if (lexer->lookahead == ',') {
-            advance(lexer);
+            advance_odin(lexer);
             lexer->result_symbol = NL_COMMA;
             lexer->mark_end(lexer);
             while (iswspace(lexer->lookahead) && lexer->lookahead != '\n') {
-                advance(lexer);
+                advance_odin(lexer);
             }
 
             if (lexer->lookahead == '\n') {
                 while (iswspace(lexer->lookahead)) {
-                    advance(lexer);
+                    advance_odin(lexer);
                 }
                 return lexer->lookahead != '}';
             }
@@ -156,11 +156,11 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
 newline:
     if (valid_symbols[NEWLINE]) {
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\n') {
-            skip(lexer);
+            skip_odin(lexer);
         }
 
         if (lexer->lookahead == '\n') {
-            advance(lexer);
+            advance_odin(lexer);
             lexer->result_symbol = NEWLINE;
             lexer->mark_end(lexer);
 
@@ -170,7 +170,7 @@ newline:
                 if (lexer->lookahead == '\n') {
                     nl_count++;
                 }
-                skip(lexer);
+                skip_odin(lexer);
             }
 
             const char *where = "where";
@@ -186,7 +186,7 @@ newline:
                     break;
                 }
                 next_word[i] = (char)lexer->lookahead;
-                advance(lexer);
+                advance_odin(lexer);
             }
 
             if (strcmp(next_word, where) == 0 || strcmp(next_word, _else) == 0) {
@@ -203,11 +203,11 @@ newline:
             return true;
         }
         // if (lexer->lookahead == ';') {
-        //     advance(lexer);
+        //     advance_odin(lexer);
         //     lexer->result_symbol = SEPARATOR;
         //     lexer->mark_end(lexer);
         //     while (iswspace(lexer->lookahead)) {
-        //         advance(lexer);
+        //         advance_odin(lexer);
         //     }
         //     return true;
         // }
@@ -215,11 +215,11 @@ newline:
 
 backslash:
     if (valid_symbols[BACKSLASH] && lexer->lookahead == '\\') {
-        advance(lexer);
+        advance_odin(lexer);
         if (lexer->lookahead == '\n') {
-            advance(lexer);
+            advance_odin(lexer);
             while (iswspace(lexer->lookahead)) {
-                advance(lexer);
+                advance_odin(lexer);
             }
             lexer->result_symbol = BACKSLASH;
             return true;
@@ -227,15 +227,15 @@ backslash:
     }
 
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_odin(lexer);
     }
 
     if (valid_symbols[BLOCK_COMMENT] && lexer->lookahead == '/') {
-        advance(lexer);
+        advance_odin(lexer);
         if (lexer->lookahead != '*') {
             return false;
         }
-        advance(lexer);
+        advance_odin(lexer);
 
         if (lexer->lookahead == '"') {
             return false;
@@ -248,12 +248,12 @@ backslash:
                 case '\0':
                     return false;
                 case '*':
-                    advance(lexer);
+                    advance_odin(lexer);
                     after_star = true;
                     break;
                 case '/':
                     if (after_star) {
-                        advance(lexer);
+                        advance_odin(lexer);
                         after_star = false;
                         nesting_depth--;
                         if (nesting_depth == 0) {
@@ -261,16 +261,16 @@ backslash:
                             return true;
                         }
                     } else {
-                        advance(lexer);
+                        advance_odin(lexer);
                         after_star = false;
                         if (lexer->lookahead == '*') {
                             nesting_depth++;
-                            advance(lexer);
+                            advance_odin(lexer);
                         }
                     }
                     break;
                 default:
-                    advance(lexer);
+                    advance_odin(lexer);
                     after_star = false;
                     break;
             }

@@ -21,9 +21,9 @@ void tree_sitter_yuck_external_scanner_deserialize(void *payload,
                                                    const char *buffer,
                                                    unsigned length) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_yuck(TSLexer *lexer) { lexer->advance_yuck(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_yuck(TSLexer *lexer) { lexer->advance_yuck(lexer, true); }
 
 static bool scan_string_literal_fragment(TSLexer *lexer, int32_t quote) {
   for (bool has_content = false;; has_content = true) {
@@ -34,14 +34,14 @@ static bool scan_string_literal_fragment(TSLexer *lexer, int32_t quote) {
     } else if (next == '\0') {
       return false;
     } else if (next == '$') {
-      advance(lexer);
+      advance_yuck(lexer);
       if (lexer->lookahead == '{') {
         return has_content;
       }
     } else if (next == '\\') {
       return has_content;
     } else {
-      advance(lexer);
+      advance_yuck(lexer);
     }
   }
 }

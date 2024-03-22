@@ -22,9 +22,9 @@ static inline void reset_state(Scanner *scanner) {
     scanner->level_count = 0;
 }
 
-static inline void consume(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void consume(TSLexer *lexer) { lexer->advance_luau(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_luau(TSLexer *lexer) { lexer->advance_luau(lexer, true); }
 
 static inline bool consume_char(char chr, TSLexer *lexer) {
     if (lexer->lookahead != chr) {
@@ -46,7 +46,7 @@ static inline uint8_t consume_and_count_char(char chr, TSLexer *lexer) {
 
 static inline void skip_whitespaces(TSLexer *lexer) {
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_luau(lexer);
     }
 }
 

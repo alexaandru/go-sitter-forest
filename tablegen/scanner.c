@@ -29,17 +29,17 @@ bool tree_sitter_tablegen_external_scanner_scan(void *payload, TSLexer *lexer,
                                                 const bool *valid_symbols) {
     if (valid_symbols[MULTILINE_COMMENT]) {
         while (iswspace(lexer->lookahead)) {
-            lexer->advance(lexer, true);
+            lexer->advance_tablegen(lexer, true);
         }
 
         if (lexer->lookahead != '/') {
             return false;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_tablegen(lexer, false);
         if (lexer->lookahead != '*') {
             return false;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_tablegen(lexer, false);
 
         bool after_star = false;
         unsigned nesting_depth = 1;
@@ -48,12 +48,12 @@ bool tree_sitter_tablegen_external_scanner_scan(void *payload, TSLexer *lexer,
                 case '\0':
                     return false;
                 case '*':
-                    lexer->advance(lexer, false);
+                    lexer->advance_tablegen(lexer, false);
                     after_star = true;
                     break;
                 case '/':
                     if (after_star) {
-                        lexer->advance(lexer, false);
+                        lexer->advance_tablegen(lexer, false);
                         after_star = false;
                         nesting_depth--;
                         if (nesting_depth == 0) {
@@ -61,16 +61,16 @@ bool tree_sitter_tablegen_external_scanner_scan(void *payload, TSLexer *lexer,
                             return true;
                         }
                     } else {
-                        lexer->advance(lexer, false);
+                        lexer->advance_tablegen(lexer, false);
                         after_star = false;
                         if (lexer->lookahead == '*') {
                             nesting_depth++;
-                            lexer->advance(lexer, false);
+                            lexer->advance_tablegen(lexer, false);
                         }
                     }
                     break;
                 default:
-                    lexer->advance(lexer, false);
+                    lexer->advance_tablegen(lexer, false);
                     after_star = false;
                     break;
             }

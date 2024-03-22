@@ -1,12 +1,11 @@
 {
   "language": "odin",
   "url": "https://github.com/amaanq/tree-sitter-odin",
-  "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@amaanq",
-  "skip": true,
+  "grammarSha": "48dc3ac828046aa66c79f895e43c4d73f580e451067b25fda3ab084cb76780a0",
   "reference": "master",
   "revision": "f94c590ed5263e11f1e492d1b53356f8c8459b66"
 }

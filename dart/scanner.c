@@ -17,15 +17,15 @@ void tree_sitter_dart_external_scanner_reset(void *p) {}
 unsigned tree_sitter_dart_external_scanner_serialize(void *p, char *buffer) { return 0; }
 void tree_sitter_dart_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void advance_dart(TSLexer *lexer) { lexer->advance_dart(lexer, false); }
+static void skip_dart(TSLexer *lexer) { lexer->advance_dart(lexer, true); }
 
 static bool scan_multiline_comments(TSLexer *lexer) {
 
     bool documentation_comment = false;
-    advance(lexer);
+    advance_dart(lexer);
     if (lexer->lookahead != '*') return false;
-    advance(lexer);
+    advance_dart(lexer);
     if (lexer->lookahead == '*') documentation_comment = true;
 
     bool after_star = false;
@@ -35,12 +35,12 @@ static bool scan_multiline_comments(TSLexer *lexer) {
         case '\0':
           return false;
         case '*':
-          advance(lexer);
+          advance_dart(lexer);
           after_star = true;
           break;
         case '/':
           if (after_star) {
-            advance(lexer);
+            advance_dart(lexer);
             after_star = false;
             nesting_depth--;
             if (nesting_depth == 0) {
@@ -52,16 +52,16 @@ static bool scan_multiline_comments(TSLexer *lexer) {
               return true;
             }
           } else {
-            advance(lexer);
+            advance_dart(lexer);
             after_star = false;
             if (lexer->lookahead == '*') {
               nesting_depth++;
-              advance(lexer);
+              advance_dart(lexer);
             }
           }
           break;
         default:
-          advance(lexer);
+          advance_dart(lexer);
           after_star = false;
           break;
       }
@@ -88,7 +88,7 @@ static bool scan_templates(TSLexer *lexer, const bool *valid_symbols) {
         return has_content;
       case '\n':
         if (valid_symbols[TEMPLATE_CHARS_DOUBLE_SINGLE] || valid_symbols[TEMPLATE_CHARS_SINGLE_SINGLE]) return false;
-        advance(lexer);
+        advance_dart(lexer);
         break;
       case '\0':
         return false;
@@ -97,13 +97,13 @@ static bool scan_templates(TSLexer *lexer, const bool *valid_symbols) {
       case '\\':
         if (valid_symbols[TEMPLATE_CHARS_RAW_SLASH]) {
             lexer->result_symbol = TEMPLATE_CHARS_RAW_SLASH;
-            advance(lexer);
+            advance_dart(lexer);
         } else {
             return has_content;
         }
         break;
       default:
-        advance(lexer);
+        advance_dart(lexer);
     }
   }
   return true;
@@ -121,7 +121,7 @@ bool tree_sitter_dart_external_scanner_scan(void *payload, TSLexer *lexer,
   ) {
     return scan_templates(lexer, valid_symbols);
   }
-  while (iswspace(lexer->lookahead)) lexer->advance(lexer, true);
+  while (iswspace(lexer->lookahead)) lexer->advance_dart(lexer, true);
 
   if (lexer->lookahead == '/') {
     return scan_multiline_comments(lexer);
