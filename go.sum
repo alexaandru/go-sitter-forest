@@ -106,8 +106,8 @@ github.com/alexaandru/go-sitter-forest/facility v1.5.5 h1:KzPCRwBvZGWLyo21ILeojO
 github.com/alexaandru/go-sitter-forest/facility v1.5.5/go.mod h1:79LYV7x9XnLkkLTGPfIFsjP3x3uj1bxpxtOH8SDjJYo=
 github.com/alexaandru/go-sitter-forest/faust v1.5.5 h1:cupG+3tOCwp32Ibmou+SvNmYZ6Sa7Avn4DFctUdhg2o=
 github.com/alexaandru/go-sitter-forest/faust v1.5.5/go.mod h1:i/0R+aDSHUK9/pF1KmVL0+OGHyoDtVsMddXh6whyT4Q=
-github.com/alexaandru/go-sitter-forest/fennel v1.5.5 h1:fnmEwxzdm82JmLBOp3kcZ1XU0YzCoSpt5LoYR8/f5L8=
-github.com/alexaandru/go-sitter-forest/fennel v1.5.5/go.mod h1:HVUS3EQb8L3GJkzrDH449Rw+xn5FcUgOCd0OAogj5f8=
+github.com/alexaandru/go-sitter-forest/fennel v1.5.7 h1:8ge4sCJDXz1hauZtR51SX0eyVDcRgi68mQvQkMcQwHU=
+github.com/alexaandru/go-sitter-forest/fennel v1.5.7/go.mod h1:bzE1X3QilaYhfLfj4Qu9DUCGurFM09t/z14AipQ+fYA=
 github.com/alexaandru/go-sitter-forest/fidl v1.5.5 h1:XwZszblenWKNGXhbqo9XU/21xmt7vkoDrfCKelRpGIM=
 github.com/alexaandru/go-sitter-forest/fidl v1.5.5/go.mod h1:xuiJPkICXHxX87OHBGVaMiKIRdUy8uCrAojvZd5gN4w=
 github.com/alexaandru/go-sitter-forest/firrtl v1.5.5 h1:1DnhsdyVJXVTlbeb1U861fDaQk2ZgUkpbBgRjYAkwfU=

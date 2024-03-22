@@ -57,7 +57,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.7
 	github.com/alexaandru/go-sitter-forest/facility v1.5.5
 	github.com/alexaandru/go-sitter-forest/faust v1.5.5
-	github.com/alexaandru/go-sitter-forest/fennel v1.5.5
+	github.com/alexaandru/go-sitter-forest/fennel v1.5.7
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.5
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.5
 	github.com/alexaandru/go-sitter-forest/fish v1.5.5
