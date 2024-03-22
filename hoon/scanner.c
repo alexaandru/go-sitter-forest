@@ -132,9 +132,9 @@ typedef struct {
     delimiter_vec delimiters;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_hoon(TSLexer *lexer) { lexer->advance_hoon(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_hoon(TSLexer *lexer) { lexer->advance_hoon(lexer, true); }
 
 bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
                                               const bool *valid_symbols) {
@@ -154,10 +154,10 @@ bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
                 return has_content;
             }
             if (lexer->lookahead == '\\') {
-                lexer->advance(lexer, false);
+                lexer->advance_hoon(lexer, false);
                 if (lexer->lookahead == end_character(&delimiter) ||
                     lexer->lookahead == '\\' || lexer->lookahead == '{' || lexer->lookahead == '}') {
-                    lexer->advance(lexer, false);
+                    lexer->advance_hoon(lexer, false);
                 }
                 if(delimiter.flags & DoubleQuote){
                     continue;
@@ -170,14 +170,14 @@ bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
             } else if (lexer->lookahead == end_char) {
                 if (is_triple(&delimiter)) {
                     lexer->mark_end(lexer);
-                    lexer->advance(lexer, false);
+                    lexer->advance_hoon(lexer, false);
                     if (lexer->lookahead == end_char) {
-                        lexer->advance(lexer, false);
+                        lexer->advance_hoon(lexer, false);
                         if (lexer->lookahead == end_char) {
                             if (has_content) {
                                 lexer->result_symbol = STRING_CONTENT;
                             } else {
-                                lexer->advance(lexer, false);
+                                lexer->advance_hoon(lexer, false);
                                 lexer->mark_end(lexer);
                                 VEC_POP(scanner->delimiters);
                                 lexer->result_symbol = STRING_END;
@@ -195,7 +195,7 @@ bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
                 if (has_content) {
                     lexer->result_symbol = STRING_CONTENT;
                 } else {
-                    lexer->advance(lexer, false);
+                    lexer->advance_hoon(lexer, false);
                     VEC_POP(scanner->delimiters);
                     lexer->result_symbol = STRING_END;
                 }
@@ -206,7 +206,7 @@ bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
                        !is_triple(&delimiter)) {
                 return false;
             }
-            advance(lexer);
+            advance_hoon(lexer);
             has_content = true;
         }
     }
@@ -220,23 +220,23 @@ bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
         if (lexer->lookahead == '\n') {
             found_end_of_line = true;
             indent_length = 0;
-            skip(lexer);
+            skip_hoon(lexer);
         } else if (lexer->lookahead == ' ') {
             indent_length++;
-            skip(lexer);
+            skip_hoon(lexer);
         } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
             indent_length = 0;
-            skip(lexer);
+            skip_hoon(lexer);
         } else if (lexer->lookahead == '\t') {
             indent_length += 8;
-            skip(lexer);
+            skip_hoon(lexer);
         } else if (lexer->lookahead == '\\') {
-            skip(lexer);
+            skip_hoon(lexer);
             if (lexer->lookahead == '\r') {
-                skip(lexer);
+                skip_hoon(lexer);
             }
             if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
-                skip(lexer);
+                skip_hoon(lexer);
             } else {
                 return false;
             }
@@ -267,24 +267,24 @@ bool tree_sitter_hoon_external_scanner_scan(void *payload, TSLexer *lexer,
 
         if (lexer->lookahead == '\'') {
             set_end_character(&delimiter, '\'');
-            advance(lexer);
+            advance_hoon(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '\'') {
-                advance(lexer);
+                advance_hoon(lexer);
                 if (lexer->lookahead == '\'') {
-                    advance(lexer);
+                    advance_hoon(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }
             }
         } else if (lexer->lookahead == '"') {
             set_end_character(&delimiter, '"');
-            advance(lexer);
+            advance_hoon(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '"') {
-                advance(lexer);
+                advance_hoon(lexer);
                 if (lexer->lookahead == '"') {
-                    advance(lexer);
+                    advance_hoon(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }

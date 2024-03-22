@@ -949,7 +949,7 @@
     "maintainedBy": "@urbit-pilled",
     "grammarSha": "df579dbc8cb058ff2a47d25462d5ead852ed61a360003cf87f924743e0094026",
     "reference": "master",
-    "revision": "0135187126370cbf112d759a50eab4a5c913a827"
+    "revision": "a24c5a39d1d7e993a8bee913c8e8b6a652ca5ae8"
   },
   {
     "language": "html",
@@ -2455,7 +2455,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "366d30c2438ca396f2f8304d891ca22e7c14b922"
+    "revision": "3439620ad96aa540f8dc454a332bc2d59314178f"
   },
   {
     "language": "vala",
@@ -2556,7 +2556,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "407d0518df68d3c98995f369fb554e196e8a0697"
+    "revision": "55c0ea5356b627dcdbe4882c6e10052dd2417b3f"
   },
   {
     "language": "xcompose",
