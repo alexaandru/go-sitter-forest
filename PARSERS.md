@@ -1,6 +1,6 @@
 # 267 Supported Parsers
 
-2 pending, 39 skipped regeneration
+2 pending, 38 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -59,7 +59,7 @@
 - [x] [erlang](https://github.com/WhatsApp/tree-sitter-erlang) ✔️  (maintained by @filmor)
 - [x] [facility](https://github.com/FacilityApi/tree-sitter-facility) ✔️  (maintained by @bryankenote)
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️  (maintained by @khiner)
-- [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) (maintained by @alexmozaidze; ❌grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+})
+- [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️  (maintained by @alexmozaidze)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️  (maintained by @chaopeng)
 - [x] [firrtl](https://github.com/amaanq/tree-sitter-firrtl) (maintained by @amaanq; ❌grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+})
 - [x] [fish](https://github.com/ram02z/tree-sitter-fish) ✔️  (maintained by @ram02z)

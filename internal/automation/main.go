@@ -222,7 +222,11 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	}
 
 	shas[grammarJS] = fmt.Sprintf("%x", sha256.Sum256(grc))
-	replMap := map[string]string{}
+	replMap := map[string]string{
+		// Patching broken grammars so that they compile.
+		// This is a bit "brute-force", but seems to do the job :-)
+		`/u{[\da-fA-F]+}/,`: "",
+	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
 		var b []byte
@@ -272,7 +276,10 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	}
 
 	for k, v := range replMap {
-		v = "./" + v
+		if v != "" {
+			v = "./" + v
+		}
+
 		grc = bytes.ReplaceAll(grc, []byte(k), []byte(v))
 
 		k = k[:len(k)-3]

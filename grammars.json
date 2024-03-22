@@ -535,9 +535,8 @@
   {
     "language": "fennel",
     "url": "https://github.com/alexmozaidze/tree-sitter-fennel",
-    "doc": "grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+}",
     "maintainedBy": "@alexmozaidze",
-    "skip": true,
+    "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
     "reference": "main",
     "revision": "215e3913524abc119daa9db7cf6ad2f2f5620189"
   },
