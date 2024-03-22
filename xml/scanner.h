@@ -19,7 +19,7 @@ enum TokenType {
 
 /// Advance the lexer if the next token matches the given character
 #define advance_if_eq(lexer, chr) \
-    if (!lexer->eof(lexer) && (lexer)->lookahead == (chr)) advance((lexer)); else return false
+    if (!lexer->eof(lexer) && (lexer)->lookahead == (chr)) advance_xml((lexer)); else return false
 
 #ifdef _WIN32
 #undef max
@@ -27,7 +27,7 @@ enum TokenType {
 #endif
 
 /// Advance the lexer to the next token
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_xml(TSLexer *lexer) { lexer->advance_xml(lexer, false); }
 
 /// Check if the character is valid in a name
 /// TODO: explicitly follow https://www.w3.org/TR/xml11/#NT-Name
@@ -59,19 +59,19 @@ static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
             lexer->mark_end(lexer);
         }
         advanced_once = true;
-        advance(lexer);
+        advance_xml(lexer);
     }
 
     if (advanced_once) {
         while (is_valid_name_char(lexer->lookahead)) {
             if (found_x_first && (lexer->lookahead == 'm' || lexer->lookahead == 'M')) {
-                advance(lexer);
+                advance_xml(lexer);
                 if (lexer->lookahead == 'l' || lexer->lookahead == 'L') {
-                    advance(lexer);
+                    advance_xml(lexer);
                     if (is_valid_name_char(lexer->lookahead)) {
                         found_x_first = false;
                         bool last_char_hyphen = lexer->lookahead == '-';
-                        advance(lexer);
+                        advance_xml(lexer);
                         if (last_char_hyphen) {
                             if (valid_symbols[XML_MODEL] && check_word(lexer, "model", 5))
                                 return false;
@@ -85,7 +85,7 @@ static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
             }
 
             found_x_first = false;
-            advance(lexer);
+            advance_xml(lexer);
         }
 
         lexer->mark_end(lexer);
@@ -99,18 +99,18 @@ static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
 /// Scan for the content of a PI node
 static bool scan_pi_content(TSLexer *lexer) {
     while (!lexer->eof(lexer) && lexer->lookahead != '\n' && lexer->lookahead != '?')
-        advance(lexer);
+        advance_xml(lexer);
 
     if (lexer->lookahead != '?')
         return false;
 
     lexer->mark_end(lexer);
-    advance(lexer);
+    advance_xml(lexer);
 
     if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_xml(lexer);
         while (lexer->lookahead == ' ')
-            advance(lexer);
+            advance_xml(lexer);
         advance_if_eq(lexer, '\n');
         lexer->result_symbol = PI_CONTENT;
         return true;
@@ -126,18 +126,18 @@ static bool scan_comment(TSLexer *lexer) {
 
     while (!lexer->eof(lexer)) {
         if (lexer->lookahead == '-') {
-            advance(lexer);
+            advance_xml(lexer);
             if (lexer->lookahead == '-') {
-                advance(lexer);
+                advance_xml(lexer);
                 break;
             }
         } else {
-            advance(lexer);
+            advance_xml(lexer);
         }
     }
 
     if (lexer->lookahead == '>') {
-        advance(lexer);
+        advance_xml(lexer);
         lexer->mark_end(lexer);
         lexer->result_symbol = COMMENT;
         return true;

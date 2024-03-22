@@ -174,6 +174,7 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 
 // downloads the grammar.js file and any local dependencies
 // (files that are required by it).
+// TODO: This is way too long and doing way too much.
 func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	// We need to temporarily alter gr in here.
 	gr, shas := *grRO, map[string]string{}
@@ -223,7 +224,6 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	shas[grammarJS] = fmt.Sprintf("%x", sha256.Sum256(grc))
 	replMap := map[string]string{}
 
-	// TODO: For some (apex) we'll need to do the deps extraction recursively.
 	for _, file := range extractDeps(gr.Language, grc) {
 		var b []byte
 
@@ -233,11 +233,23 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 			base = "grammar2.js"
 		}
 
+		if gr.Language == "dtd" || gr.Language == "xml" {
+			if file == "../common.js" {
+				replMap["../common"] = "common.js"
+
+				continue
+			} else if file == "../common/index.js" {
+				base = "common.js"
+			} else {
+				replMap[file] = base
+			}
+		} else {
+			replMap[file] = base
+		}
+
 		// NOTE: Here we download from URLs with ../ ./ etc. in them.
 		// Looks fine for Github, untested for the others though.
 		fsrc, fdst := url+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, base)
-
-		replMap[file] = base
 
 		if b, err = fetchFile(fsrc); err != nil {
 			return
@@ -269,6 +281,33 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 
 	if err = os.WriteFile(dst, grc, 0o644); err != nil {
 		return
+	}
+
+	var ok bool
+
+	gr2 := filepath.Join("tmp", gr.Language, "grammar2.js")
+	if ok, err = fileExists(gr2); err != nil {
+		return
+	}
+
+	if ok {
+		var gr2b []byte
+
+		if gr2b, err = os.ReadFile(gr2); err != nil {
+			return
+		}
+
+		for k, v := range replMap {
+			v = "./" + v
+			gr2b = bytes.ReplaceAll(gr2b, []byte(k), []byte(v))
+
+			k = k[:len(k)-3]
+			gr2b = bytes.ReplaceAll(gr2b, []byte("'"+k+"'"), []byte("'"+v+"'"))
+		}
+
+		if err = os.WriteFile(gr2, gr2b, 0o640); err != nil {
+			return
+		}
 	}
 
 	// If there's only one sha, return it.
@@ -309,8 +348,6 @@ func extractDeps(lang string, content []byte) (files []string) {
 	for _, m := range raw {
 		if z := m[1]; z != "" {
 			if !strings.HasSuffix(z, ".js") {
-				// TODO: Others (dtd, xml) when unsuffixed may be missing a
-				// `/index.js` instead of just `.js`.
 				z += ".js"
 			}
 
@@ -318,12 +355,11 @@ func extractDeps(lang string, content []byte) (files []string) {
 		}
 	}
 
-	// TODO: Rather than adding each recursive dep in here, make a
-	// generic mechanism that can reuse Files (so that we can extract
-	// from them either .c/.h files or .js files, as extra deps).
 	switch lang {
 	case "apex":
 		x = append(x, "../common/soql-grammar.js")
+	case "dtd", "xml":
+		x = append(x, "../common/index.js")
 	case "sosl":
 		x = append(x, "../common/soql-grammar.js", "../common/common.js")
 	case "soql":

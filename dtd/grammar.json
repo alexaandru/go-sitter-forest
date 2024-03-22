@@ -1,14 +1,13 @@
 {
   "language": "dtd",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
-  "doc": "grammar.js has folder/index.js local deps",
   "files": [
     "scanner.c",
     "common/scanner.h"
   ],
   "srcRoot": "dtd",
   "maintainedBy": "@ObserverOfTime",
-  "skip": true,
+  "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
   "reference": "master",
   "revision": "ab85469fedbf4f32da9310dd76dcedba059fc482"
 }

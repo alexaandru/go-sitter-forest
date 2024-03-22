@@ -6289,10 +6289,6 @@ bool tree_sitter_dtd_external_scanner_scan(void *, TSLexer *, const bool *);
 unsigned tree_sitter_dtd_external_scanner_serialize(void *, char *);
 void tree_sitter_dtd_external_scanner_deserialize(void *, const char *, unsigned);
 
-#ifdef TS_PUBLIC
-#undef TS_PUBLIC
-#endif
-
 #ifdef _WIN32
 #define TS_PUBLIC __declspec(dllexport)
 #else

@@ -1,6 +1,6 @@
 # 267 Supported Parsers
 
-2 pending, 42 skipped regeneration
+2 pending, 40 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -47,7 +47,7 @@
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) ✔️  (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) ✔️  (maintained by @rydesun)
 - [x] [doxygen](https://github.com/amaanq/tree-sitter-doxygen) ✔️  (maintained by @amaanq)
-- [x] [dtd](https://github.com/tree-sitter-grammars/tree-sitter-xml) (maintained by @ObserverOfTime; ❌grammar.js has folder/index.js local deps)
+- [x] [dtd](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️  (maintained by @ObserverOfTime)
 - [x] [ebnf](https://github.com/RubixDev/ebnf) ✔️  (maintained by @RubixDev)
 - [x] [eds](https://github.com/uyha/tree-sitter-eds) ✔️  (maintained by @uyha)
 - [x] [eex](https://github.com/connorlay/tree-sitter-eex) ✔️  (maintained by @connorlay)
@@ -267,7 +267,7 @@
 - [x] [wgsl_bevy](https://github.com/theHamsta/tree-sitter-wgsl-bevy) ✔️  (maintained by @theHamsta)
 - [x] [wing](https://github.com/winglang/wing) ✔️  (maintained by @gshpychka, @MarkMcCulloh)
 - [x] [xcompose](https://github.com/ObserverOfTime/tree-sitter-xcompose) ✔️  (maintained by @ObserverOfTime)
-- [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) (maintained by @ObserverOfTime; ❌grammar.js has folder/index.js local deps)
+- [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️  (maintained by @ObserverOfTime)
 - [x] [yaml](https://github.com/ikatyang/tree-sitter-yaml) (maintained by @stsewd; ❌grammar.js throws error)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️  (maintained by @Hubro)
 - [x] [yuck](https://github.com/Philipp-M/tree-sitter-yuck) (maintained by @Philipp-M, @amaanq; ❌grammar.js error: repetition quantifier expects a valid decimal: u{[0-9a-fA-F]+})

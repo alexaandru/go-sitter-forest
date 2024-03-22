@@ -38,11 +38,11 @@ static String scan_tag_name(TSLexer *lexer) {
     String tag_name = String();
     if (is_valid_name_start_char(lexer->lookahead)) {
         string_push(&tag_name, (char)lexer->lookahead);
-        advance(lexer);
+        advance_xml(lexer);
     }
     while (is_valid_name_char(lexer->lookahead)) {
         string_push(&tag_name, (char)lexer->lookahead);
-        advance(lexer);
+        advance_xml(lexer);
     }
     return tag_name;
 }
@@ -77,7 +77,7 @@ static bool scan_end_tag_name(Vector *tags, TSLexer *lexer) {
 }
 
 static bool scan_self_closing_tag_delimiter(Vector *tags, TSLexer *lexer) {
-    advance(lexer);
+    advance_xml(lexer);
     advance_if_eq(lexer, '>');
     if (tags->size > 0) {
         array_delete(&array_pop(tags));
@@ -99,11 +99,11 @@ static bool scan_char_data(TSLexer *lexer) {
     while (!lexer->eof(lexer) && lexer->lookahead != '<' && lexer->lookahead != '&') {
         if (lexer->lookahead == ']') {
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_xml(lexer);
             if (lexer->lookahead == ']') {
-                advance(lexer);
+                advance_xml(lexer);
                 if (lexer->lookahead == '>') {
-                    advance(lexer);
+                    advance_xml(lexer);
                     if (advanced_once) {
                         lexer->result_symbol = CHAR_DATA;
                         return false;
@@ -112,7 +112,7 @@ static bool scan_char_data(TSLexer *lexer) {
             }
         }
         advanced_once = true;
-        advance(lexer);
+        advance_xml(lexer);
     }
 
     if (advanced_once) {
@@ -130,9 +130,9 @@ static bool scan_cdata(TSLexer *lexer) {
     while (!lexer->eof(lexer)) {
         if (lexer->lookahead == ']') {
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_xml(lexer);
             if (lexer->lookahead == ']') {
-                advance(lexer);
+                advance_xml(lexer);
                 if (lexer->lookahead == '>' && advanced_once) {
                     lexer->result_symbol = CDATA;
                     return true;
@@ -140,7 +140,7 @@ static bool scan_cdata(TSLexer *lexer) {
             }
         }
         advanced_once = true;
-        advance(lexer);
+        advance_xml(lexer);
     }
 
     return false;
@@ -172,9 +172,9 @@ bool tree_sitter_xml_external_scanner_scan(void *payload, TSLexer *lexer, const 
     switch (lexer->lookahead) {
         case '<':
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_xml(lexer);
             if (lexer->lookahead == '!') {
-                advance(lexer);
+                advance_xml(lexer);
                 return scan_comment(lexer);
             }
             break;
