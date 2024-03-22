@@ -1,5 +1,3 @@
-// @generated
-
 #include "parser.h"
 
 #if defined(__GNUC__) || defined(__clang__)
