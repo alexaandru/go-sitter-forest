@@ -5,7 +5,7 @@
     "scanner.c"
   ],
   "maintainedBy": "@theHamsta, @clason",
-  "grammarSha": "12123d1ff1a3d01742f585d723ec1a56b83bb21c7cb3103681249bba881e2c0c",
+  "grammarSha": "14b3ee000b4bc05eaf5576af19fab8a08b23e5b501dbdc563c77a4bd513738f7",
   "reference": "master",
-  "revision": "841f89ffbba9650529a40fb867f3456bf92bf9b1"
+  "revision": "6d764f17f4d28c9db736009fb0e10ffe04866661"
 }

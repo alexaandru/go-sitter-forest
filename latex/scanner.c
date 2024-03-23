@@ -34,12 +34,12 @@ static bool find_verbatim(TSLexer *lexer, const char *keyword,
         break;
       }
 
-      lexer->advance(lexer, false);
+      lexer->advance_latex(lexer, false);
       advanced = true;
     }
 
     if (failed && !advanced) {
-      lexer->advance(lexer, false);
+      lexer->advance_latex(lexer, false);
       lexer->mark_end(lexer);
       has_marked = true;
       continue;

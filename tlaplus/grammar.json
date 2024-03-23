@@ -2,10 +2,10 @@
   "language": "tlaplus",
   "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
   "files": [
-    "scanner.cc"
+    "scanner.c"
   ],
   "maintainedBy": "@ahelwer, @susliko",
   "grammarSha": "a9ca8b481a6fbc6e0c560754cee8990291f91098f2e9db3dde21a96216c1c0fc",
   "reference": "main",
-  "revision": "3896a5be761f04ffb22a841b2a0672f7a8a43ef9"
+  "revision": "7455f17038d551ecd2b082c39e4a63bcb403e158"
 }
