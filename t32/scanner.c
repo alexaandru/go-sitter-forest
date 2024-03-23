@@ -80,7 +80,7 @@ static void Advance(
 	TSLexer *const lexer)
 {
 	assert(lexer != NULL);
-	lexer->advance(lexer, false);
+	lexer->advance_t32(lexer, false);
 }
 
 

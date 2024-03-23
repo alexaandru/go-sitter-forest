@@ -2,7 +2,7 @@
   "language": "hurl",
   "url": "https://github.com/pfeiferj/tree-sitter-hurl",
   "maintainedBy": "@pfeiferj",
-  "grammarSha": "a19ebedd736c7d2f7a3ce5aa07324dbdffa54cb68eab680d9ceebc8bc3b7a019",
+  "grammarSha": "6a4bbb18f61833d4bc9ee151696cae946f130e72aec8907d562478387bb5a117",
   "reference": "main",
-  "revision": "cd1a0ada92cc73dd0f4d7eedc162be4ded758591"
+  "revision": "ad705af8c44c737bdb965fc081329c50716d2d03"
 }

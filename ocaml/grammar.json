@@ -7,7 +7,7 @@
   ],
   "srcRoot": "grammars/ocaml",
   "maintainedBy": "@undu",
-  "grammarSha": "5b9298a37351a814a135faafe7b578ba90044dbdd33709918c42c9fc406646c5",
+  "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
   "reference": "master",
-  "revision": "dabe60a96553fbbda0a58b6ccda12b7d44047cb5"
+  "revision": "f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae"
 }

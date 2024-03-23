@@ -62,9 +62,9 @@ static inline void quoted_string_id_push(Scanner *scanner, char c) {
   scanner->quoted_string_id[scanner->quoted_string_id_length++] = c;
 }
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_ocaml_interface(TSLexer *lexer) { lexer->advance_ocaml_interface(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_ocaml_interface(TSLexer *lexer) { lexer->advance_ocaml_interface(lexer, true); }
 
 static inline bool eof(TSLexer *lexer) { return lexer->eof(lexer); }
 
@@ -72,18 +72,18 @@ static void scan_string(TSLexer *lexer) {
   for (;;) {
     switch (lexer->lookahead) {
       case '\\':
-        advance(lexer);
-        advance(lexer);
+        advance_ocaml_interface(lexer);
+        advance_ocaml_interface(lexer);
         break;
       case '"':
-        advance(lexer);
+        advance_ocaml_interface(lexer);
         return;
       case '\0':
         if (eof(lexer)) return;
-        advance(lexer);
+        advance_ocaml_interface(lexer);
         break;
       default:
-        advance(lexer);
+        advance_ocaml_interface(lexer);
     }
   }
 }
@@ -94,12 +94,12 @@ static bool scan_left_quoted_string_delimiter(Scanner *scanner,
 
   while (iswlower(lexer->lookahead) || lexer->lookahead == '_') {
     quoted_string_id_push(scanner, lexer->lookahead);
-    advance(lexer);
+    advance_ocaml_interface(lexer);
   }
 
   if (lexer->lookahead != '|') return false;
 
-  advance(lexer);
+  advance_ocaml_interface(lexer);
   scanner->in_string = true;
   return true;
 }
@@ -108,7 +108,7 @@ static bool scan_right_quoted_string_delimiter(Scanner *scanner,
                                                TSLexer *lexer) {
   for (size_t i = 0; i < scanner->quoted_string_id_length; i++) {
     if (lexer->lookahead != scanner->quoted_string_id[i]) return false;
-    advance(lexer);
+    advance_ocaml_interface(lexer);
   }
 
   if (lexer->lookahead != '}') return false;
@@ -123,15 +123,15 @@ static bool scan_quoted_string(Scanner *scanner, TSLexer *lexer) {
   for (;;) {
     switch (lexer->lookahead) {
       case '|':
-        advance(lexer);
+        advance_ocaml_interface(lexer);
         if (scan_right_quoted_string_delimiter(scanner, lexer)) return true;
         break;
       case '\0':
         if (eof(lexer)) return false;
-        advance(lexer);
+        advance_ocaml_interface(lexer);
         break;
       default:
-        advance(lexer);
+        advance_ocaml_interface(lexer);
     }
   }
 }
@@ -141,33 +141,33 @@ static char scan_character(TSLexer *lexer) {
 
   switch (lexer->lookahead) {
     case '\\':
-      advance(lexer);
+      advance_ocaml_interface(lexer);
       if (iswdigit(lexer->lookahead)) {
-        advance(lexer);
+        advance_ocaml_interface(lexer);
         for (size_t i = 0; i < 2; i++) {
           if (!iswdigit(lexer->lookahead)) return 0;
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
       } else {
         switch (lexer->lookahead) {
           case 'x':
-            advance(lexer);
+            advance_ocaml_interface(lexer);
             for (size_t i = 0; i < 2; i++) {
               if (!iswdigit(lexer->lookahead) &&
                   (towupper(lexer->lookahead) < 'A' ||
                    towupper(lexer->lookahead) > 'F')) {
                 return 0;
               }
-              advance(lexer);
+              advance_ocaml_interface(lexer);
             }
             break;
           case 'o':
-            advance(lexer);
+            advance_ocaml_interface(lexer);
             for (size_t i = 0; i < 3; i++) {
               if (!iswdigit(lexer->lookahead) || lexer->lookahead > '7') {
                 return 0;
               }
-              advance(lexer);
+              advance_ocaml_interface(lexer);
             }
             break;
           case '\'':
@@ -179,7 +179,7 @@ static char scan_character(TSLexer *lexer) {
           case 'r':
           case ' ':
             last = lexer->lookahead;
-            advance(lexer);
+            advance_ocaml_interface(lexer);
             break;
           default:
             return 0;
@@ -190,15 +190,15 @@ static char scan_character(TSLexer *lexer) {
       break;
     case '\0':
       if (eof(lexer)) return 0;
-      advance(lexer);
+      advance_ocaml_interface(lexer);
       break;
     default:
       last = lexer->lookahead;
-      advance(lexer);
+      advance_ocaml_interface(lexer);
   }
 
   if (lexer->lookahead == '\'') {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     return 0;
   }
   return last;
@@ -206,10 +206,10 @@ static char scan_character(TSLexer *lexer) {
 
 static bool scan_identifier(TSLexer *lexer) {
   if (iswalpha(lexer->lookahead) || lexer->lookahead == '_') {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     while (iswalnum(lexer->lookahead) || lexer->lookahead == '_' ||
            lexer->lookahead == '\'') {
-      advance(lexer);
+      advance_ocaml_interface(lexer);
     }
     return true;
   }
@@ -219,7 +219,7 @@ static bool scan_identifier(TSLexer *lexer) {
 static bool scan_extattrident(TSLexer *lexer) {
   while (scan_identifier(lexer)) {
     if (lexer->lookahead != '.') return true;
-    advance(lexer);
+    advance_ocaml_interface(lexer);
   }
   return false;
 }
@@ -228,7 +228,7 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
   char last = 0;
 
   if (lexer->lookahead != '*') return false;
-  advance(lexer);
+  advance_ocaml_interface(lexer);
 
   for (;;) {
     switch (last ? last : lexer->lookahead) {
@@ -236,7 +236,7 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
         if (last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
         scan_comment(scanner, lexer);
         break;
@@ -244,10 +244,10 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
         if (last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
         if (lexer->lookahead == ')') {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
           return true;
         }
         break;
@@ -255,7 +255,7 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
         if (last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
         last = scan_character(lexer);
         break;
@@ -263,7 +263,7 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
         if (last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
         scan_string(lexer);
         break;
@@ -271,32 +271,32 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
         if (last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
         if (lexer->lookahead == '%') {
-          advance(lexer);
-          if (lexer->lookahead == '%') advance(lexer);
+          advance_ocaml_interface(lexer);
+          if (lexer->lookahead == '%') advance_ocaml_interface(lexer);
           if (scan_extattrident(lexer)) {
-            while (iswspace(lexer->lookahead)) advance(lexer);
+            while (iswspace(lexer->lookahead)) advance_ocaml_interface(lexer);
           } else {
             break;
           }
         }
-        if (scan_quoted_string(scanner, lexer)) advance(lexer);
+        if (scan_quoted_string(scanner, lexer)) advance_ocaml_interface(lexer);
         break;
       case '\0':
         if (eof(lexer)) return false;
         if (last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
         break;
       default:
         if (scan_identifier(lexer) || last) {
           last = 0;
         } else {
-          advance(lexer);
+          advance_ocaml_interface(lexer);
         }
     }
   }
@@ -339,71 +339,71 @@ static bool scan_ocaml_interface(Scanner *scanner, TSLexer *lexer, const bool *v
     return scan_left_quoted_string_delimiter(scanner, lexer);
   }
   if (valid_symbols[RIGHT_QUOTED_STRING_DELIM] && (lexer->lookahead == '|')) {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     lexer->result_symbol = RIGHT_QUOTED_STRING_DELIM;
     return scan_right_quoted_string_delimiter(scanner, lexer);
   }
   if (scanner->in_string && valid_symbols[STRING_DELIM] &&
       lexer->lookahead == '"') {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     scanner->in_string = false;
     lexer->result_symbol = STRING_DELIM;
     return true;
   }
 
   while (iswspace(lexer->lookahead)) {
-    skip(lexer);
+    skip_ocaml_interface(lexer);
   }
 
   if (!scanner->in_string && lexer->lookahead == '#' &&
       lexer->get_column(lexer) == 0) {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
 
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-      advance(lexer);
+      advance_ocaml_interface(lexer);
     }
 
     if (!iswdigit(lexer->lookahead)) return false;
-    while (iswdigit(lexer->lookahead)) advance(lexer);
+    while (iswdigit(lexer->lookahead)) advance_ocaml_interface(lexer);
 
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-      advance(lexer);
+      advance_ocaml_interface(lexer);
     }
 
     if (lexer->lookahead != '"') return false;
-    advance(lexer);
+    advance_ocaml_interface(lexer);
 
     while (lexer->lookahead != '\n' && lexer->lookahead != '\r' &&
            lexer->lookahead != '"' && !eof(lexer)) {
-      advance(lexer);
+      advance_ocaml_interface(lexer);
     }
 
     if (lexer->lookahead != '"') return false;
-    advance(lexer);
+    advance_ocaml_interface(lexer);
 
     while (lexer->lookahead != '\n' && lexer->lookahead != '\r' &&
            !eof(lexer)) {
-      advance(lexer);
+      advance_ocaml_interface(lexer);
     }
 
     lexer->result_symbol = LINE_NUMBER_DIRECTIVE;
     return true;
   }
   if (!scanner->in_string && lexer->lookahead == '(') {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     lexer->result_symbol = COMMENT;
     return scan_comment(scanner, lexer);
   }
   if (!scanner->in_string && valid_symbols[STRING_DELIM] &&
       lexer->lookahead == '"') {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     scanner->in_string = true;
     lexer->result_symbol = STRING_DELIM;
     return true;
   }
   if (valid_symbols[NULL_CHARACTER] && lexer->lookahead == '\0' &&
       !eof(lexer)) {
-    advance(lexer);
+    advance_ocaml_interface(lexer);
     lexer->result_symbol = NULL_CHARACTER;
     return true;
   }

@@ -7,7 +7,7 @@
   ],
   "srcRoot": "tree-sitter-markdown-inline",
   "maintainedBy": "@MDeiml",
-  "grammarSha": "3d91ba0e2969e5e8fdd46296fed79252c9c1614b9d3484966af27ece9586d7da",
+  "grammarSha": "dcc51b403a28e25e4e858bc237733539267b86abf396aaa61e869de704d78648",
   "reference": "split_parser",
-  "revision": "d427744e2128668f3b4bac3dc63f840ebb7e87c3"
+  "revision": "44017499c51cb6431635ed51d5080e1fd05c2c21"
 }

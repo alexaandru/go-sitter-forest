@@ -970,9 +970,9 @@
     "language": "hurl",
     "url": "https://github.com/pfeiferj/tree-sitter-hurl",
     "maintainedBy": "@pfeiferj",
-    "grammarSha": "a19ebedd736c7d2f7a3ce5aa07324dbdffa54cb68eab680d9ceebc8bc3b7a019",
+    "grammarSha": "6a4bbb18f61833d4bc9ee151696cae946f130e72aec8907d562478387bb5a117",
     "reference": "main",
-    "revision": "cd1a0ada92cc73dd0f4d7eedc162be4ded758591"
+    "revision": "ad705af8c44c737bdb965fc081329c50716d2d03"
   },
   {
     "language": "hyprlang",
@@ -1265,9 +1265,9 @@
     ],
     "srcRoot": "tree-sitter-markdown",
     "maintainedBy": "@MDeiml",
-    "grammarSha": "ea981bad5bc253fb4275ca89330ed0c81c74e139599b5af599bcad2293b329f8",
+    "grammarSha": "3852822202d08776192a3a1306ffc5205e30b03dcd274f6ea8a422812f58d4b2",
     "reference": "split_parser",
-    "revision": "d427744e2128668f3b4bac3dc63f840ebb7e87c3"
+    "revision": "44017499c51cb6431635ed51d5080e1fd05c2c21"
   },
   {
     "language": "markdown_inline",
@@ -1278,9 +1278,9 @@
     ],
     "srcRoot": "tree-sitter-markdown-inline",
     "maintainedBy": "@MDeiml",
-    "grammarSha": "3d91ba0e2969e5e8fdd46296fed79252c9c1614b9d3484966af27ece9586d7da",
+    "grammarSha": "dcc51b403a28e25e4e858bc237733539267b86abf396aaa61e869de704d78648",
     "reference": "split_parser",
-    "revision": "d427744e2128668f3b4bac3dc63f840ebb7e87c3"
+    "revision": "44017499c51cb6431635ed51d5080e1fd05c2c21"
   },
   {
     "language": "matlab",
@@ -1444,9 +1444,9 @@
     ],
     "srcRoot": "grammars/ocaml",
     "maintainedBy": "@undu",
-    "grammarSha": "5b9298a37351a814a135faafe7b578ba90044dbdd33709918c42c9fc406646c5",
+    "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
     "reference": "master",
-    "revision": "dabe60a96553fbbda0a58b6ccda12b7d44047cb5"
+    "revision": "f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae"
   },
   {
     "language": "ocaml_interface",
@@ -1457,9 +1457,9 @@
     ],
     "srcRoot": "grammars/interface",
     "maintainedBy": "@undu",
-    "grammarSha": "c1266c73f244302b4a70f77a04f11fa7002768e27f6e5ec0799c28ae5ebc548e",
+    "grammarSha": "ed745a3b34f2a56f90cc3a15895367bd3adbc2c9684c8e52c8bf722eb764211b",
     "reference": "master",
-    "revision": "dabe60a96553fbbda0a58b6ccda12b7d44047cb5"
+    "revision": "f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae"
   },
   {
     "language": "ocamllex",
@@ -2186,7 +2186,7 @@
     "maintainedBy": "@xasc",
     "grammarSha": "dbbd3f0dea16a698f601d9c86b9316c08d5f28e586e6373ebc17313036441c08",
     "reference": "main",
-    "revision": "0a457a557be7779336bc8ac2b396e73797bc68f7"
+    "revision": "d43f1433f2812b0207cabc75afe6f762774ba1c1"
   },
   {
     "language": "tablegen",
@@ -2425,7 +2425,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "a50fc40276aded4b422bdf9f092aa7c8db6c33d3"
+    "revision": "b21db154e8be920277c494b1cb81367d4da40a98"
   },
   {
     "language": "vala",
@@ -2480,7 +2480,7 @@
     "maintainedBy": "@clason",
     "grammarSha": "1f451d3c8db9b4ee856807912b67c79a69820df1b8acde6cfbdd7f3b370005b4",
     "reference": "master",
-    "revision": "66f4fee37b07cff0dd3400089eebccd02e61e5c2"
+    "revision": "a75a932449675bbd260213a95f4cd8b3193286f0"
   },
   {
     "language": "vue",
