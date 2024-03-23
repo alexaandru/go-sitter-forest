@@ -112,11 +112,12 @@ this way you can fetch and use any of the parsers dynamically, without having to
 manually import them. You should rarely need this though, unless you're writing
 a text editor or something.
 
-### 3. Plugin
+### 3. As a Plugin
 
 A third way, ~and perhaps the most convenient~ (no, it's not, it's \~200MB with all
-parsers built into the binary whereas all parsers built as plugins take \~1650MB),
-is to use the included [Plugins.make](Plugins.make)
+parsers built into the binary whereas all parsers built as plugins took \~1650MB
+last time I built them all (which granted, was several versions ago, before upgrading
+to `TreeSitter` v0.22.1)), is to use the included [Plugins.make](Plugins.make)
 makefile, which allows easy creation of any and all plugins. Simply copy it to
 your repo, and then you can easily `make -f Plugins.make plugin-risor`, etc. or
 use the `plugin-all` target which creates all the plugins.
