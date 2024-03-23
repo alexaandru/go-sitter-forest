@@ -104,7 +104,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.5.6
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.5
 	github.com/alexaandru/go-sitter-forest/http v1.5.8
-	github.com/alexaandru/go-sitter-forest/hurl v1.5.5
+	github.com/alexaandru/go-sitter-forest/hurl v1.5.6
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.5
 	github.com/alexaandru/go-sitter-forest/ini v1.5.5
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.5
@@ -252,7 +252,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/unison v1.5.6
 	github.com/alexaandru/go-sitter-forest/usd v1.5.6
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.5
-	github.com/alexaandru/go-sitter-forest/v v1.5.7
+	github.com/alexaandru/go-sitter-forest/v v1.5.8
 	github.com/alexaandru/go-sitter-forest/vala v1.5.5
 	github.com/alexaandru/go-sitter-forest/vento v1.5.6
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.5
