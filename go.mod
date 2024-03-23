@@ -36,7 +36,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/csv v1.5.6
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.5
 	github.com/alexaandru/go-sitter-forest/cue v1.5.5
-	github.com/alexaandru/go-sitter-forest/d v1.5.5
+	github.com/alexaandru/go-sitter-forest/d v1.5.6
 	github.com/alexaandru/go-sitter-forest/dart v1.5.6
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.5
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.5
@@ -72,13 +72,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/git_config v1.5.5
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.5.5
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.5.5
-	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.5
+	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.6
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.5
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.6
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.6
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.5
 	github.com/alexaandru/go-sitter-forest/gn v1.5.5
-	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.5
+	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.6
 	github.com/alexaandru/go-sitter-forest/go v1.5.5
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.5
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.5
@@ -122,8 +122,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.5
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.5
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.5
-	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.6
-	github.com/alexaandru/go-sitter-forest/latex v1.5.5
+	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.7
+	github.com/alexaandru/go-sitter-forest/latex v1.5.6
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.5
 	github.com/alexaandru/go-sitter-forest/leo v1.5.5
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.5
@@ -162,8 +162,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.5
 	github.com/alexaandru/go-sitter-forest/pem v1.5.5
 	github.com/alexaandru/go-sitter-forest/perl v1.5.6
-	github.com/alexaandru/go-sitter-forest/php v1.5.7
-	github.com/alexaandru/go-sitter-forest/php_only v1.5.7
+	github.com/alexaandru/go-sitter-forest/php v1.5.8
+	github.com/alexaandru/go-sitter-forest/php_only v1.5.8
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.5
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.5
 	github.com/alexaandru/go-sitter-forest/po v1.5.6
@@ -236,7 +236,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.5
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.6
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.5
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.5
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.6
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.5
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.5
 	github.com/alexaandru/go-sitter-forest/toml v1.5.5
