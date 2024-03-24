@@ -64,8 +64,8 @@ github.com/alexaandru/go-sitter-forest/cuda v1.5.5 h1:gSnx2h7la5ElDhJ+CrPX/JRmLb
 github.com/alexaandru/go-sitter-forest/cuda v1.5.5/go.mod h1:62RlCBjvOKxcKl2oipvHpgvO1nsJTghXIm9zuyCsQ3Y=
 github.com/alexaandru/go-sitter-forest/cue v1.5.5 h1:J4Jg37VXqgkxZBPGluAiqUpHZLHKgsPQar0ng4P8ZIg=
 github.com/alexaandru/go-sitter-forest/cue v1.5.5/go.mod h1:agpH4gymoNiPzPd23U3qFiUenNu+9J78MnS8UCtmc/8=
-github.com/alexaandru/go-sitter-forest/d v1.5.6 h1:RMBDoGGmBPVVKMCJ+9FMdFa4COVAQ9CdtNqbsnX5YTM=
-github.com/alexaandru/go-sitter-forest/d v1.5.6/go.mod h1:lqumgbi84IAGW+c6YTXThuSquBcLFeBwEv3FqaSluMQ=
+github.com/alexaandru/go-sitter-forest/d v1.5.7 h1:/vFxjgvQ/JakBajvQaSOBb0l/BtxocyCh2QmfuvNXIE=
+github.com/alexaandru/go-sitter-forest/d v1.5.7/go.mod h1:lqumgbi84IAGW+c6YTXThuSquBcLFeBwEv3FqaSluMQ=
 github.com/alexaandru/go-sitter-forest/dart v1.5.6 h1:IhUJ7in1NLlybxZvPK7Sg618LuXOr/zmZAHBGGU2FLk=
 github.com/alexaandru/go-sitter-forest/dart v1.5.6/go.mod h1:k/ZiVzfiu1CoPtTaO77qtU/EreSKMCFV2eS5d+coHbE=
 github.com/alexaandru/go-sitter-forest/devicetree v1.5.5 h1:Gm6U550lZdD7D1TBLeW0jX/bimtgmd3P+IcUXRIp9sA=
@@ -246,8 +246,8 @@ github.com/alexaandru/go-sitter-forest/leo v1.5.5 h1:f86RWJtSDFRhD64LbreUUWGrs14
 github.com/alexaandru/go-sitter-forest/leo v1.5.5/go.mod h1:lhbwMqesnZFpM/djufKbSVTVldsIkj8jGh1PoxfILpo=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.5.5 h1:Ih8/Wh0CqLAeX5uty+BKZcV/yHXRRh1E1ARr2jAsKqU=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.5.5/go.mod h1:UEthra3+GPDbWU1dp0ag+dnIHNpXkAj2TMSRHv9GZi4=
-github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.5 h1:3bDu5T8wc58g+/WkAgpkVaCMkxr9z17iMXU9Ss31iq0=
-github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.5/go.mod h1:kc9nxgv5sA5Lex+GEXyYNLjd20R5w0/93GyAJZL7dvs=
+github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.6 h1:jkWEf0SBbKK3i0iPFGCGv7vphsAjtmgdsuIY05q8ol8=
+github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.6/go.mod h1:kc9nxgv5sA5Lex+GEXyYNLjd20R5w0/93GyAJZL7dvs=
 github.com/alexaandru/go-sitter-forest/llvm v1.5.5 h1:5cHEzlcyKQyPtBVKJPYUWRs5MFHs+YQ5mWX1YebHce0=
 github.com/alexaandru/go-sitter-forest/llvm v1.5.5/go.mod h1:78zozPD8gXZoxs2+/OqKCxylLFrL2bMDsDv3QSV2VPQ=
 github.com/alexaandru/go-sitter-forest/lua v1.5.5 h1:M+P7pMPqdFhijQWhr01qTqXQ6Bc/DAAYxrDpLZ8uRGY=

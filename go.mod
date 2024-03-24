@@ -36,7 +36,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/csv v1.5.6
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.5
 	github.com/alexaandru/go-sitter-forest/cue v1.5.5
-	github.com/alexaandru/go-sitter-forest/d v1.5.6
+	github.com/alexaandru/go-sitter-forest/d v1.5.7
 	github.com/alexaandru/go-sitter-forest/dart v1.5.6
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.5
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.5
@@ -127,7 +127,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.5
 	github.com/alexaandru/go-sitter-forest/leo v1.5.5
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.5
-	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.5
+	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.6
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.5
 	github.com/alexaandru/go-sitter-forest/lua v1.5.5
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.5
