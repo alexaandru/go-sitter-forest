@@ -1,6 +1,7 @@
-#include <regex>
-#include <stdlib.h>
+#include "alloc.h"
+#include "array.h"
 #include "parser.h"
+#include <stdlib.h>
 
 enum TokenType {
   VAR,
@@ -31,34 +32,112 @@ enum State {
   IS_COMMENT,
 };
 
-class Config {
-public:
-  bool no_uminus;
-  int comment_level;
-  Config() { reset(); }
-  void reset() {
-    no_uminus = false;
-    comment_level = 0;
-  }
-};
+typedef Array(int32_t) ustring_t;
 
-#define NUMBER_REX L"[\\d]"
-#define SKIP_REX L"[[:space:]]"
-#define SPACE_REX L"[ ]"
+typedef struct config {
+  int no_uminus;
+  int comment_level;
+  ustring_t lookahead;
+  ustring_t parser_decorator;
+} config_t;
+
+#define RESET_CONFIG(config)                                                   \
+  {                                                                            \
+    config->no_uminus = 0;                                                     \
+    config->comment_level = 0;                                                 \
+    array_clear(&config->lookahead);                                           \
+    array_clear(&config->parser_decorator);                                    \
+  }
+
+#define SPACE_UCHAR 0x20
+#define FIRST_CONTROL_UCHAR 0x9
+#define LAST_CONTROL_UCHAR 0xd
+#define FIRST_NUMBER_UCHAR 0x30
+#define LAST_NUMBER_UCHAR 0x39
+#define FIRST_ALPHA_UCHAR 0x61
+#define LAST_ALPHA_UCHAR 0x7a
+#define DOT_UCHAR 0x2e
 #define PARSE_DECORATOR_REX L"[a-z.]"
 
-extern "C" {
+static inline int is_space(ustring_t *s) {
+  uint32_t i;
+
+  for (i = 0; i < s->size; i++) {
+    if (*array_get(s, i) != SPACE_UCHAR)
+      return 0;
+  }
+
+  return 1;
+};
+
+static inline int is_skip(ustring_t *s) {
+  uint32_t i;
+  uint32_t c;
+
+  for (i = 0; i < s->size; i++) {
+    c = *array_get(s, i);
+    if (c != SPACE_UCHAR && (c < FIRST_CONTROL_UCHAR || LAST_CONTROL_UCHAR < c))
+      return 0;
+  }
+
+  return 1;
+};
+
+static inline int is_number(ustring_t *s) {
+  uint32_t i;
+  uint32_t c;
+
+  for (i = 0; i < s->size; i++) {
+    c = *array_get(s, i);
+    if (c < FIRST_NUMBER_UCHAR || LAST_NUMBER_UCHAR < c)
+      return 0;
+  }
+
+  return 1;
+};
+
+static inline int is_parse_decorator(ustring_t *s) {
+  uint32_t i;
+  uint32_t c;
+
+  for (i = 0; i < s->size; i++) {
+    c = *array_get(s, i);
+    if ((c < FIRST_ALPHA_UCHAR || LAST_ALPHA_UCHAR < c) && c != DOT_UCHAR)
+      return 0;
+  }
+
+  return 1;
+};
+
+static inline int ustring_equal(ustring_t *s, char *t) {
+  size_t len = strlen(t);
+  size_t i;
+
+  if (s->size != len)
+    return 0;
+
+  for (i = 0; i < len; i++) {
+    if (*array_get(s, i) != (uint32_t)t[i])
+      return 0;
+  }
+
+  return 1;
+}
+
 void *tree_sitter_liquidsoap_external_scanner_create() {
-  Config *config = new Config;
+  config_t *config = ts_malloc(sizeof(config_t));
+  array_init(&config->lookahead);
+  array_init(&config->parser_decorator);
+  RESET_CONFIG(config);
   return config;
 }
 
 void tree_sitter_liquidsoap_external_scanner_destroy(void *config) {
-  delete (Config *)config;
+  ts_free(config);
 }
 
 void tree_sitter_liquidsoap_external_scanner_reset(void *config) {
-  ((Config *)config)->reset();
+  RESET_CONFIG(((config_t *)config));
 }
 
 unsigned tree_sitter_liquidsoap_external_scanner_serialize(void *payload,
@@ -72,25 +151,20 @@ void tree_sitter_liquidsoap_external_scanner_deserialize(void *payload,
 
 bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
                                                   const bool *valid_symbols) {
-  std::wregex const is_number(NUMBER_REX);
-  std::wregex const skip_rex(SKIP_REX);
-  std::wregex const space(SPACE_REX);
-  std::wregex const parse_decorator(PARSE_DECORATOR_REX);
-  State state = START;
-  Config *config = (Config *)payload;
-  std::wstring lookahead_string;
-  std::wstring parser_decorator = L"";
+  enum State state = START;
+  config_t *config = (config_t *)payload;
+  array_clear(&config->parser_decorator);
 
   if (!valid_symbols[VAR] && !valid_symbols[LBRA] && !valid_symbols[LPAR] &&
       !valid_symbols[NO_EXTERNAL] && !valid_symbols[FLOAT_NO_LBRA] &&
       !valid_symbols[PARSE_DECORATOR] && !valid_symbols[COMMENT] &&
       !valid_symbols[UMINUS]) {
-    config->reset();
-    return false;
+    RESET_CONFIG(config);
+    return 0;
   }
 
   if (valid_symbols[NO_EXTERNAL])
-    return false;
+    return 0;
 
   if (valid_symbols[VAR] || valid_symbols[LBRA] || valid_symbols[LPAR])
     state = POST_VAR;
@@ -100,51 +174,52 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
 
   START_LEXER();
   eof = lexer->eof(lexer);
-  lookahead_string = L"";
-  lookahead_string += lookahead;
+  array_clear(&config->lookahead);
+  array_push(&config->lookahead, lookahead);
 
   if (eof) {
     if (state == IN_INLINE_COMMENT || state == IN_INLINE_COMMENT_END)
       ACCEPT_TOKEN(COMMENT);
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
   }
 
   switch (state) {
   case START:
-    if (std::regex_match(lookahead_string, skip_rex))
+    if (is_skip(&config->lookahead))
       SKIP(START);
 
-    if (std::regex_match(lookahead_string, is_number)) {
-      config->no_uminus = true;
+    if (is_number(&config->lookahead)) {
+      config->no_uminus = 1;
       ADVANCE(IN_FLOAT);
     }
 
     if (lookahead == ')') {
-      config->no_uminus = true;
+      config->no_uminus = 1;
       END_STATE();
     }
 
     if (lookahead == '}') {
-      config->no_uminus = true;
+      config->no_uminus = 1;
       END_STATE();
     }
 
     if (lookahead == '#')
       ADVANCE(IN_COMMENT_START);
 
-    if (lookahead == '-')
+    if (lookahead == '-') {
       if (config->no_uminus) {
         ADVANCE(IN_FLOAT);
       } else {
         ADVANCE(IS_UMINUS);
       }
+    }
 
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
 
   case IN_FLOAT:
-    if (std::regex_match(lookahead_string, is_number))
+    if (is_number(&config->lookahead))
       ADVANCE(IN_FLOAT);
 
     if (lookahead == '_')
@@ -153,25 +228,26 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     if (lookahead == '.')
       ADVANCE(IN_FLOAT_NO_LBRA);
 
-    config->no_uminus = true;
+    config->no_uminus = 1;
     END_STATE();
 
   case IN_FLOAT_NO_LBRA:
-    if (std::regex_match(lookahead_string, space))
+    if (is_space(&config->lookahead)) {
       SKIP(IN_FLOAT_NO_LBRA);
+    }
 
     if (lookahead == '{') {
-      config->no_uminus = true;
+      config->no_uminus = 1;
       END_STATE();
     }
 
-    if (std::regex_match(lookahead_string, is_number)) {
-      config->no_uminus = true;
+    if (is_number(&config->lookahead)) {
+      config->no_uminus = 1;
       END_STATE();
     }
 
     ACCEPT_TOKEN(FLOAT_NO_LBRA);
-    config->no_uminus = true;
+    config->no_uminus = 1;
     END_STATE();
 
   case IN_COMMENT_START:
@@ -198,15 +274,15 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     ADVANCE(IN_INLINE_COMMENT);
 
   case IN_INLINE_COMMENT_END:
-    if (std::regex_match(lookahead_string, skip_rex))
+    if (is_space(&config->lookahead))
       ADVANCE(IN_INLINE_COMMENT_END);
 
     if (lookahead == '#')
       ADVANCE(IN_INLINE_COMMENT_CONTINUE);
 
-    result = true;
+    result = 1;
     lexer->result_symbol = COMMENT;
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
 
   case IN_INLINE_COMMENT_CONTINUE:
@@ -215,12 +291,12 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
       ADVANCE(IN_INLINE_COMMENT_END);
     }
 
-    if (lookahead != '<')
+    if (!ustring_equal(&config->lookahead, "<"))
       ADVANCE(IN_INLINE_COMMENT);
 
-    result = true;
+    result = 1;
     lexer->result_symbol = COMMENT;
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
 
   case IN_MULTILINE_COMMENT:
@@ -243,25 +319,25 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     ADVANCE(IN_MULTILINE_COMMENT);
 
   case PRE_PARSE_DECORATOR:
-    if (std::regex_match(lookahead_string, space))
+    if (is_space(&config->lookahead))
       SKIP(PRE_PARSE_DECORATOR);
 
-    if (!std::regex_match(lookahead_string, parse_decorator))
+    if (!is_parse_decorator(&config->lookahead))
       END_STATE();
 
-    parser_decorator += lookahead;
+    array_push_all(&config->parser_decorator, &config->lookahead);
     ADVANCE(IN_PARSE_DECORATOR);
 
   case IN_PARSE_DECORATOR:
-    if (std::regex_match(lookahead_string, parse_decorator)) {
-      parser_decorator += lookahead;
+    if (is_parse_decorator(&config->lookahead)) {
+      array_push_all(&config->parser_decorator, &config->lookahead);
       ADVANCE(IN_PARSE_DECORATOR);
     }
 
-    if (parser_decorator != L"json.parse" &&
-        parser_decorator != L"yaml.parse" &&
-        parser_decorator != L"sqlite.row" &&
-        parser_decorator != L"sqlite.query") {
+    if (!ustring_equal(&config->parser_decorator, "json.parse") &&
+        !ustring_equal(&config->parser_decorator, "yaml.parse") &&
+        !ustring_equal(&config->parser_decorator, "sqlite.row") &&
+        !ustring_equal(&config->parser_decorator, "sqlite.query")) {
       END_STATE();
     }
 
@@ -269,19 +345,19 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     ADVANCE(POST_PARSE_DECORATOR);
 
   case POST_PARSE_DECORATOR:
-    if (std::regex_match(lookahead_string, space))
+    if (is_space(&config->lookahead))
       SKIP(POST_PARSE_DECORATOR);
 
     if (lookahead == '.' || lookahead == '=')
-      result = false;
+      result = 0;
 
     END_STATE();
 
   case POST_VAR:
-    if (std::regex_match(lookahead_string, space))
+    if (is_space(&config->lookahead))
       SKIP(POST_VAR);
 
-    result = true;
+    result = 1;
 
     if (lookahead == '(') {
       lexer->result_symbol = LPAR;
@@ -290,19 +366,18 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     } else
       lexer->result_symbol = VAR;
 
-    config->no_uminus = true;
+    config->no_uminus = 1;
     END_STATE();
   case IS_UMINUS:
     ACCEPT_TOKEN(UMINUS);
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
   case IS_COMMENT:
     ACCEPT_TOKEN(COMMENT);
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
   default:
-    config->reset();
+    RESET_CONFIG(config);
     END_STATE();
   }
-}
 }

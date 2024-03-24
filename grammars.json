@@ -337,9 +337,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "b7da4c69323d8e47bb1ba375653fcb2c01fe753171222db033698b6da45b7e48",
+    "grammarSha": "5dc380c0ca88cf2d34a57113cb918e181a0500c0358ba3eef22bfe8d31cb2fbc",
     "reference": "main",
-    "revision": "9f6ce416e0289c176ccd0dcd446fb8828873bbd5"
+    "revision": "750dde90ed9cdbd82493bc28478d8ab1976b0e9f"
   },
   {
     "language": "dart",
@@ -1015,7 +1015,7 @@
     "maintainedBy": "@p00f",
     "grammarSha": "0dd59b84c0d40944f7328d3b8b928d566e7a16a3333f96780f1a9d24d979d324",
     "reference": "master",
-    "revision": "5e62fbb519b608dfd856000fdc66536304c414de"
+    "revision": "2aae502017d3aed587ba85e3c7e0cbc138f3e07a"
   },
   {
     "language": "javascript",
@@ -1186,12 +1186,12 @@
     "language": "liquidsoap",
     "url": "https://github.com/savonet/tree-sitter-liquidsoap",
     "files": [
-      "scanner.cc"
+      "scanner.c"
     ],
     "maintainedBy": "@toots",
     "grammarSha": "6aa8c1d4781326a9b278e715f3eca2e5dc3df3f99ae4a2246f679be23f1642b0",
     "reference": "main",
-    "revision": "fb062bfc7ca09a741820debb7cb8a75a557b30f9"
+    "revision": "09a9e31e2af734a8974dad6ed349648f601eee8c"
   },
   {
     "language": "llvm",
@@ -2159,7 +2159,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "b7755aa95cab95babdcefc8397739e09c986ca583ea080f4d153590d3b97ab76",
     "reference": "main",
-    "revision": "a8cf05cd49b3b97d70a03fd65c9c279fc76662f7"
+    "revision": "bb3fe96bb65d9b71e2d04b7ebe27dc1947f2cd5d"
   },
   {
     "language": "sxhkdrc",
@@ -2184,9 +2184,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@xasc",
-    "grammarSha": "dbbd3f0dea16a698f601d9c86b9316c08d5f28e586e6373ebc17313036441c08",
+    "grammarSha": "b2376e379652860048f00e2f54895b18abae7220a6730a44dfec8ab0f2ee33b8",
     "reference": "main",
-    "revision": "d43f1433f2812b0207cabc75afe6f762774ba1c1"
+    "revision": "95caba87f00c51177b254e95be55b2dc46d2ac78"
   },
   {
     "language": "tablegen",

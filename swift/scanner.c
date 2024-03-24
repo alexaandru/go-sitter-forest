@@ -270,8 +270,8 @@ void tree_sitter_swift_external_scanner_deserialize(
     state->ongoing_raw_str_hash_count = hash_count;
 }
 
-static void advance(TSLexer *lexer) {
-    lexer->advance(lexer, false);
+static void advance_swift(TSLexer *lexer) {
+    lexer->advance_swift(lexer, false);
 }
 
 static bool should_treat_as_wspace(int32_t character) {
@@ -487,7 +487,7 @@ static bool eat_operators(
         }
 
         last_examined_char = lexer->lookahead;
-        lexer->advance(lexer, false);
+        lexer->advance_swift(lexer, false);
         str_idx += 1;
 
         if (encountered_ops == 0 && !is_legal_custom_operator(
@@ -541,13 +541,13 @@ static enum ParseDirective eat_comment(
         return CONTINUE_PARSING_NOTHING_FOUND;
     }
 
-    advance(lexer);
+    advance_swift(lexer);
 
     if (lexer->lookahead != '*') {
         return CONTINUE_PARSING_SLASH_CONSUMED;
     }
 
-    advance(lexer);
+    advance_swift(lexer);
 
     bool after_star = false;
     unsigned nesting_depth = 1;
@@ -556,12 +556,12 @@ static enum ParseDirective eat_comment(
         case '\0':
             return STOP_PARSING_END_OF_FILE;
         case '*':
-            advance(lexer);
+            advance_swift(lexer);
             after_star = true;
             break;
         case '/':
             if (after_star) {
-                advance(lexer);
+                advance_swift(lexer);
                 after_star = false;
                 nesting_depth--;
                 if (nesting_depth == 0) {
@@ -572,16 +572,16 @@ static enum ParseDirective eat_comment(
                     return STOP_PARSING_TOKEN_FOUND;
                 }
             } else {
-                advance(lexer);
+                advance_swift(lexer);
                 after_star = false;
                 if (lexer->lookahead == '*') {
                     nesting_depth++;
-                    advance(lexer);
+                    advance_swift(lexer);
                 }
             }
             break;
         default:
-            advance(lexer);
+            advance_swift(lexer);
             after_star = false;
             break;
         }
@@ -600,13 +600,13 @@ static enum ParseDirective eat_whitespace(
         if (lookahead == ';') {
             if (semi_is_valid) {
                 ws_directive = STOP_PARSING_TOKEN_FOUND;
-                lexer->advance(lexer, false);
+                lexer->advance_swift(lexer, false);
             }
 
             break;
         }
 
-        lexer->advance(lexer, true);
+        lexer->advance_swift(lexer, true);
 
         lexer->mark_end(lexer);
 
@@ -646,7 +646,7 @@ static enum ParseDirective eat_whitespace(
                 // the second one of those and it means we have a single-line comment.
                 has_seen_single_comment = true;
                 while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
-                    lexer->advance(lexer, true);
+                    lexer->advance_swift(lexer, true);
                 }
             } else if (iswspace(lexer->lookahead)) {
                 // We didn't see any type of comment - in fact, we saw an operator that we don't normally treat as an
@@ -657,7 +657,7 @@ static enum ParseDirective eat_whitespace(
             // If we skipped through some comment, we're at whitespace now, so advance.
             while(iswspace(lexer->lookahead)) {
                 any_comment = CONTINUE_PARSING_NOTHING_FOUND; // We're advancing, so clear out the comment
-                lexer->advance(lexer, true);
+                lexer->advance_swift(lexer, true);
             }
         }
 
@@ -710,7 +710,7 @@ static bool eat_raw_str_part(
         // If this is a raw_str_part, it's the first one - look for hashes
         while (lexer->lookahead == '#') {
             hash_count += 1;
-            advance(lexer);
+            advance_swift(lexer);
         }
 
         if (hash_count == 0) {
@@ -718,7 +718,7 @@ static bool eat_raw_str_part(
         }
 
         if (lexer->lookahead == '"') {
-            advance(lexer);
+            advance_swift(lexer);
         } else {
             return false;
         }
@@ -745,7 +745,7 @@ static bool eat_raw_str_part(
         // Advance through anything that isn't a hash symbol, because we want to count those.
         while (lexer->lookahead != '#' && lexer->lookahead != '\0') {
             last_char = lexer->lookahead;
-            advance(lexer);
+            advance_swift(lexer);
             if (last_char != '\\' || lexer->lookahead == '\\') {
                 // Mark a new end, but only if we didn't just advance past a `\` symbol, since we
                 // don't want to consume that. Exception: if this is a `\` that happens _right
@@ -759,7 +759,7 @@ static bool eat_raw_str_part(
         uint32_t current_hash_count = 0;
         while (lexer->lookahead == '#' && current_hash_count < hash_count) {
             current_hash_count += 1;
-            advance(lexer);
+            advance_swift(lexer);
         }
 
         // If we saw exactly the right number of hashes, one of three things is true:
