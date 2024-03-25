@@ -149,7 +149,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.5
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.5
 	github.com/alexaandru/go-sitter-forest/nix v1.5.5
-	github.com/alexaandru/go-sitter-forest/norg v1.5.5
+	github.com/alexaandru/go-sitter-forest/norg v1.5.6
 	github.com/alexaandru/go-sitter-forest/nqc v1.5.5
 	github.com/alexaandru/go-sitter-forest/objc v1.5.5
 	github.com/alexaandru/go-sitter-forest/objdump v1.5.5
