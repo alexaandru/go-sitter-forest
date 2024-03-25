@@ -262,7 +262,7 @@ struct Scanner
 
     bitset<((INLINE_MACRO_OPEN - BOLD_OPEN) / 2) + 1> m_ActiveModifiers;
 
-    bool scan(const bool* valid_symbols)
+    bool scan_norg(const bool* valid_symbols)
     {
         lexer->result_symbol = NONE;
 
@@ -275,12 +275,12 @@ struct Scanner
 
         if (m_LastToken == TRAILING_MODIFIER)
         {
-            advance();
+            advance_norg();
             return parse_text();
         }
         else if (is_newline(lexer->lookahead))
         {
-            advance();
+            advance_norg();
 
             lexer->result_symbol = m_LastToken = LINE_BREAK;
 
@@ -298,7 +298,7 @@ struct Scanner
 
             if (is_newline(lexer->lookahead))
             {
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = PARAGRAPH_BREAK;
                 reset_active_modifiers();
             }
@@ -311,12 +311,12 @@ struct Scanner
         {
             // Skip all leading whitespace
             while (is_blank(lexer->lookahead))
-                skip();
+                skip_norg();
 
             // We are dealing with a ranged verbatim tag: @something
             if (lexer->lookahead == '@')
             {
-                advance();
+                advance_norg();
 
                 // Mark the end of the token here
                 // We do this because we only want the returned token to be part
@@ -327,7 +327,7 @@ struct Scanner
                 if (token("end") && (iswspace(lexer->lookahead) || !lexer->lookahead))
                 {
                     while (is_blank(lexer->lookahead))
-                        advance();
+                        advance_norg();
 
                     if ((iswspace(lexer->lookahead) || !lexer->lookahead)
                         && m_TagContext == TagType::IN_VERBATIM_TAG)
@@ -360,7 +360,7 @@ struct Scanner
             // We are dealing with a macro tag (=something)
             if (lexer->lookahead == '=' && m_TagContext != TagType::IN_VERBATIM_TAG)
             {
-                advance();
+                advance_norg();
 
                 // Mark the end of the token here
                 // We do this because we only want the returned token to be part
@@ -372,7 +372,7 @@ struct Scanner
                 {
                     while (lexer->lookahead && iswspace(lexer->lookahead)
                            && !is_newline(lexer->lookahead))
-                        advance();
+                        advance_norg();
 
                     if ((iswspace(lexer->lookahead) || !lexer->lookahead) && m_TagLevel)
                     {
@@ -386,19 +386,19 @@ struct Scanner
                 }
                 else if (lexer->lookahead == '=')
                 {
-                    advance();
+                    advance_norg();
                     if (lexer->lookahead == '=')
                     {
                         // we are now three-characters in
                         do
-                            advance();
+                            advance_norg();
                         while (lexer->lookahead == '=');
 
                         if (is_newline(lexer->lookahead))
                         {
                             // reset the marked end
                             lexer->mark_end(lexer);
-                            advance();
+                            advance_norg();
                             lexer->result_symbol = m_LastToken = STRONG_PARAGRAPH_DELIMITER;
                             return true;
                         }
@@ -406,7 +406,7 @@ struct Scanner
                         {
                             // reset the marked end
                             lexer->mark_end(lexer);
-                            advance();
+                            advance_norg();
                             lexer->result_symbol = m_LastToken = WORD;
                             return true;
                         }
@@ -436,7 +436,7 @@ struct Scanner
             // We are dealing with a ranged tag (|something)
             else if (lexer->lookahead == '|' && m_TagContext != TagType::IN_VERBATIM_TAG)
             {
-                advance();
+                advance_norg();
 
                 // Mark the end of the token here.
                 // We do this because we only want the returned token to be part
@@ -447,7 +447,7 @@ struct Scanner
                 if (token("end") && (iswspace(lexer->lookahead) || !lexer->lookahead))
                 {
                     while (is_blank(lexer->lookahead))
-                        advance();
+                        advance_norg();
 
                     if ((iswspace(lexer->lookahead) || !lexer->lookahead) && m_TagLevel)
                     {
@@ -477,7 +477,7 @@ struct Scanner
             // we are dealing with a strong carryover (#something)
             else if (lexer->lookahead == '#' && m_TagContext != TagType::IN_VERBATIM_TAG)
             {
-                advance();
+                advance_norg();
 
                 if (!lexer->lookahead || iswspace(lexer->lookahead))
                 {
@@ -495,7 +495,7 @@ struct Scanner
             // we are dealing with a weak carryover (+something)
             else if (lexer->lookahead == '+' && m_TagContext != TagType::IN_VERBATIM_TAG)
             {
-                advance();
+                advance_norg();
                 if (lexer->lookahead != '+')
                 {
                     lexer->result_symbol = m_LastToken = WEAK_CARRYOVER;
@@ -505,7 +505,7 @@ struct Scanner
             // we are dealing with a infirm tag (.something)
             else if (lexer->lookahead == '.' && m_TagContext != TagType::IN_VERBATIM_TAG)
             {
-                advance();
+                advance_norg();
                 if (lexer->lookahead != '.')
                 {
                     lexer->result_symbol = m_LastToken = INFIRM_TAG;
@@ -557,7 +557,7 @@ struct Scanner
             //   ^ will be here, and lexer->lookahead will return '\n'
             else if (is_newline(lexer->lookahead) && m_ParsedChars >= 3)
             {
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = WEAK_PARAGRAPH_DELIMITER;
                 return true;
             }
@@ -581,7 +581,7 @@ struct Scanner
                 return true;
             else if (is_newline(lexer->lookahead) && m_ParsedChars == 2)
             {
-                advance();
+                advance_norg();
                 lexer->result_symbol = MULTI_DEFINITION_SUFFIX;
                 return true;
             }
@@ -590,7 +590,7 @@ struct Scanner
                 return true;
             else if (is_newline(lexer->lookahead) && m_ParsedChars == 2)
             {
-                advance();
+                advance_norg();
                 lexer->result_symbol = MULTI_FOOTNOTE_SUFFIX;
                 return true;
             }
@@ -599,7 +599,7 @@ struct Scanner
                 return true;
             else if (is_newline(lexer->lookahead) && m_ParsedChars == 2)
             {
-                advance();
+                advance_norg();
                 lexer->result_symbol = MULTI_TABLE_CELL_SUFFIX;
                 return true;
             }
@@ -615,12 +615,12 @@ struct Scanner
 
         switch (lexer->lookahead) {
         case '~':
-            advance();
+            advance_norg();
             lexer->mark_end(lexer);
 
             if (is_newline(lexer->lookahead))
             {
-                advance();
+                advance_norg();
                 if (lexer->eof(lexer))
                 {
                     reset_active_modifiers();
@@ -632,7 +632,7 @@ struct Scanner
 
             return parse_text();
         case '\\':  // Check for an escape seqence (e.g. "\*")
-            advance();
+            advance_norg();
             lexer->result_symbol = m_LastToken = ESCAPE_SEQUENCE;
             return true;
         }
@@ -643,12 +643,12 @@ struct Scanner
                   || m_LastToken == DETACHED_MODIFIER_EXTENSION_END)
                  && lexer->lookahead == ':')
         {
-            advance();
+            advance_norg();
             bool is_indent_segment = false;
 
             if (lexer->lookahead == ':')
             {
-                advance();
+                advance_norg();
                 is_indent_segment = true;
             }
 
@@ -659,7 +659,7 @@ struct Scanner
             }
 
             // Move past the newline character as well
-            advance();
+            advance_norg();
 
             lexer->result_symbol = m_LastToken = (TokenType)(SLIDE + is_indent_segment);
             return true;
@@ -667,7 +667,7 @@ struct Scanner
 
         switch (lexer->lookahead) {
         case '<':
-            advance();
+            advance_norg();
 
             if (!iswspace(lexer->lookahead))
             {
@@ -677,7 +677,7 @@ struct Scanner
             }
             break;
         case '>':
-            advance();
+            advance_norg();
 
             if (!iswspace(m_Previous) && m_LastToken != LINK_LOCATION_BEGIN
                 && m_LastToken != LINK_FILE_END)
@@ -688,7 +688,7 @@ struct Scanner
             }
             break;
         case '(':
-            advance();
+            advance_norg();
 
             if (!iswspace(lexer->lookahead) && m_LastToken != NONE
                 && ((m_LastToken >= BOLD_OPEN && m_LastToken <= INLINE_MACRO_CLOSE
@@ -707,7 +707,7 @@ struct Scanner
             }
             break;
         case ')':
-            advance();
+            advance_norg();
 
             if (!iswspace(m_Previous))
             {
@@ -716,7 +716,7 @@ struct Scanner
             }
             break;
         case '[':
-            advance();
+            advance_norg();
 
             if (!iswspace(lexer->lookahead))
             {
@@ -725,7 +725,7 @@ struct Scanner
             }
             break;
         case ']':
-            advance();
+            advance_norg();
 
             if (!iswspace(m_Previous))
             {
@@ -734,7 +734,7 @@ struct Scanner
             }
             break;
         case '{':
-            advance();
+            advance_norg();
 
             if (!iswspace(lexer->lookahead))
             {
@@ -744,7 +744,7 @@ struct Scanner
             }
             break;
         case '}':
-            advance();
+            advance_norg();
 
             if (is_newline(m_Previous))
             {
@@ -774,20 +774,20 @@ struct Scanner
     }
 
     // Skips the next character without including it in the final result.
-    void skip()
+    void skip_norg()
     {
         m_Previous = m_Current;
         m_Current = lexer->lookahead;
-        lexer->advance(lexer, true);
+        lexer->advance_norg(lexer, true);
     }
 
     // Advances the lexer forward. The char that was advanced will be returned
     // in the final result.
-    void advance()
+    void advance_norg()
     {
         m_Previous = m_Current;
         m_Current = lexer->lookahead;
-        lexer->advance(lexer, false);
+        lexer->advance_norg(lexer, false);
     }
 
     bool token(const string str)
@@ -795,7 +795,7 @@ struct Scanner
         for (int32_t c : str)
         {
             if (c == lexer->lookahead)
-                advance();
+                advance_norg();
             else
                 return false;
         }
@@ -819,7 +819,7 @@ struct Scanner
             if (lexer->lookahead != expected)
                 break;
 
-            advance();
+            advance_norg();
 
             // If the next character is whitespace (which is the distinguishing
             // factor between an attached/detached modifier).
@@ -833,7 +833,7 @@ struct Scanner
 
                 // Skip all whitespaces.
                 while (is_blank(lexer->lookahead))
-                    advance();
+                    advance_norg();
 
                 lexer->result_symbol = m_LastToken = result;
                 reset_active_modifiers();
@@ -871,7 +871,7 @@ struct Scanner
         if (lexer->lookahead == ':')
         {
             bool is_current_char_whitespace = !m_Current || iswspace(m_Current);
-            advance();
+            advance_norg();
 
             if (is_current_char_whitespace || iswspace(lexer->lookahead))
                 return false;
@@ -888,7 +888,7 @@ struct Scanner
 
         if (lexer->lookahead == '|')
         {
-            advance();
+            advance_norg();
 
             auto found_attached_modifier = m_AttachedModifiers.find(lexer->lookahead);
 
@@ -932,13 +932,13 @@ struct Scanner
             || (iswpunct(m_Current) && m_LastToken != FREE_FORM_MODIFIER_CLOSE)
             || !m_Current)
         {
-            advance();
+            advance_norg();
 
             // empty attached modifier
             if (lexer->lookahead == found_attached_modifier->first)
             {
                 while (lexer->lookahead == found_attached_modifier->first)
-                    advance();
+                    advance_norg();
                 return false;
             }
 
@@ -954,12 +954,12 @@ struct Scanner
             }
         }
         else
-            advance();
+            advance_norg();
 
         if (lexer->lookahead == found_attached_modifier->first)
         {
             while (lexer->lookahead == found_attached_modifier->first)
-                advance();
+                advance_norg();
             return false;
         }
 
@@ -995,7 +995,7 @@ struct Scanner
             if (lexer->lookahead == ':')
             {
                 lexer->result_symbol = m_LastToken = LINK_FILE_BEGIN;
-                advance();
+                advance_norg();
                 return !iswspace(lexer->lookahead);
             }
             // since we have no break here, if we do not detect a beginning of a
@@ -1026,12 +1026,12 @@ struct Scanner
                 lexer->result_symbol = m_LastToken = LINK_TARGET_FOOTNOTE;
                 break;
             case '*':
-                advance();
+                advance_norg();
 
                 while (lexer->lookahead == '*')
                 {
                     ++count;
-                    advance();
+                    advance_norg();
                 }
 
                 lexer->result_symbol = m_LastToken =
@@ -1041,7 +1041,7 @@ struct Scanner
                     return false;
 
                 while (iswspace(lexer->lookahead))
-                    advance();
+                    advance_norg();
 
                 return true;
             default:
@@ -1050,13 +1050,13 @@ struct Scanner
                 return true;
             }
 
-            advance();
+            advance_norg();
 
             if (!iswspace(lexer->lookahead))
                 return false;
 
             while (iswspace(lexer->lookahead))
-                advance();
+                advance_norg();
 
             return true;
         case LINK_FILE_BEGIN:
@@ -1083,7 +1083,7 @@ struct Scanner
                 if (lexer->lookahead == '$' && m_Current != ':')
                     return false;
 
-                advance();
+                advance_norg();
             }
 
             lexer->result_symbol = m_LastToken = LINK_FILE_TEXT;
@@ -1092,7 +1092,7 @@ struct Scanner
             if (lexer->lookahead == ':')
             {
                 lexer->result_symbol = m_LastToken = LINK_FILE_END;
-                advance();
+                advance_norg();
                 switch (lexer->lookahead) {
                 case '}':
                 case '#':
@@ -1150,14 +1150,14 @@ struct Scanner
                 lexer->result_symbol = m_LastToken = TODO_ITEM_RECURRING;
                 break;
             default:
-                advance();
+                advance_norg();
                 return false;
             }
 
-            advance();
+            advance_norg();
 
             while (iswspace(lexer->lookahead))
-                advance();
+                advance_norg();
 
             return true;
         case TIMESTAMP:
@@ -1165,17 +1165,17 @@ struct Scanner
         case TODO_ITEM_RECURRING:
             switch (lexer->lookahead) {
             case ')':
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = DETACHED_MODIFIER_EXTENSION_END;
                 return true;
             case '|':
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = MODIFIER_EXTENSION_DELIMITER;
                 return true;
             }
 
             while (lexer->lookahead && lexer->lookahead != '|' && lexer->lookahead != ')')
-                advance();
+                advance_norg();
 
             lexer->result_symbol = m_LastToken =
                 (m_LastToken == TIMESTAMP || m_LastToken == TODO_ITEM_RECURRING) ?
@@ -1193,13 +1193,13 @@ struct Scanner
         case PRIORITY_DATA:
             switch (lexer->lookahead) {
             case ')':
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = DETACHED_MODIFIER_EXTENSION_END;
                 return true;
             case '|':
                 if (m_AttachedModifiers.find(m_Current) == m_AttachedModifiers.end())
                 {
-                    advance();
+                    advance_norg();
                     lexer->result_symbol = m_LastToken = MODIFIER_EXTENSION_DELIMITER;
                     return true;
                 }
@@ -1211,11 +1211,11 @@ struct Scanner
 
             switch (lexer->lookahead) {
             case '(':
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = DETACHED_MODIFIER_EXTENSION_BEGIN;
                 return true;
             case ')':
-                advance();
+                advance_norg();
                 lexer->result_symbol = m_LastToken = DETACHED_MODIFIER_EXTENSION_END;
                 return true;
             }
@@ -1233,14 +1233,14 @@ struct Scanner
         if (m_TagContext == TagType::IN_VERBATIM_TAG)
         {
             while (!is_newline(lexer->lookahead))
-                advance();
+                advance_norg();
             lexer->result_symbol = m_LastToken = WORD;
             return true;
         }
 
         if (((char)m_TagContext % 2) == 0 && lexer->lookahead == '.')
         {
-            advance();
+            advance_norg();
             lexer->result_symbol = m_LastToken = TAG_DELIMITER;
             return true;
         }
@@ -1254,15 +1254,15 @@ struct Scanner
         if (is_blank(lexer->lookahead))
         {
             do
-                advance();
+                advance_norg();
             while (is_blank(lexer->lookahead));
 
             if (lexer->lookahead == ':')
             {
-                advance();
+                advance_norg();
                 if (is_blank(lexer->lookahead))
                 {
-                    advance();
+                    advance_norg();
                     lexer->result_symbol = m_LastToken = INTERSECTING_MODIFIER;
                     return true;
                 }
@@ -1296,7 +1296,7 @@ struct Scanner
                 || ((char)m_TagContext % 2 == 0 && lexer->lookahead == '.'))
                 break;
             else
-                advance();
+                advance_norg();
         } while (lexer->lookahead && !iswspace(lexer->lookahead) && lexer->lookahead != '\\');
 
         lexer->result_symbol = m_LastToken = resulting_symbol;
@@ -1328,7 +1328,7 @@ extern "C"
     {
         Scanner* scanner = static_cast<Scanner*>(payload);
         scanner->lexer = lexer;
-        return scanner->scan(valid_symbols);
+        return scanner->scan_norg(valid_symbols);
     }
 
     unsigned tree_sitter_norg_external_scanner_serialize(void* payload, char* buffer)
