@@ -39,15 +39,15 @@ void tree_sitter_scala_external_scanner_deserialize(void *payload, const char *b
   deserialiseStack(payload, buffer, length);
 }
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_scala(TSLexer *lexer) { lexer->advance_scala(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_scala(TSLexer *lexer) { lexer->advance_scala(lexer, true); }
 
 static bool scan_string_content(TSLexer *lexer, bool is_multiline, bool has_interpolation) {
   unsigned closing_quote_count = 0;
   for (;;) {
     if (lexer->lookahead == '"') {
-      advance(lexer);
+      advance_scala(lexer);
       closing_quote_count++;
       if (!is_multiline) {
         lexer->result_symbol = has_interpolation ? INTERPOLATED_STRING_END : SIMPLE_STRING;
@@ -66,24 +66,24 @@ static bool scan_string_content(TSLexer *lexer, bool is_multiline, bool has_inte
         lexer->result_symbol = INTERPOLATED_STRING_MIDDLE;
         return true;
       }
-      advance(lexer);
+      advance_scala(lexer);
     } else {
       closing_quote_count = 0;
       if (lexer->lookahead == '\\') {
-        advance(lexer);
+        advance_scala(lexer);
         if (!lexer->eof(lexer)) {
-          advance(lexer);
+          advance_scala(lexer);
         }
       } else if (lexer->lookahead == '\n') {
         if (is_multiline) {
-          advance(lexer);
+          advance_scala(lexer);
         } else {
           return false;
         }
       } else if (lexer->eof(lexer)) {
         return false;
       } else {
-        advance(lexer);
+        advance_scala(lexer);
       }
     }
   }
@@ -93,7 +93,7 @@ static bool detect_comment_start(TSLexer *lexer) {
   lexer->mark_end(lexer);
   // Comments should not affect indentation
   if (lexer->lookahead == '/') {
-    advance(lexer);
+    advance_scala(lexer);
     if (lexer->lookahead == '/' || lexer -> lookahead == '*') {
       return true;
     }
@@ -106,7 +106,7 @@ static bool scan_word(TSLexer *lexer, const char* const word) {
     if (lexer->lookahead != word[i]) {
       return false;
     }
-    advance(lexer);
+    advance_scala(lexer);
   }
   return !iswalnum(lexer->lookahead);
 }
@@ -126,7 +126,7 @@ bool tree_sitter_scala_external_scanner_scan(void *payload, TSLexer *lexer,
     else {
       indentation_size++;
     }
-    skip(lexer);
+    skip_scala(lexer);
   }
 
   // Before advancing the lexer, check if we can double outdent
@@ -217,28 +217,28 @@ bool tree_sitter_scala_external_scanner_scan(void *payload, TSLexer *lexer,
 
     // Single-line and multi-line comments
     if (lexer->lookahead == '/') {
-      advance(lexer);
+      advance_scala(lexer);
       if (lexer->lookahead == '/') {
         return false;
       }
       if (lexer->lookahead == '*') {
-        advance(lexer);
+        advance_scala(lexer);
         while (!lexer->eof(lexer)) {
           if (lexer->lookahead == '*') {
-            advance(lexer);
+            advance_scala(lexer);
             if (lexer->lookahead == '/') {
-              advance(lexer);
+              advance_scala(lexer);
               break;
             }
           } else {
-            advance(lexer);
+            advance_scala(lexer);
           }
         }
         while (iswspace(lexer->lookahead)) {
           if (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
             return false;
           }
-          skip(lexer);
+          skip_scala(lexer);
         }
         // If some code is present at the same line after comment end, 
         // we should still produce AUTOMATIC_SEMICOLON, e.g. in
@@ -293,17 +293,17 @@ bool tree_sitter_scala_external_scanner_scan(void *payload, TSLexer *lexer,
     if (lexer->lookahead == '\n') {
       newline_count++;
     }
-    skip(lexer);
+    skip_scala(lexer);
   }
 
   if (valid_symbols[SIMPLE_STRING] && lexer->lookahead == '"') {
-    advance(lexer);
+    advance_scala(lexer);
 
     bool is_multiline = false;
     if (lexer->lookahead == '"') {
-      advance(lexer);
+      advance_scala(lexer);
       if (lexer->lookahead == '"') {
-        advance(lexer);
+        advance_scala(lexer);
         is_multiline = true;
       } else {
         lexer->result_symbol = SIMPLE_STRING;

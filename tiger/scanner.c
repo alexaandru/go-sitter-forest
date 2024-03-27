@@ -7,9 +7,9 @@ enum TokenType {
     COMMENT,
 };
 
-static int32_t advance(TSLexer *lexer) {
+static int32_t advance_tiger(TSLexer *lexer) {
     int32_t last = lexer->lookahead;
-    lexer->advance(lexer, false);
+    lexer->advance_tiger(lexer, false);
     return last;
 }
 
@@ -17,7 +17,7 @@ static bool expect(TSLexer *lexer, int32_t expected) {
     if (lexer->eof(lexer) || lexer->lookahead != expected) {
         return false;
     }
-    advance(lexer);
+    advance_tiger(lexer);
     return true;
 }
 
@@ -28,7 +28,7 @@ static void skip_whitespace(TSLexer *lexer) {
         case '\t':
         case '\n':
         case '\r':
-            lexer->advance(lexer, true);
+            lexer->advance_tiger(lexer, true);
             break;
         default:
             return;
@@ -46,7 +46,7 @@ static bool scan_comment(TSLexer *lexer) {
     unsigned long level = 1;
 
     while (level > 0 && !lexer->eof(lexer)) {
-        switch (advance(lexer)) {
+        switch (advance_tiger(lexer)) {
         case '/':
             if (expect(lexer, '*')) {
                 ++level;

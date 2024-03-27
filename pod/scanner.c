@@ -24,7 +24,7 @@
     else                                       \
       DEBUG("> advance U+%04X = '%c'\n",       \
           lexer->lookahead, lexer->lookahead); \
-    lexer->advance(lexer, false);              \
+    lexer->advance_pod(lexer, false);              \
     c = lexer->lookahead;                      \
   } while(0)
 
@@ -126,12 +126,12 @@ bool tree_sitter_pod_external_scanner_scan(
 
     if(c == '\r') {
       DEBUG("> skip \\r\n", 0);
-      lexer->advance(lexer, true);
+      lexer->advance_pod(lexer, true);
       c = lexer->lookahead;
     }
     if(c == '\n') {
       DEBUG("> advance \\n\n", 0);
-      lexer->advance(lexer, true);
+      lexer->advance_pod(lexer, true);
       TOKEN(TOKEN_EOL);
     }
   }

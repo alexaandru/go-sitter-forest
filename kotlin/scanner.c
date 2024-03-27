@@ -84,15 +84,15 @@ static void deserialize_stack(Stack *stack, const char *buffer, unsigned len) {
   }
 }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void skip_kotlin(TSLexer *lexer) { lexer->advance_kotlin(lexer, true); }
+static void advance_kotlin(TSLexer *lexer) { lexer->advance_kotlin(lexer, false); }
 static void mark_end(TSLexer *lexer) { lexer->mark_end(lexer); }
 
 // Scanner functions
 
 static bool scan_string_start(TSLexer *lexer, Stack *stack) {
   if (lexer->lookahead != '"') return false;
-  advance(lexer);
+  advance_kotlin(lexer);
   mark_end(lexer);
   for (unsigned count = 1; count < 3; count++) {
     if (lexer->lookahead != '"') {
@@ -100,7 +100,7 @@ static bool scan_string_start(TSLexer *lexer, Stack *stack) {
       push(stack, '"', false);
       return true;
     }
-    advance(lexer);
+    advance_kotlin(lexer);
   }
   mark_end(lexer);
   push(stack, '"', true);
@@ -128,7 +128,7 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack) {
       // otherwise, if this is the start, determine if it is an 
       // interpolated identifier.
       // otherwise, it's just string content, so continue 
-      advance(lexer);
+      advance_kotlin(lexer);
       if (iswalpha(lexer->lookahead) || lexer->lookahead == '{') {
         // this must be a string interpolation, let's
         // fail so we parse it as such
@@ -142,18 +142,18 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack) {
       // if we see a \, then this might possibly escape a dollar sign
       // in which case, we need to not defer to the interpolation 
       has_content = true;
-      advance(lexer);
+      advance_kotlin(lexer);
       // this dollar sign is escaped, so it must be content.
       // we consume it here so we don't enter the dollar sign case above,
       // which leaves the possibility that it is an interpolation 
       if (lexer->lookahead == '$') {
-        advance(lexer);
+        advance_kotlin(lexer);
       }
     } else if (lexer->lookahead == end_char) {
       if (is_triple) {
         mark_end(lexer);
         for (unsigned count = 1; count < 3; count++) {
-          advance(lexer);
+          advance_kotlin(lexer);
           if (lexer->lookahead != end_char) {
             mark_end(lexer);
             lexer->result_symbol = STRING_CONTENT;
@@ -186,7 +186,7 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack) {
         lexer->result_symbol = STRING_END;
         mark_end(lexer);
         while (lexer->lookahead == end_char) {
-          advance(lexer);
+          advance_kotlin(lexer);
           mark_end(lexer);
         }
         pop(stack);
@@ -198,12 +198,12 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack) {
         return true;
       }
       pop(stack);
-      advance(lexer);
+      advance_kotlin(lexer);
       mark_end(lexer);
       lexer->result_symbol = STRING_END;
       return true;
     }
-    advance(lexer);
+    advance_kotlin(lexer);
     has_content = true;
   }
   return false;
@@ -211,20 +211,20 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack) {
 
 static bool scan_multiline_comment(TSLexer *lexer) {
   if (lexer->lookahead != '/') return false;
-  advance(lexer);
+  advance_kotlin(lexer);
   if (lexer->lookahead != '*') return false;
-  advance(lexer);
+  advance_kotlin(lexer);
 
   bool after_star = false;
   unsigned nesting_depth = 1;
   for (;;) {
     switch (lexer->lookahead) {
       case '*':
-        advance(lexer);
+        advance_kotlin(lexer);
         after_star = true;
         break;
       case '/':
-        advance(lexer);
+        advance_kotlin(lexer);
         if (after_star) {
           after_star = false;
           nesting_depth--;
@@ -237,14 +237,14 @@ static bool scan_multiline_comment(TSLexer *lexer) {
           after_star = false;
           if (lexer->lookahead == '*') {
             nesting_depth++;
-            advance(lexer);
+            advance_kotlin(lexer);
           }
         }
         break;
       case '\0':
         return false;
       default:
-        advance(lexer);
+        advance_kotlin(lexer);
         after_star = false;
         break;
     }
@@ -254,7 +254,7 @@ static bool scan_multiline_comment(TSLexer *lexer) {
 static bool scan_whitespace_and_comments(TSLexer *lexer) {
   for (;;) {
     while (iswspace(lexer->lookahead)) {
-      skip(lexer);
+      skip_kotlin(lexer);
     }
 
     if (lexer->lookahead == '/') {
@@ -265,10 +265,10 @@ static bool scan_whitespace_and_comments(TSLexer *lexer) {
 }
 
 static bool scan_for_word(TSLexer *lexer, const char* word, unsigned len) {
-    skip(lexer);
+    skip_kotlin(lexer);
     for (unsigned i = 0; i < len; i++) {
       if (lexer->lookahead != word[i]) return false;
-      skip(lexer);
+      skip_kotlin(lexer);
     }
     return true;
 }
@@ -283,7 +283,7 @@ static bool scan_automatic_semicolon(TSLexer *lexer) {
       return true;
 
     if (lexer->lookahead == ';') {
-      advance(lexer);
+      advance_kotlin(lexer);
       lexer->mark_end(lexer);
       return true;
     }
@@ -293,24 +293,24 @@ static bool scan_automatic_semicolon(TSLexer *lexer) {
     }
 
     if (lexer->lookahead == '\n') {
-      skip(lexer);
+      skip_kotlin(lexer);
 
       sameline = false;
       break;
     }
 
     if (lexer->lookahead == '\r') {
-      skip(lexer);
+      skip_kotlin(lexer);
 
       if (lexer->lookahead == '\n') {
-        skip(lexer);
+        skip_kotlin(lexer);
       }
 
       sameline = false;
       break;
     }
 
-    skip(lexer);
+    skip_kotlin(lexer);
   }
 
   // Skip whitespace and comments
@@ -327,7 +327,7 @@ static bool scan_automatic_semicolon(TSLexer *lexer) {
         return scan_for_word(lexer, "mport", 5);
 
       case ';':
-        advance(lexer);
+        advance_kotlin(lexer);
         lexer->mark_end(lexer);
         return true;
 
@@ -357,19 +357,19 @@ static bool scan_automatic_semicolon(TSLexer *lexer) {
     // Insert a semicolon before `--` and `++`, but not before binary `+` or `-`.
     // Insert before +/-Float
     case '+':
-      skip(lexer);
+      skip_kotlin(lexer);
       if (lexer->lookahead == '+')
         return true;
       return iswdigit(lexer->lookahead);
     case '-':
-      skip(lexer);
+      skip_kotlin(lexer);
       if (lexer->lookahead == '-')
         return true;
       return iswdigit(lexer->lookahead);
 
     // Don't insert a semicolon before `!=`, but do insert one before a unary `!`.
     case '!':
-      skip(lexer);
+      skip_kotlin(lexer);
       return lexer->lookahead != '=';
 
     // Don't insert a semicolon before an else
@@ -379,18 +379,18 @@ static bool scan_automatic_semicolon(TSLexer *lexer) {
     // Don't insert a semicolon before `in` or `instanceof`, but do insert one
     // before an identifier or an import.
     case 'i':
-      skip(lexer);
+      skip_kotlin(lexer);
       if (lexer->lookahead != 'n')
         return true;
 
-      skip(lexer);
+      skip_kotlin(lexer);
       if (!iswalpha(lexer->lookahead))
         return false;
 
       return !scan_for_word(lexer, "stanceof", 8);
 
       case ';':
-        advance(lexer);
+        advance_kotlin(lexer);
         lexer->mark_end(lexer);
         return true;
 
@@ -410,7 +410,7 @@ static bool scan_safe_nav(TSLexer *lexer) {
   if (lexer->lookahead != '?')
     return false;
 
-  advance(lexer);
+  advance_kotlin(lexer);
 
   if (!scan_whitespace_and_comments(lexer))
     return false;
@@ -418,7 +418,7 @@ static bool scan_safe_nav(TSLexer *lexer) {
   if (lexer->lookahead != '.')
     return false;
 
-  advance(lexer);
+  advance_kotlin(lexer);
   lexer->mark_end(lexer);
   return true;
 }
@@ -432,11 +432,11 @@ static bool scan_line_sep(TSLexer *lexer) {
       case '\t':
       case '\v':
         // Skip whitespace
-        advance(lexer);
+        advance_kotlin(lexer);
         break;
 
       case '\n':
-        advance(lexer);
+        advance_kotlin(lexer);
         return true;
 
       case '\r':
@@ -444,7 +444,7 @@ static bool scan_line_sep(TSLexer *lexer) {
           return true;
 
         state = 1;
-        advance(lexer);
+        advance_kotlin(lexer);
         break;
 
       default:
@@ -483,7 +483,7 @@ static bool scan_import_list_delimiter(TSLexer *lexer) {
       case '\t':
       case '\v':
         // Skip whitespace
-        advance(lexer);
+        advance_kotlin(lexer);
         break;
 
       case 'i':
@@ -525,7 +525,7 @@ bool tree_sitter_kotlin_external_scanner_scan(void *payload, TSLexer *lexer,
   // a string might follow after some whitespace, so we can't lookahead 
   // until we get rid of it
   while(iswspace(lexer->lookahead)) {
-    skip(lexer);
+    skip_kotlin(lexer);
   }
 
   if (valid_symbols[STRING_START] && scan_string_start(lexer, payload)) {

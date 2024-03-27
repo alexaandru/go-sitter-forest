@@ -22,18 +22,17 @@ The [Makefile](Makefile) is pretty clean and self explanatory, but in short:
 - `check-updates`: checks to see if there are any updates; This is based solely
   on the latest commit's sha; While it can be useful to know if there are updates,
   this is just an optional step, `update-all` will perform the same check anyway;
-- `update-all`: will run `update` for all languages that have pending updates
-  (the check is the same as above);
-- `update-%`: where `%` is any of the folders in the root of this repo (with the
+- `[force-]update-all`: will run `update` for all languages that have pending updates
+  (the check is the same as above); If force updated, the update will happen
+  unconditionally (even if the commit sha did not change);
+- `[force-]update-%`: where `%` is any of the folders in the root of this repo (with the
   exception of `internal`) will update that respective parser. For most parsers
   that means:
   1. download the manual C files (`scanner.c`, etc.) if any;
   2. download `grammar.js` and it's dependencies (extracted automatically from it),
   3. rebuild the parser (via `npx tree-sitter generate`);
 - for the few parsers where regeneration is not possible, 2 and 3 above are
-  replaced with: download the generated files too (`parser.c`, `parser.h`, `alloc.h` and `array.h`);
-- `force-update-%`: identical to `update-%` except that it will forcefully update
-  the parsers, even if the commit sha hasn't changed.
+  replaced with: download the generated files too (`parser.c`, `parser.h`, `alloc.h` and `array.h`).
 
 ### Misc Targets
 

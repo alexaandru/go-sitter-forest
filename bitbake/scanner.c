@@ -150,17 +150,17 @@ typedef struct {
     bool inside_f_string;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_bitbake(TSLexer *lexer) { lexer->advance_bitbake(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_bitbake(TSLexer *lexer) { lexer->advance_bitbake(lexer, true); }
 
-// #define advance(lexer)                                                                                                 \
+// #define advance_bitbake(lexer)                                                                                                 \
 //     {                                                                                                                  \
 //         printf("advance %c, line: %d\n", lexer->lookahead, __LINE__);                                                  \
 //         (lexer->advance)(lexer, false);                                                                                \
 //     }
 //
-// #define skip(lexer) \
+// #define skip_bitbake(lexer) \
 //     { \
 //         printf("skip %c, line: %d\n", lexer->lookahead, __LINE__); \
 //         (lexer->advance)(lexer, true); \
@@ -187,10 +187,10 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
         if (is_format(&delimiter)) {
             lexer->mark_end(lexer);
             bool is_left_brace = lexer->lookahead == '{';
-            advance(lexer);
+            advance_bitbake(lexer);
             advanced_once = true;
             if ((lexer->lookahead == '{' && is_left_brace) || (lexer->lookahead == '}' && !is_left_brace)) {
-                advance(lexer);
+                advance_bitbake(lexer);
                 lexer->mark_end(lexer);
                 lexer->result_symbol = ESCAPE_INTERPOLATION;
                 return true;
@@ -212,30 +212,30 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
             if (lexer->lookahead == '\\') {
                 if (is_raw(&delimiter)) {
                     // Step over the backslash.
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     // Step over any escaped quotes.
                     if (lexer->lookahead == end_character(&delimiter) || lexer->lookahead == '\\') {
-                        advance(lexer);
+                        advance_bitbake(lexer);
                     }
                     // Step over newlines
                     if (lexer->lookahead == '\r') {
-                        advance(lexer);
+                        advance_bitbake(lexer);
                         if (lexer->lookahead == '\n') {
-                            advance(lexer);
+                            advance_bitbake(lexer);
                         }
                     } else if (lexer->lookahead == '\n') {
-                        advance(lexer);
+                        advance_bitbake(lexer);
                     }
                     continue;
                 }
                 if (is_bytes(&delimiter)) {
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     if (lexer->lookahead == 'N' || lexer->lookahead == 'u' || lexer->lookahead == 'U') {
                         // In bytes string, \N{...}, \uXXXX and \UXXXXXXXX are
                         // not escape sequences
                         // https://docs.bitbake.org/3/reference/lexical_analysis.html#string-and-bytes-literals
-                        advance(lexer);
+                        advance_bitbake(lexer);
                     } else {
                         lexer->result_symbol = STRING_CONTENT;
                         return has_content;
@@ -248,14 +248,14 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
             } else if (lexer->lookahead == end_char) {
                 if (is_triple(&delimiter)) {
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     if (lexer->lookahead == end_char) {
-                        advance(lexer);
+                        advance_bitbake(lexer);
                         if (lexer->lookahead == end_char) {
                             if (has_content) {
                                 lexer->result_symbol = STRING_CONTENT;
                             } else {
-                                advance(lexer);
+                                advance_bitbake(lexer);
                                 lexer->mark_end(lexer);
                                 VEC_POP(scanner->delimiters);
                                 lexer->result_symbol = STRING_END;
@@ -274,7 +274,7 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
                 if (has_content) {
                     lexer->result_symbol = STRING_CONTENT;
                 } else {
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     VEC_POP(scanner->delimiters);
                     lexer->result_symbol = STRING_END;
                     scanner->inside_f_string = false;
@@ -285,7 +285,7 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
             } else if (lexer->lookahead == '\n' && has_content && !is_triple(&delimiter)) {
                 return false;
             }
-            advance(lexer);
+            advance_bitbake(lexer);
             has_content = true;
         }
     }
@@ -299,16 +299,16 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
         if (lexer->lookahead == '\n') {
             found_end_of_line = true;
             indent_length = 0;
-            skip(lexer);
+            skip_bitbake(lexer);
         } else if (lexer->lookahead == ' ') {
             indent_length++;
-            skip(lexer);
+            skip_bitbake(lexer);
         } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
             indent_length = 0;
-            skip(lexer);
+            skip_bitbake(lexer);
         } else if (lexer->lookahead == '\t') {
             indent_length += 8;
-            skip(lexer);
+            skip_bitbake(lexer);
         } else if (lexer->lookahead == '#') {
             // If we haven't found an EOL yet,
             // then this is a comment after an expression:
@@ -322,17 +322,17 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
                 first_comment_indent_length = (int32_t)indent_length;
             }
             while (lexer->lookahead && lexer->lookahead != '\n') {
-                skip(lexer);
+                skip_bitbake(lexer);
             }
-            skip(lexer);
+            skip_bitbake(lexer);
             indent_length = 0;
         } else if (lexer->lookahead == '\\' && valid_symbols[STRING_CONTENT]) {
-            skip(lexer);
+            skip_bitbake(lexer);
             if (lexer->lookahead == '\r') {
-                skip(lexer);
+                skip_bitbake(lexer);
             }
             if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
-                skip(lexer);
+                skip_bitbake(lexer);
             } else {
                 return false;
             }
@@ -394,33 +394,33 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
                 break;
             }
             has_flags = true;
-            advance(lexer);
+            advance_bitbake(lexer);
         }
 
         if (lexer->lookahead == '`') {
             set_end_character(&delimiter, '`');
-            advance(lexer);
+            advance_bitbake(lexer);
             lexer->mark_end(lexer);
         } else if (lexer->lookahead == '\'') {
             set_end_character(&delimiter, '\'');
-            advance(lexer);
+            advance_bitbake(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '\'') {
-                advance(lexer);
+                advance_bitbake(lexer);
                 if (lexer->lookahead == '\'') {
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }
             }
         } else if (lexer->lookahead == '"') {
             set_end_character(&delimiter, '"');
-            advance(lexer);
+            advance_bitbake(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '"') {
-                advance(lexer);
+                advance_bitbake(lexer);
                 if (lexer->lookahead == '"') {
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }
@@ -440,9 +440,9 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
 
     if (valid_symbols[SHELL_CONTENT] && !error_recovery_mode) {
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_bitbake(lexer);
             if (lexer->lookahead == '\n') {
-                skip(lexer);
+                skip_bitbake(lexer);
                 break;
             }
         }
@@ -461,18 +461,18 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
                     } else if (lexer->lookahead == start_quote) {
                         start_quote = 0;
                     }
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     advance_once = true;
                     break;
 
                 case '$':
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     if (lexer->lookahead == '{') {
-                        advance(lexer);
+                        advance_bitbake(lexer);
                         brace_depth++;
                         if (lexer->lookahead == '@') {
-                            advance(lexer);
+                            advance_bitbake(lexer);
                             lexer->result_symbol = SHELL_CONTENT;
                             return advance_once;
                         }
@@ -480,13 +480,13 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
                     advance_once = true;
                     break;
                 case '{':
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     if (!start_quote) {
                         brace_depth++;
                     }
                     break;
                 case '}':
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     if (!start_quote) {
                         brace_depth--;
                     }
@@ -496,10 +496,10 @@ bool tree_sitter_bitbake_external_scanner_scan(void *payload, TSLexer *lexer, co
                 case '\f':
                 case '\v':
                 case ' ':
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     break;
                 default:
-                    advance(lexer);
+                    advance_bitbake(lexer);
                     advance_once = true;
                     break;
             }

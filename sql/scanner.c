@@ -58,7 +58,7 @@ char* scan_dollar_string_tag(TSLexer *lexer) {
   *text_size = 0;
   if (lexer->lookahead == '$') {
     tag = add_char(tag, text_size, '$', index);
-    lexer->advance(lexer, false);
+    lexer->advance_sql(lexer, false);
   } else {
     free(text_size);
     return NULL;
@@ -66,12 +66,12 @@ char* scan_dollar_string_tag(TSLexer *lexer) {
 
   while (lexer->lookahead != '$' && !iswspace(lexer->lookahead) && !lexer->eof(lexer)) {
     tag = add_char(tag, text_size, lexer->lookahead, ++index);
-    lexer->advance(lexer, false);
+    lexer->advance_sql(lexer, false);
   }
 
   if (lexer->lookahead == '$') {
     tag = add_char(tag, text_size, lexer->lookahead, ++index);
-    lexer->advance(lexer, false);
+    lexer->advance_sql(lexer, false);
     free(text_size);
     return tag;
   } else {
@@ -84,7 +84,7 @@ char* scan_dollar_string_tag(TSLexer *lexer) {
 bool tree_sitter_sql_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
   LexerState *state = (LexerState*)payload;
   if (valid_symbols[DOLLAR_QUOTED_STRING_START_TAG] && state->start_tag == NULL) {
-    while (iswspace(lexer->lookahead)) lexer->advance(lexer, true);
+    while (iswspace(lexer->lookahead)) lexer->advance_sql(lexer, true);
 
     char* start_tag = scan_dollar_string_tag(lexer);
     if (start_tag == NULL) {
@@ -100,7 +100,7 @@ bool tree_sitter_sql_external_scanner_scan(void *payload, TSLexer *lexer, const 
   }
 
   if (valid_symbols[DOLLAR_QUOTED_STRING_END_TAG] && state->start_tag != NULL) {
-    while (iswspace(lexer->lookahead)) lexer->advance(lexer, true);
+    while (iswspace(lexer->lookahead)) lexer->advance_sql(lexer, true);
 
     char* end_tag = scan_dollar_string_tag(lexer);
     if (end_tag != NULL && strcmp(end_tag, state->start_tag) == 0) {
@@ -118,7 +118,7 @@ bool tree_sitter_sql_external_scanner_scan(void *payload, TSLexer *lexer, const 
 
   if (valid_symbols[DOLLAR_QUOTED_STRING]) {
     lexer->mark_end(lexer);
-    while (iswspace(lexer->lookahead)) lexer->advance(lexer, true);
+    while (iswspace(lexer->lookahead)) lexer->advance_sql(lexer, true);
 
     char* start_tag = scan_dollar_string_tag(lexer);
     if (start_tag == NULL) {
@@ -139,7 +139,7 @@ bool tree_sitter_sql_external_scanner_scan(void *payload, TSLexer *lexer, const 
 
       end_tag = scan_dollar_string_tag(lexer);
       if (end_tag == NULL) {
-        lexer->advance(lexer, false);
+        lexer->advance_sql(lexer, false);
         continue;
       }
 

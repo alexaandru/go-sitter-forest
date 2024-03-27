@@ -41,7 +41,7 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
     // including %s in between and start / end tokens inside of Python strings
     if (valid_symbols[HINT_START]) {
         if (lexer->lookahead == '%') {
-            lexer->advance(lexer, true);
+            lexer->advance_cairo(lexer, true);
             if (lexer->lookahead == '{') {
                 scanner->context = C_PYTHON_CODE;
                 // Fallback to a built-in lexer
@@ -54,14 +54,14 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
         // Skip the first \n after `%{` token,
         // all trailing \n after code lines will be included to themselves
         if (lexer->lookahead == '\n') {
-            lexer->advance(lexer, true);
+            lexer->advance_cairo(lexer, true);
         }
 
         // There is a standalone hint close on line, don't consume it,
         // it's a job of a built-in lexer
         if (lexer->lookahead == '%') {
             lexer->mark_end(lexer);
-            lexer->advance(lexer, false);
+            lexer->advance_cairo(lexer, false);
             if (lexer->lookahead == '}') {
                 if (scanner->context == C_PYTHON_STRING) {
                     lexer->result_symbol = FAILURE;
@@ -79,14 +79,14 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
         uint32_t ws_count = 0;
         while (!lexer->eof(lexer)) {
             if (lexer->lookahead == '\n') {
-                lexer->advance(lexer, false);
+                lexer->advance_cairo(lexer, false);
                 lexer->mark_end(lexer);
                 lexer->result_symbol = PYTHON_CODE_LINE;
                 return true;
             }
             if (iswspace(lexer->lookahead)) {
                 ws_count += lexer->lookahead == '\t' ? 8 : 1;
-                lexer->advance(lexer, true);
+                lexer->advance_cairo(lexer, true);
                 if (scanner->ws_count > 0 && ws_count == scanner->ws_count) {
                     break;
                 }
@@ -105,7 +105,7 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
                 case '\'':
                 case '"': {
                     const char chr = (char)lexer->lookahead;
-                    lexer->advance(lexer, false);
+                    lexer->advance_cairo(lexer, false);
                     content_len++;
                     if (scanner->context == C_PYTHON_STRING) {
                         unsigned iter = scanner->pst == PST_1_DQ_STRING ||
@@ -119,7 +119,7 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
                                     scanner->pst = PST_NONE;
                                     return false;
                                 }
-                                lexer->advance(lexer, false);
+                                lexer->advance_cairo(lexer, false);
                                 content_len++;
                             } while (--iter);
                         }
@@ -128,10 +128,10 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
                         continue;
                     }
                     if (lexer->lookahead == chr) {
-                        lexer->advance(lexer, false);
+                        lexer->advance_cairo(lexer, false);
                         content_len++;
                         if (lexer->lookahead == chr) {
-                            lexer->advance(lexer, false);
+                            lexer->advance_cairo(lexer, false);
                             content_len++;
                             scanner->context = C_PYTHON_STRING;
                             scanner->pst =
@@ -151,13 +151,13 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
                 }
                 case '%':
                     if (scanner->context == C_PYTHON_STRING) {
-                        lexer->advance(lexer, false);
+                        lexer->advance_cairo(lexer, false);
                         content_len++;
                         continue;
                     }
 
                     lexer->mark_end(lexer);
-                    lexer->advance(lexer, false);
+                    lexer->advance_cairo(lexer, false);
                     if (lexer->lookahead == '}') {
                         if (scanner->context == C_PYTHON_STRING) {
                             lexer->result_symbol = FAILURE;
@@ -175,20 +175,20 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
                     break;
 
                 case '\n':
-                    lexer->advance(lexer, false);
+                    lexer->advance_cairo(lexer, false);
                     lexer->mark_end(lexer);
                     lexer->result_symbol = PYTHON_CODE_LINE;
                     return true;
 
                 case '#':
                     if (scanner->context == C_PYTHON_STRING) {
-                        lexer->advance(lexer, false);
+                        lexer->advance_cairo(lexer, false);
                         content_len++;
                         continue;
                     } else {
                         scanner->context = C_PYTHON_COMMENT;
                         while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
-                            lexer->advance(lexer, false);
+                            lexer->advance_cairo(lexer, false);
                             content_len++;
                         }
                         scanner->context = C_NONE;
@@ -196,7 +196,7 @@ static bool scan_cairo(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
                     }
 
                 default:
-                    lexer->advance(lexer, false);
+                    lexer->advance_cairo(lexer, false);
                     content_len++;
             }
         }

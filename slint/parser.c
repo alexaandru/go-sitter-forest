@@ -47499,7 +47499,9 @@ static const TSParseActionEntry ts_parse_actions[] = {
 #ifdef __cplusplus
 extern "C" {
 #endif
-#ifdef _WIN32
+#ifdef TREE_SITTER_HIDE_SYMBOLS
+#define TS_PUBLIC
+#elif defined(_WIN32)
 #define TS_PUBLIC __declspec(dllexport)
 #else
 #define TS_PUBLIC __attribute__((visibility("default")))

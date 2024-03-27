@@ -15,8 +15,8 @@ void tree_sitter_sourcepawn_external_scanner_reset(void *p) {}
 unsigned tree_sitter_sourcepawn_external_scanner_serialize(void *p, char *buffer) { return 0; }
 void tree_sitter_sourcepawn_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void advance_sourcepawn(TSLexer *lexer) { lexer->advance_sourcepawn(lexer, false); }
+static void skip_sourcepawn(TSLexer *lexer) { lexer->advance_sourcepawn(lexer, true); }
 
 static bool scan_whitespace_and_comments(TSLexer *lexer)
 {
@@ -24,38 +24,38 @@ static bool scan_whitespace_and_comments(TSLexer *lexer)
   {
     while (iswspace(lexer->lookahead))
     {
-      skip(lexer);
+      skip_sourcepawn(lexer);
     }
 
     if (lexer->lookahead == '/')
     {
-      skip(lexer);
+      skip_sourcepawn(lexer);
 
       if (lexer->lookahead == '/')
       {
-        skip(lexer);
+        skip_sourcepawn(lexer);
         while (lexer->lookahead != 0 && lexer->lookahead != '\n')
         {
-          skip(lexer);
+          skip_sourcepawn(lexer);
         }
       }
       else if (lexer->lookahead == '*')
       {
-        skip(lexer);
+        skip_sourcepawn(lexer);
         while (lexer->lookahead != 0)
         {
           if (lexer->lookahead == '*')
           {
-            skip(lexer);
+            skip_sourcepawn(lexer);
             if (lexer->lookahead == '/')
             {
-              skip(lexer);
+              skip_sourcepawn(lexer);
               break;
             }
           }
           else
           {
-            skip(lexer);
+            skip_sourcepawn(lexer);
           }
         }
       }
@@ -91,7 +91,7 @@ static bool preproc_arg(TSLexer *lexer)
       // Check if we are in a comment.
       // Halt the preproc_arg token matching in case it's a comment.
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_sourcepawn(lexer);
       if (lexer->lookahead == '/')
       {
         // Single line comment, return true here, line continuation
@@ -102,7 +102,7 @@ static bool preproc_arg(TSLexer *lexer)
       if (lexer->lookahead == '*')
       {
         // Multiline comment, look for the end.
-        advance(lexer);
+        advance_sourcepawn(lexer);
         bool end = false;
         while (!end)
         {
@@ -121,16 +121,16 @@ static bool preproc_arg(TSLexer *lexer)
           if (lexer->lookahead != '*')
           {
             // Can't be the end of the multiline comment, skip.
-            advance(lexer);
+            advance_sourcepawn(lexer);
             continue;
           }
           // Check for the end of the multiline comment or EOF.
-          advance(lexer);
+          advance_sourcepawn(lexer);
           end = lexer->lookahead == '/' || lexer->lookahead == 0;
         }
         // For now, assume the preproc_arg token has ended.
         ends_with_multiline_comment = true;
-        advance(lexer);
+        advance_sourcepawn(lexer);
       }
     }
 
@@ -149,7 +149,7 @@ static bool preproc_arg(TSLexer *lexer)
         // preproc_arg here.
         lexer->mark_end(lexer);
       }
-      advance(lexer);
+      advance_sourcepawn(lexer);
       return true;
     }
 
@@ -160,7 +160,7 @@ static bool preproc_arg(TSLexer *lexer)
       is_escaped = lexer->lookahead == '\\';
     }
 
-    advance(lexer);
+    advance_sourcepawn(lexer);
   }
 }
 
@@ -181,10 +181,10 @@ static bool scan_automatic_semicolon(TSLexer *lexer)
       break;
     if (!iswspace(lexer->lookahead))
       return false;
-    skip(lexer);
+    skip_sourcepawn(lexer);
   }
 
-  skip(lexer);
+  skip_sourcepawn(lexer);
 
   if (!scan_whitespace_and_comments(lexer))
     return false;
@@ -211,15 +211,15 @@ static bool scan_automatic_semicolon(TSLexer *lexer)
 
   // Insert a semicolon before `--` and `++`, but not before binary `+` or `-`.
   case '+':
-    skip(lexer);
+    skip_sourcepawn(lexer);
     return lexer->lookahead == '+';
   case '-':
-    skip(lexer);
+    skip_sourcepawn(lexer);
     return lexer->lookahead == '-';
 
   // Don't insert a semicolon before `!=`, but do insert one before a unary `!`.
   case '!':
-    skip(lexer);
+    skip_sourcepawn(lexer);
     return lexer->lookahead != '=';
   }
 
@@ -234,7 +234,7 @@ static bool scan_automatic_semicolon(TSLexer *lexer)
   // We are at the beginning of a word (`action1` in our example).
   while (iswalnum(lexer->lookahead))
   {
-    skip(lexer);
+    skip_sourcepawn(lexer);
   }
 
   // We are at the end of a word (`action1` in our example). Skip comments and whitespaces.
@@ -256,11 +256,11 @@ static bool ternary_colon(TSLexer *lexer)
   lexer->result_symbol = TERNARY_COLON;
   while (iswspace(lexer->lookahead))
   {
-    skip(lexer);
+    skip_sourcepawn(lexer);
   }
   if (lexer->lookahead == ':')
   {
-    advance(lexer);
+    advance_sourcepawn(lexer);
     lexer->mark_end(lexer);
     return lexer->lookahead != ':';
   }

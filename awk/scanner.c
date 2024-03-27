@@ -46,7 +46,7 @@ static bool tsawk_next_chars_eq(TSLexer *lexer, char *word)
       return false;
     }
 
-    lexer->advance(lexer, true);
+    lexer->advance_awk(lexer, true);
   }
   return true;
 }
@@ -60,10 +60,10 @@ static bool tsawk_is_line_continuation(TSLexer *lexer)
 {
   if (lexer->lookahead == '\\')
   {
-    lexer->advance(lexer, true);
+    lexer->advance_awk(lexer, true);
 
     if (lexer->lookahead == '\r')
-      lexer->advance(lexer, true);
+      lexer->advance_awk(lexer, true);
 
     if (lexer->lookahead == '\n')
       return true;
@@ -83,7 +83,7 @@ static bool tsawk_skip_whitespace(TSLexer *lexer, bool skip_newlines, bool captu
 
   while (tsawk_is_whitespace(lexer->lookahead) || tsawk_is_line_continuation(lexer) || lexer->lookahead == '\r' || (skip_newlines && lexer->lookahead == '\n'))
   {
-    lexer->advance(lexer, !capture);
+    lexer->advance_awk(lexer, !capture);
     skipped = true;
   }
 
@@ -99,10 +99,10 @@ static void tsawk_skip_comment(TSLexer *lexer)
 
   while (lexer->lookahead != '\n' && !lexer->eof(lexer))
   {
-    lexer->advance(lexer, true);
+    lexer->advance_awk(lexer, true);
   }
 
-  lexer->advance(lexer, false);
+  lexer->advance_awk(lexer, false);
 
   tsawk_skip_whitespace(lexer, true, false);
 
@@ -116,7 +116,7 @@ static bool tsawk_is_if_else_separator(TSLexer *lexer)
 {
   while (tsawk_is_whitespace(lexer->lookahead) || tsawk_is_statement_terminator(lexer->lookahead) || lexer->lookahead == '\r')
   {
-    lexer->advance(lexer, true);
+    lexer->advance_awk(lexer, true);
   }
 
   lexer->mark_end(lexer);
@@ -166,11 +166,11 @@ static bool tsawk_is_concatenating_space(TSLexer *lexer)
   case '(':
     return had_whitespace;
   case 'i':
-    lexer->advance(lexer, true);
+    lexer->advance_awk(lexer, true);
 
     if (lexer->lookahead == 'n' || lexer->lookahead == 'f')
     {
-      lexer->advance(lexer, true);
+      lexer->advance_awk(lexer, true);
       return lexer->lookahead != ' ';
     }
   default:

@@ -152,12 +152,12 @@ const char NON_IDENTIFIER_CHARS[] = {
     '<',  '=',  '>',  '+',  '-', '*', '/', '\\', '%', '?',  '!', '~', '(', ')', '[', ']', '{', '}',
 };
 
-static inline void skip(Scanner *scanner, TSLexer *lexer) {
+static inline void skip_ruby(Scanner *scanner, TSLexer *lexer) {
     scanner->has_leading_whitespace = true;
-    lexer->advance(lexer, true);
+    lexer->advance_ruby(lexer, true);
 }
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_ruby(TSLexer *lexer) { lexer->advance_ruby(lexer, false); }
 
 static inline void reset(Scanner *scanner) {
     VEC_CLEAR(scanner->literal_stack);
@@ -167,7 +167,7 @@ static inline void reset(Scanner *scanner) {
     VEC_CLEAR(scanner->open_heredocs);
 }
 
-static inline unsigned serialize(Scanner *scanner, char *buffer) {
+static inline unsigned serialize_ruby(Scanner *scanner, char *buffer) {
     unsigned i = 0;
 
     if (scanner->literal_stack.len * 5 + 2 >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
@@ -201,7 +201,7 @@ static inline unsigned serialize(Scanner *scanner, char *buffer) {
     return i;
 }
 
-static inline void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static inline void deserialize_ruby(Scanner *scanner, const char *buffer, unsigned length) {
     unsigned i = 0;
     scanner->has_leading_whitespace = false;
     reset(scanner);
@@ -255,7 +255,7 @@ static inline bool scan_whitespace(Scanner *scanner, TSLexer *lexer, const bool 
         switch (lexer->lookahead) {
             case ' ':
             case '\t':
-                skip(scanner, lexer);
+                skip_ruby(scanner, lexer);
                 break;
             case '\r':
                 if (heredoc_body_start_is_valid) {
@@ -263,7 +263,7 @@ static inline bool scan_whitespace(Scanner *scanner, TSLexer *lexer, const bool 
                     scanner->open_heredocs.data[0].started = true;
                     return true;
                 } else {
-                    skip(scanner, lexer);
+                    skip_ruby(scanner, lexer);
                     break;
                 }
             case '\n':
@@ -273,19 +273,19 @@ static inline bool scan_whitespace(Scanner *scanner, TSLexer *lexer, const bool 
                     return true;
                 } else if (!valid_symbols[NO_LINE_BREAK] && valid_symbols[LINE_BREAK] && !crossed_newline) {
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_ruby(lexer);
                     crossed_newline = true;
                 } else {
-                    skip(scanner, lexer);
+                    skip_ruby(scanner, lexer);
                 }
                 break;
             case '\\':
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead == '\r') {
-                    skip(scanner, lexer);
+                    skip_ruby(scanner, lexer);
                 }
                 if (iswspace(lexer->lookahead)) {
-                    skip(scanner, lexer);
+                    skip_ruby(scanner, lexer);
                 } else {
                     return false;
                 }
@@ -298,7 +298,7 @@ static inline bool scan_whitespace(Scanner *scanner, TSLexer *lexer, const bool 
                         // Don't return LINE_BREAK for the call operator (`.`) but do return one for range
                         // operators
                         // (`..` and `...`)
-                        advance(lexer);
+                        advance_ruby(lexer);
                         if (!lexer->eof(lexer) && lexer->lookahead == '.') {
                             lexer->result_symbol = LINE_BREAK;
                         } else {
@@ -315,36 +315,36 @@ static inline bool scan_operator(TSLexer *lexer) {
     switch (lexer->lookahead) {
         // <, <=, <<, <=>
         case '<':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '<') {
-                advance(lexer);
+                advance_ruby(lexer);
             } else if (lexer->lookahead == '=') {
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead == '>') {
-                    advance(lexer);
+                    advance_ruby(lexer);
                 }
             }
             return true;
 
         // >, >=, >>
         case '>':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '>' || lexer->lookahead == '=') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             return true;
 
         // ==, ===, =~
         case '=':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '~') {
-                advance(lexer);
+                advance_ruby(lexer);
                 return true;
             }
             if (lexer->lookahead == '=') {
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead == '=') {
-                    advance(lexer);
+                    advance_ruby(lexer);
                 }
                 return true;
             }
@@ -354,17 +354,17 @@ static inline bool scan_operator(TSLexer *lexer) {
         case '+':
         case '-':
         case '~':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '@') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             return true;
 
         // ..
         case '.':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '.') {
-                advance(lexer);
+                advance_ruby(lexer);
                 return true;
             }
             return false;
@@ -376,35 +376,35 @@ static inline bool scan_operator(TSLexer *lexer) {
         case '/':
         case '%':
         case '`':
-            advance(lexer);
+            advance_ruby(lexer);
             return true;
 
         // !, !=, !~
         case '!':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '=' || lexer->lookahead == '~') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             return true;
 
         // *, **
         case '*':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '*') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             return true;
 
         // [], []=
         case '[':
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == ']') {
-                advance(lexer);
+                advance_ruby(lexer);
             } else {
                 return false;
             }
             if (lexer->lookahead == '=') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             return true;
 
@@ -419,31 +419,31 @@ static inline bool is_iden_char(char c) {
 
 static inline bool scan_symbol_identifier(TSLexer *lexer) {
     if (lexer->lookahead == '@') {
-        advance(lexer);
+        advance_ruby(lexer);
         if (lexer->lookahead == '@') {
-            advance(lexer);
+            advance_ruby(lexer);
         }
     } else if (lexer->lookahead == '$') {
-        advance(lexer);
+        advance_ruby(lexer);
     }
 
     if (is_iden_char((char)lexer->lookahead)) {
-        advance(lexer);
+        advance_ruby(lexer);
     } else if (!scan_operator(lexer)) {
         return false;
     }
 
     while (is_iden_char((char)lexer->lookahead)) {
-        advance(lexer);
+        advance_ruby(lexer);
     }
 
     if (lexer->lookahead == '?' || lexer->lookahead == '!') {
-        advance(lexer);
+        advance_ruby(lexer);
     }
 
     if (lexer->lookahead == '=') {
         lexer->mark_end(lexer);
-        advance(lexer);
+        advance_ruby(lexer);
         if (lexer->lookahead != '>') {
             lexer->mark_end(lexer);
         }
@@ -458,14 +458,14 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
             literal->type = STRING_START;
             literal->open_delimiter = literal->close_delimiter = lexer->lookahead;
             literal->allows_interpolation = true;
-            advance(lexer);
+            advance_ruby(lexer);
             return true;
 
         case '\'':
             literal->type = STRING_START;
             literal->open_delimiter = literal->close_delimiter = lexer->lookahead;
             literal->allows_interpolation = false;
-            advance(lexer);
+            advance_ruby(lexer);
             return true;
 
         case '`':
@@ -475,7 +475,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
             literal->type = SUBSHELL_START;
             literal->open_delimiter = literal->close_delimiter = lexer->lookahead;
             literal->allows_interpolation = true;
-            advance(lexer);
+            advance_ruby(lexer);
             return true;
 
         case '/':
@@ -485,7 +485,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
             literal->type = REGEX_START;
             literal->open_delimiter = literal->close_delimiter = lexer->lookahead;
             literal->allows_interpolation = true;
-            advance(lexer);
+            advance_ruby(lexer);
             if (valid_symbols[FORWARD_SLASH]) {
                 if (!scanner->has_leading_whitespace) {
                     return false;
@@ -501,7 +501,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
             return true;
 
         case '%':
-            advance(lexer);
+            advance_ruby(lexer);
 
             switch (lexer->lookahead) {
                 case 's':
@@ -510,7 +510,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = SYMBOL_START;
                     literal->allows_interpolation = false;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'r':
@@ -519,7 +519,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = REGEX_START;
                     literal->allows_interpolation = true;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'x':
@@ -528,7 +528,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = SUBSHELL_START;
                     literal->allows_interpolation = true;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'q':
@@ -537,7 +537,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = STRING_START;
                     literal->allows_interpolation = false;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'Q':
@@ -546,7 +546,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = STRING_START;
                     literal->allows_interpolation = true;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'w':
@@ -555,7 +555,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = STRING_ARRAY_START;
                     literal->allows_interpolation = false;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'i':
@@ -564,7 +564,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = SYMBOL_ARRAY_START;
                     literal->allows_interpolation = false;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'W':
@@ -573,7 +573,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = STRING_ARRAY_START;
                     literal->allows_interpolation = true;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 case 'I':
@@ -582,7 +582,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     }
                     literal->type = SYMBOL_ARRAY_START;
                     literal->allows_interpolation = true;
-                    advance(lexer);
+                    advance_ruby(lexer);
                     break;
 
                 default:
@@ -665,7 +665,7 @@ static inline bool scan_open_delimiter(Scanner *scanner, TSLexer *lexer, Literal
                     return false;
             }
 
-            advance(lexer);
+            advance_ruby(lexer);
             return true;
 
         default:
@@ -682,21 +682,21 @@ static inline void scan_heredoc_word(TSLexer *lexer, Heredoc *heredoc) {
         case '"':
         case '`':
             quote = lexer->lookahead;
-            advance(lexer);
+            advance_ruby(lexer);
             while (lexer->lookahead != quote && !lexer->eof(lexer)) {
                 STRING_PUSH(word, lexer->lookahead);
-                advance(lexer);
+                advance_ruby(lexer);
             }
-            advance(lexer);
+            advance_ruby(lexer);
             break;
 
         default:
             if (iswalnum(lexer->lookahead) || lexer->lookahead == '_') {
                 STRING_PUSH(word, lexer->lookahead);
-                advance(lexer);
+                advance_ruby(lexer);
                 while (iswalnum(lexer->lookahead) || lexer->lookahead == '_') {
                     STRING_PUSH(word, lexer->lookahead);
-                    advance(lexer);
+                    advance_ruby(lexer);
                 }
             }
             break;
@@ -714,14 +714,14 @@ static inline bool scan_short_interpolation(TSLexer *lexer, const bool has_conte
             return true;
         }
         lexer->mark_end(lexer);
-        advance(lexer);
+        advance_ruby(lexer);
         bool is_short_interpolation = false;
         if (start == '$') {
             if (strchr("!@&`'+~=/\\,;.<>*$?:\"", lexer->lookahead) != NULL) {
                 is_short_interpolation = true;
             } else {
                 if (lexer->lookahead == '-') {
-                    advance(lexer);
+                    advance_ruby(lexer);
                     is_short_interpolation = iswalpha(lexer->lookahead) || lexer->lookahead == '_';
                 } else {
                     is_short_interpolation = iswalnum(lexer->lookahead) || lexer->lookahead == '_';
@@ -730,7 +730,7 @@ static inline bool scan_short_interpolation(TSLexer *lexer, const bool has_conte
         }
         if (start == '@') {
             if (lexer->lookahead == '@') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             is_short_interpolation = is_iden_char((char)lexer->lookahead) && !iswdigit(lexer->lookahead);
         }
@@ -755,7 +755,7 @@ static inline bool scan_heredoc_content(Scanner *scanner, TSLexer *lexer) {
                 lexer->mark_end(lexer);
             }
             while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                advance(lexer);
+                advance_ruby(lexer);
             }
             if (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
                 if (has_content) {
@@ -782,7 +782,7 @@ static inline bool scan_heredoc_content(Scanner *scanner, TSLexer *lexer) {
         }
 
         if (lexer->lookahead == heredoc->word.data[position_in_word] && look_for_heredoc_end) {
-            advance(lexer);
+            advance_ruby(lexer);
             position_in_word++;
         } else {
             position_in_word = 0;
@@ -798,7 +798,7 @@ static inline bool scan_heredoc_content(Scanner *scanner, TSLexer *lexer) {
 
             if (heredoc->allows_interpolation && lexer->lookahead == '#') {
                 lexer->mark_end(lexer);
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead == '{') {
                     if (has_content) {
                         lexer->result_symbol = HEREDOC_CONTENT;
@@ -811,17 +811,17 @@ static inline bool scan_heredoc_content(Scanner *scanner, TSLexer *lexer) {
                 }
             } else if (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
                 if (lexer->lookahead == '\r') {
-                    advance(lexer);
+                    advance_ruby(lexer);
                     if (lexer->lookahead == '\n') {
-                        advance(lexer);
+                        advance_ruby(lexer);
                     }
                 } else {
-                    advance(lexer);
+                    advance_ruby(lexer);
                 }
                 has_content = true;
                 look_for_heredoc_end = true;
                 while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-                    advance(lexer);
+                    advance_ruby(lexer);
                     if (!heredoc->end_word_indentation_allowed) {
                         look_for_heredoc_end = false;
                     }
@@ -829,7 +829,7 @@ static inline bool scan_heredoc_content(Scanner *scanner, TSLexer *lexer) {
                 lexer->mark_end(lexer);
             } else {
                 has_content = true;
-                advance(lexer);
+                advance_ruby(lexer);
                 lexer->mark_end(lexer);
             }
         }
@@ -856,10 +856,10 @@ static inline bool scan_literal_content(Scanner *scanner, TSLexer *lexer) {
                 if (has_content) {
                     lexer->result_symbol = STRING_CONTENT;
                 } else {
-                    advance(lexer);
+                    advance_ruby(lexer);
                     if (literal->type == REGEX_START) {
                         while (iswlower(lexer->lookahead)) {
-                            advance(lexer);
+                            advance_ruby(lexer);
                         }
                     }
                     VEC_POP(scanner->literal_stack);
@@ -869,14 +869,14 @@ static inline bool scan_literal_content(Scanner *scanner, TSLexer *lexer) {
                 return true;
             }
             literal->nesting_depth--;
-            advance(lexer);
+            advance_ruby(lexer);
 
         } else if (lexer->lookahead == literal->open_delimiter) {
             literal->nesting_depth++;
-            advance(lexer);
+            advance_ruby(lexer);
         } else if (literal->allows_interpolation && lexer->lookahead == '#') {
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead == '{') {
                 if (has_content) {
                     lexer->result_symbol = STRING_CONTENT;
@@ -896,22 +896,22 @@ static inline bool scan_literal_content(Scanner *scanner, TSLexer *lexer) {
                 }
                 return false;
             }
-            advance(lexer);
-            advance(lexer);
+            advance_ruby(lexer);
+            advance_ruby(lexer);
 
         } else if (lexer->eof(lexer)) {
-            advance(lexer);
+            advance_ruby(lexer);
             lexer->mark_end(lexer);
             return false;
         } else {
-            advance(lexer);
+            advance_ruby(lexer);
         }
 
         has_content = true;
     }
 }
 
-static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static inline bool scan_ruby(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     scanner->has_leading_whitespace = false;
 
     // Contents of literals, which match any character except for some close delimiter
@@ -936,7 +936,7 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
     switch (lexer->lookahead) {
         case '&':
             if (valid_symbols[BLOCK_AMPERSAND]) {
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead != '&' && lexer->lookahead != '.' && lexer->lookahead != '=' &&
                     !iswspace(lexer->lookahead)) {
                     lexer->result_symbol = BLOCK_AMPERSAND;
@@ -948,9 +948,9 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
 
         case '<':
             if (valid_symbols[SINGLETON_CLASS_LEFT_ANGLE_LEFT_ANGLE]) {
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead == '<') {
-                    advance(lexer);
+                    advance_ruby(lexer);
                     lexer->result_symbol = SINGLETON_CLASS_LEFT_ANGLE_LEFT_ANGLE;
                     return true;
                 }
@@ -961,13 +961,13 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
         case '*':
             if (valid_symbols[SPLAT_STAR] || valid_symbols[BINARY_STAR] || valid_symbols[HASH_SPLAT_STAR_STAR] ||
                 valid_symbols[BINARY_STAR_STAR]) {
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead == '=') {
                     return false;
                 }
                 if (lexer->lookahead == '*') {
                     if (valid_symbols[HASH_SPLAT_STAR_STAR] || valid_symbols[BINARY_STAR_STAR]) {
-                        advance(lexer);
+                        advance_ruby(lexer);
                         if (lexer->lookahead == '=') {
                             return false;
                         }
@@ -1013,7 +1013,7 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
 
         case '-':
             if (valid_symbols[UNARY_MINUS] || valid_symbols[UNARY_MINUS_NUM] || valid_symbols[BINARY_MINUS]) {
-                advance(lexer);
+                advance_ruby(lexer);
                 if (lexer->lookahead != '=' && lexer->lookahead != '>') {
                     if (valid_symbols[UNARY_MINUS_NUM] &&
                         (!valid_symbols[BINARY_STAR] || scanner->has_leading_whitespace) &&
@@ -1039,11 +1039,11 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
                 Literal literal = {0};
                 literal.type = SYMBOL_START;
                 literal.nesting_depth = 1;
-                advance(lexer);
+                advance_ruby(lexer);
 
                 switch (lexer->lookahead) {
                     case '"':
-                        advance(lexer);
+                        advance_ruby(lexer);
                         literal.open_delimiter = '"';
                         literal.close_delimiter = '"';
                         literal.allows_interpolation = true;
@@ -1052,7 +1052,7 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
                         return true;
 
                     case '\'':
-                        advance(lexer);
+                        advance_ruby(lexer);
                         literal.open_delimiter = '\'';
                         literal.close_delimiter = '\'';
                         literal.allows_interpolation = false;
@@ -1077,7 +1077,7 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
             // * an arbitrary expression is not valid at the current position.
             if (valid_symbols[ELEMENT_REFERENCE_BRACKET] &&
                 (!scanner->has_leading_whitespace || !valid_symbols[STRING_START])) {
-                advance(lexer);
+                advance_ruby(lexer);
                 lexer->result_symbol = ELEMENT_REFERENCE_BRACKET;
                 return true;
             }
@@ -1099,18 +1099,18 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
                 word[index] = (char)lexer->lookahead;
             }
             index++;
-            advance(lexer);
+            advance_ruby(lexer);
         }
 
         if (valid_symbols[HASH_KEY_SYMBOL] && lexer->lookahead == ':') {
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead != ':') {
                 lexer->result_symbol = HASH_KEY_SYMBOL;
                 return true;
             }
         } else if (valid_symbols[validIdentifierSymbol] && lexer->lookahead == '!') {
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead != '=') {
                 lexer->result_symbol = validIdentifierSymbol;
                 return true;
@@ -1126,15 +1126,15 @@ static inline bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
         literal.nesting_depth = 1;
 
         if (lexer->lookahead == '<') {
-            advance(lexer);
+            advance_ruby(lexer);
             if (lexer->lookahead != '<') {
                 return false;
             }
-            advance(lexer);
+            advance_ruby(lexer);
 
             Heredoc heredoc = {0};
             if (lexer->lookahead == '-' || lexer->lookahead == '~') {
-                advance(lexer);
+                advance_ruby(lexer);
                 heredoc.end_word_indentation_allowed = true;
             }
 
@@ -1166,17 +1166,17 @@ void *tree_sitter_ruby_external_scanner_create() {
 
 bool tree_sitter_ruby_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_ruby(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_ruby_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    return serialize(scanner, buffer);
+    return serialize_ruby(scanner, buffer);
 }
 
 void tree_sitter_ruby_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
-    deserialize(scanner, buffer, length);
+    deserialize_ruby(scanner, buffer, length);
 }
 
 void tree_sitter_ruby_external_scanner_destroy(void *payload) {

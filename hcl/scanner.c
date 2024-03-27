@@ -116,9 +116,9 @@ typedef struct {
     context_vec context_stack;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_hcl(TSLexer *lexer) { lexer->advance_hcl(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_hcl(TSLexer *lexer) { lexer->advance_hcl(lexer, true); }
 
 static unsigned serialize_hcl(Scanner *scanner, char *buf) {
     unsigned size = 0;
@@ -181,26 +181,26 @@ static inline bool accept_inplace(TSLexer *lexer, enum TokenType token) {
     return true;
 }
 
-static inline bool accept_and_advance(TSLexer *lexer, enum TokenType token) {
-    advance(lexer);
+static inline bool accept_and_advance_hcl(TSLexer *lexer, enum TokenType token) {
+    advance_hcl(lexer);
     return accept_inplace(lexer, token);
 }
 
 static inline bool consume_wxdigit(TSLexer *lexer) {
-    advance(lexer);
+    advance_hcl(lexer);
     return iswxdigit(lexer->lookahead);
 }
 
 static inline bool skip_comment(TSLexer *lexer) {
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_hcl(lexer);
     }
     if (lexer->lookahead != '#') {
         return false;
     }
-    skip(lexer);
+    skip_hcl(lexer);
     while (lexer->lookahead != '\n') {
-        skip(lexer);
+        skip_hcl(lexer);
         if (lexer->eof(lexer)) {
             return false;
         }
@@ -235,7 +235,7 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
         if (lexer->lookahead == '\n') {
             has_leading_whitespace_with_newline = true;
         }
-        skip(lexer);
+        skip_hcl(lexer);
     }
     if (lexer->lookahead == '\0') {
         return false;
@@ -246,63 +246,63 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
         ctx.type = QUOTED_TEMPLATE;
         ctx.heredoc_identifier = string_new();
         VEC_PUSH(scanner->context_stack, ctx);
-        return accept_and_advance(lexer, QUOTED_TEMPLATE_START);
+        return accept_and_advance_hcl(lexer, QUOTED_TEMPLATE_START);
     }
     if (valid_symbols[QUOTED_TEMPLATE_END] && in_quoted_context(scanner) && lexer->lookahead == '"') {
         VEC_POP(scanner->context_stack);
-        return accept_and_advance(lexer, QUOTED_TEMPLATE_END);
+        return accept_and_advance_hcl(lexer, QUOTED_TEMPLATE_END);
     }
 
     // manage template interpolations
     if (valid_symbols[TEMPLATE_INTERPOLATION_START] && valid_symbols[TEMPLATE_LITERAL_CHUNK] &&
         !in_interpolation_context(scanner) && lexer->lookahead == '$') {
-        advance(lexer);
+        advance_hcl(lexer);
         if (lexer->lookahead == '{') {
             Context ctx;
             ctx.type = TEMPLATE_INTERPOLATION;
             ctx.heredoc_identifier = string_new();
             VEC_PUSH(scanner->context_stack, ctx);
-            return accept_and_advance(lexer, TEMPLATE_INTERPOLATION_START);
+            return accept_and_advance_hcl(lexer, TEMPLATE_INTERPOLATION_START);
         }
         // try to scan escape sequence
         if (lexer->lookahead == '$') {
-            advance(lexer);
+            advance_hcl(lexer);
             if (lexer->lookahead == '{') {
                 // $${
-                return accept_and_advance(lexer, TEMPLATE_LITERAL_CHUNK);
+                return accept_and_advance_hcl(lexer, TEMPLATE_LITERAL_CHUNK);
             }
         }
         return accept_inplace(lexer, TEMPLATE_LITERAL_CHUNK);
     }
     if (valid_symbols[TEMPLATE_INTERPOLATION_END] && in_interpolation_context(scanner) && lexer->lookahead == '}') {
         VEC_POP(scanner->context_stack);
-        return accept_and_advance(lexer, TEMPLATE_INTERPOLATION_END);
+        return accept_and_advance_hcl(lexer, TEMPLATE_INTERPOLATION_END);
     }
 
     // manage template directives
     if (valid_symbols[TEMPLATE_DIRECTIVE_START] && valid_symbols[TEMPLATE_LITERAL_CHUNK] &&
         !in_directive_context(scanner) && lexer->lookahead == '%') {
-        advance(lexer);
+        advance_hcl(lexer);
         if (lexer->lookahead == '{') {
             Context ctx;
             ctx.type = TEMPLATE_DIRECTIVE;
             ctx.heredoc_identifier = string_new();
             VEC_PUSH(scanner->context_stack, ctx);
-            return accept_and_advance(lexer, TEMPLATE_DIRECTIVE_START);
+            return accept_and_advance_hcl(lexer, TEMPLATE_DIRECTIVE_START);
         }
         // try to scan escape sequence
         if (lexer->lookahead == '%') {
-            advance(lexer);
+            advance_hcl(lexer);
             if (lexer->lookahead == '{') {
                 // $${
-                return accept_and_advance(lexer, TEMPLATE_LITERAL_CHUNK);
+                return accept_and_advance_hcl(lexer, TEMPLATE_LITERAL_CHUNK);
             }
         }
         return accept_inplace(lexer, TEMPLATE_LITERAL_CHUNK);
     }
     if (valid_symbols[TEMPLATE_DIRECTIVE_END] && in_directive_context(scanner) && lexer->lookahead == '}') {
         VEC_POP(scanner->context_stack);
-        return accept_and_advance(lexer, TEMPLATE_DIRECTIVE_END);
+        return accept_and_advance_hcl(lexer, TEMPLATE_DIRECTIVE_END);
     }
 
     // manage heredoc context
@@ -311,7 +311,7 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
         // TODO: check that this is a valid identifier
         while (iswalnum(lexer->lookahead) || lexer->lookahead == '_' || lexer->lookahead == '-') {
             STRING_PUSH(identifier, lexer->lookahead);
-            advance(lexer);
+            advance_hcl(lexer);
         }
         Context ctx;
         ctx.type = HEREDOC_TEMPLATE;
@@ -324,7 +324,7 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
 
         for (size_t i = 0; i < expected_identifier.len; i++) {
             if (lexer->lookahead == expected_identifier.data[i]) {
-                advance(lexer);
+                advance_hcl(lexer);
             } else {
                 return accept_inplace(lexer, TEMPLATE_LITERAL_CHUNK);
             }
@@ -332,13 +332,13 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
         // check if the identifier is on a line of its own
         lexer->mark_end(lexer);
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\n') {
-            advance(lexer);
+            advance_hcl(lexer);
         }
         if (lexer->lookahead == '\n') {
             VEC_POP(scanner->context_stack);
             return accept_inplace(lexer, HEREDOC_IDENTIFIER);
         }
-        advance(lexer);
+        advance_hcl(lexer);
         lexer->mark_end(lexer);
         return accept_inplace(lexer, TEMPLATE_LITERAL_CHUNK);
     }
@@ -350,28 +350,28 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
     if (valid_symbols[TEMPLATE_LITERAL_CHUNK] && in_quoted_context(scanner)) {
         switch (lexer->lookahead) {
             case '\\':
-                advance(lexer);
+                advance_hcl(lexer);
                 switch (lexer->lookahead) {
                     case '"':
                     case 'n':
                     case 'r':
                     case 't':
                     case '\\':
-                        return accept_and_advance(lexer, TEMPLATE_LITERAL_CHUNK);
+                        return accept_and_advance_hcl(lexer, TEMPLATE_LITERAL_CHUNK);
                     case 'u':
                         for (int i = 0; i < 4; i++) {
                             if (!consume_wxdigit(lexer)) {
                                 return false;
                             }
                         }
-                        return accept_and_advance(lexer, TEMPLATE_LITERAL_CHUNK);
+                        return accept_and_advance_hcl(lexer, TEMPLATE_LITERAL_CHUNK);
                     case 'U':
                         for (int i = 0; i < 8; i++) {
                             if (!consume_wxdigit(lexer)) {
                                 return false;
                             }
                         }
-                        return accept_and_advance(lexer, TEMPLATE_LITERAL_CHUNK);
+                        return accept_and_advance_hcl(lexer, TEMPLATE_LITERAL_CHUNK);
                     default:
                         return false;
                 }
@@ -380,7 +380,7 @@ static bool scan_hcl(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols
 
     // handle all other quoted template or string literal characters
     if (valid_symbols[TEMPLATE_LITERAL_CHUNK] && in_template_context(scanner)) {
-        return accept_and_advance(lexer, TEMPLATE_LITERAL_CHUNK);
+        return accept_and_advance_hcl(lexer, TEMPLATE_LITERAL_CHUNK);
     }
 
     // probably not handled by the external scanner

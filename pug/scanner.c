@@ -54,9 +54,9 @@ typedef struct {
     indent_vec indents;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_pug(TSLexer *lexer) { lexer->advance_pug(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_pug(TSLexer *lexer) { lexer->advance_pug(lexer, true); }
 
 unsigned tree_sitter_pug_external_scanner_serialize(void *payload,
                                                     char *buffer) {
@@ -100,7 +100,7 @@ bool tree_sitter_pug_external_scanner_scan(void *payload, TSLexer *lexer,
     Scanner *scanner = (Scanner *)payload;
     if (lexer->lookahead == '\n') {
         if (valid_symbols[NEWLINE]) {
-            skip(lexer);
+            skip_pug(lexer);
             lexer->result_symbol = NEWLINE;
             return true;
         }
@@ -116,10 +116,10 @@ bool tree_sitter_pug_external_scanner_scan(void *payload, TSLexer *lexer,
         for (;;) {
             if (lexer->lookahead == ' ') {
                 indent_length++;
-                skip(lexer);
+                skip_pug(lexer);
             } else if (lexer->lookahead == '\t') {
                 indent_length += 8;
-                skip(lexer);
+                skip_pug(lexer);
             } else {
                 break;
             }

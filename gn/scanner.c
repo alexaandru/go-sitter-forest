@@ -4,7 +4,7 @@
 
 enum TokenType { STRING_CONTENT };
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_gn(TSLexer *lexer) { lexer->advance_gn(lexer, false); }
 
 void *tree_sitter_gn_external_scanner_create() { return NULL; }
 
@@ -20,23 +20,23 @@ bool tree_sitter_gn_external_scanner_scan(void *payload, TSLexer *lexer, const b
                     return false;
                 case '\\':
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_gn(lexer);
                     if (lexer->lookahead == '\"' || lexer->lookahead == '$' || lexer->lookahead == '\\') {
                         lexer->result_symbol = STRING_CONTENT;
                         return did_advance;
                     }
                     did_advance = true;
-                    advance(lexer);
+                    advance_gn(lexer);
                     break;
                 case '$':
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_gn(lexer);
                     if (lexer->lookahead == '{' || isalpha(lexer->lookahead) || lexer->lookahead == '_') {
                         lexer->result_symbol = STRING_CONTENT;
                         return did_advance;
                     }
                     did_advance = true;
-                    advance(lexer);
+                    advance_gn(lexer);
                     break;
                 case '\"':
                     lexer->mark_end(lexer);
@@ -44,7 +44,7 @@ bool tree_sitter_gn_external_scanner_scan(void *payload, TSLexer *lexer, const b
                     return did_advance;
                 default:
                     did_advance = true;
-                    advance(lexer);
+                    advance_gn(lexer);
             }
         }
     }

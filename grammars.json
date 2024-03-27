@@ -1359,12 +1359,11 @@
   {
     "language": "nim",
     "url": "https://github.com/alaviss/tree-sitter-nim",
-    "doc": "high memory usage, must be compiled on its own",
+    "doc": "high (7GB) memory usage",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@aMOPel",
-    "skip": true,
     "grammarSha": "e4d4285b41b99c749866c57170b7a51cb01df519cabdf5c187f3fe8b9cb932de",
     "reference": "main",
     "revision": "f5cec6a841b585e4e7388a120ded07e60ae19c43"
@@ -2276,7 +2275,7 @@
     "maintainedBy": "@Freed-Wu",
     "grammarSha": "c8c779eb2c4f2b7ad93ac909c3cc86a7f882442a16ad9fc1318509dfd3339574",
     "reference": "main",
-    "revision": "7cb35fc925cad06992e57672a027d4971ee935a7"
+    "revision": "7499587642a46ee156e1bb58851904ac750dcc7c"
   },
   {
     "language": "todotxt",

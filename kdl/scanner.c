@@ -12,30 +12,30 @@ unsigned tree_sitter_kdl_external_scanner_serialize(void *payload, char *buffer)
 
 void tree_sitter_kdl_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_kdl(TSLexer *lexer) { lexer->advance_kdl(lexer, false); }
 
 bool tree_sitter_kdl_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     // check for End-of-file
     if (valid_symbols[_EOF] && lexer->lookahead == 0) {
         lexer->result_symbol = _EOF;
-        advance(lexer);
+        advance_kdl(lexer);
         return true;
     }
 
     if (valid_symbols[_RAW_STRING] && lexer->lookahead == 'r') {
-        advance(lexer);
+        advance_kdl(lexer);
 
         unsigned num_hashes = 0;
         while (lexer->lookahead == '#') {
             num_hashes += 1;
-            advance(lexer);
+            advance_kdl(lexer);
         }
 
         if (lexer->lookahead != '"') {
             return false;
         }
 
-        advance(lexer);
+        advance_kdl(lexer);
 
         for (;;) {
             if (lexer->eof(lexer)) {
@@ -44,7 +44,7 @@ bool tree_sitter_kdl_external_scanner_scan(void *payload, TSLexer *lexer, const 
             }
 
             int32_t c = lexer->lookahead;
-            advance(lexer);
+            advance_kdl(lexer);
 
             if (c != '"') {
                 continue;
@@ -61,7 +61,7 @@ bool tree_sitter_kdl_external_scanner_scan(void *payload, TSLexer *lexer, const 
                     break;
                 }
 
-                advance(lexer);
+                advance_kdl(lexer);
 
                 closing_hashes += 1;
             }
@@ -74,10 +74,10 @@ bool tree_sitter_kdl_external_scanner_scan(void *payload, TSLexer *lexer, const 
 
     // multi-line-comment := '/*' commented-block
     if (lexer->lookahead == '/') {
-        advance(lexer);
+        advance_kdl(lexer);
         if (lexer->lookahead != '*')
             return false;
-        advance(lexer);
+        advance_kdl(lexer);
 
         bool after_star = false;
         unsigned nesting_depth = 1;
@@ -88,12 +88,12 @@ bool tree_sitter_kdl_external_scanner_scan(void *payload, TSLexer *lexer, const 
                 case '\0':
                     return false;
                 case '*':
-                    advance(lexer);
+                    advance_kdl(lexer);
                     after_star = true;
                     break;
                 case '/':
                     if (after_star) {
-                        advance(lexer);
+                        advance_kdl(lexer);
                         after_star = false;
                         nesting_depth--;
                         if (nesting_depth == 0) {
@@ -101,16 +101,16 @@ bool tree_sitter_kdl_external_scanner_scan(void *payload, TSLexer *lexer, const 
                             return true;
                         }
                     } else {
-                        advance(lexer);
+                        advance_kdl(lexer);
                         after_star = false;
                         if (lexer->lookahead == '*') {
                             nesting_depth++;
-                            advance(lexer);
+                            advance_kdl(lexer);
                         }
                     }
                     break;
                 default:
-                    advance(lexer);
+                    advance_kdl(lexer);
                     after_star = false;
                     break;
             }

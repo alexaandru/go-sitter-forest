@@ -270,7 +270,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.6
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.5
 	github.com/alexaandru/go-sitter-forest/zig v1.5.5
-	github.com/alexaandru/go-tree-sitter-bare v1.1.0
+	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/sync v0.6.0
 )
 

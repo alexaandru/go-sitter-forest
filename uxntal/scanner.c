@@ -18,13 +18,13 @@ void tree_sitter_uxntal_external_scanner_deserialize(void *payload,
                                                      const char *buffer,
                                                      unsigned length) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_uxntal(TSLexer *lexer) { lexer->advance_uxntal(lexer, false); }
 
 bool tree_sitter_uxntal_external_scanner_scan(void *payload, TSLexer *lexer,
                                               const bool *valid_symbols) {
     bool is_in_string = false;
     while (iswspace(lexer->lookahead)) {
-        advance(lexer);
+        advance_uxntal(lexer);
     }
 
     if (lexer->lookahead == '"') {
@@ -32,7 +32,7 @@ bool tree_sitter_uxntal_external_scanner_scan(void *payload, TSLexer *lexer,
     }
 
     if (lexer->lookahead == '(' && !is_in_string) {
-        advance(lexer);
+        advance_uxntal(lexer);
 
         unsigned nesting_depth = 1;
         for (;;) {
@@ -40,11 +40,11 @@ bool tree_sitter_uxntal_external_scanner_scan(void *payload, TSLexer *lexer,
                 case '\0':
                     return false;
                 case '(':
-                    advance(lexer);
+                    advance_uxntal(lexer);
                     nesting_depth++;
                     break;
                 case ')':
-                    advance(lexer);
+                    advance_uxntal(lexer);
                     nesting_depth--;
                     if (nesting_depth == 0) {
                         lexer->result_symbol = COMMENT;
@@ -52,7 +52,7 @@ bool tree_sitter_uxntal_external_scanner_scan(void *payload, TSLexer *lexer,
                     }
                     break;
                 default:
-                    advance(lexer);
+                    advance_uxntal(lexer);
                     break;
             }
         }

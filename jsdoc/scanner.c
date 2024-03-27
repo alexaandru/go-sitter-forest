@@ -31,7 +31,7 @@ static bool scan_for_type(TSLexer *lexer) {
         return false;
       default:;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_jsdoc(lexer, false);
   }
 }
 

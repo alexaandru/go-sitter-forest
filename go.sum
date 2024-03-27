@@ -532,7 +532,7 @@ github.com/alexaandru/go-sitter-forest/zathurarc v1.5.5 h1:9hNpIQhsQC7vbccxJLcwi
 github.com/alexaandru/go-sitter-forest/zathurarc v1.5.5/go.mod h1:/Y4D3aEtdPeZnCggcptMsuAvVd7iEyfB0HQZ2ClDfXE=
 github.com/alexaandru/go-sitter-forest/zig v1.5.5 h1:/KHglJaWY1m6XqY8gT1heBXvnSdDH2viCTxTmoQ3ses=
 github.com/alexaandru/go-sitter-forest/zig v1.5.5/go.mod h1:076tO8HMlYNjZPjtj1eSUo6dKvaw6Ze4nhKSPZFweDE=
-github.com/alexaandru/go-tree-sitter-bare v1.1.0 h1:9lIu0YxNIdsiI5Kli4qCVkTQW2wTZjiKD3JqMI5hxeA=
-github.com/alexaandru/go-tree-sitter-bare v1.1.0/go.mod h1:PTUvlXZbRX3x0NbgFgkL8TSwdce2d1ST7yUYotifxLk=
+github.com/alexaandru/go-tree-sitter-bare v1.1.1 h1:2UtaDczLIqcTGTV9VU3w/GgC6iKgNr6uPtgM+IXN0lQ=
+github.com/alexaandru/go-tree-sitter-bare v1.1.1/go.mod h1:PTUvlXZbRX3x0NbgFgkL8TSwdce2d1ST7yUYotifxLk=
 golang.org/x/sync v0.6.0 h1:5BMeUDZ7vkXGfEr1x9B4bRcTH4lpkTkpdh0T/J+qjbQ=
 golang.org/x/sync v0.6.0/go.mod h1:Czt+wKu1gCyEFDUtn0jG5QVvpJ6rzVqr5aXyt9drQfk=

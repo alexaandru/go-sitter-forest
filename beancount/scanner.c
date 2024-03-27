@@ -106,12 +106,12 @@ void deserialize_beancount(Scanner *scanner, const char *buffer, unsigned length
     }
 }
 
-void advance(TSLexer *lexer) {
-    lexer->advance(lexer, false);
+void advance_beancount(TSLexer *lexer) {
+    lexer->advance_beancount(lexer, false);
 }
 
-void skip(TSLexer *lexer) {
-    lexer->advance(lexer, true);
+void skip_beancount(TSLexer *lexer) {
+    lexer->advance_beancount(lexer, true);
 }
 
 static bool in_error_recovery(const bool *valid_symbols) {
@@ -146,16 +146,16 @@ bool scan_beancount(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols)
         } else {
             break;
         }
-        skip(lexer);
+        skip_beancount(lexer);
     }
 
     if (indent_length == 0 && lexer->lookahead == '*') {
         lexer->mark_end(lexer);
         int16_t stars = 1;
-        skip(lexer);
+        skip_beancount(lexer);
         while (lexer->lookahead == '*') {
             stars++;
-            skip(lexer);
+            skip_beancount(lexer);
         }
 
         if (valid_symbols[SECTIONEND] && iswspace(lexer->lookahead) && stars > 0

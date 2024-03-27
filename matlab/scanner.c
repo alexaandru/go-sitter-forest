@@ -59,15 +59,15 @@ static const char* const keywords[] = {
 };
 
 static inline void
-advance(TSLexer* lexer)
+advance_matlab(TSLexer* lexer)
 {
-    lexer->advance(lexer, false);
+    lexer->advance_matlab(lexer, false);
 }
 
 static inline void
-skip(TSLexer* lexer)
+skip_matlab(TSLexer* lexer)
 {
-    lexer->advance(lexer, true);
+    lexer->advance_matlab(lexer, true);
 }
 
 static inline bool
@@ -76,7 +76,7 @@ consume_char(char chr, TSLexer* lexer)
     if (lexer->lookahead != chr) {
         return false;
     }
-    advance(lexer);
+    advance_matlab(lexer);
     return true;
 }
 
@@ -114,14 +114,14 @@ consume_identifier(TSLexer* lexer, char* buffer)
     size_t size = 0;
     if (is_identifier(lexer->lookahead, true)) {
         buffer[size] = (char)lexer->lookahead;
-        advance(lexer);
+        advance_matlab(lexer);
         while (is_identifier(lexer->lookahead, false)) {
             if (size == 255) {
                 buffer[0] = 0;
                 return;
             }
             buffer[++size] = (char)lexer->lookahead;
-            advance(lexer);
+            advance_matlab(lexer);
         }
         return;
     }
@@ -136,7 +136,7 @@ skip_whitespaces(TSLexer* lexer)
         if (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
             skipped = skipped | 2;
         }
-        skip(lexer);
+        skip_matlab(lexer);
         skipped = skipped | 1;
     }
     return skipped;
@@ -146,7 +146,7 @@ static inline void
 consume_whitespaces(TSLexer* lexer)
 {
     while (iswspace(lexer->lookahead)) {
-        advance(lexer);
+        advance_matlab(lexer);
     }
 }
 
@@ -190,7 +190,7 @@ void tree_sitter_matlab_external_scanner_deserialize(void* payload,
 static inline void consume_comment_line(TSLexer* lexer)
 {
     while (lexer->lookahead != '\n' && lexer->lookahead != '\r' && !lexer->eof(lexer)) {
-        advance(lexer);
+        advance_matlab(lexer);
     }
 }
 
@@ -213,7 +213,7 @@ static bool scan_comment(TSLexer* lexer, bool entry_delimiter)
     if (block) {
         while (!lexer->eof(lexer)) {
             consume_comment_line(lexer);
-            advance(lexer);
+            advance_matlab(lexer);
             consume_whitespaces(lexer);
 
             if (consume_char('%', lexer) && consume_char('}', lexer)) {
@@ -230,17 +230,17 @@ static bool scan_comment(TSLexer* lexer, bool entry_delimiter)
         consume_comment_line(lexer);
 
         if (line_continuation) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
 
         lexer->mark_end(lexer);
 
         if (!line_continuation) {
             lexer->result_symbol = COMMENT;
-            advance(lexer);
+            advance_matlab(lexer);
         } else {
             while (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
-                advance(lexer);
+                advance_matlab(lexer);
             }
             lexer->mark_end(lexer);
             lexer->result_symbol = LINE_CONTINUATION;
@@ -249,7 +249,7 @@ static bool scan_comment(TSLexer* lexer, bool entry_delimiter)
         // Merges consecutive comments into one token, unless they are
         // separated by a newline.
         while (!lexer->eof(lexer) && (lexer->lookahead == ' ' || lexer->lookahead == '\t')) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
 
         if (lexer->lookahead == '%') {
@@ -266,17 +266,17 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
 {
     // Special case: shell escape
     if (lexer->lookahead == '!') {
-        advance(lexer);
+        advance_matlab(lexer);
         while (iswspace_matlab(lexer->lookahead)) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
         while (lexer->lookahead != ' ' && lexer->lookahead != '\n' && !lexer->eof(lexer)) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
         lexer->result_symbol = COMMAND_NAME;
         lexer->mark_end(lexer);
         while (iswspace_matlab(lexer->lookahead)) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
         scanner->is_inside_command = lexer->lookahead != '\n';
         scanner->is_shell_scape = scanner->is_inside_command;
@@ -357,7 +357,7 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
     if (ispunct(lexer->lookahead)) {
         // In this case, we advance and look at what comes next too.
         const uint32_t first = lexer->lookahead;
-        advance(lexer);
+        advance_matlab(lexer);
         const uint32_t second = lexer->lookahead;
 
         // If it's the end-of-line, then it's a command.
@@ -393,9 +393,9 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
             // If it is an operator, this can only be a command if there
             // are no further arguments.
             if (is_invalid) {
-                advance(lexer);
+                advance_matlab(lexer);
                 while (iswspace_matlab(lexer->lookahead)) {
-                    advance(lexer);
+                    advance_matlab(lexer);
                 }
                 scanner->is_inside_command = is_eol(lexer->lookahead);
                 return scanner->is_inside_command;
@@ -408,7 +408,7 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
 
         // Now we check for the rest of the operators.
         // Since they have 2 digits, it matters if the next is a space.
-        advance(lexer);
+        advance_matlab(lexer);
 
         if (lexer->lookahead != ' ') {
             scanner->is_inside_command = true;
@@ -453,12 +453,12 @@ static bool scan_command_argument(Scanner* scanner, TSLexer* lexer)
         }
 
         while (lexer->lookahead != ' ' && lexer->lookahead != '\n' && !lexer->eof(lexer)) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
         lexer->result_symbol = COMMAND_ARGUMENT;
         lexer->mark_end(lexer);
         while (iswspace_matlab(lexer->lookahead)) {
-            advance(lexer);
+            advance_matlab(lexer);
         }
         if (lexer->lookahead == '\n') {
             scanner->is_inside_command = false;
@@ -488,7 +488,7 @@ static bool scan_command_argument(Scanner* scanner, TSLexer* lexer)
             lexer->mark_end(lexer);
 
             while (iswspace_matlab(lexer->lookahead)) {
-                advance(lexer);
+                advance_matlab(lexer);
             }
 
             if (is_eol(lexer->lookahead)) {
@@ -513,9 +513,9 @@ static bool scan_command_argument(Scanner* scanner, TSLexer* lexer)
         if ((!quote || (quote && parens != 0)) && lexer->lookahead == '.') {
             lexer->result_symbol = COMMAND_ARGUMENT;
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_matlab(lexer);
             if (lexer->lookahead == '.') {
-                advance(lexer);
+                advance_matlab(lexer);
                 if (lexer->lookahead == '.') {
                     if (consumed) {
                         scanner->line_continuation = true;
@@ -547,7 +547,7 @@ static bool scan_command_argument(Scanner* scanner, TSLexer* lexer)
             quote = !quote;
         }
 
-        advance(lexer);
+        advance_matlab(lexer);
         consumed = true;
     }
 
@@ -567,13 +567,13 @@ static bool scan_string_open(Scanner* scanner, TSLexer* lexer)
     switch (lexer->lookahead) {
     case '"':
         scanner->string_delimiter = '"';
-        advance(lexer);
+        advance_matlab(lexer);
         lexer->result_symbol = DOUBLE_QUOTE_STRING_START;
         lexer->mark_end(lexer);
         return true;
     case '\'':
         scanner->string_delimiter = '\'';
-        advance(lexer);
+        advance_matlab(lexer);
         lexer->result_symbol = SINGLE_QUOTE_STRING_START;
         lexer->mark_end(lexer);
         return true;
@@ -585,9 +585,9 @@ static bool scan_string_open(Scanner* scanner, TSLexer* lexer)
 static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
 {
     if (lexer->lookahead == scanner->string_delimiter) {
-        advance(lexer);
+        advance_matlab(lexer);
         if (lexer->lookahead == scanner->string_delimiter) {
-            advance(lexer);
+            advance_matlab(lexer);
             lexer->result_symbol = STRING_CONTENT;
             goto content;
         }
@@ -607,10 +607,10 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
     }
 
     if (lexer->lookahead == '%') {
-        advance(lexer);
+        advance_matlab(lexer);
 
         if (lexer->lookahead == '%') {
-            advance(lexer);
+            advance_matlab(lexer);
             lexer->result_symbol = FORMATTING_SEQUENCE;
             lexer->mark_end(lexer);
             return true;
@@ -634,14 +634,14 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
 
             for (int i = 0; i < 12; i++) {
                 if (end_tokens[i] == lexer->lookahead) {
-                    advance(lexer);
+                    advance_matlab(lexer);
                     lexer->result_symbol = FORMATTING_SEQUENCE;
                     lexer->mark_end(lexer);
                     return true;
                 }
             }
 
-            advance(lexer);
+            advance_matlab(lexer);
         }
 
         scanner->string_delimiter = 0;
@@ -649,10 +649,10 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
     }
 
     if (lexer->lookahead == '\\') {
-        advance(lexer);
+        advance_matlab(lexer);
 
         if (lexer->lookahead == 'x') {
-            advance(lexer);
+            advance_matlab(lexer);
             while (!lexer->eof(lexer)) {
                 const char* hexa_chars = "1234567890abcdefABCDEF";
                 bool is_valid = false;
@@ -669,13 +669,13 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
                     return true;
                 }
 
-                advance(lexer);
+                advance_matlab(lexer);
             }
         }
 
         if (lexer->lookahead >= '0' && lexer->lookahead <= '7') {
             while (lexer->lookahead >= '0' && lexer->lookahead <= '7' && !lexer->eof(lexer)) {
-                advance(lexer);
+                advance_matlab(lexer);
             }
 
             lexer->result_symbol = ESCAPE_SEQUENCE;
@@ -693,7 +693,7 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
         }
 
         if (is_valid) {
-            advance(lexer);
+            advance_matlab(lexer);
             lexer->result_symbol = ESCAPE_SEQUENCE;
             lexer->mark_end(lexer);
             return true;
@@ -706,11 +706,11 @@ content:
         if (lexer->lookahead == scanner->string_delimiter) {
             lexer->result_symbol = STRING_CONTENT;
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_matlab(lexer);
             if (lexer->lookahead != scanner->string_delimiter) {
                 return true;
             }
-            advance(lexer);
+            advance_matlab(lexer);
             continue;
         }
 
@@ -719,14 +719,14 @@ content:
         if (lexer->lookahead == '%' || lexer->lookahead == '\\') {
             lexer->result_symbol = STRING_CONTENT;
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_matlab(lexer);
             if (lexer->lookahead == scanner->string_delimiter || iswspace_matlab(lexer->lookahead)) {
                 goto content;
             }
             return true;
         }
 
-        advance(lexer);
+        advance_matlab(lexer);
     }
 
     // Mark end of content here and end of string on next call. This is an
@@ -745,18 +745,18 @@ content:
 
 static inline bool scan_multioutput_var_start(TSLexer* lexer)
 {
-    advance(lexer);
+    advance_matlab(lexer);
     lexer->result_symbol = MULTIOUTPUT_VARIABLE_START;
     lexer->mark_end(lexer);
 
     while (!lexer->eof(lexer)) {
         if (consume_char('.', lexer) && consume_char('.', lexer) && consume_char('.', lexer)) {
             consume_comment_line(lexer);
-            advance(lexer);
+            advance_matlab(lexer);
         }
 
         if (lexer->lookahead != ']' && lexer->lookahead != '\n' && lexer->lookahead != '\r') {
-            advance(lexer);
+            advance_matlab(lexer);
         } else {
             break;
         }
@@ -766,14 +766,14 @@ static inline bool scan_multioutput_var_start(TSLexer* lexer)
         return false;
     }
 
-    advance(lexer);
+    advance_matlab(lexer);
 
     while (!lexer->eof(lexer) && iswspace_matlab(lexer->lookahead)) {
-        advance(lexer);
+        advance_matlab(lexer);
     }
 
     if (lexer->lookahead == '=') {
-        advance(lexer);
+        advance_matlab(lexer);
         if (lexer->lookahead != '=') {
             return true;
         }
@@ -792,15 +792,15 @@ static bool scan_entry_delimiter(TSLexer* lexer, int skipped)
     }
 
     if (lexer->lookahead == ',') {
-        advance(lexer);
+        advance_matlab(lexer);
         lexer->mark_end(lexer);
         lexer->result_symbol = ENTRY_DELIMITER;
         return true;
     }
 
     if (lexer->lookahead == '.') {
-        advance(lexer);
-        advance(lexer);
+        advance_matlab(lexer);
+        advance_matlab(lexer);
         return isdigit(lexer->lookahead);
     }
 
@@ -823,14 +823,14 @@ static bool scan_entry_delimiter(TSLexer* lexer, int skipped)
     }
 
     if (lexer->lookahead == '~') {
-        advance(lexer);
+        advance_matlab(lexer);
         return lexer->lookahead != '=';
     }
 
     const char maybe_end[] = { '+', '-' };
     for (int i = 0; i < sizeof(maybe_end); i++) {
         if (maybe_end[i] == lexer->lookahead) {
-            advance(lexer);
+            advance_matlab(lexer);
             if (lexer->lookahead == ' ') {
                 return false;
             }

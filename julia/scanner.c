@@ -84,13 +84,13 @@ static void deserialize_stack(Stack *stack, const char *buffer, unsigned len) {
 
 // Scanner functions
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_julia(TSLexer *lexer) { lexer->advance_julia(lexer, false); }
 
 static void mark_end(TSLexer *lexer) { lexer->mark_end(lexer); }
 
 static bool scan_string_start(TSLexer *lexer, Stack *stack, char start_char) {
   if (lexer->lookahead != start_char) return false;
-  advance(lexer);
+  advance_julia(lexer);
   mark_end(lexer);
   for (unsigned count = 1; count < 3; count++) {
     if (lexer->lookahead != start_char) {
@@ -98,7 +98,7 @@ static bool scan_string_start(TSLexer *lexer, Stack *stack, char start_char) {
       push(stack, start_char, false);
       return true;
     }
-    advance(lexer);
+    advance_julia(lexer);
   }
   mark_end(lexer);
   push(stack, start_char, true);
@@ -129,7 +129,7 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack, bool interp) {
       if (is_triple) {
         mark_end(lexer);
         for (unsigned count = 1; count < 3; count++) {
-          advance(lexer);
+          advance_julia(lexer);
           if (lexer->lookahead != end_char) {
             mark_end(lexer);
             lexer->result_symbol = end_content;
@@ -141,13 +141,13 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack, bool interp) {
         lexer->result_symbol = end_content;
       } else {
         pop(stack);
-        advance(lexer);
+        advance_julia(lexer);
         mark_end(lexer);
         lexer->result_symbol = end_symbol;
       }
       return true;
     }
-    advance(lexer);
+    advance_julia(lexer);
     has_content = true;
   }
   return false;
@@ -155,20 +155,20 @@ static bool scan_string_content(TSLexer *lexer, Stack *stack, bool interp) {
 
 static bool scan_block_comment(TSLexer *lexer) {
   if (lexer->lookahead != '#') return false;
-  advance(lexer);
+  advance_julia(lexer);
   if (lexer->lookahead != '=') return false;
-  advance(lexer);
+  advance_julia(lexer);
 
   bool after_eq = false;
   unsigned nesting_depth = 1;
   for (;;) {
     switch (lexer->lookahead) {
       case '=':
-        advance(lexer);
+        advance_julia(lexer);
         after_eq = true;
         break;
       case '#':
-        advance(lexer);
+        advance_julia(lexer);
         if (after_eq) {
           after_eq = false;
           nesting_depth--;
@@ -180,14 +180,14 @@ static bool scan_block_comment(TSLexer *lexer) {
           after_eq = false;
           if (lexer->lookahead == '=') {
             nesting_depth++;
-            advance(lexer);
+            advance_julia(lexer);
           }
         }
         break;
       case '\0':
         return false;
       default:
-        advance(lexer);
+        advance_julia(lexer);
         after_eq = false;
         break;
     }
@@ -235,7 +235,7 @@ bool tree_sitter_julia_external_scanner_scan(
 
   // Ignore whitespace
   while (iswspace(lexer->lookahead)) {
-    lexer->advance(lexer, true);
+    lexer->advance_julia(lexer, true);
   }
 
   if (valid_symbols[STRING_START] && scan_string_start(lexer, payload, '"')) {

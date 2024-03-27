@@ -9,9 +9,9 @@ enum TokenType {
   MULTI_RAW_BYTES_CONTENT,
 };
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_cue(TSLexer *lexer) { lexer->advance_cue(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_cue(TSLexer *lexer) { lexer->advance_cue(lexer, true); }
 
 static bool scan_multiline(TSLexer *lexer, int c) {
   bool has_content = false;
@@ -26,9 +26,9 @@ static bool scan_multiline(TSLexer *lexer, int c) {
     case '\'':
     case '"':
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_cue(lexer);
       if (lexer->lookahead == c) {
-        advance(lexer);
+        advance_cue(lexer);
         if (lexer->lookahead == c) {
           if (has_content) {
             return true;
@@ -40,7 +40,7 @@ static bool scan_multiline(TSLexer *lexer, int c) {
       break;
     case '\\':
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_cue(lexer);
       if (lexer->lookahead == '(') {
         if (has_content) {
           return true;
@@ -49,7 +49,7 @@ static bool scan_multiline(TSLexer *lexer, int c) {
         }
       } else {
         // FIXME: Accept anything after '\'
-        advance(lexer);
+        advance_cue(lexer);
       }
       has_content = true;
       break;
@@ -57,11 +57,11 @@ static bool scan_multiline(TSLexer *lexer, int c) {
       if (lexer->eof(lexer)) {
         return false;
       }
-      advance(lexer);
+      advance_cue(lexer);
       has_content = true;
       break;
     default:
-      advance(lexer);
+      advance_cue(lexer);
       has_content = true;
       break;
     }
@@ -81,11 +81,11 @@ static bool scan_raw_multiline(TSLexer *lexer, int c) {
     case '\'':
     case '"':
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_cue(lexer);
       if (lexer->lookahead == c) {
-        advance(lexer);
+        advance_cue(lexer);
         if (lexer->lookahead == c) {
-          advance(lexer);
+          advance_cue(lexer);
           if (lexer->lookahead == '#') {
             if (has_content) {
               return true;
@@ -98,9 +98,9 @@ static bool scan_raw_multiline(TSLexer *lexer, int c) {
       break;
     case '\\':
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_cue(lexer);
       if (lexer->lookahead == '#') {
-        advance(lexer);
+        advance_cue(lexer);
         if (lexer->lookahead == '(') {
           if (has_content) {
             return true;
@@ -115,11 +115,11 @@ static bool scan_raw_multiline(TSLexer *lexer, int c) {
       if (lexer->eof(lexer)) {
         return false;
       }
-      advance(lexer);
+      advance_cue(lexer);
       has_content = true;
       break;
     default:
-      advance(lexer);
+      advance_cue(lexer);
       has_content = true;
       break;
     }
@@ -139,7 +139,7 @@ static bool scan_raw(TSLexer *lexer, int c) {
     case '\'':
     case '"':
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_cue(lexer);
       if (lexer->lookahead == '#') {
         if (has_content) {
           return true;
@@ -150,9 +150,9 @@ static bool scan_raw(TSLexer *lexer, int c) {
       break;
     case '\\':
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_cue(lexer);
       if (lexer->lookahead == '#') {
-        advance(lexer);
+        advance_cue(lexer);
         if (lexer->lookahead == '(') {
           if (has_content) {
             return true;
@@ -161,7 +161,7 @@ static bool scan_raw(TSLexer *lexer, int c) {
           }
         }
       } else {
-        advance(lexer);
+        advance_cue(lexer);
       }
       has_content = true;
       break;
@@ -169,18 +169,18 @@ static bool scan_raw(TSLexer *lexer, int c) {
       if (lexer->eof(lexer)) {
         return false;
       }
-      advance(lexer);
+      advance_cue(lexer);
       has_content = true;
       break;
     default:
-      advance(lexer);
+      advance_cue(lexer);
       has_content = true;
       break;
     }
   }
 }
 
-static bool scan(TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_cue(TSLexer *lexer, const bool *valid_symbols) {
   if (valid_symbols[MULTI_STR_CONTENT]) {
     return scan_multiline(lexer, '"');
   } else if (valid_symbols[MULTI_BYTES_CONTENT]) {
@@ -206,7 +206,7 @@ void *tree_sitter_cue_external_scanner_create() { return NULL; }
 
 bool tree_sitter_cue_external_scanner_scan(void *payload, TSLexer *lexer,
                                            const bool *valid_symbols) {
-  return scan(lexer, valid_symbols);
+  return scan_cue(lexer, valid_symbols);
 }
 
 unsigned tree_sitter_cue_external_scanner_serialize(void *payload,

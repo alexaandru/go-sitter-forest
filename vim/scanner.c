@@ -107,11 +107,11 @@ void tree_sitter_vim_external_scanner_deserialize(void *payload,
   }
 }
 
-static void advance(TSLexer *lexer, bool skip) { lexer->advance(lexer, skip); }
+static void advance_vim(TSLexer *lexer, bool skip) { lexer->advance_vim(lexer, skip); }
 
 static void skip_space_tabs(TSLexer *lexer) {
   while (IS_SPACE_TABS(lexer->lookahead)) {
-    advance(lexer, true);
+    advance_vim(lexer, true);
   }
 }
 
@@ -119,7 +119,7 @@ static bool check_prefix(TSLexer *lexer, char *prefix, unsigned int prefix_len,
                   enum TokenType token) {
   for (unsigned int i = 0; i < prefix_len; i++) {
     if (lexer->lookahead == prefix[i]) {
-      advance(lexer, false);
+      advance_vim(lexer, false);
     } else {
       return false;
     }
@@ -143,7 +143,7 @@ static bool try_lex_heredoc_marker(Scanner *scanner, TSLexer *lexer, const bool 
   while ((!is_let_heredoc || !IS_SPACE_TABS(lexer->lookahead)) && lexer->lookahead && lexer->lookahead != '\n' && marker_len < HEREDOC_MARKER_LEN) {
     marker[marker_len] = lexer->lookahead;
     marker_len++;
-    advance(lexer, false);
+    advance_vim(lexer, false);
   }
 
   if (marker_len == HEREDOC_MARKER_LEN || marker_len == 0) {
@@ -165,9 +165,9 @@ static bool lex_literal_string(TSLexer *lexer) {
   while (true) {
     if(lexer->lookahead == '\'') {
       // Maybe end of string, but not sure, it could be double quote
-      advance(lexer, false);
+      advance_vim(lexer, false);
       if (lexer->lookahead == '\'') {
-        advance(lexer, false);
+        advance_vim(lexer, false);
       } else {
         lexer->result_symbol = STRING;
         lexer->mark_end(lexer);
@@ -176,7 +176,7 @@ static bool lex_literal_string(TSLexer *lexer) {
     } else if (lexer->lookahead == '\n') {
       // Not sure at this point, look after that if there's not a \\ character
       lexer->mark_end(lexer);
-      advance(lexer, true);
+      advance_vim(lexer, true);
       skip_space_tabs(lexer);
       if (lexer->lookahead != '\\') {
         // Was an invalid end...
@@ -185,7 +185,7 @@ static bool lex_literal_string(TSLexer *lexer) {
     } else if (lexer->lookahead == '\0') {
       return false;
     } else {
-      advance(lexer, false);
+      advance_vim(lexer, false);
     }
   }
 }
@@ -194,17 +194,17 @@ static bool lex_literal_string(TSLexer *lexer) {
 static bool lex_escapable_string(TSLexer *lexer) {
   while (true) {
     if (lexer->lookahead == '\\') {
-      advance(lexer, false);
-      advance(lexer, false);
+      advance_vim(lexer, false);
+      advance_vim(lexer, false);
     } else if (lexer->lookahead == '"') {
-      advance(lexer, false);
+      advance_vim(lexer, false);
       lexer->mark_end(lexer);
       lexer->result_symbol = STRING;
       return true;
     } else if (lexer->lookahead == '\n') {
       // Not sure at this point, look after that if there's not a \\ character
       lexer->mark_end(lexer);
-      advance(lexer, false);
+      advance_vim(lexer, false);
       skip_space_tabs(lexer);
       if (lexer->lookahead != '\\') {
         // Was a comment...
@@ -215,7 +215,7 @@ static bool lex_escapable_string(TSLexer *lexer) {
     } else if (lexer->lookahead == '\0') {
       return false;
     } else {
-      advance(lexer, false);
+      advance_vim(lexer, false);
     }
   }
 }
@@ -228,7 +228,7 @@ static bool lex_string(TSLexer *lexer) {
   }
 
   string_delim = lexer->lookahead;
-  advance(lexer, false);
+  advance_vim(lexer, false);
 
   switch (string_delim) {
     case '"':
@@ -285,23 +285,23 @@ static bool lex_scope(TSLexer *lexer) {
   }
 
   if (lexer->lookahead == '<') {
-    advance(lexer, false);
+    advance_vim(lexer, false);
     const char sid[4 + 1] = "SID>";
     for (size_t i = 0; sid[i] && lexer->lookahead; i++) {
       if (lexer->lookahead != sid[i]) {
         return false;
       }
-      advance(lexer, false);
+      advance_vim(lexer, false);
     }
     lexer->result_symbol = SCOPE;
     return true;
   } else {
-    advance(lexer, false);
+    advance_vim(lexer, false);
 
     if (lexer->lookahead != ':') {
       return false;
     }
-    advance(lexer, false);
+    advance_vim(lexer, false);
 
     if (iswalnum(lexer->lookahead) || lexer->lookahead == '{' || lexer->lookahead == '_') {
       lexer->result_symbol = SCOPE;
@@ -326,21 +326,21 @@ bool tree_sitter_vim_external_scanner_scan(void *payload, TSLexer *lexer,
   // Not sure about the punctuation here...
   if (valid_symbols[SEP_FIRST] && iswpunct(lexer->lookahead)) {
     s->separator = lexer->lookahead;
-    advance(lexer, false);
+    advance_vim(lexer, false);
     s->ignore_comments = true;
     lexer->result_symbol = SEP_FIRST;
     return true;
   } else if (valid_symbols[SEP] && s->separator == lexer->lookahead) {
     // No need to check for s->separator == 0 above because we know
     // lexer->lookahead is != 0
-    advance(lexer, false);
+    advance_vim(lexer, false);
     s->ignore_comments = false;
     lexer->result_symbol = SEP;
     return true;
   }
 
   if (valid_symbols[BANG_FILTER] && lexer->lookahead == '!') {
-    advance(lexer, false);
+    advance_vim(lexer, false);
     s->ignore_comments = true;
     lexer->result_symbol = BANG_FILTER;
     return true;
@@ -364,13 +364,13 @@ bool tree_sitter_vim_external_scanner_scan(void *payload, TSLexer *lexer,
   // This ambiguity forces us to use the mark_end function and lookahead more
   // than just past the final newline and indentationg character.
   if (lexer->lookahead == '\n') {
-    advance(lexer, false);
+    advance_vim(lexer, false);
     lexer->mark_end(lexer);
     skip_space_tabs(lexer);
 
     if (lexer->lookahead == '\\') {
       // You think this is a line continuation ? It might not
-      advance(lexer, false);
+      advance_vim(lexer, false);
 
       if (lexer->lookahead == '/'
           || lexer->lookahead == '?'
@@ -390,7 +390,7 @@ bool tree_sitter_vim_external_scanner_scan(void *payload, TSLexer *lexer,
       return true;
     } else if (s->marker_len == 0 && check_prefix(lexer, "\"\\ ", 3, LINE_CONTINUATION_COMMENT)) {
       while (lexer->lookahead != '\0' && lexer->lookahead != '\n') {
-        advance(lexer, false);
+        advance_vim(lexer, false);
       }
       lexer->mark_end(lexer);
       return true;
@@ -404,7 +404,7 @@ bool tree_sitter_vim_external_scanner_scan(void *payload, TSLexer *lexer,
   }
 
   if (valid_symbols[CMD_SEPARATOR] && lexer->lookahead == '|') {
-    advance(lexer, false);
+    advance_vim(lexer, false);
     if (lexer->lookahead == '|') {
       // This is an or expression
       return false;
@@ -453,7 +453,7 @@ bool tree_sitter_vim_external_scanner_scan(void *payload, TSLexer *lexer,
       && lexer->lookahead == '"' && !s->ignore_comments) {
     // This con only be a comment
     do {
-      advance(lexer, false);
+      advance_vim(lexer, false);
     } while (lexer->lookahead != '\n' && lexer->lookahead != '\0');
 
     lexer->result_symbol = COMMENT;
@@ -467,12 +467,12 @@ bool tree_sitter_vim_external_scanner_scan(void *payload, TSLexer *lexer,
 #define KEYWORD_SIZE 30
     char keyword[KEYWORD_SIZE + 1] = { lexer->lookahead, 0 };
 
-    advance(lexer, false);
+    advance_vim(lexer, false);
 
     size_t i = 1;
     for (; i < KEYWORD_SIZE && iswalpha(lexer->lookahead); i++) {
       keyword[i] = lexer->lookahead;
-      advance(lexer, false);
+      advance_vim(lexer, false);
     }
 
     if (i == KEYWORD_SIZE) {

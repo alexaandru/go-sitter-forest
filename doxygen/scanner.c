@@ -17,15 +17,15 @@ typedef struct {
     uint32_t codeblock_start_column;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_doxygen(TSLexer *lexer) { lexer->advance_doxygen(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_doxygen(TSLexer *lexer) { lexer->advance_doxygen(lexer, true); }
 
-/* #define advance(lexer) \ */
+/* #define advance_doxygen(lexer) \ */
 /*     { \ */
 /*         printf("advance %c, col %d, L%d\n", lexer->lookahead, \ */
 /*                lexer->get_column(lexer), __LINE__); \ */
-/*         lexer->advance(lexer, false); \ */
+/*         lexer->advance_doxygen(lexer, false); \ */
 /*     } */
 
 unsigned tree_sitter_doxygen_external_scanner_serialize(void *payload,
@@ -70,7 +70,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
         while ((iswspace(lexer->lookahead) || lexer->lookahead == '*') &&
                lexer->lookahead != '\n' && !lexer->eof(lexer)) {
-            skip(lexer);
+            skip_doxygen(lexer);
         }
 
         if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
@@ -82,7 +82,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
     content:
         while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
             advanced_once = true;
-            advance(lexer);
+            advance_doxygen(lexer);
         }
 
         if (lexer->eof(lexer)) {
@@ -90,13 +90,13 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
         }
 
         lexer->mark_end(lexer);
-        advance(lexer);
+        advance_doxygen(lexer);
 
         // go past space, / and * to check next text's column
         while (lexer->lookahead != '\n' && !lexer->eof(lexer) &&
                (iswspace(lexer->lookahead) || lexer->lookahead == '/' ||
                 lexer->lookahead == '*')) {
-            advance(lexer);
+            advance_doxygen(lexer);
         }
 
         if (!lexer->eof(lexer) && lexer->get_column(lexer) == column_start) {
@@ -111,7 +111,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
     if (valid_symbols[CODE_BLOCK_START]) {
         while (iswspace(lexer->lookahead) && !lexer->eof(lexer)) {
-            skip(lexer);
+            skip_doxygen(lexer);
         }
 
         if (lexer->eof(lexer)) {
@@ -120,11 +120,11 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
         if (lexer->lookahead == '`') {
             scanner->codeblock_start_column = lexer->get_column(lexer);
-            advance(lexer);
+            advance_doxygen(lexer);
             scanner->codeblock_delimiter_length = 1;
 
             while (lexer->lookahead == '`') {
-                advance(lexer);
+                advance_doxygen(lexer);
                 scanner->codeblock_delimiter_length++;
             }
             if (isalpha(lexer->lookahead)) {
@@ -139,13 +139,13 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
     if (valid_symbols[CODE_BLOCK_LANGUAGE] && isalnum(lexer->lookahead)) {
         while (isalnum(lexer->lookahead)) {
-            advance(lexer);
+            advance_doxygen(lexer);
         }
 
         lexer->mark_end(lexer);
 
         while (iswspace(lexer->lookahead) && lexer->lookahead != '\n') {
-            advance(lexer);
+            advance_doxygen(lexer);
         }
 
         lexer->result_symbol = CODE_BLOCK_LANGUAGE;
@@ -160,7 +160,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
         // skip ws and newline before block
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_doxygen(lexer);
             if (lexer->lookahead == '\n') {
                 break;
             }
@@ -168,7 +168,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
         while (lexer->lookahead != '`' && lexer->lookahead != '@' &&
                !lexer->eof(lexer)) {
-            advance(lexer);
+            advance_doxygen(lexer);
         }
 
         if (lexer->eof(lexer)) {
@@ -178,11 +178,11 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
         if (lexer->lookahead == '`' &&
             lexer->get_column(lexer) == scanner->codeblock_start_column) {
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_doxygen(lexer);
             uint32_t col_count = 1;
 
             while (lexer->lookahead == '`') {
-                advance(lexer);
+                advance_doxygen(lexer);
                 col_count++;
             }
 
@@ -194,7 +194,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
         if (lexer->lookahead == '@') {
             lexer->mark_end(lexer);
-            advance(lexer);
+            advance_doxygen(lexer);
             const char *const remainder = "endcode";
 
             for (uint32_t i = 0; i < 7; i++) {
@@ -202,7 +202,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
                     return false;
                 }
 
-                advance(lexer);
+                advance_doxygen(lexer);
             }
 
             lexer->result_symbol = CODE_BLOCK_CONTENT;
@@ -214,11 +214,11 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
     if (valid_symbols[CODE_BLOCK_END]) {
         if (lexer->lookahead == '`') {
-            advance(lexer);
+            advance_doxygen(lexer);
             uint32_t col_count = 1;
 
             while (lexer->lookahead == '`') {
-                advance(lexer);
+                advance_doxygen(lexer);
                 col_count++;
             }
 

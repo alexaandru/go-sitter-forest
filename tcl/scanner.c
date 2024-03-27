@@ -29,9 +29,9 @@ static bool is_concat_valid(TSLexer *lexer, const bool *valid_symbols) {
 
 static bool scan_ns_delim(TSLexer *lexer) {
   if (lexer->lookahead == ':') {
-    lexer->advance(lexer, false);
+    lexer->advance_tcl(lexer, false);
     if (lexer->lookahead == ':') {
-      lexer->advance(lexer, false);
+      lexer->advance_tcl(lexer, false);
       if (iswalpha(lexer->lookahead)) {
         lexer->result_symbol = NS_DELIM;
         return true;

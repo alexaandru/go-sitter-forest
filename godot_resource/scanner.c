@@ -17,7 +17,7 @@ bool tree_sitter_godot_resource_external_scanner_scan(void *payload, TSLexer *le
     }
 
     while (iswspace(lexer->lookahead)) {
-      lexer->advance(lexer, true);
+      lexer->advance_godot_resource(lexer, true);
     }
 
     if (lexer->lookahead != '"') {
@@ -25,18 +25,18 @@ bool tree_sitter_godot_resource_external_scanner_scan(void *payload, TSLexer *le
     }
 
     uint32_t last_char = '"';
-    lexer->advance(lexer, false);
+    lexer->advance_godot_resource(lexer, false);
 
     while (lexer->lookahead) {
 
       if (last_char != '\\' && lexer->lookahead == '"') {
-        lexer->advance(lexer, false);
+        lexer->advance_godot_resource(lexer, false);
         lexer->result_symbol = STRING;
         return true;
       }
 
       last_char = lexer->lookahead;
-      lexer->advance(lexer, false);
+      lexer->advance_godot_resource(lexer, false);
     }
 
     return false;

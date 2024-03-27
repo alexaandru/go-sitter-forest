@@ -12,8 +12,8 @@ enum TokenType {
   STRING_END,
 };
 
-static inline void consume(TSLexer *lexer) { lexer->advance(lexer, false); }
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void consume(TSLexer *lexer) { lexer->advance_jsonnet(lexer, false); }
+static inline void skip_jsonnet(TSLexer *lexer) { lexer->advance_jsonnet(lexer, true); }
 
 static inline bool consume_char(char c, TSLexer *lexer) {
   if (lexer->lookahead != c) {
@@ -35,7 +35,7 @@ static inline uint8_t consume_and_count_char(char c, TSLexer *lexer) {
 
 static inline void skip_whitespaces(TSLexer *lexer) {
   while (iswspace(lexer->lookahead)) {
-    skip(lexer);
+    skip_jsonnet(lexer);
   }
 }
 

@@ -23,7 +23,7 @@ bool tree_sitter_toml_external_scanner_scan_multiline_string_end(TSLexer *lexer,
     return false;
   }
 
-  lexer->advance(lexer, false);
+  lexer->advance_toml(lexer, false);
   lexer->mark_end(lexer);
 
   if (lexer->lookahead != delimiter) {
@@ -31,7 +31,7 @@ bool tree_sitter_toml_external_scanner_scan_multiline_string_end(TSLexer *lexer,
     return true;
   }
 
-  lexer->advance(lexer, false);
+  lexer->advance_toml(lexer, false);
 
   if (lexer->lookahead != delimiter) {
     lexer->mark_end(lexer);
@@ -39,7 +39,7 @@ bool tree_sitter_toml_external_scanner_scan_multiline_string_end(TSLexer *lexer,
     return true;
   }
 
-  lexer->advance(lexer, false);
+  lexer->advance_toml(lexer, false);
 
   if (lexer->lookahead != delimiter) {
     lexer->mark_end(lexer);
@@ -67,7 +67,7 @@ bool tree_sitter_toml_external_scanner_scan(
     lexer->result_symbol = LINE_ENDING_OR_EOF;
 
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-      lexer->advance(lexer, true);
+      lexer->advance_toml(lexer, true);
     }
 
     if (lexer->lookahead == 0 || lexer->lookahead == '\n') {
@@ -75,7 +75,7 @@ bool tree_sitter_toml_external_scanner_scan(
     }
 
     if (lexer->lookahead == '\r') {
-      lexer->advance(lexer, true);
+      lexer->advance_toml(lexer, true);
       if (lexer->lookahead == '\n') {
         return true;
       }

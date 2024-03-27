@@ -62,15 +62,15 @@ typedef struct {
     vec expected_percent_count;
 } Scanner;
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_nickel(TSLexer *lexer) { lexer->advance_nickel(lexer, true); }
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_nickel(TSLexer *lexer) { lexer->advance_nickel(lexer, false); }
 
 static inline bool eof(TSLexer *lexer) { return lexer->eof(lexer); }
 
 static inline int32_t lookahead(TSLexer *lexer) { return lexer->lookahead; }
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_nickel(Scanner *scanner, char *buffer) {
     uint8_t size = 0;
 
     if (scanner->expected_percent_count.len >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
@@ -92,7 +92,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
     return size;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, uint8_t length) {
+static void deserialize_nickel(Scanner *scanner, const char *buffer, uint8_t length) {
     // We have a constant size state, so this case should never happen. In
     // case it does, we initialize a fresh state.
     VEC_CLEAR(scanner->expected_percent_count);
@@ -134,7 +134,7 @@ static bool scan_until_sstr_start_end(TSLexer *lexer, bool m_scanned) {
         switch (state) {
             case START:
                 if (valid_symtag_start(current)) {
-                    advance(lexer);
+                    advance_nickel(lexer);
                     state = MIDDLE;
                 } else {
                     return false;
@@ -147,12 +147,12 @@ static bool scan_until_sstr_start_end(TSLexer *lexer, bool m_scanned) {
                 if (current == '-') {
                     state = DASH;
                 }
-                advance(lexer);
+                advance_nickel(lexer);
                 break;
             case DASH:
                 if (current == 's') {
                     state = S;
-                    advance(lexer);
+                    advance_nickel(lexer);
                 } else {
                     state = MIDDLE;
                 }
@@ -160,7 +160,7 @@ static bool scan_until_sstr_start_end(TSLexer *lexer, bool m_scanned) {
             case S:
                 if (current == '%') {
                     state = PERCENT;
-                    advance(lexer);
+                    advance_nickel(lexer);
                 } else {
                     state = MIDDLE;
                 }
@@ -181,12 +181,12 @@ static bool scan_multstr_start(Scanner *scanner, TSLexer *lexer) {
     bool m_scanned = false;
 
     if (lookahead(lexer) == 'm') {
-        advance(lexer);
+        advance_nickel(lexer);
         m_scanned = true;
     }
 
     if (m_scanned && lookahead(lexer) == '%') {
-        advance(lexer);
+        advance_nickel(lexer);
     } else if (!scan_until_sstr_start_end(lexer, m_scanned)) {
         return false;
     }
@@ -197,13 +197,13 @@ static bool scan_multstr_start(Scanner *scanner, TSLexer *lexer) {
     uint8_t count = 1;
     while (lookahead(lexer) == '%') {
         count++;
-        advance(lexer);
+        advance_nickel(lexer);
     }
 
     bool quote = false;
     if (lookahead(lexer) == '"') {
         quote = true;
-        advance(lexer);
+        advance_nickel(lexer);
     }
 
     VEC_PUSH(scanner->expected_percent_count, count);
@@ -223,7 +223,7 @@ static bool scan_multstr_end(Scanner *scanner, TSLexer *lexer) {
     // count should never be zero here, as we are lexing a multiline string.
     while (lookahead(lexer) == '%' && count > 0) {
         count--;
-        advance(lexer);
+        advance_nickel(lexer);
     }
 
     VEC_POP(scanner->expected_percent_count);
@@ -241,7 +241,7 @@ static bool scan_str_start(Scanner *scanner, TSLexer *lexer) {
     // Interpolation in strings are preceded by a single % sign.
     VEC_PUSH(scanner->expected_percent_count, 1);
 
-    advance(lexer);
+    advance_nickel(lexer);
 
     return true;
 }
@@ -250,7 +250,7 @@ static bool scan_str_start(Scanner *scanner, TSLexer *lexer) {
 static bool scan_str_end(Scanner *scanner, TSLexer *lexer) {
     lexer->result_symbol = STR_END;
 
-    advance(lexer);
+    advance_nickel(lexer);
 
     VEC_POP(scanner->expected_percent_count);
 
@@ -272,12 +272,12 @@ static bool scan_interpolation_start(Scanner *scanner, TSLexer *lexer) {
 
     while (lookahead(lexer) == '%') {
         count--;
-        advance(lexer);
+        advance_nickel(lexer);
     }
 
     if (lookahead(lexer) == '{') {
         brace = true;
-        advance(lexer);
+        advance_nickel(lexer);
     }
 
     return brace && (count == 0);
@@ -287,7 +287,7 @@ static bool scan_interpolation_start(Scanner *scanner, TSLexer *lexer) {
 static bool scan_interpolation_end(TSLexer *lexer) {
     lexer->result_symbol = INTERPOLATION_END;
 
-    advance(lexer);
+    advance_nickel(lexer);
 
     return true;
 }
@@ -299,7 +299,7 @@ static bool scan_quoted_enum_tag_start(Scanner *scanner, TSLexer *lexer) {
     // zero is a special value meaning that no interpolation is allowed.
     VEC_PUSH(scanner->expected_percent_count, NO_INTERPOLATION);
 
-    advance(lexer);
+    advance_nickel(lexer);
 
     return true;
 }
@@ -315,16 +315,16 @@ static bool scan_comment(Scanner *scanner, TSLexer *lexer) {
     }
 
     // Consume the #
-    advance(lexer);
+    advance_nickel(lexer);
 
     while (lookahead(lexer) != '\n' && lookahead(lexer) != '\0') {
-        advance(lexer);
+        advance_nickel(lexer);
     }
 
     return true;
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_nickel(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     // During error recovery we don't run the external scanner. This
     // produces less accurate results, but avoids a large deal of complexity
     // in this scanner.
@@ -336,13 +336,13 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
 
     // Skip over all whitespace
     while (iswspace(lookahead(lexer))) {
-        skip(lexer);
+        skip_nickel(lexer);
     }
 
     switch (lookahead(lexer)) {
         case '"':
             if (valid_symbols[MULTSTR_END]) {
-                advance(lexer);
+                advance_nickel(lexer);
                 if (lookahead(lexer) == '%') {
                     return scan_multstr_end(scanner, lexer);
                 }
@@ -364,7 +364,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
             break;
         case '\'':
             if (valid_symbols[QUOTED_ENUM_TAG_START]) {
-                advance(lexer);
+                advance_nickel(lexer);
                 if (lookahead(lexer) == '"') {
                     return scan_quoted_enum_tag_start(scanner, lexer);
                 }
@@ -392,7 +392,7 @@ void *tree_sitter_nickel_external_scanner_create() {
 
 bool tree_sitter_nickel_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)(payload);
-    return scan(scanner, lexer, valid_symbols);
+    return scan_nickel(scanner, lexer, valid_symbols);
 }
 
 /**
@@ -401,7 +401,7 @@ bool tree_sitter_nickel_external_scanner_scan(void *payload, TSLexer *lexer, con
  */
 unsigned tree_sitter_nickel_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)(payload);
-    return serialize(scanner, buffer);
+    return serialize_nickel(scanner, buffer);
 }
 
 /**
@@ -411,7 +411,7 @@ unsigned tree_sitter_nickel_external_scanner_serialize(void *payload, char *buff
  */
 void tree_sitter_nickel_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)(payload);
-    deserialize(scanner, buffer, (uint8_t)length);
+    deserialize_nickel(scanner, buffer, (uint8_t)length);
 }
 
 void tree_sitter_nickel_external_scanner_destroy(void *payload) {

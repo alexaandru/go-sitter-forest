@@ -15,8 +15,8 @@ unsigned int tree_sitter_wgsl_external_scanner_serialize(void *p, char *buffer) 
 }
 void tree_sitter_wgsl_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) {
-	lexer->advance(lexer, false);
+static void advance_wgsl(TSLexer *lexer) {
+	lexer->advance_wgsl(lexer, false);
 }
 
 static bool at_eof(TSLexer *lexer) {
@@ -30,33 +30,33 @@ bool tree_sitter_wgsl_external_scanner_scan(
 	const bool *valid_symbols
 ) {
 	while (iswspace(lexer->lookahead)) {
-		lexer->advance(lexer, true);
+		lexer->advance_wgsl(lexer, true);
 	}
 
 	if (lexer->lookahead != '/') {
 		return false;
 	}
-	advance(lexer);
+	advance_wgsl(lexer);
 
 	if (lexer->lookahead != '*') {
 		return false;
 	}
-	advance(lexer);
+	advance_wgsl(lexer);
 
 	unsigned int comment_depth = 1;
 	while (true) {
 		if (lexer->lookahead == '/') {
-			advance(lexer);
+			advance_wgsl(lexer);
 
 			if (lexer->lookahead == '*') {
-				advance(lexer);
+				advance_wgsl(lexer);
 				comment_depth += 1;
 			}
 		} else if (lexer->lookahead == '*') {
-			advance(lexer);
+			advance_wgsl(lexer);
 
 			if (lexer->lookahead == '/') {
-				advance(lexer);
+				advance_wgsl(lexer);
 				comment_depth -= 1;
 				
 				if (comment_depth == 0) {
@@ -67,7 +67,7 @@ bool tree_sitter_wgsl_external_scanner_scan(
 		} else if (at_eof(lexer)) {
 			return false;
 		} else {
-			advance(lexer);
+			advance_wgsl(lexer);
 		}
 	}
 }

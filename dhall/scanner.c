@@ -35,15 +35,15 @@ tree_sitter_dhall_external_scanner_scan(void* payload, TSLexer* lexer,
 
         while (depth > 0) {
             if (lexer->lookahead == '{') {
-                lexer->advance(lexer, false);
+                lexer->advance_dhall(lexer, false);
 
                 if (lexer->lookahead == '-') {
-                    lexer->advance(lexer, false);
+                    lexer->advance_dhall(lexer, false);
                     depth += 1;
                 }
             } else if (lexer->lookahead == '-') {
                 lexer->mark_end(lexer);
-                lexer->advance(lexer, false);
+                lexer->advance_dhall(lexer, false);
 
                 if (lexer->lookahead == '}') {
                     depth -= 1;
@@ -51,7 +51,7 @@ tree_sitter_dhall_external_scanner_scan(void* payload, TSLexer* lexer,
             } else if (lexer->lookahead == 0) {
                 return false;
             } else {
-                lexer->advance(lexer, false);
+                lexer->advance_dhall(lexer, false);
             }
         }
 

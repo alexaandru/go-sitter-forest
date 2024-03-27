@@ -68,9 +68,9 @@ typedef struct {
     stack *section_stack;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_org(TSLexer *lexer) { lexer->advance_org(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_org(TSLexer *lexer) { lexer->advance_org(lexer, true); }
 
 unsigned serialize_org(Scanner *scanner, char *buffer) {
     size_t i = 0;
@@ -143,49 +143,49 @@ static bool in_error_recovery(const bool *valid_symbols) {
 
 Bullet getbullet(TSLexer *lexer) {
     if (lexer->lookahead == '-') {
-        advance(lexer);
+        advance_org(lexer);
         if (iswspace(lexer->lookahead))
             return DASH;
     } else if (lexer->lookahead == '+') {
-        advance(lexer);
+        advance_org(lexer);
         if (iswspace(lexer->lookahead))
             return PLUS;
     } else if (lexer->lookahead == '*') {
-        advance(lexer);
+        advance_org(lexer);
         if (iswspace(lexer->lookahead))
             return STAR;
     } else if ('a' <= lexer->lookahead && lexer->lookahead <= 'z') {
-        advance(lexer);
+        advance_org(lexer);
         if (lexer->lookahead == '.') {
-            advance(lexer);
+            advance_org(lexer);
             if (iswspace(lexer->lookahead))
                 return LOWERDOT;
         } else if (lexer->lookahead == ')') {
-            advance(lexer);
+            advance_org(lexer);
             if (iswspace(lexer->lookahead))
                 return LOWERPAREN;
         }
     } else if ('A' <= lexer->lookahead && lexer->lookahead <= 'Z') {
-        advance(lexer);
+        advance_org(lexer);
         if (lexer->lookahead == '.') {
-            advance(lexer);
+            advance_org(lexer);
             if (iswspace(lexer->lookahead))
                 return UPPERDOT;
         } else if (lexer->lookahead == ')') {
-            advance(lexer);
+            advance_org(lexer);
             if (iswspace(lexer->lookahead))
                 return UPPERPAREN;
         }
     } else if ('0' <= lexer->lookahead && lexer->lookahead <= '9') {
         do {
-            advance(lexer);
+            advance_org(lexer);
         } while ('0' <= lexer->lookahead && lexer->lookahead <= '9');
         if (lexer->lookahead == '.') {
-            advance(lexer);
+            advance_org(lexer);
             if (iswspace(lexer->lookahead))
                 return NUMDOT;
         } else if (lexer->lookahead == ')') {
-            advance(lexer);
+            advance_org(lexer);
             if (iswspace(lexer->lookahead))
                 return NUMPAREN;
         }
@@ -219,7 +219,7 @@ bool scan_org(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
         } else {
             break;
         }
-        skip(lexer);
+        skip_org(lexer);
     }
 
     // - Listiem ends
@@ -243,7 +243,7 @@ bool scan_org(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
             } else {
                 break;
             }
-            skip(lexer);
+            skip_org(lexer);
         }
 
         if (indent_length < VEC_BACK(scanner->indent_length_stack)) {
@@ -261,10 +261,10 @@ bool scan_org(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     if (indent_length == 0 && lexer->lookahead == '*') {
         lexer->mark_end(lexer);
         int16_t stars = 1;
-        skip(lexer);
+        skip_org(lexer);
         while (lexer->lookahead == '*') {
             stars++;
-            skip(lexer);
+            skip_org(lexer);
         }
 
         if (valid_symbols[SECTIONEND] && iswspace(lexer->lookahead) &&

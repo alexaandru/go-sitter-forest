@@ -15,9 +15,9 @@ bool tree_sitter_scss_external_scanner_scan(void *payload, TSLexer *lexer, const
   if (iswspace(lexer->lookahead) && valid_symbols[DESCENDANT_OP]) {
     lexer->result_symbol = DESCENDANT_OP;
 
-    lexer->advance(lexer, true);
+    lexer->advance_scss(lexer, true);
     while (iswspace(lexer->lookahead)) {
-      lexer->advance(lexer, true);
+      lexer->advance_scss(lexer, true);
     }
     lexer->mark_end(lexer);
 
@@ -33,7 +33,7 @@ bool tree_sitter_scss_external_scanner_scan(void *payload, TSLexer *lexer, const
     }
 
     if (lexer->lookahead == ':') {
-      lexer->advance(lexer, false);
+      lexer->advance_scss(lexer, false);
       if (iswspace(lexer->lookahead)) return false;
       for (;;) {
         if (
@@ -44,7 +44,7 @@ bool tree_sitter_scss_external_scanner_scan(void *payload, TSLexer *lexer, const
         if (lexer->lookahead == '{') {
           return true;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_scss(lexer, false);
       }
     }
   }

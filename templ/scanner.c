@@ -75,7 +75,7 @@ static bool lookahead_buffer_find_keyword(LookaheadBuffer *buffer,
     buffer->buf[buffer->write_pos] = lexer->lookahead;
     buffer->write_pos++;
 
-    lexer->advance(lexer, false);
+    lexer->advance_templ(lexer, false);
   }
 
   return true;
@@ -96,13 +96,13 @@ typedef struct {
   bool saw_at_symbol;
 } Scanner;
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_templ(Scanner *scanner, char *buffer) {
   buffer[0] = scanner->saw_at_symbol ? 1 : 0;
 
   return 0;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_templ(Scanner *scanner, const char *buffer, unsigned length) {
   if (length <= 0) {
     return;
   }
@@ -127,7 +127,7 @@ static bool scan_css_property_value(Scanner *scanner, TSLexer *lexer) {
     if (lexer->lookahead == ';') {
       return true;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_templ(lexer, false);
   }
 
   return false;
@@ -237,7 +237,7 @@ static bool scan_element_text(Scanner *scanner, TSLexer *lexer) {
       goto done;
     }
 
-    lexer->advance(lexer, false);
+    lexer->advance_templ(lexer, false);
     lexer->mark_end(lexer);
     count++;
   }
@@ -279,7 +279,7 @@ outer:
         // This branch means the keyword was not found at this point, therefore
         // we have to extend the current token.
 
-        lexer->advance(lexer, false);
+        lexer->advance_templ(lexer, false);
         lexer->mark_end(lexer);
         has_marked = true;
 
@@ -288,7 +288,7 @@ outer:
 
       // Otherwise continue and try to find the next character in the keyword
 
-      lexer->advance(lexer, false);
+      lexer->advance_templ(lexer, false);
     }
 
     // The keyword was found
@@ -319,7 +319,7 @@ static bool scan_element_comment(Scanner *scanner, TSLexer *lexer) {
     case '>':
       if (dashes >= 2) {
         lexer->result_symbol = ELEMENT_COMMENT;
-        lexer->advance(lexer, false);
+        lexer->advance_templ(lexer, false);
         lexer->mark_end(lexer);
         return true;
       }
@@ -329,7 +329,7 @@ static bool scan_element_comment(Scanner *scanner, TSLexer *lexer) {
       dashes = 0;
       break;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_templ(lexer, false);
   }
   return false;
 }
@@ -355,7 +355,7 @@ outer:
         // This branch means the keyword was not found at this point, therefore
         // we have to extend the current token.
 
-        lexer->advance(lexer, false);
+        lexer->advance_templ(lexer, false);
         lexer->mark_end(lexer);
         has_marked = true;
 
@@ -364,7 +364,7 @@ outer:
 
       // Otherwise continue and try to find the next character in the keyword
 
-      lexer->advance(lexer, false);
+      lexer->advance_templ(lexer, false);
     }
 
     // The keyword was found
@@ -403,7 +403,7 @@ static bool scan_script_block_text(Scanner *scanner, TSLexer *lexer) {
       break;
     }
 
-    lexer->advance(lexer, false);
+    lexer->advance_templ(lexer, false);
     lexer->mark_end(lexer);
 
     has_marked = true;
@@ -418,9 +418,9 @@ done:
   return has_marked;
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_templ(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
   while (!lexer->eof(lexer) && iswspace(lexer->lookahead)) {
-    lexer->advance(lexer, true);
+    lexer->advance_templ(lexer, true);
   }
 
   if (valid_symbols[CSS_PROPERTY_VALUE] &&
@@ -465,20 +465,20 @@ void *tree_sitter_templ_external_scanner_create() {
 bool tree_sitter_templ_external_scanner_scan(void *payload, TSLexer *lexer,
                                              const bool *valid_symbols) {
   Scanner *scanner = (Scanner *)payload;
-  return scan(scanner, lexer, valid_symbols);
+  return scan_templ(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_templ_external_scanner_serialize(void *payload,
                                                       char *buffer) {
   Scanner *scanner = (Scanner *)payload;
-  return serialize(scanner, buffer);
+  return serialize_templ(scanner, buffer);
 }
 
 void tree_sitter_templ_external_scanner_deserialize(void *payload,
                                                     const char *buffer,
                                                     unsigned length) {
   Scanner *scanner = (Scanner *)payload;
-  deserialize(scanner, buffer, length);
+  deserialize_templ(scanner, buffer, length);
 }
 
 void tree_sitter_templ_external_scanner_destroy(void *payload) {

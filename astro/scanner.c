@@ -126,7 +126,7 @@ typedef struct {
         memset((vec).data, 0, (vec).cap * sizeof(char));                       \
     } while (0)
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_astro(Scanner *scanner, char *buffer) {
     uint16_t tag_count =
         scanner->tags.len > UINT16_MAX ? UINT16_MAX : scanner->tags.len;
     uint16_t serialized_tag_count = 0;
@@ -162,7 +162,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
     return size;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_astro(Scanner *scanner, const char *buffer, unsigned length) {
     VEC_CLEAR(scanner->tags);
     if (length > 0) {
         unsigned size = 0;
@@ -210,7 +210,7 @@ static String scan_tag_name(TSLexer *lexer) {
     while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' ||
            lexer->lookahead == ':' || lexer->lookahead == '.') {
         STRING_PUSH(tag_name, lexer->lookahead);
-        lexer->advance(lexer, false);
+        lexer->advance_astro(lexer, false);
     }
     return tag_name;
 }
@@ -219,11 +219,11 @@ static bool scan_comment(TSLexer *lexer) {
     if (lexer->lookahead != '-') {
         return false;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_astro(lexer, false);
     if (lexer->lookahead != '-') {
         return false;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_astro(lexer, false);
 
     unsigned dashes = 0;
     while (lexer->lookahead) {
@@ -234,14 +234,14 @@ static bool scan_comment(TSLexer *lexer) {
             case '>':
                 if (dashes >= 2) {
                     lexer->result_symbol = COMMENT;
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                     lexer->mark_end(lexer);
                     return true;
                 }
             default:
                 dashes = 0;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_astro(lexer, false);
     }
     return false;
 }
@@ -250,13 +250,13 @@ static inline void scan_js_expr(TSLexer *lexer, char *end);
 
 static inline void scan_js_backtick_string(TSLexer *lexer) {
     // Advance past backtick
-    lexer->advance(lexer, false);
+    lexer->advance_astro(lexer, false);
     while (lexer->lookahead) {
         if (lexer->lookahead == '$') {
-            lexer->advance(lexer, false);
+            lexer->advance_astro(lexer, false);
             if (lexer->lookahead == '{') {
                 // String interpolation
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 scan_js_expr(lexer, "}");
                 // Advance past the final curly
             } else {
@@ -265,10 +265,10 @@ static inline void scan_js_backtick_string(TSLexer *lexer) {
             }
         } else if (lexer->lookahead == '`') {
             // End of string
-            lexer->advance(lexer, false);
+            lexer->advance_astro(lexer, false);
             break;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_astro(lexer, false);
     }
 }
 
@@ -279,7 +279,7 @@ static inline void scan_js_string(TSLexer *lexer) {
     } else {
         // Start and end chars are the same
         char str_end_char = (char)lexer->lookahead;
-        lexer->advance(lexer, false);
+        lexer->advance_astro(lexer, false);
         while (lexer->lookahead) {
             // Note that this doesn't take into account newlines in basic
             // strings, for the same reason why tree-sitter-javascript
@@ -287,13 +287,13 @@ static inline void scan_js_string(TSLexer *lexer) {
             // https://github.com/tree-sitter/tree-sitter-javascript/blob/fdeb68ac8d2bd5a78b943528bb68ceda3aade2eb/grammar.js#L860
             if (lexer->lookahead == '\\') {
                 // Accept any next char
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
             } else if (lexer->lookahead == str_end_char) {
                 // End of string
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 return;
             }
-            lexer->advance(lexer, false);
+            lexer->advance_astro(lexer, false);
         }
     }
 }
@@ -317,27 +317,27 @@ static inline void scan_js_expr(TSLexer *lexer, char *end) {
             if (lexer->lookahead == '/') {
                 // comment?
                 delimiter_index = 0;
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 if (lexer->lookahead == '/') {
                     in_comment = SingleLine;
                     delimiter_index = 0;
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                 } else if (lexer->lookahead == '*') {
                     in_comment = MultiLine;
                     delimiter_index = 0;
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                 }
                 continue;
             }
 
             if (strcmp(end, "}") == 0) {
                 while (lexer->lookahead == '\n') {
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                 }
                 // we have to balance braces
                 if (lexer->lookahead == '{') {
                     curly_count++;
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                     continue;
                 }
                 if (lexer->lookahead == '}') {
@@ -346,7 +346,7 @@ static inline void scan_js_expr(TSLexer *lexer, char *end) {
                         // don't do anything
                     } else {
                         curly_count--;
-                        lexer->advance(lexer, false);
+                        lexer->advance_astro(lexer, false);
                         continue;
                     }
                 }
@@ -356,7 +356,7 @@ static inline void scan_js_expr(TSLexer *lexer, char *end) {
                 if (delimiter_index == strlen(end)) {
                     break;
                 }
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
             } else {
                 // It's entirely possible we just stumbled across a newline
                 // character, which would mean that our delimiter index
@@ -367,7 +367,7 @@ static inline void scan_js_expr(TSLexer *lexer, char *end) {
                 // ---
                 // was the frontmatter.
                 /* delimiter_index = (lexer->lookahead == '\n' ? 1 : 0); */
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 lexer->mark_end(lexer);
             }
         } else if (in_comment == SingleLine) {
@@ -375,26 +375,26 @@ static inline void scan_js_expr(TSLexer *lexer, char *end) {
                 // End of comment
                 in_comment = NotInComment;
                 /* delimiter_index = (end[0] == '\n' ? 1 : 0); */
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 lexer->mark_end(lexer);
             } else {
                 // Still in comment, ignore
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
             }
         } else if (in_comment == MultiLine) {
             if (lexer->lookahead == '*') {
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 if (lexer->lookahead == '/') {
                     // End of comment
                     in_comment = NotInComment;
                     delimiter_index = 0;
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                 } else {
                     continue;
                 }
             } else {
                 // Still in comment, ignore
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
             }
         }
     }
@@ -434,10 +434,10 @@ static bool scan_raw_text(Scanner *scanner, TSLexer *lexer) {
             if (delimiter_index == strlen(end_delimiter)) {
                 break;
             }
-            lexer->advance(lexer, false);
+            lexer->advance_astro(lexer, false);
         } else {
             delimiter_index = 0;
-            lexer->advance(lexer, false);
+            lexer->advance_astro(lexer, false);
             lexer->mark_end(lexer);
         }
     }
@@ -453,7 +453,7 @@ static bool scan_implicit_end_tag(Scanner *scanner, TSLexer *lexer) {
     bool is_closing_tag = false;
     if (lexer->lookahead == '/') {
         is_closing_tag = true;
-        lexer->advance(lexer, false);
+        lexer->advance_astro(lexer, false);
     } else {
         if (parent && is_void(parent)) {
             VEC_POP(scanner->tags);
@@ -545,9 +545,9 @@ static bool scan_end_tag_name(Scanner *scanner, TSLexer *lexer) {
 }
 
 static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
-    lexer->advance(lexer, false);
+    lexer->advance_astro(lexer, false);
     if (lexer->lookahead == '>') {
-        lexer->advance(lexer, false);
+        lexer->advance_astro(lexer, false);
         if (scanner->tags.len > 0) {
             VEC_POP(scanner->tags);
             lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
@@ -557,9 +557,9 @@ static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
     return false;
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_astro(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     while (iswspace(lexer->lookahead)) {
-        lexer->advance(lexer, true);
+        lexer->advance_astro(lexer, true);
     }
 
     if (valid_symbols[RAW_TEXT] && !valid_symbols[START_TAG_NAME] &&
@@ -570,10 +570,10 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     switch (lexer->lookahead) {
         case '<':
             lexer->mark_end(lexer);
-            lexer->advance(lexer, false);
+            lexer->advance_astro(lexer, false);
 
             if (lexer->lookahead == '!') {
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 return scan_comment(lexer);
             }
 
@@ -596,7 +596,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
 
         case '{':
             if (valid_symbols[INTERPOLATION_START]) {
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 Tag tag = (Tag){INTERPOLATION, {0}};
                 VEC_PUSH(scanner->tags, tag);
                 lexer->result_symbol = INTERPOLATION_START;
@@ -607,11 +607,11 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
         case '-':
             if (valid_symbols[FRONTMATTER_START]) {
                 lexer->mark_end(lexer);
-                lexer->advance(lexer, false);
+                lexer->advance_astro(lexer, false);
                 if (lexer->lookahead == '-') {
-                    lexer->advance(lexer, false);
+                    lexer->advance_astro(lexer, false);
                     if (lexer->lookahead == '-') {
-                        lexer->advance(lexer, false);
+                        lexer->advance_astro(lexer, false);
                         lexer->mark_end(lexer);
                         lexer->result_symbol = FRONTMATTER_START;
                         return true;
@@ -640,18 +640,18 @@ void *tree_sitter_astro_external_scanner_create() {
 
 bool tree_sitter_astro_external_scanner_scan(void *payload, TSLexer *lexer,
                                              const bool *valid_symbols) {
-    return scan((Scanner *)payload, lexer, valid_symbols);
+    return scan_astro((Scanner *)payload, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_astro_external_scanner_serialize(void *payload,
                                                       char *buffer) {
-    return serialize((Scanner *)payload, buffer);
+    return serialize_astro((Scanner *)payload, buffer);
 }
 
 void tree_sitter_astro_external_scanner_deserialize(void *payload,
                                                     const char *buffer,
                                                     unsigned length) {
-    deserialize((Scanner *)payload, buffer, length);
+    deserialize_astro((Scanner *)payload, buffer, length);
 }
 
 void tree_sitter_astro_external_scanner_destroy(void *payload) {

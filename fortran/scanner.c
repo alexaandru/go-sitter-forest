@@ -16,10 +16,10 @@ typedef struct {
 } Scanner;
 
 //  consume current character into current token and advance
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_fortran(TSLexer *lexer) { lexer->advance_fortran(lexer, false); }
 
 // ignore current character and advance
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_fortran(TSLexer *lexer) { lexer->advance_fortran(lexer, true); }
 
 static bool is_ident_char(char chr) { return iswalnum(chr) || chr == '_'; }
 
@@ -55,18 +55,18 @@ static bool scan_int(TSLexer *lexer) {
     }
     // consume digits
     while (iswdigit(lexer->lookahead)) {
-        advance(lexer); // store all digits
+        advance_fortran(lexer); // store all digits
     }
 
     // handle line continuations
     if (lexer->lookahead == '&') {
-      skip(lexer);
+      skip_fortran(lexer);
       while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_fortran(lexer);
       }
       // second '&' required to continue the literal
       if (lexer->lookahead == '&') {
-        skip(lexer);
+        skip_fortran(lexer);
         // don't return here, as we may have finished literal on first
         // line but still have second '&'
         scan_int(lexer);
@@ -82,7 +82,7 @@ static bool scan_number(TSLexer *lexer) {
     lexer->result_symbol = INTEGER_LITERAL;
     bool digits = scan_int(lexer);
     if (lexer->lookahead == '.') {
-        advance(lexer);
+        advance_fortran(lexer);
         // exclude decimal if followed by any letter other than d/D and e/E
         // if no leading digits are present and a non-digit follows
         // the decimal it's a nonmatch.
@@ -98,9 +98,9 @@ static bool scan_number(TSLexer *lexer) {
     if (digits) {
         // process exp notation
         if (is_exp_sentinel(lexer->lookahead)) {
-            advance(lexer);
+            advance_fortran(lexer);
             if (lexer->lookahead == '+' || lexer->lookahead == '-') {
-                advance(lexer);
+                advance_fortran(lexer);
             }
             if (!scan_int(lexer)) {
                 return true; // valid number token with junk after it
@@ -110,12 +110,12 @@ static bool scan_number(TSLexer *lexer) {
         }
         // get size qualifer
         if (lexer->lookahead == '_') {
-            advance(lexer);
+            advance_fortran(lexer);
             if (!isalnum(lexer->lookahead)) {
                 return true; // valid number token with junk after it
             }
             while (is_ident_char(lexer->lookahead)) {
-                advance(lexer); // store all digits
+                advance_fortran(lexer); // store all digits
             }
             lexer->mark_end(lexer);
         }
@@ -128,22 +128,22 @@ static bool scan_boz(TSLexer *lexer) {
     bool boz_prefix = false;
     char quote = '\0';
     if (is_boz_sentinel(lexer->lookahead)) {
-        advance(lexer);
+        advance_fortran(lexer);
         boz_prefix = true;
     }
     if (lexer->lookahead == '\'' || lexer->lookahead == '"') {
         quote = lexer->lookahead;
-        advance(lexer);
+        advance_fortran(lexer);
         if (!isxdigit(lexer->lookahead)) {
             return false;
         }
         while (isxdigit(lexer->lookahead)) {
-            advance(lexer); // store all hex digits
+            advance_fortran(lexer); // store all hex digits
         }
         if (lexer->lookahead != quote) {
             return false;
         }
-        advance(lexer); // store enclosing quote
+        advance_fortran(lexer); // store enclosing quote
         if (!boz_prefix && !is_boz_sentinel(lexer->lookahead)) {
             return false; // no boz suffix or prefix provided
         }
@@ -166,7 +166,7 @@ static bool scan_end_of_statement(Scanner *scanner, TSLexer *lexer) {
 
     // Semicolons and EOF always end the statement
     if (lexer->lookahead == ';' || lexer->eof(lexer)) {
-        skip(lexer);
+        skip_fortran(lexer);
         lexer->result_symbol = END_OF_STATEMENT;
         return true;
     }
@@ -180,13 +180,13 @@ static bool scan_end_of_statement(Scanner *scanner, TSLexer *lexer) {
     // '\r' to cover unix, MSDOS and old style Macintosh.
     // Handle comments here too, but don't consume them
     if (lexer->lookahead == '\r') {
-        skip(lexer);
+        skip_fortran(lexer);
         if (lexer->lookahead == '\n') {
-            skip(lexer);
+            skip_fortran(lexer);
         }
     } else {
         if (lexer->lookahead == '\n') {
-            skip(lexer);
+            skip_fortran(lexer);
         } else if (lexer->lookahead != '!') {
             // Not a newline and not a comment, so not an
             // end-of-statement
@@ -205,7 +205,7 @@ static bool scan_start_line_continuation(Scanner *scanner, TSLexer *lexer) {
         return false;
     }
     // Consume the '&'
-    advance(lexer);
+    advance_fortran(lexer);
     lexer->result_symbol = LINE_CONTINUATION;
     return true;
 }
@@ -223,7 +223,7 @@ static bool scan_end_line_continuation(Scanner *scanner, TSLexer *lexer) {
 
     // Consume any leading line continuation markers
     if (lexer->lookahead == '&') {
-        advance(lexer);
+        advance_fortran(lexer);
     }
     lexer->result_symbol = LINE_CONTINUATION;
     return true;
@@ -236,7 +236,7 @@ static bool scan_string_literal(TSLexer *lexer) {
         return false;
     }
 
-    advance(lexer);
+    advance_fortran(lexer);
     lexer->result_symbol = STRING_LITERAL;
 
     while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
@@ -256,16 +256,16 @@ static bool scan_string_literal(TSLexer *lexer) {
         // the quotes (yes, you can have comments _inside_ string
         // literals if they contain a line continuation)
         if (lexer->lookahead == '&') {
-            advance(lexer);
+            advance_fortran(lexer);
             // Consume blanks up to the end of the line or non-blank
             while (iswblank(lexer->lookahead)) {
-                advance(lexer);
+                advance_fortran(lexer);
             }
             // If we hit the end of the line, consume all whitespace,
             // including new lines
             if (lexer->lookahead == '\n' || lexer->lookahead == '\r') {
                 while (iswspace(lexer->lookahead)) {
-                    advance(lexer);
+                    advance_fortran(lexer);
                 }
             }
         }
@@ -274,14 +274,14 @@ static bool scan_string_literal(TSLexer *lexer) {
         // check to see if there's two in a row, and if so, consume
         // both of them
         if (lexer->lookahead == opening_quote) {
-            advance(lexer);
+            advance_fortran(lexer);
             // It was just one quote, so we've successfully reached the
             // end of the literal
             if (lexer->lookahead != opening_quote) {
                 return true;
             }
         }
-        advance(lexer);
+        advance_fortran(lexer);
     }
 
     // We hit the end of the line without an '&', so this is an
@@ -289,10 +289,10 @@ static bool scan_string_literal(TSLexer *lexer) {
     return false;
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_fortran(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     // Consume any leading whitespace except newlines
     while (iswblank(lexer->lookahead)) {
-        skip(lexer);
+        skip_fortran(lexer);
     }
 
     // Close the current statement if we can
@@ -306,7 +306,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     // statements, so we should eat all whitespace including
     // newlines, until we come to something more interesting
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_fortran(lexer);
     }
 
     if (scan_end_line_continuation(scanner, lexer)) {
@@ -344,7 +344,7 @@ void *tree_sitter_fortran_external_scanner_create() {
 bool tree_sitter_fortran_external_scanner_scan(void *payload, TSLexer *lexer,
                                                const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_fortran(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_fortran_external_scanner_serialize(void *payload,

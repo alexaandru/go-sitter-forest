@@ -112,7 +112,7 @@ typedef struct {
     memset((vec).data, 0, (vec).cap * sizeof(char));                           \
   }
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_angular(Scanner *scanner, char *buffer) {
   uint16_t tag_count =
       scanner->tags.len > UINT16_MAX ? UINT16_MAX : scanner->tags.len;
   uint16_t serialized_tag_count = 0;
@@ -149,7 +149,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
   return size;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_angular(Scanner *scanner, const char *buffer, unsigned length) {
   VEC_CLEAR(scanner->tags);
   if (length > 0) {
     unsigned size = 0;
@@ -197,7 +197,7 @@ static String scan_tag_name(TSLexer *lexer) {
   while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' ||
          lexer->lookahead == ':') {
     STRING_PUSH(tag_name, towupper(lexer->lookahead));
-    lexer->advance(lexer, false);
+    lexer->advance_angular(lexer, false);
   }
   return tag_name;
 }
@@ -206,11 +206,11 @@ static bool scan_comment(TSLexer *lexer) {
   if (lexer->lookahead != '-') {
     return false;
   }
-  lexer->advance(lexer, false);
+  lexer->advance_angular(lexer, false);
   if (lexer->lookahead != '-') {
     return false;
   }
-  lexer->advance(lexer, false);
+  lexer->advance_angular(lexer, false);
 
   unsigned dashes = 0;
   while (lexer->lookahead) {
@@ -221,14 +221,14 @@ static bool scan_comment(TSLexer *lexer) {
     case '>':
       if (dashes >= 2) {
         lexer->result_symbol = COMMENT;
-        lexer->advance(lexer, false);
+        lexer->advance_angular(lexer, false);
         lexer->mark_end(lexer);
         return true;
       }
     default:
       dashes = 0;
     }
-    lexer->advance(lexer, false);
+    lexer->advance_angular(lexer, false);
   }
   return false;
 }
@@ -250,10 +250,10 @@ static bool scan_raw_text(Scanner *scanner, TSLexer *lexer) {
       if (delimiter_index == strlen(end_delimiter)) {
         break;
       }
-      lexer->advance(lexer, false);
+      lexer->advance_angular(lexer, false);
     } else {
       delimiter_index = 0;
-      lexer->advance(lexer, false);
+      lexer->advance_angular(lexer, false);
       lexer->mark_end(lexer);
     }
   }
@@ -268,7 +268,7 @@ static bool scan_implicit_end_tag(Scanner *scanner, TSLexer *lexer) {
   bool is_closing_tag = false;
   if (lexer->lookahead == '/') {
     is_closing_tag = true;
-    lexer->advance(lexer, false);
+    lexer->advance_angular(lexer, false);
   } else {
     if (parent && is_void(parent)) {
       VEC_POP(scanner->tags);
@@ -359,9 +359,9 @@ static bool scan_end_tag_name(Scanner *scanner, TSLexer *lexer) {
 }
 
 static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
-  lexer->advance(lexer, false);
+  lexer->advance_angular(lexer, false);
   if (lexer->lookahead == '>') {
-    lexer->advance(lexer, false);
+    lexer->advance_angular(lexer, false);
     if (scanner->tags.len > 0) {
       VEC_POP(scanner->tags);
       lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
@@ -371,23 +371,23 @@ static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
   return false;
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_angular(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
   if (valid_symbols[RAW_TEXT] && !valid_symbols[START_TAG_NAME] &&
       !valid_symbols[END_TAG_NAME]) {
     return scan_raw_text(scanner, lexer);
   }
 
   while (iswspace(lexer->lookahead)) {
-    lexer->advance(lexer, true);
+    lexer->advance_angular(lexer, true);
   }
 
   switch (lexer->lookahead) {
   case '<':
     lexer->mark_end(lexer);
-    lexer->advance(lexer, false);
+    lexer->advance_angular(lexer, false);
 
     if (lexer->lookahead == '!') {
-      lexer->advance(lexer, false);
+      lexer->advance_angular(lexer, false);
       return scan_comment(lexer);
     }
 
@@ -411,9 +411,9 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
   case '{':
     if (valid_symbols[INTERPOLATION_START]) {
       lexer->mark_end(lexer);
-      lexer->advance(lexer, false);
+      lexer->advance_angular(lexer, false);
       if (lexer->lookahead == '{') {
-        lexer->advance(lexer, false);
+        lexer->advance_angular(lexer, false);
         lexer->mark_end(lexer);
         Tag tag = (Tag){INTERPOLATION, {0}};
         VEC_PUSH(scanner->tags, tag);
@@ -426,10 +426,10 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
   case '}':
     if (valid_symbols[INTERPOLATION_END]) {
       lexer->mark_end(lexer);
-      lexer->advance(lexer, false);
+      lexer->advance_angular(lexer, false);
       if (lexer->lookahead == '}' &&
           VEC_BACK(scanner->tags).type == INTERPOLATION) {
-        lexer->advance(lexer, false);
+        lexer->advance_angular(lexer, false);
         lexer->mark_end(lexer);
         VEC_POP(scanner->tags);
         lexer->result_symbol = INTERPOLATION_END;
@@ -441,7 +441,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
 
   case '@':
     if (valid_symbols[CONTROL_FLOW_START]) {
-      lexer->advance(lexer, false);
+      lexer->advance_angular(lexer, false);
       lexer->mark_end(lexer);
       lexer->result_symbol = CONTROL_FLOW_START;
       return true;
@@ -467,20 +467,20 @@ void *tree_sitter_angular_external_scanner_create() {
 bool tree_sitter_angular_external_scanner_scan(void *payload, TSLexer *lexer,
                                                const bool *valid_symbols) {
   Scanner *scanner = (Scanner *)payload;
-  return scan(scanner, lexer, valid_symbols);
+  return scan_angular(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_angular_external_scanner_serialize(void *payload,
                                                         char *buffer) {
   Scanner *scanner = (Scanner *)payload;
-  return serialize(scanner, buffer);
+  return serialize_angular(scanner, buffer);
 }
 
 void tree_sitter_angular_external_scanner_deserialize(void *payload,
                                                       const char *buffer,
                                                       unsigned length) {
   Scanner *scanner = (Scanner *)payload;
-  deserialize(scanner, buffer, length);
+  deserialize_angular(scanner, buffer, length);
 }
 
 void tree_sitter_angular_external_scanner_destroy(void *payload) {

@@ -1,6 +1,6 @@
 # 267 Supported Parsers
 
-2 pending, 10 skipped regeneration
+2 pending, 9 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -147,7 +147,7 @@
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️  (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) (maintained by @ObserverOfTime; ❌grammar.js has errors: repetition operator missing expression: {[rR][eE][xX]})
 - [x] [nickel](https://github.com/nickel-lang/tree-sitter-nickel) ✔️  (maintained by @ErinvanderVeen, @yannham)
-- [x] [nim](https://github.com/alaviss/tree-sitter-nim) ✔️  (maintained by @aMOPel; ❌high memory usage, must be compiled on its own)
+- [x] [nim](https://github.com/alaviss/tree-sitter-nim) ✔️  (maintained by @aMOPel; ❌high (7GB) memory usage)
 - [x] [nim_format_string](https://github.com/aMOPel/tree-sitter-nim-format-string) ✔️  (maintained by @aMOPel)
 - [x] [ninja](https://github.com/alemuller/tree-sitter-ninja) ✔️  (maintained by @alemuller)
 - [x] [nix](https://github.com/cstrahan/tree-sitter-nix) ✔️  (maintained by @leo60228)

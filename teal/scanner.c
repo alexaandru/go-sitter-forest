@@ -12,8 +12,8 @@ typedef struct {
 void *tree_sitter_teal_external_scanner_create() { return calloc(1, sizeof(State)); }
 void tree_sitter_teal_external_scanner_destroy(void *payload) { free(payload); }
 
-static inline void consume(TSLexer *lexer) { lexer->advance(lexer, false); }
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void consume(TSLexer *lexer) { lexer->advance_teal(lexer, false); }
+static inline void skip_teal(TSLexer *lexer) { lexer->advance_teal(lexer, true); }
 
 enum TokenType {
     COMMENT,
@@ -193,7 +193,7 @@ bool tree_sitter_teal_external_scanner_scan(void *payload, TSLexer *lexer, const
         return scan_long_string_end(state, lexer) || scan_long_string_char(lexer);
     }
     while (is_whitespace(lexer->lookahead))
-        skip(lexer);
+        skip_teal(lexer);
 
     if (valid_symbols[SHORT_STRING_START] && scan_short_string_start(state, lexer))
         return true;
@@ -202,7 +202,7 @@ bool tree_sitter_teal_external_scanner_scan(void *payload, TSLexer *lexer, const
         return true;
 
     while (is_whitespace(lexer->lookahead))
-        skip(lexer);
+        skip_teal(lexer);
 
     return valid_symbols[COMMENT] && scan_comment(lexer);
 }

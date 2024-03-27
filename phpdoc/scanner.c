@@ -25,8 +25,8 @@ void tree_sitter_phpdoc_external_scanner_reset(void *p) {}
 unsigned tree_sitter_phpdoc_external_scanner_serialize(void *p, char *buffer) { return 0; }
 void tree_sitter_phpdoc_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void advance_phpdoc(TSLexer *lexer) { lexer->advance_phpdoc(lexer, false); }
+static void skip_phpdoc(TSLexer *lexer) { lexer->advance_phpdoc(lexer, true); }
 
 // Skip line prefix:
 //
@@ -42,7 +42,7 @@ static bool skip_to_text_start(TSLexer *lexer) {
     switch (lexer->lookahead) {
       case '\r':
       case '\n':
-        skip(lexer);
+        skip_phpdoc(lexer);
         asterisk_found = false;
         break;
       case ' ':
@@ -50,10 +50,10 @@ static bool skip_to_text_start(TSLexer *lexer) {
           // '* ' found: potential start of next content
           return true;
         }
-        skip(lexer);
+        skip_phpdoc(lexer);
         break;
       case '*':
-        skip(lexer);
+        skip_phpdoc(lexer);
         asterisk_found = true;
         break;
       default:
@@ -70,7 +70,7 @@ static bool skip_whitespace(TSLexer *lexer) {
       lexer->lookahead == '\n' ||
       lexer->lookahead == '\r'
   ) {
-    skip(lexer);
+    skip_phpdoc(lexer);
     skipped = true;
   }
   return skipped;
@@ -85,7 +85,7 @@ static bool scan_variable_name(TSLexer *lexer, bool *has_content) {
   if (lexer->lookahead != '$') {
     return false;
   }
-  advance(lexer);
+  advance_phpdoc(lexer);
 
   // From PHP parser:
   //  name: /[_a-zA-Z\u00A1-\u00ff][_a-zA-Z\u00A1-\u00ff\d]*/,
@@ -98,7 +98,7 @@ static bool scan_variable_name(TSLexer *lexer, bool *has_content) {
         (*has_content && lexer->lookahead >= '0' && lexer->lookahead <= '9')
        ) {
       *has_content = true;
-      advance(lexer);
+      advance_phpdoc(lexer);
     } else {
       return *has_content;
     }
@@ -149,7 +149,7 @@ static bool scan_version(TSLexer *lexer, bool *has_content) {
           if (*(pkg++) != lexer->lookahead) {
             return false;
           }
-          advance(lexer);
+          advance_phpdoc(lexer);
         }
         return true;
         break;
@@ -182,7 +182,7 @@ static bool scan_version(TSLexer *lexer, bool *has_content) {
           vcs_started = true;
         }
     }
-    advance(lexer);
+    advance_phpdoc(lexer);
     *has_content = true;
   }
 }
@@ -208,7 +208,7 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool has_content) {
         break;
 
       case '{':
-        advance(lexer);
+        advance_phpdoc(lexer);
         if (lexer->lookahead == '@') {
           // new inline tag starts, so text node is complete
           return has_content;
@@ -223,12 +223,12 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool has_content) {
         break;
 
       case ' ':
-        advance(lexer);
+        advance_phpdoc(lexer);
         switch (lexer->lookahead) {
           // check for end of comment: ' */', ' **/', ...
           case '*':
             while (lexer->lookahead == '*') {
-              advance(lexer);
+              advance_phpdoc(lexer);
             }
             if (lexer->lookahead == '/') {
               return has_content;
@@ -236,7 +236,7 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool has_content) {
             break;
           // check for start of inline tag
           case '{':
-            advance(lexer);
+            advance_phpdoc(lexer);
             if (lexer->lookahead == '@') {
               // new inline tag starts, so text node is complete
               return has_content;
@@ -246,7 +246,7 @@ static bool scan_text(TSLexer *lexer, bool is_inline, bool has_content) {
         break;
     }
     has_content = true;
-    advance(lexer);
+    advance_phpdoc(lexer);
   }
 }
 
@@ -278,7 +278,7 @@ bool tree_sitter_phpdoc_external_scanner_scan(void *payload, TSLexer *lexer,
     if (lexer->lookahead != ' ') {
       return false;
     }
-    skip(lexer);
+    skip_phpdoc(lexer);
 
     if (valid_symbols[TEXT] && scan_text(lexer, false, has_content)) {
       lexer->result_symbol = TEXT;

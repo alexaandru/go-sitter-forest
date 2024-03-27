@@ -40,9 +40,9 @@ enum TokenType {
     ERROR_RECOVERY,
 };
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_qmljs(TSLexer *lexer) { lexer->advance_qmljs(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_qmljs(TSLexer *lexer) { lexer->advance_qmljs(lexer, true); }
 
 static bool scan_template_chars(TSLexer *lexer) {
     lexer->result_symbol = TEMPLATE_CHARS;
@@ -54,7 +54,7 @@ static bool scan_template_chars(TSLexer *lexer) {
             case '\0':
                 return false;
             case '$':
-                advance(lexer);
+                advance_qmljs(lexer);
                 if (lexer->lookahead == '{') {
                     return has_content;
                 }
@@ -62,7 +62,7 @@ static bool scan_template_chars(TSLexer *lexer) {
             case '\\':
                 return has_content;
             default:
-                advance(lexer);
+                advance_qmljs(lexer);
         }
     }
 }
@@ -70,29 +70,29 @@ static bool scan_template_chars(TSLexer *lexer) {
 static bool scan_whitespace_and_comments(TSLexer *lexer, bool *scanned_comment) {
     for (;;) {
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_qmljs(lexer);
         }
 
         if (lexer->lookahead == '/') {
-            skip(lexer);
+            skip_qmljs(lexer);
 
             if (lexer->lookahead == '/') {
-                skip(lexer);
+                skip_qmljs(lexer);
                 while (lexer->lookahead != 0 && lexer->lookahead != '\n') {
-                    skip(lexer);
+                    skip_qmljs(lexer);
                 }
                 *scanned_comment = true;
             } else if (lexer->lookahead == '*') {
-                skip(lexer);
+                skip_qmljs(lexer);
                 while (lexer->lookahead != 0) {
                     if (lexer->lookahead == '*') {
-                        skip(lexer);
+                        skip_qmljs(lexer);
                         if (lexer->lookahead == '/') {
-                            skip(lexer);
+                            skip_qmljs(lexer);
                             break;
                         }
                     } else {
-                        skip(lexer);
+                        skip_qmljs(lexer);
                     }
                 }
             } else {
@@ -118,7 +118,7 @@ static bool scan_automatic_semicolon(TSLexer *lexer, const bool *valid_symbols, 
             //   type F = ({a}: {a: number}) => number;
             // Therefore, disable automatic semicolons when followed by typing
             do {
-                skip(lexer);
+                skip_qmljs(lexer);
             } while (iswspace(lexer->lookahead));
             if (lexer->lookahead == ':') {
                 return false;
@@ -131,10 +131,10 @@ static bool scan_automatic_semicolon(TSLexer *lexer, const bool *valid_symbols, 
         if (lexer->lookahead == '\n') {
             break;
         }
-        skip(lexer);
+        skip_qmljs(lexer);
     }
 
-    skip(lexer);
+    skip_qmljs(lexer);
 
     if (!scan_whitespace_and_comments(lexer, scanned_comment)) {
         return false;
@@ -175,26 +175,26 @@ static bool scan_automatic_semicolon(TSLexer *lexer, const bool *valid_symbols, 
 
             // Insert a semicolon before `--` and `++`, but not before binary `+` or `-`.
         case '+':
-            skip(lexer);
+            skip_qmljs(lexer);
             return lexer->lookahead == '+';
         case '-':
-            skip(lexer);
+            skip_qmljs(lexer);
             return lexer->lookahead == '-';
 
             // Don't insert a semicolon before `!=`, but do insert one before a unary `!`.
         case '!':
-            skip(lexer);
+            skip_qmljs(lexer);
             return lexer->lookahead != '=';
 
             // Don't insert a semicolon before `in` or `instanceof`, but do insert one
             // before an identifier.
         case 'i':
-            skip(lexer);
+            skip_qmljs(lexer);
 
             if (lexer->lookahead != 'n') {
                 return true;
             }
-            skip(lexer);
+            skip_qmljs(lexer);
 
             if (!iswalpha(lexer->lookahead)) {
                 return false;
@@ -204,7 +204,7 @@ static bool scan_automatic_semicolon(TSLexer *lexer, const bool *valid_symbols, 
                 if (lexer->lookahead != "stanceof"[i]) {
                     return true;
                 }
-                skip(lexer);
+                skip_qmljs(lexer);
             }
 
             if (!iswalpha(lexer->lookahead)) {
@@ -221,11 +221,11 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
         if (!iswspace(lexer->lookahead)) {
             break;
         }
-        skip(lexer);
+        skip_qmljs(lexer);
     }
 
     if (lexer->lookahead == '?') {
-        advance(lexer);
+        advance_qmljs(lexer);
 
         /* Optional chaining. */
         if (lexer->lookahead == '?' || lexer->lookahead == '.') {
@@ -241,7 +241,7 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
             if (!iswspace(lexer->lookahead)) {
                 break;
             }
-            advance(lexer);
+            advance_qmljs(lexer);
         }
 
         if (lexer->lookahead == ':' || lexer->lookahead == ')' || lexer->lookahead == ',') {
@@ -249,7 +249,7 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
         }
 
         if (lexer->lookahead == '.') {
-            advance(lexer);
+            advance_qmljs(lexer);
             if (iswdigit(lexer->lookahead)) {
                 return true;
             }
@@ -262,7 +262,7 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
 
 static bool scan_closing_comment(TSLexer *lexer) {
     while (iswspace(lexer->lookahead) || lexer->lookahead == 0x2028 || lexer->lookahead == 0x2029) {
-        skip(lexer);
+        skip_qmljs(lexer);
     }
 
     const char *comment_start = "<!--";
@@ -273,14 +273,14 @@ static bool scan_closing_comment(TSLexer *lexer) {
             if (lexer->lookahead != comment_start[i]) {
                 return false;
             }
-            advance(lexer);
+            advance_qmljs(lexer);
         }
     } else if (lexer->lookahead == '-') {
         for (unsigned i = 0; i < 3; i++) {
             if (lexer->lookahead != comment_end[i]) {
                 return false;
             }
-            advance(lexer);
+            advance_qmljs(lexer);
         }
     } else {
         return false;
@@ -288,7 +288,7 @@ static bool scan_closing_comment(TSLexer *lexer) {
 
     while (lexer->lookahead != 0 && lexer->lookahead != '\n' && lexer->lookahead != 0x2028 &&
            lexer->lookahead != 0x2029) {
-        advance(lexer);
+        advance_qmljs(lexer);
     }
 
     lexer->result_symbol = HTML_COMMENT;

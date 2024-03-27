@@ -41,14 +41,14 @@
   {                               \
     endline chr = str(peek());    \
     print("next %s\n", chr.str);  \
-    lexer->advance(lexer, false); \
+    lexer->advance_hack(lexer, false); \
   }
 
-#define skip()                   \
+#define skip_hack()                   \
   {                              \
     endline chr = str(peek());   \
     print("skip %s\n", chr.str); \
-    lexer->advance(lexer, true); \
+    lexer->advance_hack(lexer, true); \
   }
 
 #define stop()                   \
@@ -160,7 +160,7 @@ static endline str(int32_t chr) {
   }
 }
 
-static unsigned serialize(Scanner *scanner, char *buffer) {
+static unsigned serialize_hack(Scanner *scanner, char *buffer) {
   if (scanner->delimiter.len + 2 >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
     return 0;
   }
@@ -171,7 +171,7 @@ static unsigned serialize(Scanner *scanner, char *buffer) {
   return scanner->delimiter.len + 3;
 }
 
-static void deserialize(Scanner *scanner, const char *buffer, unsigned length) {
+static void deserialize_hack(Scanner *scanner, const char *buffer, unsigned length) {
   if (length == 0) {
     scanner->is_nowdoc = false;
     scanner->did_start = false;
@@ -269,7 +269,7 @@ static bool scan_body(Scanner *scanner, TSLexer *lexer) {
           // <<<EOF
           // x     \n
           // EOF;  ^^ detected did_end during HEREDOC_BODY scan
-          skip();
+          skip_hack();
         } else {
           // Did not detect did_end in a previous scan. Newline could be HEREDOC_START_NEWLINE,
           // HEREDOC_BODY, HEREDOC_END_NEWLINE.
@@ -331,7 +331,7 @@ static bool scan_body(Scanner *scanner, TSLexer *lexer) {
 static bool scan_start(Scanner *scanner, TSLexer *lexer) {
   print("scan_start() <-\n");
 
-  while (iswspace(peek())) skip();
+  while (iswspace(peek())) skip_hack();
 
   scanner->is_nowdoc = peek() == '\'';
   string_clear(&scanner->delimiter);
@@ -386,7 +386,7 @@ static bool scan_start(Scanner *scanner, TSLexer *lexer) {
  * Note: if we return false for a scan, variable value changes are overwritten with the values of
  * the last successful scan. https://tree-sitter.github.io/tree-sitter/creating-parsers#serialize
  */
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *expected) {
+static bool scan_hack(Scanner *scanner, TSLexer *lexer, const bool *expected) {
   print("\n> ");
   if (expected[HEREDOC_START]) {
     print("%s ", TokenTypes[HEREDOC_START]);
@@ -428,18 +428,18 @@ void *tree_sitter_hack_external_scanner_create() {
 
 bool tree_sitter_hack_external_scanner_scan(void *payload, TSLexer *lexer, const bool *expected) {
   Scanner *scanner = (Scanner *)payload;
-  return scan(scanner, lexer, expected);
+  return scan_hack(scanner, lexer, expected);
 }
 
 unsigned tree_sitter_hack_external_scanner_serialize(void *payload, char *state) {
   Scanner *scanner = (Scanner *)payload;
-  return serialize(scanner, state);
+  return serialize_hack(scanner, state);
 }
 
 void tree_sitter_hack_external_scanner_deserialize(
     void *payload, const char *state, unsigned length) {
   Scanner *scanner = (Scanner *)payload;
-  deserialize(scanner, state, length);
+  deserialize_hack(scanner, state, length);
 }
 
 void tree_sitter_hack_external_scanner_destroy(void *payload) {

@@ -6,9 +6,9 @@ enum TokenType {
     HELP_TEXT,
 };
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_kconfig(TSLexer *lexer) { lexer->advance_kconfig(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_kconfig(TSLexer *lexer) { lexer->advance_kconfig(lexer, true); }
 
 void *tree_sitter_kconfig_external_scanner_create() { return NULL; }
 
@@ -32,12 +32,12 @@ bool tree_sitter_kconfig_external_scanner_scan(void *payload, TSLexer *lexer, co
                 default:
                     break;
             }
-            skip(lexer);
+            skip_kconfig(lexer);
         }
 
     scan_line:
         while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
-            advance(lexer);
+            advance_kconfig(lexer);
         }
 
         if (lexer->eof(lexer)) {
@@ -59,7 +59,7 @@ bool tree_sitter_kconfig_external_scanner_scan(void *payload, TSLexer *lexer, co
                 default:
                     break;
             }
-            advance(lexer);
+            advance_kconfig(lexer);
         }
 
         if (next_col >= start_col) {

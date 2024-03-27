@@ -9,13 +9,13 @@ enum TokenType {
   INDENTED_DOLLAR_ESCAPE,
 };
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_nix(TSLexer *lexer) { lexer->advance_nix(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_nix(TSLexer *lexer) { lexer->advance_nix(lexer, true); }
 
 static bool scan_dollar_escape(TSLexer *lexer) {
   lexer->result_symbol = DOLLAR_ESCAPE;
-  advance(lexer);
+  advance_nix(lexer);
   lexer->mark_end(lexer);
   if (lexer->lookahead == '$') {
     return true;
@@ -26,13 +26,13 @@ static bool scan_dollar_escape(TSLexer *lexer) {
 
 static bool scan_indented_dollar_escape(TSLexer *lexer) {
   lexer->result_symbol = INDENTED_DOLLAR_ESCAPE;
-  advance(lexer);
+  advance_nix(lexer);
   lexer->mark_end(lexer);
   if (lexer->lookahead == '$') {
     return true;
   } else {
     if (lexer->lookahead == '\\') {
-      advance(lexer);
+      advance_nix(lexer);
       if (lexer->lookahead == '$') {
         lexer->mark_end(lexer);
         return true;
@@ -57,21 +57,21 @@ static bool scan_string_fragment(TSLexer *lexer) {
     case '\\':
       return has_content;
     case '$':
-      advance(lexer);
+      advance_nix(lexer);
       if (lexer->lookahead == '{') {
         return has_content;
       } else if (lexer->lookahead != '"' && lexer->lookahead != '\\') {
         // Any char following '$' other than '"', '\\' and '{' (which was
         // handled above) should be consumed as additional string content. This
         // means `$${` doesn't start an interpolation, but `$$${` does.
-        advance(lexer);
+        advance_nix(lexer);
       }
       break;
     // Simply give up on EOF or '\0'.
     case '\0':
       return false;
     default:
-      advance(lexer);
+      advance_nix(lexer);
     }
   }
 }
@@ -83,18 +83,18 @@ static bool scan_indented_string_fragment(TSLexer *lexer) {
     lexer->mark_end(lexer);
     switch (lexer->lookahead) {
     case '$':
-      advance(lexer);
+      advance_nix(lexer);
       if (lexer->lookahead == '{') {
         return has_content;
       } else if (lexer->lookahead != '\'') {
         // Any char following '$' other than '\'' and '{' (which was handled
         // above) should be consumed as additional string content. This means
         // `$${` doesn't start an interpolation, but `$$${` does.
-        advance(lexer);
+        advance_nix(lexer);
       }
       break;
     case '\'':
-      advance(lexer);
+      advance_nix(lexer);
       if (lexer->lookahead == '\'') {
         // Two single quotes always stop current string fragment.
         // It can be either an end delimiter '', or escape sequences ''', ''$,
@@ -106,7 +106,7 @@ static bool scan_indented_string_fragment(TSLexer *lexer) {
     case '\0':
       return false;
     default:
-      advance(lexer);
+      advance_nix(lexer);
     }
   }
 }
@@ -130,7 +130,7 @@ static bool scan_path_start(TSLexer *lexer) {
   //
   // so we must skip over any leading whitespace here.
   while (c == ' ' || c == '\n' || c == '\r' || c == '\t') {
-    skip(lexer);
+    skip_nix(lexer);
     c = lexer->lookahead;
   }
 
@@ -155,7 +155,7 @@ static bool scan_path_start(TSLexer *lexer) {
       return have_after_sep;
     }
 
-    advance(lexer);
+    advance_nix(lexer);
   }
 }
 
@@ -167,7 +167,7 @@ static bool scan_path_fragment(TSLexer *lexer) {
     if (!is_path_char(lexer->lookahead)) {
       return has_content;
     }
-    advance(lexer);
+    advance_nix(lexer);
   }
 }
 
@@ -194,7 +194,7 @@ bool tree_sitter_nix_external_scanner_scan(void *payload, TSLexer *lexer,
   } else if (valid_symbols[INDENTED_STRING_FRAGMENT]) {
     if (lexer->lookahead == '\'') {
       lexer->mark_end(lexer);
-      advance(lexer);
+      advance_nix(lexer);
       if (lexer->lookahead == '\'') {
         return scan_indented_dollar_escape(lexer);
       }

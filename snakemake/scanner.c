@@ -172,10 +172,10 @@ typedef struct {
 bool parse_wc_interp_open(TSLexer *lexer, const bool *valid_symbols, bool has_content) {
     // Encountered '{' as next symbol and a wildcard interpolation is allowed
     lexer->mark_end(lexer);
-    lexer->advance(lexer, false);
+    lexer->advance_snakemake(lexer, false);
     if (lexer->lookahead == '{') {
         // Double {{ -> escaped.
-        lexer->advance(lexer, false);
+        lexer->advance_snakemake(lexer, false);
         lexer->mark_end(lexer);
         lexer->result_symbol = STRING_CONTENT;
         return true;
@@ -195,10 +195,10 @@ bool parse_wc_def_open(
     // Encountered '{' as next symbol and a wildcard definition is allowed
     // Consume additional { - only the last one opens a wildcard.
     lexer->mark_end(lexer);
-    lexer->advance(lexer, false);
+    lexer->advance_snakemake(lexer, false);
     while (lexer->lookahead == '{' && lexer->lookahead != end_character && !lexer->eof(lexer)) {
         lexer->mark_end(lexer);
-        lexer->advance(lexer, false);
+        lexer->advance_snakemake(lexer, false);
         has_content = true;
     }
     if (has_content) {
@@ -208,20 +208,20 @@ bool parse_wc_def_open(
         if (lexer->lookahead == '}') {
             // empty braces -> not a wildcard
             lexer->mark_end(lexer);
-            lexer->advance(lexer, false);
+            lexer->advance_snakemake(lexer, false);
             lexer->result_symbol = STRING_CONTENT;
         } else {
             // braces have content -> wildcard
             lexer->result_symbol = WILDCARD_DEF_OPEN;
-            lexer->advance(lexer, false);
+            lexer->advance_snakemake(lexer, false);
         }
     }
     return true;
 }
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_snakemake(TSLexer *lexer) { lexer->advance_snakemake(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_snakemake(TSLexer *lexer) { lexer->advance_snakemake(lexer, true); }
 
 bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                                               const bool *valid_symbols) {
@@ -258,11 +258,11 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
         if (is_format(&delimiter)) {
             lexer->mark_end(lexer);
             bool is_left_brace = lexer->lookahead == '{';
-            advance(lexer);
+            advance_snakemake(lexer);
             advanced_once = true;
             if ((lexer->lookahead == '{' && is_left_brace) ||
                 (lexer->lookahead == '}' && !is_left_brace)) {
-                advance(lexer);
+                advance_snakemake(lexer);
                 lexer->mark_end(lexer);
                 lexer->result_symbol = ESCAPE_INTERPOLATION;
                 return true;
@@ -295,32 +295,32 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
             if (lexer->lookahead == '\\') {
                 if (is_raw(&delimiter)) {
                     // Step over the backslash.
-                    advance(lexer);
+                    advance_snakemake(lexer);
                     // Step over any escaped quotes.
                     if (lexer->lookahead == end_character(&delimiter) ||
                         lexer->lookahead == '\\') {
-                        advance(lexer);
+                        advance_snakemake(lexer);
                     }
                     // Step over newlines
                     if (lexer -> lookahead == '\r') {
-                        advance(lexer);
+                        advance_snakemake(lexer);
                         if (lexer -> lookahead == '\n') {
-                        advance(lexer);
+                        advance_snakemake(lexer);
                         }
                     } else if (lexer -> lookahead == '\n') {
-                        advance(lexer);
+                        advance_snakemake(lexer);
                     }
                     continue;
                 }
                 if (is_bytes(&delimiter)) {
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_snakemake(lexer);
                     if (lexer->lookahead == 'N' || lexer->lookahead == 'u' ||
                         lexer->lookahead == 'U') {
                         // In bytes string, \N{...}, \uXXXX and \UXXXXXXXX are
                         // not escape sequences
                         // https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals
-                        advance(lexer);
+                        advance_snakemake(lexer);
                     } else {
                         lexer->result_symbol = STRING_CONTENT;
                         return has_content;
@@ -333,14 +333,14 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
             } else if (lexer->lookahead == end_char) {
                 if (is_triple(&delimiter)) {
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_snakemake(lexer);
                     if (lexer->lookahead == end_char) {
-                        advance(lexer);
+                        advance_snakemake(lexer);
                         if (lexer->lookahead == end_char) {
                             if (has_content) {
                                 lexer->result_symbol = STRING_CONTENT;
                             } else {
-                                advance(lexer);
+                                advance_snakemake(lexer);
                                 lexer->mark_end(lexer);
                                 VEC_POP(scanner->delimiters);
                                 lexer->result_symbol = STRING_END;
@@ -359,7 +359,7 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                 if (has_content) {
                     lexer->result_symbol = STRING_CONTENT;
                 } else {
-                    advance(lexer);
+                    advance_snakemake(lexer);
                     VEC_POP(scanner->delimiters);
                     lexer->result_symbol = STRING_END;
                     scanner->inside_f_string = false;
@@ -371,7 +371,7 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                        !is_triple(&delimiter)) {
                 return false;
             }
-            advance(lexer);
+            advance_snakemake(lexer);
             has_content = true;
         }
     }
@@ -385,16 +385,16 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
         if (lexer->lookahead == '\n') {
             found_end_of_line = true;
             indent_length = 0;
-            skip(lexer);
+            skip_snakemake(lexer);
         } else if (lexer->lookahead == ' ') {
             indent_length++;
-            skip(lexer);
+            skip_snakemake(lexer);
         } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
             indent_length = 0;
-            skip(lexer);
+            skip_snakemake(lexer);
         } else if (lexer->lookahead == '\t') {
             indent_length += 8;
-            skip(lexer);
+            skip_snakemake(lexer);
         } else if (lexer->lookahead == '#') {
             // If we haven't found an EOL yet,
             // then this is a comment after an expression:
@@ -408,17 +408,17 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                 first_comment_indent_length = (int32_t)indent_length;
             }
             while (lexer->lookahead && lexer->lookahead != '\n') {
-                skip(lexer);
+                skip_snakemake(lexer);
             }
-            skip(lexer);
+            skip_snakemake(lexer);
             indent_length = 0;
         } else if (lexer->lookahead == '\\') {
-            skip(lexer);
+            skip_snakemake(lexer);
             if (lexer->lookahead == '\r') {
-                skip(lexer);
+                skip_snakemake(lexer);
             }
             if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
-                skip(lexer);
+                skip_snakemake(lexer);
             } else {
                 return false;
             }
@@ -484,33 +484,33 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                 break;
             }
             has_flags = true;
-            advance(lexer);
+            advance_snakemake(lexer);
         }
 
         if (lexer->lookahead == '`') {
             set_end_character(&delimiter, '`');
-            advance(lexer);
+            advance_snakemake(lexer);
             lexer->mark_end(lexer);
         } else if (lexer->lookahead == '\'') {
             set_end_character(&delimiter, '\'');
-            advance(lexer);
+            advance_snakemake(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '\'') {
-                advance(lexer);
+                advance_snakemake(lexer);
                 if (lexer->lookahead == '\'') {
-                    advance(lexer);
+                    advance_snakemake(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }
             }
         } else if (lexer->lookahead == '"') {
             set_end_character(&delimiter, '"');
-            advance(lexer);
+            advance_snakemake(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '"') {
-                advance(lexer);
+                advance_snakemake(lexer);
                 if (lexer->lookahead == '"') {
-                    advance(lexer);
+                    advance_snakemake(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }

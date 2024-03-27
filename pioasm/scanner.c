@@ -26,13 +26,13 @@ bool tree_sitter_pioasm_external_scanner_scan(void* payload, TSLexer* lexer, con
       lexer->mark_end(lexer);
 
       if (lexer->lookahead == '%') {
-        lexer->advance(lexer, false);
+        lexer->advance_pioasm(lexer, false);
 
         if (lexer->lookahead == '}') {
           return true;
         }
       } else {
-        lexer->advance(lexer, false);
+        lexer->advance_pioasm(lexer, false);
       }
     }
   }

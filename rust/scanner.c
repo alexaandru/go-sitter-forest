@@ -23,9 +23,9 @@ void tree_sitter_rust_external_scanner_deserialize(void *p, const char *b, unsig
 
 static inline bool is_num_char(int32_t c) { return c == '_' || iswdigit(c); }
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_rust(TSLexer *lexer) { lexer->advance_rust(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_rust(TSLexer *lexer) { lexer->advance_rust(lexer, true); }
 
 static inline bool process_string(TSLexer *lexer) {
     bool has_content = false;
@@ -37,7 +37,7 @@ static inline bool process_string(TSLexer *lexer) {
             return false;
         }
         has_content = true;
-        advance(lexer);
+        advance_rust(lexer);
     }
     lexer->result_symbol = STRING_CONTENT;
     lexer->mark_end(lexer);
@@ -47,33 +47,33 @@ static inline bool process_string(TSLexer *lexer) {
 static inline bool process_raw_string(TSLexer *lexer) {
     lexer->result_symbol = RAW_STRING_LITERAL;
     if (lexer->lookahead == 'b' || lexer->lookahead == 'c') {
-        advance(lexer);
+        advance_rust(lexer);
     }
     if (lexer->lookahead != 'r') {
         return false;
     }
-    advance(lexer);
+    advance_rust(lexer);
 
     unsigned opening_hash_count = 0;
     while (lexer->lookahead == '#') {
-        advance(lexer);
+        advance_rust(lexer);
         opening_hash_count++;
     }
 
     if (lexer->lookahead != '"') {
         return false;
     }
-    advance(lexer);
+    advance_rust(lexer);
 
     for (;;) {
         if (lexer->eof(lexer)) {
             return false;
         }
         if (lexer->lookahead == '"') {
-            advance(lexer);
+            advance_rust(lexer);
             unsigned hash_count = 0;
             while (lexer->lookahead == '#' && hash_count < opening_hash_count) {
-                advance(lexer);
+                advance_rust(lexer);
                 hash_count++;
             }
             if (hash_count == opening_hash_count) {
@@ -81,7 +81,7 @@ static inline bool process_raw_string(TSLexer *lexer) {
                 return true;
             }
         } else {
-            advance(lexer);
+            advance_rust(lexer);
         }
     }
 }
@@ -89,16 +89,16 @@ static inline bool process_raw_string(TSLexer *lexer) {
 static inline bool process_float_literal(TSLexer *lexer) {
     lexer->result_symbol = FLOAT_LITERAL;
 
-    advance(lexer);
+    advance_rust(lexer);
     while (is_num_char(lexer->lookahead)) {
-        advance(lexer);
+        advance_rust(lexer);
     }
 
     bool has_fraction = false, has_exponent = false;
 
     if (lexer->lookahead == '.') {
         has_fraction = true;
-        advance(lexer);
+        advance_rust(lexer);
         if (iswalpha(lexer->lookahead)) {
             // The dot is followed by a letter: 1.max(2) => not a float but an integer
             return false;
@@ -108,7 +108,7 @@ static inline bool process_float_literal(TSLexer *lexer) {
             return false;
         }
         while (is_num_char(lexer->lookahead)) {
-            advance(lexer);
+            advance_rust(lexer);
         }
     }
 
@@ -116,16 +116,16 @@ static inline bool process_float_literal(TSLexer *lexer) {
 
     if (lexer->lookahead == 'e' || lexer->lookahead == 'E') {
         has_exponent = true;
-        advance(lexer);
+        advance_rust(lexer);
         if (lexer->lookahead == '+' || lexer->lookahead == '-') {
-            advance(lexer);
+            advance_rust(lexer);
         }
         if (!is_num_char(lexer->lookahead)) {
             return true;
         }
-        advance(lexer);
+        advance_rust(lexer);
         while (is_num_char(lexer->lookahead)) {
-            advance(lexer);
+            advance_rust(lexer);
         }
 
         lexer->mark_end(lexer);
@@ -138,13 +138,13 @@ static inline bool process_float_literal(TSLexer *lexer) {
     if (lexer->lookahead != 'u' && lexer->lookahead != 'i' && lexer->lookahead != 'f') {
         return true;
     }
-    advance(lexer);
+    advance_rust(lexer);
     if (!iswdigit(lexer->lookahead)) {
         return true;
     }
 
     while (iswdigit(lexer->lookahead)) {
-        advance(lexer);
+        advance_rust(lexer);
     }
 
     lexer->mark_end(lexer);
@@ -203,11 +203,11 @@ static inline bool process_block_comment(TSLexer *lexer, const bool *valid_symbo
     // comment if need be.
     if (valid_symbols[BLOCK_INNER_DOC] && first == '!') {
         lexer->result_symbol = BLOCK_INNER_DOC;
-        advance(lexer);
+        advance_rust(lexer);
         return true;
     }
     if (valid_symbols[BLOCK_OUTER_DOC] && first == '*') {
-        advance(lexer);
+        advance_rust(lexer);
         lexer->mark_end(lexer);
         // If the next token is a / that means that it's an empty
         // block comment and we should go to the BLOCK_COMMENT_END case
@@ -218,7 +218,7 @@ static inline bool process_block_comment(TSLexer *lexer, const bool *valid_symbo
             return true;
         }
     } else {
-        advance(lexer);
+        advance_rust(lexer);
     }
 
     if (valid_symbols[BLOCK_COMMENT_END]) {
@@ -261,7 +261,7 @@ static inline bool process_block_comment(TSLexer *lexer, const bool *valid_symbo
                 default:
                     break;
             }
-            advance(lexer);
+            advance_rust(lexer);
         }
         lexer->mark_end(lexer);
         lexer->result_symbol = BLOCK_COMMENT_END;
@@ -302,7 +302,7 @@ bool tree_sitter_rust_external_scanner_scan(void *payload, TSLexer *lexer, const
     }
 
     while (iswspace(lexer->lookahead)) {
-        skip(lexer);
+        skip_rust(lexer);
     }
 
     if (valid_symbols[RAW_STRING_LITERAL] &&

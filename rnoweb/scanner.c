@@ -22,7 +22,7 @@ bool ws(int32_t val)
 void advance_ws(TSLexer* lexer)
 {
 	// If the current character is whitesapce, skip it
-	while (ws(lexer->lookahead))  lexer->advance(lexer, true);
+	while (ws(lexer->lookahead))  lexer->advance_rnoweb(lexer, true);
 };
 
 bool rnw_content(TSLexer* lexer)
@@ -40,7 +40,7 @@ bool rnw_content(TSLexer* lexer)
 		(! lexer->eof(lexer))
 		) {
 		lexer->mark_end(lexer);
-		lexer->advance(lexer, false);
+		lexer->advance_rnoweb(lexer, false);
 	}
 
 	lexer->result_symbol = RENV_CONTENT;
@@ -68,7 +68,7 @@ bool rnw_sig_end(TSLexer* lexer)
 			break;
 		} else
 		{
-			lexer->advance(lexer, false);
+			lexer->advance_rnoweb(lexer, false);
 		}
 	}
 
@@ -107,7 +107,7 @@ bool word_or_sig(TSLexer* lexer)
 					issig = false;
 					break;
 			}
-			lexer->advance(lexer, false);
+			lexer->advance_rnoweb(lexer, false);
 			val = lexer->lookahead;
 		}
 		if (issig) {
@@ -126,7 +126,7 @@ bool word_or_sig(TSLexer* lexer)
 	{
 		while ((!ws(val)) && (val != '\\') && ! lexer->eof(lexer))
 		{
-			lexer->advance(lexer, false);
+			lexer->advance_rnoweb(lexer, false);
 			val = lexer->lookahead;
 		}
 		lexer->mark_end(lexer);
@@ -147,7 +147,7 @@ bool word_or_sig(TSLexer* lexer)
 				is_sexpr = false;
 				break;
 			}
-			lexer->advance(lexer, false);
+			lexer->advance_rnoweb(lexer, false);
 			val = lexer->lookahead;
 		}
 
@@ -159,7 +159,7 @@ bool word_or_sig(TSLexer* lexer)
 
 		while ((!ws(val)) && (val != '\\') && ! lexer->eof(lexer))
 		{
-			lexer->advance(lexer, false);
+			lexer->advance_rnoweb(lexer, false);
 			val = lexer->lookahead;
 		}
 		lexer->mark_end(lexer);

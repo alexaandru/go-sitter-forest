@@ -67,7 +67,7 @@ static bool scan_code_identifier(TSLexer *lexer) {
     unsigned int const size = (sizeof(next_token_text) / sizeof(char) - 1);
 
     while (true) {
-        lexer->advance(lexer, false);
+        lexer->advance_objdump(lexer, false);
 
         if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
             lexer->result_symbol = CODE_IDENTIFIER;
@@ -172,7 +172,7 @@ static bool scan_whitespace_no_newline(TSLexer *lexer) {
                 return false;
         };
 
-        lexer->advance(lexer, false);
+        lexer->advance_objdump(lexer, false);
     }
 }
 

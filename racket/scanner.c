@@ -68,12 +68,12 @@ static void string_clear(String *str) {
     str->len = 0;
 }
 
-static void advance(TSLexer *lexer) {
-    lexer->advance(lexer, false);
+static void advance_racket(TSLexer *lexer) {
+    lexer->advance_racket(lexer, false);
 }
 
-static void skip(TSLexer *lexer) {
-    lexer->advance(lexer, true);
+static void skip_racket(TSLexer *lexer) {
+    lexer->advance_racket(lexer, true);
 }
 
 // NOTE: only "\n" is allowed as newline here,
@@ -86,7 +86,7 @@ static bool isnewline(int32_t chr) {
 static void read_line(String *str, TSLexer *lexer) {
     while (!isnewline(lexer->lookahead) && !lexer->eof(lexer)) {
         string_push(str, lexer->lookahead);
-        advance(lexer);
+        advance_racket(lexer);
     }
 }
 
@@ -107,7 +107,7 @@ static bool scan_racket(TSLexer *lexer, const bool *valid_symbols) {
     }
 
     // skip `\n`
-    skip(lexer);
+    skip_racket(lexer);
 
     String current_line = string_new();
     while (true) {
@@ -125,7 +125,7 @@ static bool scan_racket(TSLexer *lexer, const bool *valid_symbols) {
         }
         string_clear(&current_line);
         // skip `\n`
-        skip(lexer);
+        skip_racket(lexer);
     }
 }
 

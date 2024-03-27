@@ -104,9 +104,9 @@ static bool is_number_character(char character) {
 }
 
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_disassembly(TSLexer *lexer) { lexer->advance_disassembly(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_disassembly(TSLexer *lexer) { lexer->advance_disassembly(lexer, true); }
 
 static bool scan_code_identifier(TSLexer *lexer);
 static void scan_memory_dump(TSLexer *lexer, bool possibly_in_jump_target, struct MemoryDumpResult *result);
@@ -170,7 +170,7 @@ static unsigned int look_ahead_for_bytes(TSLexer *lexer, unsigned int characters
             break;
         }
 
-        advance(lexer);
+        advance_disassembly(lexer);
     }
 
     return total_count;
@@ -500,7 +500,7 @@ static bool scan_assembly_instruction(TSLexer *lexer) {
         else if (is_maybe_a_byte && (EXPECTED_BYTES_WIDTH != 0 && hexadecimal_count == EXPECTED_BYTES_WIDTH))
         {
             // We've found a hexadecimal byte.
-            skip(lexer);
+            skip_disassembly(lexer);
             unsigned int found = look_ahead_for_bytes(lexer, hexadecimal_count) + 1;
 
             if (found > EXPECTED_BYTES_COUNT)
@@ -527,7 +527,7 @@ static bool scan_assembly_instruction(TSLexer *lexer) {
             return false;
         }
 
-        advance(lexer);
+        advance_disassembly(lexer);
     }
 
     return false;
@@ -634,7 +634,7 @@ static bool scan_code_identifier(TSLexer *lexer)
                 break;
         }
 
-        advance(lexer);
+        advance_disassembly(lexer);
         has_text = true;
     }
 
@@ -665,7 +665,7 @@ static void scan_memory_dump(
 
     while (true) {
         previous_character = lexer->lookahead;
-        advance(lexer);
+        advance_disassembly(lexer);
 
         if (lexer->lookahead == '\n' || lexer->eof(lexer))
         {

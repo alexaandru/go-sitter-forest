@@ -22,9 +22,9 @@ unsigned tree_sitter_javascript_external_scanner_serialize(void *p, char *buffer
 
 void tree_sitter_javascript_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_javascript(TSLexer *lexer) { lexer->advance_javascript(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_javascript(TSLexer *lexer) { lexer->advance_javascript(lexer, true); }
 
 static bool scan_template_chars(TSLexer *lexer) {
     lexer->result_symbol = TEMPLATE_CHARS;
@@ -36,7 +36,7 @@ static bool scan_template_chars(TSLexer *lexer) {
             case '\0':
                 return false;
             case '$':
-                advance(lexer);
+                advance_javascript(lexer);
                 if (lexer->lookahead == '{') {
                     return has_content;
                 }
@@ -44,7 +44,7 @@ static bool scan_template_chars(TSLexer *lexer) {
             case '\\':
                 return has_content;
             default:
-                advance(lexer);
+                advance_javascript(lexer);
         }
     }
 }
@@ -52,31 +52,31 @@ static bool scan_template_chars(TSLexer *lexer) {
 static bool scan_whitespace_and_comments(TSLexer *lexer, bool *scanned_comment) {
     for (;;) {
         while (iswspace(lexer->lookahead)) {
-            skip(lexer);
+            skip_javascript(lexer);
         }
 
         if (lexer->lookahead == '/') {
-            skip(lexer);
+            skip_javascript(lexer);
 
             if (lexer->lookahead == '/') {
-                skip(lexer);
+                skip_javascript(lexer);
                 while (lexer->lookahead != 0 && lexer->lookahead != '\n' && lexer->lookahead != 0x2028 &&
                        lexer->lookahead != 0x2029) {
-                    skip(lexer);
+                    skip_javascript(lexer);
                 }
                 *scanned_comment = true;
             } else if (lexer->lookahead == '*') {
-                skip(lexer);
+                skip_javascript(lexer);
                 while (lexer->lookahead != 0) {
                     if (lexer->lookahead == '*') {
-                        skip(lexer);
+                        skip_javascript(lexer);
                         if (lexer->lookahead == '/') {
-                            skip(lexer);
+                            skip_javascript(lexer);
                             *scanned_comment = true;
                             break;
                         }
                     } else {
-                        skip(lexer);
+                        skip_javascript(lexer);
                     }
                 }
             } else {
@@ -122,10 +122,10 @@ static bool scan_automatic_semicolon(TSLexer *lexer, bool comment_condition, boo
             return false;
         }
 
-        skip(lexer);
+        skip_javascript(lexer);
     }
 
-    skip(lexer);
+    skip_javascript(lexer);
 
     if (!scan_whitespace_and_comments(lexer, scanned_comment)) {
         return false;
@@ -152,26 +152,26 @@ static bool scan_automatic_semicolon(TSLexer *lexer, bool comment_condition, boo
 
         // Insert a semicolon before `--` and `++`, but not before binary `+` or `-`.
         case '+':
-            skip(lexer);
+            skip_javascript(lexer);
             return lexer->lookahead == '+';
         case '-':
-            skip(lexer);
+            skip_javascript(lexer);
             return lexer->lookahead == '-';
 
         // Don't insert a semicolon before `!=`, but do insert one before a unary `!`.
         case '!':
-            skip(lexer);
+            skip_javascript(lexer);
             return lexer->lookahead != '=';
 
         // Don't insert a semicolon before `in` or `instanceof`, but do insert one
         // before an identifier.
         case 'i':
-            skip(lexer);
+            skip_javascript(lexer);
 
             if (lexer->lookahead != 'n') {
                 return true;
             }
-            skip(lexer);
+            skip_javascript(lexer);
 
             if (!iswalpha(lexer->lookahead)) {
                 return false;
@@ -181,7 +181,7 @@ static bool scan_automatic_semicolon(TSLexer *lexer, bool comment_condition, boo
                 if (lexer->lookahead != "stanceof"[i]) {
                     return true;
                 }
-                skip(lexer);
+                skip_javascript(lexer);
             }
 
             if (!iswalpha(lexer->lookahead)) {
@@ -201,11 +201,11 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
         if (!iswspace(lexer->lookahead)) {
             break;
         }
-        skip(lexer);
+        skip_javascript(lexer);
     }
 
     if (lexer->lookahead == '?') {
-        advance(lexer);
+        advance_javascript(lexer);
 
         if (lexer->lookahead == '?') {
             return false;
@@ -215,7 +215,7 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
         lexer->result_symbol = TERNARY_QMARK;
 
         if (lexer->lookahead == '.') {
-            advance(lexer);
+            advance_javascript(lexer);
             if (iswdigit(lexer->lookahead)) {
                 return true;
             }
@@ -228,7 +228,7 @@ static bool scan_ternary_qmark(TSLexer *lexer) {
 
 static bool scan_html_comment(TSLexer *lexer) {
     while (iswspace(lexer->lookahead) || lexer->lookahead == 0x2028 || lexer->lookahead == 0x2029) {
-        skip(lexer);
+        skip_javascript(lexer);
     }
 
     const char *comment_start = "<!--";
@@ -239,14 +239,14 @@ static bool scan_html_comment(TSLexer *lexer) {
             if (lexer->lookahead != comment_start[i]) {
                 return false;
             }
-            advance(lexer);
+            advance_javascript(lexer);
         }
     } else if (lexer->lookahead == '-') {
         for (unsigned i = 0; i < 3; i++) {
             if (lexer->lookahead != comment_end[i]) {
                 return false;
             }
-            advance(lexer);
+            advance_javascript(lexer);
         }
     } else {
         return false;
@@ -254,7 +254,7 @@ static bool scan_html_comment(TSLexer *lexer) {
 
     while (lexer->lookahead != 0 && lexer->lookahead != '\n' && lexer->lookahead != 0x2028 &&
            lexer->lookahead != 0x2029) {
-        advance(lexer);
+        advance_javascript(lexer);
     }
 
     lexer->result_symbol = HTML_COMMENT;

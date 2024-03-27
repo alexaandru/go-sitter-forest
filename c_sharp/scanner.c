@@ -20,7 +20,7 @@ bool tree_sitter_c_sharp_external_scanner_scan(
   if (valid_symbols[OPT_SEMI]) {
     lexer->result_symbol = OPT_SEMI;
     if (lexer->lookahead == ';') {
-      lexer->advance(lexer, true);
+      lexer->advance_c_sharp(lexer, true);
     }
     return true;
   }   
@@ -32,6 +32,6 @@ bool tree_sitter_c_sharp_external_scanner_scan(
     if (lexer->lookahead == 0) return true;
     if (lexer->lookahead == '\n') return true;
     if (!iswspace(lexer->lookahead)) return false;
-    lexer->advance(lexer, true);
+    lexer->advance_c_sharp(lexer, true);
   }
 }

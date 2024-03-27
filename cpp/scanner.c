@@ -18,7 +18,7 @@ typedef struct {
     wchar_t delimiter[MAX_DELIMITER_LENGTH];
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_cpp(TSLexer *lexer) { lexer->advance_cpp(lexer, false); }
 
 static inline void reset(Scanner *scanner) {
     scanner->delimiter_length = 0;
@@ -35,7 +35,7 @@ static bool scan_raw_string_delimiter(Scanner *scanner, TSLexer *lexer) {
             if (lexer->lookahead != scanner->delimiter[i]) {
                 return false;
             }
-            advance(lexer);
+            advance_cpp(lexer);
         }
         reset(scanner);
         return true;
@@ -54,7 +54,7 @@ static bool scan_raw_string_delimiter(Scanner *scanner, TSLexer *lexer) {
             return scanner->delimiter_length > 0;
         }
         scanner->delimiter[scanner->delimiter_length++] = lexer->lookahead;
-        advance(lexer);
+        advance_cpp(lexer);
     }
 }
 
@@ -93,7 +93,7 @@ static bool scan_raw_string_content(Scanner *scanner, TSLexer *lexer) {
             delimiter_index = 0;
         }
 
-        advance(lexer);
+        advance_cpp(lexer);
     }
 }
 

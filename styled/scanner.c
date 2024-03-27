@@ -8,9 +8,9 @@ enum TokenType {
   ERROR_RECOVERY,
 };
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_styled(TSLexer *lexer) { lexer->advance_styled(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_styled(TSLexer *lexer) { lexer->advance_styled(lexer, true); }
 
 void *tree_sitter_styled_external_scanner_create() { return NULL; }
 
@@ -36,9 +36,9 @@ bool tree_sitter_styled_external_scanner_scan(void *payload, TSLexer *lexer,
   if (iswspace(lexer->lookahead) && valid_symbols[DESCENDANT_OP]) {
     lexer->result_symbol = DESCENDANT_OP;
 
-    lexer->advance(lexer, true);
+    lexer->advance_styled(lexer, true);
     while (iswspace(lexer->lookahead)) {
-      lexer->advance(lexer, true);
+      lexer->advance_styled(lexer, true);
     }
     lexer->mark_end(lexer);
 
@@ -49,7 +49,7 @@ bool tree_sitter_styled_external_scanner_scan(void *payload, TSLexer *lexer,
     }
 
     if (lexer->lookahead == ':') {
-      lexer->advance(lexer, false);
+      lexer->advance_styled(lexer, false);
       if (iswspace(lexer->lookahead)) {
         return false;
       }
@@ -61,17 +61,17 @@ bool tree_sitter_styled_external_scanner_scan(void *payload, TSLexer *lexer,
         if (lexer->lookahead == '{') {
           return true;
         }
-        lexer->advance(lexer, false);
+        lexer->advance_styled(lexer, false);
       }
     }
   }
 
   if (valid_symbols[PSEUDO_CLASS_SELECTOR_COLON]) {
     while (iswspace(lexer->lookahead)) {
-      lexer->advance(lexer, true);
+      lexer->advance_styled(lexer, true);
     }
     if (lexer->lookahead == ':') {
-      advance(lexer);
+      advance_styled(lexer);
       if (lexer->lookahead == ':') {
         return false;
       }
@@ -81,7 +81,7 @@ bool tree_sitter_styled_external_scanner_scan(void *payload, TSLexer *lexer,
       // not be considered a pseudo class selector.
       while (lexer->lookahead != ';' && lexer->lookahead != '}' &&
              lexer->lookahead != '$' && !lexer->eof(lexer)) {
-        advance(lexer);
+        advance_styled(lexer);
         if (lexer->lookahead == '{') {
           lexer->result_symbol = PSEUDO_CLASS_SELECTOR_COLON;
           return true;

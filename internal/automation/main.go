@@ -74,9 +74,9 @@ func checkUpdates() error {
 	})
 }
 
-func updateAll() (err error) {
+func updateAll(force bool) (err error) {
 	return forEachGrammar(func(gr *grammar.Grammar) error {
-		return update(gr, !force)
+		return update(gr, force)
 	})
 }
 
@@ -536,7 +536,7 @@ func putFile(b []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.cc", "scanner.h", "parser.h":
+	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h":
 		// These identifiers clash between org and beancount parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
@@ -550,6 +550,7 @@ func putFile(b []byte, lang, toPath string) error {
 		reMap["advance("] = fmt.Sprintf("advance_%s(", lang)
 		reMap["void (*advance)(TSLexer *, bool)"] = fmt.Sprintf("void (*advance_%s)(TSLexer *, bool)", lang)
 		reMap[" skip("] = fmt.Sprintf(" skip_%s(", lang)
+		reMap["\nskip("] = fmt.Sprintf("\nskip_%s(", lang)
 	}
 
 	for old, new := range reMap {
@@ -697,10 +698,10 @@ func main() {
 	switch cmd := args[0]; cmd {
 	case "check-updates":
 		err = checkUpdates()
-	case "update-all":
+	case "force-update-all", "update-all":
 		fmt.Println("Updating all (applicable) languages ...")
 
-		if err = updateAll(); err != nil {
+		if err = updateAll(strings.HasPrefix(cmd, "force-")); err != nil {
 			break
 		}
 

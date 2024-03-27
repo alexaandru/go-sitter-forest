@@ -160,9 +160,9 @@ typedef struct {
     delimiter_vec *delimiters;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_gdscript(TSLexer *lexer) { lexer->advance_gdscript(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_gdscript(TSLexer *lexer) { lexer->advance_gdscript(lexer, true); }
 
 bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
                                                 const bool *valid_symbols) {
@@ -189,23 +189,23 @@ bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
             if (lexer->lookahead == '\\') {
                 if (is_raw(&delimiter)) {
                     // Step over the backslash.
-                    lexer->advance(lexer, false);
+                    lexer->advance_gdscript(lexer, false);
                     // Step over any escaped quotes.
                     if (lexer->lookahead == end_character(&delimiter) ||
                         lexer->lookahead == '\\') {
-                        lexer->advance(lexer, false);
+                        lexer->advance_gdscript(lexer, false);
                     }
                     continue;
                 }
                 if (is_bytes(&delimiter)) {
                     lexer->mark_end(lexer);
-                    lexer->advance(lexer, false);
+                    lexer->advance_gdscript(lexer, false);
                     if (lexer->lookahead == 'N' || lexer->lookahead == 'u' ||
                         lexer->lookahead == 'U') {
                         // In bytes string, \N{...}, \uXXXX and \UXXXXXXXX are
                         // not escape sequences
                         // https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals
-                        lexer->advance(lexer, false);
+                        lexer->advance_gdscript(lexer, false);
                     } else {
                         lexer->result_symbol = STRING_CONTENT;
                         return has_content;
@@ -218,14 +218,14 @@ bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
             } else if (lexer->lookahead == end_char) {
                 if (is_triple(&delimiter)) {
                     lexer->mark_end(lexer);
-                    lexer->advance(lexer, false);
+                    lexer->advance_gdscript(lexer, false);
                     if (lexer->lookahead == end_char) {
-                        lexer->advance(lexer, false);
+                        lexer->advance_gdscript(lexer, false);
                         if (lexer->lookahead == end_char) {
                             if (has_content) {
                                 lexer->result_symbol = STRING_CONTENT;
                             } else {
-                                lexer->advance(lexer, false);
+                                lexer->advance_gdscript(lexer, false);
                                 lexer->mark_end(lexer);
                                 VEC_POP(scanner->delimiters);
                                 lexer->result_symbol = STRING_END;
@@ -243,7 +243,7 @@ bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
                 if (has_content) {
                     lexer->result_symbol = STRING_CONTENT;
                 } else {
-                    lexer->advance(lexer, false);
+                    lexer->advance_gdscript(lexer, false);
                     VEC_POP(scanner->delimiters);
                     lexer->result_symbol = STRING_END;
                 }
@@ -254,7 +254,7 @@ bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
                        !is_triple(&delimiter)) {
                 return false;
             }
-            advance(lexer);
+            advance_gdscript(lexer);
             has_content = true;
         }
     }
@@ -268,32 +268,32 @@ bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
         if (lexer->lookahead == '\n') {
             found_end_of_line = true;
             indent_length = 0;
-            skip(lexer);
+            skip_gdscript(lexer);
         } else if (lexer->lookahead == ' ') {
             indent_length++;
-            skip(lexer);
+            skip_gdscript(lexer);
         } else if (lexer->lookahead == '\r' || lexer->lookahead == '\f') {
             indent_length = 0;
-            skip(lexer);
+            skip_gdscript(lexer);
         } else if (lexer->lookahead == '\t') {
             indent_length += 8;
-            skip(lexer);
+            skip_gdscript(lexer);
         } else if (lexer->lookahead == '#') {
             if (first_comment_indent_length == -1) {
                 first_comment_indent_length = (int32_t)indent_length;
             }
             while (lexer->lookahead && lexer->lookahead != '\n') {
-                skip(lexer);
+                skip_gdscript(lexer);
             }
-            skip(lexer);
+            skip_gdscript(lexer);
             indent_length = 0;
         } else if (lexer->lookahead == '\\') {
-            skip(lexer);
+            skip_gdscript(lexer);
             if (lexer->lookahead == '\r') {
-                skip(lexer);
+                skip_gdscript(lexer);
             }
             if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
-                skip(lexer);
+                skip_gdscript(lexer);
             } else {
                 return false;
             }
@@ -384,33 +384,33 @@ bool tree_sitter_gdscript_external_scanner_scan(void *payload, TSLexer *lexer,
                 break;
             }
             has_flags = true;
-            advance(lexer);
+            advance_gdscript(lexer);
         }
 
         if (lexer->lookahead == '`') {
             set_end_character(&delimiter, '`');
-            advance(lexer);
+            advance_gdscript(lexer);
             lexer->mark_end(lexer);
         } else if (lexer->lookahead == '\'') {
             set_end_character(&delimiter, '\'');
-            advance(lexer);
+            advance_gdscript(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '\'') {
-                advance(lexer);
+                advance_gdscript(lexer);
                 if (lexer->lookahead == '\'') {
-                    advance(lexer);
+                    advance_gdscript(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }
             }
         } else if (lexer->lookahead == '"') {
             set_end_character(&delimiter, '"');
-            advance(lexer);
+            advance_gdscript(lexer);
             lexer->mark_end(lexer);
             if (lexer->lookahead == '"') {
-                advance(lexer);
+                advance_gdscript(lexer);
                 if (lexer->lookahead == '"') {
-                    advance(lexer);
+                    advance_gdscript(lexer);
                     lexer->mark_end(lexer);
                     set_triple(&delimiter);
                 }

@@ -127,9 +127,9 @@ typedef struct {
     token_queue tokens;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_agda(TSLexer *lexer) { lexer->advance_agda(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_agda(TSLexer *lexer) { lexer->advance_agda(lexer, true); }
 
 bool tree_sitter_agda_external_scanner_scan(void *payload, TSLexer *lexer,
                                             const bool *valid_symbols) {
@@ -147,9 +147,9 @@ bool tree_sitter_agda_external_scanner_scan(void *payload, TSLexer *lexer,
                    lexer->lookahead == '\r' || lexer->lookahead == '\n') {
                 if (lexer->lookahead == '\n') {
                     skipped_newline = true;
-                    skip(lexer);
+                    skip_agda(lexer);
                 } else {
-                    skip(lexer);
+                    skip_agda(lexer);
                 }
             }
 

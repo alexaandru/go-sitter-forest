@@ -68,9 +68,9 @@ typedef struct {
     vec runback;
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_elm(TSLexer *lexer) { lexer->advance_elm(lexer, false); }
 
-static inline void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static inline void skip_elm(TSLexer *lexer) { lexer->advance_elm(lexer, true); }
 
 // > You can detect error recovery in the external scanner by the fact that
 // > _all_ tokens are considered valid at once.
@@ -92,10 +92,10 @@ static bool is_elm_space(TSLexer *lexer) {
 static int checkForIn(TSLexer *lexer, const bool *valid_symbols) {
     // Are we at the end of a let (in) declaration
     if (valid_symbols[VIRTUAL_END_SECTION] && lexer->lookahead == 'i') {
-        skip(lexer);
+        skip_elm(lexer);
 
         if (lexer->lookahead == 'n') {
-            skip(lexer);
+            skip_elm(lexer);
             if (is_elm_space(lexer) || lexer->eof(lexer)) {
                 return 2; // Success
             }
@@ -112,12 +112,12 @@ static bool scan_block_comment(TSLexer *lexer) {
         return false;
     }
 
-    advance(lexer);
+    advance_elm(lexer);
     if (lexer->lookahead != '-') {
         return false;
     }
 
-    advance(lexer);
+    advance_elm(lexer);
 
     while (true) {
         switch (lexer->lookahead) {
@@ -125,16 +125,16 @@ static bool scan_block_comment(TSLexer *lexer) {
                 scan_block_comment(lexer);
                 break;
             case '-':
-                advance(lexer);
+                advance_elm(lexer);
                 if (lexer->lookahead == '}') {
-                    advance(lexer);
+                    advance_elm(lexer);
                     return true;
                 }
                 break;
             case '\0':
                 return true;
             default:
-                advance(lexer);
+                advance_elm(lexer);
         }
     }
 }
@@ -144,11 +144,11 @@ static void advance_to_line_end(TSLexer *lexer) {
         if (lexer->lookahead == '\n' || lexer->eof(lexer)) {
             break;
         }
-        advance(lexer);
+        advance_elm(lexer);
     }
 }
 
-static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+static bool scan_elm(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     if (in_error_recovery(valid_symbols)) {
         return false;
     }
@@ -175,13 +175,13 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     lexer->mark_end(lexer);
     while (true) {
         if (lexer->lookahead == ' ' || lexer->lookahead == '\r') {
-            skip(lexer);
+            skip_elm(lexer);
         } else if (lexer->lookahead == '\n') {
-            skip(lexer);
+            skip_elm(lexer);
             has_newline = true;
             while (true) {
                 if (lexer->lookahead == ' ') {
-                    skip(lexer);
+                    skip_elm(lexer);
                 } else {
                     scanner->indent_length = lexer->get_column(lexer);
                     break;
@@ -189,7 +189,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
             }
         } else if (!valid_symbols[BLOCK_COMMENT_CONTENT] &&
                    lexer->lookahead == '-') {
-            advance(lexer);
+            advance_elm(lexer);
             int32_t lookahead = lexer->lookahead;
 
             // Handle minus without a whitespace for negate
@@ -214,7 +214,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
             // the comment will be lost.
             if (lookahead == '-' && has_newline) {
                 can_call_mark_end = false;
-                advance(lexer);
+                advance_elm(lexer);
                 advance_to_line_end(lexer);
             } else if (valid_symbols[BLOCK_COMMENT_CONTENT] &&
                        lexer->lookahead == '}') {
@@ -266,16 +266,16 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
                 break;
             }
             if (lexer->lookahead != '{' && lexer->lookahead != '-') {
-                advance(lexer);
+                advance_elm(lexer);
             } else if (lexer->lookahead == '-') {
                 lexer->mark_end(lexer);
-                advance(lexer);
+                advance_elm(lexer);
                 if (lexer->lookahead == '}') {
                     break;
                 }
             } else if (scan_block_comment(lexer)) {
                 lexer->mark_end(lexer);
-                advance(lexer);
+                advance_elm(lexer);
                 if (lexer->lookahead == '-') {
                     break;
                 }
@@ -301,7 +301,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
                 // comment incoming
 
                 if (lexer->lookahead == '-') {
-                    skip(lexer);
+                    skip_elm(lexer);
                     if (lexer->lookahead == '-') {
                         break;
                     }
@@ -309,7 +309,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
                 // Don't insert VIRTUAL_END_DECL when there is a block
                 // comment incoming
                 if (lexer->lookahead == '{') {
-                    skip(lexer);
+                    skip_elm(lexer);
                     if (lexer->lookahead == '-') {
                         break;
                     }
@@ -362,9 +362,9 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
             switch (lexer->lookahead) {
                 case '|':
                     lexer->mark_end(lexer);
-                    advance(lexer);
+                    advance_elm(lexer);
                     if (lexer->lookahead == ']') {
-                        advance(lexer);
+                        advance_elm(lexer);
                         return true;
                     }
                     break;
@@ -372,7 +372,7 @@ static bool scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
                     lexer->mark_end(lexer);
                     return true;
                 default:
-                    advance(lexer);
+                    advance_elm(lexer);
             }
         }
     }
@@ -400,7 +400,7 @@ void *tree_sitter_elm_external_scanner_create() {
 bool tree_sitter_elm_external_scanner_scan(void *payload, TSLexer *lexer,
                                            const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
-    return scan(scanner, lexer, valid_symbols);
+    return scan_elm(scanner, lexer, valid_symbols);
 }
 
 /**

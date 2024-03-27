@@ -27,9 +27,9 @@ enum TokenType {
 
 const char *const boolean_values[] = {"on", "off", "true", "false"};
 
-static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void advance_foam(TSLexer *lexer) { lexer->advance_foam(lexer, false); }
 
-static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
+static void skip_foam(TSLexer *lexer) { lexer->advance_foam(lexer, true); }
 
 static bool non_identifier_char(const uint32_t chr) {
     switch (chr) {
@@ -67,7 +67,7 @@ bool tree_sitter_foam_external_scanner_scan(void *payload, TSLexer *lexer,
     char current_ident[6] = {0};
 
     while (iswspace(lexer->lookahead) && lexer->lookahead != '\0') {
-        skip(lexer);
+        skip_foam(lexer);
     }
 
     if (!isalpha(lexer->lookahead) && lexer->lookahead != '_') {
@@ -79,7 +79,7 @@ bool tree_sitter_foam_external_scanner_scan(void *payload, TSLexer *lexer,
     }
 
     current_ident[0] = (char)lexer->lookahead;
-    advance(lexer);
+    advance_foam(lexer);
 
     int idx = 1;
     while (true) {
@@ -108,13 +108,13 @@ bool tree_sitter_foam_external_scanner_scan(void *payload, TSLexer *lexer,
             current_ident[idx++] = (char)lexer->lookahead;
             for (int j = 0; j < 4; j++) {
                 if (strcmp(current_ident, boolean_values[j]) == 0) {
-                    advance(lexer);
+                    advance_foam(lexer);
                     lexer->result_symbol = BOOLEAN;
                     return true;
                 }
             }
         }
-        advance(lexer);
+        advance_foam(lexer);
     }
 
     if (valid_symbols[IDENTIFIER]) {

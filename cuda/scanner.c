@@ -12,7 +12,7 @@ typedef struct {
     wchar_t delimiter[RAW_STRING_DELIMITER_MAX];
 } Scanner;
 
-static inline void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static inline void advance_cuda(TSLexer *lexer) { lexer->advance_cuda(lexer, false); }
 
 static inline void reset(Scanner *scanner) {
     scanner->delimiter_length = 0;
@@ -27,7 +27,7 @@ static bool scan_raw_string_delimiter(Scanner *scanner, TSLexer *lexer) {
         for (int i = 0; i < scanner->delimiter_length; ++i) {
             if (lexer->lookahead != scanner->delimiter[i])
                 return false;
-            advance(lexer);
+            advance_cuda(lexer);
         }
         reset(scanner);
         return true;
@@ -47,7 +47,7 @@ static bool scan_raw_string_delimiter(Scanner *scanner, TSLexer *lexer) {
             return scanner->delimiter_length > 0;
         }
         scanner->delimiter[scanner->delimiter_length++] = lexer->lookahead;
-        advance(lexer);
+        advance_cuda(lexer);
     }
 }
 
@@ -88,11 +88,11 @@ static bool scan_raw_string_content(Scanner *scanner, TSLexer *lexer) {
             delimiter_index = 0;
         }
 
-        advance(lexer);
+        advance_cuda(lexer);
     }
 }
 
-static inline bool scan(Scanner *scanner, TSLexer *lexer,
+static inline bool scan_cuda(Scanner *scanner, TSLexer *lexer,
                         const bool *valid_symbols) {
     // No skipping leading whitespace: raw-string grammar is space-sensitive.
 
@@ -119,7 +119,7 @@ bool tree_sitter_cuda_external_scanner_scan(void *payload, TSLexer *lexer,
                                            const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
 
-    return scan(scanner, lexer, valid_symbols);
+    return scan_cuda(scanner, lexer, valid_symbols);
 }
 
 unsigned tree_sitter_cuda_external_scanner_serialize(void *payload,
