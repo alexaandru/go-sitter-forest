@@ -161,7 +161,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.5
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.5
 	github.com/alexaandru/go-sitter-forest/pem v1.5.5
-	github.com/alexaandru/go-sitter-forest/perl v1.5.6
+	github.com/alexaandru/go-sitter-forest/perl v1.5.7
 	github.com/alexaandru/go-sitter-forest/php v1.5.8
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.8
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.5
@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.6
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.5
 	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.6
-	github.com/alexaandru/go-sitter-forest/tmux v1.5.5
+	github.com/alexaandru/go-sitter-forest/tmux v1.5.6
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.5
 	github.com/alexaandru/go-sitter-forest/toml v1.5.5
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.6
@@ -252,7 +252,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/unison v1.5.6
 	github.com/alexaandru/go-sitter-forest/usd v1.5.6
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.5
-	github.com/alexaandru/go-sitter-forest/v v1.5.8
+	github.com/alexaandru/go-sitter-forest/v v1.5.9
 	github.com/alexaandru/go-sitter-forest/vala v1.5.5
 	github.com/alexaandru/go-sitter-forest/vento v1.5.6
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.5
