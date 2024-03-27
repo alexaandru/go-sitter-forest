@@ -286,7 +286,9 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		grc = bytes.ReplaceAll(grc, []byte(k), []byte(v))
 
 		k = k[:len(k)-3]
+
 		grc = bytes.ReplaceAll(grc, []byte("'"+k+"'"), []byte("'"+v+"'"))
+		grc = bytes.ReplaceAll(grc, []byte(`"`+k+`"`), []byte("'"+v+"'"))
 	}
 
 	if err = os.WriteFile(dst, grc, 0o644); err != nil {

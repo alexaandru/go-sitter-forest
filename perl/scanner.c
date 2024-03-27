@@ -126,7 +126,7 @@ static void lexerstate_finish_heredoc(struct LexerState *state)
     else                                       \
       DEBUG("> advance U+%04X = '%c'\n",       \
           lexer->lookahead, lexer->lookahead); \
-    lexer->advance(lexer, false);              \
+    lexer->advance_perl(lexer, false);              \
     c = lexer->lookahead;                      \
   } while(0)
 
@@ -144,7 +144,7 @@ static void skip_whitespace(TSLexer *lexer)
     if(!c)
       return;
     if(is_tsp_whitespace(c))
-      lexer->advance(lexer, true);
+      lexer->advance_perl(lexer, true);
       /* continue */
     else
       return;
@@ -158,7 +158,7 @@ static void skip_ws_to_eol(TSLexer * lexer)
     if(!c)
       return;
     if(is_tsp_whitespace(c)) {
-      lexer->advance(lexer, true);
+      lexer->advance_perl(lexer, true);
       // return after eating the newline
       if(c == '\n')
         return;

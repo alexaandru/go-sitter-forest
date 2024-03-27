@@ -2,7 +2,7 @@
   "language": "tmux",
   "url": "https://github.com/Freed-Wu/tree-sitter-tmux",
   "maintainedBy": "@Freed-Wu",
-  "grammarSha": "f96e3376961a1acd57d442034d92e7025b30496dc041df4b268206cd4d535b5d",
+  "grammarSha": "c8c779eb2c4f2b7ad93ac909c3cc86a7f882442a16ad9fc1318509dfd3339574",
   "reference": "main",
-  "revision": "10737f5dc4d8e68c9667f11a6996688a1185755f"
+  "revision": "7cb35fc925cad06992e57672a027d4971ee935a7"
 }

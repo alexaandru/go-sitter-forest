@@ -428,7 +428,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
     "reference": "master",
-    "revision": "ab85469fedbf4f32da9310dd76dcedba059fc482"
+    "revision": "24b662eb61e369757d13c4b5f0624284dc3fe7e8"
   },
   {
     "language": "ebnf",
@@ -917,7 +917,7 @@
     "maintainedBy": "@Freed-Wu",
     "grammarSha": "cfd93557c3bdb0168f78e74e06885a687b2a90ecb39d490fabed99ede1a56a17",
     "reference": "main",
-    "revision": "5be34b0f6ea01b24f017c2c715729a3a919f57fd"
+    "revision": "5305c061efce2841942dbbac6f9a5b21e3e4eb35"
   },
   {
     "language": "hocon",
@@ -948,7 +948,7 @@
     "maintainedBy": "@TravonteD",
     "grammarSha": "24a745bb29af676860649cfa0ea42fdde9f24afef5921065e5b2a66e9ea76dab",
     "reference": "master",
-    "revision": "cc53b6878a003cf26d213025af49c78388cebe21"
+    "revision": "bfa075d83c6b97cd48440b3829ab8d24a2319809"
   },
   {
     "language": "htmldjango",
@@ -978,9 +978,9 @@
     "language": "hyprlang",
     "url": "https://github.com/luckasRanarison/tree-sitter-hyprlang",
     "maintainedBy": "@luckasRanarison",
-    "grammarSha": "79ccae0a8ec5924217f1ec0786679604c3403ad58c24f42ddb074c207bd1e8af",
+    "grammarSha": "fcabbde1f9f0241d09552c836c2d98161e085d4e8c5997e6aa48ffa25d9c07b8",
     "reference": "master",
-    "revision": "27af9b74acf89fa6bed4fb8cb8631994fcb2e6f3"
+    "revision": "e5da7d0aa44403153e0394d87d9edea4e5bd6609"
   },
   {
     "language": "ini",
@@ -1318,7 +1318,7 @@
     "maintainedBy": "@Decodetalkers",
     "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "reference": "master",
-    "revision": "3ebd060b1a2eec450ff46b73428c63f9148a07ff"
+    "revision": "bd17c824196ce70800f64ad39cfddd1b17acc13f"
   },
   {
     "language": "mlir",
@@ -1334,7 +1334,7 @@
     "maintainedBy": "@Freed-Wu",
     "grammarSha": "fe155063ba38c3078ebdffb2f793518ef7ee8a6d65978823ba0adb0f1b47be25",
     "reference": "main",
-    "revision": "67d9e23ca7aa22d9bce9d16c53d2c927dff5159a"
+    "revision": "2f918f9c887109fdf1419f98158a0cfff644af75"
   },
   {
     "language": "nasm",
@@ -1526,9 +1526,9 @@
       "tsp_unicode.h"
     ],
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
-    "grammarSha": "d299352fae31627d57177c5fdbe4022213e5dab2e95574b1ce7268b99aa0d2d6",
+    "grammarSha": "7a29fc16cadfcf0d9c101211cd85acbc87b545da424d863066a2bcabdab7c1c9",
     "reference": "master",
-    "revision": "35e58380131853a4f453325286d397c8c6fc08e4"
+    "revision": "125a6d9c5935768c27739418330d980df7f068ba"
   },
   {
     "language": "php",
@@ -1762,9 +1762,9 @@
     "altName": "Tree-Sitter Query Language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "048e27ad12b16f5870dac68e59c0e9fa5118a20572a9787d9cc66c10fd21c175",
+    "grammarSha": "8038833d8fdc201fb567e2095832651c8978084b3d006c68d0940730f348f5c5",
     "reference": "master",
-    "revision": "176a380df78800167565118bb0dadfc961abbd43"
+    "revision": "2e31ca2771f6042b0e4e0c41a6290014a9e1face"
   },
   {
     "language": "r",
@@ -2148,7 +2148,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "2df2f1ff283178873a52079b157cd21d9be43c613a550fd79947732d5199fec3",
     "reference": "master",
-    "revision": "b974719d47447666687d49c68a51b278b2320e99"
+    "revision": "6909efa7179cd655f9b48123357d65ce8fc661fd"
   },
   {
     "language": "swift",
@@ -2266,17 +2266,17 @@
       "scanner.c"
     ],
     "maintainedBy": "@ahelwer, @susliko",
-    "grammarSha": "a9ca8b481a6fbc6e0c560754cee8990291f91098f2e9db3dde21a96216c1c0fc",
+    "grammarSha": "0a03fc2ded8367c41d3e6f4772e4602808954fa3f30349b4b5cc39187e354c72",
     "reference": "main",
-    "revision": "7455f17038d551ecd2b082c39e4a63bcb403e158"
+    "revision": "496322c1f78647ae0cc1ec96e7b2523656d34846"
   },
   {
     "language": "tmux",
     "url": "https://github.com/Freed-Wu/tree-sitter-tmux",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "f96e3376961a1acd57d442034d92e7025b30496dc041df4b268206cd4d535b5d",
+    "grammarSha": "c8c779eb2c4f2b7ad93ac909c3cc86a7f882442a16ad9fc1318509dfd3339574",
     "reference": "main",
-    "revision": "10737f5dc4d8e68c9667f11a6996688a1185755f"
+    "revision": "7cb35fc925cad06992e57672a027d4971ee935a7"
   },
   {
     "language": "todotxt",
@@ -2425,7 +2425,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "e1f14c4b92f571bb1063ca5260c9172256844540"
+    "revision": "180b5d3ebbedd197821d1364ddd83489faa71489"
   },
   {
     "language": "vala",
@@ -2492,7 +2492,7 @@
     "maintainedBy": "@WhyNotHugo, @lucario387",
     "grammarSha": "6d0c8fe145d98b55a4d782590d847a95b449e9bdaa556b2f5f33b16bffe2cb1a",
     "reference": "main",
-    "revision": "3b9d52087100bdfce43dad2ca46d75b0e21613f6"
+    "revision": "22bdfa6c9fc0f5ffa44c6e938ec46869ac8a99ff"
   },
   {
     "language": "wgsl",
@@ -2526,7 +2526,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "ad9c1142e280a71614ec5081509a50378429b3eb"
+    "revision": "9473b8d7547b3075cc9c68a086155f643a1d7b45"
   },
   {
     "language": "xcompose",
@@ -2545,9 +2545,9 @@
     ],
     "srcRoot": "xml",
     "maintainedBy": "@ObserverOfTime",
-    "grammarSha": "9269c7e70970b1a45e5763700a65e75b774d0694b7b604de2e298cdfbfdf4d4a",
+    "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
     "reference": "master",
-    "revision": "ab85469fedbf4f32da9310dd76dcedba059fc482"
+    "revision": "24b662eb61e369757d13c4b5f0624284dc3fe7e8"
   },
   {
     "language": "yaml",
@@ -2587,7 +2587,7 @@
     "maintainedBy": "@Freed-Wu",
     "grammarSha": "5559fb09bbdd432463e11d4c2f0f5cc1bb759c0f8b34ac3aa9833371bb2a30a9",
     "reference": "main",
-    "revision": "353bdf25e7af9c2830e254977fd3fb57ccaa8203"
+    "revision": "aad4302fb5a5176004b688fcab4ae7dcf36bf49a"
   },
   {
     "language": "zig",

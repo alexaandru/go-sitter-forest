@@ -1,7 +1,5 @@
 #include "array.h"
-#include "parser.h"
 
-#include <assert.h>
 #include <string.h>
 
 typedef enum {
