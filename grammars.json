@@ -462,9 +462,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@connorlay",
-    "grammarSha": "007cba71a47a37329002e13573400f077ba4d2609236703c794fe28b54262602",
+    "grammarSha": "d56ee3fdad30b9eaa20da9781d847d0804ec9d1b4ec585987d3ae291700ef87f",
     "reference": "main",
-    "revision": "511ea5e0088779e4bdd76e12963ab9a5fe99983a"
+    "revision": "868620e19f070a5e6b0b685dc6069a611a86259a"
   },
   {
     "language": "elm",
@@ -806,13 +806,10 @@
   {
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
-    "files": [
-      "scanner.c"
-    ],
     "maintainedBy": "@murtaza64",
     "grammarSha": "e9e09e3353d28f32256f0e10585629a133ca0e4b4e4ad1943b1511d159fe5a94",
     "reference": "main",
-    "revision": "3c25d1ce6c1eb9da34215060372792dc9f439b0c"
+    "revision": "b398a5a243c67f0b4d54728c983fa586bd5cd52e"
   },
   {
     "language": "gstlaunch",
@@ -2525,7 +2522,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "9473b8d7547b3075cc9c68a086155f643a1d7b45"
+    "revision": "4e7b0d296eb259b985766fe35da60e8aaec8daa1"
   },
   {
     "language": "xcompose",
