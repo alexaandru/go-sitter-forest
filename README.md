@@ -196,7 +196,6 @@ version everywhere, and keeping up with it too.
 
 ## Roadmap
 
-- upgrade to TreeSitter `v0.22.2`;
 - hook up the `Plugins.make` update to `update-all`;
 - need some automation around working with so many Go modules, in particular:
   - updating tag on a parser after a parser update to its next major/minor/path no.;
