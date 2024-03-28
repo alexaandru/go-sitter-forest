@@ -90,8 +90,8 @@ github.com/alexaandru/go-sitter-forest/eds v1.5.10 h1:7M4Ixa6WZ+0UaOH2mKNOT0LlgE
 github.com/alexaandru/go-sitter-forest/eds v1.5.10/go.mod h1:enKgBicK4quafX5s3gLOdOJXrxb8yQj8BRQPkBQ+hUU=
 github.com/alexaandru/go-sitter-forest/eex v1.5.10 h1:JcP0dAOPD3bo14mWZUXkwwf0HKARfuU3NlkFmQVM64Q=
 github.com/alexaandru/go-sitter-forest/eex v1.5.10/go.mod h1:Yrua+cwvNA4Dsl5dT649GKw0CphAZ5pqx947SYV/CLY=
-github.com/alexaandru/go-sitter-forest/elixir v1.5.10 h1:BvIvx4Z/Tm+bbJOGOBe8cF+6pkvhOzPtKmbRCNfNPjA=
-github.com/alexaandru/go-sitter-forest/elixir v1.5.10/go.mod h1:pFxZwmsxqPVM6MFEF5nIZSi54GLAyoYkmN0yv9RX27Y=
+github.com/alexaandru/go-sitter-forest/elixir v1.5.11 h1:RiCjwCpHLhdYqvtW/zsBIjXmTD98IqRgpaUOCFqy+IQ=
+github.com/alexaandru/go-sitter-forest/elixir v1.5.11/go.mod h1:pFxZwmsxqPVM6MFEF5nIZSi54GLAyoYkmN0yv9RX27Y=
 github.com/alexaandru/go-sitter-forest/elm v1.5.10 h1:NBFN5Qka68JzDGF47V5l6HcvnYoQEaDFEnPu9pM9MvE=
 github.com/alexaandru/go-sitter-forest/elm v1.5.10/go.mod h1:z4L1ApOszKmnbXZkBdnFgYq2Tf+lOGp3aQo3U+YHvn8=
 github.com/alexaandru/go-sitter-forest/elsa v1.5.10 h1:q01d3BPhK7clsGrEfOWF7Wz0Jdz8YbGhd+i6JLh9n6E=

@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
-	github.com/alexaandru/go-sitter-forest/elixir v1.5.10
+	github.com/alexaandru/go-sitter-forest/elixir v1.5.11
 	github.com/alexaandru/go-sitter-forest/elm v1.5.10
 	github.com/alexaandru/go-sitter-forest/elsa v1.5.10
 	github.com/alexaandru/go-sitter-forest/elvish v1.5.10
