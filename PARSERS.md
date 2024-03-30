@@ -1,4 +1,4 @@
-# 267 Supported Parsers
+# 268 Supported Parsers
 
 2 pending, 9 skipped regeneration
 
@@ -24,6 +24,7 @@
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) (maintained by @Luxed; ❌OOM)
 - [x] [cairo](https://github.com/amaanq/tree-sitter-cairo) ✔️  (maintained by @amaanq)
 - [x] [capnp](https://github.com/amaanq/tree-sitter-capnp) ✔️  (maintained by @amaanq)
+- [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️  (maintained by @Alfus)
 - [x] [chatito](https://github.com/ObserverOfTime/tree-sitter-chatito) ✔️  (maintained by @ObserverOfTime)
 - [x] [clojure](https://github.com/sogaiu/tree-sitter-clojure) ✔️  (maintained by @NoahTheDuke)
 - [x] [cmake](https://github.com/uyha/tree-sitter-cmake) ✔️  (maintained by @uyha)

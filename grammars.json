@@ -197,6 +197,15 @@
     "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
   },
   {
+    "language": "cel",
+    "altName": "Common Expression Language",
+    "url": "https://github.com/bufbuild/tree-sitter-cel",
+    "maintainedBy": "@Alfus",
+    "grammarSha": "b58dbe473c48b24d8876254747a86256109a827cf8e3fa1ec61598478490a07e",
+    "reference": "main",
+    "revision": "df0585025e6f50cdb07347f5009ae3f47c652890"
+  },
+  {
     "language": "chatito",
     "url": "https://github.com/ObserverOfTime/tree-sitter-chatito",
     "maintainedBy": "@ObserverOfTime",
