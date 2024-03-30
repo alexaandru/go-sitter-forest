@@ -14,7 +14,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
 	github.com/alexaandru/go-sitter-forest/bash v1.5.10
 	github.com/alexaandru/go-sitter-forest/bass v1.5.10
-	github.com/alexaandru/go-sitter-forest/beancount v1.5.10
+	github.com/alexaandru/go-sitter-forest/beancount v1.5.11
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.10
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.10
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
@@ -209,7 +209,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.10
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.10
-	github.com/alexaandru/go-sitter-forest/snakemake v1.5.10
+	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.10
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
@@ -252,7 +252,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/unison v1.5.10
 	github.com/alexaandru/go-sitter-forest/usd v1.5.10
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.10
-	github.com/alexaandru/go-sitter-forest/v v1.5.10
+	github.com/alexaandru/go-sitter-forest/v v1.5.11
 	github.com/alexaandru/go-sitter-forest/vala v1.5.10
 	github.com/alexaandru/go-sitter-forest/vento v1.5.10
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.10
