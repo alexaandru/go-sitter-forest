@@ -38,6 +38,8 @@ github.com/alexaandru/go-sitter-forest/cairo v1.5.10 h1:WJ0P34j3fVcqjGQweLEse45I
 github.com/alexaandru/go-sitter-forest/cairo v1.5.10/go.mod h1:3Yynn8lHYNZ+3C48jDZnx1y6qNJJ09kmaoInCPaTGSM=
 github.com/alexaandru/go-sitter-forest/capnp v1.5.10 h1:hhpTfJDwcL68UqvFpBAjxN3a26MeRiiTYMy8ZDScTec=
 github.com/alexaandru/go-sitter-forest/capnp v1.5.10/go.mod h1:jmnPT2nEMNcgXtALZw3Tat2aMfB6ROxK1E7dFF0FBvU=
+github.com/alexaandru/go-sitter-forest/cel v1.5.11 h1:Hm+2KzkoRrDeQRPle/LOsMMFzz1rGOSGqNRGTtqd+2w=
+github.com/alexaandru/go-sitter-forest/cel v1.5.11/go.mod h1:tx13RVA09bkDrAL0TYVadhxjxo1SjbNcZ5KxDZQYa7M=
 github.com/alexaandru/go-sitter-forest/chatito v1.5.10 h1:vT9WzURtsZTkWqLABkWNPri6qA2Pf11VilEHmyatMn4=
 github.com/alexaandru/go-sitter-forest/chatito v1.5.10/go.mod h1:ce/3dWB/d3eaYRtffPLrtVK7rQSsXx1fSy2yKCZVH+Q=
 github.com/alexaandru/go-sitter-forest/clojure v1.5.10 h1:mGeDYLbKnDvHcRQpmTdKEII0S8Vb1J+lhM8u06YJwi8=

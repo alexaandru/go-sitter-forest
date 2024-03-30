@@ -23,6 +23,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.10
+	github.com/alexaandru/go-sitter-forest/cel v1.5.11
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.10
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.10
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.10

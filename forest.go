@@ -27,6 +27,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
 	"github.com/alexaandru/go-sitter-forest/cairo"
 	"github.com/alexaandru/go-sitter-forest/capnp"
+	"github.com/alexaandru/go-sitter-forest/cel"
 	"github.com/alexaandru/go-sitter-forest/chatito"
 	"github.com/alexaandru/go-sitter-forest/clojure"
 	"github.com/alexaandru/go-sitter-forest/cmake"
@@ -301,6 +302,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"c_sharp":            c_sharp.GetLanguage,
 	"cairo":              cairo.GetLanguage,
 	"capnp":              capnp.GetLanguage,
+	"cel":                cel.GetLanguage,
 	"chatito":            chatito.GetLanguage,
 	"clojure":            clojure.GetLanguage,
 	"cmake":              cmake.GetLanguage,
