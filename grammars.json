@@ -115,9 +115,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@polarmutex",
-    "grammarSha": "3936057afc425915a80e78cbcf7c90b464d3d1231ddc0fde0cf0ce25a1bda615",
+    "grammarSha": "dfde9c9d2d8b4ce6ce4f8c0de67d9c5bdb2b439bdddd27b8f6b13303c7efd252",
     "reference": "master",
-    "revision": "6c665e7cf15d76a1687959643868a78fb381458d"
+    "revision": "c25f8034c977681653a8acd541c8b4877a58f474"
   },
   {
     "language": "bibtex",
@@ -1323,7 +1323,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "d9a79cf19da13812e1a4fe1f816b68750ac65cb3"
+    "revision": "a89a5f2bbcf7e82e46b106138977c99d6a644db2"
   },
   {
     "language": "muttrc",
@@ -1442,7 +1442,7 @@
     "maintainedBy": "@undu",
     "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
     "reference": "master",
-    "revision": "f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae"
+    "revision": "0b12614ded3ec7ed7ab7933a9ba4f695ba4c342e"
   },
   {
     "language": "ocaml_interface",
@@ -1455,7 +1455,7 @@
     "maintainedBy": "@undu",
     "grammarSha": "ed745a3b34f2a56f90cc3a15895367bd3adbc2c9684c8e52c8bf722eb764211b",
     "reference": "master",
-    "revision": "f7e63111ed1bc1908eacafe6af1ee8d01bfcf7ae"
+    "revision": "0b12614ded3ec7ed7ab7933a9ba4f695ba4c342e"
   },
   {
     "language": "ocamllex",
@@ -1997,9 +1997,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@osthomas",
-    "grammarSha": "dff6dd41360e7ec55c11ae5b36e595c49f53e9234cdbcf8d9bccc66fa4cd8f60",
+    "grammarSha": "cd8ce8d7868789491e309a86b9be0cfd84f1aa7fa4381eab243f71bb2b604d94",
     "reference": "main",
-    "revision": "65a6c3b4671877821082164da0a310851b211953"
+    "revision": "ba1b3868eaa960b945593404af9a7c2f296d3643"
   },
   {
     "language": "solidity",
@@ -2421,7 +2421,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "180b5d3ebbedd197821d1364ddd83489faa71489"
+    "revision": "0077997267edee446315b69acac7464e5f8e52ae"
   },
   {
     "language": "vala",
@@ -2440,7 +2440,7 @@
     "maintainedBy": "@wrapperup, @oscarotero",
     "grammarSha": "25f7b4a6f62ea92b0e44647b7738ac00b798673e0865067fcfad899d662f57fa",
     "reference": "main",
-    "revision": "c1eb14b130c37267be7c6bb38ce949c3077dd4b3"
+    "revision": "3321077d7446c1b3b017c294fd56ce028ed817fe"
   },
   {
     "language": "verilog",
@@ -2522,7 +2522,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "4e7b0d296eb259b985766fe35da60e8aaec8daa1"
+    "revision": "4c03dd8eebbbaf350a61e3c2227bc8a5d9dbdb3f"
   },
   {
     "language": "xcompose",

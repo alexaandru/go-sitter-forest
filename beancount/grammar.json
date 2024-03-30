@@ -5,7 +5,7 @@
     "scanner.c"
   ],
   "maintainedBy": "@polarmutex",
-  "grammarSha": "3936057afc425915a80e78cbcf7c90b464d3d1231ddc0fde0cf0ce25a1bda615",
+  "grammarSha": "dfde9c9d2d8b4ce6ce4f8c0de67d9c5bdb2b439bdddd27b8f6b13303c7efd252",
   "reference": "master",
-  "revision": "6c665e7cf15d76a1687959643868a78fb381458d"
+  "revision": "c25f8034c977681653a8acd541c8b4877a58f474"
 }

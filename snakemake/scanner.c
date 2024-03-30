@@ -234,20 +234,26 @@ bool tree_sitter_snakemake_external_scanner_scan(void *payload, TSLexer *lexer,
                            valid_symbols[CLOSE_BRACKET];
 
     // Set flag if and which wildcards are allowed. Affects string parsing.
-    if (valid_symbols[ALLOW_WC_DEF] && !error_recovery_mode) {
+    if (valid_symbols[ALLOW_WC_DEF]) {
         scanner->allow_wc = DEFINITION;
         lexer->result_symbol = ALLOW_WC_DEF;
-        return true;
+        if (!error_recovery_mode) {
+            return true;
+        }
     }
-    if (valid_symbols[ALLOW_WC_INTERP] && !error_recovery_mode) {
+    if (valid_symbols[ALLOW_WC_INTERP]) {
         scanner->allow_wc = INTERPOLATION;
         lexer->result_symbol = ALLOW_WC_INTERP;
-        return true;
+        if (!error_recovery_mode) {
+            return true;
+        }
     }
-    if (valid_symbols[DISALLOW_WC] && !error_recovery_mode) {
+    if (valid_symbols[DISALLOW_WC]) {
         scanner->allow_wc = NONE;
         lexer->result_symbol = DISALLOW_WC;
-        return true;
+        if (!error_recovery_mode) {
+            return true;
+        }
     }
 
 	bool advanced_once = false;
