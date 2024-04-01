@@ -1,6 +1,6 @@
 # 268 Supported Parsers
 
-2 pending, 8 skipped regeneration
+2 pending, 7 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -81,7 +81,7 @@
 - [x] [Glimmer and Ember](https://github.com/alexlafroscia/tree-sitter-glimmer) ✔️  (maintained by @NullVoxPopuli)
 - [x] [glsl](https://github.com/theHamsta/tree-sitter-glsl) ✔️  (maintained by @theHamsta)
 - [x] [GN (Generate Ninja)](https://github.com/amaanq/tree-sitter-gn) ✔️  (maintained by @amaanq)
-- [x] [gnuplot](https://github.com/dpezto/tree-sitter-gnuplot) (maintained by @dpezto; ❌grammar.js throws error)
+- [x] [gnuplot](https://github.com/dpezto/tree-sitter-gnuplot) ✔️  (maintained by @dpezto)
 - [x] [go](https://github.com/tree-sitter/tree-sitter-go) ✔️  (maintained by @theHamsta, @WinWisely268)
 - [x] [Godot Resources (gdresource)](https://github.com/PrestonKnopp/tree-sitter-godot-resource) ✔️  (maintained by @pierpo)
 - [x] [gomod](https://github.com/camdencheek/tree-sitter-go-mod) ✔️  (maintained by @camdencheek)
