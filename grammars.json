@@ -639,7 +639,7 @@
     "maintainedBy": "@PrestonKnopp",
     "grammarSha": "26cc6cc18ef5c83dfa6dfdb50ea4db2c286a3dbf18c8f2b67db66d8ac635e291",
     "reference": "master",
-    "revision": "b5dea4d852db65f0872d849c24533eb121e03c76"
+    "revision": "1f1e782fe2600f50ae57b53876505b8282388d77"
   },
   {
     "language": "gdshader",
@@ -2164,7 +2164,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "b7755aa95cab95babdcefc8397739e09c986ca583ea080f4d153590d3b97ab76",
     "reference": "main",
-    "revision": "bb3fe96bb65d9b71e2d04b7ebe27dc1947f2cd5d"
+    "revision": "67ea4e9ea7302b731d392cd8b1aad7b8e79a5547"
   },
   {
     "language": "sxhkdrc",
@@ -2430,7 +2430,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "skip": true,
     "reference": "main",
-    "revision": "bb6ca96b1b205fd2f2504fb7d0e19cf0e4888cd6"
+    "revision": "cae4a2c641a0668fba36df5410ffaa25864ba2e7"
   },
   {
     "language": "vala",
