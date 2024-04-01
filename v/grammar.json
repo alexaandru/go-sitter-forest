@@ -1,10 +1,9 @@
 {
   "language": "v",
   "url": "https://github.com/vlang/v-analyzer",
-  "doc": "grammar.js throws error",
   "srcRoot": "tree_sitter_v",
   "maintainedBy": "@kkharji, @amaanq",
-  "skip": true,
+  "grammarSha": "bcc9250f26b58bae6fef332f4bd8b9415f3607186a5bbe14ef730637c888a485",
   "reference": "main",
   "revision": "cae4a2c641a0668fba36df5410ffaa25864ba2e7"
 }

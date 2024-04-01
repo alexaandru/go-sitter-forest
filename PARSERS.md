@@ -1,6 +1,6 @@
 # 268 Supported Parsers
 
-2 pending, 9 skipped regeneration
+2 pending, 8 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -256,7 +256,7 @@
 - [x] [unison](https://github.com/kylegoetz/tree-sitter-unison) ✔️  (maintained by @tapegram)
 - [x] [usd](https://github.com/ColinKennedy/tree-sitter-usd) ✔️  (maintained by @ColinKennedy)
 - [x] [uxn tal](https://github.com/amaanq/tree-sitter-uxntal) ✔️  (maintained by @amaanq)
-- [x] [v](https://github.com/vlang/v-analyzer) (maintained by @kkharji, @amaanq; ❌grammar.js throws error)
+- [x] [v](https://github.com/vlang/v-analyzer) ✔️  (maintained by @kkharji, @amaanq)
 - [x] [vala](https://github.com/vala-lang/tree-sitter-vala) ✔️  (maintained by @Prince781)
 - [x] [vento](https://github.com/ventojs/tree-sitter-vento) ✔️  (maintained by @wrapperup, @oscarotero)
 - [x] [verilog](https://github.com/tree-sitter/tree-sitter-verilog) ✔️  (maintained by @zegervdv)
