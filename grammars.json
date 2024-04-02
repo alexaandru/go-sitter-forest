@@ -249,7 +249,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "e61ab3af74a8952b292a88030a3b58c4779c4756d50fe8686debe81b628b6b1b",
     "reference": "master",
-    "revision": "cf10fc38bc24faf0549d59217ff37c789973dfdc"
+    "revision": "a2a67494c223ccf8aa419ac419d9cdf483dbb8ca"
   },
   {
     "language": "cooklang",
@@ -326,7 +326,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b29685ffd70b98583a5e7bec30f2b399b65e96116693799d834b0458af7f3f48",
     "reference": "master",
-    "revision": "221179d4287a2c24c08e4c67ff383ef67dc32156"
+    "revision": "a18550206a205a0b056437652cf4802f377c4a92"
   },
   {
     "language": "cue",
@@ -357,9 +357,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@akinsho",
-    "grammarSha": "9b459377e5d193e0d64f333bbeab7c3344e2013f82f341ccde47867a84a743cd",
+    "grammarSha": "4a6cc4d453ffdc1005518dd7558bbe4fa362a16d377660ed80a68fa8ef78be83",
     "reference": "master",
-    "revision": "1a31399a08aefc93bc4cdbfadc0cb619136f86c1"
+    "revision": "7861a4889e7682af453afa4811ae85b1d7a6e415"
   },
   {
     "language": "devicetree",
@@ -719,9 +719,9 @@
     "language": "glsl",
     "url": "https://github.com/theHamsta/tree-sitter-glsl",
     "maintainedBy": "@theHamsta",
-    "grammarSha": "5a2b0404779a6b451f7da1e1ca71d46d3bbdf0faebf60c336bdf9d033ed1257c",
+    "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "284bed0e2f1d9f700756b96512baf33483642ff0"
+    "revision": "339fe659aed7618b822d27120c1ec5b5cd83c61c"
   },
   {
     "language": "gn",
@@ -759,9 +759,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@pierpo",
-    "grammarSha": "5f6dee498be649b5ddb4563f337f2671ba9f51140a5b631a4396e12c47e4f400",
+    "grammarSha": "d3457db5546a9850cb2a64f712ba10527b386fee97e36140019eefacbffff520",
     "reference": "master",
-    "revision": "b6ef0768711086a86b3297056f9ffb5cc1d77b4a"
+    "revision": "2ffb90de47417018651fc3b970e5f6b67214dc9d"
   },
   {
     "language": "gomod",
@@ -914,7 +914,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "ee24be127560f0de0c4741e382416f45ab47eb76"
+    "revision": "2c2732db3ac55028af9456f89ab12683e02822bf"
   },
   {
     "language": "hlsplaylist",
@@ -1159,9 +1159,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
-    "grammarSha": "14b3ee000b4bc05eaf5576af19fab8a08b23e5b501dbdc563c77a4bd513738f7",
+    "grammarSha": "f31fbb7f84b8cf77e07fd5b7e1d9f5865ccd412ec7a7b472c83ee465c8bd7dd3",
     "reference": "master",
-    "revision": "6d764f17f4d28c9db736009fb0e10ffe04866661"
+    "revision": "eb552c7022cbd1379138bdc1b2fe464a99d25640"
   },
   {
     "language": "ledger",
@@ -1969,7 +1969,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "0cdfb1741323f38e9a33798674145c22cfc0092b"
+    "revision": "0249daba5931ca9bcab4700ac700864cd5fe3c38"
   },
   {
     "language": "slint",
@@ -2428,7 +2428,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "grammarSha": "bcc9250f26b58bae6fef332f4bd8b9415f3607186a5bbe14ef730637c888a485",
     "reference": "main",
-    "revision": "cae4a2c641a0668fba36df5410ffaa25864ba2e7"
+    "revision": "95869fa2058fbc9098f640b87399971c6d7552c0"
   },
   {
     "language": "vala",
@@ -2517,7 +2517,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b3121fb63be59a217a5bc48ccc95d37f166184e800a72465a73c2a418a4ac92c",
     "reference": "master",
-    "revision": "cbd58ee33e24f46d16b9882b001eefb25a958ee2"
+    "revision": "4d7b4697dd2598c60a6ccbc51db8b768cd8700b8"
   },
   {
     "language": "wing",
@@ -2529,7 +2529,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "4c03dd8eebbbaf350a61e3c2227bc8a5d9dbdb3f"
+    "revision": "5151f4a33d81ff68f94ff451a3404c581705eb96"
   },
   {
     "language": "xcompose",
