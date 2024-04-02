@@ -211,7 +211,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.10
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
-	github.com/alexaandru/go-sitter-forest/solidity v1.5.10
+	github.com/alexaandru/go-sitter-forest/solidity v1.5.11
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.10
