@@ -66,6 +66,7 @@ func TestGrammar(t *testing.T) {
 var tplBindings = map[string]string{
 	"binding.go":      bindingTpl,
 	"binding_test.go": bindingTestTpl,
+	"plugin.go":       bindingTpl,
 }
 
 // Creates a map between file paths to write to and corresponding content.
@@ -81,10 +82,13 @@ func mkBindingMap(lang string) (out map[string]string) {
 			pack = "FunC"
 		}
 
-		if k == "binding.go" {
+		switch k {
+		case "binding.go":
 			out[filepath.Join(lang, k)] = fmt.Sprintf(v, "//go:build !plugin", pack, lang, lang)
-		} else {
+		case "binding_test.go":
 			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, pack, pack)
+		case "plugin.go":
+			out[filepath.Join(lang, k)] = fmt.Sprintf(v, "//go:build plugin", "main", lang, lang)
 		}
 	}
 

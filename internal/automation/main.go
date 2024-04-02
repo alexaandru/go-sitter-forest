@@ -35,16 +35,14 @@ const (
 )
 
 var (
-	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings, create-plugins, update-grammars")
+	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
 	grammars      = Grammars{}
 	replaceMap    = map[string]string{
-		`"../../common/scanner.h"`:       `"scanner.h"`,
-		`"../../../include/scanner.h"`:   `"scanner.h"`,
-		`"tree_sitter/parser.h"`:         `"parser.h"`,
-		`"tree_sitter_comment/parser.c"`: `"parser.c"`, // Needed for Comment.
-		`"tree_sitter_comment/tokens.h"`: `"tokens.h"`, // Needed for Comment.
-		`"tree_sitter/array.h"`:          `"array.h"`,
-		`"tree_sitter/alloc.h"`:          `"alloc.h"`,
+		`"../../common/scanner.h"`:     `"scanner.h"`,
+		`"../../../include/scanner.h"`: `"scanner.h"`,
+		`"tree_sitter/parser.h"`:       `"parser.h"`,
+		`"tree_sitter/array.h"`:        `"array.h"`,
+		`"tree_sitter/alloc.h"`:        `"alloc.h"`,
 	}
 
 	logFile *os.File
@@ -75,16 +73,24 @@ func checkUpdates() error {
 }
 
 func updateAll(force bool) (err error) {
+	fmt.Println("Updating all (applicable) languages ...")
+
 	if err = forEachGrammar(func(gr *grammar.Grammar) error {
 		return update(gr, force)
 	}); err != nil {
 		return
 	}
 
-	return updatePluginsMakefile()
+	if err = updatePluginsMakefile(); err != nil {
+		return
+	}
+
+	return updateGrammars()
 }
 
 func updateBindings() error {
+	fmt.Println("Updating all languages' binding.go files ...")
+
 	return forEachGrammar(func(gr *grammar.Grammar) error {
 		return createBindings(gr.Language, force)
 	})
@@ -174,14 +180,17 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 		}
 	}
 
-	return createPlugin(gr.Language)
+	return
 }
 
 // downloads the grammar.js file and any local dependencies
 // (files that are required by it).
-// TODO: This is way too long and doing way too much.
+// FIXME: This is waaaaay too long and doing waaaaay too much.
+// It does the job though :-)
 func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
-	// We need to temporarily alter gr in here.
+	// We need to temporarily alter gr in here because in case of
+	// failure we do not want the grammars.js to be updatd with the
+	// new info.
 	gr, shas := *grRO, map[string]string{}
 
 	oldFiles, _ := filepath.Glob(filepath.Join("tmp", gr.Language, "*.*"))
@@ -401,10 +410,6 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 		return
 	}
 
-	if err = createPlugin(gr.Language); err != nil {
-		return
-	}
-
 	g := new(errgroup.Group)
 
 	var files map[string]string
@@ -489,8 +494,8 @@ func createBindings(lang string, opts ...bool) (err error) {
 
 	for toPath, content := range mkBindingMap(lang) {
 		if found, err := fileExists(toPath); err != nil {
-			return err // Allow force overwriting of the binding.go file alone.
-		} else if !found || (force && filepath.Base(toPath) == "binding.go") {
+			return err // Allow force overwriting except for binding_test.go.
+		} else if !found || (force && filepath.Base(toPath) != "binding_test.go") {
 			if err = createBindingFile(toPath, content); err != nil {
 				return err
 			}
@@ -502,19 +507,6 @@ func createBindings(lang string, opts ...bool) (err error) {
 
 func createBindingFile(toPath, content string) error {
 	return os.WriteFile(toPath, []byte(content), 0o644)
-}
-
-func createPlugin(lang string) error {
-	toPath := filepath.Join(lang, "plugin.go")
-	if ok, _ := fileExists(toPath); ok {
-		return nil
-	}
-
-	if err := makeDir(filepath.Dir(toPath)); err != nil {
-		return err
-	}
-
-	return os.WriteFile(toPath, []byte(fmt.Sprintf(bindingTpl, "//go:build plugin", "main", lang, lang)), 0o644)
 }
 
 func downloadFile(lang, url, toPath string) error {
@@ -542,7 +534,7 @@ func putFile(b []byte, lang, toPath string) error {
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
 	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h":
-		// These identifiers clash between org and beancount parsers.
+		// These identifiers clash between many (org, beancount, etc.) parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
 		reMap[" deserialize("] = fmt.Sprintf(" deserialize_%s(", lang)
@@ -704,16 +696,8 @@ func main() {
 	case "check-updates":
 		err = checkUpdates()
 	case "force-update-all", "update-all":
-		fmt.Println("Updating all (applicable) languages ...")
-
-		if err = updateAll(strings.HasPrefix(cmd, "force-")); err != nil {
-			break
-		}
-
-		err = updateGrammars()
+		err = updateAll(strings.HasPrefix(cmd, "force-"))
 	case "update-bindings":
-		fmt.Println("Updating all languages' binding.go files ...")
-
 		err = updateBindings()
 	default:
 		i, lang, force := 0, "", false
