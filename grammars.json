@@ -437,7 +437,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
     "reference": "master",
-    "revision": "24b662eb61e369757d13c4b5f0624284dc3fe7e8"
+    "revision": "2282ad5cb8e815523e70d5c82404620bd9a1494c"
   },
   {
     "language": "ebnf",
@@ -1272,7 +1272,7 @@
     "maintainedBy": "@MDeiml",
     "grammarSha": "3852822202d08776192a3a1306ffc5205e30b03dcd274f6ea8a422812f58d4b2",
     "reference": "split_parser",
-    "revision": "44017499c51cb6431635ed51d5080e1fd05c2c21"
+    "revision": "7fe453beacecf02c86f7736439f238f5bb8b5c9b"
   },
   {
     "language": "markdown_inline",
@@ -1285,7 +1285,7 @@
     "maintainedBy": "@MDeiml",
     "grammarSha": "dcc51b403a28e25e4e858bc237733539267b86abf396aaa61e869de704d78648",
     "reference": "split_parser",
-    "revision": "44017499c51cb6431635ed51d5080e1fd05c2c21"
+    "revision": "7fe453beacecf02c86f7736439f238f5bb8b5c9b"
   },
   {
     "language": "matlab",
@@ -2013,9 +2013,9 @@
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
     "maintainedBy": "@amaanq",
-    "grammarSha": "3971adac94ae4238fdf09af0451a6ef80dde5e76abd0908d37c9b0f6c8e3039f",
+    "grammarSha": "700ea6df7e817e83fc3b9953f90e5b9c120593e4d2b3f44031076e1d58a30f49",
     "reference": "master",
-    "revision": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02"
+    "revision": "a8ed2f5d600fed77f8ed3084d1479998c649bca1"
   },
   {
     "language": "soql",
@@ -2550,7 +2550,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
     "reference": "master",
-    "revision": "24b662eb61e369757d13c4b5f0624284dc3fe7e8"
+    "revision": "2282ad5cb8e815523e70d5c82404620bd9a1494c"
   },
   {
     "language": "yaml",

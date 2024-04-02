@@ -2,7 +2,7 @@
   "language": "solidity",
   "url": "https://github.com/JoranHonig/tree-sitter-solidity",
   "maintainedBy": "@amaanq",
-  "grammarSha": "3971adac94ae4238fdf09af0451a6ef80dde5e76abd0908d37c9b0f6c8e3039f",
+  "grammarSha": "700ea6df7e817e83fc3b9953f90e5b9c120593e4d2b3f44031076e1d58a30f49",
   "reference": "master",
-  "revision": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02"
+  "revision": "a8ed2f5d600fed77f8ed3084d1479998c649bca1"
 }

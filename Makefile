@@ -1,4 +1,4 @@
-check-updates update-all force-update-all update-bindings create-plugins update-grammars:
+check-updates update-all force-update-all update-bindings update-grammars:
 	@go run ./internal/automation $@
 
 update-% force-update-%:

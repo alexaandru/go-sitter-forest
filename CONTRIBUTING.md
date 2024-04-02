@@ -46,11 +46,7 @@ useful now and may even be removed later:
 - `update-bindings`: will update the binding files (binding.go, binding_test.go) in bulk
   (will create them if they do not exist, it's safe to run it whenever); no longer
   needed as the binding files are auto-created during each "dowloadFiles()" call
-  (so even for a new parser, they are now created automatically);
-- `create-plugins`: almost the same comment as above, but for plugin.go (so auto-created, etc.);
-  HOWEVER, in addition to the above, this one also rebuilds the Plugins.make file,
-  which is not yet added to `update-all`; Once that's done, this target will be
-  largely useless;
+  (so even for a new parser, they are now created automatically).
 
 ## Test Coverage
 

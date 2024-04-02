@@ -75,9 +75,13 @@ func checkUpdates() error {
 }
 
 func updateAll(force bool) (err error) {
-	return forEachGrammar(func(gr *grammar.Grammar) error {
+	if err = forEachGrammar(func(gr *grammar.Grammar) error {
 		return update(gr, force)
-	})
+	}); err != nil {
+		return
+	}
+
+	return updatePluginsMakefile()
 }
 
 func updateBindings() error {
@@ -86,12 +90,12 @@ func updateBindings() error {
 	})
 }
 
-func createPlugins() (err error) {
+func updatePluginsMakefile() (err error) {
 	mkFileContent := []string{}
 	mkFileTargets := []string{}
 	mux := sync.Mutex{}
 
-	if err = forEachGrammar(func(gr *grammar.Grammar) error {
+	_ = forEachGrammar(func(gr *grammar.Grammar) error {
 		mux.Lock()
 		defer mux.Unlock()
 
@@ -99,15 +103,14 @@ func createPlugins() (err error) {
 		mkFileTargets = append(mkFileTargets, target)
 		mkFileContent = append(mkFileContent, fmt.Sprintf(plugFmt, target, gr.Language))
 
-		return createPlugin(gr.Language)
-	}); err != nil {
-		return
-	}
+		return nil
+	})
 
 	slices.Sort(mkFileContent)
 	slices.Sort(mkFileTargets)
 
-	content := slices.Concat([]string{"plugin-all: " + strings.Join(mkFileTargets, " ")},
+	content := slices.Concat([]string{"# NOTE: This file is generated automatically! DO NOT EDIT!\n\nplugin-all: " +
+		strings.Join(mkFileTargets, " ")},
 		mkFileContent)
 
 	return os.WriteFile("Plugins.make", []byte(strings.Join(content, "\n\n")), 0o644)
@@ -166,10 +169,12 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 
 	if newSha != "" {
 		gr.GrammarSha = newSha
-		err = regenerateGrammar(gr)
+		if err = regenerateGrammar(gr); err != nil {
+			return
+		}
 	}
 
-	return
+	return createPlugin(gr.Language)
 }
 
 // downloads the grammar.js file and any local dependencies
@@ -710,10 +715,6 @@ func main() {
 		fmt.Println("Updating all languages' binding.go files ...")
 
 		err = updateBindings()
-	case "create-plugins":
-		fmt.Println("Creating plugins for all languages ...")
-
-		err = createPlugins()
 	case "update-grammars":
 		fmt.Println("Updating grammars.json ...")
 
