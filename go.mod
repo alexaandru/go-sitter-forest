@@ -38,7 +38,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.10
 	github.com/alexaandru/go-sitter-forest/cue v1.5.10
 	github.com/alexaandru/go-sitter-forest/d v1.5.10
-	github.com/alexaandru/go-sitter-forest/dart v1.5.10
+	github.com/alexaandru/go-sitter-forest/dart v1.5.11
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.10
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.10
@@ -77,11 +77,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.10
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.10
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.10
-	github.com/alexaandru/go-sitter-forest/glsl v1.5.10
+	github.com/alexaandru/go-sitter-forest/glsl v1.5.11
 	github.com/alexaandru/go-sitter-forest/gn v1.5.10
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10
 	github.com/alexaandru/go-sitter-forest/go v1.5.10
-	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.10
+	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.10
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.10
 	github.com/alexaandru/go-sitter-forest/gotmpl v1.5.10
@@ -124,7 +124,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.10
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.10
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.10
-	github.com/alexaandru/go-sitter-forest/latex v1.5.10
+	github.com/alexaandru/go-sitter-forest/latex v1.5.11
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
