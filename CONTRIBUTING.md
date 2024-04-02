@@ -32,21 +32,12 @@ The [Makefile](Makefile) is pretty clean and self explanatory, but in short:
   2. download `grammar.js` and it's dependencies (extracted automatically from it),
   3. rebuild the parser (via `npx tree-sitter generate`);
 - for the few parsers where regeneration is not possible, 2 and 3 above are
-  replaced with: download the generated files too (`parser.c`, `parser.h`, `alloc.h` and `array.h`).
-
-### Misc Targets
-
-These targets were useful in the beginning, while this repo was in flux (and for example
-I would change the `binding.go` template and want to update all parsers). They are less
-useful now and may even be removed later:
-
-- `update-grammars`: it updates the individual `*/grammar.json` files from the main
-  `grammars.json` file; Obsolete now, as the file is automatically updated as
-  part of the `update` command;
-- `update-bindings`: will update the binding files (binding.go, binding_test.go) in bulk
+  replaced with: download the generated files too (`parser.c`, `parser.h`, `alloc.h` and `array.h`);
+- `update-bindings`: rarely needed, will update the binding files (binding.go, binding_test.go) in bulk
   (will create them if they do not exist, it's safe to run it whenever); no longer
-  needed as the binding files are auto-created during each "dowloadFiles()" call
-  (so even for a new parser, they are now created automatically).
+  routinely needed as the binding files are auto-created during each "dowloadFiles()" call
+  (so even for a new parser, they are now created automatically), however it may still be
+  useful, should the binding file template change.
 
 ## Test Coverage
 

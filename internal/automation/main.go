@@ -715,10 +715,6 @@ func main() {
 		fmt.Println("Updating all languages' binding.go files ...")
 
 		err = updateBindings()
-	case "update-grammars":
-		fmt.Println("Updating grammars.json ...")
-
-		err = updateGrammars()
 	default:
 		i, lang, force := 0, "", false
 
