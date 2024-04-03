@@ -35,7 +35,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.10
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
-	github.com/alexaandru/go-sitter-forest/cuda v1.5.10
+	github.com/alexaandru/go-sitter-forest/cuda v1.5.11
 	github.com/alexaandru/go-sitter-forest/cue v1.5.10
 	github.com/alexaandru/go-sitter-forest/d v1.5.10
 	github.com/alexaandru/go-sitter-forest/dart v1.5.11
@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.10
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.10
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.10
-	github.com/alexaandru/go-sitter-forest/fish v1.5.10
+	github.com/alexaandru/go-sitter-forest/fish v1.5.11
 	github.com/alexaandru/go-sitter-forest/foam v1.5.10
 	github.com/alexaandru/go-sitter-forest/forth v1.5.10
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.10
@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tablegen v1.5.10
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.10
-	github.com/alexaandru/go-sitter-forest/templ v1.5.10
+	github.com/alexaandru/go-sitter-forest/templ v1.5.11
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.10
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
