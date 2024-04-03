@@ -324,9 +324,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "b29685ffd70b98583a5e7bec30f2b399b65e96116693799d834b0458af7f3f48",
+    "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
     "reference": "master",
-    "revision": "a18550206a205a0b056437652cf4802f377c4a92"
+    "revision": "4ec5afdf98041d137c25b555958a1f825c7c1272"
   },
   {
     "language": "cue",
@@ -568,9 +568,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ram02z",
-    "grammarSha": "744bb5158b47bfa5660df0b61e9e7952f1552e51e2491e92517a4150398dc3f7",
+    "grammarSha": "eb2b0d32a993838ce11e0123c2ef8abdc1570fd4c02b6e0183215a3e0d72e7b0",
     "reference": "master",
-    "revision": "f9176908c9eb2e11eb684d79e1d00f3b29bd65c9"
+    "revision": "a78aef9abc395c600c38a037ac779afc7e3cc9e0"
   },
   {
     "language": "foam",
@@ -721,7 +721,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "339fe659aed7618b822d27120c1ec5b5cd83c61c"
+    "revision": "f7040966a97c6c5a644a230df7fe74623f963d2f"
   },
   {
     "language": "gn",
@@ -914,7 +914,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "2c2732db3ac55028af9456f89ab12683e02822bf"
+    "revision": "ef428a36b2faa20450ee979a618f802228b38318"
   },
   {
     "language": "hlsplaylist",
@@ -1969,7 +1969,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "0249daba5931ca9bcab4700ac700864cd5fe3c38"
+    "revision": "13fdd899bfa62527cc39887abd74ec24cd626dec"
   },
   {
     "language": "slint",
@@ -2232,9 +2232,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
-    "grammarSha": "472d6ee90ec9abb6139e6b28005327996bb8f1de5c757639ab356de81dcd633e",
+    "grammarSha": "d32afb954419b1d14b3e83d7520926c45122fd1b6e3dc48bd990d7da3e917874",
     "reference": "master",
-    "revision": "592faa3186ef857c92e4bd1c31d73c07a4a334db"
+    "revision": "db662414ccd6f7c78b1e834e7abe11c224b04759"
   },
   {
     "language": "textproto",
@@ -2272,7 +2272,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "grammarSha": "0a03fc2ded8367c41d3e6f4772e4602808954fa3f30349b4b5cc39187e354c72",
     "reference": "main",
-    "revision": "496322c1f78647ae0cc1ec96e7b2523656d34846"
+    "revision": "439dad01355e4db335fe9cd12eb177b4f2563dd6"
   },
   {
     "language": "tmux",
@@ -2529,7 +2529,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "5151f4a33d81ff68f94ff451a3404c581705eb96"
+    "revision": "0cdff2bc50e3664049905e952746cadf4ac62f15"
   },
   {
     "language": "xcompose",
