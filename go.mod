@@ -5,7 +5,7 @@ go 1.22.1
 require (
 	github.com/alexaandru/go-sitter-forest/ada v1.5.10
 	github.com/alexaandru/go-sitter-forest/agda v1.5.10
-	github.com/alexaandru/go-sitter-forest/angular v1.5.10
+	github.com/alexaandru/go-sitter-forest/angular v1.5.11
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.10
 	github.com/alexaandru/go-sitter-forest/asm v1.5.10
@@ -73,7 +73,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/git_config v1.5.10
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.5.10
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.5.10
-	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.10
+	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.11
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.10
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.10
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.10
@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.10
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.10
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.11
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
