@@ -161,9 +161,9 @@
     "language": "c",
     "url": "https://github.com/tree-sitter/tree-sitter-c",
     "maintainedBy": "@amaanq",
-    "grammarSha": "56ab1350a74fb57bec6125ac47c6d1cca11709410677fc4f2eed986f4c624fdc",
+    "grammarSha": "3e151925097e0878fb3c773e85f8e77c69bc3cd46e9dcc64d2a72e76f025b151",
     "reference": "master",
-    "revision": "72084f447c2051e01a7cd6c6e0477ec71a9297ed"
+    "revision": "ff7f769c2d7aa3f954ce4ae98311e09f6e863c9c"
   },
   {
     "language": "c_sharp",
@@ -285,9 +285,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "d19dedb944148eb7ff16513772f4a9df485adc2f3fc49e7a63a7b6e17ca401a9",
+    "grammarSha": "bcced97e702e8b9a0442acbb0b67327020dac97bd6142ed83573c956a08c12cf",
     "reference": "master",
-    "revision": "e0c1678a78731e78655b7d953efb4daecf58be46"
+    "revision": "d0b4e006ca3c4466f834d9a4bf709bfede13d359"
   },
   {
     "language": "crystal",
@@ -1159,9 +1159,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
-    "grammarSha": "f31fbb7f84b8cf77e07fd5b7e1d9f5865ccd412ec7a7b472c83ee465c8bd7dd3",
+    "grammarSha": "e1ffe8c88f6b869190b6bb7df85da4f09b98e8f848910f03dafdaccdfd0d638f",
     "reference": "master",
-    "revision": "eb552c7022cbd1379138bdc1b2fe464a99d25640"
+    "revision": "ae2134af67f6c5e45587ace9ec748dd6e7b356a2"
   },
   {
     "language": "ledger",
@@ -1919,7 +1919,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "f8883fe89493a869e9b382f1fc29d85aeea480e3581c93e4accad67586aea0e4",
     "reference": "master",
-    "revision": "3a56481f8d13b6874a28752502a58520b9139dc7"
+    "revision": "b0cd98e1c60cb55dc358c6b6781346886b980e86"
   },
   {
     "language": "scala",
@@ -2529,7 +2529,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "4f51239d35644b642601f07193c48e78805c138f"
+    "revision": "33211e61248d933f5c81d2d111931ce34eb319be"
   },
   {
     "language": "xcompose",
