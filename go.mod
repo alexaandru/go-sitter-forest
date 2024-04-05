@@ -19,7 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.10
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.10
-	github.com/alexaandru/go-sitter-forest/c v1.5.10
+	github.com/alexaandru/go-sitter-forest/c v1.5.11
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.10
@@ -31,7 +31,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.10
 	github.com/alexaandru/go-sitter-forest/cpon v1.5.10
-	github.com/alexaandru/go-sitter-forest/cpp v1.5.10
+	github.com/alexaandru/go-sitter-forest/cpp v1.5.11
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.10
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
@@ -124,7 +124,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.10
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.10
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.10
-	github.com/alexaandru/go-sitter-forest/latex v1.5.11
+	github.com/alexaandru/go-sitter-forest/latex v1.5.12
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
