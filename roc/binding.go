@@ -1,0 +1,26 @@
+//go:build !plugin
+
+package roc
+
+//#include "parser.h"
+//TSLanguage *tree_sitter_roc();
+import "C"
+
+import (
+	_ "embed"
+	"unsafe"
+
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
+)
+
+//go:embed grammar.json
+var info []byte
+
+func GetLanguage() *sitter.Language {
+	ptr := unsafe.Pointer(C.tree_sitter_roc())
+	return sitter.NewLanguage(ptr)
+}
+
+func Info() string {
+	return string(info)
+}

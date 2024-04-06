@@ -1,0 +1,11 @@
+{
+  "language": "liquid",
+  "url": "https://github.com/hankthetank27/tree-sitter-liquid",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@hankthetank27",
+  "grammarSha": "b3857aaa9785b6c96a3734b7d8741cbbd56a006c7d56c68115a066d06292da80",
+  "reference": "main",
+  "revision": "293369818da219d97327908aab33707b04b63fd9"
+}

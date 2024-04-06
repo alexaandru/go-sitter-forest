@@ -27,6 +27,10 @@ type Grammar struct {
 	// problems.
 	Doc string `json:"doc,omitempty"`
 
+	// Description holds end users facing description.
+	// Optional, only populated when needed (at least for now).
+	Description string `json:"description,omitempty"`
+
 	// Files holds a list of files of interest from the repo.
 	//
 	// It MUST NOT include parser generated files (parser.c, parser.h,

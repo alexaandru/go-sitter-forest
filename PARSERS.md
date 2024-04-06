@@ -1,4 +1,4 @@
-# 268 Supported Parsers
+# 273 Supported Parsers
 
 2 pending, 7 skipped regeneration
 
@@ -23,6 +23,7 @@
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️  (maintained by @amaanq)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) (maintained by @Luxed; ❌OOM)
 - [x] [cairo](https://github.com/amaanq/tree-sitter-cairo) ✔️  (maintained by @amaanq)
+- [x] [calc](https://github.com/zeromake/tree-sitter-calc) ✔️  (maintained by @zeromake)
 - [x] [capnp](https://github.com/amaanq/tree-sitter-capnp) ✔️  (maintained by @amaanq)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️  (maintained by @Alfus)
 - [x] [chatito](https://github.com/ObserverOfTime/tree-sitter-chatito) ✔️  (maintained by @ObserverOfTime)
@@ -45,6 +46,7 @@
 - [x] [dhall](https://github.com/jbellerb/tree-sitter-dhall) ✔️  (maintained by @amaanq)
 - [x] [diff](https://github.com/the-mikedavis/tree-sitter-diff) ✔️  (maintained by @gbprod)
 - [x] [disassembly](https://github.com/ColinKennedy/tree-sitter-disassembly) ✔️  (maintained by @ColinKennedy)
+- [x] [djot](https://github.com/treeman/tree-sitter-djot) ✔️  (maintained by @NoahTheDuke)
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) ✔️  (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) ✔️  (maintained by @rydesun)
 - [x] [doxygen](https://github.com/amaanq/tree-sitter-doxygen) ✔️  (maintained by @amaanq)
@@ -121,6 +123,7 @@
 - [x] [JSON with comments](https://gitlab.com/WhyNotHugo/tree-sitter-jsonc) ✔️  (maintained by @WhyNotHugo)
 - [x] [jsonnet](https://github.com/sourcegraph/tree-sitter-jsonnet) ✔️  (maintained by @nawordar)
 - [x] [julia](https://github.com/tree-sitter/tree-sitter-julia) ✔️  (maintained by @theHamsta)
+- [x] [just](https://github.com/IndianBoy42/tree-sitter-just) ✔️  (maintained by @Hubro)
 - [x] [kconfig](https://github.com/amaanq/tree-sitter-kconfig) ✔️  (maintained by @amaanq)
 - [x] [kdl](https://github.com/amaanq/tree-sitter-kdl) ✔️  (maintained by @amaanq)
 - [x] [kotlin](https://github.com/fwcd/tree-sitter-kotlin) ✔️  (maintained by @SalBakraa)
@@ -130,6 +133,7 @@
 - [x] [ledger](https://github.com/cbarrete/tree-sitter-ledger) ✔️  (maintained by @cbarrete)
 - [x] [leo](https://github.com/r001/tree-sitter-leo) ✔️  (maintained by @r001)
 - [x] [linkerscript](https://github.com/amaanq/tree-sitter-linkerscript) ✔️  (maintained by @amaanq)
+- [x] [liquid](https://github.com/hankthetank27/tree-sitter-liquid) ✔️  (maintained by @hankthetank27)
 - [x] [liquidsoap](https://github.com/savonet/tree-sitter-liquidsoap) ✔️  (maintained by @toots)
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️  (maintained by @benwilliamgraham)
 - [x] [lua](https://github.com/MunifTanjim/tree-sitter-lua) ✔️  (maintained by @MunifTanjim)
@@ -201,6 +205,7 @@
 - [x] [risor](https://github.com/applejag/tree-sitter-risor) ✔️  (maintained by @applejag)
 - [x] [rnoweb](https://github.com/bamonroe/tree-sitter-rnoweb) ✔️  (maintained by @bamonroe)
 - [x] [robot](https://github.com/Hubro/tree-sitter-robot) ✔️  (maintained by @Hubro)
+- [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️  (maintained by @nat-418)
 - [x] [ron](https://github.com/amaanq/tree-sitter-ron) ✔️  (maintained by @amaanq)
 - [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd; ❌It's complicated, has multiple scanner.c files)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️  (maintained by @TravonteD)

@@ -189,6 +189,15 @@
     "revision": "6216c6ee5e9fc0649c4bd7b1aedd884a55bdd9ef"
   },
   {
+    "language": "calc",
+    "url": "https://github.com/zeromake/tree-sitter-calc",
+    "description": "Calc is a small functional language implemented in Go",
+    "maintainedBy": "@zeromake",
+    "grammarSha": "2844642191fb62853d8e6357365ad97de1814fdfb13b9d88f813dc662f271b0d",
+    "reference": "master",
+    "revision": "20b64e3ebc8c4623e11cb532451b509901881642"
+  },
+  {
     "language": "capnp",
     "url": "https://github.com/amaanq/tree-sitter-capnp",
     "maintainedBy": "@amaanq",
@@ -398,6 +407,17 @@
     "grammarSha": "bdfb14107c21d966d83e3677c764a074aa3b769bf8815dfbecd730a042ad97f0",
     "reference": "master",
     "revision": "0229c0211dba909c5d45129ac784a3f4d49c243a"
+  },
+  {
+    "language": "djot",
+    "url": "https://github.com/treeman/tree-sitter-djot",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@NoahTheDuke",
+    "grammarSha": "5893d58c8b6cb523d6749b478b6bbfcb3faab5f2880fd5f9a0cdd73e8cc0401c",
+    "reference": "master",
+    "revision": "63f176e7db5fca073b55b98b7e5e95afd1587fcb"
   },
   {
     "language": "dockerfile",
@@ -1100,6 +1120,17 @@
     "revision": "e84f10db8eeb8b9807786bfc658808edaa1b4fa2"
   },
   {
+    "language": "just",
+    "url": "https://github.com/IndianBoy42/tree-sitter-just",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@Hubro",
+    "grammarSha": "af20eb22568039b0a3f1b0d51b063129ff0972464828fbde1c8cbc7b8c9e656a",
+    "reference": "main",
+    "revision": "6c2f018ab1d90946c0ce029bb2f7d57f56895dff"
+  },
+  {
     "language": "kconfig",
     "url": "https://github.com/amaanq/tree-sitter-kconfig",
     "files": [
@@ -1186,6 +1217,17 @@
     "grammarSha": "6a4b083d98ba1c09baa00fba81216d067af13a91cf5bcce2fde4fbd198353900",
     "reference": "master",
     "revision": "f99011a3554213b654985a4b0a65b3b032ec4621"
+  },
+  {
+    "language": "liquid",
+    "url": "https://github.com/hankthetank27/tree-sitter-liquid",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@hankthetank27",
+    "grammarSha": "b3857aaa9785b6c96a3734b7d8741cbbd56a006c7d56c68115a066d06292da80",
+    "reference": "main",
+    "revision": "293369818da219d97327908aab33707b04b63fd9"
   },
   {
     "language": "liquidsoap",
@@ -1875,6 +1917,17 @@
     "grammarSha": "fcfe10a0ec522652409a8346417865907a7b480e16483f71cd270d4eee592ad7",
     "reference": "master",
     "revision": "322e4cc65754d2b3fdef4f2f8a71e0762e3d13af"
+  },
+  {
+    "language": "roc",
+    "url": "https://github.com/nat-418/tree-sitter-roc",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@nat-418",
+    "grammarSha": "dda024eb47a35296f38b7816e80b1bc13b22666445a6c75557dfe6b2db2ad52b",
+    "reference": "master",
+    "revision": "65ec48bf818967ce71680da2afc6db9fa3a03937"
   },
   {
     "language": "ron",

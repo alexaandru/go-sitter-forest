@@ -1,0 +1,11 @@
+{
+  "language": "roc",
+  "url": "https://github.com/nat-418/tree-sitter-roc",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@nat-418",
+  "grammarSha": "dda024eb47a35296f38b7816e80b1bc13b22666445a6c75557dfe6b2db2ad52b",
+  "reference": "master",
+  "revision": "65ec48bf818967ce71680da2afc6db9fa3a03937"
+}
