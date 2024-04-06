@@ -26,6 +26,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/c"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
 	"github.com/alexaandru/go-sitter-forest/cairo"
+	"github.com/alexaandru/go-sitter-forest/calc"
 	"github.com/alexaandru/go-sitter-forest/capnp"
 	"github.com/alexaandru/go-sitter-forest/cel"
 	"github.com/alexaandru/go-sitter-forest/chatito"
@@ -47,6 +48,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/dhall"
 	"github.com/alexaandru/go-sitter-forest/diff"
 	"github.com/alexaandru/go-sitter-forest/disassembly"
+	"github.com/alexaandru/go-sitter-forest/djot"
 	"github.com/alexaandru/go-sitter-forest/dockerfile"
 	"github.com/alexaandru/go-sitter-forest/dot"
 	"github.com/alexaandru/go-sitter-forest/doxygen"
@@ -124,6 +126,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/jsonc"
 	"github.com/alexaandru/go-sitter-forest/jsonnet"
 	"github.com/alexaandru/go-sitter-forest/julia"
+	"github.com/alexaandru/go-sitter-forest/just"
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
 	"github.com/alexaandru/go-sitter-forest/kotlin"
@@ -133,6 +136,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ledger"
 	"github.com/alexaandru/go-sitter-forest/leo"
 	"github.com/alexaandru/go-sitter-forest/linkerscript"
+	"github.com/alexaandru/go-sitter-forest/liquid"
 	"github.com/alexaandru/go-sitter-forest/liquidsoap"
 	"github.com/alexaandru/go-sitter-forest/llvm"
 	"github.com/alexaandru/go-sitter-forest/lua"
@@ -204,6 +208,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/risor"
 	"github.com/alexaandru/go-sitter-forest/rnoweb"
 	"github.com/alexaandru/go-sitter-forest/robot"
+	"github.com/alexaandru/go-sitter-forest/roc"
 	"github.com/alexaandru/go-sitter-forest/ron"
 	"github.com/alexaandru/go-sitter-forest/ruby"
 	"github.com/alexaandru/go-sitter-forest/rust"
@@ -301,6 +306,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"c":                  c.GetLanguage,
 	"c_sharp":            c_sharp.GetLanguage,
 	"cairo":              cairo.GetLanguage,
+	"calc":               calc.GetLanguage,
 	"capnp":              capnp.GetLanguage,
 	"cel":                cel.GetLanguage,
 	"chatito":            chatito.GetLanguage,
@@ -322,6 +328,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"dhall":              dhall.GetLanguage,
 	"diff":               diff.GetLanguage,
 	"disassembly":        disassembly.GetLanguage,
+	"djot":               djot.GetLanguage,
 	"dockerfile":         dockerfile.GetLanguage,
 	"dot":                dot.GetLanguage,
 	"doxygen":            doxygen.GetLanguage,
@@ -398,6 +405,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"jsonc":              jsonc.GetLanguage,
 	"jsonnet":            jsonnet.GetLanguage,
 	"julia":              julia.GetLanguage,
+	"just":               just.GetLanguage,
 	"kconfig":            kconfig.GetLanguage,
 	"kdl":                kdl.GetLanguage,
 	"kotlin":             kotlin.GetLanguage,
@@ -407,6 +415,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"ledger":             ledger.GetLanguage,
 	"leo":                leo.GetLanguage,
 	"linkerscript":       linkerscript.GetLanguage,
+	"liquid":             liquid.GetLanguage,
 	"liquidsoap":         liquidsoap.GetLanguage,
 	"llvm":               llvm.GetLanguage,
 	"lua":                lua.GetLanguage,
@@ -478,6 +487,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"risor":              risor.GetLanguage,
 	"rnoweb":             rnoweb.GetLanguage,
 	"robot":              robot.GetLanguage,
+	"roc":                roc.GetLanguage,
 	"ron":                ron.GetLanguage,
 	"ruby":               ruby.GetLanguage,
 	"rust":               rust.GetLanguage,
@@ -534,8 +544,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"uxntal":             uxntal.GetLanguage,
 	"v":                  v.GetLanguage,
 	"vala":               vala.GetLanguage,
-	"verilog":            verilog.GetLanguage,
 	"vento":              vento.GetLanguage,
+	"verilog":            verilog.GetLanguage,
 	"vhs":                vhs.GetLanguage,
 	"vim":                vim.GetLanguage,
 	"vimdoc":             vimdoc.GetLanguage,

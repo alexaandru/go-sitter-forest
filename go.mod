@@ -1,6 +1,6 @@
 module github.com/alexaandru/go-sitter-forest
 
-go 1.22.1
+go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/ada v1.5.10
@@ -22,6 +22,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/c v1.5.11
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
+	github.com/alexaandru/go-sitter-forest/calc v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cel v1.5.11
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.10
@@ -43,6 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.10
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
+	github.com/alexaandru/go-sitter-forest/djot v1.5.10
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.10
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
@@ -119,6 +121,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
 	github.com/alexaandru/go-sitter-forest/julia v1.5.10
+	github.com/alexaandru/go-sitter-forest/just v1.5.10
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.10
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.10
@@ -128,6 +131,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
+	github.com/alexaandru/go-sitter-forest/liquid v1.5.10
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.10
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.10
 	github.com/alexaandru/go-sitter-forest/lua v1.5.10
@@ -199,6 +203,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/risor v1.5.10
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.5.10
 	github.com/alexaandru/go-sitter-forest/robot v1.5.10
+	github.com/alexaandru/go-sitter-forest/roc v1.5.10
 	github.com/alexaandru/go-sitter-forest/ron v1.5.10
 	github.com/alexaandru/go-sitter-forest/ruby v1.5.10
 	github.com/alexaandru/go-sitter-forest/rust v1.5.11
