@@ -163,7 +163,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "3e151925097e0878fb3c773e85f8e77c69bc3cd46e9dcc64d2a72e76f025b151",
     "reference": "master",
-    "revision": "ff7f769c2d7aa3f954ce4ae98311e09f6e863c9c"
+    "revision": "5c3ab3a9ef85124cb0493427c1334ca85b7c2e8e"
   },
   {
     "language": "c_sharp",
@@ -326,7 +326,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
     "reference": "master",
-    "revision": "4ec5afdf98041d137c25b555958a1f825c7c1272"
+    "revision": "f6e9ef75aa332567252dd8ba097c98a3752cb35e"
   },
   {
     "language": "cue",
@@ -721,7 +721,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "f7040966a97c6c5a644a230df7fe74623f963d2f"
+    "revision": "2656718ba951014f3b5bd850ac36b460bac91331"
   },
   {
     "language": "gn",
@@ -914,7 +914,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "ef428a36b2faa20450ee979a618f802228b38318"
+    "revision": "bd414eace891a649e7ce03a9e24adbd5d0a66b51"
   },
   {
     "language": "hlsplaylist",
@@ -1029,9 +1029,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "d9e9cd75b7542364583556968d92e0d23af22fc2fbdc3638f3cc305623b1c096",
+    "grammarSha": "0e27d71b6786d0d7593564d9b11932dea929a87ea8a07287f42ea9a07eb5de3e",
     "reference": "master",
-    "revision": "de1e682289a417354df5b4437a3e4f92e0722a0f"
+    "revision": "d9b3a5841bd8f05e15db0748848ef3f5af5b5b44"
   },
   {
     "language": "jq",
@@ -1731,7 +1731,7 @@
     "maintainedBy": "@stsewd, @theHamsta",
     "grammarSha": "9a77a8055fd5cf26327a95b26fd4d9e4556284bbc579013b054ac6a468e0033b",
     "reference": "master",
-    "revision": "b8a4c64121ba66b460cb878e934e3157ecbfb124"
+    "revision": "a22761025cdac6c314b7e3aa48fb44fa9e594d6a"
   },
   {
     "language": "ql",
@@ -1917,9 +1917,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "f8883fe89493a869e9b382f1fc29d85aeea480e3581c93e4accad67586aea0e4",
+    "grammarSha": "59c9401e2a3f74a46aa012a0e3f02b4db272dcd165e9914b5a5b1eb9df70c190",
     "reference": "master",
-    "revision": "b0cd98e1c60cb55dc358c6b6781346886b980e86"
+    "revision": "927a1b57c12c70dc5906bcebd58ffa354c3ce62b"
   },
   {
     "language": "scala",
@@ -1969,7 +1969,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "13fdd899bfa62527cc39887abd74ec24cd626dec"
+    "revision": "0968d2c6e0f395dfec48232e586f7d04ddc11c83"
   },
   {
     "language": "slint",
@@ -2272,7 +2272,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "grammarSha": "0a03fc2ded8367c41d3e6f4772e4602808954fa3f30349b4b5cc39187e354c72",
     "reference": "main",
-    "revision": "c10ad7e82aa4d77fcb5c4aaec193c9f2dfd3afcb"
+    "revision": "0545ebd097338f1a119c2cb61eb3600409fce715"
   },
   {
     "language": "tmux",
@@ -2371,7 +2371,7 @@
     "maintainedBy": "@uben0, @RaafatTurki",
     "grammarSha": "03ff65b03ee164ac7f84cf6f9e00ccb640ed0dd9c62cb6561083c9602600b070",
     "reference": "master",
-    "revision": "f457c77edffd4b93190794355ff5acf7acfb99c6"
+    "revision": "1ad9724e4e4ea5ab81192e843e74cf664eacc59b"
   },
   {
     "language": "udev",
@@ -2428,7 +2428,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "grammarSha": "bcc9250f26b58bae6fef332f4bd8b9415f3607186a5bbe14ef730637c888a485",
     "reference": "main",
-    "revision": "12f5f6a073f9c48fd8733f3102fe4162dcf1c514"
+    "revision": "c9049436e16bd4182d4a1593e6163652f748e59b"
   },
   {
     "language": "vala",
@@ -2529,7 +2529,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "33211e61248d933f5c81d2d111931ce34eb319be"
+    "revision": "1bfc04707486cf19476ce046960810b553659a1a"
   },
   {
     "language": "xcompose",
