@@ -201,7 +201,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/robot v1.5.10
 	github.com/alexaandru/go-sitter-forest/ron v1.5.10
 	github.com/alexaandru/go-sitter-forest/ruby v1.5.10
-	github.com/alexaandru/go-sitter-forest/rust v1.5.10
+	github.com/alexaandru/go-sitter-forest/rust v1.5.11
 	github.com/alexaandru/go-sitter-forest/scala v1.5.10
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.10
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.10
@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.10
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.11
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.12
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
@@ -247,7 +247,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
 	github.com/alexaandru/go-sitter-forest/typescript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
-	github.com/alexaandru/go-sitter-forest/typst v1.5.10
+	github.com/alexaandru/go-sitter-forest/typst v1.5.11
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
 	github.com/alexaandru/go-sitter-forest/unison v1.5.10
