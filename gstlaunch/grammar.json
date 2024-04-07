@@ -2,7 +2,7 @@
   "language": "gstlaunch",
   "url": "https://github.com/theHamsta/tree-sitter-gstlaunch",
   "maintainedBy": "@theHamsta",
-  "grammarSha": "7956e7055e92a57957ee34377ddffdfb7f05de9af035372009f55bece270a21f",
+  "grammarSha": "7c0c76b349f1cae6d2d3190df35f20006fb7d48a86d075dadf151852f3627424",
   "reference": "master",
-  "revision": "2c0d9c94d35e37aa63fa5002163c8480985b3e5b"
+  "revision": "549aef253fd38a53995cda1bf55c501174372bf7"
 }
