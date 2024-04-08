@@ -82,7 +82,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.11
 	github.com/alexaandru/go-sitter-forest/gn v1.5.10
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10
-	github.com/alexaandru/go-sitter-forest/go v1.5.10
+	github.com/alexaandru/go-sitter-forest/go v1.5.11
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.10
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.10
@@ -112,7 +112,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
-	github.com/alexaandru/go-sitter-forest/java v1.5.10
+	github.com/alexaandru/go-sitter-forest/java v1.5.11
 	github.com/alexaandru/go-sitter-forest/javascript v1.5.10
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.10
