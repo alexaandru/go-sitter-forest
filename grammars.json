@@ -493,7 +493,7 @@
     "maintainedBy": "@connorlay",
     "grammarSha": "d56ee3fdad30b9eaa20da9781d847d0804ec9d1b4ec585987d3ae291700ef87f",
     "reference": "main",
-    "revision": "868620e19f070a5e6b0b685dc6069a611a86259a"
+    "revision": "e3b0b2ef2e8d6e6569fc5525a99ffa98b450f333"
   },
   {
     "language": "elm",
@@ -2582,7 +2582,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "44760ce857697926c6c4091db3e727fd193c55cd"
+    "revision": "47fd645afa0b1cdd4ee1de68a78343853302571b"
   },
   {
     "language": "xcompose",
