@@ -48,7 +48,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
     "reference": "master",
-    "revision": "f491d929f5af4e6ede4067095c7a649716b23ee8"
+    "revision": "2e5222b3e2cbc8eb1dc578e9a2517e85bbb21c98"
   },
   {
     "language": "asm",
@@ -2066,9 +2066,9 @@
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
     "maintainedBy": "@amaanq",
-    "grammarSha": "700ea6df7e817e83fc3b9953f90e5b9c120593e4d2b3f44031076e1d58a30f49",
+    "grammarSha": "0f2d5592d69d738ffca03567cf87d2de872a67031df41c51f7556fcd8dd26a78",
     "reference": "master",
-    "revision": "a8ed2f5d600fed77f8ed3084d1479998c649bca1"
+    "revision": "08338dcee32603383fcef08f36321900bb7a354b"
   },
   {
     "language": "soql",
@@ -2174,7 +2174,7 @@
     "maintainedBy": "@mskelton",
     "grammarSha": "e47c79e14d31ac7774cf20ff7582297a41b47b1dfe56006b112a4e3e2e0528fa",
     "reference": "main",
-    "revision": "5e52758b32e02adca16bb93f95b3f9c050c72b56"
+    "revision": "c68a4572e2d6403b6e99066c9a113b43f4a07a27"
   },
   {
     "language": "supercollider",
@@ -2287,7 +2287,7 @@
     "maintainedBy": "@vrischmann",
     "grammarSha": "d32afb954419b1d14b3e83d7520926c45122fd1b6e3dc48bd990d7da3e917874",
     "reference": "master",
-    "revision": "044ad200092170727650fa6d368df66a8da98f9d"
+    "revision": "71978ef587a9e4456333d62a5929949669af66fc"
   },
   {
     "language": "textproto",
@@ -2422,9 +2422,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@uben0, @RaafatTurki",
-    "grammarSha": "03ff65b03ee164ac7f84cf6f9e00ccb640ed0dd9c62cb6561083c9602600b070",
+    "grammarSha": "2a6fd720c892bb454917b55864fb1e3214be87c16c083a65fe5582a5917b1961",
     "reference": "master",
-    "revision": "1ad9724e4e4ea5ab81192e843e74cf664eacc59b"
+    "revision": "13863ddcbaa7b68ee6221cea2e3143415e64aea4"
   },
   {
     "language": "udev",
@@ -2582,7 +2582,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "5e2b8b23b922ad525c2d9ecf546bba4d4173c7fd"
+    "revision": "05f6e2908a38db3a17b18f9c1cffd2f29b6aa575"
   },
   {
     "language": "xcompose",
