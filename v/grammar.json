@@ -3,7 +3,7 @@
   "url": "https://github.com/vlang/v-analyzer",
   "srcRoot": "tree_sitter_v",
   "maintainedBy": "@kkharji, @amaanq",
-  "grammarSha": "bcc9250f26b58bae6fef332f4bd8b9415f3607186a5bbe14ef730637c888a485",
+  "grammarSha": "21cb78dc529cb21db26945299f1aff59e45a1ad34b846b3ddbda47bceb3c3be9",
   "reference": "main",
-  "revision": "395d22e718b6211d05b72fe10bfb371cb7a7aff3"
+  "revision": "3cb964b9023388d2dd261070ccf772863afc3ea6"
 }

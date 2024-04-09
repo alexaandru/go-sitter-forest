@@ -175,7 +175,7 @@
     "maintainedBy": "@Luxed",
     "skip": true,
     "reference": "master",
-    "revision": "92c0a9431400cd8b6b6ee7503f81da3ae83fc830"
+    "revision": "9de565257ada70ac441c640e3b5d6850e2df5ab8"
   },
   {
     "language": "cairo",
@@ -493,7 +493,7 @@
     "maintainedBy": "@connorlay",
     "grammarSha": "d56ee3fdad30b9eaa20da9781d847d0804ec9d1b4ec585987d3ae291700ef87f",
     "reference": "main",
-    "revision": "e3b0b2ef2e8d6e6569fc5525a99ffa98b450f333"
+    "revision": "de690fa8a028f122af46d9d2685679fe5f2d7d60"
   },
   {
     "language": "elm",
@@ -769,7 +769,7 @@
     "maintainedBy": "@theHamsta, @WinWisely268",
     "grammarSha": "cc75022fe024588f3ea22f54d8328286026972ffb5b8c8fd006b6eef0b75ee99",
     "reference": "master",
-    "revision": "5c0024cfbb10f0a6b54ed4b14dc5acadacd19b61"
+    "revision": "eb68645662a3f7bf7fdd4bcb9531585f54c8570e"
   },
   {
     "language": "godot_resource",
@@ -1373,7 +1373,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "151da61eb77d21b7c070d893ff852dd1ec0b7de0"
+    "revision": "c2845c1c0b23e2faf6febfa72a042e5346374ebf"
   },
   {
     "language": "muttrc",
@@ -1972,7 +1972,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "5d561bbd01fdd4a91af98a0e1e2b04bb7743c0fd6dd0e6668c19412f1fef4fad",
     "reference": "master",
-    "revision": "886e8df3c6ac02723c05fc431a61eb8c27dc118d"
+    "revision": "b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b"
   },
   {
     "language": "scala",
@@ -2479,9 +2479,9 @@
     "url": "https://github.com/vlang/v-analyzer",
     "srcRoot": "tree_sitter_v",
     "maintainedBy": "@kkharji, @amaanq",
-    "grammarSha": "bcc9250f26b58bae6fef332f4bd8b9415f3607186a5bbe14ef730637c888a485",
+    "grammarSha": "21cb78dc529cb21db26945299f1aff59e45a1ad34b846b3ddbda47bceb3c3be9",
     "reference": "main",
-    "revision": "395d22e718b6211d05b72fe10bfb371cb7a7aff3"
+    "revision": "3cb964b9023388d2dd261070ccf772863afc3ea6"
   },
   {
     "language": "vala",
@@ -2582,7 +2582,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "47fd645afa0b1cdd4ee1de68a78343853302571b"
+    "revision": "5e2b8b23b922ad525c2d9ecf546bba4d4173c7fd"
   },
   {
     "language": "xcompose",
