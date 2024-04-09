@@ -424,8 +424,8 @@ github.com/alexaandru/go-sitter-forest/smithy v1.5.10 h1:sHQD5DEAP9FixAG8dz5hjgs
 github.com/alexaandru/go-sitter-forest/smithy v1.5.10/go.mod h1:+MUYbHtnD9GHwOTIDL2Q50mgIe7uEqjU4Y51N3c6ReU=
 github.com/alexaandru/go-sitter-forest/snakemake v1.5.11 h1:VdG2i7/PTvjgRqRf+zr3uDGjnw8jVz1ZuxILRZhUggE=
 github.com/alexaandru/go-sitter-forest/snakemake v1.5.11/go.mod h1:te2nR83QXaQCuN31q5fhJbtUXJqk9cpH76BD7TAi7mk=
-github.com/alexaandru/go-sitter-forest/solidity v1.5.11 h1:QzB+1nap9TCxFwDFTSllzbPTf1J+Bgo0EsRxeKywxgE=
-github.com/alexaandru/go-sitter-forest/solidity v1.5.11/go.mod h1:BW6TSuk1/KX1uTev4HZ2HQ841/Ik7wORb3AgpoOJWx4=
+github.com/alexaandru/go-sitter-forest/solidity v1.5.12 h1:tfJNH8zDvlJUmKAC9O82X8m6qgPaouhowzH1kRl0F+I=
+github.com/alexaandru/go-sitter-forest/solidity v1.5.12/go.mod h1:BW6TSuk1/KX1uTev4HZ2HQ841/Ik7wORb3AgpoOJWx4=
 github.com/alexaandru/go-sitter-forest/soql v1.5.10 h1:EhIcGPvo1X/83ovTnAGA6uXRkCsR+F3III/8HRbdF0I=
 github.com/alexaandru/go-sitter-forest/soql v1.5.10/go.mod h1:n+QjNPL2HdDlCUTHIlgnK4QeoZ6ajgeE+Xo7wnATjRM=
 github.com/alexaandru/go-sitter-forest/sosl v1.5.10 h1:2uH8BmkP7OcQRDnHIsCk0C/j7/H+KADxoBWKPfwEGBI=
@@ -496,8 +496,8 @@ github.com/alexaandru/go-sitter-forest/typescript v1.5.10 h1:j/aejA2z7kKANHgW3Vq
 github.com/alexaandru/go-sitter-forest/typescript v1.5.10/go.mod h1:PgnFy+OCtdp6IeDLkeYirSSeMex1RP95MB8V7vTcjXU=
 github.com/alexaandru/go-sitter-forest/typoscript v1.5.10 h1:AiDYYHgztwWkzhzFLoUFGgNTi4qrOao/k0jBFDqLczc=
 github.com/alexaandru/go-sitter-forest/typoscript v1.5.10/go.mod h1:Yslo16A3704vio+ANn/AR4Uj1Vy4xDJMeLiTuN8ZjrI=
-github.com/alexaandru/go-sitter-forest/typst v1.5.11 h1:sWn5e/a0bWRCxUbxoI8AVsuUpS2dJRC01eSUZsMAQpM=
-github.com/alexaandru/go-sitter-forest/typst v1.5.11/go.mod h1:7y7H2pSzSsp/YuEPJyPbMCxkdZwzVRy78YieWWNd4hw=
+github.com/alexaandru/go-sitter-forest/typst v1.5.12 h1:XHRgqE0oet1KSiGarCIu+onego46mBXLvvvZpbT4W34=
+github.com/alexaandru/go-sitter-forest/typst v1.5.12/go.mod h1:7y7H2pSzSsp/YuEPJyPbMCxkdZwzVRy78YieWWNd4hw=
 github.com/alexaandru/go-sitter-forest/udev v1.5.10 h1:W9K/SVyaN4Pw3qJwR2o0tlsNBNIeeoAYjR9Q/qtt1hU=
 github.com/alexaandru/go-sitter-forest/udev v1.5.10/go.mod h1:92k05UOujXrVSd8tHhWWGhMiP8o6YHZCeqFGIkAO/zU=
 github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10 h1:z5mg665O9iBKnWKBrQ8vwAUf+1AHzVAaiUd0bK7AdJ4=
