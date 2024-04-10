@@ -271,7 +271,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wing v1.5.10
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
-	github.com/alexaandru/go-sitter-forest/yaml v1.5.10
+	github.com/alexaandru/go-sitter-forest/yaml v1.5.11
 	github.com/alexaandru/go-sitter-forest/yang v1.5.10
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.10
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.10
