@@ -150,8 +150,7 @@ clear picture of all the changes performed to the code, changes which are detail
 - the include paths are rewritten to use a flat structure (i.e. `"tree_sitter/parser.h"`
   becomes `"parser.h"`); This is needed so that the files are part of the same package,
   plus it also makes automation simpler;
-- for `yaml` and `unison`, the `scanner` file includes `schema.generated.cc` (and `maybe.c`,
-  respectively) file which causes `cgo` the included file twice and throw duplicate symbols error.
+- for `unison` the `scanner` file includes `maybe.c` which causes `cgo` to include the file twice and throw duplicate symbols error.
   The solution chosen was to copy the content of the included file into the scanner file and set
   the included file to zero bytes; this way all the code is in one file and the compilation is possible;
 - for parsers that include a `tag.h` file: the `TAG_TYPES_BY_TAG_NAME` variable clashes

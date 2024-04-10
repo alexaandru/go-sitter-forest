@@ -1,6 +1,6 @@
 # 273 Supported Parsers
 
-2 pending, 7 skipped regeneration
+2 pending, 6 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -274,7 +274,7 @@
 - [x] [wing](https://github.com/winglang/wing) ✔️  (maintained by @gshpychka, @MarkMcCulloh)
 - [x] [xcompose](https://github.com/ObserverOfTime/tree-sitter-xcompose) ✔️  (maintained by @ObserverOfTime)
 - [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️  (maintained by @ObserverOfTime)
-- [x] [yaml](https://github.com/ikatyang/tree-sitter-yaml) (maintained by @stsewd; ❌grammar.js throws error)
+- [x] [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) ✔️  (maintained by @amaanq)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️  (maintained by @Hubro)
 - [x] [yuck](https://github.com/Philipp-M/tree-sitter-yuck) ✔️  (maintained by @Philipp-M, @amaanq)
 - [x] [zathurarc](https://github.com/Freed-Wu/tree-sitter-zathurarc) ✔️  (maintained by @Freed-Wu)

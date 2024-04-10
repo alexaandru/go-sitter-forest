@@ -429,8 +429,6 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 	// For these grammars 1st file is included into the 2nd file and it causes
 	// cgo to compile the 1st one twice and throw duplicate symbols error.
 	switch gr.Language {
-	case "yaml":
-		err = combineFiles("schema.generated.cc", "scanner.cc", gr, `#include "parser.h"`)
 	case "unison":
 		err = combineFiles("maybe.c", "scanner.c", gr)
 	}

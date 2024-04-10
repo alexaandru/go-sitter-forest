@@ -2607,16 +2607,16 @@
   },
   {
     "language": "yaml",
-    "url": "https://github.com/ikatyang/tree-sitter-yaml",
-    "doc": "grammar.js throws error",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-yaml",
     "files": [
-      "scanner.cc",
-      "schema.generated.cc"
+      "scanner.c",
+      "schema.core.c",
+      "schema.json.c"
     ],
-    "maintainedBy": "@stsewd",
-    "skip": true,
+    "maintainedBy": "@amaanq",
+    "grammarSha": "17ab22256ca2099b3dd5aaa620d96801d00a8a6dab48d0a649657ecea1960f52",
     "reference": "master",
-    "revision": "0e36bed171768908f331ff7dff9d956bae016efb"
+    "revision": "3975596d84650e8d8ab8ef3128b1b7f0fec324f8"
   },
   {
     "language": "yang",
