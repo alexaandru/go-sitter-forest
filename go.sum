@@ -8,8 +8,8 @@ github.com/alexaandru/go-sitter-forest/apex v1.5.10 h1:Blq1nvLIkFfDrPNkorK6q6uJw
 github.com/alexaandru/go-sitter-forest/apex v1.5.10/go.mod h1:yPnT5zvLgcdF5Q2ezJ3CUazzjGqf1oSdlAmEXu86rIo=
 github.com/alexaandru/go-sitter-forest/arduino v1.5.10 h1:XFluJTQo+19XXXXXpiV5UhPySsyitSOeXuTJkO8E8SQ=
 github.com/alexaandru/go-sitter-forest/arduino v1.5.10/go.mod h1:+UoZflgilRrAObten0fPTgz+CHYXfkOT23AGnLV+52E=
-github.com/alexaandru/go-sitter-forest/asm v1.5.10 h1:FNKgBrPfO9t/xvXN4TcJ60O3cQBrkXjIRn40R1eb4N8=
-github.com/alexaandru/go-sitter-forest/asm v1.5.10/go.mod h1:1kXo/VxxqE6xKTEhN1n+SKDi87Ii8xYPMpJcQ/YypMo=
+github.com/alexaandru/go-sitter-forest/asm v1.5.11 h1:y/fLB1e2I3h6Vd4Biwy3jkNtiFq6/f7WyzfTAhr6Iqk=
+github.com/alexaandru/go-sitter-forest/asm v1.5.11/go.mod h1:1kXo/VxxqE6xKTEhN1n+SKDi87Ii8xYPMpJcQ/YypMo=
 github.com/alexaandru/go-sitter-forest/astro v1.5.10 h1:HCX9zHr+i81KOLsGUBhjSZIF3cTgjmQBkUvlk/VlZrM=
 github.com/alexaandru/go-sitter-forest/astro v1.5.10/go.mod h1:ecxfpjJi7ZOUYxhMHGZnObtRynL3ueBB5tn6qv33UtE=
 github.com/alexaandru/go-sitter-forest/authzed v1.5.10 h1:UAmV9S8s1iXO3Ii+BgVVxh7ZvnsmjvsC7TLlyfwGCV8=
@@ -314,8 +314,8 @@ github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.10 h1:OtF5ZspTm+H5h4
 github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.10/go.mod h1:R9y6yoVJ+U/B81eoNkHjxJNXIzIMIY41dlJzzZL7jh0=
 github.com/alexaandru/go-sitter-forest/ocamllex v1.5.10 h1:6kutRnmvG20U0bDiurzx+/QasN78nF9jRsjvgHiNWUk=
 github.com/alexaandru/go-sitter-forest/ocamllex v1.5.10/go.mod h1:SDBLXnKEF6UcvhnxU92FK0gMaAxGi4gqeC4Tk56nkuk=
-github.com/alexaandru/go-sitter-forest/odin v1.5.10 h1:pKy/XAcGhKylES+I6d1blSNSYwk7xI8cPNpS0Z68lfc=
-github.com/alexaandru/go-sitter-forest/odin v1.5.10/go.mod h1:n2rElK3h1CNMZW9RiHRE3k+2lXw4TrROEzk1bPQapm8=
+github.com/alexaandru/go-sitter-forest/odin v1.5.11 h1:w0sg+gfR/gERSZSfSbPCoO4NT4673q2r5WK8rzmKG3c=
+github.com/alexaandru/go-sitter-forest/odin v1.5.11/go.mod h1:n2rElK3h1CNMZW9RiHRE3k+2lXw4TrROEzk1bPQapm8=
 github.com/alexaandru/go-sitter-forest/org v1.5.10 h1:6xAJKoh3j5D6R6qhDZdGpEMotGgXmLPddOn+dNzMZvg=
 github.com/alexaandru/go-sitter-forest/org v1.5.10/go.mod h1:sdnL8N8la8pjI+1p/q9GMOVRbfH/48MJC2sC9lfoNQw=
 github.com/alexaandru/go-sitter-forest/pascal v1.5.10 h1:a6yK1KtU0Bquch1jsQ+ETq6xx85eVkHdRuCYo2OUMKY=

@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.5.11
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.10
-	github.com/alexaandru/go-sitter-forest/asm v1.5.10
+	github.com/alexaandru/go-sitter-forest/asm v1.5.11
 	github.com/alexaandru/go-sitter-forest/astro v1.5.10
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
@@ -161,7 +161,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml v1.5.10
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.10
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.5.10
-	github.com/alexaandru/go-sitter-forest/odin v1.5.10
+	github.com/alexaandru/go-sitter-forest/odin v1.5.11
 	github.com/alexaandru/go-sitter-forest/org v1.5.10
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.10
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
