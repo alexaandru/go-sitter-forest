@@ -1,6 +1,6 @@
 {
   "language": "linkerscript",
-  "url": "https://github.com/amaanq/tree-sitter-linkerscript",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
   "maintainedBy": "@amaanq",
   "grammarSha": "6a4b083d98ba1c09baa00fba81216d067af13a91cf5bcce2fde4fbd198353900",
   "reference": "master",

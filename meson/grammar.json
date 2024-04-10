@@ -1,6 +1,6 @@
 {
   "language": "meson",
-  "url": "https://github.com/Decodetalkers/tree-sitter-meson",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
   "maintainedBy": "@Decodetalkers",
   "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
   "reference": "master",

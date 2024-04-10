@@ -1,6 +1,6 @@
 {
   "language": "nix",
-  "url": "https://github.com/cstrahan/tree-sitter-nix",
+  "url": "https://github.com/nix-community/tree-sitter-nix",
   "files": [
     "scanner.c"
   ],

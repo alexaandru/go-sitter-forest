@@ -1,6 +1,6 @@
 {
   "language": "hare",
-  "url": "https://github.com/amaanq/tree-sitter-hare",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
   "maintainedBy": "@amaanq",
   "grammarSha": "cda65405f31f1e7f5117d24949685971791e40a2ca1a86fea5d812b0d282a2de",
   "reference": "master",

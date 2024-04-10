@@ -41,7 +41,7 @@
   },
   {
     "language": "arduino",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-arduino",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",
     "files": [
       "scanner.c"
     ],
@@ -129,7 +129,7 @@
   },
   {
     "language": "bicep",
-    "url": "https://github.com/amaanq/tree-sitter-bicep",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-bicep",
     "files": [
       "scanner.c"
     ],
@@ -140,7 +140,7 @@
   },
   {
     "language": "bitbake",
-    "url": "https://github.com/amaanq/tree-sitter-bitbake",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-bitbake",
     "files": [
       "scanner.c"
     ],
@@ -179,7 +179,7 @@
   },
   {
     "language": "cairo",
-    "url": "https://github.com/amaanq/tree-sitter-cairo",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-cairo",
     "files": [
       "scanner.c"
     ],
@@ -199,7 +199,7 @@
   },
   {
     "language": "capnp",
-    "url": "https://github.com/amaanq/tree-sitter-capnp",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-capnp",
     "maintainedBy": "@amaanq",
     "grammarSha": "adf7b38ad7bdbe764758e3d93dfc5c902e37a2cabeaacd6bb0ddccd0887d63ea",
     "reference": "master",
@@ -216,7 +216,7 @@
   },
   {
     "language": "chatito",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-chatito",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-chatito",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "18d0205daf6e17480dc79d1dd9ed02af7fa64299a5137a7542f6abd35b426161",
     "reference": "master",
@@ -273,7 +273,7 @@
   },
   {
     "language": "corn",
-    "url": "https://github.com/jakestanger/tree-sitter-corn",
+    "url": "https://github.com/corn-config/tree-sitter-corn",
     "maintainedBy": "@jakestanger",
     "grammarSha": "86936e6c3350fb7c0461466e28ce6eab4a8cec9bc1e3bc778e4990dc7d914e62",
     "reference": "master",
@@ -281,7 +281,7 @@
   },
   {
     "language": "cpon",
-    "url": "https://github.com/amaanq/tree-sitter-cpon",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-cpon",
     "maintainedBy": "@amaanq",
     "grammarSha": "559879feb11840fa1c0ba6ee0544ee0f7d92b695b6ce44f41c780f7f5f36bc1a",
     "reference": "master",
@@ -319,7 +319,7 @@
   },
   {
     "language": "csv",
-    "url": "https://github.com/amaanq/tree-sitter-csv",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
     "srcRoot": "csv",
     "maintainedBy": "@amaanq",
     "grammarSha": "eacebfc9353209f7a298af08e26c2b9dd09593533893171ecf921a0a389a879f",
@@ -328,7 +328,7 @@
   },
   {
     "language": "cuda",
-    "url": "https://github.com/theHamsta/tree-sitter-cuda",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
     "files": [
       "scanner.c"
     ],
@@ -437,7 +437,7 @@
   },
   {
     "language": "doxygen",
-    "url": "https://github.com/amaanq/tree-sitter-doxygen",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-doxygen",
     "files": [
       "scanner.c"
     ],
@@ -572,7 +572,7 @@
   },
   {
     "language": "firrtl",
-    "url": "https://github.com/amaanq/tree-sitter-firrtl",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-firrtl",
     "files": [
       "scanner.c"
     ],
@@ -632,7 +632,7 @@
   },
   {
     "language": "func",
-    "url": "https://github.com/amaanq/tree-sitter-func",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-func",
     "maintainedBy": "@amaanq",
     "grammarSha": "7e70d7a0b369d37193ce3eb428b7279c927b3c9e66d62d396a5cd9a7bc1cd5ad",
     "reference": "master",
@@ -687,7 +687,7 @@
   },
   {
     "language": "gitattributes",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-gitattributes",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-gitattributes",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "a9ef77390db0868e1c246ff010377b0bbc7742b21771c094303ef63e5bd1176d",
     "reference": "master",
@@ -726,7 +726,7 @@
   {
     "language": "glimmer",
     "altName": "Glimmer and Ember",
-    "url": "https://github.com/alexlafroscia/tree-sitter-glimmer",
+    "url": "https://github.com/ember-tooling/tree-sitter-glimmer",
     "files": [
       "scanner.c"
     ],
@@ -737,7 +737,7 @@
   },
   {
     "language": "glsl",
-    "url": "https://github.com/theHamsta/tree-sitter-glsl",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
@@ -746,7 +746,7 @@
   {
     "language": "gn",
     "altName": "GN (Generate Ninja)",
-    "url": "https://github.com/amaanq/tree-sitter-gn",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-gn",
     "files": [
       "scanner.c"
     ],
@@ -793,7 +793,7 @@
   },
   {
     "language": "gosum",
-    "url": "https://github.com/amaanq/tree-sitter-go-sum",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-go-sum",
     "maintainedBy": "@amaanq",
     "grammarSha": "c8e57d0bad6bf049ac323fff4f8215b6b250e31c38b40e6f9993f3c5a9138971",
     "reference": "master",
@@ -817,7 +817,7 @@
   },
   {
     "language": "gpg",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-gpg-config",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
     "reference": "master",
@@ -841,7 +841,7 @@
   },
   {
     "language": "gstlaunch",
-    "url": "https://github.com/theHamsta/tree-sitter-gstlaunch",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch",
     "maintainedBy": "@theHamsta",
     "grammarSha": "7c0c76b349f1cae6d2d3190df35f20006fb7d48a86d075dadf151852f3627424",
     "reference": "master",
@@ -860,7 +860,7 @@
   },
   {
     "language": "hare",
-    "url": "https://github.com/amaanq/tree-sitter-hare",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
     "maintainedBy": "@amaanq",
     "grammarSha": "cda65405f31f1e7f5117d24949685971791e40a2ca1a86fea5d812b0d282a2de",
     "reference": "master",
@@ -891,7 +891,7 @@
   },
   {
     "language": "hcl",
-    "url": "https://github.com/MichaHoffmann/tree-sitter-hcl",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-hcl",
     "files": [
       "scanner.c"
     ],
@@ -902,7 +902,7 @@
   },
   {
     "language": "heex",
-    "url": "https://github.com/connorlay/tree-sitter-heex",
+    "url": "https://github.com/phoenixframework/tree-sitter-heex",
     "maintainedBy": "@connorlay",
     "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
     "reference": "main",
@@ -927,7 +927,7 @@
   },
   {
     "language": "hlsl",
-    "url": "https://github.com/theHamsta/tree-sitter-hlsl",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-hlsl",
     "files": [
       "scanner.c"
     ],
@@ -1001,7 +1001,7 @@
   },
   {
     "language": "hyprlang",
-    "url": "https://github.com/luckasRanarison/tree-sitter-hyprlang",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
     "maintainedBy": "@luckasRanarison",
     "grammarSha": "fcabbde1f9f0241d09552c836c2d98161e085d4e8c5997e6aa48ffa25d9c07b8",
     "reference": "master",
@@ -1017,7 +1017,7 @@
   },
   {
     "language": "ispc",
-    "url": "https://github.com/fab4100/tree-sitter-ispc",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
     "maintainedBy": "@fab4100",
     "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
     "reference": "master",
@@ -1132,7 +1132,7 @@
   },
   {
     "language": "kconfig",
-    "url": "https://github.com/amaanq/tree-sitter-kconfig",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",
     "files": [
       "scanner.c"
     ],
@@ -1143,7 +1143,7 @@
   },
   {
     "language": "kdl",
-    "url": "https://github.com/amaanq/tree-sitter-kdl",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-kdl",
     "files": [
       "scanner.c"
     ],
@@ -1212,7 +1212,7 @@
   },
   {
     "language": "linkerscript",
-    "url": "https://github.com/amaanq/tree-sitter-linkerscript",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
     "maintainedBy": "@amaanq",
     "grammarSha": "6a4b083d98ba1c09baa00fba81216d067af13a91cf5bcce2fde4fbd198353900",
     "reference": "master",
@@ -1250,7 +1250,7 @@
   },
   {
     "language": "lua",
-    "url": "https://github.com/MunifTanjim/tree-sitter-lua",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-lua",
     "files": [
       "scanner.c"
     ],
@@ -1261,7 +1261,7 @@
   },
   {
     "language": "luadoc",
-    "url": "https://github.com/amaanq/tree-sitter-luadoc",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-luadoc",
     "maintainedBy": "@amaanq",
     "grammarSha": "c137cb2a941c104d4028ba2b592f78fd4c4e9b344bcfd4b8802c9089090bbe86",
     "reference": "master",
@@ -1270,7 +1270,7 @@
   {
     "language": "luap",
     "altName": "lua patterns",
-    "url": "https://github.com/amaanq/tree-sitter-luap",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-luap",
     "maintainedBy": "@amaanq",
     "grammarSha": "75f056c7064aef3e22af7896b11734fc6e9ffaa4639bb55a1813d7791fe063ea",
     "reference": "master",
@@ -1278,7 +1278,7 @@
   },
   {
     "language": "luau",
-    "url": "https://github.com/amaanq/tree-sitter-luau",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-luau",
     "files": [
       "scanner.c"
     ],
@@ -1306,7 +1306,7 @@
   {
     "language": "markdown",
     "altName": "markdown (basic highlighting)",
-    "url": "https://github.com/MDeiml/tree-sitter-markdown",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
     "files": [
       "scanner.c"
     ],
@@ -1319,7 +1319,7 @@
   {
     "language": "markdown_inline",
     "altName": "markdown_inline (needed for full highlighting)",
-    "url": "https://github.com/MDeiml/tree-sitter-markdown",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
     "files": [
       "scanner.c"
     ],
@@ -1361,7 +1361,7 @@
   },
   {
     "language": "meson",
-    "url": "https://github.com/Decodetalkers/tree-sitter-meson",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
     "maintainedBy": "@Decodetalkers",
     "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "reference": "master",
@@ -1433,7 +1433,7 @@
   },
   {
     "language": "nix",
-    "url": "https://github.com/cstrahan/tree-sitter-nix",
+    "url": "https://github.com/nix-community/tree-sitter-nix",
     "files": [
       "scanner.c"
     ],
@@ -1455,7 +1455,7 @@
   },
   {
     "language": "nqc",
-    "url": "https://github.com/amaanq/tree-sitter-nqc",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
     "maintainedBy": "@amaanq",
     "grammarSha": "9c4164103e924312e970cba1c2078ff33b122985de47e816febe26684fe11f1d",
     "reference": "master",
@@ -1463,7 +1463,7 @@
   },
   {
     "language": "objc",
-    "url": "https://github.com/amaanq/tree-sitter-objc",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-objc",
     "doc": "grammar.js throws error: Unresolved conflict for symbol sequence",
     "maintainedBy": "@amaanq",
     "skip": true,
@@ -1509,7 +1509,7 @@
   },
   {
     "language": "ocamllex",
-    "url": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
+    "url": "https://github.com/314eter/tree-sitter-ocamllex",
     "files": [
       "scanner.c"
     ],
@@ -1520,7 +1520,7 @@
   },
   {
     "language": "odin",
-    "url": "https://github.com/amaanq/tree-sitter-odin",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-odin",
     "files": [
       "scanner.c"
     ],
@@ -1558,7 +1558,7 @@
   },
   {
     "language": "pem",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-pem",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-pem",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "15d39dc1718ffd7b05a726517c1a748995e22cf8352e49c87adcfb5dcea50159",
     "reference": "master",
@@ -1627,7 +1627,7 @@
   },
   {
     "language": "po",
-    "url": "https://github.com/erasin/tree-sitter-po",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-po",
     "maintainedBy": "@amaanq",
     "grammarSha": "a1eb430e768662afe7e917b0d03daf3729bbcbe1a883cb407e1af8c5f3c6e567",
     "reference": "main",
@@ -1647,7 +1647,7 @@
   {
     "language": "poe_filter",
     "altName": "Path of Exile item filter",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-poe-filter",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-poe-filter",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "a58fba5ad81765c871e4fffd7958a8de00efa851840ebf1f0b1323c3d8c7d1ac",
     "reference": "master",
@@ -1655,7 +1655,7 @@
   },
   {
     "language": "pony",
-    "url": "https://github.com/amaanq/tree-sitter-pony",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-pony",
     "files": [
       "scanner.c"
     ],
@@ -1666,7 +1666,7 @@
   },
   {
     "language": "printf",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-printf",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
     "reference": "main",
@@ -1717,7 +1717,7 @@
   },
   {
     "language": "psv",
-    "url": "https://github.com/amaanq/tree-sitter-csv",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
     "srcRoot": "psv",
     "maintainedBy": "@amaanq",
     "grammarSha": "f20b7fbe1c7956fdcfd124fafee7be24faeb54b860e24e33c3fc1d673d5dae5d",
@@ -1737,7 +1737,7 @@
   },
   {
     "language": "puppet",
-    "url": "https://github.com/amaanq/tree-sitter-puppet",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-puppet",
     "maintainedBy": "@amaanq",
     "grammarSha": "fd6aba1e868c3021e966c25a5e46ad57cf2855edfea1130b8400f3c1b96c425e",
     "reference": "master",
@@ -1758,7 +1758,7 @@
   {
     "language": "pymanifest",
     "altName": "PyPA manifest",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-pymanifest",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-pymanifest",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "f0d50e3e03ba68358eeeac016575ae42ead06ab8fb106447b405f9c6ae4e4a04",
     "reference": "master",
@@ -1785,7 +1785,7 @@
   },
   {
     "language": "qmldir",
-    "url": "https://github.com/Decodetalkers/tree-sitter-qmldir",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-qmldir",
     "maintainedBy": "@amaanq",
     "grammarSha": "5640f359dd610e35037c85414d38e56443cbad1fbe8f4d0640f3643ac31f7f19",
     "reference": "master",
@@ -1852,7 +1852,7 @@
   },
   {
     "language": "re2c",
-    "url": "https://github.com/amaanq/tree-sitter-re2c",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-re2c",
     "maintainedBy": "@amaanq",
     "grammarSha": "c5cccbda55131250d0ebab3c13b6ba6ccc8df6af84ae33637c900e10c1ccf53a",
     "reference": "master",
@@ -1860,7 +1860,7 @@
   },
   {
     "language": "readline",
-    "url": "https://github.com/ribru17/tree-sitter-readline",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-readline",
     "maintainedBy": "@ribru17",
     "grammarSha": "f1213c3a674435fb8dc01b8b557fc6065803d40486d6afe723d7e7ba28969d2a",
     "reference": "master",
@@ -1885,7 +1885,7 @@
   {
     "language": "requirements",
     "altName": "pip requirements",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "afae79c0e1e13a296c79b5696af84a9dfebed0479f64b3edc5783d9987df10b6",
     "reference": "master",
@@ -1931,7 +1931,7 @@
   },
   {
     "language": "ron",
-    "url": "https://github.com/amaanq/tree-sitter-ron",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-ron",
     "files": [
       "scanner.c"
     ],
@@ -2015,7 +2015,7 @@
   },
   {
     "language": "slang",
-    "url": "https://github.com/theHamsta/tree-sitter-slang",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-slang",
     "files": [
       "scanner.c"
     ],
@@ -2101,7 +2101,7 @@
   },
   {
     "language": "sparql",
-    "url": "https://github.com/BonaBeavis/tree-sitter-sparql",
+    "url": "https://github.com/GordianDziwis/tree-sitter-sparql",
     "doc": "grammar.js throws error: The `token.immediate` function only takes one literal argument.",
     "maintainedBy": "@BonaBeavis",
     "skip": true,
@@ -2129,7 +2129,7 @@
   },
   {
     "language": "squirrel",
-    "url": "https://github.com/amaanq/tree-sitter-squirrel",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-squirrel",
     "files": [
       "scanner.c"
     ],
@@ -2140,7 +2140,7 @@
   },
   {
     "language": "ssh_config",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-ssh-config",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "ad74ebeaa308cbb1e796f684afa1c886b28382cd43e2a86629101b917065961d",
     "reference": "master",
@@ -2148,7 +2148,7 @@
   },
   {
     "language": "starlark",
-    "url": "https://github.com/amaanq/tree-sitter-starlark",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-starlark",
     "files": [
       "scanner.c"
     ],
@@ -2247,7 +2247,7 @@
   },
   {
     "language": "tablegen",
-    "url": "https://github.com/amaanq/tree-sitter-tablegen",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-tablegen",
     "files": [
       "scanner.c"
     ],
@@ -2299,7 +2299,7 @@
   },
   {
     "language": "thrift",
-    "url": "https://github.com/duskmoon314/tree-sitter-thrift",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-thrift",
     "maintainedBy": "@amaanq, @duskmoon314",
     "grammarSha": "4a84e7b02e51a9fceebc2f42544ac819e611d2af2cfd9e2fed0a54cdfa35dd8d",
     "reference": "main",
@@ -2357,7 +2357,7 @@
   },
   {
     "language": "tsv",
-    "url": "https://github.com/amaanq/tree-sitter-csv",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
     "srcRoot": "tsv",
     "maintainedBy": "@amaanq",
     "grammarSha": "8178a32aa21eb39021e7772830ac0eefd367f3243bfc92d27ffa0150712b033e",
@@ -2379,7 +2379,7 @@
   },
   {
     "language": "turtle",
-    "url": "https://github.com/BonaBeavis/tree-sitter-turtle",
+    "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
     "maintainedBy": "@BonaBeavis",
     "grammarSha": "9e5fd31b7fb9cc23832a695b3f7ae44730151b7f262d28e2eaa5a2d2e248b0b2",
     "reference": "main",
@@ -2428,7 +2428,7 @@
   },
   {
     "language": "udev",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-udev",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-udev",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d27349ddfe8a5b6436ea78e029bbd507dcc936a083967af382d64b2375126dad",
     "reference": "master",
@@ -2436,7 +2436,7 @@
   },
   {
     "language": "ungrammar",
-    "url": "https://github.com/Philipp-M/tree-sitter-ungrammar",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-ungrammar",
     "maintainedBy": "@Philipp-M, @amaanq",
     "grammarSha": "61592f44491139dd73362f8b3752e9cfde7ec232515f2144e43e80b61b566abb",
     "reference": "main",
@@ -2465,7 +2465,7 @@
   {
     "language": "uxntal",
     "altName": "uxn tal",
-    "url": "https://github.com/amaanq/tree-sitter-uxntal",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-uxntal",
     "files": [
       "scanner.c"
     ],
@@ -2520,7 +2520,7 @@
   },
   {
     "language": "vim",
-    "url": "https://github.com/neovim/tree-sitter-vim",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-vim",
     "files": [
       "scanner.c",
       "keywords.h"
@@ -2563,7 +2563,7 @@
   },
   {
     "language": "wgsl_bevy",
-    "url": "https://github.com/theHamsta/tree-sitter-wgsl-bevy",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy",
     "files": [
       "scanner.c"
     ],
@@ -2586,7 +2586,7 @@
   },
   {
     "language": "xcompose",
-    "url": "https://github.com/ObserverOfTime/tree-sitter-xcompose",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "707d9f9c857a48b695a50fc6c30aca0972ebcae0dd971fd6254fdeae47ba1937",
     "reference": "master",
@@ -2628,7 +2628,7 @@
   },
   {
     "language": "yuck",
-    "url": "https://github.com/Philipp-M/tree-sitter-yuck",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-yuck",
     "files": [
       "scanner.c"
     ],

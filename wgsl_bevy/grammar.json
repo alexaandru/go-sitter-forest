@@ -1,6 +1,6 @@
 {
   "language": "wgsl_bevy",
-  "url": "https://github.com/theHamsta/tree-sitter-wgsl-bevy",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy",
   "files": [
     "scanner.c"
   ],

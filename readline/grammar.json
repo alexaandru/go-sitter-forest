@@ -1,6 +1,6 @@
 {
   "language": "readline",
-  "url": "https://github.com/ribru17/tree-sitter-readline",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-readline",
   "maintainedBy": "@ribru17",
   "grammarSha": "f1213c3a674435fb8dc01b8b557fc6065803d40486d6afe723d7e7ba28969d2a",
   "reference": "master",

@@ -1,6 +1,6 @@
 {
   "language": "gpg",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-gpg-config",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
   "reference": "master",

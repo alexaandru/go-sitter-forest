@@ -1,6 +1,6 @@
 {
   "language": "printf",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-printf",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
   "reference": "main",

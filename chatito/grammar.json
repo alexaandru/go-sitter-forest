@@ -1,6 +1,6 @@
 {
   "language": "chatito",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-chatito",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-chatito",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "18d0205daf6e17480dc79d1dd9ed02af7fa64299a5137a7542f6abd35b426161",
   "reference": "master",

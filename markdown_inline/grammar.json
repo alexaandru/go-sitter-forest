@@ -1,7 +1,7 @@
 {
   "language": "markdown_inline",
   "altName": "markdown_inline (needed for full highlighting)",
-  "url": "https://github.com/MDeiml/tree-sitter-markdown",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
   "files": [
     "scanner.c"
   ],

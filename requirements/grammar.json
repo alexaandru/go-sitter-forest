@@ -1,7 +1,7 @@
 {
   "language": "requirements",
   "altName": "pip requirements",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-requirements",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "afae79c0e1e13a296c79b5696af84a9dfebed0479f64b3edc5783d9987df10b6",
   "reference": "master",

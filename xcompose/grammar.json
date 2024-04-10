@@ -1,6 +1,6 @@
 {
   "language": "xcompose",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-xcompose",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "707d9f9c857a48b695a50fc6c30aca0972ebcae0dd971fd6254fdeae47ba1937",
   "reference": "master",

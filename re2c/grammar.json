@@ -1,6 +1,6 @@
 {
   "language": "re2c",
-  "url": "https://github.com/amaanq/tree-sitter-re2c",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-re2c",
   "maintainedBy": "@amaanq",
   "grammarSha": "c5cccbda55131250d0ebab3c13b6ba6ccc8df6af84ae33637c900e10c1ccf53a",
   "reference": "master",

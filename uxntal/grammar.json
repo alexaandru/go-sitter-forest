@@ -1,7 +1,7 @@
 {
   "language": "uxntal",
   "altName": "uxn tal",
-  "url": "https://github.com/amaanq/tree-sitter-uxntal",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-uxntal",
   "files": [
     "scanner.c"
   ],

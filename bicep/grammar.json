@@ -1,6 +1,6 @@
 {
   "language": "bicep",
-  "url": "https://github.com/amaanq/tree-sitter-bicep",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-bicep",
   "files": [
     "scanner.c"
   ],

@@ -1,6 +1,6 @@
 {
   "language": "lua",
-  "url": "https://github.com/MunifTanjim/tree-sitter-lua",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-lua",
   "files": [
     "scanner.c"
   ],

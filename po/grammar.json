@@ -1,6 +1,6 @@
 {
   "language": "po",
-  "url": "https://github.com/erasin/tree-sitter-po",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-po",
   "maintainedBy": "@amaanq",
   "grammarSha": "a1eb430e768662afe7e917b0d03daf3729bbcbe1a883cb407e1af8c5f3c6e567",
   "reference": "main",

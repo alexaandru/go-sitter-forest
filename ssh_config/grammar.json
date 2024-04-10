@@ -1,6 +1,6 @@
 {
   "language": "ssh_config",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-ssh-config",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "ad74ebeaa308cbb1e796f684afa1c886b28382cd43e2a86629101b917065961d",
   "reference": "master",

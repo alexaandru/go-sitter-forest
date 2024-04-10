@@ -1,7 +1,7 @@
 {
   "language": "markdown",
   "altName": "markdown (basic highlighting)",
-  "url": "https://github.com/MDeiml/tree-sitter-markdown",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",
   "files": [
     "scanner.c"
   ],

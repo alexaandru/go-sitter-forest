@@ -1,6 +1,6 @@
 {
   "language": "kdl",
-  "url": "https://github.com/amaanq/tree-sitter-kdl",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-kdl",
   "files": [
     "scanner.c"
   ],

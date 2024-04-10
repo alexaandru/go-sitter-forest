@@ -1,6 +1,6 @@
 {
   "language": "bitbake",
-  "url": "https://github.com/amaanq/tree-sitter-bitbake",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-bitbake",
   "files": [
     "scanner.c"
   ],

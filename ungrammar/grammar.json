@@ -1,6 +1,6 @@
 {
   "language": "ungrammar",
-  "url": "https://github.com/Philipp-M/tree-sitter-ungrammar",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-ungrammar",
   "maintainedBy": "@Philipp-M, @amaanq",
   "grammarSha": "61592f44491139dd73362f8b3752e9cfde7ec232515f2144e43e80b61b566abb",
   "reference": "main",

@@ -1,6 +1,6 @@
 {
   "language": "func",
-  "url": "https://github.com/amaanq/tree-sitter-func",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-func",
   "maintainedBy": "@amaanq",
   "grammarSha": "7e70d7a0b369d37193ce3eb428b7279c927b3c9e66d62d396a5cd9a7bc1cd5ad",
   "reference": "master",

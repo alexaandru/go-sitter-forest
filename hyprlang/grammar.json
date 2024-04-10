@@ -1,6 +1,6 @@
 {
   "language": "hyprlang",
-  "url": "https://github.com/luckasRanarison/tree-sitter-hyprlang",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
   "maintainedBy": "@luckasRanarison",
   "grammarSha": "fcabbde1f9f0241d09552c836c2d98161e085d4e8c5997e6aa48ffa25d9c07b8",
   "reference": "master",

@@ -1,6 +1,6 @@
 {
   "language": "vim",
-  "url": "https://github.com/neovim/tree-sitter-vim",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-vim",
   "files": [
     "scanner.c",
     "keywords.h"

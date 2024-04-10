@@ -1,6 +1,6 @@
 {
   "language": "hcl",
-  "url": "https://github.com/MichaHoffmann/tree-sitter-hcl",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-hcl",
   "files": [
     "scanner.c"
   ],

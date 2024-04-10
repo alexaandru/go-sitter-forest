@@ -1,6 +1,6 @@
 {
   "language": "luau",
-  "url": "https://github.com/amaanq/tree-sitter-luau",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-luau",
   "files": [
     "scanner.c"
   ],

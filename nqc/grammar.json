@@ -1,6 +1,6 @@
 {
   "language": "nqc",
-  "url": "https://github.com/amaanq/tree-sitter-nqc",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
   "maintainedBy": "@amaanq",
   "grammarSha": "9c4164103e924312e970cba1c2078ff33b122985de47e816febe26684fe11f1d",
   "reference": "master",

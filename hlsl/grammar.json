@@ -1,6 +1,6 @@
 {
   "language": "hlsl",
-  "url": "https://github.com/theHamsta/tree-sitter-hlsl",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-hlsl",
   "files": [
     "scanner.c"
   ],

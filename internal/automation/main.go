@@ -6,6 +6,7 @@ import (
 	"context"
 	"crypto/sha256"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"log/slog"
@@ -70,6 +71,28 @@ func checkUpdates() error {
 
 		return
 	})
+}
+
+var nonRedirectingClient = new(http.Client)
+
+// checkIfRedirect checks if the repo URL redirects to some other URL, in which
+// case it auto-updates the grammar to use the final URL and skip the redirect.
+func checkIfRedirect(gr *grammar.Grammar) {
+	req, err := http.NewRequest("GET", gr.URL, nil)
+	if err != nil {
+		logger.Error("checkIfRedirect", "err", err)
+	}
+
+	resp, _ := nonRedirectingClient.Do(req)
+	if resp != nil && resp.StatusCode == http.StatusMovedPermanently {
+		loc, err := resp.Location()
+		if err == nil {
+			logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "new", loc.String())
+			gr.URL = loc.String()
+		} else {
+			logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "err", err)
+		}
+	}
 }
 
 func updateAll(force bool) (err error) {
@@ -141,6 +164,8 @@ func updateGrammars() (err error) {
 }
 
 func update(gr *grammar.Grammar, force bool) (err error) {
+	checkIfRedirect(gr)
+
 	if err = gr.FetchNewVersion(); err != nil {
 		return
 	}
@@ -755,4 +780,8 @@ func init() {
 	}
 
 	logger = slog.New(slog.NewJSONHandler(logFile, nil))
+
+	nonRedirectingClient.CheckRedirect = func(req *http.Request, via []*http.Request) error {
+		return errors.New("Redirect")
+	}
 }

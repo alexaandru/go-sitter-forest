@@ -1,6 +1,6 @@
 {
   "language": "gitattributes",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-gitattributes",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-gitattributes",
   "maintainedBy": "@ObserverOfTime",
   "grammarSha": "a9ef77390db0868e1c246ff010377b0bbc7742b21771c094303ef63e5bd1176d",
   "reference": "master",

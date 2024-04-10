@@ -1,6 +1,6 @@
 {
   "language": "luadoc",
-  "url": "https://github.com/amaanq/tree-sitter-luadoc",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-luadoc",
   "maintainedBy": "@amaanq",
   "grammarSha": "c137cb2a941c104d4028ba2b592f78fd4c4e9b344bcfd4b8802c9089090bbe86",
   "reference": "master",

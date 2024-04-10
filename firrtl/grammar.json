@@ -1,6 +1,6 @@
 {
   "language": "firrtl",
-  "url": "https://github.com/amaanq/tree-sitter-firrtl",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-firrtl",
   "files": [
     "scanner.c"
   ],

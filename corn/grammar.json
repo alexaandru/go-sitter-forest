@@ -1,6 +1,6 @@
 {
   "language": "corn",
-  "url": "https://github.com/jakestanger/tree-sitter-corn",
+  "url": "https://github.com/corn-config/tree-sitter-corn",
   "maintainedBy": "@jakestanger",
   "grammarSha": "86936e6c3350fb7c0461466e28ce6eab4a8cec9bc1e3bc778e4990dc7d914e62",
   "reference": "master",

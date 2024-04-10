@@ -1,6 +1,6 @@
 {
   "language": "ron",
-  "url": "https://github.com/amaanq/tree-sitter-ron",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-ron",
   "files": [
     "scanner.c"
   ],

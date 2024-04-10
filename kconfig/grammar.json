@@ -1,6 +1,6 @@
 {
   "language": "kconfig",
-  "url": "https://github.com/amaanq/tree-sitter-kconfig",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",
   "files": [
     "scanner.c"
   ],

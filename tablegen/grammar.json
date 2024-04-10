@@ -1,6 +1,6 @@
 {
   "language": "tablegen",
-  "url": "https://github.com/amaanq/tree-sitter-tablegen",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-tablegen",
   "files": [
     "scanner.c"
   ],

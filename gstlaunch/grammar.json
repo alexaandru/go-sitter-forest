@@ -1,6 +1,6 @@
 {
   "language": "gstlaunch",
-  "url": "https://github.com/theHamsta/tree-sitter-gstlaunch",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch",
   "maintainedBy": "@theHamsta",
   "grammarSha": "7c0c76b349f1cae6d2d3190df35f20006fb7d48a86d075dadf151852f3627424",
   "reference": "master",

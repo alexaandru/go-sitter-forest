@@ -1,6 +1,6 @@
 {
   "language": "yuck",
-  "url": "https://github.com/Philipp-M/tree-sitter-yuck",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-yuck",
   "files": [
     "scanner.c"
   ],

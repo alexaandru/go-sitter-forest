@@ -1,6 +1,6 @@
 {
   "language": "cuda",
-  "url": "https://github.com/theHamsta/tree-sitter-cuda",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
   "files": [
     "scanner.c"
   ],

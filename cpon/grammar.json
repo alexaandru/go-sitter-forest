@@ -1,6 +1,6 @@
 {
   "language": "cpon",
-  "url": "https://github.com/amaanq/tree-sitter-cpon",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-cpon",
   "maintainedBy": "@amaanq",
   "grammarSha": "559879feb11840fa1c0ba6ee0544ee0f7d92b695b6ce44f41c780f7f5f36bc1a",
   "reference": "master",

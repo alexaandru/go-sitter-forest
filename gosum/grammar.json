@@ -1,6 +1,6 @@
 {
   "language": "gosum",
-  "url": "https://github.com/amaanq/tree-sitter-go-sum",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-go-sum",
   "maintainedBy": "@amaanq",
   "grammarSha": "c8e57d0bad6bf049ac323fff4f8215b6b250e31c38b40e6f9993f3c5a9138971",
   "reference": "master",

@@ -1,6 +1,6 @@
 {
   "language": "squirrel",
-  "url": "https://github.com/amaanq/tree-sitter-squirrel",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-squirrel",
   "files": [
     "scanner.c"
   ],

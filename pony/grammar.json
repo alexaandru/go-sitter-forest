@@ -1,6 +1,6 @@
 {
   "language": "pony",
-  "url": "https://github.com/amaanq/tree-sitter-pony",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-pony",
   "files": [
     "scanner.c"
   ],

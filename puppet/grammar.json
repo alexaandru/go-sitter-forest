@@ -1,6 +1,6 @@
 {
   "language": "puppet",
-  "url": "https://github.com/amaanq/tree-sitter-puppet",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-puppet",
   "maintainedBy": "@amaanq",
   "grammarSha": "fd6aba1e868c3021e966c25a5e46ad57cf2855edfea1130b8400f3c1b96c425e",
   "reference": "master",

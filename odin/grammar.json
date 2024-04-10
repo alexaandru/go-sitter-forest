@@ -1,6 +1,6 @@
 {
   "language": "odin",
-  "url": "https://github.com/amaanq/tree-sitter-odin",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-odin",
   "files": [
     "scanner.c"
   ],

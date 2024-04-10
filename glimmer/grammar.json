@@ -1,7 +1,7 @@
 {
   "language": "glimmer",
   "altName": "Glimmer and Ember",
-  "url": "https://github.com/alexlafroscia/tree-sitter-glimmer",
+  "url": "https://github.com/ember-tooling/tree-sitter-glimmer",
   "files": [
     "scanner.c"
   ],

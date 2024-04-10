@@ -1,6 +1,6 @@
 {
   "language": "cairo",
-  "url": "https://github.com/amaanq/tree-sitter-cairo",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-cairo",
   "files": [
     "scanner.c"
   ],

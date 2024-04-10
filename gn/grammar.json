@@ -1,7 +1,7 @@
 {
   "language": "gn",
   "altName": "GN (Generate Ninja)",
-  "url": "https://github.com/amaanq/tree-sitter-gn",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-gn",
   "files": [
     "scanner.c"
   ],

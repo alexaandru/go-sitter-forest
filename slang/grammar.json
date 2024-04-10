@@ -1,6 +1,6 @@
 {
   "language": "slang",
-  "url": "https://github.com/theHamsta/tree-sitter-slang",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-slang",
   "files": [
     "scanner.c"
   ],

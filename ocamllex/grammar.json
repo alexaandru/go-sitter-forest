@@ -1,6 +1,6 @@
 {
   "language": "ocamllex",
-  "url": "https://github.com/atom-ocaml/tree-sitter-ocamllex",
+  "url": "https://github.com/314eter/tree-sitter-ocamllex",
   "files": [
     "scanner.c"
   ],

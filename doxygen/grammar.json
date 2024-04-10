@@ -1,6 +1,6 @@
 {
   "language": "doxygen",
-  "url": "https://github.com/amaanq/tree-sitter-doxygen",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-doxygen",
   "files": [
     "scanner.c"
   ],

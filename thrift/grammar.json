@@ -1,6 +1,6 @@
 {
   "language": "thrift",
-  "url": "https://github.com/duskmoon314/tree-sitter-thrift",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-thrift",
   "maintainedBy": "@amaanq, @duskmoon314",
   "grammarSha": "4a84e7b02e51a9fceebc2f42544ac819e611d2af2cfd9e2fed0a54cdfa35dd8d",
   "reference": "main",

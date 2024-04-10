@@ -1,6 +1,6 @@
 {
   "language": "arduino",
-  "url": "https://github.com/ObserverOfTime/tree-sitter-arduino",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",
   "files": [
     "scanner.c"
   ],
