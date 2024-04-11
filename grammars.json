@@ -1805,7 +1805,7 @@
   },
   {
     "language": "query",
-    "altName": "Tree-Sitter Query Language",
+    "altName": "Tree-Sitter query language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
     "maintainedBy": "@steelsojka",
     "grammarSha": "8038833d8fdc201fb567e2095832651c8978084b3d006c68d0940730f348f5c5",

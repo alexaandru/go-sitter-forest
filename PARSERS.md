@@ -192,7 +192,7 @@
 - [x] [ql](https://github.com/tree-sitter/tree-sitter-ql) ✔️  (maintained by @pwntester)
 - [x] [qmldir](https://github.com/tree-sitter-grammars/tree-sitter-qmldir) ✔️  (maintained by @amaanq)
 - [x] [qmljs](https://github.com/yuja/tree-sitter-qmljs) ✔️  (maintained by @Decodetalkers)
-- [x] [Tree-Sitter Query Language](https://github.com/tree-sitter-grammars/tree-sitter-query) ✔️  (maintained by @steelsojka)
+- [x] [Tree-Sitter query language](https://github.com/tree-sitter-grammars/tree-sitter-query) ✔️  (maintained by @steelsojka)
 - [x] [r](https://github.com/r-lib/tree-sitter-r) ✔️  (maintained by @echasnovski)
 - [x] [racket](https://github.com/6cdh/tree-sitter-racket) ✔️  (maintained by @6cdh)
 - [x] [rasi](https://github.com/Fymyte/tree-sitter-rasi) ✔️  (maintained by @Fymyte)
