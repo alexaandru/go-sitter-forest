@@ -2265,7 +2265,7 @@
     "maintainedBy": "@lewis6991",
     "grammarSha": "d61014d737366f78f4210a6b6365b10191866989c99e6b555ec8d441bb13a47d",
     "reference": "main",
-    "revision": "56ad1fa6a34ba800e5495d1025a9b0fda338d5b8"
+    "revision": "ed943a3dc46c612fe4d4e6a2fa074680e0713d5f"
   },
   {
     "language": "teal",
@@ -2479,9 +2479,9 @@
     "url": "https://github.com/vlang/v-analyzer",
     "srcRoot": "tree_sitter_v",
     "maintainedBy": "@kkharji, @amaanq",
-    "grammarSha": "21cb78dc529cb21db26945299f1aff59e45a1ad34b846b3ddbda47bceb3c3be9",
+    "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
     "reference": "main",
-    "revision": "42798b5108fbc9aed968adfc7407f22a68174ad7"
+    "revision": "9ba1aa8c46e11f2239ab6fac3c61522362b05c9f"
   },
   {
     "language": "vala",
@@ -2582,7 +2582,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
     "reference": "main",
-    "revision": "8ea635bd3da46e952e6cc9ae10186b93d0ed04f6"
+    "revision": "a9cacfc7b877267aa006b3d436feae253f54ed29"
   },
   {
     "language": "xcompose",
