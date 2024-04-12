@@ -20,7 +20,7 @@ function mandelbrot(a)
     return z
 end
 `
-	expected = "(source_file (function_definition name: (identifier) parameters: (parameter_list (identifier)) (assignment (identifier) (operator) (integer_literal)) (for_statement (for_binding (identifier) (range_expression (integer_literal) (integer_literal))) (assignment (identifier) (operator) (binary_expression (binary_expression (identifier) (operator) (integer_literal)) (operator) (identifier)))) (return_statement (identifier))))"
+	expected = "(source_file (function_definition (signature (call_expression (identifier) (argument_list (identifier)))) (assignment (identifier) (operator) (integer_literal)) (for_statement (for_binding (identifier) (range_expression (integer_literal) (integer_literal))) (assignment (identifier) (operator) (binary_expression (binary_expression (identifier) (operator) (integer_literal)) (operator) (identifier)))) (return_statement (identifier))))"
 )
 
 func TestGrammar(t *testing.T) {

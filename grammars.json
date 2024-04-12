@@ -98,7 +98,7 @@
     "maintainedBy": "@TravonteD",
     "grammarSha": "e1e7ed6840a2a692a1bd5f352ff85b38d065cdca200f95b1288230fb621ff2d7",
     "reference": "master",
-    "revision": "f3f26f47a126797c011c311cec9d449d855c3eab"
+    "revision": "f8fb3274f72a30896075585b32b0c54cad65c086"
   },
   {
     "language": "bass",
@@ -296,7 +296,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "bcced97e702e8b9a0442acbb0b67327020dac97bd6142ed83573c956a08c12cf",
     "reference": "master",
-    "revision": "d0b4e006ca3c4466f834d9a4bf709bfede13d359"
+    "revision": "f79b9d98592bcc307ace9c9a2441b04eb175a1c2"
   },
   {
     "language": "crystal",
@@ -1115,9 +1115,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "9a64491e0a7dafde83f525f82fed3ed3e95e2cab92b746e239f7784dd40f5fbd",
+    "grammarSha": "b8b5c78c89d39f2c592e48e364082c4ba63e82a270251af4e824a0642a036d86",
     "reference": "master",
-    "revision": "e84f10db8eeb8b9807786bfc658808edaa1b4fa2"
+    "revision": "87394e7ce3b1aca1a7c7912d2bbc599551591093"
   },
   {
     "language": "just",
@@ -1355,9 +1355,9 @@
     "language": "mermaid",
     "url": "https://github.com/monaqa/tree-sitter-mermaid",
     "maintainedBy": "@monaqa",
-    "grammarSha": "e517c9d2711c266b231b716558256809a32db310359fa635d3f06066c97807ce",
+    "grammarSha": "d8cfdbc92f425c96b6a40e09e62f510e4e265a72787e11152f2551212f5ae768",
     "reference": "master",
-    "revision": "e8dac87a9f789b23a2c7ab8e55b485a2f5927b98"
+    "revision": "49442bd087901c60f019b4e34dcb6ecdc8849067"
   },
   {
     "language": "meson",
@@ -1379,9 +1379,9 @@
     "language": "muttrc",
     "url": "https://github.com/neomutt/tree-sitter-muttrc",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "fe155063ba38c3078ebdffb2f793518ef7ee8a6d65978823ba0adb0f1b47be25",
+    "grammarSha": "505ead6de0c8f543f109a1fa3a760f383adf9a1208fc82af3f7a4877a998937e",
     "reference": "main",
-    "revision": "2f918f9c887109fdf1419f98158a0cfff644af75"
+    "revision": "ce5b31451b3c0f90be884571b2ff4f569182f1d8"
   },
   {
     "language": "nasm",
@@ -1544,9 +1544,9 @@
     "language": "pascal",
     "url": "https://github.com/Isopod/tree-sitter-pascal",
     "maintainedBy": "@Isopod",
-    "grammarSha": "e36dd555838cb89851cff368a772629ccb7d9b2eb01726a2dc5c36792eb9f31c",
+    "grammarSha": "984a69c374a5bea5b1fa5b75478f2adbee99a9da21614f54720b9901a91d8375",
     "reference": "master",
-    "revision": "9e995404ddff8319631d72d4b46552e737206912"
+    "revision": "a9ee969dec5b2e3b2ccccc5954fec04100c7619e"
   },
   {
     "language": "passwd",
@@ -1832,7 +1832,7 @@
     "maintainedBy": "@6cdh",
     "grammarSha": "2326ca8a89f5d8dd025445baf6e6af6b5f0ef6786759d7a4efaa61abe73b0562",
     "reference": "main",
-    "revision": "d9858a0f607578814f2d34662ad4bc21aa37a455"
+    "revision": "171f52a8c0ed635b85cd42d1e36d82f1066a03b4"
   },
   {
     "language": "rasi",
@@ -2000,7 +2000,7 @@
     "maintainedBy": "@6cdh",
     "grammarSha": "05f7a7ef1fb277bc46e698b947f90489e78959703cc2db44c6067de86a2bca81",
     "reference": "main",
-    "revision": "184e7596ee0cbaef79230cae1b4ee5bb4fbad314"
+    "revision": "8f9dff3d038f09934db5ea113cebc59c74447743"
   },
   {
     "language": "scss",
@@ -2265,7 +2265,7 @@
     "maintainedBy": "@lewis6991",
     "grammarSha": "d61014d737366f78f4210a6b6365b10191866989c99e6b555ec8d441bb13a47d",
     "reference": "main",
-    "revision": "ed943a3dc46c612fe4d4e6a2fa074680e0713d5f"
+    "revision": "8784024358c233efd0f3a6fd9e7a3c5852e628bc"
   },
   {
     "language": "teal",
@@ -2481,7 +2481,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
     "reference": "main",
-    "revision": "9ba1aa8c46e11f2239ab6fac3c61522362b05c9f"
+    "revision": "78282918559ab0d8981d6366f2f1100f3102e540"
   },
   {
     "language": "vala",
@@ -2580,9 +2580,9 @@
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "grammarSha": "c329ba6c6387cf6ce4aef6db95a1d1f00ab715d2b6d1024c63470a91b5d2cd18",
+    "grammarSha": "19e3d6998a714af0574c4fb00a3ab3fe5626e3688666d388dfd87fa1b897d3e5",
     "reference": "main",
-    "revision": "a9cacfc7b877267aa006b3d436feae253f54ed29"
+    "revision": "e7eca556d632c334b549c1834fdedba93510491b"
   },
   {
     "language": "xcompose",
