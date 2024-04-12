@@ -12,7 +12,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/astro v1.5.10
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
-	github.com/alexaandru/go-sitter-forest/bash v1.5.10
+	github.com/alexaandru/go-sitter-forest/bash v1.5.11
 	github.com/alexaandru/go-sitter-forest/bass v1.5.10
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.11
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.10
@@ -32,7 +32,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.10
 	github.com/alexaandru/go-sitter-forest/cpon v1.5.10
-	github.com/alexaandru/go-sitter-forest/cpp v1.5.11
+	github.com/alexaandru/go-sitter-forest/cpp v1.5.12
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.10
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
@@ -120,7 +120,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/json5 v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
-	github.com/alexaandru/go-sitter-forest/julia v1.5.10
+	github.com/alexaandru/go-sitter-forest/julia v1.5.11
 	github.com/alexaandru/go-sitter-forest/just v1.5.10
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.10
@@ -144,10 +144,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
 	github.com/alexaandru/go-sitter-forest/matlab v1.5.10
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.10
-	github.com/alexaandru/go-sitter-forest/mermaid v1.5.10
+	github.com/alexaandru/go-sitter-forest/mermaid v1.5.11
 	github.com/alexaandru/go-sitter-forest/meson v1.5.10
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
-	github.com/alexaandru/go-sitter-forest/muttrc v1.5.10
+	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.10
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.10
 	github.com/alexaandru/go-sitter-forest/nim v1.5.10
@@ -163,7 +163,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.5.10
 	github.com/alexaandru/go-sitter-forest/odin v1.5.11
 	github.com/alexaandru/go-sitter-forest/org v1.5.10
-	github.com/alexaandru/go-sitter-forest/pascal v1.5.10
+	github.com/alexaandru/go-sitter-forest/pascal v1.5.11
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
 	github.com/alexaandru/go-sitter-forest/pem v1.5.10
 	github.com/alexaandru/go-sitter-forest/perl v1.5.10
@@ -192,7 +192,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.10
 	github.com/alexaandru/go-sitter-forest/query v1.5.10
 	github.com/alexaandru/go-sitter-forest/r v1.5.10
-	github.com/alexaandru/go-sitter-forest/racket v1.5.10
+	github.com/alexaandru/go-sitter-forest/racket v1.5.11
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
 	github.com/alexaandru/go-sitter-forest/rbs v1.5.10
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.10
@@ -268,7 +268,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
-	github.com/alexaandru/go-sitter-forest/wing v1.5.10
+	github.com/alexaandru/go-sitter-forest/wing v1.5.11
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.11
