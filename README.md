@@ -197,5 +197,4 @@ version everywhere, and keeping up with it too.
 
 - need some automation around working with so many Go modules, in particular:
   - updating forest (root package) to point to the latest tag of a parser after a parser update;
-  - updating the tag for the forest itself;
   - also need to update the parsers automation to create a Go module for a new parser automatically.
