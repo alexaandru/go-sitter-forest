@@ -460,6 +460,17 @@
     "revision": "00363c3d8279adc7c729ac25f68179d1f8e91c60"
   },
   {
+    "language": "earthfile",
+    "url": "https://github.com/glehmann/tree-sitter-earthfile",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@glehmann",
+    "grammarSha": "a3ae05a71fd15ca1a1373dacdfb7bacd70ed92842e085c43dc24735303ab10a9",
+    "reference": "main",
+    "revision": "fda374bd4e908b3a34be097b94857e08c22b1ec3"
+  },
+  {
     "language": "ebnf",
     "url": "https://github.com/RubixDev/ebnf",
     "srcRoot": "crates/tree-sitter-ebnf",
