@@ -33,4 +33,11 @@ auto_tag: test
 		git tag $$TAG_NEXT; \
 	done && git push --tag
 
+auto_tag_forest:
+	@export TAG=$$(git tag -l --sort=committerdate "v1*"| tail -n1); \
+		export TAG_BASE=$$(echo $$TAG|cut -f1-2 -d.); \
+		export PATCH_NO=$$(echo $$TAG|cut -f3 -d.); \
+		export TAG_NEXT="$${TAG_BASE}.$$[$${PATCH_NO} + 1]"; \
+		git tag $$TAG_NEXT && git push --tag
+
 .PHONY: clean
