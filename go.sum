@@ -408,8 +408,8 @@ github.com/alexaandru/go-sitter-forest/ruby v1.5.10 h1:b02r6qO5xv87JWTxkWUWTgQYf
 github.com/alexaandru/go-sitter-forest/ruby v1.5.10/go.mod h1:cOsDUVaQtM6l3F8lhThytM8JKQ/mWr6IJTBV72WlXys=
 github.com/alexaandru/go-sitter-forest/rust v1.5.12 h1:+/SDVKC8uz1Hw4fEIuzivGrHHSMBDFzPeYt9qySJ++o=
 github.com/alexaandru/go-sitter-forest/rust v1.5.12/go.mod h1:7ZA95Pj/TpB8F/u/nqlAq4rMUg/+pWKP86J9LyYjkYw=
-github.com/alexaandru/go-sitter-forest/scala v1.5.10 h1:zirnga2wqkUak01nbnE/mGzKIR5qA+KcHshjnMZoOCs=
-github.com/alexaandru/go-sitter-forest/scala v1.5.10/go.mod h1:Wtlki0K9rU47bSzNneaIrL8+PPZFpMT2sznZFn11Rq4=
+github.com/alexaandru/go-sitter-forest/scala v1.5.11 h1:PSwnjAPFMD0RYa6sa9BYCoCnIjeXqpUcpymhYZSr2SM=
+github.com/alexaandru/go-sitter-forest/scala v1.5.11/go.mod h1:Wtlki0K9rU47bSzNneaIrL8+PPZFpMT2sznZFn11Rq4=
 github.com/alexaandru/go-sitter-forest/scfg v1.5.10 h1:g4JOQnGnegfCjmHZRt0MB9jRSFP+ax6jGzDtk6/ibTA=
 github.com/alexaandru/go-sitter-forest/scfg v1.5.10/go.mod h1:7eVPLKuLAQ5hJHDSezrce6bJ3VDEniqp+4eLy/0b2yA=
 github.com/alexaandru/go-sitter-forest/scheme v1.5.10 h1:3ZpiXuLeXH4iSQihiA2xKLH4skBNd6qM7ABLkNF9y7s=
