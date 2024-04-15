@@ -24,4 +24,13 @@ nvim_diff:
 	@diff <(sed -n '/<!--parserinfo-->/,/<!--parserinfo-->/{/<!--parserinfo-->/! p}' tmp/README.md|cut -f3 -d\[|cut -f1 -d\]|sort) \
 		<(sed -n '/<!--parserinfo-->/,/<!--parserinfo-->/{/<!--parserinfo-->/! p}' PARSERS.md|cut -f3 -d\[|cut -f1 -d\]|sort)
 
+auto_tag: test
+	@export GIT_PAGER=cat; git diff --name-only HEAD^|grep '/'|grep -v 'grammar.json'|cut -f1 -d '/'|sort -u|while read x; do \
+		export TAG=$$(git tag -l --sort=committerdate "$$x/*"| tail -n1); \
+		export TAG_BASE=$$(echo $$TAG|cut -f1-2 -d.); \
+		export PATCH_NO=$$(echo $$TAG|cut -f3 -d.); \
+		export TAG_NEXT="$${TAG_BASE}.$$[$${PATCH_NO} + 1]"; \
+		git tag $$TAG_NEXT; \
+	done && git push --tag
+
 .PHONY: clean

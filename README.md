@@ -196,9 +196,6 @@ version everywhere, and keeping up with it too.
 ## Roadmap
 
 - need some automation around working with so many Go modules, in particular:
-  - updating tag on a parser after a parser update to its next major/minor/path no.;
-  - updating forest (root package) to point to the latest tag of a parser after
-    a parser update;
+  - updating forest (root package) to point to the latest tag of a parser after a parser update;
   - updating the tag for the forest itself;
-  - also need to update the parsers automation to create a Go module for a new
-    parser automatically.
+  - also need to update the parsers automation to create a Go module for a new parser automatically.
