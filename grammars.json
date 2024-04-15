@@ -48,7 +48,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
     "reference": "master",
-    "revision": "0dc863c1bba5413284d73372c103476a014e4c4b"
+    "revision": "4ddf79edaa87170ec12bd6a8d03a8ac528fe0ae7"
   },
   {
     "language": "asm",
@@ -294,9 +294,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "bcced97e702e8b9a0442acbb0b67327020dac97bd6142ed83573c956a08c12cf",
+    "grammarSha": "df637ed64e6aea7101e6ec7326f573af68ed21b96d0100e7b967b7af1ce9a817",
     "reference": "master",
-    "revision": "f79b9d98592bcc307ace9c9a2441b04eb175a1c2"
+    "revision": "72fd00128f1c38319670cbf4bcedbba0dc849d96"
   },
   {
     "language": "crystal",
@@ -335,7 +335,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
     "reference": "master",
-    "revision": "6e25c94f8be4388a4fec6dadc23f3b662388ec20"
+    "revision": "50a28f4600c559e3d19a1825e854dfe6dcac1d49"
   },
   {
     "language": "cue",
@@ -457,7 +457,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
     "reference": "master",
-    "revision": "2282ad5cb8e815523e70d5c82404620bd9a1494c"
+    "revision": "00363c3d8279adc7c729ac25f68179d1f8e91c60"
   },
   {
     "language": "ebnf",
@@ -741,7 +741,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "31064ce53385150f894a6c72d61b94076adf640a"
+    "revision": "e7817c982e0e921c5ee89a1e0283121bb5cc5e01"
   },
   {
     "language": "gn",
@@ -934,7 +934,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "027fa2e142db1258026cc6497b9f32bbf11f392d"
+    "revision": "d200375a29b24764b78d7051df0024ed7c2f1ab0"
   },
   {
     "language": "hlsplaylist",
@@ -987,9 +987,9 @@
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
     "maintainedBy": "@amaanq",
-    "grammarSha": "4d56b9a842d4bdb93fe00af15b818e6c03bff4df83e5c78f81befb2d048cd4af",
+    "grammarSha": "5358a21cb9b476da1c6cdecf9627c41f27c80e2487e73aef139f95bc29706fa9",
     "reference": "main",
-    "revision": "86ad05ac2de3c63c69f65e58f0182a76c1658d1e"
+    "revision": "a10b13eb63ab978969585d9c0fa80e77a9e82872"
   },
   {
     "language": "hurl",
@@ -1117,7 +1117,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b8b5c78c89d39f2c592e48e364082c4ba63e82a270251af4e824a0642a036d86",
     "reference": "master",
-    "revision": "87394e7ce3b1aca1a7c7912d2bbc599551591093"
+    "revision": "0a80d33aca49dd257625ab25ef3a506e2b99a554"
   },
   {
     "language": "just",
@@ -1451,7 +1451,7 @@
     "maintainedBy": "@JoeyGrajciar, @vhyrro",
     "grammarSha": "fa83a4ce377afd4947c3fff440dd3b225506cb5f57aab9b871f29e7348d106c2",
     "reference": "main",
-    "revision": "9766442985fd546e2d33f8d1c7e7619ed07860cf"
+    "revision": "ceb44e4cdb58fbeea52301835bdd461817ddb57e"
   },
   {
     "language": "nqc",
@@ -2022,7 +2022,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "08021fe6e55662281744de289c747197173a1170"
+    "revision": "b950ddf54c564fec0efead602268b6e0d3e5f26e"
   },
   {
     "language": "slint",
@@ -2030,7 +2030,7 @@
     "maintainedBy": "@hunger",
     "grammarSha": "519a758a731a59fc5e26ca82586a4443106638e1f3fac3d81ac8bb6fe34ff7de",
     "reference": "master",
-    "revision": "acc77c93ef4b73ba8c3a581b8c99d95b55f7178b"
+    "revision": "f42fa5a44e8477f0443fcd3312a828ccba4f481e"
   },
   {
     "language": "smali",
@@ -2066,9 +2066,9 @@
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
     "maintainedBy": "@amaanq",
-    "grammarSha": "0f2d5592d69d738ffca03567cf87d2de872a67031df41c51f7556fcd8dd26a78",
+    "grammarSha": "a782e263e5e1743aa00d7fb23c88954d6a8489e39809160be37bfdee433d8161",
     "reference": "master",
-    "revision": "08338dcee32603383fcef08f36321900bb7a354b"
+    "revision": "1653da09ccd183f4312fba819056a13af22a65f6"
   },
   {
     "language": "soql",
@@ -2115,9 +2115,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "grammarSha": "a91985aca9832983f52a67de6c5778f2c0c45f0b1d02d3a7b84f93fe9b5f9255",
+    "grammarSha": "395e5f4a45d05b2584e20628ab0619d3f85bf65ec2856f68db1817e81d700db4",
     "reference": "main",
-    "revision": "b6b1f7f7e70e869c655705c591cbdf3e8a807ad6"
+    "revision": "2c0e4612486ca6e8ed3f8e56f55f8d043ad9a496"
   },
   {
     "language": "sqlite",
@@ -2216,7 +2216,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "b7755aa95cab95babdcefc8397739e09c986ca583ea080f4d153590d3b97ab76",
     "reference": "main",
-    "revision": "e15e9676d5fa35848cb6021c105702b2fd86bc54"
+    "revision": "e2f0b7cf8136b801e4743790b7a956ab29a4d6b0"
   },
   {
     "language": "sxhkdrc",
@@ -2241,9 +2241,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@xasc",
-    "grammarSha": "b2376e379652860048f00e2f54895b18abae7220a6730a44dfec8ab0f2ee33b8",
+    "grammarSha": "7bebd6f6db27ce3efac1e77a471fc0d899542d3ee158c69200fa58e284864e81",
     "reference": "main",
-    "revision": "8487a14874f3e3138877655f303322d9e7222cec"
+    "revision": "6182836f4128725f1e74ce986840d7317021a015"
   },
   {
     "language": "tablegen",
@@ -2287,7 +2287,7 @@
     "maintainedBy": "@vrischmann",
     "grammarSha": "d32afb954419b1d14b3e83d7520926c45122fd1b6e3dc48bd990d7da3e917874",
     "reference": "master",
-    "revision": "65fae2cb1d92c746d06d38df37f5ec148e2269b1"
+    "revision": "1f9dae9c273136551684cb41461d00e565150e23"
   },
   {
     "language": "textproto",
@@ -2325,7 +2325,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "grammarSha": "0a03fc2ded8367c41d3e6f4772e4602808954fa3f30349b4b5cc39187e354c72",
     "reference": "main",
-    "revision": "0545ebd097338f1a119c2cb61eb3600409fce715"
+    "revision": "3c8ce503563ea04ba1cc07c468ed064b1974c3ba"
   },
   {
     "language": "tmux",
@@ -2447,12 +2447,13 @@
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
     "files": [
       "scanner.c",
-      "maybe.c"
+      "maybe.c",
+      "jtckdint.h"
     ],
     "maintainedBy": "@tapegram",
     "grammarSha": "3961fa8d7b20c5f28c8377afc1cf92cb2531b58c908b8d9241be0fac928851a0",
     "reference": "master",
-    "revision": "fb49b8125509c079e08f345758c03a427129010e"
+    "revision": "d2c875ad758885429a4d91f471a9590ab7c47aee"
   },
   {
     "language": "usd",
@@ -2481,7 +2482,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
     "reference": "main",
-    "revision": "78282918559ab0d8981d6366f2f1100f3102e540"
+    "revision": "e8cbd4d61606186061967a80a30f2f3b5b1b5025"
   },
   {
     "language": "vala",
@@ -2580,9 +2581,9 @@
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "grammarSha": "19e3d6998a714af0574c4fb00a3ab3fe5626e3688666d388dfd87fa1b897d3e5",
+    "grammarSha": "b64412c7fa7506f20fa2cbe47ae18a05bfbdfbc1815e35c3274a324ca0c0c4da",
     "reference": "main",
-    "revision": "e7eca556d632c334b549c1834fdedba93510491b"
+    "revision": "ba06ad3e2d4170516a01f304e200d35f184ab2d6"
   },
   {
     "language": "xcompose",
@@ -2603,7 +2604,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
     "reference": "master",
-    "revision": "2282ad5cb8e815523e70d5c82404620bd9a1494c"
+    "revision": "00363c3d8279adc7c729ac25f68179d1f8e91c60"
   },
   {
     "language": "yaml",
@@ -2614,9 +2615,9 @@
       "schema.json.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "17ab22256ca2099b3dd5aaa620d96801d00a8a6dab48d0a649657ecea1960f52",
+    "grammarSha": "d8ae6228a3d5fc5d99777b51041d3e3ac2cbba32f43a5be6ffcfad33aa9ce71a",
     "reference": "master",
-    "revision": "3975596d84650e8d8ab8ef3128b1b7f0fec324f8"
+    "revision": "ee093118211be521742b9866a8ed8ce6d87c7a94"
   },
   {
     "language": "yang",

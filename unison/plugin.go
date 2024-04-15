@@ -2,6 +2,7 @@
 
 package main
 
+//#cgo CFLAGS: -Wno-stringop-overflow
 //#include "parser.h"
 //TSLanguage *tree_sitter_unison();
 import "C"

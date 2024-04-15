@@ -47,6 +47,11 @@ func Info() string {
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
+		if lang == "unison" {
+			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
+//#include "parser.h"`)
+		}
+
 		if act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
 		}
@@ -56,6 +61,11 @@ func TestBindingFilesAreAllUpToDate(t *testing.T) {
 func TestPluginFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/plugin.go", func(t *testing.T, act, _, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build plugin", "main", lang, lang)
+		if lang == "unison" {
+			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
+//#include "parser.h"`)
+		}
+
 		if act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
 		}

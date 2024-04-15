@@ -3,10 +3,11 @@
   "url": "https://github.com/kylegoetz/tree-sitter-unison",
   "files": [
     "scanner.c",
-    "maybe.c"
+    "maybe.c",
+    "jtckdint.h"
   ],
   "maintainedBy": "@tapegram",
   "grammarSha": "3961fa8d7b20c5f28c8377afc1cf92cb2531b58c908b8d9241be0fac928851a0",
   "reference": "master",
-  "revision": "fb49b8125509c079e08f345758c03a427129010e"
+  "revision": "d2c875ad758885429a4d91f471a9590ab7c47aee"
 }
