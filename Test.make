@@ -18,7 +18,7 @@ cover_map: test
 check_submodules:
 	@echo "The list below shows all langs that do NOT have a Go module"
 	@echo "(no putput below this line == success)"
-	@find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -exec test -e "{}/go.mod" ';' -print
+	@find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -path ./node_modules ! -path ./tmp ! -exec test -e "{}/go.mod" ';' -print
 
 tests_with_bad_test_cases:
 	@echo These tests have the test case with errors in them or are plainly skipped.
