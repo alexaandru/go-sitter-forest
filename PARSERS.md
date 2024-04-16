@@ -1,4 +1,4 @@
-# 274 Supported Parsers
+# 275 Supported Parsers
 
 2 pending, 6 skipped regeneration
 
@@ -273,6 +273,7 @@
 - [x] [wgsl](https://github.com/szebniok/tree-sitter-wgsl) ✔️  (maintained by @szebniok)
 - [x] [wgsl_bevy](https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy) ✔️  (maintained by @theHamsta)
 - [x] [wing](https://github.com/winglang/wing) ✔️  (maintained by @gshpychka, @MarkMcCulloh)
+- [x] [wit](https://github.com/liamwh/tree-sitter-wit) ✔️  (maintained by @liamwh)
 - [x] [xcompose](https://github.com/tree-sitter-grammars/tree-sitter-xcompose) ✔️  (maintained by @ObserverOfTime)
 - [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️  (maintained by @ObserverOfTime)
 - [x] [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) ✔️  (maintained by @amaanq)
