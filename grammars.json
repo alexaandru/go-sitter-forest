@@ -393,9 +393,9 @@
     "language": "diff",
     "url": "https://github.com/the-mikedavis/tree-sitter-diff",
     "maintainedBy": "@gbprod",
-    "grammarSha": "217ecf26bb3ecf00922f8bb3c12a416318fd14906d0f2b738901703b5bc56bfd",
+    "grammarSha": "5888766692ceb9fae4ec1722a86993c8703b9eb1682a400b43f3fdbf3600729b",
     "reference": "main",
-    "revision": "c165725c28e69b36c5799ff0e458713a844f1aaf"
+    "revision": "710e881127512bda8157096e26c1f3e91702823a"
   },
   {
     "language": "disassembly",
@@ -457,7 +457,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
     "reference": "master",
-    "revision": "00363c3d8279adc7c729ac25f68179d1f8e91c60"
+    "revision": "96beba9f3e4156aaae64bb86997503b1ceb1283d"
   },
   {
     "language": "earthfile",
@@ -2548,7 +2548,7 @@
     "maintainedBy": "@clason",
     "grammarSha": "1f451d3c8db9b4ee856807912b67c79a69820df1b8acde6cfbdd7f3b370005b4",
     "reference": "master",
-    "revision": "a75a932449675bbd260213a95f4cd8b3193286f0"
+    "revision": "0b36856db88680f662cc67545c82af4ce83bf158"
   },
   {
     "language": "vue",
@@ -2594,7 +2594,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "b64412c7fa7506f20fa2cbe47ae18a05bfbdfbc1815e35c3274a324ca0c0c4da",
     "reference": "main",
-    "revision": "f0b6b11709eb2ed56e5ef76a9b6fcc98615683b8"
+    "revision": "97a205ab38a2b668a527a16ff17dfb0216276da3"
   },
   {
     "language": "xcompose",
@@ -2615,7 +2615,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
     "reference": "master",
-    "revision": "00363c3d8279adc7c729ac25f68179d1f8e91c60"
+    "revision": "96beba9f3e4156aaae64bb86997503b1ceb1283d"
   },
   {
     "language": "yaml",
