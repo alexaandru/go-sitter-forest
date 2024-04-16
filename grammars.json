@@ -1995,7 +1995,7 @@
     "maintainedBy": "@stevanmilic",
     "grammarSha": "cb450cd9a7ec218745412c512476b554a940208dcaf6c66fdaeebc2b0730ba0a",
     "reference": "master",
-    "revision": "d3eb6b2382f3051cca164f4cc41cdb5bf0876e10"
+    "revision": "b76db435a7f876cf1ede837d66054c534783c72f"
   },
   {
     "language": "scfg",
