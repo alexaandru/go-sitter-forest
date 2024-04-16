@@ -42,7 +42,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dart v1.5.11
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.10
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
-	github.com/alexaandru/go-sitter-forest/diff v1.5.10
+	github.com/alexaandru/go-sitter-forest/diff v1.5.11
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
 	github.com/alexaandru/go-sitter-forest/djot v1.5.10
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.10
@@ -269,7 +269,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
-	github.com/alexaandru/go-sitter-forest/wing v1.5.12
+	github.com/alexaandru/go-sitter-forest/wing v1.5.13
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.12
