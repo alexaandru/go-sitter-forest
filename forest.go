@@ -275,6 +275,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/wgsl"
 	"github.com/alexaandru/go-sitter-forest/wgsl_bevy"
 	"github.com/alexaandru/go-sitter-forest/wing"
+	"github.com/alexaandru/go-sitter-forest/wit"
 	"github.com/alexaandru/go-sitter-forest/xcompose"
 	"github.com/alexaandru/go-sitter-forest/xml"
 	"github.com/alexaandru/go-sitter-forest/yaml"
@@ -555,6 +556,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"wgsl":               wgsl.GetLanguage,
 	"wgsl_bevy":          wgsl_bevy.GetLanguage,
 	"wing":               wing.GetLanguage,
+	"wit":                wit.GetLanguage,
 	"xcompose":           xcompose.GetLanguage,
 	"xml":                xml.GetLanguage,
 	"yaml":               yaml.GetLanguage,

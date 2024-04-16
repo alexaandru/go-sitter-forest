@@ -532,6 +532,8 @@ github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10 h1:KuuTTivZWFh+GRiXyKPx
 github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10/go.mod h1:+h1aE/VtlprvjGynIqnGH1qWF+IPMf6k1JwDs6lOyMs=
 github.com/alexaandru/go-sitter-forest/wing v1.5.13 h1:hsos0QGHZ1ZFW6nACaYVw5s1Fzfa524Ixtd+wwtdz7I=
 github.com/alexaandru/go-sitter-forest/wing v1.5.13/go.mod h1:utVkl7tyRT80VTC394YFcYSTjnNYXC66GXHmLyp5uBw=
+github.com/alexaandru/go-sitter-forest/wit v1.5.10 h1:wrxrMb2AluQ6+5ZNlWKM9YASDVg5aLffgT0pslagIP8=
+github.com/alexaandru/go-sitter-forest/wit v1.5.10/go.mod h1:lxA8+rdVgNbO3s4u2NbetYPV3ZRwMGjgVglJWfm5ozA=
 github.com/alexaandru/go-sitter-forest/xcompose v1.5.10 h1:mR0yk48lYKRICoKtj1anteGn0kWdKO4ieqAPxG6zQH4=
 github.com/alexaandru/go-sitter-forest/xcompose v1.5.10/go.mod h1:Q/QvNvKSmcvOjK5Ar7872sAABKzCMI8w/MS9gprU8N0=
 github.com/alexaandru/go-sitter-forest/xml v1.5.10 h1:R4PjeKx5Db26spC4wVounByfgens9et4uUh2Doy7Nqo=
