@@ -466,9 +466,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "a3ae05a71fd15ca1a1373dacdfb7bacd70ed92842e085c43dc24735303ab10a9",
+    "grammarSha": "fde5b4ad48b9f9cb0ff234444625b52d60c1348ca85707002c16061fda4aa563",
     "reference": "main",
-    "revision": "fda374bd4e908b3a34be097b94857e08c22b1ec3"
+    "revision": "a079e6c472eeedd6b9a1e03ca0b6c82cd6a112a4"
   },
   {
     "language": "ebnf",
@@ -846,9 +846,9 @@
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
     "maintainedBy": "@murtaza64",
-    "grammarSha": "e9e09e3353d28f32256f0e10585629a133ca0e4b4e4ad1943b1511d159fe5a94",
+    "grammarSha": "46eb407f8414d6e65ba8b8d3476c2a0e29ab94f3001b43bd49dc1dd8037f1b83",
     "reference": "main",
-    "revision": "b398a5a243c67f0b4d54728c983fa586bd5cd52e"
+    "revision": "6c5c8813233fe326e24c5ef032858d13f8006a8d"
   },
   {
     "language": "gstlaunch",
@@ -1462,7 +1462,7 @@
     "maintainedBy": "@JoeyGrajciar, @vhyrro",
     "grammarSha": "fa83a4ce377afd4947c3fff440dd3b225506cb5f57aab9b871f29e7348d106c2",
     "reference": "main",
-    "revision": "ceb44e4cdb58fbeea52301835bdd461817ddb57e"
+    "revision": "dbe0bf559b379564bf63ffc139524fea0a983a95"
   },
   {
     "language": "nqc",
@@ -2039,9 +2039,9 @@
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
     "maintainedBy": "@hunger",
-    "grammarSha": "2d0c74ea5314c388e59b8b9984f2d8ddfa4625d889502f608bf6f340e037ca40",
+    "grammarSha": "e5554a4091b6c5636d3d307d36e67d929ae2b3a2cb66bb0b48c371a92f426ba0",
     "reference": "master",
-    "revision": "cce8df0a04e2db04ba7b5896a99139e4aac212a5"
+    "revision": "d5fbeaf0c26683f1417d00b6a5ab1cca445031f2"
   },
   {
     "language": "smali",
@@ -2296,9 +2296,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
-    "grammarSha": "d32afb954419b1d14b3e83d7520926c45122fd1b6e3dc48bd990d7da3e917874",
+    "grammarSha": "aa210a008df43ab7ee8edb5b507ba0750fbfcaf44808dea93e9d1a9e8cb08248",
     "reference": "master",
-    "revision": "1f9dae9c273136551684cb41461d00e565150e23"
+    "revision": "ba859a973d3e9a901c425134f4477e083a305ed5"
   },
   {
     "language": "textproto",
@@ -2493,7 +2493,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
     "reference": "main",
-    "revision": "e8cbd4d61606186061967a80a30f2f3b5b1b5025"
+    "revision": "80b4a87c3b2f2ce572ce87cbe74dbb8de38ab8b1"
   },
   {
     "language": "vala",
@@ -2594,7 +2594,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "b64412c7fa7506f20fa2cbe47ae18a05bfbdfbc1815e35c3274a324ca0c0c4da",
     "reference": "main",
-    "revision": "97a205ab38a2b668a527a16ff17dfb0216276da3"
+    "revision": "3936dcd5f7241150247ed8063b948287a6e60845"
   },
   {
     "language": "wit",
