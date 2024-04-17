@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.10
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.11
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -91,7 +91,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gowork v1.5.10
 	github.com/alexaandru/go-sitter-forest/gpg v1.5.10
 	github.com/alexaandru/go-sitter-forest/graphql v1.5.10
-	github.com/alexaandru/go-sitter-forest/groovy v1.5.10
+	github.com/alexaandru/go-sitter-forest/groovy v1.5.11
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10
 	github.com/alexaandru/go-sitter-forest/hack v1.5.10
 	github.com/alexaandru/go-sitter-forest/hare v1.5.10
@@ -213,7 +213,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.10
 	github.com/alexaandru/go-sitter-forest/scss v1.5.10
 	github.com/alexaandru/go-sitter-forest/slang v1.5.11
-	github.com/alexaandru/go-sitter-forest/slint v1.5.10
+	github.com/alexaandru/go-sitter-forest/slint v1.5.11
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.10
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
@@ -239,7 +239,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tablegen v1.5.10
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.10
-	github.com/alexaandru/go-sitter-forest/templ v1.5.11
+	github.com/alexaandru/go-sitter-forest/templ v1.5.12
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.10
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
