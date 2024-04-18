@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.11
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.12
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.10
 	github.com/alexaandru/go-sitter-forest/facility v1.5.10
 	github.com/alexaandru/go-sitter-forest/faust v1.5.10
-	github.com/alexaandru/go-sitter-forest/fennel v1.5.10
+	github.com/alexaandru/go-sitter-forest/fennel v1.5.11
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.10
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.10
 	github.com/alexaandru/go-sitter-forest/fish v1.5.11
@@ -121,7 +121,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/json5 v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
-	github.com/alexaandru/go-sitter-forest/julia v1.5.12
+	github.com/alexaandru/go-sitter-forest/julia v1.5.13
 	github.com/alexaandru/go-sitter-forest/just v1.5.10
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.10
@@ -151,7 +151,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.10
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.10
-	github.com/alexaandru/go-sitter-forest/nim v1.5.10
+	github.com/alexaandru/go-sitter-forest/nim v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.10
 	github.com/alexaandru/go-sitter-forest/nix v1.5.10
