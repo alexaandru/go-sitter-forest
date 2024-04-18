@@ -12,7 +12,7 @@ import (
 
 const (
 	code     = `(local bit (require :bit))`
-	expected = "(program (list call: (symbol) item: (symbol) item: (list call: (symbol) item: (string content: (string_content)))))"
+	expected = "(program (local_form call: (symbol) (binding_pair lhs: (symbol_binding) rhs: (list call: (symbol) item: (string content: (string_content))))))"
 )
 
 func TestGrammar(t *testing.T) {
