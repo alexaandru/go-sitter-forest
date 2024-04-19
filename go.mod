@@ -9,7 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.11
 	github.com/alexaandru/go-sitter-forest/asm v1.5.11
-	github.com/alexaandru/go-sitter-forest/astro v1.5.10
+	github.com/alexaandru/go-sitter-forest/astro v1.5.11
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
 	github.com/alexaandru/go-sitter-forest/bash v1.5.11
@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.12
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.13
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -107,14 +107,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.10
 	github.com/alexaandru/go-sitter-forest/html v1.5.10
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
-	github.com/alexaandru/go-sitter-forest/http v1.5.11
+	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
-	github.com/alexaandru/go-sitter-forest/javascript v1.5.10
+	github.com/alexaandru/go-sitter-forest/javascript v1.5.11
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/json v1.5.10
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.10
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.10
-	github.com/alexaandru/go-sitter-forest/sql v1.5.11
+	github.com/alexaandru/go-sitter-forest/sql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.10
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.10
@@ -243,7 +243,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.10
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.12
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.13
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
@@ -256,7 +256,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typst v1.5.12
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
-	github.com/alexaandru/go-sitter-forest/unison v1.5.11
+	github.com/alexaandru/go-sitter-forest/unison v1.5.12
 	github.com/alexaandru/go-sitter-forest/usd v1.5.10
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.10
 	github.com/alexaandru/go-sitter-forest/v v1.5.15
