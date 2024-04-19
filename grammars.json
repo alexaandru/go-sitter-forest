@@ -68,7 +68,7 @@
     "maintainedBy": "@virchau13",
     "grammarSha": "905d45ca602bc95b4cefe38ec13e33313b40a2fbac533901f47aa0525fd7fb6d",
     "reference": "master",
-    "revision": "dfa0893bdc4bdfada102043404758c66e3580568"
+    "revision": "ccd8826973bdd770136481e96554ee7c570f0fd4"
   },
   {
     "language": "authzed",
@@ -466,9 +466,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "c50c66d535ba3c9aea8b374bf4b979056dd98508855b4ea9b6259d64e86f5cc8",
+    "grammarSha": "bfdcbfc8f71685ce181bccf3309152c27f77fcb4617f58802f1f2eb75ee20be6",
     "reference": "main",
-    "revision": "cc888b4b02a29013db3a7183f5e33190c1435493"
+    "revision": "b05876f7c206fdaa57c5cefeaefdb2623927c77e"
   },
   {
     "language": "ebnf",
@@ -1003,9 +1003,9 @@
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
     "maintainedBy": "@amaanq",
-    "grammarSha": "5358a21cb9b476da1c6cdecf9627c41f27c80e2487e73aef139f95bc29706fa9",
+    "grammarSha": "e78e642cd396633c2eb55b2e25319e2f0e6b10422ce1ce26d8c4c36106f86b15",
     "reference": "main",
-    "revision": "a10b13eb63ab978969585d9c0fa80e77a9e82872"
+    "revision": "8d22f33faa5aa95c6526606fb656ada342e59e40"
   },
   {
     "language": "hurl",
@@ -1065,9 +1065,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "0e27d71b6786d0d7593564d9b11932dea929a87ea8a07287f42ea9a07eb5de3e",
+    "grammarSha": "e746f374a4e98086890a7bc3c648db04bc42fd6b195deed0ff15cf839acbae1a",
     "reference": "master",
-    "revision": "ac10a11e0c8db512f70e6b798260d2516d22454c"
+    "revision": "aa08ce31d9ddcb1ada668ef1fc58fe0cd277efd1"
   },
   {
     "language": "jq",
@@ -2131,9 +2131,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "grammarSha": "395e5f4a45d05b2584e20628ab0619d3f85bf65ec2856f68db1817e81d700db4",
+    "grammarSha": "b7f48cbf96e0ca3d447f47a09925aeaf4c2b664524072ed908945e45695e3932",
     "reference": "main",
-    "revision": "2c0e4612486ca6e8ed3f8e56f55f8d043ad9a496"
+    "revision": "ea878da68f6c1681c8c1792f07dada3abb7ffe7e"
   },
   {
     "language": "sqlite",
@@ -2341,7 +2341,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "grammarSha": "0a03fc2ded8367c41d3e6f4772e4602808954fa3f30349b4b5cc39187e354c72",
     "reference": "main",
-    "revision": "3c8ce503563ea04ba1cc07c468ed064b1974c3ba"
+    "revision": "410122a012abb06fbacc8c0b8f288b684f8113e1"
   },
   {
     "language": "tmux",
@@ -2469,7 +2469,7 @@
     "maintainedBy": "@tapegram",
     "grammarSha": "3961fa8d7b20c5f28c8377afc1cf92cb2531b58c908b8d9241be0fac928851a0",
     "reference": "master",
-    "revision": "f34fbf337d4c8658e9a7d890d352b79ba2548a86"
+    "revision": "a1eba0fef887800de97126e2c9ae4109c1c6a2ea"
   },
   {
     "language": "usd",
@@ -2599,7 +2599,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "b64412c7fa7506f20fa2cbe47ae18a05bfbdfbc1815e35c3274a324ca0c0c4da",
     "reference": "main",
-    "revision": "797829a3d3ef5f3b2244e975c856d21161e4bd16"
+    "revision": "24178a41c3d4cea3abf2d22a62f62ed3fd9dfbcf"
   },
   {
     "language": "wit",
