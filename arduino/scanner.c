@@ -41,8 +41,8 @@ static bool scan_raw_string_delimiter(Scanner *scanner, TSLexer *lexer) {
     // Opening delimiter: record the d-char-sequence up to (.
     // d-char is any basic character except parens, backslashes, and spaces.
     for (;;) {
-        if (scanner->delimiter_length >= MAX_DELIMITER_LENGTH || lexer->eof(lexer) ||
-            lexer->lookahead == '\\' || iswspace(lexer->lookahead)) {
+        if (scanner->delimiter_length >= MAX_DELIMITER_LENGTH || lexer->eof(lexer) || lexer->lookahead == '\\' ||
+            iswspace(lexer->lookahead)) {
             return false;
         }
         if (lexer->lookahead == '(') {
@@ -137,7 +137,9 @@ void tree_sitter_arduino_external_scanner_deserialize(void *payload, const char 
 
     Scanner *scanner = (Scanner *)payload;
     scanner->delimiter_length = length / sizeof(wchar_t);
-    memcpy(&scanner->delimiter[0], buffer, length);
+    if (length > 0) {
+        memcpy(&scanner->delimiter[0], buffer, length);
+    }
 }
 
 void tree_sitter_arduino_external_scanner_destroy(void *payload) {

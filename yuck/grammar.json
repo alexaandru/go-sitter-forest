@@ -5,7 +5,7 @@
     "scanner.c"
   ],
   "maintainedBy": "@Philipp-M, @amaanq",
-  "grammarSha": "c9b6dd5d97be4306824ec48587ee58c21698ec5220a092f14623dcb04522608c",
+  "grammarSha": "8e796f4f2a07256961aaf62e5db3acd000cb88d69551f97b10a91ba7dcb9adef",
   "reference": "main",
-  "revision": "c348825d3f86dec71dee0e1223c6bd73114e3579"
+  "revision": "a513732feb813426b51d1ead8397a9c285c411be"
 }

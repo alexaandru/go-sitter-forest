@@ -2,7 +2,7 @@
   "language": "cpon",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-cpon",
   "maintainedBy": "@amaanq",
-  "grammarSha": "559879feb11840fa1c0ba6ee0544ee0f7d92b695b6ce44f41c780f7f5f36bc1a",
+  "grammarSha": "fad25b074c4eff8aef2412d9c9c3df06aebf4cd494319b8d18f4b88643f6f190",
   "reference": "master",
-  "revision": "f4b3cbc8b0bd4e13035d39940fef09f1392e8739"
+  "revision": "594289eadfec719198e560f9d7fd243c4db678d5"
 }

@@ -18,7 +18,7 @@ function answer(){
   return 42
 }
 `
-	expected = "(document (text) (interpolation (raw_text)) (text) (interpolation (raw_text)))"
+	expected = "(document (text) (html_interpolation (permissible_text)) (text) (html_interpolation (permissible_text)))"
 )
 
 func TestGrammar(t *testing.T) {

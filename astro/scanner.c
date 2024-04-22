@@ -1,4 +1,6 @@
 #include "tag.h"
+#include "array.h"
+
 #include <wctype.h>
 
 enum TokenType {
@@ -11,123 +13,29 @@ enum TokenType {
     IMPLICIT_END_TAG,
     RAW_TEXT,
     COMMENT,
-    FRONTMATTER_START,
-    INTERPOLATION_START,
+    HTML_INTERPOLATION_START,
+    HTML_INTERPOLATION_END,
+    FRONTMATTER_JS_BLOCK,
+    ATTRIBUTE_JS_EXPR,
+    ATTRIBUTE_BACKTICK_STRING,
+    PERMISSIBLE_TEXT,
+    FRAGMENT_TAG_DELIM,
 };
 
 typedef struct {
-    uint32_t len;
-    uint32_t cap;
-    Tag *data;
-} tags_vec;
-
-typedef struct {
-    tags_vec tags;
+    Array(Tag) tags;
 } Scanner;
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
-#define VEC_RESIZE(vec, _cap)                                                  \
-    do {                                                                       \
-        if ((_cap) > (vec).cap && (_cap) > 0) {                                \
-            void *tmp = realloc((vec).data, (_cap) * sizeof((vec).data[0]));   \
-            assert(tmp != NULL);                                               \
-            (vec).data = tmp;                                                  \
-            (vec).cap = (_cap);                                                \
-        }                                                                      \
-    } while (0)
+#define IS_ASCII_ALPHA(e) (('a' <= (e) && (e) <= 'z') || ('A' <= (e) && (e) <= 'Z'))
 
-#define VEC_GROW(vec, _cap)                                                    \
-    do {                                                                       \
-        if ((vec).cap < (_cap)) {                                              \
-            VEC_RESIZE((vec), (_cap));                                         \
-        }                                                                      \
-    } while (0)
+static inline void advance_astro(TSLexer *lexer) { lexer->advance_astro(lexer, false); }
 
-#define VEC_PUSH(vec, el)                                                      \
-    do {                                                                       \
-        if ((vec).cap == (vec).len) {                                          \
-            VEC_RESIZE((vec), MAX(16, (vec).len * 2));                         \
-        }                                                                      \
-        (vec).data[(vec).len++] = (el);                                        \
-    } while (0)
-
-#define VEC_POP(vec)                                                           \
-    do {                                                                       \
-        if (VEC_BACK(vec).type == CUSTOM) {                                    \
-            tag_free(&VEC_BACK(vec));                                          \
-        }                                                                      \
-        (vec).len--;                                                           \
-    } while (0)
-
-#define VEC_BACK(vec) ((vec).data[(vec).len - 1])
-
-#define VEC_FREE(vec)                                                          \
-    do {                                                                       \
-        if ((vec).data != NULL)                                                \
-            free((vec).data);                                                  \
-        (vec).data = NULL;                                                     \
-    } while (0)
-
-#define VEC_CLEAR(vec)                                                         \
-    do {                                                                       \
-        for (int i = 0; i < (vec).len; i++) {                                  \
-            tag_free(&(vec).data[i]);                                          \
-        }                                                                      \
-        (vec).len = 0;                                                         \
-    } while (0)
-
-#define VEC_NEW                                                                \
-    { .len = 0, .cap = 0, .data = NULL }
-
-#define STRING_RESIZE(vec, _cap)                                               \
-    do {                                                                       \
-        void *tmp = realloc((vec).data, ((_cap) + 1) * sizeof((vec).data[0])); \
-        assert(tmp != NULL);                                                   \
-        (vec).data = tmp;                                                      \
-        memset((vec).data + (vec).len, 0,                                      \
-               (((_cap) + 1) - (vec).len) * sizeof((vec).data[0]));            \
-        (vec).cap = (_cap);                                                    \
-    } while (0)
-
-#define STRING_GROW(vec, _cap)                                                 \
-    do {                                                                       \
-        if ((vec).cap < (_cap)) {                                              \
-            STRING_RESIZE((vec), (_cap));                                      \
-        }                                                                      \
-    } while (0)
-
-#define STRING_PUSH(vec, el)                                                   \
-    do {                                                                       \
-        if ((vec).cap == (vec).len) {                                          \
-            STRING_RESIZE((vec), MAX(16, (vec).len * 2));                      \
-        }                                                                      \
-        (vec).data[(vec).len++] = (el);                                        \
-    } while (0)
-
-#define STRING_INIT(vec)                                                       \
-    do {                                                                       \
-        (vec).data = calloc(1, sizeof(char) * 17);                             \
-        (vec).len = 0;                                                         \
-        (vec).cap = 16;                                                        \
-    } while (0)
-
-#define STRING_FREE(vec)                                                       \
-    do {                                                                       \
-        if ((vec).data != NULL)                                                \
-            free((vec).data);                                                  \
-        (vec).data = NULL;                                                     \
-    } while (0)
-
-#define STRING_CLEAR(vec)                                                      \
-    do {                                                                       \
-        (vec).len = 0;                                                         \
-        memset((vec).data, 0, (vec).cap * sizeof(char));                       \
-    } while (0)
+static inline void skip_astro(TSLexer *lexer) { lexer->advance_astro(lexer, true); }
 
 static unsigned serialize_astro(Scanner *scanner, char *buffer) {
-    uint16_t tag_count =
-        scanner->tags.len > UINT16_MAX ? UINT16_MAX : scanner->tags.len;
+    uint16_t tag_count = scanner->tags.size > UINT16_MAX ? UINT16_MAX : scanner->tags.size;
     uint16_t serialized_tag_count = 0;
 
     unsigned size = sizeof(tag_count);
@@ -135,19 +43,18 @@ static unsigned serialize_astro(Scanner *scanner, char *buffer) {
     size += sizeof(tag_count);
 
     for (; serialized_tag_count < tag_count; serialized_tag_count++) {
-        Tag tag = scanner->tags.data[serialized_tag_count];
+        Tag tag = scanner->tags.contents[serialized_tag_count];
         if (tag.type == CUSTOM) {
-            unsigned name_length = tag.custom_tag_name.len;
+            unsigned name_length = tag.custom_tag_name.size;
             if (name_length > UINT8_MAX) {
                 name_length = UINT8_MAX;
             }
-            if (size + 2 + name_length >=
-                TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
+            if (size + 2 + name_length >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
                 break;
             }
             buffer[size++] = tag.type;
             buffer[size++] = (char)name_length;
-            strncpy(&buffer[size], tag.custom_tag_name.data, name_length);
+            strncpy(&buffer[size], tag.custom_tag_name.contents, name_length);
             size += name_length;
         } else {
             if (size + 1 >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
@@ -162,54 +69,53 @@ static unsigned serialize_astro(Scanner *scanner, char *buffer) {
 }
 
 static void deserialize_astro(Scanner *scanner, const char *buffer, unsigned length) {
-    VEC_CLEAR(scanner->tags);
+    for (unsigned i = 0; i < scanner->tags.size; i++) {
+        tag_free(&scanner->tags.contents[i]);
+    }
+    array_clear(&scanner->tags);
+
     if (length > 0) {
         unsigned size = 0;
         uint16_t tag_count = 0;
         uint16_t serialized_tag_count = 0;
 
-        memcpy(&serialized_tag_count, &buffer[size],
-               sizeof(serialized_tag_count));
+        memcpy(&serialized_tag_count, &buffer[size], sizeof(serialized_tag_count));
         size += sizeof(serialized_tag_count);
 
         memcpy(&tag_count, &buffer[size], sizeof(tag_count));
         size += sizeof(tag_count);
 
-        VEC_RESIZE(scanner->tags, tag_count);
+        array_reserve(&scanner->tags, tag_count);
         if (tag_count > 0) {
             unsigned iter = 0;
             for (iter = 0; iter < serialized_tag_count; iter++) {
-                Tag tag = scanner->tags.data[iter];
-                tag.type = (unsigned char)buffer[size++];
+                Tag tag = tag_new();
+                tag.type = (TagType)buffer[size++];
                 if (tag.type == CUSTOM) {
-                    uint16_t name_length = (unsigned char)buffer[size++];
-                    tag.custom_tag_name.len = name_length;
-                    tag.custom_tag_name.cap = name_length;
-                    tag.custom_tag_name.data =
-                        (char *)calloc(1, sizeof(char) * (name_length + 1));
-                    strncpy(tag.custom_tag_name.data, &buffer[size],
-                            name_length);
+                    uint16_t name_length = (uint8_t)buffer[size++];
+                    array_reserve(&tag.custom_tag_name, name_length);
+                    tag.custom_tag_name.size = name_length;
+                    memcpy(tag.custom_tag_name.contents, &buffer[size], name_length);
                     size += name_length;
                 }
-                VEC_PUSH(scanner->tags, tag);
+                array_push(&scanner->tags, tag);
             }
             // add zero tags if we didn't read enough, this is because the
             // buffer had no more room but we held more tags.
             for (; iter < tag_count; iter++) {
-                Tag tag = new_tag();
-                VEC_PUSH(scanner->tags, tag);
+                array_push(&scanner->tags, tag_new());
             }
         }
     }
 }
 
 static String scan_tag_name(TSLexer *lexer) {
-    String tag_name;
-    STRING_INIT(tag_name);
-    while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' ||
-           lexer->lookahead == ':' || lexer->lookahead == '.') {
-        STRING_PUSH(tag_name, lexer->lookahead);
-        lexer->advance_astro(lexer, false);
+    String tag_name = array_new();
+    while (iswalnum(lexer->lookahead) || 
+            lexer->lookahead == '-' || 
+            lexer->lookahead == ':' || lexer->lookahead == '.') {
+        array_push(&tag_name, lexer->lookahead);
+        advance_astro(lexer);
     }
     return tag_name;
 }
@@ -218,11 +124,11 @@ static bool scan_comment(TSLexer *lexer) {
     if (lexer->lookahead != '-') {
         return false;
     }
-    lexer->advance_astro(lexer, false);
+    advance_astro(lexer);
     if (lexer->lookahead != '-') {
         return false;
     }
-    lexer->advance_astro(lexer, false);
+    advance_astro(lexer);
 
     unsigned dashes = 0;
     while (lexer->lookahead) {
@@ -233,14 +139,14 @@ static bool scan_comment(TSLexer *lexer) {
             case '>':
                 if (dashes >= 2) {
                     lexer->result_symbol = COMMENT;
-                    lexer->advance_astro(lexer, false);
+                    advance_astro(lexer);
                     lexer->mark_end(lexer);
                     return true;
                 }
             default:
                 dashes = 0;
         }
-        lexer->advance_astro(lexer, false);
+        advance_astro(lexer);
     }
     return false;
 }
@@ -248,23 +154,24 @@ static bool scan_comment(TSLexer *lexer) {
 enum RawTextEndType { 
     // corresponds to the ending delimiter "\n---"
     EndFrontmatter, 
-    // corresponds to the ending delimiter "}"
-    // we have to balance brackets with this one
-    EndInterp 
+    // corresponds to the ending delimiter "}",
+    // used for JS backtick strings and attribute interpolations.
+    // we have to balance brackets with this one.
+    EndCurly 
 };
 
-static inline void scan_js_expr(TSLexer *lexer, enum RawTextEndType end_type);
+static inline void scan_js_expr_with_delimiter(TSLexer *lexer, enum RawTextEndType end_type);
 
 static inline void scan_js_backtick_string(TSLexer *lexer) {
     // Advance past backtick
     lexer->advance_astro(lexer, false);
-    while (lexer->lookahead) {
+    while (lexer->lookahead != '\0') {
         if (lexer->lookahead == '$') {
             lexer->advance_astro(lexer, false);
             if (lexer->lookahead == '{') {
                 // String interpolation
                 lexer->advance_astro(lexer, false);
-                scan_js_expr(lexer, EndInterp);
+                scan_js_expr_with_delimiter(lexer, EndCurly);
                 // Advance past the final curly
             } else {
                 // Reprocess this character
@@ -287,7 +194,7 @@ static inline void scan_js_string(TSLexer *lexer) {
         // Start and end chars are the same
         char str_end_char = (char)lexer->lookahead;
         lexer->advance_astro(lexer, false);
-        while (lexer->lookahead) {
+        while (lexer->lookahead != '\0') {
             // Note that this doesn't take into account newlines in basic
             // strings, for the same reason why tree-sitter-javascript
             // doesn't.
@@ -306,7 +213,7 @@ static inline void scan_js_string(TSLexer *lexer) {
 }
 
 
-static inline void scan_js_expr(TSLexer *lexer, enum RawTextEndType end_type) {
+static inline void scan_js_expr_with_delimiter(TSLexer *lexer, enum RawTextEndType end_type) {
     lexer->mark_end(lexer);
     // `delimiter_index` is only used when `end_type == EndFrontmatter`.
     // We assign "1" here because we only enter this function when "---\n" is parsed by tree-sitter,
@@ -343,7 +250,7 @@ static inline void scan_js_expr(TSLexer *lexer, enum RawTextEndType end_type) {
                     lexer->mark_end(lexer);
                     delimiter_index = (lexer->lookahead == '\n' ? 1 : 0);
                 }
-            } else if (end_type == EndInterp) {
+            } else if (end_type == EndCurly) {
                 lexer->mark_end(lexer);
                 // balance braces
                 if (lexer->lookahead == '{') {
@@ -403,110 +310,110 @@ static inline void scan_js_expr(TSLexer *lexer, enum RawTextEndType end_type) {
 }
 
 static bool scan_raw_text(Scanner *scanner, TSLexer *lexer) {
-    if (scanner->tags.len == 0) {
-        scan_js_expr(lexer, EndFrontmatter);
-        goto finish;
-    }
-    if (VEC_BACK(scanner->tags).type == INTERPOLATION) {
-        scan_js_expr(lexer, EndInterp);
-        VEC_POP(scanner->tags);
-        goto finish;
-    }
-
-    if (VEC_BACK(scanner->tags).type != SCRIPT &&
-        VEC_BACK(scanner->tags).type != STYLE) {
-        return false;
-    }
-
     lexer->mark_end(lexer);
 
-    const char *end_delimiter =
-        VEC_BACK(scanner->tags).type == SCRIPT ? "</SCRIPT" : "</STYLE";
+    const char *end_delimiter = array_back(&scanner->tags)->type == SCRIPT ? "</script" : "</style";
 
     unsigned delimiter_index = 0;
     while (lexer->lookahead) {
-        if (towupper(lexer->lookahead) == end_delimiter[delimiter_index]) {
+        // TODO add test for uppercase SCRIPT not conflicting with lowercase script
+        if (lexer->lookahead == end_delimiter[delimiter_index]) {
             delimiter_index++;
             if (delimiter_index == strlen(end_delimiter)) {
                 break;
             }
-            lexer->advance_astro(lexer, false);
+            advance_astro(lexer);
         } else {
             delimiter_index = 0;
-            lexer->advance_astro(lexer, false);
+            advance_astro(lexer);
             lexer->mark_end(lexer);
         }
     }
 
-finish:
     lexer->result_symbol = RAW_TEXT;
     return true;
 }
 
+static void pop_tag(Scanner *scanner) {
+    Tag popped_tag = array_pop(&scanner->tags);
+    tag_free(&popped_tag);
+}
+
 static bool scan_implicit_end_tag(Scanner *scanner, TSLexer *lexer) {
-    Tag *parent = scanner->tags.len == 0 ? NULL : &VEC_BACK(scanner->tags);
+    Tag *parent = scanner->tags.size == 0 ? NULL : array_back(&scanner->tags);
 
     bool is_closing_tag = false;
     if (lexer->lookahead == '/') {
         is_closing_tag = true;
-        lexer->advance_astro(lexer, false);
+        advance_astro(lexer);
     } else {
-        if (parent && is_void(parent)) {
-            VEC_POP(scanner->tags);
+        if (parent && tag_is_void(parent)) {
+            pop_tag(scanner);
             lexer->result_symbol = IMPLICIT_END_TAG;
             return true;
         }
     }
 
     String tag_name = scan_tag_name(lexer);
-    if (tag_name.len == 0) {
-        STRING_FREE(tag_name);
+    if (tag_name.size == 0 && !lexer->eof(lexer)) {
+        array_delete(&tag_name);
         return false;
     }
 
-    Tag next_tag = for_name(tag_name.data);
+    Tag next_tag = tag_for_name(tag_name);
 
     if (is_closing_tag) {
         // The tag correctly closes the topmost element on the stack
-        if (scanner->tags.len > 0 &&
-            tagcmp(&VEC_BACK(scanner->tags), &next_tag)) {
-            STRING_FREE(tag_name);
+        if (scanner->tags.size > 0 && tag_eq(array_back(&scanner->tags), &next_tag)) {
             tag_free(&next_tag);
             return false;
         }
 
         // Otherwise, dig deeper and queue implicit end tags (to be nice in
-        // the case of malformed astro)
-        for (unsigned i = scanner->tags.len; i > 0; i--) {
-            if (scanner->tags.data[i - 1].type == next_tag.type) {
-                VEC_POP(scanner->tags);
+        // the case of malformed Astro)
+        for (unsigned i = scanner->tags.size; i > 0; i--) {
+            if (scanner->tags.contents[i - 1].type == next_tag.type) {
+                pop_tag(scanner);
                 lexer->result_symbol = IMPLICIT_END_TAG;
-                STRING_FREE(tag_name);
                 tag_free(&next_tag);
                 return true;
             }
         }
-    } else if (parent && !can_contain(parent, &next_tag)) {
-        VEC_POP(scanner->tags);
+    } else if (
+        parent &&
+        (
+            !tag_can_contain(parent, &next_tag) ||
+            ((parent->type == HTML || parent->type == HEAD || parent->type == BODY) && lexer->eof(lexer))
+        )
+    ) {
+        pop_tag(scanner);
         lexer->result_symbol = IMPLICIT_END_TAG;
-        STRING_FREE(tag_name);
         tag_free(&next_tag);
         return true;
     }
 
-    STRING_FREE(tag_name);
     tag_free(&next_tag);
     return false;
 }
 
 static bool scan_start_tag_name(Scanner *scanner, TSLexer *lexer) {
     String tag_name = scan_tag_name(lexer);
-    if (tag_name.len == 0) {
-        STRING_FREE(tag_name);
-        return false;
+    if (tag_name.size == 0) {
+        array_delete(&tag_name);
+        // Fragment tags don't contain spaces.
+        if (lexer->lookahead == '>') {
+            advance_astro(lexer);
+            Tag tag = {.type = FRAGMENT, .custom_tag_name = {0}};
+            array_push(&scanner->tags, tag);
+            lexer->result_symbol = FRAGMENT_TAG_DELIM;
+            return true;
+        } else {
+            return false;
+        }
     }
-    Tag tag = for_name(tag_name.data);
-    VEC_PUSH(scanner->tags, tag);
+
+    Tag tag = tag_for_name(tag_name);
+    array_push(&scanner->tags, tag);
     switch (tag.type) {
         case SCRIPT:
             lexer->result_symbol = SCRIPT_START_TAG_NAME;
@@ -518,34 +425,47 @@ static bool scan_start_tag_name(Scanner *scanner, TSLexer *lexer) {
             lexer->result_symbol = START_TAG_NAME;
             break;
     }
-    STRING_FREE(tag_name);
     return true;
 }
 
 static bool scan_end_tag_name(Scanner *scanner, TSLexer *lexer) {
     String tag_name = scan_tag_name(lexer);
-    if (tag_name.len == 0) {
-        STRING_FREE(tag_name);
-        return false;
+    if (tag_name.size == 0) {
+        array_delete(&tag_name);
+        if (lexer->lookahead == '>') {
+            advance_astro(lexer);
+            if (scanner->tags.size > 0 && array_back(&scanner->tags)->type == FRAGMENT) {
+                pop_tag(scanner);
+                lexer->result_symbol = FRAGMENT_TAG_DELIM;
+                return true;
+            } else {
+                lexer->result_symbol = ERRONEOUS_END_TAG_NAME;
+                return true;
+            }
+        } else {
+            // Closing fragment tags don't have spaces.
+            return false;
+        }
     }
-    Tag tag = for_name(tag_name.data);
-    if (scanner->tags.len > 0 && tagcmp(&VEC_BACK(scanner->tags), &tag)) {
-        VEC_POP(scanner->tags);
+
+    Tag tag = tag_for_name(tag_name);
+    if (scanner->tags.size > 0 && tag_eq(array_back(&scanner->tags), &tag)) {
+        pop_tag(scanner);
         lexer->result_symbol = END_TAG_NAME;
     } else {
         lexer->result_symbol = ERRONEOUS_END_TAG_NAME;
     }
+
     tag_free(&tag);
-    STRING_FREE(tag_name);
     return true;
 }
 
 static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
-    lexer->advance_astro(lexer, false);
+    advance_astro(lexer);
     if (lexer->lookahead == '>') {
-        lexer->advance_astro(lexer, false);
-        if (scanner->tags.len > 0) {
-            VEC_POP(scanner->tags);
+        advance_astro(lexer);
+        if (scanner->tags.size > 0) {
+            pop_tag(scanner);
             lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
         }
         return true;
@@ -553,32 +473,152 @@ static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
     return false;
 }
 
-static bool scan_astro(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
-    while (iswspace(lexer->lookahead)) {
-        lexer->advance_astro(lexer, true);
+static bool scan_permissible_text(TSLexer *lexer) {
+    bool there_is_text = false;
+
+    while (lexer->lookahead != '\0') {
+        if(lexer->lookahead == '{' || lexer->lookahead == '}') {
+            // Start of interpolation / end of interpolation, break
+            break;
+        }
+        if(lexer->lookahead == '\'' || lexer->lookahead == '"' || lexer->lookahead == '`') {
+            // skip string
+            scan_js_string(lexer);
+            there_is_text = true;
+            goto text_found;
+        }
+        if(lexer->lookahead == '/') {
+            // check for a comment
+            // (c.f. https://github.com/withastro/compiler/blob/e8b6cdfc89f940a411304787632efd8140535feb/internal/token.go#L1017)
+            advance_astro(lexer);
+            there_is_text = true;
+            if (lexer->lookahead == '/') {
+                // single-line comment
+                while(lexer->lookahead != '\r' && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+                    advance_astro(lexer);
+                }
+            }
+            if (lexer->lookahead == '*') {
+                // multiline comment
+                while (lexer->lookahead != '\0') {
+                    advance_astro(lexer);
+                    if (lexer->lookahead == '*') {
+                        advance_astro(lexer);
+                        if (lexer->lookahead == '/') {
+                            // end of multi-line comment
+                            advance_astro(lexer);
+                            break;
+                        }
+                    }
+                }
+            }
+            goto text_found;
+        }
+        if (lexer->lookahead == '<') {
+            advance_astro(lexer);
+            // This is the same logic the Astro compiler uses
+            // to find when to terminate a text node.
+            // https://github.com/withastro/compiler/blob/e8b6cdfc89f940a411304787632efd8140535feb/internal/token.go#L1737
+            if (IS_ASCII_ALPHA(lexer->lookahead)) {
+                // Potential <start> tag
+                break;
+            }
+            if (lexer->lookahead == '/') {
+                // Potential </end> tag
+                break;
+            }
+            if (lexer->lookahead == '/' || lexer->lookahead == '?') {
+                // Potential <!-- comment --> tag
+                // or <!DOCTYPE ...> tag
+                // or <?xml processing instructions?> tag
+                break;
+            }
+            if (lexer->lookahead == '>') {
+                // Fragment tag
+                // (e.g. `<> <p> hi </p> </>`)
+                break;
+            }
+            // If none of the above conditions pass,
+            // there's definitely text here.
+            goto text_found;
+        } 
+        advance_astro(lexer);
+text_found:
+        there_is_text = true;
+        lexer->mark_end(lexer);
     }
 
-    if (valid_symbols[RAW_TEXT] && !valid_symbols[START_TAG_NAME] &&
-        !valid_symbols[END_TAG_NAME]) {
+    // If there isn't any text,
+    // then this can't be permissible text.
+    if (there_is_text) {
+        lexer->result_symbol = PERMISSIBLE_TEXT;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+static bool scan_astro(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
+    if (valid_symbols[FRONTMATTER_JS_BLOCK] && scanner->tags.size == 0) {
+        scan_js_expr_with_delimiter(lexer, EndFrontmatter);
+        lexer->result_symbol = FRONTMATTER_JS_BLOCK;
+        return true;
+    }
+
+    if (valid_symbols[RAW_TEXT] && !valid_symbols[START_TAG_NAME] && !valid_symbols[END_TAG_NAME]) {
         return scan_raw_text(scanner, lexer);
     }
+
+    if (valid_symbols[ATTRIBUTE_JS_EXPR]) {
+        scan_js_expr_with_delimiter(lexer, EndCurly);
+        lexer->result_symbol = ATTRIBUTE_JS_EXPR;
+        return true;
+    }
+
+    if (valid_symbols[PERMISSIBLE_TEXT]) {
+        if(iswspace(lexer->lookahead)) {
+            // Can't be anything else.
+            return scan_permissible_text(lexer);
+        }
+    } else {
+        while (iswspace(lexer->lookahead)) {
+            skip_astro(lexer);
+        }
+    }
+
+    bool definitely_not_permissible_text = false;
 
     switch (lexer->lookahead) {
         case '<':
             lexer->mark_end(lexer);
-            lexer->advance_astro(lexer, false);
+            advance_astro(lexer);
 
             if (lexer->lookahead == '!') {
-                lexer->advance_astro(lexer, false);
+                advance_astro(lexer);
                 return scan_comment(lexer);
             }
-
+            
             if (valid_symbols[IMPLICIT_END_TAG]) {
                 return scan_implicit_end_tag(scanner, lexer);
             }
+
+            if (valid_symbols[PERMISSIBLE_TEXT]) {
+                bool invalid = 
+                    IS_ASCII_ALPHA(lexer->lookahead)
+                    || lexer->lookahead == '/'
+                    || lexer->lookahead == '?'
+                    || lexer->lookahead == '>';
+                if (invalid) {
+                    // This looks like an element,
+                    // so it can't be permissible text.
+                    definitely_not_permissible_text = true;
+                }
+            }
+
             break;
 
         case '\0':
+            definitely_not_permissible_text = true;
             if (valid_symbols[IMPLICIT_END_TAG]) {
                 return scan_implicit_end_tag(scanner, lexer);
             }
@@ -591,70 +631,79 @@ static bool scan_astro(Scanner *scanner, TSLexer *lexer, const bool *valid_symbo
             break;
 
         case '{':
-            if (valid_symbols[INTERPOLATION_START]) {
+            if (valid_symbols[HTML_INTERPOLATION_START]) {
                 lexer->advance_astro(lexer, false);
                 Tag tag = (Tag){INTERPOLATION, {0}};
-                VEC_PUSH(scanner->tags, tag);
-                lexer->result_symbol = INTERPOLATION_START;
+                array_push(&scanner->tags, tag);
+                lexer->result_symbol = HTML_INTERPOLATION_START;
+                return true;
+            }
+            break;
+        case '}':
+            // Close any void tags before exiting the interpolation node.
+            if (valid_symbols[IMPLICIT_END_TAG]) {
+                return scan_implicit_end_tag(scanner, lexer);
+            }
+
+            if (valid_symbols[HTML_INTERPOLATION_END] &&
+                    scanner->tags.size > 0 &&
+                    array_back(&scanner->tags)->type == INTERPOLATION) {
+                lexer->advance_astro(lexer, false);
+                array_pop(&scanner->tags);
+                lexer->result_symbol = HTML_INTERPOLATION_END;
                 return true;
             }
             break;
 
-        case '-':
-            if (valid_symbols[FRONTMATTER_START]) {
+        case '`':
+            if (valid_symbols[ATTRIBUTE_BACKTICK_STRING]) {
+                scan_js_backtick_string(lexer);
                 lexer->mark_end(lexer);
-                lexer->advance_astro(lexer, false);
-                if (lexer->lookahead == '-') {
-                    lexer->advance_astro(lexer, false);
-                    if (lexer->lookahead == '-') {
-                        lexer->advance_astro(lexer, false);
-                        lexer->mark_end(lexer);
-                        lexer->result_symbol = FRONTMATTER_START;
-                        return true;
-                    }
-                }
+                lexer->result_symbol = ATTRIBUTE_BACKTICK_STRING;
+                return true;
             }
+            break;
 
         default:
-            if ((valid_symbols[START_TAG_NAME] ||
-                 valid_symbols[END_TAG_NAME]) &&
-                !valid_symbols[RAW_TEXT]) {
-                return valid_symbols[START_TAG_NAME]
-                           ? scan_start_tag_name(scanner, lexer)
-                           : scan_end_tag_name(scanner, lexer);
+            if ((valid_symbols[START_TAG_NAME] || valid_symbols[END_TAG_NAME]) && !valid_symbols[RAW_TEXT]) {
+                return valid_symbols[START_TAG_NAME] ? scan_start_tag_name(scanner, lexer)
+                                                     : scan_end_tag_name(scanner, lexer);
             }
+    }
+
+    if (!definitely_not_permissible_text && valid_symbols[PERMISSIBLE_TEXT]) {
+        // There are no other choices, it's this or nothing.
+        return scan_permissible_text(lexer);
     }
 
     return false;
 }
 
 void *tree_sitter_astro_external_scanner_create() {
-    Scanner *scanner = (Scanner *)malloc(sizeof(Scanner));
-    scanner->tags = (tags_vec)VEC_NEW;
+    Scanner *scanner = (Scanner *)ts_calloc(1, sizeof(Scanner));
     return scanner;
 }
 
-bool tree_sitter_astro_external_scanner_scan(void *payload, TSLexer *lexer,
-                                             const bool *valid_symbols) {
-    return scan_astro((Scanner *)payload, lexer, valid_symbols);
+bool tree_sitter_astro_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+    Scanner *scanner = (Scanner *)payload;
+    return scan_astro(scanner, lexer, valid_symbols);
 }
 
-unsigned tree_sitter_astro_external_scanner_serialize(void *payload,
-                                                      char *buffer) {
-    return serialize_astro((Scanner *)payload, buffer);
+unsigned tree_sitter_astro_external_scanner_serialize(void *payload, char *buffer) {
+    Scanner *scanner = (Scanner *)payload;
+    return serialize_astro(scanner, buffer);
 }
 
-void tree_sitter_astro_external_scanner_deserialize(void *payload,
-                                                    const char *buffer,
-                                                    unsigned length) {
-    deserialize_astro((Scanner *)payload, buffer, length);
+void tree_sitter_astro_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
+    Scanner *scanner = (Scanner *)payload;
+    deserialize_astro(scanner, buffer, length);
 }
 
 void tree_sitter_astro_external_scanner_destroy(void *payload) {
     Scanner *scanner = (Scanner *)payload;
-    for (unsigned i = 0; i < scanner->tags.len; i++) {
-        STRING_FREE(scanner->tags.data[i].custom_tag_name);
+    for (unsigned i = 0; i < scanner->tags.size; i++) {
+        tag_free(&scanner->tags.contents[i]);
     }
-    VEC_FREE(scanner->tags);
-    free(scanner);
+    array_delete(&scanner->tags);
+    ts_free(scanner);
 }

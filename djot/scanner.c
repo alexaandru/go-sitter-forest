@@ -1710,7 +1710,7 @@ void *tree_sitter_djot_external_scanner_create() {
 void tree_sitter_djot_external_scanner_destroy(void *payload) {
   Scanner *s = (Scanner *)payload;
   for (size_t i = 0; i < s->open_blocks->size; ++i) {
-    ts_free(array_get(s->open_blocks, i));
+    ts_free(*array_get(s->open_blocks, i));
   }
   array_delete(s->open_blocks);
   ts_free(s);

@@ -2,7 +2,7 @@
   "language": "capnp",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-capnp",
   "maintainedBy": "@amaanq",
-  "grammarSha": "adf7b38ad7bdbe764758e3d93dfc5c902e37a2cabeaacd6bb0ddccd0887d63ea",
+  "grammarSha": "1e7791c44ad85fe199cd46c51a12d40fa1b47ea7ba4071bed037e370eb09901c",
   "reference": "master",
-  "revision": "dc28c9f4212809eab74d10996086297853eb34e5"
+  "revision": "7b0883c03e5edd34ef7bcf703194204299d7099f"
 }

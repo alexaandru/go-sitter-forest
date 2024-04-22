@@ -2,7 +2,7 @@
   "language": "thrift",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-thrift",
   "maintainedBy": "@amaanq, @duskmoon314",
-  "grammarSha": "4a84e7b02e51a9fceebc2f42544ac819e611d2af2cfd9e2fed0a54cdfa35dd8d",
+  "grammarSha": "e391fd8ec1e994e19c800249c7c8ea84b85adcd6e4978c633df73293c8a24fca",
   "reference": "main",
-  "revision": "d4deb1bd9e848f2dbe81103a151d99e8546de480"
+  "revision": "68fd0d80943a828d9e6f49c58a74be1e9ca142cf"
 }
