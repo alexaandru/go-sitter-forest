@@ -9172,6 +9172,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\'') ADVANCE(222);
       if (lookahead != 0 &&
           lookahead != '\n' &&
+          lookahead != '\r' &&
           lookahead != '\\') ADVANCE(232);
       END_STATE();
     case 220:
@@ -9180,16 +9181,18 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == '\'') ADVANCE(223);
       if (lookahead == '\\') ADVANCE(262);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r') ||
+          lookahead == 11 ||
+          lookahead == '\f' ||
           lookahead == ' ' ||
           lookahead == '>') ADVANCE(232);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(233);
+          (lookahead < '\n' || '\r' < lookahead)) ADVANCE(233);
       END_STATE();
     case 221:
       ACCEPT_TOKEN(anon_sym_BSLASH);
       if (lookahead != 0 &&
           lookahead != '\n' &&
+          lookahead != '\r' &&
           lookahead != '\\') ADVANCE(232);
       END_STATE();
     case 222:
@@ -10022,6 +10025,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(aux_sym__comment_with_newline_token1);
       if (lookahead != 0 &&
           lookahead != '\n' &&
+          lookahead != '\r' &&
           lookahead != '\\') ADVANCE(232);
       END_STATE();
     case 349:

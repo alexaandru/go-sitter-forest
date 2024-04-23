@@ -415,9 +415,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@NoahTheDuke",
-    "grammarSha": "31005fae6edbc085256725f5724340d2d91e0d06a87a8377cd991d1e67b0fd8c",
+    "grammarSha": "caf71b2e04635b4a829dbfc7405279bca5c3ceea1e8f432967afc5b71e09103e",
     "reference": "master",
-    "revision": "66e1b8a51e297971795b7a8c9d3d271237174538"
+    "revision": "7be89f13c3a5e3c2ed34d29310259158ebe2e493"
   },
   {
     "language": "dockerfile",
@@ -579,7 +579,7 @@
     "skip": true,
     "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
     "reference": "main",
-    "revision": "f83e094724609d1cf788c61c7d0467a05831f419"
+    "revision": "325a3315be968b3d8ecdc5c414159be3c8bab212"
   },
   {
     "language": "fidl",
@@ -959,9 +959,9 @@
     "language": "hlsplaylist",
     "url": "https://github.com/Freed-Wu/tree-sitter-hlsplaylist",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "f6b22862101fccc1c34038b0eb3a00e5e36258cc0b18865de3e72ddbe8dd00ce",
+    "grammarSha": "6b52938ffbe7af9879617a46d2e23f5f9884739fa976f0f86b7553a22414c66e",
     "reference": "main",
-    "revision": "936d399ed501c12636cf6d3a417063e49c98cee5"
+    "revision": "64f19029339e75d6762feae39e7878595860c980"
   },
   {
     "language": "hocon",
@@ -1374,9 +1374,9 @@
     "language": "mermaid",
     "url": "https://github.com/monaqa/tree-sitter-mermaid",
     "maintainedBy": "@monaqa",
-    "grammarSha": "d8cfdbc92f425c96b6a40e09e62f510e4e265a72787e11152f2551212f5ae768",
+    "grammarSha": "51fd1d09d2744f0e81e2e62ab1c9b7c8aebe293826ff5096a153c7d674219a6b",
     "reference": "master",
-    "revision": "49442bd087901c60f019b4e34dcb6ecdc8849067"
+    "revision": "90ae195b31933ceb9d079abfa8a3ad0a36fee4cc"
   },
   {
     "language": "meson",
@@ -1398,9 +1398,9 @@
     "language": "muttrc",
     "url": "https://github.com/neomutt/tree-sitter-muttrc",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "96dd95191ad19f83bf54c869fa825532cb0c63d065b038c26790e3a286682d7c",
+    "grammarSha": "6d13bf1ec8230703df2a53ab4cc2facc756166a585d8b977e3ebd10dba5ec63e",
     "reference": "main",
-    "revision": "394e4e88ada3bad05054193e204c5cb592f6630d"
+    "revision": "90ef60852c410bd964cd3b954366e4c403c17314"
   },
   {
     "language": "nasm",
@@ -1829,7 +1829,7 @@
     "maintainedBy": "@steelsojka",
     "grammarSha": "8038833d8fdc201fb567e2095832651c8978084b3d006c68d0940730f348f5c5",
     "reference": "master",
-    "revision": "2e31ca2771f6042b0e4e0c41a6290014a9e1face"
+    "revision": "608c01187fb9f525a1e4cf585bb63d73dea280b7"
   },
   {
     "language": "r",
@@ -2233,9 +2233,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@alex-pinkus",
-    "grammarSha": "147bc811038d1d6feccd5438f21da7dc8a415975055cd2585ebee4dd750d1eb8",
+    "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "c982633802f3c099663addff29e56d27800965d8"
+    "revision": "ee04ee19910bb9ea6daf14be7d1e5362a208207d"
   },
   {
     "language": "sxhkdrc",
@@ -2342,17 +2342,17 @@
       "scanner.c"
     ],
     "maintainedBy": "@ahelwer, @susliko",
-    "grammarSha": "0a03fc2ded8367c41d3e6f4772e4602808954fa3f30349b4b5cc39187e354c72",
+    "grammarSha": "bc4ec685cb42356822ff745b7deab7b1c65d0674bc099bd458284ed36c8dae18",
     "reference": "main",
-    "revision": "410122a012abb06fbacc8c0b8f288b684f8113e1"
+    "revision": "c842127c4385190c3326d5477c92d0816260b547"
   },
   {
     "language": "tmux",
     "url": "https://github.com/Freed-Wu/tree-sitter-tmux",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "b1391d87316378d8434e8b64f13c0cf843534d325707c5b27a526e5c1548f91f",
+    "grammarSha": "b43b8d1b6c2b183d0a4040744d3a3dd1de68df9b45ef9e8b9d2422625352335a",
     "reference": "main",
-    "revision": "d3cacd0821b90d42ac57ec1388a55987ea30cc03"
+    "revision": "9138ea508410e0f34da2666609f600f65e944f22"
   },
   {
     "language": "todotxt",
@@ -2441,9 +2441,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@uben0, @RaafatTurki",
-    "grammarSha": "2a6fd720c892bb454917b55864fb1e3214be87c16c083a65fe5582a5917b1961",
+    "grammarSha": "95ca1a1e64ee67df31f73a37aa111de3a4511f2c110a558c1490d2621b5214d7",
     "reference": "master",
-    "revision": "13863ddcbaa7b68ee6221cea2e3143415e64aea4"
+    "revision": "4610172f312e8ce5184e6882be5ad1a1cd800fbe"
   },
   {
     "language": "udev",
@@ -2548,7 +2548,7 @@
     "maintainedBy": "@clason",
     "grammarSha": "7e378615588a0305650cfab13aaa12a1264415338b3f2b7f31d037e5e13ecf79",
     "reference": "master",
-    "revision": "052279cd5e1d73b075640c64cef97e7bdcd32611"
+    "revision": "b448ca63f972ade12c373c808acdd2bf972937db"
   },
   {
     "language": "vimdoc",
@@ -2556,7 +2556,7 @@
     "maintainedBy": "@clason",
     "grammarSha": "1f451d3c8db9b4ee856807912b67c79a69820df1b8acde6cfbdd7f3b370005b4",
     "reference": "master",
-    "revision": "0b36856db88680f662cc67545c82af4ce83bf158"
+    "revision": "b711df784dd43d0a8ed8ddbfca0ddcc3239d94b4"
   },
   {
     "language": "vue",
@@ -2602,15 +2602,15 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "94eb5615dffb17556f6733cfc4b20d252fef130b68676907da66ee74845a3425",
     "reference": "main",
-    "revision": "ddd52cb4becb9746e98527e35ae315665356a576"
+    "revision": "fa4a7a5080bfedb3e85c015f1e7c0ee6468eafb0"
   },
   {
     "language": "wit",
     "url": "https://github.com/liamwh/tree-sitter-wit",
     "maintainedBy": "@liamwh",
-    "grammarSha": "065f48d87b6f55ca817fbd8a919c5a3d180653f3670826a141c49f96d2f4a80c",
+    "grammarSha": "7dad4431dcc39c7db4ee865621a9fd5a84a0255f1973652c65ee54e084b9d5bb",
     "reference": "main",
-    "revision": "6f511f9c6676e597c2f0930e4d2629595319882d"
+    "revision": "ed13e0a3ee77833900a095d57d2685a1f7f91237"
   },
   {
     "language": "xcompose",
@@ -2669,9 +2669,9 @@
     "language": "zathurarc",
     "url": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "3ab2827c548ec4dccb5c93a06d22d720a41509b2584313e662afea96180738af",
+    "grammarSha": "af8b1a99287ad28ba875999fb0b21236159083bfd1e5ab832e2c68ecc500ec8a",
     "reference": "main",
-    "revision": "2266ac3315e873e37edd24d7e6b6513b8798dab3"
+    "revision": "e9e8de071ab79ed1f6e3365f05fcf890b6d85a2f"
   },
   {
     "language": "zig",

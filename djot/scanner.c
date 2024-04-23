@@ -248,6 +248,11 @@ static uint8_t consume_whitespace(TSLexer *lexer) {
     if (lexer->lookahead == ' ') {
       lexer->advance_djot(lexer, false);
       ++indent;
+      // Carriage returns should simply be ignored,
+      // consuming the carriage return here takes care of almost all
+      // special case handling.
+    } else if (lexer->lookahead == '\r') {
+      lexer->advance_djot(lexer, false);
     } else if (lexer->lookahead == '\t') {
       lexer->advance_djot(lexer, false);
       indent += 4;
@@ -903,6 +908,8 @@ static uint8_t consume_line_with_char_or_whitespace(Scanner *s, TSLexer *lexer,
       lexer->advance_djot(lexer, false);
     } else if (lexer->lookahead == ' ') {
       lexer->advance_djot(lexer, false);
+    } else if (lexer->lookahead == '\r') {
+      lexer->advance_djot(lexer, false);
     } else if (lexer->lookahead == '\n') {
       return seen;
     } else {
@@ -1156,18 +1163,17 @@ static TokenType heading_continuation_token(uint8_t level) {
 
 static bool parse_heading(Scanner *s, TSLexer *lexer,
                           const bool *valid_symbols) {
-  // It's fine to always consume, since this only parses '#'
-  uint8_t hash_count = consume_chars(lexer, '#');
-
   // Note that headings don't contain other blocks, only inline.
   Block *top = peek_block(s);
 
-  // Not technically needed, but allows us to skip unnecessary parsing.
-  if (top && top->type == CODE_BLOCK) {
+  // Avoids consuming `#` inside code/verbatim contexts.
+  if (top && top->type == CODE_BLOCK || s->verbatim_tick_count > 0) {
     return false;
   }
 
   bool top_heading = top && top->type == HEADING;
+
+  uint8_t hash_count = consume_chars(lexer, '#');
 
   // We found a `# ` that can start or continue a heading.
   if (hash_count > 0 && lexer->lookahead == ' ') {
@@ -1250,6 +1256,11 @@ static bool scan_block_quote_marker(Scanner *s, TSLexer *lexer,
     return false;
   }
   lexer->advance_djot(lexer, false);
+
+  // Carriage returns should be ignored.
+  if (lexer->lookahead == '\r') {
+    lexer->advance_djot(lexer, false);
+  }
   if (lexer->lookahead == ' ') {
     lexer->advance_djot(lexer, false);
     return true;
@@ -1978,6 +1989,10 @@ static void dump_valid_symbols(const bool *valid_symbols) {
   //     printf("%s\n", token_type_s(i));
   //   }
   // }
+  if (valid_symbols[ERROR]) {
+    printf("# In error recovery ALL SYMBOLS ARE VALID\n");
+    return;
+  }
   printf("# valid_symbols (shortened):\n");
   for (int i = 0; i <= ERROR; ++i) {
     switch (i) {
