@@ -14,4 +14,4 @@ update: update-all test
 	@git status
 	@echo "Press enter to continue, Ctrl-C to exit"
 	@read x && git commit -m Updated\ parsers && git push
-	@make -s auto_tag
+	@make -s auto_tag auto_update_forest

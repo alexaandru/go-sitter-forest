@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.11
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
-	github.com/alexaandru/go-sitter-forest/djot v1.5.11
+	github.com/alexaandru/go-sitter-forest/djot v1.5.12
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.10
 	github.com/alexaandru/go-sitter-forest/facility v1.5.10
 	github.com/alexaandru/go-sitter-forest/faust v1.5.10
-	github.com/alexaandru/go-sitter-forest/fennel v1.5.11
+	github.com/alexaandru/go-sitter-forest/fennel v1.5.12
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.10
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.11
 	github.com/alexaandru/go-sitter-forest/fish v1.5.11
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
 	github.com/alexaandru/go-sitter-forest/matlab v1.5.10
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.10
-	github.com/alexaandru/go-sitter-forest/mermaid v1.5.11
+	github.com/alexaandru/go-sitter-forest/mermaid v1.5.12
 	github.com/alexaandru/go-sitter-forest/meson v1.5.10
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
@@ -243,7 +243,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.11
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.13
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.14
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
@@ -253,7 +253,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
 	github.com/alexaandru/go-sitter-forest/typescript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
-	github.com/alexaandru/go-sitter-forest/typst v1.5.12
+	github.com/alexaandru/go-sitter-forest/typst v1.5.13
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
 	github.com/alexaandru/go-sitter-forest/unison v1.5.12
@@ -270,7 +270,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
 	github.com/alexaandru/go-sitter-forest/wing v1.5.14
-	github.com/alexaandru/go-sitter-forest/wit v1.5.10
+	github.com/alexaandru/go-sitter-forest/wit v1.5.11
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.12

@@ -195,8 +195,6 @@ version everywhere, and keeping up with it too.
 
 ## TODO
 
-- need some automation around working with so many Go modules, in particular:
-  - updating forest (root package) to point to the latest tag of a parser after a parser update;
-- also need to update the parsers automation to create a Go module for a new parser automatically;
+- need to update the parsers automation to create a Go module for a new parser automatically;
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally).
