@@ -66,9 +66,9 @@
       "tag.h"
     ],
     "maintainedBy": "@virchau13",
-    "grammarSha": "437c0cf0180ca6e2873bfdf92265b47a98e4872f52c5195bbbb81ee5496fd38a",
+    "grammarSha": "e53c10208f450ad12dd2d9af3f5222804713b651943d72165da1de74fc843e3a",
     "reference": "master",
-    "revision": "506515c1dce4220fc9db278ce9eae2ad4e239cff"
+    "revision": "4be180759ec13651f72bacee65fa477c64222a1a"
   },
   {
     "language": "authzed",
@@ -368,7 +368,7 @@
     "maintainedBy": "@akinsho",
     "grammarSha": "4a6cc4d453ffdc1005518dd7558bbe4fa362a16d377660ed80a68fa8ef78be83",
     "reference": "master",
-    "revision": "6da46473ab8accb13da48113f4634e729a71d335"
+    "revision": "4e101058b4ec7ce4ba92496311a7dd10a4c9c66a"
   },
   {
     "language": "devicetree",
@@ -738,9 +738,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "a941e7df9af155ce6e68f1e43d058c16ea19454fb79e95e892cad0836381b014",
+    "grammarSha": "107fa12f6f326c738a708c2a5f4c4390476ce874a94a42dd3352e2b1bab30863",
     "reference": "main",
-    "revision": "bcf9c45b56cbe46e9dac5eee0aee75df270000ac"
+    "revision": "a0b11a15935b95848176c747a8b5776752d90d7c"
   },
   {
     "language": "glimmer",
@@ -1257,7 +1257,7 @@
     "maintainedBy": "@toots",
     "grammarSha": "6aa8c1d4781326a9b278e715f3eca2e5dc3df3f99ae4a2246f679be23f1642b0",
     "reference": "main",
-    "revision": "09a9e31e2af734a8974dad6ed349648f601eee8c"
+    "revision": "ea97fa1f7d6665a018353cb4483d07c8b121e374"
   },
   {
     "language": "llvm",
@@ -2344,7 +2344,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "grammarSha": "bc4ec685cb42356822ff745b7deab7b1c65d0674bc099bd458284ed36c8dae18",
     "reference": "main",
-    "revision": "c842127c4385190c3326d5477c92d0816260b547"
+    "revision": "763f9a4edcb1747595842164614aa143eec084dd"
   },
   {
     "language": "tmux",
@@ -2602,7 +2602,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "94eb5615dffb17556f6733cfc4b20d252fef130b68676907da66ee74845a3425",
     "reference": "main",
-    "revision": "fa4a7a5080bfedb3e85c015f1e7c0ee6468eafb0"
+    "revision": "ddabbd99f591e6602783cf6ac2afd2270b0c4f18"
   },
   {
     "language": "wit",
