@@ -34,7 +34,7 @@ auto_update_forest:
 	@make -s list_all_parsers|while read x; do \
 		export LANG=$$(basename $$x); \
 		export TAG=$$(git tag -l --sort=committerdate "$$LANG/*"| tail -n1| cut -f2 -d/); \
-		go get github.com/alexaandru/go-sitter-forest/$$LANG@$$TAG; \ # TODO: only go get the updated ones...
+		go get github.com/alexaandru/go-sitter-forest/$$LANG@$$TAG; \
 	done && make -s test && git diff && git add -u . && git commit -m Updated\ forest && git push && make -s auto_tag_forest
 
 auto_tag_forest:

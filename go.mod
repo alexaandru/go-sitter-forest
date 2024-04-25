@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.5.11
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.12
-	github.com/alexaandru/go-sitter-forest/asm v1.5.11
+	github.com/alexaandru/go-sitter-forest/asm v1.5.12
 	github.com/alexaandru/go-sitter-forest/astro v1.5.13
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.11
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
-	github.com/alexaandru/go-sitter-forest/djot v1.5.12
+	github.com/alexaandru/go-sitter-forest/djot v1.5.13
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
@@ -256,20 +256,20 @@ require (
 	github.com/alexaandru/go-sitter-forest/typst v1.5.13
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
-	github.com/alexaandru/go-sitter-forest/unison v1.5.12
+	github.com/alexaandru/go-sitter-forest/unison v1.5.13
 	github.com/alexaandru/go-sitter-forest/usd v1.5.10
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.10
 	github.com/alexaandru/go-sitter-forest/v v1.5.15
 	github.com/alexaandru/go-sitter-forest/vala v1.5.10
 	github.com/alexaandru/go-sitter-forest/vento v1.5.10
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.10
-	github.com/alexaandru/go-sitter-forest/vhs v1.5.10
+	github.com/alexaandru/go-sitter-forest/vhs v1.5.11
 	github.com/alexaandru/go-sitter-forest/vim v1.5.10
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
-	github.com/alexaandru/go-sitter-forest/wing v1.5.14
+	github.com/alexaandru/go-sitter-forest/wing v1.5.15
 	github.com/alexaandru/go-sitter-forest/wit v1.5.11
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
