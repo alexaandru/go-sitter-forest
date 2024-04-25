@@ -54,9 +54,9 @@
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
     "maintainedBy": "@RubixDev",
-    "grammarSha": "7903217fe036fa4663ae0b1ef13eb607c8bc87c330e50aa90b0edb09e0cbead6",
+    "grammarSha": "272c60ca9eddab6261601d9c6030d3469d629d1770938d396718971778ff4fb8",
     "reference": "main",
-    "revision": "afdc3d5da18d42cbb471c0f40527dbed9cace7ad"
+    "revision": "b0306e9bb2ebe01c6562f1aef265cc42ccc53070"
   },
   {
     "language": "astro",
@@ -415,9 +415,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@NoahTheDuke",
-    "grammarSha": "caf71b2e04635b4a829dbfc7405279bca5c3ceea1e8f432967afc5b71e09103e",
+    "grammarSha": "8f914fc489179f2f9939fec92b30400d3e043ebb3efa5acd3133411dd1283a87",
     "reference": "master",
-    "revision": "7be89f13c3a5e3c2ed34d29310259158ebe2e493"
+    "revision": "bc94a2867f7a1040c416212207e7e28e79ef0339"
   },
   {
     "language": "dockerfile",
@@ -1392,7 +1392,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "c2845c1c0b23e2faf6febfa72a042e5346374ebf"
+    "revision": "c930b5f4a1fceec146b9074b8eb54bedcc266e56"
   },
   {
     "language": "muttrc",
@@ -2470,9 +2470,9 @@
       "jtckdint.h"
     ],
     "maintainedBy": "@tapegram",
-    "grammarSha": "3961fa8d7b20c5f28c8377afc1cf92cb2531b58c908b8d9241be0fac928851a0",
+    "grammarSha": "a84e9b729e3c52ef80dafd2e3cbd84816c605445a12450cb04771ce919ac261e",
     "reference": "master",
-    "revision": "056a926d8998e24eaa687755767b83217901a1cc"
+    "revision": "5d1af86e954be775fc338396d27cd5858d0286be"
   },
   {
     "language": "usd",
@@ -2534,9 +2534,9 @@
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
     "maintainedBy": "@caarlos0",
-    "grammarSha": "f39e9aa3fabcc3d33ed27321469dea0e99a02c3ac80fccf7de3e7638f32d9601",
+    "grammarSha": "91f5120397ed4177f168ff85b5039505591a31b931b597fdcfbc480020891d3f",
     "reference": "main",
-    "revision": "9534865e614c95eb9418e5e73f061c32fa4d9540"
+    "revision": "90028bbadb267ead5b87830380f6a825147f0c0f"
   },
   {
     "language": "vim",
@@ -2600,9 +2600,9 @@
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "grammarSha": "94eb5615dffb17556f6733cfc4b20d252fef130b68676907da66ee74845a3425",
+    "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "ddabbd99f591e6602783cf6ac2afd2270b0c4f18"
+    "revision": "b60d52d35b5ac78269dc872ae46246c1ebd3fe8f"
   },
   {
     "language": "wit",

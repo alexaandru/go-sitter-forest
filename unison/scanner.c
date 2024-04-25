@@ -52,9 +52,11 @@ void * justInt64(int64_t i) {
 /**
  * Print input and result information.
  */
+#ifndef __wasm32__ // disable logging for Zed build
 #define DEBUG 0
+#endif
 
-#define LOG_LEVEL WARN
+#define LOG_LEVEL ERROR
 typedef enum {
   VERBOSE,
   INFO,
@@ -64,19 +66,17 @@ typedef enum {
 } LogLevel;
 
 #include "parser.h"
-#include <assert.h>
-#include <stdio.h>
-#include <inttypes.h> // needed for portability of PRId64
+#include <stdlib.h> // malloc, free, calloc, atof
+#include <stdio.h> // fprintf, stderr
+#include <assert.h> // assert
+#include <string.h> // memcpy, strlen, strncat
+#include <ctype.h> // isalpha, isdigit
 #include "jtckdint.h" // needed to prevent integer overflow in get_whole
-#ifdef DEBUG
-#include <assert.h>
-#endif
-#include <string.h>
-#include <wctype.h>
-#include <stdlib.h>
-#include <math.h>
-#include <ctype.h>
 
+
+#ifndef __wasm32__
+#include <inttypes.h> // needed for portability of PRId64
+#endif
 
 #define ASCII_OFFSET 48
 #define UNISON_NAT_MIN 0
@@ -296,6 +296,9 @@ void debug_state(State *state) {
   debug_indents(state->indents);
   LOG(VERBOSE, " }\n");
 }
+#else
+static void debug_indents(indent_vec *indents) { return; }
+void debug_state(State *state) { return; }
 #endif
 
 /**
@@ -920,7 +923,9 @@ static void * get_whole(State *state) {
     digit_found = true;
     int64_t new_val = 0;
     if(ckd_mul(&new_val, val, 10) && ckd_add(&new_val, new_val, PEEK - ASCII_OFFSET)) {
+      #ifndef __wasm32__ // Zed build cannot handle PRId64
       LOG(WARN, "get_whole: exceeded the length of an int64 { val = %" PRId64 ", new_val = %" PRId64 ", ASCII_OFFSET = %d, PEEK = %c }\n", val, new_val, ASCII_OFFSET, PEEK);
+      #endif
       return &nothing;
     }
     S_ADVANCE;

@@ -135,7 +135,42 @@ typedef struct {
   // Delayed output of a token, used to first output closing token(s)
   // before this token.
   TokenType delayed_token;
+  // Used for:
+  // - VERBATIM_END
+  // - CODE_BLOCK_END
+  // - DIV_END
   uint8_t delayed_token_width;
+
+  // States to track:
+  // Using `delayed_token_width`
+  // - CLOSE_VERBATIM (VERBATIM_CONTENT then VERBATIM_END)
+  // - CLOSE_CODE_BLOCK (BLOCK_COSE then CODE_BLOCK_END)
+  // - CLOSE_DIV (BLOCK_COSE then DIV_END)
+  //
+  // Heading states:
+  // Can use `delayed_token_width` or similar
+  // - NEW_SECTION
+  //      - BLOCK_CLOSE for previous heading
+  //      - BLOCK_CLOSE for previous SECTION
+  //      - SECTION to open new section
+  //      - HEADING with `hash_count`
+  // - NEW_HEADING
+  //      - BLOCK_CLOSE for previous heading
+  //      - BLOCK_CLOSE for previous SECTION
+  //      - HEADING with `hash_count`
+  // (we can continue headings immediately)
+  //
+  // List states:
+  // Can use `delayed_token_width` + `delayed_token`
+  // - NEW_LIST
+  //    1. BLOCK_CLOSE (close block that's in a list)
+  //    2. BLOCK_CLOSE (close the open list)
+  //    3. Open new list
+  //       Push block type and return marker
+  //
+  // Block quote
+  // In `end_paragraph_in_block_quote` we scan all markers on a line
+  // to compare levels. We should hopefully be able to reuse this information?
 
   // The number of ` we are currently matching, or 0 when not inside.
   uint8_t verbatim_tick_count;
