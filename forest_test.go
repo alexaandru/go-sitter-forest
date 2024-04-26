@@ -15,6 +15,7 @@ import (
 )
 
 const (
+	langsCount = 276
 	bindingTpl = `%s
 
 package %s
@@ -144,7 +145,7 @@ func TestAllParsers(t *testing.T) {
 		})
 	}
 
-	if exp, x := 275, len(SupportedLanguages()); x != exp {
+	if exp, x := langsCount, len(SupportedLanguages()); x != exp {
 		t.Fatalf("Expected supported langs to be %d got %d", exp, x)
 	}
 }

@@ -131,6 +131,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
 	"github.com/alexaandru/go-sitter-forest/kotlin"
+	"github.com/alexaandru/go-sitter-forest/koto"
 	"github.com/alexaandru/go-sitter-forest/kusto"
 	"github.com/alexaandru/go-sitter-forest/lalrpop"
 	"github.com/alexaandru/go-sitter-forest/latex"
@@ -412,6 +413,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"kconfig":            kconfig.GetLanguage,
 	"kdl":                kdl.GetLanguage,
 	"kotlin":             kotlin.GetLanguage,
+	"koto":               koto.GetLanguage,
 	"kusto":              kusto.GetLanguage,
 	"lalrpop":            lalrpop.GetLanguage,
 	"latex":              latex.GetLanguage,

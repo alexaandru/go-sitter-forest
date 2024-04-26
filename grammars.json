@@ -469,9 +469,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "50f243ad1c2637a64651c599968cb2db50dd31c79dbe7db1a84c3816b981391d",
+    "grammarSha": "23e3335b54c491d1a7f8db87634ec935ae7f573fb6a1afb9035a91c3b45d3d50",
     "reference": "main",
-    "revision": "513598b175928b6989e02bfc7ff73332955dcbf9"
+    "revision": "41e7d7fb61dc072cdddcf68af9919ab0a9c6d10e"
   },
   {
     "language": "ebnf",
@@ -1403,7 +1403,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "c930b5f4a1fceec146b9074b8eb54bedcc266e56"
+    "revision": "f92e2e11a34a3b9e64252164ffdf5fc857628ad9"
   },
   {
     "language": "muttrc",
@@ -2000,9 +2000,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "5d561bbd01fdd4a91af98a0e1e2b04bb7743c0fd6dd0e6668c19412f1fef4fad",
+    "grammarSha": "c36a7086b5e6649f637f774c492eacf8441ac7274867960c392bb0509a22aea9",
     "reference": "master",
-    "revision": "b77c0d8ac28a7c143224e6ed9b4f9e4bd044ff5b"
+    "revision": "04352146022062c101b8ddd853adf17eadd8cf56"
   },
   {
     "language": "scala",
@@ -2481,9 +2481,9 @@
       "jtckdint.h"
     ],
     "maintainedBy": "@tapegram",
-    "grammarSha": "a84e9b729e3c52ef80dafd2e3cbd84816c605445a12450cb04771ce919ac261e",
+    "grammarSha": "f24f6e98daf9fefb100c9ede63f7529688821179eae538b800ec71cf2bc9bce8",
     "reference": "master",
-    "revision": "5d1af86e954be775fc338396d27cd5858d0286be"
+    "revision": "59d36a09282be7e4d3374854126590f3dcebee6e"
   },
   {
     "language": "usd",
@@ -2613,15 +2613,15 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "b60d52d35b5ac78269dc872ae46246c1ebd3fe8f"
+    "revision": "a4ae09f17daa6491c945bace0e153a018e5e3717"
   },
   {
     "language": "wit",
     "url": "https://github.com/liamwh/tree-sitter-wit",
     "maintainedBy": "@liamwh",
-    "grammarSha": "7dad4431dcc39c7db4ee865621a9fd5a84a0255f1973652c65ee54e084b9d5bb",
+    "grammarSha": "0ae784068ec908adc16d891b6a79dc66a31371bd05c141d311c299f4275b5cbf",
     "reference": "main",
-    "revision": "ed13e0a3ee77833900a095d57d2685a1f7f91237"
+    "revision": "16e263143e230b79a00f6cc353f6fd860c4e5de5"
   },
   {
     "language": "xcompose",

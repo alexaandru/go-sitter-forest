@@ -16,7 +16,7 @@ const (
     func doSomething() -> bool;
 }
 `
-	expected = "(source_file (interface name: (identifier) (type_definition type_name: (identifier) type: (type)) (function_declaration function_name: (identifier) return_type: (type))))"
+	expected = "(source_file (interface_item name: (id) (ERROR (UNEXPECTED 'x')) body: (interface_body interface_items: (interface_items typedef: (typedef_item (type_item alias: (id) type: (ty)))) (ERROR (id) (UNEXPECTED 'd')))))"
 )
 
 func TestGrammar(t *testing.T) {
