@@ -44,4 +44,12 @@ auto_tag_forest:
 		export TAG_NEXT="$${TAG_BASE}.$$[$${PATCH_NO} + 1]"; \
 		git tag $$TAG_NEXT && git push --tag
 
+updates-status:
+	@make -s list_all_parsers|while read x; do \
+		export LANG=$$(basename $$x); \
+		export TAG_COUNT=$$(git tag -l --sort=committerdate "$$LANG/*"| wc -l); \
+		export SIZE=$$(du -sb $$LANG|cut -f1); \
+		echo "parsers/$$LANG,$$SIZE,$${TAG_COUNT}"; \
+	done | treemap > updates.svg && xdg-open updates.svg
+
 .PHONY: clean

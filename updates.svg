@@ -1,0 +1,1783 @@
+
+<svg 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 1028.000000 640.000000" 
+	style="background: white none repeat scroll 0% 0%;"
+>
+
+<g>
+	<rect x="36.000000" y="36.000000" width="956.000000" height="568.000000" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(44.000000,51.600000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">parsers</text>
+		
+</g>
+
+
+<g>
+	<rect x="895.229744" y="374.231866" width="24.607795" height="23.110221" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="446.173337" y="442.825065" width="77.214115" height="75.310910" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(454.173337,458.425065) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">agda</text>
+		
+</g>
+
+
+<g>
+	<rect x="879.286210" y="474.137271" width="8.720343" height="8.789409" style="fill: rgb(203, 76, 64);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="826.419323" y="374.231866" width="27.152708" height="23.110221" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="890.087926" y="57.600000" width="93.912074" height="88.220624" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(898.087926,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">arduino</text>
+		
+</g>
+
+
+<g>
+	<rect x="958.339890" y="551.938461" width="0.903551" height="0.240489" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="531.043245" width="9.810118" height="10.646847" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="753.314531" y="411.534384" width="29.079352" height="26.953030" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="757.345113" y="221.620344" width="59.246289" height="59.146669" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(765.345113,237.220344) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">bash</text>
+		
+</g>
+
+
+<g>
+	<rect x="879.286210" y="520.381047" width="7.547623" height="6.469263" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="820.366572" y="559.803389" width="14.900822" height="14.108579" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="795.668094" y="335.749118" width="33.128438" height="30.482748" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(803.668094,351.349118) scale(0.254887)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">bitbake</text>
+		
+</g>
+
+
+<g>
+	<rect x="931.322545" y="569.973428" width="1.126401" height="0.850355" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="711.808661" y="481.187822" width="33.505870" height="34.088157" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,496.787822) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">c</text>
+		
+</g>
+
+
+<g>
+	<rect x="960.413325" y="374.231866" width="23.586675" height="23.110221" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="894.833833" y="563.717248" width="4.598275" height="5.640154" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="956.981162" y="519.947996" width="3.996643" height="3.168250" style="fill: rgb(166, 18, 42);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="903.174401" y="453.912908" width="10.308665" height="12.224363" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="490.926680" width="9.165185" height="6.820035" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="613.339651" y="554.531076" width="44.629237" height="41.468924" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,570.131076) scale(0.298221)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">commonlisp</text>
+		
+</g>
+
+
+<g>
+	<rect x="920.207458" y="531.116245" width="2.637050" height="3.899595" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="446.173337" y="153.820624" width="77.214115" height="103.245292" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(454.173337,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">cpp</text>
+		
+</g>
+
+
+<g>
+	<rect x="843.267394" y="512.103941" width="9.810118" height="10.939303" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="44.000000" y="490.362024" width="161.044139" height="105.637976" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(52.000000,505.962024) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">c_sharp</text>
+		
+</g>
+
+
+<g>
+	<rect x="894.833833" y="549.343023" width="4.598275" height="6.374225" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="562.337499" y="57.600000" width="103.578371" height="88.220624" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(570.337499,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">cuda</text>
+		
+</g>
+
+
+<g>
+	<rect x="946.314492" y="405.342087" width="15.148225" height="19.669467" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="446.173337" y="265.065916" width="77.214115" height="83.196562" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(454.173337,280.665916) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">d</text>
+		
+</g>
+
+
+<g>
+	<rect x="613.339651" y="503.900577" width="44.629237" height="42.630499" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,519.500577) scale(0.745553)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">dart</text>
+		
+</g>
+
+
+<g>
+	<rect x="887.309153" y="433.011554" width="13.591005" height="12.901353" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="790.393883" y="498.128894" width="21.972690" height="20.184374" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="753.314531" y="335.749118" width="34.353563" height="30.482748" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(761.314531,351.349118) scale(0.477957)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">djot</text>
+		
+</g>
+
+
+<g>
+	<rect x="980.588914" y="519.947996" width="3.411086" height="3.168250" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="940.448947" y="551.938461" width="0.947253" height="0.240489" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="962.083909" y="543.015840" width="2.084193" height="0.922621" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="972.168102" y="543.015840" width="1.930557" height="0.922621" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="790.393883" y="374.231866" width="28.025440" height="23.110221" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="531.387452" y="463.394812" width="73.952199" height="62.532072" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(539.387452,478.994812) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">elixir</text>
+		
+</g>
+
+
+<g>
+	<rect x="820.366572" y="535.458318" width="14.900822" height="16.345072" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="961.168019" y="474.137271" width="7.452523" height="8.789409" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="969.462717" y="405.342087" width="14.537283" height="19.669467" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="453.912908" width="12.634623" height="12.224363" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="820.366572" y="433.011554" width="14.900822" height="19.165051" style="fill: rgb(168, 208, 228);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="930.844508" y="531.116245" width="2.431206" height="3.899595" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="945.500082" y="490.926680" width="7.744085" height="6.820035" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="576.986601" width="7.547623" height="5.681533" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="907.432108" y="519.947996" width="4.775349" height="5.044820" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="907.432108" y="569.442045" width="4.775349" height="3.637699" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="613.339651" y="451.946076" width="44.629237" height="43.954500" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,467.546076) scale(0.426030)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">fortran</text>
+		
+</g>
+
+
+<g>
+	<rect x="843.267394" y="568.263708" width="9.810118" height="10.027694" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="896.451395" y="490.926680" width="8.940929" height="6.820035" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="932.602187" y="519.947996" width="4.350558" height="3.168250" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="872.657657" y="405.342087" width="16.769907" height="19.669467" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="855.856582" y="288.767013" width="38.474724" height="38.982106" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(863.856582,304.367013) scale(0.292640)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">gdshader</text>
+		
+</g>
+
+
+<g>
+	<rect x="753.314531" y="573.704200" width="29.079352" height="22.295800" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="790.393883" y="579.081296" width="21.972690" height="16.918704" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="931.322545" y="561.105023" width="1.126401" height="0.868405" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="613.339651" y="288.767013" width="44.629237" height="49.019527" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,304.367013) scale(0.745553)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">glsl</text>
+		
+</g>
+
+
+<g>
+	<rect x="931.322545" y="543.015840" width="2.437572" height="0.922621" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="330.781576" y="174.935043" width="107.391761" height="107.395207" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(338.781576,190.535043) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">gnuplot</text>
+		
+</g>
+
+
+<g>
+	<rect x="846.722757" y="405.342087" width="17.934899" height="19.669467" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="939.352113" y="453.912908" width="9.844157" height="12.224363" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="493.153249" width="9.810118" height="10.950692" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="944.952745" y="519.947996" width="4.028417" height="3.168250" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="665.968888" y="398.198822" width="37.839773" height="45.667521" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(673.968888,413.798822) scale(0.379163)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">groovy</text>
+		
+</g>
+
+
+<g>
+	<rect x="613.339651" y="221.620344" width="64.259636" height="59.146669" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,237.220344) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">hack</text>
+		
+</g>
+
+
+<g>
+	<rect x="883.757184" y="453.912908" width="11.417217" height="12.224363" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="446.173337" y="57.600000" width="108.164162" height="88.220624" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(454.173337,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">haskell</text>
+		
+</g>
+
+
+<g>
+	<rect x="861.077511" y="556.869231" width="10.208698" height="7.978369" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="951.132897" y="433.011554" width="12.749640" height="12.901353" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="921.483065" y="453.912908" width="9.869047" height="12.224363" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="330.781576" y="404.816455" width="107.391761" height="93.145683" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(338.781576,420.416455) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">hlsl</text>
+		
+</g>
+
+
+<g>
+	<rect x="972.119537" y="531.116245" width="1.942275" height="3.899595" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="685.599287" y="221.620344" width="63.745826" height="59.146669" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(693.599287,237.220344) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">hoon</text>
+		
+</g>
+
+
+<g>
+	<rect x="907.432108" y="557.392964" width="4.775349" height="4.049081" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="920.207458" y="574.642264" width="3.115088" height="2.060574" style="fill: rgb(168, 208, 228);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="474.137271" width="9.810118" height="11.015978" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="772.366121" y="153.820624" width="65.722762" height="59.799719" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(780.366121,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">ispc</text>
+		
+</g>
+
+
+<g>
+	<rect x="753.314531" y="480.031938" width="29.079352" height="23.802149" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="711.808661" y="434.901077" width="33.505870" height="38.286745" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,450.501077) scale(0.182353)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">javascript</text>
+		
+</g>
+
+
+<g>
+	<rect x="861.077511" y="540.661470" width="10.208698" height="8.207761" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="909.232178" y="505.746715" width="6.051530" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="44.000000" y="235.463531" width="161.044139" height="126.563857" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(52.000000,251.063531) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">julia</text>
+		
+</g>
+
+
+<g>
+	<rect x="920.207458" y="564.280003" width="3.115088" height="2.362261" style="fill: rgb(103, 0, 31);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="920.207458" y="553.651607" width="3.115088" height="2.628396" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="923.283707" y="505.746715" width="6.041226" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="673.915870" y="57.600000" width="100.429569" height="88.220624" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(681.915870,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">kotlin</text>
+		
+</g>
+
+
+<g>
+	<rect x="942.519502" y="221.620344" width="41.480498" height="59.146669" style="fill: rgb(103, 0, 31);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(950.519502,237.220344) scale(0.663555)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">koto</text>
+		
+</g>
+
+
+<g>
+	<rect x="968.977805" y="519.947996" width="3.611109" height="3.168250" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="534.850310" width="7.547623" height="6.422543" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="330.781576" y="57.600000" width="107.391761" height="109.335043" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(338.781576,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">latex</text>
+		
+</g>
+
+
+<g>
+	<rect x="894.833833" y="519.947996" width="4.598275" height="6.916059" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="865.657026" y="433.011554" width="13.652127" height="12.901353" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="929.505667" y="490.926680" width="7.994415" height="6.820035" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="957.196270" y="453.912908" width="9.771957" height="12.224363" style="fill: rgb(103, 0, 31);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="711.808661" y="523.275979" width="33.505870" height="33.012040" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,538.875979) scale(0.182353)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">liquidsoap</text>
+		
+</g>
+
+
+<g>
+	<rect x="665.968888" y="343.549709" width="37.839773" height="46.649113" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(673.968888,359.149709) scale(0.568744)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">llvm</text>
+		
+</g>
+
+
+<g>
+	<rect x="907.432108" y="545.300845" width="4.775349" height="4.092119" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="912.371151" y="474.137271" width="8.344323" height="8.789409" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="861.077511" y="588.471223" width="10.208698" height="7.528777" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="613.339651" y="345.786540" width="44.629237" height="45.930455" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,361.386540) scale(0.745553)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">m68k</text>
+		
+</g>
+
+
+<g>
+	<rect x="908.900158" y="433.011554" width="13.441429" height="12.901353" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="790.393883" y="437.414286" width="21.972690" height="23.672543" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="927.837539" y="374.231866" width="24.575786" height="23.110221" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="820.366572" y="485.707397" width="14.900822" height="17.198587" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="920.207458" y="519.947996" width="4.394729" height="3.168250" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="971.882537" y="433.011554" width="12.117463" height="12.901353" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="974.968227" y="453.912908" width="9.031773" height="12.224363" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="697.125726" y="153.820624" width="67.240395" height="59.799719" style="fill: rgb(166, 18, 42);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(705.125726,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">mlir</text>
+		
+</g>
+
+
+<g>
+	<rect x="861.077511" y="572.847601" width="10.208698" height="7.623623" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="760.172567" y="288.767013" width="40.039889" height="38.982106" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(768.172567,304.367013) scale(0.626039)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">nasm</text>
+		
+</g>
+
+
+<g>
+	<rect x="820.366572" y="581.911968" width="14.900822" height="14.088032" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="44.000000" y="57.600000" width="161.044139" height="169.863531" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(52.000000,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">nim</text>
+		
+</g>
+
+
+<g>
+	<rect x="982.098658" y="543.015840" width="1.901342" height="0.922621" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="928.715474" y="474.137271" width="8.325692" height="8.789409" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="330.781576" y="505.962138" width="107.391761" height="90.037862" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(338.781576,521.562138) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">norg</text>
+		
+</g>
+
+
+<g>
+	<rect x="665.968888" y="451.866343" width="37.839773" height="43.429534" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(673.968888,467.466343) scale(0.758325)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">nqc</text>
+		
+</g>
+
+
+<g>
+	<rect x="213.044139" y="57.600000" width="109.737437" height="153.553014" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(221.044139,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">objc</text>
+		
+</g>
+
+
+<g>
+	<rect x="213.044139" y="359.382373" width="109.737437" height="117.652583" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(221.044139,374.982373) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">ocaml</text>
+		
+</g>
+
+
+<g>
+	<rect x="330.781576" y="290.330251" width="107.391761" height="106.486204" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(338.781576,305.930251) scale(0.634665)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">ocaml_interface</text>
+		
+</g>
+
+
+<g>
+	<rect x="531.387452" y="388.800853" width="73.952199" height="66.593960" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(539.387452,404.400853) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">odin</text>
+		
+</g>
+
+
+<g>
+	<rect x="753.314531" y="511.834088" width="29.079352" height="22.971938" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="918.418525" y="335.749118" width="29.560942" height="30.482748" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(926.418525,351.349118) scale(0.235433)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">pascal</text>
+		
+</g>
+
+
+<g>
+	<rect x="531.387452" y="234.651704" width="73.952199" height="70.763904" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(539.387452,250.251704) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">perl</text>
+		
+</g>
+
+
+<g>
+	<rect x="808.212456" y="288.767013" width="39.644127" height="38.982106" style="fill: rgb(220, 231, 243);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(816.212456,304.367013) scale(0.820977)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">php</text>
+		
+</g>
+
+
+<g>
+	<rect x="820.366572" y="510.905984" width="14.900822" height="16.552333" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="902.331306" y="288.767013" width="36.965676" height="38.982106" style="fill: rgb(220, 231, 243);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(910.331306,304.367013) scale(0.272991)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">php_only</text>
+		
+</g>
+
+
+<g>
+	<rect x="975.666642" y="551.938461" width="0.327291" height="0.240489" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="907.432108" y="532.992816" width="4.775349" height="4.308029" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="711.808661" y="335.749118" width="33.505870" height="41.841161" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,351.349118) scale(0.455882)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">pony</text>
+		
+</g>
+
+
+<g>
+	<rect x="920.207458" y="584.702837" width="3.115088" height="2.016901" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="931.322545" y="595.636026" width="1.126401" height="0.363974" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="951.662629" y="531.116245" width="2.367660" height="3.899595" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="586.291402" width="9.810118" height="9.708598" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="433.011554" width="14.389632" height="12.901353" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="861.077511" y="524.417354" width="10.208698" height="8.244116" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="824.591402" y="221.620344" width="53.699755" height="59.146669" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(832.591402,237.220344) scale(0.392706)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">purescript</text>
+		
+</g>
+
+
+<g>
+	<rect x="877.792202" y="335.749118" width="32.626322" height="30.482748" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(885.792202,351.349118) scale(0.288651)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">python</text>
+		
+</g>
+
+
+<g>
+	<rect x="861.572031" y="374.231866" width="25.657713" height="23.110221" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="531.387452" y="153.820624" width="73.952199" height="72.831080" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(539.387452,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">qmljs</text>
+		
+</g>
+
+
+<g>
+	<rect x="931.322545" y="587.234417" width="1.126401" height="0.401609" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="753.314531" y="446.487414" width="29.079352" height="25.544524" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="913.392324" y="490.926680" width="8.113343" height="6.820035" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="941.275714" y="531.116245" width="2.386915" height="3.899595" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="976.641432" y="490.926680" width="7.358568" height="6.820035" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="951.158785" y="505.746715" width="5.744820" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="894.833833" y="505.746715" width="6.398345" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="861.077511" y="474.137271" width="10.208698" height="9.119675" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="941.760118" y="543.015840" width="2.189858" height="0.922621" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="945.041166" y="474.137271" width="8.126853" height="8.789409" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="937.324933" y="505.746715" width="5.833852" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="665.968888" y="503.295876" width="37.839773" height="42.810731" style="fill: rgb(103, 0, 31);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(673.968888,518.895876) scale(0.758325)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">roc</text>
+		
+</g>
+
+
+<g>
+	<rect x="951.949976" y="543.015840" width="2.133932" height="0.922621" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="446.173337" y="526.135976" width="77.214115" height="69.864024" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(454.173337,541.735976) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">ruby</text>
+		
+</g>
+
+
+<g>
+	<rect x="613.339651" y="399.716995" width="44.629237" height="44.229082" style="fill: rgb(220, 231, 243);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,415.316995) scale(0.745553)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">rust</text>
+		
+</g>
+
+
+<g>
+	<rect x="782.345439" y="57.600000" width="99.742487" height="88.220624" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(790.345439,73.200000) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">scala</text>
+		
+</g>
+
+
+<g>
+	<rect x="907.432108" y="592.630166" width="4.775349" height="3.369834" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="976.620541" y="474.137271" width="7.379459" height="8.789409" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="213.044139" y="485.034956" width="109.737437" height="110.965044" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(221.044139,500.634956) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">slang</text>
+		
+</g>
+
+
+<g>
+	<rect x="790.393883" y="554.137042" width="21.972690" height="16.944254" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="820.366572" y="405.342087" width="18.356185" height="19.669467" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="907.432108" y="581.079744" width="4.775349" height="3.550422" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="947.296982" y="288.767013" width="36.703018" height="38.982106" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(955.296982,304.367013) scale(0.239618)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">snakemake</text>
+		
+</g>
+
+
+<g>
+	<rect x="790.393883" y="405.342087" width="21.972690" height="24.072199" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="894.833833" y="534.864055" width="4.598275" height="6.478968" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="549.272853" width="7.547623" height="5.910427" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="836.796531" y="335.749118" width="32.995671" height="30.482748" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(844.796531,351.349118) scale(0.177038)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">sourcepawn</text>
+		
+</g>
+
+
+<g>
+	<rect x="790.393883" y="469.086828" width="21.972690" height="21.042066" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="531.387452" y="313.415608" width="73.952199" height="67.385244" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(539.387452,329.015608) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">sql</text>
+		
+</g>
+
+
+<g>
+	<rect x="665.968888" y="288.767013" width="37.839773" height="46.782696" style="fill: rgb(166, 18, 42);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(673.968888,304.367013) scale(0.379163)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">sqlite</text>
+		
+</g>
+
+
+<g>
+	<rect x="955.979467" y="335.749118" width="28.020533" height="30.482748" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(963.979467,351.349118) scale(0.156517)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">squirrel</text>
+		
+</g>
+
+
+<g>
+	<rect x="863.902017" y="453.912908" width="11.855166" height="12.224363" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="753.314531" y="542.806026" width="29.079352" height="22.898174" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="964.903605" y="505.746715" width="5.594179" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="930.341588" y="433.011554" width="12.791310" height="12.901353" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="920.207458" y="543.015840" width="3.115088" height="2.635766" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="446.173337" y="356.262478" width="77.214115" height="78.562588" style="fill: rgb(203, 76, 64);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(454.173337,371.862478) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">swift</text>
+		
+</g>
+
+
+<g>
+	<rect x="897.427563" y="405.342087" width="16.628813" height="19.669467" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="753.314531" y="374.231866" width="29.079352" height="29.302517" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="563.183280" width="7.547623" height="5.803321" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="896.006553" y="474.137271" width="8.364598" height="8.789409" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="861.077511" y="491.256945" width="10.208698" height="8.865837" style="fill: rgb(166, 18, 42);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="790.393883" y="526.313268" width="21.972690" height="19.823774" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="843.267394" y="549.690092" width="9.810118" height="10.573617" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="982.061812" y="531.116245" width="1.938188" height="3.899595" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="213.044139" y="219.153014" width="109.737437" height="132.229359" style="fill: rgb(107, 172, 209);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(221.044139,234.753014) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">tlaplus</text>
+		
+</g>
+
+
+<g>
+	<rect x="919.349658" y="153.820624" width="64.650342" height="59.799719" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(927.349658,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">tmux</text>
+		
+</g>
+
+
+<g>
+	<rect x="613.339651" y="153.820624" width="75.786075" height="59.799719" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(621.339651,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">tsx</text>
+		
+</g>
+
+
+<g>
+	<rect x="861.077511" y="508.122783" width="10.208698" height="8.294571" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="531.387452" y="533.926885" width="73.952199" height="62.073115" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(539.387452,549.526885) scale(0.603669)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">typescript</text>
+		
+</g>
+
+
+<g>
+	<rect x="983.993934" y="551.938461" width="0.006066" height="0.240489" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="665.968888" y="554.106607" width="37.839773" height="41.893393" style="fill: rgb(220, 231, 243);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(673.968888,569.706607) scale(0.454995)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">typst</text>
+		
+</g>
+
+
+<g>
+	<rect x="931.322545" y="551.938461" width="1.126401" height="1.166561" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="886.291157" y="221.620344" width="48.228345" height="59.146669" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(894.291157,237.220344) scale(0.559520)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">unison</text>
+		
+</g>
+
+
+<g>
+	<rect x="894.833833" y="590.729751" width="4.598275" height="5.270249" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="894.833833" y="577.357402" width="4.598275" height="5.372349" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="846.088883" y="153.820624" width="65.260775" height="59.799719" style="fill: rgb(5, 48, 97);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(854.088883,169.420624) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(255, 255, 255); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">v</text>
+		
+</g>
+
+
+<g>
+	<rect x="711.808661" y="564.288019" width="33.505870" height="31.711981" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,579.888019) scale(0.455882)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">vala</text>
+		
+</g>
+
+
+<g>
+	<rect x="44.000000" y="370.027389" width="161.044139" height="112.334635" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(52.000000,385.627389) scale(1.000000)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">verilog</text>
+		
+</g>
+
+
+<g>
+	<rect x="967.243441" y="551.938461" width="0.423202" height="0.240489" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="711.808661" y="385.590279" width="33.505870" height="41.310797" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,401.190279) scale(0.607843)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">vim</text>
+		
+</g>
+
+
+<g>
+	<rect x="961.244167" y="490.926680" width="7.397265" height="6.820035" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="949.396200" y="551.938461" width="0.943691" height="0.240489" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="978.497784" y="505.746715" width="5.502216" height="6.201281" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="505.746715" width="7.547623" height="6.634333" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="922.056377" y="405.342087" width="16.258116" height="19.669467" style="fill: rgb(220, 231, 243);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="920.207458" y="594.719738" width="3.115088" height="1.280262" style="fill: rgb(203, 76, 64);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="962.030288" y="531.116245" width="2.089249" height="3.899595" style="fill: rgb(248, 183, 152);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="820.366572" y="460.176605" width="14.900822" height="17.530792" style="fill: rgb(248, 247, 247);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="879.286210" y="590.668134" width="7.547623" height="5.331866" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="931.322545" y="578.823783" width="1.126401" height="0.410634" style="fill: rgb(255, 223, 210);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+</g>
+
+
+<g>
+	<rect x="711.808661" y="288.767013" width="40.363905" height="38.982106" style="fill: rgb(230, 131, 101);opacity:1;fill-opacity:1.00;stroke:rgb(128,128,128);stroke-width:1px;stroke-opacity:1.00;" />
+	
+<text 
+	data-notex="1" 
+	text-anchor="start"
+	transform="translate(719.808661,304.367013) scale(0.845969)"
+	style="font-family: Open Sans, verdana, arial, sans-serif !important; font-size: 12px; fill: rgb(0, 0, 0); fill-opacity: 1.00; white-space: pre;" 
+	data-math="N">zig</text>
+		
+</g>
+
+</svg>
