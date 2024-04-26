@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.14
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.15
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -208,7 +208,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/roc v1.5.10
 	github.com/alexaandru/go-sitter-forest/ron v1.5.11
 	github.com/alexaandru/go-sitter-forest/ruby v1.5.10
-	github.com/alexaandru/go-sitter-forest/rust v1.5.12
+	github.com/alexaandru/go-sitter-forest/rust v1.5.13
 	github.com/alexaandru/go-sitter-forest/scala v1.5.11
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.10
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.10
@@ -257,7 +257,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typst v1.5.13
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
-	github.com/alexaandru/go-sitter-forest/unison v1.5.13
+	github.com/alexaandru/go-sitter-forest/unison v1.5.14
 	github.com/alexaandru/go-sitter-forest/usd v1.5.10
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.10
 	github.com/alexaandru/go-sitter-forest/v v1.5.15
@@ -271,7 +271,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
 	github.com/alexaandru/go-sitter-forest/wing v1.5.15
-	github.com/alexaandru/go-sitter-forest/wit v1.5.11
+	github.com/alexaandru/go-sitter-forest/wit v1.5.12
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.12
