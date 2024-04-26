@@ -1183,6 +1183,17 @@
     "revision": "260afd9a92bac51b3a4546303103c3d40a430639"
   },
   {
+    "language": "koto",
+    "url": "https://github.com/koto-lang/tree-sitter-koto",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@irh",
+    "grammarSha": "65391014b55e39943803baf82af80d2ae2be001c2224f797e309c79793126322",
+    "reference": "main",
+    "revision": "85e689c17abab691e033080da726a792b3711df0"
+  },
+  {
     "language": "kusto",
     "url": "https://github.com/Willem-J-an/tree-sitter-kusto",
     "maintainedBy": "@Willem-J-an",
