@@ -335,7 +335,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
     "reference": "master",
-    "revision": "50a28f4600c559e3d19a1825e854dfe6dcac1d49"
+    "revision": "c794560823013fc4cc29944d862b7158d9585408"
   },
   {
     "language": "cue",
@@ -460,7 +460,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
     "reference": "master",
-    "revision": "96beba9f3e4156aaae64bb86997503b1ceb1283d"
+    "revision": "5910ee285378e07ff1e63a9f5d21898f62310aed"
   },
   {
     "language": "earthfile",
@@ -760,7 +760,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "e7817c982e0e921c5ee89a1e0283121bb5cc5e01"
+    "revision": "9f611774fb5b95993e31e03f137b4a689c63f827"
   },
   {
     "language": "gn",
@@ -953,7 +953,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "d200375a29b24764b78d7051df0024ed7c2f1ab0"
+    "revision": "de5d490e52aa7be2a877df7022f93dff05f03eb9"
   },
   {
     "language": "hlsplaylist",
@@ -1191,7 +1191,7 @@
     "maintainedBy": "@irh",
     "grammarSha": "65391014b55e39943803baf82af80d2ae2be001c2224f797e309c79793126322",
     "reference": "main",
-    "revision": "85e689c17abab691e033080da726a792b3711df0"
+    "revision": "919440e1376109bab4edac52594c17c02ae0be5a"
   },
   {
     "language": "kusto",
@@ -2052,7 +2052,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "b950ddf54c564fec0efead602268b6e0d3e5f26e"
+    "revision": "a9ca9d9a8c56d43cf5265779a482b4fd67d004ee"
   },
   {
     "language": "slint",
@@ -2601,7 +2601,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b3121fb63be59a217a5bc48ccc95d37f166184e800a72465a73c2a418a4ac92c",
     "reference": "master",
-    "revision": "f5980f534ee64256b1e64b0a42e2864d91154a5d"
+    "revision": "59d5fbd562c0e17c45312f49485098cce467f5ac"
   },
   {
     "language": "wing",
@@ -2613,7 +2613,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "a4ae09f17daa6491c945bace0e153a018e5e3717"
+    "revision": "0ef615f83f1d64f98f52d1b113852ae20b23cfa3"
   },
   {
     "language": "wit",
@@ -2642,7 +2642,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
     "reference": "master",
-    "revision": "96beba9f3e4156aaae64bb86997503b1ceb1283d"
+    "revision": "5910ee285378e07ff1e63a9f5d21898f62310aed"
   },
   {
     "language": "yaml",
