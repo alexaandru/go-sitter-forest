@@ -36,7 +36,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.10
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
-	github.com/alexaandru/go-sitter-forest/cuda v1.5.12
+	github.com/alexaandru/go-sitter-forest/cuda v1.5.13
 	github.com/alexaandru/go-sitter-forest/cue v1.5.10
 	github.com/alexaandru/go-sitter-forest/d v1.5.10
 	github.com/alexaandru/go-sitter-forest/dart v1.5.11
@@ -101,7 +101,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/heex v1.5.10
 	github.com/alexaandru/go-sitter-forest/helm v1.5.10
 	github.com/alexaandru/go-sitter-forest/hjson v1.5.10
-	github.com/alexaandru/go-sitter-forest/hlsl v1.5.11
+	github.com/alexaandru/go-sitter-forest/hlsl v1.5.12
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.5.10
 	github.com/alexaandru/go-sitter-forest/hocon v1.5.10
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.10
@@ -213,7 +213,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.10
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.10
 	github.com/alexaandru/go-sitter-forest/scss v1.5.10
-	github.com/alexaandru/go-sitter-forest/slang v1.5.11
+	github.com/alexaandru/go-sitter-forest/slang v1.5.12
 	github.com/alexaandru/go-sitter-forest/slint v1.5.11
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.10
