@@ -1,6 +1,6 @@
-# 277 Supported Parsers
+# 278 Supported Parsers
 
-2 pending, 7 skipped regeneration
+1 pending, 7 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -29,7 +29,7 @@
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️  (maintained by @ObserverOfTime)
 - [x] [clojure](https://github.com/sogaiu/tree-sitter-clojure) ✔️  (maintained by @NoahTheDuke)
 - [x] [cmake](https://github.com/uyha/tree-sitter-cmake) ✔️  (maintained by @uyha)
-- [ ] [comment](https://github.com/stsewd/tree-sitter-comment) (maintained by @stsewd)
+- [x] [comment](https://github.com/stsewd/tree-sitter-comment) ✔️  (maintained by @stsewd)
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️  (maintained by @theHamsta)
 - [x] [cooklang](https://github.com/addcninblue/tree-sitter-cooklang) ✔️  (maintained by @addcninblue)
 - [x] [corn](https://github.com/corn-config/tree-sitter-corn) ✔️  (maintained by @jakestanger)
@@ -210,7 +210,7 @@
 - [x] [robot](https://github.com/Hubro/tree-sitter-robot) ✔️  (maintained by @Hubro)
 - [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️  (maintained by @nat-418)
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️  (maintained by @amaanq)
-- [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd; ❌It's complicated, has multiple scanner.c files)
+- [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️  (maintained by @TravonteD)
 - [x] [rust](https://github.com/tree-sitter/tree-sitter-rust) ✔️  (maintained by @amaanq)
 - [x] [scala](https://github.com/tree-sitter/tree-sitter-scala) ✔️  (maintained by @stevanmilic)

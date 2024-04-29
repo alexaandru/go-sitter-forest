@@ -39,11 +39,17 @@ var (
 	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
 	grammars      = Grammars{}
 	replaceMap    = map[string]string{
-		`"../../common/scanner.h"`:     `"scanner.h"`,
-		`"../../../include/scanner.h"`: `"scanner.h"`,
-		`"tree_sitter/parser.h"`:       `"parser.h"`,
-		`"tree_sitter/array.h"`:        `"array.h"`,
-		`"tree_sitter/alloc.h"`:        `"alloc.h"`,
+		`"../../common/scanner.h"`:       `"scanner.h"`,
+		`"../../../include/scanner.h"`:   `"scanner.h"`,
+		`"tree_sitter/parser.h"`:         `"parser.h"`,
+		`"tree_sitter_comment/parser.c"`: `"_parser.c"`,
+		`"tree_sitter_comment/parser.h"`: `"_parser.h"`,
+		`"tree_sitter_comment/tokens.h"`: `"tokens.h"`,
+		`"tree_sitter_rst/scanner.c"`:    `"_scanner.c"`,
+		`"tree_sitter_rst/scanner.h"`:    `"scanner.h"`,
+		`"tree_sitter_rst/tokens.h"`:     `"tokens.h"`,
+		`"tree_sitter/array.h"`:          `"array.h"`,
+		`"tree_sitter/alloc.h"`:          `"alloc.h"`,
 	}
 
 	logFile *os.File
@@ -456,6 +462,8 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 	switch gr.Language {
 	case "unison":
 		err = combineFiles("maybe.c", "scanner.c", gr)
+	case "comment":
+		err = combineFiles("chars.c", "scanner.c", gr, "touch")
 	}
 
 	return
@@ -556,7 +564,7 @@ func putFile(b []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h":
+	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h", "_parser.c", "chars.c", "chars.h", "_scanner.c":
 		// These identifiers clash between many (org, beancount, etc.) parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
@@ -571,6 +579,17 @@ func putFile(b []byte, lang, toPath string) error {
 		reMap["void (*advance)(TSLexer *, bool)"] = fmt.Sprintf("void (*advance_%s)(TSLexer *, bool)", lang)
 		reMap[" skip("] = fmt.Sprintf(" skip_%s(", lang)
 		reMap["\nskip("] = fmt.Sprintf("\nskip_%s(", lang)
+		reMap["is_upper("] = fmt.Sprintf("is_upper_%s(", lang)
+		reMap["is_digit("] = fmt.Sprintf("is_digit_%s(", lang)
+		reMap["is_newline("] = fmt.Sprintf("is_newline_%s(", lang)
+		reMap["is_space("] = fmt.Sprintf("is_space_%s(", lang)
+		reMap["is_internal_char("] = fmt.Sprintf("is_internal_char_%s(", lang)
+	}
+
+	if slices.Contains([]string{"_scanner.c", "chars.c", "chars.h"}, filepath.Base(toPath)) {
+		reMap[`"parser.c"`] = `"_parser.c"`
+		reMap[`"parser.h"`] = `"_parser.h"`
+		reMap[`"scanner.c"`] = `"_scanner.c"`
 	}
 
 	for old, new := range reMap {
@@ -673,27 +692,44 @@ func updateParsersMd() error {
 	return nil
 }
 
-func combineFiles(from, into string, gr *grammar.Grammar, opts ...string) error {
+func combineFiles(from, into string, gr *grammar.Grammar, opts ...string) (err error) {
 	extra := ""
 	if len(opts) > 0 {
 		extra = opts[0]
 	}
 
+	touch := false
+	if extra == "touch" {
+		touch, extra = true, ""
+	}
+
 	f1 := path.Join(gr.Language, from)
 	f2 := path.Join(gr.Language, into)
 
-	f1b, err := os.ReadFile(f1)
-	if err != nil {
-		return err
+	var f1b, f2b []byte
+
+	if f1b, err = os.ReadFile(f1); err != nil {
+		return
 	}
 
-	f2b, err := os.ReadFile(f2)
-	if err != nil {
-		return err
+	if f2b, err = os.ReadFile(f2); err != nil {
+		return
 	}
 
 	if err = os.Remove(f1); err != nil {
-		return err
+		return
+	}
+
+	if touch {
+		var f *os.File
+
+		if f, err = os.Create(f1); err != nil {
+			return
+		}
+
+		if err = f.Close(); err != nil {
+			return
+		}
 	}
 
 	// combine both files into one

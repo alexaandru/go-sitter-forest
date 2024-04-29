@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os/exec"
 	"path"
+	"slices"
 	"strings"
 )
 
@@ -127,6 +128,12 @@ func (gr *Grammar) FilesMap() (out map[string]string, err error) {
 		switch {
 		case strings.Contains(pat, "/"):
 			k, v = pat, path.Base(pat)
+
+			if gr.Language == "comment" || gr.Language == "rst" {
+				if slices.Contains(parserFiles, v) || v == "scanner.c" {
+					v = "_" + v
+				}
+			}
 		case pat == "parser.h" || pat == "alloc.h" || pat == "array.h":
 			k, v = path.Join(src, "tree_sitter", pat), pat
 		default:

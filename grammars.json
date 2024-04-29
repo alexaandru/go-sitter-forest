@@ -245,12 +245,17 @@
     "language": "comment",
     "url": "https://github.com/stsewd/tree-sitter-comment",
     "files": [
-      "scanner.c"
+      "scanner.c",
+      "src/tree_sitter_comment/parser.c",
+      "src/tree_sitter_comment/parser.h",
+      "src/tree_sitter_comment/tokens.h",
+      "src/tree_sitter_comment/chars.c",
+      "src/tree_sitter_comment/chars.h"
     ],
     "maintainedBy": "@stsewd",
-    "pending": true,
+    "grammarSha": "322f2fb4c0b593afb6ef849ec2f0972daa9a3e57604b0274eee789e8b087d312",
     "reference": "master",
-    "revision": ""
+    "revision": "aefcc2813392eb6ffe509aa0fc8b4e9b57413ee1"
   },
   {
     "language": "commonlisp",
@@ -1981,14 +1986,21 @@
   {
     "language": "rst",
     "url": "https://github.com/stsewd/tree-sitter-rst",
-    "doc": "It's complicated, has multiple scanner.c files",
     "files": [
-      "scanner.c"
+      "scanner.c",
+      "src/tree_sitter_rst/parser.c",
+      "src/tree_sitter_rst/parser.h",
+      "src/tree_sitter_rst/scanner.c",
+      "src/tree_sitter_rst/scanner.h",
+      "src/tree_sitter_rst/tokens.h",
+      "src/tree_sitter_rst/chars.c",
+      "src/tree_sitter_rst/chars.h",
+      "src/tree_sitter_rst/punctuation_chars.h"
     ],
     "maintainedBy": "@stsewd",
     "pending": true,
     "reference": "master",
-    "revision": "3ba9eb9b5a47aadb1f2356a3cab0dd3d2bd00b4b"
+    "revision": ""
   },
   {
     "language": "ruby",
@@ -2497,9 +2509,9 @@
     "language": "usd",
     "url": "https://github.com/ColinKennedy/tree-sitter-usd",
     "maintainedBy": "@ColinKennedy",
-    "grammarSha": "78689e3a93068e55db981d43c3f1c11bd6bd840856f57c6d578b645efe4e4c82",
+    "grammarSha": "33db33c43f4ca3296c4fa25a54c7874572d51b4cf46c32915a4f291c66e311bb",
     "reference": "master",
-    "revision": "ab8c30bde2df0e58c4b3f01f220fb0125ecb57a7"
+    "revision": "4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216"
   },
   {
     "language": "uxntal",
