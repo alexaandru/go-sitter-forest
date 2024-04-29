@@ -18,7 +18,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.10
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.11
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
-	github.com/alexaandru/go-sitter-forest/blueprint v1.5.10
+	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
 	github.com/alexaandru/go-sitter-forest/c v1.5.11
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
@@ -39,7 +39,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.13
 	github.com/alexaandru/go-sitter-forest/cue v1.5.10
 	github.com/alexaandru/go-sitter-forest/d v1.5.10
-	github.com/alexaandru/go-sitter-forest/dart v1.5.11
+	github.com/alexaandru/go-sitter-forest/dart v1.5.12
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.10
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.11
@@ -68,7 +68,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/foam v1.5.10
 	github.com/alexaandru/go-sitter-forest/forth v1.5.10
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.10
-	github.com/alexaandru/go-sitter-forest/fsh v1.5.10
+	github.com/alexaandru/go-sitter-forest/fsh v1.5.11
 	github.com/alexaandru/go-sitter-forest/func v1.5.10
 	github.com/alexaandru/go-sitter-forest/fusion v1.5.10
 	github.com/alexaandru/go-sitter-forest/gdscript v1.5.10
@@ -129,7 +129,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.5.10
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.10
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.10
-	github.com/alexaandru/go-sitter-forest/latex v1.5.12
+	github.com/alexaandru/go-sitter-forest/latex v1.5.13
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
@@ -191,12 +191,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/python v1.5.10
 	github.com/alexaandru/go-sitter-forest/ql v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.10
-	github.com/alexaandru/go-sitter-forest/qmljs v1.5.10
+	github.com/alexaandru/go-sitter-forest/qmljs v1.5.11
 	github.com/alexaandru/go-sitter-forest/query v1.5.10
 	github.com/alexaandru/go-sitter-forest/r v1.5.10
 	github.com/alexaandru/go-sitter-forest/racket v1.5.11
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
-	github.com/alexaandru/go-sitter-forest/rbs v1.5.10
+	github.com/alexaandru/go-sitter-forest/rbs v1.5.11
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.10
 	github.com/alexaandru/go-sitter-forest/readline v1.5.10
 	github.com/alexaandru/go-sitter-forest/regex v1.5.10
@@ -216,7 +216,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slang v1.5.12
 	github.com/alexaandru/go-sitter-forest/slint v1.5.11
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
-	github.com/alexaandru/go-sitter-forest/smithy v1.5.10
+	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.13
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
