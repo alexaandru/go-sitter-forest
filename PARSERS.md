@@ -1,4 +1,4 @@
-# 276 Supported Parsers
+# 277 Supported Parsers
 
 2 pending, 7 skipped regeneration
 
@@ -112,6 +112,7 @@
 - [x] [http](https://github.com/rest-nvim/tree-sitter-http) ✔️  (maintained by @amaanq)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️  (maintained by @pfeiferj)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️  (maintained by @luckasRanarison)
+- [x] [idl](https://github.com/cathaysia/tree-sitter-idl) ✔️  (maintained by @cathaysa)
 - [x] [ini](https://github.com/justinmk/tree-sitter-ini) ✔️  (maintained by @theHamsta)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️  (maintained by @fab4100)
 - [x] [janet_simple](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️  (maintained by @sogaiu)
