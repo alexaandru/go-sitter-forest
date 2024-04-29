@@ -2,7 +2,7 @@
   "language": "blueprint",
   "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
   "maintainedBy": "@gabmus",
-  "grammarSha": "62ffa8feae3d815bce1b7506cae95a69aabdbe761d7cce0e765c89a0ab38b7a5",
+  "grammarSha": "ea981a296a7ed9883e687e8b83cee54989b51854cd07af90480637ea7b0e1dd5",
   "reference": "master",
-  "revision": "863cea9f83ad5637300478e0559262f1e791684b"
+  "revision": "60ba73739c6083c693d86a1a7cf039c07eb4ed59"
 }

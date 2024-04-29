@@ -5,7 +5,7 @@
     "scanner.c"
   ],
   "maintainedBy": "@akinsho",
-  "grammarSha": "4a6cc4d453ffdc1005518dd7558bbe4fa362a16d377660ed80a68fa8ef78be83",
+  "grammarSha": "4fd9ea14ec4fa3ce105c13677a05a002259585d9587f8900cd6a8e996c5fb241",
   "reference": "master",
-  "revision": "4e101058b4ec7ce4ba92496311a7dd10a4c9c66a"
+  "revision": "ac0bb849ccd1a923963af47573b5e396736ff582"
 }

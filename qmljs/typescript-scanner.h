@@ -1,6 +1,6 @@
 /*
 Source:
-0.20.5
+github:tree-sitter/tree-sitter-typescript#b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b
 
 The MIT License (MIT)
 
@@ -36,6 +36,7 @@ enum TokenType {
     HTML_COMMENT,
     LOGICAL_OR,
     ESCAPE_SEQUENCE,
+    REGEX_PATTERN,
     FUNCTION_SIGNATURE_AUTOMATIC_SEMICOLON,
     ERROR_RECOVERY,
 };
@@ -316,7 +317,8 @@ static inline bool external_scanner_scan(void *payload, TSLexer *lexer, const bo
         return scan_ternary_qmark(lexer);
     }
 
-    if (valid_symbols[HTML_COMMENT] && !valid_symbols[LOGICAL_OR] && !valid_symbols[ESCAPE_SEQUENCE]) {
+    if (valid_symbols[HTML_COMMENT] && !valid_symbols[LOGICAL_OR] && !valid_symbols[ESCAPE_SEQUENCE] &&
+        !valid_symbols[REGEX_PATTERN]) {
         return scan_closing_comment(lexer);
     }
 

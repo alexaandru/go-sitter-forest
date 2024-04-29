@@ -2,7 +2,7 @@
   "language": "smithy",
   "url": "https://github.com/indoorvivants/tree-sitter-smithy",
   "maintainedBy": "@amaanq, @keynmol",
-  "grammarSha": "12c1ad079dfb5766855747efdc1792c1bbb2d51d119115558a719bf80caeace5",
+  "grammarSha": "c2fcc45eb965b76e4832e12f6bbbd4d58d5e08291218d837213f6194ff6a4383",
   "reference": "main",
-  "revision": "8327eb84d55639ffbe08c9dc82da7fff72a1ad07"
+  "revision": "fa898ac0885d1da9a253695c3e0e91f5efc587cd"
 }

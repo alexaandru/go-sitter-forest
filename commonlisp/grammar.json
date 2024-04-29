@@ -2,7 +2,7 @@
   "language": "commonlisp",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
   "maintainedBy": "@theHamsta",
-  "grammarSha": "e61ab3af74a8952b292a88030a3b58c4779c4756d50fe8686debe81b628b6b1b",
+  "grammarSha": "67694aa144004e79088da09c29652bca050b6600097cb79be4e2f164bd5c6882",
   "reference": "master",
-  "revision": "83ae738bed7e914cee9090c3fe4c80a32ab45905"
+  "revision": "bf2a65b1c119898a1a17389e07f2a399c05cdc0c"
 }
