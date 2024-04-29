@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	langsCount = 277
+	langsCount = 278
 	bindingTpl = `%s
 
 package %s

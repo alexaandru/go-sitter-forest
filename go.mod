@@ -28,6 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.10
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.10
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.10
+	github.com/alexaandru/go-sitter-forest/comment v1.5.10
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.10
@@ -259,7 +260,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
 	github.com/alexaandru/go-sitter-forest/unison v1.5.14
-	github.com/alexaandru/go-sitter-forest/usd v1.5.10
+	github.com/alexaandru/go-sitter-forest/usd v1.5.11
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.10
 	github.com/alexaandru/go-sitter-forest/v v1.5.15
 	github.com/alexaandru/go-sitter-forest/vala v1.5.10

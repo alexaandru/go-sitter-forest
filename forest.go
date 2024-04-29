@@ -32,6 +32,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/chatito"
 	"github.com/alexaandru/go-sitter-forest/clojure"
 	"github.com/alexaandru/go-sitter-forest/cmake"
+	"github.com/alexaandru/go-sitter-forest/comment"
 	"github.com/alexaandru/go-sitter-forest/commonlisp"
 	"github.com/alexaandru/go-sitter-forest/cooklang"
 	"github.com/alexaandru/go-sitter-forest/corn"
@@ -316,6 +317,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"chatito":            chatito.GetLanguage,
 	"clojure":            clojure.GetLanguage,
 	"cmake":              cmake.GetLanguage,
+	"comment":            comment.GetLanguage,
 	"commonlisp":         commonlisp.GetLanguage,
 	"cooklang":           cooklang.GetLanguage,
 	"corn":               corn.GetLanguage,
