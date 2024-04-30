@@ -28,7 +28,7 @@
     "maintainedBy": "@dlvandenberg",
     "grammarSha": "b24e49c09549314853a7bb50ec5d6355d5e02d5203e8c60032a41cbbedce79d0",
     "reference": "main",
-    "revision": "b7a7167762e3863b3d6247c708b7f9bca1ca7bea"
+    "revision": "a9ec402bf8e0509f389dba64a6dba037ad199233"
   },
   {
     "language": "apex",
@@ -37,7 +37,7 @@
     "maintainedBy": "@aheber",
     "grammarSha": "cfd28d5b3d85b71a2a9492bca27cba277dcdfdf51ad012834e5671c8d466f8d3",
     "reference": "main",
-    "revision": "74368c27537a932539904394df8e6beae8990c7f"
+    "revision": "c99ad4b16d112fea91745e3f1b769754239fdaba"
   },
   {
     "language": "arduino",
@@ -474,9 +474,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "23e3335b54c491d1a7f8db87634ec935ae7f573fb6a1afb9035a91c3b45d3d50",
+    "grammarSha": "e43b0c20679e626b78498de45decc057b6b4e6c11f44628a0dd74ed07d295368",
     "reference": "main",
-    "revision": "41e7d7fb61dc072cdddcf68af9919ab0a9c6d10e"
+    "revision": "3ded1cba9eab14b07377b700b1132d259480abae"
   },
   {
     "language": "ebnf",
@@ -584,7 +584,7 @@
     "skip": true,
     "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
     "reference": "main",
-    "revision": "325a3315be968b3d8ecdc5c414159be3c8bab212"
+    "revision": "8ad17704b3c2469155947d4e8fcb618cf1328459"
   },
   {
     "language": "fidl",
@@ -2127,7 +2127,7 @@
     "maintainedBy": "@aheber",
     "grammarSha": "e4153b305dac0fc85acfb71f7e4666f111b267fc27df3b94a74b94af559ad1f6",
     "reference": "main",
-    "revision": "74368c27537a932539904394df8e6beae8990c7f"
+    "revision": "c99ad4b16d112fea91745e3f1b769754239fdaba"
   },
   {
     "language": "sosl",
@@ -2136,7 +2136,7 @@
     "maintainedBy": "@aheber",
     "grammarSha": "f314108f523cec98ab852aef5ea3e2cd4c019255a9e0d225c49880e1c00b8285",
     "reference": "main",
-    "revision": "74368c27537a932539904394df8e6beae8990c7f"
+    "revision": "c99ad4b16d112fea91745e3f1b769754239fdaba"
   },
   {
     "language": "sourcepawn",
@@ -2233,9 +2233,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@madskjeldgaard",
-    "grammarSha": "f28e3c6cc9a34944ea1a78e7b2c73c90ee37b7e5ae778f9d592c74ad44ad3884",
+    "grammarSha": "212831439aa2597789e12ae415ae867193a5c10ebfa9ed4705c0103f7acd8db9",
     "reference": "main",
-    "revision": "3b35bd0fded4423c8fb30e9585c7bacbcd0e8095"
+    "revision": "affa4389186b6939d89673e1e9d2b28364f5ca6f"
   },
   {
     "language": "surface",
@@ -2633,15 +2633,15 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "25512ad6c6539fda1d203a49fee0e28069181bf5"
+    "revision": "bb52687ed23bf4a61b6752426a53d2d7359af244"
   },
   {
     "language": "wit",
     "url": "https://github.com/liamwh/tree-sitter-wit",
     "maintainedBy": "@liamwh",
-    "grammarSha": "0ae784068ec908adc16d891b6a79dc66a31371bd05c141d311c299f4275b5cbf",
+    "grammarSha": "34d6ac5d95722efae4dd38bef11f9e321bb964161137658f290100587f5f1cf8",
     "reference": "main",
-    "revision": "16e263143e230b79a00f6cc353f6fd860c4e5de5"
+    "revision": "3d6124cfe88555ecee1ba97d6d76c70d13af927a"
   },
   {
     "language": "xcompose",
@@ -2675,7 +2675,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "d8ae6228a3d5fc5d99777b51041d3e3ac2cbba32f43a5be6ffcfad33aa9ce71a",
     "reference": "master",
-    "revision": "ee093118211be521742b9866a8ed8ce6d87c7a94"
+    "revision": "49db816e6a644ea5914daad801514d9f830e4c88"
   },
   {
     "language": "yang",
