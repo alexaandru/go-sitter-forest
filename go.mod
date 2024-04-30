@@ -5,7 +5,7 @@ go 1.22.2
 require (
 	github.com/alexaandru/go-sitter-forest/ada v1.5.10
 	github.com/alexaandru/go-sitter-forest/agda v1.5.10
-	github.com/alexaandru/go-sitter-forest/angular v1.5.11
+	github.com/alexaandru/go-sitter-forest/angular v1.5.12
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.12
 	github.com/alexaandru/go-sitter-forest/asm v1.5.12
@@ -50,7 +50,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.15
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.16
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -232,7 +232,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/starlark v1.5.10
 	github.com/alexaandru/go-sitter-forest/strace v1.5.10
 	github.com/alexaandru/go-sitter-forest/styled v1.5.10
-	github.com/alexaandru/go-sitter-forest/supercollider v1.5.10
+	github.com/alexaandru/go-sitter-forest/supercollider v1.5.11
 	github.com/alexaandru/go-sitter-forest/surface v1.5.10
 	github.com/alexaandru/go-sitter-forest/svelte v1.5.10
 	github.com/alexaandru/go-sitter-forest/swift v1.5.11
@@ -273,7 +273,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
 	github.com/alexaandru/go-sitter-forest/wing v1.5.15
-	github.com/alexaandru/go-sitter-forest/wit v1.5.12
+	github.com/alexaandru/go-sitter-forest/wit v1.5.13
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.12
