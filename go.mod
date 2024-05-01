@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.11
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
-	github.com/alexaandru/go-sitter-forest/djot v1.5.13
+	github.com/alexaandru/go-sitter-forest/djot v1.5.14
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
@@ -106,7 +106,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.5.10
 	github.com/alexaandru/go-sitter-forest/hocon v1.5.10
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.10
-	github.com/alexaandru/go-sitter-forest/html v1.5.10
+	github.com/alexaandru/go-sitter-forest/html v1.5.11
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
@@ -120,7 +120,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/json v1.5.10
-	github.com/alexaandru/go-sitter-forest/json5 v1.5.10
+	github.com/alexaandru/go-sitter-forest/json5 v1.5.11
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
 	github.com/alexaandru/go-sitter-forest/julia v1.5.13
@@ -276,7 +276,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wit v1.5.13
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.10
-	github.com/alexaandru/go-sitter-forest/yaml v1.5.12
+	github.com/alexaandru/go-sitter-forest/yaml v1.5.13
 	github.com/alexaandru/go-sitter-forest/yang v1.5.10
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.11
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.10
