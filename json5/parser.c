@@ -1852,13 +1852,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 6:
       if (lookahead == '*') ADVANCE(6);
       if (lookahead == '/') ADVANCE(34);
-      if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(7);
+      if (lookahead != 0) ADVANCE(7);
       END_STATE();
     case 7:
       if (lookahead == '*') ADVANCE(6);
-      if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(7);
+      if (lookahead != 0) ADVANCE(7);
       END_STATE();
     case 8:
       if (lookahead == '.') ADVANCE(66);
@@ -1962,9 +1960,6 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 34:
       ACCEPT_TOKEN(sym_comment);
-      if (lookahead == '*') ADVANCE(6);
-      if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(7);
       END_STATE();
     case 35:
       ACCEPT_TOKEN(sym_comment);

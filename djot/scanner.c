@@ -1202,7 +1202,7 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
   Block *top = peek_block(s);
 
   // Avoids consuming `#` inside code/verbatim contexts.
-  if (top && top->type == CODE_BLOCK || s->verbatim_tick_count > 0) {
+  if ((top && top->type == CODE_BLOCK) || s->verbatim_tick_count > 0) {
     return false;
   }
 

@@ -97,6 +97,6 @@ static int8_t adv_sch_stt(int8_t sch_stt, int32_t cur_chr, ResultSchema *rlt_sch
       *rlt_sch = RS_STR;
       return SCH_STT_FRZ;
   }
-  if (cur_chr != '\r' && cur_chr != '\n' && cur_chr != ' ' && cur_chr != 0) {*rlt_sch = RS_STR;}
+  if (cur_chr != '\r' && cur_chr != '\n' && cur_chr != ' ' && cur_chr != 0) *rlt_sch = RS_STR;
   return SCH_STT_FRZ;
 }

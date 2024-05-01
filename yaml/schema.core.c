@@ -15,18 +15,18 @@ static int8_t adv_sch_stt(int8_t sch_stt, int32_t cur_chr, ResultSchema *rlt_sch
     case SCH_STT_FRZ:
       break;
     case 0:
-      if (cur_chr == '+' ||
-          cur_chr == '-') {*rlt_sch = RS_STR; return 1;}
-      if (cur_chr == '.') {*rlt_sch = RS_STR; return 6;}
-      if (cur_chr == '0') {*rlt_sch = RS_INT; return 37;}
-      if (cur_chr == 'F') {*rlt_sch = RS_STR; return 2;}
-      if (cur_chr == 'N') {*rlt_sch = RS_STR; return 16;}
-      if (cur_chr == 'T') {*rlt_sch = RS_STR; return 13;}
-      if (cur_chr == 'f') {*rlt_sch = RS_STR; return 17;}
-      if (cur_chr == 'n') {*rlt_sch = RS_STR; return 29;}
-      if (cur_chr == 't') {*rlt_sch = RS_STR; return 26;}
-      if (cur_chr == '~') {*rlt_sch = RS_NULL; return 35;}
-      if (('1' <= cur_chr && cur_chr <= '9')) {*rlt_sch = RS_INT; return 38;}
+        if (cur_chr == '.') {*rlt_sch = RS_STR; return 6;}
+        if (cur_chr == '0') {*rlt_sch = RS_INT; return 37;}
+        if (cur_chr == 'F') {*rlt_sch = RS_STR; return 2;}
+        if (cur_chr == 'N') {*rlt_sch = RS_STR; return 16;}
+        if (cur_chr == 'T') {*rlt_sch = RS_STR; return 13;}
+        if (cur_chr == 'f') {*rlt_sch = RS_STR; return 17;}
+        if (cur_chr == 'n') {*rlt_sch = RS_STR; return 29;}
+        if (cur_chr == 't') {*rlt_sch = RS_STR; return 26;}
+        if (cur_chr == '~') {*rlt_sch = RS_NULL; return 35;}
+        if (cur_chr == '+') {*rlt_sch = RS_STR; return 1;}
+        if (cur_chr == '-') {*rlt_sch = RS_STR; return 1;}
+        if (('1' <= cur_chr && cur_chr <= '9')) {*rlt_sch = RS_INT; return 38;}
       break;
     case 1:
       if (cur_chr == '.') {*rlt_sch = RS_STR; return 7;}
@@ -195,6 +195,6 @@ static int8_t adv_sch_stt(int8_t sch_stt, int32_t cur_chr, ResultSchema *rlt_sch
       *rlt_sch = RS_STR;
       return SCH_STT_FRZ;
   }
-  if (cur_chr != '\r' && cur_chr != '\n' && cur_chr != ' ' && cur_chr != 0) {*rlt_sch = RS_STR;}
+  if (cur_chr != '\r' && cur_chr != '\n' && cur_chr != ' ' && cur_chr != 0) *rlt_sch = RS_STR;
   return SCH_STT_FRZ;
 }

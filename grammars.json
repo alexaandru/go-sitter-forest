@@ -28,7 +28,7 @@
     "maintainedBy": "@dlvandenberg",
     "grammarSha": "b24e49c09549314853a7bb50ec5d6355d5e02d5203e8c60032a41cbbedce79d0",
     "reference": "main",
-    "revision": "a9ec402bf8e0509f389dba64a6dba037ad199233"
+    "revision": "f12fc56469d778285fb35b5bdb943edcfe77c48a"
   },
   {
     "language": "apex",
@@ -301,7 +301,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "df637ed64e6aea7101e6ec7326f573af68ed21b96d0100e7b967b7af1ce9a817",
     "reference": "master",
-    "revision": "72fd00128f1c38319670cbf4bcedbba0dc849d96"
+    "revision": "2369fa991eba294e9238e28280ffcd58132f94bc"
   },
   {
     "language": "crystal",
@@ -422,7 +422,7 @@
     "maintainedBy": "@NoahTheDuke",
     "grammarSha": "8f914fc489179f2f9939fec92b30400d3e043ebb3efa5acd3133411dd1283a87",
     "reference": "master",
-    "revision": "bc94a2867f7a1040c416212207e7e28e79ef0339"
+    "revision": "0e9a836ec47612ade15645fb1680adb549894a6c"
   },
   {
     "language": "dockerfile",
@@ -997,7 +997,7 @@
     "maintainedBy": "@TravonteD",
     "grammarSha": "24a745bb29af676860649cfa0ea42fdde9f24afef5921065e5b2a66e9ea76dab",
     "reference": "master",
-    "revision": "bfa075d83c6b97cd48440b3829ab8d24a2319809"
+    "revision": "eee29ca0ce287b699d9d52118f9c1cd9094c48f9"
   },
   {
     "language": "htmldjango",
@@ -1116,9 +1116,9 @@
     "language": "json5",
     "url": "https://github.com/Joakker/tree-sitter-json5",
     "maintainedBy": "@Joakker",
-    "grammarSha": "16d997b5ffbbd2e81541f30400291f0352350c273f4f0c13d3d695d864acae4b",
+    "grammarSha": "3078cb21dd100399e6be0ccdca0ac55656cba1c8910a5877a0d1f563fd1df3ad",
     "reference": "master",
-    "revision": "c23f7a9b1ee7d45f516496b1e0e4be067264fa0d"
+    "revision": "ab0ba8229d639ec4f3fa5f674c9133477f4b77bd"
   },
   {
     "language": "jsonc",
@@ -1416,7 +1416,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "f92e2e11a34a3b9e64252164ffdf5fc857628ad9"
+    "revision": "d04201a28c9f93656634ca1c1d6ba775149522a0"
   },
   {
     "language": "muttrc",
@@ -1816,7 +1816,7 @@
     "maintainedBy": "@stsewd, @theHamsta",
     "grammarSha": "9a77a8055fd5cf26327a95b26fd4d9e4556284bbc579013b054ac6a468e0033b",
     "reference": "master",
-    "revision": "b466ffb4d7ce0a833754429ad8d3a02e950ed74c"
+    "revision": "71778c2a472ed00a64abf4219544edbf8e4b86d7"
   },
   {
     "language": "ql",
@@ -2118,7 +2118,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "a782e263e5e1743aa00d7fb23c88954d6a8489e39809160be37bfdee433d8161",
     "reference": "master",
-    "revision": "1653da09ccd183f4312fba819056a13af22a65f6"
+    "revision": "fa5c61c7c5a2d9e8e99439e2cec90225f4acb86b"
   },
   {
     "language": "soql",
@@ -2633,7 +2633,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "bb52687ed23bf4a61b6752426a53d2d7359af244"
+    "revision": "2546cb98e73c6f1896f6afd49f096b75f64f1eea"
   },
   {
     "language": "wit",
@@ -2675,7 +2675,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "d8ae6228a3d5fc5d99777b51041d3e3ac2cbba32f43a5be6ffcfad33aa9ce71a",
     "reference": "master",
-    "revision": "49db816e6a644ea5914daad801514d9f830e4c88"
+    "revision": "08ab1fbc18beac06b2938495a2c6ab17b5a6abc5"
   },
   {
     "language": "yang",

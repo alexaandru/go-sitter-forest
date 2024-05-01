@@ -2,7 +2,7 @@
   "language": "json5",
   "url": "https://github.com/Joakker/tree-sitter-json5",
   "maintainedBy": "@Joakker",
-  "grammarSha": "16d997b5ffbbd2e81541f30400291f0352350c273f4f0c13d3d695d864acae4b",
+  "grammarSha": "3078cb21dd100399e6be0ccdca0ac55656cba1c8910a5877a0d1f563fd1df3ad",
   "reference": "master",
-  "revision": "c23f7a9b1ee7d45f516496b1e0e4be067264fa0d"
+  "revision": "ab0ba8229d639ec4f3fa5f674c9133477f4b77bd"
 }
