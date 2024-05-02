@@ -175,7 +175,7 @@
     "maintainedBy": "@Luxed",
     "skip": true,
     "reference": "master",
-    "revision": "9de565257ada70ac441c640e3b5d6850e2df5ab8"
+    "revision": "e1384e2f132936019b43aaaae154cd780fb497ce"
   },
   {
     "language": "cairo",
@@ -1158,9 +1158,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Hubro",
-    "grammarSha": "af20eb22568039b0a3f1b0d51b063129ff0972464828fbde1c8cbc7b8c9e656a",
+    "grammarSha": "415ec854b0cd15469811e3cdd8d62ef387acccf781f35fa6fc00becc669a8653",
     "reference": "main",
-    "revision": "6c2f018ab1d90946c0ce029bb2f7d57f56895dff"
+    "revision": "fd814fc6c579f68c2a642f5e0268cf69daae92d7"
   },
   {
     "language": "kconfig",
@@ -1279,9 +1279,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@toots",
-    "grammarSha": "6aa8c1d4781326a9b278e715f3eca2e5dc3df3f99ae4a2246f679be23f1642b0",
+    "grammarSha": "9f1f2c46340b642e4653e3e81b2490597ef3cb4ff7beddea3d09d39b4ece1615",
     "reference": "main",
-    "revision": "ea97fa1f7d6665a018353cb4483d07c8b121e374"
+    "revision": "a9b8012366eab7d0c28bbda5f75a847be931008f"
   },
   {
     "language": "llvm",
@@ -2116,9 +2116,9 @@
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
     "maintainedBy": "@amaanq",
-    "grammarSha": "a782e263e5e1743aa00d7fb23c88954d6a8489e39809160be37bfdee433d8161",
+    "grammarSha": "c7de619d47428e559f42d6c2e039e913e8793064f57db228e70b4865ba30e39e",
     "reference": "master",
-    "revision": "fa5c61c7c5a2d9e8e99439e2cec90225f4acb86b"
+    "revision": "b5a23ead0f69d38b5c9a630f52f5c129132c16ed"
   },
   {
     "language": "soql",
@@ -2335,9 +2335,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
-    "grammarSha": "aa210a008df43ab7ee8edb5b507ba0750fbfcaf44808dea93e9d1a9e8cb08248",
+    "grammarSha": "cc6228abda973c269d688cbd828984a15f8a221ae87c0e0e985ddebe537dfdd4",
     "reference": "master",
-    "revision": "4bedd882d47c55f22226307fe6bc6a7a87a94f43"
+    "revision": "85a0bb071e9d7405915220bcca82d0b62c39167b"
   },
   {
     "language": "textproto",
@@ -2633,7 +2633,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "2546cb98e73c6f1896f6afd49f096b75f64f1eea"
+    "revision": "e01948c266d2c77f1be8cad9017ebe838505a215"
   },
   {
     "language": "wit",

@@ -59,7 +59,7 @@ typedef struct config {
 #define DOT_UCHAR 0x2e
 #define PARSE_DECORATOR_REX L"[a-z.]"
 
-static inline int is_space(ustring_t *s) {
+static inline int is_space_liquidsoap(ustring_t *s) {
   uint32_t i;
 
   for (i = 0; i < s->size; i++) {
@@ -232,7 +232,7 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     END_STATE();
 
   case IN_FLOAT_NO_LBRA:
-    if (is_space(&config->lookahead)) {
+    if (is_space_liquidsoap(&config->lookahead)) {
       SKIP(IN_FLOAT_NO_LBRA);
     }
 
@@ -274,7 +274,7 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     ADVANCE(IN_INLINE_COMMENT);
 
   case IN_INLINE_COMMENT_END:
-    if (is_space(&config->lookahead))
+    if (is_space_liquidsoap(&config->lookahead))
       ADVANCE(IN_INLINE_COMMENT_END);
 
     if (lookahead == '#')
@@ -319,7 +319,7 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     ADVANCE(IN_MULTILINE_COMMENT);
 
   case PRE_PARSE_DECORATOR:
-    if (is_space(&config->lookahead))
+    if (is_space_liquidsoap(&config->lookahead))
       SKIP(PRE_PARSE_DECORATOR);
 
     if (!is_parse_decorator(&config->lookahead))
@@ -345,7 +345,7 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     ADVANCE(POST_PARSE_DECORATOR);
 
   case POST_PARSE_DECORATOR:
-    if (is_space(&config->lookahead))
+    if (is_space_liquidsoap(&config->lookahead))
       SKIP(POST_PARSE_DECORATOR);
 
     if (lookahead == '.' || lookahead == '=')
@@ -354,7 +354,7 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
     END_STATE();
 
   case POST_VAR:
-    if (is_space(&config->lookahead))
+    if (is_space_liquidsoap(&config->lookahead))
       SKIP(POST_VAR);
 
     result = 1;
