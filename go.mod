@@ -20,7 +20,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
 	github.com/alexaandru/go-sitter-forest/c v1.5.11
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.10
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.11
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/calc v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.11
@@ -124,7 +124,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
 	github.com/alexaandru/go-sitter-forest/julia v1.5.13
-	github.com/alexaandru/go-sitter-forest/just v1.5.10
+	github.com/alexaandru/go-sitter-forest/just v1.5.11
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.10
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.10
@@ -136,7 +136,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.10
-	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.10
+	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.11
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.10
 	github.com/alexaandru/go-sitter-forest/lua v1.5.10
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
@@ -220,7 +220,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
-	github.com/alexaandru/go-sitter-forest/solidity v1.5.13
+	github.com/alexaandru/go-sitter-forest/solidity v1.5.14
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.10
@@ -242,7 +242,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tablegen v1.5.11
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.10
-	github.com/alexaandru/go-sitter-forest/templ v1.5.12
+	github.com/alexaandru/go-sitter-forest/templ v1.5.13
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.11
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
