@@ -1,4 +1,4 @@
-# 278 Supported Parsers
+# 279 Supported Parsers
 
 1 pending, 7 skipped regeneration
 
@@ -114,6 +114,7 @@
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️  (maintained by @luckasRanarison)
 - [x] [idl](https://github.com/cathaysia/tree-sitter-idl) ✔️  (maintained by @cathaysa)
 - [x] [ini](https://github.com/justinmk/tree-sitter-ini) ✔️  (maintained by @theHamsta)
+- [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️  (maintained by @yorickpeterse)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️  (maintained by @fab4100)
 - [x] [janet_simple](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️  (maintained by @sogaiu)
 - [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️  (maintained by @p00f)
