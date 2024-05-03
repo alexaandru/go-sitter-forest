@@ -113,6 +113,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
 	github.com/alexaandru/go-sitter-forest/idl v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
+	github.com/alexaandru/go-sitter-forest/inko v1.5.10
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11

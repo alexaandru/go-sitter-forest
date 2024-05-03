@@ -117,6 +117,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/hyprlang"
 	"github.com/alexaandru/go-sitter-forest/idl"
 	"github.com/alexaandru/go-sitter-forest/ini"
+	"github.com/alexaandru/go-sitter-forest/inko"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/ispc"
 	"github.com/alexaandru/go-sitter-forest/janet_simple"
@@ -402,6 +403,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"hyprlang":           hyprlang.GetLanguage,
 	"idl":                idl.GetLanguage,
 	"ini":                ini.GetLanguage,
+	"inko":               inko.GetLanguage,
 	"ispc":               ispc.GetLanguage,
 	"janet_simple":       janet_simple.GetLanguage,
 	"java":               java.GetLanguage,

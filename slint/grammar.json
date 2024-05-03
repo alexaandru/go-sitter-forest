@@ -2,7 +2,7 @@
   "language": "slint",
   "url": "https://github.com/slint-ui/tree-sitter-slint",
   "maintainedBy": "@hunger",
-  "grammarSha": "e5554a4091b6c5636d3d307d36e67d929ae2b3a2cb66bb0b48c371a92f426ba0",
+  "grammarSha": "c3f701873071af57ca3ae52a39a7d62ba7a78f704bd35ab3798be519915560bb",
   "reference": "master",
-  "revision": "d5fbeaf0c26683f1417d00b6a5ab1cca445031f2"
+  "revision": "0701312b74b87fe20e61aa662ba41c5815b5d428"
 }

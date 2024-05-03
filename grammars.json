@@ -1089,9 +1089,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "998672e5ac9f4d4e54798274773851e2374019088d05539dd163b107b1306e4c",
+    "grammarSha": "c322c2f0bd5b114c3260c7cf8c43023cd26ffeb39d53f862fc8a47b29035ffbb",
     "reference": "master",
-    "revision": "fff4560044bdc51d9f6995f1edc797b7cd72b9dc"
+    "revision": "c0027460e8f9629afeeb27f7949ecf961c82d707"
   },
   {
     "language": "jq",
@@ -1424,7 +1424,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "d04201a28c9f93656634ca1c1d6ba775149522a0"
+    "revision": "ed528701a1ee52d4735c3439da262c898e506fc3"
   },
   {
     "language": "muttrc",
@@ -1441,7 +1441,7 @@
     "maintainedBy": "@ObserverOfTime",
     "skip": true,
     "reference": "main",
-    "revision": "3bc691d2cfba44bea339a775ad496c8bc552c60d"
+    "revision": "570f3d7be01fffc751237f4cfcf52d04e20532d1"
   },
   {
     "language": "nickel",
@@ -1832,7 +1832,7 @@
     "maintainedBy": "@pwntester",
     "grammarSha": "758524d418fde3eb51eda6418a71289effa101bbfe72fafa3e2747597daa6ade",
     "reference": "master",
-    "revision": "ff04ba61857ba05b80221e71b423b2728dbebe1e"
+    "revision": "fa5c3821dd2161f5c8528a8cbdb258daa6dc4de6"
   },
   {
     "language": "qmldir",
@@ -2086,9 +2086,9 @@
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
     "maintainedBy": "@hunger",
-    "grammarSha": "e5554a4091b6c5636d3d307d36e67d929ae2b3a2cb66bb0b48c371a92f426ba0",
+    "grammarSha": "c3f701873071af57ca3ae52a39a7d62ba7a78f704bd35ab3798be519915560bb",
     "reference": "master",
-    "revision": "d5fbeaf0c26683f1417d00b6a5ab1cca445031f2"
+    "revision": "0701312b74b87fe20e61aa662ba41c5815b5d428"
   },
   {
     "language": "smali",
@@ -2345,7 +2345,7 @@
     "maintainedBy": "@vrischmann",
     "grammarSha": "cc6228abda973c269d688cbd828984a15f8a221ae87c0e0e985ddebe537dfdd4",
     "reference": "master",
-    "revision": "85a0bb071e9d7405915220bcca82d0b62c39167b"
+    "revision": "c06e7bf0edfa211f6a7665a3c7fa25c1198850b2"
   },
   {
     "language": "textproto",
@@ -2641,7 +2641,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "e01948c266d2c77f1be8cad9017ebe838505a215"
+    "revision": "63683b5110756cd710da0abf913a4f9fd166b314"
   },
   {
     "language": "wit",
