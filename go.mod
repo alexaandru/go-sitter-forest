@@ -117,7 +117,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
-	github.com/alexaandru/go-sitter-forest/javascript v1.5.12
+	github.com/alexaandru/go-sitter-forest/javascript v1.5.13
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/json v1.5.10
@@ -153,7 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.5.10
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
-	github.com/alexaandru/go-sitter-forest/nasm v1.5.10
+	github.com/alexaandru/go-sitter-forest/nasm v1.5.11
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.10
 	github.com/alexaandru/go-sitter-forest/nim v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.10
 	github.com/alexaandru/go-sitter-forest/scss v1.5.10
 	github.com/alexaandru/go-sitter-forest/slang v1.5.12
-	github.com/alexaandru/go-sitter-forest/slint v1.5.11
+	github.com/alexaandru/go-sitter-forest/slint v1.5.12
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
