@@ -2315,6 +2315,14 @@
     "revision": "6b7eb096621443627cc5e29c8c34ff1fde482cf3"
   },
   {
+    "language": "tact",
+    "url": "https://github.com/tact-lang/tree-sitter-tact",
+    "maintainedBy": "@novusnota",
+    "grammarSha": "01902b89ec8a89987275a46adbd68ae96a19192b866e0f10cf86f64cd832d917",
+    "reference": "main",
+    "revision": "68c48c51a9b9ef5280a172acfa3c73b35078e8a7"
+  },
+  {
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "files": [
