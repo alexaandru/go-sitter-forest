@@ -12,7 +12,7 @@ import (
 
 const (
 	code     = "using static System.Math;"
-	expected = "(compilation_unit (using_directive name: (qualified_name qualifier: (identifier) name: (identifier))))"
+	expected = "(compilation_unit (using_directive (qualified_name qualifier: (identifier) name: (identifier))))"
 )
 
 func TestGrammar(t *testing.T) {

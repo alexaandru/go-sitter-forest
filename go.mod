@@ -241,6 +241,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/systemtap v1.5.10
 	github.com/alexaandru/go-sitter-forest/t32 v1.5.11
 	github.com/alexaandru/go-sitter-forest/tablegen v1.5.11
+	github.com/alexaandru/go-sitter-forest/tact v1.5.10
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.10
 	github.com/alexaandru/go-sitter-forest/templ v1.5.13

@@ -104,9 +104,9 @@
     "language": "bass",
     "url": "https://github.com/vito/tree-sitter-bass",
     "maintainedBy": "@amaanq",
-    "grammarSha": "f1e1c7ec9367c37016944e67a384cc86b759a44fc5ad281d5b05a84b76c73853",
+    "grammarSha": "c6b5953f1a9f87a08ed16204186ed3b46bc4b0a4793ea5f538e473c8461116bf",
     "reference": "main",
-    "revision": "c9ba4568af24cd3403029730687c0a43d1350a43"
+    "revision": "28dc7059722be090d04cd751aed915b2fee2f89a"
   },
   {
     "language": "beancount",
@@ -175,7 +175,7 @@
     "maintainedBy": "@Luxed",
     "skip": true,
     "reference": "master",
-    "revision": "e1384e2f132936019b43aaaae154cd780fb497ce"
+    "revision": "5aeecbd9795af21f3cc582a9a6f52bda14fe9734"
   },
   {
     "language": "cairo",
@@ -272,9 +272,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@addcninblue",
-    "grammarSha": "6d86c3f8705e8505c56f7040e417887ba25676adb17d7e21f5728572a921f0a0",
+    "grammarSha": "b689559d6231730095fdf93a0833cd71bde5f45bbe1f817cc81b8285da4e5b83",
     "reference": "master",
-    "revision": "81c2a8667846b1e60db68b5601d864fe00fd1d3a"
+    "revision": "4ebe237c1cf64cf3826fc249e9ec0988fe07e58e"
   },
   {
     "language": "corn",
@@ -318,9 +318,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@TravonteD",
-    "grammarSha": "abcc352261881ad95945a2bc659d7fa46bc0b043e3c55514cd36a7c08090e482",
+    "grammarSha": "110fba3bff364c9350a10adcc1cf08d49e13e5e62e36fe431b61552c7123893f",
     "reference": "master",
-    "revision": "02b4ee757654b7d54fe35352fd8e53a8a4385d42"
+    "revision": "2e868a75a518531656b493cba36ef60d8c61cc89"
   },
   {
     "language": "csv",
@@ -900,7 +900,7 @@
     "maintainedBy": "@mrcjkb",
     "grammarSha": "576e32fbc42f7926537e84b6584ee5137d18b314eba3bbadac578dc06c51beb6",
     "reference": "master",
-    "revision": "95a4f0023741b3bee0cc500f3dab9c5bab2dc2be"
+    "revision": "af32d884088ce7b74541b5e51820baa7e305caae"
   },
   {
     "language": "haskell_persistent",
@@ -995,9 +995,9 @@
       "tag.h"
     ],
     "maintainedBy": "@TravonteD",
-    "grammarSha": "24a745bb29af676860649cfa0ea42fdde9f24afef5921065e5b2a66e9ea76dab",
+    "grammarSha": "c139ccf784d7f2c377cbf702e0fe1daaa8e9ac2d76a7a8c0f81bfdb387b45ee2",
     "reference": "master",
-    "revision": "eee29ca0ce287b699d9d52118f9c1cd9094c48f9"
+    "revision": "e4d834eb4918df01dcad5c27d1b15d56e3bd94cd"
   },
   {
     "language": "htmldjango",
@@ -1636,9 +1636,9 @@
     ],
     "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
-    "grammarSha": "d29326a6a152e01b17f11478a4eaa3cf9e1effa6381b24690690939c1c9694ac",
+    "grammarSha": "b5547ced34d2daebd3697e2caf3f72b129db55d472835ea597d115996180a99e",
     "reference": "master",
-    "revision": "29838ad107f50b1f5f51a0beefa9c9d834fce2b3"
+    "revision": "58054be104db0809ea6f119514a4d904f95e5b5c"
   },
   {
     "language": "php_only",
@@ -1649,9 +1649,9 @@
     ],
     "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
-    "grammarSha": "94321db4360495e8beb665b0b209ee7b6595c633c3401441b356716e1aceb6d4",
+    "grammarSha": "de38deac46401704f0585485d5816f09c28088cb54004c726cb0e1f142a37e53",
     "reference": "master",
-    "revision": "29838ad107f50b1f5f51a0beefa9c9d834fce2b3"
+    "revision": "58054be104db0809ea6f119514a4d904f95e5b5c"
   },
   {
     "language": "phpdoc",
@@ -1870,9 +1870,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@echasnovski",
-    "grammarSha": "176af8dec2220d6f6d40470b0f9a175211a8969a49c28e312310e92dd2066370",
+    "grammarSha": "0af6a4051cf553950cab33e40e5e20be49d27e3f103e0521defff4d05a21d12c",
     "reference": "main",
-    "revision": "c55f8b4dfaa32c80ddef6c0ac0e79b05cb0cbf57"
+    "revision": "391400572538ff9854341a175ed8ab4b1e45f44b"
   },
   {
     "language": "racket",
@@ -2649,7 +2649,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "63683b5110756cd710da0abf913a4f9fd166b314"
+    "revision": "3b7c2c6e13d45c95ee898655d75d744d9736f2fe"
   },
   {
     "language": "wit",

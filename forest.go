@@ -246,6 +246,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/systemtap"
 	"github.com/alexaandru/go-sitter-forest/t32"
 	"github.com/alexaandru/go-sitter-forest/tablegen"
+	"github.com/alexaandru/go-sitter-forest/tact"
 	"github.com/alexaandru/go-sitter-forest/tcl"
 	"github.com/alexaandru/go-sitter-forest/teal"
 	"github.com/alexaandru/go-sitter-forest/templ"
@@ -531,6 +532,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"systemtap":          systemtap.GetLanguage,
 	"t32":                t32.GetLanguage,
 	"tablegen":           tablegen.GetLanguage,
+	"tact":               tact.GetLanguage,
 	"tcl":                tcl.GetLanguage,
 	"teal":               teal.GetLanguage,
 	"templ":              templ.GetLanguage,
