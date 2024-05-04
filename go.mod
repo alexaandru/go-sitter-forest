@@ -13,14 +13,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
 	github.com/alexaandru/go-sitter-forest/bash v1.5.11
-	github.com/alexaandru/go-sitter-forest/bass v1.5.10
+	github.com/alexaandru/go-sitter-forest/bass v1.5.11
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.11
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.10
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.11
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
 	github.com/alexaandru/go-sitter-forest/c v1.5.11
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.11
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.12
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/calc v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.11
@@ -96,7 +96,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10
 	github.com/alexaandru/go-sitter-forest/hack v1.5.10
 	github.com/alexaandru/go-sitter-forest/hare v1.5.11
-	github.com/alexaandru/go-sitter-forest/haskell v1.5.10
+	github.com/alexaandru/go-sitter-forest/haskell v1.5.11
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.10
 	github.com/alexaandru/go-sitter-forest/hcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/heex v1.5.10
@@ -172,8 +172,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
 	github.com/alexaandru/go-sitter-forest/pem v1.5.10
 	github.com/alexaandru/go-sitter-forest/perl v1.5.10
-	github.com/alexaandru/go-sitter-forest/php v1.5.10
-	github.com/alexaandru/go-sitter-forest/php_only v1.5.10
+	github.com/alexaandru/go-sitter-forest/php v1.5.11
+	github.com/alexaandru/go-sitter-forest/php_only v1.5.11
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.10
 	github.com/alexaandru/go-sitter-forest/po v1.5.11
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.11
 	github.com/alexaandru/go-sitter-forest/query v1.5.10
-	github.com/alexaandru/go-sitter-forest/r v1.5.10
+	github.com/alexaandru/go-sitter-forest/r v1.5.11
 	github.com/alexaandru/go-sitter-forest/racket v1.5.11
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
 	github.com/alexaandru/go-sitter-forest/rbs v1.5.11
