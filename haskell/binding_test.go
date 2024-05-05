@@ -19,7 +19,7 @@ factorial :: Integer -> Integer
 factorial 0 = 1
 factorial n = n * factorial (n - 1)
 `
-	expected = "(haskell module: (module) (where) (comment) (signature name: (variable) type: (fun (type_name (type)) (type_name (type)))) (function name: (variable) patterns: (patterns (pat_literal (integer))) rhs: (exp_literal (integer))) (function name: (variable) patterns: (patterns (pat_name (variable))) rhs: (exp_infix (exp_name (variable)) (operator) (exp_apply (exp_name (variable)) (exp_parens (exp_infix (exp_name (variable)) (operator) (exp_literal (integer))))))))"
+	expected = "(haskell (header module: (module (module_id))) (comment) declarations: (declarations (signature name: (variable) type: (function parameter: (name) result: (name))) (function name: (variable) patterns: (patterns (literal (integer))) match: (match expression: (literal (integer)))) (function name: (variable) patterns: (patterns (variable)) match: (match expression: (infix left_operand: (variable) operator: (operator) right_operand: (apply function: (variable) argument: (parens expression: (infix left_operand: (variable) operator: (operator) right_operand: (literal (integer))))))))))"
 )
 
 func TestGrammar(t *testing.T) {

@@ -48,7 +48,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
     "reference": "master",
-    "revision": "8518c3fa6b8562af545a496d55c9abd78f53e732"
+    "revision": "babb6d4da69b359bbb80adbf1fe39c0da9175210"
   },
   {
     "language": "asm",
@@ -898,9 +898,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@mrcjkb",
-    "grammarSha": "576e32fbc42f7926537e84b6584ee5137d18b314eba3bbadac578dc06c51beb6",
+    "grammarSha": "058e7384dbe2d78a4cca4e9ee32fd0b91b21e5c0e6b7cb39b42093c690348a33",
     "reference": "master",
-    "revision": "af32d884088ce7b74541b5e51820baa7e305caae"
+    "revision": "e29c59236283198d93740a796c50d1394bccbef5"
   },
   {
     "language": "haskell_persistent",
@@ -1051,9 +1051,9 @@
     "language": "inko",
     "url": "https://github.com/inko-lang/tree-sitter-inko",
     "maintainedBy": "@yorickpeterse",
-    "grammarSha": "3042190e56f7f6188ceb36086c23afdb84f4b542e79f37aab0336557c1906f38",
+    "grammarSha": "2ff31d2a5500a84da4c62edb590e5c5a2c783503e7b02b4dd557dad11ede34b4",
     "reference": "main",
-    "revision": "6983354c13a14bc621d7a3619f1790149e901187"
+    "revision": "4cef9aa4980606311b906b2f2b8c6cf791c60396"
   },
   {
     "language": "ispc",
@@ -1201,7 +1201,7 @@
     "maintainedBy": "@SalBakraa",
     "grammarSha": "eefacb19e9c6c72aade72c9ced86316541a68476c6d4d33174e2ebaec8d3c2c1",
     "reference": "main",
-    "revision": "260afd9a92bac51b3a4546303103c3d40a430639"
+    "revision": "eca05edbab1918d7d36a0d30d086ba7b6b1e8803"
   },
   {
     "language": "koto",
@@ -2274,7 +2274,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "ae648bc42aac4473122918bf792bc3b50158deef"
+    "revision": "c9c669b4513479e07a0ff44cf14f72351959ac21"
   },
   {
     "language": "sxhkdrc",
@@ -2318,9 +2318,9 @@
     "language": "tact",
     "url": "https://github.com/tact-lang/tree-sitter-tact",
     "maintainedBy": "@novusnota",
-    "grammarSha": "01902b89ec8a89987275a46adbd68ae96a19192b866e0f10cf86f64cd832d917",
+    "grammarSha": "629e5e25446cc85103f65e30895ed7445d935669a1f6cf26f402db1e2037a426",
     "reference": "main",
-    "revision": "68c48c51a9b9ef5280a172acfa3c73b35078e8a7"
+    "revision": "f65460eb0746037bc15913e2737afcf87745b66b"
   },
   {
     "language": "tcl",
@@ -2649,7 +2649,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "3b7c2c6e13d45c95ee898655d75d744d9736f2fe"
+    "revision": "8daa8032d21d3379c440dae4cf046754e5f6c1fc"
   },
   {
     "language": "wit",
