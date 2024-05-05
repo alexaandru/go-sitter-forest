@@ -96,7 +96,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10
 	github.com/alexaandru/go-sitter-forest/hack v1.5.10
 	github.com/alexaandru/go-sitter-forest/hare v1.5.11
-	github.com/alexaandru/go-sitter-forest/haskell v1.5.11
+	github.com/alexaandru/go-sitter-forest/haskell v1.5.12
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.10
 	github.com/alexaandru/go-sitter-forest/hcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/heex v1.5.10
@@ -113,7 +113,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
 	github.com/alexaandru/go-sitter-forest/idl v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
-	github.com/alexaandru/go-sitter-forest/inko v1.5.10
+	github.com/alexaandru/go-sitter-forest/inko v1.5.11
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
@@ -241,7 +241,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/systemtap v1.5.10
 	github.com/alexaandru/go-sitter-forest/t32 v1.5.11
 	github.com/alexaandru/go-sitter-forest/tablegen v1.5.11
-	github.com/alexaandru/go-sitter-forest/tact v1.5.10
+	github.com/alexaandru/go-sitter-forest/tact v1.5.11
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.10
 	github.com/alexaandru/go-sitter-forest/templ v1.5.13
