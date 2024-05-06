@@ -1,4 +1,5 @@
 #include "parser.h"
+
 #include <wctype.h>
 
 enum TokenType { COMMENT };
@@ -7,21 +8,13 @@ void *tree_sitter_uxntal_external_scanner_create() { return NULL; }
 
 void tree_sitter_uxntal_external_scanner_destroy(void *payload) {}
 
-void tree_sitter_uxntal_external_scanner_reset(void *payload) {}
+unsigned tree_sitter_uxntal_external_scanner_serialize(void *payload, char *buffer) { return 0; }
 
-unsigned tree_sitter_uxntal_external_scanner_serialize(void *payload,
-                                                       char *buffer) {
-    return 0;
-}
-
-void tree_sitter_uxntal_external_scanner_deserialize(void *payload,
-                                                     const char *buffer,
-                                                     unsigned length) {}
+void tree_sitter_uxntal_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {}
 
 static void advance_uxntal(TSLexer *lexer) { lexer->advance_uxntal(lexer, false); }
 
-bool tree_sitter_uxntal_external_scanner_scan(void *payload, TSLexer *lexer,
-                                              const bool *valid_symbols) {
+bool tree_sitter_uxntal_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     bool is_in_string = false;
     while (iswspace(lexer->lookahead)) {
         advance_uxntal(lexer);

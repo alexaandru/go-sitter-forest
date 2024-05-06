@@ -320,7 +320,7 @@
     "maintainedBy": "@TravonteD",
     "grammarSha": "110fba3bff364c9350a10adcc1cf08d49e13e5e62e36fe431b61552c7123893f",
     "reference": "master",
-    "revision": "2e868a75a518531656b493cba36ef60d8c61cc89"
+    "revision": "f6be52c3d1cdb1c5e4dd7d8bce0a57497f55d6af"
   },
   {
     "language": "csv",
@@ -545,9 +545,9 @@
     "language": "embedded_template",
     "url": "https://github.com/tree-sitter/tree-sitter-embedded-template",
     "maintainedBy": "@maxbrunsfeld",
-    "grammarSha": "c01fcca9b045c3968e18feadb20c4bb9b98ee2a5fabc335020d523290e611665",
+    "grammarSha": "989af9f9e9f043390422ee07c9ab4dad6111a7f211dff0affe01b0aab3864dc6",
     "reference": "master",
-    "revision": "6d791b897ecda59baa0689a85a9906348a2a6414"
+    "revision": "38d5004a797298dc42c85e7706c5ceac46a3f29f"
   },
   {
     "language": "erlang",
@@ -900,7 +900,7 @@
     "maintainedBy": "@mrcjkb",
     "grammarSha": "058e7384dbe2d78a4cca4e9ee32fd0b91b21e5c0e6b7cb39b42093c690348a33",
     "reference": "master",
-    "revision": "e29c59236283198d93740a796c50d1394bccbef5"
+    "revision": "a50070d5bb5bd5c1281740a6102ecf1f4b0c4f19"
   },
   {
     "language": "haskell_persistent",
@@ -1037,7 +1037,7 @@
     "maintainedBy": "@cathaysa",
     "grammarSha": "ee36bb142781554cc1630bc2c29cf390e797c7bd937d69fd5a8ea9589f7b372b",
     "reference": "master",
-    "revision": "d9a260eda455deaa36d2edf398963b0736ed0845"
+    "revision": "3bb3c69a050c68c24482e45465b41652628044b7"
   },
   {
     "language": "ini",
@@ -1091,7 +1091,7 @@
     "maintainedBy": "@steelsojka",
     "grammarSha": "c322c2f0bd5b114c3260c7cf8c43023cd26ffeb39d53f862fc8a47b29035ffbb",
     "reference": "master",
-    "revision": "c0027460e8f9629afeeb27f7949ecf961c82d707"
+    "revision": "c67e8556d09bfdc21919839486d03e37ee44a6ce"
   },
   {
     "language": "jq",
@@ -1108,9 +1108,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "d11c646efdcf092e332b4629f19dfcc52c099315bde56eecee2e406b872969af",
+    "grammarSha": "da7a172aceb1460e9ca9bfb80492bdff8fdd61255b02080aa78ffb4dee66b9b0",
     "reference": "master",
-    "revision": "6a6cf9e7341af32d8e2b2e24a37fbfebefc3dc55"
+    "revision": "49fde205b59a1d9792efc21ee0b6d50bbd35ff14"
   },
   {
     "language": "json",
@@ -1424,7 +1424,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "ed528701a1ee52d4735c3439da262c898e506fc3"
+    "revision": "ab7708c4aed1ff0919d6f6fd3e463fe75ba645be"
   },
   {
     "language": "muttrc",
@@ -1625,7 +1625,7 @@
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
     "grammarSha": "7a29fc16cadfcf0d9c101211cd85acbc87b545da424d863066a2bcabdab7c1c9",
     "reference": "master",
-    "revision": "125a6d9c5935768c27739418330d980df7f068ba"
+    "revision": "bdafc01789b60c017182ceeb445507f370f6e318"
   },
   {
     "language": "php",
@@ -1638,7 +1638,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "b5547ced34d2daebd3697e2caf3f72b129db55d472835ea597d115996180a99e",
     "reference": "master",
-    "revision": "58054be104db0809ea6f119514a4d904f95e5b5c"
+    "revision": "d5aea05a70c5d021fa746516391f156d35658875"
   },
   {
     "language": "php_only",
@@ -1651,7 +1651,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "de38deac46401704f0585485d5816f09c28088cb54004c726cb0e1f142a37e53",
     "reference": "master",
-    "revision": "58054be104db0809ea6f119514a4d904f95e5b5c"
+    "revision": "d5aea05a70c5d021fa746516391f156d35658875"
   },
   {
     "language": "phpdoc",
@@ -1921,9 +1921,9 @@
     "language": "regex",
     "url": "https://github.com/tree-sitter/tree-sitter-regex",
     "maintainedBy": "@theHamsta",
-    "grammarSha": "ea0b0da14f795171450c7b4fc279e97dd9bf7924e16483915ab0d4bc66446f05",
+    "grammarSha": "6c3d9767fd449cbc1470dbf499879ef48b56188bcd53a2a1d6345a945d07cf7c",
     "reference": "master",
-    "revision": "ba22e4e0cb42b2ef066948d0ea030ac509cef733"
+    "revision": "47007f195752d8e57bda80b0b6cdb2d173a9f7d7"
   },
   {
     "language": "rego",
@@ -1989,7 +1989,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "3b290b7caf6b4fdced4009548d316ec8c566b204ed0bd976e0f8b30d9d4721f8",
     "reference": "master",
-    "revision": "f0ddc95a4b7bb21a7308642255a80f5496e69c5b"
+    "revision": "78938553b93075e638035f624973083451b29055"
   },
   {
     "language": "rst",
@@ -2017,9 +2017,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@TravonteD",
-    "grammarSha": "15aff47c001b7cc46db9628613a3313a3e64279d078459308b16f8903a263a2a",
+    "grammarSha": "6b0a205dfb6f5f84240ccc228def4104903daf2fb454f535106f2f6d03ca46cf",
     "reference": "master",
-    "revision": "9d86f3761bb30e8dcc81e754b81d3ce91848477e"
+    "revision": "788a63ca1b7619288980aaafd37d890ee2469421"
   },
   {
     "language": "rust",
@@ -2028,9 +2028,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "c36a7086b5e6649f637f774c492eacf8441ac7274867960c392bb0509a22aea9",
+    "grammarSha": "8df6f48b1c8d29ae0aa72521fdceabca3b0817ff324edd6630f74103cbe2de96",
     "reference": "master",
-    "revision": "04352146022062c101b8ddd853adf17eadd8cf56"
+    "revision": "9c84af007b0f144954adb26b3f336495cbb320a7"
   },
   {
     "language": "scala",
@@ -2194,7 +2194,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "640a3642beb7353f2b13ad7abc82edf56e8a69ffe906a626bc04a485b1322397",
     "reference": "master",
-    "revision": "f93fd2864dd05cc39b0490145fd86a1a93bfa3a3"
+    "revision": "0a50d31098e83c668d34d1160a0f6c7d23b571cc"
   },
   {
     "language": "ssh_config",
@@ -2312,7 +2312,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "20f83ffadd15817df244ccd19fc99895b24f6975d702a64442c090e2d96838e9",
     "reference": "master",
-    "revision": "6b7eb096621443627cc5e29c8c34ff1fde482cf3"
+    "revision": "b1170880c61355aaf38fc06f4af7d3c55abdabc4"
   },
   {
     "language": "tact",
@@ -2353,7 +2353,7 @@
     "maintainedBy": "@vrischmann",
     "grammarSha": "cc6228abda973c269d688cbd828984a15f8a221ae87c0e0e985ddebe537dfdd4",
     "reference": "master",
-    "revision": "c06e7bf0edfa211f6a7665a3c7fa25c1198850b2"
+    "revision": "81e16d4ca796407361dad83ffee472715015339c"
   },
   {
     "language": "textproto",
@@ -2488,9 +2488,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@uben0, @RaafatTurki",
-    "grammarSha": "95ca1a1e64ee67df31f73a37aa111de3a4511f2c110a558c1490d2621b5214d7",
+    "grammarSha": "1498bb6fb9b7f9c61bfe636d0abf69fb18aeed48a76089e23212371143b7fd39",
     "reference": "master",
-    "revision": "4610172f312e8ce5184e6882be5ad1a1cd800fbe"
+    "revision": "b19e64087a426fe059fc6103ff0766c607f41888"
   },
   {
     "language": "udev",
@@ -2539,7 +2539,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "b2b1014a102caf7a82ee879b378d66ab78d39b65c4db7c338fc3653b8f903b28",
     "reference": "master",
-    "revision": "4c5ecd6326ebd61f6f9a22a370cbd100e0d601da"
+    "revision": "ad9b638b914095320de85d59c49ab271603af048"
   },
   {
     "language": "v",
@@ -2649,7 +2649,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1821b707ccd43683258a040c69f0c841d8d799a0277f8f9fba8b6fa4f01571eb",
     "reference": "main",
-    "revision": "8daa8032d21d3379c440dae4cf046754e5f6c1fc"
+    "revision": "8a6ac4d4b29403d7428f947ce2b0e1c33b454d47"
   },
   {
     "language": "wit",
@@ -2710,7 +2710,7 @@
     "maintainedBy": "@Philipp-M, @amaanq",
     "grammarSha": "8e796f4f2a07256961aaf62e5db3acd000cb88d69551f97b10a91ba7dcb9adef",
     "reference": "main",
-    "revision": "a513732feb813426b51d1ead8397a9c285c411be"
+    "revision": "e877f6ade4b77d5ef8787075141053631ba12318"
   },
   {
     "language": "zathurarc",

@@ -1,4 +1,5 @@
 #include "parser.h"
+
 #include <wctype.h>
 
 enum TokenType {
@@ -9,21 +10,13 @@ void *tree_sitter_squirrel_external_scanner_create() { return NULL; }
 
 void tree_sitter_squirrel_external_scanner_destroy(void *payload) {}
 
-void tree_sitter_squirrel_external_scanner_reset(void *payload) {}
+unsigned tree_sitter_squirrel_external_scanner_serialize(void *payload, char *buffer) { return 0; }
 
-unsigned tree_sitter_squirrel_external_scanner_serialize(void *payload,
-                                                         char *buffer) {
-    return 0;
-}
-
-void tree_sitter_squirrel_external_scanner_deserialize(void *payload,
-                                                       const char *buffer,
-                                                       unsigned length) {}
+void tree_sitter_squirrel_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {}
 
 static void advance_squirrel(TSLexer *lexer) { lexer->advance_squirrel(lexer, false); }
 
-bool tree_sitter_squirrel_external_scanner_scan(void *payload, TSLexer *lexer,
-                                                const bool *valid_symbols) {
+bool tree_sitter_squirrel_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     while (iswspace(lexer->lookahead)) {
         lexer->advance_squirrel(lexer, true);
     }

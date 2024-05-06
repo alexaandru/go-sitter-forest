@@ -11,8 +11,6 @@ void *tree_sitter_yuck_external_scanner_create() { return NULL; }
 
 void tree_sitter_yuck_external_scanner_destroy(void *payload) {}
 
-void tree_sitter_yuck_external_scanner_reset(void *payload) {}
-
 unsigned tree_sitter_yuck_external_scanner_serialize(void *payload,
                                                      char *buffer) {
   return 0;
