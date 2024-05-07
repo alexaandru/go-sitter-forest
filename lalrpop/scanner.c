@@ -1,7 +1,8 @@
 #include "scanner_table.h"
+#include "parser.h"
+
 #include <search.h>
 #include <stdio.h>
-#include "parser.h"
 #include <wctype.h>
 
 #define SYMBOLS(...)                                                           \
@@ -49,9 +50,6 @@ void *tree_sitter_lalrpop_external_scanner_create() {
 }
 
 void tree_sitter_lalrpop_external_scanner_destroy(void *payload) {
-}
-
-void tree_sitter_lalrpop_external_scanner_reset(void *payload) {
 }
 
 unsigned tree_sitter_lalrpop_external_scanner_serialize(void *payload,

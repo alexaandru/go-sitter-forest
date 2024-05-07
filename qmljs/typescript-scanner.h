@@ -1,10 +1,10 @@
 /*
 Source:
-github:tree-sitter/tree-sitter-typescript#b00b8eb44f0b9f02556da0b1a4e2f71faed7e61b
+^0.21.1
 
 The MIT License (MIT)
 
-Copyright (c) 2017 GitHub
+Copyright (c) 2017 Max Brunsfeld
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

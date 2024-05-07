@@ -2,7 +2,7 @@
   "language": "json",
   "url": "https://github.com/tree-sitter/tree-sitter-json",
   "maintainedBy": "@steelsojka",
-  "grammarSha": "fa05862f93d2053b06a8630c2e71f9a77a14c1db97ab60af143cea50ce34e989",
+  "grammarSha": "eb94bbd6463cd5332ae0515df29d96a869494f3c5d6238ccaff1c1fe86ed4e9f",
   "reference": "master",
-  "revision": "80e623c2165887f9829357acfa9c0a0bab34a3cd"
+  "revision": "94f5c527b2965465956c2000ed6134dd24daf2a7"
 }
