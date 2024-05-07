@@ -1437,9 +1437,8 @@
   {
     "language": "nasm",
     "url": "https://github.com/naclsn/tree-sitter-nasm",
-    "doc": "grammar.js has errors: repetition operator missing expression: {[rR][eE][xX]}",
     "maintainedBy": "@ObserverOfTime",
-    "skip": true,
+    "grammarSha": "62416145d98a6cea8b28c148ab8db3162ecbd96647bcdbd046a92af8a8b3883d",
     "reference": "main",
     "revision": "570f3d7be01fffc751237f4cfcf52d04e20532d1"
   },
@@ -1656,12 +1655,11 @@
   {
     "language": "phpdoc",
     "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
-    "doc": "grammar.js throws error: TypeError: Cannot read properties of undefined (reading 'namespace_aliasing_clause')",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@mikehaertl",
-    "skip": true,
+    "grammarSha": "5b52ad374dfe8505d460ac822f8d906fe97448037a334f12e4573630b0e66a93",
     "reference": "master",
     "revision": "1d0e255b37477d0ca46f1c9e9268c8fa76c0b3fc"
   },

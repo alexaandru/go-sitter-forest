@@ -1,6 +1,6 @@
 # 280 Supported Parsers
 
-1 pending, 7 skipped regeneration
+1 pending, 5 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -154,7 +154,7 @@
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️  (maintained by @Decodetalkers)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️  (maintained by @artagnon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️  (maintained by @Freed-Wu)
-- [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) (maintained by @ObserverOfTime; ❌grammar.js has errors: repetition operator missing expression: {[rR][eE][xX]})
+- [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️  (maintained by @ObserverOfTime)
 - [x] [nickel](https://github.com/nickel-lang/tree-sitter-nickel) ✔️  (maintained by @ErinvanderVeen, @yannham)
 - [x] [nim](https://github.com/alaviss/tree-sitter-nim) ✔️  (maintained by @aMOPel; ❌high (7GB) memory usage)
 - [x] [nim_format_string](https://github.com/aMOPel/tree-sitter-nim-format-string) ✔️  (maintained by @aMOPel)
@@ -175,7 +175,7 @@
 - [x] [perl](https://github.com/tree-sitter-perl/tree-sitter-perl) ✔️  (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️  (maintained by @tk-shirasaka)
 - [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️  (maintained by @tk-shirasaka)
-- [x] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) (maintained by @mikehaertl; ❌grammar.js throws error: TypeError: Cannot read properties of undefined (reading 'namespace_aliasing_clause'))
+- [x] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) ✔️  (maintained by @mikehaertl)
 - [x] [pioasm](https://github.com/leo60228/tree-sitter-pioasm) ✔️  (maintained by @leo60228)
 - [x] [po](https://github.com/tree-sitter-grammars/tree-sitter-po) ✔️  (maintained by @amaanq)
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️  (maintained by @RabbiVeesh, @LeoNerd)
