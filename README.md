@@ -13,13 +13,12 @@ parsers I can add.
 So here it is: started with the parsers and the automation from the above
 mentioned repo then added a bunch more parsers on top of it and updated
 automation (to support more parsers and also to automatically update the
-PARSERS.md file, etc.).
+PARSERS.md file, git tags, etc.).
 
-See [Parsers](PARSERS.md) for a list of supported (and planned) parsers.
-The end goal is (at least) parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages)
-(since I'm using their queries in conjunction with this repo).
+See [PARSERS.md](PARSERS.md) for the list of supported parsers.
+The end goal is (at least) parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
 
-For contributing (or just to see how the automation works) see [CONTRIBUTING](CONTRIBUTING.md).
+For contributing (or just to see how the automation works) see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Naming Conventions
 
@@ -179,7 +178,7 @@ We are currently aligned with TreeSitter `v0.22.2`: [go-tree-sitter-bare](https:
 
 As for the parsers in this repo:
 
-- most of the parsers were updated to regenerate the `parser.{c,h}` files
+- almost of the parsers are now regenerating the `parser.{c,h}` files
   using the latest `tree-sitter` (they are marked with a heavy checkmark
   in [PARSERS.md](PARSERS.md) and they do NOT have the `skip` flag set
   in [grammars.json](grammars.json)); this is preferred way going further;
@@ -188,7 +187,7 @@ As for the parsers in this repo:
   have in the upstream repo, which may or may not have been compiled with
   the latest `tree-sitter` version (most likely not, or we'd also be able
   to regenerate them). In general they should work too though, that's how
-  this project started, with downloaded files only, after all.
+  this project started after all, with downloaded files only.
 
 So there it is, we try to converge towards using the same `tree-sitter`
 version everywhere, and keeping up with it too.
