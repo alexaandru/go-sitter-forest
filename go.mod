@@ -20,7 +20,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
 	github.com/alexaandru/go-sitter-forest/c v1.5.11
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.13
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.14
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/calc v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.11
@@ -153,7 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.5.10
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
-	github.com/alexaandru/go-sitter-forest/nasm v1.5.11
+	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.10
 	github.com/alexaandru/go-sitter-forest/nim v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
@@ -174,7 +174,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.5.11
 	github.com/alexaandru/go-sitter-forest/php v1.5.11
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.11
-	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.11
+	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.12
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.10
 	github.com/alexaandru/go-sitter-forest/po v1.5.11
 	github.com/alexaandru/go-sitter-forest/pod v1.5.10
@@ -248,7 +248,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.11
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.14
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.15
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
