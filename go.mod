@@ -258,7 +258,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
 	github.com/alexaandru/go-sitter-forest/typescript v1.5.11
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
-	github.com/alexaandru/go-sitter-forest/typst v1.5.14
+	github.com/alexaandru/go-sitter-forest/typst v1.5.15
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.10
 	github.com/alexaandru/go-sitter-forest/unison v1.5.14
@@ -274,11 +274,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
-	github.com/alexaandru/go-sitter-forest/wing v1.5.15
+	github.com/alexaandru/go-sitter-forest/wing v1.5.16
 	github.com/alexaandru/go-sitter-forest/wit v1.5.13
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
-	github.com/alexaandru/go-sitter-forest/xml v1.5.10
-	github.com/alexaandru/go-sitter-forest/yaml v1.5.13
+	github.com/alexaandru/go-sitter-forest/xml v1.5.11
+	github.com/alexaandru/go-sitter-forest/yaml v1.5.14
 	github.com/alexaandru/go-sitter-forest/yang v1.5.10
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.12
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.10
