@@ -2,7 +2,7 @@
 #include "parser.h"
 
 #define _str(x) #x
-#define _file(x) _str(./schema.x.c)
+#define _file(x) _str(schema.x.c)
 
 #ifndef YAML_SCHEMA
 #define YAML_SCHEMA core
@@ -152,20 +152,27 @@ typedef struct {
 } Scanner;
 
 static unsigned serialize_yaml(Scanner *scanner, char *buffer) {
-    size_t i = 0;
-    buffer[i++] = (char)scanner->row;
-    buffer[i++] = (char)scanner->col;
-    buffer[i++] = (char)scanner->blk_imp_row;
-    buffer[i++] = (char)scanner->blk_imp_col;
-    buffer[i++] = (char)scanner->blk_imp_tab;
+    size_t size = 0;
+    *(int16_t *)&buffer[size] = scanner->row;
+    size += sizeof(int16_t);
+    *(int16_t *)&buffer[size] = scanner->col;
+    size += sizeof(int16_t);
+    *(int16_t *)&buffer[size] = scanner->blk_imp_row;
+    size += sizeof(int16_t);
+    *(int16_t *)&buffer[size] = scanner->blk_imp_col;
+    size += sizeof(int16_t);
+    *(int16_t *)&buffer[size] = scanner->blk_imp_tab;
+    size += sizeof(int16_t);
     int16_t *typ_itr = scanner->ind_typ_stk.contents + 1;
     int16_t *typ_end = scanner->ind_typ_stk.contents + scanner->ind_typ_stk.size;
     int16_t *len_itr = scanner->ind_len_stk.contents + 1;
-    for (; typ_itr != typ_end && i < TREE_SITTER_SERIALIZATION_BUFFER_SIZE; ++typ_itr, ++len_itr) {
-        buffer[i++] = (char)*typ_itr;
-        buffer[i++] = (char)*len_itr;
+    for (; typ_itr != typ_end && size < TREE_SITTER_SERIALIZATION_BUFFER_SIZE; ++typ_itr, ++len_itr) {
+        *(int16_t *)&buffer[size] = *typ_itr;
+        size += sizeof(int16_t);
+        *(int16_t *)&buffer[size] = *len_itr;
+        size += sizeof(int16_t);
     }
-    return i;
+    return size;
 }
 
 static void deserialize_yaml(Scanner *scanner, const char *buffer, unsigned length) {
@@ -179,16 +186,24 @@ static void deserialize_yaml(Scanner *scanner, const char *buffer, unsigned leng
     array_delete(&scanner->ind_len_stk);
     array_push(&scanner->ind_len_stk, -1);
     if (length > 0) {
-        size_t i = 0;
-        scanner->row = (int16_t)buffer[i++];
-        scanner->col = (int16_t)buffer[i++];
-        scanner->blk_imp_row = (int16_t)buffer[i++];
-        scanner->blk_imp_col = (int16_t)buffer[i++];
-        scanner->blk_imp_tab = (int16_t)buffer[i++];
-        while (i < length) {
-            array_push(&scanner->ind_typ_stk, (int16_t)buffer[i++]);
-            array_push(&scanner->ind_len_stk, (int16_t)buffer[i++]);
+        size_t size = 0;
+        scanner->row = *(int16_t *)&buffer[size];
+        size += sizeof(int16_t);
+        scanner->col = *(int16_t *)&buffer[size];
+        size += sizeof(int16_t);
+        scanner->blk_imp_row = *(int16_t *)&buffer[size];
+        size += sizeof(int16_t);
+        scanner->blk_imp_col = *(int16_t *)&buffer[size];
+        size += sizeof(int16_t);
+        scanner->blk_imp_tab = *(int16_t *)&buffer[size];
+        size += sizeof(int16_t);
+        while (size < length) {
+            array_push(&scanner->ind_typ_stk, *(int16_t *)&buffer[size]);
+            size += sizeof(int16_t);
+            array_push(&scanner->ind_len_stk, *(int16_t *)&buffer[size]);
+            size += sizeof(int16_t);
         }
+        assert(size == length);
     }
 }
 

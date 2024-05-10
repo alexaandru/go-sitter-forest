@@ -24,7 +24,7 @@ we don't take action soon!
   ],
 ) <glaciers>
 `
-	expected = "(source_file (text) (ref) (text) (text) (quote) (text) (parbreak) (call item: (ident) (group (call item: (ident) (group (string) (tagged field: (ident) (number (unit))))) (tagged field: (ident) (content (emph (text)) (text) (text) (quote) (text))))) (label))"
+	expected = "(source_file (text) (ref) (text) (text) (quote) (text) (parbreak) (code (call item: (ident) (group (call item: (ident) (group (string) (tagged field: (ident) (number (unit))))) (tagged field: (ident) (content (emph (text)) (text) (text) (quote) (text)))))) (label))"
 )
 
 func TestGrammar(t *testing.T) {

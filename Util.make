@@ -16,6 +16,8 @@ list_parsers_without_modules:
 clean:
 	@rm -rfv *.cov tmp auto.log
 
+check: nvim_diff check-updates
+
 nvim_diff:
 	@curl -so tmp/README.md https://raw.githubusercontent.com/nvim-treesitter/nvim-treesitter/master/README.md
 	@diff <(sed -n '/<!--parserinfo-->/,/<!--parserinfo-->/{/<!--parserinfo-->/! p}' tmp/README.md|cut -f3 -d\[|cut -f1 -d\]|sort|grep -v terraform) \

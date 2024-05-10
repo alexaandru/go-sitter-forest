@@ -3,45 +3,25 @@
 
 #include <string.h>
 
-/// The default capacity of strings
-#define STRING_CAP 16
-
 typedef Array(char) String;
 
 typedef Array(String) Vector;
 
-/// Create a new String instance
-#define String() { ts_calloc(STRING_CAP + 1, sizeof(char)), 0, STRING_CAP }
-
-static inline uint32_t max(uint32_t a, uint32_t b) {
-    return a > b ? a : b;
-}
-
-static inline bool string_equals(String *a, String b) {
-    return strcmp(a->contents, b.contents) == 0;
-}
-
-static inline void string_push(String *string, char data) {
-    if (string->capacity == string->size) {
-        uint32_t cap = max(STRING_CAP, string->size << 1);
-        void *tmp = ts_realloc(string->contents, (cap + 1) * sizeof *string->contents);
-        if (tmp == NULL) abort();
-
-        string->contents = (char *)tmp;
-        memset(string->contents + string->size, 0, (cap + 1 - string->size) * sizeof *string->contents);
-        string->capacity = cap;
+static inline bool string_eq(String *a, String *b) {
+    if (a->size != b->size) {
+        return false;
     }
-    array_push(string, data);
+    return memcmp(a->contents, b->contents, a->size) == 0;
 }
 
 static String scan_tag_name(TSLexer *lexer) {
-    String tag_name = String();
+    String tag_name = array_new();
     if (is_valid_name_start_char(lexer->lookahead)) {
-        string_push(&tag_name, (char)lexer->lookahead);
+        array_push(&tag_name, (char)lexer->lookahead);
         advance_xml(lexer);
     }
     while (is_valid_name_char(lexer->lookahead)) {
-        string_push(&tag_name, (char)lexer->lookahead);
+        array_push(&tag_name, (char)lexer->lookahead);
         advance_xml(lexer);
     }
     return tag_name;
@@ -66,7 +46,7 @@ static bool scan_end_tag_name(Vector *tags, TSLexer *lexer) {
         return false;
     }
 
-    if (tags->size > 0 && string_equals(array_back(tags), tag_name)) {
+    if (tags->size > 0 && string_eq(array_back(tags), &tag_name)) {
         array_delete(&array_pop(tags));
         lexer->result_symbol = END_TAG_NAME;
     } else {
@@ -264,7 +244,7 @@ void tree_sitter_xml_external_scanner_deserialize(void *payload, const char *buf
 
     uint32_t iter = 0;
     for (; iter < serialized_tag_count; ++iter) {
-        String tag = String();
+        String tag = array_new();
         tag.size = (uint8_t)buffer[size++];
         if (tag.size > 0) {
             array_reserve(&tag, tag.size + 1);
@@ -276,7 +256,7 @@ void tree_sitter_xml_external_scanner_deserialize(void *payload, const char *buf
     // add zero tags if we didn't read enough, this is because the
     // buffer had no more room but we held more tags.
     for (; iter < tag_count; ++iter) {
-        String tag = String();
+        String tag = array_new();
         array_push(tags, tag);
     }
 }
