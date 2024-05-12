@@ -340,7 +340,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
     "reference": "master",
-    "revision": "c794560823013fc4cc29944d862b7158d9585408"
+    "revision": "e7878a9cf4157e9d6c8013ff5605c9f26d62894d"
   },
   {
     "language": "cue",
@@ -765,7 +765,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "9f611774fb5b95993e31e03f137b4a689c63f827"
+    "revision": "8c9fb41836dc202bbbcf0e2369f256055786dedb"
   },
   {
     "language": "gn",
@@ -784,16 +784,16 @@
     "url": "https://github.com/dpezto/tree-sitter-gnuplot",
     "maintainedBy": "@dpezto",
     "grammarSha": "4ef67c26567c0c6195b5d9811380799c76365a030e82bf471779a0550e59e626",
-    "reference": "release",
+    "reference": "main",
     "revision": "3c895f5d9c0b3a3c7e02383766b462c21913c000"
   },
   {
     "language": "go",
     "url": "https://github.com/tree-sitter/tree-sitter-go",
     "maintainedBy": "@theHamsta, @WinWisely268",
-    "grammarSha": "cc75022fe024588f3ea22f54d8328286026972ffb5b8c8fd006b6eef0b75ee99",
+    "grammarSha": "bc8db6976c928a2da6378753fb3ccb0aa739e38e0e6e903110e3269444db557c",
     "reference": "master",
-    "revision": "eb68645662a3f7bf7fdd4bcb9531585f54c8570e"
+    "revision": "7ee8d928db5202f6831a78f8112fd693bf69f98b"
   },
   {
     "language": "godot_resource",
@@ -958,7 +958,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "de5d490e52aa7be2a877df7022f93dff05f03eb9"
+    "revision": "feea0ff6eccda8be958c133985dca8977db3d887"
   },
   {
     "language": "hlsplaylist",
@@ -1035,9 +1035,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "ee36bb142781554cc1630bc2c29cf390e797c7bd937d69fd5a8ea9589f7b372b",
+    "grammarSha": "a6f6eaa0ed0b69f5e60e0ae300742dd930263808eaf923893f766d9338f685fc",
     "reference": "master",
-    "revision": "9d7380151583d43a333add8a5a6918aec8c3f275"
+    "revision": "e885d7fd66c2549b7a28172400d645d27656f5cb"
   },
   {
     "language": "ini",
@@ -1091,7 +1091,7 @@
     "maintainedBy": "@steelsojka",
     "grammarSha": "c322c2f0bd5b114c3260c7cf8c43023cd26ffeb39d53f862fc8a47b29035ffbb",
     "reference": "master",
-    "revision": "4928d3d18019a848906855476fde2dc8be030217"
+    "revision": "e88537c2703546f3f0887dd3f16898e1749cdba5"
   },
   {
     "language": "jq",
@@ -1424,7 +1424,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "2812b6c6aa03f1ca8dba2fb1c33d14abb87809e7"
+    "revision": "a708e9b3f3d7f2fc85ac3fd1d4317c51b101eab0"
   },
   {
     "language": "muttrc",
@@ -2151,9 +2151,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Sarrus1",
-    "grammarSha": "826e5c3834e7284b9fd712752750ada8b6caec38d1983c4e96a2e98527fb4e4a",
+    "grammarSha": "c9c95619b0d29b03bfc4736a32b4980c79f30f6674eaee84f019e0277b8fc8b5",
     "reference": "main",
-    "revision": "3ca89fdf998340a7973e276b39516d8902950f86"
+    "revision": "6a67772eed866cd6d247cc478a28c6a9272fc0ef"
   },
   {
     "language": "sparql",
@@ -2318,7 +2318,7 @@
     "maintainedBy": "@novusnota",
     "grammarSha": "629e5e25446cc85103f65e30895ed7445d935669a1f6cf26f402db1e2037a426",
     "reference": "main",
-    "revision": "f65460eb0746037bc15913e2737afcf87745b66b"
+    "revision": "034df2162ed7b654efd999942e266be713c7cde0"
   },
   {
     "language": "tcl",
@@ -2647,7 +2647,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "4ca75fa299b5d8f05bee1e047c61206fc92649d393e76fa1de47a693ad67d1df",
     "reference": "main",
-    "revision": "14ebf043bbc27599c2d62e5b6d1e5e171c51b6b5"
+    "revision": "18cce7375bd736474276e2945d203f14e647e15c"
   },
   {
     "language": "wit",

@@ -3,6 +3,6 @@
   "url": "https://github.com/dpezto/tree-sitter-gnuplot",
   "maintainedBy": "@dpezto",
   "grammarSha": "4ef67c26567c0c6195b5d9811380799c76365a030e82bf471779a0550e59e626",
-  "reference": "release",
+  "reference": "main",
   "revision": "3c895f5d9c0b3a3c7e02383766b462c21913c000"
 }
