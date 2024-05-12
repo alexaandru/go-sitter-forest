@@ -84,7 +84,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.11
 	github.com/alexaandru/go-sitter-forest/gn v1.5.10
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10
-	github.com/alexaandru/go-sitter-forest/go v1.5.11
+	github.com/alexaandru/go-sitter-forest/go v1.5.12
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.10
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.10
@@ -111,7 +111,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
-	github.com/alexaandru/go-sitter-forest/idl v1.5.10
+	github.com/alexaandru/go-sitter-forest/idl v1.5.11
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.11
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
@@ -224,7 +224,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.14
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
-	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.10
+	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.11
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
