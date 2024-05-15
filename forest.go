@@ -549,7 +549,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"turtle":             turtle.GetLanguage,
 	"twig":               twig.GetLanguage,
 	"typescript":         typescript.GetLanguage,
-	"typespect":          typespec.GetLanguage,
+	"typespec":           typespec.GetLanguage,
 	"typoscript":         typoscript.GetLanguage,
 	"typst":              typst.GetLanguage,
 	"udev":               udev.GetLanguage,
