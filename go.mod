@@ -257,6 +257,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.10
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
 	github.com/alexaandru/go-sitter-forest/typescript v1.5.11
+	github.com/alexaandru/go-sitter-forest/typespec v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typst v1.5.15
 	github.com/alexaandru/go-sitter-forest/udev v1.5.10

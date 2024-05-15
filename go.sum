@@ -506,6 +506,8 @@ github.com/alexaandru/go-sitter-forest/twig v1.5.10 h1:5wBSZsVdGiM0Kc20Sh7s00xgh
 github.com/alexaandru/go-sitter-forest/twig v1.5.10/go.mod h1:RQpy42YgMxxjO/U+FitIUpOVKXdeKr0OxtPnHdgjJrU=
 github.com/alexaandru/go-sitter-forest/typescript v1.5.11 h1:uPXEnnoLATUJhGr7cnvIfjlh/8VyIbZk3zndAww2QhM=
 github.com/alexaandru/go-sitter-forest/typescript v1.5.11/go.mod h1:PgnFy+OCtdp6IeDLkeYirSSeMex1RP95MB8V7vTcjXU=
+github.com/alexaandru/go-sitter-forest/typespec v1.5.10 h1:aqCTI/iqCxV1/IOkKCWCfp7rYCcoaLbWclQQxw0GoFA=
+github.com/alexaandru/go-sitter-forest/typespec v1.5.10/go.mod h1:Qjt9PZxlMhntLfr3vLpo9/fgcMDOs5By1lOv4tdHCD4=
 github.com/alexaandru/go-sitter-forest/typoscript v1.5.10 h1:AiDYYHgztwWkzhzFLoUFGgNTi4qrOao/k0jBFDqLczc=
 github.com/alexaandru/go-sitter-forest/typoscript v1.5.10/go.mod h1:Yslo16A3704vio+ANn/AR4Uj1Vy4xDJMeLiTuN8ZjrI=
 github.com/alexaandru/go-sitter-forest/typst v1.5.15 h1:9W0ZhXBNDrArJu2miTStR58P2s5pwdhsiAoqwLssT9E=

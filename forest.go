@@ -262,6 +262,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/turtle"
 	"github.com/alexaandru/go-sitter-forest/twig"
 	"github.com/alexaandru/go-sitter-forest/typescript"
+	"github.com/alexaandru/go-sitter-forest/typespec"
 	"github.com/alexaandru/go-sitter-forest/typoscript"
 	"github.com/alexaandru/go-sitter-forest/typst"
 	"github.com/alexaandru/go-sitter-forest/udev"
@@ -548,6 +549,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"turtle":             turtle.GetLanguage,
 	"twig":               twig.GetLanguage,
 	"typescript":         typescript.GetLanguage,
+	"typespect":          typespec.GetLanguage,
 	"typoscript":         typoscript.GetLanguage,
 	"typst":              typst.GetLanguage,
 	"udev":               udev.GetLanguage,
