@@ -1,4 +1,4 @@
-# 280 Supported Parsers
+# 281 Supported Parsers
 
 1 pending, 5 skipped regeneration
 
@@ -259,6 +259,7 @@
 - [x] [turtle](https://github.com/GordianDziwis/tree-sitter-turtle) ✔️  (maintained by @BonaBeavis)
 - [x] [twig](https://github.com/gbprod/tree-sitter-twig) ✔️  (maintained by @gbprod)
 - [x] [typescript](https://github.com/tree-sitter/tree-sitter-typescript) ✔️  (maintained by @steelsojka)
+- [x] [typespec](https://github.com/happenslol/tree-sitter-typespec) ✔️  (maintained by @happenslol)
 - [x] [typoscript](https://github.com/Teddytrombone/tree-sitter-typoscript) ✔️  (maintained by @Teddytrombone)
 - [x] [typst](https://github.com/uben0/tree-sitter-typst) ✔️  (maintained by @uben0, @RaafatTurki)
 - [x] [udev](https://github.com/tree-sitter-grammars/tree-sitter-udev) ✔️  (maintained by @ObserverOfTime)
