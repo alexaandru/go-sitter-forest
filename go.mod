@@ -43,7 +43,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dart v1.5.12
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.10
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
-	github.com/alexaandru/go-sitter-forest/diff v1.5.11
+	github.com/alexaandru/go-sitter-forest/diff v1.5.12
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
 	github.com/alexaandru/go-sitter-forest/djot v1.5.14
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
@@ -111,7 +111,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
-	github.com/alexaandru/go-sitter-forest/idl v1.5.11
+	github.com/alexaandru/go-sitter-forest/idl v1.5.12
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.11
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
@@ -172,8 +172,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
 	github.com/alexaandru/go-sitter-forest/pem v1.5.10
 	github.com/alexaandru/go-sitter-forest/perl v1.5.11
-	github.com/alexaandru/go-sitter-forest/php v1.5.11
-	github.com/alexaandru/go-sitter-forest/php_only v1.5.11
+	github.com/alexaandru/go-sitter-forest/php v1.5.12
+	github.com/alexaandru/go-sitter-forest/php_only v1.5.12
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.12
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.10
 	github.com/alexaandru/go-sitter-forest/po v1.5.11
@@ -224,7 +224,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.14
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
-	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.11
+	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.12
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
