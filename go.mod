@@ -50,7 +50,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.16
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.17
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -224,7 +224,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.14
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
-	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.12
+	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.13
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
@@ -253,10 +253,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.10
-	github.com/alexaandru/go-sitter-forest/tsx v1.5.11
+	github.com/alexaandru/go-sitter-forest/tsx v1.5.12
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.10
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
-	github.com/alexaandru/go-sitter-forest/typescript v1.5.11
+	github.com/alexaandru/go-sitter-forest/typescript v1.5.12
 	github.com/alexaandru/go-sitter-forest/typespec v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typst v1.5.15
