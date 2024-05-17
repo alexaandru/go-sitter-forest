@@ -2480,7 +2480,7 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_parameters, 3},
     {field_returnType, 0},
   [255] =
-    {field_name, 0},
+    {field_field, 0},
     {field_value, 2},
   [257] =
     {field_name, 2},

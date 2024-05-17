@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := check
+
 check-updates update-all force-update-all update-bindings:
 	@go run ./internal/automation $@
 

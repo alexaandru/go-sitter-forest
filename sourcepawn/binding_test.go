@@ -25,7 +25,7 @@ public void OnPluginStart() {
     // your code
 }
 `
-	expected = "(source_file (struct_declaration type: (identifier) name: (identifier) value: (struct_constructor (struct_field_value name: (identifier) value: (string_literal)) (struct_field_value name: (identifier) value: (string_literal)) (struct_field_value name: (identifier) value: (string_literal)) (struct_field_value name: (identifier) value: (identifier)) (struct_field_value name: (identifier) value: (string_literal)))) (function_definition visibility: (visibility) returnType: (type (builtin_type)) name: (identifier) parameters: (parameter_declarations) body: (block (comment))))"
+	expected = "(source_file (struct_declaration type: (identifier) name: (identifier) value: (struct_constructor (struct_field_value field: (identifier) value: (string_literal)) (struct_field_value field: (identifier) value: (string_literal)) (struct_field_value field: (identifier) value: (string_literal)) (struct_field_value field: (identifier) value: (identifier)) (struct_field_value field: (identifier) value: (string_literal)))) (function_definition visibility: (visibility) returnType: (type (builtin_type)) name: (identifier) parameters: (parameter_declarations) body: (block (comment))))"
 )
 
 func TestGrammar(t *testing.T) {

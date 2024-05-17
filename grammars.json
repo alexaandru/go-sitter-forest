@@ -474,9 +474,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "e43b0c20679e626b78498de45decc057b6b4e6c11f44628a0dd74ed07d295368",
+    "grammarSha": "7f43022cad43f1c56052d7167b9d999a8d6b4813368bbe2d158d7d56ffe53af7",
     "reference": "main",
-    "revision": "3ded1cba9eab14b07377b700b1132d259480abae"
+    "revision": "450546b6db9a37a178fd87aeda93a287301e9570"
   },
   {
     "language": "ebnf",
@@ -555,7 +555,7 @@
     "maintainedBy": "@filmor",
     "grammarSha": "de03d64511facbe2bf834d92587316b41113ff93a7fc22a7ef1b7ee3c82112a1",
     "reference": "main",
-    "revision": "868306b033f5163658e8777940da68d61afad5cb"
+    "revision": "b2ab8f2ef8f4a8aba3e44f7007d1793a9ee5bb70"
   },
   {
     "language": "facility",
@@ -1072,7 +1072,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "51271e260346878e1a1aa6c506ce6a797b7c25e2"
+    "revision": "25d0687433ed0ed8e320861c2c625711ce1716f9"
   },
   {
     "language": "java",
@@ -2151,9 +2151,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Sarrus1",
-    "grammarSha": "1a03c37b2c387249e343820e702b7000e579f0ceb1767bfaf7e747e5317f2bed",
+    "grammarSha": "c6daab7cfe92669f8e288d68e891c394f854db7f080ebce5eeab46eb28a9aee5",
     "reference": "main",
-    "revision": "4c62065c4136873ef42a9efe128380cbe7ae4f64"
+    "revision": "03d2aba50380a3ceb552044ab4960d4a44759f33"
   },
   {
     "language": "sparql",
@@ -2389,7 +2389,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "grammarSha": "a2060cb40391e0603d3e5d795a0a1e6f6caf5283496e4a41b430fbcccdbed572",
     "reference": "main",
-    "revision": "08d915655d360bb0b7592d38a533dcc17dcb8dfb"
+    "revision": "ef18145e7f985f592ad41b04004b24a590f58b71"
   },
   {
     "language": "tmux",
@@ -2439,7 +2439,7 @@
     "maintainedBy": "@steelsojka",
     "grammarSha": "83db0bd94470e2edd9ce66964334c1c83e3da5beda151d023648d3dc5da0ff1e",
     "reference": "master",
-    "revision": "7b4275d077ae196fc0ce42ab3ad091574e3ec519"
+    "revision": "4ad3010c91d700026d036b5230e2d99ba94ae8a4"
   },
   {
     "language": "turtle",
@@ -2468,7 +2468,7 @@
     "maintainedBy": "@steelsojka",
     "grammarSha": "9d89aeb5ee675f77fa33319071c629e55c1053487b1366cd553af2ff9506a53a",
     "reference": "master",
-    "revision": "7b4275d077ae196fc0ce42ab3ad091574e3ec519"
+    "revision": "4ad3010c91d700026d036b5230e2d99ba94ae8a4"
   },
   {
     "language": "typespec",
@@ -2655,7 +2655,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "4ca75fa299b5d8f05bee1e047c61206fc92649d393e76fa1de47a693ad67d1df",
     "reference": "main",
-    "revision": "a3790ea50921825c7cbeef34411f198619efee66"
+    "revision": "d65e4c03e1b992adc76df2c2485562c8f2204462"
   },
   {
     "language": "wit",
