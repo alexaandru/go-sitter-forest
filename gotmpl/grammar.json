@@ -2,7 +2,7 @@
   "language": "gotmpl",
   "url": "https://github.com/ngalaiko/tree-sitter-go-template",
   "maintainedBy": "@qvalentin",
-  "grammarSha": "1025e828ff6d271b9d2e899ea4bfbe39af3f43f53266b69e1e46676c7c150d82",
+  "grammarSha": "52b57d750fa315700624be319f2955af65c0dc390543f5184483fa7aeed19778",
   "reference": "master",
-  "revision": "17144a77be0acdecebd9d557398883569fed41de"
+  "revision": "9d3f6e526dd074b9edae9070b7bb778f00e87a5b"
 }

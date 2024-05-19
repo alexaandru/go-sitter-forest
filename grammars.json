@@ -474,9 +474,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "7f43022cad43f1c56052d7167b9d999a8d6b4813368bbe2d158d7d56ffe53af7",
+    "grammarSha": "8d903d689986768d820098164ea586d1088bbf43ce2ac04d285fa8c921082795",
     "reference": "main",
-    "revision": "450546b6db9a37a178fd87aeda93a287301e9570"
+    "revision": "875d81149e3130f843503f157b3f41732e29ce0b"
   },
   {
     "language": "ebnf",
@@ -827,9 +827,9 @@
     "language": "gotmpl",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
     "maintainedBy": "@qvalentin",
-    "grammarSha": "1025e828ff6d271b9d2e899ea4bfbe39af3f43f53266b69e1e46676c7c150d82",
+    "grammarSha": "52b57d750fa315700624be319f2955af65c0dc390543f5184483fa7aeed19778",
     "reference": "master",
-    "revision": "17144a77be0acdecebd9d557398883569fed41de"
+    "revision": "9d3f6e526dd074b9edae9070b7bb778f00e87a5b"
   },
   {
     "language": "gowork",
@@ -937,9 +937,9 @@
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
     "srcRoot": "dialects/helm",
     "maintainedBy": "@qvalentin",
-    "grammarSha": "5f82b46836084d5dc221a6ad61207005c9b3453a571883cfe1461c63ec5003e8",
+    "grammarSha": "3f347eff9531efba54af771f203b53bbf9f1663f4a1d56bce85b111c9623762b",
     "reference": "master",
-    "revision": "17144a77be0acdecebd9d557398883569fed41de"
+    "revision": "9d3f6e526dd074b9edae9070b7bb778f00e87a5b"
   },
   {
     "language": "hjson",
@@ -958,7 +958,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "feea0ff6eccda8be958c133985dca8977db3d887"
+    "revision": "a84e8d4f675d0006f7c07f6c7bcea2fca04cdb6e"
   },
   {
     "language": "hlsplaylist",
@@ -1635,9 +1635,9 @@
     ],
     "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
-    "grammarSha": "b5547ced34d2daebd3697e2caf3f72b129db55d472835ea597d115996180a99e",
+    "grammarSha": "a44821c74a4e6be305076e009d98f823a11b3bc580fabd9f86752ed17a5611eb",
     "reference": "master",
-    "revision": "27afeb02e49ff30acd17b67897b1c0114561a38c"
+    "revision": "b38c53537769df05871643c9688c264074fb6076"
   },
   {
     "language": "php_only",
@@ -1648,9 +1648,9 @@
     ],
     "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
-    "grammarSha": "de38deac46401704f0585485d5816f09c28088cb54004c726cb0e1f142a37e53",
+    "grammarSha": "c00458c27b715e9f298a1b6b4c13a0ffb0be5af186f628f6547b1f879e13d53c",
     "reference": "master",
-    "revision": "27afeb02e49ff30acd17b67897b1c0114561a38c"
+    "revision": "b38c53537769df05871643c9688c264074fb6076"
   },
   {
     "language": "phpdoc",
@@ -2078,7 +2078,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "68587530d86aaeb1f1cb17fdada795281cdd0556"
+    "revision": "35684819cec627bc32955600ee9a093ed29c3375"
   },
   {
     "language": "slint",
@@ -2151,9 +2151,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Sarrus1",
-    "grammarSha": "c6daab7cfe92669f8e288d68e891c394f854db7f080ebce5eeab46eb28a9aee5",
+    "grammarSha": "b38cf6272873faad218aac1d76f2e08b193b27aef84b11822a2fc804607f7978",
     "reference": "main",
-    "revision": "03d2aba50380a3ceb552044ab4960d4a44759f33"
+    "revision": "227656e72a5f0d430bb82a467bc8078f078bba84"
   },
   {
     "language": "sparql",
@@ -2272,7 +2272,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "c9c669b4513479e07a0ff44cf14f72351959ac21"
+    "revision": "03af4d057afc56edf6a703e6606b86f782353f22"
   },
   {
     "language": "sxhkdrc",
@@ -2387,9 +2387,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ahelwer, @susliko",
-    "grammarSha": "a2060cb40391e0603d3e5d795a0a1e6f6caf5283496e4a41b430fbcccdbed572",
+    "grammarSha": "d15b6072e44008b3ebb10ebf96edad6b907a34ad59c5aef77f8c39c4c62747b6",
     "reference": "main",
-    "revision": "ef18145e7f985f592ad41b04004b24a590f58b71"
+    "revision": "200f9dab6b23f3b9bb8f67fc811221517f56c373"
   },
   {
     "language": "tmux",
@@ -2653,9 +2653,9 @@
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "grammarSha": "4ca75fa299b5d8f05bee1e047c61206fc92649d393e76fa1de47a693ad67d1df",
+    "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
     "reference": "main",
-    "revision": "d65e4c03e1b992adc76df2c2485562c8f2204462"
+    "revision": "d9a9ddfdf56fbb0701168dc59e56a8757d12287d"
   },
   {
     "language": "wit",
