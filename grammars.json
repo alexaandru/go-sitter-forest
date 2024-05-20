@@ -1035,9 +1035,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "a753e8a41695082bda2ed3d3cf9b9aa2ce31d9ca9c2aa95a8be34eda32466a09",
+    "grammarSha": "4d7f90e1778c0945062054c507b0181d14fa7640ed2653d0f3ef4f654cda87ac",
     "reference": "master",
-    "revision": "006a5266d771cab57da58a6ade483ebd3075638d"
+    "revision": "32eade147a3714c768049ba0ddabd3f3ecbe5e99"
   },
   {
     "language": "ini",
@@ -1072,7 +1072,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "25d0687433ed0ed8e320861c2c625711ce1716f9"
+    "revision": "2e8fcbf43e5bb3b0adbb551733f5792d88198153"
   },
   {
     "language": "java",
@@ -1089,9 +1089,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "c322c2f0bd5b114c3260c7cf8c43023cd26ffeb39d53f862fc8a47b29035ffbb",
+    "grammarSha": "777c1206c2fd370cb9af568432c82a38dc4d171ed8976f442f73eb0ff0f04483",
     "reference": "master",
-    "revision": "e88537c2703546f3f0887dd3f16898e1749cdba5"
+    "revision": "ce29c27450810249dde98ca9d0d95b6ae25fe154"
   },
   {
     "language": "jq",
@@ -1287,9 +1287,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@toots",
-    "grammarSha": "9f1f2c46340b642e4653e3e81b2490597ef3cb4ff7beddea3d09d39b4ece1615",
+    "grammarSha": "9646d8c3100106c0e21c907c4fa888cba2b6fa24aae4ffcfd07e50668278f5a5",
     "reference": "main",
-    "revision": "a9b8012366eab7d0c28bbda5f75a847be931008f"
+    "revision": "14feafa91630afb1ab9988cf9b738b7ea29f3f89"
   },
   {
     "language": "llvm",
@@ -1575,9 +1575,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "cb5da2bd168a7b17a398316d0a0f8cdb909f5d3af6f64395837ed5c2e94ee0c5",
+    "grammarSha": "ff77b92bec5ccccabbfeb756fe489e98ea5bda1abd074a4ac03ddbca75f17226",
     "reference": "master",
-    "revision": "f25b8c5201c1480dc0c8c4155a059a79a5a40719"
+    "revision": "edfc92802b0df40c1dcf7f6e624714c21121ac44"
   },
   {
     "language": "org",
