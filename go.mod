@@ -117,7 +117,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
-	github.com/alexaandru/go-sitter-forest/javascript v1.5.14
+	github.com/alexaandru/go-sitter-forest/javascript v1.5.15
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.11
 	github.com/alexaandru/go-sitter-forest/json v1.5.11
@@ -137,7 +137,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.10
-	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.11
+	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.12
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.10
 	github.com/alexaandru/go-sitter-forest/lua v1.5.10
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
@@ -166,7 +166,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml v1.5.10
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.10
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.5.10
-	github.com/alexaandru/go-sitter-forest/odin v1.5.11
+	github.com/alexaandru/go-sitter-forest/odin v1.5.12
 	github.com/alexaandru/go-sitter-forest/org v1.5.10
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.11
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
