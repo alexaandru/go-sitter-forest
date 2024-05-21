@@ -50,7 +50,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.17
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.18
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -113,7 +113,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
 	github.com/alexaandru/go-sitter-forest/idl v1.5.12
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
-	github.com/alexaandru/go-sitter-forest/inko v1.5.11
+	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
@@ -142,7 +142,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lua v1.5.10
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/luap v1.5.10
-	github.com/alexaandru/go-sitter-forest/luau v1.5.11
+	github.com/alexaandru/go-sitter-forest/luau v1.5.12
 	github.com/alexaandru/go-sitter-forest/m68k v1.5.10
 	github.com/alexaandru/go-sitter-forest/make v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.10
@@ -166,12 +166,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml v1.5.10
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.5.10
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.5.10
-	github.com/alexaandru/go-sitter-forest/odin v1.5.12
+	github.com/alexaandru/go-sitter-forest/odin v1.5.13
 	github.com/alexaandru/go-sitter-forest/org v1.5.10
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.11
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
 	github.com/alexaandru/go-sitter-forest/pem v1.5.10
-	github.com/alexaandru/go-sitter-forest/perl v1.5.11
+	github.com/alexaandru/go-sitter-forest/perl v1.5.12
 	github.com/alexaandru/go-sitter-forest/php v1.5.13
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.13
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.12
