@@ -474,9 +474,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "8d903d689986768d820098164ea586d1088bbf43ce2ac04d285fa8c921082795",
+    "grammarSha": "7d21b78848c63064cb4bf67e2b185e99b8425964c8e9ef3e111a44983240de5c",
     "reference": "main",
-    "revision": "875d81149e3130f843503f157b3f41732e29ce0b"
+    "revision": "b556c9f4cf1c6a4a8ebbca47e520653801fcf535"
   },
   {
     "language": "ebnf",
@@ -1051,9 +1051,9 @@
     "language": "inko",
     "url": "https://github.com/inko-lang/tree-sitter-inko",
     "maintainedBy": "@yorickpeterse",
-    "grammarSha": "2ff31d2a5500a84da4c62edb590e5c5a2c783503e7b02b4dd557dad11ede34b4",
+    "grammarSha": "27b0eda319f7a836fc9fda1b81aacd748c0f3ba0a03af225fe96b465246ca842",
     "reference": "main",
-    "revision": "4cef9aa4980606311b906b2f2b8c6cf791c60396"
+    "revision": "7860637ce1b43f5f79cfb7cc3311bf3234e9479f"
   },
   {
     "language": "ispc",
@@ -1072,7 +1072,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "2e8fcbf43e5bb3b0adbb551733f5792d88198153"
+    "revision": "f3d6e09cc47e76833f23f83b2c59ea0878660953"
   },
   {
     "language": "java",
@@ -1334,9 +1334,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "86dca839256716fa98e3332179f201382ae081264de255cebc254eeb35358ac2",
+    "grammarSha": "960ce83e78a109dd2d3cf0e7d05f653d4745b869d5eaef7a4f6f44e079c249bd",
     "reference": "master",
-    "revision": "5b088fac748f2666a315cafd1638a214388eb23e"
+    "revision": "09df1696adefcee8a4422dea85990a56e668547e"
   },
   {
     "language": "m68k",
@@ -1575,9 +1575,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "ff77b92bec5ccccabbfeb756fe489e98ea5bda1abd074a4ac03ddbca75f17226",
+    "grammarSha": "fbefdd5feb3c89825794a7a6920e6ee33ed42e94f30e430542e7b9e165bfdb40",
     "reference": "master",
-    "revision": "edfc92802b0df40c1dcf7f6e624714c21121ac44"
+    "revision": "d37b8f24f653378b268ec18404e9c14ad355b128"
   },
   {
     "language": "org",
@@ -1624,7 +1624,7 @@
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
     "grammarSha": "7a29fc16cadfcf0d9c101211cd85acbc87b545da424d863066a2bcabdab7c1c9",
     "reference": "master",
-    "revision": "bdafc01789b60c017182ceeb445507f370f6e318"
+    "revision": "08d2485d263eb5ab17c46a9d952ebabc1d805bb5"
   },
   {
     "language": "php",
@@ -1936,9 +1936,9 @@
     "altName": "pip requirements",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
     "maintainedBy": "@ObserverOfTime",
-    "grammarSha": "afae79c0e1e13a296c79b5696af84a9dfebed0479f64b3edc5783d9987df10b6",
+    "grammarSha": "6b69519aff8c77dec466180f74d2ddbd14c41605641fd476ec7fec0442a2be3e",
     "reference": "master",
-    "revision": "8666a4dfeb3107144398158bc3dd7a3f59d89ccb"
+    "revision": "360c6a6b31076a482663806f7a8241de9cad6b4e"
   },
   {
     "language": "risor",
@@ -2655,7 +2655,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
     "reference": "main",
-    "revision": "d9a9ddfdf56fbb0701168dc59e56a8757d12287d"
+    "revision": "a93ede6dfefccada439fcd11640c040186b85d49"
   },
   {
     "language": "wit",

@@ -11,6 +11,7 @@ enum {
     FLOAT,
     BLOCK_COMMENT,
     BRACKET,
+    QUOTE,
 };
 
 static inline void advance_odin(TSLexer *lexer) { lexer->advance_odin(lexer, false); }
@@ -230,7 +231,7 @@ backslash:
         skip_odin(lexer);
     }
 
-    if (valid_symbols[BLOCK_COMMENT] && lexer->lookahead == '/') {
+    if (valid_symbols[BLOCK_COMMENT] && !valid_symbols[QUOTE] && lexer->lookahead == '/') {
         advance_odin(lexer);
         if (lexer->lookahead != '*') {
             return false;

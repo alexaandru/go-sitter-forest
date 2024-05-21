@@ -3,7 +3,7 @@
   "altName": "pip requirements",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
   "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "afae79c0e1e13a296c79b5696af84a9dfebed0479f64b3edc5783d9987df10b6",
+  "grammarSha": "6b69519aff8c77dec466180f74d2ddbd14c41605641fd476ec7fec0442a2be3e",
   "reference": "master",
-  "revision": "8666a4dfeb3107144398158bc3dd7a3f59d89ccb"
+  "revision": "360c6a6b31076a482663806f7a8241de9cad6b4e"
 }
