@@ -111,7 +111,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
-	github.com/alexaandru/go-sitter-forest/idl v1.5.12
+	github.com/alexaandru/go-sitter-forest/idl v1.5.13
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
@@ -210,7 +210,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/robot v1.5.10
 	github.com/alexaandru/go-sitter-forest/roc v1.5.10
 	github.com/alexaandru/go-sitter-forest/ron v1.5.12
-	github.com/alexaandru/go-sitter-forest/ruby v1.5.11
+	github.com/alexaandru/go-sitter-forest/ruby v1.5.12
 	github.com/alexaandru/go-sitter-forest/rust v1.5.14
 	github.com/alexaandru/go-sitter-forest/scala v1.5.11
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.10
