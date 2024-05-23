@@ -2,7 +2,7 @@
   "language": "ada",
   "url": "https://github.com/briot/tree-sitter-ada",
   "maintainedBy": "@briot",
-  "grammarSha": "ca1332a3760addee888b313a46ba580b13e54e99b22652447ccd22d2ffc92cf6",
+  "grammarSha": "d95b2f5aa3829021160b1cddc2ef9fe5f499b54a9db085b601e20e215eab57af",
   "reference": "master",
-  "revision": "ba0894efa03beb70780156b91e28c716b7a4764d"
+  "revision": "5417b9ffc790d2b2aff61db5113d6d89b0d17a25"
 }

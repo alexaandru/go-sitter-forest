@@ -3,9 +3,9 @@
     "language": "ada",
     "url": "https://github.com/briot/tree-sitter-ada",
     "maintainedBy": "@briot",
-    "grammarSha": "ca1332a3760addee888b313a46ba580b13e54e99b22652447ccd22d2ffc92cf6",
+    "grammarSha": "d95b2f5aa3829021160b1cddc2ef9fe5f499b54a9db085b601e20e215eab57af",
     "reference": "master",
-    "revision": "ba0894efa03beb70780156b91e28c716b7a4764d"
+    "revision": "5417b9ffc790d2b2aff61db5113d6d89b0d17a25"
   },
   {
     "language": "agda",
@@ -228,7 +228,7 @@
     "maintainedBy": "@NoahTheDuke",
     "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
     "reference": "master",
-    "revision": "3a1ace906c151dd631cf6f149b5083f2b60e6a9e"
+    "revision": "f4236d4da8aa92bc105d9c118746474c608e6af7"
   },
   {
     "language": "cmake",
@@ -1424,7 +1424,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "a708e9b3f3d7f2fc85ac3fd1d4317c51b101eab0"
+    "revision": "c31894561aa7f747ef84a8fb4f6e37689b086f85"
   },
   {
     "language": "muttrc",
@@ -2351,7 +2351,7 @@
     "maintainedBy": "@vrischmann",
     "grammarSha": "cc6228abda973c269d688cbd828984a15f8a221ae87c0e0e985ddebe537dfdd4",
     "reference": "master",
-    "revision": "33d261ad46bd66f5f1fa12d41d0c78e55e97e48b"
+    "revision": "cf84ea53e2e2531f23009d676ac206090c1e2392"
   },
   {
     "language": "textproto",
@@ -2655,7 +2655,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
     "reference": "main",
-    "revision": "5a53aadb566b5dadde55cd6361efbc9f3835a9c7"
+    "revision": "3d2aaa21cd0ed7181215ae1d199549a697425a63"
   },
   {
     "language": "wit",
