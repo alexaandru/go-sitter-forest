@@ -2,7 +2,7 @@
   "language": "erlang",
   "url": "https://github.com/WhatsApp/tree-sitter-erlang",
   "maintainedBy": "@filmor",
-  "grammarSha": "de03d64511facbe2bf834d92587316b41113ff93a7fc22a7ef1b7ee3c82112a1",
+  "grammarSha": "3fe0b9a54c60430dd0081550d10197e7238ce2188c6cf6fa783e8ecaf47ff7bf",
   "reference": "main",
-  "revision": "b2ab8f2ef8f4a8aba3e44f7007d1793a9ee5bb70"
+  "revision": "98ea1f9c957b2ad520415eecb5a5b406e931101e"
 }
