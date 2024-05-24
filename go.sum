@@ -30,6 +30,8 @@ github.com/alexaandru/go-sitter-forest/bitbake v1.5.10 h1:bQJ7Q/6iBWUySPWycHbLzE
 github.com/alexaandru/go-sitter-forest/bitbake v1.5.10/go.mod h1:vwQZHSNpmsULdmbdaIL2c9mu7vSE/DfdaE9qxoySM0c=
 github.com/alexaandru/go-sitter-forest/blueprint v1.5.11 h1:ZAtslQRXdFMnuTpQQFn+dzrcZepOIMSh0NxAebzH4Uw=
 github.com/alexaandru/go-sitter-forest/blueprint v1.5.11/go.mod h1:oKo1JlP2OLXxqNjB1wpnZcZAC+c4zOIDgIs/CPilZWc=
+github.com/alexaandru/go-sitter-forest/bp v1.5.10 h1:tERqIK8qr4GSE4M5AiC6CxFYpLtISkBKmqHSBCMddZA=
+github.com/alexaandru/go-sitter-forest/bp v1.5.10/go.mod h1:vMWs6KGHXtyfsu4ArtBrN8V53ivoEfBokWEW2TPavXU=
 github.com/alexaandru/go-sitter-forest/c v1.5.11 h1:s0Z1wbp/8eJUWGPl5aN7Zl4DNEyZV5i5/LXSMP8NX4E=
 github.com/alexaandru/go-sitter-forest/c v1.5.11/go.mod h1:75nq60/UEhIsPxHoz9j9ocrf1nOr9a1FX/egpxST6/8=
 github.com/alexaandru/go-sitter-forest/c_sharp v1.5.14 h1:rlDXEEu7DlUJzvR8UAIhBd7wU/3s0LAnIxjTYo4AOko=

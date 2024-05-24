@@ -19,6 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.11
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
+	github.com/alexaandru/go-sitter-forest/bp v1.5.10
 	github.com/alexaandru/go-sitter-forest/c v1.5.11
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.14
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10

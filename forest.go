@@ -23,6 +23,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/bicep"
 	"github.com/alexaandru/go-sitter-forest/bitbake"
 	"github.com/alexaandru/go-sitter-forest/blueprint"
+	"github.com/alexaandru/go-sitter-forest/bp"
 	"github.com/alexaandru/go-sitter-forest/c"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
 	"github.com/alexaandru/go-sitter-forest/cairo"
@@ -311,6 +312,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,
 	"blueprint":          blueprint.GetLanguage,
+	"bp":                 bp.GetLanguage,
 	"c":                  c.GetLanguage,
 	"c_sharp":            c_sharp.GetLanguage,
 	"cairo":              cairo.GetLanguage,
