@@ -1,4 +1,4 @@
-# 281 Supported Parsers
+# 282 Supported Parsers
 
 1 pending, 5 skipped regeneration
 
@@ -20,6 +20,7 @@
 - [x] [bicep](https://github.com/tree-sitter-grammars/tree-sitter-bicep) ✔️  (maintained by @amaanq)
 - [x] [bitbake](https://github.com/tree-sitter-grammars/tree-sitter-bitbake) ✔️  (maintained by @amaanq)
 - [x] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint) ✔️  (maintained by @gabmus)
+- [x] [bp](https://github.com/ambroisie/tree-sitter-bp) ✔️  (maintained by @ambroisie)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️  (maintained by @amaanq)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) (maintained by @Luxed; ❌OOM)
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️  (maintained by @amaanq)
