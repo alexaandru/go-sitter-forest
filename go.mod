@@ -34,7 +34,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.10
 	github.com/alexaandru/go-sitter-forest/cpon v1.5.11
-	github.com/alexaandru/go-sitter-forest/cpp v1.5.13
+	github.com/alexaandru/go-sitter-forest/cpp v1.5.14
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.11
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
@@ -51,7 +51,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.18
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.19
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -172,7 +172,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.11
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.10
 	github.com/alexaandru/go-sitter-forest/pem v1.5.10
-	github.com/alexaandru/go-sitter-forest/perl v1.5.12
+	github.com/alexaandru/go-sitter-forest/perl v1.5.13
 	github.com/alexaandru/go-sitter-forest/php v1.5.13
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.13
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.12
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ql v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.12
-	github.com/alexaandru/go-sitter-forest/query v1.5.11
+	github.com/alexaandru/go-sitter-forest/query v1.5.12
 	github.com/alexaandru/go-sitter-forest/r v1.5.11
 	github.com/alexaandru/go-sitter-forest/racket v1.5.11
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
@@ -231,7 +231,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.12
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11
-	github.com/alexaandru/go-sitter-forest/starlark v1.5.10
+	github.com/alexaandru/go-sitter-forest/starlark v1.5.11
 	github.com/alexaandru/go-sitter-forest/strace v1.5.10
 	github.com/alexaandru/go-sitter-forest/styled v1.5.10
 	github.com/alexaandru/go-sitter-forest/supercollider v1.5.11
