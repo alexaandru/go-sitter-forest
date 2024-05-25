@@ -3,7 +3,7 @@
   "altName": "Tree-Sitter query language",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
   "maintainedBy": "@steelsojka",
-  "grammarSha": "a4bf487cbff5cf4a9e8c575719d91f5d70e6bd0a220e17a48fb8dc069152dc96",
+  "grammarSha": "4d62f78f7c3bba553e71ee5d8b9fb71f71e40eb1d5778407045103c21b1a9a61",
   "reference": "master",
-  "revision": "d25e8d183f319497b8b22a2a1585975b020da722"
+  "revision": "e6a775551f6e32cc0efd5b822b2987138c338d9b"
 }
