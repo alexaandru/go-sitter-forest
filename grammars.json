@@ -482,9 +482,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "9e004e19aec5d819c55aaa5bae5142551f9424e741fadd7b5e479e288d4e4fc7",
+    "grammarSha": "88bbed8e8bdd2b3b82c0fe00b55be48959ba82d965dba25c4aef1c3723075591",
     "reference": "main",
-    "revision": "91fc9434283aec06139e37fc007ad00922f278b4"
+    "revision": "336001d79dd62668088bc6fe6d72a774a449fa2d"
   },
   {
     "language": "ebnf",
@@ -501,7 +501,7 @@
     "maintainedBy": "@uyha",
     "grammarSha": "e7b06b7fc0edf8ea5d22d4161783d3444a31e143df7f90a8df4686e9e6c6213e",
     "reference": "main",
-    "revision": "fde62029d4c715562230070b9af51a9500c2ce10"
+    "revision": "5517bdb90c90703df49579a4b04689a614780be2"
   },
   {
     "language": "eex",
@@ -1867,7 +1867,7 @@
     "maintainedBy": "@steelsojka",
     "grammarSha": "4d62f78f7c3bba553e71ee5d8b9fb71f71e40eb1d5778407045103c21b1a9a61",
     "reference": "master",
-    "revision": "e6a775551f6e32cc0efd5b822b2987138c338d9b"
+    "revision": "f767fb0ac5e711b6d44c5e0c8d1f349687a86ce0"
   },
   {
     "language": "r",
@@ -2130,9 +2130,9 @@
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
     "maintainedBy": "@amaanq",
-    "grammarSha": "c7de619d47428e559f42d6c2e039e913e8793064f57db228e70b4865ba30e39e",
+    "grammarSha": "585fa2825de7a62f0c0a5be3821a3391e101cbaf91b033cebf15f3bd72922d99",
     "reference": "master",
-    "revision": "b5a23ead0f69d38b5c9a630f52f5c129132c16ed"
+    "revision": "2c5f1e7318fe7d9c8eb38d7d64ebe558d9f41ebc"
   },
   {
     "language": "soql",
@@ -2663,7 +2663,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
     "reference": "main",
-    "revision": "4b42f9dc4adcdaf7329db9b4cf067bdd06ebb116"
+    "revision": "72f7128a531f9f5b32f1694d5fb2d49ffd2d0d2a"
   },
   {
     "language": "wit",
