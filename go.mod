@@ -155,7 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
-	github.com/alexaandru/go-sitter-forest/nickel v1.5.10
+	github.com/alexaandru/go-sitter-forest/nickel v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.10
@@ -283,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.14
 	github.com/alexaandru/go-sitter-forest/yang v1.5.10
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.12
-	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.10
+	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.11
 	github.com/alexaandru/go-sitter-forest/zig v1.5.10
 	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/sync v0.7.0

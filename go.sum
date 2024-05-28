@@ -302,8 +302,8 @@ github.com/alexaandru/go-sitter-forest/muttrc v1.5.11 h1:8jzmYwXIFXMf5egB/9wvMtW
 github.com/alexaandru/go-sitter-forest/muttrc v1.5.11/go.mod h1:bmsxLB8tyKc4rWZc3W1jso2I/JrzAXgyGQAgKb+L9Uw=
 github.com/alexaandru/go-sitter-forest/nasm v1.5.12 h1:ibKoNCXQbavkzvGT9yeREeTUCs+667/qFcPl+5Yn7TY=
 github.com/alexaandru/go-sitter-forest/nasm v1.5.12/go.mod h1:qoWYYm1NaocxnRj9WbauIh09eDJNZ96eDS6stYdvHQ8=
-github.com/alexaandru/go-sitter-forest/nickel v1.5.10 h1:gYnbrNd0OoV7ehUPewP5OEfMSdyzeDxRcIKATtQb4Bc=
-github.com/alexaandru/go-sitter-forest/nickel v1.5.10/go.mod h1:fPU2NaKoQvWO1QtXUQc4hZ54J9c/vMm08ElrqSuGky4=
+github.com/alexaandru/go-sitter-forest/nickel v1.5.11 h1:PsPnEN4PpaSB987hFxZKyEoW0T8A3nsIo+Zl3MgS/nQ=
+github.com/alexaandru/go-sitter-forest/nickel v1.5.11/go.mod h1:fPU2NaKoQvWO1QtXUQc4hZ54J9c/vMm08ElrqSuGky4=
 github.com/alexaandru/go-sitter-forest/nim v1.5.11 h1:nvl7xzqLSfa/LUPXI/KD/OdAynUri/hsrCGG6VEkyJs=
 github.com/alexaandru/go-sitter-forest/nim v1.5.11/go.mod h1:qafp69W8YYit2gG+/lprS6ENmzfn3AkBS54tay01bPA=
 github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10 h1:6XQjWNh046LP/o9IYsP6XKW8uQzW1OpQXWGVCdgemxE=
@@ -558,8 +558,8 @@ github.com/alexaandru/go-sitter-forest/yang v1.5.10 h1:LLNnYKbOXL35uAD8PekmR6uc0
 github.com/alexaandru/go-sitter-forest/yang v1.5.10/go.mod h1:EKJo1MA5DBDZYh7LvdCPvG99aWD7dHpZlp1m9GDT9ss=
 github.com/alexaandru/go-sitter-forest/yuck v1.5.12 h1:iWsGekVBTMAEM/0rhN5djBR/fzzKOLlxueNQYssFCYY=
 github.com/alexaandru/go-sitter-forest/yuck v1.5.12/go.mod h1:tnSF5NaF3PzUm/AKvlGBe+dMgSbl3KLCYVaPA9Wolio=
-github.com/alexaandru/go-sitter-forest/zathurarc v1.5.10 h1:7bsIK21axhwWxl/oCSxPsHGRkaglhJ+vXWQXF3031FQ=
-github.com/alexaandru/go-sitter-forest/zathurarc v1.5.10/go.mod h1:ySlDSXn95fZpyLDltBfoXk7Vnt5UBxJD6jvXwZAk6Q8=
+github.com/alexaandru/go-sitter-forest/zathurarc v1.5.11 h1:we9EDOV4ZSmOros8MHrP1uCo20OPXCR3v7LUdkV8hQs=
+github.com/alexaandru/go-sitter-forest/zathurarc v1.5.11/go.mod h1:ySlDSXn95fZpyLDltBfoXk7Vnt5UBxJD6jvXwZAk6Q8=
 github.com/alexaandru/go-sitter-forest/zig v1.5.10 h1:6CZkkEnbovubxGBUSMLsac2Z04ioWhwexPKRliQtZo8=
 github.com/alexaandru/go-sitter-forest/zig v1.5.10/go.mod h1:lDcXWoy9H1B9q9/xa4pfPU5rTTmPs5Bs0AI7uWOUHFE=
 github.com/alexaandru/go-tree-sitter-bare v1.1.1 h1:2UtaDczLIqcTGTV9VU3w/GgC6iKgNr6uPtgM+IXN0lQ=
