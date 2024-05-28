@@ -1061,7 +1061,7 @@
     "maintainedBy": "@yorickpeterse",
     "grammarSha": "27b0eda319f7a836fc9fda1b81aacd748c0f3ba0a03af225fe96b465246ca842",
     "reference": "main",
-    "revision": "7860637ce1b43f5f79cfb7cc3311bf3234e9479f"
+    "revision": "234c87be1dac20f766ddf6f486a7bde2a4bc5594"
   },
   {
     "language": "ispc",
@@ -1457,9 +1457,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ErinvanderVeen, @yannham",
-    "grammarSha": "5a0fe7ce530f28abf0f9a4ef15488fb6225bbddc3507c8409ea4667361b92be3",
+    "grammarSha": "d3ebeadc446ab94652a77bd8759c48f2d7b3dcb290a18687a5db3512ddb2d223",
     "reference": "main",
-    "revision": "58baf89db8fdae54a84bcf22c80ff10ee3f929ed"
+    "revision": "52478738c5a072ab3ad62c74db5d0902dab064cd"
   },
   {
     "language": "nim",
@@ -2132,7 +2132,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "585fa2825de7a62f0c0a5be3821a3391e101cbaf91b033cebf15f3bd72922d99",
     "reference": "master",
-    "revision": "2c5f1e7318fe7d9c8eb38d7d64ebe558d9f41ebc"
+    "revision": "1c94fe3d5351dfcff3551ec1f49614cbf758e444"
   },
   {
     "language": "soql",
@@ -2280,7 +2280,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "03af4d057afc56edf6a703e6606b86f782353f22"
+    "revision": "26354ddec08c7efde4fa16bd29429f3310d2e2c5"
   },
   {
     "language": "sxhkdrc",
@@ -2663,7 +2663,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
     "reference": "main",
-    "revision": "72f7128a531f9f5b32f1694d5fb2d49ffd2d0d2a"
+    "revision": "31ba2e08a8be40dbd7c9824ae6f2040e2e9c0275"
   },
   {
     "language": "wit",
@@ -2730,9 +2730,9 @@
     "language": "zathurarc",
     "url": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
     "maintainedBy": "@Freed-Wu",
-    "grammarSha": "af8b1a99287ad28ba875999fb0b21236159083bfd1e5ab832e2c68ecc500ec8a",
+    "grammarSha": "41765dc4689b4646780f87faa90f9084b7c49c6e8a61fb5f6486dbdc9be792c3",
     "reference": "main",
-    "revision": "e9e8de071ab79ed1f6e3365f05fcf890b6d85a2f"
+    "revision": "5918bf1785662c43a841b0b6a27a129337ec3a23"
   },
   {
     "language": "zig",

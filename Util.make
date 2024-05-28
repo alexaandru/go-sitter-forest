@@ -16,7 +16,10 @@ list_parsers_without_modules:
 clean:
 	@rm -rfv *.cov tmp auto.log
 
-check: nvim_diff check-updates
+mktmp:
+	@mkdir -p tmp
+
+check: mktmp nvim_diff check-updates
 
 nvim_diff:
 	@curl -so tmp/README.md https://raw.githubusercontent.com/nvim-treesitter/nvim-treesitter/master/README.md
