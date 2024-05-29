@@ -23,7 +23,7 @@ print! (2, 4, 6, 8)
   .to_list()
 check! [4, 16, 36, 64]
 `
-	expected = "(module (chain start: (identifier) (call (string))) (chain start: (identifier) (ERROR) (call (identifier) (chain start: (identifier) (ERROR) (call (assign (identifier) (function (args (arg (identifier))) body: (binary_op (identifier) (identifier)))))))) (chain start: (identifier) (ERROR) (call (string (chain start: (identifier) (call (number)))))) (chain start: (identifier) (ERROR) (call (chain start: (identifier) (call (chain start: (identifier) (call (number))))))) (chain start: (identifier) (ERROR) (call (chain start: (tuple (number) (number) (number) (number)) lookup: (identifier) (call (chain start: (identifier) lookup: (identifier) call: (tuple)))))) (chain start: (identifier) (ERROR) (call (list (number) (number) (number) (number)))))"
+	expected = "(module (chain start: (identifier) (call (string))) (chain start: (identifier) (ERROR) (call (identifier) (chain start: (identifier) (ERROR) (call (assign (identifier) (function (args (arg (variable (identifier)))) body: (binary_op (identifier) (identifier)))))))) (chain start: (identifier) (ERROR) (call (string (chain start: (identifier) (call (number)))))) (chain start: (identifier) (ERROR) (call (chain start: (identifier) (call (chain start: (identifier) (call (number))))))) (chain start: (identifier) (ERROR) (call (chain start: (tuple (number) (number) (number) (number)) lookup: (identifier) (call (chain start: (identifier) lookup: (identifier) call: (tuple)))))) (chain start: (identifier) (ERROR) (call (list (number) (number) (number) (number)))))"
 )
 
 func TestGrammar(t *testing.T) {
