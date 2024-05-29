@@ -317,7 +317,7 @@
     "maintainedBy": "@devnote-dev",
     "grammarSha": "020f2eab82bdc80417848496ffdbaf9865795893653639f94c536c35503914c3",
     "reference": "main",
-    "revision": "4e6a4f93f4926b59c2c0e128801525f77c822b5f"
+    "revision": "c67e9bc000f006212edae98d167c83411a3d8309"
   },
   {
     "language": "css",
@@ -348,7 +348,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
     "reference": "master",
-    "revision": "e7878a9cf4157e9d6c8013ff5605c9f26d62894d"
+    "revision": "1f188eff83b562ffae36d13e1b804ec6f3b9f1d9"
   },
   {
     "language": "cue",
@@ -753,7 +753,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "107fa12f6f326c738a708c2a5f4c4390476ce874a94a42dd3352e2b1bab30863",
     "reference": "main",
-    "revision": "8432ffe32ccd360534837256747beb5b1c82fca1"
+    "revision": "02a17bf9d0553406268cdbf466d57808ae712bf3"
   },
   {
     "language": "glimmer",
@@ -773,7 +773,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
     "reference": "master",
-    "revision": "33a16b6ff4d7206a16f2dc96c40e149c657db65f"
+    "revision": "7f91bf34cadc06a96efc475df501ffca4dda9410"
   },
   {
     "language": "gn",
@@ -966,7 +966,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
     "reference": "master",
-    "revision": "a84e8d4f675d0006f7c07f6c7bcea2fca04cdb6e"
+    "revision": "5e1225a30712ca0a9040509806c7ba274a1bbcde"
   },
   {
     "language": "hlsplaylist",
@@ -1053,7 +1053,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "7ddb44f842e45d6d24d156a2a625f43f86fc36f608994b0393529c61c7698a99",
     "reference": "master",
-    "revision": "bcb84a2d4bcd6f55b911c42deade75c8f90cb0c5"
+    "revision": "87176e524f0a98f5be75fa44f4f0ff5c6eac069c"
   },
   {
     "language": "inko",
@@ -1218,9 +1218,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@irh",
-    "grammarSha": "65391014b55e39943803baf82af80d2ae2be001c2224f797e309c79793126322",
+    "grammarSha": "2db7faf47a974a2b2ee030a213e33c026a2e59db898c19a2bf2e338502744749",
     "reference": "main",
-    "revision": "919440e1376109bab4edac52594c17c02ae0be5a"
+    "revision": "2ff158a3c7c8ac8e50c1aefe8a3162a9156a73e7"
   },
   {
     "language": "kusto",
@@ -2086,7 +2086,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
     "reference": "master",
-    "revision": "989bfe5ae69e7bad13454b8f52e4ab0c343d8ded"
+    "revision": "865d79e236c7f0e04276c969453d021d1da4b15f"
   },
   {
     "language": "slint",
@@ -2663,7 +2663,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
     "reference": "main",
-    "revision": "31ba2e08a8be40dbd7c9824ae6f2040e2e9c0275"
+    "revision": "79b07d53ddac1be1c4a22378da6ff9db22568688"
   },
   {
     "language": "wit",
@@ -2732,7 +2732,7 @@
     "maintainedBy": "@Freed-Wu",
     "grammarSha": "41765dc4689b4646780f87faa90f9084b7c49c6e8a61fb5f6486dbdc9be792c3",
     "reference": "main",
-    "revision": "5918bf1785662c43a841b0b6a27a129337ec3a23"
+    "revision": "6e7c8edfcd6f5f7c12b2fa9ffc6d042f1b6d7068"
   },
   {
     "language": "zig",
