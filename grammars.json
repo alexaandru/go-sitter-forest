@@ -1043,9 +1043,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "92e110ceb6b4a439ccd4d7d37e62674125bd63b68d99cc5dda667acbd7c2ffd8",
+    "grammarSha": "63cc3fb6fcd49901eb5ec0868ef7c2971c6799b9592cbdb4f5141f5d789fd305",
     "reference": "master",
-    "revision": "b5b53e2ca0521b98277d5e4b109f0b0e362e850e"
+    "revision": "9f56001f8ed29b0ea9fa4f02813f3e83ab0a2aaa"
   },
   {
     "language": "ini",
@@ -1165,7 +1165,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "e1a9235dd9a3477903424c7739b9d35e26f33c0c102a1dde69a795d12e64e691",
     "reference": "master",
-    "revision": "acd5ca12cc278df7960629c2429a096c7ac4bbea"
+    "revision": "f1baa5f8e271109d01cc8ff7473c11df2d8a9aee"
   },
   {
     "language": "just",
@@ -1457,9 +1457,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ErinvanderVeen, @yannham",
-    "grammarSha": "d3ebeadc446ab94652a77bd8759c48f2d7b3dcb290a18687a5db3512ddb2d223",
+    "grammarSha": "a908003e7cd8563e6a35e8d99e47230ecb41631e4faa64a47e55570dfc9d991e",
     "reference": "main",
-    "revision": "52478738c5a072ab3ad62c74db5d0902dab064cd"
+    "revision": "0a796f3a312917724c1d9f486a201f7402a8acfd"
   },
   {
     "language": "nim",
@@ -2159,9 +2159,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Sarrus1",
-    "grammarSha": "b38cf6272873faad218aac1d76f2e08b193b27aef84b11822a2fc804607f7978",
+    "grammarSha": "16e7b560a31cc4e0f0e7e81b37a47ea014c5912d9520bf5d79c29942b1b635ed",
     "reference": "main",
-    "revision": "227656e72a5f0d430bb82a467bc8078f078bba84"
+    "revision": "64ad670dd59e88c5d32bc3d759ae8562b522cad9"
   },
   {
     "language": "sparql",
@@ -2661,9 +2661,9 @@
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "grammarSha": "f842fef7078c19b6d758db885010e6aa1294568c8a20fd6691587611c4833ba7",
+    "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "79b07d53ddac1be1c4a22378da6ff9db22568688"
+    "revision": "f323a4ba52fc513012ee7162f6a9b74cc8f25d8c"
   },
   {
     "language": "wit",
