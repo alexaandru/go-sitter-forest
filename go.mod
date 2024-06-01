@@ -20,7 +20,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
 	github.com/alexaandru/go-sitter-forest/bp v1.5.10
-	github.com/alexaandru/go-sitter-forest/c v1.5.11
+	github.com/alexaandru/go-sitter-forest/c v1.5.12
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.14
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/calc v1.5.10
@@ -51,7 +51,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.20
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.21
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -118,7 +118,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
-	github.com/alexaandru/go-sitter-forest/javascript v1.5.15
+	github.com/alexaandru/go-sitter-forest/javascript v1.5.16
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.11
 	github.com/alexaandru/go-sitter-forest/json v1.5.11
