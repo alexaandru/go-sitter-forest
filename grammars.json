@@ -169,9 +169,9 @@
     "language": "c",
     "url": "https://github.com/tree-sitter/tree-sitter-c",
     "maintainedBy": "@amaanq",
-    "grammarSha": "c6ef06caa651a10c3e9f96f4ca82655f61ae8d5f0aad9db37b387c4461527078",
+    "grammarSha": "069c821350e3c921bdc42a43e0545de8fa772a39a44a2536ffca120da76229bc",
     "reference": "master",
-    "revision": "00ed08f1a6c18141bfd7a81638e4d239a0bb55cc"
+    "revision": "deca017a554045b4c203e7ddff39ae64ff05e071"
   },
   {
     "language": "c_sharp",
@@ -482,9 +482,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "88bbed8e8bdd2b3b82c0fe00b55be48959ba82d965dba25c4aef1c3723075591",
+    "grammarSha": "90d05606befa3f1f22f7ba29154396e6f88814071856df0173e5bafac26e73ff",
     "reference": "main",
-    "revision": "336001d79dd62668088bc6fe6d72a774a449fa2d"
+    "revision": "934d3c5e2e7ce94031fa9a55c73c5344e1eaae17"
   },
   {
     "language": "ebnf",
@@ -592,7 +592,7 @@
     "skip": true,
     "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
     "reference": "main",
-    "revision": "8ad17704b3c2469155947d4e8fcb618cf1328459"
+    "revision": "cfbfa478dc2dbef267ee94ae4323d9c886f45e94"
   },
   {
     "language": "fidl",
@@ -1080,7 +1080,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "f3d6e09cc47e76833f23f83b2c59ea0878660953"
+    "revision": "6bfbaadac2ba0da21087041eff85d26129c4c920"
   },
   {
     "language": "java",
@@ -1097,9 +1097,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "70ac82f9f7ba2f94a83e2edfc078a860dc4e765e4219008892d62bca421ca9e7",
+    "grammarSha": "6a0544301bd23f4098c26c269fe963bb061b1d2fdc3ae3d1da8fc4e1532c10ae",
     "reference": "master",
-    "revision": "a5de24dc7939cb07a758f8d89c089cfdb6f479aa"
+    "revision": "391a8fcc48a11f63bf18ec9885f6f069e760949a"
   },
   {
     "language": "jq",
@@ -1935,9 +1935,9 @@
     "language": "rego",
     "url": "https://github.com/FallenAngel97/tree-sitter-rego",
     "maintainedBy": "@FallenAngel97",
-    "grammarSha": "6ef054a81d5fe7ac899d333780953ceecd3057dc9055328f14c76deffea36f50",
+    "grammarSha": "0a3e763b60822c96d5148b593d2630b1a0a5bc3b0eaa1105a724b8785c871a46",
     "reference": "master",
-    "revision": "9ac75e71b2d791e0aadeef68098319d86a2a14cf"
+    "revision": "39771ed2d7eec293543c81afe705617f39d607f5"
   },
   {
     "language": "requirements",
@@ -2094,7 +2094,7 @@
     "maintainedBy": "@hunger",
     "grammarSha": "c3f701873071af57ca3ae52a39a7d62ba7a78f704bd35ab3798be519915560bb",
     "reference": "master",
-    "revision": "0701312b74b87fe20e61aa662ba41c5815b5d428"
+    "revision": "59ace2390848e8ab17b47e0b9fa1e5fde8077316"
   },
   {
     "language": "smali",
@@ -2663,7 +2663,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "f323a4ba52fc513012ee7162f6a9b74cc8f25d8c"
+    "revision": "5ff5635673f202d528f1befa293ccab8de79fe42"
   },
   {
     "language": "wit",

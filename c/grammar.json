@@ -2,7 +2,7 @@
   "language": "c",
   "url": "https://github.com/tree-sitter/tree-sitter-c",
   "maintainedBy": "@amaanq",
-  "grammarSha": "c6ef06caa651a10c3e9f96f4ca82655f61ae8d5f0aad9db37b387c4461527078",
+  "grammarSha": "069c821350e3c921bdc42a43e0545de8fa772a39a44a2536ffca120da76229bc",
   "reference": "master",
-  "revision": "00ed08f1a6c18141bfd7a81638e4d239a0bb55cc"
+  "revision": "deca017a554045b4c203e7ddff39ae64ff05e071"
 }
