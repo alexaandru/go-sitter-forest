@@ -46,9 +46,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ObserverOfTime",
-    "grammarSha": "5c2ffe3d03b9a6fb6c8912618a2e0ae21904b3cf6bb412de1d5321373780df38",
+    "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
     "reference": "master",
-    "revision": "babb6d4da69b359bbb80adbf1fe39c0da9175210"
+    "revision": "afb34b2c65f507932c5c6ddbf0d5a9ca6a772f2f"
   },
   {
     "language": "asm",
@@ -484,7 +484,7 @@
     "maintainedBy": "@glehmann",
     "grammarSha": "90d05606befa3f1f22f7ba29154396e6f88814071856df0173e5bafac26e73ff",
     "reference": "main",
-    "revision": "934d3c5e2e7ce94031fa9a55c73c5344e1eaae17"
+    "revision": "dbfb970a59cd87b628d087eb8e3fbe19c8e20601"
   },
   {
     "language": "ebnf",
@@ -1935,9 +1935,9 @@
     "language": "rego",
     "url": "https://github.com/FallenAngel97/tree-sitter-rego",
     "maintainedBy": "@FallenAngel97",
-    "grammarSha": "0a3e763b60822c96d5148b593d2630b1a0a5bc3b0eaa1105a724b8785c871a46",
+    "grammarSha": "8eba6893c89e615a8b6b0796874d7df831a743761669fd9a809dc67e376a8b49",
     "reference": "master",
-    "revision": "39771ed2d7eec293543c81afe705617f39d607f5"
+    "revision": "23b1da8de9766d766c4f01531e8be14b5c00c493"
   },
   {
     "language": "requirements",
@@ -2238,7 +2238,7 @@
     "maintainedBy": "@mskelton",
     "grammarSha": "e47c79e14d31ac7774cf20ff7582297a41b47b1dfe56006b112a4e3e2e0528fa",
     "reference": "main",
-    "revision": "c68a4572e2d6403b6e99066c9a113b43f4a07a27"
+    "revision": "65835cca33a5f033bcde580ed66cde01c1fabbbe"
   },
   {
     "language": "supercollider",
@@ -2342,13 +2342,15 @@
   {
     "language": "teal",
     "url": "https://github.com/euclidianAce/tree-sitter-teal",
+    "doc": "is currently broken: https://github.com/euclidianAce/tree-sitter-teal/issues/25",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@euclidianAce",
-    "grammarSha": "a2a8f60f650edcbabf1e24efbe5702fd668b1ff92e12b6822641e410cf683e12",
+    "skipUpdate": true,
+    "grammarSha": "821dceb684ce573ce95e84ead77945d70e36b3e0db69bf784d0741d8cd801c9d",
     "reference": "main",
-    "revision": "33482c92a0dfa694491d34e167a1d2f52b0dccb1"
+    "revision": "f937fb4ea76e9e1ff29393fad841c75721001d85"
   },
   {
     "language": "templ",
@@ -2484,7 +2486,7 @@
     "maintainedBy": "@happenslol",
     "grammarSha": "80e4b2fa4e96de71f19f028bac79ac26793f401c07134cdcdf0b21ad9b4c9c4a",
     "reference": "main",
-    "revision": "fd9a83c6c0aaaff4b1354454b5b9f130f59dd553"
+    "revision": "28821d0d6da5f0a6b5eb02b9bad953fecafd7248"
   },
   {
     "language": "typoscript",
@@ -2663,7 +2665,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "5ff5635673f202d528f1befa293ccab8de79fe42"
+    "revision": "70e9677d0eebb57b7ebc86f3e8de64a908a5ba0a"
   },
   {
     "language": "wit",

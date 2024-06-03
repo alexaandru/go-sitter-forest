@@ -60,6 +60,10 @@ func checkUpdates() error {
 	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Branch", "Status", strings.Repeat("─", 100))
 
 	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+		if gr.SkipUpdate {
+			return
+		}
+
 		if err = gr.FetchNewVersion(); err != nil {
 			return
 		}
@@ -105,6 +109,10 @@ func updateAll(force bool) (err error) {
 	fmt.Println("Updating all (applicable) languages ...")
 
 	if err = forEachGrammar(func(gr *grammar.Grammar) error {
+		if gr.SkipUpdate {
+			return nil
+		}
+
 		return update(gr, force)
 	}); err != nil {
 		return
@@ -170,6 +178,10 @@ func updateGrammars() (err error) {
 }
 
 func update(gr *grammar.Grammar, force bool) (err error) {
+	if gr.SkipUpdate {
+		return
+	}
+
 	checkIfRedirect(gr)
 
 	if err = gr.FetchNewVersion(); err != nil {

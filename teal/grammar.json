@@ -1,11 +1,13 @@
 {
   "language": "teal",
   "url": "https://github.com/euclidianAce/tree-sitter-teal",
+  "doc": "is currently broken: https://github.com/euclidianAce/tree-sitter-teal/issues/25",
   "files": [
     "scanner.c"
   ],
   "maintainedBy": "@euclidianAce",
-  "grammarSha": "a2a8f60f650edcbabf1e24efbe5702fd668b1ff92e12b6822641e410cf683e12",
+  "skipUpdate": true,
+  "grammarSha": "821dceb684ce573ce95e84ead77945d70e36b3e0db69bf784d0741d8cd801c9d",
   "reference": "main",
-  "revision": "33482c92a0dfa694491d34e167a1d2f52b0dccb1"
+  "revision": "f937fb4ea76e9e1ff29393fad841c75721001d85"
 }

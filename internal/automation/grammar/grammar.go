@@ -58,6 +58,10 @@ type Grammar struct {
 	// the regeneration locally.
 	SkipGenerate bool `json:"skip,omitempty"`
 
+	// SkipUpdate skips updates for the given parser.
+	// Can be used when a parser becomes temporarily unbuildable.
+	SkipUpdate bool `json:"skipUpdate,omitempty"`
+
 	// Pending indicates to completly ignore this grammar, as not-yet-implemented.
 	Pending bool `json:"pending,omitempty"`
 
