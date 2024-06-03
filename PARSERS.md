@@ -246,7 +246,7 @@
 - [x] [tablegen](https://github.com/tree-sitter-grammars/tree-sitter-tablegen) ✔️  (maintained by @amaanq)
 - [x] [tact](https://github.com/tact-lang/tree-sitter-tact) ✔️  (maintained by @novusnota)
 - [x] [tcl](https://github.com/tree-sitter-grammars/tree-sitter-tcl) ✔️  (maintained by @lewis6991)
-- [x] [teal](https://github.com/euclidianAce/tree-sitter-teal) ✔️  (maintained by @euclidianAce; ❌is currently broken: https://github.com/euclidianAce/tree-sitter-teal/issues/25)
+- [x] [teal](https://github.com/euclidianAce/tree-sitter-teal) ✔️  (maintained by @euclidianAce)
 - [x] [templ](https://github.com/vrischmann/tree-sitter-templ) ✔️  (maintained by @vrischmann)
 - [x] [textproto](https://github.com/PorterAtGoogle/tree-sitter-textproto) ✔️  (maintained by @Porter)
 - [x] [thrift](https://github.com/tree-sitter-grammars/tree-sitter-thrift) ✔️  (maintained by @amaanq, @duskmoon314)

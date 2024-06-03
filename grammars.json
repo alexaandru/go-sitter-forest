@@ -1218,9 +1218,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@irh",
-    "grammarSha": "2db7faf47a974a2b2ee030a213e33c026a2e59db898c19a2bf2e338502744749",
+    "grammarSha": "16af1c29f739e747930b5739818b56b97eda8382e8d6d45a066059b4be97e197",
     "reference": "main",
-    "revision": "2ff158a3c7c8ac8e50c1aefe8a3162a9156a73e7"
+    "revision": "eb8d866cff5751c0a7650623d244280618b0a378"
   },
   {
     "language": "kusto",
@@ -2092,9 +2092,9 @@
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
     "maintainedBy": "@hunger",
-    "grammarSha": "c3f701873071af57ca3ae52a39a7d62ba7a78f704bd35ab3798be519915560bb",
+    "grammarSha": "40bc54c63ccec958dbb383cc9b0014bff4828df7690ebd6f1a6aefcad292247e",
     "reference": "master",
-    "revision": "59ace2390848e8ab17b47e0b9fa1e5fde8077316"
+    "revision": "d82ab8c19ea1b60ff570256eaef7d137cc5ecb63"
   },
   {
     "language": "smali",
@@ -2342,15 +2342,13 @@
   {
     "language": "teal",
     "url": "https://github.com/euclidianAce/tree-sitter-teal",
-    "doc": "is currently broken: https://github.com/euclidianAce/tree-sitter-teal/issues/25",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@euclidianAce",
-    "skipUpdate": true,
     "grammarSha": "821dceb684ce573ce95e84ead77945d70e36b3e0db69bf784d0741d8cd801c9d",
     "reference": "main",
-    "revision": "f937fb4ea76e9e1ff29393fad841c75721001d85"
+    "revision": "19b02da829d1721a521bf7b802eb80a50bd53aab"
   },
   {
     "language": "templ",
@@ -2665,7 +2663,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "70e9677d0eebb57b7ebc86f3e8de64a908a5ba0a"
+    "revision": "2429488a8f794f9a667dfdee52eaa4e69a55ed7b"
   },
   {
     "language": "wit",

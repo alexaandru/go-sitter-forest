@@ -1,6 +1,6 @@
 #include "parser.h"
+#include "alloc.h"
 #include <stdbool.h>
-#include <stdio.h>
 #include <string.h>
 
 typedef struct {
@@ -9,8 +9,8 @@ typedef struct {
     char opening_quote;
 } State;
 
-void *tree_sitter_teal_external_scanner_create() { return calloc(1, sizeof(State)); }
-void tree_sitter_teal_external_scanner_destroy(void *payload) { free(payload); }
+void *tree_sitter_teal_external_scanner_create() { return ts_calloc(1, sizeof(State)); }
+void tree_sitter_teal_external_scanner_destroy(void *payload) { ts_free(payload); }
 
 static inline void consume(TSLexer *lexer) { lexer->advance_teal(lexer, false); }
 static inline void skip_teal(TSLexer *lexer) { lexer->advance_teal(lexer, true); }
@@ -91,14 +91,14 @@ static inline void reset_state(State *state) {
 }
 
 unsigned tree_sitter_teal_external_scanner_serialize(void *payload, char *buffer) {
-    memcpy(buffer, payload, sizeof(State));
+    *(State *)buffer = *(State *)payload;
     return sizeof(State);
 }
 
 void tree_sitter_teal_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     if (length < sizeof(State))
         return;
-    memcpy(payload, buffer, sizeof(State));
+    *(State *)payload = *(State *)buffer;
 }
 
 static bool scan_short_string_start(State *state, TSLexer *lexer) {
@@ -172,7 +172,7 @@ static bool scan_long_string_char(TSLexer *lexer) {
     return true;
 }
 
-static inline bool is_whitespace(uint32_t chr) {
+static inline bool is_ascii_whitespace(uint32_t chr) {
     switch (chr) {
         default: return false;
         case '\n': case '\r': case ' ': case '\t':
@@ -192,7 +192,8 @@ bool tree_sitter_teal_external_scanner_scan(void *payload, TSLexer *lexer, const
         }
         return scan_long_string_end(state, lexer) || scan_long_string_char(lexer);
     }
-    while (is_whitespace(lexer->lookahead))
+
+    while (is_ascii_whitespace(lexer->lookahead))
         skip_teal(lexer);
 
     if (valid_symbols[SHORT_STRING_START] && scan_short_string_start(state, lexer))
@@ -200,9 +201,6 @@ bool tree_sitter_teal_external_scanner_scan(void *payload, TSLexer *lexer, const
 
     if (valid_symbols[LONG_STRING_START] && scan_long_string_start(state, lexer))
         return true;
-
-    while (is_whitespace(lexer->lookahead))
-        skip_teal(lexer);
 
     return valid_symbols[COMMENT] && scan_comment(lexer);
 }
