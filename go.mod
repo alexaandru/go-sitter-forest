@@ -7,7 +7,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.5.10
 	github.com/alexaandru/go-sitter-forest/angular v1.5.12
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
-	github.com/alexaandru/go-sitter-forest/arduino v1.5.12
+	github.com/alexaandru/go-sitter-forest/arduino v1.5.13
 	github.com/alexaandru/go-sitter-forest/asm v1.5.12
 	github.com/alexaandru/go-sitter-forest/astro v1.5.13
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.10
 	github.com/alexaandru/go-sitter-forest/readline v1.5.10
 	github.com/alexaandru/go-sitter-forest/regex v1.5.10
-	github.com/alexaandru/go-sitter-forest/rego v1.5.10
+	github.com/alexaandru/go-sitter-forest/rego v1.5.11
 	github.com/alexaandru/go-sitter-forest/requirements v1.5.10
 	github.com/alexaandru/go-sitter-forest/risor v1.5.10
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.5.10

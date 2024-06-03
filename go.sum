@@ -6,8 +6,8 @@ github.com/alexaandru/go-sitter-forest/angular v1.5.12 h1:ITplHweofTonfckS3ev4UR
 github.com/alexaandru/go-sitter-forest/angular v1.5.12/go.mod h1:JNDhnM4FbgsicwBToSxxEMV9M8eMfw46S6qVJ5vRRmk=
 github.com/alexaandru/go-sitter-forest/apex v1.5.10 h1:Blq1nvLIkFfDrPNkorK6q6uJwwyEMIrKYZ+SupLBG8w=
 github.com/alexaandru/go-sitter-forest/apex v1.5.10/go.mod h1:yPnT5zvLgcdF5Q2ezJ3CUazzjGqf1oSdlAmEXu86rIo=
-github.com/alexaandru/go-sitter-forest/arduino v1.5.12 h1:nJ2CHchCB1ArhtQlk0fmysf49k2k44mQSaU3zqHDNNE=
-github.com/alexaandru/go-sitter-forest/arduino v1.5.12/go.mod h1:+UoZflgilRrAObten0fPTgz+CHYXfkOT23AGnLV+52E=
+github.com/alexaandru/go-sitter-forest/arduino v1.5.13 h1:8D2TxRIPKuspK2YDJEomHsFfOqVSTtgDrTFk05UgKMU=
+github.com/alexaandru/go-sitter-forest/arduino v1.5.13/go.mod h1:+UoZflgilRrAObten0fPTgz+CHYXfkOT23AGnLV+52E=
 github.com/alexaandru/go-sitter-forest/asm v1.5.12 h1:ZCpcd+uK9vGpvMb1+fbjynHwFjmB4g0G20z9kheL4/g=
 github.com/alexaandru/go-sitter-forest/asm v1.5.12/go.mod h1:1kXo/VxxqE6xKTEhN1n+SKDi87Ii8xYPMpJcQ/YypMo=
 github.com/alexaandru/go-sitter-forest/astro v1.5.13 h1:Ij+mcozYDVoytN4b0OEbVx9cFAYPBpzZoy6QSqVraw4=
@@ -400,8 +400,8 @@ github.com/alexaandru/go-sitter-forest/readline v1.5.10 h1:xsfoe9rY1U0jmVAmzjfEo
 github.com/alexaandru/go-sitter-forest/readline v1.5.10/go.mod h1:1gnKnYCGZSW04q2bejP18hZDA3oqqk+KK7p+tleYmSY=
 github.com/alexaandru/go-sitter-forest/regex v1.5.10 h1:3dWDDYNbpTu7GtU0FIORM7goUK0a4gh0KyXbm8vpE9Y=
 github.com/alexaandru/go-sitter-forest/regex v1.5.10/go.mod h1:zgRq5HnLa5gW73I+wF6ajxPY0Ar7QxYD4+BRGOnEZig=
-github.com/alexaandru/go-sitter-forest/rego v1.5.10 h1:fXq97boG5tFtltaI9HDixr9lkT0Gv3RWk+uOUX86PvQ=
-github.com/alexaandru/go-sitter-forest/rego v1.5.10/go.mod h1:Saq0KemH+zcWupWEAYtjoU4YDRu7oxZ4gb1RyDlkxLE=
+github.com/alexaandru/go-sitter-forest/rego v1.5.11 h1:0D/JVJXCukmsAHQcN2NJxRpmL4MsEZ9zN8ObbKJo7Mo=
+github.com/alexaandru/go-sitter-forest/rego v1.5.11/go.mod h1:Saq0KemH+zcWupWEAYtjoU4YDRu7oxZ4gb1RyDlkxLE=
 github.com/alexaandru/go-sitter-forest/requirements v1.5.10 h1:bnK4nvQgieRm7ldXSgw7IFoze8Had2SVs0lpc0+a14E=
 github.com/alexaandru/go-sitter-forest/requirements v1.5.10/go.mod h1:MhlBxev5+PkXyknLqyV2SCBrwlwpmKJ5BqkdYpra+io=
 github.com/alexaandru/go-sitter-forest/risor v1.5.10 h1:Yu9BNZXwu9B0exxhY1vpwMm8h0qNnKYnBEnCWWx34S0=
