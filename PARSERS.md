@@ -1,4 +1,4 @@
-# 282 Supported Parsers
+# 283 Supported Parsers
 
 1 pending, 5 skipped regeneration
 
@@ -200,6 +200,7 @@
 - [x] [Tree-Sitter query language](https://github.com/tree-sitter-grammars/tree-sitter-query) ✔️  (maintained by @steelsojka)
 - [x] [r](https://github.com/r-lib/tree-sitter-r) ✔️  (maintained by @echasnovski)
 - [x] [racket](https://github.com/6cdh/tree-sitter-racket) ✔️  (maintained by @6cdh)
+- [x] [ralph](https://github.com/alephium/tree-sitter-ralph) ✔️  (maintained by @tdroxler)
 - [x] [rasi](https://github.com/Fymyte/tree-sitter-rasi) ✔️  (maintained by @Fymyte)
 - [x] [rbs](https://github.com/joker1007/tree-sitter-rbs) ✔️  (maintained by @joker1007)
 - [x] [re2c](https://github.com/tree-sitter-grammars/tree-sitter-re2c) ✔️  (maintained by @amaanq)
