@@ -204,6 +204,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/query"
 	"github.com/alexaandru/go-sitter-forest/r"
 	"github.com/alexaandru/go-sitter-forest/racket"
+	"github.com/alexaandru/go-sitter-forest/ralph"
 	"github.com/alexaandru/go-sitter-forest/rasi"
 	"github.com/alexaandru/go-sitter-forest/rbs"
 	"github.com/alexaandru/go-sitter-forest/re2c"
@@ -492,6 +493,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"query":              query.GetLanguage,
 	"r":                  r.GetLanguage,
 	"racket":             racket.GetLanguage,
+	"ralph":              ralph.GetLanguage,
 	"rasi":               rasi.GetLanguage,
 	"rbs":                rbs.GetLanguage,
 	"re2c":               re2c.GetLanguage,

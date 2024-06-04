@@ -199,6 +199,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/query v1.5.12
 	github.com/alexaandru/go-sitter-forest/r v1.5.11
 	github.com/alexaandru/go-sitter-forest/racket v1.5.11
+	github.com/alexaandru/go-sitter-forest/ralph v1.5.10
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
 	github.com/alexaandru/go-sitter-forest/rbs v1.5.11
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.10
