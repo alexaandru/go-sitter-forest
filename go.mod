@@ -34,7 +34,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.10
 	github.com/alexaandru/go-sitter-forest/cpon v1.5.11
-	github.com/alexaandru/go-sitter-forest/cpp v1.5.14
+	github.com/alexaandru/go-sitter-forest/cpp v1.5.15
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.11
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
@@ -46,12 +46,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
 	github.com/alexaandru/go-sitter-forest/diff v1.5.12
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
-	github.com/alexaandru/go-sitter-forest/djot v1.5.14
+	github.com/alexaandru/go-sitter-forest/djot v1.5.15
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.10
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.21
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.22
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.10
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -155,7 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
-	github.com/alexaandru/go-sitter-forest/nickel v1.5.12
+	github.com/alexaandru/go-sitter-forest/nickel v1.5.13
 	github.com/alexaandru/go-sitter-forest/nim v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.10
@@ -228,7 +228,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.15
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.10
-	github.com/alexaandru/go-sitter-forest/sql v1.5.12
+	github.com/alexaandru/go-sitter-forest/sql v1.5.13
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.12
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11
@@ -273,7 +273,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.10
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.11
 	github.com/alexaandru/go-sitter-forest/vim v1.5.10
-	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.10
+	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.11
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
