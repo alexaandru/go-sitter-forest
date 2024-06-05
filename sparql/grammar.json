@@ -1,9 +1,8 @@
 {
   "language": "sparql",
   "url": "https://github.com/GordianDziwis/tree-sitter-sparql",
-  "doc": "grammar.js throws error: The `token.immediate` function only takes one literal argument.",
   "maintainedBy": "@BonaBeavis",
-  "skip": true,
+  "grammarSha": "753787b89729bb024002e655191c33ede71eb9792096fa720af654409ac850a9",
   "reference": "main",
   "revision": "05f949d3c1c15e3261473a244d3ce87777374dec"
 }

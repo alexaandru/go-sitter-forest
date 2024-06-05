@@ -286,6 +286,32 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		`/u{[0-9a-fA-F]+}/`:  `/u[0-9a-fA-F]+/`,
 		`/u{[0-9a-fA-F ]+}/`: `/u[0-9a-fA-F]+/`,
 		`/x{[0-9a-fA-F]+}/`:  `/x[0-9a-fA-F]+/`,
+		// This is for sparql:
+		`token.immediate(
+        choice(
+          ...PN_CHARS_U,
+          /[0-9]/
+        ),
+        optional(seq(
+          repeat(choice(
+            ...PN_CHARS,
+            '.'
+          )),
+          choice(...PN_CHARS)
+        ))
+      )`: `token.immediate(seq(
+        choice(
+          ...PN_CHARS_U,
+          /[0-9]/
+        ),
+        optional(seq(
+          repeat(choice(
+            ...PN_CHARS,
+            '.'
+          )),
+          choice(...PN_CHARS)
+        ))
+	  ))`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {

@@ -1,6 +1,6 @@
 # 283 Supported Parsers
 
-1 pending, 5 skipped regeneration
+1 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -229,7 +229,7 @@
 - [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️  (maintained by @aheber)
 - [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️  (maintained by @aheber)
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️  (maintained by @Sarrus1)
-- [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) (maintained by @BonaBeavis; ❌grammar.js throws error: The `token.immediate` function only takes one literal argument.)
+- [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) ✔️  (maintained by @BonaBeavis)
 - [x] [sql](https://github.com/DerekStride/tree-sitter-sql) ✔️  (maintained by @DerekStride)
 - [x] [sqlite](https://github.com/johndoe-o/tree-sitter-sqlite) ✔️  (maintained by @johndoe-o)
 - [x] [squirrel](https://github.com/tree-sitter-grammars/tree-sitter-squirrel) ✔️  (maintained by @amaanq)
