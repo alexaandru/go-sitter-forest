@@ -307,9 +307,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "da7d05feb49c75efdd765f591afe261634ddff4f0019148d0f7faff64197bee9",
+    "grammarSha": "21f8bd11457cc9a097890e144059c5cf3645f5cd66f68e17232df4272450030c",
     "reference": "master",
-    "revision": "d29fbff09a8c9ff4f3074de2595dfca12cb33da9"
+    "revision": "9d412ba7e597fe158f209da33e60f31b1f0df967"
   },
   {
     "language": "crystal",
@@ -428,9 +428,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@NoahTheDuke",
-    "grammarSha": "8f914fc489179f2f9939fec92b30400d3e043ebb3efa5acd3133411dd1283a87",
+    "grammarSha": "b6162645c7ddaf8c68f8b478a81f547a8f08f4901b644deaaae505282c402139",
     "reference": "master",
-    "revision": "0e9a836ec47612ade15645fb1680adb549894a6c"
+    "revision": "ea851b9cf1a71e475f4e2ac4dc03609a1b9ca56d"
   },
   {
     "language": "dockerfile",
@@ -482,9 +482,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@glehmann",
-    "grammarSha": "90d05606befa3f1f22f7ba29154396e6f88814071856df0173e5bafac26e73ff",
+    "grammarSha": "be2b9920bda9cc1df060c2ca619212a47b94b138341766c30aa867eb88fcb80f",
     "reference": "main",
-    "revision": "dbfb970a59cd87b628d087eb8e3fbe19c8e20601"
+    "revision": "b2672286174c078eb80cdffc61375d0364e7fafb"
   },
   {
     "language": "ebnf",
@@ -1457,9 +1457,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ErinvanderVeen, @yannham",
-    "grammarSha": "a908003e7cd8563e6a35e8d99e47230ecb41631e4faa64a47e55570dfc9d991e",
+    "grammarSha": "02b670669adedfd07ef06f51ba8ccda437138e9c9950f39a2cab5ab0d4ee75be",
     "reference": "main",
-    "revision": "0a796f3a312917724c1d9f486a201f7402a8acfd"
+    "revision": "43433d8477b24cd13acaac20a66deda49b7e2547"
   },
   {
     "language": "nim",
@@ -2187,9 +2187,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "grammarSha": "b7f48cbf96e0ca3d447f47a09925aeaf4c2b664524072ed908945e45695e3932",
+    "grammarSha": "c32611f281eea5fef9b855589e42a58328d9906b1e5134f07c6f8fc886183538",
     "reference": "main",
-    "revision": "7d591a1a14ce4d5caf81ae64284c2dc185544cb2"
+    "revision": "7349144de0d5af4c4ae123abc92e758ec72bebd0"
   },
   {
     "language": "sqlite",
@@ -2623,9 +2623,9 @@
     "language": "vimdoc",
     "url": "https://github.com/neovim/tree-sitter-vimdoc",
     "maintainedBy": "@clason",
-    "grammarSha": "1f451d3c8db9b4ee856807912b67c79a69820df1b8acde6cfbdd7f3b370005b4",
+    "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
     "reference": "master",
-    "revision": "b711df784dd43d0a8ed8ddbfca0ddcc3239d94b4"
+    "revision": "1b177bd9f53995dac83616e84b552a8d4f6c5f7e"
   },
   {
     "language": "vue",
@@ -2671,7 +2671,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "2429488a8f794f9a667dfdee52eaa4e69a55ed7b"
+    "revision": "cbb30437e1b997dc8242addd9b62faab7e374f1f"
   },
   {
     "language": "wit",

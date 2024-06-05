@@ -19,7 +19,7 @@ myplugin#MyFunction({required}, [optional])         *myplugin#MyFunction()*
   This is my function. It does different things to the {required} argument,
   depending upon the [optional] argument.
 `
-	expected = "(help_file (block (line (h1 (word) (tag text: (word))))) (block (line (word) (word) (argument text: (word)) (word) (word) (word) (tag text: (word))) (line (word) (word) (word) (word) (word) (word) (word) (word) (word) (word) (argument text: (word)) (word) (word)) (line (word) (word) (word) (word) (word) (word)) (MISSING \"<\")))"
+	expected = `(help_file (block (line (h1 (delimiter) (heading (word)) (tag text: (word))))) (block (line (word) (word) (argument text: (word)) (word) (word) (word) (tag text: (word))) (line (word) (word) (word) (word) (word) (word) (word) (word) (word) (word) (argument text: (word)) (word) (word)) (line (word) (word) (word) (word) (word) (word)) (MISSING "<")))`
 )
 
 func TestGrammar(t *testing.T) {

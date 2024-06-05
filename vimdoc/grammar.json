@@ -2,7 +2,7 @@
   "language": "vimdoc",
   "url": "https://github.com/neovim/tree-sitter-vimdoc",
   "maintainedBy": "@clason",
-  "grammarSha": "1f451d3c8db9b4ee856807912b67c79a69820df1b8acde6cfbdd7f3b370005b4",
+  "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
   "reference": "master",
-  "revision": "b711df784dd43d0a8ed8ddbfca0ddcc3239d94b4"
+  "revision": "1b177bd9f53995dac83616e84b552a8d4f6c5f7e"
 }
