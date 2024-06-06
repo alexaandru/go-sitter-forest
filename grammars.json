@@ -245,9 +245,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@uyha",
-    "grammarSha": "9f7f9d8bc2da2f5353ab5a63780694f6b59c727cf66d8bceb589f5d74a25e499",
+    "grammarSha": "d6dc94c6aa6ecfac745497e794af35c0b7551c53c68d05497f3f86995f7fad9d",
     "reference": "master",
-    "revision": "20ffd6d3b4da1acdbf2d08204b2130a5b2f7c4b3"
+    "revision": "4864abb95a1f6e54d6b362677beef9fb674b41e9"
   },
   {
     "language": "comment",
@@ -499,9 +499,9 @@
     "language": "eds",
     "url": "https://github.com/uyha/tree-sitter-eds",
     "maintainedBy": "@uyha",
-    "grammarSha": "e7b06b7fc0edf8ea5d22d4161783d3444a31e143df7f90a8df4686e9e6c6213e",
+    "grammarSha": "24b6d6feac50aabab59e13fa0bcd068451ad0b21a6bc19b646fe53885e463d62",
     "reference": "main",
-    "revision": "5517bdb90c90703df49579a4b04689a614780be2"
+    "revision": "0ad62cb635c2f4353359a88dec9e3a57bbf9f66d"
   },
   {
     "language": "eex",
@@ -518,9 +518,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@connorlay",
-    "grammarSha": "d56ee3fdad30b9eaa20da9781d847d0804ec9d1b4ec585987d3ae291700ef87f",
+    "grammarSha": "759eb810f50579affb7ac892480e3df722f7125083b13c55800db7fd4dbeb2a5",
     "reference": "main",
-    "revision": "de690fa8a028f122af46d9d2685679fe5f2d7d60"
+    "revision": "c7ae8b77e2749826dcf23df6514f08fdd68c66a3"
   },
   {
     "language": "elm",
@@ -1817,9 +1817,9 @@
     "altName": "PyPA manifest",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-pymanifest",
     "maintainedBy": "@ObserverOfTime",
-    "grammarSha": "f0d50e3e03ba68358eeeac016575ae42ead06ab8fb106447b405f9c6ae4e4a04",
+    "grammarSha": "c5aee334ab2d63826ff2cbeb9998a8c6fffaa4c31d98054e5cf35606e88ce55a",
     "reference": "master",
-    "revision": "e3b82b78721aee07f676dac8473ae69db51debcf"
+    "revision": "be062582956165019d3253794b4d712f66dfeaaa"
   },
   {
     "language": "python",
@@ -1954,7 +1954,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "6b69519aff8c77dec466180f74d2ddbd14c41605641fd476ec7fec0442a2be3e",
     "reference": "master",
-    "revision": "360c6a6b31076a482663806f7a8241de9cad6b4e"
+    "revision": "5ad9b7581b3334f6ad492847d007f2fac6e6e5f2"
   },
   {
     "language": "risor",
@@ -2186,9 +2186,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "grammarSha": "c32611f281eea5fef9b855589e42a58328d9906b1e5134f07c6f8fc886183538",
+    "grammarSha": "bb0952df05a674bc792794c71d3e8e5cf613c3b4a61182f5774a34978a1d4233",
     "reference": "main",
-    "revision": "7349144de0d5af4c4ae123abc92e758ec72bebd0"
+    "revision": "70ba8a5dd00c1229069684ea80d56035e75691a5"
   },
   {
     "language": "sqlite",
@@ -2670,7 +2670,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "cbb30437e1b997dc8242addd9b62faab7e374f1f"
+    "revision": "97dac4b519b98876fd8f3661a179dbd62aefd458"
   },
   {
     "language": "wit",

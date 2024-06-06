@@ -49,14 +49,14 @@ static inline bool is_inline_whitespace(int32_t c) {
   return c == ' ' || c == '\t';
 }
 
-static inline bool is_newline(int32_t c) {
+static inline bool is_newline_elixir(int32_t c) {
   // Note: this implies \r\n is treated as two line breaks,
   // but in our case it's fine, since multiple line breaks
   // make no difference
   return c == '\n' || c == '\r';
 }
 
-static inline bool is_digit(int32_t c) { return '0' <= c && c <= '9'; }
+static inline bool is_digit_elixir(int32_t c) { return '0' <= c && c <= '9'; }
 
 static inline bool check_keyword_end(TSLexer *lexer) {
   if (lexer->lookahead == ':') {
@@ -80,7 +80,7 @@ static bool check_operator_end(TSLexer *lexer) {
     while (is_whitespace(lexer->lookahead)) {
       advance_elixir(lexer);
     }
-    if (is_digit(lexer->lookahead)) {
+    if (is_digit_elixir(lexer->lookahead)) {
       return false;
     }
   }
@@ -174,7 +174,7 @@ static bool scan_quoted_content(TSLexer *lexer, const QuotedContentInfo *info) {
   for (bool has_content = false; true; has_content = true) {
     bool newline = false;
 
-    if (is_newline(lexer->lookahead)) {
+    if (is_newline_elixir(lexer->lookahead)) {
       advance_elixir(lexer);
 
       has_content = true;
@@ -545,7 +545,7 @@ static bool scan_elixir(TSLexer *lexer, const bool *valid_symbols) {
   }
 
   // Newline, which is either tokenized as a special newline or ignored
-  if (is_newline(lexer->lookahead) &&
+  if (is_newline_elixir(lexer->lookahead) &&
       (valid_symbols[NEWLINE_BEFORE_DO] ||
        valid_symbols[NEWLINE_BEFORE_BINARY_OPERATOR] ||
        valid_symbols[NEWLINE_BEFORE_COMMENT])) {
