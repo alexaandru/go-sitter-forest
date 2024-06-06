@@ -28,7 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cel v1.5.11
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.10
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.10
-	github.com/alexaandru/go-sitter-forest/cmake v1.5.10
+	github.com/alexaandru/go-sitter-forest/cmake v1.5.11
 	github.com/alexaandru/go-sitter-forest/comment v1.5.10
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
@@ -53,9 +53,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
 	github.com/alexaandru/go-sitter-forest/earthfile v1.5.22
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
-	github.com/alexaandru/go-sitter-forest/eds v1.5.10
+	github.com/alexaandru/go-sitter-forest/eds v1.5.11
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
-	github.com/alexaandru/go-sitter-forest/elixir v1.5.11
+	github.com/alexaandru/go-sitter-forest/elixir v1.5.12
 	github.com/alexaandru/go-sitter-forest/elm v1.5.10
 	github.com/alexaandru/go-sitter-forest/elsa v1.5.10
 	github.com/alexaandru/go-sitter-forest/elvish v1.5.10
@@ -227,8 +227,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.15
-	github.com/alexaandru/go-sitter-forest/sparql v1.5.10
-	github.com/alexaandru/go-sitter-forest/sql v1.5.13
+	github.com/alexaandru/go-sitter-forest/sparql v1.5.11
+	github.com/alexaandru/go-sitter-forest/sql v1.5.14
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.12
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11
