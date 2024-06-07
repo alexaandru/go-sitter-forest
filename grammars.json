@@ -1218,9 +1218,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@irh",
-    "grammarSha": "16af1c29f739e747930b5739818b56b97eda8382e8d6d45a066059b4be97e197",
+    "grammarSha": "a03212c658d092802aad4dc24272c9ec902abb1fd6dc26816847f17fed89c316",
     "reference": "main",
-    "revision": "eb8d866cff5751c0a7650623d244280618b0a378"
+    "revision": "d4109879ba1387d19095269a7473bd7d274ab848"
   },
   {
     "language": "kusto",
@@ -1645,7 +1645,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "a44821c74a4e6be305076e009d98f823a11b3bc580fabd9f86752ed17a5611eb",
     "reference": "master",
-    "revision": "b38c53537769df05871643c9688c264074fb6076"
+    "revision": "1d01c6184c7c7daf3bd63b4be2255ba1b2a3ac96"
   },
   {
     "language": "php_only",
@@ -1658,7 +1658,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "c00458c27b715e9f298a1b6b4c13a0ffb0be5af186f628f6547b1f879e13d53c",
     "reference": "master",
-    "revision": "b38c53537769df05871643c9688c264074fb6076"
+    "revision": "1d01c6184c7c7daf3bd63b4be2255ba1b2a3ac96"
   },
   {
     "language": "phpdoc",
@@ -2670,7 +2670,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "97dac4b519b98876fd8f3661a179dbd62aefd458"
+    "revision": "cdfab81a04acc494f84d01b74838e8cba72fb964"
   },
   {
     "language": "wit",
