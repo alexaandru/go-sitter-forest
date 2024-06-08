@@ -448,8 +448,8 @@ github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.15 h1:BoDo0gFgzrTMHaxvK/x
 github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.15/go.mod h1:5qROsJbaTrT9VNMsy+2eq6BjISN/NPbXXR1EZgA5ls4=
 github.com/alexaandru/go-sitter-forest/sparql v1.5.11 h1:wxm1fyAVUF34XnUi8uclSVVu3Dr1dWr5DyQWUvf7OmQ=
 github.com/alexaandru/go-sitter-forest/sparql v1.5.11/go.mod h1:ijETsfQ6XJ2OwmoI+VQBMZc+x+RWT0RpVBTU6FX+y7s=
-github.com/alexaandru/go-sitter-forest/sql v1.5.14 h1:cs6KifXmrG+eK4k3V2XgciiPfF7vga6//CK+FTHgmzU=
-github.com/alexaandru/go-sitter-forest/sql v1.5.14/go.mod h1:U4RmAjEKtm1heCSbkA0t9s5XzPULpnsTNooZl0gifwg=
+github.com/alexaandru/go-sitter-forest/sql v1.5.15 h1:Awfpm5CjwbFxs4WtmpaMXSUA3wfOdKQq6WKtd9Y0FkY=
+github.com/alexaandru/go-sitter-forest/sql v1.5.15/go.mod h1:U4RmAjEKtm1heCSbkA0t9s5XzPULpnsTNooZl0gifwg=
 github.com/alexaandru/go-sitter-forest/sqlite v1.5.10 h1:Ruzbp7Qg3Jw4wKbl9NOkjFDjE18PkVkG5Sb+hmBJLhg=
 github.com/alexaandru/go-sitter-forest/sqlite v1.5.10/go.mod h1:hhRNRKMr/R5jiIfgW7eCpG8ZjHPurAgagfQEjdzu6rU=
 github.com/alexaandru/go-sitter-forest/squirrel v1.5.12 h1:hYqEEB6RXb+k2qxDF1Lz6cpbJG/V/BX5a7yYpMgJOGA=

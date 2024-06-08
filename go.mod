@@ -228,7 +228,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.15
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.11
-	github.com/alexaandru/go-sitter-forest/sql v1.5.14
+	github.com/alexaandru/go-sitter-forest/sql v1.5.15
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.12
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11
