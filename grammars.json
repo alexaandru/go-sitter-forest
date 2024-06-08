@@ -563,7 +563,7 @@
     "maintainedBy": "@filmor",
     "grammarSha": "3fe0b9a54c60430dd0081550d10197e7238ce2188c6cf6fa783e8ecaf47ff7bf",
     "reference": "main",
-    "revision": "98ea1f9c957b2ad520415eecb5a5b406e931101e"
+    "revision": "b8e44bc0a3b2ce6bceea47c0b1c0f303a6b322b8"
   },
   {
     "language": "facility",
@@ -1645,7 +1645,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "a44821c74a4e6be305076e009d98f823a11b3bc580fabd9f86752ed17a5611eb",
     "reference": "master",
-    "revision": "1d01c6184c7c7daf3bd63b4be2255ba1b2a3ac96"
+    "revision": "4f124bc6075e1c3333e80190c1c170933ed72c95"
   },
   {
     "language": "php_only",
@@ -1658,7 +1658,7 @@
     "maintainedBy": "@tk-shirasaka",
     "grammarSha": "c00458c27b715e9f298a1b6b4c13a0ffb0be5af186f628f6547b1f879e13d53c",
     "reference": "master",
-    "revision": "1d01c6184c7c7daf3bd63b4be2255ba1b2a3ac96"
+    "revision": "4f124bc6075e1c3333e80190c1c170933ed72c95"
   },
   {
     "language": "phpdoc",
@@ -2186,9 +2186,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@DerekStride",
-    "grammarSha": "bb0952df05a674bc792794c71d3e8e5cf613c3b4a61182f5774a34978a1d4233",
+    "grammarSha": "ff9561b0004b928a370a8f3a5d6b156fa4fbaae4854e75966967d7fd79d3e891",
     "reference": "main",
-    "revision": "70ba8a5dd00c1229069684ea80d56035e75691a5"
+    "revision": "df7a77336363e09c37647cce4da7e7b4ffc92271"
   },
   {
     "language": "sqlite",
@@ -2287,7 +2287,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "26354ddec08c7efde4fa16bd29429f3310d2e2c5"
+    "revision": "a9e6289ee526b0bb3b805c4313f12470b96cf1e9"
   },
   {
     "language": "sxhkdrc",
@@ -2624,7 +2624,7 @@
     "maintainedBy": "@clason",
     "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
     "reference": "master",
-    "revision": "1b177bd9f53995dac83616e84b552a8d4f6c5f7e"
+    "revision": "2249c44ecd3f5cf22da3dcccfb74f816ddb29245"
   },
   {
     "language": "vue",
