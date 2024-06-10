@@ -5,7 +5,7 @@
 #include "parser.h"
 
 enum TokenType {
-    BRIEF_DESCRIPTION,
+    BRIEF_TEXT,
     CODE_BLOCK_START,
     CODE_BLOCK_LANGUAGE,
     CODE_BLOCK_CONTENT,
@@ -21,19 +21,10 @@ static inline void advance_doxygen(TSLexer *lexer) { lexer->advance_doxygen(lexe
 
 static inline void skip_doxygen(TSLexer *lexer) { lexer->advance_doxygen(lexer, true); }
 
-/* #define advance_doxygen(lexer) \ */
-/*     { \ */
-/*         printf("advance %c, col %d, L%d\n", lexer->lookahead, \ */
-/*                lexer->get_column(lexer), __LINE__); \ */
-/*         lexer->advance_doxygen(lexer, false); \ */
-/*     } */
-
-unsigned tree_sitter_doxygen_external_scanner_serialize(void *payload,
-                                                        char *buffer) {
+unsigned tree_sitter_doxygen_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
 
-    if (scanner->codeblock_start_column > 255 ||
-        scanner->codeblock_delimiter_length > 255) {
+    if (scanner->codeblock_start_column > 255 || scanner->codeblock_delimiter_length > 255) {
         return 0;
     }
 
@@ -42,9 +33,7 @@ unsigned tree_sitter_doxygen_external_scanner_serialize(void *payload,
     return 2;
 }
 
-void tree_sitter_doxygen_external_scanner_deserialize(void *payload,
-                                                      const char *buffer,
-                                                      unsigned length) {
+void tree_sitter_doxygen_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     Scanner *scanner = (Scanner *)payload;
 
     if (length == 2) {
@@ -59,17 +48,15 @@ void tree_sitter_doxygen_external_scanner_deserialize(void *payload,
     }
 }
 
-bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
-                                               const bool *valid_symbols) {
+bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
 
-    if (valid_symbols[BRIEF_DESCRIPTION] &&
-        !valid_symbols[CODE_BLOCK_LANGUAGE]) {
+    if (valid_symbols[BRIEF_TEXT] && !valid_symbols[CODE_BLOCK_LANGUAGE]) {
         uint32_t column_start = 0;
         bool advanced_once = false;
 
-        while ((iswspace(lexer->lookahead) || lexer->lookahead == '*') &&
-               lexer->lookahead != '\n' && !lexer->eof(lexer)) {
+        while ((iswspace(lexer->lookahead) || lexer->lookahead == '*') && lexer->lookahead != '\n' &&
+               !lexer->eof(lexer)) {
             skip_doxygen(lexer);
         }
 
@@ -80,9 +67,18 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
         column_start = lexer->get_column(lexer);
 
     content:
-        while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
+        while (lexer->lookahead != '\n' && !lexer->eof(lexer) && lexer->lookahead != '\\') {
             advanced_once = true;
-            advance_doxygen(lexer);
+            if (lexer->lookahead == '*') {
+                lexer->mark_end(lexer);
+                advance_doxygen(lexer);
+                if (lexer->lookahead == '/') {
+                    lexer->result_symbol = BRIEF_TEXT;
+                    return advanced_once;
+                }
+            } else {
+                advance_doxygen(lexer);
+            }
         }
 
         if (lexer->eof(lexer)) {
@@ -94,15 +90,14 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
 
         // go past space, / and * to check next text's column
         while (lexer->lookahead != '\n' && !lexer->eof(lexer) &&
-               (iswspace(lexer->lookahead) || lexer->lookahead == '/' ||
-                lexer->lookahead == '*')) {
+               (iswspace(lexer->lookahead) || lexer->lookahead == '/' || lexer->lookahead == '*')) {
             advance_doxygen(lexer);
         }
 
         if (!lexer->eof(lexer) && lexer->get_column(lexer) == column_start) {
             goto content;
         } else if (advanced_once) {
-            lexer->result_symbol = BRIEF_DESCRIPTION;
+            lexer->result_symbol = BRIEF_TEXT;
             return true;
         }
 
@@ -166,8 +161,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
             }
         }
 
-        while (lexer->lookahead != '`' && lexer->lookahead != '@' &&
-               !lexer->eof(lexer)) {
+        while (lexer->lookahead != '`' && lexer->lookahead != '@' && !lexer->eof(lexer)) {
             advance_doxygen(lexer);
         }
 
@@ -175,8 +169,7 @@ bool tree_sitter_doxygen_external_scanner_scan(void *payload, TSLexer *lexer,
             return false;
         }
 
-        if (lexer->lookahead == '`' &&
-            lexer->get_column(lexer) == scanner->codeblock_start_column) {
+        if (lexer->lookahead == '`' && lexer->get_column(lexer) == scanner->codeblock_start_column) {
             lexer->mark_end(lexer);
             advance_doxygen(lexer);
             uint32_t col_count = 1;

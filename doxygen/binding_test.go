@@ -21,7 +21,7 @@ const (
  * These five constants represent the five gods.
  */
 `
-	expected = "(document (ERROR (tag (tag_name)) (tag (tag_name) (description))) (brief_header (tag_name) (brief_description)) (description))"
+	expected = "(document (ERROR (tag (tag_name)) (tag (tag_name) (description))) (brief_header (tag_name) (brief_description (brief_text))) (description))"
 )
 
 func TestGrammar(t *testing.T) {
