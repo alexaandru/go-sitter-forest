@@ -21,7 +21,7 @@ fibonacci <- function(n) {
     }
 }
 `
-	expected = "(program (comment) (left_assignment name: (identifier) value: (function_definition (formal_parameters (identifier)) (brace_list (if condition: (binary left: (identifier) right: (float)) consequence: (brace_list (call function: (identifier) arguments: (arguments (identifier)))) alternative: (brace_list (call function: (identifier) arguments: (arguments (binary left: (call function: (identifier) arguments: (arguments (binary left: (identifier) right: (float)))) right: (call function: (identifier) arguments: (arguments (binary left: (identifier) right: (float)))))))))))))"
+	expected = "(program (comment) (binary_operator lhs: (identifier) rhs: (function_definition parameters: (parameters parameter: (parameter name: (identifier))) body: (braced_expression body: (if_statement condition: (binary_operator lhs: (identifier) rhs: (float)) consequence: (braced_expression body: (call function: (return) arguments: (arguments argument: (argument value: (identifier))))) alternative: (braced_expression body: (call function: (return) arguments: (arguments argument: (argument value: (binary_operator lhs: (call function: (identifier) arguments: (arguments argument: (argument value: (binary_operator lhs: (identifier) rhs: (float))))) rhs: (call function: (identifier) arguments: (arguments argument: (argument value: (binary_operator lhs: (identifier) rhs: (float)))))))))))))))"
 )
 
 func TestGrammar(t *testing.T) {

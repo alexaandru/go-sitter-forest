@@ -2,7 +2,7 @@
   "language": "hyprlang",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
   "maintainedBy": "@luckasRanarison",
-  "grammarSha": "fcabbde1f9f0241d09552c836c2d98161e085d4e8c5997e6aa48ffa25d9c07b8",
+  "grammarSha": "34b8ccdf9c437ede77a9fae66e96b2e330c020186604f4ef23cdea9c0a972a9d",
   "reference": "master",
-  "revision": "e5da7d0aa44403153e0394d87d9edea4e5bd6609"
+  "revision": "9c3dffd29c23a6f042571b08fcaf6387639b05c4"
 }
