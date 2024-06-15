@@ -111,7 +111,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
-	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.10
+	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.11
 	github.com/alexaandru/go-sitter-forest/idl v1.5.14
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
@@ -197,7 +197,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.12
 	github.com/alexaandru/go-sitter-forest/query v1.5.12
-	github.com/alexaandru/go-sitter-forest/r v1.5.11
+	github.com/alexaandru/go-sitter-forest/r v1.5.12
 	github.com/alexaandru/go-sitter-forest/racket v1.5.11
 	github.com/alexaandru/go-sitter-forest/ralph v1.5.10
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
@@ -205,7 +205,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.10
 	github.com/alexaandru/go-sitter-forest/readline v1.5.10
 	github.com/alexaandru/go-sitter-forest/regex v1.5.10
-	github.com/alexaandru/go-sitter-forest/rego v1.5.11
+	github.com/alexaandru/go-sitter-forest/rego v1.5.12
 	github.com/alexaandru/go-sitter-forest/requirements v1.5.10
 	github.com/alexaandru/go-sitter-forest/risor v1.5.10
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.5.10
@@ -222,8 +222,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.12
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
-	github.com/alexaandru/go-sitter-forest/snakemake v1.5.11
-	github.com/alexaandru/go-sitter-forest/solidity v1.5.15
+	github.com/alexaandru/go-sitter-forest/snakemake v1.5.12
+	github.com/alexaandru/go-sitter-forest/solidity v1.5.16
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.16
