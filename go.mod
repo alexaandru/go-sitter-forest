@@ -51,7 +51,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.11
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
-	github.com/alexaandru/go-sitter-forest/earthfile v1.5.22
+	github.com/alexaandru/go-sitter-forest/earthfile v1.5.23
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.11
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
@@ -111,7 +111,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
-	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.11
+	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/idl v1.5.14
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/styled v1.5.10
 	github.com/alexaandru/go-sitter-forest/supercollider v1.5.11
 	github.com/alexaandru/go-sitter-forest/surface v1.5.10
-	github.com/alexaandru/go-sitter-forest/svelte v1.5.10
+	github.com/alexaandru/go-sitter-forest/svelte v1.5.11
 	github.com/alexaandru/go-sitter-forest/swift v1.5.11
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.10
 	github.com/alexaandru/go-sitter-forest/systemtap v1.5.10
