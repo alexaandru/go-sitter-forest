@@ -1,7 +1,6 @@
 #include "tag.h"
 #include "parser.h"
 
-#include <stdio.h>
 #include <wctype.h>
 
 enum TokenType {
@@ -283,7 +282,7 @@ static bool scan_implicit_end_tag(Scanner *scanner, TSLexer *lexer) {
         }
 
         // Otherwise, dig deeper and queue implicit end tags (to be nice in
-        // the case of malformed svelte)
+        // the case of malformed Svelte)
         for (unsigned i = scanner->tags.size; i > 0; i--) {
             if (scanner->tags.contents[i - 1].type == next_tag.type) {
                 pop_tag(scanner);
@@ -355,7 +354,7 @@ static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
     if (lexer->lookahead == '>') {
         advance_svelte(lexer);
         if (scanner->tags.size > 0) {
-            tag_free(&array_pop(&scanner->tags));
+            pop_tag(scanner);
             lexer->result_symbol = SELF_CLOSING_TAG_DELIMITER;
         }
         return true;
@@ -391,6 +390,7 @@ static bool scan_svelte(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
             }
             break;
 
+        case '{':
         case '\0':
             if (valid_symbols[IMPLICIT_END_TAG]) {
                 return scan_implicit_end_tag(scanner, lexer);
