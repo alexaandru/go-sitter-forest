@@ -288,9 +288,9 @@
     "language": "corn",
     "url": "https://github.com/corn-config/tree-sitter-corn",
     "maintainedBy": "@jakestanger",
-    "grammarSha": "86936e6c3350fb7c0461466e28ce6eab4a8cec9bc1e3bc778e4990dc7d914e62",
+    "grammarSha": "2bf9152b2654b1a00af56f008c2468bd684665268bbe124c8ad0e2187e173afc",
     "reference": "master",
-    "revision": "604d73c38d4c28ca68e9e441ffd405d68cb63051"
+    "revision": "464654742cbfd3a3de560aba120998f1d5dfa844"
   },
   {
     "language": "cpon",
@@ -479,9 +479,9 @@
     "language": "earthfile",
     "url": "https://github.com/glehmann/tree-sitter-earthfile",
     "maintainedBy": "@glehmann",
-    "grammarSha": "f6af06f5bb884089a32f918dd355cd3762d778da7dc702c7f4afeabeff0d722c",
+    "grammarSha": "13e293822cde7ceee2c08c522ab093689044443c1184444ed9962eed732c1ffa",
     "reference": "main",
-    "revision": "1a4ec8431bf6c8d77dc00f75f57eacde3ed6826f"
+    "revision": "b5bdcb5813ce0e582fbd8e03eb42c80d3cc8984e"
   },
   {
     "language": "ebnf",
@@ -927,7 +927,7 @@
     "maintainedBy": "@MichaHoffmann",
     "grammarSha": "2e76e0b9fd2eae42513fb5a1e774fa8e9d021c5e92e5b431cf908467f2c926f1",
     "reference": "main",
-    "revision": "e936d3fef8bac884661472dce71ad82284761eb1"
+    "revision": "e2d416afeba80e8cf711ed6792e089ed5c8e184e"
   },
   {
     "language": "heex",
@@ -1077,7 +1077,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "b5ce47537b47c408d83440efed44a10c9ba28c34"
+    "revision": "2a05cab838dfec52daa76f10920917d2e69a85bc"
   },
   {
     "language": "java",
@@ -1910,7 +1910,7 @@
     "maintainedBy": "@joker1007",
     "grammarSha": "a760bbf4236ada6999a630bf5843f29918a8483f5e0c68264a50ab6257aa145f",
     "reference": "main",
-    "revision": "e5e807a50fcd104a2d740d354632fc671700a0bf"
+    "revision": "88d8ed487b5449ddda2fc0c4fe23b71cba29ca24"
   },
   {
     "language": "re2c",
@@ -2667,7 +2667,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "0e04fa675f0be1bd40aa1dc46731be1139e157cb"
+    "revision": "34d146279febc9cc2d36986eba19573afdf1a257"
   },
   {
     "language": "wit",
