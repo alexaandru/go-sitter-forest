@@ -307,9 +307,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "21f8bd11457cc9a097890e144059c5cf3645f5cd66f68e17232df4272450030c",
+    "grammarSha": "1fd0c5c53a69d1fd0e15bae105d3310e6d454cd76ae822a38b92fd96bbdf5868",
     "reference": "master",
-    "revision": "9d412ba7e597fe158f209da33e60f31b1f0df967"
+    "revision": "7ce8946cae4bb25adebe5b50394f702beb007026"
   },
   {
     "language": "crystal",
@@ -430,7 +430,7 @@
     "maintainedBy": "@NoahTheDuke",
     "grammarSha": "b6162645c7ddaf8c68f8b478a81f547a8f08f4901b644deaaae505282c402139",
     "reference": "master",
-    "revision": "ea851b9cf1a71e475f4e2ac4dc03609a1b9ca56d"
+    "revision": "87bf82874c86dcf563f5521069d603ed50e5f0cc"
   },
   {
     "language": "dockerfile",
@@ -927,7 +927,7 @@
     "maintainedBy": "@MichaHoffmann",
     "grammarSha": "2e76e0b9fd2eae42513fb5a1e774fa8e9d021c5e92e5b431cf908467f2c926f1",
     "reference": "main",
-    "revision": "e2d416afeba80e8cf711ed6792e089ed5c8e184e"
+    "revision": "422cbe1d93a8ae3847744b664041fc76876babcd"
   },
   {
     "language": "heex",
@@ -1875,7 +1875,7 @@
     "maintainedBy": "@echasnovski",
     "grammarSha": "5c285a5c81def49fac168e1ca740d651708270fb5f7ee0434ff802012a1f53c1",
     "reference": "main",
-    "revision": "93be93a7e0fce0ad3f9be444906a1ff544603ee3"
+    "revision": "1faad45322314f34dce88981e684f8f98d8e93b8"
   },
   {
     "language": "racket",
@@ -2284,7 +2284,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "13ffaec4068facfff608e3afbdb7a581c185f6a6"
+    "revision": "d657f98dd6bbc34cb48438c9e5956f15a6d89f1d"
   },
   {
     "language": "sxhkdrc",
@@ -2449,9 +2449,9 @@
     ],
     "srcRoot": "tsx",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "83db0bd94470e2edd9ce66964334c1c83e3da5beda151d023648d3dc5da0ff1e",
+    "grammarSha": "076ad05950a2716b0361516509d5a2b059d13947096373baeadec2a2ff7a2ff9",
     "reference": "master",
-    "revision": "4ad3010c91d700026d036b5230e2d99ba94ae8a4"
+    "revision": "4f3eb6655a1cd1a1f87ef10201f8e22886dcd76e"
   },
   {
     "language": "turtle",
@@ -2478,9 +2478,9 @@
     ],
     "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "9d89aeb5ee675f77fa33319071c629e55c1053487b1366cd553af2ff9506a53a",
+    "grammarSha": "df8ce4d4850a317056b6a93c716b3cc81e26982b9f45bb7f1be22b5040db5f0e",
     "reference": "master",
-    "revision": "4ad3010c91d700026d036b5230e2d99ba94ae8a4"
+    "revision": "4f3eb6655a1cd1a1f87ef10201f8e22886dcd76e"
   },
   {
     "language": "typespec",
@@ -2667,7 +2667,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
     "reference": "main",
-    "revision": "34d146279febc9cc2d36986eba19573afdf1a257"
+    "revision": "9c411e591feb99c92848a75345eeda09bb313ba9"
   },
   {
     "language": "wit",
