@@ -34,7 +34,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.11
 	github.com/alexaandru/go-sitter-forest/cpon v1.5.11
-	github.com/alexaandru/go-sitter-forest/cpp v1.5.15
+	github.com/alexaandru/go-sitter-forest/cpp v1.5.16
 	github.com/alexaandru/go-sitter-forest/crystal v1.5.10
 	github.com/alexaandru/go-sitter-forest/css v1.5.11
 	github.com/alexaandru/go-sitter-forest/csv v1.5.10
@@ -255,10 +255,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.10
-	github.com/alexaandru/go-sitter-forest/tsx v1.5.12
+	github.com/alexaandru/go-sitter-forest/tsx v1.5.13
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.10
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
-	github.com/alexaandru/go-sitter-forest/typescript v1.5.12
+	github.com/alexaandru/go-sitter-forest/typescript v1.5.13
 	github.com/alexaandru/go-sitter-forest/typespec v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typst v1.5.15
