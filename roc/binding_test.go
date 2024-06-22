@@ -21,7 +21,7 @@ main=
       } |> extractState   
   aliceID
 `
-	expected = "(file (value_declaration (decl_left (identifier_pattern (identifier))) body: (expr_body declarations: (value_declaration (decl_left (record_pattern (record_field_pattern (field_name)) (record_field_pattern (field_name)) (record_field_pattern (field_name)))) body: (expr_body result: (bin_op_expr part: (function_call_expr caller: (variable_expr (identifier)) args: (record_expr (record_field_builder (field_name) (identifier)) (record_field_builder (field_name) (identifier)) (record_field_builder (field_name) (identifier)))) part: (operator) part: (variable_expr (identifier))))) result: (variable_expr (identifier)))))"
+	expected = "(file (value_declaration (decl_left (identifier_pattern (identifier))) body: (expr_body declarations: (value_declaration (decl_left (record_pattern (record_field_pattern (field_name)) (record_field_pattern (field_name)) (record_field_pattern (field_name)))) body: (expr_body result: (bin_op_expr part: (function_call_expr caller: (variable_expr (identifier)) args: (record_expr (record_field_builder (field_name) (variable_expr (identifier))) (record_field_builder (field_name) (variable_expr (identifier))) (record_field_builder (field_name) (variable_expr (identifier))))) part: (operator) part: (variable_expr (identifier))))) result: (variable_expr (identifier)))))"
 )
 
 func TestGrammar(t *testing.T) {

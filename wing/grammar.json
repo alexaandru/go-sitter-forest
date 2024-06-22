@@ -6,7 +6,7 @@
   ],
   "srcRoot": "libs/tree-sitter-wing",
   "maintainedBy": "@gshpychka, @MarkMcCulloh",
-  "grammarSha": "1cb069b89bc9daad8b36e907aa1f533ab5c69fbe43bfea2f31717d194d75a41d",
+  "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
   "reference": "main",
-  "revision": "cace7aeb44a12733471684a6490466a08e60b6f6"
+  "revision": "150b4e498abd3aa2c101ecea2423facae4ec6c49"
 }
