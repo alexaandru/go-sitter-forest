@@ -133,7 +133,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.5.13
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.10
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.11
-	github.com/alexaandru/go-sitter-forest/latex v1.5.13
+	github.com/alexaandru/go-sitter-forest/latex v1.5.14
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
@@ -210,9 +210,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/risor v1.5.10
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.5.10
 	github.com/alexaandru/go-sitter-forest/robot v1.5.10
-	github.com/alexaandru/go-sitter-forest/roc v1.5.10
+	github.com/alexaandru/go-sitter-forest/roc v1.5.11
 	github.com/alexaandru/go-sitter-forest/ron v1.5.12
-	github.com/alexaandru/go-sitter-forest/ruby v1.5.13
+	github.com/alexaandru/go-sitter-forest/ruby v1.5.14
 	github.com/alexaandru/go-sitter-forest/rust v1.5.14
 	github.com/alexaandru/go-sitter-forest/scala v1.5.11
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.10
@@ -277,7 +277,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
-	github.com/alexaandru/go-sitter-forest/wing v1.5.18
+	github.com/alexaandru/go-sitter-forest/wing v1.5.19
 	github.com/alexaandru/go-sitter-forest/wit v1.5.13
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.11
