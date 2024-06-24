@@ -1,4 +1,4 @@
-# 283 Supported Parsers
+# 284 Supported Parsers
 
 1 pending, 4 skipped regeneration
 
@@ -243,6 +243,7 @@
 - [x] [swift](https://github.com/alex-pinkus/tree-sitter-swift) ✔️  (maintained by @alex-pinkus)
 - [x] [sxhkdrc](https://github.com/RaafatTurki/tree-sitter-sxhkdrc) ✔️  (maintained by @RaafatTurki)
 - [x] [systemtap](https://github.com/ok-ryoko/tree-sitter-systemtap) ✔️  (maintained by @ok-ryoko)
+- [x] [systemverilog](https://github.com/zhangwwpeng/tree-sitter-systemverilog) ✔️  (maintained by @zhangwwpeng)
 - [x] [t32](https://gitlab.com/xasc/tree-sitter-t32) ✔️  (maintained by @xasc)
 - [x] [tablegen](https://github.com/tree-sitter-grammars/tree-sitter-tablegen) ✔️  (maintained by @amaanq)
 - [x] [tact](https://github.com/tact-lang/tree-sitter-tact) ✔️  (maintained by @novusnota)
