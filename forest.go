@@ -246,6 +246,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/swift"
 	"github.com/alexaandru/go-sitter-forest/sxhkdrc"
 	"github.com/alexaandru/go-sitter-forest/systemtap"
+	"github.com/alexaandru/go-sitter-forest/systemverilog"
 	"github.com/alexaandru/go-sitter-forest/t32"
 	"github.com/alexaandru/go-sitter-forest/tablegen"
 	"github.com/alexaandru/go-sitter-forest/tact"
@@ -535,6 +536,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"swift":              swift.GetLanguage,
 	"sxhkdrc":            sxhkdrc.GetLanguage,
 	"systemtap":          systemtap.GetLanguage,
+	"systemverilog":      systemverilog.GetLanguage,
 	"t32":                t32.GetLanguage,
 	"tablegen":           tablegen.GetLanguage,
 	"tact":               tact.GetLanguage,

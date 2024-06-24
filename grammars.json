@@ -346,9 +346,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "b65f5aa9e690a4ff91b50f9d72753878b5cd153c0d7ae08a39d40877ed31a13c",
+    "grammarSha": "e2de644b8ea2fa2c472ffb3beddca2814aead6dcb2792a19277b7d5f205a358e",
     "reference": "master",
-    "revision": "1f188eff83b562ffae36d13e1b804ec6f3b9f1d9"
+    "revision": "b93070b5a91ee9537d45e59d741737b1289c5dcc"
   },
   {
     "language": "cue",
@@ -768,9 +768,9 @@
     "language": "glsl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
     "maintainedBy": "@theHamsta",
-    "grammarSha": "86dff9f456eae57a9b3426fb4d5e4140ff3c253cfaf3788d9bb7cd3594d68390",
+    "grammarSha": "8e4348daa59e73aab734a074b66bb84808629bdd38dbb2bb8ed27faf32ff75a6",
     "reference": "master",
-    "revision": "7f91bf34cadc06a96efc475df501ffca4dda9410"
+    "revision": "3736dfc811c07fa749ca818f94c9a3977734dd26"
   },
   {
     "language": "gn",
@@ -925,9 +925,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@MichaHoffmann",
-    "grammarSha": "2e76e0b9fd2eae42513fb5a1e774fa8e9d021c5e92e5b431cf908467f2c926f1",
+    "grammarSha": "2342b881852a885c60d063c64cddde3c8436870724b98ac8ed4a2f49ba5e2c29",
     "reference": "main",
-    "revision": "422cbe1d93a8ae3847744b664041fc76876babcd"
+    "revision": "9e3ec9848f28d26845ba300fd73c740459b83e9b"
   },
   {
     "language": "heex",
@@ -961,9 +961,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "de9f52708bd1cca8bd2c9230b0f61e5e32146606d0cc1c197a7c5375ecec0dbb",
+    "grammarSha": "da0cddc899e03ceb3e433df64d3456d662fec48e141492ca643b5edb6f8d6b3e",
     "reference": "master",
-    "revision": "5e1225a30712ca0a9040509806c7ba274a1bbcde"
+    "revision": "80517ca13317fb8591503c0d99f2ad76e8979a72"
   },
   {
     "language": "hlsplaylist",
@@ -1077,7 +1077,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "4e23a9ef6ec8769bc4063f0fdb049b4d564ea6bc"
+    "revision": "6eb1525872013f58c64b0526ac9d64174f7136f1"
   },
   {
     "language": "java",
@@ -1246,9 +1246,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
-    "grammarSha": "2a4bb9f78248830e79e783cd7a9d9b79d8fb6af6f16b548dc56cef35fc2bc3ba",
+    "grammarSha": "588b8f7c7f688e173d823ce30b4362285bc3f4f4e10a9a6e2a4dcba8b90c1716",
     "reference": "master",
-    "revision": "5a1b4165add2dd705e0a460e5ac12d5baa35a354"
+    "revision": "08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4"
   },
   {
     "language": "ledger",
@@ -1339,9 +1339,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "960ce83e78a109dd2d3cf0e7d05f653d4745b869d5eaef7a4f6f44e079c249bd",
+    "grammarSha": "564a66f6c6c36572bbc7e94634663efdfa00b0ab19ea1ebae5a27724ae1bd94a",
     "reference": "master",
-    "revision": "5aa9b88a8e3327276ec6e72de997f04ac80b1ae4"
+    "revision": "fbadc96272f718dba267628ba7b0e694c368cef3"
   },
   {
     "language": "m68k",
@@ -2053,7 +2053,7 @@
     "maintainedBy": "@stevanmilic",
     "grammarSha": "cb450cd9a7ec218745412c512476b554a940208dcaf6c66fdaeebc2b0730ba0a",
     "reference": "master",
-    "revision": "b76db435a7f876cf1ede837d66054c534783c72f"
+    "revision": "5bce09bdd9d3dda5af5f4c67ca5e9bcbc7c44be2"
   },
   {
     "language": "scfg",
@@ -2089,9 +2089,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta",
-    "grammarSha": "21d44fda47cfecc389d3c65de9ee1bdf45772a94a42c6c472de69d04ec75a507",
+    "grammarSha": "915a9a46cd2ada757424a4f9a2650e91e9199bb83a46afa960a9e90f1859f9f2",
     "reference": "master",
-    "revision": "865d79e236c7f0e04276c969453d021d1da4b15f"
+    "revision": "ea77a4d91dd93f4483965efcc41f3faebb9131c8"
   },
   {
     "language": "slint",
@@ -2663,7 +2663,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "b3121fb63be59a217a5bc48ccc95d37f166184e800a72465a73c2a418a4ac92c",
     "reference": "master",
-    "revision": "1e12c7925c41bb09818d86e30cd78644fde7d31a"
+    "revision": "0f06f24e259ac725045956436b9025dab008ff9f"
   },
   {
     "language": "wing",
