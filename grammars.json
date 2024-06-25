@@ -1171,9 +1171,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Hubro",
-    "grammarSha": "415ec854b0cd15469811e3cdd8d62ef387acccf781f35fa6fc00becc669a8653",
+    "grammarSha": "f9dec423d91012a2eafd0d6424b934150d47d302081c32b77564e6c628862a91",
     "reference": "main",
-    "revision": "fd814fc6c579f68c2a642f5e0268cf69daae92d7"
+    "revision": "379fbe36d1e441bc9414ea050ad0c85c9d6935ea"
   },
   {
     "language": "kconfig",
@@ -1454,9 +1454,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ErinvanderVeen, @yannham",
-    "grammarSha": "02b670669adedfd07ef06f51ba8ccda437138e9c9950f39a2cab5ab0d4ee75be",
+    "grammarSha": "ad813772f5294c0188bdad3737248b4fae9b4611b45bbbbb0d5f36cc9f1b708b",
     "reference": "main",
-    "revision": "43433d8477b24cd13acaac20a66deda49b7e2547"
+    "revision": "3039ad9e9af3c1ffe049a04ee83a2b489915b0b9"
   },
   {
     "language": "nim",
@@ -1894,7 +1894,7 @@
     "maintainedBy": "@tdroxler",
     "grammarSha": "9398a46037546f10e9f20fb09b5f56137690ff08c1ee12cb1036a211b676d2dd",
     "reference": "master",
-    "revision": "48b9d9d6e2b55ce8f9eb09ceb0d952e4b1cc87a0"
+    "revision": "f6d81bf7a4599c77388035439cf5801cd461ff77"
   },
   {
     "language": "rasi",
@@ -2308,7 +2308,7 @@
     "maintainedBy": "@zhangwwpeng",
     "grammarSha": "daf4b45c0f8192979d80b8fcb62a7f8c09b8d3dca71d9c7e2b9236f09b3281a6",
     "reference": "master",
-    "revision": "7dc4904578a29315c64f0f6500920baff41cc3af"
+    "revision": "a478beb76be72fa8f305f5fe9cc6141ac91b91a4"
   },
   {
     "language": "t32",
@@ -2336,9 +2336,9 @@
     "language": "tact",
     "url": "https://github.com/tact-lang/tree-sitter-tact",
     "maintainedBy": "@novusnota",
-    "grammarSha": "629e5e25446cc85103f65e30895ed7445d935669a1f6cf26f402db1e2037a426",
+    "grammarSha": "9adc7b0302f23b6bacbd9d719df66b2a88e7ccbdb5d2ffedee83740abc2f0af6",
     "reference": "main",
-    "revision": "034df2162ed7b654efd999942e266be713c7cde0"
+    "revision": "91cc49a83f4f0b3a756bf7d0e65403a9cf757003"
   },
   {
     "language": "tcl",
@@ -2675,7 +2675,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
     "reference": "main",
-    "revision": "150b4e498abd3aa2c101ecea2423facae4ec6c49"
+    "revision": "1a813ea4b95fa009c686106fb48960dc88f2dff5"
   },
   {
     "language": "wit",
