@@ -126,7 +126,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
 	github.com/alexaandru/go-sitter-forest/julia v1.5.13
-	github.com/alexaandru/go-sitter-forest/just v1.5.11
+	github.com/alexaandru/go-sitter-forest/just v1.5.12
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.10
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.10
@@ -155,7 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
-	github.com/alexaandru/go-sitter-forest/nickel v1.5.13
+	github.com/alexaandru/go-sitter-forest/nickel v1.5.14
 	github.com/alexaandru/go-sitter-forest/nim v1.5.11
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.10
@@ -244,7 +244,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.5.10
 	github.com/alexaandru/go-sitter-forest/t32 v1.5.11
 	github.com/alexaandru/go-sitter-forest/tablegen v1.5.12
-	github.com/alexaandru/go-sitter-forest/tact v1.5.11
+	github.com/alexaandru/go-sitter-forest/tact v1.5.12
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.11
 	github.com/alexaandru/go-sitter-forest/templ v1.5.14
