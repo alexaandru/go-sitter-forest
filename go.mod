@@ -144,7 +144,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/luap v1.5.10
 	github.com/alexaandru/go-sitter-forest/luau v1.5.13
-	github.com/alexaandru/go-sitter-forest/m68k v1.5.10
+	github.com/alexaandru/go-sitter-forest/m68k v1.5.11
 	github.com/alexaandru/go-sitter-forest/make v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
