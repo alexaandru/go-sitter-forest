@@ -731,7 +731,7 @@
     "maintainedBy": "@gbprod",
     "grammarSha": "184b359891dc914f21bfaec82602d79775396786a8a17b90c8978852fb334a1f",
     "reference": "main",
-    "revision": "edd817e0532f179b7f7f371dc180629070945f0c"
+    "revision": "821994a8029b0e271171da4331b8cfc0294d08ed"
   },
   {
     "language": "gitignore",
@@ -1077,7 +1077,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "6eb1525872013f58c64b0526ac9d64174f7136f1"
+    "revision": "74f054bfe916a8f5fd5e5f90bda5549000eaaa56"
   },
   {
     "language": "java",
@@ -1347,9 +1347,9 @@
     "language": "m68k",
     "url": "https://github.com/grahambates/tree-sitter-m68k",
     "maintainedBy": "@grahambates",
-    "grammarSha": "696cdc46e1d0c27c8e68eba91a3ecc23bf94bc04822d8bdbf4f0d03bf80e1836",
+    "grammarSha": "b12c7e076db0c5726171c502d71922d09368cfbc474d513d437c70a575689bc3",
     "reference": "master",
-    "revision": "d097b123f19c6eaba2bf181c05420d88b9fc489d"
+    "revision": "7fe45a68be54955da7678f3f166a7b530f980c06"
   },
   {
     "language": "make",
@@ -1875,7 +1875,7 @@
     "maintainedBy": "@echasnovski",
     "grammarSha": "5c285a5c81def49fac168e1ca740d651708270fb5f7ee0434ff802012a1f53c1",
     "reference": "main",
-    "revision": "733cc58e9735f17f78a5b84c99bd65fa07af3b27"
+    "revision": "b1e211f52ad8f8e1e182bbbcc16dcd5e3688eb7d"
   },
   {
     "language": "racket",
@@ -2284,7 +2284,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "d657f98dd6bbc34cb48438c9e5956f15a6d89f1d"
+    "revision": "631f1e66bfbf55791b7a9ed23fa6dc90ee55550a"
   },
   {
     "language": "sxhkdrc",
@@ -2675,7 +2675,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
     "reference": "main",
-    "revision": "1a813ea4b95fa009c686106fb48960dc88f2dff5"
+    "revision": "734a760cc94748deb880b424e92b0fac4a696411"
   },
   {
     "language": "wit",
