@@ -557,10 +557,13 @@
   {
     "language": "erlang",
     "url": "https://github.com/WhatsApp/tree-sitter-erlang",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@filmor",
-    "grammarSha": "3fe0b9a54c60430dd0081550d10197e7238ce2188c6cf6fa783e8ecaf47ff7bf",
+    "grammarSha": "3d82945bd7c59b78470e1b679acc286c63716956147427053919154ab014ff82",
     "reference": "main",
-    "revision": "54cecce7454bab1e1c92d6fdeeb2e34625684397"
+    "revision": "da275db3ae46bbd00f97d11f888d8c58c14faa6d"
   },
   {
     "language": "facility",
@@ -1034,7 +1037,7 @@
     "maintainedBy": "@luckasRanarison",
     "grammarSha": "2d8178cf4dbb90a01e3c2a899339d5ad931b56d8a419d27c2d459f42d5a42659",
     "reference": "master",
-    "revision": "c9012d6dcaaa939f17c21e1fdb17b013d139e6b9"
+    "revision": "6858695eba0e63b9e0fceef081d291eb352abce8"
   },
   {
     "language": "idl",
@@ -1077,7 +1080,7 @@
     "maintainedBy": "@sogaiu",
     "grammarSha": "d1d9883679d14fe93c28d7af1c4697bc4bd36f07871bdb34dd76656231b01247",
     "reference": "master",
-    "revision": "74f054bfe916a8f5fd5e5f90bda5549000eaaa56"
+    "revision": "3b08641373cb3e37bc531e6e3cdb85d02b454702"
   },
   {
     "language": "java",
@@ -1347,9 +1350,9 @@
     "language": "m68k",
     "url": "https://github.com/grahambates/tree-sitter-m68k",
     "maintainedBy": "@grahambates",
-    "grammarSha": "b12c7e076db0c5726171c502d71922d09368cfbc474d513d437c70a575689bc3",
+    "grammarSha": "203172cf8f36e9d2579fe122bc4fccf58e14afecc95cf55f8d6976525eef1876",
     "reference": "master",
-    "revision": "7fe45a68be54955da7678f3f166a7b530f980c06"
+    "revision": "fe7cde600d3d4f6f67a9766f58690431b5a1c9f4"
   },
   {
     "language": "make",
@@ -2172,9 +2175,9 @@
     "language": "sparql",
     "url": "https://github.com/GordianDziwis/tree-sitter-sparql",
     "maintainedBy": "@BonaBeavis",
-    "grammarSha": "753787b89729bb024002e655191c33ede71eb9792096fa720af654409ac850a9",
+    "grammarSha": "3d3e320241461a9418ec8be548541538fff24cd123a075052928c1ecb40add0c",
     "reference": "main",
-    "revision": "05f949d3c1c15e3261473a244d3ce87777374dec"
+    "revision": "d853661ca680d8ff7f8d800182d5782b61d0dd58"
   },
   {
     "language": "sql",
@@ -2675,7 +2678,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
     "reference": "main",
-    "revision": "734a760cc94748deb880b424e92b0fac4a696411"
+    "revision": "d6d896915e2a2e61352f90a628a83fafc0c38df3"
   },
   {
     "language": "wit",
