@@ -60,7 +60,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/elsa v1.5.10
 	github.com/alexaandru/go-sitter-forest/elvish v1.5.10
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.10
-	github.com/alexaandru/go-sitter-forest/erlang v1.5.10
+	github.com/alexaandru/go-sitter-forest/erlang v1.5.11
 	github.com/alexaandru/go-sitter-forest/facility v1.5.10
 	github.com/alexaandru/go-sitter-forest/faust v1.5.10
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.12
@@ -144,7 +144,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/luap v1.5.10
 	github.com/alexaandru/go-sitter-forest/luau v1.5.13
-	github.com/alexaandru/go-sitter-forest/m68k v1.5.11
+	github.com/alexaandru/go-sitter-forest/m68k v1.5.12
 	github.com/alexaandru/go-sitter-forest/make v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
@@ -227,7 +227,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.10
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.16
-	github.com/alexaandru/go-sitter-forest/sparql v1.5.11
+	github.com/alexaandru/go-sitter-forest/sparql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sql v1.5.15
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.12
