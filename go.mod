@@ -112,7 +112,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.12
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
-	github.com/alexaandru/go-sitter-forest/idl v1.5.15
+	github.com/alexaandru/go-sitter-forest/idl v1.5.16
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
@@ -144,7 +144,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/luap v1.5.10
 	github.com/alexaandru/go-sitter-forest/luau v1.5.13
-	github.com/alexaandru/go-sitter-forest/m68k v1.5.12
+	github.com/alexaandru/go-sitter-forest/m68k v1.5.13
 	github.com/alexaandru/go-sitter-forest/make v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
@@ -247,7 +247,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tact v1.5.12
 	github.com/alexaandru/go-sitter-forest/tcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/teal v1.5.11
-	github.com/alexaandru/go-sitter-forest/templ v1.5.14
+	github.com/alexaandru/go-sitter-forest/templ v1.5.15
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.11
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yang v1.5.10
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.12
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.11
-	github.com/alexaandru/go-sitter-forest/zig v1.5.10
+	github.com/alexaandru/go-sitter-forest/zig v1.5.11
 	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/sync v0.7.0
 )
