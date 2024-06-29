@@ -2,7 +2,7 @@
   "language": "xcompose",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
   "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "707d9f9c857a48b695a50fc6c30aca0972ebcae0dd971fd6254fdeae47ba1937",
+  "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
   "reference": "master",
-  "revision": "2383cc69a2c42cfade41c7cb971fb3862bec6df1"
+  "revision": "fff3e72242aa110ebba6441946ea4d12d200fa68"
 }

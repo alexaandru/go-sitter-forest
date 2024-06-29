@@ -1043,9 +1043,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "6af80e260095f27b1bc6caece120561872ac5db833a5925b91d79a61b1bed5f0",
+    "grammarSha": "3a9ef431c2392a5ded7018dcc2918679ff0217c2479254be15587cf98e65a8ed",
     "reference": "master",
-    "revision": "6aa57adb5f6d14ea768d5d1b3d8a3fae11e6b97f"
+    "revision": "dcc727329d383145a57f8ce7209f20c19a3765c6"
   },
   {
     "language": "ini",
@@ -1350,9 +1350,9 @@
     "language": "m68k",
     "url": "https://github.com/grahambates/tree-sitter-m68k",
     "maintainedBy": "@grahambates",
-    "grammarSha": "203172cf8f36e9d2579fe122bc4fccf58e14afecc95cf55f8d6976525eef1876",
+    "grammarSha": "8ae34c946de06a551c8d78c9bc56291b24302320c8b354e9972a7b61d237da34",
     "reference": "master",
-    "revision": "fe7cde600d3d4f6f67a9766f58690431b5a1c9f4"
+    "revision": "9e082a2253c50eb3d80e84bbd635e57cfb1476a2"
   },
   {
     "language": "make",
@@ -2372,9 +2372,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
-    "grammarSha": "cc6228abda973c269d688cbd828984a15f8a221ae87c0e0e985ddebe537dfdd4",
+    "grammarSha": "62df91aa9a3b81e3197ef7af725c861b62df32e8e2e8d0cdb0099acf2e6c3b27",
     "reference": "master",
-    "revision": "cf84ea53e2e2531f23009d676ac206090c1e2392"
+    "revision": "a4f14aa248b84df73cc1c00bf06edac8d7c96acd"
   },
   {
     "language": "textproto",
@@ -2678,7 +2678,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
     "reference": "main",
-    "revision": "d6d896915e2a2e61352f90a628a83fafc0c38df3"
+    "revision": "f35b02e9760685252c3c753cf6b56f1d738a7e50"
   },
   {
     "language": "wit",
@@ -2692,9 +2692,9 @@
     "language": "xcompose",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
     "maintainedBy": "@ObserverOfTime",
-    "grammarSha": "707d9f9c857a48b695a50fc6c30aca0972ebcae0dd971fd6254fdeae47ba1937",
+    "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
     "reference": "master",
-    "revision": "2383cc69a2c42cfade41c7cb971fb3862bec6df1"
+    "revision": "fff3e72242aa110ebba6441946ea4d12d200fa68"
   },
   {
     "language": "xml",
@@ -2753,8 +2753,8 @@
     "language": "zig",
     "url": "https://github.com/maxxnino/tree-sitter-zig",
     "maintainedBy": "@maxxnino",
-    "grammarSha": "5109259c9af66a75d93c1033e202b4191ba32b270923414b2a8f02d13eb252ff",
+    "grammarSha": "ca1dd7bd1bef0bdfcec6c78d2c9a32e102b677cffc3d938a38e44dec5270aea3",
     "reference": "main",
-    "revision": "7c5a29b721d409be8842017351bf007d7e384401"
+    "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
   }
 ]

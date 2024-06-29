@@ -2,7 +2,7 @@
   "language": "idl",
   "url": "https://github.com/cathaysia/tree-sitter-idl",
   "maintainedBy": "@cathaysa",
-  "grammarSha": "6af80e260095f27b1bc6caece120561872ac5db833a5925b91d79a61b1bed5f0",
+  "grammarSha": "3a9ef431c2392a5ded7018dcc2918679ff0217c2479254be15587cf98e65a8ed",
   "reference": "master",
-  "revision": "6aa57adb5f6d14ea768d5d1b3d8a3fae11e6b97f"
+  "revision": "dcc727329d383145a57f8ce7209f20c19a3765c6"
 }
