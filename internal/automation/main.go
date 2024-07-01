@@ -39,8 +39,9 @@ var (
 	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
 	grammars      = Grammars{}
 	replaceMap    = map[string]string{
-		`"../../common/scanner.h"`:       `"scanner.h"`,
-		`"../../../include/scanner.h"`:   `"scanner.h"`,
+		`"../../common/scanner.h"`: `"scanner.h"`,
+		//`"../../../include/scanner.h"`:   `"scanner.h"`,
+		`"../../../common/scanner.h"`:    `"scanner.h"`,
 		`"tree_sitter/parser.h"`:         `"parser.h"`,
 		`"tree_sitter_comment/parser.c"`: `"_parser.c"`,
 		`"tree_sitter_comment/parser.h"`: `"_parser.h"`,

@@ -406,9 +406,9 @@
     "language": "diff",
     "url": "https://github.com/the-mikedavis/tree-sitter-diff",
     "maintainedBy": "@gbprod",
-    "grammarSha": "5c1b91d3f55fac9f6aecf89b43161b8f72ee6b0f80cd8c510d3f485ec3fe93ef",
+    "grammarSha": "7e50abb16ea9fac756e9a1f5686965925e3a5f1e1bfc2ee79c251de1b5ff3dd3",
     "reference": "main",
-    "revision": "629676fc3919606964231b2c7b9677d6998a2cb4"
+    "revision": "19dd5aa52fe339a1d974768a09ee2537303e8ca5"
   },
   {
     "language": "disassembly",
@@ -473,7 +473,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
     "reference": "master",
-    "revision": "648183d86f6f8ffb240ea11b4c6873f6f45d8b67"
+    "revision": "809266ed1694d64dedc168a18893cc254e3edf7e"
   },
   {
     "language": "earthfile",
@@ -1019,9 +1019,9 @@
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
     "maintainedBy": "@amaanq",
-    "grammarSha": "e78e642cd396633c2eb55b2e25319e2f0e6b10422ce1ce26d8c4c36106f86b15",
+    "grammarSha": "8c5f381f3f3252ee6d9f70b785cc371ec149fa46a0b6870f1cd168abde54df74",
     "reference": "main",
-    "revision": "8d22f33faa5aa95c6526606fb656ada342e59e40"
+    "revision": "2dacda923bafcfeae487e457df0fc1c95f6d1848"
   },
   {
     "language": "hurl",
@@ -1043,9 +1043,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "3a9ef431c2392a5ded7018dcc2918679ff0217c2479254be15587cf98e65a8ed",
+    "grammarSha": "08378d5c0d9ac4196394cbf3a392e3c4793e3b55d25d3bfa19f941f71fed8284",
     "reference": "master",
-    "revision": "dcc727329d383145a57f8ce7209f20c19a3765c6"
+    "revision": "6be61711aa3c1ea6a8c9ef9d38ab4e080d148745"
   },
   {
     "language": "ini",
@@ -1395,9 +1395,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@acristoffers",
-    "grammarSha": "ce1ecced0150a36e24a7079e59d0f3b55533f514340e013ee4065bded13b3d8f",
+    "grammarSha": "888ef253d3c7a6ce08545c42c9267ec0e7f12728a80ec408904cdc9329f4e590",
     "reference": "main",
-    "revision": "79d8b25f57b48f83ae1333aff6723b83c9532e37"
+    "revision": "2825fb578325ac308945318881445a89ea06e0f6"
   },
   {
     "language": "menhir",
@@ -1544,26 +1544,26 @@
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "files": [
       "scanner.c",
-      "include/scanner.h"
+      "common/scanner.h"
     ],
     "srcRoot": "grammars/ocaml",
     "maintainedBy": "@undu",
     "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
     "reference": "master",
-    "revision": "0b12614ded3ec7ed7ab7933a9ba4f695ba4c342e"
+    "revision": "cd95a67cea8c839d62fc5206ed1f5c66ff9ca255"
   },
   {
     "language": "ocaml_interface",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "files": [
       "scanner.c",
-      "include/scanner.h"
+      "common/scanner.h"
     ],
     "srcRoot": "grammars/interface",
     "maintainedBy": "@undu",
     "grammarSha": "ed745a3b34f2a56f90cc3a15895367bd3adbc2c9684c8e52c8bf722eb764211b",
     "reference": "master",
-    "revision": "0b12614ded3ec7ed7ab7933a9ba4f695ba4c342e"
+    "revision": "cd95a67cea8c839d62fc5206ed1f5c66ff9ca255"
   },
   {
     "language": "ocamllex",
@@ -2067,7 +2067,7 @@
     "maintainedBy": "@stevanmilic",
     "grammarSha": "cb450cd9a7ec218745412c512476b554a940208dcaf6c66fdaeebc2b0730ba0a",
     "reference": "master",
-    "revision": "5bce09bdd9d3dda5af5f4c67ca5e9bcbc7c44be2"
+    "revision": "599d12b59fed092f5a3d4a7019fd85d90cb39ec1"
   },
   {
     "language": "scfg",
@@ -2689,7 +2689,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
     "reference": "main",
-    "revision": "f35b02e9760685252c3c753cf6b56f1d738a7e50"
+    "revision": "7fe1e215454610bca783f2d36ce844be85b79013"
   },
   {
     "language": "wit",
@@ -2718,7 +2718,7 @@
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
     "reference": "master",
-    "revision": "648183d86f6f8ffb240ea11b4c6873f6f45d8b67"
+    "revision": "809266ed1694d64dedc168a18893cc254e3edf7e"
   },
   {
     "language": "yaml",

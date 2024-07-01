@@ -32,7 +32,7 @@ Content-Type: application/json
 	"id": 3
 }
 `
-	expected = "(document (comment) (ERROR (identifier) (identifier) (identifier)) (comment) (comment) (request (method) (target_url (variable name: (identifier)) (path (identifier)))) (comment) (request (method) (ERROR (variable name: (identifier))) (target_url (variable name: (identifier)))) (comment) (request (method) (target_url (variable name: (identifier)) (path (identifier) (identifier))) (header name: (name) value: (value)) (json_body)))"
+	expected = "(document (comment) (variable_declaration name: (identifier) (ERROR (identifier) (identifier)) value: (MISSING number)) (ERROR (ERROR (identifier) (identifier)) (identifier)) (variable name: (identifier)) (ERROR (identifier)) (request (method) (ERROR (variable name: (identifier))) (target_url (variable name: (identifier)))) (comment) (request (method) (target_url (variable name: (identifier)) (path (identifier) (identifier))) (header name: (name) value: (value)) (json_body)))"
 )
 
 func TestGrammar(t *testing.T) {

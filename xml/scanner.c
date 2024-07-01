@@ -72,11 +72,16 @@ static inline bool in_error_recovery(const bool *valid_symbols) {
            valid_symbols[CHAR_DATA] && valid_symbols[CDATA];
 }
 
+/// Check if the lexer is in a char data node
+static inline bool in_char_data(TSLexer *lexer) {
+    return !lexer->eof(lexer) && lexer->lookahead != '<' && lexer->lookahead != '&';
+}
+
 /// Scan for a CharData node
 static bool scan_char_data(TSLexer *lexer) {
     bool advanced_once = false;
 
-    while (!lexer->eof(lexer) && lexer->lookahead != '<' && lexer->lookahead != '&') {
+    while (in_char_data(lexer)) {
         if (lexer->lookahead == ']') {
             lexer->mark_end(lexer);
             advance_xml(lexer);
@@ -92,7 +97,9 @@ static bool scan_char_data(TSLexer *lexer) {
             }
         }
         advanced_once = true;
-        advance_xml(lexer);
+        if (in_char_data(lexer)) {
+            advance_xml(lexer);
+        }
     }
 
     if (advanced_once) {

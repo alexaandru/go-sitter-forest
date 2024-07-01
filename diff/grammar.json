@@ -2,7 +2,7 @@
   "language": "diff",
   "url": "https://github.com/the-mikedavis/tree-sitter-diff",
   "maintainedBy": "@gbprod",
-  "grammarSha": "5c1b91d3f55fac9f6aecf89b43161b8f72ee6b0f80cd8c510d3f485ec3fe93ef",
+  "grammarSha": "7e50abb16ea9fac756e9a1f5686965925e3a5f1e1bfc2ee79c251de1b5ff3dd3",
   "reference": "main",
-  "revision": "629676fc3919606964231b2c7b9677d6998a2cb4"
+  "revision": "19dd5aa52fe339a1d974768a09ee2537303e8ca5"
 }

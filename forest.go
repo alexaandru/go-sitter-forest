@@ -215,6 +215,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/risor"
 	"github.com/alexaandru/go-sitter-forest/rnoweb"
 	"github.com/alexaandru/go-sitter-forest/robot"
+	"github.com/alexaandru/go-sitter-forest/robots"
 	"github.com/alexaandru/go-sitter-forest/roc"
 	"github.com/alexaandru/go-sitter-forest/ron"
 	"github.com/alexaandru/go-sitter-forest/ruby"
@@ -505,6 +506,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"risor":              risor.GetLanguage,
 	"rnoweb":             rnoweb.GetLanguage,
 	"robot":              robot.GetLanguage,
+	"robots":             robots.GetLanguage,
 	"roc":                roc.GetLanguage,
 	"ron":                ron.GetLanguage,
 	"ruby":               ruby.GetLanguage,
