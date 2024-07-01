@@ -1,4 +1,4 @@
-# 284 Supported Parsers
+# 285 Supported Parsers
 
 1 pending, 4 skipped regeneration
 
@@ -211,6 +211,7 @@
 - [x] [risor](https://github.com/applejag/tree-sitter-risor) ✔️  (maintained by @applejag)
 - [x] [rnoweb](https://github.com/bamonroe/tree-sitter-rnoweb) ✔️  (maintained by @bamonroe)
 - [x] [robot](https://github.com/Hubro/tree-sitter-robot) ✔️  (maintained by @Hubro)
+- [x] [robots](https://github.com/opa-oz/tree-sitter-robots-txt) ✔️  (maintained by @opa-oz)
 - [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️  (maintained by @nat-418)
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️  (maintained by @amaanq)
 - [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd)

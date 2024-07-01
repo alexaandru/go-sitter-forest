@@ -1984,6 +1984,17 @@
     "revision": "322e4cc65754d2b3fdef4f2f8a71e0762e3d13af"
   },
   {
+    "language": "robots",
+    "url": "https://github.com/opa-oz/tree-sitter-robots-txt",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@opa-oz",
+    "grammarSha": "0b37553a43e1545e4fd3361c23558efbd6ed056328bebb33a2888e652dd9de35",
+    "reference": "main",
+    "revision": "8e3a4205b76236bb6dbebdbee5afc262ce38bb62"
+  },
+  {
     "language": "roc",
     "url": "https://github.com/nat-418/tree-sitter-roc",
     "files": [
