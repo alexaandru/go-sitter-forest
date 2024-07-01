@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dart v1.5.12
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.10
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
-	github.com/alexaandru/go-sitter-forest/diff v1.5.12
+	github.com/alexaandru/go-sitter-forest/diff v1.5.13
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.10
 	github.com/alexaandru/go-sitter-forest/djot v1.5.15
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
@@ -109,10 +109,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.10
 	github.com/alexaandru/go-sitter-forest/html v1.5.11
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
-	github.com/alexaandru/go-sitter-forest/http v1.5.12
+	github.com/alexaandru/go-sitter-forest/http v1.5.13
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
-	github.com/alexaandru/go-sitter-forest/idl v1.5.16
+	github.com/alexaandru/go-sitter-forest/idl v1.5.17
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
@@ -148,7 +148,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/make v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
-	github.com/alexaandru/go-sitter-forest/matlab v1.5.10
+	github.com/alexaandru/go-sitter-forest/matlab v1.5.11
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.10
 	github.com/alexaandru/go-sitter-forest/mermaid v1.5.12
 	github.com/alexaandru/go-sitter-forest/meson v1.5.10
@@ -281,7 +281,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wing v1.5.19
 	github.com/alexaandru/go-sitter-forest/wit v1.5.13
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
-	github.com/alexaandru/go-sitter-forest/xml v1.5.11
+	github.com/alexaandru/go-sitter-forest/xml v1.5.12
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.14
 	github.com/alexaandru/go-sitter-forest/yang v1.5.10
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.12
@@ -290,6 +290,8 @@ require (
 	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/sync v0.7.0
 )
+
+require github.com/alexaandru/go-sitter-forest/robots v1.5.10
 
 retract (
 	v1.4.1 // Yes, messed up again...
