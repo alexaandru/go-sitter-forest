@@ -167,6 +167,8 @@ func (gr *Grammar) ContentURL() (url string, err error) {
 		url = fmt.Sprintf("%s/-/raw/%s/", gr.URL, gr.Reference)
 	case strings.Contains(gr.URL, "git.sr.ht"):
 		url = fmt.Sprintf("%s/blob/%s/", gr.URL, gr.Revision)
+	case strings.Contains(gr.URL, "codeberg.org"):
+		url = fmt.Sprintf("%s/raw/branch/%s/", gr.URL, gr.Reference)
 	default:
 		err = errUnkHosting
 	}

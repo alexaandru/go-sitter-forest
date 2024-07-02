@@ -210,6 +210,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/risor v1.5.10
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.5.10
 	github.com/alexaandru/go-sitter-forest/robot v1.5.10
+	github.com/alexaandru/go-sitter-forest/robots v1.5.10
 	github.com/alexaandru/go-sitter-forest/roc v1.5.11
 	github.com/alexaandru/go-sitter-forest/ron v1.5.12
 	github.com/alexaandru/go-sitter-forest/ruby v1.5.14
@@ -290,8 +291,6 @@ require (
 	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/sync v0.7.0
 )
-
-require github.com/alexaandru/go-sitter-forest/robots v1.5.10
 
 retract (
 	v1.4.1 // Yes, messed up again...

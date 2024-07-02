@@ -1,0 +1,9 @@
+{
+  "language": "prolog",
+  "url": "https://codeberg.org/foxy/tree-sitter-prolog",
+  "srcRoot": "grammars/prolog",
+  "maintainedBy": "@foxyseta",
+  "grammarSha": "3619c89c53644f5d792841f3524930d5b9d38b64ecffe3eec130b397492fc22a",
+  "reference": "main",
+  "revision": "d8bc22c007825d3af3d62b4326f9d8f9ca529974"
+}

@@ -1,4 +1,4 @@
-# 285 Supported Parsers
+# 287 Supported Parsers
 
 1 pending, 4 skipped regeneration
 
@@ -184,6 +184,8 @@
 - [x] [pony](https://github.com/tree-sitter-grammars/tree-sitter-pony) ✔️  (maintained by @amaanq, @mfelsche)
 - [x] [printf](https://github.com/tree-sitter-grammars/tree-sitter-printf) ✔️  (maintained by @ObserverOfTime)
 - [x] [prisma](https://github.com/victorhqc/tree-sitter-prisma) ✔️  (maintained by @elianiva)
+- [x] [problog](https://codeberg.org/foxy/tree-sitter-prolog) ✔️  (maintained by @foxyseta)
+- [x] [prolog](https://codeberg.org/foxy/tree-sitter-prolog) ✔️  (maintained by @foxyseta)
 - [x] [promql](https://github.com/MichaHoffmann/tree-sitter-promql) ✔️  (maintained by @MichaHoffmann)
 - [x] [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties) ✔️  (maintained by @ObserverOfTime)
 - [x] [proto](https://github.com/treywood/tree-sitter-proto) ✔️  (maintained by @treywood)
