@@ -28,7 +28,7 @@
     "maintainedBy": "@dlvandenberg",
     "grammarSha": "b24e49c09549314853a7bb50ec5d6355d5e02d5203e8c60032a41cbbedce79d0",
     "reference": "main",
-    "revision": "10f21f3f1b10584e62ecc113ab3cda1196d0ceb8"
+    "revision": "5c9b47c6a978072808b356065fe8f223cdc8fc07"
   },
   {
     "language": "apex",
@@ -161,9 +161,9 @@
     "language": "bp",
     "url": "https://github.com/ambroisie/tree-sitter-bp",
     "maintainedBy": "@ambroisie",
-    "grammarSha": "00593e0984819c61d6c36c75121dfff1b831dcf37de7b87bf9309fdd19251153",
+    "grammarSha": "b2ac0412db1c00688675139dd78c2daec1191f2fa29ad97df4173da117b5490a",
     "reference": "main",
-    "revision": "2326d709fb9cf73cf124fdbc803c267f851721a4"
+    "revision": "4e60cf3c2e613625c06f6f85540b3631e2d06cd3"
   },
   {
     "language": "c",
@@ -713,9 +713,9 @@
     "language": "git_rebase",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
     "maintainedBy": "@gbprod",
-    "grammarSha": "7a4953e1d9e40f40c819fed8e8998845eab38976d32daf9a339ef131b99dd5b9",
+    "grammarSha": "97cc0fc399f96c98b68dc14981467ef61012b357dbb2d53356077b7c1800d96d",
     "reference": "main",
-    "revision": "d8a4207ebbc47bd78bacdf48f883db58283f9fd8"
+    "revision": "274e27ea0f09371122ab55b8a812a32d6ef644e8"
   },
   {
     "language": "gitattributes",
@@ -732,9 +732,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@gbprod",
-    "grammarSha": "184b359891dc914f21bfaec82602d79775396786a8a17b90c8978852fb334a1f",
+    "grammarSha": "e637c5430e65d37248b50e5950494fd7993e4122ff97e12c7f8a930c1db67fcf",
     "reference": "main",
-    "revision": "821994a8029b0e271171da4331b8cfc0294d08ed"
+    "revision": "aa5c279287f0895a7ebc76a06e55ac3e4b2df7c7"
   },
   {
     "language": "gitignore",
@@ -1045,7 +1045,7 @@
     "maintainedBy": "@cathaysa",
     "grammarSha": "08378d5c0d9ac4196394cbf3a392e3c4793e3b55d25d3bfa19f941f71fed8284",
     "reference": "master",
-    "revision": "6be61711aa3c1ea6a8c9ef9d38ab4e080d148745"
+    "revision": "966797b8c581526efdd2252f815dde6de1a8f932"
   },
   {
     "language": "ini",
@@ -2687,9 +2687,9 @@
     ],
     "srcRoot": "libs/tree-sitter-wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
-    "grammarSha": "5d1f2d5a066a61d113348f5823f80d99f063fce64dd3aa715f3ad91ee5ad9972",
+    "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "7fe1e215454610bca783f2d36ce844be85b79013"
+    "revision": "341068035f06e1ba171b03d697ceee4a66f9de9d"
   },
   {
     "language": "wit",

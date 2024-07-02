@@ -23,7 +23,7 @@ obsolete now.
 Reviewed-by: Z
 Refs: #123
 `
-	expected = "(source (message (trailer (token) (value)) (trailer (token) (value)) (trailer (token) (value))))"
+	expected = "(source (message (trailer (token) (value)) (message_line) (message_line) (message_line) (message_line) (trailer (token)) (message_line) (trailer (token) (value))))"
 )
 
 func TestGrammar(t *testing.T) {
