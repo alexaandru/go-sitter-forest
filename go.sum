@@ -358,6 +358,10 @@ github.com/alexaandru/go-sitter-forest/printf v1.5.10 h1:0SUNXUWgJbW61CefMFp0rtS
 github.com/alexaandru/go-sitter-forest/printf v1.5.10/go.mod h1:iG8pYNdGf/X6og4CPnoB5TIg2CK/VKBHqUNaeFlxVr0=
 github.com/alexaandru/go-sitter-forest/prisma v1.5.10 h1:zg2hT2Di/UogejJlilB5LnuCCqpCcxsNCxHvtOQolgU=
 github.com/alexaandru/go-sitter-forest/prisma v1.5.10/go.mod h1:V29vetvb/4sSMPWb2XSlbrTc6Sqch4b7hLhTXQQ3oHM=
+github.com/alexaandru/go-sitter-forest/problog v1.5.10 h1:vrdJ+45iKHYqXdQcQyZB9Jp0MQrL2ZJ/9CpUO0t5t8I=
+github.com/alexaandru/go-sitter-forest/problog v1.5.10/go.mod h1:xyBKR7dfHacOrv9WJYwIBWQlAdX9hmMhYJrTG85Kx9I=
+github.com/alexaandru/go-sitter-forest/prolog v1.5.10 h1:yS8CBYB3p9eXhHevkTn6P6dzNphFun0Q7qUJh4XxVHQ=
+github.com/alexaandru/go-sitter-forest/prolog v1.5.10/go.mod h1:M4QjuwNHw0j0ErdYXI2b6YWkvdkL5gkA+P5dy/qS7ns=
 github.com/alexaandru/go-sitter-forest/promql v1.5.10 h1:UmI0LBfU1oYjgSdB3WAqMwFsaMPiCV2wxj/Qry1IB64=
 github.com/alexaandru/go-sitter-forest/promql v1.5.10/go.mod h1:VwOviiEK8vdIMOc2gEahB7LApPwMkSURvf5Fkxiib44=
 github.com/alexaandru/go-sitter-forest/properties v1.5.10 h1:S1vQYrOwvD5+7Bj1W680TCD7jxYovEzSPveK7f/rkUU=

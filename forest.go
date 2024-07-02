@@ -188,6 +188,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pony"
 	"github.com/alexaandru/go-sitter-forest/printf"
 	"github.com/alexaandru/go-sitter-forest/prisma"
+	"github.com/alexaandru/go-sitter-forest/problog"
+	"github.com/alexaandru/go-sitter-forest/prolog"
 	"github.com/alexaandru/go-sitter-forest/promql"
 	"github.com/alexaandru/go-sitter-forest/properties"
 	"github.com/alexaandru/go-sitter-forest/proto"
@@ -479,6 +481,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"pony":               pony.GetLanguage,
 	"printf":             printf.GetLanguage,
 	"prisma":             prisma.GetLanguage,
+	"problog":            problog.GetLanguage,
+	"prolog":             prolog.GetLanguage,
 	"promql":             promql.GetLanguage,
 	"properties":         properties.GetLanguage,
 	"proto":              proto.GetLanguage,

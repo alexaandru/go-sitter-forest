@@ -183,6 +183,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/pony v1.5.11
 	github.com/alexaandru/go-sitter-forest/printf v1.5.10
 	github.com/alexaandru/go-sitter-forest/prisma v1.5.10
+	github.com/alexaandru/go-sitter-forest/problog v1.5.10
+	github.com/alexaandru/go-sitter-forest/prolog v1.5.10
 	github.com/alexaandru/go-sitter-forest/promql v1.5.10
 	github.com/alexaandru/go-sitter-forest/properties v1.5.10
 	github.com/alexaandru/go-sitter-forest/proto v1.5.10
