@@ -203,7 +203,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/racket v1.5.11
 	github.com/alexaandru/go-sitter-forest/ralph v1.5.10
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.10
-	github.com/alexaandru/go-sitter-forest/rbs v1.5.11
+	github.com/alexaandru/go-sitter-forest/rbs v1.5.12
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.10
 	github.com/alexaandru/go-sitter-forest/readline v1.5.10
 	github.com/alexaandru/go-sitter-forest/regex v1.5.10
@@ -260,7 +260,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsx v1.5.13
-	github.com/alexaandru/go-sitter-forest/turtle v1.5.10
+	github.com/alexaandru/go-sitter-forest/turtle v1.5.11
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
 	github.com/alexaandru/go-sitter-forest/typescript v1.5.13
 	github.com/alexaandru/go-sitter-forest/typespec v1.5.10
