@@ -1929,9 +1929,9 @@
     "language": "rbs",
     "url": "https://github.com/joker1007/tree-sitter-rbs",
     "maintainedBy": "@joker1007",
-    "grammarSha": "a760bbf4236ada6999a630bf5843f29918a8483f5e0c68264a50ab6257aa145f",
+    "grammarSha": "a227eee7249c43e6ef385371350ae3463c69e3fbc24b54cf826ac2c9328a8c06",
     "reference": "main",
-    "revision": "88d8ed487b5449ddda2fc0c4fe23b71cba29ca24"
+    "revision": "8d8e65ac3f77fbc9e15b1cdb9f980a3e0ac3ab99"
   },
   {
     "language": "re2c",
@@ -2497,9 +2497,9 @@
     "language": "turtle",
     "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
     "maintainedBy": "@BonaBeavis",
-    "grammarSha": "9e5fd31b7fb9cc23832a695b3f7ae44730151b7f262d28e2eaa5a2d2e248b0b2",
+    "grammarSha": "3999181dd85bc5b8d167959a9d6bafb8be8c496e214f138d595e3d75f878a5ca",
     "reference": "main",
-    "revision": "085437f5cb117703b7f520dd92161140a684f092"
+    "revision": "7f789ea7ef765080f71a298fc96b7c957fa24422"
   },
   {
     "language": "twig",
@@ -2606,7 +2606,7 @@
     "maintainedBy": "@kkharji, @amaanq",
     "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
     "reference": "main",
-    "revision": "e91f8a42de7842f24f4ce600754f2b6651985fd4"
+    "revision": "7f80a0441ff2ca6aa8ced8e1ee87cead9dd26515"
   },
   {
     "language": "vala",
@@ -2707,7 +2707,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "341068035f06e1ba171b03d697ceee4a66f9de9d"
+    "revision": "ce8c4cee11fa6b5e53c64d6615e9fc1cd651b27a"
   },
   {
     "language": "wit",
