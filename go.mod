@@ -21,7 +21,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
 	github.com/alexaandru/go-sitter-forest/bp v1.5.11
 	github.com/alexaandru/go-sitter-forest/c v1.5.12
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.14
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.15
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.10
 	github.com/alexaandru/go-sitter-forest/calc v1.5.10
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.11
@@ -60,7 +60,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/elsa v1.5.10
 	github.com/alexaandru/go-sitter-forest/elvish v1.5.10
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.10
-	github.com/alexaandru/go-sitter-forest/erlang v1.5.11
+	github.com/alexaandru/go-sitter-forest/erlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/facility v1.5.10
 	github.com/alexaandru/go-sitter-forest/faust v1.5.10
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.12
@@ -112,7 +112,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.13
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
-	github.com/alexaandru/go-sitter-forest/idl v1.5.17
+	github.com/alexaandru/go-sitter-forest/idl v1.5.18
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
