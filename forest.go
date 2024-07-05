@@ -57,6 +57,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/dtd"
 	"github.com/alexaandru/go-sitter-forest/earthfile"
 	"github.com/alexaandru/go-sitter-forest/ebnf"
+	"github.com/alexaandru/go-sitter-forest/editorconfig"
 	"github.com/alexaandru/go-sitter-forest/eds"
 	"github.com/alexaandru/go-sitter-forest/eex"
 	"github.com/alexaandru/go-sitter-forest/elixir"
@@ -351,6 +352,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"dtd":                dtd.GetLanguage,
 	"earthfile":          earthfile.GetLanguage,
 	"ebnf":               ebnf.GetLanguage,
+	"editorconfig":       editorconfig.GetLanguage,
 	"eds":                eds.GetLanguage,
 	"eex":                eex.GetLanguage,
 	"elixir":             elixir.GetLanguage,
