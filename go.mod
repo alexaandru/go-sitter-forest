@@ -53,6 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
 	github.com/alexaandru/go-sitter-forest/earthfile v1.5.25
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
+	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/eds v1.5.11
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
 	github.com/alexaandru/go-sitter-forest/elixir v1.5.12
@@ -118,7 +119,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
 	github.com/alexaandru/go-sitter-forest/java v1.5.11
-	github.com/alexaandru/go-sitter-forest/javascript v1.5.16
+	github.com/alexaandru/go-sitter-forest/javascript v1.5.17
 	github.com/alexaandru/go-sitter-forest/jq v1.5.10
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.11
 	github.com/alexaandru/go-sitter-forest/json v1.5.11
@@ -282,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
 	github.com/alexaandru/go-sitter-forest/wing v1.5.20
-	github.com/alexaandru/go-sitter-forest/wit v1.5.13
+	github.com/alexaandru/go-sitter-forest/wit v1.5.14
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.12
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.14
