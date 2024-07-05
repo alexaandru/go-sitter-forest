@@ -1108,9 +1108,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "6a0544301bd23f4098c26c269fe963bb061b1d2fdc3ae3d1da8fc4e1532c10ae",
+    "grammarSha": "58f9f14b04b9fb76c11baf93f60d1b68efda9c139d952b40f87d8d40b7c97c38",
     "reference": "master",
-    "revision": "391a8fcc48a11f63bf18ec9885f6f069e760949a"
+    "revision": "12e45374422f6051648717be62f0ffc40a279ee2"
   },
   {
     "language": "jq",
@@ -2718,15 +2718,15 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "fdaffe5b031c32ccec5f25796c90a6e432ebf623"
+    "revision": "b663c29774999a9219ceee70e30ed6390d0d230c"
   },
   {
     "language": "wit",
     "url": "https://github.com/liamwh/tree-sitter-wit",
     "maintainedBy": "@liamwh",
-    "grammarSha": "4175f74d7d38bee65a176b55daba35aa74c1c409ada2f16c79cda2729b60f813",
+    "grammarSha": "cc33b4f305bacaee6a6234cfcfd2f452948add03956b8da1424f5068d440b5af",
     "reference": "main",
-    "revision": "cab94791450524a542324d8cbe8017d69c516d8e"
+    "revision": "7351db0da11900e7f0c754b3483d39fc6a9d53e8"
   },
   {
     "language": "xcompose",
