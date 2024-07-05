@@ -493,6 +493,17 @@
     "revision": "8e635b0b723c620774dfb8abf382a7f531894b40"
   },
   {
+    "language": "editorconfig",
+    "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@ValdezFOmar",
+    "grammarSha": "cfbc3a138b49c8924df107804ce97f368eae8f98250097576fa089bcee5088fe",
+    "reference": "main",
+    "revision": "81b885016d2acdc4b95781ba1d6920b9b835a0c5"
+  },
+  {
     "language": "eds",
     "url": "https://github.com/uyha/tree-sitter-eds",
     "maintainedBy": "@uyha",
