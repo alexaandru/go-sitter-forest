@@ -499,9 +499,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ValdezFOmar",
-    "grammarSha": "cfbc3a138b49c8924df107804ce97f368eae8f98250097576fa089bcee5088fe",
+    "grammarSha": "329f05e9b7ea23b1288ebf2f956e4a7b70bf65e636dcc1c474e92c5782d1a077",
     "reference": "main",
-    "revision": "81b885016d2acdc4b95781ba1d6920b9b835a0c5"
+    "revision": "a1f293faf993209cbbc324c4d73cd907a6aee205"
   },
   {
     "language": "eds",
@@ -1108,9 +1108,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@steelsojka",
-    "grammarSha": "58f9f14b04b9fb76c11baf93f60d1b68efda9c139d952b40f87d8d40b7c97c38",
+    "grammarSha": "190fb491938fa6a4cf78a721a48416e76cf5b7e100a74c7cc6861798b2ad3c78",
     "reference": "master",
-    "revision": "12e45374422f6051648717be62f0ffc40a279ee2"
+    "revision": "d767b1a276a4e80d7a6be30bada3070740ba4fa2"
   },
   {
     "language": "jq",
@@ -1654,9 +1654,9 @@
     ],
     "srcRoot": "php",
     "maintainedBy": "@tk-shirasaka",
-    "grammarSha": "a44821c74a4e6be305076e009d98f823a11b3bc580fabd9f86752ed17a5611eb",
+    "grammarSha": "7cd6703d100240cd10cf42797838a9f751e70f13f845b971c6a5253671e0589d",
     "reference": "master",
-    "revision": "4f124bc6075e1c3333e80190c1c170933ed72c95"
+    "revision": "575a0801f430c8672db70b73493c033a9dcfc328"
   },
   {
     "language": "php_only",
@@ -1667,9 +1667,9 @@
     ],
     "srcRoot": "php_only",
     "maintainedBy": "@tk-shirasaka",
-    "grammarSha": "c00458c27b715e9f298a1b6b4c13a0ffb0be5af186f628f6547b1f879e13d53c",
+    "grammarSha": "7eadc0fd99dafea2f743c9c7b7ee363bbf43a09903aacb4ae165050d4d716d81",
     "reference": "master",
-    "revision": "4f124bc6075e1c3333e80190c1c170933ed72c95"
+    "revision": "575a0801f430c8672db70b73493c033a9dcfc328"
   },
   {
     "language": "phpdoc",
@@ -1859,7 +1859,7 @@
     "maintainedBy": "@stsewd, @theHamsta",
     "grammarSha": "9a77a8055fd5cf26327a95b26fd4d9e4556284bbc579013b054ac6a468e0033b",
     "reference": "master",
-    "revision": "71778c2a472ed00a64abf4219544edbf8e4b86d7"
+    "revision": "36515d50016d497e490a0c416b5ccb8623f1251a"
   },
   {
     "language": "ql",
@@ -2718,7 +2718,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "b663c29774999a9219ceee70e30ed6390d0d230c"
+    "revision": "13610b735e5aebda4d512618fd554a08a4c2164f"
   },
   {
     "language": "wit",
