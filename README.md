@@ -194,6 +194,7 @@ version everywhere, and keeping up with it too.
 
 ## TODO
 
+- filter high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally).

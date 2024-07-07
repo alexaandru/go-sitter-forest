@@ -501,7 +501,7 @@
     "maintainedBy": "@ValdezFOmar",
     "grammarSha": "329f05e9b7ea23b1288ebf2f956e4a7b70bf65e636dcc1c474e92c5782d1a077",
     "reference": "main",
-    "revision": "a1f293faf993209cbbc324c4d73cd907a6aee205"
+    "revision": "cb3c86f146d470ace41648eee44225bc457499db"
   },
   {
     "language": "eds",
@@ -1054,9 +1054,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "ce6795abd4ab249e40a36e02faf3b3b8c99e93454d6c983e2703b0c2b50b54a2",
+    "grammarSha": "22309315305b0e51a30c967364dc98ddd3ab792fdc3c21577d9b4734c784b175",
     "reference": "master",
-    "revision": "dd5ce556451e51d6f67a8f53f103193e39ee49aa"
+    "revision": "443308c0f32af6681e5b0a09bb7071f3c0c85d74"
   },
   {
     "language": "ini",
@@ -1443,7 +1443,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "268bc99020f7ba7a219f839e3a6a31c36ad0826b"
+    "revision": "935a551f76fb07f66d0ce6f1f6e955d22cd44f15"
   },
   {
     "language": "muttrc",
@@ -1475,14 +1475,14 @@
   {
     "language": "nim",
     "url": "https://github.com/alaviss/tree-sitter-nim",
-    "doc": "high (7GB) memory usage",
+    "doc": "high memory usage (7GB)",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@aMOPel",
-    "grammarSha": "e4d4285b41b99c749866c57170b7a51cb01df519cabdf5c187f3fe8b9cb932de",
+    "grammarSha": "818a6875ad29c2c3bad3f9fa7b7205a382fea860411bd68d49733a5650087221",
     "reference": "main",
-    "revision": "961c2798cec9250c44f7d7225ddb33d47d25856a"
+    "revision": "bb2f809b65c5c943d16c45dd17e631bf3d5d4f07"
   },
   {
     "language": "nim_format_string",
@@ -1857,9 +1857,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@stsewd, @theHamsta",
-    "grammarSha": "9a77a8055fd5cf26327a95b26fd4d9e4556284bbc579013b054ac6a468e0033b",
+    "grammarSha": "dd5b303e428cb84e255a2bbf4e3d0ccedcd1a74588a5221716e429c58eb77e58",
     "reference": "master",
-    "revision": "36515d50016d497e490a0c416b5ccb8623f1251a"
+    "revision": "ccc2408e558029ad82b0dea63ff55ada495965da"
   },
   {
     "language": "ql",
@@ -2494,15 +2494,16 @@
   {
     "language": "tsx",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "doc": "high memory usage (13GB)",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "tsx",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "076ad05950a2716b0361516509d5a2b059d13947096373baeadec2a2ff7a2ff9",
+    "grammarSha": "92fe8b1653f899150367c4775bcbaad171a7870a23632ac4f041b70cd3c15ffd",
     "reference": "master",
-    "revision": "4f3eb6655a1cd1a1f87ef10201f8e22886dcd76e"
+    "revision": "9f804be960f289a0acc59d8564acc16857b0b088"
   },
   {
     "language": "turtle",
@@ -2523,15 +2524,16 @@
   {
     "language": "typescript",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
+    "doc": "high memory usage (13GB)",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "df8ce4d4850a317056b6a93c716b3cc81e26982b9f45bb7f1be22b5040db5f0e",
+    "grammarSha": "714a05c26a01b6e855a6acd8f712c3c9f9e2bf476874a947fe65800ae66a6667",
     "reference": "master",
-    "revision": "4f3eb6655a1cd1a1f87ef10201f8e22886dcd76e"
+    "revision": "9f804be960f289a0acc59d8564acc16857b0b088"
   },
   {
     "language": "typespec",

@@ -85,8 +85,8 @@ _nonnull_(1) _returns_nonnull_ static indent_value* indent_vec_at(
   return &self->data[idx];
 }
 
-_nonnull_(1) static indent_value
-    indent_vec_get(const struct indent_vec* self, int32_t idx)
+_nonnull_(1) static indent_value indent_vec_get(
+    const struct indent_vec* self, int32_t idx)
 {
   return *indent_vec_at((struct indent_vec*)self, idx);
 }
@@ -227,7 +227,7 @@ enum token_type {
   INVALID_LAYOUT,
   SIGIL_OP,
   UNARY_OP,
-  SYM_EXPORT_MARKER,
+  WANT_EXPORT_MARKER,
   OF,
   TOKEN_TYPE_LEN
 };
@@ -249,7 +249,7 @@ const char* const TOKEN_TYPE_STR[TOKEN_TYPE_LEN] = {
     "INVALID_LAYOUT",
     "SIGIL_OP",
     "UNARY_OP",
-    "SYM_EXPORT_MARKER",
+    "WANT_EXPORT_MARKER",
     "OF",
 };
 #endif
@@ -264,8 +264,8 @@ struct valid_tokens {
     .bits = (bits_)         \
   }
 
-_nonnull_(1) _pure_ static struct valid_tokens
-    valid_tokens_from_array(const bool* valid_tokens)
+_nonnull_(1) _pure_ static struct valid_tokens valid_tokens_from_array(
+    const bool* valid_tokens)
 {
   struct valid_tokens result = {0};
   for (unsigned i = TOKEN_TYPE_START; i < TOKEN_TYPE_LEN; i++) {
@@ -443,20 +443,20 @@ _nonnull_(1) static indent_value context_indent(struct context* self)
 #define LEX_FN(name, ...) \
   _nonnull_(1) static bool name(struct context* ctx, ##__VA_ARGS__)
 
-_const_ static bool is_digit(uint32_t chr) { return chr >= '0' && chr <= '9'; }
+_const_ static bool is_digit_nim(uint32_t chr) { return chr >= '0' && chr <= '9'; }
 
 _const_ static bool is_lower(uint32_t chr) { return chr >= 'a' && chr <= 'z'; }
 
-_const_ static bool is_upper(uint32_t chr) { return chr >= 'A' && chr <= 'Z'; }
+_const_ static bool is_upper_nim(uint32_t chr) { return chr >= 'A' && chr <= 'Z'; }
 
 _const_ static bool is_keyword(uint32_t chr)
 {
-  return is_lower(chr) || is_upper(chr) || chr == '_';
+  return is_lower(chr) || is_upper_nim(chr) || chr == '_';
 }
 
 _const_ static bool is_identifier(uint32_t chr)
 {
-  return is_keyword(chr) || is_digit(chr);
+  return is_keyword(chr) || is_digit_nim(chr);
 }
 
 _const_ static uint32_t to_upper(uint32_t chr)
@@ -917,8 +917,8 @@ const char* const OPERATOR_SCAN_STATE_STR[] = {
     "STAR"};
 #endif
 
-_nonnull_(1) static enum token_type
-    scan_operator(struct context* ctx, bool immediate)
+_nonnull_(1) static enum token_type scan_operator(
+    struct context* ctx, bool immediate)
 {
   if (immediate) {
     return TOKEN_TYPE_LEN;
@@ -995,12 +995,12 @@ loop_end:
   case OS_DOT:
     return TOKEN_TYPE_LEN;
   case OS_MINUS:
-    if (is_digit(context_lookahead(ctx))) {
+    if (is_digit_nim(context_lookahead(ctx))) {
       return TOKEN_TYPE_LEN;
     }
     break;
   case OS_STAR:
-    if (valid_tokens_test(ctx->valid_tokens, SYM_EXPORT_MARKER)) {
+    if (valid_tokens_test(ctx->valid_tokens, WANT_EXPORT_MARKER)) {
       return TOKEN_TYPE_LEN;
     }
     break;

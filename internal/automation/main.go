@@ -692,7 +692,13 @@ func updateParsersMd() error {
 		if x := gr.MaintainedBy; x != "" {
 			doc := ""
 			if gr.Doc != "" {
-				doc = "; ❌" + gr.Doc
+				doc = "; "
+
+				if gr.SkipGenerate || gr.SkipUpdate {
+					doc += "❌"
+				}
+
+				doc += gr.Doc
 			}
 
 			maint = fmt.Sprintf(" (maintained by %s%s)", x, doc)
