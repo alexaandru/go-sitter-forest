@@ -113,7 +113,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.13
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
-	github.com/alexaandru/go-sitter-forest/idl v1.5.18
+	github.com/alexaandru/go-sitter-forest/idl v1.5.19
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
@@ -157,7 +157,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.14
-	github.com/alexaandru/go-sitter-forest/nim v1.5.11
+	github.com/alexaandru/go-sitter-forest/nim v1.5.12
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.10
 	github.com/alexaandru/go-sitter-forest/nix v1.5.10
@@ -195,7 +195,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/puppet v1.5.11
 	github.com/alexaandru/go-sitter-forest/purescript v1.5.10
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.5.10
-	github.com/alexaandru/go-sitter-forest/python v1.5.10
+	github.com/alexaandru/go-sitter-forest/python v1.5.11
 	github.com/alexaandru/go-sitter-forest/ql v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.12
@@ -260,10 +260,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.10
-	github.com/alexaandru/go-sitter-forest/tsx v1.5.13
+	github.com/alexaandru/go-sitter-forest/tsx v1.5.14
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.11
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
-	github.com/alexaandru/go-sitter-forest/typescript v1.5.13
+	github.com/alexaandru/go-sitter-forest/typescript v1.5.14
 	github.com/alexaandru/go-sitter-forest/typespec v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typst v1.5.15
