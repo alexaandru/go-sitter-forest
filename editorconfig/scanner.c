@@ -50,7 +50,10 @@ static inline bool parse_key_name(TSLexer *lexer)
 
     while (lexer->lookahead != '=') {
         if (is_newline_editorconfig(lexer->lookahead) || lexer->eof(lexer)) {
-            return false;
+            // NOTE: Tecnically is not valid since there is be no value
+            // on the right side, but it gives better error recovery
+            lexer->result_symbol = KEY_NAME_TRIMMED;
+            return true;
         }
         if (is_space_editorconfig(lexer->lookahead)) {
             lexer->advance_editorconfig(lexer, false);

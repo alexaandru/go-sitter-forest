@@ -1,3 +1,4 @@
+#include "alloc.h"
 #include "parser.h"
 #include <ctype.h>
 #include <wctype.h>
@@ -338,7 +339,7 @@ static bool scan_fortran(Scanner *scanner, TSLexer *lexer, const bool *valid_sym
 }
 
 void *tree_sitter_fortran_external_scanner_create() {
-    return calloc(1, sizeof(bool));
+    return ts_calloc(1, sizeof(bool));
 }
 
 bool tree_sitter_fortran_external_scanner_scan(void *payload, TSLexer *lexer,
@@ -365,5 +366,5 @@ void tree_sitter_fortran_external_scanner_deserialize(void *payload,
 
 void tree_sitter_fortran_external_scanner_destroy(void *payload) {
     Scanner *scanner = (Scanner *)payload;
-    free(scanner);
+    ts_free(scanner);
 }

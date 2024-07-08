@@ -499,9 +499,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@ValdezFOmar",
-    "grammarSha": "329f05e9b7ea23b1288ebf2f956e4a7b70bf65e636dcc1c474e92c5782d1a077",
+    "grammarSha": "02c0ab6af9199799802ce882692cda660bfa33748245e94a21b351a670d60783",
     "reference": "main",
-    "revision": "cb3c86f146d470ace41648eee44225bc457499db"
+    "revision": "c5f83685a64117872ae750ce14333a7a1dddcf0b"
   },
   {
     "language": "eds",
@@ -661,9 +661,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "9e890f16f6794641cb9caadf55a1325b7ed0372d4e4e21b55dc26815443037cd",
+    "grammarSha": "228963cd669cd83562c52dc44445f94449ba3e870697e0a8ad963d7e4a39aa4a",
     "reference": "master",
-    "revision": "f73d473e3530862dee7cbb38520f28824e7804f6"
+    "revision": "dde9829554b831cf6cbf927294f22dfb9a8f0419"
   },
   {
     "language": "fsh",
@@ -2454,13 +2454,14 @@
   {
     "language": "tlaplus",
     "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
+    "doc": "high memory usage (5.3GB)",
     "files": [
       "scanner.c"
     ],
     "maintainedBy": "@ahelwer, @susliko",
-    "grammarSha": "d15b6072e44008b3ebb10ebf96edad6b907a34ad59c5aef77f8c39c4c62747b6",
+    "grammarSha": "8d619358938f79d281257323a67d9d09c89a5544f09fcf2b083b81bae47fb9c1",
     "reference": "main",
-    "revision": "200f9dab6b23f3b9bb8f67fc811221517f56c373"
+    "revision": "bba02e79f85e335f310fc95e21c677e49f2c4439"
   },
   {
     "language": "tmux",
@@ -2502,16 +2503,16 @@
   {
     "language": "tsx",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
-    "doc": "high memory usage (13GB)",
+    "doc": "high memory usage (4GB)",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "tsx",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "92fe8b1653f899150367c4775bcbaad171a7870a23632ac4f041b70cd3c15ffd",
+    "grammarSha": "a93e73354ad16f510fc0f4e91360e2e6cf109ebe90172ceb410245662b88a771",
     "reference": "master",
-    "revision": "9f804be960f289a0acc59d8564acc16857b0b088"
+    "revision": "e45cb3225bf47a04da827e4575b9791523d953fd"
   },
   {
     "language": "turtle",
@@ -2532,16 +2533,16 @@
   {
     "language": "typescript",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
-    "doc": "high memory usage (13GB)",
+    "doc": "high memory usage (4GB)",
     "files": [
       "scanner.c",
       "common/scanner.h"
     ],
     "srcRoot": "typescript",
     "maintainedBy": "@steelsojka",
-    "grammarSha": "714a05c26a01b6e855a6acd8f712c3c9f9e2bf476874a947fe65800ae66a6667",
+    "grammarSha": "2a9a2102a49538a8573cb4c6d7e343f450b331f714aaaf89c56440db609eadce",
     "reference": "master",
-    "revision": "9f804be960f289a0acc59d8564acc16857b0b088"
+    "revision": "e45cb3225bf47a04da827e4575b9791523d953fd"
   },
   {
     "language": "typespec",
@@ -2736,7 +2737,7 @@
     "maintainedBy": "@liamwh",
     "grammarSha": "cc33b4f305bacaee6a6234cfcfd2f452948add03956b8da1424f5068d440b5af",
     "reference": "main",
-    "revision": "7351db0da11900e7f0c754b3483d39fc6a9d53e8"
+    "revision": "cd7e6534fd9a22e3e9a7a85feecf4e35461e47cb"
   },
   {
     "language": "xcompose",
