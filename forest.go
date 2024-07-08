@@ -91,6 +91,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gn"
 	"github.com/alexaandru/go-sitter-forest/gnuplot"
 	Go "github.com/alexaandru/go-sitter-forest/go"
+	"github.com/alexaandru/go-sitter-forest/goctl"
 	"github.com/alexaandru/go-sitter-forest/godot_resource"
 	"github.com/alexaandru/go-sitter-forest/gomod"
 	"github.com/alexaandru/go-sitter-forest/gosum"
@@ -386,6 +387,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"gn":                 gn.GetLanguage,
 	"gnuplot":            gnuplot.GetLanguage,
 	"go":                 Go.GetLanguage,
+	"goctl":              goctl.GetLanguage,
 	"godot_resource":     godot_resource.GetLanguage,
 	"gomod":              gomod.GetLanguage,
 	"gosum":              gosum.GetLanguage,

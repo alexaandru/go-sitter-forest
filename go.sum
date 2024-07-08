@@ -166,6 +166,8 @@ github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10 h1:r79ffuqbDsYeMjKFdWIKuA
 github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10/go.mod h1:abTgLAOCDJvYtTOlCK4crhlzyWTAzvwiam/jhlvt50Q=
 github.com/alexaandru/go-sitter-forest/go v1.5.12 h1:cyngvm/2M69A+N1V6CK1CPePTYhzG58ztxOKDg6olhY=
 github.com/alexaandru/go-sitter-forest/go v1.5.12/go.mod h1:UyoID+qLBxrKG25rQMTmoT4htjZGBpLNgu0QHKJRaP0=
+github.com/alexaandru/go-sitter-forest/goctl v1.5.10 h1:CJV+e0od21Bm5FmaUK9JlFpQiYEvJKnHXYDdTy9qSZU=
+github.com/alexaandru/go-sitter-forest/goctl v1.5.10/go.mod h1:ZY2Ne7nTHo02C59Pjv9kHlWSM9yCXoJSEFir7/ex9rY=
 github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11 h1:SHt/bmlDuajp+K13UuDd8TeGQrVnQQp04V0F+oPWllM=
 github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11/go.mod h1:Bttg+80w9vLzzmfqDbSZlqB+66DkjbrER2snst8Tka0=
 github.com/alexaandru/go-sitter-forest/gomod v1.5.10 h1:Rt8DQOeOPqcpMgocl40m0ji0oyn+R6DHHr5Hh0F0LvE=

@@ -87,6 +87,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gn v1.5.10
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10
 	github.com/alexaandru/go-sitter-forest/go v1.5.12
+	github.com/alexaandru/go-sitter-forest/goctl v1.5.10
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.10
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.10
