@@ -188,8 +188,8 @@ github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10 h1:2euKQTe34il4EjvRhIKF
 github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10/go.mod h1:BXg/rRygxW3ClOedh1lGciij/TVSgL4sLiACfIoM/Mw=
 github.com/alexaandru/go-sitter-forest/hack v1.5.10 h1:mUEes2OH/Eb5XeNdLcHKIFZJqg6zc1e8Lv7nyAPnAf8=
 github.com/alexaandru/go-sitter-forest/hack v1.5.10/go.mod h1:CHHwQclFzJscbh3bed/FNb9GA5aZ3xj9EBTLtVEmXik=
-github.com/alexaandru/go-sitter-forest/hare v1.5.11 h1:9xoqU3byiLKeFkM7QTLsWPJQqRDVh7IzNvEIbGx+3W0=
-github.com/alexaandru/go-sitter-forest/hare v1.5.11/go.mod h1:krzJhhg6w6IGCkxUrRXuYhfAAsPPA2CUsSeR0V77Ijo=
+github.com/alexaandru/go-sitter-forest/hare v1.5.12 h1:5Xl2oQNrzHYNyf+coW/S1z9yXL0TJCHnTGOL8XHj+oc=
+github.com/alexaandru/go-sitter-forest/hare v1.5.12/go.mod h1:krzJhhg6w6IGCkxUrRXuYhfAAsPPA2CUsSeR0V77Ijo=
 github.com/alexaandru/go-sitter-forest/haskell v1.5.12 h1:xX/mq70vRLw6KanS9tBFUjzholJnw9NqFkNwkommF/4=
 github.com/alexaandru/go-sitter-forest/haskell v1.5.12/go.mod h1:ONFboFqNQ8NudwXFk8FyQLUD4BZj7PudXG5nmkNmZyc=
 github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.10 h1:Ql94TFUfEb7J6kg032E8NwfZIpKgsYOY0sdT4KKYwxA=
@@ -464,8 +464,8 @@ github.com/alexaandru/go-sitter-forest/sql v1.5.15 h1:Awfpm5CjwbFxs4WtmpaMXSUA3w
 github.com/alexaandru/go-sitter-forest/sql v1.5.15/go.mod h1:U4RmAjEKtm1heCSbkA0t9s5XzPULpnsTNooZl0gifwg=
 github.com/alexaandru/go-sitter-forest/sqlite v1.5.10 h1:Ruzbp7Qg3Jw4wKbl9NOkjFDjE18PkVkG5Sb+hmBJLhg=
 github.com/alexaandru/go-sitter-forest/sqlite v1.5.10/go.mod h1:hhRNRKMr/R5jiIfgW7eCpG8ZjHPurAgagfQEjdzu6rU=
-github.com/alexaandru/go-sitter-forest/squirrel v1.5.12 h1:hYqEEB6RXb+k2qxDF1Lz6cpbJG/V/BX5a7yYpMgJOGA=
-github.com/alexaandru/go-sitter-forest/squirrel v1.5.12/go.mod h1:7eswiei1038H91wkZ05n8/Pw34phE86UL9P9nhrxkdQ=
+github.com/alexaandru/go-sitter-forest/squirrel v1.5.13 h1:SwOrZzUgwGCVQB8KEJ++I/9Bih7d3+4HR0wqouIfGR0=
+github.com/alexaandru/go-sitter-forest/squirrel v1.5.13/go.mod h1:7eswiei1038H91wkZ05n8/Pw34phE86UL9P9nhrxkdQ=
 github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11 h1:MnNkBlB4SlQ5/vH9Z2T+nz/NcaQWwU4G2eYWtvDRIaI=
 github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11/go.mod h1:rc0g526vuQ00xFul+P6VduXMDDCoyvVMIGKd2sruBP8=
 github.com/alexaandru/go-sitter-forest/starlark v1.5.11 h1:pWC7RdE//htKd8OM9mxZ5s9fEz3sLt99Am/8GPQnVBA=

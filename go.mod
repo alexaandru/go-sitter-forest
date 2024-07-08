@@ -98,7 +98,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.5.11
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10
 	github.com/alexaandru/go-sitter-forest/hack v1.5.10
-	github.com/alexaandru/go-sitter-forest/hare v1.5.11
+	github.com/alexaandru/go-sitter-forest/hare v1.5.12
 	github.com/alexaandru/go-sitter-forest/haskell v1.5.12
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.10
 	github.com/alexaandru/go-sitter-forest/hcl v1.5.12
@@ -236,7 +236,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sql v1.5.15
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
-	github.com/alexaandru/go-sitter-forest/squirrel v1.5.12
+	github.com/alexaandru/go-sitter-forest/squirrel v1.5.13
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11
 	github.com/alexaandru/go-sitter-forest/starlark v1.5.11
 	github.com/alexaandru/go-sitter-forest/strace v1.5.10
