@@ -3071,14 +3071,6 @@
   {
     "language": "turtle",
     "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
-    "maintainedBy": "@GordianDziwis",
-    "pending": true,
-    "reference": "main",
-    "revision": ""
-  },
-  {
-    "language": "turtle",
-    "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
     "maintainedBy": "@BonaBeavis",
     "grammarSha": "3999181dd85bc5b8d167959a9d6bafb8be8c496e214f138d595e3d75f878a5ca",
     "reference": "main",
@@ -3421,3 +3413,4 @@
     "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
   }
 ]
+

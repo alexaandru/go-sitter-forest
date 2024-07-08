@@ -22,8 +22,9 @@ For contributing (or just to see how the automation works) see [CONTRIBUTING.md]
 
 ## Naming Conventions
 
-The language name used is the same as TreeSitter language name (lower case, underscore
-instead of spaces) and the same as the query folder name in `nvim_treesitter`.
+The language name used is the same as TreeSitter language name (the `name` exported
+by grammar.js) and the same as the query folder name in `nvim_treesitter` (where
+applicable).
 
 This keeps things simple and consistent.
 
@@ -32,7 +33,9 @@ In rare cases, the Go package name differs from the language name:
 - `go` actually has the package name `Go` because `package go` does not go well in Go
   (pun intended) but otherwise the language name remains "go";
 - `func` language, same problem as above, so package name is actually `FunC`
-  (but everything else is `func` as normal: folder, language name, etc.).
+  (but everything else is `func` as normal: folder, language name, etc.);
+- there are two cobol parsers, haven't decided which one to keep, until I do,
+  there is both `cobol` AND `COBOL`.
 
 Also, some languages may have names that are not very straightforward acronyms.
 In those cases, an `altName` field will be populated, i.e. `requirements` language
@@ -194,7 +197,7 @@ version everywhere, and keeping up with it too.
 
 ## TODO
 
-- filter high memory usage parsers and run them one by one (at the end?);
+- filter automatically high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally).

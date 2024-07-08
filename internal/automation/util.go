@@ -10,8 +10,15 @@ import (
 
 func forEachGrammar(fn func(gr *grammar.Grammar) error) error {
 	g := new(errgroup.Group)
+	seen := map[string]string{}
 
 	for _, gr := range grammars {
+		if v, ok := seen[gr.Language]; ok {
+			return fmt.Errorf("grammar %q seen twice: %q and %q", gr.Language, v, gr.URL)
+		}
+
+		seen[gr.Language] = gr.URL
+
 		if gr.Pending {
 			continue
 		}
