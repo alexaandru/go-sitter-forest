@@ -1,3 +1,5 @@
+github.com/alexaandru/go-sitter-forest/abap v1.5.10 h1:N2i/8B77e5P2E9fLiOSSpb4mEjYqu/u8jFixfNgJKSM=
+github.com/alexaandru/go-sitter-forest/abap v1.5.10/go.mod h1:MNKapb/uZDZpfARiuUvG8MT9ehEy4wDoaHYRR45E+7Q=
 github.com/alexaandru/go-sitter-forest/ada v1.5.11 h1:Kns8lU+5paDYNuAlIcOxzv19t90jB6vg9c3a4sRCeY0=
 github.com/alexaandru/go-sitter-forest/ada v1.5.11/go.mod h1:jlw2/aLFUoiVytX/kLyofIs8S+YO6TdocjbTqqVYW2c=
 github.com/alexaandru/go-sitter-forest/agda v1.5.10 h1:uSPguhdWZa+QPtPhqafPP1V5SFY3czPEsw4s9eNwLkI=

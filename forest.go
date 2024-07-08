@@ -7,6 +7,7 @@ import (
 
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 
+	"github.com/alexaandru/go-sitter-forest/abap"
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
 	"github.com/alexaandru/go-sitter-forest/angular"
@@ -304,6 +305,7 @@ import (
 var info []byte
 
 var langNameFuncs = map[string]func() *sitter.Language{
+	"abap":               abap.GetLanguage,
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
 	"angular":            angular.GetLanguage,

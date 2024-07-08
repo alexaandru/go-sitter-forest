@@ -3,6 +3,7 @@ module github.com/alexaandru/go-sitter-forest
 go 1.22.2
 
 require (
+	github.com/alexaandru/go-sitter-forest/abap v1.5.10
 	github.com/alexaandru/go-sitter-forest/ada v1.5.11
 	github.com/alexaandru/go-sitter-forest/agda v1.5.10
 	github.com/alexaandru/go-sitter-forest/angular v1.5.12
