@@ -1,4 +1,4 @@
-# 289 Supported Parsers
+# 290 Supported Parsers
 
 1 pending, 4 skipped regeneration
 
@@ -158,6 +158,7 @@
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️  (maintained by @artagnon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️  (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️  (maintained by @ObserverOfTime)
+- [x] [nginx](https://github.com/opa-oz/tree-sitter-nginx) ✔️  (maintained by @opa-oz)
 - [x] [nickel](https://github.com/nickel-lang/tree-sitter-nickel) ✔️  (maintained by @ErinvanderVeen, @yannham)
 - [x] [nim](https://github.com/alaviss/tree-sitter-nim) ✔️  (maintained by @aMOPel; high memory usage (7GB))
 - [x] [nim_format_string](https://github.com/aMOPel/tree-sitter-nim-format-string) ✔️  (maintained by @aMOPel)
