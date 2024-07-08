@@ -1,0 +1,8 @@
+{
+  "language": "abap",
+  "url": "https://github.com/mkoval1/tree-sitter-abap",
+  "maintainedBy": "@mkoval1",
+  "grammarSha": "78db84b0cc60f4883b127d80e770d543681655aaaeb6ef5e90c5bb7ed844c313",
+  "reference": "main",
+  "revision": "c7604df9e25d56ae879fa25694fd9f2ddbab05d8"
+}

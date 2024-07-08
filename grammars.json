@@ -11,9 +11,9 @@
     "language": "abap",
     "url": "https://github.com/mkoval1/tree-sitter-abap",
     "maintainedBy": "@mkoval1",
-    "pending": true,
+    "grammarSha": "78db84b0cc60f4883b127d80e770d543681655aaaeb6ef5e90c5bb7ed844c313",
     "reference": "main",
-    "revision": ""
+    "revision": "c7604df9e25d56ae879fa25694fd9f2ddbab05d8"
   },
   {
     "language": "ada",
@@ -3413,4 +3413,3 @@
     "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
   }
 ]
-

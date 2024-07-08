@@ -1,11 +1,11 @@
-# 290 Supported Parsers
+# 291 Supported Parsers
 
-75 pending, 4 skipped regeneration
+73 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
 - [ ] [COBOL](https://github.com/yutaro-sakamoto/tree-sitter-cobol) (maintained by @yutaro-sakamoto)
-- [ ] [abap](https://github.com/mkoval1/tree-sitter-abap) (maintained by @mkoval1)
+- [x] [abap](https://github.com/mkoval1/tree-sitter-abap) ✔️  (maintained by @mkoval1)
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️  (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️  (maintained by @Decodetalkers)
 - [ ] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) (maintained by @Riley-Kilgore)
@@ -332,7 +332,6 @@
 - [ ] [tort](https://github.com/quendimax/tree-sitter-tort) (maintained by @quendimax)
 - [x] [tsv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️  (maintained by @amaanq)
 - [x] [tsx](https://github.com/tree-sitter/tree-sitter-typescript) ✔️  (maintained by @steelsojka; high memory usage (4GB))
-- [ ] [turtle](https://github.com/GordianDziwis/tree-sitter-turtle) (maintained by @GordianDziwis)
 - [x] [turtle](https://github.com/GordianDziwis/tree-sitter-turtle) ✔️  (maintained by @BonaBeavis)
 - [x] [twig](https://github.com/gbprod/tree-sitter-twig) ✔️  (maintained by @gbprod)
 - [ ] [twolc](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
