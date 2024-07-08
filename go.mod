@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
 	github.com/alexaandru/go-sitter-forest/earthfile v1.5.25
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.10
-	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.11
+	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.12
 	github.com/alexaandru/go-sitter-forest/eds v1.5.11
 	github.com/alexaandru/go-sitter-forest/eex v1.5.10
 	github.com/alexaandru/go-sitter-forest/elixir v1.5.12
@@ -70,7 +70,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fish v1.5.11
 	github.com/alexaandru/go-sitter-forest/foam v1.5.10
 	github.com/alexaandru/go-sitter-forest/forth v1.5.10
-	github.com/alexaandru/go-sitter-forest/fortran v1.5.10
+	github.com/alexaandru/go-sitter-forest/fortran v1.5.11
 	github.com/alexaandru/go-sitter-forest/fsh v1.5.11
 	github.com/alexaandru/go-sitter-forest/func v1.5.10
 	github.com/alexaandru/go-sitter-forest/fusion v1.5.10
@@ -256,15 +256,15 @@ require (
 	github.com/alexaandru/go-sitter-forest/textproto v1.5.10
 	github.com/alexaandru/go-sitter-forest/thrift v1.5.11
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
-	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.16
+	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.17
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.10
-	github.com/alexaandru/go-sitter-forest/tsx v1.5.14
+	github.com/alexaandru/go-sitter-forest/tsx v1.5.15
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.11
 	github.com/alexaandru/go-sitter-forest/twig v1.5.10
-	github.com/alexaandru/go-sitter-forest/typescript v1.5.14
+	github.com/alexaandru/go-sitter-forest/typescript v1.5.15
 	github.com/alexaandru/go-sitter-forest/typespec v1.5.10
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/typst v1.5.15
