@@ -6,16 +6,19 @@ require (
 	github.com/alexaandru/go-sitter-forest/abap v1.5.10
 	github.com/alexaandru/go-sitter-forest/ada v1.5.11
 	github.com/alexaandru/go-sitter-forest/agda v1.5.10
+	github.com/alexaandru/go-sitter-forest/aiken v1.5.10
 	github.com/alexaandru/go-sitter-forest/angular v1.5.12
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.13
 	github.com/alexaandru/go-sitter-forest/asm v1.5.12
 	github.com/alexaandru/go-sitter-forest/astro v1.5.13
+	github.com/alexaandru/go-sitter-forest/august v1.5.10
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.10
 	github.com/alexaandru/go-sitter-forest/awk v1.5.10
 	github.com/alexaandru/go-sitter-forest/bash v1.5.11
 	github.com/alexaandru/go-sitter-forest/bass v1.5.11
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.11
+	github.com/alexaandru/go-sitter-forest/bend v1.5.10
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.10
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.11
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10

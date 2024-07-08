@@ -10,16 +10,19 @@ import (
 	"github.com/alexaandru/go-sitter-forest/abap"
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
+	"github.com/alexaandru/go-sitter-forest/aiken"
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/arduino"
 	"github.com/alexaandru/go-sitter-forest/asm"
 	"github.com/alexaandru/go-sitter-forest/astro"
+	"github.com/alexaandru/go-sitter-forest/august"
 	"github.com/alexaandru/go-sitter-forest/authzed"
 	"github.com/alexaandru/go-sitter-forest/awk"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
 	"github.com/alexaandru/go-sitter-forest/beancount"
+	"github.com/alexaandru/go-sitter-forest/bend"
 	"github.com/alexaandru/go-sitter-forest/bibtex"
 	"github.com/alexaandru/go-sitter-forest/bicep"
 	"github.com/alexaandru/go-sitter-forest/bitbake"
@@ -308,16 +311,19 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"abap":               abap.GetLanguage,
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
+	"aiken":              aiken.GetLanguage,
 	"angular":            angular.GetLanguage,
 	"apex":               apex.GetLanguage,
 	"arduino":            arduino.GetLanguage,
 	"asm":                asm.GetLanguage,
 	"astro":              astro.GetLanguage,
+	"august":             august.GetLanguage,
 	"authzed":            authzed.GetLanguage,
 	"awk":                awk.GetLanguage,
 	"bash":               bash.GetLanguage,
 	"bass":               bass.GetLanguage,
 	"beancount":          beancount.GetLanguage,
+	"bend":               bend.GetLanguage,
 	"bibtex":             bibtex.GetLanguage,
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,
