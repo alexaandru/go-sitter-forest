@@ -270,8 +270,8 @@ github.com/alexaandru/go-sitter-forest/leo v1.5.10 h1:hg/TVMFRHs553h/gRcJI5eUqcx
 github.com/alexaandru/go-sitter-forest/leo v1.5.10/go.mod h1:bf4eP5MpPq9P2kkhdwEh2FZls7ubUladcTKBArugbkI=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10 h1:+C9+jKLZXxb7m2rsAm3kd2hi/Eut/ZYhHgoHAcdoAZw=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10/go.mod h1:mbL09+xoUA7jRg3syo40cH1pJVC2+u+YHn9plIq7dbg=
-github.com/alexaandru/go-sitter-forest/liquid v1.5.10 h1:dGMlWjxSckA1+b2NKDIpm4qa9T7UaACTxluLoY/cVrI=
-github.com/alexaandru/go-sitter-forest/liquid v1.5.10/go.mod h1:qPx8Kt/Gfu3NK8ws6k78l7ydSDfp+UsaN4uQN6p9SCI=
+github.com/alexaandru/go-sitter-forest/liquid v1.5.11 h1:QtLMm8uocI0krmNBJ/7iQW2CdsvWA9YgYT8RmAyBhjU=
+github.com/alexaandru/go-sitter-forest/liquid v1.5.11/go.mod h1:qPx8Kt/Gfu3NK8ws6k78l7ydSDfp+UsaN4uQN6p9SCI=
 github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.12 h1:O5wjrLGtacZoptA/z4jilFfGgO9abzXVbQkuLA1+G1Q=
 github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.12/go.mod h1:GVAD7ftCSZjO6QTHZZOrFxABZXARiH73lkRRMfhCDRQ=
 github.com/alexaandru/go-sitter-forest/llvm v1.5.10 h1:5at/AtRFRWKzm7l7TJs3VjVc+Fva+HDdVokApWcwEuI=
