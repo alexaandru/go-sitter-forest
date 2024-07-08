@@ -2,7 +2,7 @@
   "language": "hare",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
   "maintainedBy": "@amaanq",
-  "grammarSha": "e873521bc2ca803bd6c7f67bbbe3dfe3a751d5fb3d933788454ba98fb6e4f4a7",
+  "grammarSha": "b17e1806f2057bf3f86b8b901a5eb3e493570747e5e389b61dbf7730850e7e6e",
   "reference": "master",
-  "revision": "070524937539eb8bb4f10debd9c83b66c434f3a2"
+  "revision": "4af5d82cf9ec39f67cb1db5b7a9269d337406592"
 }

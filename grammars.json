@@ -913,9 +913,9 @@
     "language": "hare",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
     "maintainedBy": "@amaanq",
-    "grammarSha": "e873521bc2ca803bd6c7f67bbbe3dfe3a751d5fb3d933788454ba98fb6e4f4a7",
+    "grammarSha": "b17e1806f2057bf3f86b8b901a5eb3e493570747e5e389b61dbf7730850e7e6e",
     "reference": "master",
-    "revision": "070524937539eb8bb4f10debd9c83b66c434f3a2"
+    "revision": "4af5d82cf9ec39f67cb1db5b7a9269d337406592"
   },
   {
     "language": "haskell",
@@ -2264,9 +2264,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@amaanq",
-    "grammarSha": "640a3642beb7353f2b13ad7abc82edf56e8a69ffe906a626bc04a485b1322397",
+    "grammarSha": "9333492f8391f7c69685557134b59eab3d6034363c6da84aba3f93990e268bf5",
     "reference": "master",
-    "revision": "0a50d31098e83c668d34d1160a0f6c7d23b571cc"
+    "revision": "072c969749e66f000dba35a33c387650e203e96e"
   },
   {
     "language": "ssh_config",
@@ -2740,7 +2740,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "13610b735e5aebda4d512618fd554a08a4c2164f"
+    "revision": "1c755acf5481591aed2ad682c6f17f2e3d020ed5"
   },
   {
     "language": "wit",
