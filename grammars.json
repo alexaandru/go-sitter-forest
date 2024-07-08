@@ -38,9 +38,9 @@
     "language": "aiken",
     "url": "https://github.com/aiken-lang/tree-sitter-aiken",
     "maintainedBy": "@Riley-Kilgore",
-    "pending": true,
+    "grammarSha": "6a49124ddd173690d8097311557c8c644ace171256a335ed74b907002b1f6019",
     "reference": "main",
-    "revision": ""
+    "revision": "d6465dc7887873dadd828c5522f3db59274f9726"
   },
   {
     "language": "angular",
@@ -98,9 +98,9 @@
     "language": "august",
     "url": "https://github.com/ScratchCat458/tree-sitter-august",
     "maintainedBy": "@ScratchCat458",
-    "pending": true,
+    "grammarSha": "21f97bf59b37eafb5025dc1a3f11281b526070069bffe2d43d92e0259fdd90fe",
     "reference": "master",
-    "revision": ""
+    "revision": "405672a2b7a393ebf3ed14261a1d03d8a777f84e"
   },
   {
     "language": "authzed",
@@ -154,10 +154,13 @@
   {
     "language": "bend",
     "url": "https://github.com/HigherOrderCO/tree-sitter-bend",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@edusporto",
-    "pending": true,
+    "grammarSha": "c6ab8d7f38a38ba6498a0169ac88186406a579512dcd05b7606adee98c070ec2",
     "reference": "main",
-    "revision": ""
+    "revision": "9f7d16a4da46b215616aee433161c4343d622dc4"
   },
   {
     "language": "bibtex",

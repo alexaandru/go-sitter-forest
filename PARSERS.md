@@ -1,6 +1,6 @@
-# 291 Supported Parsers
+# 294 Supported Parsers
 
-73 pending, 4 skipped regeneration
+70 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -8,19 +8,19 @@
 - [x] [abap](https://github.com/mkoval1/tree-sitter-abap) ✔️  (maintained by @mkoval1)
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️  (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️  (maintained by @Decodetalkers)
-- [ ] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) (maintained by @Riley-Kilgore)
+- [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) ✔️  (maintained by @Riley-Kilgore)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️  (maintained by @dlvandenberg)
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️  (maintained by @aheber)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️  (maintained by @ObserverOfTime)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) ✔️  (maintained by @RubixDev)
 - [x] [astro](https://github.com/virchau13/tree-sitter-astro) ✔️  (maintained by @virchau13)
-- [ ] [august](https://github.com/ScratchCat458/tree-sitter-august) (maintained by @ScratchCat458)
+- [x] [august](https://github.com/ScratchCat458/tree-sitter-august) ✔️  (maintained by @ScratchCat458)
 - [x] [authzed](https://github.com/mleonidas/tree-sitter-authzed) ✔️  (maintained by @mattpolzin)
 - [x] [awk](https://github.com/Beaglefoot/tree-sitter-awk) ✔️  (maintained by @Beaglefoot)
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) ✔️  (maintained by @TravonteD)
 - [x] [bass](https://github.com/vito/tree-sitter-bass) ✔️  (maintained by @amaanq)
 - [x] [beancount](https://github.com/polarmutex/tree-sitter-beancount) ✔️  (maintained by @polarmutex)
-- [ ] [bend](https://github.com/HigherOrderCO/tree-sitter-bend) (maintained by @edusporto)
+- [x] [bend](https://github.com/HigherOrderCO/tree-sitter-bend) ✔️  (maintained by @edusporto)
 - [x] [bibtex](https://github.com/latex-lsp/tree-sitter-bibtex) ✔️  (maintained by @theHamsta, @clason)
 - [x] [bicep](https://github.com/tree-sitter-grammars/tree-sitter-bicep) ✔️  (maintained by @amaanq)
 - [x] [bitbake](https://github.com/tree-sitter-grammars/tree-sitter-bitbake) ✔️  (maintained by @amaanq)
