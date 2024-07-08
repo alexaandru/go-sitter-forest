@@ -24,7 +24,7 @@ check: mktmp nvim_diff check-updates
 nvim_diff:
 	@curl -so tmp/README.md https://raw.githubusercontent.com/nvim-treesitter/nvim-treesitter/master/README.md
 	@diff <(sed -n '/<!--parserinfo-->/,/<!--parserinfo-->/{/<!--parserinfo-->/! p}' tmp/README.md|cut -f3 -d\[|cut -f1 -d\]|sort|grep -v terraform) \
-		<(sed -n '/<!--parserinfo-->/,/<!--parserinfo-->/{/<!--parserinfo-->/! p}' PARSERS.md|cut -f3 -d\[|cut -f1 -d\]|sort|grep -v '^calc$$'|grep -v 'Common Expression Language'|grep -v crystal|grep -v risor|grep -v sqlite)
+		<(sed -n '/<!--parserinfo-->/,/<!--parserinfo-->/{/<!--parserinfo-->/! p}' PARSERS.md|cut -f3 -d\[|cut -f1 -d\]|sort|grep -v ^nginx|grep -v '^calc$$'|grep -v 'Common Expression Language'|grep -v crystal|grep -v risor|grep -v sqlite)
 
 auto_tag: test
 	@export GIT_PAGER=cat; git diff --name-only HEAD^|grep '/'|grep -v 'grammar.json'|grep -v ^internal/|cut -f1 -d '/'|sort -u|while read x; do \

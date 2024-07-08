@@ -1,5 +1,21 @@
 [
   {
+    "language": "COBOL",
+    "url": "https://github.com/yutaro-sakamoto/tree-sitter-cobol",
+    "maintainedBy": "@yutaro-sakamoto",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "abap",
+    "url": "https://github.com/mkoval1/tree-sitter-abap",
+    "maintainedBy": "@mkoval1",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "ada",
     "url": "https://github.com/briot/tree-sitter-ada",
     "maintainedBy": "@briot",
@@ -17,6 +33,14 @@
     "grammarSha": "cec88b01595c69bf14deaa72a1bb52b88061bb7b777a2e9f17084514a6072e35",
     "reference": "master",
     "revision": "d3dc807692e6bca671d4491b3bf5c67eeca8c016"
+  },
+  {
+    "language": "aiken",
+    "url": "https://github.com/aiken-lang/tree-sitter-aiken",
+    "maintainedBy": "@Riley-Kilgore",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "angular",
@@ -71,6 +95,14 @@
     "revision": "4be180759ec13651f72bacee65fa477c64222a1a"
   },
   {
+    "language": "august",
+    "url": "https://github.com/ScratchCat458/tree-sitter-august",
+    "maintainedBy": "@ScratchCat458",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "authzed",
     "url": "https://github.com/mleonidas/tree-sitter-authzed",
     "maintainedBy": "@mattpolzin",
@@ -120,6 +152,14 @@
     "revision": "c25f8034c977681653a8acd541c8b4877a58f474"
   },
   {
+    "language": "bend",
+    "url": "https://github.com/HigherOrderCO/tree-sitter-bend",
+    "maintainedBy": "@edusporto",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "bibtex",
     "url": "https://github.com/latex-lsp/tree-sitter-bibtex",
     "maintainedBy": "@theHamsta, @clason",
@@ -150,6 +190,14 @@
     "revision": "a5d04fdb5a69a02b8fa8eb5525a60dfb5309b73b"
   },
   {
+    "language": "blade",
+    "url": "https://github.com/deanrumsby/tree-sitter-blade",
+    "maintainedBy": "@deanrumsby",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "blueprint",
     "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
     "maintainedBy": "@gabmus",
@@ -158,12 +206,28 @@
     "revision": "60ba73739c6083c693d86a1a7cf039c07eb4ed59"
   },
   {
+    "language": "bluespec",
+    "url": "https://github.com/panther03/tree-sitter-bluespec",
+    "maintainedBy": "@panther03",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "bp",
     "url": "https://github.com/ambroisie/tree-sitter-bp",
     "maintainedBy": "@ambroisie",
     "grammarSha": "b2ac0412db1c00688675139dd78c2daec1191f2fa29ad97df4173da117b5490a",
     "reference": "main",
     "revision": "4e60cf3c2e613625c06f6f85540b3631e2d06cd3"
+  },
+  {
+    "language": "brightscript",
+    "url": "https://github.com/ajdelcimmuto/tree-sitter-brightscript",
+    "maintainedBy": "@ajdelcimmuto",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "c",
@@ -183,7 +247,7 @@
     "maintainedBy": "@Luxed",
     "skip": true,
     "reference": "master",
-    "revision": "8623a7276b63a99b19f7793b1f81357335adb54f"
+    "revision": "31a64b28292aac6adf44071e449fa03fb80eaf4e"
   },
   {
     "language": "cairo",
@@ -214,6 +278,22 @@
     "revision": "7b0883c03e5edd34ef7bcf703194204299d7099f"
   },
   {
+    "language": "cds",
+    "url": "https://github.com/cap-js-community/tree-sitter-cds",
+    "maintainedBy": "@bugwelle",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "cedar",
+    "url": "https://github.com/chrnorm/tree-sitter-cedar",
+    "maintainedBy": "@chrnorm",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "cel",
     "altName": "Common Expression Language",
     "url": "https://github.com/bufbuild/tree-sitter-cel",
@@ -223,12 +303,53 @@
     "revision": "df0585025e6f50cdb07347f5009ae3f47c652890"
   },
   {
+    "language": "cg",
+    "url": "https://github.com/apertium/tree-sitter-apertium",
+    "srcRoot": "tree-sitter-cg",
+    "maintainedBy": "@mr-martian",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "chatito",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-chatito",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "18d0205daf6e17480dc79d1dd9ed02af7fa64299a5137a7542f6abd35b426161",
     "reference": "master",
     "revision": "a461f20dedb43905febb12c1635bc7d2e43e96f0"
+  },
+  {
+    "language": "circom",
+    "url": "https://github.com/Decurity/tree-sitter-circom",
+    "maintainedBy": "@Frodan",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "clarity",
+    "url": "https://github.com/xlittlerag/tree-sitter-clarity",
+    "maintainedBy": "@xlittlerag",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "cleancopy",
+    "url": "https://github.com/Taev-dev/tree-sitter-cleancopy",
+    "maintainedBy": "@Badg",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "clingo",
+    "url": "https://github.com/potassco/tree-sitter-clingo",
+    "maintainedBy": "@sthiele",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "clojure",
@@ -248,6 +369,22 @@
     "grammarSha": "d6dc94c6aa6ecfac745497e794af35c0b7551c53c68d05497f3f86995f7fad9d",
     "reference": "master",
     "revision": "69d7a8b0f7493b0dbb07d54e8fea96c5421e8a71"
+  },
+  {
+    "language": "cobol",
+    "url": "https://github.com/MatheusNSantiago/tree-sitter-cobol",
+    "maintainedBy": "@MatheusNSantiago",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "cognate",
+    "url": "https://github.com/hedyhli/tree-sitter-cognate",
+    "maintainedBy": "@hedyhli",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "comment",
@@ -272,6 +409,14 @@
     "grammarSha": "67694aa144004e79088da09c29652bca050b6600097cb79be4e2f164bd5c6882",
     "reference": "master",
     "revision": "bf2a65b1c119898a1a17389e07f2a399c05cdc0c"
+  },
+  {
+    "language": "context",
+    "url": "https://github.com/pmazaitis/tree-sitter-context",
+    "maintainedBy": "@pmazaitis",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "cooklang",
@@ -371,6 +516,14 @@
     "grammarSha": "5dc380c0ca88cf2d34a57113cb918e181a0500c0358ba3eef22bfe8d31cb2fbc",
     "reference": "main",
     "revision": "750dde90ed9cdbd82493bc28478d8ab1976b0e9f"
+  },
+  {
+    "language": "dale",
+    "url": "https://github.com/crumbtoo/tree-sitter-dale",
+    "maintainedBy": "@lomisk",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "dart",
@@ -585,6 +738,22 @@
     "revision": "a52579670e2b14ec03d410c3c980fafaf6d659c4"
   },
   {
+    "language": "familymarkup",
+    "url": "https://github.com/redexp/tree-sitter-familymarkup",
+    "maintainedBy": "@redexp",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "fastbuild",
+    "url": "https://github.com/pinbraerts/tree-sitter-fastbuild",
+    "maintainedBy": "@pinbraerts",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "faust",
     "url": "https://github.com/khiner/tree-sitter-faust",
     "maintainedBy": "@khiner",
@@ -614,6 +783,14 @@
     "revision": "0a8910f293268e27ff554357c229ba172b0eaed2"
   },
   {
+    "language": "fin",
+    "url": "https://github.com/fin-org/tree-sitter-fin",
+    "maintainedBy": "@mrmcc3",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "firrtl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-firrtl",
     "files": [
@@ -634,6 +811,22 @@
     "grammarSha": "eb2b0d32a993838ce11e0123c2ef8abdc1570fd4c02b6e0183215a3e0d72e7b0",
     "reference": "master",
     "revision": "a78aef9abc395c600c38a037ac779afc7e3cc9e0"
+  },
+  {
+    "language": "flamingo",
+    "url": "https://github.com/inobulles/tree-sitter-flamingo",
+    "maintainedBy": "@obiwac",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "fluentbit",
+    "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
+    "maintainedBy": "@sh-cho",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "foam",
@@ -713,6 +906,22 @@
     "revision": "ffd9f958df13cae04593781d7d2562295a872455"
   },
   {
+    "language": "gemfilelock",
+    "url": "https://github.com/fluidattacks/tree-sitter-gemfilelock",
+    "maintainedBy": "@drestrepom",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "gherkin",
+    "url": "https://github.com/SamyAB/tree-sitter-gherkin",
+    "maintainedBy": "@SamyAB",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "git_config",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
     "maintainedBy": "@amaanq",
@@ -779,6 +988,14 @@
     "revision": "6b25d265c990139353e1f7f97baf84987ebb7bf0"
   },
   {
+    "language": "glint",
+    "url": "https://github.com/LensPlaysGames/tree-sitter-glint",
+    "maintainedBy": "@LensPlaysGames",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "glsl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
     "maintainedBy": "@theHamsta",
@@ -813,6 +1030,14 @@
     "grammarSha": "bc8db6976c928a2da6378753fb3ccb0aa739e38e0e6e903110e3269444db557c",
     "reference": "master",
     "revision": "7ee8d928db5202f6831a78f8112fd693bf69f98b"
+  },
+  {
+    "language": "gobra",
+    "url": "https://github.com/HSMF/tree-sitter-gobra",
+    "maintainedBy": "@HSMF",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "goctl",
@@ -883,6 +1108,14 @@
     "revision": "5e66e961eee421786bdda8495ed1db045e06b5fe"
   },
   {
+    "language": "gren",
+    "url": "https://github.com/MaeBrooks/tree-sitter-gren",
+    "maintainedBy": "@MaeBrooks",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
     "maintainedBy": "@murtaza64",
@@ -908,6 +1141,14 @@
     "grammarSha": "b6126a8b2bdf34eb861fc00a2653ec5a4d20b4b4ee77a16bbef698c3b97dd1bc",
     "reference": "main",
     "revision": "fca1e294f6dce8ec5659233a6a21f5bd0ed5b4f2"
+  },
+  {
+    "language": "haml",
+    "url": "https://github.com/vitallium/tree-sitter-haml",
+    "maintainedBy": "@vitallium",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "hare",
@@ -1027,6 +1268,14 @@
     "revision": "e4d834eb4918df01dcad5c27d1b15d56e3bd94cd"
   },
   {
+    "language": "htmlaskama",
+    "url": "https://github.com/juliamertz/tree-sitter-htmlaskama",
+    "maintainedBy": "@juliamertz",
+    "pending": true,
+    "reference": "stable",
+    "revision": ""
+  },
+  {
     "language": "htmldjango",
     "url": "https://github.com/interdependence/tree-sitter-htmldjango",
     "maintainedBy": "@ObserverOfTime",
@@ -1041,6 +1290,22 @@
     "grammarSha": "8c5f381f3f3252ee6d9f70b785cc371ec149fa46a0b6870f1cd168abde54df74",
     "reference": "main",
     "revision": "2dacda923bafcfeae487e457df0fc1c95f6d1848"
+  },
+  {
+    "language": "hugo",
+    "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
+    "maintainedBy": "@GitesHubisz",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "hungarian",
+    "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
+    "maintainedBy": "@jpt13653903",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "hurl",
@@ -1067,12 +1332,36 @@
     "revision": "443308c0f32af6681e5b0a09bb7071f3c0c85d74"
   },
   {
+    "language": "idris",
+    "url": "https://github.com/kayhide/tree-sitter-idris",
+    "maintainedBy": "@kayhide",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "ignis",
+    "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
+    "maintainedBy": "@BasileusErwin",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "ini",
     "url": "https://github.com/justinmk/tree-sitter-ini",
     "maintainedBy": "@theHamsta",
     "grammarSha": "7ddb44f842e45d6d24d156a2a625f43f86fc36f608994b0393529c61c7698a99",
     "reference": "master",
     "revision": "87176e524f0a98f5be75fa44f4f0ff5c6eac069c"
+  },
+  {
+    "language": "ink",
+    "url": "https://github.com/wldmr/tree-sitter-ink",
+    "maintainedBy": "@wldmr",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "inko",
@@ -1198,6 +1487,14 @@
     "revision": "379fbe36d1e441bc9414ea050ad0c85c9d6935ea"
   },
   {
+    "language": "kcl",
+    "url": "https://github.com/kcl-lang/tree-sitter-kcl",
+    "maintainedBy": "@Vishalk91-4",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "kconfig",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",
     "files": [
@@ -1218,6 +1515,14 @@
     "grammarSha": "eaf0c321d4cfb3ecb7ca09631a1e76d60b4212581ddfc3b919301bfe485eabcd",
     "reference": "master",
     "revision": "b37e3d58e5c5cf8d739b315d6114e02d42e66664"
+  },
+  {
+    "language": "koan",
+    "url": "https://github.com/TogarashiPepper/tree-sitter-koan",
+    "maintainedBy": "@TogarashiPepper",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "kotlin",
@@ -1273,6 +1578,14 @@
     "revision": "08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4"
   },
   {
+    "language": "ldg",
+    "url": "https://github.com/lesserfish/tree-sitter-ldg",
+    "maintainedBy": "@lesserfish",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "ledger",
     "url": "https://github.com/cbarrete/tree-sitter-ledger",
     "maintainedBy": "@cbarrete",
@@ -1289,6 +1602,40 @@
     "revision": "304611b5eaf53aca07459a0a03803b83b6dfd3b3"
   },
   {
+    "language": "lexc",
+    "url": "https://github.com/apertium/tree-sitter-apertium",
+    "srcRoot": "tree-sitter-lexc",
+    "maintainedBy": "@mr-martian",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "lexd",
+    "url": "https://github.com/apertium/tree-sitter-apertium",
+    "srcRoot": "tree-sitter-lexd",
+    "maintainedBy": "@mr-martian",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "lilypond",
+    "url": "https://github.com/nwhetsell/tree-sitter-lilypond",
+    "maintainedBy": "@nwhetsell",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "lilypond_scheme",
+    "url": "https://github.com/nwhetsell/tree-sitter-lilypond-scheme",
+    "maintainedBy": "@nwhetsell",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "linkerscript",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
     "maintainedBy": "@amaanq",
@@ -1303,9 +1650,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@hankthetank27",
-    "grammarSha": "b3857aaa9785b6c96a3734b7d8741cbbd56a006c7d56c68115a066d06292da80",
+    "grammarSha": "0f6f3d0d7474f13e956df33b103c1fd6be42d8a400e9ddec0e30f5268935e717",
     "reference": "main",
-    "revision": "0419ac4868585320eee8615c90b864a1b04ef433"
+    "revision": "7862a3424832c3a9d45eb21143b375837bd6573b"
   },
   {
     "language": "liquidsoap",
@@ -1325,6 +1672,24 @@
     "grammarSha": "dfb920500200e4527f5823896f0547d01d1c3958dfe0f01c3d7b744877f8d1fb",
     "reference": "main",
     "revision": "1b96e58faf558ce057d4dc664b904528aee743cb"
+  },
+  {
+    "language": "loongdoc",
+    "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
+    "srcRoot": "tree-sitter-loongdoc",
+    "maintainedBy": "@cathaysia",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "loongdoc_inline",
+    "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
+    "srcRoot": "tree-sitter-loongdoc_inline",
+    "maintainedBy": "@cathaysia",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "lua",
@@ -1419,6 +1784,14 @@
     "revision": "2825fb578325ac308945318881445a89ea06e0f6"
   },
   {
+    "language": "mcfuncx",
+    "url": "https://github.com/PFiS1737/tree-sitter-mcfuncx",
+    "maintainedBy": "@PFiS1737",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "menhir",
     "url": "https://github.com/Kerl13/tree-sitter-menhir",
     "files": [
@@ -1446,12 +1819,45 @@
     "revision": "bd17c824196ce70800f64ad39cfddd1b17acc13f"
   },
   {
+    "language": "mix_lock",
+    "url": "https://github.com/fluidattacks/tree-sitter-mix_lock",
+    "maintainedBy": "@drestrepom",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "935a551f76fb07f66d0ce6f1f6e955d22cd44f15"
+    "revision": "bc81fd03084017aa8684b904db70cad6b953d49a"
+  },
+  {
+    "language": "motoko",
+    "url": "https://github.com/f0i/tree-sitter-motoko",
+    "maintainedBy": "@f0i",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "move",
+    "url": "https://github.com/tzakian/tree-sitter-move",
+    "maintainedBy": "@tzakian",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "move_on_aptos",
+    "altName": "Move on Aptos",
+    "url": "https://github.com/aptos-labs/tree-sitter-move-on-aptos",
+    "maintainedBy": "@ArArgon",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "muttrc",
@@ -1542,6 +1948,14 @@
     "revision": "aa1a1a7ded81a094cc3d5cb14bea6f34b86d8688"
   },
   {
+    "language": "note",
+    "url": "https://github.com/gsuuon/tree-sitter-note",
+    "maintainedBy": "@gsuuon",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "nqc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
     "maintainedBy": "@amaanq",
@@ -1627,6 +2041,14 @@
     "grammarSha": "944dce2455d4355b0219a9e29390f8b204bb8216aaa3158e2fa7600b02ac7e41",
     "reference": "main",
     "revision": "64cfbc213f5a83da17632c95382a5a0a2f3357c1"
+  },
+  {
+    "language": "ott",
+    "url": "https://github.com/armonjam/tree-sitter-ott",
+    "maintainedBy": "@armonjam",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "pascal",
@@ -1870,6 +2292,14 @@
     "revision": "be062582956165019d3253794b4d712f66dfeaaa"
   },
   {
+    "language": "pyrope",
+    "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
+    "maintainedBy": "@russellbaxt",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "python",
     "url": "https://github.com/tree-sitter/tree-sitter-python",
     "files": [
@@ -2084,6 +2514,15 @@
     "revision": ""
   },
   {
+    "language": "rtx",
+    "url": "https://github.com/apertium/tree-sitter-apertium",
+    "srcRoot": "tree-sitter-rtx",
+    "maintainedBy": "@mr-martian",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "ruby",
     "url": "https://github.com/tree-sitter/tree-sitter-ruby",
     "files": [
@@ -2145,6 +2584,22 @@
     "revision": "c478c6868648eff49eb04a4df90d703dc45b312a"
   },
   {
+    "language": "sdml",
+    "url": "https://github.com/sdm-lang/tree-sitter-sdml",
+    "maintainedBy": "@johnstonskj",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "sincere",
+    "url": "https://github.com/vincentvanecchi/tree-sitter-sincere",
+    "maintainedBy": "@vincentvanecchi",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "slang",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-slang",
     "files": [
@@ -2154,6 +2609,14 @@
     "grammarSha": "915a9a46cd2ada757424a4f9a2650e91e9199bb83a46afa960a9e90f1859f9f2",
     "reference": "master",
     "revision": "ea77a4d91dd93f4483965efcc41f3faebb9131c8"
+  },
+  {
+    "language": "slim",
+    "url": "https://github.com/kolen/tree-sitter-slim",
+    "maintainedBy": "@kolen",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "slint",
@@ -2181,6 +2644,14 @@
     "grammarSha": "c2fcc45eb965b76e4832e12f6bbbd4d58d5e08291218d837213f6194ff6a4383",
     "reference": "main",
     "revision": "fa898ac0885d1da9a253695c3e0e91f5efc587cd"
+  },
+  {
+    "language": "sml",
+    "url": "https://github.com/MatthewFluet/tree-sitter-sml",
+    "maintainedBy": "@MatthewFluet",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "snakemake",
@@ -2250,6 +2721,14 @@
     "revision": "df7a77336363e09c37647cce4da7e7b4ffc92271"
   },
   {
+    "language": "sql_bigquery",
+    "url": "https://github.com/takegue/tree-sitter-sql-bigquery",
+    "maintainedBy": "@takegue",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "sqlite",
     "url": "https://github.com/johndoe-o/tree-sitter-sqlite",
     "maintainedBy": "@johndoe-o",
@@ -2267,6 +2746,14 @@
     "grammarSha": "9333492f8391f7c69685557134b59eab3d6034363c6da84aba3f93990e268bf5",
     "reference": "master",
     "revision": "072c969749e66f000dba35a33c387650e203e96e"
+  },
+  {
+    "language": "ssh_client_config",
+    "url": "https://github.com/metio/tree-sitter-ssh-client-config",
+    "maintainedBy": "@sebhoss",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "ssh_config",
@@ -2326,6 +2813,22 @@
     "revision": "f4586b35ac8548667a9aaa4eae44456c1f43d032"
   },
   {
+    "language": "surrealql",
+    "url": "https://github.com/Ce11an/tree-sitter-surrealql",
+    "maintainedBy": "@Ce11an",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "sus",
+    "url": "https://github.com/pc2/tree-sitter-sus",
+    "maintainedBy": "@VonTum",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "svelte",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",
     "files": [
@@ -2355,6 +2858,14 @@
     "grammarSha": "80eee0f4554a5a9a056e01252ad634c0762fb0a8c1dbcd1b1bbc2cb54cf5a4ad",
     "reference": "master",
     "revision": "440d5f913d9465c9c776a1bd92334d32febcf065"
+  },
+  {
+    "language": "syphon",
+    "url": "https://github.com/yhyadev/tree-sitter-syphon",
+    "maintainedBy": "@yhyadev",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "systemtap",
@@ -2436,6 +2947,14 @@
     "revision": "a4f14aa248b84df73cc1c00bf06edac8d7c96acd"
   },
   {
+    "language": "terra",
+    "url": "https://github.com/tpkessler/tree-sitter-terra-rewrite",
+    "maintainedBy": "@tpkessler",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "textproto",
     "url": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
     "maintainedBy": "@Porter",
@@ -2483,6 +3002,22 @@
     "revision": "9138ea508410e0f34da2666609f600f65e944f22"
   },
   {
+    "language": "tnsl",
+    "url": "https://github.com/CircleShift/tree-sitter-tnsl",
+    "maintainedBy": "@CircleShift",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "todolang",
+    "url": "https://github.com/Gnarus-G/tree-sitter-todolang",
+    "maintainedBy": "@Gnarus-G",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "todotxt",
     "url": "https://github.com/arnarg/tree-sitter-todotxt",
     "maintainedBy": "@arnarg",
@@ -2501,6 +3036,14 @@
     "skip": true,
     "reference": "master",
     "revision": "8bd2056818b21860e3d756b5a58c4f6e05fb744e"
+  },
+  {
+    "language": "tort",
+    "url": "https://github.com/quendimax/tree-sitter-tort",
+    "maintainedBy": "@quendimax",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "tsv",
@@ -2528,6 +3071,14 @@
   {
     "language": "turtle",
     "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
+    "maintainedBy": "@GordianDziwis",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
+    "language": "turtle",
+    "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
     "maintainedBy": "@BonaBeavis",
     "grammarSha": "3999181dd85bc5b8d167959a9d6bafb8be8c496e214f138d595e3d75f878a5ca",
     "reference": "main",
@@ -2540,6 +3091,15 @@
     "grammarSha": "c2245f31a52c6034a7af09d8c06fab0a9810fe55bd683ec0e63b51946c2c6369",
     "reference": "main",
     "revision": "085648e01d1422163a1702a44e72303b4e2a0bd1"
+  },
+  {
+    "language": "twolc",
+    "url": "https://github.com/apertium/tree-sitter-apertium",
+    "srcRoot": "tree-sitter-twolc",
+    "maintainedBy": "@mr-martian",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "typescript",
@@ -2669,6 +3229,14 @@
     "revision": "075ebfc84543675f12e79a955f79d717772dcef3"
   },
   {
+    "language": "vhdl",
+    "url": "https://github.com/jpt13653903/tree-sitter-vhdl",
+    "maintainedBy": "@jpt13653903",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
     "maintainedBy": "@caarlos0",
@@ -2695,6 +3263,22 @@
     "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
     "reference": "master",
     "revision": "2249c44ecd3f5cf22da3dcccfb74f816ddb29245"
+  },
+  {
+    "language": "virdant",
+    "url": "https://github.com/maloneymr/tree-sitter-virdant",
+    "maintainedBy": "@maloneymr",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "virgil",
+    "url": "https://github.com/btwj/tree-sitter-virgil",
+    "maintainedBy": "@btwj",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
   },
   {
     "language": "vue",
@@ -2740,7 +3324,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "1c755acf5481591aed2ad682c6f17f2e3d020ed5"
+    "revision": "fddc8a9138eea27a44574fade16b92708d0fdf33"
   },
   {
     "language": "wit",
@@ -2751,12 +3335,29 @@
     "revision": "cd7e6534fd9a22e3e9a7a85feecf4e35461e47cb"
   },
   {
+    "language": "woml",
+    "url": "https://github.com/0xWaleed/tree-sitter-woml",
+    "maintainedBy": "@0xWaleed",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "xcompose",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
     "maintainedBy": "@ObserverOfTime",
     "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
     "reference": "master",
     "revision": "fff3e72242aa110ebba6441946ea4d12d200fa68"
+  },
+  {
+    "language": "xfst",
+    "url": "https://github.com/apertium/tree-sitter-apertium",
+    "srcRoot": "tree-sitter-xfst",
+    "maintainedBy": "@mr-martian",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   },
   {
     "language": "xml",
