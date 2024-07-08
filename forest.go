@@ -162,6 +162,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/mlir"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
 	"github.com/alexaandru/go-sitter-forest/nasm"
+	"github.com/alexaandru/go-sitter-forest/nginx"
 	"github.com/alexaandru/go-sitter-forest/nickel"
 	"github.com/alexaandru/go-sitter-forest/nim"
 	"github.com/alexaandru/go-sitter-forest/nim_format_string"
@@ -457,6 +458,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"mlir":               mlir.GetLanguage,
 	"muttrc":             muttrc.GetLanguage,
 	"nasm":               nasm.GetLanguage,
+	"nginx":              nginx.GetLanguage,
 	"nickel":             nickel.GetLanguage,
 	"nim":                nim.GetLanguage,
 	"nim_format_string":  nim_format_string.GetLanguage,

@@ -157,6 +157,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
+	github.com/alexaandru/go-sitter-forest/nginx v1.5.10
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.14
 	github.com/alexaandru/go-sitter-forest/nim v1.5.12
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
