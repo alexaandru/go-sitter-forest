@@ -37,8 +37,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/cel v1.5.11
 	github.com/alexaandru/go-sitter-forest/cg v1.5.10
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.10
+	github.com/alexaandru/go-sitter-forest/circom v1.5.10
+	github.com/alexaandru/go-sitter-forest/clarity v1.5.10
+	github.com/alexaandru/go-sitter-forest/cleancopy v1.5.10
+	github.com/alexaandru/go-sitter-forest/clingo v1.5.10
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.10
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.11
+	github.com/alexaandru/go-sitter-forest/cognate v1.5.10
 	github.com/alexaandru/go-sitter-forest/comment v1.5.10
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.10
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10

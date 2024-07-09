@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	langsCount = 303
+	langsCount = 308
 	bindingTpl = `%s
 
 package %s
@@ -48,8 +48,13 @@ func Info() string {
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
-		if lang == "unison" {
+
+		switch lang {
+		case "unison":
 			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
+//#include "parser.h"`)
+		case "cleancopy":
+			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
 //#include "parser.h"`)
 		}
 

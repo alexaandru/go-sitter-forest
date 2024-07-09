@@ -41,8 +41,13 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cel"
 	"github.com/alexaandru/go-sitter-forest/cg"
 	"github.com/alexaandru/go-sitter-forest/chatito"
+	"github.com/alexaandru/go-sitter-forest/circom"
+	"github.com/alexaandru/go-sitter-forest/clarity"
+	"github.com/alexaandru/go-sitter-forest/cleancopy"
+	"github.com/alexaandru/go-sitter-forest/clingo"
 	"github.com/alexaandru/go-sitter-forest/clojure"
 	"github.com/alexaandru/go-sitter-forest/cmake"
+	"github.com/alexaandru/go-sitter-forest/cognate"
 	"github.com/alexaandru/go-sitter-forest/comment"
 	"github.com/alexaandru/go-sitter-forest/commonlisp"
 	"github.com/alexaandru/go-sitter-forest/cooklang"
@@ -351,8 +356,13 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"cel":                cel.GetLanguage,
 	"cg":                 cg.GetLanguage,
 	"chatito":            chatito.GetLanguage,
+	"circom":             circom.GetLanguage,
+	"clarity":            clarity.GetLanguage,
+	"cleancopy":          cleancopy.GetLanguage,
+	"clingo":             clingo.GetLanguage,
 	"clojure":            clojure.GetLanguage,
 	"cmake":              cmake.GetLanguage,
+	"cognate":            cognate.GetLanguage,
 	"comment":            comment.GetLanguage,
 	"commonlisp":         commonlisp.GetLanguage,
 	"cooklang":           cooklang.GetLanguage,
