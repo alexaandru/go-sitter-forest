@@ -1,6 +1,6 @@
 # NOTE: This file is generated automatically! DO NOT EDIT!
 
-plugin-all: plugin-abap plugin-ada plugin-agda plugin-aiken plugin-angular plugin-apex plugin-arduino plugin-asm plugin-astro plugin-august plugin-authzed plugin-awk plugin-bash plugin-bass plugin-beancount plugin-bend plugin-bibtex plugin-bicep plugin-bitbake plugin-blueprint plugin-bp plugin-c plugin-c_sharp plugin-cairo plugin-calc plugin-capnp plugin-cel plugin-chatito plugin-clojure plugin-cmake plugin-comment plugin-commonlisp plugin-cooklang plugin-corn plugin-cpon plugin-cpp plugin-crystal plugin-css plugin-csv plugin-cuda plugin-cue plugin-d plugin-dart plugin-devicetree plugin-dhall plugin-diff plugin-disassembly plugin-djot plugin-dockerfile plugin-dot plugin-doxygen plugin-dtd plugin-earthfile plugin-ebnf plugin-editorconfig plugin-eds plugin-eex plugin-elixir plugin-elm plugin-elsa plugin-elvish plugin-embedded_template plugin-erlang plugin-facility plugin-faust plugin-fennel plugin-fidl plugin-firrtl plugin-fish plugin-foam plugin-forth plugin-fortran plugin-fsh plugin-func plugin-fusion plugin-gdscript plugin-gdshader plugin-git_config plugin-git_rebase plugin-gitattributes plugin-gitcommit plugin-gitignore plugin-gleam plugin-glimmer plugin-glsl plugin-gn plugin-gnuplot plugin-go plugin-goctl plugin-godot_resource plugin-gomod plugin-gosum plugin-gotmpl plugin-gowork plugin-gpg plugin-graphql plugin-groovy plugin-gstlaunch plugin-hack plugin-hare plugin-haskell plugin-haskell_persistent plugin-hcl plugin-heex plugin-helm plugin-hjson plugin-hlsl plugin-hlsplaylist plugin-hocon plugin-hoon plugin-html plugin-htmldjango plugin-http plugin-hurl plugin-hyprlang plugin-idl plugin-ini plugin-inko plugin-ispc plugin-janet_simple plugin-java plugin-javascript plugin-jq plugin-jsdoc plugin-json plugin-json5 plugin-jsonc plugin-jsonnet plugin-julia plugin-just plugin-kconfig plugin-kdl plugin-kotlin plugin-koto plugin-kusto plugin-lalrpop plugin-latex plugin-ledger plugin-leo plugin-linkerscript plugin-liquid plugin-liquidsoap plugin-llvm plugin-lua plugin-luadoc plugin-luap plugin-luau plugin-m68k plugin-make plugin-markdown plugin-markdown_inline plugin-matlab plugin-menhir plugin-mermaid plugin-meson plugin-mlir plugin-muttrc plugin-nasm plugin-nginx plugin-nickel plugin-nim plugin-nim_format_string plugin-ninja plugin-nix plugin-norg plugin-nqc plugin-objc plugin-objdump plugin-ocaml plugin-ocaml_interface plugin-ocamllex plugin-odin plugin-org plugin-pascal plugin-passwd plugin-pem plugin-perl plugin-php plugin-php_only plugin-phpdoc plugin-pioasm plugin-po plugin-pod plugin-poe_filter plugin-pony plugin-printf plugin-prisma plugin-problog plugin-prolog plugin-promql plugin-properties plugin-proto plugin-prql plugin-psv plugin-pug plugin-puppet plugin-purescript plugin-pymanifest plugin-python plugin-ql plugin-qmldir plugin-qmljs plugin-query plugin-r plugin-racket plugin-ralph plugin-rasi plugin-rbs plugin-re2c plugin-readline plugin-regex plugin-rego plugin-requirements plugin-risor plugin-rnoweb plugin-robot plugin-robots plugin-roc plugin-ron plugin-ruby plugin-rust plugin-scala plugin-scfg plugin-scheme plugin-scss plugin-slang plugin-slint plugin-smali plugin-smithy plugin-snakemake plugin-solidity plugin-soql plugin-sosl plugin-sourcepawn plugin-sparql plugin-sql plugin-sqlite plugin-squirrel plugin-ssh_config plugin-starlark plugin-strace plugin-styled plugin-supercollider plugin-surface plugin-svelte plugin-swift plugin-sxhkdrc plugin-systemtap plugin-systemverilog plugin-t32 plugin-tablegen plugin-tact plugin-tcl plugin-teal plugin-templ plugin-textproto plugin-thrift plugin-tiger plugin-tlaplus plugin-tmux plugin-todotxt plugin-toml plugin-tsv plugin-tsx plugin-turtle plugin-twig plugin-typescript plugin-typespec plugin-typoscript plugin-typst plugin-udev plugin-ungrammar plugin-unison plugin-usd plugin-uxntal plugin-v plugin-vala plugin-vento plugin-verilog plugin-vhs plugin-vim plugin-vimdoc plugin-vue plugin-wgsl plugin-wgsl_bevy plugin-wing plugin-wit plugin-xcompose plugin-xml plugin-yaml plugin-yang plugin-yuck plugin-zathurarc plugin-zig
+plugin-all: plugin-abap plugin-ada plugin-agda plugin-aiken plugin-angular plugin-apex plugin-arduino plugin-asm plugin-astro plugin-august plugin-authzed plugin-awk plugin-bash plugin-bass plugin-beancount plugin-bend plugin-bibtex plugin-bicep plugin-bitbake plugin-blade plugin-blueprint plugin-bluespec plugin-bp plugin-brightscript plugin-c plugin-c_sharp plugin-cairo plugin-calc plugin-capnp plugin-cds plugin-cedar plugin-cel plugin-cg plugin-chatito plugin-clojure plugin-cmake plugin-comment plugin-commonlisp plugin-cooklang plugin-corn plugin-cpon plugin-cpp plugin-crystal plugin-css plugin-csv plugin-cuda plugin-cue plugin-d plugin-dart plugin-devicetree plugin-dhall plugin-diff plugin-disassembly plugin-djot plugin-dockerfile plugin-dot plugin-doxygen plugin-dtd plugin-earthfile plugin-ebnf plugin-editorconfig plugin-eds plugin-eex plugin-elixir plugin-elm plugin-elsa plugin-elvish plugin-embedded_template plugin-erlang plugin-facility plugin-faust plugin-fennel plugin-fidl plugin-firrtl plugin-fish plugin-foam plugin-forth plugin-fortran plugin-fsh plugin-func plugin-fusion plugin-gdscript plugin-gdshader plugin-git_config plugin-git_rebase plugin-gitattributes plugin-gitcommit plugin-gitignore plugin-gleam plugin-glimmer plugin-glsl plugin-gn plugin-gnuplot plugin-go plugin-goctl plugin-godot_resource plugin-gomod plugin-gosum plugin-gotmpl plugin-gowork plugin-gpg plugin-graphql plugin-groovy plugin-gstlaunch plugin-hack plugin-hare plugin-haskell plugin-haskell_persistent plugin-hcl plugin-heex plugin-helm plugin-hjson plugin-hlsl plugin-hlsplaylist plugin-hocon plugin-hoon plugin-html plugin-htmldjango plugin-http plugin-hurl plugin-hyprlang plugin-idl plugin-ini plugin-inko plugin-ispc plugin-janet_simple plugin-java plugin-javascript plugin-jq plugin-jsdoc plugin-json plugin-json5 plugin-jsonc plugin-jsonnet plugin-julia plugin-just plugin-kconfig plugin-kdl plugin-kotlin plugin-koto plugin-kusto plugin-lalrpop plugin-latex plugin-ledger plugin-leo plugin-linkerscript plugin-liquid plugin-liquidsoap plugin-llvm plugin-lua plugin-luadoc plugin-luap plugin-luau plugin-m68k plugin-make plugin-markdown plugin-markdown_inline plugin-matlab plugin-menhir plugin-mermaid plugin-meson plugin-mlir plugin-muttrc plugin-nasm plugin-nginx plugin-nickel plugin-nim plugin-nim_format_string plugin-ninja plugin-nix plugin-norg plugin-nqc plugin-objc plugin-objdump plugin-ocaml plugin-ocaml_interface plugin-ocamllex plugin-odin plugin-org plugin-pascal plugin-passwd plugin-pem plugin-perl plugin-php plugin-php_only plugin-phpdoc plugin-pioasm plugin-po plugin-pod plugin-poe_filter plugin-pony plugin-printf plugin-prisma plugin-problog plugin-prolog plugin-promql plugin-properties plugin-proto plugin-prql plugin-psv plugin-pug plugin-puppet plugin-purescript plugin-pymanifest plugin-python plugin-ql plugin-qmldir plugin-qmljs plugin-query plugin-r plugin-racket plugin-ralph plugin-rasi plugin-rbs plugin-re2c plugin-readline plugin-regex plugin-rego plugin-requirements plugin-risor plugin-rnoweb plugin-robot plugin-robots plugin-roc plugin-ron plugin-rtx plugin-ruby plugin-rust plugin-scala plugin-scfg plugin-scheme plugin-scss plugin-slang plugin-slint plugin-smali plugin-smithy plugin-snakemake plugin-solidity plugin-soql plugin-sosl plugin-sourcepawn plugin-sparql plugin-sql plugin-sqlite plugin-squirrel plugin-ssh_config plugin-starlark plugin-strace plugin-styled plugin-supercollider plugin-surface plugin-svelte plugin-swift plugin-sxhkdrc plugin-systemtap plugin-systemverilog plugin-t32 plugin-tablegen plugin-tact plugin-tcl plugin-teal plugin-templ plugin-textproto plugin-thrift plugin-tiger plugin-tlaplus plugin-tmux plugin-todotxt plugin-toml plugin-tsv plugin-tsx plugin-turtle plugin-twig plugin-twolc plugin-typescript plugin-typespec plugin-typoscript plugin-typst plugin-udev plugin-ungrammar plugin-unison plugin-usd plugin-uxntal plugin-v plugin-vala plugin-vento plugin-verilog plugin-vhs plugin-vim plugin-vimdoc plugin-vue plugin-wgsl plugin-wgsl_bevy plugin-wing plugin-wit plugin-xcompose plugin-xfst plugin-xml plugin-yaml plugin-yang plugin-yuck plugin-zathurarc plugin-zig
 
 plugin-abap:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/abap
@@ -59,11 +59,20 @@ plugin-bicep:
 plugin-bitbake:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/bitbake
 
+plugin-blade:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/blade
+
 plugin-blueprint:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/blueprint
 
+plugin-bluespec:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/bluespec
+
 plugin-bp:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/bp
+
+plugin-brightscript:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/brightscript
 
 plugin-c:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/c
@@ -80,8 +89,17 @@ plugin-calc:
 plugin-capnp:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/capnp
 
+plugin-cds:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/cds
+
+plugin-cedar:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/cedar
+
 plugin-cel:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/cel
+
+plugin-cg:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/cg
 
 plugin-chatito:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/chatito
@@ -659,6 +677,9 @@ plugin-roc:
 plugin-ron:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/ron
 
+plugin-rtx:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/rtx
+
 plugin-ruby:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/ruby
 
@@ -800,6 +821,9 @@ plugin-turtle:
 plugin-twig:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/twig
 
+plugin-twolc:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/twolc
+
 plugin-typescript:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/typescript
 
@@ -865,6 +889,9 @@ plugin-wit:
 
 plugin-xcompose:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/xcompose
+
+plugin-xfst:
+	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/xfst
 
 plugin-xml:
 	@go build -trimpath -buildmode=plugin -tags plugin github.com/alexaandru/go-sitter-forest/xml
