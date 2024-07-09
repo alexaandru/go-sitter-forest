@@ -50,6 +50,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cognate"
 	"github.com/alexaandru/go-sitter-forest/comment"
 	"github.com/alexaandru/go-sitter-forest/commonlisp"
+	ConTeXt "github.com/alexaandru/go-sitter-forest/context"
 	"github.com/alexaandru/go-sitter-forest/cooklang"
 	"github.com/alexaandru/go-sitter-forest/corn"
 	"github.com/alexaandru/go-sitter-forest/cpon"
@@ -60,6 +61,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cuda"
 	"github.com/alexaandru/go-sitter-forest/cue"
 	"github.com/alexaandru/go-sitter-forest/d"
+	"github.com/alexaandru/go-sitter-forest/dale"
 	"github.com/alexaandru/go-sitter-forest/dart"
 	"github.com/alexaandru/go-sitter-forest/devicetree"
 	"github.com/alexaandru/go-sitter-forest/dhall"
@@ -82,11 +84,16 @@ import (
 	"github.com/alexaandru/go-sitter-forest/embedded_template"
 	"github.com/alexaandru/go-sitter-forest/erlang"
 	"github.com/alexaandru/go-sitter-forest/facility"
+	"github.com/alexaandru/go-sitter-forest/familymarkup"
+	"github.com/alexaandru/go-sitter-forest/fastbuild"
 	"github.com/alexaandru/go-sitter-forest/faust"
 	"github.com/alexaandru/go-sitter-forest/fennel"
 	"github.com/alexaandru/go-sitter-forest/fidl"
+	"github.com/alexaandru/go-sitter-forest/fin"
 	"github.com/alexaandru/go-sitter-forest/firrtl"
 	"github.com/alexaandru/go-sitter-forest/fish"
+	"github.com/alexaandru/go-sitter-forest/flamingo"
+	"github.com/alexaandru/go-sitter-forest/fluentbit"
 	"github.com/alexaandru/go-sitter-forest/foam"
 	"github.com/alexaandru/go-sitter-forest/forth"
 	"github.com/alexaandru/go-sitter-forest/fortran"
@@ -365,6 +372,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"cognate":            cognate.GetLanguage,
 	"comment":            comment.GetLanguage,
 	"commonlisp":         commonlisp.GetLanguage,
+	"context":            ConTeXt.GetLanguage,
 	"cooklang":           cooklang.GetLanguage,
 	"corn":               corn.GetLanguage,
 	"cpon":               cpon.GetLanguage,
@@ -375,6 +383,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"cuda":               cuda.GetLanguage,
 	"cue":                cue.GetLanguage,
 	"d":                  d.GetLanguage,
+	"dale":               dale.GetLanguage,
 	"dart":               dart.GetLanguage,
 	"devicetree":         devicetree.GetLanguage,
 	"dhall":              dhall.GetLanguage,
@@ -397,11 +406,16 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"embedded_template":  embedded_template.GetLanguage,
 	"erlang":             erlang.GetLanguage,
 	"facility":           facility.GetLanguage,
+	"familymarkup":       familymarkup.GetLanguage,
+	"fastbuild":          fastbuild.GetLanguage,
 	"faust":              faust.GetLanguage,
 	"fennel":             fennel.GetLanguage,
 	"fidl":               fidl.GetLanguage,
+	"fin":                fin.GetLanguage,
 	"firrtl":             firrtl.GetLanguage,
 	"fish":               fish.GetLanguage,
+	"flamingo":           flamingo.GetLanguage,
+	"fluentbit":          fluentbit.GetLanguage,
 	"foam":               foam.GetLanguage,
 	"forth":              forth.GetLanguage,
 	"fortran":            fortran.GetLanguage,

@@ -46,6 +46,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cognate v1.5.10
 	github.com/alexaandru/go-sitter-forest/comment v1.5.10
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.10
+	github.com/alexaandru/go-sitter-forest/context v1.5.10
 	github.com/alexaandru/go-sitter-forest/cooklang v1.5.10
 	github.com/alexaandru/go-sitter-forest/corn v1.5.11
 	github.com/alexaandru/go-sitter-forest/cpon v1.5.11
@@ -56,6 +57,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.14
 	github.com/alexaandru/go-sitter-forest/cue v1.5.10
 	github.com/alexaandru/go-sitter-forest/d v1.5.10
+	github.com/alexaandru/go-sitter-forest/dale v1.5.10
 	github.com/alexaandru/go-sitter-forest/dart v1.5.12
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.10
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.10
@@ -78,11 +80,16 @@ require (
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.10
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/facility v1.5.10
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.10
+	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.10
 	github.com/alexaandru/go-sitter-forest/faust v1.5.10
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.12
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.10
+	github.com/alexaandru/go-sitter-forest/fin v1.5.10
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.11
 	github.com/alexaandru/go-sitter-forest/fish v1.5.11
+	github.com/alexaandru/go-sitter-forest/flamingo v1.5.10
+	github.com/alexaandru/go-sitter-forest/fluentbit v1.5.10
 	github.com/alexaandru/go-sitter-forest/foam v1.5.10
 	github.com/alexaandru/go-sitter-forest/forth v1.5.10
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.11

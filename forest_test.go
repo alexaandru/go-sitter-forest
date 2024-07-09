@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	langsCount = 308
+	langsCount = 315
 	bindingTpl = `%s
 
 package %s
@@ -56,6 +56,8 @@ func TestBindingFilesAreAllUpToDate(t *testing.T) {
 		case "cleancopy":
 			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
 //#include "parser.h"`)
+		case "context":
+			exp = strings.ReplaceAll(exp, `package context`, `package ConTeXt`)
 		}
 
 		if act != exp {
