@@ -333,33 +333,38 @@
     "language": "circom",
     "url": "https://github.com/Decurity/tree-sitter-circom",
     "maintainedBy": "@Frodan",
-    "pending": true,
+    "grammarSha": "04190162d98a534fd2e41e4e8517ee261ae2efdbc5ee4b565b339d43ad4da2b7",
     "reference": "main",
-    "revision": ""
+    "revision": "bf78859ce510d26cb5363e2e2d53a82de1f72017"
   },
   {
     "language": "clarity",
     "url": "https://github.com/xlittlerag/tree-sitter-clarity",
     "maintainedBy": "@xlittlerag",
-    "pending": true,
+    "grammarSha": "02bdeca55ab2fb9c60f762891ef1ddba4dd450a56f97e93931a2a0a6c3430d7a",
     "reference": "main",
-    "revision": ""
+    "revision": "da191410209ed49849bb5a750262cbda8800a86f"
   },
   {
     "language": "cleancopy",
     "url": "https://github.com/Taev-dev/tree-sitter-cleancopy",
+    "files": [
+      "scanner.c",
+      "cleancopy_utils.h",
+      "cleancopy_chars.h"
+    ],
     "maintainedBy": "@Badg",
-    "pending": true,
+    "grammarSha": "59d223c0cc9f5a3c3d61af675ffaebacad016de4feb8fb774452926f09c4ff0d",
     "reference": "main",
-    "revision": ""
+    "revision": "63fffe3f90f4146c44dbd7ed3110982b2a059d3d"
   },
   {
     "language": "clingo",
     "url": "https://github.com/potassco/tree-sitter-clingo",
     "maintainedBy": "@sthiele",
-    "pending": true,
+    "grammarSha": "0b488c9bbd135597365ba826cc6ee9c8f1208571512568f3eb98becb0e183b04",
     "reference": "main",
-    "revision": ""
+    "revision": "cb06e649c2994de6dc6b4bafb3dd864e2ed33675"
   },
   {
     "language": "clojure",
@@ -392,9 +397,9 @@
     "language": "cognate",
     "url": "https://github.com/hedyhli/tree-sitter-cognate",
     "maintainedBy": "@hedyhli",
-    "pending": true,
+    "grammarSha": "4f32cd0d98f5ca2e37ecb65b7730cdf6d4324abd4a803b9d8eadbc07248201a1",
     "reference": "main",
-    "revision": ""
+    "revision": "09276014d9e00be839cd063c689f2e1f921e50f9"
   },
   {
     "language": "comment",

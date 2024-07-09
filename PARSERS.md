@@ -1,6 +1,6 @@
-# 303 Supported Parsers
+# 308 Supported Parsers
 
-61 pending, 4 skipped regeneration
+56 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -39,14 +39,14 @@
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️  (maintained by @Alfus)
 - [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️  (maintained by @ObserverOfTime)
-- [ ] [circom](https://github.com/Decurity/tree-sitter-circom) (maintained by @Frodan)
-- [ ] [clarity](https://github.com/xlittlerag/tree-sitter-clarity) (maintained by @xlittlerag)
-- [ ] [cleancopy](https://github.com/Taev-dev/tree-sitter-cleancopy) (maintained by @Badg)
-- [ ] [clingo](https://github.com/potassco/tree-sitter-clingo) (maintained by @sthiele)
+- [x] [circom](https://github.com/Decurity/tree-sitter-circom) ✔️  (maintained by @Frodan)
+- [x] [clarity](https://github.com/xlittlerag/tree-sitter-clarity) ✔️  (maintained by @xlittlerag)
+- [x] [cleancopy](https://github.com/Taev-dev/tree-sitter-cleancopy) ✔️  (maintained by @Badg)
+- [x] [clingo](https://github.com/potassco/tree-sitter-clingo) ✔️  (maintained by @sthiele)
 - [x] [clojure](https://github.com/sogaiu/tree-sitter-clojure) ✔️  (maintained by @NoahTheDuke)
 - [x] [cmake](https://github.com/uyha/tree-sitter-cmake) ✔️  (maintained by @uyha)
 - [ ] [cobol](https://github.com/MatheusNSantiago/tree-sitter-cobol) (maintained by @MatheusNSantiago)
-- [ ] [cognate](https://github.com/hedyhli/tree-sitter-cognate) (maintained by @hedyhli)
+- [x] [cognate](https://github.com/hedyhli/tree-sitter-cognate) ✔️  (maintained by @hedyhli)
 - [x] [comment](https://github.com/stsewd/tree-sitter-comment) ✔️  (maintained by @stsewd)
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️  (maintained by @theHamsta)
 - [ ] [context](https://github.com/pmazaitis/tree-sitter-context) (maintained by @pmazaitis)
