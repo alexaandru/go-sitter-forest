@@ -1,0 +1,11 @@
+{
+  "language": "context",
+  "url": "https://github.com/pmazaitis/tree-sitter-context",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@pmazaitis",
+  "grammarSha": "7926bb7633e507188cb3c32f6e4d284c01391508de3dbfad154724b167e0d72d",
+  "reference": "main",
+  "revision": "55d5bfdc58cdc0a5e83820d3f15411cf5c7e58df"
+}

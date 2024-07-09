@@ -1,6 +1,6 @@
-# 308 Supported Parsers
+# 315 Supported Parsers
 
-56 pending, 4 skipped regeneration
+50 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -49,7 +49,7 @@
 - [x] [cognate](https://github.com/hedyhli/tree-sitter-cognate) ✔️  (maintained by @hedyhli)
 - [x] [comment](https://github.com/stsewd/tree-sitter-comment) ✔️  (maintained by @stsewd)
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️  (maintained by @theHamsta)
-- [ ] [context](https://github.com/pmazaitis/tree-sitter-context) (maintained by @pmazaitis)
+- [x] [context](https://github.com/pmazaitis/tree-sitter-context) ✔️  (maintained by @pmazaitis)
 - [x] [cooklang](https://github.com/addcninblue/tree-sitter-cooklang) ✔️  (maintained by @addcninblue)
 - [x] [corn](https://github.com/corn-config/tree-sitter-corn) ✔️  (maintained by @jakestanger)
 - [x] [cpon](https://github.com/tree-sitter-grammars/tree-sitter-cpon) ✔️  (maintained by @amaanq)
@@ -60,7 +60,7 @@
 - [x] [cuda](https://github.com/tree-sitter-grammars/tree-sitter-cuda) ✔️  (maintained by @theHamsta)
 - [x] [cue](https://github.com/eonpatapon/tree-sitter-cue) ✔️  (maintained by @amaanq)
 - [x] [d](https://github.com/gdamore/tree-sitter-d) ✔️  (maintained by @amaanq)
-- [ ] [dale](https://github.com/crumbtoo/tree-sitter-dale) (maintained by @lomisk)
+- [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️  (maintained by @lomisk)
 - [x] [dart](https://github.com/UserNobody14/tree-sitter-dart) ✔️  (maintained by @akinsho)
 - [x] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) ✔️  (maintained by @jedrzejboczar)
 - [x] [dhall](https://github.com/jbellerb/tree-sitter-dhall) ✔️  (maintained by @amaanq)
@@ -83,16 +83,16 @@
 - [x] [embedded_template](https://github.com/tree-sitter/tree-sitter-embedded-template) ✔️  (maintained by @maxbrunsfeld)
 - [x] [erlang](https://github.com/WhatsApp/tree-sitter-erlang) ✔️  (maintained by @filmor)
 - [x] [facility](https://github.com/FacilityApi/tree-sitter-facility) ✔️  (maintained by @bryankenote)
-- [ ] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) (maintained by @redexp)
-- [ ] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) (maintained by @pinbraerts)
+- [x] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) ✔️  (maintained by @redexp)
+- [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️  (maintained by @pinbraerts)
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️  (maintained by @khiner)
 - [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️  (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents regeneration from working)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️  (maintained by @chaopeng)
-- [ ] [fin](https://github.com/fin-org/tree-sitter-fin) (maintained by @mrmcc3)
+- [x] [fin](https://github.com/fin-org/tree-sitter-fin) ✔️  (maintained by @mrmcc3)
 - [x] [firrtl](https://github.com/tree-sitter-grammars/tree-sitter-firrtl) ✔️  (maintained by @amaanq)
 - [x] [fish](https://github.com/ram02z/tree-sitter-fish) ✔️  (maintained by @ram02z)
-- [ ] [flamingo](https://github.com/inobulles/tree-sitter-flamingo) (maintained by @obiwac)
-- [ ] [fluentbit](https://github.com/sh-cho/tree-sitter-fluentbit) (maintained by @sh-cho)
+- [x] [flamingo](https://github.com/inobulles/tree-sitter-flamingo) ✔️  (maintained by @obiwac)
+- [x] [fluentbit](https://github.com/sh-cho/tree-sitter-fluentbit) ✔️  (maintained by @sh-cho)
 - [x] [foam](https://github.com/FoamScience/tree-sitter-foam) ✔️  (maintained by @FoamScience)
 - [x] [forth](https://github.com/AlexanderBrevig/tree-sitter-forth) ✔️  (maintained by @amaanq)
 - [x] [fortran](https://github.com/stadelmanma/tree-sitter-fortran) ✔️  (maintained by @amaanq)
@@ -188,6 +188,7 @@
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️  (maintained by @benwilliamgraham)
 - [ ] [loongdoc](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [ ] [loongdoc_inline](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
+- [ ] [lox](https://github.com/marcuscaisey/tree-sitter-lox) (maintained by @marcuscaisey)
 - [x] [lua](https://github.com/tree-sitter-grammars/tree-sitter-lua) ✔️  (maintained by @MunifTanjim)
 - [x] [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc) ✔️  (maintained by @amaanq)
 - [x] [lua patterns](https://github.com/tree-sitter-grammars/tree-sitter-luap) ✔️  (maintained by @amaanq)

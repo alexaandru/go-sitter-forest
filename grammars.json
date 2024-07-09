@@ -428,10 +428,13 @@
   {
     "language": "context",
     "url": "https://github.com/pmazaitis/tree-sitter-context",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@pmazaitis",
-    "pending": true,
+    "grammarSha": "7926bb7633e507188cb3c32f6e4d284c01391508de3dbfad154724b167e0d72d",
     "reference": "main",
-    "revision": ""
+    "revision": "55d5bfdc58cdc0a5e83820d3f15411cf5c7e58df"
   },
   {
     "language": "cooklang",
@@ -536,9 +539,9 @@
     "language": "dale",
     "url": "https://github.com/crumbtoo/tree-sitter-dale",
     "maintainedBy": "@lomisk",
-    "pending": true,
+    "grammarSha": "0bac886a26aaea40679ce164f21d415801fe61c30d0a43ab61f54ab5fa525c22",
     "reference": "main",
-    "revision": ""
+    "revision": "5a775720f3561ad4eda09a0039bc4f884736e10b"
   },
   {
     "language": "dart",
@@ -756,17 +759,20 @@
     "language": "familymarkup",
     "url": "https://github.com/redexp/tree-sitter-familymarkup",
     "maintainedBy": "@redexp",
-    "pending": true,
+    "grammarSha": "abb14be312ca3a85bb2b04fbfe141a6a22633d5a94495a441c1d03aaf07abbaf",
     "reference": "master",
-    "revision": ""
+    "revision": "589b6e54e13f27286ca20b203fe7e8eff230f1bd"
   },
   {
     "language": "fastbuild",
     "url": "https://github.com/pinbraerts/tree-sitter-fastbuild",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@pinbraerts",
-    "pending": true,
+    "grammarSha": "a707393b5f0966dd9e8d59469c1341e47e88c50dd635d2255ef3ff1df1ee416b",
     "reference": "main",
-    "revision": ""
+    "revision": "d69dd4961730ee96b02644076784eb89f482e05b"
   },
   {
     "language": "faust",
@@ -801,9 +807,9 @@
     "language": "fin",
     "url": "https://github.com/fin-org/tree-sitter-fin",
     "maintainedBy": "@mrmcc3",
-    "pending": true,
+    "grammarSha": "e7d595287605b6ba788e9c8b7ef31cd58f806d2e3eabc9f0bc2dc310e46a9da4",
     "reference": "main",
-    "revision": ""
+    "revision": "33a570c1fd5118b0c00137b143d0e7e0e184bdef"
   },
   {
     "language": "firrtl",
@@ -831,17 +837,17 @@
     "language": "flamingo",
     "url": "https://github.com/inobulles/tree-sitter-flamingo",
     "maintainedBy": "@obiwac",
-    "pending": true,
+    "grammarSha": "639ef936092bc8b7321b2a589e9ddb90f974712696d9af35bdd2e594bee7321c",
     "reference": "main",
-    "revision": ""
+    "revision": "18cfcf5ad1ec55ca434ff87adaa096ce9ded62f2"
   },
   {
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
     "maintainedBy": "@sh-cho",
-    "pending": true,
+    "grammarSha": "4127950a818fbba767eef1bc1ea1c612fb094d24dfd680e2f700f731b5d4268f",
     "reference": "main",
-    "revision": ""
+    "revision": "b13d4c98d8aaa370093585b7ccce92f77f662456"
   },
   {
     "language": "foam",
@@ -1702,6 +1708,14 @@
     "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
     "srcRoot": "tree-sitter-loongdoc_inline",
     "maintainedBy": "@cathaysia",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
+    "language": "lox",
+    "url": "https://github.com/marcuscaisey/tree-sitter-lox",
+    "maintainedBy": "@marcuscaisey",
     "pending": true,
     "reference": "master",
     "revision": ""
