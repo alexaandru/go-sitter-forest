@@ -1,0 +1,8 @@
+{
+  "language": "cedar",
+  "url": "https://github.com/chrnorm/tree-sitter-cedar",
+  "maintainedBy": "@chrnorm",
+  "grammarSha": "912f21e450329b50308ed1f4feb7bf336263f591b8d6778c800950fb053f485b",
+  "reference": "main",
+  "revision": "5092204de4521a8d5a71bbf14adf2e1ded45b723"
+}

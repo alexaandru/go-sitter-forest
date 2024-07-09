@@ -1,0 +1,8 @@
+{
+  "language": "bluespec",
+  "url": "https://github.com/panther03/tree-sitter-bluespec",
+  "maintainedBy": "@panther03",
+  "grammarSha": "2a5c3841411570e6b7531d79766a58b100a350f3d96d4be2439c5e4b47dc973b",
+  "reference": "master",
+  "revision": "198e3bf6912875dd94fb8edb19f2e227af4ad2bb"
+}

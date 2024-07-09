@@ -195,10 +195,14 @@
   {
     "language": "blade",
     "url": "https://github.com/deanrumsby/tree-sitter-blade",
+    "files": [
+      "scanner.c",
+      "tag.h"
+    ],
     "maintainedBy": "@deanrumsby",
-    "pending": true,
+    "grammarSha": "f16c2d279bca756fa55c70647f8d2603a4f0feaad39570ba0308511acc7dd1c9",
     "reference": "main",
-    "revision": ""
+    "revision": "d274b76342e3ef5245fdeef52c51d8ffbfa403c1"
   },
   {
     "language": "blueprint",
@@ -212,9 +216,9 @@
     "language": "bluespec",
     "url": "https://github.com/panther03/tree-sitter-bluespec",
     "maintainedBy": "@panther03",
-    "pending": true,
+    "grammarSha": "2a5c3841411570e6b7531d79766a58b100a350f3d96d4be2439c5e4b47dc973b",
     "reference": "master",
-    "revision": ""
+    "revision": "198e3bf6912875dd94fb8edb19f2e227af4ad2bb"
   },
   {
     "language": "bp",
@@ -228,9 +232,9 @@
     "language": "brightscript",
     "url": "https://github.com/ajdelcimmuto/tree-sitter-brightscript",
     "maintainedBy": "@ajdelcimmuto",
-    "pending": true,
+    "grammarSha": "7f1199a7707030dc2fc45b9d60c3d7e921569e2fc024c5444f23c59daf7776da",
     "reference": "main",
-    "revision": ""
+    "revision": "42cadd7c9b74cd4f5c2fc4ab30507260637a458a"
   },
   {
     "language": "c",
@@ -283,18 +287,21 @@
   {
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@bugwelle",
-    "pending": true,
+    "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "reference": "main",
-    "revision": ""
+    "revision": "83afa475dddea823009eece85e4861b590661f6f"
   },
   {
     "language": "cedar",
     "url": "https://github.com/chrnorm/tree-sitter-cedar",
     "maintainedBy": "@chrnorm",
-    "pending": true,
+    "grammarSha": "912f21e450329b50308ed1f4feb7bf336263f591b8d6778c800950fb053f485b",
     "reference": "main",
-    "revision": ""
+    "revision": "5092204de4521a8d5a71bbf14adf2e1ded45b723"
   },
   {
     "language": "cel",
@@ -310,9 +317,9 @@
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "srcRoot": "tree-sitter-cg",
     "maintainedBy": "@mr-martian",
-    "pending": true,
+    "grammarSha": "3a6676dca4088d22853492508925519d65573c8dc7434541812e3fdbec0e4418",
     "reference": "master",
-    "revision": ""
+    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
   },
   {
     "language": "chatito",
@@ -2521,9 +2528,9 @@
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "srcRoot": "tree-sitter-rtx",
     "maintainedBy": "@mr-martian",
-    "pending": true,
+    "grammarSha": "a08c0b2984516c9864d84274624b7afe9e03f89cb956c72e41ecead685e05e48",
     "reference": "master",
-    "revision": ""
+    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
   },
   {
     "language": "ruby",
@@ -3092,9 +3099,9 @@
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "srcRoot": "tree-sitter-twolc",
     "maintainedBy": "@mr-martian",
-    "pending": true,
+    "grammarSha": "eaa7246f30f6fe6b2671f90059ed8ecc29b40170e6e1e5e93153a5ff4c181085",
     "reference": "master",
-    "revision": ""
+    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
   },
   {
     "language": "typescript",
@@ -3350,9 +3357,9 @@
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "srcRoot": "tree-sitter-xfst",
     "maintainedBy": "@mr-martian",
-    "pending": true,
+    "grammarSha": "7fa68e1c2a0046de92b0bc197b46383941cdc159e410298676dba362d1292aa2",
     "reference": "master",
-    "revision": ""
+    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
   },
   {
     "language": "xml",

@@ -1,0 +1,26 @@
+//go:build !plugin
+
+package bluespec
+
+//#include "parser.h"
+//TSLanguage *tree_sitter_bluespec();
+import "C"
+
+import (
+	_ "embed"
+	"unsafe"
+
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
+)
+
+//go:embed grammar.json
+var info []byte
+
+func GetLanguage() *sitter.Language {
+	ptr := unsafe.Pointer(C.tree_sitter_bluespec())
+	return sitter.NewLanguage(ptr)
+}
+
+func Info() string {
+	return string(info)
+}

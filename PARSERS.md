@@ -1,6 +1,6 @@
-# 294 Supported Parsers
+# 303 Supported Parsers
 
-70 pending, 4 skipped regeneration
+61 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -24,20 +24,20 @@
 - [x] [bibtex](https://github.com/latex-lsp/tree-sitter-bibtex) ✔️  (maintained by @theHamsta, @clason)
 - [x] [bicep](https://github.com/tree-sitter-grammars/tree-sitter-bicep) ✔️  (maintained by @amaanq)
 - [x] [bitbake](https://github.com/tree-sitter-grammars/tree-sitter-bitbake) ✔️  (maintained by @amaanq)
-- [ ] [blade](https://github.com/deanrumsby/tree-sitter-blade) (maintained by @deanrumsby)
+- [x] [blade](https://github.com/deanrumsby/tree-sitter-blade) ✔️  (maintained by @deanrumsby)
 - [x] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint) ✔️  (maintained by @gabmus)
-- [ ] [bluespec](https://github.com/panther03/tree-sitter-bluespec) (maintained by @panther03)
+- [x] [bluespec](https://github.com/panther03/tree-sitter-bluespec) ✔️  (maintained by @panther03)
 - [x] [bp](https://github.com/ambroisie/tree-sitter-bp) ✔️  (maintained by @ambroisie)
-- [ ] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) (maintained by @ajdelcimmuto)
+- [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️  (maintained by @ajdelcimmuto)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️  (maintained by @amaanq)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) (maintained by @Luxed; ❌OOM)
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️  (maintained by @amaanq)
 - [x] [calc](https://github.com/zeromake/tree-sitter-calc) ✔️  (maintained by @zeromake)
 - [x] [capnp](https://github.com/tree-sitter-grammars/tree-sitter-capnp) ✔️  (maintained by @amaanq)
-- [ ] [cds](https://github.com/cap-js-community/tree-sitter-cds) (maintained by @bugwelle)
-- [ ] [cedar](https://github.com/chrnorm/tree-sitter-cedar) (maintained by @chrnorm)
+- [x] [cds](https://github.com/cap-js-community/tree-sitter-cds) ✔️  (maintained by @bugwelle)
+- [x] [cedar](https://github.com/chrnorm/tree-sitter-cedar) ✔️  (maintained by @chrnorm)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️  (maintained by @Alfus)
-- [ ] [cg](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
+- [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️  (maintained by @ObserverOfTime)
 - [ ] [circom](https://github.com/Decurity/tree-sitter-circom) (maintained by @Frodan)
 - [ ] [clarity](https://github.com/xlittlerag/tree-sitter-clarity) (maintained by @xlittlerag)
@@ -273,7 +273,7 @@
 - [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️  (maintained by @nat-418)
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️  (maintained by @amaanq)
 - [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd)
-- [ ] [rtx](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
+- [x] [rtx](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️  (maintained by @TravonteD)
 - [x] [rust](https://github.com/tree-sitter/tree-sitter-rust) ✔️  (maintained by @amaanq)
 - [x] [scala](https://github.com/tree-sitter/tree-sitter-scala) ✔️  (maintained by @stevanmilic)
@@ -334,7 +334,7 @@
 - [x] [tsx](https://github.com/tree-sitter/tree-sitter-typescript) ✔️  (maintained by @steelsojka; high memory usage (4GB))
 - [x] [turtle](https://github.com/GordianDziwis/tree-sitter-turtle) ✔️  (maintained by @BonaBeavis)
 - [x] [twig](https://github.com/gbprod/tree-sitter-twig) ✔️  (maintained by @gbprod)
-- [ ] [twolc](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
+- [x] [twolc](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [x] [typescript](https://github.com/tree-sitter/tree-sitter-typescript) ✔️  (maintained by @steelsojka; high memory usage (4GB))
 - [x] [typespec](https://github.com/happenslol/tree-sitter-typespec) ✔️  (maintained by @happenslol)
 - [x] [typoscript](https://github.com/Teddytrombone/tree-sitter-typoscript) ✔️  (maintained by @Teddytrombone)
@@ -361,7 +361,7 @@
 - [x] [wit](https://github.com/liamwh/tree-sitter-wit) ✔️  (maintained by @liamwh)
 - [ ] [woml](https://github.com/0xWaleed/tree-sitter-woml) (maintained by @0xWaleed)
 - [x] [xcompose](https://github.com/tree-sitter-grammars/tree-sitter-xcompose) ✔️  (maintained by @ObserverOfTime)
-- [ ] [xfst](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
+- [x] [xfst](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️  (maintained by @ObserverOfTime)
 - [x] [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) ✔️  (maintained by @amaanq)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️  (maintained by @Hubro)

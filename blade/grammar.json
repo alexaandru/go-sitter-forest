@@ -1,0 +1,12 @@
+{
+  "language": "blade",
+  "url": "https://github.com/deanrumsby/tree-sitter-blade",
+  "files": [
+    "scanner.c",
+    "tag.h"
+  ],
+  "maintainedBy": "@deanrumsby",
+  "grammarSha": "f16c2d279bca756fa55c70647f8d2603a4f0feaad39570ba0308511acc7dd1c9",
+  "reference": "main",
+  "revision": "d274b76342e3ef5245fdeef52c51d8ffbfa403c1"
+}
