@@ -26,14 +26,20 @@ import (
 	"github.com/alexaandru/go-sitter-forest/bibtex"
 	"github.com/alexaandru/go-sitter-forest/bicep"
 	"github.com/alexaandru/go-sitter-forest/bitbake"
+	"github.com/alexaandru/go-sitter-forest/blade"
 	"github.com/alexaandru/go-sitter-forest/blueprint"
+	"github.com/alexaandru/go-sitter-forest/bluespec"
 	"github.com/alexaandru/go-sitter-forest/bp"
+	"github.com/alexaandru/go-sitter-forest/brightscript"
 	"github.com/alexaandru/go-sitter-forest/c"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
 	"github.com/alexaandru/go-sitter-forest/cairo"
 	"github.com/alexaandru/go-sitter-forest/calc"
 	"github.com/alexaandru/go-sitter-forest/capnp"
+	"github.com/alexaandru/go-sitter-forest/cds"
+	"github.com/alexaandru/go-sitter-forest/cedar"
 	"github.com/alexaandru/go-sitter-forest/cel"
+	"github.com/alexaandru/go-sitter-forest/cg"
 	"github.com/alexaandru/go-sitter-forest/chatito"
 	"github.com/alexaandru/go-sitter-forest/clojure"
 	"github.com/alexaandru/go-sitter-forest/cmake"
@@ -227,6 +233,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/robots"
 	"github.com/alexaandru/go-sitter-forest/roc"
 	"github.com/alexaandru/go-sitter-forest/ron"
+	"github.com/alexaandru/go-sitter-forest/rtx"
 	"github.com/alexaandru/go-sitter-forest/ruby"
 	"github.com/alexaandru/go-sitter-forest/rust"
 	"github.com/alexaandru/go-sitter-forest/scala"
@@ -274,6 +281,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/tsx"
 	"github.com/alexaandru/go-sitter-forest/turtle"
 	"github.com/alexaandru/go-sitter-forest/twig"
+	"github.com/alexaandru/go-sitter-forest/twolc"
 	"github.com/alexaandru/go-sitter-forest/typescript"
 	"github.com/alexaandru/go-sitter-forest/typespec"
 	"github.com/alexaandru/go-sitter-forest/typoscript"
@@ -296,6 +304,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/wing"
 	"github.com/alexaandru/go-sitter-forest/wit"
 	"github.com/alexaandru/go-sitter-forest/xcompose"
+	"github.com/alexaandru/go-sitter-forest/xfst"
 	"github.com/alexaandru/go-sitter-forest/xml"
 	"github.com/alexaandru/go-sitter-forest/yaml"
 	"github.com/alexaandru/go-sitter-forest/yang"
@@ -327,14 +336,20 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"bibtex":             bibtex.GetLanguage,
 	"bicep":              bicep.GetLanguage,
 	"bitbake":            bitbake.GetLanguage,
+	"blade":              blade.GetLanguage,
 	"blueprint":          blueprint.GetLanguage,
+	"bluespec":           bluespec.GetLanguage,
 	"bp":                 bp.GetLanguage,
+	"brightscript":       brightscript.GetLanguage,
 	"c":                  c.GetLanguage,
 	"c_sharp":            c_sharp.GetLanguage,
 	"cairo":              cairo.GetLanguage,
 	"calc":               calc.GetLanguage,
 	"capnp":              capnp.GetLanguage,
+	"cds":                cds.GetLanguage,
+	"cedar":              cedar.GetLanguage,
 	"cel":                cel.GetLanguage,
+	"cg":                 cg.GetLanguage,
 	"chatito":            chatito.GetLanguage,
 	"clojure":            clojure.GetLanguage,
 	"cmake":              cmake.GetLanguage,
@@ -527,6 +542,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"robots":             robots.GetLanguage,
 	"roc":                roc.GetLanguage,
 	"ron":                ron.GetLanguage,
+	"rtx":                rtx.GetLanguage,
 	"ruby":               ruby.GetLanguage,
 	"rust":               rust.GetLanguage,
 	"scala":              scala.GetLanguage,
@@ -574,6 +590,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"tsx":                tsx.GetLanguage,
 	"turtle":             turtle.GetLanguage,
 	"twig":               twig.GetLanguage,
+	"twolc":              twolc.GetLanguage,
 	"typescript":         typescript.GetLanguage,
 	"typespec":           typespec.GetLanguage,
 	"typoscript":         typoscript.GetLanguage,
@@ -596,6 +613,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"wing":               wing.GetLanguage,
 	"wit":                wit.GetLanguage,
 	"xcompose":           xcompose.GetLanguage,
+	"xfst":               xfst.GetLanguage,
 	"xml":                xml.GetLanguage,
 	"yaml":               yaml.GetLanguage,
 	"yang":               yang.GetLanguage,

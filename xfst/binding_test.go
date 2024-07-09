@@ -11,15 +11,15 @@ import (
 )
 
 const (
-	code = "[\n" +
-		"  [ ?* [ ' (->) [ %` | ʻ | ’ | ‘ | ʼ ] ] ?* ]\n\n" +
+	code = `[
+  [ ?* [ ' (->) [ % | ʻ | ‘ | ʼ ] ] ?* ]
 
-		`  .o.
+  .o.
   [ ?* [ á (->) a ] ?* ]
 ]
 ! <- punctuation.delimiter
 `
-	expected = "(source_file (expression (expression (expression (expression (expression (expression (expression (any)) (star)) (expression (expression (simple_replace (expression (symbol)) (arrow) (expression (expression (expression (expression (expression (expression (symbol)) (union) (expression (symbol))) (union) (expression (symbol))) (union) (expression (symbol))) (union) (expression (symbol)))))))) (expression (expression (any)) (star)))) (compose) (expression (expression (expression (expression (expression (any)) (star)) (expression (expression (simple_replace (expression (symbol)) (arrow) (expression (symbol)))))) (expression (expression (any)) (star)))))) (comment))"
+	expected = "(source_file (expression (expression (expression (expression (expression (expression (expression (any)) (star)) (expression (expression (simple_replace (expression (symbol)) (arrow) (expression (expression (expression (expression (expression (symbol)) (union) (expression (symbol))) (union) (expression (symbol))) (union) (expression (symbol)))))))) (expression (expression (any)) (star)))) (compose) (expression (expression (expression (expression (expression (any)) (star)) (expression (expression (simple_replace (expression (symbol)) (arrow) (expression (symbol)))))) (expression (expression (any)) (star)))))) (comment))"
 )
 
 func TestGrammar(t *testing.T) {
