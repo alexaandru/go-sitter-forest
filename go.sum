@@ -250,8 +250,8 @@ github.com/alexaandru/go-sitter-forest/hurl v1.5.10 h1:RhdBQfUhF1/oD6RGWwn0UMagq
 github.com/alexaandru/go-sitter-forest/hurl v1.5.10/go.mod h1:nGWJPJCN751RxgvViwrYpUfScHFvqD/edq5NucuV1IU=
 github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12 h1:sCR/TBUm4ZknQd3XOCNXo7vo6SJ6qPD+S0q2zTq99hE=
 github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12/go.mod h1:7lQnI/CzBU/Uj9q9A/MVMRJnkp9ktoVbV/wjF726HBY=
-github.com/alexaandru/go-sitter-forest/idl v1.5.19 h1:7qJlzATMBvDXBqw/SdKGzCRy64K2Ue787M6KflS8JJA=
-github.com/alexaandru/go-sitter-forest/idl v1.5.19/go.mod h1:cxwhLfzi0rbHkJi91SnZJVHvbLR+noR1OSPsGXkfRZA=
+github.com/alexaandru/go-sitter-forest/idl v1.5.20 h1:HpU6fC0Nw3A3gTSexlhq1LAo8iOVKvvsIpjQ3v83HtY=
+github.com/alexaandru/go-sitter-forest/idl v1.5.20/go.mod h1:cxwhLfzi0rbHkJi91SnZJVHvbLR+noR1OSPsGXkfRZA=
 github.com/alexaandru/go-sitter-forest/ini v1.5.10 h1:3hKH4Ed7v+sgvenlHTPjQvje9JSMHogAviqFiyvQCdE=
 github.com/alexaandru/go-sitter-forest/ini v1.5.10/go.mod h1:tHMgOQtP4Cp7rvkDcC3+7n7iUhqcPcZWf98S5OCGp/s=
 github.com/alexaandru/go-sitter-forest/inko v1.5.12 h1:viWzLrkClIia4fuwi+cD8k02DpX79fGKEVud7RledUw=
