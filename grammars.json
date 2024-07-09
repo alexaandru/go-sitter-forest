@@ -1342,9 +1342,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "22309315305b0e51a30c967364dc98ddd3ab792fdc3c21577d9b4734c784b175",
+    "grammarSha": "5b54ee17f62a13c19baddce2880338732b68c9336b60e0f9e906a859936e56d9",
     "reference": "master",
-    "revision": "443308c0f32af6681e5b0a09bb7071f3c0c85d74"
+    "revision": "a3fa81607202b6f8134e9f8566ec77ff2c909a59"
   },
   {
     "language": "idris",
@@ -1847,7 +1847,7 @@
     "maintainedBy": "@artagnon",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "reference": "master",
-    "revision": "e7cc5e2fbf782b5fedb9b58dcceee78b049ebb3e"
+    "revision": "affbd6f3b08155826a22cfa8373147acbf60f1f1"
   },
   {
     "language": "motoko",
@@ -3331,7 +3331,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "fddc8a9138eea27a44574fade16b92708d0fdf33"
+    "revision": "723bf12574e834a0f1caaf99d88cfdb1933d6c4a"
   },
   {
     "language": "wit",
