@@ -1,0 +1,8 @@
+{
+  "language": "gherkin",
+  "url": "https://github.com/SamyAB/tree-sitter-gherkin",
+  "maintainedBy": "@SamyAB",
+  "grammarSha": "56ae07efd20f90f8a00945ea83f33f85c84ca53cb987ebf3b381f7ccac25e57e",
+  "reference": "main",
+  "revision": "43873ee8de16476635b48d52c46f5b6407cb5c09"
+}

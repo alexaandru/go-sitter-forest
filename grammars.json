@@ -929,18 +929,21 @@
   {
     "language": "gemfilelock",
     "url": "https://github.com/fluidattacks/tree-sitter-gemfilelock",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@drestrepom",
-    "pending": true,
+    "grammarSha": "2ed91b56e5317331639d4f0c6222d3f12aa382a35861cf35ad6ba96b18cfe6a6",
     "reference": "main",
-    "revision": ""
+    "revision": "a0c57ba1edbe39ec0327838995d104aab2ed16c3"
   },
   {
     "language": "gherkin",
     "url": "https://github.com/SamyAB/tree-sitter-gherkin",
     "maintainedBy": "@SamyAB",
-    "pending": true,
+    "grammarSha": "56ae07efd20f90f8a00945ea83f33f85c84ca53cb987ebf3b381f7ccac25e57e",
     "reference": "main",
-    "revision": ""
+    "revision": "43873ee8de16476635b48d52c46f5b6407cb5c09"
   },
   {
     "language": "git_config",
@@ -1012,9 +1015,9 @@
     "language": "glint",
     "url": "https://github.com/LensPlaysGames/tree-sitter-glint",
     "maintainedBy": "@LensPlaysGames",
-    "pending": true,
+    "grammarSha": "251defd7fd4d87e93ae593b6e50b09b6fbdc501bd43ebf27bcf30b90a9eb387d",
     "reference": "main",
-    "revision": ""
+    "revision": "0702b6c703e5a2d7136474e8e62aa3e43d9e8f94"
   },
   {
     "language": "glsl",
@@ -1056,9 +1059,9 @@
     "language": "gobra",
     "url": "https://github.com/HSMF/tree-sitter-gobra",
     "maintainedBy": "@HSMF",
-    "pending": true,
+    "grammarSha": "bbfd85de760e5159f54b668d671df32caef3d387cd520965343db5a1a88e3fbb",
     "reference": "main",
-    "revision": ""
+    "revision": "5e7831b663cd8a7b5c357c6317e50aa31b3d3b79"
   },
   {
     "language": "goctl",
@@ -1132,9 +1135,9 @@
     "language": "gren",
     "url": "https://github.com/MaeBrooks/tree-sitter-gren",
     "maintainedBy": "@MaeBrooks",
-    "pending": true,
+    "grammarSha": "54feaba3e82b58e9af277f425cc066b013e65ba38a2240f699e53b031eedafb8",
     "reference": "main",
-    "revision": ""
+    "revision": "2caf0e601675fb68591104b4915cc318b7ebd4b4"
   },
   {
     "language": "groovy",
@@ -1166,10 +1169,13 @@
   {
     "language": "haml",
     "url": "https://github.com/vitallium/tree-sitter-haml",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@vitallium",
-    "pending": true,
+    "grammarSha": "abbc143b562ed3903cf091abdd4baa814fd56f3ddab29ba1d33436082fe0ff34",
     "reference": "main",
-    "revision": ""
+    "revision": "244ac9605d140f31d4a5a269b3e7c819a9dcf4b8"
   },
   {
     "language": "hare",
@@ -1291,10 +1297,13 @@
   {
     "language": "htmlaskama",
     "url": "https://github.com/juliamertz/tree-sitter-htmlaskama",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@juliamertz",
-    "pending": true,
+    "grammarSha": "fccc38c90c9101057314bc774c9ea899ca2d157cfab3eb4a2ff1172ae379b425",
     "reference": "stable",
-    "revision": ""
+    "revision": "d5b082de842b19ba290cb1796674377bda57a76f"
   },
   {
     "language": "htmldjango",
@@ -1317,16 +1326,21 @@
     "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
     "maintainedBy": "@GitesHubisz",
     "pending": true,
+    "grammarSha": "b60de08e7357eb2b15c0238c093a96b042a4955d0490061c66daaa0f76b9f38e",
     "reference": "main",
-    "revision": ""
+    "revision": "4772c2abe6d6eac6f038cbe37fc17b766447c2f2"
   },
   {
     "language": "hungarian",
     "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
+    "files": [
+      "scanner.c",
+      "debug_macros.h"
+    ],
     "maintainedBy": "@jpt13653903",
-    "pending": true,
+    "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
     "reference": "master",
-    "revision": ""
+    "revision": "f4e98aeeca94809feab134b7d3b96d1f4fd72636"
   },
   {
     "language": "hurl",
@@ -1355,18 +1369,22 @@
   {
     "language": "idris",
     "url": "https://github.com/kayhide/tree-sitter-idris",
+    "files": [
+      "scanner.c",
+      "unicode.h"
+    ],
     "maintainedBy": "@kayhide",
-    "pending": true,
+    "grammarSha": "f79f8c2ccf30ea1cf9fe2f7dbbeb9db5f9a476dd7833b40b42cecc1eefd3c143",
     "reference": "main",
-    "revision": ""
+    "revision": "0d9b491ff484ae1e3c87e966605f80b5ec7501cd"
   },
   {
     "language": "ignis",
     "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
     "maintainedBy": "@BasileusErwin",
-    "pending": true,
+    "grammarSha": "b372f633e06589fb2eedda5b6682d6c3451ab3d0f78960187437e4884ee98453",
     "reference": "main",
-    "revision": ""
+    "revision": "dfc6aa9232e0ed18da184d31ed2e39d70df10e86"
   },
   {
     "language": "ini",
@@ -1379,10 +1397,13 @@
   {
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@wldmr",
-    "pending": true,
+    "grammarSha": "bfe900eaaa51c5763d64c3114a8e5ac89003492b7bece463aa9efb35b86b7f11",
     "reference": "main",
-    "revision": ""
+    "revision": "c3ff6c67bd826f09feb6ee532aa30e1cc2130e0a"
   },
   {
     "language": "inko",
@@ -1510,10 +1531,13 @@
   {
     "language": "kcl",
     "url": "https://github.com/kcl-lang/tree-sitter-kcl",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@Vishalk91-4",
-    "pending": true,
+    "grammarSha": "f8eaa5c47716a3842012e1840076bc8d219ef19c5a398ad451577591bae09043",
     "reference": "main",
-    "revision": ""
+    "revision": "8350098d4c1fe185dbda54a499db896defb303ae"
   },
   {
     "language": "kconfig",
@@ -1541,9 +1565,9 @@
     "language": "koan",
     "url": "https://github.com/TogarashiPepper/tree-sitter-koan",
     "maintainedBy": "@TogarashiPepper",
-    "pending": true,
+    "grammarSha": "fc75f7a854dfc489a2942e67578bf27dd2f4294473f46e57f26e3257e7325141",
     "reference": "main",
-    "revision": ""
+    "revision": "3f097e5c54a41bd64e5af877516d1fab7fdc6b80"
   },
   {
     "language": "kotlin",

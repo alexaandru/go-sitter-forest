@@ -1,0 +1,11 @@
+{
+  "language": "kcl",
+  "url": "https://github.com/kcl-lang/tree-sitter-kcl",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@Vishalk91-4",
+  "grammarSha": "f8eaa5c47716a3842012e1840076bc8d219ef19c5a398ad451577591bae09043",
+  "reference": "main",
+  "revision": "8350098d4c1fe185dbda54a499db896defb303ae"
+}

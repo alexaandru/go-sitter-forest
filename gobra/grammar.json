@@ -1,0 +1,8 @@
+{
+  "language": "gobra",
+  "url": "https://github.com/HSMF/tree-sitter-gobra",
+  "maintainedBy": "@HSMF",
+  "grammarSha": "bbfd85de760e5159f54b668d671df32caef3d387cd520965343db5a1a88e3fbb",
+  "reference": "main",
+  "revision": "5e7831b663cd8a7b5c357c6317e50aa31b3d3b79"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "ink",
+  "url": "https://github.com/wldmr/tree-sitter-ink",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@wldmr",
+  "grammarSha": "bfe900eaaa51c5763d64c3114a8e5ac89003492b7bece463aa9efb35b86b7f11",
+  "reference": "main",
+  "revision": "c3ff6c67bd826f09feb6ee532aa30e1cc2130e0a"
+}

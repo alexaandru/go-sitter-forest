@@ -1,0 +1,11 @@
+{
+  "language": "htmlaskama",
+  "url": "https://github.com/juliamertz/tree-sitter-htmlaskama",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@juliamertz",
+  "grammarSha": "fccc38c90c9101057314bc774c9ea899ca2d157cfab3eb4a2ff1172ae379b425",
+  "reference": "stable",
+  "revision": "d5b082de842b19ba290cb1796674377bda57a76f"
+}

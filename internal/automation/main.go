@@ -466,6 +466,8 @@ func extractDeps(lang string, content []byte) (files []string) {
 		x = append(x, "../common/html_entities.json")
 	case "unison":
 		x = append(x, "./grammar/precedences.js", "./grammar/function-application.js")
+	case "idris":
+		x = append(x, "./grammar/util.js")
 	}
 
 	return x

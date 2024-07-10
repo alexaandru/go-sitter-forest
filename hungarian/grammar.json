@@ -1,0 +1,12 @@
+{
+  "language": "hungarian",
+  "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
+  "files": [
+    "scanner.c",
+    "debug_macros.h"
+  ],
+  "maintainedBy": "@jpt13653903",
+  "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
+  "reference": "master",
+  "revision": "f4e98aeeca94809feab134b7d3b96d1f4fd72636"
+}

@@ -1,0 +1,11 @@
+{
+  "language": "haml",
+  "url": "https://github.com/vitallium/tree-sitter-haml",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@vitallium",
+  "grammarSha": "abbc143b562ed3903cf091abdd4baa814fd56f3ddab29ba1d33436082fe0ff34",
+  "reference": "main",
+  "revision": "244ac9605d140f31d4a5a269b3e7c819a9dcf4b8"
+}

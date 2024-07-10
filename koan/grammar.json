@@ -1,0 +1,8 @@
+{
+  "language": "koan",
+  "url": "https://github.com/TogarashiPepper/tree-sitter-koan",
+  "maintainedBy": "@TogarashiPepper",
+  "grammarSha": "fc75f7a854dfc489a2942e67578bf27dd2f4294473f46e57f26e3257e7325141",
+  "reference": "main",
+  "revision": "3f097e5c54a41bd64e5af877516d1fab7fdc6b80"
+}
