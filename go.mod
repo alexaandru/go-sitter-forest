@@ -98,6 +98,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/fusion v1.5.10
 	github.com/alexaandru/go-sitter-forest/gdscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/gdshader v1.5.10
+	github.com/alexaandru/go-sitter-forest/gemfilelock v1.5.10
+	github.com/alexaandru/go-sitter-forest/gherkin v1.5.10
 	github.com/alexaandru/go-sitter-forest/git_config v1.5.10
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.5.10
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.5.10
@@ -105,10 +107,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.10
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.11
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.10
+	github.com/alexaandru/go-sitter-forest/glint v1.5.10
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.12
 	github.com/alexaandru/go-sitter-forest/gn v1.5.10
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.10
 	github.com/alexaandru/go-sitter-forest/go v1.5.12
+	github.com/alexaandru/go-sitter-forest/gobra v1.5.10
 	github.com/alexaandru/go-sitter-forest/goctl v1.5.10
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.11
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.10
@@ -117,9 +121,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/gowork v1.5.10
 	github.com/alexaandru/go-sitter-forest/gpg v1.5.10
 	github.com/alexaandru/go-sitter-forest/graphql v1.5.10
+	github.com/alexaandru/go-sitter-forest/gren v1.5.10
 	github.com/alexaandru/go-sitter-forest/groovy v1.5.11
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.10
 	github.com/alexaandru/go-sitter-forest/hack v1.5.10
+	github.com/alexaandru/go-sitter-forest/haml v1.5.10
 	github.com/alexaandru/go-sitter-forest/hare v1.5.12
 	github.com/alexaandru/go-sitter-forest/haskell v1.5.12
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.10
@@ -132,12 +138,17 @@ require (
 	github.com/alexaandru/go-sitter-forest/hocon v1.5.10
 	github.com/alexaandru/go-sitter-forest/hoon v1.5.10
 	github.com/alexaandru/go-sitter-forest/html v1.5.11
+	github.com/alexaandru/go-sitter-forest/htmlaskama v1.5.10
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
 	github.com/alexaandru/go-sitter-forest/http v1.5.13
+	github.com/alexaandru/go-sitter-forest/hungarian v1.5.10
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/idl v1.5.20
+	github.com/alexaandru/go-sitter-forest/idris v1.5.10
+	github.com/alexaandru/go-sitter-forest/ignis v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
+	github.com/alexaandru/go-sitter-forest/ink v1.5.10
 	github.com/alexaandru/go-sitter-forest/inko v1.5.12
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.10
 	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.10
@@ -151,8 +162,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.10
 	github.com/alexaandru/go-sitter-forest/julia v1.5.13
 	github.com/alexaandru/go-sitter-forest/just v1.5.12
+	github.com/alexaandru/go-sitter-forest/kcl v1.5.10
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.10
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.10
+	github.com/alexaandru/go-sitter-forest/koan v1.5.10
 	github.com/alexaandru/go-sitter-forest/kotlin v1.5.10
 	github.com/alexaandru/go-sitter-forest/koto v1.5.13
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.10

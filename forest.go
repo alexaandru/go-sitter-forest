@@ -102,6 +102,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/fusion"
 	"github.com/alexaandru/go-sitter-forest/gdscript"
 	"github.com/alexaandru/go-sitter-forest/gdshader"
+	"github.com/alexaandru/go-sitter-forest/gemfilelock"
+	"github.com/alexaandru/go-sitter-forest/gherkin"
 	"github.com/alexaandru/go-sitter-forest/git_config"
 	"github.com/alexaandru/go-sitter-forest/git_rebase"
 	"github.com/alexaandru/go-sitter-forest/gitattributes"
@@ -109,10 +111,12 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gitignore"
 	"github.com/alexaandru/go-sitter-forest/gleam"
 	"github.com/alexaandru/go-sitter-forest/glimmer"
+	"github.com/alexaandru/go-sitter-forest/glint"
 	"github.com/alexaandru/go-sitter-forest/glsl"
 	"github.com/alexaandru/go-sitter-forest/gn"
 	"github.com/alexaandru/go-sitter-forest/gnuplot"
 	Go "github.com/alexaandru/go-sitter-forest/go"
+	"github.com/alexaandru/go-sitter-forest/gobra"
 	"github.com/alexaandru/go-sitter-forest/goctl"
 	"github.com/alexaandru/go-sitter-forest/godot_resource"
 	"github.com/alexaandru/go-sitter-forest/gomod"
@@ -121,9 +125,11 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gowork"
 	"github.com/alexaandru/go-sitter-forest/gpg"
 	"github.com/alexaandru/go-sitter-forest/graphql"
+	"github.com/alexaandru/go-sitter-forest/gren"
 	"github.com/alexaandru/go-sitter-forest/groovy"
 	"github.com/alexaandru/go-sitter-forest/gstlaunch"
 	"github.com/alexaandru/go-sitter-forest/hack"
+	"github.com/alexaandru/go-sitter-forest/haml"
 	"github.com/alexaandru/go-sitter-forest/hare"
 	"github.com/alexaandru/go-sitter-forest/haskell"
 	"github.com/alexaandru/go-sitter-forest/haskell_persistent"
@@ -136,12 +142,17 @@ import (
 	"github.com/alexaandru/go-sitter-forest/hocon"
 	"github.com/alexaandru/go-sitter-forest/hoon"
 	"github.com/alexaandru/go-sitter-forest/html"
+	"github.com/alexaandru/go-sitter-forest/htmlaskama"
 	"github.com/alexaandru/go-sitter-forest/htmldjango"
 	"github.com/alexaandru/go-sitter-forest/http"
+	"github.com/alexaandru/go-sitter-forest/hungarian"
 	"github.com/alexaandru/go-sitter-forest/hurl"
 	"github.com/alexaandru/go-sitter-forest/hyprlang"
 	"github.com/alexaandru/go-sitter-forest/idl"
+	"github.com/alexaandru/go-sitter-forest/idris"
+	"github.com/alexaandru/go-sitter-forest/ignis"
 	"github.com/alexaandru/go-sitter-forest/ini"
+	"github.com/alexaandru/go-sitter-forest/ink"
 	"github.com/alexaandru/go-sitter-forest/inko"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/ispc"
@@ -156,8 +167,10 @@ import (
 	"github.com/alexaandru/go-sitter-forest/jsonnet"
 	"github.com/alexaandru/go-sitter-forest/julia"
 	"github.com/alexaandru/go-sitter-forest/just"
+	"github.com/alexaandru/go-sitter-forest/kcl"
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
+	"github.com/alexaandru/go-sitter-forest/koan"
 	"github.com/alexaandru/go-sitter-forest/kotlin"
 	"github.com/alexaandru/go-sitter-forest/koto"
 	"github.com/alexaandru/go-sitter-forest/kusto"
@@ -424,6 +437,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"fusion":             fusion.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
 	"gdshader":           gdshader.GetLanguage,
+	"gemfilelock":        gemfilelock.GetLanguage,
+	"gherkin":            gherkin.GetLanguage,
 	"git_config":         git_config.GetLanguage,
 	"git_rebase":         git_rebase.GetLanguage,
 	"gitattributes":      gitattributes.GetLanguage,
@@ -431,10 +446,12 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"gitignore":          gitignore.GetLanguage,
 	"gleam":              gleam.GetLanguage,
 	"glimmer":            glimmer.GetLanguage,
+	"glint":              glint.GetLanguage,
 	"glsl":               glsl.GetLanguage,
 	"gn":                 gn.GetLanguage,
 	"gnuplot":            gnuplot.GetLanguage,
 	"go":                 Go.GetLanguage,
+	"gobra":              gobra.GetLanguage,
 	"goctl":              goctl.GetLanguage,
 	"godot_resource":     godot_resource.GetLanguage,
 	"gomod":              gomod.GetLanguage,
@@ -443,9 +460,11 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"gowork":             gowork.GetLanguage,
 	"gpg":                gpg.GetLanguage,
 	"graphql":            graphql.GetLanguage,
+	"gren":               gren.GetLanguage,
 	"groovy":             groovy.GetLanguage,
 	"gstlaunch":          gstlaunch.GetLanguage,
 	"hack":               hack.GetLanguage,
+	"haml":               haml.GetLanguage,
 	"hare":               hare.GetLanguage,
 	"haskell":            haskell.GetLanguage,
 	"haskell_persistent": haskell_persistent.GetLanguage,
@@ -458,12 +477,17 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"hocon":              hocon.GetLanguage,
 	"hoon":               hoon.GetLanguage,
 	"html":               html.GetLanguage,
+	"htmlaskama":         htmlaskama.GetLanguage,
 	"htmldjango":         htmldjango.GetLanguage,
 	"http":               http.GetLanguage,
+	"hungarian":          hungarian.GetLanguage,
 	"hurl":               hurl.GetLanguage,
 	"hyprlang":           hyprlang.GetLanguage,
 	"idl":                idl.GetLanguage,
+	"idris":              idris.GetLanguage,
+	"ignis":              ignis.GetLanguage,
 	"ini":                ini.GetLanguage,
+	"ink":                ink.GetLanguage,
 	"inko":               inko.GetLanguage,
 	"ispc":               ispc.GetLanguage,
 	"janet_simple":       janet_simple.GetLanguage,
@@ -477,8 +501,10 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"jsonnet":            jsonnet.GetLanguage,
 	"julia":              julia.GetLanguage,
 	"just":               just.GetLanguage,
+	"kcl":                kcl.GetLanguage,
 	"kconfig":            kconfig.GetLanguage,
 	"kdl":                kdl.GetLanguage,
+	"koan":               koan.GetLanguage,
 	"kotlin":             kotlin.GetLanguage,
 	"koto":               koto.GetLanguage,
 	"kusto":              kusto.GetLanguage,

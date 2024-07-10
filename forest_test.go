@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	langsCount = 315
+	langsCount = 328
 	bindingTpl = `%s
 
 package %s
@@ -50,14 +50,17 @@ func TestBindingFilesAreAllUpToDate(t *testing.T) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
 
 		switch lang {
+		case "context":
+			exp = strings.ReplaceAll(exp, `package context`, `package ConTeXt`)
 		case "unison":
 			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
 //#include "parser.h"`)
 		case "cleancopy":
 			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
 //#include "parser.h"`)
-		case "context":
-			exp = strings.ReplaceAll(exp, `package context`, `package ConTeXt`)
+		case "htmlaskama":
+			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-builtin-declaration-mismatch
+//#include "parser.h"`)
 		}
 
 		if act != exp {
