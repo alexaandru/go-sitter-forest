@@ -1,0 +1,11 @@
+{
+  "language": "motoko",
+  "url": "https://github.com/f0i/tree-sitter-motoko",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@f0i",
+  "grammarSha": "2bc5dc869bc183b1e4a9ca21d15b410bf81dea4b2138a5cbec7c5b8a5bc1d47b",
+  "reference": "main",
+  "revision": "e52d7490e668e7411a489663792c83778a7d2d2d"
+}

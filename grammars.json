@@ -1326,9 +1326,8 @@
     "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
     "maintainedBy": "@GitesHubisz",
     "pending": true,
-    "grammarSha": "b60de08e7357eb2b15c0238c093a96b042a4955d0490061c66daaa0f76b9f38e",
     "reference": "main",
-    "revision": "4772c2abe6d6eac6f038cbe37fc17b766447c2f2"
+    "revision": ""
   },
   {
     "language": "hungarian",
@@ -1740,9 +1739,9 @@
     "language": "lox",
     "url": "https://github.com/marcuscaisey/tree-sitter-lox",
     "maintainedBy": "@marcuscaisey",
-    "pending": true,
+    "grammarSha": "36a23c84d06ee1bea37e26584df618bf6f7b4e0160ae06ffa819c681c8d9be9e",
     "reference": "master",
-    "revision": ""
+    "revision": "355b4c820404645272f80498fc2d49d386cec822"
   },
   {
     "language": "lua",
@@ -1840,9 +1839,9 @@
     "language": "mcfuncx",
     "url": "https://github.com/PFiS1737/tree-sitter-mcfuncx",
     "maintainedBy": "@PFiS1737",
-    "pending": true,
+    "grammarSha": "f8637367cbc1b258d8b879c203991ed76bb51ebb8f872673e43aace8d4f181cd",
     "reference": "main",
-    "revision": ""
+    "revision": "f36cb91ac93cd38ba84c192b43ed6d84dc52bbdc"
   },
   {
     "language": "menhir",
@@ -1890,18 +1889,21 @@
   {
     "language": "motoko",
     "url": "https://github.com/f0i/tree-sitter-motoko",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@f0i",
-    "pending": true,
+    "grammarSha": "2bc5dc869bc183b1e4a9ca21d15b410bf81dea4b2138a5cbec7c5b8a5bc1d47b",
     "reference": "main",
-    "revision": ""
+    "revision": "e52d7490e668e7411a489663792c83778a7d2d2d"
   },
   {
     "language": "move",
     "url": "https://github.com/tzakian/tree-sitter-move",
     "maintainedBy": "@tzakian",
-    "pending": true,
+    "grammarSha": "27578c0c4c7d3821deec5cc663fff5890dad41a8f768ead3cba12408f0cc1e4f",
     "reference": "main",
-    "revision": ""
+    "revision": "f3c7609f398aa4291c04204440c6e4a7a3979229"
   },
   {
     "language": "move_on_aptos",

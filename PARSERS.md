@@ -1,6 +1,6 @@
-# 328 Supported Parsers
+# 332 Supported Parsers
 
-37 pending, 4 skipped regeneration
+33 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -144,7 +144,7 @@
 - [x] [htmlaskama](https://github.com/juliamertz/tree-sitter-htmlaskama) ✔️  (maintained by @juliamertz)
 - [x] [htmldjango](https://github.com/interdependence/tree-sitter-htmldjango) ✔️  (maintained by @ObserverOfTime)
 - [x] [http](https://github.com/rest-nvim/tree-sitter-http) ✔️  (maintained by @amaanq)
-- [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) ✔️  (maintained by @GitesHubisz)
+- [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz)
 - [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️  (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️  (maintained by @pfeiferj)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️  (maintained by @luckasRanarison)
@@ -188,7 +188,7 @@
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️  (maintained by @benwilliamgraham)
 - [ ] [loongdoc](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [ ] [loongdoc_inline](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
-- [ ] [lox](https://github.com/marcuscaisey/tree-sitter-lox) (maintained by @marcuscaisey)
+- [x] [lox](https://github.com/marcuscaisey/tree-sitter-lox) ✔️  (maintained by @marcuscaisey)
 - [x] [lua](https://github.com/tree-sitter-grammars/tree-sitter-lua) ✔️  (maintained by @MunifTanjim)
 - [x] [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc) ✔️  (maintained by @amaanq)
 - [x] [lua patterns](https://github.com/tree-sitter-grammars/tree-sitter-luap) ✔️  (maintained by @amaanq)
@@ -198,14 +198,14 @@
 - [x] [markdown (basic highlighting)](https://github.com/tree-sitter-grammars/tree-sitter-markdown) ✔️  (maintained by @MDeiml)
 - [x] [markdown_inline (needed for full highlighting)](https://github.com/tree-sitter-grammars/tree-sitter-markdown) ✔️  (maintained by @MDeiml)
 - [x] [matlab](https://github.com/acristoffers/tree-sitter-matlab) ✔️  (maintained by @acristoffers)
-- [ ] [mcfuncx](https://github.com/PFiS1737/tree-sitter-mcfuncx) (maintained by @PFiS1737)
+- [x] [mcfuncx](https://github.com/PFiS1737/tree-sitter-mcfuncx) ✔️  (maintained by @PFiS1737)
 - [x] [menhir](https://github.com/Kerl13/tree-sitter-menhir) ✔️  (maintained by @Kerl13)
 - [x] [mermaid](https://github.com/monaqa/tree-sitter-mermaid) ✔️  (maintained by @monaqa)
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️  (maintained by @Decodetalkers)
 - [ ] [mix_lock](https://github.com/fluidattacks/tree-sitter-mix_lock) (maintained by @drestrepom)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️  (maintained by @artagnon)
-- [ ] [motoko](https://github.com/f0i/tree-sitter-motoko) (maintained by @f0i)
-- [ ] [move](https://github.com/tzakian/tree-sitter-move) (maintained by @tzakian)
+- [x] [motoko](https://github.com/f0i/tree-sitter-motoko) ✔️  (maintained by @f0i)
+- [x] [move](https://github.com/tzakian/tree-sitter-move) ✔️  (maintained by @tzakian)
 - [ ] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) (maintained by @ArArgon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️  (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️  (maintained by @ObserverOfTime)
