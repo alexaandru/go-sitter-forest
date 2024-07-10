@@ -144,7 +144,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.10
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
-	github.com/alexaandru/go-sitter-forest/idl v1.5.20
+	github.com/alexaandru/go-sitter-forest/idl v1.5.21
 	github.com/alexaandru/go-sitter-forest/idris v1.5.10
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
