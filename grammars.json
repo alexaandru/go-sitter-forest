@@ -158,9 +158,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@edusporto",
-    "grammarSha": "3c0ef6f0195ca8b66db46fc305e29275356d9042079a2204fc4f039efcc5587b",
+    "grammarSha": "2555e1d3dcdd59e98528e19d665d9fb0f59989c0fe41ccf211566554d0b1a4a8",
     "reference": "main",
-    "revision": "d55471786997f5cd36e4d92dbc9e2f227ff81132"
+    "revision": "1c9284952947aa8c11e7cb702cfa4dbb9ddf878c"
   },
   {
     "language": "bibtex",
@@ -2902,7 +2902,7 @@
     "maintainedBy": "@alex-pinkus",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "reference": "main",
-    "revision": "631f1e66bfbf55791b7a9ed23fa6dc90ee55550a"
+    "revision": "6248145bd1c221f75feb3460e59de57f81fda58f"
   },
   {
     "language": "sxhkdrc",
@@ -3369,7 +3369,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "8c92b1078b0be9db7a0dae35e34f75e25b316fc8"
+    "revision": "4a74587198edf500401f6aca27b49c63f46a8c54"
   },
   {
     "language": "wit",
