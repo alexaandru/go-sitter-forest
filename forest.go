@@ -182,6 +182,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/liquid"
 	"github.com/alexaandru/go-sitter-forest/liquidsoap"
 	"github.com/alexaandru/go-sitter-forest/llvm"
+	"github.com/alexaandru/go-sitter-forest/lox"
 	"github.com/alexaandru/go-sitter-forest/lua"
 	"github.com/alexaandru/go-sitter-forest/luadoc"
 	"github.com/alexaandru/go-sitter-forest/luap"
@@ -191,10 +192,13 @@ import (
 	"github.com/alexaandru/go-sitter-forest/markdown"
 	"github.com/alexaandru/go-sitter-forest/markdown_inline"
 	"github.com/alexaandru/go-sitter-forest/matlab"
+	"github.com/alexaandru/go-sitter-forest/mcfuncx"
 	"github.com/alexaandru/go-sitter-forest/menhir"
 	"github.com/alexaandru/go-sitter-forest/mermaid"
 	"github.com/alexaandru/go-sitter-forest/meson"
 	"github.com/alexaandru/go-sitter-forest/mlir"
+	"github.com/alexaandru/go-sitter-forest/motoko"
+	"github.com/alexaandru/go-sitter-forest/move"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
 	"github.com/alexaandru/go-sitter-forest/nasm"
 	"github.com/alexaandru/go-sitter-forest/nginx"
@@ -516,6 +520,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"liquid":             liquid.GetLanguage,
 	"liquidsoap":         liquidsoap.GetLanguage,
 	"llvm":               llvm.GetLanguage,
+	"lox":                lox.GetLanguage,
 	"lua":                lua.GetLanguage,
 	"luadoc":             luadoc.GetLanguage,
 	"luap":               luap.GetLanguage,
@@ -525,10 +530,13 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"markdown":           markdown.GetLanguage,
 	"markdown_inline":    markdown_inline.GetLanguage,
 	"matlab":             matlab.GetLanguage,
+	"mcfuncx":            mcfuncx.GetLanguage,
 	"menhir":             menhir.GetLanguage,
 	"mermaid":            mermaid.GetLanguage,
 	"meson":              meson.GetLanguage,
 	"mlir":               mlir.GetLanguage,
+	"motoko":             motoko.GetLanguage,
+	"move":               move.GetLanguage,
 	"muttrc":             muttrc.GetLanguage,
 	"nasm":               nasm.GetLanguage,
 	"nginx":              nginx.GetLanguage,

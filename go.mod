@@ -177,6 +177,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.11
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.12
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.10
+	github.com/alexaandru/go-sitter-forest/lox v1.5.10
 	github.com/alexaandru/go-sitter-forest/lua v1.5.10
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/luap v1.5.10
@@ -186,10 +187,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.10
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.10
 	github.com/alexaandru/go-sitter-forest/matlab v1.5.11
+	github.com/alexaandru/go-sitter-forest/mcfuncx v1.5.10
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.10
 	github.com/alexaandru/go-sitter-forest/mermaid v1.5.12
 	github.com/alexaandru/go-sitter-forest/meson v1.5.10
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.10
+	github.com/alexaandru/go-sitter-forest/motoko v1.5.10
+	github.com/alexaandru/go-sitter-forest/move v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.10
