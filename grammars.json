@@ -43,6 +43,14 @@
     "revision": "d6465dc7887873dadd828c5522f3db59274f9726"
   },
   {
+    "language": "amber",
+    "url": "https://github.com/amber-lang/tree-sitter-amber",
+    "maintainedBy": "@Ph0enixKM",
+    "grammarSha": "5b555f8ff8b609100dfadb931e7df299901e48924338c246ea977a985ac1f517",
+    "reference": "master",
+    "revision": "0d553f126317f8d937647d062189fb1e439097ea"
+  },
+  {
     "language": "angular",
     "url": "https://github.com/dlvandenberg/tree-sitter-angular",
     "files": [

@@ -1,4 +1,4 @@
-# 348 Supported Parsers
+# 349 Supported Parsers
 
 17 pending, 4 skipped regeneration
 
@@ -9,6 +9,7 @@
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️  (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️  (maintained by @Decodetalkers)
 - [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) ✔️  (maintained by @Riley-Kilgore)
+- [x] [amber](https://github.com/amber-lang/tree-sitter-amber) ✔️  (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️  (maintained by @dlvandenberg)
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️  (maintained by @aheber)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️  (maintained by @ObserverOfTime)
