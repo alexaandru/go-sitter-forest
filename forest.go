@@ -11,6 +11,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
 	"github.com/alexaandru/go-sitter-forest/aiken"
+	"github.com/alexaandru/go-sitter-forest/amber"
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/arduino"
@@ -366,6 +367,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
 	"aiken":              aiken.GetLanguage,
+	"amber":              amber.GetLanguage,
 	"angular":            angular.GetLanguage,
 	"apex":               apex.GetLanguage,
 	"arduino":            arduino.GetLanguage,

@@ -6,6 +6,8 @@ github.com/alexaandru/go-sitter-forest/agda v1.5.10 h1:uSPguhdWZa+QPtPhqafPP1V5S
 github.com/alexaandru/go-sitter-forest/agda v1.5.10/go.mod h1:+mAXfuWbz34G1y2RLSXHEGKPc2gp7pixyAECyBXLuQM=
 github.com/alexaandru/go-sitter-forest/aiken v1.5.10 h1:mbWyftBcDh2PLpg2LryB+4S9vJgNnxdc4xd2GomRh8w=
 github.com/alexaandru/go-sitter-forest/aiken v1.5.10/go.mod h1:jU42dsPecvbt6blbChyM5dMgF8wh5ryRn8mfzXkT4Hk=
+github.com/alexaandru/go-sitter-forest/amber v1.5.10 h1:Tlgt5ZVynkaCNoun4dU9+FdJIRCgMnjsnnXat4O0NpE=
+github.com/alexaandru/go-sitter-forest/amber v1.5.10/go.mod h1:RS9pCk7oTLnDQHGj/TYtJkmjf/KmIxAaoKXDAybnOOs=
 github.com/alexaandru/go-sitter-forest/angular v1.5.12 h1:ITplHweofTonfckS3ev4URv6oHp2Y8mUSLuMo+F+ey8=
 github.com/alexaandru/go-sitter-forest/angular v1.5.12/go.mod h1:JNDhnM4FbgsicwBToSxxEMV9M8eMfw46S6qVJ5vRRmk=
 github.com/alexaandru/go-sitter-forest/apex v1.5.10 h1:Blq1nvLIkFfDrPNkorK6q6uJwwyEMIrKYZ+SupLBG8w=

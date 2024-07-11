@@ -7,6 +7,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.5.11
 	github.com/alexaandru/go-sitter-forest/agda v1.5.10
 	github.com/alexaandru/go-sitter-forest/aiken v1.5.10
+	github.com/alexaandru/go-sitter-forest/amber v1.5.10
 	github.com/alexaandru/go-sitter-forest/angular v1.5.12
 	github.com/alexaandru/go-sitter-forest/apex v1.5.10
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.13
