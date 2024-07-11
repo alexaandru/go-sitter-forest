@@ -1,0 +1,11 @@
+{
+  "language": "sml",
+  "url": "https://github.com/MatthewFluet/tree-sitter-sml",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@MatthewFluet",
+  "grammarSha": "522577bc93280d0940d5823e04985405a3562b91a0e32277555ddc20f3776075",
+  "reference": "main",
+  "revision": "6dc4af576ccd5519c8a37a1219f9f756b8ba0e65"
+}

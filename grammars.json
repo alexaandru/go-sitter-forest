@@ -1627,10 +1627,13 @@
   {
     "language": "ldg",
     "url": "https://github.com/lesserfish/tree-sitter-ldg",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@lesserfish",
-    "pending": true,
+    "grammarSha": "ec35a5589b9230166e120ae0bf1c5595306f03b44fa526e05dcdc22ea8a3d704",
     "reference": "main",
-    "revision": ""
+    "revision": "9966830abfd4e040bcbc95e5d2a4370197db5dcc"
   },
   {
     "language": "ledger",
@@ -2721,10 +2724,13 @@
   {
     "language": "sml",
     "url": "https://github.com/MatthewFluet/tree-sitter-sml",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@MatthewFluet",
-    "pending": true,
+    "grammarSha": "522577bc93280d0940d5823e04985405a3562b91a0e32277555ddc20f3776075",
     "reference": "main",
-    "revision": ""
+    "revision": "6dc4af576ccd5519c8a37a1219f9f756b8ba0e65"
   },
   {
     "language": "snakemake",
@@ -3355,17 +3361,17 @@
     "language": "virdant",
     "url": "https://github.com/maloneymr/tree-sitter-virdant",
     "maintainedBy": "@maloneymr",
-    "pending": true,
+    "grammarSha": "5b1050da42b0285620756ce8e963afc8565fc2d180abe7dc92acc844e142ef3b",
     "reference": "master",
-    "revision": ""
+    "revision": "db6e1f0719a36915a5ddc20c6bf08234f959c00e"
   },
   {
     "language": "virgil",
     "url": "https://github.com/btwj/tree-sitter-virgil",
     "maintainedBy": "@btwj",
-    "pending": true,
+    "grammarSha": "dcacdd05553043214a11f8f37041ac6c64610ebd04ada293df47db7f3322fea1",
     "reference": "main",
-    "revision": ""
+    "revision": "8e6907839b384af9019f4d52ee24d7b7cfb9cf70"
   },
   {
     "language": "vue",

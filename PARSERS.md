@@ -1,6 +1,6 @@
-# 350 Supported Parsers
+# 354 Supported Parsers
 
-15 pending, 4 skipped regeneration
+11 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -175,7 +175,7 @@
 - [x] [kusto](https://github.com/Willem-J-an/tree-sitter-kusto) ✔️  (maintained by @Willem-J-an)
 - [x] [lalrpop](https://github.com/traxys/tree-sitter-lalrpop) ✔️  (maintained by @traxys)
 - [x] [latex](https://github.com/latex-lsp/tree-sitter-latex) ✔️  (maintained by @theHamsta, @clason)
-- [ ] [ldg](https://github.com/lesserfish/tree-sitter-ldg) (maintained by @lesserfish)
+- [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️  (maintained by @lesserfish)
 - [x] [ledger](https://github.com/cbarrete/tree-sitter-ledger) ✔️  (maintained by @cbarrete)
 - [x] [leo](https://github.com/r001/tree-sitter-leo) ✔️  (maintained by @r001)
 - [ ] [lexc](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
@@ -288,7 +288,7 @@
 - [x] [slint](https://github.com/slint-ui/tree-sitter-slint) ✔️  (maintained by @hunger)
 - [x] [smali](https://git.sr.ht/~yotam/tree-sitter-smali) ✔️  (maintained by @amaanq)
 - [x] [smithy](https://github.com/indoorvivants/tree-sitter-smithy) ✔️  (maintained by @amaanq, @keynmol)
-- [ ] [sml](https://github.com/MatthewFluet/tree-sitter-sml) (maintained by @MatthewFluet)
+- [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️  (maintained by @MatthewFluet)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) ✔️  (maintained by @osthomas)
 - [x] [solidity](https://github.com/JoranHonig/tree-sitter-solidity) ✔️  (maintained by @amaanq)
 - [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️  (maintained by @aheber)
@@ -353,8 +353,8 @@
 - [x] [vhs](https://github.com/charmbracelet/tree-sitter-vhs) ✔️  (maintained by @caarlos0)
 - [x] [vim](https://github.com/tree-sitter-grammars/tree-sitter-vim) ✔️  (maintained by @clason)
 - [x] [vimdoc](https://github.com/neovim/tree-sitter-vimdoc) ✔️  (maintained by @clason)
-- [ ] [virdant](https://github.com/maloneymr/tree-sitter-virdant) (maintained by @maloneymr)
-- [ ] [virgil](https://github.com/btwj/tree-sitter-virgil) (maintained by @btwj)
+- [x] [virdant](https://github.com/maloneymr/tree-sitter-virdant) ✔️  (maintained by @maloneymr)
+- [x] [virgil](https://github.com/btwj/tree-sitter-virgil) ✔️  (maintained by @btwj)
 - [x] [vue](https://github.com/tree-sitter-grammars/tree-sitter-vue) ✔️  (maintained by @WhyNotHugo, @lucario387)
 - [x] [wgsl](https://github.com/szebniok/tree-sitter-wgsl) ✔️  (maintained by @szebniok)
 - [x] [wgsl_bevy](https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy) ✔️  (maintained by @theHamsta)
