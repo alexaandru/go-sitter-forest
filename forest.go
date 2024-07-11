@@ -205,6 +205,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/move_on_aptos"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
 	"github.com/alexaandru/go-sitter-forest/nasm"
+	"github.com/alexaandru/go-sitter-forest/nesfab"
 	"github.com/alexaandru/go-sitter-forest/nginx"
 	"github.com/alexaandru/go-sitter-forest/nickel"
 	"github.com/alexaandru/go-sitter-forest/nim"
@@ -565,6 +566,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"move_on_aptos":      move_on_aptos.GetLanguage,
 	"muttrc":             muttrc.GetLanguage,
 	"nasm":               nasm.GetLanguage,
+	"nesfab":             nesfab.GetLanguage,
 	"nginx":              nginx.GetLanguage,
 	"nickel":             nickel.GetLanguage,
 	"nim":                nim.GetLanguage,

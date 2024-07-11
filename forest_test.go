@@ -14,9 +14,9 @@ import (
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
-const (
-	langsCount = 354
-	bindingTpl = `%s
+const langsCount = 355
+
+const bindingTpl = `%s
 
 package %s
 
@@ -43,7 +43,6 @@ func Info() string {
 	return string(info)
 }
 `
-)
 
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {

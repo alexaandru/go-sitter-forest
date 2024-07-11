@@ -392,6 +392,8 @@ github.com/alexaandru/go-sitter-forest/muttrc v1.5.11 h1:8jzmYwXIFXMf5egB/9wvMtW
 github.com/alexaandru/go-sitter-forest/muttrc v1.5.11/go.mod h1:bmsxLB8tyKc4rWZc3W1jso2I/JrzAXgyGQAgKb+L9Uw=
 github.com/alexaandru/go-sitter-forest/nasm v1.5.12 h1:ibKoNCXQbavkzvGT9yeREeTUCs+667/qFcPl+5Yn7TY=
 github.com/alexaandru/go-sitter-forest/nasm v1.5.12/go.mod h1:qoWYYm1NaocxnRj9WbauIh09eDJNZ96eDS6stYdvHQ8=
+github.com/alexaandru/go-sitter-forest/nesfab v1.5.10 h1:mOzBw9TbAlpbjza6j2gpIZApcP4iv986+bMemoMZZ3M=
+github.com/alexaandru/go-sitter-forest/nesfab v1.5.10/go.mod h1:0CB2FxTc49X93hhIcoMtrMgQhDN3GVWxpChNe7Q4fR0=
 github.com/alexaandru/go-sitter-forest/nginx v1.5.10 h1:OyGPxhwSjThxdX8VXiMQfpICpu0P6aoB1MYsOedXyqc=
 github.com/alexaandru/go-sitter-forest/nginx v1.5.10/go.mod h1:n1k3wIMyUWX+AuPmUbau8W2ZM0GPWYRS3755ldSJRUQ=
 github.com/alexaandru/go-sitter-forest/nickel v1.5.14 h1:flPOJFmXPrcQsX5sQz6Z4asXaLNiZSSO0oT1A+TVtHE=
