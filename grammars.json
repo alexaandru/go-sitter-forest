@@ -1,13 +1,5 @@
 [
   {
-    "language": "COBOL",
-    "url": "https://github.com/yutaro-sakamoto/tree-sitter-cobol",
-    "maintainedBy": "@yutaro-sakamoto",
-    "pending": true,
-    "reference": "main",
-    "revision": ""
-  },
-  {
     "language": "abap",
     "url": "https://github.com/mkoval1/tree-sitter-abap",
     "maintainedBy": "@mkoval1",
@@ -395,11 +387,14 @@
   },
   {
     "language": "cobol",
-    "url": "https://github.com/MatheusNSantiago/tree-sitter-cobol",
-    "maintainedBy": "@MatheusNSantiago",
-    "pending": true,
-    "reference": "master",
-    "revision": ""
+    "url": "https://github.com/yutaro-sakamoto/tree-sitter-cobol",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@yutaro-sakamoto",
+    "grammarSha": "a4a83f4d0012f022900be8da247e71aec77de637011823778661475a6538a3be",
+    "reference": "main",
+    "revision": "c7a36d749e7f1db021588259f2b1b765e59d0c12"
   },
   {
     "language": "cognate",

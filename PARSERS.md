@@ -1,10 +1,9 @@
-# 349 Supported Parsers
+# 350 Supported Parsers
 
-17 pending, 4 skipped regeneration
+15 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
-- [ ] [COBOL](https://github.com/yutaro-sakamoto/tree-sitter-cobol) (maintained by @yutaro-sakamoto)
 - [x] [abap](https://github.com/mkoval1/tree-sitter-abap) ✔️  (maintained by @mkoval1)
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️  (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️  (maintained by @Decodetalkers)
@@ -46,7 +45,7 @@
 - [x] [clingo](https://github.com/potassco/tree-sitter-clingo) ✔️  (maintained by @sthiele)
 - [x] [clojure](https://github.com/sogaiu/tree-sitter-clojure) ✔️  (maintained by @NoahTheDuke)
 - [x] [cmake](https://github.com/uyha/tree-sitter-cmake) ✔️  (maintained by @uyha)
-- [ ] [cobol](https://github.com/MatheusNSantiago/tree-sitter-cobol) (maintained by @MatheusNSantiago)
+- [x] [cobol](https://github.com/yutaro-sakamoto/tree-sitter-cobol) ✔️  (maintained by @yutaro-sakamoto)
 - [x] [cognate](https://github.com/hedyhli/tree-sitter-cognate) ✔️  (maintained by @hedyhli)
 - [x] [comment](https://github.com/stsewd/tree-sitter-comment) ✔️  (maintained by @stsewd)
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️  (maintained by @theHamsta)

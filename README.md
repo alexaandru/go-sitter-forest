@@ -34,10 +34,8 @@ In rare cases, the Go package name differs from the language name:
   (pun intended) but otherwise the language name remains "go";
 - `func` language, same problem as above, so package name is actually `FunC`
   (but everything else is `func` as normal: folder, language name, etc.);
-- **context** language, same problem (conflict with stdlib `context` package)
-  so it uses the name `ConTeXt`;
-- there are two **cobol** parsers, haven't decided which one to keep, until I do,
-  there is both `cobol` AND `COBOL`.
+- `context` language, same problem (conflict with stdlib `context` package)
+  so it uses the name `ConTeXt`.
 
 Also, some languages may have names that are not very straightforward acronyms.
 In those cases, an `altName` field will be populated, i.e. `requirements` language
