@@ -173,6 +173,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.10
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.11
 	github.com/alexaandru/go-sitter-forest/latex v1.5.15
+	github.com/alexaandru/go-sitter-forest/ldg v1.5.10
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
@@ -277,6 +278,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.12
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
+	github.com/alexaandru/go-sitter-forest/sml v1.5.10
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.12
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.16
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
@@ -339,6 +341,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.11
 	github.com/alexaandru/go-sitter-forest/vim v1.5.10
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.11
+	github.com/alexaandru/go-sitter-forest/virdant v1.5.10
+	github.com/alexaandru/go-sitter-forest/virgil v1.5.10
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10

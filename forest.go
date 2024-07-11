@@ -178,6 +178,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/kusto"
 	"github.com/alexaandru/go-sitter-forest/lalrpop"
 	"github.com/alexaandru/go-sitter-forest/latex"
+	"github.com/alexaandru/go-sitter-forest/ldg"
 	"github.com/alexaandru/go-sitter-forest/ledger"
 	"github.com/alexaandru/go-sitter-forest/leo"
 	"github.com/alexaandru/go-sitter-forest/linkerscript"
@@ -282,6 +283,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/slint"
 	"github.com/alexaandru/go-sitter-forest/smali"
 	"github.com/alexaandru/go-sitter-forest/smithy"
+	"github.com/alexaandru/go-sitter-forest/sml"
 	"github.com/alexaandru/go-sitter-forest/snakemake"
 	"github.com/alexaandru/go-sitter-forest/solidity"
 	"github.com/alexaandru/go-sitter-forest/soql"
@@ -344,6 +346,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/vhs"
 	"github.com/alexaandru/go-sitter-forest/vim"
 	"github.com/alexaandru/go-sitter-forest/vimdoc"
+	"github.com/alexaandru/go-sitter-forest/virdant"
+	"github.com/alexaandru/go-sitter-forest/virgil"
 	"github.com/alexaandru/go-sitter-forest/vue"
 	"github.com/alexaandru/go-sitter-forest/wgsl"
 	"github.com/alexaandru/go-sitter-forest/wgsl_bevy"
@@ -534,6 +538,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"kusto":              kusto.GetLanguage,
 	"lalrpop":            lalrpop.GetLanguage,
 	"latex":              latex.GetLanguage,
+	"ldg":                ldg.GetLanguage,
 	"ledger":             ledger.GetLanguage,
 	"leo":                leo.GetLanguage,
 	"linkerscript":       linkerscript.GetLanguage,
@@ -638,6 +643,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"slint":              slint.GetLanguage,
 	"smali":              smali.GetLanguage,
 	"smithy":             smithy.GetLanguage,
+	"sml":                sml.GetLanguage,
 	"snakemake":          snakemake.GetLanguage,
 	"solidity":           solidity.GetLanguage,
 	"soql":               soql.GetLanguage,
@@ -700,6 +706,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"vhs":                vhs.GetLanguage,
 	"vim":                vim.GetLanguage,
 	"vimdoc":             vimdoc.GetLanguage,
+	"virdant":            virdant.GetLanguage,
+	"virgil":             virgil.GetLanguage,
 	"vue":                vue.GetLanguage,
 	"wgsl":               wgsl.GetLanguage,
 	"wgsl_bevy":          wgsl_bevy.GetLanguage,
