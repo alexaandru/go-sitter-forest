@@ -37,7 +37,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cel v1.5.11
 	github.com/alexaandru/go-sitter-forest/cg v1.5.10
 	github.com/alexaandru/go-sitter-forest/chatito v1.5.10
-	github.com/alexaandru/go-sitter-forest/circom v1.5.10
+	github.com/alexaandru/go-sitter-forest/circom v1.5.11
 	github.com/alexaandru/go-sitter-forest/clarity v1.5.10
 	github.com/alexaandru/go-sitter-forest/cleancopy v1.5.10
 	github.com/alexaandru/go-sitter-forest/clingo v1.5.10
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/idl v1.5.22
-	github.com/alexaandru/go-sitter-forest/idris v1.5.11
+	github.com/alexaandru/go-sitter-forest/idris v1.5.12
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/ink v1.5.10
