@@ -2,6 +2,7 @@
 
 package main
 
+//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch
 //#include "parser.h"
 //TSLanguage *tree_sitter_note();
 import "C"

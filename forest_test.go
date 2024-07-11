@@ -48,28 +48,7 @@ func Info() string {
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
-
-		switch lang {
-		case "context":
-			exp = strings.ReplaceAll(exp, `package context`, `package ConTeXt`)
-		case "unison":
-			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
-//#include "parser.h"`)
-		case "cleancopy":
-			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
-//#include "parser.h"`)
-		case "htmlaskama":
-			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-builtin-declaration-mismatch
-//#include "parser.h"`)
-		case "note":
-			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch
-//#include "parser.h"`)
-		case "ott":
-			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
-//#include "parser.h"`)
-		}
-
-		if act != exp {
+		if exp = adjustExp(exp, lang); act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
 		}
 	})
@@ -78,12 +57,7 @@ func TestBindingFilesAreAllUpToDate(t *testing.T) {
 func TestPluginFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/plugin.go", func(t *testing.T, act, _, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build plugin", "main", lang, lang)
-		if lang == "unison" {
-			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
-//#include "parser.h"`)
-		}
-
-		if act != exp {
+		if exp = adjustExp(exp, lang); act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
 		}
 	})
@@ -173,6 +147,30 @@ func TestInfo(t *testing.T) {
 	if a := act.String(); a != exp {
 		t.Fatalf("Expected %q got %q", exp, a)
 	}
+}
+
+func adjustExp(exp, lang string) string {
+	switch lang {
+	case "context":
+		exp = strings.ReplaceAll(exp, `package context`, `package ConTeXt`)
+	case "unison":
+		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
+//#include "parser.h"`)
+	case "cleancopy":
+		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
+//#include "parser.h"`)
+	case "htmlaskama":
+		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-builtin-declaration-mismatch
+//#include "parser.h"`)
+	case "note":
+		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch
+//#include "parser.h"`)
+	case "ott":
+		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
+//#include "parser.h"`)
+	}
+
+	return exp
 }
 
 func stripCode(s string) string {

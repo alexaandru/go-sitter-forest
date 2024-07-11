@@ -2,6 +2,7 @@
 
 package main
 
+//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
 //#include "parser.h"
 //TSLanguage *tree_sitter_cleancopy();
 import "C"

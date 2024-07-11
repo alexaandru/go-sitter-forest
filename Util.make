@@ -14,7 +14,7 @@ list_parsers_without_modules:
 	@$(FIND_PARSERS) ! -exec test -e "{}/go.mod" ';' -print
 
 clean:
-	@rm -rfv *.cov tmp auto.log
+	@rm -rfv *.cov tmp auto.log *.so
 
 mktmp:
 	@mkdir -p tmp

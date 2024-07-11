@@ -2,6 +2,7 @@
 
 package main
 
+//#cgo CFLAGS: -Wno-builtin-declaration-mismatch
 //#include "parser.h"
 //TSLanguage *tree_sitter_htmlaskama();
 import "C"
