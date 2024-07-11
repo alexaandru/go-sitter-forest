@@ -199,6 +199,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/mlir"
 	"github.com/alexaandru/go-sitter-forest/motoko"
 	"github.com/alexaandru/go-sitter-forest/move"
+	"github.com/alexaandru/go-sitter-forest/move_on_aptos"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
 	"github.com/alexaandru/go-sitter-forest/nasm"
 	"github.com/alexaandru/go-sitter-forest/nginx"
@@ -208,6 +209,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ninja"
 	"github.com/alexaandru/go-sitter-forest/nix"
 	"github.com/alexaandru/go-sitter-forest/norg"
+	"github.com/alexaandru/go-sitter-forest/note"
 	"github.com/alexaandru/go-sitter-forest/nqc"
 	"github.com/alexaandru/go-sitter-forest/objc"
 	"github.com/alexaandru/go-sitter-forest/objdump"
@@ -216,6 +218,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ocamllex"
 	"github.com/alexaandru/go-sitter-forest/odin"
 	"github.com/alexaandru/go-sitter-forest/org"
+	"github.com/alexaandru/go-sitter-forest/ott"
 	"github.com/alexaandru/go-sitter-forest/pascal"
 	"github.com/alexaandru/go-sitter-forest/passwd"
 	"github.com/alexaandru/go-sitter-forest/pem"
@@ -537,6 +540,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"mlir":               mlir.GetLanguage,
 	"motoko":             motoko.GetLanguage,
 	"move":               move.GetLanguage,
+	"move_on_aptos":      move_on_aptos.GetLanguage,
 	"muttrc":             muttrc.GetLanguage,
 	"nasm":               nasm.GetLanguage,
 	"nginx":              nginx.GetLanguage,
@@ -546,6 +550,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"ninja":              ninja.GetLanguage,
 	"nix":                nix.GetLanguage,
 	"norg":               norg.GetLanguage,
+	"note":               note.GetLanguage,
 	"nqc":                nqc.GetLanguage,
 	"objc":               objc.GetLanguage,
 	"objdump":            objdump.GetLanguage,
@@ -554,6 +559,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"ocamllex":           ocamllex.GetLanguage,
 	"odin":               odin.GetLanguage,
 	"org":                org.GetLanguage,
+	"ott":                ott.GetLanguage,
 	"pascal":             pascal.GetLanguage,
 	"passwd":             passwd.GetLanguage,
 	"pem":                pem.GetLanguage,
