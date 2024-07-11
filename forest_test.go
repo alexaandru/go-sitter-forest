@@ -61,6 +61,12 @@ func TestBindingFilesAreAllUpToDate(t *testing.T) {
 		case "htmlaskama":
 			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-builtin-declaration-mismatch
 //#include "parser.h"`)
+		case "note":
+			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch
+//#include "parser.h"`)
+		case "ott":
+			exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
+//#include "parser.h"`)
 		}
 
 		if act != exp {

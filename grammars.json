@@ -1909,10 +1909,13 @@
     "language": "move_on_aptos",
     "altName": "Move on Aptos",
     "url": "https://github.com/aptos-labs/tree-sitter-move-on-aptos",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@ArArgon",
-    "pending": true,
+    "grammarSha": "a3c0778071317173b5bed8ed0c8ba3a50ea161f5fb8da79d8f737fd0c5a8b2fa",
     "reference": "main",
-    "revision": ""
+    "revision": "3235a9fc83872d7d20800b0713f7c6e9966442d1"
   },
   {
     "language": "muttrc",
@@ -2005,10 +2008,13 @@
   {
     "language": "note",
     "url": "https://github.com/gsuuon/tree-sitter-note",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@gsuuon",
-    "pending": true,
+    "grammarSha": "b0f5e1bb2a95c552bc82c93461a33f1ca61629762e5a9a487c5241ff558d7b82",
     "reference": "main",
-    "revision": ""
+    "revision": "2c01258709153aefeb7645754fed27b947e8a0b4"
   },
   {
     "language": "nqc",
@@ -2100,10 +2106,13 @@
   {
     "language": "ott",
     "url": "https://github.com/armonjam/tree-sitter-ott",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@armonjam",
-    "pending": true,
+    "grammarSha": "76ee7f3d080f9712948d92a6442e44ed24886ef3f9483fde200032a51dffae63",
     "reference": "main",
-    "revision": ""
+    "revision": "8ab99c5f7dcd5d9f30c08a549d62266a9d75467a"
   },
   {
     "language": "pascal",

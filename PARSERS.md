@@ -1,6 +1,6 @@
-# 332 Supported Parsers
+# 335 Supported Parsers
 
-33 pending, 4 skipped regeneration
+30 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -206,7 +206,7 @@
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️  (maintained by @artagnon)
 - [x] [motoko](https://github.com/f0i/tree-sitter-motoko) ✔️  (maintained by @f0i)
 - [x] [move](https://github.com/tzakian/tree-sitter-move) ✔️  (maintained by @tzakian)
-- [ ] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) (maintained by @ArArgon)
+- [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) ✔️  (maintained by @ArArgon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️  (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️  (maintained by @ObserverOfTime)
 - [x] [nginx](https://github.com/opa-oz/tree-sitter-nginx) ✔️  (maintained by @opa-oz)
@@ -216,7 +216,7 @@
 - [x] [ninja](https://github.com/alemuller/tree-sitter-ninja) ✔️  (maintained by @alemuller)
 - [x] [nix](https://github.com/nix-community/tree-sitter-nix) ✔️  (maintained by @leo60228)
 - [x] [norg](https://github.com/nvim-neorg/tree-sitter-norg) ✔️  (maintained by @JoeyGrajciar, @vhyrro)
-- [ ] [note](https://github.com/gsuuon/tree-sitter-note) (maintained by @gsuuon)
+- [x] [note](https://github.com/gsuuon/tree-sitter-note) ✔️  (maintained by @gsuuon)
 - [x] [nqc](https://github.com/tree-sitter-grammars/tree-sitter-nqc) ✔️  (maintained by @amaanq)
 - [x] [objc](https://github.com/tree-sitter-grammars/tree-sitter-objc) (maintained by @amaanq; ❌grammar.js throws error: Unresolved conflict for symbol sequence)
 - [x] [objdump](https://github.com/ColinKennedy/tree-sitter-objdump) ✔️  (maintained by @ColinKennedy)
@@ -225,7 +225,7 @@
 - [x] [ocamllex](https://github.com/314eter/tree-sitter-ocamllex) ✔️  (maintained by @undu)
 - [x] [odin](https://github.com/tree-sitter-grammars/tree-sitter-odin) ✔️  (maintained by @amaanq)
 - [x] [org](https://github.com/milisims/tree-sitter-org) ✔️  (maintained by @milisims)
-- [ ] [ott](https://github.com/armonjam/tree-sitter-ott) (maintained by @armonjam)
+- [x] [ott](https://github.com/armonjam/tree-sitter-ott) ✔️  (maintained by @armonjam)
 - [x] [pascal](https://github.com/Isopod/tree-sitter-pascal) ✔️  (maintained by @Isopod)
 - [x] [passwd](https://github.com/ath3/tree-sitter-passwd) ✔️  (maintained by @amaanq)
 - [x] [pem](https://github.com/tree-sitter-grammars/tree-sitter-pem) ✔️  (maintained by @ObserverOfTime)
