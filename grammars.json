@@ -2358,10 +2358,13 @@
   {
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@russellbaxt",
-    "pending": true,
+    "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "reference": "main",
-    "revision": ""
+    "revision": "a052a54151ca5a746314dc5f93411ef537eea1cc"
   },
   {
     "language": "python",
@@ -2651,17 +2654,17 @@
     "language": "sdml",
     "url": "https://github.com/sdm-lang/tree-sitter-sdml",
     "maintainedBy": "@johnstonskj",
-    "pending": true,
+    "grammarSha": "3d886a967430b8910258e346ef5d2920dc271001c68ae0026fc640669576b80d",
     "reference": "main",
-    "revision": ""
+    "revision": "3fbf0ca440183c7ec15c515085725e0c3ae81740"
   },
   {
     "language": "sincere",
     "url": "https://github.com/vincentvanecchi/tree-sitter-sincere",
     "maintainedBy": "@vincentvanecchi",
-    "pending": true,
+    "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
     "reference": "main",
-    "revision": ""
+    "revision": "4b64be244a64a2362740b3d83d74517f15ebc16d"
   },
   {
     "language": "slang",
@@ -2677,10 +2680,13 @@
   {
     "language": "slim",
     "url": "https://github.com/kolen/tree-sitter-slim",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@kolen",
-    "pending": true,
+    "grammarSha": "5d5d3fac60aee98b22b1cec65f30c7cdea17fe7a5c1822d02a151ef210fa525b",
     "reference": "master",
-    "revision": ""
+    "revision": "7a5135779d784b38d9bb1975e6eaa19dffcdec2d"
   },
   {
     "language": "slint",
@@ -2787,10 +2793,14 @@
   {
     "language": "sql_bigquery",
     "url": "https://github.com/takegue/tree-sitter-sql-bigquery",
+    "doc": "high memory usage (3.4GB)",
+    "files": [
+      "scanner.c"
+    ],
     "maintainedBy": "@takegue",
-    "pending": true,
+    "grammarSha": "7c376b54247514c0d896408030bf9f1da1bb0497e448ecdb79177bbcfd8e4f21",
     "reference": "main",
-    "revision": ""
+    "revision": "bbeda88e5dd9026dbf1443e6a198a9f293de193c"
   },
   {
     "language": "sqlite",
@@ -2815,9 +2825,9 @@
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
     "maintainedBy": "@sebhoss",
-    "pending": true,
+    "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "reference": "main",
-    "revision": ""
+    "revision": "fbe46e72876cd3d21e865982b5f76b2aa63d828a"
   },
   {
     "language": "ssh_config",
@@ -2880,17 +2890,17 @@
     "language": "surrealql",
     "url": "https://github.com/Ce11an/tree-sitter-surrealql",
     "maintainedBy": "@Ce11an",
-    "pending": true,
+    "grammarSha": "cb415d877d6a92a017fbd0245a05f57bbc9ff95fa394f449fda86bf44772d100",
     "reference": "main",
-    "revision": ""
+    "revision": "ad1638d211710ca662d1c83b3e333accc11d8a9d"
   },
   {
     "language": "sus",
     "url": "https://github.com/pc2/tree-sitter-sus",
     "maintainedBy": "@VonTum",
-    "pending": true,
+    "grammarSha": "6466a6d1c50fdf47590221f6fd2eda63416d543540e235e06f7f88945dcde8ca",
     "reference": "main",
-    "revision": ""
+    "revision": "898549fe5253b0981a50234bcc811812cccd0ff0"
   },
   {
     "language": "svelte",
@@ -2927,9 +2937,9 @@
     "language": "syphon",
     "url": "https://github.com/yhyadev/tree-sitter-syphon",
     "maintainedBy": "@yhyadev",
-    "pending": true,
+    "grammarSha": "a17dc99827e30f31f4f2f7b0b9d999051b1def5fe9c7f14cb7f420b56a8ba2a1",
     "reference": "master",
-    "revision": ""
+    "revision": "f7e33f4c443ae3a0cada0f7a8981e0829aa52e83"
   },
   {
     "language": "systemtap",
@@ -3069,17 +3079,17 @@
     "language": "tnsl",
     "url": "https://github.com/CircleShift/tree-sitter-tnsl",
     "maintainedBy": "@CircleShift",
-    "pending": true,
+    "grammarSha": "b97de80da008e57299a99edb06f970febd524e2c925b7d778eaedc53da4b9bc1",
     "reference": "main",
-    "revision": ""
+    "revision": "f710acbab4bf75d75c5f24db5cff5ee308e41f7e"
   },
   {
     "language": "todolang",
     "url": "https://github.com/Gnarus-G/tree-sitter-todolang",
     "maintainedBy": "@Gnarus-G",
-    "pending": true,
+    "grammarSha": "1fda17dd0ded0060d9ce28a99fb0df1d020b9441a29346771a7062968b53a133",
     "reference": "main",
-    "revision": ""
+    "revision": "e61ce92769e03532f7a5ddf2b0845e12a9e77335"
   },
   {
     "language": "todotxt",
@@ -3105,9 +3115,9 @@
     "language": "tort",
     "url": "https://github.com/quendimax/tree-sitter-tort",
     "maintainedBy": "@quendimax",
-    "pending": true,
+    "grammarSha": "4c323fbc781ea311091ba29dc327d821515e8a86587340d02448975d140a0550",
     "reference": "main",
-    "revision": ""
+    "revision": "b0009c2264870c3e4f796405edd88c05d8297cb1"
   },
   {
     "language": "tsv",
@@ -3287,6 +3297,24 @@
   {
     "language": "vhdl",
     "url": "https://github.com/jpt13653903/tree-sitter-vhdl",
+    "files": [
+      "scanner.c",
+      "debug_macros.h",
+      "TokenTree.h",
+      "TokenTree.inc",
+      "TokenType.h",
+      "TokenType.inc",
+      "src/libraries/std/env.h",
+      "src/libraries/std/standard.h",
+      "src/libraries/std/textio.h",
+      "src/libraries/ieee/fixed_pkg.h",
+      "src/libraries/ieee/float_pkg.h",
+      "src/libraries/ieee/math_complex.h",
+      "src/libraries/ieee/math_real.h",
+      "src/libraries/ieee/numeric_std.h",
+      "src/libraries/ieee/std_logic_1164.h",
+      "core.h"
+    ],
     "maintainedBy": "@jpt13653903",
     "pending": true,
     "reference": "master",
@@ -3394,9 +3422,9 @@
     "language": "woml",
     "url": "https://github.com/0xWaleed/tree-sitter-woml",
     "maintainedBy": "@0xWaleed",
-    "pending": true,
+    "grammarSha": "d0ff48f26872bc53e1e70498701829fdcdac1e0ccbc96a5c2d78e485f6aa3068",
     "reference": "main",
-    "revision": ""
+    "revision": "735993d036e6b010c5f9a10e5d21612435981818"
   },
   {
     "language": "xcompose",

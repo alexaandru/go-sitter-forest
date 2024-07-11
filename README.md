@@ -172,7 +172,9 @@ clear picture of all the changes performed to the code, changes which are detail
   in which case we hot patch them before regenerating the parser. See the `replMap` in
   `downloadGrammar()` function;
 - **EXCEPTION MANUAL CHANGE**: `poe_filter/parser.c` is currently invalid upon generation
-  (is missing a right paren at line 6216, col 50 - I added it manually).
+  (is missing a right paren at line 6216, col 50 - I added it manually);
+- **EXCEPTION MANUAL CHANGE**: `sdml/parser.c` same as for poe_filter, at line 4125
+  the generated parser.c file had an unbalanced (missing) paren.
 
 ## Versions & Status
 

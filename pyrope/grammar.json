@@ -1,0 +1,11 @@
+{
+  "language": "pyrope",
+  "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@russellbaxt",
+  "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
+  "reference": "main",
+  "revision": "a052a54151ca5a746314dc5f93411ef537eea1cc"
+}
