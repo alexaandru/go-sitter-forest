@@ -1,4 +1,4 @@
-# 354 Supported Parsers
+# 355 Supported Parsers
 
 11 pending, 4 skipped regeneration
 
@@ -209,6 +209,7 @@
 - [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) ✔️  (maintained by @ArArgon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️  (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️  (maintained by @ObserverOfTime)
+- [x] [nesfab](https://github.com/hnd2/tree-sitter-nesfab) ✔️  (maintained by @hnd2)
 - [x] [nginx](https://github.com/opa-oz/tree-sitter-nginx) ✔️  (maintained by @opa-oz)
 - [x] [nickel](https://github.com/nickel-lang/tree-sitter-nickel) ✔️  (maintained by @ErinvanderVeen, @yannham)
 - [x] [nim](https://github.com/alaviss/tree-sitter-nim) ✔️  (maintained by @aMOPel; high memory usage (7GB))
