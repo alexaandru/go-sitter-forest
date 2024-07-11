@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	langsCount = 349
+	langsCount = 350
 	bindingTpl = `%s
 
 package %s
@@ -217,6 +217,8 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 				pack = "Go"
 			case "func":
 				pack = "FunC"
+			case "cobol":
+				lang = "COBOL"
 			}
 
 			fn(t, act, pack, lang)

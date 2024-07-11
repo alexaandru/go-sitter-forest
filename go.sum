@@ -80,6 +80,8 @@ github.com/alexaandru/go-sitter-forest/clojure v1.5.10 h1:mGeDYLbKnDvHcRQpmTdKEI
 github.com/alexaandru/go-sitter-forest/clojure v1.5.10/go.mod h1:3pYXoxh5hQ4OPtnDgOPJtdmGxTS4DPnpqaOT6Y8LidY=
 github.com/alexaandru/go-sitter-forest/cmake v1.5.11 h1:ZTX55rB3OauCmMD+Nb3YnsMZQWs4GmHjok+wOtCcI8c=
 github.com/alexaandru/go-sitter-forest/cmake v1.5.11/go.mod h1:6QCHbg5cc9RR27lALp0Cc8mvpOlH9WzYj4dW5vquw0w=
+github.com/alexaandru/go-sitter-forest/cobol v1.5.10 h1:E3fKh3tTip5ZfhkCoYnLRdfOV3lG9A1FZ/KGsUd+wKw=
+github.com/alexaandru/go-sitter-forest/cobol v1.5.10/go.mod h1:2NyYNXzbBFlaC7WUY4KT3hrmDqo+3EikneVc40ut6vs=
 github.com/alexaandru/go-sitter-forest/cognate v1.5.10 h1:oSkJlFOSle6gs+od3IHiCs0T55xURIQQAJKyElf6pbY=
 github.com/alexaandru/go-sitter-forest/cognate v1.5.10/go.mod h1:qVvUqz+RX6Ze11EqVGx1QHqOMcd5cvuvs1u8V+zcdGc=
 github.com/alexaandru/go-sitter-forest/comment v1.5.10 h1:P9+MhXb7Jlyc/bCep2nzHlzZzYFVF7aqnFTW/21+RDU=

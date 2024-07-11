@@ -48,6 +48,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/clingo"
 	"github.com/alexaandru/go-sitter-forest/clojure"
 	"github.com/alexaandru/go-sitter-forest/cmake"
+	"github.com/alexaandru/go-sitter-forest/cobol"
 	"github.com/alexaandru/go-sitter-forest/cognate"
 	"github.com/alexaandru/go-sitter-forest/comment"
 	"github.com/alexaandru/go-sitter-forest/commonlisp"
@@ -404,6 +405,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"clingo":             clingo.GetLanguage,
 	"clojure":            clojure.GetLanguage,
 	"cmake":              cmake.GetLanguage,
+	"cobol":              cobol.GetLanguage,
 	"cognate":            cognate.GetLanguage,
 	"comment":            comment.GetLanguage,
 	"commonlisp":         commonlisp.GetLanguage,

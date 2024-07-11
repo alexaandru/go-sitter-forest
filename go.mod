@@ -44,6 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.5.10
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.10
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.11
+	github.com/alexaandru/go-sitter-forest/cobol v1.5.10
 	github.com/alexaandru/go-sitter-forest/cognate v1.5.10
 	github.com/alexaandru/go-sitter-forest/comment v1.5.10
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.10
