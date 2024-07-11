@@ -333,9 +333,9 @@
     "language": "circom",
     "url": "https://github.com/Decurity/tree-sitter-circom",
     "maintainedBy": "@Frodan",
-    "grammarSha": "04190162d98a534fd2e41e4e8517ee261ae2efdbc5ee4b565b339d43ad4da2b7",
+    "grammarSha": "5c8faf57cbef9b88ae4fd24322efbb04d72c3431c3c57123532c097d6c127058",
     "reference": "main",
-    "revision": "bf78859ce510d26cb5363e2e2d53a82de1f72017"
+    "revision": "c4df0664be207e2eae9f5507f9f5f00ea0a952c9"
   },
   {
     "language": "clarity",
@@ -1363,7 +1363,7 @@
     "maintainedBy": "@cathaysa",
     "grammarSha": "f05321be2db4c4aaaa24a7b3aae97895f687c63d41a7550c955549c327c970ff",
     "reference": "master",
-    "revision": "cf79ff5c9be020d2b56b094ebc85c266fcf7bf3b"
+    "revision": "1a495f4520fdd85ae4c9286fb69d9d92fb623343"
   },
   {
     "language": "idris",
@@ -1373,9 +1373,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@kayhide",
-    "grammarSha": "ef58c95f63c62c42f5fd153a52c37b247b76b43041de98822702c48424c2f6ee",
+    "grammarSha": "13399527fe202d1eb5e73b926ed42a1ac73655b6780a34b1e397816f4c1da119",
     "reference": "main",
-    "revision": "6022a00ab842a238731850953402f2b926394cb4"
+    "revision": "dd34984532ffa6eb9249967f1d9d3b20ee353c1f"
   },
   {
     "language": "ignis",
@@ -3408,7 +3408,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "9e8fcc8a5b9fa0b35b5c4d12231d48aa836dca1be679b4ed23888f74cc30d2da",
     "reference": "main",
-    "revision": "33fc02835e5b9667b3087a3694f41898e9fe1fe3"
+    "revision": "89367ee4033280cf746d1725719381ddde5da47e"
   },
   {
     "language": "wit",
