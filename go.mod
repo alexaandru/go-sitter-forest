@@ -239,6 +239,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/puppet v1.5.11
 	github.com/alexaandru/go-sitter-forest/purescript v1.5.10
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.5.10
+	github.com/alexaandru/go-sitter-forest/pyrope v1.5.10
 	github.com/alexaandru/go-sitter-forest/python v1.5.11
 	github.com/alexaandru/go-sitter-forest/ql v1.5.10
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.10
@@ -267,7 +268,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.10
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.10
 	github.com/alexaandru/go-sitter-forest/scss v1.5.10
+	github.com/alexaandru/go-sitter-forest/sdml v1.5.10
+	github.com/alexaandru/go-sitter-forest/sincere v1.5.10
 	github.com/alexaandru/go-sitter-forest/slang v1.5.13
+	github.com/alexaandru/go-sitter-forest/slim v1.5.10
 	github.com/alexaandru/go-sitter-forest/slint v1.5.12
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
@@ -278,17 +282,22 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.16
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.12
 	github.com/alexaandru/go-sitter-forest/sql v1.5.15
+	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.5.10
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.10
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.13
+	github.com/alexaandru/go-sitter-forest/ssh_client_config v1.5.10
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.5.11
 	github.com/alexaandru/go-sitter-forest/starlark v1.5.11
 	github.com/alexaandru/go-sitter-forest/strace v1.5.10
 	github.com/alexaandru/go-sitter-forest/styled v1.5.10
 	github.com/alexaandru/go-sitter-forest/supercollider v1.5.11
 	github.com/alexaandru/go-sitter-forest/surface v1.5.10
+	github.com/alexaandru/go-sitter-forest/surrealql v1.5.10
+	github.com/alexaandru/go-sitter-forest/sus v1.5.10
 	github.com/alexaandru/go-sitter-forest/svelte v1.5.11
 	github.com/alexaandru/go-sitter-forest/swift v1.5.11
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.10
+	github.com/alexaandru/go-sitter-forest/syphon v1.5.10
 	github.com/alexaandru/go-sitter-forest/systemtap v1.5.10
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.5.10
 	github.com/alexaandru/go-sitter-forest/t32 v1.5.11
@@ -302,8 +311,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/tiger v1.5.10
 	github.com/alexaandru/go-sitter-forest/tlaplus v1.5.17
 	github.com/alexaandru/go-sitter-forest/tmux v1.5.10
+	github.com/alexaandru/go-sitter-forest/tnsl v1.5.10
+	github.com/alexaandru/go-sitter-forest/todolang v1.5.10
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.10
 	github.com/alexaandru/go-sitter-forest/toml v1.5.10
+	github.com/alexaandru/go-sitter-forest/tort v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.10
 	github.com/alexaandru/go-sitter-forest/tsx v1.5.15
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.11
@@ -330,6 +342,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
 	github.com/alexaandru/go-sitter-forest/wing v1.5.20
 	github.com/alexaandru/go-sitter-forest/wit v1.5.14
+	github.com/alexaandru/go-sitter-forest/woml v1.5.10
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
 	github.com/alexaandru/go-sitter-forest/xfst v1.5.10
 	github.com/alexaandru/go-sitter-forest/xml v1.5.12

@@ -244,6 +244,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/puppet"
 	"github.com/alexaandru/go-sitter-forest/purescript"
 	"github.com/alexaandru/go-sitter-forest/pymanifest"
+	"github.com/alexaandru/go-sitter-forest/pyrope"
 	"github.com/alexaandru/go-sitter-forest/python"
 	"github.com/alexaandru/go-sitter-forest/ql"
 	"github.com/alexaandru/go-sitter-forest/qmldir"
@@ -272,7 +273,10 @@ import (
 	"github.com/alexaandru/go-sitter-forest/scfg"
 	"github.com/alexaandru/go-sitter-forest/scheme"
 	"github.com/alexaandru/go-sitter-forest/scss"
+	"github.com/alexaandru/go-sitter-forest/sdml"
+	"github.com/alexaandru/go-sitter-forest/sincere"
 	"github.com/alexaandru/go-sitter-forest/slang"
+	"github.com/alexaandru/go-sitter-forest/slim"
 	"github.com/alexaandru/go-sitter-forest/slint"
 	"github.com/alexaandru/go-sitter-forest/smali"
 	"github.com/alexaandru/go-sitter-forest/smithy"
@@ -283,17 +287,22 @@ import (
 	"github.com/alexaandru/go-sitter-forest/sourcepawn"
 	"github.com/alexaandru/go-sitter-forest/sparql"
 	"github.com/alexaandru/go-sitter-forest/sql"
+	"github.com/alexaandru/go-sitter-forest/sql_bigquery"
 	"github.com/alexaandru/go-sitter-forest/sqlite"
 	"github.com/alexaandru/go-sitter-forest/squirrel"
+	"github.com/alexaandru/go-sitter-forest/ssh_client_config"
 	"github.com/alexaandru/go-sitter-forest/ssh_config"
 	"github.com/alexaandru/go-sitter-forest/starlark"
 	"github.com/alexaandru/go-sitter-forest/strace"
 	"github.com/alexaandru/go-sitter-forest/styled"
 	"github.com/alexaandru/go-sitter-forest/supercollider"
 	"github.com/alexaandru/go-sitter-forest/surface"
+	"github.com/alexaandru/go-sitter-forest/surrealql"
+	"github.com/alexaandru/go-sitter-forest/sus"
 	"github.com/alexaandru/go-sitter-forest/svelte"
 	"github.com/alexaandru/go-sitter-forest/swift"
 	"github.com/alexaandru/go-sitter-forest/sxhkdrc"
+	"github.com/alexaandru/go-sitter-forest/syphon"
 	"github.com/alexaandru/go-sitter-forest/systemtap"
 	"github.com/alexaandru/go-sitter-forest/systemverilog"
 	"github.com/alexaandru/go-sitter-forest/t32"
@@ -307,8 +316,11 @@ import (
 	"github.com/alexaandru/go-sitter-forest/tiger"
 	"github.com/alexaandru/go-sitter-forest/tlaplus"
 	"github.com/alexaandru/go-sitter-forest/tmux"
+	"github.com/alexaandru/go-sitter-forest/tnsl"
+	"github.com/alexaandru/go-sitter-forest/todolang"
 	"github.com/alexaandru/go-sitter-forest/todotxt"
 	"github.com/alexaandru/go-sitter-forest/toml"
+	"github.com/alexaandru/go-sitter-forest/tort"
 	"github.com/alexaandru/go-sitter-forest/tsv"
 	"github.com/alexaandru/go-sitter-forest/tsx"
 	"github.com/alexaandru/go-sitter-forest/turtle"
@@ -335,6 +347,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/wgsl_bevy"
 	"github.com/alexaandru/go-sitter-forest/wing"
 	"github.com/alexaandru/go-sitter-forest/wit"
+	"github.com/alexaandru/go-sitter-forest/woml"
 	"github.com/alexaandru/go-sitter-forest/xcompose"
 	"github.com/alexaandru/go-sitter-forest/xfst"
 	"github.com/alexaandru/go-sitter-forest/xml"
@@ -585,6 +598,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"puppet":             puppet.GetLanguage,
 	"purescript":         purescript.GetLanguage,
 	"pymanifest":         pymanifest.GetLanguage,
+	"pyrope":             pyrope.GetLanguage,
 	"python":             python.GetLanguage,
 	"ql":                 ql.GetLanguage,
 	"qmldir":             qmldir.GetLanguage,
@@ -613,7 +627,10 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"scfg":               scfg.GetLanguage,
 	"scheme":             scheme.GetLanguage,
 	"scss":               scss.GetLanguage,
+	"sdml":               sdml.GetLanguage,
+	"sincere":            sincere.GetLanguage,
 	"slang":              slang.GetLanguage,
+	"slim":               slim.GetLanguage,
 	"slint":              slint.GetLanguage,
 	"smali":              smali.GetLanguage,
 	"smithy":             smithy.GetLanguage,
@@ -624,17 +641,22 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"sourcepawn":         sourcepawn.GetLanguage,
 	"sparql":             sparql.GetLanguage,
 	"sql":                sql.GetLanguage,
+	"sql_bigquery":       sql_bigquery.GetLanguage,
 	"sqlite":             sqlite.GetLanguage,
 	"squirrel":           squirrel.GetLanguage,
+	"ssh_client_config":  ssh_client_config.GetLanguage,
 	"ssh_config":         ssh_config.GetLanguage,
 	"starlark":           starlark.GetLanguage,
 	"strace":             strace.GetLanguage,
 	"styled":             styled.GetLanguage,
 	"supercollider":      supercollider.GetLanguage,
 	"surface":            surface.GetLanguage,
+	"surrealql":          surrealql.GetLanguage,
+	"sus":                sus.GetLanguage,
 	"svelte":             svelte.GetLanguage,
 	"swift":              swift.GetLanguage,
 	"sxhkdrc":            sxhkdrc.GetLanguage,
+	"syphon":             syphon.GetLanguage,
 	"systemtap":          systemtap.GetLanguage,
 	"systemverilog":      systemverilog.GetLanguage,
 	"t32":                t32.GetLanguage,
@@ -648,8 +670,11 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"tiger":              tiger.GetLanguage,
 	"tlaplus":            tlaplus.GetLanguage,
 	"tmux":               tmux.GetLanguage,
+	"tnsl":               tnsl.GetLanguage,
+	"todolang":           todolang.GetLanguage,
 	"todotxt":            todotxt.GetLanguage,
 	"toml":               toml.GetLanguage,
+	"tort":               tort.GetLanguage,
 	"tsv":                tsv.GetLanguage,
 	"tsx":                tsx.GetLanguage,
 	"turtle":             turtle.GetLanguage,
@@ -676,6 +701,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"wgsl_bevy":          wgsl_bevy.GetLanguage,
 	"wing":               wing.GetLanguage,
 	"wit":                wit.GetLanguage,
+	"woml":               woml.GetLanguage,
 	"xcompose":           xcompose.GetLanguage,
 	"xfst":               xfst.GetLanguage,
 	"xml":                xml.GetLanguage,
