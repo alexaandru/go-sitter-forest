@@ -2,7 +2,6 @@ package forest
 
 import (
 	"embed"
-	"fmt"
 	"path"
 	"strings"
 )
@@ -25,6 +24,8 @@ var queries embed.FS
 
 var DefaultPreference = NvimFirst
 
+var iq = path.Join("internal", "queries")
+
 // GetQuery returns (if it exists) the `kind`.scm query for `lang` language,
 // using the DefaultPreference.
 // You should omit the ".scm" extension.
@@ -44,11 +45,11 @@ func GetQuery(lang, kind string) (out []byte) {
 }
 
 func getNvim(lang, kind string) (out []byte) {
-	return get(path.Join("nvim_treesitter", lang, kind+".scm"))
+	return get(path.Join(iq, "nvim_treesitter", lang, kind+".scm"))
 }
 
 func getNative(lang, kind string) (out []byte) {
-	return get(path.Join(lang, kind+".scm"))
+	return get(path.Join(iq, lang, kind+".scm"))
 }
 
 func getNvimFirst(lang, kind string) (out []byte) {
@@ -68,10 +69,6 @@ func getNativeFirst(lang, kind string) (out []byte) {
 }
 
 func get(src string) (out []byte) {
-	out, err := queries.ReadFile(src)
-	if err != nil {
-		fmt.Println(err)
-	}
-
+	out, _ = queries.ReadFile(src)
 	return
 }

@@ -47,6 +47,8 @@ and so on. Search [grammar.json](grammars.json) for your grammar of interest.
 
 ## Usage
 
+### Parsers
+
 See the README in [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare),
 as well as the `example_*.go` files in this repo.
 
@@ -55,7 +57,7 @@ repo for all your interactions with the tree.
 
 You can use the parsers in this repo in 3 main ways:
 
-### 1. Standalone
+#### 1. Standalone
 
 You can use the parsers one (or more) at a time, as you'd use any other Go package:
 
@@ -82,7 +84,7 @@ func main() {
 }
 ```
 
-### 2. In Bulk
+#### 2. In Bulk
 
 If (and only IF) you want to use ALL (or most of) the parsers (beware, your binary
 size **will be huge**, as in 200MB+ huge) then you can use the root (`forest`) package:
@@ -117,7 +119,7 @@ this way you can fetch and use any of the parsers dynamically, without having to
 manually import them. You should rarely need this though, unless you're writing
 a text editor or something.
 
-### 3. As a Plugin
+#### 3. As a Plugin
 
 A third way, ~and perhaps the most convenient~ (no, it's not, it's \~250MB with all
 parsers built into the binary whereas all parsers built as plugins took \~1400MB
@@ -131,7 +133,7 @@ Then you can selectively use them in your app using the [plugins mechanism](http
 **IMPORTANT:** You **MUST** use `-trimpath` when building your app, when using plugins
 (the [Plugins.make](Plugins.make) file already includes it, but the app that uses them also needs it).
 
-### Info
+#### Info
 
 Each individual parser (as well as the bulk loader) offers an `Info()` function
 which can be used to retrieve information about a parser. It exposes it's entry
@@ -140,6 +142,20 @@ or as an object (only available in bulk mode).
 
 The returned `Grammar` type implements `Stringer` so it should give a nice summary
 when printed (to screen or logs, etc.).
+
+### Queries
+
+As of `v1.5.90` the root package not only includes the "parsers forest" but also
+the corresponding queries. The queries are compiled from two sources:
+
+1. `nvim_treesitter` project and
+2. the individual sitter repos' own `queries` folders.
+
+The queries are embedded in the library (at the time of writing this, for 359 parsers,
+the queries are only 11MB) and they can be fetched via `forest.GetQuery(lang, kind)`
+where kind is one of {`highlights`, `indent`, `folds`, etc.} (preferably without the
+".scm" extension, but will work with it included as well). I.e. to get the highlights
+query for Go, one would call `forest.GetQuery("go", "highlights")`.
 
 ## Parser Code Changes
 
