@@ -181,6 +181,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ldg"
 	"github.com/alexaandru/go-sitter-forest/ledger"
 	"github.com/alexaandru/go-sitter-forest/leo"
+	"github.com/alexaandru/go-sitter-forest/lexc"
+	"github.com/alexaandru/go-sitter-forest/lexd"
 	"github.com/alexaandru/go-sitter-forest/linkerscript"
 	"github.com/alexaandru/go-sitter-forest/liquid"
 	"github.com/alexaandru/go-sitter-forest/liquidsoap"
@@ -542,6 +544,8 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"ldg":                ldg.GetLanguage,
 	"ledger":             ledger.GetLanguage,
 	"leo":                leo.GetLanguage,
+	"lexc":               lexc.GetLanguage,
+	"lexd":               lexd.GetLanguage,
 	"linkerscript":       linkerscript.GetLanguage,
 	"liquid":             liquid.GetLanguage,
 	"liquidsoap":         liquidsoap.GetLanguage,

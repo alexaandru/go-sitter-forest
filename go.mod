@@ -176,6 +176,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.10
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.10
 	github.com/alexaandru/go-sitter-forest/leo v1.5.10
+	github.com/alexaandru/go-sitter-forest/lexc v1.5.10
+	github.com/alexaandru/go-sitter-forest/lexd v1.5.10
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.11
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.12

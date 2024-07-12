@@ -344,6 +344,10 @@ github.com/alexaandru/go-sitter-forest/ledger v1.5.10 h1:MqaDLnxyeopMnMOInYu8Uvj
 github.com/alexaandru/go-sitter-forest/ledger v1.5.10/go.mod h1:PyJ4eKffgCPD20F9TBGX2xywT/xuF0nYBBBNJxUrEVs=
 github.com/alexaandru/go-sitter-forest/leo v1.5.10 h1:hg/TVMFRHs553h/gRcJI5eUqcxEky2j2nxkjMRfgJns=
 github.com/alexaandru/go-sitter-forest/leo v1.5.10/go.mod h1:bf4eP5MpPq9P2kkhdwEh2FZls7ubUladcTKBArugbkI=
+github.com/alexaandru/go-sitter-forest/lexc v1.5.10 h1:ePjC+I4qIGswUMw1nIC9LKQwPbxMCGLyg7E8ELxcAK4=
+github.com/alexaandru/go-sitter-forest/lexc v1.5.10/go.mod h1:dKkaQP/yL9olrn2/FmjiZZjb2Lme82NmzpRrCQLyhEg=
+github.com/alexaandru/go-sitter-forest/lexd v1.5.10 h1:QLN03GmZrm8ouvU05RvgiURjxbhAE7Cy2plSwNuYJ5Q=
+github.com/alexaandru/go-sitter-forest/lexd v1.5.10/go.mod h1:TipoqhYIpX0gZ1LRRoxh782WdsWdbd3uN21OsH1aTk4=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10 h1:+C9+jKLZXxb7m2rsAm3kd2hi/Eut/ZYhHgoHAcdoAZw=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.5.10/go.mod h1:mbL09+xoUA7jRg3syo40cH1pJVC2+u+YHn9plIq7dbg=
 github.com/alexaandru/go-sitter-forest/liquid v1.5.11 h1:QtLMm8uocI0krmNBJ/7iQW2CdsvWA9YgYT8RmAyBhjU=
