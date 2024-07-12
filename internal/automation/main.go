@@ -127,6 +127,10 @@ func updateAll(force bool) (err error) {
 		return
 	}
 
+	if err = fetchQueries(&grammar.Grammar{Language: "nvim_treesitter", URL: nvimTreeSiterURL}); err != nil {
+		return
+	}
+
 	return updateGrammars()
 }
 
@@ -786,10 +790,10 @@ func updateParsersMd() error {
 		return fmt.Errorf("creating PARSERS.md error: %w", err)
 	}
 
-	planned, skipped, implemented := 0, 0, 0
+	planned, skipped, implemented, withQueries := 0, 0, 0, 0
 	text := `# %d Supported Parsers
 
-%d pending, %d skipped regeneration
+%d pending, %d skipped regeneration, %d have queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -832,18 +836,32 @@ func updateParsersMd() error {
 
 		attr := ""
 		if gr.GrammarSha != "" {
-			attr = " ✔️ "
+			attr = " 🗸"
+		}
+
+		gl1, _ := filepath.Glob(filepath.Join("internal", "queries", "nvim_treesitter", gr.Language, "*.scm"))
+		gl2, _ := filepath.Glob(filepath.Join("internal", "queries", gr.Language, "*.scm"))
+		if len(gl1)+len(gl2) > 0 {
+			if attr == " 🗸" {
+				attr = " ✔️"
+			} else {
+				attr = " 🔍"
+			}
+
+			withQueries++
 		}
 
 		text += fmt.Sprintf("- [%s] [%s](%s)%s%s\n", checked, lang, gr.URL, attr, maint)
 	}
 
 	text += "<!--parserinfo-->\n\nLegend:\n" +
-		"- [x] ✔️ parser files regenerated from `grammar.js`;\n" +
+		"- [x] ✔️parser files regenerated from `grammar.js` and queries are available;\n" +
+		"- [x] 🗸 parser files regenerated from `grammar.js`, no queries though;\n" +
+		"- [x] 🔍 queries are available;\n" +
 		"- [x] ❌ parser files copied from the repo;\n" +
 		"- [ ] parser not implemented (pending).\n"
 
-	if _, err = fmt.Fprintf(f, text, implemented, planned, skipped); err != nil {
+	if _, err = fmt.Fprintf(f, text, implemented, planned, skipped, withQueries); err != nil {
 		return fmt.Errorf("writing PARSERS.md error: %w", err)
 	}
 
