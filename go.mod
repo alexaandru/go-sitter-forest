@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.11
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.12
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.10
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.14
 	github.com/alexaandru/go-sitter-forest/nim v1.5.13
@@ -283,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.12
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
-	github.com/alexaandru/go-sitter-forest/sml v1.5.10
+	github.com/alexaandru/go-sitter-forest/sml v1.5.11
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.12
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.16
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
