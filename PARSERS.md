@@ -1,6 +1,6 @@
-# 358 Supported Parsers
+# 359 Supported Parsers
 
-9 pending, 4 skipped regeneration
+10 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -31,12 +31,14 @@
 - [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️  (maintained by @ajdelcimmuto)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️  (maintained by @amaanq)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) (maintained by @Luxed; ❌OOM)
+- [x] [ca65](https://github.com/babasbot/tree-sitter-ca65) ✔️  (maintained by @babasbot)
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️  (maintained by @amaanq)
 - [x] [calc](https://github.com/zeromake/tree-sitter-calc) ✔️  (maintained by @zeromake)
 - [x] [capnp](https://github.com/tree-sitter-grammars/tree-sitter-capnp) ✔️  (maintained by @amaanq)
 - [x] [cds](https://github.com/cap-js-community/tree-sitter-cds) ✔️  (maintained by @bugwelle)
 - [x] [cedar](https://github.com/chrnorm/tree-sitter-cedar) ✔️  (maintained by @chrnorm)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️  (maintained by @Alfus)
+- [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; is broken similar to poe_filter but in MANY places)
 - [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️  (maintained by @ObserverOfTime)
 - [x] [circom](https://github.com/Decurity/tree-sitter-circom) ✔️  (maintained by @Frodan)
