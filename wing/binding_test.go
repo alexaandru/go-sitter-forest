@@ -27,7 +27,7 @@ resource Lock {
   }
 }
 `
-	expected = "(source (import_statement module_name: (identifier)) (ERROR (custom_type object: (type_identifier)) (ERROR (identifier)) (identifier) (ERROR (nested_identifier object: (reference (reference_identifier)) accessor_type: (accessor) property: (member_identifier))) (ERROR) (ERROR (nested_identifier object: (reference (reference_identifier)) accessor_type: (accessor) property: (member_identifier))) (custom_type object: (type_identifier) fields: (type_identifier)) (ERROR (inflight_specifier) (identifier)) (identifier) (ERROR (identifier) (closure_modifiers (inflight_specifier)) (ERROR (identifier)) (parameter_list)) (nested_identifier object: (reference (reference_identifier)) accessor_type: (accessor) property: (member_identifier))))"
+	expected = "(source (import_statement module_name: (identifier)) (ERROR (custom_type object: (type_identifier)) (ERROR (identifier)) (identifier) (ERROR (nested_identifier object: (reference (reference_identifier)) accessor_type: (accessor) property: (member_identifier))) (ERROR) (ERROR (nested_identifier object: (reference (reference_identifier)) accessor_type: (accessor) property: (member_identifier))) (custom_type object: (type_identifier) fields: (type_identifier)) (ERROR (phase_specifier) (reassignable)) (identifier) (ERROR (identifier) (closure_modifiers (phase_specifier)) (ERROR) (parameter_list)) (nested_identifier object: (reference (reference_identifier)) accessor_type: (accessor) property: (member_identifier))))"
 )
 
 func TestGrammar(t *testing.T) {

@@ -21,18 +21,19 @@ bool tree_sitter_nesfab_external_scanner_scan(void *payload, TSLexer *lexer,
   Scanner *scanner = (Scanner *)payload;
 
   uint32_t column = lexer->get_column(lexer);
-  printf("\
-========\n\
-INDENT: %d\n\
-DEDENT: %d\n\
-NEWLINE: %d\n\
-indent size: %d\n\
-column: %d\n\
-lookahead: %c (%02X)\n\
---------\n\
-",
-         valid_symbols[INDENT], valid_symbols[DEDENT], valid_symbols[NEWLINE],
-         scanner->indents.size, column, lexer->lookahead, lexer->lookahead);
+  //   printf("\
+// ========\n\
+// INDENT: %d\n\
+// DEDENT: %d\n\
+// NEWLINE: %d\n\
+// indent size: %d\n\
+// column: %d\n\
+// lookahead: %c (%02X)\n\
+// --------\n\
+// ",
+  //          valid_symbols[INDENT], valid_symbols[DEDENT],
+  //          valid_symbols[NEWLINE], scanner->indents.size, column,
+  //          lexer->lookahead, lexer->lookahead);
 
   lexer->mark_end(lexer);
 
@@ -65,12 +66,12 @@ lookahead: %c (%02X)\n\
   if (found_end_of_line) {
     if (scanner->indents.size > 0) {
       uint16_t current_indent_length = *array_back(&scanner->indents);
-      printf("indent length: %d\n", indent_length);
-      printf("current indent length: %d\n", current_indent_length);
+      // printf("indent length: %d\n", indent_length);
+      // printf("current indent length: %d\n", current_indent_length);
 
       if (valid_symbols[INDENT] && indent_length > current_indent_length) {
         array_push(&scanner->indents, indent_length);
-        printf("INDENT is pushed\n");
+        // printf("INDENT is pushed\n");
         lexer->result_symbol = INDENT;
         return true;
       }
@@ -84,14 +85,14 @@ lookahead: %c (%02X)\n\
           indent_length < current_indent_length &&
           first_comment_indent_length < (int32_t)current_indent_length) {
         array_pop(&scanner->indents);
-        printf("DEDENT is pushed\n");
+        // printf("DEDENT is pushed\n");
         lexer->result_symbol = DEDENT;
         return true;
       }
     }
 
     if (valid_symbols[NEWLINE] && !valid_symbols[INDENT]) {
-      printf("NEWLINE is pushed\n");
+      // printf("NEWLINE is pushed\n");
       lexer->result_symbol = NEWLINE;
       return true;
     }
