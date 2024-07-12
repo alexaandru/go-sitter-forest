@@ -1,6 +1,6 @@
 # 359 Supported Parsers
 
-10 pending, 4 skipped regeneration, 334 have queries
+10 pending, 4 skipped regeneration, 20 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -91,7 +91,7 @@
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️ (maintained by @khiner)
 - [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️ (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents regeneration from working)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️ (maintained by @chaopeng)
-- [x] [fin](https://github.com/fin-org/tree-sitter-fin) 🗸 (maintained by @mrmcc3)
+- [x] [fin](https://github.com/fin-org/tree-sitter-fin) ✔️ (maintained by @mrmcc3)
 - [x] [firrtl](https://github.com/tree-sitter-grammars/tree-sitter-firrtl) ✔️ (maintained by @amaanq)
 - [x] [fish](https://github.com/ram02z/tree-sitter-fish) ✔️ (maintained by @ram02z)
 - [x] [flamingo](https://github.com/inobulles/tree-sitter-flamingo) ✔️ (maintained by @obiwac)
@@ -118,7 +118,7 @@
 - [x] [GN (Generate Ninja)](https://github.com/tree-sitter-grammars/tree-sitter-gn) ✔️ (maintained by @amaanq)
 - [x] [gnuplot](https://github.com/dpezto/tree-sitter-gnuplot) ✔️ (maintained by @dpezto)
 - [x] [go](https://github.com/tree-sitter/tree-sitter-go) ✔️ (maintained by @theHamsta, @WinWisely268)
-- [x] [gobra](https://github.com/HSMF/tree-sitter-gobra) 🗸 (maintained by @HSMF)
+- [x] [gobra](https://github.com/HSMF/tree-sitter-gobra) ✔️ (maintained by @HSMF)
 - [x] [goctl](https://github.com/chaozwn/tree-sitter-goctl) ✔️ (maintained by @chaozwn)
 - [x] [Godot Resources (gdresource)](https://github.com/PrestonKnopp/tree-sitter-godot-resource) ✔️ (maintained by @pierpo)
 - [x] [gomod](https://github.com/camdencheek/tree-sitter-go-mod) ✔️ (maintained by @camdencheek)
@@ -148,7 +148,7 @@
 - [x] [htmldjango](https://github.com/interdependence/tree-sitter-htmldjango) ✔️ (maintained by @ObserverOfTime)
 - [x] [http](https://github.com/rest-nvim/tree-sitter-http) ✔️ (maintained by @amaanq)
 - [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz; is looking for an external scanner but none is present in the repo)
-- [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) 🗸 (maintained by @jpt13653903)
+- [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️ (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️ (maintained by @pfeiferj)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️ (maintained by @luckasRanarison)
 - [x] [idl](https://github.com/cathaysia/tree-sitter-idl) ✔️ (maintained by @cathaysa)
@@ -191,7 +191,7 @@
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️ (maintained by @benwilliamgraham)
 - [ ] [loongdoc](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [ ] [loongdoc_inline](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
-- [x] [lox](https://github.com/marcuscaisey/tree-sitter-lox) 🗸 (maintained by @marcuscaisey)
+- [x] [lox](https://github.com/marcuscaisey/tree-sitter-lox) ✔️ (maintained by @marcuscaisey)
 - [x] [lua](https://github.com/tree-sitter-grammars/tree-sitter-lua) ✔️ (maintained by @MunifTanjim)
 - [x] [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc) ✔️ (maintained by @amaanq)
 - [x] [lua patterns](https://github.com/tree-sitter-grammars/tree-sitter-luap) ✔️ (maintained by @amaanq)
@@ -207,7 +207,7 @@
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️ (maintained by @Decodetalkers)
 - [ ] [mix_lock](https://github.com/fluidattacks/tree-sitter-mix_lock) (maintained by @drestrepom)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️ (maintained by @artagnon)
-- [x] [motoko](https://github.com/f0i/tree-sitter-motoko) 🗸 (maintained by @f0i)
+- [x] [motoko](https://github.com/f0i/tree-sitter-motoko) ✔️ (maintained by @f0i)
 - [x] [move](https://github.com/tzakian/tree-sitter-move) 🗸 (maintained by @tzakian)
 - [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) 🗸 (maintained by @ArArgon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️ (maintained by @Freed-Wu)

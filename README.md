@@ -217,6 +217,14 @@ version everywhere, and keeping up with it too.
 
 ## TODO
 
+- queries needs some more work:
+  - move them from forest to individual parsers (so they can be used individually);
+  - have the forest use them from the parsers (similar to GetLanguage);
+  - some of them (bass, matlab, syphon, vala) use {n(eo)vim,helix}/\*.scm convetion,
+    only pull in nvim ones (and not in subfolder);
+  - some of them (d) use {nova,helix,}-\*.scm convention, only pull in generic ones
+    (or nvim if they'll have them);
+  - update-queries should not leave behind empty folders under internal/queries;
 - filter automatically high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted

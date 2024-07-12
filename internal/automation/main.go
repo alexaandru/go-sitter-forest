@@ -659,10 +659,14 @@ func fetchQueries(gr *grammar.Grammar) (err error) {
 		}
 	}()
 
-	return recursiveCopy(src, filepath.Join("internal", "queries", gr.Language))
+	dst := filepath.Join("internal", "queries", gr.Language)
+
+	os.RemoveAll(dst)
+
+	return recursiveCopy(src, dst, gr.Language != "nvim_treesitter")
 }
 
-func recursiveCopy(src, dstPath string) (err error) {
+func recursiveCopy(src, dstPath string, flatten bool) (err error) {
 	if err = os.MkdirAll(dstPath, os.ModePerm); err != nil {
 		return
 	}
@@ -678,6 +682,10 @@ func recursiveCopy(src, dstPath string) (err error) {
 
 		relPath, _ := filepath.Rel(src, path)
 		dst := filepath.Join(dstPath, relPath)
+
+		if flatten {
+			dst = filepath.Join(dstPath, filepath.Base(path))
+		}
 
 		dstDir := filepath.Dir(dst)
 		if err = os.MkdirAll(dstDir, os.ModePerm); err != nil {
@@ -793,7 +801,7 @@ func updateParsersMd() error {
 	planned, skipped, implemented, withQueries := 0, 0, 0, 0
 	text := `# %d Supported Parsers
 
-%d pending, %d skipped regeneration, %d have queries
+%d pending, %d skipped regeneration, %d missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -861,7 +869,7 @@ func updateParsersMd() error {
 		"- [x] ❌ parser files copied from the repo;\n" +
 		"- [ ] parser not implemented (pending).\n"
 
-	if _, err = fmt.Fprintf(f, text, implemented, planned, skipped, withQueries); err != nil {
+	if _, err = fmt.Fprintf(f, text, implemented, planned, skipped, implemented-withQueries); err != nil {
 		return fmt.Errorf("writing PARSERS.md error: %w", err)
 	}
 
