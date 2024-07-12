@@ -144,7 +144,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.5.11
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.5.10
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.10
-	github.com/alexaandru/go-sitter-forest/http v1.5.13
+	github.com/alexaandru/go-sitter-forest/http v1.5.14
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.10
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
@@ -204,10 +204,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.10
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.11
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.12
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.10
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.11
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.10
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.14
-	github.com/alexaandru/go-sitter-forest/nim v1.5.12
+	github.com/alexaandru/go-sitter-forest/nim v1.5.13
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.5.10
 	github.com/alexaandru/go-sitter-forest/ninja v1.5.10
 	github.com/alexaandru/go-sitter-forest/nix v1.5.10
@@ -351,7 +351,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vue v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.10
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.10
-	github.com/alexaandru/go-sitter-forest/wing v1.5.20
+	github.com/alexaandru/go-sitter-forest/wing v1.5.21
 	github.com/alexaandru/go-sitter-forest/wit v1.5.14
 	github.com/alexaandru/go-sitter-forest/woml v1.5.10
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.10
