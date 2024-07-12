@@ -14,7 +14,7 @@ import (
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
-const langsCount = 357
+const langsCount = 358
 
 const bindingTpl = `%s
 
@@ -216,6 +216,8 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 				pack = "FunC"
 			case "cobol":
 				lang = "COBOL"
+			case "dotenv":
+				lang = "env"
 			}
 
 			fn(t, act, pack, lang)

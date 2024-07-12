@@ -128,6 +128,8 @@ github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11 h1:AaGkqtJxTpS/3tdIBi+
 github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11/go.mod h1:yiGqoHZwk9Lt81N+9LN48+YnPF5oPC6U61nT+8sUZi8=
 github.com/alexaandru/go-sitter-forest/dot v1.5.10 h1:3SRde1Pm1CfMyHw8ZK7paBKu1ybxLySi/qiq3gW4ZvE=
 github.com/alexaandru/go-sitter-forest/dot v1.5.10/go.mod h1:bskgH5LOqFzq/s8f2e80GzWQysOOgFKZIMLzM6D3vw0=
+github.com/alexaandru/go-sitter-forest/dotenv v1.5.10 h1:HOOneE1wqiqjWiKOOHZ01gZptaS8TcuZbFJjxkHWSK0=
+github.com/alexaandru/go-sitter-forest/dotenv v1.5.10/go.mod h1:JaaRMdU1zB8Mcr5gsfHcM7IcXGDXHRUsveNQYLwJTKs=
 github.com/alexaandru/go-sitter-forest/doxygen v1.5.11 h1:sPgCy1RgTsPJiEEwCkrS8lT+hDYJKrgnAmzZFP53VRA=
 github.com/alexaandru/go-sitter-forest/doxygen v1.5.11/go.mod h1:5ScjK5CdKjXWLRA/alARAiVwuIrmns8tLf2GZl8BsR4=
 github.com/alexaandru/go-sitter-forest/dtd v1.5.10 h1:ZOgvkNIyQwwGLOwCKKH69MSuGmbRnDBtKEK1PipgtDk=

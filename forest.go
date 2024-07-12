@@ -72,6 +72,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/djot"
 	"github.com/alexaandru/go-sitter-forest/dockerfile"
 	"github.com/alexaandru/go-sitter-forest/dot"
+	"github.com/alexaandru/go-sitter-forest/dotenv"
 	"github.com/alexaandru/go-sitter-forest/doxygen"
 	"github.com/alexaandru/go-sitter-forest/dtd"
 	"github.com/alexaandru/go-sitter-forest/earthfile"
@@ -436,6 +437,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"djot":               djot.GetLanguage,
 	"dockerfile":         dockerfile.GetLanguage,
 	"dot":                dot.GetLanguage,
+	"dotenv":             dotenv.GetLanguage,
 	"doxygen":            doxygen.GetLanguage,
 	"dtd":                dtd.GetLanguage,
 	"earthfile":          earthfile.GetLanguage,
