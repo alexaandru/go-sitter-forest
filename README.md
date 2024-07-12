@@ -35,7 +35,10 @@ In rare cases, the Go package name differs from the language name:
 - `func` language, same problem as above, so package name is actually `FunC`
   (but everything else is `func` as normal: folder, language name, etc.);
 - `context` language, same problem (conflict with stdlib `context` package)
-  so it uses the name `ConTeXt`.
+  so it uses the name `ConTeXt`;
+- `COBOL` language is named `COBOL` in grammar.js but we expose it as `cobol`
+  (for aligning with the rest of the parsers);
+- `dotenv` language is named `env` in grammar.js but we expose it as `dotenv`.
 
 Also, some languages may have names that are not very straightforward acronyms.
 In those cases, an `altName` field will be populated, i.e. `requirements` language

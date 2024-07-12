@@ -440,7 +440,6 @@ var rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
 func extractDeps(lang string, content []byte) (files []string) {
 	raw := rxReq.FindAllStringSubmatch(string(content), -1)
 	if len(raw) == 0 && !bytes.Contains(content, []byte("tree-sitter-xfst/grammar")) {
-		fmt.Println("bailing out")
 		return nil
 	}
 

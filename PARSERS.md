@@ -1,4 +1,4 @@
-# 357 Supported Parsers
+# 358 Supported Parsers
 
 9 pending, 4 skipped regeneration
 
@@ -69,6 +69,7 @@
 - [x] [djot](https://github.com/treeman/tree-sitter-djot) ✔️  (maintained by @NoahTheDuke)
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) ✔️  (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) ✔️  (maintained by @rydesun)
+- [x] [dotenv](https://github.com/zarifpour/tree-sitter-dotenv) ✔️  (maintained by @zarifpour)
 - [x] [doxygen](https://github.com/tree-sitter-grammars/tree-sitter-doxygen) ✔️  (maintained by @amaanq)
 - [x] [dtd](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️  (maintained by @ObserverOfTime)
 - [x] [earthfile](https://github.com/glehmann/tree-sitter-earthfile) ✔️  (maintained by @glehmann)
