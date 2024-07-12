@@ -1327,6 +1327,7 @@
   {
     "language": "hugo",
     "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
+    "doc": "is looking for an external scanner but none is present in the repo",
     "maintainedBy": "@GitesHubisz",
     "pending": true,
     "reference": "main",
@@ -1656,18 +1657,18 @@
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "srcRoot": "tree-sitter-lexc",
     "maintainedBy": "@mr-martian",
-    "pending": true,
+    "grammarSha": "879b1128503c0d3bc6398d30e54bbc085c0d8881c6c4e3c2f0705d2458736bd4",
     "reference": "master",
-    "revision": ""
+    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
   },
   {
     "language": "lexd",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "srcRoot": "tree-sitter-lexd",
     "maintainedBy": "@mr-martian",
-    "pending": true,
+    "grammarSha": "2db19e565d8b0b77721fd9cede86b8efc9b6a85f824bf9c25d1f2328f47d9f41",
     "reference": "master",
-    "revision": ""
+    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
   },
   {
     "language": "lilypond",

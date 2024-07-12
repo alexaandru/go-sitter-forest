@@ -283,10 +283,11 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 	replMap := map[string]string{
 		// Patching broken grammars so that they compile.
 		// This is a bit "brute-force", but seems to do the job :-)
-		`/u{[\da-fA-F]+}/`:   `/u[\da-fA-F]+/`,
-		`/u{[0-9a-fA-F]+}/`:  `/u[0-9a-fA-F]+/`,
-		`/u{[0-9a-fA-F ]+}/`: `/u[0-9a-fA-F]+/`,
-		`/x{[0-9a-fA-F]+}/`:  `/x[0-9a-fA-F]+/`,
+		`/u{[\da-fA-F]+}/`:    `/u[\da-fA-F]+/`,
+		`/u{[0-9a-fA-F]+}/`:   `/u[0-9a-fA-F]+/`,
+		`/u{[0-9a-fA-F ]+}/`:  `/u[0-9a-fA-F]+/`,
+		`/x{[0-9a-fA-F]+}/`:   `/x[0-9a-fA-F]+/`,
+		`/{([^}\n\\]|\\.)+}/`: `/\{([^}\n\\]|\\.)+\}/`,
 		// This is for sparql:
 		`token.immediate(
         choice(
@@ -313,6 +314,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
           choice(...PN_CHARS)
         ))
 	  ))`,
+		// for lexc
+		`require("tree-sitter-xfst/grammar")`: `require("./grammar2.js")`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
@@ -436,7 +439,8 @@ var rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
 
 func extractDeps(lang string, content []byte) (files []string) {
 	raw := rxReq.FindAllStringSubmatch(string(content), -1)
-	if len(raw) == 0 {
+	if len(raw) == 0 && !bytes.Contains(content, []byte("tree-sitter-xfst/grammar")) {
+		fmt.Println("bailing out")
 		return nil
 	}
 
@@ -468,6 +472,8 @@ func extractDeps(lang string, content []byte) (files []string) {
 		x = append(x, "./grammar/precedences.js", "./grammar/function-application.js")
 	case "idris":
 		x = append(x, "./grammar/util.js")
+	case "lexc":
+		x = append(x, "../tree-sitter-xfst/grammar.js")
 	}
 
 	return x

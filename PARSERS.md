@@ -1,6 +1,6 @@
-# 355 Supported Parsers
+# 357 Supported Parsers
 
-11 pending, 4 skipped regeneration
+9 pending, 4 skipped regeneration
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -144,7 +144,7 @@
 - [x] [htmlaskama](https://github.com/juliamertz/tree-sitter-htmlaskama) ✔️  (maintained by @juliamertz)
 - [x] [htmldjango](https://github.com/interdependence/tree-sitter-htmldjango) ✔️  (maintained by @ObserverOfTime)
 - [x] [http](https://github.com/rest-nvim/tree-sitter-http) ✔️  (maintained by @amaanq)
-- [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz)
+- [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz; is looking for an external scanner but none is present in the repo)
 - [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️  (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️  (maintained by @pfeiferj)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️  (maintained by @luckasRanarison)
@@ -178,8 +178,8 @@
 - [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️  (maintained by @lesserfish)
 - [x] [ledger](https://github.com/cbarrete/tree-sitter-ledger) ✔️  (maintained by @cbarrete)
 - [x] [leo](https://github.com/r001/tree-sitter-leo) ✔️  (maintained by @r001)
-- [ ] [lexc](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
-- [ ] [lexd](https://github.com/apertium/tree-sitter-apertium) (maintained by @mr-martian)
+- [x] [lexc](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
+- [x] [lexd](https://github.com/apertium/tree-sitter-apertium) ✔️  (maintained by @mr-martian)
 - [ ] [lilypond](https://github.com/nwhetsell/tree-sitter-lilypond) (maintained by @nwhetsell)
 - [ ] [lilypond_scheme](https://github.com/nwhetsell/tree-sitter-lilypond-scheme) (maintained by @nwhetsell)
 - [x] [linkerscript](https://github.com/tree-sitter-grammars/tree-sitter-linkerscript) ✔️  (maintained by @amaanq)

@@ -1,0 +1,9 @@
+{
+  "language": "lexd",
+  "url": "https://github.com/apertium/tree-sitter-apertium",
+  "srcRoot": "tree-sitter-lexd",
+  "maintainedBy": "@mr-martian",
+  "grammarSha": "2db19e565d8b0b77721fd9cede86b8efc9b6a85f824bf9c25d1f2328f47d9f41",
+  "reference": "master",
+  "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c"
+}
