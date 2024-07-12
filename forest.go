@@ -34,6 +34,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/brightscript"
 	"github.com/alexaandru/go-sitter-forest/c"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
+	"github.com/alexaandru/go-sitter-forest/ca65"
 	"github.com/alexaandru/go-sitter-forest/cairo"
 	"github.com/alexaandru/go-sitter-forest/calc"
 	"github.com/alexaandru/go-sitter-forest/capnp"
@@ -399,6 +400,7 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"brightscript":       brightscript.GetLanguage,
 	"c":                  c.GetLanguage,
 	"c_sharp":            c_sharp.GetLanguage,
+	"ca65":               ca65.GetLanguage,
 	"cairo":              cairo.GetLanguage,
 	"calc":               calc.GetLanguage,
 	"capnp":              capnp.GetLanguage,
