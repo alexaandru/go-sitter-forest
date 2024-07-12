@@ -1,0 +1,1 @@
+(kw_forall) @keyword

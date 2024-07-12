@@ -1,0 +1,131 @@
+;; Includes
+
+((symbol) @keyword.control.import
+  {{match "@keyword.control.import" "Import"}})
+
+;; Keywords
+
+((symbol) @keyword
+  {{match "@keyword" "Special"}})
+
+; Keywords construct a symbol
+
+(keyword) @string.special.symbol
+
+;; Operators
+
+; TODO: classify
+((symbol) @operator (#match? @operator "^(&|\\*|\\+|-|<|<=|=|>|>=)$"))
+
+;; Defining
+
+((list
+  . (symbol) @label
+  . (symbol) @function
+  (symbol)? @parameter)
+  {{match "@label" "Def"}})
+
+((cons
+  . (symbol) @label
+  . (symbol) @function
+  (symbol)? @parameter)
+  {{match "@label" "Def"}})
+
+((symbol) @label
+  {{match "@label" "Def"}})
+
+;; Builtins
+
+((symbol) @function.builtin
+  {{match "@function.builtin" "Fn"}})
+
+((symbol) @function.macro
+  {{match "@function.macro" "Op"}})
+
+;; Conditionals
+
+((symbol) @keyword.control.conditional
+  {{match "@keyword.control.conditional" "Cond"}})
+
+;; Repeats
+
+((symbol) @keyword.control.repeat
+  {{match "@keyword.control.repeat" "Repeat"}})
+
+;; Special forms
+
+; (-> x y z) highlights first x as var, y z as function
+(list
+  .
+  (symbol) @function.macro
+  (#eq? @function.macro "->")
+  .
+  (symbol) @variable.parameter
+  (symbol) @function)
+
+; (-> 42 x y) highlights 42 as regular number
+(list
+  .
+  (symbol) @function.macro
+  (#eq? @function.macro "->")
+  .
+  (_)
+  (symbol) @function)
+
+;; Functions
+
+(list
+  . (symbol) @function)
+
+;; Variables
+
+(list (symbol) @variable)
+
+(cons (symbol) @variable)
+
+(scope (symbol) @variable)
+
+(symbind (symbol) @variable)
+
+;; Namespaces
+
+(symbind
+  (symbol) @namespace
+  . (keyword))
+
+;; Punctuation
+
+[ "(" ")" ] @punctuation.bracket
+
+[ "{" "}" ] @punctuation.bracket
+
+[ "[" "]" ] @punctuation.bracket
+
+((symbol) @punctuation.delimiter
+  (#eq? @punctuation.delimiter "->"))
+
+;; Literals
+
+(string) @string
+
+(escape_sequence) @constant.character.escape
+
+(path) @string.special.path
+(command) @string.special.path
+
+(number) @constant.numeric.integer
+
+(boolean) @constant.builtin.boolean
+
+[
+  (ignore)
+  (null)
+] @constant.builtin
+
+[
+  "^"
+] @character.special
+
+;; Comments
+
+(comment) @comment.line @spell

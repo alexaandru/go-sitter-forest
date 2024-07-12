@@ -1,0 +1,8 @@
+name = "TORT"
+grammar = "tort"
+path_suffixes = ["tort"]
+line_comment = ["# ", "#! "]
+brackets = [{ start = "[", end = "]", close = true, newline = false }]
+
+num = 5.0
+bool = true

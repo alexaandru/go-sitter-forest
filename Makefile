@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := check
 
-check-updates update-all force-update-all update-bindings:
+check-updates update-all update-queries force-update-all update-bindings:
 	@go run ./internal/automation $@
 
-update-% force-update-%:
+update-% force-update-% update-queries-%:
 	@go run ./internal/automation $@
 
 include Plugins.make
