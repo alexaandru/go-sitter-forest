@@ -274,6 +274,8 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 				lang = "COBOL"
 			case "dotenv":
 				lang = "env"
+			case "walnut":
+				lang = "cwal"
 			}
 
 			fn(t, act, pack, lang)

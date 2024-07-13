@@ -1354,6 +1354,14 @@
     "revision": "e061995f0caf2fa30f68fa1fdf2c08bcbd4629a8"
   },
   {
+    "language": "http2",
+    "url": "https://github.com/rstcruzo/tree-sitter-http2",
+    "maintainedBy": "@rstcruzo",
+    "grammarSha": "8662fd422dd4bf3ff0d9ac86199d479904362790c0e21608381529b82abe103b",
+    "reference": "main",
+    "revision": "3836bf26da6c9106070d377c4d08f0be5bed06af"
+  },
+  {
     "language": "hugo",
     "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
     "doc": "is looking for an external scanner but none is present in the repo",
@@ -1773,11 +1781,12 @@
   },
   {
     "language": "lox",
-    "url": "https://github.com/marcuscaisey/tree-sitter-lox",
+    "url": "https://github.com/marcuscaisey/lox",
+    "srcRoot": "tree-sitter",
     "maintainedBy": "@marcuscaisey",
     "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
     "reference": "master",
-    "revision": "3510c523f371247634f3b7b0de061dfe318f625a"
+    "revision": "f6b219b0130f7d48ffb8a7a6509c857541d358eb"
   },
   {
     "language": "lua",
@@ -3425,6 +3434,17 @@
     "grammarSha": "6d0c8fe145d98b55a4d782590d847a95b449e9bdaa556b2f5f33b16bffe2cb1a",
     "reference": "main",
     "revision": "22bdfa6c9fc0f5ffa44c6e938ec46869ac8a99ff"
+  },
+  {
+    "language": "walnut",
+    "url": "https://github.com/UserNobody14/tree-sitter-crystal-walnut",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@UserNobody14",
+    "grammarSha": "038d3d47804d4b99af4194957fe60d9baf07fb84dae719ba5dbf3220bd11bd97",
+    "reference": "main",
+    "revision": "89e8f3a8dd025309301d0978b3843c7f4f39fcaa"
   },
   {
     "language": "wgsl",

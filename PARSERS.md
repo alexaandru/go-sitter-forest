@@ -1,6 +1,6 @@
-# 359 Supported Parsers
+# 361 Supported Parsers
 
-10 pending, 4 skipped regeneration, 19 missing queries
+10 pending, 4 skipped regeneration, 20 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -147,6 +147,7 @@
 - [x] [htmlaskama](https://github.com/juliamertz/tree-sitter-htmlaskama) ✔️ (maintained by @juliamertz)
 - [x] [htmldjango](https://github.com/interdependence/tree-sitter-htmldjango) ✔️ (maintained by @ObserverOfTime)
 - [x] [http](https://github.com/rest-nvim/tree-sitter-http) ✔️ (maintained by @amaanq)
+- [x] [http2](https://github.com/rstcruzo/tree-sitter-http2) ✔️ (maintained by @rstcruzo)
 - [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz; is looking for an external scanner but none is present in the repo)
 - [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️ (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️ (maintained by @pfeiferj)
@@ -191,7 +192,7 @@
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️ (maintained by @benwilliamgraham)
 - [ ] [loongdoc](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [ ] [loongdoc_inline](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
-- [x] [lox](https://github.com/marcuscaisey/tree-sitter-lox) ✔️ (maintained by @marcuscaisey)
+- [x] [lox](https://github.com/marcuscaisey/lox) ✔️ (maintained by @marcuscaisey)
 - [x] [lua](https://github.com/tree-sitter-grammars/tree-sitter-lua) ✔️ (maintained by @MunifTanjim)
 - [x] [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc) ✔️ (maintained by @amaanq)
 - [x] [lua patterns](https://github.com/tree-sitter-grammars/tree-sitter-luap) ✔️ (maintained by @amaanq)
@@ -360,6 +361,7 @@
 - [x] [virdant](https://github.com/maloneymr/tree-sitter-virdant) ✔️ (maintained by @maloneymr)
 - [x] [virgil](https://github.com/btwj/tree-sitter-virgil) ✔️ (maintained by @btwj)
 - [x] [vue](https://github.com/tree-sitter-grammars/tree-sitter-vue) ✔️ (maintained by @WhyNotHugo, @lucario387)
+- [x] [walnut](https://github.com/UserNobody14/tree-sitter-crystal-walnut) 🗸 (maintained by @UserNobody14)
 - [x] [wgsl](https://github.com/szebniok/tree-sitter-wgsl) ✔️ (maintained by @szebniok)
 - [x] [wgsl_bevy](https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy) ✔️ (maintained by @theHamsta)
 - [x] [wing](https://github.com/winglang/wing) ✔️ (maintained by @gshpychka, @MarkMcCulloh)

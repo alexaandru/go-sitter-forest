@@ -1,0 +1,11 @@
+{
+  "language": "walnut",
+  "url": "https://github.com/UserNobody14/tree-sitter-crystal-walnut",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@UserNobody14",
+  "grammarSha": "038d3d47804d4b99af4194957fe60d9baf07fb84dae719ba5dbf3220bd11bd97",
+  "reference": "main",
+  "revision": "89e8f3a8dd025309301d0978b3843c7f4f39fcaa"
+}

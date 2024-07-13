@@ -142,6 +142,8 @@ func mkBindingMap(lang string) (out map[string]string) {
 			langOut = "COBOL"
 		case "dotenv":
 			langOut = "env"
+		case "walnut":
+			langOut = "cwal"
 		case "unison":
 			silencer = "//#cgo CFLAGS: -Wno-stringop-overflow"
 		case "cleancopy":
