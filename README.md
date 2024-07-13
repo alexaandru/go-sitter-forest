@@ -56,7 +56,7 @@ as well as the `example_*.go` files in this repo.
 This repo only gives you the `GetLanguage()` function, you will still use the sibling
 repo for all your interactions with the tree.
 
-You can use the parsers in this repo in 3 main ways:
+You can use the parsers in this repo in several ways:
 
 #### 1. Standalone
 
@@ -134,6 +134,16 @@ Then you can selectively use them in your app using the [plugins mechanism](http
 **IMPORTANT:** You **MUST** use `-trimpath` when building your app, when using plugins
 (the [Plugins.make](Plugins.make) file already includes it, but the app that uses them also needs it).
 
+#### 4. Your Own Way
+
+You can mix and match the above, obviously.
+
+Probably the best approach would be to build your own "mini-forest", using the forest
+package as a template but only including the languages you are interested in.
+
+I'm not excluding offering "mini forests" in the future, guarded by build tags,
+if I ever figure some subsets that make sense (most used/popular/known/whatever).
+
 #### Info
 
 Each individual parser (as well as the bulk loader) offers an `Info()` function
@@ -163,6 +173,12 @@ query for Go, one would call `forest.GetQuery("go", "highlights")`.
 
 You can optionally pass the query lookup preference, see the `NvimFirst`, `NativeFirst`,
 etc. in `forest.go` for details, as in: `forest.GetQuery("go", "highlights", forest.NvimOnly)`.
+
+The queries respect the "inherits:" directive (nvim_treesitter specific), recursively,
+returning the final query with all inherited queries included, at the forest level.
+The individual packages' own GetQuery() obviously cannot do that, since they do not
+have access to other parsers' own queries, only the forest has that. See `forest.GetQuery()`
+on how to replicate that on your end if using the individual packages.
 
 ## Parser Code Changes
 
@@ -228,6 +244,8 @@ version everywhere, and keeping up with it too.
   generate a ton of "update noise"): say, do not attempt to update anything that
   was updated in the past N days (let's start with 3?);
 - queries needs some more work:
+  - capture "remaining" nvim_treesitter tags (ecma,jsx,html_tags,terraform) as they
+    are used via "inherits;" directives;
   - only update if needed (commit has changed) on update-queries
     (it already does that when run via update-all, implicitly);
 - filter automatically high memory usage parsers and run them one by one (at the end?);

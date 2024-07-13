@@ -1,9 +1,12 @@
 package forest
 
 import (
+	"bytes"
 	_ "embed"
 	enc_json "encoding/json"
+	"regexp"
 	"slices"
+	"strings"
 
 	"github.com/alexaandru/go-sitter-forest/abap"
 	"github.com/alexaandru/go-sitter-forest/ada"
@@ -1114,6 +1117,9 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 var (
 	langNames []string
 	grammars  []*grammar.Grammar
+	// Making the colon optional is risky: most places use it AND
+	// there are many places that do NOT use it and mean something else...
+	rxInherits = regexp.MustCompile(`^\s*;\s*inherits:?\s*(.*?)\n`)
 )
 
 // Lang returns the corresponding TS language function for name.
@@ -1123,7 +1129,7 @@ func GetLanguage(lang string) func() *sitter.Language {
 }
 
 // GetQuery returns (if it exists) the `kind`.scm query for `lang` language,
-// using the DefaultPreference.
+// using the DefaultPreference, resolving "inherits" directives, recursively.
 // You should omit the ".scm" extension.
 func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 	q := queryFuncs[lang]
@@ -1131,7 +1137,31 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 		return
 	}
 
-	return q(kind, opts...)
+	out = q(kind, opts...)
+
+	if len(out) == 0 {
+		// log somewhere/somehow that we're '"unable to locate a %q query for %q", "highlights", lang
+		return
+	}
+
+	mx := rxInherits.FindSubmatch(out)
+	if mx == nil {
+		return
+	}
+
+	inherited := strings.Split(string(mx[1]), ",")
+	for _, in := range inherited {
+		out2 := GetQuery(in, kind)
+		if len(out2) == 0 {
+			continue
+		}
+
+		out = slices.Concat(out2, []byte{10, 10}, out)
+	}
+
+	// FIXME: Figure out what the `\\c` escape is meant for and replace
+	// it with something more appropriate (if there is anything).
+	return bytes.ReplaceAll(out, []byte(`\\c`), nil)
 }
 
 func SupportedLanguages() []string {
