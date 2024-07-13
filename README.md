@@ -151,11 +151,17 @@ the corresponding queries. The queries are compiled from two sources:
 1. `nvim_treesitter` project and
 2. the individual sitter repos' own `queries` folders.
 
-The queries are embedded in the library (at the time of writing this, for 359 parsers,
-the queries are only 11MB) and they can be fetched via `forest.GetQuery(lang, kind)`
-where kind is one of {`highlights`, `indent`, `folds`, etc.} (preferably without the
+The queries are embedded in the packages (at the time of writing this, for 359 parsers,
+the queries are only 11MB) and they can be fetched exactly the same as languages,
+just replace `GetLanguage()` with `GetQuery(kind)` or `forest.GetQuery(lang, kind)`.
+They are available for standalone packages, plugins as well as forest itself.
+
+The kind is one of {`highlights`, `indent`, `folds`, etc.} (preferably without the
 ".scm" extension, but will work with it included as well). I.e. to get the highlights
 query for Go, one would call `forest.GetQuery("go", "highlights")`.
+
+You can optionally pass the query lookup preference, see the `NvimFirst`, `NativeFirst`,
+etc. in `forest.go` for details, as in: `forest.GetQuery("go", "highlights", forest.NvimOnly)`.
 
 ## Parser Code Changes
 
@@ -217,15 +223,15 @@ version everywhere, and keeping up with it too.
 
 ## TODO
 
+- use a template to refresh the forest maps (of lang funcs, and query funcs);
 - queries needs some more work:
-  - move them from forest to individual parsers (so they can be used individually);
-  - have the forest use them from the parsers (similar to GetLanguage);
+  - only update if needed (commit has changed);
   - some of them (bass, matlab, syphon, vala) use {n(eo)vim,helix}/\*.scm convetion,
     only pull in nvim ones (and not in subfolder);
   - some of them (d) use {nova,helix,}-\*.scm convention, only pull in generic ones
     (or nvim if they'll have them);
-  - update-queries should not leave behind empty folders under internal/queries;
 - filter automatically high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
+  (go mod init+tidy, create \_keep.scm file, go work use, what else... TBD);
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally).

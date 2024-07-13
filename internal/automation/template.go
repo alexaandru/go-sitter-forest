@@ -9,28 +9,84 @@ const (
 	bindingTpl = `%s
 
 package %s
-
+%s
 //#include "parser.h"
 //TSLanguage *tree_sitter_%s();
 import "C"
 
 import (
-	_ "embed"
+	"embed"
+	"strings"
 	"unsafe"
 
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
-//go:embed grammar.json
-var info []byte
+const (
+	_ byte = iota
+	NvimFirst
+	NativeFirst
+	NvimOnly
+	NativeOnly
+)
+
+const nvimts = "nvimts__"
+
+//go:embed grammar.json *.scm
+var files embed.FS
 
 func GetLanguage() *sitter.Language {
 	ptr := unsafe.Pointer(C.tree_sitter_%s())
 	return sitter.NewLanguage(ptr)
 }
 
+func GetQuery(kind string, opts ...byte) (out []byte) {
+	kind = strings.TrimSuffix(kind, ".scm") + ".scm"
+
+	pref := NvimFirst
+	if len(opts) > 0 {
+		pref = opts[0]
+	}
+
+	var err error
+
+	switch pref {
+	case NvimFirst:
+		out, err = files.ReadFile(nvimts + kind)
+		if err == nil && len(out) > 0 {
+			return
+		}
+
+		out, _ = files.ReadFile(kind)
+
+		return
+	case NativeFirst:
+		out, err = files.ReadFile(kind)
+		if err == nil && len(out) > 0 {
+			return
+		}
+
+		out, _ = files.ReadFile(nvimts + kind)
+
+		return
+	case NvimOnly:
+		out, _ = files.ReadFile(nvimts + kind)
+		return
+	case NativeOnly:
+		out, _ = files.ReadFile(kind)
+		return
+	}
+
+	return
+}
+
 func Info() string {
-	return string(info)
+	out, err := files.ReadFile("grammar.json")
+	if err != nil {
+		return err.Error()
+	}
+
+	return string(out)
 }
 `
 	bindingTestTpl = `//go:build !plugin
@@ -73,22 +129,42 @@ var tplBindings = map[string]string{
 func mkBindingMap(lang string) (out map[string]string) {
 	out = map[string]string{}
 	for k, v := range tplBindings {
-		pack := lang
+		pack, langOut, silencer, fpath := lang, lang, "", filepath.Join(lang, k)
 
 		switch lang {
 		case "go":
 			pack = "Go"
 		case "func":
 			pack = "FunC"
+		case "context":
+			pack = "ConTeXt"
+		case "cobol":
+			langOut = "COBOL"
+		case "dotenv":
+			langOut = "env"
+		case "unison":
+			silencer = "//#cgo CFLAGS: -Wno-stringop-overflow"
+		case "cleancopy":
+			silencer = "//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w"
+		case "htmlaskama":
+			silencer = "//#cgo CFLAGS: -Wno-builtin-declaration-mismatch"
+		case "note":
+			silencer = "//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch"
+		case "ott":
+			silencer = "//#cgo CFLAGS: -Wno-stringop-overflow"
+		}
+
+		if silencer != "" {
+			silencer = "\n" + silencer
 		}
 
 		switch k {
 		case "binding.go":
-			out[filepath.Join(lang, k)] = fmt.Sprintf(v, "//go:build !plugin", pack, lang, lang)
+			out[fpath] = fmt.Sprintf(v, "//go:build !plugin", pack, silencer, langOut, langOut)
 		case "binding_test.go":
-			out[filepath.Join(lang, k)] = fmt.Sprintf(v, pack, pack, pack)
+			out[fpath] = fmt.Sprintf(v, pack, pack, pack)
 		case "plugin.go":
-			out[filepath.Join(lang, k)] = fmt.Sprintf(v, "//go:build plugin", "main", lang, lang)
+			out[fpath] = fmt.Sprintf(v, "//go:build plugin", "main", silencer, langOut, langOut)
 		}
 	}
 

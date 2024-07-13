@@ -1,6 +1,6 @@
 # 359 Supported Parsers
 
-10 pending, 4 skipped regeneration, 20 missing queries
+10 pending, 4 skipped regeneration, 19 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -48,7 +48,7 @@
 - [x] [clojure](https://github.com/sogaiu/tree-sitter-clojure) ✔️ (maintained by @NoahTheDuke)
 - [x] [cmake](https://github.com/uyha/tree-sitter-cmake) ✔️ (maintained by @uyha)
 - [x] [cobol](https://github.com/yutaro-sakamoto/tree-sitter-cobol) ✔️ (maintained by @yutaro-sakamoto)
-- [x] [cognate](https://github.com/hedyhli/tree-sitter-cognate) 🗸 (maintained by @hedyhli)
+- [x] [cognate](https://github.com/hedyhli/tree-sitter-cognate) ✔️ (maintained by @hedyhli)
 - [x] [comment](https://github.com/stsewd/tree-sitter-comment) ✔️ (maintained by @stsewd)
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️ (maintained by @theHamsta)
 - [x] [context](https://github.com/pmazaitis/tree-sitter-context) ✔️ (maintained by @pmazaitis)
@@ -277,7 +277,7 @@
 - [x] [robots](https://github.com/opa-oz/tree-sitter-robots-txt) ✔️ (maintained by @opa-oz)
 - [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️ (maintained by @nat-418)
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️ (maintained by @amaanq)
-- [ ] [rst](https://github.com/stsewd/tree-sitter-rst) 🔍 (maintained by @stsewd)
+- [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd)
 - [x] [rtx](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️ (maintained by @TravonteD)
 - [x] [rust](https://github.com/tree-sitter/tree-sitter-rust) ✔️ (maintained by @amaanq)
@@ -315,7 +315,7 @@
 - [x] [svelte](https://github.com/tree-sitter-grammars/tree-sitter-svelte) ✔️ (maintained by @amaanq)
 - [x] [swift](https://github.com/alex-pinkus/tree-sitter-swift) ✔️ (maintained by @alex-pinkus)
 - [x] [sxhkdrc](https://github.com/RaafatTurki/tree-sitter-sxhkdrc) ✔️ (maintained by @RaafatTurki)
-- [x] [syphon](https://github.com/yhyadev/tree-sitter-syphon) 🗸 (maintained by @yhyadev)
+- [x] [syphon](https://github.com/yhyadev/tree-sitter-syphon) ✔️ (maintained by @yhyadev)
 - [x] [systemtap](https://github.com/ok-ryoko/tree-sitter-systemtap) ✔️ (maintained by @ok-ryoko)
 - [x] [systemverilog](https://github.com/zhangwwpeng/tree-sitter-systemverilog) ✔️ (maintained by @zhangwwpeng)
 - [x] [t32](https://gitlab.com/xasc/tree-sitter-t32) ✔️ (maintained by @xasc)

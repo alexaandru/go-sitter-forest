@@ -9,7 +9,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"io/fs"
 	"log/slog"
 	"maps"
 	"net/http"
@@ -56,9 +55,8 @@ var (
 		`"tree_sitter/alloc.h"`:          `"alloc.h"`,
 	}
 
-	logFile            *os.File
-	logger             *slog.Logger
-	silentQueryUpdates bool
+	logFile *os.File
+	logger  *slog.Logger
 )
 
 func checkUpdates() error {
@@ -184,15 +182,6 @@ func updateGrammars() (err error) {
 	}
 
 	return updateParsersMd()
-}
-
-func updateQueries() (err error) {
-	if err = fetchQueries(&grammar.Grammar{Language: "nvim_treesitter", URL: nvimTreeSiterURL}); err != nil {
-		return
-	}
-
-	// TODO: Skip update if commit did not change.
-	return forEachGrammar(fetchQueries)
 }
 
 func update(gr *grammar.Grammar, force bool) (err error) {
@@ -616,114 +605,6 @@ func downloadFile(lang, url, toPath string) error {
 	return putFile(b, lang, toPath)
 }
 
-func fetchQueries(gr *grammar.Grammar) (err error) {
-	tmpPath := filepath.Join("tmp", gr.Language)
-	bailedOut := false
-	os.RemoveAll(tmpPath) // Only if it exists, so we don't care if it errors out.
-
-	if err = os.MkdirAll(tmpPath, os.ModePerm); err != nil {
-		return
-	}
-
-	cmds := [][]string{
-		{"clone", "-n", "--depth=1", "--filter=tree:0", gr.URL, "."},
-		{"sparse-checkout", "set", "--no-cone", "queries"},
-		{"checkout"},
-	}
-
-	for _, args := range cmds {
-		if err = runCmd(tmpPath, "git", args...); err != nil {
-			return
-		}
-	}
-
-	defer func() {
-		if err == nil && !silentQueryUpdates {
-			if bailedOut {
-				fmt.Println("Skipped queries for", gr.Language)
-			} else {
-				fmt.Println("Updated queries for", gr.Language)
-			}
-		}
-	}()
-
-	src := filepath.Join(tmpPath, "queries")
-	if gr.SrcRoot != "" {
-		src = filepath.Join(tmpPath, gr.SrcRoot, "queries")
-	}
-
-	defer func() {
-		if err != nil && os.IsNotExist(err) {
-			logger.Warn(err.Error(), "src", src)
-			bailedOut, err = true, nil
-		}
-	}()
-
-	dst := filepath.Join("internal", "queries", gr.Language)
-
-	os.RemoveAll(dst)
-
-	return recursiveCopy(src, dst, gr.Language != "nvim_treesitter")
-}
-
-func recursiveCopy(src, dstPath string, flatten bool) (err error) {
-	if err = os.MkdirAll(dstPath, os.ModePerm); err != nil {
-		return
-	}
-
-	return filepath.WalkDir(src, func(path string, d fs.DirEntry, err error) error {
-		if err != nil {
-			return err
-		}
-
-		if d.IsDir() {
-			return nil
-		}
-
-		relPath, _ := filepath.Rel(src, path)
-		dst := filepath.Join(dstPath, relPath)
-
-		if flatten {
-			dst = filepath.Join(dstPath, filepath.Base(path))
-		}
-
-		dstDir := filepath.Dir(dst)
-		if err = os.MkdirAll(dstDir, os.ModePerm); err != nil {
-			return err
-		}
-
-		in, err := os.Open(path)
-		if err != nil {
-			return err
-		}
-		defer in.Close()
-
-		out, err := os.Create(dst)
-		if err != nil {
-			return err
-		}
-
-		if _, err = io.Copy(out, in); err != nil {
-			return err
-		}
-
-		return out.Close()
-	})
-}
-
-func runCmd(dir, comm string, args ...string) (err error) {
-	cmd := exec.Command(comm, args...)
-	cmd.Dir = dir
-
-	var b []byte
-
-	if b, err = cmd.CombinedOutput(); err != nil {
-		fmt.Println(string(b))
-	}
-
-	return
-}
-
 func putFile(b []byte, lang, toPath string) error {
 	reMap := maps.Clone(replaceMap)
 
@@ -847,9 +728,7 @@ func updateParsersMd() error {
 			attr = " 🗸"
 		}
 
-		gl1, _ := filepath.Glob(filepath.Join("internal", "queries", "nvim_treesitter", gr.Language, "*.scm"))
-		gl2, _ := filepath.Glob(filepath.Join("internal", "queries", gr.Language, "*.scm"))
-		if len(gl1)+len(gl2) > 0 {
+		if scms, _ := filepath.Glob(filepath.Join(gr.Language, "*.scm")); len(scms) > 1 {
 			if attr == " 🗸" {
 				attr = " ✔️"
 			} else {
