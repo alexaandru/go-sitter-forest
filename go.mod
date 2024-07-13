@@ -145,6 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.5.100
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.100
 	github.com/alexaandru/go-sitter-forest/http v1.5.100
+	github.com/alexaandru/go-sitter-forest/http2 v1.5.100
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
@@ -349,6 +350,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/virdant v1.5.100
 	github.com/alexaandru/go-sitter-forest/virgil v1.5.100
 	github.com/alexaandru/go-sitter-forest/vue v1.5.100
+	github.com/alexaandru/go-sitter-forest/walnut v1.5.100
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.100
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.100
 	github.com/alexaandru/go-sitter-forest/wing v1.5.100

@@ -147,6 +147,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/htmlaskama"
 	"github.com/alexaandru/go-sitter-forest/htmldjango"
 	"github.com/alexaandru/go-sitter-forest/http"
+	"github.com/alexaandru/go-sitter-forest/http2"
 	"github.com/alexaandru/go-sitter-forest/hungarian"
 	"github.com/alexaandru/go-sitter-forest/hurl"
 	"github.com/alexaandru/go-sitter-forest/hyprlang"
@@ -352,6 +353,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/virdant"
 	"github.com/alexaandru/go-sitter-forest/virgil"
 	"github.com/alexaandru/go-sitter-forest/vue"
+	"github.com/alexaandru/go-sitter-forest/walnut"
 	"github.com/alexaandru/go-sitter-forest/wgsl"
 	"github.com/alexaandru/go-sitter-forest/wgsl_bevy"
 	"github.com/alexaandru/go-sitter-forest/wing"
@@ -524,6 +526,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"htmlaskama":         htmlaskama.GetLanguage,
 	"htmldjango":         htmldjango.GetLanguage,
 	"http":               http.GetLanguage,
+	"http2":              http2.GetLanguage,
 	"hungarian":          hungarian.GetLanguage,
 	"hurl":               hurl.GetLanguage,
 	"hyprlang":           hyprlang.GetLanguage,
@@ -728,6 +731,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"virdant":            virdant.GetLanguage,
 	"virgil":             virgil.GetLanguage,
 	"vue":                vue.GetLanguage,
+	"walnut":             walnut.GetLanguage,
 	"wgsl":               wgsl.GetLanguage,
 	"wgsl_bevy":          wgsl_bevy.GetLanguage,
 	"wing":               wing.GetLanguage,
@@ -886,6 +890,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"htmlaskama":         htmlaskama.GetQuery,
 	"htmldjango":         htmldjango.GetQuery,
 	"http":               http.GetQuery,
+	"http2":              http2.GetQuery,
 	"hungarian":          hungarian.GetQuery,
 	"hurl":               hurl.GetQuery,
 	"hyprlang":           hyprlang.GetQuery,
@@ -1090,6 +1095,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"virdant":            virdant.GetQuery,
 	"virgil":             virgil.GetQuery,
 	"vue":                vue.GetQuery,
+	"walnut":             walnut.GetQuery,
 	"wgsl":               wgsl.GetQuery,
 	"wgsl_bevy":          wgsl_bevy.GetQuery,
 	"wing":               wing.GetQuery,
