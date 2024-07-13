@@ -1,8 +1,8 @@
 (source_file) @local.scope
 
-(preprocessor_import (identifier) @local.definition.import)
+(import (identifier) @local.definition.import)
 
-(preprocessor_define
+(define
   (identifier) @local.definition.macro)
 
 (arguments
@@ -12,7 +12,7 @@
   name: (identifier) @local.definition.function) @local.scope
   (#set! definition.function.scope "parent"))
 
-((function_call
+((call
   name: (identifier) @_func
   arguments: (arguments (in
     left: (usage (identifier) @local.definition.var))))

@@ -1997,22 +1997,22 @@ static const TSFieldMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
   [33] = {.index = 70, .length = 2},
   [34] = {.index = 72, .length = 4},
   [35] = {.index = 76, .length = 4},
-  [36] = {.index = 80, .length = 3},
-  [37] = {.index = 83, .length = 3},
-  [38] = {.index = 86, .length = 2},
-  [39] = {.index = 88, .length = 3},
-  [40] = {.index = 91, .length = 5},
-  [41] = {.index = 96, .length = 4},
-  [42] = {.index = 100, .length = 3},
-  [43] = {.index = 103, .length = 4},
-  [44] = {.index = 107, .length = 2},
-  [45] = {.index = 109, .length = 2},
-  [46] = {.index = 111, .length = 5},
-  [47] = {.index = 116, .length = 5},
-  [48] = {.index = 121, .length = 3},
-  [49] = {.index = 124, .length = 4},
-  [50] = {.index = 128, .length = 5},
-  [51] = {.index = 133, .length = 5},
+  [36] = {.index = 80, .length = 4},
+  [37] = {.index = 84, .length = 3},
+  [38] = {.index = 87, .length = 2},
+  [39] = {.index = 89, .length = 3},
+  [40] = {.index = 92, .length = 5},
+  [41] = {.index = 97, .length = 4},
+  [42] = {.index = 101, .length = 4},
+  [43] = {.index = 105, .length = 5},
+  [44] = {.index = 110, .length = 2},
+  [45] = {.index = 112, .length = 2},
+  [46] = {.index = 114, .length = 5},
+  [47] = {.index = 119, .length = 5},
+  [48] = {.index = 124, .length = 3},
+  [49] = {.index = 127, .length = 5},
+  [50] = {.index = 132, .length = 6},
+  [51] = {.index = 138, .length = 5},
 };
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
@@ -2135,71 +2135,76 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_args, 1},
     {field_def, 5},
     {field_name, 0},
-  [83] =
+    {field_ty, 3},
+  [84] =
     {field_decs, 5},
     {field_withtype, 2},
     {field_withtype, 3},
-  [86] =
+  [87] =
     {field_name, 0},
     {field_sig, 2},
-  [88] =
+  [89] =
     {field_arg, 2},
     {field_def, 5},
     {field_name, 0},
-  [91] =
+  [92] =
     {field_body, 3},
     {field_body, 4},
     {field_body, 5},
     {field_body, 6},
     {field_decs, 1},
-  [96] =
+  [97] =
     {field_argl, 1},
     {field_argr, 3},
     {field_def, 6},
     {field_name, 2},
-  [100] =
+  [101] =
     {field_args, 2},
     {field_def, 6},
     {field_name, 1},
-  [103] =
+    {field_ty, 4},
+  [105] =
     {field_argl, 0},
     {field_argr, 2},
     {field_def, 6},
     {field_name, 1},
-  [107] =
+    {field_ty, 4},
+  [110] =
     {field_def, 6},
     {field_name, 0},
-  [109] =
+  [112] =
     {field_def, 3},
     {field_name, 1},
-  [111] =
+  [114] =
     {field_argl, 1},
     {field_argr, 3},
     {field_args, 5},
     {field_def, 7},
     {field_name, 2},
-  [116] =
+  [119] =
     {field_arg, 2},
     {field_arg, 3},
     {field_arg, 4},
     {field_def, 7},
     {field_name, 0},
-  [121] =
+  [124] =
     {field_arg, 2},
     {field_def, 7},
     {field_name, 0},
-  [124] =
+  [127] =
     {field_argl, 1},
     {field_argr, 3},
     {field_def, 8},
     {field_name, 2},
-  [128] =
+    {field_ty, 6},
+  [132] =
     {field_argl, 1},
     {field_argr, 3},
     {field_args, 5},
     {field_def, 9},
     {field_name, 2},
-  [133] =
+    {field_ty, 7},
+  [138] =
     {field_arg, 2},
     {field_arg, 3},
     {field_arg, 4},

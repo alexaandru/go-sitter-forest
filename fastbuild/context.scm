@@ -2,7 +2,7 @@
   body: (_) @context.end
 ) @context
 
-(function_call
+(call
   body: (_) @context.end
 ) @context
 

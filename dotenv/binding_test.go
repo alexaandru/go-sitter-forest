@@ -20,7 +20,7 @@ long text here,
 e.g. a private SSH key
 """
 `
-	expected = "(source_file (comment) (variable name: (identifier) value: (value (raw_value))) (variable name: (identifier) value: (value (string_interpolated (escape_sequence) (interpolated_variable (ERROR (UNEXPECTED '{')) (identifier))))) (variable name: (identifier) value: (value (string_literal))) (variable name: (identifier) value: (value (string_interpolated))) (ERROR (UNEXPECTED 'l') (identifier) (UNEXPECTED 'k')))"
+	expected = "(source_file (comment) (variable name: (identifier) value: (value (raw_value))) (variable name: (identifier) value: (value (string_interpolated (escape_sequence) (interpolated_variable (identifier))))) (variable name: (identifier) value: (value (string_literal))) (variable name: (identifier) value: (value (string_interpolated))) (ERROR (UNEXPECTED 'l') (identifier) (UNEXPECTED 'k')))"
 )
 
 func TestGrammar(t *testing.T) {

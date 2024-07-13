@@ -2,7 +2,7 @@
   "language": "bluespec",
   "url": "https://github.com/panther03/tree-sitter-bluespec",
   "maintainedBy": "@panther03",
-  "grammarSha": "2a5c3841411570e6b7531d79766a58b100a350f3d96d4be2439c5e4b47dc973b",
+  "grammarSha": "e8d26334f5e4aa437a93f0779af233511ca9abdb7e98ecc3e87c39431a3f1356",
   "reference": "master",
-  "revision": "198e3bf6912875dd94fb8edb19f2e227af4ad2bb"
+  "revision": "4f4291803fde1cf62aebb8ab30ae2b97ec0e2bf9"
 }

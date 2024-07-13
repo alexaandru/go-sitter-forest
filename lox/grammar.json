@@ -2,7 +2,7 @@
   "language": "lox",
   "url": "https://github.com/marcuscaisey/tree-sitter-lox",
   "maintainedBy": "@marcuscaisey",
-  "grammarSha": "36a23c84d06ee1bea37e26584df618bf6f7b4e0160ae06ffa819c681c8d9be9e",
+  "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
   "reference": "master",
-  "revision": "355b4c820404645272f80498fc2d49d386cec822"
+  "revision": "3510c523f371247634f3b7b0de061dfe318f625a"
 }

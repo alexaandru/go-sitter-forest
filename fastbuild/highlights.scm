@@ -9,12 +9,12 @@
 ; (struct (expression (interpolation (identifier) @variable.member)))
 ; (arguments (expression (identifier) @variable.parameter))
 (
- (function_call
+ (call
   name: (identifier) @_func
   (arguments (in left: (usage (identifier) @variable.parameter))))
  (#eq? @_func "ForEach"))
 
-; (function_call
+; (call
 ;   body: (array
 ;     (compound
 ; 	  (usage (identifier) @variable.parameter)
@@ -25,25 +25,25 @@
 
 (function_definition (arguments (usage (identifier) @variable.parameter)))
 ; (arguments (expression (interpolation (identifier) @variable.parameter)))
-(preprocessor_if (identifier) @function.macro)
-(preprocessor_define variable: (identifier) @function.macro)
+(if (identifier) @function.macro)
+(define variable: (identifier) @function.macro)
 
-(function_call name: (identifier) @function.call)
+(call name: (identifier) @function.call)
 (function_definition "function" @keyword.function)
 (function_definition name: (identifier) @function)
 
 (
- (function_call (identifier) @_func @keyword.conditional)
+ (call (identifier) @_func @keyword.conditional)
  (#eq? @_func "If")
 )
 
 (
- (function_call (identifier) @_func @keyword.repeat)
+ (call (identifier) @_func @keyword.repeat)
  (#eq? @_func "ForEach")
 )
 
 (
-  (function_call (identifier) @_func @function.builtin)
+  (call (identifier) @_func @function.builtin)
   (#any-of? @_func "exists" "file_exists" "Alias" "Compiler" "Copy" "CopyDir" "CSAssembly" "DLL" "Error" "Exec" "Executable" "Library" "ListDependencies" "ObjectList" "Print" "RemoveDir" "Settings" "Test" "TextFile" "Unity" "Using" "VCXProject" "VSProjectExternal" "VSSolution" "XCodeProject")
 )
 
@@ -73,10 +73,10 @@
 [
  "undef"
  "if"
- (preprocessor_else)
- ((preprocessor_unknown) (#set! "priority" 101))
- (preprocessor_endif)
- (preprocessor_once)
+ (else)
+ ((unknown) (#set! "priority" 101))
+ (endif)
+ (once)
 ] @keyword.directive
 [ "import" "include" ] @keyword.import
 "define" @keyword.directive.define

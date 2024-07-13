@@ -12,8 +12,8 @@
  "]"
  (#make-range! "block.inner" @_start @_end))
 
-(function_call) @call.outer
-(function_call
+(call) @call.outer
+(call
   name: (identifier)
   arguments: (arguments
     .
@@ -31,9 +31,9 @@
 ((comment) @comment.inner
   (#offset! @comment.inner 0 2 0))
 
-((function_call name: (identifier) @_func) @conditional.outer
+((call name: (identifier) @_func) @conditional.outer
   (#eq? @_func "If"))
-((function_call
+((call
    name: (identifier) @_func
    arguments: (arguments)
    body: (array
@@ -64,9 +64,9 @@
   )
 )
 
-((function_call name: (identifier) @_func) @loop.outer
+((call name: (identifier) @_func) @loop.outer
   (#eq? @_func "ForEach"))
-((function_call
+((call
    name: (identifier) @_func
    arguments: (arguments)
    body: (array

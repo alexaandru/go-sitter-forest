@@ -1,6 +1,6 @@
 [
  (function_definition)
- (function_call)
+ (call)
  (compound (assign (_)))
  (array)
  (struct)
