@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/exec"
 
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"golang.org/x/sync/errgroup"
@@ -45,6 +46,28 @@ func fileExists(path string) (ok bool, err error) {
 	}
 
 	return
+}
+
+func runCmd(dir, comm string, args ...string) (err error) {
+	cmd := exec.Command(comm, args...)
+	cmd.Dir = dir
+
+	var b []byte
+
+	if b, err = cmd.CombinedOutput(); err != nil {
+		fmt.Println(string(b))
+	}
+
+	return
+}
+
+func touch(name string) (err error) {
+	f, err := os.OpenFile(name, os.O_RDONLY|os.O_CREATE, os.ModePerm)
+	if err != nil {
+		return
+	}
+
+	return f.Close()
 }
 
 func die(msg any) {

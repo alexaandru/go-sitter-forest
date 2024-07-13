@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"io"
-	"io/fs"
 	"os"
-	"os/exec"
 	"path/filepath"
+	"strings"
 
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 )
+
+const nvimts = "nvimts__"
 
 var silentQueryUpdates bool
 
@@ -70,6 +71,10 @@ func fetchQueries(gr *grammar.Grammar) (err error) {
 		return copyNvimQueries(src)
 	}
 
+	if err = clearQueries(gr.Language); err != nil {
+		return
+	}
+
 	return copyQueries(src, gr.Language)
 }
 
@@ -78,51 +83,46 @@ func copyQueries(src, dstPath string) (err error) {
 		return
 	}
 
-	return filepath.WalkDir(src, func(path string, d fs.DirEntry, err error) error {
-		if err != nil {
-			return err
+	pats := [][]string{
+		{"*.scm"},           // most parsers
+		{dstPath, "*.scm"},  // some parsers use queries/<langName>
+		{"nvim", "*.scm"},   // some have dedicated neovim folders
+		{"neovim", "*.scm"}, // ~~
+	}
+
+	for _, pat := range pats {
+		if err = copyFiles(filepath.Join(append([]string{src}, pat...)...), dstPath); err != nil {
+			return
 		}
+	}
 
-		if d.IsDir() || filepath.Ext(path) != ".scm" {
-			return nil
-		}
-
-		// TODO: reuse copyFiles (glob n(eo)vim/, n(eo)vim-, default).
-		dst := filepath.Join(dstPath, filepath.Base(path))
-
-		in, err := os.Open(path)
-		if err != nil {
-			return err
-		}
-		defer in.Close()
-
-		out, err := os.Create(dst)
-		if err != nil {
-			return err
-		}
-
-		if _, err = io.Copy(out, in); err != nil {
-			return err
-		}
-
-		return out.Close()
-	})
+	return
 }
 
 func copyNvimQueries(src string) error {
 	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
-		files, err := filepath.Glob(filepath.Join(src, gr.Language, "*.scm"))
-		if err != nil {
-			return
-		}
-
-		return copyFiles(files, gr.Language)
+		return copyFiles(filepath.Join(src, gr.Language, "*.scm"), gr.Language, nvimts)
 	})
 }
 
-func copyFiles(files []string, dstPath string) (err error) {
+func copyFiles(pat, dstPath string, opts ...string) (err error) {
+	pre := ""
+	if len(opts) > 0 {
+		pre = opts[0]
+	}
+
+	files, err := filepath.Glob(pat)
+	if err != nil {
+		return
+	}
+
 	for _, file := range files {
-		dst := filepath.Join(dstPath, "nvimts__"+filepath.Base(file))
+		base := filepath.Base(file)
+		if strings.HasPrefix(base, "helix") || strings.HasPrefix(base, "nova-") {
+			continue
+		}
+
+		dst := filepath.Join(dstPath, pre+base)
 
 		var in, out *os.File
 
@@ -147,14 +147,20 @@ func copyFiles(files []string, dstPath string) (err error) {
 	return
 }
 
-func runCmd(dir, comm string, args ...string) (err error) {
-	cmd := exec.Command(comm, args...)
-	cmd.Dir = dir
+func clearQueries(pat string) (err error) {
+	files, err := filepath.Glob(filepath.Join(pat, "*.scm"))
+	if err != nil {
+		return
+	}
 
-	var b []byte
+	for _, file := range files {
+		if x := filepath.Base(file); strings.HasPrefix(x, nvimts) || x == "_keep.scm" {
+			continue
+		}
 
-	if b, err = cmd.CombinedOutput(); err != nil {
-		fmt.Println(string(b))
+		if err = os.Remove(file); err != nil {
+			return
+		}
 	}
 
 	return

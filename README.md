@@ -227,11 +227,8 @@ version everywhere, and keeping up with it too.
   generate a ton of "update noise"): say, do not attempt to update anything that
   was updated in the past N days (let's start with 3?);
 - queries needs some more work:
-  - only update if needed (commit has changed);
-  - some of them (bass, matlab, syphon, vala) use {n(eo)vim,helix}/\*.scm convetion,
-    only pull in nvim ones (and not in subfolder);
-  - some of them (d) use {nova,helix,}-\*.scm convention, only pull in generic ones
-    (or nvim if they'll have them);
+  - only update if needed (commit has changed) on update-queries
+    (it already does that when run via update-all, implicitly);
 - filter automatically high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
   (go mod init+tidy, create \_keep.scm file, go work use, what else... TBD);
