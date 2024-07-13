@@ -1126,7 +1126,12 @@ func GetLanguage(lang string) func() *sitter.Language {
 // using the DefaultPreference.
 // You should omit the ".scm" extension.
 func GetQuery(lang, kind string, opts ...byte) (out []byte) {
-	return queryFuncs[lang](kind, opts...)
+	q := queryFuncs[lang]
+	if q == nil {
+		return
+	}
+
+	return q(kind, opts...)
 }
 
 func SupportedLanguages() []string {
