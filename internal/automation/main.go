@@ -129,7 +129,11 @@ func updateAll(force bool) (err error) {
 		return
 	}
 
-	return updateGrammars()
+	if err = updateGrammars(); err != nil {
+		return
+	}
+
+	return updateForest()
 }
 
 func updateBindings() error {
@@ -827,6 +831,8 @@ func main() {
 		err = updateBindings()
 	case cmd == "update-queries":
 		err = updateQueries()
+	case cmd == "update-forest":
+		err = updateForest()
 	case strings.HasPrefix(cmd, "update-queries-"):
 		var gr *grammar.Grammar
 

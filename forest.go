@@ -5,8 +5,6 @@ import (
 	enc_json "encoding/json"
 	"slices"
 
-	sitter "github.com/alexaandru/go-tree-sitter-bare"
-
 	"github.com/alexaandru/go-sitter-forest/abap"
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
@@ -367,6 +365,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/yuck"
 	"github.com/alexaandru/go-sitter-forest/zathurarc"
 	"github.com/alexaandru/go-sitter-forest/zig"
+	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 const (
@@ -382,8 +381,7 @@ const (
 //go:embed grammars.json
 var info []byte
 
-// TODO: Template this!
-var langNameFuncs = map[string]func() *sitter.Language{
+var languageFuncs = map[string]func() *sitter.Language{
 	"abap":               abap.GetLanguage,
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
@@ -745,7 +743,6 @@ var langNameFuncs = map[string]func() *sitter.Language{
 	"zig":                zig.GetLanguage,
 }
 
-// TODO: Template this!
 var queryFuncs = map[string]func(string, ...byte) []byte{
 	"abap":               abap.GetQuery,
 	"ada":                ada.GetQuery,
@@ -1116,7 +1113,7 @@ var (
 // Lang returns the corresponding TS language function for name.
 // Language name must follow the TS convention (lowercase, letters only).
 func GetLanguage(lang string) func() *sitter.Language {
-	return langNameFuncs[lang]
+	return languageFuncs[lang]
 }
 
 // GetQuery returns (if it exists) the `kind`.scm query for `lang` language,
@@ -1131,29 +1128,22 @@ func SupportedLanguages() []string {
 		return langNames
 	}
 
-	for k := range langNameFuncs {
+	for k := range languageFuncs {
 		langNames = append(langNames, k)
 	}
 
 	return langNames
 }
 
-func Info(lang string) *grammar.Grammar {
+func Info(lang string) (gr *grammar.Grammar) {
 	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
 		return x.Language == lang
 	})
-
 	if i < 0 {
-		return nil
+		return
 	}
 
-	gr := grammars[i]
-
-	if gr.SkipGenerate || gr.Pending {
-		return nil
-	}
-
-	return gr
+	return grammars[i]
 }
 
 func init() {

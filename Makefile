@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := check
 
-check-updates update-all update-queries force-update-all update-bindings:
+check-updates update-all update-queries force-update-all update-bindings update-forest:
 	@go run ./internal/automation $@
 
 update-% force-update-% update-queries-%:

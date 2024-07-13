@@ -1,0 +1,77 @@
+{{define "item"}}"{{.}}": {{if eq . "go"}}Go{{else if eq . "func"}}FunC{{else if eq . "context"}}ConTeXt{{else}}{{.}}{{end}}{{end}}
+package forest
+
+import (
+	_ "embed"
+	enc_json "encoding/json"
+	"slices"
+)
+
+const (
+	_ byte = iota
+
+	NvimFirst   // fetch both, prefer nvim
+	NativeFirst // fetch both, prefer native
+	NvimOnly    // fetch only from nvim_treesitter
+	NativeOnly  // fetch only from sitter repo
+
+)
+
+//go:embed grammars.json
+var info []byte
+
+var languageFuncs = map[string]func() *sitter.Language{ {{- range . -}}
+        {{template "item" .}}.GetLanguage,
+{{end -}}}
+
+var queryFuncs = map[string]func(string, ...byte) []byte{ {{- range . -}}
+        {{template "item" .}}.GetQuery,
+{{ end -}}}
+
+var (
+	langNames []string
+	grammars  []*grammar.Grammar
+)
+
+// Lang returns the corresponding TS language function for name.
+// Language name must follow the TS convention (lowercase, letters only).
+func GetLanguage(lang string) func() *sitter.Language {
+	return languageFuncs[lang]
+}
+
+// GetQuery returns (if it exists) the `kind`.scm query for `lang` language,
+// using the DefaultPreference.
+// You should omit the ".scm" extension.
+func GetQuery(lang, kind string, opts ...byte) (out []byte) {
+	return queryFuncs[lang](kind, opts...)
+}
+
+func SupportedLanguages() []string {
+	if langNames != nil {
+		return langNames
+	}
+
+	for k := range languageFuncs {
+		langNames = append(langNames, k)
+	}
+
+	return langNames
+}
+
+func Info(lang string) (gr *grammar.Grammar) {
+	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
+		return x.Language == lang
+	})
+	if i < 0 {
+		return
+	}
+
+	return grammars[i]
+}
+
+func init() {
+	grammars = []*grammar.Grammar{}
+	if err := enc_json.Unmarshal(info, &grammars); err != nil {
+		panic(err)
+	}
+}

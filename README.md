@@ -223,7 +223,9 @@ version everywhere, and keeping up with it too.
 
 ## TODO
 
-- use a template to refresh the forest maps (of lang funcs, and query funcs);
+- implement a "cooldown window" (some experimental/actively developed parsers
+  generate a ton of "update noise"): say, do not attempt to update anything that
+  was updated in the past N days (let's start with 3?);
 - queries needs some more work:
   - only update if needed (commit has changed);
   - some of them (bass, matlab, syphon, vala) use {n(eo)vim,helix}/\*.scm convetion,
