@@ -25,7 +25,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.10
 	github.com/alexaandru/go-sitter-forest/blade v1.5.10
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.11
-	github.com/alexaandru/go-sitter-forest/bluespec v1.5.10
+	github.com/alexaandru/go-sitter-forest/bluespec v1.5.11
 	github.com/alexaandru/go-sitter-forest/bp v1.5.11
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.10
 	github.com/alexaandru/go-sitter-forest/c v1.5.12
@@ -69,7 +69,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/djot v1.5.15
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.11
 	github.com/alexaandru/go-sitter-forest/dot v1.5.10
-	github.com/alexaandru/go-sitter-forest/dotenv v1.5.10
+	github.com/alexaandru/go-sitter-forest/dotenv v1.5.11
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.11
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.10
 	github.com/alexaandru/go-sitter-forest/earthfile v1.5.25
@@ -85,7 +85,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/facility v1.5.10
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.10
-	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.10
+	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.11
 	github.com/alexaandru/go-sitter-forest/faust v1.5.10
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.12
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.10
@@ -149,7 +149,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.10
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.12
 	github.com/alexaandru/go-sitter-forest/idl v1.5.22
-	github.com/alexaandru/go-sitter-forest/idris v1.5.12
+	github.com/alexaandru/go-sitter-forest/idris v1.5.13
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.10
 	github.com/alexaandru/go-sitter-forest/ini v1.5.10
 	github.com/alexaandru/go-sitter-forest/ink v1.5.10
@@ -184,7 +184,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.11
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.12
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.10
-	github.com/alexaandru/go-sitter-forest/lox v1.5.10
+	github.com/alexaandru/go-sitter-forest/lox v1.5.11
 	github.com/alexaandru/go-sitter-forest/lua v1.5.10
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.10
 	github.com/alexaandru/go-sitter-forest/luap v1.5.10
@@ -283,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.12
 	github.com/alexaandru/go-sitter-forest/smali v1.5.10
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.11
-	github.com/alexaandru/go-sitter-forest/sml v1.5.11
+	github.com/alexaandru/go-sitter-forest/sml v1.5.12
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.12
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.16
 	github.com/alexaandru/go-sitter-forest/soql v1.5.10
