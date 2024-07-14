@@ -1,9 +1,9 @@
 package forest
 
 import (
-	"bytes"
-	_ "embed"
+	"embed"
 	enc_json "encoding/json"
+	"path/filepath"
 	"regexp"
 	"slices"
 	"strings"
@@ -1119,8 +1119,12 @@ var (
 	grammars  []*grammar.Grammar
 	// Making the colon optional is risky: most places use it AND
 	// there are many places that do NOT use it and mean something else...
-	rxInherits = regexp.MustCompile(`^\s*;\s*inherits:?\s*(.*?)\n`)
+	rxInherits    = regexp.MustCompile(`^\s*;\s*inherits:?\s*(.*?)\n`)
+	nvimRemaining = filepath.Join("internal", "queries", "nvim_remaining")
 )
+
+//go:embed internal/queries/nvim_remaining/*/*.scm
+var remainingQueries embed.FS
 
 // Lang returns the corresponding TS language function for name.
 // Language name must follow the TS convention (lowercase, letters only).
@@ -1132,15 +1136,33 @@ func GetLanguage(lang string) func() *sitter.Language {
 // using the DefaultPreference, resolving "inherits" directives, recursively.
 // You should omit the ".scm" extension.
 func GetQuery(lang, kind string, opts ...byte) (out []byte) {
+	kind = strings.TrimSuffix(kind, ".scm") + ".scm"
+
+	// Try the package func, if it exists...
 	q := queryFuncs[lang]
 	if q == nil {
-		return
+		// Otherwise, unless the user does NOT want nvim queries at all...
+		if len(opts) == 0 || opts[0] != NativeOnly {
+			// Try out the remaining nvim queries, maybe we find it in there.
+			q = func(kind string, opts ...byte) (out []byte) {
+				out, err := remainingQueries.ReadFile(filepath.Join(nvimRemaining, lang, kind))
+
+				if err != nil || len(out) == 0 {
+					// log somewhere/somehow
+					// fmt.Printf("unable to locate a %q query for %q\n", "highlights", lang)
+					return nil
+				}
+
+				return
+			}
+		}
 	}
 
-	out = q(kind, opts...)
+	if q != nil {
+		out = q(kind, opts...)
+	}
 
 	if len(out) == 0 {
-		// log somewhere/somehow that we're '"unable to locate a %q query for %q", "highlights", lang
 		return
 	}
 
@@ -1151,7 +1173,7 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 
 	inherited := strings.Split(string(mx[1]), ",")
 	for _, in := range inherited {
-		out2 := GetQuery(in, kind)
+		out2 := GetQuery(in, kind, opts...)
 		if len(out2) == 0 {
 			continue
 		}
@@ -1159,9 +1181,7 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 		out = slices.Concat(out2, []byte{10, 10}, out)
 	}
 
-	// FIXME: Figure out what the `\\c` escape is meant for and replace
-	// it with something more appropriate (if there is anything).
-	return bytes.ReplaceAll(out, []byte(`\\c`), nil)
+	return
 }
 
 func SupportedLanguages() []string {

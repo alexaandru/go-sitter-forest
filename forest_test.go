@@ -100,6 +100,8 @@ func Info() string {
 }
 `
 
+var j = filepath.Join
+
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
@@ -195,6 +197,75 @@ func TestAllParsers(t *testing.T) {
 	}
 }
 
+func TestGetQuery(t *testing.T) {
+	deflt := byte(0) // default preference
+	goNvimHi := getContent(j("go", "nvimts__highlights.scm"))
+	goNativeHi := getContent(j("go", "highlights.scm"))
+	goInjections := getContent(j("go", "nvimts__injections.scm"))
+	goTags := getContent(j("go", "tags.scm"))
+	astroIndents := "" +
+		getContent(j(nvimRemaining, "html_tags", "indents.scm")) + "\n\n" +
+		getContent(j("html", "nvimts__indents.scm")) + "\n\n" +
+		getContent(j("astro", "nvimts__indents.scm"))
+	snakeNvimIndents := "" +
+		getContent(j("python", "nvimts__indents.scm")) + "\n\n" +
+		getContent(j("snakemake", "nvimts__indents.scm"))
+	snakeNativeIndents := "" +
+		getContent(j("python", "nvimts__indents.scm")) + "\n\n" +
+		getContent(j("snakemake", "indents.scm"))
+	snakeNativeOnlyIndents := getContent(j("snakemake", "indents.scm"))
+
+	testCases := []struct {
+		lang, kind, exp string
+		opt             byte
+	}{
+		{"go", "bogus", "", deflt},
+		{"go", "highlights", goNvimHi, deflt},
+		{"go", "highlights.scm", goNvimHi, deflt},
+		{"go", "highlights", goNvimHi, NvimFirst},
+		{"go", "highlights.scm", goNvimHi, NvimFirst},
+		{"go", "highlights", goNvimHi, NvimOnly},
+		{"go", "highlights.scm", goNvimHi, NvimOnly},
+		{"go", "highlights", goNativeHi, NativeFirst},
+		{"go", "highlights", goNativeHi, NativeOnly},
+		{"go", "highlights.scm", goNativeHi, NativeFirst},
+		{"go", "highlights.scm", goNativeHi, NativeOnly},
+		{"go", "injections", goInjections, deflt},
+		{"go", "injections", goInjections, NvimFirst},
+		{"go", "injections", goInjections, NativeFirst},
+		{"go", "injections", goInjections, NvimOnly},
+		{"go", "injections", "", NativeOnly},
+		{"go", "tags", goTags, deflt},
+		{"go", "tags", goTags, NvimFirst},
+		{"go", "tags", goTags, NativeFirst},
+		{"go", "tags", "", NvimOnly},
+		{"go", "tags", goTags, NativeOnly},
+		{"astro", "indents", astroIndents, deflt},
+		{"astro", "indents", astroIndents, NvimFirst},
+		{"astro", "indents", astroIndents, NvimOnly},
+		{"astro", "indents", astroIndents, NativeFirst},
+		{"astro", "indents", "", NativeOnly},
+		{"snakemake", "indents", snakeNvimIndents, deflt},
+		{"snakemake", "indents", snakeNvimIndents, NvimFirst},
+		{"snakemake", "indents", snakeNvimIndents, NvimOnly},
+		{"snakemake", "indents", snakeNativeIndents, NativeFirst},
+		{"snakemake", "indents", snakeNativeOnlyIndents, NativeOnly},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.lang+"/"+tc.kind, func(t *testing.T) {
+			opts := []byte{}
+			if opt := tc.opt; opt > 0 {
+				opts = append(opts, opt)
+			}
+
+			if act := GetQuery(tc.lang, tc.kind, opts...); string(act) != tc.exp {
+				t.Fatalf("Expected\n\n%s\n\ngot\n\n%s", tc.exp, string(act))
+			}
+		})
+	}
+}
+
 func TestInfo(t *testing.T) {
 	act := Info("ada")
 	exp := fmt.Sprintf(`ada, src: "https://github.com/briot/tree-sitter-ada@master", sha: "%s"`, act.Revision)
@@ -281,4 +352,13 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 			fn(t, act, pack, lang)
 		})
 	}
+}
+
+func getContent(file string) string {
+	out, err := os.ReadFile(file)
+	if err == nil {
+		return string(out)
+	}
+
+	return ""
 }

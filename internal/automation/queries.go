@@ -12,7 +12,10 @@ import (
 
 const nvimts = "nvimts__"
 
-var silentQueryUpdates bool
+var (
+	silentQueryUpdates bool
+	nvimRemaining      = filepath.Join("internal", "queries", "nvim_remaining")
+)
 
 func updateQueries() (err error) {
 	if err = fetchQueries(&grammar.Grammar{Language: "nvim_treesitter", URL: nvimTreeSiterURL}); err != nil {
@@ -99,10 +102,33 @@ func copyQueries(src, dstPath string) (err error) {
 	return
 }
 
-func copyNvimQueries(src string) error {
-	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+func copyNvimQueries(src string) (err error) {
+	err = forEachGrammar(func(gr *grammar.Grammar) (err error) {
 		return copyFiles(filepath.Join(src, gr.Language, "*.scm"), gr.Language, nvimts)
 	})
+	if err != nil {
+		return
+	}
+
+	// Copy any queries that dont't have a home yet.
+	folders, _ := filepath.Glob(filepath.Join(src, "*"+string(os.PathSeparator)))
+	for _, folder := range folders {
+		base := filepath.Base(folder)
+		if ok, _ := fileExists(base); ok {
+			continue
+		}
+
+		dst := filepath.Join(nvimRemaining, base)
+		if err = os.MkdirAll(dst, os.ModePerm); err != nil {
+			return
+		}
+
+		if err = copyFiles(filepath.Join(folder, "*.scm"), dst); err != nil {
+			return
+		}
+	}
+
+	return
 }
 
 func copyFiles(pat, dstPath string, opts ...string) (err error) {
