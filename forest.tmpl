@@ -91,7 +91,7 @@ func getQueryFromRemainingNvim(lang string, opts ...byte) func(string, ...byte) 
 		return nil
 	}
 
-	return func(kind string, opts ...byte) (out []byte) {
+	return func(kind string, _ ...byte) (out []byte) {
 		out, err := remainingQueries.ReadFile(filepath.Join(nvimRemaining, lang, kind))
 		if err != nil || len(out) == 0 {
 			// log somewhere/somehow

@@ -215,6 +215,11 @@ func TestGetQuery(t *testing.T) {
 	vueInjections := "" +
 		getContent(nvimRemaining, "html_tags", "injections.scm") + "\n\n" +
 		getContent("vue", "nvimts__injections.scm")
+	tsxFolds := "" +
+		getContent(nvimRemaining, "jsx", "folds.scm") + "\n\n" +
+		getContent(nvimRemaining, "ecma", "folds.scm") + "\n\n" +
+		getContent("typescript", "nvimts__folds.scm") + "\n\n" +
+		getContent("tsx", "nvimts__folds.scm")
 
 	testCases := []struct {
 		lang, kind, exp string
@@ -252,6 +257,7 @@ func TestGetQuery(t *testing.T) {
 		{"snakemake", "indents", snakeNativeIndents, NativeFirst},
 		{"snakemake", "indents", snakeNativeOnlyIndents, NativeOnly},
 		{"vue", "injections", vueInjections, deflt}, // this one uses inherits html_tags (missing colon)
+		{"tsx", "folds", tsxFolds, deflt},
 	}
 
 	for _, tc := range testCases {
