@@ -71,15 +71,15 @@
 (comment) @comment @spell
 
 [
- "undef"
- "if"
+ "#undef"
+ "#if"
  (else)
  ((unknown) (#set! "priority" 101))
  (endif)
  (once)
 ] @keyword.directive
-[ "import" "include" ] @keyword.import
-"define" @keyword.directive.define
+[ "#import" "#include" ] @keyword.import
+"#define" @keyword.directive.define
 
 (decimal) @number
 [ "true" "false" ] @boolean

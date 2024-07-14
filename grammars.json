@@ -216,9 +216,9 @@
     "language": "bluespec",
     "url": "https://github.com/panther03/tree-sitter-bluespec",
     "maintainedBy": "@panther03",
-    "grammarSha": "e8d26334f5e4aa437a93f0779af233511ca9abdb7e98ecc3e87c39431a3f1356",
+    "grammarSha": "59b1e8f8bf181b6d35e9d64913a18ed06f21bbc78b4ef42cc6d8f328ec94898a",
     "reference": "master",
-    "revision": "4f4291803fde1cf62aebb8ab30ae2b97ec0e2bf9"
+    "revision": "cde372702a38b369ff9998ed9939f7f87840af68"
   },
   {
     "language": "bp",
@@ -802,9 +802,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@pinbraerts",
-    "grammarSha": "8fa884a047ac8a2aadab02397edf5c40a9bf383bbcd4799e62db50c052c0cc57",
+    "grammarSha": "29e9c0cc685c3824b90a142084b574091cabd2b2a59955ea867f8f9d82feff72",
     "reference": "main",
-    "revision": "75028f63d161a1ceff2ef48cc505748eea4c4e6c"
+    "revision": "0e8547f1be9189df22ae1151f184e91e211bd8d8"
   },
   {
     "language": "faust",
@@ -869,9 +869,9 @@
     "language": "flamingo",
     "url": "https://github.com/inobulles/tree-sitter-flamingo",
     "maintainedBy": "@obiwac",
-    "grammarSha": "639ef936092bc8b7321b2a589e9ddb90f974712696d9af35bdd2e594bee7321c",
+    "grammarSha": "dd3c63054e17783f7fff72fd79eb6fdfadbb286b5893eb52251849b39e67f65b",
     "reference": "main",
-    "revision": "18cfcf5ad1ec55ca434ff87adaa096ce9ded62f2"
+    "revision": "4d05894720cda271b1bf9b6a60026764f02d7b55"
   },
   {
     "language": "fluentbit",
@@ -1357,9 +1357,9 @@
     "language": "http2",
     "url": "https://github.com/rstcruzo/tree-sitter-http2",
     "maintainedBy": "@rstcruzo",
-    "grammarSha": "8662fd422dd4bf3ff0d9ac86199d479904362790c0e21608381529b82abe103b",
+    "grammarSha": "468f51c341c1adfc4368a570a5263345e42b56d38dd34210eee3d5fb27ba0a39",
     "reference": "main",
-    "revision": "3836bf26da6c9106070d377c4d08f0be5bed06af"
+    "revision": "e6f6bdb4589e36a3d0d93ea5840b80c459485029"
   },
   {
     "language": "hugo",
@@ -1380,7 +1380,7 @@
     "maintainedBy": "@jpt13653903",
     "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
     "reference": "master",
-    "revision": "f4e98aeeca94809feab134b7d3b96d1f4fd72636"
+    "revision": "68e710772981ce768bb4da726cf48639cef19dc0"
   },
   {
     "language": "hurl",
@@ -1575,9 +1575,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@Vishalk91-4",
-    "grammarSha": "f8eaa5c47716a3842012e1840076bc8d219ef19c5a398ad451577591bae09043",
+    "grammarSha": "e2c36cb471fbc76ab03dc33fbe03db988d424cf9c524027f919e4eb08b1183d8",
     "reference": "main",
-    "revision": "8350098d4c1fe185dbda54a499db896defb303ae"
+    "revision": "e225df47eb0f45c9ab65b5db49afa9db89242fe7"
   },
   {
     "language": "kconfig",
