@@ -25,7 +25,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.100
 	github.com/alexaandru/go-sitter-forest/blade v1.5.100
 	github.com/alexaandru/go-sitter-forest/blueprint v1.5.100
-	github.com/alexaandru/go-sitter-forest/bluespec v1.5.100
+	github.com/alexaandru/go-sitter-forest/bluespec v1.5.101
 	github.com/alexaandru/go-sitter-forest/bp v1.5.100
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
@@ -85,14 +85,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/facility v1.5.100
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.100
-	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.100
+	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101
 	github.com/alexaandru/go-sitter-forest/faust v1.5.100
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.100
 	github.com/alexaandru/go-sitter-forest/fidl v1.5.100
 	github.com/alexaandru/go-sitter-forest/fin v1.5.100
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.100
 	github.com/alexaandru/go-sitter-forest/fish v1.5.100
-	github.com/alexaandru/go-sitter-forest/flamingo v1.5.100
+	github.com/alexaandru/go-sitter-forest/flamingo v1.5.101
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.5.100
 	github.com/alexaandru/go-sitter-forest/foam v1.5.100
 	github.com/alexaandru/go-sitter-forest/forth v1.5.100
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.5.100
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.5.100
 	github.com/alexaandru/go-sitter-forest/http v1.5.100
-	github.com/alexaandru/go-sitter-forest/http2 v1.5.100
+	github.com/alexaandru/go-sitter-forest/http2 v1.5.101
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
@@ -167,7 +167,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.100
 	github.com/alexaandru/go-sitter-forest/julia v1.5.100
 	github.com/alexaandru/go-sitter-forest/just v1.5.100
-	github.com/alexaandru/go-sitter-forest/kcl v1.5.100
+	github.com/alexaandru/go-sitter-forest/kcl v1.5.101
 	github.com/alexaandru/go-sitter-forest/kconfig v1.5.100
 	github.com/alexaandru/go-sitter-forest/kdl v1.5.100
 	github.com/alexaandru/go-sitter-forest/koan v1.5.100
