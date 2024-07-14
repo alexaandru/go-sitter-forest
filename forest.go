@@ -1138,24 +1138,9 @@ func GetLanguage(lang string) func() *sitter.Language {
 func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 	kind = strings.TrimSuffix(kind, ".scm") + ".scm"
 
-	// Try the package func, if it exists...
 	q := queryFuncs[lang]
 	if q == nil {
-		// Otherwise, unless the user does NOT want nvim queries at all...
-		if len(opts) == 0 || opts[0] != NativeOnly {
-			// Try out the remaining nvim queries, maybe we find it in there.
-			q = func(kind string, opts ...byte) (out []byte) {
-				out, err := remainingQueries.ReadFile(filepath.Join(nvimRemaining, lang, kind))
-
-				if err != nil || len(out) == 0 {
-					// log somewhere/somehow
-					// fmt.Printf("unable to locate a %q query for %q\n", "highlights", lang)
-					return nil
-				}
-
-				return
-			}
-		}
+		q = getQueryFromRemainingNvim(lang, opts...)
 	}
 
 	if q != nil {
@@ -1182,6 +1167,23 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 	}
 
 	return
+}
+
+func getQueryFromRemainingNvim(lang string, opts ...byte) func(string, ...byte) []byte {
+	if len(opts) > 0 && opts[0] == NativeOnly {
+		return nil
+	}
+
+	return func(kind string, opts ...byte) (out []byte) {
+		out, err := remainingQueries.ReadFile(filepath.Join(nvimRemaining, lang, kind))
+		if err != nil || len(out) == 0 {
+			// log somewhere/somehow
+			// fmt.Printf("unable to locate a %q query for %q\n", "highlights", lang)
+			return nil
+		}
+
+		return
+	}
 }
 
 func SupportedLanguages() []string {

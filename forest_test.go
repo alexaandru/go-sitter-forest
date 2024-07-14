@@ -100,8 +100,6 @@ func Info() string {
 }
 `
 
-var j = filepath.Join
-
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
@@ -199,24 +197,24 @@ func TestAllParsers(t *testing.T) {
 
 func TestGetQuery(t *testing.T) {
 	deflt := byte(0) // default preference
-	goNvimHi := getContent(j("go", "nvimts__highlights.scm"))
-	goNativeHi := getContent(j("go", "highlights.scm"))
-	goInjections := getContent(j("go", "nvimts__injections.scm"))
-	goTags := getContent(j("go", "tags.scm"))
+	goNvimHi := getContent("go", "nvimts__highlights.scm")
+	goNativeHi := getContent("go", "highlights.scm")
+	goInjections := getContent("go", "nvimts__injections.scm")
+	goTags := getContent("go", "tags.scm")
 	astroIndents := "" +
-		getContent(j(nvimRemaining, "html_tags", "indents.scm")) + "\n\n" +
-		getContent(j("html", "nvimts__indents.scm")) + "\n\n" +
-		getContent(j("astro", "nvimts__indents.scm"))
+		getContent(nvimRemaining, "html_tags", "indents.scm") + "\n\n" +
+		getContent("html", "nvimts__indents.scm") + "\n\n" +
+		getContent("astro", "nvimts__indents.scm")
 	snakeNvimIndents := "" +
-		getContent(j("python", "nvimts__indents.scm")) + "\n\n" +
-		getContent(j("snakemake", "nvimts__indents.scm"))
+		getContent("python", "nvimts__indents.scm") + "\n\n" +
+		getContent("snakemake", "nvimts__indents.scm")
 	snakeNativeIndents := "" +
-		getContent(j("python", "nvimts__indents.scm")) + "\n\n" +
-		getContent(j("snakemake", "indents.scm"))
-	snakeNativeOnlyIndents := getContent(j("snakemake", "indents.scm"))
+		getContent("python", "nvimts__indents.scm") + "\n\n" +
+		getContent("snakemake", "indents.scm")
+	snakeNativeOnlyIndents := getContent("snakemake", "indents.scm")
 	vueInjections := "" +
-		getContent(j(nvimRemaining, "html_tags", "injections.scm")) + "\n\n" +
-		getContent(j("vue", "nvimts__injections.scm"))
+		getContent(nvimRemaining, "html_tags", "injections.scm") + "\n\n" +
+		getContent("vue", "nvimts__injections.scm")
 
 	testCases := []struct {
 		lang, kind, exp string
@@ -358,7 +356,9 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 	}
 }
 
-func getContent(file string) string {
+func getContent(args ...string) string {
+	file := filepath.Join(args...)
+
 	out, err := os.ReadFile(file)
 	if err == nil {
 		return string(out)
