@@ -14,6 +14,10 @@ import (
 	"golang.org/x/exp/maps"
 )
 
+func TestFTDetectorLoad(t *testing.T) {
+	t.Skip("Tested implicitly via the entire test suite: if it passes, then the loading worked as expected")
+}
+
 func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtests MUST NOT call t.Parallel here!
 	t.Parallel()
 
@@ -584,9 +588,9 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		t.Fatalf("These langs have no test cases: %v", allLangs)
 	}
 
-	exts := maps.Keys(filetype.byExt)
-	bases := maps.Keys(filetype.byBasename)
-	paths := maps.Keys(filetype.byPath)
+	exts := maps.Keys(ft.Ext)
+	bases := maps.Keys(ft.Basename)
+	paths := maps.Keys(ft.Fullpath)
 
 	testedComponents.Range(func(k, _ any) bool {
 		key := k.(string)
@@ -615,10 +619,10 @@ func TestRegisterLanguage(t *testing.T) {
 	d := ftDetector{}
 	zero := ftDetector{}
 	ftTodolang := ftDetector{
-		byGlob:     map[string]string{"foos/*.foo": "todolang"},
-		byPath:     map[string]string{".foos/bar/.foo": "todolang"},
-		byExt:      map[string]string{".foo": "todolang"},
-		byBasename: map[string]string{"foo": "todolang"},
+		Glob:     map[string]string{"foos/*.foo": "todolang"},
+		Fullpath: map[string]string{".foos/bar/.foo": "todolang"},
+		Ext:      map[string]string{".foo": "todolang"},
+		Basename: map[string]string{"foo": "todolang"},
 	}
 	testCases := []struct {
 		pat, lang string
@@ -630,16 +634,16 @@ func TestRegisterLanguage(t *testing.T) {
 		{"foo", "", errMissingLanguage, zero},
 		{"foo", "bogus", errInvalidLanguage, zero},
 		{"foos/*.foo", "todolang", nil, ftDetector{
-			byGlob: map[string]string{"foos/*.foo": "todolang"},
+			Glob: map[string]string{"foos/*.foo": "todolang"},
 		}},
 		{".foos/bar/.foo", "todolang", nil, ftDetector{
-			byGlob: map[string]string{"foos/*.foo": "todolang"},
-			byPath: map[string]string{".foos/bar/.foo": "todolang"},
+			Glob:     map[string]string{"foos/*.foo": "todolang"},
+			Fullpath: map[string]string{".foos/bar/.foo": "todolang"},
 		}},
 		{".foo", "todolang", nil, ftDetector{
-			byGlob: map[string]string{"foos/*.foo": "todolang"},
-			byPath: map[string]string{".foos/bar/.foo": "todolang"},
-			byExt:  map[string]string{".foo": "todolang"},
+			Glob:     map[string]string{"foos/*.foo": "todolang"},
+			Fullpath: map[string]string{".foos/bar/.foo": "todolang"},
+			Ext:      map[string]string{".foo": "todolang"},
 		}},
 		{"foo", "todolang", nil, ftTodolang},
 		// Repeat the above (should be no difference).
@@ -649,53 +653,53 @@ func TestRegisterLanguage(t *testing.T) {
 		{"foo", "todolang", nil, ftTodolang},
 		// Repeat, but this time change lang (must overwrite it).
 		{"foos/*.foo", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "todolang"},
-			byExt:      map[string]string{".foo": "todolang"},
-			byBasename: map[string]string{"foo": "todolang"},
+			Glob:     map[string]string{"foos/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "todolang"},
+			Ext:      map[string]string{".foo": "todolang"},
+			Basename: map[string]string{"foo": "todolang"},
 		}},
 		{".foos/bar/.foo", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "todolang"},
-			byBasename: map[string]string{"foo": "todolang"},
+			Glob:     map[string]string{"foos/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "todolang"},
+			Basename: map[string]string{"foo": "todolang"},
 		}},
 		{".foo", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "comment"},
-			byBasename: map[string]string{"foo": "todolang"},
+			Glob:     map[string]string{"foos/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "comment"},
+			Basename: map[string]string{"foo": "todolang"},
 		}},
 		{"foo", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "comment"},
-			byBasename: map[string]string{"foo": "comment"},
+			Glob:     map[string]string{"foos/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "comment"},
+			Basename: map[string]string{"foo": "comment"},
 		}},
 		// Repeat, but this time change pat (should add it).
 		{"foosa/*.foo", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "comment"},
-			byBasename: map[string]string{"foo": "comment"},
+			Glob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "comment"},
+			Basename: map[string]string{"foo": "comment"},
 		}},
 		{".foosa/bar/.foo", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "comment"},
-			byBasename: map[string]string{"foo": "comment"},
+			Glob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "comment"},
+			Basename: map[string]string{"foo": "comment"},
 		}},
 		{".foosa", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "comment", ".foosa": "comment"},
-			byBasename: map[string]string{"foo": "comment"},
+			Glob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "comment", ".foosa": "comment"},
+			Basename: map[string]string{"foo": "comment"},
 		}},
 		{"foosa", "comment", nil, ftDetector{
-			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
-			byPath:     map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
-			byExt:      map[string]string{".foo": "comment", ".foosa": "comment"},
-			byBasename: map[string]string{"foo": "comment", "foosa": "comment"},
+			Glob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			Fullpath: map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
+			Ext:      map[string]string{".foo": "comment", ".foosa": "comment"},
+			Basename: map[string]string{"foo": "comment", "foosa": "comment"},
 		}},
 	}
 
