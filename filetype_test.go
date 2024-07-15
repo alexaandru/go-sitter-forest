@@ -2,6 +2,8 @@ package forest
 
 import (
 	"errors"
+	"fmt"
+	"os"
 	"path/filepath"
 	"reflect"
 	"slices"
@@ -523,6 +525,9 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"go.sum", "gosum"},
 		{"go.work", "gowork"},
 		{"init.trans", "clojure"},
+		{"internal/testdata/modeline_prolog1", "prolog"},
+		{"internal/testdata/modeline_v1.v", "v"},
+		{"internal/testdata/modeline_verilog1.v", "verilog"},
 		{"makefile", "make"},
 		{"nginx/a/b/c/d/foo", "unknown"},
 		{"nginx/conf", "nginx"},
@@ -557,9 +562,13 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 				t.Fatalf("Expected %q got %q", tc.exp, act)
 			}
 
-			s = filepath.Join("foo", "bar", "baz", s)
-			if act := DetectLanguage(s); act != tc.exp {
-				t.Fatalf("Expected %q got %q", tc.exp, act)
+			// Only try out this scenario with non-paths (basically, extensions+basename).
+			// With paths, we may actually need to find the file on disk.
+			if !strings.Contains(s, string(os.PathSeparator)) {
+				s = filepath.Join("foo", "bar", "baz", s)
+				if act := DetectLanguage(s); act != tc.exp {
+					t.Fatalf("Expected %q got %q", tc.exp, act)
+				}
 			}
 
 			testedLangs.Store(tc.exp, true)
@@ -696,6 +705,42 @@ func TestRegisterLanguage(t *testing.T) {
 				t.Fatalf("Expected error %v got %v", tc.expErr, err)
 			} else if !reflect.DeepEqual(d, tc.exp) {
 				t.Fatalf("Expected %v got %#v", tc.exp, d)
+			}
+		})
+	}
+}
+
+type modeTest struct {
+	modeline, exp string
+}
+
+func TestDetectByModeline(t *testing.T) {
+	t.Skip("Tested implicitly via TestDetectLanguage()")
+}
+
+func TestExtractFromModeline(t *testing.T) {
+	testCases := []modeTest{
+		{"", ""},
+		{"ft=go", ""},
+		{"filetype=go", ""},
+		{":filetype=go:", ""},
+		{":set filetype=go:", ""},
+	}
+
+	for _, vi := range []string{"Vim", "Vi", "vim", "vi", "ex"} {
+		for _, pre := range []string{"", " ", "ts=4 ", " ts=4 ", "ts=4:", " ts=4 : ", "set ", " set ", "set ts=4 "} {
+			for _, cmd := range []string{"ft", "filetype", "syntax", "ft ", "filetype ", "syntax ", "ft     ", "filetype\t\t\t  ", "syntax   \t\t   \t\t   "} {
+				for _, post := range []string{"", " ", "\t", "    ", "   \t   \t   "} {
+					testCases = append(testCases, modeTest{fmt.Sprintf("%s:%s%s=%sgo:", vi, pre, cmd, post), "go"})
+				}
+			}
+		}
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.modeline, func(t *testing.T) {
+			if act := extractFromModeline(tc.modeline); act != tc.exp {
+				t.Fatalf("Expected %q got %q for %q", tc.exp, act, tc.modeline)
 			}
 		})
 	}

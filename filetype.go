@@ -1,10 +1,12 @@
 package forest
 
 import (
+	"bufio"
 	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
+	"regexp"
 	"slices"
 	"strings"
 )
@@ -13,6 +15,8 @@ import (
 // mechanisms, such as by glob, by full path, by basename or by extension,
 // in that specific order.
 type ftDetector struct {
+	// byModeline (implicit, only considers the very 1st line in file)
+	// see https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 	byGlob,
 	byPath,
 	byBasename,
@@ -483,6 +487,10 @@ func (d *ftDetector) register(pat, lang string) (err error) {
 }
 
 func (d ftDetector) detect(fname string) string {
+	if lang := detectByModeline(fname); lang != "" {
+		return lang
+	}
+
 	for glob, lang := range d.byGlob {
 		// NOTE: We do not want to alter the fname for future iteratios,
 		// nor for the remaining checks.
@@ -521,6 +529,55 @@ func (d ftDetector) detect(fname string) string {
 	}
 
 	return "unknown"
+}
+
+// See :he modeline for details. This is a pretty relaxed regex, can match even invalid lines, as long
+// as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
+var vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
+
+func detectByModeline(fname string) (lang string) {
+	f, err := os.Open(fname)
+	if err != nil {
+		return ""
+	}
+	defer f.Close()
+
+	line, r := "", bufio.NewReader(f)
+
+	// TODO: We currently only inspect the 1st line.
+	// We may want to inspect the 1st 5 (which is the modelines default).
+	// Probably will not support the last 5 (or making it configurable) though,
+	// don't want to get overboard with it. Even with this alone in place, end
+	// users now have a way to override filetypes from within files.
+	// Exact compatibility with vi/vim is not really an end goal.
+	for {
+		curr, isPrefix, err := r.ReadLine()
+		if err != nil {
+			return ""
+		}
+
+		line += string(curr)
+
+		if !isPrefix {
+			break
+		}
+	}
+
+	lang = extractFromModeline(line)
+	if slices.Index(SupportedLanguages(), lang) < 0 {
+		return ""
+	}
+
+	return
+}
+
+func extractFromModeline(line string) (lang string) {
+	matches := vimModelineRx.FindStringSubmatch(line)
+	if len(matches) < 2 {
+		return
+	}
+
+	return matches[1]
 }
 
 func ext(exts ...string) (out []string) {

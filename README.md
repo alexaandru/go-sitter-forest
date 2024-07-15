@@ -185,8 +185,11 @@ on how to replicate that on your end if using the individual packages.
 As of `v1.5.106` the root package also includes an (still experimental/WIP) file type
 detector: `forest.DetectLanguage(<abs path|rel path|filename>)`. For best results, the
 absolute path to the file should be provided as that enables all the available detectors
-(glob, full path, filename, by extension - in that order). The language name is obviously
-the same as parser and query name.
+([vim modeline](https://vimdoc.sourceforge.net/htmldoc/options.html#modeline),
+[glob](https://pkg.go.dev/path/filepath#Match), full path, filename, by extension - in that order).
+The language name is obviously the same as parser and query name.
+
+For modeline, unlike vi(m), only the very 1st line is inspected.
 
 You can optionally register your own extensions (only for languages that are part of the
 forest, as they are validated against it) or override existing extensions (particularly
