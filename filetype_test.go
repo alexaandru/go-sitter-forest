@@ -2,6 +2,7 @@ package forest
 
 import (
 	"path/filepath"
+	"slices"
 	"strings"
 	"sync"
 	"testing"
@@ -155,7 +156,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		".git_config:git_config",
 		".git_rebase:git_rebase",
 		".gitattributes:gitattributes",
-		".gitcommit:gitcommit",
+		"TAG_EDITMSG:gitcommit",
 		".gitignore:gitignore",
 		".gjs:glimmer",
 		".gleam:gleam",
@@ -310,7 +311,6 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		".org_archive:org",
 		".ott:ott",
 		".pas:pascal",
-		".passwd:passwd",
 		".pdb:prolog",
 		".pde:arduino",
 		".pem:pem",
@@ -372,7 +372,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		".scd:supercollider",
 		".scfg:scfg",
 		".scheme:scheme",
-		".scm:query",
+		".scm:scheme",
 		".scss:scss",
 		".sdml:sdml",
 		".sface:surface",
@@ -481,13 +481,23 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		"go.mod:gomod",
 		"go.sum:gosum",
 		"go.work:gowork",
+		"passwd:passwd",
+		"passwd-:passwd",
+		"queries/foo.scm:query",
+		"queries/foo/bar.scm:query",
+		"queries/foo/bar/baz.scm:query",
+		"queries/foo/bar/baz/foobar.scm:scheme",
+		"go-sitter-forest/foobar/folds.scm:query",
+		"init.trans:clojure",
+		//".trans:clojure",
 	}
 
-	allLangs, testedLangs := map[string]struct{}{}, &sync.Map{}
-	for k, v := range filetypes {
-		allLangs[k+":"+v] = struct{}{}
+	allLangs, _ := filepath.Glob("*/binding.go")
+	for i, lang := range allLangs {
+		allLangs[i] = filepath.Dir(lang)
 	}
 
+	testedLangs := &sync.Map{}
 	for _, tc := range testCases {
 		tokens := strings.Split(tc, ":")
 		s, exp := tokens[0], tokens[1]
@@ -506,15 +516,17 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 				t.Fatalf("Expected %q got %q", exp, act)
 			}
 
-			testedLangs.Store(tc, tc)
+			testedLangs.Store(exp, true)
 		})
 	}
 
 	testedLangs.Range(func(k, _ any) bool {
-		delete(allLangs, k.(string))
-
+		allLangs = slices.DeleteFunc(allLangs, func(s string) bool { return s == k.(string) })
 		return true
 	})
+
+	// TODO: Also check that we verify all file extensions+basename+path.
+	// (it's a little trickier to test the same for globs).
 
 	if len(allLangs) > 0 {
 		t.Fatalf("These langs have no test cases: %v", allLangs)
