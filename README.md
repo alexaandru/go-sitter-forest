@@ -180,6 +180,14 @@ The individual packages' own GetQuery() obviously cannot do that, since they do 
 have access to other parsers' own queries, only the forest has that. See `forest.GetQuery()`
 on how to replicate that on your end if using the individual packages.
 
+### File Type Detection
+
+As of `v1.5.106` the root package also includes an (still experimental/WIP) file type
+detector: `forest.DetectLanguage(<abs path|rel path|filename>)`. For best results, the
+absolute path to the file should be provided as that enables all the available detectors
+(glob, full path, filename, by extension - in that order). The language name is obviously
+the same as parser and query name.
+
 ## Parser Code Changes
 
 For transparency, any and all changes made to the parsers' (and, to be clear, I

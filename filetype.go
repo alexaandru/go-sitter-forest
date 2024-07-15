@@ -403,16 +403,13 @@ var (
 )
 
 // DetectLang detects the language name based on given file path.
-// The names are the same as the ones used by nvim_treesiter queries.
-// See https://neovim.io/doc/user/filetype.html and
-// https://github.com/neovim/neovim/blob/master/runtime/lua/vim/filetype.lua
-// Detect by ext is only one thing, we should also detect by path, i.e.
-// .ssh/config -> ssh_config
-// queries/*/*.scm -> query, otherwise scheme,
-// etc.
-// As well as detect by first line in file, using the vi stuff (vim:set ft=...:).
-func DetectLanguage(fname string) string {
-	return filetypes.detect(fname)
+// The given fpath should preferably be the absolute path as that guarantees
+// that all the detectors can be used. It can however work with relative
+// paths, the filename alone or even with just the file extension (including
+// leading dot) alone. However the success rate will correspondingly be
+// reduced due to the inability to use all the detectors available.
+func DetectLanguage(fpath string) string {
+	return filetypes.detect(fpath)
 }
 
 func (d ftDetector) detect(fname string) string {
