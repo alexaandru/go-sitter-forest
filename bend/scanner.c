@@ -11,11 +11,21 @@ enum TokenType {
     INDENT,
     DEDENT,
     COMMENT,
+    PATH,
+    ERROR_SENTINEL
 };
 
 typedef struct {
     Array(uint16_t) indents;
 } Scanner;
+
+
+static inline bool identifier_char(uint32_t curr) {
+    return (('0' <= curr && curr <= '9') ||
+            ('a' <= curr && curr <= 'z') ||
+            ('A' <= curr && curr <= 'Z') ||
+            (curr == '.' || curr == '-'));
+}
 
 static inline void advance_bend(TSLexer *lexer) { lexer->advance_bend(lexer, false); }
 
@@ -23,6 +33,10 @@ static inline void skip_bend(TSLexer *lexer) { lexer->advance_bend(lexer, true);
 
 bool tree_sitter_bend_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
     Scanner *scanner = (Scanner *)payload;
+
+    if (valid_symbols[ERROR_SENTINEL]) {
+        return false;
+    }
 
     lexer->mark_end(lexer);
 
@@ -95,6 +109,25 @@ bool tree_sitter_bend_external_scanner_scan(void *payload, TSLexer *lexer, const
         if (valid_symbols[NEWLINE]) {
             lexer->result_symbol = NEWLINE;
             return true;
+        }
+    }
+
+    // Identifiers that end in a slash '/'.
+    // The slash is not included in the symbol.
+    if (valid_symbols[PATH]) {
+        if (identifier_char(lexer->lookahead)) {
+            advance_bend(lexer);
+            while (identifier_char(lexer->lookahead)) { 
+                advance_bend(lexer);
+            }
+
+            if (lexer->lookahead == '/') {
+                lexer->result_symbol = PATH;
+                lexer->mark_end(lexer);
+                return true;
+            }
+
+            return false;
         }
     }
 

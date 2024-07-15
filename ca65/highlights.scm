@@ -91,12 +91,17 @@
 ; numbers
 
 [
-  (num_8)
-  (num_16)
-  (num_32)
+  (bin_8)
+  (dec_8)
+  (hex_8)
+  (bin_16)
+  (dec_16)
+  (hex_16)
+
 ] @number
 
 (comment) @comment
+
 ; punctuation
 
 [
@@ -113,9 +118,9 @@
 ; registers
 
 [
-  (a_reg)
-  (x_reg)
-  (y_reg)
+  (acc_register)
+  (x_register)
+  (y_register)
 ] @symbol
 
 (symbol) @property
@@ -145,18 +150,4 @@
   "||"
   "~"
 ] @operator
-
-[
-  (ctrl_cmd)
-] @function.macro
-
-[
-  (pseudo_var)
-] @constant.macro
-
-[
- (if_ctrl_cmd)
-] @conditional
-
-(str) @string
 

@@ -1,9 +1,9 @@
 {
   "language": "lox",
   "url": "https://github.com/marcuscaisey/lox",
-  "srcRoot": "tree-sitter",
+  "srcRoot": "tree-sitter-lox",
   "maintainedBy": "@marcuscaisey",
   "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
   "reference": "master",
-  "revision": "f6b219b0130f7d48ffb8a7a6509c857541d358eb"
+  "revision": "b035bb4f7709df812201135b1f7f1207481de1aa"
 }

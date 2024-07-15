@@ -1,19 +1,7 @@
-(function_declaration
-  name: (identifier) @function (#set! "priority" 105)) ; increase priority to avoid conflict with variable
-
-(call_expression
-  callee: (identifier) @function.builtin
-  (#eq? @function.builtin "clock")
-  (#set! "priority" 110) ; increase priority to avoid conflict with function.call
-)
-
-(call_expression
-  callee: (identifier) @function.call (#set! "priority" 105)) ; increase priority to avoid conflict with variable
+(identifier) @variable
 
 (parameters
-  (identifier) @variable.parameter (#set! "priority" 105)) ; increase priority to avoid conflict with variable
-
-(identifier) @variable
+  (identifier) @variable.parameter)
 
 (nil) @constant.builtin
 
@@ -22,6 +10,33 @@
 (boolean) @boolean
 
 (number) @number
+
+(function_declaration
+  name: (identifier) @function)
+
+(call_expression
+  callee: (identifier) @function.call)
+
+(call_expression
+  callee: (identifier) @function.builtin
+  (#eq? @function.builtin "clock")
+)
+
+[
+  "!"
+  "=="
+  "!="
+  "<"
+  "<="
+  ">"
+  ">="
+  "+"
+  "-"
+  "*"
+  "/"
+  "%"
+  "="
+] @operator
 
 [
   "print"
@@ -64,21 +79,5 @@
   "{"
   "}"
 ] @punctuation.bracket
-
-[
-  "!"
-  "=="
-  "!="
-  "<"
-  "<="
-  ">"
-  ">="
-  "+"
-  "-"
-  "*"
-  "/"
-  "%"
-  "="
-] @operator
 
 (comment) @comment
