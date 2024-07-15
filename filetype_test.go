@@ -727,7 +727,7 @@ func TestExtractFromModeline(t *testing.T) {
 		{":set filetype=go:", ""},
 	}
 
-	for _, vi := range []string{"Vim", "Vi", "vim", "vi", "ex"} {
+	for _, vi := range []string{"Vim", "Vi", "vim", "vi", "ex", "Vox", "vox"} {
 		for _, pre := range []string{"", " ", "ts=4 ", " ts=4 ", "ts=4:", " ts=4 : ", "set ", " set ", "set ts=4 "} {
 			for _, cmd := range []string{"ft", "filetype", "syntax", "ft ", "filetype ", "syntax ", "ft     ", "filetype\t\t\t  ", "syntax   \t\t   \t\t   "} {
 				for _, post := range []string{"", " ", "\t", "    ", "   \t   \t   "} {

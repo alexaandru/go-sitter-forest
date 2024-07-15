@@ -533,7 +533,7 @@ func (d ftDetector) detect(fname string) string {
 
 // See :he modeline for details. This is a pretty relaxed regex, can match even invalid lines, as long
 // as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
-var vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
+var vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
 
 func detectByModeline(fname string) (lang string) {
 	f, err := os.Open(fname)
