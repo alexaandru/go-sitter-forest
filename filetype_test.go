@@ -15,6 +15,9 @@ import (
 func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtests MUST NOT call t.Parallel here!
 	t.Parallel()
 
+	// Patterns starting with dot will be interpreted as file extensions
+	// and be prefixed with "foobar". If you want to test an actual file
+	// starting with a dot, simply use a path in front of it (foo/.somefile).
 	testCases := []struct{ s, exp string }{
 		{".4th", "forth"},
 		{".C", "cpp"},
@@ -111,9 +114,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".drt", "dart"},
 		{".dtd", "dtd"},
 		{".dts", "devicetree"},
-		{".earthfile", "earthfile"},
 		{".ebnf", "ebnf"},
-		{".editorconfig", "editorconfig"},
 		{".eds", "eds"},
 		{".eex", "eex"},
 		{".el", "commonlisp"},
@@ -157,10 +158,6 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".gdshader", "gdshader"},
 		{".gemspec", "ruby"},
 		{".gherkin", "gherkin"},
-		{".git_config", "git_config"},
-		{".git_rebase", "git_rebase"},
-		{".gitattributes", "gitattributes"},
-		{".gitignore", "gitignore"},
 		{".gjs", "glimmer"},
 		{".gleam", "gleam"},
 		{".glint", "glint"},
@@ -215,7 +212,6 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".idl", "idl"},
 		{".idris", "idris"},
 		{".ignis", "ignis"},
-		{".ignore", "gitignore"},
 		{".ini", "ini"},
 		{".ink", "ink"},
 		{".inko", "inko"},
@@ -363,12 +359,12 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".rktl", "racket"},
 		{".rnw", "rnoweb"},
 		{".robot", "robot"},
-		{".robots", "robots"},
 		{".roc", "roc"},
 		{".rockspec", "lua"},
 		{".ron", "ron"},
 		{".rq", "sparql"},
 		{".rs", "rust"},
+		{".rss", "xml"},
 		{".rtx", "rtx"},
 		{".scala", "scala"},
 		{".scd", "supercollider"},
@@ -431,7 +427,6 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".todotxt", "todotxt"},
 		{".toml", "toml"},
 		{".tort", "tort"},
-		{".trans", "clojure"},
 		{".ts", "typescript"},
 		{".tsv", "tsv"},
 		{".tsx", "tsx"},
@@ -485,6 +480,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"Dockerfile", "dockerfile"},
 		{"Doxyfile", "doxygen"},
 		{"EDIT_DESCRIPTION", "gitcommit"},
+		{"Earthfile", "earthfile"},
 		{"Gemfile", "ruby"},
 		{"Gemfile.lock", "gemfilelock"},
 		{"MERGE_MSG", "gitcommit"},
@@ -495,6 +491,33 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"TAG_EDITMSG", "gitcommit"},
 		{"bogus", "unknown"},
 		{"dockerfile", "dockerfile"},
+		{"foo/.babelrc", "json"},
+		{"foo/.editorconfig", "editorconfig"},
+		{"foo/.eslintrc", "json"},
+		{"foo/.git/config", "git_config"},
+		{"foo/.gitattributes", "gitattributes"},
+		{"foo/.gitconfig", "git_config"},
+		{"foo/.gitignore", "gitignore"},
+		{"foo/.gitmodules", "git_config"},
+		{"foo/.ignore", "gitignore"},
+		{"foo/.irb_history", "ruby"},
+		{"foo/.irbrc", "ruby"},
+		{"foo/.prettierrc", "json"},
+		{"foo/.trans", "clojure"},
+		{"foo/Cargo.lock", "toml"},
+		{"foo/Pipfile", "toml"},
+		{"foo/Pipfile.lock", "json"},
+		{"foo/Vagrantfile", "ruby"},
+		{"foo/constraints.txt", "requirements"},
+		{"foo/flake.lock", "json"},
+		{"foo/git-rebase-todo", "git_rebase"},
+		{"foo/go.work.sum", "gosum"},
+		{"foo/hyprfoo.conf", "hyprlang"},
+		{"foo/irb_history", "ruby"},
+		{"foo/irbrc", "ruby"},
+		{"foo/requirements.in", "requirements"},
+		{"foo/requirements.txt", "requirements"},
+		{"foo/robots.txt", "robots"},
 		{"go-sitter-forest/foobar/folds.scm", "query"},
 		{"go.mod", "gomod"},
 		{"go.sum", "gosum"},
@@ -526,7 +549,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		testedComponents.Store(tc.s, true)
 		t.Run(tc.s+":"+tc.exp, func(t *testing.T) {
 			s := tc.s
-			if strings.HasPrefix(s, ".") && s != ".trans" && s != ".ignore" && !strings.HasPrefix(s, ".git") {
+			if strings.HasPrefix(s, ".") {
 				s = "foobar" + s
 			}
 
@@ -558,7 +581,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 
 	testedComponents.Range(func(k, _ any) bool {
 		key := k.(string)
-		fn := func(s string) bool { return s == key }
+		fn := func(s string) bool { return s == key || filepath.Base(key) == s || filepath.Ext(key) == s }
 		exts, bases, paths = slices.DeleteFunc(exts, fn),
 			slices.DeleteFunc(bases, fn),
 			slices.DeleteFunc(paths, fn)
