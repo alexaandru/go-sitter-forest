@@ -19,7 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bash v1.5.100
 	github.com/alexaandru/go-sitter-forest/bass v1.5.100
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.100
-	github.com/alexaandru/go-sitter-forest/bend v1.5.100
+	github.com/alexaandru/go-sitter-forest/bend v1.5.101
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.100
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.100
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.100
@@ -30,7 +30,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.100
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.101
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100
@@ -185,7 +185,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.100
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.100
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.100
-	github.com/alexaandru/go-sitter-forest/lox v1.5.100
+	github.com/alexaandru/go-sitter-forest/lox v1.5.101
 	github.com/alexaandru/go-sitter-forest/lua v1.5.100
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.100
 	github.com/alexaandru/go-sitter-forest/luap v1.5.100
@@ -284,7 +284,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.100
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
-	github.com/alexaandru/go-sitter-forest/sml v1.5.100
+	github.com/alexaandru/go-sitter-forest/sml v1.5.101
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.100
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100
@@ -325,7 +325,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/todolang v1.5.100
 	github.com/alexaandru/go-sitter-forest/todotxt v1.5.100
 	github.com/alexaandru/go-sitter-forest/toml v1.5.100
-	github.com/alexaandru/go-sitter-forest/tort v1.5.100
+	github.com/alexaandru/go-sitter-forest/tort v1.5.101
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.100
 	github.com/alexaandru/go-sitter-forest/tsx v1.5.100
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.100
