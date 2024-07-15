@@ -188,6 +188,12 @@ absolute path to the file should be provided as that enables all the available d
 (glob, full path, filename, by extension - in that order). The language name is obviously
 the same as parser and query name.
 
+You can optionally register your own extensions (only for languages that are part of the
+forest, as they are validated against it) or override existing extensions (particularly
+useful where there is file extension clashing, like both V and Verilog using `.v` file
+extension - you can opt for one or the other, etc.). See `forest.RegisterLanguage()` for
+details.
+
 ## Parser Code Changes
 
 For transparency, any and all changes made to the parsers' (and, to be clear, I

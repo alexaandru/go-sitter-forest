@@ -1,9 +1,11 @@
 package forest
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 )
 
@@ -412,6 +414,63 @@ func DetectLanguage(fpath string) string {
 	return filetypes.detect(fpath)
 }
 
+// RegisterLanguage allows end users to register their own mappings,
+// potentially overriding existing ones. Typical use would be for
+// languages not maintained by this library, or overriding ambiguous
+// ones (i.e. v vs. verilog for .v, ldg or ledger for .ldg, etc.).
+//
+// The pattern pat can be a glob, an absolute path, a filename or
+// a file extension (incl. the leading dot).
+func RegisterLanguage(pat, lang string) error {
+	return filetypes.register(pat, lang)
+}
+
+var (
+	errMissingPattern  = errors.New("pattern is missing")
+	errMissingLanguage = errors.New("language is missing")
+	errInvalidLanguage = errors.New("language is invalid")
+)
+
+func (d *ftDetector) register(pat, lang string) (err error) {
+	switch {
+	case pat == "":
+		return errMissingPattern
+	case lang == "":
+		return errMissingLanguage
+	case slices.Index(SupportedLanguages(), lang) < 0:
+		return fmt.Errorf("%w: %q", errInvalidLanguage, lang)
+	}
+
+	switch {
+	case contains(pat, "*", "[", "?"):
+		if d.byGlob == nil {
+			d.byGlob = map[string]string{}
+		}
+
+		d.byGlob[pat] = lang
+	case contains(pat, sep):
+		if d.byPath == nil {
+			d.byPath = map[string]string{}
+		}
+
+		d.byPath[pat] = lang
+	case strings.HasPrefix(pat, "."):
+		if d.byExt == nil {
+			d.byExt = map[string]string{}
+		}
+
+		d.byExt[pat] = lang
+	default:
+		if d.byBasename == nil {
+			d.byBasename = map[string]string{}
+		}
+
+		d.byBasename[pat] = lang
+	}
+
+	return
+}
+
 func (d ftDetector) detect(fname string) string {
 	for glob, lang := range d.byGlob {
 		// NOTE: We do not want to alter the fname for future iteratios,
@@ -463,6 +522,16 @@ func ext(exts ...string) (out []string) {
 
 func base(names ...string) []string {
 	return names
+}
+
+func contains(s string, opts ...string) (ok bool) {
+	for _, opt := range opts {
+		if strings.Contains(s, opt) {
+			return true
+		}
+	}
+
+	return
 }
 
 func init() {

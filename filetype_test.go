@@ -1,7 +1,9 @@
 package forest
 
 import (
+	"errors"
 	"path/filepath"
+	"reflect"
 	"slices"
 	"strings"
 	"sync"
@@ -564,5 +566,104 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 
 	if len(paths) > 0 {
 		t.Fatalf("These paths have no test cases: %v", paths)
+	}
+}
+
+func TestRegisterLanguage(t *testing.T) {
+	d := ftDetector{}
+	zero := ftDetector{}
+	ftTodolang := ftDetector{
+		byGlob:     map[string]string{"foos/*.foo": "todolang"},
+		byPath:     map[string]string{".foos/bar/.foo": "todolang"},
+		byExt:      map[string]string{".foo": "todolang"},
+		byBasename: map[string]string{"foo": "todolang"},
+	}
+	testCases := []struct {
+		pat, lang string
+		expErr    error
+		exp       ftDetector
+	}{
+		{"", "", errMissingPattern, zero},
+		{"", "go", errMissingPattern, zero},
+		{"foo", "", errMissingLanguage, zero},
+		{"foo", "bogus", errInvalidLanguage, zero},
+		{"foos/*.foo", "todolang", nil, ftDetector{
+			byGlob: map[string]string{"foos/*.foo": "todolang"},
+		}},
+		{".foos/bar/.foo", "todolang", nil, ftDetector{
+			byGlob: map[string]string{"foos/*.foo": "todolang"},
+			byPath: map[string]string{".foos/bar/.foo": "todolang"},
+		}},
+		{".foo", "todolang", nil, ftDetector{
+			byGlob: map[string]string{"foos/*.foo": "todolang"},
+			byPath: map[string]string{".foos/bar/.foo": "todolang"},
+			byExt:  map[string]string{".foo": "todolang"},
+		}},
+		{"foo", "todolang", nil, ftTodolang},
+		// Repeat the above (should be no difference).
+		{"foos/*.foo", "todolang", nil, ftTodolang},
+		{".foos/bar/.foo", "todolang", nil, ftTodolang},
+		{".foo", "todolang", nil, ftTodolang},
+		{"foo", "todolang", nil, ftTodolang},
+		// Repeat, but this time change lang (must overwrite it).
+		{"foos/*.foo", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "todolang"},
+			byExt:      map[string]string{".foo": "todolang"},
+			byBasename: map[string]string{"foo": "todolang"},
+		}},
+		{".foos/bar/.foo", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "todolang"},
+			byBasename: map[string]string{"foo": "todolang"},
+		}},
+		{".foo", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "comment"},
+			byBasename: map[string]string{"foo": "todolang"},
+		}},
+		{"foo", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "comment"},
+			byBasename: map[string]string{"foo": "comment"},
+		}},
+		// Repeat, but this time change pat (should add it).
+		{"foosa/*.foo", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "comment"},
+			byBasename: map[string]string{"foo": "comment"},
+		}},
+		{".foosa/bar/.foo", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "comment"},
+			byBasename: map[string]string{"foo": "comment"},
+		}},
+		{".foosa", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "comment", ".foosa": "comment"},
+			byBasename: map[string]string{"foo": "comment"},
+		}},
+		{"foosa", "comment", nil, ftDetector{
+			byGlob:     map[string]string{"foos/*.foo": "comment", "foosa/*.foo": "comment"},
+			byPath:     map[string]string{".foos/bar/.foo": "comment", ".foosa/bar/.foo": "comment"},
+			byExt:      map[string]string{".foo": "comment", ".foosa": "comment"},
+			byBasename: map[string]string{"foo": "comment", "foosa": "comment"},
+		}},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.pat+":"+tc.lang, func(t *testing.T) {
+			if err := d.register(tc.pat, tc.lang); !errors.Is(err, tc.expErr) {
+				t.Fatalf("Expected error %v got %v", tc.expErr, err)
+			} else if !reflect.DeepEqual(d, tc.exp) {
+				t.Fatalf("Expected %v got %#v", tc.exp, d)
+			}
+		})
 	}
 }
