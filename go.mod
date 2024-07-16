@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.5.100
 	github.com/alexaandru/go-sitter-forest/aiken v1.5.100
 	github.com/alexaandru/go-sitter-forest/amber v1.5.100
-	github.com/alexaandru/go-sitter-forest/angular v1.5.100
+	github.com/alexaandru/go-sitter-forest/angular v1.5.101
 	github.com/alexaandru/go-sitter-forest/apex v1.5.100
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.100
 	github.com/alexaandru/go-sitter-forest/asm v1.5.100
@@ -19,7 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bash v1.5.100
 	github.com/alexaandru/go-sitter-forest/bass v1.5.100
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.100
-	github.com/alexaandru/go-sitter-forest/bend v1.5.101
+	github.com/alexaandru/go-sitter-forest/bend v1.5.102
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.100
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.100
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.100
@@ -83,7 +83,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/elvish v1.5.100
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.100
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/facility v1.5.100
+	github.com/alexaandru/go-sitter-forest/facility v1.5.101
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.100
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101
 	github.com/alexaandru/go-sitter-forest/faust v1.5.100
@@ -149,8 +149,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.100
-	github.com/alexaandru/go-sitter-forest/idris v1.5.100
+	github.com/alexaandru/go-sitter-forest/idl v1.5.101
+	github.com/alexaandru/go-sitter-forest/idris v1.5.101
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
 	github.com/alexaandru/go-sitter-forest/ink v1.5.100
@@ -205,7 +205,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.100
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.100
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.101
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.100
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.100
 	github.com/alexaandru/go-sitter-forest/nim v1.5.100
@@ -284,7 +284,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.5.100
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
-	github.com/alexaandru/go-sitter-forest/sml v1.5.101
+	github.com/alexaandru/go-sitter-forest/sml v1.5.102
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.100
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/svelte v1.5.100
 	github.com/alexaandru/go-sitter-forest/swift v1.5.100
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.100
-	github.com/alexaandru/go-sitter-forest/syphon v1.5.100
+	github.com/alexaandru/go-sitter-forest/syphon v1.5.101
 	github.com/alexaandru/go-sitter-forest/systemtap v1.5.100
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.5.100
 	github.com/alexaandru/go-sitter-forest/t32 v1.5.100
