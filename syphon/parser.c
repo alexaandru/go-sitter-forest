@@ -850,11 +850,17 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 8:
       ACCEPT_TOKEN(sym_int);
       if (lookahead == '.') ADVANCE(10);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(9);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(9);
       END_STATE();
     case 9:
       ACCEPT_TOKEN(sym_int);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(9);
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '_' ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(9);
       END_STATE();
     case 10:
       ACCEPT_TOKEN(sym_float);

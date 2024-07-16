@@ -2,7 +2,7 @@
   "language": "syphon",
   "url": "https://github.com/yhyadev/tree-sitter-syphon",
   "maintainedBy": "@yhyadev",
-  "grammarSha": "a17dc99827e30f31f4f2f7b0b9d999051b1def5fe9c7f14cb7f420b56a8ba2a1",
+  "grammarSha": "424125ed6f12462adedbfb4b31716df1cd2173903860193dad6d8f20124e0d19",
   "reference": "master",
-  "revision": "f7e33f4c443ae3a0cada0f7a8981e0829aa52e83"
+  "revision": "eb0ccd78157c3e9f688c9968127209424d66a109"
 }

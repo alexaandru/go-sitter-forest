@@ -34,7 +34,6 @@
     "gomod":         ["go.mod"],
     "gosum":         ["go.sum", "go.work.sum"],
     "gowork":        ["go.work"],
-    "ini":           ["hosts"],
     "json":          ["Pipfile.lock", "flake.lock", ".prettierrc", ".babelrc", ".eslintrc"],
     "just":          [".JUSTFILE", ".Justfile", ".justfile", "JUSTFILE", "Justfile", "justfile"],
     "linkerscript":  ["ld.script"],

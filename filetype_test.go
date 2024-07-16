@@ -573,7 +573,6 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"go.sum", "gosum"},
 		{"go.work", "gowork"},
 		{"go.work.sum", "gosum"},
-		{"hosts", "ini"},
 		{"hyprfoo.conf", "hyprlang"},
 		{"init.trans", "clojure"},
 		{"internal/testdata/modeline_prolog1", "prolog"},

@@ -16,7 +16,10 @@
 (comment) @comment @spell
 (doc_comment) @comment.documentation @spell
 
-"method" @keyword.function
+[
+ "method"
+ "event"
+] @keyword.function
 
 [
   "service"
