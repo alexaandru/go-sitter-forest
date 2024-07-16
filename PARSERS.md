@@ -1,6 +1,6 @@
-# 361 Supported Parsers
+# 364 Supported Parsers
 
-10 pending, 4 skipped regeneration, 20 missing queries
+10 pending, 4 skipped regeneration, 22 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -47,6 +47,7 @@
 - [x] [clingo](https://github.com/potassco/tree-sitter-clingo) 🗸 (maintained by @sthiele)
 - [x] [clojure](https://github.com/sogaiu/tree-sitter-clojure) ✔️ (maintained by @NoahTheDuke)
 - [x] [cmake](https://github.com/uyha/tree-sitter-cmake) ✔️ (maintained by @uyha)
+- [x] [cmdl](https://github.com/lyktstolpe/tree-sitter-cmdl) ✔️ (maintained by @lyktstolpe)
 - [x] [cobol](https://github.com/yutaro-sakamoto/tree-sitter-cobol) ✔️ (maintained by @yutaro-sakamoto)
 - [x] [cognate](https://github.com/hedyhli/tree-sitter-cognate) ✔️ (maintained by @hedyhli)
 - [x] [comment](https://github.com/stsewd/tree-sitter-comment) ✔️ (maintained by @stsewd)
@@ -338,6 +339,7 @@
 - [x] [tort](https://github.com/quendimax/tree-sitter-tort) ✔️ (maintained by @quendimax)
 - [x] [tsv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
 - [x] [tsx](https://github.com/tree-sitter/tree-sitter-typescript) ✔️ (maintained by @steelsojka; high memory usage (4GB))
+- [x] [tup](https://github.com/RoBaertschi/tree-sitter-tup) 🗸 (maintained by @RoBaertschi)
 - [x] [turtle](https://github.com/GordianDziwis/tree-sitter-turtle) ✔️ (maintained by @BonaBeavis)
 - [x] [twig](https://github.com/gbprod/tree-sitter-twig) ✔️ (maintained by @gbprod)
 - [x] [twolc](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
@@ -374,6 +376,7 @@
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️ (maintained by @Hubro)
 - [x] [yuck](https://github.com/tree-sitter-grammars/tree-sitter-yuck) ✔️ (maintained by @Philipp-M, @amaanq)
 - [x] [zathurarc](https://github.com/Freed-Wu/tree-sitter-zathurarc) ✔️ (maintained by @Freed-Wu)
+- [x] [zeek](https://github.com/zeek/tree-sitter-zeek) 🗸 (maintained by @bbannier)
 - [x] [zig](https://github.com/maxxnino/tree-sitter-zig) ✔️ (maintained by @maxxnino)
 <!--parserinfo-->
 

@@ -48,6 +48,7 @@
     "sxhkdrc":       ["sxhkdrc"],
     "todotxt":       ["todo.txt"],
     "toml":          ["Pipfile", "Cargo.lock"],
+    "tup":           ["Tupfile"],
     "vim":           [".exrc", ".vimrc", ".gvimrc", ".nvimrc"],
     "xcompose":      [".XCompose", "XCompose", "xcompose"],
     "yaml":          ["glide.lock", "yarn.lock", ".gemrc", ".clang-format", ".clang-tidy"],
@@ -96,6 +97,7 @@
     "clingo":             null,
     "clojure":            ["clj", "cljc", "cljs", "cljx"],
     "cmake":              null,
+    "cmdl":               null,
     "cobol":              ["cbl", "ccp", "cob", "cobol", "cpy"],
     "cognate":            null,
     "comment":            null,
@@ -317,7 +319,7 @@
     "slint":              null,
     "smali":              null,
     "smithy":             null,
-    "sml":                null,
+    "sml":                ["sml", "fun", "sig"],
     "snakemake":          ["smk"],
     "solidity":           ["sol"],
     "soql":               null,
@@ -358,6 +360,7 @@
     "tort":               null,
     "tsv":                null,
     "tsx":                null,
+    "tup":                null,
     "turtle":             ["ttl"],
     "twig":               null,
     "twolc":              ["twol"],
@@ -390,6 +393,7 @@
     "yaml":               ["yaml", "yml"],
     "yang":               null,
     "yuck":               null,
+    "zeek":               null,
     "zig":                ["zig", "zon"]
   }
 }

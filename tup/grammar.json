@@ -1,0 +1,11 @@
+{
+  "language": "tup",
+  "url": "https://github.com/RoBaertschi/tree-sitter-tup",
+  "files": [
+    "scanner.c"
+  ],
+  "maintainedBy": "@RoBaertschi",
+  "grammarSha": "c31e72383abf41cd134e8827907902d2c9b89dce20e69e51dfd7ac5f2ac96b60",
+  "reference": "main",
+  "revision": "fa0967c788e4f3cd30fe79c25ed4fe12b4694c89"
+}
