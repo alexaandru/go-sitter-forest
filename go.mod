@@ -45,6 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.5.100
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.100
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.100
+	github.com/alexaandru/go-sitter-forest/cmdl v1.5.100
 	github.com/alexaandru/go-sitter-forest/cobol v1.5.100
 	github.com/alexaandru/go-sitter-forest/cognate v1.5.100
 	github.com/alexaandru/go-sitter-forest/comment v1.5.100
@@ -328,6 +329,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tort v1.5.101
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.100
 	github.com/alexaandru/go-sitter-forest/tsx v1.5.100
+	github.com/alexaandru/go-sitter-forest/tup v1.5.100
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.100
 	github.com/alexaandru/go-sitter-forest/twig v1.5.100
 	github.com/alexaandru/go-sitter-forest/twolc v1.5.100
@@ -363,6 +365,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yang v1.5.100
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.100
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.100
+	github.com/alexaandru/go-sitter-forest/zeek v1.5.100
 	github.com/alexaandru/go-sitter-forest/zig v1.5.100
 	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/exp v0.0.0-20240707233637-46b078467d37

@@ -50,6 +50,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/clingo"
 	"github.com/alexaandru/go-sitter-forest/clojure"
 	"github.com/alexaandru/go-sitter-forest/cmake"
+	"github.com/alexaandru/go-sitter-forest/cmdl"
 	"github.com/alexaandru/go-sitter-forest/cobol"
 	"github.com/alexaandru/go-sitter-forest/cognate"
 	"github.com/alexaandru/go-sitter-forest/comment"
@@ -334,6 +335,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/tort"
 	"github.com/alexaandru/go-sitter-forest/tsv"
 	"github.com/alexaandru/go-sitter-forest/tsx"
+	"github.com/alexaandru/go-sitter-forest/tup"
 	"github.com/alexaandru/go-sitter-forest/turtle"
 	"github.com/alexaandru/go-sitter-forest/twig"
 	"github.com/alexaandru/go-sitter-forest/twolc"
@@ -369,6 +371,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/yang"
 	"github.com/alexaandru/go-sitter-forest/yuck"
 	"github.com/alexaandru/go-sitter-forest/zathurarc"
+	"github.com/alexaandru/go-sitter-forest/zeek"
 	"github.com/alexaandru/go-sitter-forest/zig"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
@@ -429,6 +432,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"clingo":             clingo.GetLanguage,
 	"clojure":            clojure.GetLanguage,
 	"cmake":              cmake.GetLanguage,
+	"cmdl":               cmdl.GetLanguage,
 	"cobol":              cobol.GetLanguage,
 	"cognate":            cognate.GetLanguage,
 	"comment":            comment.GetLanguage,
@@ -712,6 +716,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"tort":               tort.GetLanguage,
 	"tsv":                tsv.GetLanguage,
 	"tsx":                tsx.GetLanguage,
+	"tup":                tup.GetLanguage,
 	"turtle":             turtle.GetLanguage,
 	"twig":               twig.GetLanguage,
 	"twolc":              twolc.GetLanguage,
@@ -747,6 +752,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"yang":               yang.GetLanguage,
 	"yuck":               yuck.GetLanguage,
 	"zathurarc":          zathurarc.GetLanguage,
+	"zeek":               zeek.GetLanguage,
 	"zig":                zig.GetLanguage,
 }
 
@@ -793,6 +799,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"clingo":             clingo.GetQuery,
 	"clojure":            clojure.GetQuery,
 	"cmake":              cmake.GetQuery,
+	"cmdl":               cmdl.GetQuery,
 	"cobol":              cobol.GetQuery,
 	"cognate":            cognate.GetQuery,
 	"comment":            comment.GetQuery,
@@ -1076,6 +1083,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"tort":               tort.GetQuery,
 	"tsv":                tsv.GetQuery,
 	"tsx":                tsx.GetQuery,
+	"tup":                tup.GetQuery,
 	"turtle":             turtle.GetQuery,
 	"twig":               twig.GetQuery,
 	"twolc":              twolc.GetQuery,
@@ -1111,6 +1119,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"yang":               yang.GetQuery,
 	"yuck":               yuck.GetQuery,
 	"zathurarc":          zathurarc.GetQuery,
+	"zeek":               zeek.GetQuery,
 	"zig":                zig.GetQuery,
 }
 
