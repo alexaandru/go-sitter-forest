@@ -587,6 +587,14 @@
     "revision": "ac0bb849ccd1a923963af47573b5e396736ff582"
   },
   {
+    "language": "dbml",
+    "url": "https://github.com/apexatoll/tree-sitter-dbml",
+    "maintainedBy": "@apexatoll",
+    "grammarSha": "c86d40e5f6123d505584c4d2a1a2f8162149fda36d0116b5b1c59a65c494fa4f",
+    "reference": "main",
+    "revision": "b53c7b1d854b8169974b6d22c50ad1edad832789"
+  },
+  {
     "language": "devicetree",
     "url": "https://github.com/joelspadin/tree-sitter-devicetree",
     "maintainedBy": "@jedrzejboczar",
@@ -926,6 +934,17 @@
     "grammarSha": "fad3ef16cccf6761a49b835cd74dcb013cf696259ae7db0bbbb4d1bf9daccebc",
     "reference": "main",
     "revision": "fad2e175099a45efbc98f000cc196d3674cc45e0"
+  },
+  {
+    "language": "fsharp",
+    "url": "https://github.com/ionide/tree-sitter-fsharp",
+    "files": [
+      "scanner.c"
+    ],
+    "maintainedBy": "@Nsidorenco",
+    "grammarSha": "93edea923363f7751fc26e2d86153d2481494a112da8a4a42111e44932663776",
+    "reference": "main",
+    "revision": "c95746eecf9a0f5f8da8702bc73c0c722916491e"
   },
   {
     "language": "func",
@@ -1844,6 +1863,14 @@
     "revision": "9e082a2253c50eb3d80e84bbd635e57cfb1476a2"
   },
   {
+    "language": "magik",
+    "url": "https://github.com/krn-robin/tree-sitter-magik",
+    "maintainedBy": "@sebastiaanspeck",
+    "grammarSha": "4a41569a187c1adebddf77de379b51c767338a5dbec123ba9ba641900ebfedaa",
+    "reference": "main",
+    "revision": "979a48ad55a1faa4d73b0b127472190ca6ff0a73"
+  },
+  {
     "language": "make",
     "url": "https://github.com/alemuller/tree-sitter-make",
     "maintainedBy": "@lewis6991",
@@ -1906,6 +1933,14 @@
     "grammarSha": "eccc43fcb300c2888616a180c5ec0e1c318243f9ad1fbaa46b00aa19ea57a0ed",
     "reference": "master",
     "revision": "be8866a6bcc2b563ab0de895af69daeffa88fe70"
+  },
+  {
+    "language": "merlin6502",
+    "url": "https://github.com/dfgordon/tree-sitter-merlin6502",
+    "maintainedBy": "@dfgordon",
+    "grammarSha": "8b49ba32eb1500c969dc356a07a11808046a6724fd07b74ca846ea957d244923",
+    "reference": "master",
+    "revision": "09dbeec4a89d5ba12b45f1e2308cb901132790b8"
   },
   {
     "language": "mermaid",
@@ -2772,6 +2807,14 @@
     "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5"
   },
   {
+    "language": "smith",
+    "url": "https://github.com/smith-lang/tree-sitter-smith",
+    "maintainedBy": "@adam-r-kowalski",
+    "pending": true,
+    "reference": "main",
+    "revision": ""
+  },
+  {
     "language": "smithy",
     "url": "https://github.com/indoorvivants/tree-sitter-smithy",
     "maintainedBy": "@amaanq, @keynmol",
@@ -3015,6 +3058,13 @@
     "grammarSha": "9dfc950938c773f2bc9bb78d8f0605f81e93e2dff5ae65a797395736fca4ee0a",
     "reference": "main",
     "revision": "1af543a96d060b1f808982037bfc54cc02218edd"
+  },
+  {
+    "language": "jasmin",
+    "url": "https://github.com/y4cer/tree-sitter-jasmin",
+    "maintainedBy": "@y4cer",
+    "pending": true,
+    "reference": "master"
   },
   {
     "language": "systemverilog",
@@ -3602,3 +3652,4 @@
     "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
   }
 ]
+

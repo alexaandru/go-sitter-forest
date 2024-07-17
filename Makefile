@@ -4,6 +4,7 @@ check-updates update-all update-queries force-update-all update-bindings update-
 	@go run ./internal/automation $@
 
 update-% force-update-% update-queries-%:
+	@fname=$@; fname=$${fname#update-queries-}; fname=$${fname#force-update-}; touch "$${fname#update-}/_keep.scm"
 	@go run ./internal/automation $@
 
 include Plugins.make

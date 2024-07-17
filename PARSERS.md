@@ -1,6 +1,6 @@
-# 364 Supported Parsers
+# 368 Supported Parsers
 
-10 pending, 4 skipped regeneration, 20 missing queries
+11 pending, 4 skipped regeneration, 21 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -65,6 +65,7 @@
 - [x] [d](https://github.com/gdamore/tree-sitter-d) ✔️ (maintained by @amaanq)
 - [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️ (maintained by @lomisk)
 - [x] [dart](https://github.com/UserNobody14/tree-sitter-dart) ✔️ (maintained by @akinsho)
+- [x] [dbml](https://github.com/apexatoll/tree-sitter-dbml) 🗸 (maintained by @apexatoll)
 - [x] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) ✔️ (maintained by @jedrzejboczar)
 - [x] [dhall](https://github.com/jbellerb/tree-sitter-dhall) ✔️ (maintained by @amaanq)
 - [x] [diff](https://github.com/the-mikedavis/tree-sitter-diff) ✔️ (maintained by @gbprod)
@@ -101,6 +102,7 @@
 - [x] [forth](https://github.com/AlexanderBrevig/tree-sitter-forth) ✔️ (maintained by @amaanq)
 - [x] [fortran](https://github.com/stadelmanma/tree-sitter-fortran) ✔️ (maintained by @amaanq)
 - [x] [fsh](https://github.com/mgramigna/tree-sitter-fsh) ✔️ (maintained by @mgramigna)
+- [x] [fsharp](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [func](https://github.com/tree-sitter-grammars/tree-sitter-func) ✔️ (maintained by @amaanq)
 - [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) ✔️ (maintained by @jirgn)
 - [x] [Godot (gdscript)](https://github.com/PrestonKnopp/tree-sitter-gdscript) ✔️ (maintained by @PrestonKnopp)
@@ -199,12 +201,14 @@
 - [x] [lua patterns](https://github.com/tree-sitter-grammars/tree-sitter-luap) ✔️ (maintained by @amaanq)
 - [x] [luau](https://github.com/tree-sitter-grammars/tree-sitter-luau) ✔️ (maintained by @amaanq)
 - [x] [m68k](https://github.com/grahambates/tree-sitter-m68k) ✔️ (maintained by @grahambates)
+- [x] [magik](https://github.com/krn-robin/tree-sitter-magik) ✔️ (maintained by @sebastiaanspeck)
 - [x] [make](https://github.com/alemuller/tree-sitter-make) ✔️ (maintained by @lewis6991)
 - [x] [markdown (basic highlighting)](https://github.com/tree-sitter-grammars/tree-sitter-markdown) ✔️ (maintained by @MDeiml)
 - [x] [markdown_inline (needed for full highlighting)](https://github.com/tree-sitter-grammars/tree-sitter-markdown) ✔️ (maintained by @MDeiml)
 - [x] [matlab](https://github.com/acristoffers/tree-sitter-matlab) ✔️ (maintained by @acristoffers)
 - [x] [mcfuncx](https://github.com/PFiS1737/tree-sitter-mcfuncx) ✔️ (maintained by @PFiS1737)
 - [x] [menhir](https://github.com/Kerl13/tree-sitter-menhir) ✔️ (maintained by @Kerl13)
+- [x] [merlin6502](https://github.com/dfgordon/tree-sitter-merlin6502) ✔️ (maintained by @dfgordon)
 - [x] [mermaid](https://github.com/monaqa/tree-sitter-mermaid) ✔️ (maintained by @monaqa)
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️ (maintained by @Decodetalkers)
 - [ ] [mix_lock](https://github.com/fluidattacks/tree-sitter-mix_lock) (maintained by @drestrepom)
@@ -293,6 +297,7 @@
 - [x] [slim](https://github.com/kolen/tree-sitter-slim) ✔️ (maintained by @kolen)
 - [x] [slint](https://github.com/slint-ui/tree-sitter-slint) ✔️ (maintained by @hunger)
 - [x] [smali](https://git.sr.ht/~yotam/tree-sitter-smali) ✔️ (maintained by @amaanq)
+- [ ] [smith](https://github.com/smith-lang/tree-sitter-smith) (maintained by @adam-r-kowalski)
 - [x] [smithy](https://github.com/indoorvivants/tree-sitter-smithy) ✔️ (maintained by @amaanq, @keynmol)
 - [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️ (maintained by @MatthewFluet)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) ✔️ (maintained by @osthomas)
