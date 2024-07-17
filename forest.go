@@ -68,6 +68,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/d"
 	"github.com/alexaandru/go-sitter-forest/dale"
 	"github.com/alexaandru/go-sitter-forest/dart"
+	"github.com/alexaandru/go-sitter-forest/dbml"
 	"github.com/alexaandru/go-sitter-forest/devicetree"
 	"github.com/alexaandru/go-sitter-forest/dhall"
 	"github.com/alexaandru/go-sitter-forest/diff"
@@ -104,6 +105,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/forth"
 	"github.com/alexaandru/go-sitter-forest/fortran"
 	"github.com/alexaandru/go-sitter-forest/fsh"
+	"github.com/alexaandru/go-sitter-forest/fsharp"
 	FunC "github.com/alexaandru/go-sitter-forest/func"
 	"github.com/alexaandru/go-sitter-forest/fusion"
 	"github.com/alexaandru/go-sitter-forest/gdscript"
@@ -198,12 +200,14 @@ import (
 	"github.com/alexaandru/go-sitter-forest/luap"
 	"github.com/alexaandru/go-sitter-forest/luau"
 	"github.com/alexaandru/go-sitter-forest/m68k"
+	"github.com/alexaandru/go-sitter-forest/magik"
 	"github.com/alexaandru/go-sitter-forest/make"
 	"github.com/alexaandru/go-sitter-forest/markdown"
 	"github.com/alexaandru/go-sitter-forest/markdown_inline"
 	"github.com/alexaandru/go-sitter-forest/matlab"
 	"github.com/alexaandru/go-sitter-forest/mcfuncx"
 	"github.com/alexaandru/go-sitter-forest/menhir"
+	"github.com/alexaandru/go-sitter-forest/merlin6502"
 	"github.com/alexaandru/go-sitter-forest/mermaid"
 	"github.com/alexaandru/go-sitter-forest/meson"
 	"github.com/alexaandru/go-sitter-forest/mlir"
@@ -450,6 +454,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"d":                  d.GetLanguage,
 	"dale":               dale.GetLanguage,
 	"dart":               dart.GetLanguage,
+	"dbml":               dbml.GetLanguage,
 	"devicetree":         devicetree.GetLanguage,
 	"dhall":              dhall.GetLanguage,
 	"diff":               diff.GetLanguage,
@@ -486,6 +491,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"forth":              forth.GetLanguage,
 	"fortran":            fortran.GetLanguage,
 	"fsh":                fsh.GetLanguage,
+	"fsharp":             fsharp.GetLanguage,
 	"func":               FunC.GetLanguage,
 	"fusion":             fusion.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
@@ -579,12 +585,14 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"luap":               luap.GetLanguage,
 	"luau":               luau.GetLanguage,
 	"m68k":               m68k.GetLanguage,
+	"magik":              magik.GetLanguage,
 	"make":               make.GetLanguage,
 	"markdown":           markdown.GetLanguage,
 	"markdown_inline":    markdown_inline.GetLanguage,
 	"matlab":             matlab.GetLanguage,
 	"mcfuncx":            mcfuncx.GetLanguage,
 	"menhir":             menhir.GetLanguage,
+	"merlin6502":         merlin6502.GetLanguage,
 	"mermaid":            mermaid.GetLanguage,
 	"meson":              meson.GetLanguage,
 	"mlir":               mlir.GetLanguage,
@@ -817,6 +825,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"d":                  d.GetQuery,
 	"dale":               dale.GetQuery,
 	"dart":               dart.GetQuery,
+	"dbml":               dbml.GetQuery,
 	"devicetree":         devicetree.GetQuery,
 	"dhall":              dhall.GetQuery,
 	"diff":               diff.GetQuery,
@@ -853,6 +862,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"forth":              forth.GetQuery,
 	"fortran":            fortran.GetQuery,
 	"fsh":                fsh.GetQuery,
+	"fsharp":             fsharp.GetQuery,
 	"func":               FunC.GetQuery,
 	"fusion":             fusion.GetQuery,
 	"gdscript":           gdscript.GetQuery,
@@ -946,12 +956,14 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"luap":               luap.GetQuery,
 	"luau":               luau.GetQuery,
 	"m68k":               m68k.GetQuery,
+	"magik":              magik.GetQuery,
 	"make":               make.GetQuery,
 	"markdown":           markdown.GetQuery,
 	"markdown_inline":    markdown_inline.GetQuery,
 	"matlab":             matlab.GetQuery,
 	"mcfuncx":            mcfuncx.GetQuery,
 	"menhir":             menhir.GetQuery,
+	"merlin6502":         merlin6502.GetQuery,
 	"mermaid":            mermaid.GetQuery,
 	"meson":              meson.GetQuery,
 	"mlir":               mlir.GetQuery,

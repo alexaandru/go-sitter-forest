@@ -1500,6 +1500,14 @@
     "revision": "3b08641373cb3e37bc531e6e3cdb85d02b454702"
   },
   {
+    "language": "jasmin",
+    "url": "https://github.com/y4cer/tree-sitter-jasmin",
+    "maintainedBy": "@y4cer",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
+  },
+  {
     "language": "java",
     "url": "https://github.com/tree-sitter/tree-sitter-java",
     "maintainedBy": "@p00f",
@@ -3060,13 +3068,6 @@
     "revision": "1af543a96d060b1f808982037bfc54cc02218edd"
   },
   {
-    "language": "jasmin",
-    "url": "https://github.com/y4cer/tree-sitter-jasmin",
-    "maintainedBy": "@y4cer",
-    "pending": true,
-    "reference": "master"
-  },
-  {
     "language": "systemverilog",
     "url": "https://github.com/zhangwwpeng/tree-sitter-systemverilog",
     "maintainedBy": "@zhangwwpeng",
@@ -3652,4 +3653,3 @@
     "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
   }
 ]
-

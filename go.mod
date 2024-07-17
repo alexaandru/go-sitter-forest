@@ -63,6 +63,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/d v1.5.100
 	github.com/alexaandru/go-sitter-forest/dale v1.5.100
 	github.com/alexaandru/go-sitter-forest/dart v1.5.100
+	github.com/alexaandru/go-sitter-forest/dbml v1.5.100
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.100
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.100
 	github.com/alexaandru/go-sitter-forest/diff v1.5.100
@@ -99,6 +100,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.5.100
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.100
 	github.com/alexaandru/go-sitter-forest/fsh v1.5.100
+	github.com/alexaandru/go-sitter-forest/fsharp v1.5.100
 	github.com/alexaandru/go-sitter-forest/func v1.5.100
 	github.com/alexaandru/go-sitter-forest/fusion v1.5.100
 	github.com/alexaandru/go-sitter-forest/gdscript v1.5.100
@@ -192,12 +194,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/luap v1.5.100
 	github.com/alexaandru/go-sitter-forest/luau v1.5.100
 	github.com/alexaandru/go-sitter-forest/m68k v1.5.100
+	github.com/alexaandru/go-sitter-forest/magik v1.5.100
 	github.com/alexaandru/go-sitter-forest/make v1.5.100
 	github.com/alexaandru/go-sitter-forest/markdown v1.5.100
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.5.100
 	github.com/alexaandru/go-sitter-forest/matlab v1.5.100
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.5.101
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.100
+	github.com/alexaandru/go-sitter-forest/merlin6502 v1.5.100
 	github.com/alexaandru/go-sitter-forest/mermaid v1.5.100
 	github.com/alexaandru/go-sitter-forest/meson v1.5.100
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.100
