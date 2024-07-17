@@ -14,62 +14,59 @@ import (
 )
 
 // ftDetector is responsible for detecting the filetype based on various
-// mechanisms, such as by glob, by full path, by basename or by extension,
-// in that specific order.
+// mechanisms, such as by modeline, by glob, by full path, by basename
+// or by file extension, in that specific order.
+// For modeline see https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 type ftDetector struct {
-	// Modeline (implicit, only considers the very 1st line in file)
-	// see https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
-	Glob,
-	Fullpath,
-	Basename,
-	Ext map[string]string
+	Glob, Basename, Ext map[string]string
 }
 
 func (d *ftDetector) load(b []byte) (err error) {
-	ftjs := ftDetectorJSON{}
-	if err := json.Unmarshal(b, &ftjs); err != nil {
-		panic(err)
+	ftInv := ftDetectorInverted{}
+	if err = json.Unmarshal(b, &ftInv); err != nil {
+		return err
 	}
 
-	d.Fullpath = ftjs.Fullpath
-	d.Glob = ftjs.Glob
-	d.Ext = map[string]string{}
+	d.Glob = map[string]string{}
 	d.Basename = map[string]string{}
+	d.Ext = map[string]string{}
 
-	for lang, exts := range ftjs.ExtInverted {
-		if len(exts) == 0 {
-			exts = []string{lang}
-		}
+	dot := func(s string) string { return "." + s }
+	nop := func(s string) string { return s }
+	fn := func(label string, dst map[string]string, src map[string][]string, pre func(string) string) error {
+		for lang, pats := range src {
+			for _, pat := range pats {
+				pat = pre(pat)
+				if prev, ok := dst[pat]; ok {
+					return fmt.Errorf("%q %s is registered twice: {%q, %q}", pat, label, prev, lang)
+				}
 
-		for _, ext := range exts {
-			ext = "." + ext
-			if prev, ok := d.Ext[ext]; ok {
-				return fmt.Errorf("%q extension is registered twice: {%q, %q}", ext, prev, lang)
+				dst[pat] = lang
 			}
-
-			d.Ext[ext] = lang
 		}
+
+		return nil
 	}
 
-	for lang, names := range ftjs.BasenameInverted {
-		for _, name := range names {
-			if prev, ok := d.Basename[name]; ok {
-				return fmt.Errorf("%q name is registered twice: {%q, %q}", name, prev, lang)
-			}
-
-			d.Basename[name] = lang
-		}
+	if err = fn("glob", d.Glob, ftInv.Glob, nop); err != nil {
+		return
 	}
 
-	return nil
+	if err = fn("basenae", d.Basename, ftInv.Basename, nop); err != nil {
+		return
+	}
+
+	if err = fn("extension", d.Ext, ftInv.Ext, dot); err != nil {
+		return
+	}
+
+	return
 }
 
-type ftDetectorJSON struct {
+type ftDetectorInverted struct {
 	Glob,
-	Fullpath map[string]string
-	BasenameInverted,
-	// If ext == lang you can set it to `null` (i.e. .scala and scala, .go and go, etc.).
-	ExtInverted map[string][]string
+	Basename,
+	Ext map[string][]string
 }
 
 var (
@@ -83,7 +80,7 @@ var ftDetect []byte
 // DetectLang detects the language name based on given file path.
 // The given fpath should preferably be the absolute path as that guarantees
 // that all the detectors can be used. It can however work with relative
-// paths, the filename alone or even with just the file extension (including
+// paths, the filename or even with just the file extension (including
 // leading dot) alone. However the success rate will correspondingly be
 // reduced due to the inability to use all the detectors available.
 func DetectLanguage(fpath string) string {
@@ -95,8 +92,8 @@ func DetectLanguage(fpath string) string {
 // languages not maintained by this library, or overriding ambiguous
 // ones (i.e. v vs. verilog for .v, ldg or ledger for .ldg, etc.).
 //
-// The pattern pat can be a glob, an absolute path, a filename or
-// a file extension (incl. the leading dot).
+// The pattern pat can be a glob, a path, a filename or a file
+// extension (incl. the leading dot).
 func RegisterLanguage(pat, lang string) error {
 	return ft.register(pat, lang)
 }
@@ -118,18 +115,12 @@ func (d *ftDetector) register(pat, lang string) (err error) {
 	}
 
 	switch {
-	case contains(pat, "*", "[", "?"):
+	case contains(pat, "*", "[", "?") || contains(pat, sep):
 		if d.Glob == nil {
 			d.Glob = map[string]string{}
 		}
 
 		d.Glob[pat] = lang
-	case contains(pat, sep):
-		if d.Fullpath == nil {
-			d.Fullpath = map[string]string{}
-		}
-
-		d.Fullpath[pat] = lang
 	case strings.HasPrefix(pat, "."):
 		if d.Ext == nil {
 			d.Ext = map[string]string{}
@@ -175,10 +166,6 @@ func (d ftDetector) detect(fname string) string {
 		if ok, err := filepath.Match(glob, fname); err == nil && ok {
 			return lang
 		}
-	}
-
-	if v, ok := d.Fullpath[fname]; ok {
-		return v
 	}
 
 	if v, ok := d.Basename[filepath.Base(fname)]; ok {

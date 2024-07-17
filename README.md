@@ -182,11 +182,11 @@ on how to replicate that on your end if using the individual packages.
 
 ### File Type Detection
 
-As of `v1.5.106` the root package also includes an (still experimental/WIP) file type
-detector: `forest.DetectLanguage(<abs path|rel path|filename>)`. For best results, the
-absolute path to the file should be provided as that enables all the available detectors
+As of `v1.5.106` the root package also includes a file type detector:
+`forest.DetectLanguage(<abs path|rel path|filename>)`. For best results, the absolute
+path to the file should be provided as that enables all the available detectors
 ([vim modeline](https://vimdoc.sourceforge.net/htmldoc/options.html#modeline),
-[glob](https://pkg.go.dev/path/filepath#Match), full path, filename, by extension - in that order).
+[glob](https://pkg.go.dev/path/filepath#Match), filename or by extension - in that order).
 The language name is obviously the same as parser and query name.
 
 For modeline, unlike vi(m), only the very 1st line is inspected.
@@ -196,6 +196,8 @@ forest, as they are validated against it) or override existing extensions (parti
 useful where there is file extension clashing, like both V and Verilog using `.v` file
 extension - you can opt for one or the other, etc.). See `forest.RegisterLanguage()` for
 details.
+
+You can inspect the mapping in the [filetype.json](filetype.json) file.
 
 ## Parser Code Changes
 
