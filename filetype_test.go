@@ -382,6 +382,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".purs", "purescript"},
 		{".py", "python"},
 		{".pymanifest", "pymanifest"},
+		{".qc", "quakec"},
 		{".ql", "ql"},
 		{".qll", "ql"},
 		{".qmldir", "qmldir"},

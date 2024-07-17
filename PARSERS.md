@@ -1,4 +1,4 @@
-# 370 Supported Parsers
+# 371 Supported Parsers
 
 12 pending, 4 skipped regeneration, 22 missing queries
 
@@ -269,6 +269,7 @@
 - [x] [ql](https://github.com/tree-sitter/tree-sitter-ql) ✔️ (maintained by @pwntester)
 - [x] [qmldir](https://github.com/tree-sitter-grammars/tree-sitter-qmldir) ✔️ (maintained by @amaanq)
 - [x] [qmljs](https://github.com/yuja/tree-sitter-qmljs) ✔️ (maintained by @Decodetalkers)
+- [x] [quakec](https://github.com/vkazanov/tree-sitter-quakec) ✔️ (maintained by @vkazanov)
 - [x] [Tree-Sitter query language](https://github.com/tree-sitter-grammars/tree-sitter-query) ✔️ (maintained by @steelsojka)
 - [x] [r](https://github.com/r-lib/tree-sitter-r) ✔️ (maintained by @echasnovski)
 - [x] [racket](https://github.com/6cdh/tree-sitter-racket) ✔️ (maintained by @6cdh)

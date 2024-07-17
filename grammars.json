@@ -2529,6 +2529,14 @@
     "revision": "febf48a5b6928600cd8fb2a01254743af550780d"
   },
   {
+    "language": "quakec",
+    "url": "https://github.com/vkazanov/tree-sitter-quakec",
+    "maintainedBy": "@vkazanov",
+    "grammarSha": "2ea5a576b6e5568c1f97e8c2ad214c5ee548cbf018ef07250a335f7e2501e07e",
+    "reference": "main",
+    "revision": "96185f489bef7c045a47bbffdb522e7a194af2e1"
+  },
+  {
     "language": "query",
     "altName": "Tree-Sitter query language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",

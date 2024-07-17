@@ -291,6 +291,7 @@
     "ql":                 ["ql", "qll"],
     "qmldir":             ["qmldir"],
     "qmljs":              ["qmljs"],
+    "quakec":             ["qc"],
     "r":                  ["R"],
     "racket":             ["rkt", "rktd", "rktl"],
     "ralph":              ["ralph"],
