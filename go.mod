@@ -123,6 +123,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/goctl v1.5.100
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.5.100
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.100
+	github.com/alexaandru/go-sitter-forest/gooscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.100
 	github.com/alexaandru/go-sitter-forest/gotmpl v1.5.100
 	github.com/alexaandru/go-sitter-forest/gowork v1.5.100
@@ -235,6 +236,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.5.100
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
+	github.com/alexaandru/go-sitter-forest/pic v1.5.100
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
 	github.com/alexaandru/go-sitter-forest/po v1.5.100
 	github.com/alexaandru/go-sitter-forest/pod v1.5.100

@@ -128,6 +128,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/goctl"
 	"github.com/alexaandru/go-sitter-forest/godot_resource"
 	"github.com/alexaandru/go-sitter-forest/gomod"
+	"github.com/alexaandru/go-sitter-forest/gooscript"
 	"github.com/alexaandru/go-sitter-forest/gosum"
 	"github.com/alexaandru/go-sitter-forest/gotmpl"
 	"github.com/alexaandru/go-sitter-forest/gowork"
@@ -241,6 +242,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/php"
 	"github.com/alexaandru/go-sitter-forest/php_only"
 	"github.com/alexaandru/go-sitter-forest/phpdoc"
+	"github.com/alexaandru/go-sitter-forest/pic"
 	"github.com/alexaandru/go-sitter-forest/pioasm"
 	"github.com/alexaandru/go-sitter-forest/po"
 	"github.com/alexaandru/go-sitter-forest/pod"
@@ -514,6 +516,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"goctl":              goctl.GetLanguage,
 	"godot_resource":     godot_resource.GetLanguage,
 	"gomod":              gomod.GetLanguage,
+	"gooscript":          gooscript.GetLanguage,
 	"gosum":              gosum.GetLanguage,
 	"gotmpl":             gotmpl.GetLanguage,
 	"gowork":             gowork.GetLanguage,
@@ -626,6 +629,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"php":                php.GetLanguage,
 	"php_only":           php_only.GetLanguage,
 	"phpdoc":             phpdoc.GetLanguage,
+	"pic":                pic.GetLanguage,
 	"pioasm":             pioasm.GetLanguage,
 	"po":                 po.GetLanguage,
 	"pod":                pod.GetLanguage,
@@ -885,6 +889,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"goctl":              goctl.GetQuery,
 	"godot_resource":     godot_resource.GetQuery,
 	"gomod":              gomod.GetQuery,
+	"gooscript":          gooscript.GetQuery,
 	"gosum":              gosum.GetQuery,
 	"gotmpl":             gotmpl.GetQuery,
 	"gowork":             gowork.GetQuery,
@@ -997,6 +1002,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"php":                php.GetQuery,
 	"php_only":           php_only.GetQuery,
 	"phpdoc":             phpdoc.GetQuery,
+	"pic":                pic.GetQuery,
 	"pioasm":             pioasm.GetQuery,
 	"po":                 po.GetQuery,
 	"pod":                pod.GetQuery,
