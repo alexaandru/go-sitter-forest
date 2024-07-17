@@ -12,7 +12,7 @@ include Util.make
 
 update: update-all test
 	@git add -u .
-	@git add */*.c */*.h
+	@git add */*.c */*.h */*.scm
 	@git status
 	@echo "Press enter to continue, Ctrl-C to exit"
 	@read x && git commit -m Updated\ parsers && git push

@@ -1,6 +1,7 @@
 #include "parser.h"
 #include "alloc.h"
 #include "array.h"
+#include <stdint.h>
 
 enum TokenType {
     COMMAND,
@@ -32,6 +33,26 @@ void tree_sitter_tup_external_scanner_deserialize(void *payload, char *buffer, u
 }
 
 
+// expects that mark end is already set
+bool is_variable(TSLexer *lexer, bool *advanced) {
+    if (
+        lexer->lookahead == '$'
+        || lexer->lookahead == '@'
+        || lexer->lookahead == '&'
+    ) {
+        lexer->advance_tup(lexer, false);
+        *advanced = true;
+        if (lexer->lookahead == '(' || lexer->lookahead == '{') {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+
 bool tree_sitter_tup_external_scanner_scan(
     void* payload,
     TSLexer *lexer,
@@ -50,17 +71,25 @@ bool tree_sitter_tup_external_scanner_scan(
     } else if (valid_symbols[COMMAND]
             && lexer->lookahead != '%'
             && lexer->lookahead != '^'
-            && lexer->lookahead != '&'
-            && lexer->lookahead != '$'
-            && lexer->lookahead != '@'
     ) {
+        uint32_t next = lexer->lookahead;
+
         bool advanced = false;
+        if (is_variable(lexer, &advanced)) {
+            return false;
+        }
+        if (advanced) {
+            array_push(&next_string, next);
+        }
+
+        advanced = false;
         if (lexer->lookahead == '|') {
             lexer->advance_tup(lexer, false);
             advanced = true;
             if (lexer->lookahead == '>') {
                 return false;
             }
+            array_push(&next_string, next);
         }
         if (!advanced) {
             lexer->advance_tup(lexer, false);
@@ -83,12 +112,21 @@ bool tree_sitter_tup_external_scanner_scan(
                     lexer->mark_end(lexer);
                 }
             } else if (lexer->lookahead == '%'
-                || lexer->lookahead == '&'
-                || lexer->lookahead == '$'
-                || lexer->lookahead == '@'
             ) {
+                lexer->mark_end(lexer);
                 lexer->result_symbol = COMMAND;
                 return true;
+            }
+
+            uint32_t next = lexer->lookahead;
+            lexer->mark_end(lexer);
+            bool advanced = false;
+            if (is_variable(lexer, &advanced)) {
+                lexer->result_symbol = COMMAND;
+                return true;
+            }
+            if (advanced) {
+                array_push(&next_string, lexer->lookahead);
             }
 
             array_push(&next_string, lexer->lookahead);

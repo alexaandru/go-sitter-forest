@@ -23,7 +23,7 @@
 (identifier) @variable.parameter
 
 ((identifier) @function
-  (#match? @function "^\\@"))
+  (#match? @function "^@"))
 
 ((identifier) @type
   (#match? @type "^#"))

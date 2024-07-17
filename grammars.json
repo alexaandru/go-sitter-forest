@@ -793,7 +793,7 @@
     "maintainedBy": "@bryankenote",
     "grammarSha": "c3960cc1628f05a89586fb10367e96d936e1a7a4131781872ade534a86a5ac06",
     "reference": "master",
-    "revision": "a09ba9fea4b5e0a489d1fad9b03e3be7c12044ff"
+    "revision": "2d037f2f2bf668737f72e6be6eda4b7918b68d86"
   },
   {
     "language": "familymarkup",
@@ -887,7 +887,7 @@
     "maintainedBy": "@sh-cho",
     "grammarSha": "4127950a818fbba767eef1bc1ea1c612fb094d24dfd680e2f700f731b5d4268f",
     "reference": "main",
-    "revision": "f45fa936c3dad728faa4ea62ea304950670633ac"
+    "revision": "d4cca355a2ebd7ebd4010d3288a426644e2c4697"
   },
   {
     "language": "foam",
@@ -1410,9 +1410,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "cd2a0e35c83c42b4d7430146059c783e99192bc605d2c746db01ba0cc8b0aae6",
+    "grammarSha": "1c5ae7ecba7c9d42682f824ebe612890caee9d5250fdc4d81e2896cddb0678f9",
     "reference": "master",
-    "revision": "880f898c6e38c0f8c3f2e2d2107c12189a499765"
+    "revision": "556f2878db1c26da33a921df8226f3268fadef75"
   },
   {
     "language": "idris",
@@ -1794,7 +1794,7 @@
     "maintainedBy": "@marcuscaisey",
     "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
     "reference": "master",
-    "revision": "b035bb4f7709df812201135b1f7f1207481de1aa"
+    "revision": "74eb513829c87748fda4ee9be1ed1a2cf88cd57a"
   },
   {
     "language": "lua",
@@ -1894,7 +1894,7 @@
     "maintainedBy": "@PFiS1737",
     "grammarSha": "f8637367cbc1b258d8b879c203991ed76bb51ebb8f872673e43aace8d4f181cd",
     "reference": "main",
-    "revision": "f36cb91ac93cd38ba84c192b43ed6d84dc52bbdc"
+    "revision": "e825832f938070305dc406737a542b43ebea3f64"
   },
   {
     "language": "menhir",
@@ -3083,9 +3083,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@vrischmann",
-    "grammarSha": "62df91aa9a3b81e3197ef7af725c861b62df32e8e2e8d0cdb0099acf2e6c3b27",
+    "grammarSha": "68907fd3187725d365f13898f16f380755ae495b07b628bcf17487cd1649124d",
     "reference": "master",
-    "revision": "23c820e2bd2b53198763d9e7bf12cebb4bf7b98f"
+    "revision": "de0d0ee129cf643872e8e0d5c4a6589b5a3aae23"
   },
   {
     "language": "terra",
@@ -3216,9 +3216,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@RoBaertschi",
-    "grammarSha": "c31e72383abf41cd134e8827907902d2c9b89dce20e69e51dfd7ac5f2ac96b60",
+    "grammarSha": "770f11499cbd4ecde8dd0ae64e90d5ddda380103f410ece0fa10bdaece68a98f",
     "reference": "main",
-    "revision": "fa0967c788e4f3cd30fe79c25ed4fe12b4694c89"
+    "revision": "5a42fe25a9cec560eb073dc5f77c0b44ea50825f"
   },
   {
     "language": "turtle",
@@ -3497,7 +3497,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "37e38e2a9a861ba49f1779cfb559c14c7681add7f4a605b0ce16eb2a46f6e008",
     "reference": "main",
-    "revision": "22454e219824bc41be08413c95b5b4c292ff2d7a"
+    "revision": "a14c45430c3d4defa21e25efe8d23e932169f136"
   },
   {
     "language": "wit",
