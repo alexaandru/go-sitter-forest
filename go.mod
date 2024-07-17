@@ -260,6 +260,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ql v1.5.100
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.100
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.100
+	github.com/alexaandru/go-sitter-forest/quakec v1.5.100
 	github.com/alexaandru/go-sitter-forest/query v1.5.100
 	github.com/alexaandru/go-sitter-forest/r v1.5.100
 	github.com/alexaandru/go-sitter-forest/racket v1.5.100

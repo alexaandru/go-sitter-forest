@@ -512,6 +512,8 @@ github.com/alexaandru/go-sitter-forest/qmldir v1.5.100 h1:1CBLDqAANwi67btC5eZc8V
 github.com/alexaandru/go-sitter-forest/qmldir v1.5.100/go.mod h1:QsZTt3zNMDoyjF31lxYRRKUEbDKeyLhgDjbA9AtLGP8=
 github.com/alexaandru/go-sitter-forest/qmljs v1.5.100 h1:ED0HMOQQHNz/Id74ipKrVoO1C8Jue9NJnoDTU02W9ok=
 github.com/alexaandru/go-sitter-forest/qmljs v1.5.100/go.mod h1:W5xR31lEouTJp3TxflXWqHx+It4Oxxu5yHCSe6pxo5E=
+github.com/alexaandru/go-sitter-forest/quakec v1.5.100 h1:CXBli5rc22P7AATRG54IwiyldSpMCZ03x+Nz8Jl2A1A=
+github.com/alexaandru/go-sitter-forest/quakec v1.5.100/go.mod h1:fKrssM0ZTFnZ53mNj9OAyYGgGWAe88l4xaCn4gihXfQ=
 github.com/alexaandru/go-sitter-forest/query v1.5.100 h1:CgY0fCK1j3C46YdCY3PZdV+V1DkVA54hX6mMmTW/Zuo=
 github.com/alexaandru/go-sitter-forest/query v1.5.100/go.mod h1:4FxuT/Aese3eL3p+NXgPdDYgQS86Pm9wwfRuaKvTZuc=
 github.com/alexaandru/go-sitter-forest/r v1.5.100 h1:6xf0hntfRV+m7JpUan123qO1EweLSPk2twPSBw4/X9s=

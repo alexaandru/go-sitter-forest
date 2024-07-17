@@ -266,6 +266,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ql"
 	"github.com/alexaandru/go-sitter-forest/qmldir"
 	"github.com/alexaandru/go-sitter-forest/qmljs"
+	"github.com/alexaandru/go-sitter-forest/quakec"
 	"github.com/alexaandru/go-sitter-forest/query"
 	"github.com/alexaandru/go-sitter-forest/r"
 	"github.com/alexaandru/go-sitter-forest/racket"
@@ -653,6 +654,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"ql":                 ql.GetLanguage,
 	"qmldir":             qmldir.GetLanguage,
 	"qmljs":              qmljs.GetLanguage,
+	"quakec":             quakec.GetLanguage,
 	"query":              query.GetLanguage,
 	"r":                  r.GetLanguage,
 	"racket":             racket.GetLanguage,
@@ -1026,6 +1028,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ql":                 ql.GetQuery,
 	"qmldir":             qmldir.GetQuery,
 	"qmljs":              qmljs.GetQuery,
+	"quakec":             quakec.GetQuery,
 	"query":              query.GetQuery,
 	"r":                  r.GetQuery,
 	"racket":             racket.GetQuery,
