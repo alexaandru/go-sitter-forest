@@ -1,6 +1,6 @@
-# 368 Supported Parsers
+# 370 Supported Parsers
 
-12 pending, 4 skipped regeneration, 21 missing queries
+12 pending, 4 skipped regeneration, 22 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -125,6 +125,7 @@
 - [x] [goctl](https://github.com/chaozwn/tree-sitter-goctl) ✔️ (maintained by @chaozwn)
 - [x] [Godot Resources (gdresource)](https://github.com/PrestonKnopp/tree-sitter-godot-resource) ✔️ (maintained by @pierpo)
 - [x] [gomod](https://github.com/camdencheek/tree-sitter-go-mod) ✔️ (maintained by @camdencheek)
+- [x] [gooscript](https://github.com/bishan-batel/tree-sitter-gooscript) ✔️ (maintained by @bishan-batel)
 - [x] [gosum](https://github.com/tree-sitter-grammars/tree-sitter-go-sum) ✔️ (maintained by @amaanq)
 - [x] [gotmpl](https://github.com/ngalaiko/tree-sitter-go-template) ✔️ (maintained by @qvalentin)
 - [x] [gowork](https://github.com/omertuc/tree-sitter-go-work) ✔️ (maintained by @omertuc)
@@ -244,6 +245,7 @@
 - [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
 - [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
 - [x] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) ✔️ (maintained by @mikehaertl)
+- [x] [pic](https://github.com/smoeding/tree-sitter-pic) 🗸 (maintained by @smoeding)
 - [x] [pioasm](https://github.com/leo60228/tree-sitter-pioasm) ✔️ (maintained by @leo60228)
 - [x] [po](https://github.com/tree-sitter-grammars/tree-sitter-po) ✔️ (maintained by @amaanq)
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️ (maintained by @RabbiVeesh, @LeoNerd)

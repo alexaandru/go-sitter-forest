@@ -1151,6 +1151,14 @@
     "revision": "bbe2fe3be4b87e06a613e685250f473d2267f430"
   },
   {
+    "language": "gooscript",
+    "url": "https://github.com/bishan-batel/tree-sitter-gooscript",
+    "maintainedBy": "@bishan-batel",
+    "grammarSha": "18a30ab54a5dc4f1ca9a317798a4829e4631c4c3df38844117a0c82f377077c9",
+    "reference": "mucho",
+    "revision": "76b8c61eb2b1a38178693823a09e2cde80ed3503"
+  },
+  {
     "language": "gosum",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-go-sum",
     "maintainedBy": "@amaanq",
@@ -2293,6 +2301,14 @@
     "grammarSha": "5b52ad374dfe8505d460ac822f8d906fe97448037a334f12e4573630b0e66a93",
     "reference": "master",
     "revision": "1d0e255b37477d0ca46f1c9e9268c8fa76c0b3fc"
+  },
+  {
+    "language": "pic",
+    "url": "https://github.com/smoeding/tree-sitter-pic",
+    "maintainedBy": "@smoeding",
+    "grammarSha": "423efadeb27da054c0a42e391e4e46cc496d295feae0ba4b357dc4d3490ca768",
+    "reference": "main",
+    "revision": "5b5f57213c41483aafd22461b7687549ffa16720"
   },
   {
     "language": "pioasm",

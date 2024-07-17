@@ -57,4 +57,7 @@ updates-status:
 		echo "parsers/$$LANG,$$SIZE,$${TAG_COUNT}"; \
 	done | treemap > updates.svg && xdg-open updates.svg
 
+filetype-status:
+	@echo "$$(jq '[.Ext[]]|flatten|length' filetype.json) extensions + $$(jq '[.Basename[]]|flatten|length' filetype.json) filenames + $$(jq '[.Glob[]]|flatten|length' filetype.json) patterns recognized (= $$(jq '[.Basename[], .Ext[], .Glob[]]|flatten|length' filetype.json))"
+
 .PHONY: clean
