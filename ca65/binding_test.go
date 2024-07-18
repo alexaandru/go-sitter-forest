@@ -18,7 +18,7 @@ lsr $ff ; comment
 cmp $ff,x
 ldx $ff,y
 `
-	expected = "(ca65 (inst (acc_addr_inst (asl_opcode) (acc_register))) (inst (ind_y_addr_inst (sbc_opcode) (operand_8 (hex_8)) (y_register))) (inst (rel_addr_inst (bcc_opcode) (operand_16 (hex_16)))) (inst (zp_addr_inst (lsr_opcode) (operand_8 (hex_8)))) (comment) (inst (zp_x_addr_inst (cmp_opcode) (operand_8 (hex_8)) (x_register))) (inst (zp_y_addr_inst (ldx_opcode) (operand_8 (hex_8)) (y_register))))"
+	expected = "(ca65 (inst (abs_addr_inst (asl_opcode) (operand_16 (symbol)))) (inst (ind_y_addr_inst (sbc_opcode) (operand_8 (hex_8)) (y_register))) (inst (rel_addr_inst (bcc_opcode) (operand_16 (hex_16)))) (inst (zp_addr_inst (lsr_opcode) (operand_8 (hex_8)))) (comment) (inst (zp_x_addr_inst (cmp_opcode) (operand_8 (hex_8)) (x_register))) (inst (zp_y_addr_inst (ldx_opcode) (operand_8 (hex_8)) (y_register))))"
 )
 
 func TestGrammar(t *testing.T) {

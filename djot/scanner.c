@@ -1642,6 +1642,12 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
   if (parse_footnote_end(s, lexer, valid_symbols)) {
     return true;
   }
+  // End previous list item before opening new ones.
+  if (valid_symbols[LIST_ITEM_END] &&
+      parse_list_item_end(s, lexer, valid_symbols)) {
+    return true;
+  }
+
   if (parse_heading(s, lexer, valid_symbols)) {
     return true;
   }
@@ -1655,12 +1661,6 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
     if (try_close_verbatim(s, lexer)) {
       return true;
     }
-  }
-
-  // End previous list item before opening new ones.
-  if (valid_symbols[LIST_ITEM_END] &&
-      parse_list_item_end(s, lexer, valid_symbols)) {
-    return true;
   }
 
   switch (lexer->lookahead) {

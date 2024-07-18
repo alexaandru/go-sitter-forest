@@ -260,9 +260,9 @@
     "language": "ca65",
     "url": "https://github.com/babasbot/tree-sitter-ca65",
     "maintainedBy": "@babasbot",
-    "grammarSha": "72814fc5669279119d0b0ccde91becb26517fd915ff4a9e5fb7a007f6a212284",
+    "grammarSha": "a62cf4139df10f4828a6327f0642ec295acc0737f0adbcd7111d31fa5b847d12",
     "reference": "main",
-    "revision": "81aff947964ac25a30d89f4455f8834e4b46e533"
+    "revision": "3f9b6f89bdfc42aec989d63191db2ee7d3107769"
   },
   {
     "language": "cairo",
@@ -641,7 +641,7 @@
     "maintainedBy": "@NoahTheDuke",
     "grammarSha": "b6162645c7ddaf8c68f8b478a81f547a8f08f4901b644deaaae505282c402139",
     "reference": "master",
-    "revision": "87bf82874c86dcf563f5521069d603ed50e5f0cc"
+    "revision": "c5f6cbe66753e51afc1a9b918dbdf84fdae14c1c"
   },
   {
     "language": "dockerfile",
@@ -925,7 +925,7 @@
     "maintainedBy": "@amaanq",
     "grammarSha": "228963cd669cd83562c52dc44445f94449ba3e870697e0a8ad963d7e4a39aa4a",
     "reference": "master",
-    "revision": "dde9829554b831cf6cbf927294f22dfb9a8f0419"
+    "revision": "6b633433fb3f132f21250cf8e8be76d5a6389b7e"
   },
   {
     "language": "fsh",
@@ -1449,9 +1449,9 @@
       "unicode.h"
     ],
     "maintainedBy": "@kayhide",
-    "grammarSha": "c5aed1b32d331eead19d3e84676bd9667e72637b7f7aa7c52f5571286cb28288",
+    "grammarSha": "6b39c00c458b2d7bea4ac817c2ada516c7dbd30961701ab4df8b68e57ace5766",
     "reference": "main",
-    "revision": "3d78dfeced82379292411258abe81cc45ebc6cfa"
+    "revision": "d8ea81213ea4a5c4eb1b48cb832386b9cb70aadb"
   },
   {
     "language": "ignis",
@@ -1829,7 +1829,7 @@
     "maintainedBy": "@marcuscaisey",
     "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
     "reference": "master",
-    "revision": "74eb513829c87748fda4ee9be1ed1a2cf88cd57a"
+    "revision": "d8d48e13ca7fb17f6671304d1536a4c653db8c16"
   },
   {
     "language": "lua",
@@ -2005,9 +2005,9 @@
     "language": "move",
     "url": "https://github.com/tzakian/tree-sitter-move",
     "maintainedBy": "@tzakian",
-    "grammarSha": "27578c0c4c7d3821deec5cc663fff5890dad41a8f768ead3cba12408f0cc1e4f",
+    "grammarSha": "483089860a738af63d1c477317dbec4256d82406cdd0939a812205db740b4f63",
     "reference": "main",
-    "revision": "f3c7609f398aa4291c04204440c6e4a7a3979229"
+    "revision": "f3aa096f237eb0056c5e5dd9cb66b9da19a226cd"
   },
   {
     "language": "move_on_aptos",
@@ -2746,13 +2746,12 @@
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
     "files": [
-      "scanner.c",
-      "stack.h"
+      "scanner.c"
     ],
     "maintainedBy": "@stevanmilic",
     "grammarSha": "cb450cd9a7ec218745412c512476b554a940208dcaf6c66fdaeebc2b0730ba0a",
     "reference": "master",
-    "revision": "599d12b59fed092f5a3d4a7019fd85d90cb39ec1"
+    "revision": "a13f2d1ee9609cc5c4c8ffce9640c353b77a24d8"
   },
   {
     "language": "scfg",
@@ -3474,14 +3473,6 @@
     "revision": ""
   },
   {
-    "language": "zsh",
-    "url": "https://github.com/tree-sitter-grammars/tree-sitter-zsh",
-    "maintainedBy": "@amaanq",
-    "pending": true,
-    "doc": "last (and only) commit says: 'do not use'",
-    "reference": "master"
-  },
-  {
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
     "maintainedBy": "@caarlos0",
@@ -3580,7 +3571,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "37e38e2a9a861ba49f1779cfb559c14c7681add7f4a605b0ce16eb2a46f6e008",
     "reference": "main",
-    "revision": "a14c45430c3d4defa21e25efe8d23e932169f136"
+    "revision": "98de4ad1f0bb3f022090388dfc3fd25778c992c9"
   },
   {
     "language": "wit",
@@ -3683,6 +3674,14 @@
     "grammarSha": "ca1dd7bd1bef0bdfcec6c78d2c9a32e102b677cffc3d938a38e44dec5270aea3",
     "reference": "main",
     "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
+  },
+  {
+    "language": "zsh",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-zsh",
+    "doc": "last (and only) commit says: 'do not use'",
+    "maintainedBy": "@amaanq",
+    "pending": true,
+    "reference": "master",
+    "revision": ""
   }
 ]
-

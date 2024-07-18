@@ -2,7 +2,9 @@
 
 [
   (data)
-  (annotated_type_variable)
+  (record)
+  (interface)
+  (implementation)
 ] @class.around
 
 ((signature)?
@@ -12,7 +14,7 @@
 (exp_lambda) @function.around
 
 (data
-  (type_variable) @parameter.inside)
+  (loname) @parameter.inside)
 
 (patterns
   (_) @parameter.inside)

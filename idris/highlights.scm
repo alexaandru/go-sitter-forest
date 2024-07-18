@@ -5,7 +5,7 @@
   (integer)
 ] @constant.numeric.integer
 
-(exp_literal
+(literal
   (number)) @constant.numeric.float
 
 (char) @constant.character
@@ -36,7 +36,11 @@
 ; ------------------------------------------------------------------------------
 ; Types
 
-(type_variable) @type
+(signature
+  (loname) @type)
+
+(signature
+  (caname) @constructor)
 
 (caname) @constructor
 
@@ -72,7 +76,7 @@
   "⇒"
   "<="
   "⇐"
-  ; "->" ;; somehow, this causes invalid node type '-'
+  "->"
   "→"
   "<-"
   "←"
@@ -109,9 +113,8 @@
   "do"
   "forall"
   "∀"
-  "infix"
-  "infixl"
-  "infixr"
+  (equal)
+  (fixity)
   (visibility)
   (totality)
   (quantity)
@@ -135,10 +138,10 @@
 ; Functions and variables
 
 (exp_name
-  [(loname) (qualified_loname)] @function)
+  (loname) @function)
 
 (exp_name
-  [(caname) (qualified_caname)] @constructor)
+  (caname) @constructor)
 
 (exp_record_access
   field: (_) @variable.other.member)
