@@ -28,6 +28,7 @@
     "python":             ["python"],
     "r":                  ["Rscript"],
     "racket":             ["racket"],
+    "risor":              ["risor"],
     "ruby":               ["ruby"],
     "scala":              ["scala"],
     "scheme":             ["scheme", "guile"],
