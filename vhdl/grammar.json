@@ -1,0 +1,26 @@
+{
+  "language": "vhdl",
+  "url": "https://github.com/jpt13653903/tree-sitter-vhdl",
+  "files": [
+    "scanner.c",
+    "debug_macros.h",
+    "TokenTree.h",
+    "TokenTree.inc",
+    "TokenType.h",
+    "TokenType.inc",
+    "src/libraries/std/env.h",
+    "src/libraries/std/standard.h",
+    "src/libraries/std/textio.h",
+    "src/libraries/ieee/fixed_pkg.h",
+    "src/libraries/ieee/float_pkg.h",
+    "src/libraries/ieee/math_complex.h",
+    "src/libraries/ieee/math_real.h",
+    "src/libraries/ieee/numeric_std.h",
+    "src/libraries/ieee/std_logic_1164.h",
+    "core.h"
+  ],
+  "maintainedBy": "@jpt13653903",
+  "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
+  "reference": "master",
+  "revision": "f4c492accff02b5c85517ff5dd4720e2229feb75"
+}

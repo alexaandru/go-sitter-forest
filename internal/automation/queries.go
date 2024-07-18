@@ -87,10 +87,10 @@ func copyQueries(src, dstPath string) (err error) {
 	}
 
 	pats := [][]string{
-		{"*.scm"},           // most parsers
-		{dstPath, "*.scm"},  // some parsers use queries/<langName>
-		{"nvim", "*.scm"},   // some have dedicated neovim folders
-		{"neovim", "*.scm"}, // ~~
+		{"*.scm"},              // most parsers
+		{dstPath, "*.scm"},     // some parsers use queries/<langName>
+		{"[Nn]vim", "*.scm"},   // some have dedicated neovim folders
+		{"[Nn]eovim", "*.scm"}, // ~~
 	}
 
 	for _, pat := range pats {

@@ -53,6 +53,17 @@ var (
 		`"tree_sitter_rst/tokens.h"`:     `"tokens.h"`,
 		`"tree_sitter/array.h"`:          `"array.h"`,
 		`"tree_sitter/alloc.h"`:          `"alloc.h"`,
+		// vhdl
+		`"libraries/std/env.h"`:             `"env.h"`,
+		`"../../TokenType.h"`:               `"TokenType.h"`,
+		`"libraries/std/standard.h"`:        `"standard.h"`,
+		`"libraries/std/textio.h"`:          `"textio.h"`,
+		`"libraries/ieee/std_logic_1164.h"`: `"std_logic_1164.h"`,
+		`"libraries/ieee/numeric_std.h"`:    `"numeric_std.h"`,
+		`"libraries/ieee/fixed_pkg.h"`:      `"fixed_pkg.h"`,
+		`"libraries/ieee/float_pkg.h"`:      `"float_pkg.h"`,
+		`"libraries/ieee/math_real.h"`:      `"math_real.h"`,
+		`"libraries/ieee/math_complex.h"`:   `"math_complex.h"`,
 	}
 
 	logFile *os.File
@@ -617,7 +628,7 @@ func putFile(b []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h", "_parser.c", "chars.c", "chars.h", "_scanner.c":
+	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h", "_parser.c", "chars.c", "chars.h", "_scanner.c", "TokenTree.inc":
 		// These identifiers clash between many (org, beancount, etc.) parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)

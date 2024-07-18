@@ -3468,9 +3468,9 @@
       "core.h"
     ],
     "maintainedBy": "@jpt13653903",
-    "pending": true,
+    "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
     "reference": "master",
-    "revision": ""
+    "revision": "f4c492accff02b5c85517ff5dd4720e2229feb75"
   },
   {
     "language": "vhs",

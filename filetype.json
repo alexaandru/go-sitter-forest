@@ -383,6 +383,7 @@
     "vala":               ["vala", "vapi"],
     "vento":              ["vto"],
     "verilog":            ["v"],
+    "vhdl":               ["vhdl", "vhd", "vhf", "vhi", "vho", "vhs", "vht", "vhw"],
     "vhs":                ["tape"],
     "vim":                ["vim"],
     "vimdoc":             ["vimdoc"],
