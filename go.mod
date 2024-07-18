@@ -180,7 +180,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.100
+	github.com/alexaandru/go-sitter-forest/latex v1.5.101
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -212,7 +212,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.100
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.102
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.103
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.100
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.100
 	github.com/alexaandru/go-sitter-forest/nim v1.5.100
@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.5.100
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
-	github.com/alexaandru/go-sitter-forest/pic v1.5.101
+	github.com/alexaandru/go-sitter-forest/pic v1.5.102
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
 	github.com/alexaandru/go-sitter-forest/po v1.5.100
 	github.com/alexaandru/go-sitter-forest/pod v1.5.100
@@ -312,7 +312,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.5.100
 	github.com/alexaandru/go-sitter-forest/surface v1.5.100
 	github.com/alexaandru/go-sitter-forest/surrealql v1.5.100
-	github.com/alexaandru/go-sitter-forest/sus v1.5.100
+	github.com/alexaandru/go-sitter-forest/sus v1.5.101
 	github.com/alexaandru/go-sitter-forest/svelte v1.5.100
 	github.com/alexaandru/go-sitter-forest/swift v1.5.100
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.100
