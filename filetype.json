@@ -5,6 +5,7 @@
     "gitignore":          [".*ignore"],
     "hyprlang":           ["hypr*.conf"],
     "make":               ["*makefile", "[Mm]akefile.*"],
+    "muttrc":             ["[Mm]uttrc.d/*", "[Mm]uttrc*", ".muttrc*", "[Mm]uttngrc*", ".muttngrc*", "[Nn]eomuttrc*", ".neomuttrc*"],
     "nginx":              ["nginx/*", "nginx/*/*", "nginx/*/*/*"],
     "query":              ["queries/*.scm", "queries/*/*.scm", "queries/*/*/*.scm", "go-sitter-forest/*/*.scm"],
     "ssh_client_config":  [".ssh/config"],
