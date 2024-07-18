@@ -280,6 +280,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".kts", "kotlin"},
 		{".l", "commonlisp"},
 		{".lalrpop", "lalrpop"},
+		{".lat", "lat"},
 		{".ld", "linkerscript"},
 		{".ldg", "ldg"},
 		{".lds", "linkerscript"},

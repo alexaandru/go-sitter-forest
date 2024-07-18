@@ -220,6 +220,7 @@
     "koto":               ["koto"],
     "kusto":              ["csl", "kql"],
     "lalrpop":            ["lalrpop"],
+    "lat":                ["lat"],
     "latex":              ["tex"],
     "ldg":                ["ldg"],
     "ledger":             ["journal", "ledger"],

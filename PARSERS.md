@@ -1,4 +1,4 @@
-# 372 Supported Parsers
+# 373 Supported Parsers
 
 12 pending, 4 skipped regeneration, 22 missing queries
 
@@ -183,6 +183,7 @@
 - [x] [koto](https://github.com/koto-lang/tree-sitter-koto) ✔️ (maintained by @irh)
 - [x] [kusto](https://github.com/Willem-J-an/tree-sitter-kusto) ✔️ (maintained by @Willem-J-an)
 - [x] [lalrpop](https://github.com/traxys/tree-sitter-lalrpop) ✔️ (maintained by @traxys)
+- [x] [lat](https://github.com/vilarfg/tree-sitter-lat) ✔️ (maintained by @vilarfg)
 - [x] [latex](https://github.com/latex-lsp/tree-sitter-latex) ✔️ (maintained by @theHamsta, @clason)
 - [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️ (maintained by @lesserfish)
 - [x] [ledger](https://github.com/cbarrete/tree-sitter-ledger) ✔️ (maintained by @cbarrete)
