@@ -2,7 +2,7 @@
   "language": "quakec",
   "url": "https://github.com/vkazanov/tree-sitter-quakec",
   "maintainedBy": "@vkazanov",
-  "grammarSha": "2ea5a576b6e5568c1f97e8c2ad214c5ee548cbf018ef07250a335f7e2501e07e",
+  "grammarSha": "1bc1aef664d57d8c9a9688a6a52cd0df05d06b3071faa227f15cd78ef80d7b29",
   "reference": "main",
-  "revision": "96185f489bef7c045a47bbffdb522e7a194af2e1"
+  "revision": "268be403609e944a45e5620c49cbbd6683b7f676"
 }

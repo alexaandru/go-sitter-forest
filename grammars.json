@@ -262,7 +262,7 @@
     "maintainedBy": "@babasbot",
     "grammarSha": "a62cf4139df10f4828a6327f0642ec295acc0737f0adbcd7111d31fa5b847d12",
     "reference": "main",
-    "revision": "3f9b6f89bdfc42aec989d63191db2ee7d3107769"
+    "revision": "ad711dd142ed57c9df6e76c73804131f2ffd2f30"
   },
   {
     "language": "cairo",
@@ -639,9 +639,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@NoahTheDuke",
-    "grammarSha": "b6162645c7ddaf8c68f8b478a81f547a8f08f4901b644deaaae505282c402139",
+    "grammarSha": "05aec1cd0e158e1c493f7824f64572d1ff668db612b136c142afbe816050b774",
     "reference": "master",
-    "revision": "c5f6cbe66753e51afc1a9b918dbdf84fdae14c1c"
+    "revision": "886601b67d1f4690173a4925c214343c30704d32"
   },
   {
     "language": "dockerfile",
@@ -2306,9 +2306,9 @@
     "language": "pic",
     "url": "https://github.com/smoeding/tree-sitter-pic",
     "maintainedBy": "@smoeding",
-    "grammarSha": "423efadeb27da054c0a42e391e4e46cc496d295feae0ba4b357dc4d3490ca768",
+    "grammarSha": "b0e24e8d7bd2688921ed966ebfbe4181f76c9e9c24fd418b9fe840c365776129",
     "reference": "main",
-    "revision": "5b5f57213c41483aafd22461b7687549ffa16720"
+    "revision": "ea52b4dfdddfba8e26e5d2609dff36d09bb20980"
   },
   {
     "language": "pioasm",
@@ -2532,9 +2532,9 @@
     "language": "quakec",
     "url": "https://github.com/vkazanov/tree-sitter-quakec",
     "maintainedBy": "@vkazanov",
-    "grammarSha": "2ea5a576b6e5568c1f97e8c2ad214c5ee548cbf018ef07250a335f7e2501e07e",
+    "grammarSha": "1bc1aef664d57d8c9a9688a6a52cd0df05d06b3071faa227f15cd78ef80d7b29",
     "reference": "main",
-    "revision": "96185f489bef7c045a47bbffdb522e7a194af2e1"
+    "revision": "268be403609e944a45e5620c49cbbd6683b7f676"
   },
   {
     "language": "query",

@@ -359,6 +359,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/vala"
 	"github.com/alexaandru/go-sitter-forest/vento"
 	"github.com/alexaandru/go-sitter-forest/verilog"
+	"github.com/alexaandru/go-sitter-forest/vhdl"
 	"github.com/alexaandru/go-sitter-forest/vhs"
 	"github.com/alexaandru/go-sitter-forest/vim"
 	"github.com/alexaandru/go-sitter-forest/vimdoc"
@@ -747,6 +748,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"vala":               vala.GetLanguage,
 	"vento":              vento.GetLanguage,
 	"verilog":            verilog.GetLanguage,
+	"vhdl":               vhdl.GetLanguage,
 	"vhs":                vhs.GetLanguage,
 	"vim":                vim.GetLanguage,
 	"vimdoc":             vimdoc.GetLanguage,
@@ -1121,6 +1123,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"vala":               vala.GetQuery,
 	"vento":              vento.GetQuery,
 	"verilog":            verilog.GetQuery,
+	"vhdl":               vhdl.GetQuery,
 	"vhs":                vhs.GetQuery,
 	"vim":                vim.GetQuery,
 	"vimdoc":             vimdoc.GetQuery,
