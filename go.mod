@@ -211,7 +211,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.100
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.101
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.102
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.100
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.100
 	github.com/alexaandru/go-sitter-forest/nim v1.5.100
