@@ -30,7 +30,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.101
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.102
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100
@@ -68,7 +68,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.100
 	github.com/alexaandru/go-sitter-forest/diff v1.5.100
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.100
-	github.com/alexaandru/go-sitter-forest/djot v1.5.100
+	github.com/alexaandru/go-sitter-forest/djot v1.5.101
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.100
 	github.com/alexaandru/go-sitter-forest/dot v1.5.100
 	github.com/alexaandru/go-sitter-forest/dotenv v1.5.100
@@ -154,7 +154,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/idl v1.5.102
-	github.com/alexaandru/go-sitter-forest/idris v1.5.101
+	github.com/alexaandru/go-sitter-forest/idris v1.5.102
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
 	github.com/alexaandru/go-sitter-forest/ink v1.5.100
@@ -207,7 +207,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.5.100
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.100
 	github.com/alexaandru/go-sitter-forest/motoko v1.5.100
-	github.com/alexaandru/go-sitter-forest/move v1.5.100
+	github.com/alexaandru/go-sitter-forest/move v1.5.101
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.100
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
@@ -281,7 +281,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rtx v1.5.100
 	github.com/alexaandru/go-sitter-forest/ruby v1.5.100
 	github.com/alexaandru/go-sitter-forest/rust v1.5.100
-	github.com/alexaandru/go-sitter-forest/scala v1.5.100
+	github.com/alexaandru/go-sitter-forest/scala v1.5.101
 	github.com/alexaandru/go-sitter-forest/scfg v1.5.100
 	github.com/alexaandru/go-sitter-forest/scheme v1.5.100
 	github.com/alexaandru/go-sitter-forest/scss v1.5.100
