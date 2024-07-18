@@ -14,7 +14,7 @@ import (
 )
 
 // ftDetector is responsible for detecting the filetype based on various
-// mechanisms, such as by modeline, by glob, by full path, by basename
+// mechanisms, such as by modeline/shebang, by glob, by full path, by basename
 // or by file extension, in that specific order.
 // For modeline see https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 type ftDetector struct {
@@ -139,7 +139,7 @@ func (d *ftDetector) register(pat, lang string) (err error) {
 }
 
 func (d ftDetector) detect(fname string) string {
-	if lang := detectByModeline(fname); lang != "" {
+	if lang := detectByModelineOrShebang(fname); lang != "" {
 		return lang
 	}
 
@@ -179,11 +179,14 @@ func (d ftDetector) detect(fname string) string {
 	return "unknown"
 }
 
-// See :he modeline for details. This is a pretty relaxed regex, can match even invalid lines, as long
-// as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
-var vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
+var (
+	// See :he modeline for details. This is a pretty relaxed regex, can match even invalid lines, as long
+	// as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
+	vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
+	shebangRx     = regexp.MustCompile(`^#!.*(?:/env\s+|/)(Rscript|lua|racket|fish|ruby|rdmd|sbcl|node|perl|php|python|risor|awk|gawk|mawk|sh|ash|bash|tcsh|csh|zsh|ksh)(?:\d|\s|$)`)
+)
 
-func detectByModeline(fname string) (lang string) {
+func detectByModelineOrShebang(fname string) (lang string) {
 	f, err := os.Open(fname)
 	if err != nil {
 		return ""
@@ -212,11 +215,16 @@ func detectByModeline(fname string) (lang string) {
 	}
 
 	lang = extractFromModeline(line)
-	if slices.Index(SupportedLanguages(), lang) < 0 {
-		return ""
+	if slices.Index(SupportedLanguages(), lang) >= 0 {
+		return
 	}
 
-	return
+	lang = extractFromShebang(line)
+	if slices.Index(SupportedLanguages(), lang) >= 0 {
+		return
+	}
+
+	return ""
 }
 
 func extractFromModeline(line string) (lang string) {
@@ -226,6 +234,32 @@ func extractFromModeline(line string) (lang string) {
 	}
 
 	return matches[1]
+}
+
+func extractFromShebang(line string) (lang string) {
+	matches := shebangRx.FindStringSubmatch(line)
+	if len(matches) < 2 {
+		return
+	}
+
+	lang = matches[1]
+
+	switch lang {
+	case "Rscript":
+		lang = "r"
+	case "sbcl":
+		lang = "commonlisp"
+	case "node":
+		lang = "javascript"
+	case "rdmd":
+		lang = "d"
+	case "gawk", "mawk":
+		lang = "awk"
+	case "sh", "ash", "tcsh", "csh", "zsh", "ksh":
+		lang = "bash"
+	}
+
+	return
 }
 
 func contains(s string, opts ...string) (ok bool) {

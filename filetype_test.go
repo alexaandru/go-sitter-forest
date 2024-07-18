@@ -695,6 +695,8 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"internal/testdata/modeline_prolog1", "prolog"},
 		{"internal/testdata/modeline_v1.v", "v"},
 		{"internal/testdata/modeline_verilog1.v", "verilog"},
+		{"internal/testdata/shebang_perl1", "perl"},
+		{"internal/testdata/shebang_php1", "perl"},
 		{"irb_history", "ruby"},
 		{"irbrc", "ruby"},
 		{"justfile", "just"},
@@ -910,8 +912,63 @@ type modeTest struct {
 	modeline, exp string
 }
 
-func TestDetectByModeline(t *testing.T) {
+func TestDetectByModelineOrShebang(t *testing.T) {
 	t.Skip("Tested implicitly via TestDetectLanguage()")
+}
+
+func TestExtractFromShebang(t *testing.T) {
+	testCases := []struct{ in, exp string }{
+		{"", ""},
+		{"#!/usr/bin/perl", "perl"},
+		{"#!  /usr/bin/perl", "perl"},
+		{"#!/usr/bin/perl -w", "perl"},
+		{"#!/usr/bin/env perl", "perl"},
+		{"#!  /usr/bin/env   perl", "perl"},
+		{"#!/usr/bin/env perl -w", "perl"},
+		{"#!  /usr/bin/env   perl   -w", "perl"},
+		{"#!/opt/local/bin/perl", "perl"},
+		{"#!/usr/bin/perl5", "perl"},
+		{"#!/usr/bin/php5", "php"},
+		{"#!/usr/bin/php", "php"},
+		{"#!/usr/bin/python", "python"},
+		{"#!/usr/bin/python2", "python"},
+		{"#!/usr/bin/python3", "python"},
+		{"#!/usr/bin/awk", "awk"},
+		{"#!/usr/bin/gawk", "awk"},
+		{"#!/usr/bin/mawk", "awk"},
+		{"#!/bin/sh", "bash"},
+		{"#!/bin/ash", "bash"},
+		{"#!/bin/bash", "bash"},
+		{"#!/bin/tcsh", "bash"},
+		{"#!/bin/csh", "bash"},
+		{"#!/bin/zsh", "bash"},
+		{"#!/bin/ksh", "bash"},
+		{"#!/usr/bin/env rdmd", "d"},
+		{"#!/usr/bin/env node", "javascript"},
+		{"#!/usr/bin/node", "javascript"},
+		{"#!/usr/bin/env sbcl", "commonlisp"},
+		{"#!/usr/bin/sbcl", "commonlisp"},
+		{"#!/usr/bin/env racket", "racket"},
+		{"#!/usr/bin/racket", "racket"},
+		{"#!/usr/bin/env fish", "fish"},
+		{"#!/usr/bin/fish", "fish"},
+		{"#!/bin/fish", "fish"},
+		{"#!/usr/bin/env ruby", "ruby"},
+		{"#!/usr/bin/ruby", "ruby"},
+		{"#!/usr/bin/env lua", "lua"},
+		{"#!/usr/bin/lua", "lua"},
+		{"#!/usr/bin/env Rscript", "r"},
+		{"#!/usr/bin/Rscript", "r"},
+		// TODO add some negatives as well and some more noise
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.exp, func(t *testing.T) {
+			if act := extractFromShebang(tc.in); act != tc.exp {
+				t.Fatalf("Expected %q got %q for %q", tc.exp, act, tc.in)
+			}
+		})
+	}
 }
 
 func TestExtractFromModeline(t *testing.T) {
