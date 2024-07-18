@@ -186,9 +186,9 @@ The root package also includes a file type detector:
 `forest.DetectLanguage(<abs path|rel path|filename>)`. For best results, the absolute
 path to the file should be provided as that enables all the available detectors, in
 order of priority:
-- shebang or [vim modeline](https://vimdoc.sourceforge.net/htmldoc/options.html#modeline) -
 
-  whichever is available on the (and only the) 1st line;
+- shebang or [vim modeline](https://vimdoc.sourceforge.net/htmldoc/options.html#modeline) -
+  whichever is available on the 1st 255 bytes of the file;
 - [glob](https://pkg.go.dev/path/filepath#Match) matching against the path tail
   (i.e. _/_/foo.txt will match .../a/b/foo.txt regardless of the rest of the path),
 - file name;

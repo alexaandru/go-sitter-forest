@@ -666,6 +666,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"foo/.prettierignore", "gitignore"},
 		{"foo/.prettierrc", "json"},
 		{"foo/.profile", "bash"},
+		{"foo/.sbclrc", "commonlisp"},
 		{"foo/.stylelintignore", "gitignore"},
 		{"foo/.tmux.conf", "bash"},
 		{"foo/.trans", "clojure"},
@@ -731,6 +732,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"requirements.in", "requirements"},
 		{"requirements.txt", "requirements"},
 		{"robots.txt", "robots"},
+		{"sbclrc", "commonlisp"},
 		{"sxhkdrc", "sxhkdrc"},
 		{"tmux.conf", "bash"},
 		{"todo.txt", "todotxt"},
@@ -926,7 +928,7 @@ func TestExtractFromModeline(t *testing.T) {
 							pre1, vi, pre2, cmd, post), "go"}
 
 						t.Run(tc.modeline, func(t *testing.T) {
-							if act := extractFromModeline(tc.modeline); act != tc.exp {
+							if act := ft.extractFromModeline(tc.modeline); act != tc.exp {
 								t.Fatalf("Expected %q got %q for %q", tc.exp, act, tc.modeline)
 							}
 						})
