@@ -291,9 +291,7 @@
   ">>"
 ] @punctuation.bracket
 
-[
-  "@"
-] @punctuation.special
+"@" @punctuation.special
 
 [
   (decimal_integer)

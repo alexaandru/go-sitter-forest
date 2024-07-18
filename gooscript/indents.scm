@@ -12,7 +12,7 @@
  (match_statement)
  (dictionary)
  (fn_statement)
- (variable_declare)
+  ; (variable_declare)
  (block)
 ] @indent.begin
 

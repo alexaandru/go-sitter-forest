@@ -185,6 +185,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/koto"
 	"github.com/alexaandru/go-sitter-forest/kusto"
 	"github.com/alexaandru/go-sitter-forest/lalrpop"
+	"github.com/alexaandru/go-sitter-forest/lat"
 	"github.com/alexaandru/go-sitter-forest/latex"
 	"github.com/alexaandru/go-sitter-forest/ldg"
 	"github.com/alexaandru/go-sitter-forest/ledger"
@@ -574,6 +575,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"koto":               koto.GetLanguage,
 	"kusto":              kusto.GetLanguage,
 	"lalrpop":            lalrpop.GetLanguage,
+	"lat":                lat.GetLanguage,
 	"latex":              latex.GetLanguage,
 	"ldg":                ldg.GetLanguage,
 	"ledger":             ledger.GetLanguage,
@@ -949,6 +951,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"koto":               koto.GetQuery,
 	"kusto":              kusto.GetQuery,
 	"lalrpop":            lalrpop.GetQuery,
+	"lat":                lat.GetQuery,
 	"latex":              latex.GetQuery,
 	"ldg":                ldg.GetQuery,
 	"ledger":             ledger.GetQuery,
