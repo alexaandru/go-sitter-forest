@@ -58,6 +58,6 @@ updates-status:
 	done | treemap > updates.svg && xdg-open updates.svg
 
 filetype-status:
-	@echo "$$(jq '[.Ext[]]|flatten|length' filetype.json) extensions + $$(jq '[.Basename[]]|flatten|length' filetype.json) filenames + $$(jq '[.Glob[]]|flatten|length' filetype.json) patterns recognized (= $$(jq '[.Basename[], .Ext[], .Glob[]]|flatten|length' filetype.json))"
+	@echo "$$(jq '[.Shebang[]]|flatten|length' filetype.json) shebangs + $$(jq '[.Ext[]]|flatten|length' filetype.json) extensions + $$(jq '[.Basename[]]|flatten|length' filetype.json) filenames + $$(jq '[.Glob[]]|flatten|length' filetype.json) patterns recognized (= $$(jq '[.Shebang[], .Basename[], .Ext[], .Glob[]]|flatten|length' filetype.json))"
 
 .PHONY: clean

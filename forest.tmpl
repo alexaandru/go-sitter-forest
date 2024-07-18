@@ -1,9 +1,10 @@
-{{define "item"}}"{{.}}": {{if eq . "go"}}Go{{else if eq . "func"}}FunC{{else if eq . "context"}}ConTeXt{{else}}{{.}}{{end}}{{end}}
+{{define "item"}}"{{.}}": {{if eq . "go"}}Go{{else if eq . "func"}}FunC{{else if eq . "context"}}ConTeXt{{else if eq . "terraform"}}hcl{{else}}{{.}}{{end}}{{end}}
 package forest
 
 import (
 	"embed"
 	enc_json "encoding/json"
+	"errors"
 	"path/filepath"
 	"regexp"
 	"slices"
@@ -22,6 +23,8 @@ const (
 
 //go:embed grammars.json
 var info []byte
+
+var ErrLanguageNotSupported = errors.New("language not supported")
 
 var languageFuncs = map[string]func() *sitter.Language{ {{- range . -}}
         {{template "item" .}}.GetLanguage,
@@ -112,7 +115,14 @@ func SupportedLanguages() []string {
 		langNames = append(langNames, k)
 	}
 
+	// Special case, it has its own queries, but uses the hcl parser.
+	langNames = append(langNames, "terraform")
+
 	return langNames
+}
+
+func SupportedLanguage(lang string) bool {
+	return slices.Index(SupportedLanguages(), lang) >= 0
 }
 
 func Info(lang string) (gr *grammar.Grammar) {

@@ -16,7 +16,7 @@ func updateForest() (err error) {
 		return nil
 	})
 
-	langs := []string{}
+	langs := []string{"terraform"}
 	m.Range(func(k, v any) bool {
 		langs = append(langs, k.(string))
 		return true

@@ -3,6 +3,7 @@ package forest
 import (
 	"embed"
 	enc_json "encoding/json"
+	"errors"
 	"path/filepath"
 	"regexp"
 	"slices"
@@ -398,6 +399,8 @@ const (
 //go:embed grammars.json
 var info []byte
 
+var ErrLanguageNotSupported = errors.New("language not supported")
+
 var languageFuncs = map[string]func() *sitter.Language{
 	"abap":               abap.GetLanguage,
 	"ada":                ada.GetLanguage,
@@ -721,6 +724,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"tcl":                tcl.GetLanguage,
 	"teal":               teal.GetLanguage,
 	"templ":              templ.GetLanguage,
+	"terraform":          hcl.GetLanguage,
 	"textproto":          textproto.GetLanguage,
 	"thrift":             thrift.GetLanguage,
 	"tiger":              tiger.GetLanguage,
@@ -1097,6 +1101,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"tcl":                tcl.GetQuery,
 	"teal":               teal.GetQuery,
 	"templ":              templ.GetQuery,
+	"terraform":          hcl.GetQuery,
 	"textproto":          textproto.GetQuery,
 	"thrift":             thrift.GetQuery,
 	"tiger":              tiger.GetQuery,
@@ -1232,6 +1237,10 @@ func SupportedLanguages() []string {
 	}
 
 	return langNames
+}
+
+func SupportedLanguage(lang string) bool {
+	return slices.Index(SupportedLanguages(), lang) >= 0
 }
 
 func Info(lang string) (gr *grammar.Grammar) {

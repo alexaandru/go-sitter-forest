@@ -156,7 +156,7 @@ when printed (to screen or logs, etc.).
 
 ### Queries
 
-As of `v1.5.90` the root package not only includes the "parsers forest" but also
+The root package not only includes the "parsers forest" but also
 the corresponding queries. The queries are compiled from two sources:
 
 1. `nvim_treesitter` project and
@@ -182,17 +182,22 @@ on how to replicate that on your end if using the individual packages.
 
 ### File Type Detection
 
-As of `v1.5.106` the root package also includes a file type detector:
+The root package also includes a file type detector:
 `forest.DetectLanguage(<abs path|rel path|filename>)`. For best results, the absolute
-path to the file should be provided as that enables all the available detectors
-([vim modeline](https://vimdoc.sourceforge.net/htmldoc/options.html#modeline),
-[glob](https://pkg.go.dev/path/filepath#Match), filename or by extension - in that order).
+path to the file should be provided as that enables all the available detectors, in
+order of priority:
+- shebang or [vim modeline](https://vimdoc.sourceforge.net/htmldoc/options.html#modeline) -
+
+  whichever is available on the (and only the) 1st line;
+- [glob](https://pkg.go.dev/path/filepath#Match) matching against the path tail
+  (i.e. _/_/foo.txt will match .../a/b/foo.txt regardless of the rest of the path),
+- file name;
+- file extension.
+
 The language name is obviously the same as parser and query name.
 
-For modeline, unlike vi(m), only the very 1st line is inspected.
-
-You can optionally register your own extensions (only for languages that are part of the
-forest, as they are validated against it) or override existing extensions (particularly
+You can optionally register your own "patterns" (only for languages that are part of the
+forest, as they are validated against it) or override existing patterns (particularly
 useful where there is file extension clashing, like both V and Verilog using `.v` file
 extension - you can opt for one or the other, etc.). See `forest.RegisterLanguage()` for
 details.

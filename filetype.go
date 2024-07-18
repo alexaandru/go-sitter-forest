@@ -9,8 +9,9 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-	"slices"
 	"strings"
+
+	"golang.org/x/exp/maps"
 )
 
 // ftDetector is responsible for detecting the filetype based on various
@@ -18,7 +19,7 @@ import (
 // or by file extension, in that specific order.
 // For modeline see https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 type ftDetector struct {
-	Glob, Basename, Ext map[string]string
+	Shebang, Glob, Basename, Ext map[string]string
 }
 
 func (d *ftDetector) load(b []byte) (err error) {
@@ -27,6 +28,7 @@ func (d *ftDetector) load(b []byte) (err error) {
 		return err
 	}
 
+	d.Shebang = map[string]string{}
 	d.Glob = map[string]string{}
 	d.Basename = map[string]string{}
 	d.Ext = map[string]string{}
@@ -35,6 +37,10 @@ func (d *ftDetector) load(b []byte) (err error) {
 	nop := func(s string) string { return s }
 	fn := func(label string, dst map[string]string, src map[string][]string, pre func(string) string) error {
 		for lang, pats := range src {
+			if !SupportedLanguage(lang) {
+				return fmt.Errorf("%w: %s", ErrLanguageNotSupported, lang)
+			}
+
 			for _, pat := range pats {
 				pat = pre(pat)
 				if prev, ok := dst[pat]; ok {
@@ -48,11 +54,15 @@ func (d *ftDetector) load(b []byte) (err error) {
 		return nil
 	}
 
+	if err = fn("shebang", d.Shebang, ftInv.Shebang, nop); err != nil {
+		return
+	}
+
 	if err = fn("glob", d.Glob, ftInv.Glob, nop); err != nil {
 		return
 	}
 
-	if err = fn("basenae", d.Basename, ftInv.Basename, nop); err != nil {
+	if err = fn("basename", d.Basename, ftInv.Basename, nop); err != nil {
 		return
 	}
 
@@ -64,6 +74,7 @@ func (d *ftDetector) load(b []byte) (err error) {
 }
 
 type ftDetectorInverted struct {
+	Shebang,
 	Glob,
 	Basename,
 	Ext map[string][]string
@@ -110,7 +121,7 @@ func (d *ftDetector) register(pat, lang string) (err error) {
 		return errMissingPattern
 	case lang == "":
 		return errMissingLanguage
-	case slices.Index(SupportedLanguages(), lang) < 0:
+	case !SupportedLanguage(lang):
 		return fmt.Errorf("%w: %q", errInvalidLanguage, lang)
 	}
 
@@ -139,7 +150,7 @@ func (d *ftDetector) register(pat, lang string) (err error) {
 }
 
 func (d ftDetector) detect(fname string) string {
-	if lang := detectByModelineOrShebang(fname); lang != "" {
+	if lang := d.detectByModelineOrShebang(fname); lang != "" {
 		return lang
 	}
 
@@ -183,10 +194,11 @@ var (
 	// See :he modeline for details. This is a pretty relaxed regex, can match even invalid lines, as long
 	// as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
 	vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
-	shebangRx     = regexp.MustCompile(`^#!.*(?:/env\s+|/)(Rscript|lua|racket|fish|ruby|rdmd|sbcl|node|perl|php|python|risor|awk|gawk|mawk|sh|ash|bash|tcsh|csh|zsh|ksh)(?:\d|\s|$)`)
+	// This is just a sample, DO NOT EDIT! The actual rx is populated by init().
+	shebangRx = regexp.MustCompile(`^#!.*(?:/env\s+|/)(perl)(?:\d|\s|$)`)
 )
 
-func detectByModelineOrShebang(fname string) (lang string) {
+func (d ftDetector) detectByModelineOrShebang(fname string) (lang string) {
 	f, err := os.Open(fname)
 	if err != nil {
 		return ""
@@ -215,16 +227,20 @@ func detectByModelineOrShebang(fname string) (lang string) {
 	}
 
 	lang = extractFromModeline(line)
-	if slices.Index(SupportedLanguages(), lang) >= 0 {
+	if SupportedLanguage(lang) {
 		return
 	}
 
-	lang = extractFromShebang(line)
-	if slices.Index(SupportedLanguages(), lang) >= 0 {
+	lang = d.extractFromShebang(line)
+	if SupportedLanguage(lang) {
 		return
 	}
 
 	return ""
+}
+
+func (d ftDetector) shebangs() []string {
+	return maps.Keys(d.Shebang)
 }
 
 func extractFromModeline(line string) (lang string) {
@@ -236,30 +252,13 @@ func extractFromModeline(line string) (lang string) {
 	return matches[1]
 }
 
-func extractFromShebang(line string) (lang string) {
+func (d ftDetector) extractFromShebang(line string) (lang string) {
 	matches := shebangRx.FindStringSubmatch(line)
 	if len(matches) < 2 {
 		return
 	}
 
-	lang = matches[1]
-
-	switch lang {
-	case "Rscript":
-		lang = "r"
-	case "sbcl":
-		lang = "commonlisp"
-	case "node":
-		lang = "javascript"
-	case "rdmd":
-		lang = "d"
-	case "gawk", "mawk":
-		lang = "awk"
-	case "sh", "ash", "tcsh", "csh", "zsh", "ksh":
-		lang = "bash"
-	}
-
-	return
+	return d.Shebang[matches[1]]
 }
 
 func contains(s string, opts ...string) (ok bool) {
@@ -276,4 +275,7 @@ func init() {
 	if err := ft.load(ftDetect); err != nil {
 		panic(err)
 	}
+
+	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/env\s+|/)(%s)(?:\d|\s|$)`,
+		strings.Join(ft.shebangs(), "|")))
 }

@@ -1,4 +1,28 @@
 {
+  "Shebang": {
+    "awk":                ["awk", "gawk", "mawk"],
+    "bash":               ["ash", "bash", "csh", "ksh", "sh", "tcsh", "zsh"],
+    "commonlisp":         ["sbcl"],
+    "crystal":            ["crystal"],
+    "d":                  ["dmd", "rdmd"],
+    "erlang":             ["escript"],
+    "fish":               ["fish"],
+    "groovy":             ["groovy"],
+    "javascript":         ["node"],
+    "lua":                ["lua"],
+    "luau":               ["luau"],
+    "make":               ["make"],
+    "matlab":             ["matlab", "octave"],
+    "perl":               ["perl", "miniperl"],
+    "php":                ["php"],
+    "prolog":             ["swipl"],
+    "python":             ["python"],
+    "r":                  ["Rscript"],
+    "racket":             ["racket"],
+    "ruby":               ["ruby"],
+    "tcl":                ["tcl", "tclsh", "wish"]
+  },
+
   "Glob": {
     "dotenv":             [".env.*"],
     "git_config":         [".git/config"],

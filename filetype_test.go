@@ -696,7 +696,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"internal/testdata/modeline_v1.v", "v"},
 		{"internal/testdata/modeline_verilog1.v", "verilog"},
 		{"internal/testdata/shebang_perl1", "perl"},
-		{"internal/testdata/shebang_php1", "perl"},
+		{"internal/testdata/shebang_php1", "php"},
 		{"irb_history", "ruby"},
 		{"irbrc", "ruby"},
 		{"justfile", "just"},
@@ -916,85 +916,43 @@ func TestDetectByModelineOrShebang(t *testing.T) {
 	t.Skip("Tested implicitly via TestDetectLanguage()")
 }
 
-func TestExtractFromShebang(t *testing.T) {
-	testCases := []struct{ in, exp string }{
-		{"", ""},
-		{"#!/usr/bin/perl", "perl"},
-		{"#!  /usr/bin/perl", "perl"},
-		{"#!/usr/bin/perl -w", "perl"},
-		{"#!/usr/bin/env perl", "perl"},
-		{"#!  /usr/bin/env   perl", "perl"},
-		{"#!/usr/bin/env perl -w", "perl"},
-		{"#!  /usr/bin/env   perl   -w", "perl"},
-		{"#!/opt/local/bin/perl", "perl"},
-		{"#!/usr/bin/perl5", "perl"},
-		{"#!/usr/bin/php5", "php"},
-		{"#!/usr/bin/php", "php"},
-		{"#!/usr/bin/python", "python"},
-		{"#!/usr/bin/python2", "python"},
-		{"#!/usr/bin/python3", "python"},
-		{"#!/usr/bin/awk", "awk"},
-		{"#!/usr/bin/gawk", "awk"},
-		{"#!/usr/bin/mawk", "awk"},
-		{"#!/bin/sh", "bash"},
-		{"#!/bin/ash", "bash"},
-		{"#!/bin/bash", "bash"},
-		{"#!/bin/tcsh", "bash"},
-		{"#!/bin/csh", "bash"},
-		{"#!/bin/zsh", "bash"},
-		{"#!/bin/ksh", "bash"},
-		{"#!/usr/bin/env rdmd", "d"},
-		{"#!/usr/bin/env node", "javascript"},
-		{"#!/usr/bin/node", "javascript"},
-		{"#!/usr/bin/env sbcl", "commonlisp"},
-		{"#!/usr/bin/sbcl", "commonlisp"},
-		{"#!/usr/bin/env racket", "racket"},
-		{"#!/usr/bin/racket", "racket"},
-		{"#!/usr/bin/env fish", "fish"},
-		{"#!/usr/bin/fish", "fish"},
-		{"#!/bin/fish", "fish"},
-		{"#!/usr/bin/env ruby", "ruby"},
-		{"#!/usr/bin/ruby", "ruby"},
-		{"#!/usr/bin/env lua", "lua"},
-		{"#!/usr/bin/lua", "lua"},
-		{"#!/usr/bin/env Rscript", "r"},
-		{"#!/usr/bin/Rscript", "r"},
-		// TODO add some negatives as well and some more noise
-	}
-
-	for _, tc := range testCases {
-		t.Run(tc.exp, func(t *testing.T) {
-			if act := extractFromShebang(tc.in); act != tc.exp {
-				t.Fatalf("Expected %q got %q for %q", tc.exp, act, tc.in)
-			}
-		})
-	}
-}
-
 func TestExtractFromModeline(t *testing.T) {
-	testCases := []modeTest{
-		{"", ""},
-		{"ft=go", ""},
-		{"filetype=go", ""},
-		{":filetype=go:", ""},
-		{":set filetype=go:", ""},
-	}
+	for _, pre1 := range []string{"", " ", "foobar ", "  \t", "foobar\t"} {
+		for _, vi := range []string{"Vim", "Vi", "vim", "vi", "ex", "Vox", "vox"} {
+			for _, pre2 := range []string{"", " ", "ts=4 ", " ts=4 ", "ts=4:", " ts=4 : ", "set ", " set ", "set ts=4 "} {
+				for _, cmd := range []string{"ft", "filetype", "syntax", "ft ", "filetype ", "syntax ", "ft     ", "filetype\t\t\t  ", "   \t\t\t syntax   \t\t   \t\t   "} {
+					for _, post := range []string{"", " ", "\t", "    ", "   \t   \t   "} {
+						tc := modeTest{fmt.Sprintf("%s%s:%s%s=%sgo:",
+							pre1, vi, pre2, cmd, post), "go"}
 
-	for _, vi := range []string{"Vim", "Vi", "vim", "vi", "ex", "Vox", "vox"} {
-		for _, pre := range []string{"", " ", "ts=4 ", " ts=4 ", "ts=4:", " ts=4 : ", "set ", " set ", "set ts=4 "} {
-			for _, cmd := range []string{"ft", "filetype", "syntax", "ft ", "filetype ", "syntax ", "ft     ", "filetype\t\t\t  ", "syntax   \t\t   \t\t   "} {
-				for _, post := range []string{"", " ", "\t", "    ", "   \t   \t   "} {
-					testCases = append(testCases, modeTest{fmt.Sprintf("%s:%s%s=%sgo:", vi, pre, cmd, post), "go"})
+						t.Run(tc.modeline, func(t *testing.T) {
+							if act := extractFromModeline(tc.modeline); act != tc.exp {
+								t.Fatalf("Expected %q got %q for %q", tc.exp, act, tc.modeline)
+							}
+						})
+					}
 				}
 			}
 		}
 	}
+}
 
-	for _, tc := range testCases {
-		t.Run(tc.modeline, func(t *testing.T) {
-			if act := extractFromModeline(tc.modeline); act != tc.exp {
-				t.Fatalf("Expected %q got %q for %q", tc.exp, act, tc.modeline)
+func TestExtractFromShebang(t *testing.T) {
+	testCaseTemplate := "#!/usr/bin/%s"
+
+	for _, tc := range ft.shebangs() {
+		for _, cmdTemplate := range []string{"%s", "env %s", "%s5", "env %s3", "%s -w", "env %s -w", "%s -whatever -else --foo=bar"} {
+			for _, pre := range []string{"", "_bogus"} {
+				cmd := fmt.Sprintf(cmdTemplate, tc)
+				in := pre + fmt.Sprintf(testCaseTemplate, cmd)
+
+				t.Run(in, func(t *testing.T) {
+					exp := ft.Shebang[pre+tc]
+					if act := ft.extractFromShebang(in); act != exp {
+						t.Fatalf("Expected %q got %q for %q", exp, act, in)
+					}
+				})
 			}
-		})
+		}
 	}
 }
