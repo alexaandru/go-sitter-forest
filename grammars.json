@@ -1709,9 +1709,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@theHamsta, @clason",
-    "grammarSha": "588b8f7c7f688e173d823ce30b4362285bc3f4f4e10a9a6e2a4dcba8b90c1716",
+    "grammarSha": "7b09e9b2d448d94943035c5b0454bc4294d2a5bdbd5240aef3cab57e5f468f47",
     "reference": "master",
-    "revision": "08d8b885a3fa67a6e8aa8edd8988eaa55db46ba4"
+    "revision": "107435ada4c4c422ba4f951336b5e566b86ac3ca"
   },
   {
     "language": "ldg",
@@ -2052,9 +2052,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@hnd2",
-    "grammarSha": "cea055bd33b4230668d7b3d6c851afef05cc5c00e9fdf8880067ac33a4262d78",
+    "grammarSha": "bfbe9d954889b263bf07eb450baaf6c8b7f1dd4476e0dc996338def4f7dbdbfd",
     "reference": "main",
-    "revision": "7985f1477be3b80810f52f60d66ad8e83b208c0d"
+    "revision": "1aa3f2d09cf0ebf120333d0e2689732a440749d7"
   },
   {
     "language": "nginx",
@@ -2314,9 +2314,9 @@
     "language": "pic",
     "url": "https://github.com/smoeding/tree-sitter-pic",
     "maintainedBy": "@smoeding",
-    "grammarSha": "b0e24e8d7bd2688921ed966ebfbe4181f76c9e9c24fd418b9fe840c365776129",
+    "grammarSha": "f1ba52f5a7d9a2eeefcc1980700542ae54fe5bd5daaea1cf595c6120935ae378",
     "reference": "main",
-    "revision": "cefcd6e01f086199643c3fe9f5e89bcef92c1bef"
+    "revision": "59456e8f4c2123f67417388c423c157f3c50fa30"
   },
   {
     "language": "pioasm",
@@ -2832,7 +2832,7 @@
     "maintainedBy": "@hunger",
     "grammarSha": "40bc54c63ccec958dbb383cc9b0014bff4828df7690ebd6f1a6aefcad292247e",
     "reference": "master",
-    "revision": "d82ab8c19ea1b60ff570256eaef7d137cc5ecb63"
+    "revision": "4a0558cc0fcd7a6110815b9bbd7cc12d7ab31e74"
   },
   {
     "language": "smali",
@@ -3047,9 +3047,9 @@
     "language": "sus",
     "url": "https://github.com/pc2/tree-sitter-sus",
     "maintainedBy": "@VonTum",
-    "grammarSha": "6466a6d1c50fdf47590221f6fd2eda63416d543540e235e06f7f88945dcde8ca",
+    "grammarSha": "fb67699bc73de08f453cfc0e9669217bb79d38b03f8bec1bc03ae9651682a407",
     "reference": "main",
-    "revision": "898549fe5253b0981a50234bcc811812cccd0ff0"
+    "revision": "da2bc416b97ee66fd3c21937222891fb1bd0da5e"
   },
   {
     "language": "svelte",

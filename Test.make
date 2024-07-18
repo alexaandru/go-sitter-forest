@@ -10,7 +10,7 @@ test_only:
 	@gocovmerge parsers.cov forest.cov > unit.cov
 
 check_forest:
-	@diff <(grep \\.GetLanguage forest.go|cut -f2 -d'"'|sort) <(jq -r '.[]|select(.pending == null)|.language' grammars.json|sort)
+	@diff <(grep \\.GetLanguage forest.go|cut -f2 -d'"'|sort|grep -v terraform) <(jq -r '.[]|select(.pending == null)|.language' grammars.json|sort)
 
 cover_map: test
 	@go-cover-treemap -coverprofile unit.cov > unit.svg

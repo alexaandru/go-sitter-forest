@@ -5,7 +5,10 @@
     function_name: (identifier) @function
 )
 (call
-    function_name: (primary_expression) @function
+    function_name: (identifier) @function
+)
+(goto_mode_statement
+    function_name: (identifier) @function
 )
 (file_expression
     function_name: (identifier) @function.special

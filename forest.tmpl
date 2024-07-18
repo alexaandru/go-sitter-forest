@@ -115,9 +115,6 @@ func SupportedLanguages() []string {
 		langNames = append(langNames, k)
 	}
 
-	// Special case, it has its own queries, but uses the hcl parser.
-	langNames = append(langNames, "terraform")
-
 	return langNames
 }
 
