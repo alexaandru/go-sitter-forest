@@ -1,10 +1,32 @@
 (type) @type
 (identifier) @identifier
 
+(function_definition
+    function_name: (identifier) @function
+)
+(call
+    function_name: (primary_expression) @function
+)
+(file_expression
+    function_name: (identifier) @function.special
+)
+(macro_expression
+    function_name: (identifier) @function.special
+)
+(mapfab_expression
+    function_name: (identifier) @function.special
+)
+(audio_expression
+    function_name: (identifier) @function.special
+)
+
 [
     (boolean_literal)
     (system_literal)
     (ppu_literal)
+    (file_target)
+    (audio_target)
+    (mapfab_target)
 ] @constant
 
 [
@@ -25,12 +47,13 @@
    "break"
    "case"
    "charmap"
+   "chrrom"
    "continue"
    "ct"
    "default"
    "do"
    "else"
-   ; "fence"
+   "fence"
    "fn"
    "for"
    "goto"
@@ -38,8 +61,10 @@
    "irq"
    "mode"
    "nmi"
+   "nmi_counter"
    "omni"
    "read"
+   "ready"
    "return"
    "struct"
    "swap"

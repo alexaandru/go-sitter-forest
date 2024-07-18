@@ -4,8 +4,8 @@ check-updates update-all update-queries force-update-all update-bindings update-
 	@go run ./internal/automation $@
 
 update-% force-update-% update-queries-%:
-	@fname=$@; fname=$${fname#update-queries-}; fname=$${fname#force-update-}; fname=$${fname#update-}; \
-		if [ "$$fname" != "nvim_treesitter" ]; then touch "$${fname}/_keep.scm"; fi
+	@lang=$@; lang=$${lang#update-queries-}; lang=$${lang#force-update-}; lang=$${lang#update-}; \
+		if [ "$$lang" != "nvim_treesitter" ]; then touch "$${lang}/_keep.scm"; fi
 	@go run ./internal/automation $@
 
 include Plugins.make
