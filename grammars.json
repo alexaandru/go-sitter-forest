@@ -3474,6 +3474,14 @@
     "revision": ""
   },
   {
+    "language": "zsh",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-zsh",
+    "maintainedBy": "@amaanq",
+    "pending": true,
+    "doc": "last (and only) commit says: 'do not use'",
+    "reference": "master"
+  },
+  {
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
     "maintainedBy": "@caarlos0",
@@ -3677,3 +3685,4 @@
     "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
   }
 ]
+

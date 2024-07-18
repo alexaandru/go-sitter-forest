@@ -21,8 +21,4 @@ check_submodules:
 	@find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -path ./node_modules ! -path ./tmp ! -exec test -e "{}/go.mod" ';' -print
 
 tests_with_bad_test_cases:
-	@echo These tests have the test case with errors in them or are plainly skipped.
-	@echo It would be nice to have successful test cases only.
-	@echo "(and maybe a few separate error ones too, but that's another story)"
-	@echo
 	@grep -lE "(ERROR|Skip)" */binding_test.go
