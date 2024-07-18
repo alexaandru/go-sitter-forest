@@ -1,6 +1,6 @@
 [ (comment) (doc) ] @comment
 [ (null) (false) (true) (global) (root) ] @constant.builtin
-(text_esc) @escape
+(text_esc) @string.escape
 [
     "@" "@end"
     "@fallback"
@@ -22,7 +22,6 @@
   (infinity)
 ] @number
 [
-	"->" "→"
   "…" "..."
   "@not"
 	"^"
@@ -38,7 +37,10 @@
   "{" "}"
   "io" "ic"
 ]  @punctuation.bracket
-[ "." "," ";" ] @punctuation.delimiter
+[ "->" "→" "." "," ";" ] @punctuation
 (s) @string
 [ (Logical) (Number) (Text) (List) (Map) (Function) (Time) (Re) (Unknown) ] @type
 [ (key) (id) ] @variable
+
+
+(ERROR) @error

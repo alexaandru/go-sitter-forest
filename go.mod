@@ -179,6 +179,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.5.100
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
+	github.com/alexaandru/go-sitter-forest/lat v1.5.100
 	github.com/alexaandru/go-sitter-forest/latex v1.5.100
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
