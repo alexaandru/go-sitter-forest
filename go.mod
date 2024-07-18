@@ -86,7 +86,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.100
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/facility v1.5.102
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.100
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.101
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101
 	github.com/alexaandru/go-sitter-forest/faust v1.5.100
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.100
@@ -179,7 +179,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.5.100
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
-	github.com/alexaandru/go-sitter-forest/lat v1.5.100
+	github.com/alexaandru/go-sitter-forest/lat v1.5.101
 	github.com/alexaandru/go-sitter-forest/latex v1.5.100
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100

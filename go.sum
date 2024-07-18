@@ -164,8 +164,8 @@ github.com/alexaandru/go-sitter-forest/erlang v1.5.100 h1:xygbCRCXOZi9o42EN+3ZXQ
 github.com/alexaandru/go-sitter-forest/erlang v1.5.100/go.mod h1:xBgnAbNzgQ5FuzOBnf3mVBe/ibNvtY9raQygCVQO1ho=
 github.com/alexaandru/go-sitter-forest/facility v1.5.102 h1:kFbOdbMY8wL9prLu2jMqPAQU4BSMEfTRT8WPHvlaugI=
 github.com/alexaandru/go-sitter-forest/facility v1.5.102/go.mod h1:14peM1KjpA8cchrInLamifWlKJBkD/8EjQOELqU+U1Q=
-github.com/alexaandru/go-sitter-forest/familymarkup v1.5.100 h1:5OCJj2nh8QnvPJTzM/5FiZoSVw/Uwf5jiCk727cstyk=
-github.com/alexaandru/go-sitter-forest/familymarkup v1.5.100/go.mod h1:cJCtumZSClROBpKv0taHyvR1fisiowT4R4swLjFEBn0=
+github.com/alexaandru/go-sitter-forest/familymarkup v1.5.101 h1:Ved+mBtdgjtQDwszRi3uv4W+yfZF0S6Y6k3YV3i9Ls0=
+github.com/alexaandru/go-sitter-forest/familymarkup v1.5.101/go.mod h1:cJCtumZSClROBpKv0taHyvR1fisiowT4R4swLjFEBn0=
 github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101 h1:874q8zmKiRAV9Zn+JXTMnqusTDoPzvPDyvaV2abk0UE=
 github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101/go.mod h1:KSxghi5ghTOgB0Mu7jYObEnl/Qmf+IdJA7q+cCmLtpU=
 github.com/alexaandru/go-sitter-forest/faust v1.5.100 h1:Yjfiv3xsVTbBzRQ8GHm9F2Nc+BgPbMqsHYazfxecLWI=
@@ -350,8 +350,8 @@ github.com/alexaandru/go-sitter-forest/kusto v1.5.100 h1:D6l71PIh5xWXnv/Z8Rs9g5I
 github.com/alexaandru/go-sitter-forest/kusto v1.5.100/go.mod h1:uc4M+UUMvDRi9CQv589zSa+FXXWJG9sTZRyJa97etg0=
 github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100 h1:w0tk+Zbnh5f8MtVkSwygWiAiCB1GqWxvt5LJB+ZZmic=
 github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100/go.mod h1:GuPPzo9fatAnez/K16ZUUGKlssfXb+vyBeLDAoLGoV4=
-github.com/alexaandru/go-sitter-forest/lat v1.5.100 h1:+UgeDFMs1sN4SmpUkt7HfhOOzYXjuxZ77GUhYLoVRZ8=
-github.com/alexaandru/go-sitter-forest/lat v1.5.100/go.mod h1:0yXZ7Hk4MidRBkrD/MjoAw5jXQFgjgT0OdcQzhb043Y=
+github.com/alexaandru/go-sitter-forest/lat v1.5.101 h1:3N799d4SGsaIalShuSR/45GWXMBOTluG5cEXf2ZfNOs=
+github.com/alexaandru/go-sitter-forest/lat v1.5.101/go.mod h1:0yXZ7Hk4MidRBkrD/MjoAw5jXQFgjgT0OdcQzhb043Y=
 github.com/alexaandru/go-sitter-forest/latex v1.5.100 h1:FHYxUefVdftwlFxCkYhzmv5QhRL/0oTrV8uVrrUGW1E=
 github.com/alexaandru/go-sitter-forest/latex v1.5.100/go.mod h1:YaFQQSHLsxK7iHEJFGb1brqhIKQBZMv89ubOnX5WbSE=
 github.com/alexaandru/go-sitter-forest/ldg v1.5.100 h1:PHkT5PwJnA599BX+hcqaXhQxN/iZORO+EBKveByobjA=
