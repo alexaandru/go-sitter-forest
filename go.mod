@@ -68,7 +68,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.100
 	github.com/alexaandru/go-sitter-forest/diff v1.5.100
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.100
-	github.com/alexaandru/go-sitter-forest/djot v1.5.101
+	github.com/alexaandru/go-sitter-forest/djot v1.5.102
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.5.100
 	github.com/alexaandru/go-sitter-forest/dot v1.5.100
 	github.com/alexaandru/go-sitter-forest/dotenv v1.5.100
@@ -236,7 +236,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.5.100
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
-	github.com/alexaandru/go-sitter-forest/pic v1.5.100
+	github.com/alexaandru/go-sitter-forest/pic v1.5.101
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
 	github.com/alexaandru/go-sitter-forest/po v1.5.100
 	github.com/alexaandru/go-sitter-forest/pod v1.5.100
@@ -260,7 +260,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ql v1.5.100
 	github.com/alexaandru/go-sitter-forest/qmldir v1.5.100
 	github.com/alexaandru/go-sitter-forest/qmljs v1.5.100
-	github.com/alexaandru/go-sitter-forest/quakec v1.5.100
+	github.com/alexaandru/go-sitter-forest/quakec v1.5.101
 	github.com/alexaandru/go-sitter-forest/query v1.5.100
 	github.com/alexaandru/go-sitter-forest/r v1.5.100
 	github.com/alexaandru/go-sitter-forest/racket v1.5.100
@@ -353,6 +353,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vala v1.5.100
 	github.com/alexaandru/go-sitter-forest/vento v1.5.100
 	github.com/alexaandru/go-sitter-forest/verilog v1.5.100
+	github.com/alexaandru/go-sitter-forest/vhdl v1.5.101
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.100
 	github.com/alexaandru/go-sitter-forest/vim v1.5.100
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.100
