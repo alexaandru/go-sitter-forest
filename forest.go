@@ -167,7 +167,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/inko"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/ispc"
-	"github.com/alexaandru/go-sitter-forest/janet_simple"
+	"github.com/alexaandru/go-sitter-forest/janet"
 	"github.com/alexaandru/go-sitter-forest/java"
 	"github.com/alexaandru/go-sitter-forest/javascript"
 	"github.com/alexaandru/go-sitter-forest/jq"
@@ -561,7 +561,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"ink":                ink.GetLanguage,
 	"inko":               inko.GetLanguage,
 	"ispc":               ispc.GetLanguage,
-	"janet_simple":       janet_simple.GetLanguage,
+	"janet":              janet.GetLanguage,
 	"java":               java.GetLanguage,
 	"javascript":         javascript.GetLanguage,
 	"jq":                 jq.GetLanguage,
@@ -940,7 +940,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ink":                ink.GetQuery,
 	"inko":               inko.GetQuery,
 	"ispc":               ispc.GetQuery,
-	"janet_simple":       janet_simple.GetQuery,
+	"janet":              janet.GetQuery,
 	"java":               java.GetQuery,
 	"javascript":         javascript.GetQuery,
 	"jq":                 jq.GetQuery,

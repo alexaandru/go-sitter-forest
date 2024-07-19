@@ -160,7 +160,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ink v1.5.100
 	github.com/alexaandru/go-sitter-forest/inko v1.5.100
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
-	github.com/alexaandru/go-sitter-forest/janet_simple v1.5.100
+	github.com/alexaandru/go-sitter-forest/janet v1.5.100
 	github.com/alexaandru/go-sitter-forest/java v1.5.100
 	github.com/alexaandru/go-sitter-forest/javascript v1.5.100
 	github.com/alexaandru/go-sitter-forest/jq v1.5.100

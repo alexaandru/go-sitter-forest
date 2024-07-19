@@ -349,12 +349,16 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 				pack = "Go"
 			case "func":
 				pack = "FunC"
+			case "context":
+				pack = "ConTeXt"
 			case "cobol":
 				lang = "COBOL"
 			case "dotenv":
 				lang = "env"
 			case "walnut":
 				lang = "cwal"
+			case "janet":
+				lang = "janet_simple"
 			}
 
 			fn(t, act, pack, lang)
