@@ -7,7 +7,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.5.100
 	github.com/alexaandru/go-sitter-forest/agda v1.5.100
 	github.com/alexaandru/go-sitter-forest/aiken v1.5.100
-	github.com/alexaandru/go-sitter-forest/amber v1.5.100
+	github.com/alexaandru/go-sitter-forest/amber v1.5.101
 	github.com/alexaandru/go-sitter-forest/angular v1.5.102
 	github.com/alexaandru/go-sitter-forest/apex v1.5.100
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.100
@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.5.100
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.100
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.100
-	github.com/alexaandru/go-sitter-forest/cmdl v1.5.100
+	github.com/alexaandru/go-sitter-forest/cmdl v1.5.101
 	github.com/alexaandru/go-sitter-forest/cobol v1.5.100
 	github.com/alexaandru/go-sitter-forest/cognate v1.5.100
 	github.com/alexaandru/go-sitter-forest/comment v1.5.100
@@ -153,7 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.103
+	github.com/alexaandru/go-sitter-forest/idl v1.5.104
 	github.com/alexaandru/go-sitter-forest/idris v1.5.102
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
@@ -180,7 +180,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.101
+	github.com/alexaandru/go-sitter-forest/latex v1.5.102
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -294,7 +294,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
 	github.com/alexaandru/go-sitter-forest/smith v1.5.100
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
-	github.com/alexaandru/go-sitter-forest/sml v1.5.102
+	github.com/alexaandru/go-sitter-forest/sml v1.5.103
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.100
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100

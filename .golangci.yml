@@ -220,7 +220,7 @@ linters:
     - gocritic
     - gocyclo
     - godot
-    #- godox
+    - godox
     - gofmt
     - gofumpt
     #- goheader
