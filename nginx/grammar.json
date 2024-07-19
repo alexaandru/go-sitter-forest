@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "281d184b8240b2b22670b8907b57b6d6842db6f3",
+  "grammarSha": "e7fa39a2755a6047ce0714342cd6b4e3aeadb1c8c72922a4b4930c8ac39fed0f",
   "language": "nginx",
   "url": "https://github.com/opa-oz/tree-sitter-nginx",
+  "maintainedBy": "@opa-oz",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@opa-oz",
-  "grammarSha": "e7fa39a2755a6047ce0714342cd6b4e3aeadb1c8c72922a4b4930c8ac39fed0f",
-  "reference": "main",
-  "revision": "281d184b8240b2b22670b8907b57b6d6842db6f3"
+  ]
 }

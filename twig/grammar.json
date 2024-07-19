@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "085648e01d1422163a1702a44e72303b4e2a0bd1",
+  "grammarSha": "c2245f31a52c6034a7af09d8c06fab0a9810fe55bd683ec0e63b51946c2c6369",
   "language": "twig",
   "url": "https://github.com/gbprod/tree-sitter-twig",
-  "maintainedBy": "@gbprod",
-  "grammarSha": "c2245f31a52c6034a7af09d8c06fab0a9810fe55bd683ec0e63b51946c2c6369",
-  "reference": "main",
-  "revision": "085648e01d1422163a1702a44e72303b4e2a0bd1"
+  "maintainedBy": "@gbprod"
 }

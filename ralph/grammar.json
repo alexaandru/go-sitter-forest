@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "f6d81bf7a4599c77388035439cf5801cd461ff77",
+  "grammarSha": "9398a46037546f10e9f20fb09b5f56137690ff08c1ee12cb1036a211b676d2dd",
   "language": "ralph",
   "url": "https://github.com/alephium/tree-sitter-ralph",
-  "maintainedBy": "@tdroxler",
-  "grammarSha": "9398a46037546f10e9f20fb09b5f56137690ff08c1ee12cb1036a211b676d2dd",
-  "reference": "master",
-  "revision": "f6d81bf7a4599c77388035439cf5801cd461ff77"
+  "maintainedBy": "@tdroxler"
 }

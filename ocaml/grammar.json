@@ -1,13 +1,13 @@
 {
+  "reference": "master",
+  "revision": "036226e5edb410aec004cc7ac0f4b2014dd04a0e",
+  "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
   "language": "ocaml",
   "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
+  "maintainedBy": "@undu",
+  "srcRoot": "grammars/ocaml",
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ],
-  "srcRoot": "grammars/ocaml",
-  "maintainedBy": "@undu",
-  "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
-  "reference": "master",
-  "revision": "036226e5edb410aec004cc7ac0f4b2014dd04a0e"
+  ]
 }

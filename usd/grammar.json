@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216",
+  "grammarSha": "33db33c43f4ca3296c4fa25a54c7874572d51b4cf46c32915a4f291c66e311bb",
   "language": "usd",
   "url": "https://github.com/ColinKennedy/tree-sitter-usd",
-  "maintainedBy": "@ColinKennedy",
-  "grammarSha": "33db33c43f4ca3296c4fa25a54c7874572d51b4cf46c32915a4f291c66e311bb",
-  "reference": "master",
-  "revision": "4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216"
+  "maintainedBy": "@ColinKennedy"
 }

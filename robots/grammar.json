@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "8e3a4205b76236bb6dbebdbee5afc262ce38bb62",
+  "grammarSha": "0b37553a43e1545e4fd3361c23558efbd6ed056328bebb33a2888e652dd9de35",
   "language": "robots",
   "url": "https://github.com/opa-oz/tree-sitter-robots-txt",
+  "maintainedBy": "@opa-oz",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@opa-oz",
-  "grammarSha": "0b37553a43e1545e4fd3361c23558efbd6ed056328bebb33a2888e652dd9de35",
-  "reference": "main",
-  "revision": "8e3a4205b76236bb6dbebdbee5afc262ce38bb62"
+  ]
 }

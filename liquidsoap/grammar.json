@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "14feafa91630afb1ab9988cf9b738b7ea29f3f89",
+  "grammarSha": "9646d8c3100106c0e21c907c4fa888cba2b6fa24aae4ffcfd07e50668278f5a5",
   "language": "liquidsoap",
   "url": "https://github.com/savonet/tree-sitter-liquidsoap",
+  "maintainedBy": "@toots",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@toots",
-  "grammarSha": "9646d8c3100106c0e21c907c4fa888cba2b6fa24aae4ffcfd07e50668278f5a5",
-  "reference": "main",
-  "revision": "14feafa91630afb1ab9988cf9b738b7ea29f3f89"
+  ]
 }

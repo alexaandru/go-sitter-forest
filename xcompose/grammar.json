@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "fff3e72242aa110ebba6441946ea4d12d200fa68",
+  "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
   "language": "xcompose",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
-  "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
-  "reference": "master",
-  "revision": "fff3e72242aa110ebba6441946ea4d12d200fa68"
+  "maintainedBy": "@ObserverOfTime"
 }

@@ -1,9 +1,9 @@
 {
+  "reference": "master",
+  "revision": "20b64e3ebc8c4623e11cb532451b509901881642",
+  "grammarSha": "2844642191fb62853d8e6357365ad97de1814fdfb13b9d88f813dc662f271b0d",
   "language": "calc",
   "url": "https://github.com/zeromake/tree-sitter-calc",
   "description": "Calc is a small functional language implemented in Go",
-  "maintainedBy": "@zeromake",
-  "grammarSha": "2844642191fb62853d8e6357365ad97de1814fdfb13b9d88f813dc662f271b0d",
-  "reference": "master",
-  "revision": "20b64e3ebc8c4623e11cb532451b509901881642"
+  "maintainedBy": "@zeromake"
 }

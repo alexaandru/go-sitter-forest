@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "43b221c0b76e77244efdaa9963e402a17c930fbc",
+  "grammarSha": "60569ad8b4b835c2603c2ec55f03d575905d2cf9bebff8343edc7838294913a9",
   "language": "typoscript",
   "url": "https://github.com/Teddytrombone/tree-sitter-typoscript",
-  "maintainedBy": "@Teddytrombone",
-  "grammarSha": "60569ad8b4b835c2603c2ec55f03d575905d2cf9bebff8343edc7838294913a9",
-  "reference": "main",
-  "revision": "43b221c0b76e77244efdaa9963e402a17c930fbc"
+  "maintainedBy": "@Teddytrombone"
 }

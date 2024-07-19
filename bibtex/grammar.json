@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34",
+  "grammarSha": "8b153a42b82a394a2ee455264d95a654296a5991f5047fefed95b0ca7e9094cd",
   "language": "bibtex",
   "url": "https://github.com/latex-lsp/tree-sitter-bibtex",
-  "maintainedBy": "@theHamsta, @clason",
-  "grammarSha": "8b153a42b82a394a2ee455264d95a654296a5991f5047fefed95b0ca7e9094cd",
-  "reference": "master",
-  "revision": "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34"
+  "maintainedBy": "@theHamsta, @clason"
 }

@@ -1,9 +1,9 @@
 {
+  "reference": "master",
+  "revision": "62e61b6f5c0289c376d61a8c91faf6435cde9012",
   "language": "objc",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-objc",
   "doc": "grammar.js throws error: Unresolved conflict for symbol sequence",
   "maintainedBy": "@amaanq",
-  "skip": true,
-  "reference": "master",
-  "revision": "62e61b6f5c0289c376d61a8c91faf6435cde9012"
+  "skip": true
 }

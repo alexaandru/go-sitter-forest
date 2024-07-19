@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "e6f6bdb4589e36a3d0d93ea5840b80c459485029",
+  "grammarSha": "468f51c341c1adfc4368a570a5263345e42b56d38dd34210eee3d5fb27ba0a39",
   "language": "http2",
   "url": "https://github.com/rstcruzo/tree-sitter-http2",
-  "maintainedBy": "@rstcruzo",
-  "grammarSha": "468f51c341c1adfc4368a570a5263345e42b56d38dd34210eee3d5fb27ba0a39",
-  "reference": "main",
-  "revision": "e6f6bdb4589e36a3d0d93ea5840b80c459485029"
+  "maintainedBy": "@rstcruzo"
 }

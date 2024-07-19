@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "f6be52c3d1cdb1c5e4dd7d8bce0a57497f55d6af",
+  "grammarSha": "110fba3bff364c9350a10adcc1cf08d49e13e5e62e36fe431b61552c7123893f",
   "language": "css",
   "url": "https://github.com/tree-sitter/tree-sitter-css",
+  "maintainedBy": "@TravonteD",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@TravonteD",
-  "grammarSha": "110fba3bff364c9350a10adcc1cf08d49e13e5e62e36fe431b61552c7123893f",
-  "reference": "master",
-  "revision": "f6be52c3d1cdb1c5e4dd7d8bce0a57497f55d6af"
+  ]
 }

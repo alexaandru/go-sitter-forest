@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "a854096808a5c1da0de998b31e5887995a98a89f",
+  "grammarSha": "d7bec9650c11662e710404f321e8a4608ba8ae11ae7c20d360beab9788fd39be",
   "language": "dotenv",
   "url": "https://github.com/zarifpour/tree-sitter-dotenv",
-  "maintainedBy": "@zarifpour",
-  "grammarSha": "d7bec9650c11662e710404f321e8a4608ba8ae11ae7c20d360beab9788fd39be",
-  "reference": "master",
-  "revision": "a854096808a5c1da0de998b31e5887995a98a89f"
+  "maintainedBy": "@zarifpour"
 }

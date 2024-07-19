@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "a0c57ba1edbe39ec0327838995d104aab2ed16c3",
+  "grammarSha": "2ed91b56e5317331639d4f0c6222d3f12aa382a35861cf35ad6ba96b18cfe6a6",
   "language": "gemfilelock",
   "url": "https://github.com/fluidattacks/tree-sitter-gemfilelock",
+  "maintainedBy": "@drestrepom",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@drestrepom",
-  "grammarSha": "2ed91b56e5317331639d4f0c6222d3f12aa382a35861cf35ad6ba96b18cfe6a6",
-  "reference": "main",
-  "revision": "a0c57ba1edbe39ec0327838995d104aab2ed16c3"
+  ]
 }

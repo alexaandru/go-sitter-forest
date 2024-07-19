@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "e877f6ade4b77d5ef8787075141053631ba12318",
+  "grammarSha": "8e796f4f2a07256961aaf62e5db3acd000cb88d69551f97b10a91ba7dcb9adef",
   "language": "yuck",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-yuck",
+  "maintainedBy": "@Philipp-M, @amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@Philipp-M, @amaanq",
-  "grammarSha": "8e796f4f2a07256961aaf62e5db3acd000cb88d69551f97b10a91ba7dcb9adef",
-  "reference": "main",
-  "revision": "e877f6ade4b77d5ef8787075141053631ba12318"
+  ]
 }

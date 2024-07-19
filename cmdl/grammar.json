@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "513c7419a951ff3543d682af620f775c7f1be6b6",
+  "grammarSha": "767b8bf025883c1f1a927c5d7a3b3d36c3eaf123130cb3d4ba179b2ca06e8654",
   "language": "cmdl",
   "url": "https://github.com/lyktstolpe/tree-sitter-cmdl",
-  "maintainedBy": "@lyktstolpe",
-  "grammarSha": "24ec76093c084203595eadd7036b89827a0d01d1cb9f4814656402bbdbf46aaa",
-  "reference": "main",
-  "revision": "a7833b416405315fa0bc645aabee4484afe89b6e"
+  "maintainedBy": "@lyktstolpe"
 }

@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "bbe2fe3be4b87e06a613e685250f473d2267f430",
+  "grammarSha": "5e96409a9b0f3241a586ab12138e75df6992a2d860574b1b008acc6b46ae2474",
   "language": "gomod",
   "url": "https://github.com/camdencheek/tree-sitter-go-mod",
-  "maintainedBy": "@camdencheek",
-  "grammarSha": "5e96409a9b0f3241a586ab12138e75df6992a2d860574b1b008acc6b46ae2474",
-  "reference": "main",
-  "revision": "bbe2fe3be4b87e06a613e685250f473d2267f430"
+  "maintainedBy": "@camdencheek"
 }

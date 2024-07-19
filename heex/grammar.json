@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "b5ad6e34eea18a15bbd1466ca707a17f9bff7b93",
+  "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
   "language": "heex",
   "url": "https://github.com/phoenixframework/tree-sitter-heex",
-  "maintainedBy": "@connorlay",
-  "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
-  "reference": "main",
-  "revision": "b5ad6e34eea18a15bbd1466ca707a17f9bff7b93"
+  "maintainedBy": "@connorlay"
 }

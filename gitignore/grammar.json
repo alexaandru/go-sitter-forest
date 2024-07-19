@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "f4685bf11ac466dd278449bcfe5fd014e94aa504",
+  "grammarSha": "e9175700860229aff28750afa3e21bdb7b44a724cda2d11a562b4fc6ff0f3714",
   "language": "gitignore",
   "url": "https://github.com/shunsambongi/tree-sitter-gitignore",
-  "maintainedBy": "@theHamsta",
-  "grammarSha": "e9175700860229aff28750afa3e21bdb7b44a724cda2d11a562b4fc6ff0f3714",
-  "reference": "main",
-  "revision": "f4685bf11ac466dd278449bcfe5fd014e94aa504"
+  "maintainedBy": "@theHamsta"
 }

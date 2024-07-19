@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "f9c1d393f2ff296d8ea4787a3f0c5e96d3bb803e",
+  "grammarSha": "0676b9e30a1f9c36983556e8d36f5f35bb056fb279fe47b13fa2736c261f9f29",
   "language": "tort",
   "url": "https://github.com/quendimax/tree-sitter-tort",
-  "maintainedBy": "@quendimax",
-  "grammarSha": "0676b9e30a1f9c36983556e8d36f5f35bb056fb279fe47b13fa2736c261f9f29",
-  "reference": "main",
-  "revision": "f9c1d393f2ff296d8ea4787a3f0c5e96d3bb803e"
+  "maintainedBy": "@quendimax"
 }

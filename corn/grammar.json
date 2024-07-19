@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "464654742cbfd3a3de560aba120998f1d5dfa844",
+  "grammarSha": "2bf9152b2654b1a00af56f008c2468bd684665268bbe124c8ad0e2187e173afc",
   "language": "corn",
   "url": "https://github.com/corn-config/tree-sitter-corn",
-  "maintainedBy": "@jakestanger",
-  "grammarSha": "2bf9152b2654b1a00af56f008c2468bd684665268bbe124c8ad0e2187e173afc",
-  "reference": "master",
-  "revision": "464654742cbfd3a3de560aba120998f1d5dfa844"
+  "maintainedBy": "@jakestanger"
 }

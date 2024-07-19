@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "ccd998f378c3f9345ea4eeb223f56d7b84d16687",
+  "grammarSha": "8db7063aa1a989b757af6e345017e5ce1429079423c670fa3472bfafeb96842b",
   "language": "doxygen",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-doxygen",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "8db7063aa1a989b757af6e345017e5ce1429079423c670fa3472bfafeb96842b",
-  "reference": "master",
-  "revision": "ccd998f378c3f9345ea4eeb223f56d7b84d16687"
+  ]
 }

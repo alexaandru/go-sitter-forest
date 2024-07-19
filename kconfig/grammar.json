@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "486fea71f61ad9f3fd4072a118402e97fe88d26c",
+  "grammarSha": "47150496c6c18055eded0f6676ca9463ace24c66ce9d550cf80bf57b7b3fa38f",
   "language": "kconfig",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "47150496c6c18055eded0f6676ca9463ace24c66ce9d550cf80bf57b7b3fa38f",
-  "reference": "master",
-  "revision": "486fea71f61ad9f3fd4072a118402e97fe88d26c"
+  ]
 }

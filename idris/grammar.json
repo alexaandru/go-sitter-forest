@@ -1,12 +1,12 @@
 {
+  "reference": "main",
+  "revision": "d8ea81213ea4a5c4eb1b48cb832386b9cb70aadb",
+  "grammarSha": "6b39c00c458b2d7bea4ac817c2ada516c7dbd30961701ab4df8b68e57ace5766",
   "language": "idris",
   "url": "https://github.com/kayhide/tree-sitter-idris",
+  "maintainedBy": "@kayhide",
   "files": [
     "scanner.c",
     "unicode.h"
-  ],
-  "maintainedBy": "@kayhide",
-  "grammarSha": "6b39c00c458b2d7bea4ac817c2ada516c7dbd30961701ab4df8b68e57ace5766",
-  "reference": "main",
-  "revision": "d8ea81213ea4a5c4eb1b48cb832386b9cb70aadb"
+  ]
 }

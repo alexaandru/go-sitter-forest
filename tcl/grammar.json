@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "8784024358c233efd0f3a6fd9e7a3c5852e628bc",
+  "grammarSha": "d61014d737366f78f4210a6b6365b10191866989c99e6b555ec8d441bb13a47d",
   "language": "tcl",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
+  "maintainedBy": "@lewis6991",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@lewis6991",
-  "grammarSha": "d61014d737366f78f4210a6b6365b10191866989c99e6b555ec8d441bb13a47d",
-  "reference": "main",
-  "revision": "8784024358c233efd0f3a6fd9e7a3c5852e628bc"
+  ]
 }

@@ -1,12 +1,12 @@
 {
+  "reference": "main",
+  "revision": "bbeda88e5dd9026dbf1443e6a198a9f293de193c",
+  "grammarSha": "7c376b54247514c0d896408030bf9f1da1bb0497e448ecdb79177bbcfd8e4f21",
   "language": "sql_bigquery",
   "url": "https://github.com/takegue/tree-sitter-sql-bigquery",
   "doc": "high memory usage (3.4GB)",
+  "maintainedBy": "@takegue",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@takegue",
-  "grammarSha": "7c376b54247514c0d896408030bf9f1da1bb0497e448ecdb79177bbcfd8e4f21",
-  "reference": "main",
-  "revision": "bbeda88e5dd9026dbf1443e6a198a9f293de193c"
+  ]
 }

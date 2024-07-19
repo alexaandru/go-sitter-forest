@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "b53c7b1d854b8169974b6d22c50ad1edad832789",
+  "grammarSha": "c86d40e5f6123d505584c4d2a1a2f8162149fda36d0116b5b1c59a65c494fa4f",
   "language": "dbml",
   "url": "https://github.com/apexatoll/tree-sitter-dbml",
-  "maintainedBy": "@apexatoll",
-  "grammarSha": "c86d40e5f6123d505584c4d2a1a2f8162149fda36d0116b5b1c59a65c494fa4f",
-  "reference": "main",
-  "revision": "b53c7b1d854b8169974b6d22c50ad1edad832789"
+  "maintainedBy": "@apexatoll"
 }

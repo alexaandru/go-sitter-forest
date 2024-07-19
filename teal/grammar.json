@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "19b02da829d1721a521bf7b802eb80a50bd53aab",
+  "grammarSha": "821dceb684ce573ce95e84ead77945d70e36b3e0db69bf784d0741d8cd801c9d",
   "language": "teal",
   "url": "https://github.com/euclidianAce/tree-sitter-teal",
+  "maintainedBy": "@euclidianAce",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@euclidianAce",
-  "grammarSha": "821dceb684ce573ce95e84ead77945d70e36b3e0db69bf784d0741d8cd801c9d",
-  "reference": "main",
-  "revision": "19b02da829d1721a521bf7b802eb80a50bd53aab"
+  ]
 }

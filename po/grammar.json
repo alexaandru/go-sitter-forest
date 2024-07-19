@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "bd860a0f57f697162bf28e576674be9c1500db5e",
+  "grammarSha": "1c174bcad62d2a227f819318694e9044b56138e73d13d3dbd26d2aed38e701b7",
   "language": "po",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-po",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "1c174bcad62d2a227f819318694e9044b56138e73d13d3dbd26d2aed38e701b7",
-  "reference": "main",
-  "revision": "bd860a0f57f697162bf28e576674be9c1500db5e"
+  "maintainedBy": "@amaanq"
 }

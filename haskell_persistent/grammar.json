@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "577259b4068b2c281c9ebf94c109bd50a74d5857",
+  "grammarSha": "7ccf1eab60aa5a4532dc416eb8f4143ac3a0d60cf5079314b3b426ce49c4885a",
   "language": "haskell_persistent",
   "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
+  "maintainedBy": "@lykahb",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@lykahb",
-  "grammarSha": "7ccf1eab60aa5a4532dc416eb8f4143ac3a0d60cf5079314b3b426ce49c4885a",
-  "reference": "master",
-  "revision": "577259b4068b2c281c9ebf94c109bd50a74d5857"
+  ]
 }

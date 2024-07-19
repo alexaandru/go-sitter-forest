@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "075ebfc84543675f12e79a955f79d717772dcef3",
+  "grammarSha": "f2572173a0ff3bd53745bd0ed92c2eaa4c73d1a4972770ab5b60201a4e0ccbf5",
   "language": "verilog",
   "url": "https://github.com/tree-sitter/tree-sitter-verilog",
-  "maintainedBy": "@zegervdv",
-  "grammarSha": "f2572173a0ff3bd53745bd0ed92c2eaa4c73d1a4972770ab5b60201a4e0ccbf5",
-  "reference": "master",
-  "revision": "075ebfc84543675f12e79a955f79d717772dcef3"
+  "maintainedBy": "@zegervdv"
 }

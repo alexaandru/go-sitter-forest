@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "4b64be244a64a2362740b3d83d74517f15ebc16d",
+  "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
   "language": "sincere",
   "url": "https://github.com/vincentvanecchi/tree-sitter-sincere",
-  "maintainedBy": "@vincentvanecchi",
-  "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
-  "reference": "main",
-  "revision": "4b64be244a64a2362740b3d83d74517f15ebc16d"
+  "maintainedBy": "@vincentvanecchi"
 }

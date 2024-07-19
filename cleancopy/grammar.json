@@ -1,13 +1,13 @@
 {
+  "reference": "main",
+  "revision": "63fffe3f90f4146c44dbd7ed3110982b2a059d3d",
+  "grammarSha": "59d223c0cc9f5a3c3d61af675ffaebacad016de4feb8fb774452926f09c4ff0d",
   "language": "cleancopy",
   "url": "https://github.com/Taev-dev/tree-sitter-cleancopy",
+  "maintainedBy": "@Badg",
   "files": [
     "scanner.c",
     "cleancopy_utils.h",
     "cleancopy_chars.h"
-  ],
-  "maintainedBy": "@Badg",
-  "grammarSha": "59d223c0cc9f5a3c3d61af675ffaebacad016de4feb8fb774452926f09c4ff0d",
-  "reference": "main",
-  "revision": "63fffe3f90f4146c44dbd7ed3110982b2a059d3d"
+  ]
 }

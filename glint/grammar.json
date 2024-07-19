@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "0702b6c703e5a2d7136474e8e62aa3e43d9e8f94",
+  "grammarSha": "251defd7fd4d87e93ae593b6e50b09b6fbdc501bd43ebf27bcf30b90a9eb387d",
   "language": "glint",
   "url": "https://github.com/LensPlaysGames/tree-sitter-glint",
-  "maintainedBy": "@LensPlaysGames",
-  "grammarSha": "251defd7fd4d87e93ae593b6e50b09b6fbdc501bd43ebf27bcf30b90a9eb387d",
-  "reference": "main",
-  "revision": "0702b6c703e5a2d7136474e8e62aa3e43d9e8f94"
+  "maintainedBy": "@LensPlaysGames"
 }

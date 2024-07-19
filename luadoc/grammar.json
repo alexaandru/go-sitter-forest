@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "873612aadd3f684dd4e631bdf42ea8990c57634e",
+  "grammarSha": "c137cb2a941c104d4028ba2b592f78fd4c4e9b344bcfd4b8802c9089090bbe86",
   "language": "luadoc",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-luadoc",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "c137cb2a941c104d4028ba2b592f78fd4c4e9b344bcfd4b8802c9089090bbe86",
-  "reference": "master",
-  "revision": "873612aadd3f684dd4e631bdf42ea8990c57634e"
+  "maintainedBy": "@amaanq"
 }

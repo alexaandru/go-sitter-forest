@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "405672a2b7a393ebf3ed14261a1d03d8a777f84e",
+  "grammarSha": "21f97bf59b37eafb5025dc1a3f11281b526070069bffe2d43d92e0259fdd90fe",
   "language": "august",
   "url": "https://github.com/ScratchCat458/tree-sitter-august",
-  "maintainedBy": "@ScratchCat458",
-  "grammarSha": "21f97bf59b37eafb5025dc1a3f11281b526070069bffe2d43d92e0259fdd90fe",
-  "reference": "master",
-  "revision": "405672a2b7a393ebf3ed14261a1d03d8a777f84e"
+  "maintainedBy": "@ScratchCat458"
 }

@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "f9e7a2b3144bab5aca777606415a06f44f8d8aa2",
+  "grammarSha": "a82cfcf385779c3624b09e9eb31672349a046f94369ed7a67e3b4b8f6d92bf94",
   "language": "sqlite",
   "url": "https://github.com/johndoe-o/tree-sitter-sqlite",
-  "maintainedBy": "@johndoe-o",
-  "grammarSha": "a82cfcf385779c3624b09e9eb31672349a046f94369ed7a67e3b4b8f6d92bf94",
-  "reference": "main",
-  "revision": "f9e7a2b3144bab5aca777606415a06f44f8d8aa2"
+  "maintainedBy": "@johndoe-o"
 }

@@ -1,14 +1,14 @@
 {
+  "reference": "master",
+  "revision": "e45cb3225bf47a04da827e4575b9791523d953fd",
+  "grammarSha": "2a9a2102a49538a8573cb4c6d7e343f450b331f714aaaf89c56440db609eadce",
   "language": "typescript",
   "url": "https://github.com/tree-sitter/tree-sitter-typescript",
   "doc": "high memory usage (4GB)",
+  "maintainedBy": "@steelsojka",
+  "srcRoot": "typescript",
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ],
-  "srcRoot": "typescript",
-  "maintainedBy": "@steelsojka",
-  "grammarSha": "2a9a2102a49538a8573cb4c6d7e343f450b331f714aaaf89c56440db609eadce",
-  "reference": "master",
-  "revision": "e45cb3225bf47a04da827e4575b9791523d953fd"
+  ]
 }

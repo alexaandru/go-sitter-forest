@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "6e7c8edfcd6f5f7c12b2fa9ffc6d042f1b6d7068",
+  "grammarSha": "41765dc4689b4646780f87faa90f9084b7c49c6e8a61fb5f6486dbdc9be792c3",
   "language": "zathurarc",
   "url": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
-  "maintainedBy": "@Freed-Wu",
-  "grammarSha": "41765dc4689b4646780f87faa90f9084b7c49c6e8a61fb5f6486dbdc9be792c3",
-  "reference": "main",
-  "revision": "6e7c8edfcd6f5f7c12b2fa9ffc6d042f1b6d7068"
+  "maintainedBy": "@Freed-Wu"
 }

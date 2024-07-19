@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "750dde90ed9cdbd82493bc28478d8ab1976b0e9f",
+  "grammarSha": "5dc380c0ca88cf2d34a57113cb918e181a0500c0358ba3eef22bfe8d31cb2fbc",
   "language": "d",
   "url": "https://github.com/gdamore/tree-sitter-d",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "5dc380c0ca88cf2d34a57113cb918e181a0500c0358ba3eef22bfe8d31cb2fbc",
-  "reference": "main",
-  "revision": "750dde90ed9cdbd82493bc28478d8ab1976b0e9f"
+  ]
 }

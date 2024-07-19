@@ -1,9 +1,9 @@
 {
+  "reference": "master",
+  "revision": "7eb7297823605392d2bbcc4c09b1cd18d6fa9529",
+  "grammarSha": "f20b7fbe1c7956fdcfd124fafee7be24faeb54b860e24e33c3fc1d673d5dae5d",
   "language": "psv",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
-  "srcRoot": "psv",
   "maintainedBy": "@amaanq",
-  "grammarSha": "f20b7fbe1c7956fdcfd124fafee7be24faeb54b860e24e33c3fc1d673d5dae5d",
-  "reference": "master",
-  "revision": "7eb7297823605392d2bbcc4c09b1cd18d6fa9529"
+  "srcRoot": "psv"
 }

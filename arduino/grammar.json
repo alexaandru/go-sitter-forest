@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "afb34b2c65f507932c5c6ddbf0d5a9ca6a772f2f",
+  "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
   "language": "arduino",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",
+  "maintainedBy": "@ObserverOfTime",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
-  "reference": "master",
-  "revision": "afb34b2c65f507932c5c6ddbf0d5a9ca6a772f2f"
+  ]
 }

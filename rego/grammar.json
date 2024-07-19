@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "20b5a5958c837bc9f74b231022a68a594a313f6d",
+  "grammarSha": "518bc76c2a6d6a7bfb46158d09cc73a66c1322b56cdbf030b3baaccfb73a3987",
   "language": "rego",
   "url": "https://github.com/FallenAngel97/tree-sitter-rego",
-  "maintainedBy": "@FallenAngel97",
-  "grammarSha": "518bc76c2a6d6a7bfb46158d09cc73a66c1322b56cdbf030b3baaccfb73a3987",
-  "reference": "master",
-  "revision": "20b5a5958c837bc9f74b231022a68a594a313f6d"
+  "maintainedBy": "@FallenAngel97"
 }

@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd",
+  "grammarSha": "ca1dd7bd1bef0bdfcec6c78d2c9a32e102b677cffc3d938a38e44dec5270aea3",
   "language": "zig",
   "url": "https://github.com/maxxnino/tree-sitter-zig",
-  "maintainedBy": "@maxxnino",
-  "grammarSha": "ca1dd7bd1bef0bdfcec6c78d2c9a32e102b677cffc3d938a38e44dec5270aea3",
-  "reference": "main",
-  "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd"
+  "maintainedBy": "@maxxnino"
 }

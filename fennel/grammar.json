@@ -1,13 +1,13 @@
 {
+  "reference": "main",
+  "revision": "cfbfa478dc2dbef267ee94ae4323d9c886f45e94",
+  "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
   "language": "fennel",
   "url": "https://github.com/alexmozaidze/tree-sitter-fennel",
   "doc": "some 'smart importing' feature prevents regeneration from working",
+  "maintainedBy": "@alexmozaidze",
   "files": [
     "scanner.c"
   ],
-  "maintainedBy": "@alexmozaidze",
-  "skip": true,
-  "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
-  "reference": "main",
-  "revision": "cfbfa478dc2dbef267ee94ae4323d9c886f45e94"
+  "skip": true
 }

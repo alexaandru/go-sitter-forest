@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "3321077d7446c1b3b017c294fd56ce028ed817fe",
+  "grammarSha": "25f7b4a6f62ea92b0e44647b7738ac00b798673e0865067fcfad899d662f57fa",
   "language": "vento",
   "url": "https://github.com/ventojs/tree-sitter-vento",
+  "maintainedBy": "@wrapperup, @oscarotero",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@wrapperup, @oscarotero",
-  "grammarSha": "25f7b4a6f62ea92b0e44647b7738ac00b798673e0865067fcfad899d662f57fa",
-  "reference": "main",
-  "revision": "3321077d7446c1b3b017c294fd56ce028ed817fe"
+  ]
 }

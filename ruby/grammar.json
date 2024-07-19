@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "0ffe457fb6aabf064f173fd30ea356845cef2513",
+  "grammarSha": "57d139832e436ae8222d33e433d492c70247f39e7f43d5ca00cef8da859be3e2",
   "language": "ruby",
   "url": "https://github.com/tree-sitter/tree-sitter-ruby",
+  "maintainedBy": "@TravonteD",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@TravonteD",
-  "grammarSha": "57d139832e436ae8222d33e433d492c70247f39e7f43d5ca00cef8da859be3e2",
-  "reference": "master",
-  "revision": "0ffe457fb6aabf064f173fd30ea356845cef2513"
+  ]
 }

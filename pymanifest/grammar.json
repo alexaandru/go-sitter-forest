@@ -1,9 +1,9 @@
 {
+  "reference": "master",
+  "revision": "be062582956165019d3253794b4d712f66dfeaaa",
+  "grammarSha": "c5aee334ab2d63826ff2cbeb9998a8c6fffaa4c31d98054e5cf35606e88ce55a",
   "language": "pymanifest",
   "altName": "PyPA manifest",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-pymanifest",
-  "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "c5aee334ab2d63826ff2cbeb9998a8c6fffaa4c31d98054e5cf35606e88ce55a",
-  "reference": "master",
-  "revision": "be062582956165019d3253794b4d712f66dfeaaa"
+  "maintainedBy": "@ObserverOfTime"
 }

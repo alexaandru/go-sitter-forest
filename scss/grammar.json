@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "c478c6868648eff49eb04a4df90d703dc45b312a",
+  "grammarSha": "d1549f616df3363837d5557bd39004d24d46df56a14a1affd3aa7decf6967bfc",
   "language": "scss",
   "url": "https://github.com/serenadeai/tree-sitter-scss",
+  "maintainedBy": "@elianiva",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@elianiva",
-  "grammarSha": "d1549f616df3363837d5557bd39004d24d46df56a14a1affd3aa7decf6967bfc",
-  "reference": "master",
-  "revision": "c478c6868648eff49eb04a4df90d703dc45b312a"
+  ]
 }

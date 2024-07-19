@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "94f5c527b2965465956c2000ed6134dd24daf2a7",
+  "grammarSha": "eb94bbd6463cd5332ae0515df29d96a869494f3c5d6238ccaff1c1fe86ed4e9f",
   "language": "json",
   "url": "https://github.com/tree-sitter/tree-sitter-json",
-  "maintainedBy": "@steelsojka",
-  "grammarSha": "eb94bbd6463cd5332ae0515df29d96a869494f3c5d6238ccaff1c1fe86ed4e9f",
-  "reference": "master",
-  "revision": "94f5c527b2965465956c2000ed6134dd24daf2a7"
+  "maintainedBy": "@steelsojka"
 }

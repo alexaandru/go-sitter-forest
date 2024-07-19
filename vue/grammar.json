@@ -1,12 +1,12 @@
 {
+  "reference": "main",
+  "revision": "22bdfa6c9fc0f5ffa44c6e938ec46869ac8a99ff",
+  "grammarSha": "6d0c8fe145d98b55a4d782590d847a95b449e9bdaa556b2f5f33b16bffe2cb1a",
   "language": "vue",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-vue",
+  "maintainedBy": "@WhyNotHugo, @lucario387",
   "files": [
     "scanner.c",
     "tag.h"
-  ],
-  "maintainedBy": "@WhyNotHugo, @lucario387",
-  "grammarSha": "6d0c8fe145d98b55a4d782590d847a95b449e9bdaa556b2f5f33b16bffe2cb1a",
-  "reference": "main",
-  "revision": "22bdfa6c9fc0f5ffa44c6e938ec46869ac8a99ff"
+  ]
 }

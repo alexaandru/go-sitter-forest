@@ -1,9 +1,9 @@
 {
+  "reference": "main",
+  "revision": "7f80a0441ff2ca6aa8ced8e1ee87cead9dd26515",
+  "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
   "language": "v",
   "url": "https://github.com/vlang/v-analyzer",
-  "srcRoot": "tree_sitter_v",
   "maintainedBy": "@kkharji, @amaanq",
-  "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
-  "reference": "main",
-  "revision": "7f80a0441ff2ca6aa8ced8e1ee87cead9dd26515"
+  "srcRoot": "tree_sitter_v"
 }

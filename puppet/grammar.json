@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "584522f32495d648b18a53ccb52d988e60de127d",
+  "grammarSha": "023a6a0545590f658c374b2b0bf84246b0ef94f4e72272b4112e06ce76972f6a",
   "language": "puppet",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-puppet",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "023a6a0545590f658c374b2b0bf84246b0ef94f4e72272b4112e06ce76972f6a",
-  "reference": "master",
-  "revision": "584522f32495d648b18a53ccb52d988e60de127d"
+  "maintainedBy": "@amaanq"
 }

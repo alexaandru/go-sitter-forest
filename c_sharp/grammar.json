@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "31a64b28292aac6adf44071e449fa03fb80eaf4e",
   "language": "c_sharp",
   "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
   "doc": "OOM",
+  "maintainedBy": "@Luxed",
   "files": [
     "scanner.c"
   ],
-  "maintainedBy": "@Luxed",
-  "skip": true,
-  "reference": "master",
-  "revision": "31a64b28292aac6adf44071e449fa03fb80eaf4e"
+  "skip": true
 }

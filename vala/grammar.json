@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "8f690bfa639f2b83d1fb938ed3dd98a7ba453e8b",
+  "grammarSha": "6cb1d0b274ffd263d8f422e2e206844186e1fea912ab529a2a137080be568883",
   "language": "vala",
   "url": "https://github.com/vala-lang/tree-sitter-vala",
-  "maintainedBy": "@Prince781",
-  "grammarSha": "6cb1d0b274ffd263d8f422e2e206844186e1fea912ab529a2a137080be568883",
-  "reference": "master",
-  "revision": "8f690bfa639f2b83d1fb938ed3dd98a7ba453e8b"
+  "maintainedBy": "@Prince781"
 }

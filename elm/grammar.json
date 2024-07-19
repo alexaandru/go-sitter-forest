@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "09dbf221d7491dc8d8839616b27c21b9c025c457",
+  "grammarSha": "5975e9b252eb5f65a54ea5d84013f504cb557d2d7b727520f5999dcefd600ff8",
   "language": "elm",
   "url": "https://github.com/elm-tooling/tree-sitter-elm",
+  "maintainedBy": "@zweimach",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@zweimach",
-  "grammarSha": "5975e9b252eb5f65a54ea5d84013f504cb557d2d7b727520f5999dcefd600ff8",
-  "reference": "main",
-  "revision": "09dbf221d7491dc8d8839616b27c21b9c025c457"
+  ]
 }

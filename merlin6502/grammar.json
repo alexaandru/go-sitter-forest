@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "09dbeec4a89d5ba12b45f1e2308cb901132790b8",
+  "grammarSha": "8b49ba32eb1500c969dc356a07a11808046a6724fd07b74ca846ea957d244923",
   "language": "merlin6502",
   "url": "https://github.com/dfgordon/tree-sitter-merlin6502",
-  "maintainedBy": "@dfgordon",
-  "grammarSha": "8b49ba32eb1500c969dc356a07a11808046a6724fd07b74ca846ea957d244923",
-  "reference": "master",
-  "revision": "09dbeec4a89d5ba12b45f1e2308cb901132790b8"
+  "maintainedBy": "@dfgordon"
 }

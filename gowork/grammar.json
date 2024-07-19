@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "949a8a470559543857a62102c84700d291fc984c",
+  "grammarSha": "4b5e4c85ae52a3950681b835060deb86c1fbb5ea359b2164f4a522ed402f00e3",
   "language": "gowork",
   "url": "https://github.com/omertuc/tree-sitter-go-work",
-  "maintainedBy": "@omertuc",
-  "grammarSha": "4b5e4c85ae52a3950681b835060deb86c1fbb5ea359b2164f4a522ed402f00e3",
-  "reference": "main",
-  "revision": "949a8a470559543857a62102c84700d291fc984c"
+  "maintainedBy": "@omertuc"
 }

@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "ee5a2d2ba30b487c4bbf613d2ef310a454c09c7c",
+  "grammarSha": "13943eaa07791bd412b2cce5cdd0f8a7bb12309cc03d1bef3a5f7f16c109c1fc",
   "language": "solidity",
   "url": "https://github.com/JoranHonig/tree-sitter-solidity",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "13943eaa07791bd412b2cce5cdd0f8a7bb12309cc03d1bef3a5f7f16c109c1fc",
-  "reference": "master",
-  "revision": "ee5a2d2ba30b487c4bbf613d2ef310a454c09c7c"
+  "maintainedBy": "@amaanq"
 }

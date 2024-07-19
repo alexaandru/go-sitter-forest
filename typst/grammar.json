@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "90f6af21271dee246a9cafe109e2b456c5bc10a6",
+  "grammarSha": "10153d49c0cecc3760b4ed762a2e1b8b4267391fd4a0e2633f076d450268c63d",
   "language": "typst",
   "url": "https://github.com/uben0/tree-sitter-typst",
+  "maintainedBy": "@uben0, @RaafatTurki",
   "files": [
     "scanner.c",
     "unicode.h"
-  ],
-  "maintainedBy": "@uben0, @RaafatTurki",
-  "grammarSha": "10153d49c0cecc3760b4ed762a2e1b8b4267391fd4a0e2633f076d450268c63d",
-  "reference": "master",
-  "revision": "90f6af21271dee246a9cafe109e2b456c5bc10a6"
+  ]
 }

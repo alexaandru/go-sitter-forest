@@ -1,9 +1,9 @@
 {
+  "reference": "master",
+  "revision": "9d3f6e526dd074b9edae9070b7bb778f00e87a5b",
+  "grammarSha": "3f347eff9531efba54af771f203b53bbf9f1663f4a1d56bce85b111c9623762b",
   "language": "helm",
   "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-  "srcRoot": "dialects/helm",
   "maintainedBy": "@qvalentin",
-  "grammarSha": "3f347eff9531efba54af771f203b53bbf9f1663f4a1d56bce85b111c9623762b",
-  "reference": "master",
-  "revision": "9d3f6e526dd074b9edae9070b7bb778f00e87a5b"
+  "srcRoot": "dialects/helm"
 }

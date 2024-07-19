@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "4af5d82cf9ec39f67cb1db5b7a9269d337406592",
+  "grammarSha": "b17e1806f2057bf3f86b8b901a5eb3e493570747e5e389b61dbf7730850e7e6e",
   "language": "hare",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "b17e1806f2057bf3f86b8b901a5eb3e493570747e5e389b61dbf7730850e7e6e",
-  "reference": "master",
-  "revision": "4af5d82cf9ec39f67cb1db5b7a9269d337406592"
+  "maintainedBy": "@amaanq"
 }

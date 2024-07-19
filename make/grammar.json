@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "a4b9187417d6be349ee5fd4b6e77b4172c6827dd",
+  "grammarSha": "80402e3642fc46a08de1fbac9ea634da0075d57b854b6c19f215016a4ba3a59b",
   "language": "make",
   "url": "https://github.com/alemuller/tree-sitter-make",
-  "maintainedBy": "@lewis6991",
-  "grammarSha": "80402e3642fc46a08de1fbac9ea634da0075d57b854b6c19f215016a4ba3a59b",
-  "reference": "main",
-  "revision": "a4b9187417d6be349ee5fd4b6e77b4172c6827dd"
+  "maintainedBy": "@lewis6991"
 }

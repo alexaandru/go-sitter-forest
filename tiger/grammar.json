@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "a7f11d946b44244f71df41d2a78af0665d618dae",
+  "grammarSha": "85c67802125a4a995da9d4adb723d7a2b1379e26d84fe481b8aaa34d58faf4bd",
   "language": "tiger",
   "url": "https://github.com/ambroisie/tree-sitter-tiger",
+  "maintainedBy": "@ambroisie",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@ambroisie",
-  "grammarSha": "85c67802125a4a995da9d4adb723d7a2b1379e26d84fe481b8aaa34d58faf4bd",
-  "reference": "main",
-  "revision": "a7f11d946b44244f71df41d2a78af0665d618dae"
+  ]
 }

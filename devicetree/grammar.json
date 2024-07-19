@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "fb07e6044ffd36932c57a5be01ba5d6b8a9337bb",
+  "grammarSha": "9ecd7ff631a9e1bdc64c30f4136b0c2bd3cefd1c21d1794174fc966eee8e9495",
   "language": "devicetree",
   "url": "https://github.com/joelspadin/tree-sitter-devicetree",
-  "maintainedBy": "@jedrzejboczar",
-  "grammarSha": "9ecd7ff631a9e1bdc64c30f4136b0c2bd3cefd1c21d1794174fc966eee8e9495",
-  "reference": "main",
-  "revision": "fb07e6044ffd36932c57a5be01ba5d6b8a9337bb"
+  "maintainedBy": "@jedrzejboczar"
 }

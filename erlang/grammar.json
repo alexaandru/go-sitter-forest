@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "19ca500fa5a17ab58dc18aa03b50e2db305e7a8a",
+  "grammarSha": "5efbdfd106065c2d21a340c046c9158d110cf7b1ccc9341d7f429f04fe869846",
   "language": "erlang",
   "url": "https://github.com/WhatsApp/tree-sitter-erlang",
+  "maintainedBy": "@filmor",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@filmor",
-  "grammarSha": "5efbdfd106065c2d21a340c046c9158d110cf7b1ccc9341d7f429f04fe869846",
-  "reference": "main",
-  "revision": "19ca500fa5a17ab58dc18aa03b50e2db305e7a8a"
+  ]
 }

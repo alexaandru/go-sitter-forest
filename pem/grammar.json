@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "217ff2af3f2db15a79ab7e3d21ea1e0c17e71a1a",
+  "grammarSha": "15d39dc1718ffd7b05a726517c1a748995e22cf8352e49c87adcfb5dcea50159",
   "language": "pem",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-pem",
-  "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "15d39dc1718ffd7b05a726517c1a748995e22cf8352e49c87adcfb5dcea50159",
-  "reference": "master",
-  "revision": "217ff2af3f2db15a79ab7e3d21ea1e0c17e71a1a"
+  "maintainedBy": "@ObserverOfTime"
 }

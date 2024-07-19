@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "d819cdd5dbe455bd3c859193633c8d91c0df7c36",
+  "grammarSha": "2a74d3dd62f23213ec71abb790b89e6b43ebf1d75dd1797c068a2ce5b1d36358",
   "language": "strace",
   "url": "https://github.com/sigmaSd/tree-sitter-strace",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "2a74d3dd62f23213ec71abb790b89e6b43ebf1d75dd1797c068a2ce5b1d36358",
-  "reference": "master",
-  "revision": "d819cdd5dbe455bd3c859193633c8d91c0df7c36"
+  "maintainedBy": "@amaanq"
 }

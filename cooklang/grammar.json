@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "4ebe237c1cf64cf3826fc249e9ec0988fe07e58e",
+  "grammarSha": "b689559d6231730095fdf93a0833cd71bde5f45bbe1f817cc81b8285da4e5b83",
   "language": "cooklang",
   "url": "https://github.com/addcninblue/tree-sitter-cooklang",
+  "maintainedBy": "@addcninblue",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@addcninblue",
-  "grammarSha": "b689559d6231730095fdf93a0833cd71bde5f45bbe1f817cc81b8285da4e5b83",
-  "reference": "master",
-  "revision": "4ebe237c1cf64cf3826fc249e9ec0988fe07e58e"
+  ]
 }

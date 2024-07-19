@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "78938553b93075e638035f624973083451b29055",
+  "grammarSha": "3b290b7caf6b4fdced4009548d316ec8c566b204ed0bd976e0f8b30d9d4721f8",
   "language": "ron",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ron",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "3b290b7caf6b4fdced4009548d316ec8c566b204ed0bd976e0f8b30d9d4721f8",
-  "reference": "master",
-  "revision": "78938553b93075e638035f624973083451b29055"
+  ]
 }

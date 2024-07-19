@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "2ffb90de47417018651fc3b970e5f6b67214dc9d",
+  "grammarSha": "d3457db5546a9850cb2a64f712ba10527b386fee97e36140019eefacbffff520",
   "language": "godot_resource",
   "altName": "Godot Resources (gdresource)",
   "url": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
+  "maintainedBy": "@pierpo",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@pierpo",
-  "grammarSha": "d3457db5546a9850cb2a64f712ba10527b386fee97e36140019eefacbffff520",
-  "reference": "master",
-  "revision": "2ffb90de47417018651fc3b970e5f6b67214dc9d"
+  ]
 }

@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "28d3b2e25a0b1881d1b47ed1924ca276c7003d45",
+  "grammarSha": "647cced066e575a86b5e14197679af0160c4ad94565ba5e40a20d6c6ab36727f",
   "language": "objdump",
   "url": "https://github.com/ColinKennedy/tree-sitter-objdump",
+  "maintainedBy": "@ColinKennedy",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@ColinKennedy",
-  "grammarSha": "647cced066e575a86b5e14197679af0160c4ad94565ba5e40a20d6c6ab36727f",
-  "reference": "master",
-  "revision": "28d3b2e25a0b1881d1b47ed1924ca276c7003d45"
+  ]
 }

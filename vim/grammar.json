@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "b448ca63f972ade12c373c808acdd2bf972937db",
+  "grammarSha": "7e378615588a0305650cfab13aaa12a1264415338b3f2b7f31d037e5e13ecf79",
   "language": "vim",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-vim",
+  "maintainedBy": "@clason",
   "files": [
     "scanner.c",
     "keywords.h"
-  ],
-  "maintainedBy": "@clason",
-  "grammarSha": "7e378615588a0305650cfab13aaa12a1264415338b3f2b7f31d037e5e13ecf79",
-  "reference": "master",
-  "revision": "b448ca63f972ade12c373c808acdd2bf972937db"
+  ]
 }

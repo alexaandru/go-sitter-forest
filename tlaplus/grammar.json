@@ -1,12 +1,12 @@
 {
+  "reference": "main",
+  "revision": "bba02e79f85e335f310fc95e21c677e49f2c4439",
+  "grammarSha": "8d619358938f79d281257323a67d9d09c89a5544f09fcf2b083b81bae47fb9c1",
   "language": "tlaplus",
   "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",
   "doc": "high memory usage (5.3GB)",
+  "maintainedBy": "@ahelwer, @susliko",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@ahelwer, @susliko",
-  "grammarSha": "8d619358938f79d281257323a67d9d09c89a5544f09fcf2b083b81bae47fb9c1",
-  "reference": "main",
-  "revision": "bba02e79f85e335f310fc95e21c677e49f2c4439"
+  ]
 }

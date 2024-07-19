@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "f4236d4da8aa92bc105d9c118746474c608e6af7",
+  "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
   "language": "clojure",
   "url": "https://github.com/sogaiu/tree-sitter-clojure",
-  "maintainedBy": "@NoahTheDuke",
-  "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
-  "reference": "master",
-  "revision": "f4236d4da8aa92bc105d9c118746474c608e6af7"
+  "maintainedBy": "@NoahTheDuke"
 }

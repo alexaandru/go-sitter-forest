@@ -1,9 +1,9 @@
 {
+  "reference": "main",
+  "revision": "8e635b0b723c620774dfb8abf382a7f531894b40",
+  "grammarSha": "df3ebc35ed8068754d76ec15b9c27f31217bab69f01be8c3db7b783d86c6417e",
   "language": "ebnf",
   "url": "https://github.com/RubixDev/ebnf",
-  "srcRoot": "crates/tree-sitter-ebnf",
   "maintainedBy": "@RubixDev",
-  "grammarSha": "df3ebc35ed8068754d76ec15b9c27f31217bab69f01be8c3db7b783d86c6417e",
-  "reference": "main",
-  "revision": "8e635b0b723c620774dfb8abf382a7f531894b40"
+  "srcRoot": "crates/tree-sitter-ebnf"
 }

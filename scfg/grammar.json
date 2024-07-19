@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "a5512800ea0220da4abbae61b8aea8423d1549aa",
+  "grammarSha": "bf371a3f393b5b01a5b1949511e6cf9dd352a19274caa8a374df348b3bd1f93c",
   "language": "scfg",
   "url": "https://git.sr.ht/~rockorager/tree-sitter-scfg",
-  "maintainedBy": "@WhyNotHugo",
-  "grammarSha": "bf371a3f393b5b01a5b1949511e6cf9dd352a19274caa8a374df348b3bd1f93c",
-  "reference": "main",
-  "revision": "a5512800ea0220da4abbae61b8aea8423d1549aa"
+  "maintainedBy": "@WhyNotHugo"
 }

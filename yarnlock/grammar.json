@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "a11d09bd7e3702116dd4cf85901a1897aefa5d2d",
+  "grammarSha": "d385849e6e31cdb3e6c776516a12512ec68acd1aa86d930df8f8d66b0cd2ba3f",
   "language": "yarnlock",
   "url": "https://github.com/amaanq/tree-sitter-yarnlock",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "d385849e6e31cdb3e6c776516a12512ec68acd1aa86d930df8f8d66b0cd2ba3f",
-  "reference": "master",
-  "revision": "a11d09bd7e3702116dd4cf85901a1897aefa5d2d"
+  "maintainedBy": "@amaanq"
 }

@@ -1,9 +1,9 @@
 {
+  "reference": "master",
+  "revision": "c134aaec6acf4fa95fe4aa0dc9aba3eacdbbe55a",
+  "grammarSha": "75f056c7064aef3e22af7896b11734fc6e9ffaa4639bb55a1813d7791fe063ea",
   "language": "luap",
   "altName": "lua patterns",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-luap",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "75f056c7064aef3e22af7896b11734fc6e9ffaa4639bb55a1813d7791fe063ea",
-  "reference": "master",
-  "revision": "c134aaec6acf4fa95fe4aa0dc9aba3eacdbbe55a"
+  "maintainedBy": "@amaanq"
 }

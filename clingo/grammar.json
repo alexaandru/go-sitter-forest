@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "cb06e649c2994de6dc6b4bafb3dd864e2ed33675",
+  "grammarSha": "0b488c9bbd135597365ba826cc6ee9c8f1208571512568f3eb98becb0e183b04",
   "language": "clingo",
   "url": "https://github.com/potassco/tree-sitter-clingo",
-  "maintainedBy": "@sthiele",
-  "grammarSha": "0b488c9bbd135597365ba826cc6ee9c8f1208571512568f3eb98becb0e183b04",
-  "reference": "main",
-  "revision": "cb06e649c2994de6dc6b4bafb3dd864e2ed33675"
+  "maintainedBy": "@sthiele"
 }

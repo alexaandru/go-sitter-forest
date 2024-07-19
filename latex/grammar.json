@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "107435ada4c4c422ba4f951336b5e566b86ac3ca",
+  "grammarSha": "7b09e9b2d448d94943035c5b0454bc4294d2a5bdbd5240aef3cab57e5f468f47",
   "language": "latex",
   "url": "https://github.com/latex-lsp/tree-sitter-latex",
+  "maintainedBy": "@theHamsta, @clason",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@theHamsta, @clason",
-  "grammarSha": "7b09e9b2d448d94943035c5b0454bc4294d2a5bdbd5240aef3cab57e5f468f47",
-  "reference": "master",
-  "revision": "107435ada4c4c422ba4f951336b5e566b86ac3ca"
+  ]
 }

@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "7ce8946cae4bb25adebe5b50394f702beb007026",
+  "grammarSha": "1fd0c5c53a69d1fd0e15bae105d3310e6d454cd76ae822a38b92fd96bbdf5868",
   "language": "cpp",
   "url": "https://github.com/tree-sitter/tree-sitter-cpp",
+  "maintainedBy": "@theHamsta",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@theHamsta",
-  "grammarSha": "1fd0c5c53a69d1fd0e15bae105d3310e6d454cd76ae822a38b92fd96bbdf5868",
-  "reference": "master",
-  "revision": "7ce8946cae4bb25adebe5b50394f702beb007026"
+  ]
 }

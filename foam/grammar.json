@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "04664b40c0dadb7ef37028acf3422c63271d377b",
+  "grammarSha": "85b049335450477ef7ae5380ef3b440e7c74a310c67f822c20fc84435cffabbe",
   "language": "foam",
   "url": "https://github.com/FoamScience/tree-sitter-foam",
+  "maintainedBy": "@FoamScience",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@FoamScience",
-  "grammarSha": "85b049335450477ef7ae5380ef3b440e7c74a310c67f822c20fc84435cffabbe",
-  "reference": "master",
-  "revision": "04664b40c0dadb7ef37028acf3422c63271d377b"
+  ]
 }

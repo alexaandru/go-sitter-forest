@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "febf48a5b6928600cd8fb2a01254743af550780d",
+  "grammarSha": "25337d059d8208f5212f24981ae02bbef564f1a4d6b601227378aa75dba485dc",
   "language": "qmljs",
   "url": "https://github.com/yuja/tree-sitter-qmljs",
+  "maintainedBy": "@Decodetalkers",
   "files": [
     "scanner.c",
     "typescript-scanner.h"
-  ],
-  "maintainedBy": "@Decodetalkers",
-  "grammarSha": "25337d059d8208f5212f24981ae02bbef564f1a4d6b601227378aa75dba485dc",
-  "reference": "master",
-  "revision": "febf48a5b6928600cd8fb2a01254743af550780d"
+  ]
 }

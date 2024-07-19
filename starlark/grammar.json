@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "018d0e09d9d0f0dd6740a37682b8ee4512e8b2ac",
+  "grammarSha": "33ea96a44600d31b8c17fb5ea021bc98fa02503482c1c3f7dd202ac3f2ddb971",
   "language": "starlark",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-starlark",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "33ea96a44600d31b8c17fb5ea021bc98fa02503482c1c3f7dd202ac3f2ddb971",
-  "reference": "master",
-  "revision": "018d0e09d9d0f0dd6740a37682b8ee4512e8b2ac"
+  ]
 }

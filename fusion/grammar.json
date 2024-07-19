@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "19db2f47ba4c3a0f6238d4ae0e2abfca16e61dd6",
+  "grammarSha": "968f5db13182d2cedb50d512b5ad6a98f0f92d1c6625f549c73e6fe276064862",
   "language": "fusion",
   "url": "https://gitlab.com/jirgn/tree-sitter-fusion",
+  "maintainedBy": "@jirgn",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@jirgn",
-  "grammarSha": "968f5db13182d2cedb50d512b5ad6a98f0f92d1c6625f549c73e6fe276064862",
-  "reference": "main",
-  "revision": "19db2f47ba4c3a0f6238d4ae0e2abfca16e61dd6"
+  ]
 }

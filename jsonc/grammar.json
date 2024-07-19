@@ -1,9 +1,9 @@
 {
+  "reference": "main",
+  "revision": "02b01653c8a1c198ae7287d566efa86a135b30d5",
+  "grammarSha": "a67a0d3d31f242a632f0660501c33edadc7d2fe0b4b4a20e1641d8d0dadd4a94",
   "language": "jsonc",
   "altName": "JSON with comments",
   "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
-  "maintainedBy": "@WhyNotHugo",
-  "grammarSha": "a67a0d3d31f242a632f0660501c33edadc7d2fe0b4b4a20e1641d8d0dadd4a94",
-  "reference": "main",
-  "revision": "02b01653c8a1c198ae7287d566efa86a135b30d5"
+  "maintainedBy": "@WhyNotHugo"
 }

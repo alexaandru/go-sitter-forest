@@ -1,6 +1,10 @@
 {
+  "reference": "master",
+  "revision": "5d8b29f6ef3bf64d59430dcfe76b31cc44b5abfd",
+  "grammarSha": "322f2fb4c0b593afb6ef849ec2f0972daa9a3e57604b0274eee789e8b087d312",
   "language": "comment",
   "url": "https://github.com/stsewd/tree-sitter-comment",
+  "maintainedBy": "@stsewd",
   "files": [
     "scanner.c",
     "src/tree_sitter_comment/parser.c",
@@ -8,9 +12,5 @@
     "src/tree_sitter_comment/tokens.h",
     "src/tree_sitter_comment/chars.c",
     "src/tree_sitter_comment/chars.h"
-  ],
-  "maintainedBy": "@stsewd",
-  "grammarSha": "322f2fb4c0b593afb6ef849ec2f0972daa9a3e57604b0274eee789e8b087d312",
-  "reference": "master",
-  "revision": "5d8b29f6ef3bf64d59430dcfe76b31cc44b5abfd"
+  ]
 }

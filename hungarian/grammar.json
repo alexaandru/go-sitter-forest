@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "ed004ba057355562a7a44e8641ba8994eb5b9edd",
+  "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
   "language": "hungarian",
   "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
+  "maintainedBy": "@jpt13653903",
   "files": [
     "scanner.c",
     "debug_macros.h"
-  ],
-  "maintainedBy": "@jpt13653903",
-  "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
-  "reference": "master",
-  "revision": "ed004ba057355562a7a44e8641ba8994eb5b9edd"
+  ]
 }

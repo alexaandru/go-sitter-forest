@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "b37e3d58e5c5cf8d739b315d6114e02d42e66664",
+  "grammarSha": "eaf0c321d4cfb3ecb7ca09631a1e76d60b4212581ddfc3b919301bfe485eabcd",
   "language": "kdl",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-kdl",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "eaf0c321d4cfb3ecb7ca09631a1e76d60b4212581ddfc3b919301bfe485eabcd",
-  "reference": "master",
-  "revision": "b37e3d58e5c5cf8d739b315d6114e02d42e66664"
+  ]
 }

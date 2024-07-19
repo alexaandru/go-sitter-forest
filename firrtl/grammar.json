@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "8503d3a0fe0f9e427863cb0055699ff2d29ae5f5",
+  "grammarSha": "6d03eefb4046e10af7fd7f6bae1bca9ed84c92aee390d5b6035846575c104d6d",
   "language": "firrtl",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-firrtl",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "6d03eefb4046e10af7fd7f6bae1bca9ed84c92aee390d5b6035846575c104d6d",
-  "reference": "master",
-  "revision": "8503d3a0fe0f9e427863cb0055699ff2d29ae5f5"
+  ]
 }

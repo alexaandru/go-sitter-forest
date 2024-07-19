@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "a78aef9abc395c600c38a037ac779afc7e3cc9e0",
+  "grammarSha": "eb2b0d32a993838ce11e0123c2ef8abdc1570fd4c02b6e0183215a3e0d72e7b0",
   "language": "fish",
   "url": "https://github.com/ram02z/tree-sitter-fish",
+  "maintainedBy": "@ram02z",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@ram02z",
-  "grammarSha": "eb2b0d32a993838ce11e0123c2ef8abdc1570fd4c02b6e0183215a3e0d72e7b0",
-  "reference": "master",
-  "revision": "a78aef9abc395c600c38a037ac779afc7e3cc9e0"
+  ]
 }

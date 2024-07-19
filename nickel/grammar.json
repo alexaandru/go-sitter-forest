@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "3039ad9e9af3c1ffe049a04ee83a2b489915b0b9",
+  "grammarSha": "ad813772f5294c0188bdad3737248b4fae9b4611b45bbbbb0d5f36cc9f1b708b",
   "language": "nickel",
   "url": "https://github.com/nickel-lang/tree-sitter-nickel",
+  "maintainedBy": "@ErinvanderVeen, @yannham",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@ErinvanderVeen, @yannham",
-  "grammarSha": "ad813772f5294c0188bdad3737248b4fae9b4611b45bbbbb0d5f36cc9f1b708b",
-  "reference": "main",
-  "revision": "3039ad9e9af3c1ffe049a04ee83a2b489915b0b9"
+  ]
 }

@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "ba7472152d79a8c916550c80fdbfd5724d07a0c9",
+  "grammarSha": "a9074597f237e6ad04274822189bb14bddbf70be1c4d7a21a3e1b4d70dc16204",
   "language": "awk",
   "url": "https://github.com/Beaglefoot/tree-sitter-awk",
+  "maintainedBy": "@Beaglefoot",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@Beaglefoot",
-  "grammarSha": "a9074597f237e6ad04274822189bb14bddbf70be1c4d7a21a3e1b4d70dc16204",
-  "reference": "master",
-  "revision": "ba7472152d79a8c916550c80fdbfd5724d07a0c9"
+  ]
 }

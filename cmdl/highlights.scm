@@ -2,9 +2,14 @@
 "signal"    @keyword
 "end"       @keyword
 
+"cat" @operator
+"^" @operator
 "and" @operator
+"&" @operator
 "or"  @operator
+"|"  @operator
 "not" @operator
+"!" @operator
 "=>"  @operator
 "<="  @operator
 

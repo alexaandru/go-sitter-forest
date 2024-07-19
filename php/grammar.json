@@ -1,13 +1,13 @@
 {
+  "reference": "master",
+  "revision": "575a0801f430c8672db70b73493c033a9dcfc328",
+  "grammarSha": "7cd6703d100240cd10cf42797838a9f751e70f13f845b971c6a5253671e0589d",
   "language": "php",
   "url": "https://github.com/tree-sitter/tree-sitter-php",
+  "maintainedBy": "@tk-shirasaka",
+  "srcRoot": "php",
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ],
-  "srcRoot": "php",
-  "maintainedBy": "@tk-shirasaka",
-  "grammarSha": "7cd6703d100240cd10cf42797838a9f751e70f13f845b971c6a5253671e0589d",
-  "reference": "master",
-  "revision": "575a0801f430c8672db70b73493c033a9dcfc328"
+  ]
 }

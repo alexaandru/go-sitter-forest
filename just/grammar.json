@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "379fbe36d1e441bc9414ea050ad0c85c9d6935ea",
+  "grammarSha": "f9dec423d91012a2eafd0d6424b934150d47d302081c32b77564e6c628862a91",
   "language": "just",
   "url": "https://github.com/IndianBoy42/tree-sitter-just",
+  "maintainedBy": "@Hubro",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@Hubro",
-  "grammarSha": "f9dec423d91012a2eafd0d6424b934150d47d302081c32b77564e6c628862a91",
-  "reference": "main",
-  "revision": "379fbe36d1e441bc9414ea050ad0c85c9d6935ea"
+  ]
 }

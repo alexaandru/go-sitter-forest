@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "c25f8034c977681653a8acd541c8b4877a58f474",
+  "grammarSha": "dfde9c9d2d8b4ce6ce4f8c0de67d9c5bdb2b439bdddd27b8f6b13303c7efd252",
   "language": "beancount",
   "url": "https://github.com/polarmutex/tree-sitter-beancount",
+  "maintainedBy": "@polarmutex",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@polarmutex",
-  "grammarSha": "dfde9c9d2d8b4ce6ce4f8c0de67d9c5bdb2b439bdddd27b8f6b13303c7efd252",
-  "reference": "master",
-  "revision": "c25f8034c977681653a8acd541c8b4877a58f474"
+  ]
 }

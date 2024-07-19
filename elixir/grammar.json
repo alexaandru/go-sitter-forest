@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "c7ae8b77e2749826dcf23df6514f08fdd68c66a3",
+  "grammarSha": "759eb810f50579affb7ac892480e3df722f7125083b13c55800db7fd4dbeb2a5",
   "language": "elixir",
   "url": "https://github.com/elixir-lang/tree-sitter-elixir",
+  "maintainedBy": "@connorlay",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@connorlay",
-  "grammarSha": "759eb810f50579affb7ac892480e3df722f7125083b13c55800db7fd4dbeb2a5",
-  "reference": "main",
-  "revision": "c7ae8b77e2749826dcf23df6514f08fdd68c66a3"
+  ]
 }

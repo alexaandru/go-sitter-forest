@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "49fde205b59a1d9792efc21ee0b6d50bbd35ff14",
+  "grammarSha": "da7a172aceb1460e9ca9bfb80492bdff8fdd61255b02080aa78ffb4dee66b9b0",
   "language": "jsdoc",
   "url": "https://github.com/tree-sitter/tree-sitter-jsdoc",
+  "maintainedBy": "@steelsojka",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@steelsojka",
-  "grammarSha": "da7a172aceb1460e9ca9bfb80492bdff8fdd61255b02080aa78ffb4dee66b9b0",
-  "reference": "master",
-  "revision": "49fde205b59a1d9792efc21ee0b6d50bbd35ff14"
+  ]
 }

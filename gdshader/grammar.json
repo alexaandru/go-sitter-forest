@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "ffd9f958df13cae04593781d7d2562295a872455",
+  "grammarSha": "3b8e5c148d7c189be38818da5c0afe237fab685626150d726ec32d0b14d8711d",
   "language": "gdshader",
   "url": "https://github.com/GodOfAvacyn/tree-sitter-gdshader",
-  "maintainedBy": "@godofavacyn",
-  "grammarSha": "3b8e5c148d7c189be38818da5c0afe237fab685626150d726ec32d0b14d8711d",
-  "reference": "main",
-  "revision": "ffd9f958df13cae04593781d7d2562295a872455"
+  "maintainedBy": "@godofavacyn"
 }

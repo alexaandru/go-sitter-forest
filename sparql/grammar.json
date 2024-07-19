@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "d853661ca680d8ff7f8d800182d5782b61d0dd58",
+  "grammarSha": "3d3e320241461a9418ec8be548541538fff24cd123a075052928c1ecb40add0c",
   "language": "sparql",
   "url": "https://github.com/GordianDziwis/tree-sitter-sparql",
-  "maintainedBy": "@BonaBeavis",
-  "grammarSha": "3d3e320241461a9418ec8be548541538fff24cd123a075052928c1ecb40add0c",
-  "reference": "main",
-  "revision": "d853661ca680d8ff7f8d800182d5782b61d0dd58"
+  "maintainedBy": "@BonaBeavis"
 }

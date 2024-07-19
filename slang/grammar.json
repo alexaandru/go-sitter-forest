@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "ea77a4d91dd93f4483965efcc41f3faebb9131c8",
+  "grammarSha": "915a9a46cd2ada757424a4f9a2650e91e9199bb83a46afa960a9e90f1859f9f2",
   "language": "slang",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-slang",
+  "maintainedBy": "@theHamsta",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@theHamsta",
-  "grammarSha": "915a9a46cd2ada757424a4f9a2650e91e9199bb83a46afa960a9e90f1859f9f2",
-  "reference": "master",
-  "revision": "ea77a4d91dd93f4483965efcc41f3faebb9131c8"
+  ]
 }

@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "072c969749e66f000dba35a33c387650e203e96e",
+  "grammarSha": "9333492f8391f7c69685557134b59eab3d6034363c6da84aba3f93990e268bf5",
   "language": "squirrel",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-squirrel",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "9333492f8391f7c69685557134b59eab3d6034363c6da84aba3f93990e268bf5",
-  "reference": "master",
-  "revision": "072c969749e66f000dba35a33c387650e203e96e"
+  ]
 }

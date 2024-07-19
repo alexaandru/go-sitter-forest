@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "7a5135779d784b38d9bb1975e6eaa19dffcdec2d",
+  "grammarSha": "5d5d3fac60aee98b22b1cec65f30c7cdea17fe7a5c1822d02a151ef210fa525b",
   "language": "slim",
   "url": "https://github.com/kolen/tree-sitter-slim",
+  "maintainedBy": "@kolen",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@kolen",
-  "grammarSha": "5d5d3fac60aee98b22b1cec65f30c7cdea17fe7a5c1822d02a151ef210fa525b",
-  "reference": "master",
-  "revision": "7a5135779d784b38d9bb1975e6eaa19dffcdec2d"
+  ]
 }

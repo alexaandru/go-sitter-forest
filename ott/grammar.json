@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "8ab99c5f7dcd5d9f30c08a549d62266a9d75467a",
+  "grammarSha": "76ee7f3d080f9712948d92a6442e44ed24886ef3f9483fde200032a51dffae63",
   "language": "ott",
   "url": "https://github.com/armonjam/tree-sitter-ott",
+  "maintainedBy": "@armonjam",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@armonjam",
-  "grammarSha": "76ee7f3d080f9712948d92a6442e44ed24886ef3f9483fde200032a51dffae63",
-  "reference": "main",
-  "revision": "8ab99c5f7dcd5d9f30c08a549d62266a9d75467a"
+  ]
 }

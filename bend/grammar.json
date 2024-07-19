@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "aaf96bf2cb5cbbfd482ec5c0c13b4bb4bd03dc52",
+  "grammarSha": "84d96a0e23a5222b83222908f337b83e4846ce965a02d9a10ebaa5cb2179b8e1",
   "language": "bend",
   "url": "https://github.com/HigherOrderCO/tree-sitter-bend",
+  "maintainedBy": "@edusporto",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@edusporto",
-  "grammarSha": "84d96a0e23a5222b83222908f337b83e4846ce965a02d9a10ebaa5cb2179b8e1",
-  "reference": "main",
-  "revision": "aaf96bf2cb5cbbfd482ec5c0c13b4bb4bd03dc52"
+  ]
 }

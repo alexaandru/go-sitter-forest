@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "7b0883c03e5edd34ef7bcf703194204299d7099f",
+  "grammarSha": "1e7791c44ad85fe199cd46c51a12d40fa1b47ea7ba4071bed037e370eb09901c",
   "language": "capnp",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-capnp",
-  "maintainedBy": "@amaanq",
-  "grammarSha": "1e7791c44ad85fe199cd46c51a12d40fa1b47ea7ba4071bed037e370eb09901c",
-  "reference": "master",
-  "revision": "7b0883c03e5edd34ef7bcf703194204299d7099f"
+  "maintainedBy": "@amaanq"
 }

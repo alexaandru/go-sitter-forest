@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "e61ce92769e03532f7a5ddf2b0845e12a9e77335",
+  "grammarSha": "1fda17dd0ded0060d9ce28a99fb0df1d020b9441a29346771a7062968b53a133",
   "language": "todolang",
   "url": "https://github.com/Gnarus-G/tree-sitter-todolang",
-  "maintainedBy": "@Gnarus-G",
-  "grammarSha": "1fda17dd0ded0060d9ce28a99fb0df1d020b9441a29346771a7062968b53a133",
-  "reference": "main",
-  "revision": "e61ce92769e03532f7a5ddf2b0845e12a9e77335"
+  "maintainedBy": "@Gnarus-G"
 }

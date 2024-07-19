@@ -1,11 +1,11 @@
 {
+  "reference": "main",
+  "revision": "02a17bf9d0553406268cdbf466d57808ae712bf3",
+  "grammarSha": "107fa12f6f326c738a708c2a5f4c4390476ce874a94a42dd3352e2b1bab30863",
   "language": "gleam",
   "url": "https://github.com/gleam-lang/tree-sitter-gleam",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "107fa12f6f326c738a708c2a5f4c4390476ce874a94a42dd3352e2b1bab30863",
-  "reference": "main",
-  "revision": "02a17bf9d0553406268cdbf466d57808ae712bf3"
+  ]
 }

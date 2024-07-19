@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "02fa3b79b3ff9a296066da6277adfc3f26cbc9e0",
+  "grammarSha": "8cc7d9dfe2f995fd21d56c2647db21d52f259d8cf204e64a583c6c16936a4dba",
   "language": "hjson",
   "url": "https://github.com/winston0410/tree-sitter-hjson",
-  "maintainedBy": "@winston0410",
-  "grammarSha": "8cc7d9dfe2f995fd21d56c2647db21d52f259d8cf204e64a583c6c16936a4dba",
-  "reference": "master",
-  "revision": "02fa3b79b3ff9a296066da6277adfc3f26cbc9e0"
+  "maintainedBy": "@winston0410"
 }

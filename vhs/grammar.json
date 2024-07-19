@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "90028bbadb267ead5b87830380f6a825147f0c0f",
+  "grammarSha": "91f5120397ed4177f168ff85b5039505591a31b931b597fdcfbc480020891d3f",
   "language": "vhs",
   "url": "https://github.com/charmbracelet/tree-sitter-vhs",
-  "maintainedBy": "@caarlos0",
-  "grammarSha": "91f5120397ed4177f168ff85b5039505591a31b931b597fdcfbc480020891d3f",
-  "reference": "main",
-  "revision": "90028bbadb267ead5b87830380f6a825147f0c0f"
+  "maintainedBy": "@caarlos0"
 }

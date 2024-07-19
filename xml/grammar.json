@@ -1,13 +1,13 @@
 {
+  "reference": "master",
+  "revision": "809266ed1694d64dedc168a18893cc254e3edf7e",
+  "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
   "language": "xml",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+  "maintainedBy": "@ObserverOfTime",
+  "srcRoot": "xml",
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ],
-  "srcRoot": "xml",
-  "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
-  "reference": "master",
-  "revision": "809266ed1694d64dedc168a18893cc254e3edf7e"
+  ]
 }

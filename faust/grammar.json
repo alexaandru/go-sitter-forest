@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "f3b9274514b5f9bf6b0dd4a01c30f9cc15c58bc4",
+  "grammarSha": "df27ded872f96efd65c28ad96e22311d0b133eb16a3c24242470941ec5c8289d",
   "language": "faust",
   "url": "https://github.com/khiner/tree-sitter-faust",
-  "maintainedBy": "@khiner",
-  "grammarSha": "df27ded872f96efd65c28ad96e22311d0b133eb16a3c24242470941ec5c8289d",
-  "reference": "main",
-  "revision": "f3b9274514b5f9bf6b0dd4a01c30f9cc15c58bc4"
+  "maintainedBy": "@khiner"
 }

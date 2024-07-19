@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "40259f3c77ea856841a4e0c4c807705f3e4a2b65",
+  "grammarSha": "ff09adbea051c0a85fdd2b1bd69f7565590a3c5dfac7e918ddc3df12b2bb8e86",
   "language": "wgsl",
   "url": "https://github.com/szebniok/tree-sitter-wgsl",
+  "maintainedBy": "@szebniok",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@szebniok",
-  "grammarSha": "ff09adbea051c0a85fdd2b1bd69f7565590a3c5dfac7e918ddc3df12b2bb8e86",
-  "reference": "master",
-  "revision": "40259f3c77ea856841a4e0c4c807705f3e4a2b65"
+  ]
 }

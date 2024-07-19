@@ -1,13 +1,13 @@
 {
+  "reference": "master",
+  "revision": "809266ed1694d64dedc168a18893cc254e3edf7e",
+  "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
   "language": "dtd",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
+  "maintainedBy": "@ObserverOfTime",
+  "srcRoot": "dtd",
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ],
-  "srcRoot": "dtd",
-  "maintainedBy": "@ObserverOfTime",
-  "grammarSha": "e255598c458849525789ef877097d9777740080d167ee0f45fba5ac9ecc52742",
-  "reference": "master",
-  "revision": "809266ed1694d64dedc168a18893cc254e3edf7e"
+  ]
 }

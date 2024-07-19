@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "42becd6f8f7bae82c818fa3abb1b6ff34b552310",
+  "grammarSha": "758524d418fde3eb51eda6418a71289effa101bbfe72fafa3e2747597daa6ade",
   "language": "ql",
   "url": "https://github.com/tree-sitter/tree-sitter-ql",
-  "maintainedBy": "@pwntester",
-  "grammarSha": "758524d418fde3eb51eda6418a71289effa101bbfe72fafa3e2747597daa6ade",
-  "reference": "master",
-  "revision": "42becd6f8f7bae82c818fa3abb1b6ff34b552310"
+  "maintainedBy": "@pwntester"
 }

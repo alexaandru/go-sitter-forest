@@ -1,8 +1,8 @@
 {
+  "reference": "master",
+  "revision": "c390f10519ae69fdb03b3e5764f5592fb6924bcc",
+  "grammarSha": "39ddc35b2ec00208925a88971b77909018f215cda7a943e4f9eb1e1bb2ce86a5",
   "language": "hocon",
   "url": "https://github.com/antosha417/tree-sitter-hocon",
-  "maintainedBy": "@antosha417",
-  "grammarSha": "39ddc35b2ec00208925a88971b77909018f215cda7a943e4f9eb1e1bb2ce86a5",
-  "reference": "master",
-  "revision": "c390f10519ae69fdb03b3e5764f5592fb6924bcc"
+  "maintainedBy": "@antosha417"
 }

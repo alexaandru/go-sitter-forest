@@ -1,12 +1,12 @@
 {
+  "reference": "master",
+  "revision": "7218cf622b057ae9c530e1f0a7a3ce49806ca55e",
+  "grammarSha": "fcd843e6aff1a14bb3543042bc7d8c2189523cdd56709c2193459a5dc2724cc4",
   "language": "svelte",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c",
     "tag.h"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "fcd843e6aff1a14bb3543042bc7d8c2189523cdd56709c2193459a5dc2724cc4",
-  "reference": "master",
-  "revision": "7218cf622b057ae9c530e1f0a7a3ce49806ca55e"
+  ]
 }

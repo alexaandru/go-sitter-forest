@@ -1,8 +1,8 @@
 {
+  "reference": "main",
+  "revision": "3937c5cd105ec4127448651a21aef45f52d19609",
+  "grammarSha": "57fcca3fa5f0b2e820116df26e5020fcdd506d7b5ef18b33f21ee925f860723b",
   "language": "todotxt",
   "url": "https://github.com/arnarg/tree-sitter-todotxt",
-  "maintainedBy": "@arnarg",
-  "grammarSha": "57fcca3fa5f0b2e820116df26e5020fcdd506d7b5ef18b33f21ee925f860723b",
-  "reference": "main",
-  "revision": "3937c5cd105ec4127448651a21aef45f52d19609"
+  "maintainedBy": "@arnarg"
 }

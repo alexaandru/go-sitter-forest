@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "d37b8f24f653378b268ec18404e9c14ad355b128",
+  "grammarSha": "fbefdd5feb3c89825794a7a6920e6ee33ed42e94f30e430542e7b9e165bfdb40",
   "language": "odin",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-odin",
+  "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq",
-  "grammarSha": "fbefdd5feb3c89825794a7a6920e6ee33ed42e94f30e430542e7b9e165bfdb40",
-  "reference": "master",
-  "revision": "d37b8f24f653378b268ec18404e9c14ad355b128"
+  ]
 }

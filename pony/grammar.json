@@ -1,11 +1,11 @@
 {
+  "reference": "master",
+  "revision": "73ff874ae4c9e9b45462673cbc0a1e350e2522a7",
+  "grammarSha": "2a00de6b1148fae169e40a446c9085db8122761e63ebbf13a5b1009c95109555",
   "language": "pony",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-pony",
+  "maintainedBy": "@amaanq, @mfelsche",
   "files": [
     "scanner.c"
-  ],
-  "maintainedBy": "@amaanq, @mfelsche",
-  "grammarSha": "2a00de6b1148fae169e40a446c9085db8122761e63ebbf13a5b1009c95109555",
-  "reference": "master",
-  "revision": "73ff874ae4c9e9b45462673cbc0a1e350e2522a7"
+  ]
 }
