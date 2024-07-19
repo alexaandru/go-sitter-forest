@@ -372,6 +372,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xml v1.5.100
 	github.com/alexaandru/go-sitter-forest/yaml v1.5.100
 	github.com/alexaandru/go-sitter-forest/yang v1.5.100
+	github.com/alexaandru/go-sitter-forest/yarnlock v1.5.100
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.100
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.100
 	github.com/alexaandru/go-sitter-forest/zeek v1.5.100

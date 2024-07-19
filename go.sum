@@ -736,6 +736,8 @@ github.com/alexaandru/go-sitter-forest/yaml v1.5.100 h1:kQXgQuum+oE+xLvS0D05/idQ
 github.com/alexaandru/go-sitter-forest/yaml v1.5.100/go.mod h1:XyQUjPBxQ2is08Ofra9E/QeV3PZY2stB5wg9r2yQz74=
 github.com/alexaandru/go-sitter-forest/yang v1.5.100 h1:w5k6ZA6cSo2X9xELyH+Hr2IygHoBxm9zjr7MPeDHDe8=
 github.com/alexaandru/go-sitter-forest/yang v1.5.100/go.mod h1:EKJo1MA5DBDZYh7LvdCPvG99aWD7dHpZlp1m9GDT9ss=
+github.com/alexaandru/go-sitter-forest/yarnlock v1.5.100 h1:0/oggZJSHVyQJ3RwCUNkOChjSrSp66lWwO/Vbx+F44k=
+github.com/alexaandru/go-sitter-forest/yarnlock v1.5.100/go.mod h1:8BZmHHxE8KQqVP6uv5v6sSteU2Sb6My4FnRrpwGvgn0=
 github.com/alexaandru/go-sitter-forest/yuck v1.5.100 h1:2By0SdGJuv3kY5O7Hoasiw0VqwdKkH3xFNNcIdTmac0=
 github.com/alexaandru/go-sitter-forest/yuck v1.5.100/go.mod h1:tnSF5NaF3PzUm/AKvlGBe+dMgSbl3KLCYVaPA9Wolio=
 github.com/alexaandru/go-sitter-forest/zathurarc v1.5.100 h1:dNcY2OHB0GoUzsvLAV+Ak5OgTWdBQTtw9FAmvvlYAU8=

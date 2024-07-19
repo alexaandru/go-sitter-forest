@@ -379,6 +379,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/xml"
 	"github.com/alexaandru/go-sitter-forest/yaml"
 	"github.com/alexaandru/go-sitter-forest/yang"
+	"github.com/alexaandru/go-sitter-forest/yarnlock"
 	"github.com/alexaandru/go-sitter-forest/yuck"
 	"github.com/alexaandru/go-sitter-forest/zathurarc"
 	"github.com/alexaandru/go-sitter-forest/zeek"
@@ -772,6 +773,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"xml":                xml.GetLanguage,
 	"yaml":               yaml.GetLanguage,
 	"yang":               yang.GetLanguage,
+	"yarnlock":           yarnlock.GetLanguage,
 	"yuck":               yuck.GetLanguage,
 	"zathurarc":          zathurarc.GetLanguage,
 	"zeek":               zeek.GetLanguage,
@@ -1149,6 +1151,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"xml":                xml.GetQuery,
 	"yaml":               yaml.GetQuery,
 	"yang":               yang.GetQuery,
+	"yarnlock":           yarnlock.GetQuery,
 	"yuck":               yuck.GetQuery,
 	"zathurarc":          zathurarc.GetQuery,
 	"zeek":               zeek.GetQuery,

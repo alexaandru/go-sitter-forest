@@ -740,7 +740,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{"udev/foo.conf", "udev"},
 		{"udev/rules.d/foo.conf", "udev"},
 		{"xcompose", "xcompose"},
-		{"yarn.lock", "yaml"},
+		{"yarn.lock", "yarnlock"},
 		{"zathurarc", "zathurarc"},
 		{"zlogin", "bash"},
 		{"zlogout", "bash"},
