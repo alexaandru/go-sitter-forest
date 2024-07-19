@@ -1,12 +1,12 @@
 //go:build !plugin
 
-package janet_simple_test
+package janet_test
 
 import (
 	"context"
 	"testing"
 
-	"github.com/alexaandru/go-sitter-forest/janet_simple"
+	"github.com/alexaandru/go-sitter-forest/janet"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
@@ -20,7 +20,7 @@ const (
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), janet_simple.GetLanguage())
+	n, err := sitter.ParseCtx(context.Background(), []byte(code), janet.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

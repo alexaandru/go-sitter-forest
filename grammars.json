@@ -1498,7 +1498,7 @@
     "revision": "9b2f9aec2106b94b4e099fe75e73ebd8ae707c04"
   },
   {
-    "language": "janet_simple",
+    "language": "janet",
     "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
     "files": [
       "scanner.c"

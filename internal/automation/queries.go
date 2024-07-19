@@ -104,7 +104,14 @@ func copyQueries(src, dstPath string) (err error) {
 
 func copyNvimQueries(src string) (err error) {
 	err = forEachGrammar(func(gr *grammar.Grammar) (err error) {
-		return copyFiles(filepath.Join(src, gr.Language, "*.scm"), gr.Language, nvimts)
+		nvimLang := gr.Language
+		if nvimLang == "janet" {
+			nvimLang += "_simple"
+		}
+
+		logger.Info("copy nvim queries", "src", src, "nvimLang", nvimLang, "lang", gr.Language)
+
+		return copyFiles(filepath.Join(src, nvimLang, "*.scm"), gr.Language, nvimts)
 	})
 	if err != nil {
 		return

@@ -39,7 +39,9 @@ In rare cases, the Go package name differs from the language name:
 - `COBOL` language is named `COBOL` in grammar.js but we expose it as `cobol`
   (for aligning with the rest of the parsers);
 - `dotenv` language is named `env` in grammar.js but we expose it as `dotenv`;
-- `walnut` language is named `cwal` in grammar.js but we retain it as `walnut`.
+- `walnut` language is named `cwal` in grammar.js but we retain it as `walnut`;
+- `janet` language is named `janet_simple` in grammar.js but in here is
+  simply named `janet`.
 
 Also, some languages may have names that are not very straightforward acronyms.
 In those cases, an `altName` field will be populated, i.e. `requirements` language

@@ -163,7 +163,7 @@
 - [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr)
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100)
-- [x] [janet_simple](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
+- [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [ ] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) (maintained by @y4cer)
 - [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f)
 - [x] [javascript](https://github.com/tree-sitter/tree-sitter-javascript) ✔️ (maintained by @steelsojka)

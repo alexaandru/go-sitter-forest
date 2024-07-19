@@ -1,6 +1,6 @@
 //go:build !plugin
 
-package janet_simple
+package janet
 
 //#include "parser.h"
 //TSLanguage *tree_sitter_janet_simple();

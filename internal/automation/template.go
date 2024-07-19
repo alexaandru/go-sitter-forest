@@ -144,6 +144,8 @@ func mkBindingMap(lang string) (out map[string]string) {
 			langOut = "env"
 		case "walnut":
 			langOut = "cwal"
+		case "janet":
+			langOut = "janet_simple"
 		case "unison":
 			silencer = "//#cgo CFLAGS: -Wno-stringop-overflow"
 		case "cleancopy":

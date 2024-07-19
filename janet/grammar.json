@@ -1,5 +1,5 @@
 {
-  "language": "janet_simple",
+  "language": "janet",
   "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
   "files": [
     "scanner.c"

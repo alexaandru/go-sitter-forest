@@ -49,14 +49,14 @@ bool tree_sitter_janet_simple_external_scanner_scan(
 {
   // skip a bit brother
   while (iswspace(lexer->lookahead)) {
-    lexer->advance_janet_simple(lexer, true);
+    lexer->advance_janet(lexer, true);
   }
   // there can be only...two?
   if (valid_symbols[LONG_BUF_LIT] || valid_symbols[LONG_STR_LIT]) {
     // so which one was it?
     if (lexer->lookahead == '@') {
       lexer->result_symbol = LONG_BUF_LIT;
-      lexer->advance_janet_simple(lexer, false);
+      lexer->advance_janet(lexer, false);
     } else {
       lexer->result_symbol = LONG_STR_LIT;
     }
@@ -68,7 +68,7 @@ bool tree_sitter_janet_simple_external_scanner_scan(
       return false;
     }
     // getting here means a backtick was encountered
-    lexer->advance_janet_simple(lexer, false);
+    lexer->advance_janet(lexer, false);
     uint32_t n_backticks = 1;
     // arrive at a total number of backticks
     for (;;) {
@@ -78,10 +78,10 @@ bool tree_sitter_janet_simple_external_scanner_scan(
       // found one!
       if (lexer->lookahead == '`') {
         n_backticks++;
-        lexer->advance_janet_simple(lexer, false);
+        lexer->advance_janet(lexer, false);
         continue;
       } else { // nope, time to bail
-        lexer->advance_janet_simple(lexer, false);
+        lexer->advance_janet(lexer, false);
         break;
       }
     }
@@ -97,14 +97,14 @@ bool tree_sitter_janet_simple_external_scanner_scan(
         cbt++;
         // are we there yet?
         if (cbt == n_backticks) {
-          lexer->advance_janet_simple(lexer, false);
+          lexer->advance_janet(lexer, false);
           return true;
         }
       } else { // nope, better reset the count
         cbt = 0;
       }
       // next!
-      lexer->advance_janet_simple(lexer, false);
+      lexer->advance_janet(lexer, false);
     }
 
   }

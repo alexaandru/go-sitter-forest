@@ -255,7 +255,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".ipd", "starlark"},
 		{".ispc", "ispc"},
 		{".jade", "pug"},
-		{".janet", "janet_simple"},
+		{".janet", "janet"},
 		{".jav", "java"},
 		{".java", "java"},
 		{".jl", "julia"},

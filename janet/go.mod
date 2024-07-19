@@ -1,4 +1,4 @@
-module github.com/alexaandru/go-sitter-forest/janet_simple
+module github.com/alexaandru/go-sitter-forest/janet
 
 go 1.22.1
 
