@@ -346,6 +346,7 @@
     "slim":               ["slim"],
     "slint":              ["slint"],
     "smali":              ["smali"],
+    "smith":              ["smith"],
     "smithy":             ["smithy"],
     "sml":                ["sml", "fun", "sig"],
     "snakemake":          ["smk"],

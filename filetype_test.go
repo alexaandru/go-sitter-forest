@@ -439,6 +439,7 @@ func TestDetectLanguage(t *testing.T) { //nolint:funlen,tparallel // no, subtest
 		{".slim", "slim"},
 		{".slint", "slint"},
 		{".smali", "smali"},
+		{".smith", "smith"},
 		{".smithy", "smithy"},
 		{".smk", "snakemake"},
 		{".sml", "sml"},

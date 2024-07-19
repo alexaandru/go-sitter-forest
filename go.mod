@@ -292,6 +292,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slim v1.5.100
 	github.com/alexaandru/go-sitter-forest/slint v1.5.100
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
+	github.com/alexaandru/go-sitter-forest/smith v1.5.100
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
 	github.com/alexaandru/go-sitter-forest/sml v1.5.102
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.100

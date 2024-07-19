@@ -299,6 +299,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/slim"
 	"github.com/alexaandru/go-sitter-forest/slint"
 	"github.com/alexaandru/go-sitter-forest/smali"
+	"github.com/alexaandru/go-sitter-forest/smith"
 	"github.com/alexaandru/go-sitter-forest/smithy"
 	"github.com/alexaandru/go-sitter-forest/sml"
 	"github.com/alexaandru/go-sitter-forest/snakemake"
@@ -692,6 +693,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"slim":               slim.GetLanguage,
 	"slint":              slint.GetLanguage,
 	"smali":              smali.GetLanguage,
+	"smith":              smith.GetLanguage,
 	"smithy":             smithy.GetLanguage,
 	"sml":                sml.GetLanguage,
 	"snakemake":          snakemake.GetLanguage,
@@ -1070,6 +1072,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"slim":               slim.GetQuery,
 	"slint":              slint.GetQuery,
 	"smali":              smali.GetQuery,
+	"smith":              smith.GetQuery,
 	"smithy":             smithy.GetQuery,
 	"sml":                sml.GetQuery,
 	"snakemake":          snakemake.GetQuery,
