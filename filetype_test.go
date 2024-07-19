@@ -942,8 +942,8 @@ func TestExtractFromModeline(t *testing.T) {
 func TestExtractFromShebang(t *testing.T) {
 	testCaseTemplate := "#!/usr/bin/%s"
 
-	for _, tc := range ft.shebangs() {
-		for _, cmdTemplate := range []string{"%s", "env %s", "%s5", "env %s3", "%s -w", "env %s -w", "%s -whatever -else --foo=bar"} {
+	for _, tc := range append(ft.shebangs(), SupportedLanguages()...) {
+		for _, cmdTemplate := range []string{"%s", `%s"`, `%s" -w`, "env %s", `env" %s`, "%s5", "env %s3", "%s -w", "env %s -w", "%s -whatever -else --foo=bar", "env -i -S %s"} {
 			for _, pre := range []string{"", "_bogus"} {
 				cmd := fmt.Sprintf(cmdTemplate, tc)
 				in := pre + fmt.Sprintf(testCaseTemplate, cmd)

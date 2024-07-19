@@ -193,8 +193,7 @@ var (
 	// See :he modeline for details. This is a pretty relaxed regex, can match even invalid modelines,
 	// as long as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
 	vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
-	// This is just a sample, DO NOT EDIT! The actual rx is populated by init().
-	shebangRx = regexp.MustCompile(`^#!.*(?:/env\s+|/)(perl)(?:\d|\s|$)`)
+	shebangRx     *regexp.Regexp
 )
 
 func (d ftDetector) detectByModelineOrShebang(fname string) (lang string) {
@@ -257,6 +256,6 @@ func init() {
 		panic(err)
 	}
 
-	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/env\s+|/)(%s)(?:\d|\s|$)`,
-		strings.Join(ft.shebangs(), "|")))
+	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/|/env"?\s+|/env"?\s+.*\s+)(%s)(?:"|\d|\s|$)`,
+		strings.Join(append(ft.shebangs(), SupportedLanguages()...), "|")))
 }
