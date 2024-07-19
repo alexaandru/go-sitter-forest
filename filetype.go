@@ -1,6 +1,7 @@
 package forest
 
 import (
+	"cmp"
 	_ "embed"
 	"encoding/json"
 	"errors"
@@ -8,6 +9,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strings"
 
 	"golang.org/x/exp/maps"
@@ -238,7 +240,9 @@ func (d ftDetector) extractFromShebang(line string) (lang string) {
 		return
 	}
 
-	return d.Shebang[matches[1]]
+	lang = matches[1]
+
+	return cmp.Or(d.Shebang[lang], lang)
 }
 
 func contains(s string, opts ...string) (ok bool) {
@@ -256,6 +260,28 @@ func init() {
 		panic(err)
 	}
 
+	isDigit := func(r rune) bool {
+		return r >= '0' && r <= '9'
+	}
+
+	// We need to place the ones ending in digits at the front (to favor them)
+	// as digit is one of the separators, i.e.:
+	// - we want to pick python for `python`, `python2`, `python3`, etc. BUT
+	// - we want to pick json5 for json5 (ok bad example as it's not an interpreter,
+	//   but you get the idea).
+	interpreters := append(ft.shebangs(), SupportedLanguages()...)
+	slices.SortFunc(interpreters, func(a, b string) int {
+		la, lb := rune(a[len(a)-1]), rune(b[len(b)-1])
+
+		if isDigit(la) && isDigit(lb) {
+			return cmp.Compare(a, b)
+		} else if isDigit(la) {
+			return -1
+		} else {
+			return 1
+		}
+	})
+
 	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/|/env"?\s+|/env"?\s+.*\s+)(%s)(?:"|\d|\s|$)`,
-		strings.Join(append(ft.shebangs(), SupportedLanguages()...), "|")))
+		strings.Join(interpreters, "|")))
 }

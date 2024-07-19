@@ -158,9 +158,9 @@
       "scanner.c"
     ],
     "maintainedBy": "@edusporto",
-    "grammarSha": "1517765adb73efe621073d09af790d6aa21a0071ed8cb20f0cd32ef737c4cedf",
+    "grammarSha": "84d96a0e23a5222b83222908f337b83e4846ce965a02d9a10ebaa5cb2179b8e1",
     "reference": "main",
-    "revision": "7378b339a383c321e2a20c584f806ea7ccae5f7c"
+    "revision": "aaf96bf2cb5cbbfd482ec5c0c13b4bb4bd03dc52"
   },
   {
     "language": "bibtex",
@@ -260,6 +260,7 @@
     "language": "ca65",
     "url": "https://github.com/babasbot/tree-sitter-ca65",
     "maintainedBy": "@babasbot",
+    "skipUpdate": true,
     "grammarSha": "a62cf4139df10f4828a6327f0642ec295acc0737f0adbcd7111d31fa5b847d12",
     "reference": "main",
     "revision": "b0bb68a90923d4f06ad787e615495dbcd416a3cb"
@@ -466,7 +467,7 @@
     "maintainedBy": "@pmazaitis",
     "grammarSha": "7926bb7633e507188cb3c32f6e4d284c01391508de3dbfad154724b167e0d72d",
     "reference": "main",
-    "revision": "55d5bfdc58cdc0a5e83820d3f15411cf5c7e58df"
+    "revision": "ac46cbacdf282e72388d7a73f72682eabbe77aca"
   },
   {
     "language": "cooklang",
@@ -543,7 +544,7 @@
     "maintainedBy": "@theHamsta",
     "grammarSha": "e2de644b8ea2fa2c472ffb3beddca2814aead6dcb2792a19277b7d5f205a358e",
     "reference": "master",
-    "revision": "b93070b5a91ee9537d45e59d741737b1289c5dcc"
+    "revision": "30c29607aba8e23cf4f77ceaa0a19a34f93b3ae0"
   },
   {
     "language": "cue",
@@ -1437,9 +1438,9 @@
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa",
-    "grammarSha": "1c5ae7ecba7c9d42682f824ebe612890caee9d5250fdc4d81e2896cddb0678f9",
+    "grammarSha": "8fa3fff7bc6be7671cd48126c33132d8c2229dfa4f737bcf0fb765134fd76b45",
     "reference": "master",
-    "revision": "556f2878db1c26da33a921df8226f3268fadef75"
+    "revision": "d3e2781b436a10d9f63db154aefdfe053ded115e"
   },
   {
     "language": "idris",
@@ -1837,7 +1838,7 @@
     "maintainedBy": "@marcuscaisey",
     "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
     "reference": "master",
-    "revision": "d8d48e13ca7fb17f6671304d1536a4c653db8c16"
+    "revision": "06288f26d4100c0022d89c9d3861f13ce45cbe77"
   },
   {
     "language": "lua",
@@ -3579,7 +3580,7 @@
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
     "grammarSha": "37e38e2a9a861ba49f1779cfb559c14c7681add7f4a605b0ce16eb2a46f6e008",
     "reference": "main",
-    "revision": "98de4ad1f0bb3f022090388dfc3fd25778c992c9"
+    "revision": "483487103de5a2e4b8de58171b154b0ae1ab23e8"
   },
   {
     "language": "wit",
