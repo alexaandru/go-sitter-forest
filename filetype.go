@@ -16,9 +16,9 @@ import (
 )
 
 // ftDetector is responsible for detecting the filetype based on various
-// mechanisms, such as by modeline/shebang, by glob, by full path, by basename
-// or by file extension, in that specific order.
-// For modeline see https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
+// mechanisms, such as by modeline/shebang, by glob, by basename or by
+// file extension, in that specific order. For modeline see
+// https://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 type ftDetector struct {
 	Shebang, Glob, Basename, Ext map[string]string
 }
@@ -26,7 +26,7 @@ type ftDetector struct {
 func (d *ftDetector) load(b []byte) (err error) {
 	ftInv := ftDetectorInverted{}
 	if err = json.Unmarshal(b, &ftInv); err != nil {
-		return err
+		return
 	}
 
 	d.Shebang = map[string]string{}
@@ -201,14 +201,14 @@ var (
 func (d ftDetector) detectByModelineOrShebang(fname string) (lang string) {
 	f, err := os.Open(fname)
 	if err != nil {
-		return ""
+		return
 	}
 	defer f.Close()
 
 	b := make([]byte, 255)
 	n, err := f.Read(b)
 	if err != nil {
-		return ""
+		return
 	}
 
 	line := string(b[:n])
@@ -259,6 +259,8 @@ func init() {
 	if err := ft.load(ftDetect); err != nil {
 		panic(err)
 	}
+
+	// TODO: Move this to a better place (load() itself? TBD)
 
 	isDigit := func(r rune) bool {
 		return r >= '0' && r <= '9'

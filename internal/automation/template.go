@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"path/filepath"
+
+	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 )
 
 const (
@@ -126,49 +128,19 @@ var tplBindings = map[string]string{
 }
 
 // Creates a map between file paths to write to and corresponding content.
-func mkBindingMap(lang string) (out map[string]string) {
+func mkBindingMap(langIn string) (out map[string]string) {
 	out = map[string]string{}
 	for k, v := range tplBindings {
-		pack, langOut, silencer, fpath := lang, lang, "", filepath.Join(lang, k)
-
-		switch lang {
-		case "go":
-			pack = "Go"
-		case "func":
-			pack = "FunC"
-		case "context":
-			pack = "ConTeXt"
-		case "cobol":
-			langOut = "COBOL"
-		case "dotenv":
-			langOut = "env"
-		case "walnut":
-			langOut = "cwal"
-		case "janet":
-			langOut = "janet_simple"
-		case "unison":
-			silencer = "//#cgo CFLAGS: -Wno-stringop-overflow"
-		case "cleancopy":
-			silencer = "//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w"
-		case "htmlaskama":
-			silencer = "//#cgo CFLAGS: -Wno-builtin-declaration-mismatch"
-		case "note":
-			silencer = "//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch"
-		case "ott":
-			silencer = "//#cgo CFLAGS: -Wno-stringop-overflow"
-		}
-
-		if silencer != "" {
-			silencer = "\n" + silencer
-		}
+		lang, pack, silencer := util.NormalizeLangPackName(langIn)
+		fpath := filepath.Join(langIn, k)
 
 		switch k {
 		case "binding.go":
-			out[fpath] = fmt.Sprintf(v, "//go:build !plugin", pack, silencer, langOut, langOut)
+			out[fpath] = fmt.Sprintf(v, "//go:build !plugin", pack, silencer, lang, lang)
 		case "binding_test.go":
 			out[fpath] = fmt.Sprintf(v, pack, pack, pack)
 		case "plugin.go":
-			out[fpath] = fmt.Sprintf(v, "//go:build plugin", "main", silencer, langOut, langOut)
+			out[fpath] = fmt.Sprintf(v, "//go:build plugin", "main", silencer, lang, lang)
 		}
 	}
 

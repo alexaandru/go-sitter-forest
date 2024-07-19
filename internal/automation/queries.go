@@ -121,7 +121,7 @@ func copyNvimQueries(src string) (err error) {
 	folders, _ := filepath.Glob(filepath.Join(src, "*"+string(os.PathSeparator)))
 	for _, folder := range folders {
 		base := filepath.Base(folder)
-		if ok, _ := fileExists(base); ok {
+		if ok, _ := fileExists(base); ok || base == "janet_simple" {
 			continue
 		}
 

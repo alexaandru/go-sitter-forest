@@ -11,6 +11,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
@@ -19,7 +20,7 @@ const langsCount = 376
 const bindingTpl = `%s
 
 package %s
-
+%s
 //#include "parser.h"
 //TSLanguage *tree_sitter_%s();
 import "C"
@@ -101,18 +102,18 @@ func Info() string {
 `
 
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
-	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang string) {
-		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, lang, lang)
-		if exp = adjustExp(exp, lang); act != exp {
+	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang, silencer string) {
+		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, silencer, lang, lang)
+		if act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
 		}
 	})
 }
 
 func TestPluginFilesAreAllUpToDate(t *testing.T) {
-	forEachFile(t, "*/plugin.go", func(t *testing.T, act, _, lang string) {
-		exp := fmt.Sprintf(bindingTpl, "//go:build plugin", "main", lang, lang)
-		if exp = adjustExp(exp, lang); act != exp {
+	forEachFile(t, "*/plugin.go", func(t *testing.T, act, _, lang, silencer string) {
+		exp := fmt.Sprintf(bindingTpl, "//go:build plugin", "main", silencer, lang, lang)
+		if act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
 		}
 	})
@@ -283,28 +284,35 @@ func TestInfo(t *testing.T) {
 	}
 }
 
-func adjustExp(exp, lang string) string {
-	switch lang {
-	case "context":
-		exp = strings.ReplaceAll(exp, `package context`, `package ConTeXt`)
-	case "unison":
-		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
-//#include "parser.h"`)
-	case "cleancopy":
-		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-discarded-qualifiers -Wno-incompatible-pointer-types -w
-//#include "parser.h"`)
-	case "htmlaskama":
-		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-builtin-declaration-mismatch
-//#include "parser.h"`)
-	case "note":
-		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-implicit-function-declaration -Wno-builtin-declaration-mismatch
-//#include "parser.h"`)
-	case "ott":
-		exp = strings.ReplaceAll(exp, `//#include "parser.h"`, `//#cgo CFLAGS: -Wno-stringop-overflow
-//#include "parser.h"`)
+func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang, silencer string)) {
+	t.Helper()
+	t.Parallel()
+
+	files, err := filepath.Glob(pat)
+	if err != nil {
+		t.Fatal(err)
 	}
 
-	return exp
+	for _, fpath := range files {
+		t.Run(fpath, func(t *testing.T) {
+			t.Parallel()
+
+			lang, pack, silencer := util.NormalizeLangPackName(filepath.Dir(fpath))
+
+			fn(t, getContent(fpath), pack, lang, silencer)
+		})
+	}
+}
+
+func getContent(args ...string) string {
+	file := filepath.Join(args...)
+
+	out, err := os.ReadFile(file)
+	if err == nil {
+		return string(out)
+	}
+
+	return ""
 }
 
 func stripCode(s string) string {
@@ -319,60 +327,4 @@ func stripCode(s string) string {
 
 func stripExp(s string) string {
 	return strings.ReplaceAll(stripCode(s), `\"`, `"`)
-}
-
-func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang string)) {
-	t.Helper()
-	t.Parallel()
-
-	files, err := filepath.Glob(pat)
-	if err != nil {
-		t.Fatal(err)
-	}
-
-	for _, fpath := range files {
-		t.Run(fpath, func(t *testing.T) {
-			t.Parallel()
-
-			lang := filepath.Dir(fpath)
-
-			actb, err := os.ReadFile(fpath)
-			if err != nil {
-				t.Fatal(err)
-			}
-
-			act := string(actb)
-			pack := lang
-
-			switch lang {
-			case "go":
-				pack = "Go"
-			case "func":
-				pack = "FunC"
-			case "context":
-				pack = "ConTeXt"
-			case "cobol":
-				lang = "COBOL"
-			case "dotenv":
-				lang = "env"
-			case "walnut":
-				lang = "cwal"
-			case "janet":
-				lang = "janet_simple"
-			}
-
-			fn(t, act, pack, lang)
-		})
-	}
-}
-
-func getContent(args ...string) string {
-	file := filepath.Join(args...)
-
-	out, err := os.ReadFile(file)
-	if err == nil {
-		return string(out)
-	}
-
-	return ""
 }
