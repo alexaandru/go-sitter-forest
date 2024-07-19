@@ -68,7 +68,8 @@
     "tup":                ["Tupfile"],
     "vim":                [".exrc", ".vimrc", ".gvimrc", ".nvimrc"],
     "xcompose":           [".XCompose", "XCompose", "xcompose"],
-    "yaml":               ["glide.lock", "yarn.lock", ".gemrc", ".clang-format", ".clang-tidy"],
+    "yaml":               ["glide.lock", ".gemrc", ".clang-format", ".clang-tidy"],
+    "yarnlock":           ["yarn.lock"],
     "zathurarc":          ["zathurarc"]
   },
 

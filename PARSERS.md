@@ -1,6 +1,6 @@
-# 373 Supported Parsers
+# 374 Supported Parsers
 
-12 pending, 4 skipped regeneration, 22 missing queries
+12 pending, 4 skipped regeneration, 23 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -384,6 +384,7 @@
 - [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️ (maintained by @ObserverOfTime)
 - [x] [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) ✔️ (maintained by @amaanq)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️ (maintained by @Hubro)
+- [x] [yarnlock](https://github.com/amaanq/tree-sitter-yarnlock) 🗸 (maintained by @amaanq)
 - [x] [yuck](https://github.com/tree-sitter-grammars/tree-sitter-yuck) ✔️ (maintained by @Philipp-M, @amaanq)
 - [x] [zathurarc](https://github.com/Freed-Wu/tree-sitter-zathurarc) ✔️ (maintained by @Freed-Wu)
 - [x] [zeek](https://github.com/zeek/tree-sitter-zeek) ✔️ (maintained by @bbannier)
