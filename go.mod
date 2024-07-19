@@ -19,7 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bash v1.5.100
 	github.com/alexaandru/go-sitter-forest/bass v1.5.100
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.100
-	github.com/alexaandru/go-sitter-forest/bend v1.5.102
+	github.com/alexaandru/go-sitter-forest/bend v1.5.103
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.100
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.100
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.100
@@ -153,7 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.102
+	github.com/alexaandru/go-sitter-forest/idl v1.5.103
 	github.com/alexaandru/go-sitter-forest/idris v1.5.102
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
