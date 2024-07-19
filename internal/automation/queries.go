@@ -22,17 +22,17 @@ func updateQueries() (err error) {
 		return
 	}
 
-	return forEachGrammar(fetchQueries)
+	return grammars.ForEach(fetchQueries)
 }
 
+// TODO: Skip update if commit did not change.
 func fetchQueries(gr *grammar.Grammar) (err error) {
-	// TODO: Skip update if commit did not change.
-
 	tmpPath := filepath.Join("tmp", gr.Language)
 	bailedOut := false
-	os.RemoveAll(tmpPath) // Only if it exists, so we don't care if it errors out.
 
-	if err = os.MkdirAll(tmpPath, os.ModePerm); err != nil {
+	os.RemoveAll(tmpPath) //nolint:errcheck // Only if exists, we don't care otherwise
+
+	if err = os.MkdirAll(tmpPath, 0o750); err != nil {
 		return
 	}
 
@@ -50,6 +50,7 @@ func fetchQueries(gr *grammar.Grammar) (err error) {
 
 	defer func() {
 		if err == nil && !silentQueryUpdates {
+			//nolint:forbidigo // ok
 			if bailedOut {
 				fmt.Println("Skipped queries for", gr.Language)
 			} else {
@@ -82,15 +83,15 @@ func fetchQueries(gr *grammar.Grammar) (err error) {
 }
 
 func copyQueries(src, dstPath string) (err error) {
-	if err = os.MkdirAll(dstPath, os.ModePerm); err != nil {
+	if err = os.MkdirAll(dstPath, 0o750); err != nil {
 		return
 	}
 
 	pats := [][]string{
-		{"*.scm"},              // most parsers
-		{dstPath, "*.scm"},     // some parsers use queries/<langName>
-		{"[Nn]vim", "*.scm"},   // some have dedicated neovim folders
-		{"[Nn]eovim", "*.scm"}, // ~~
+		{"*.scm"},            // Most parsers.
+		{dstPath, "*.scm"},   // Some parsers use queries/<langName>.
+		{"[Nn]vim", "*.scm"}, // Some have dedicated neovim folders.
+		{"[Nn]eovim", "*.scm"},
 	}
 
 	for _, pat := range pats {
@@ -103,7 +104,7 @@ func copyQueries(src, dstPath string) (err error) {
 }
 
 func copyNvimQueries(src string) (err error) {
-	err = forEachGrammar(func(gr *grammar.Grammar) (err error) {
+	err = grammars.ForEach(func(gr *grammar.Grammar) (err error) {
 		nvimLang := gr.Language
 		if nvimLang == "janet" {
 			nvimLang += "_simple"
@@ -118,15 +119,19 @@ func copyNvimQueries(src string) (err error) {
 	}
 
 	// Copy any queries that dont't have a home yet.
-	folders, _ := filepath.Glob(filepath.Join(src, "*"+string(os.PathSeparator)))
+	folders, err := filepath.Glob(filepath.Join(src, "*"+string(os.PathSeparator)))
+	if err != nil {
+		return
+	}
+
 	for _, folder := range folders {
 		base := filepath.Base(folder)
-		if ok, _ := fileExists(base); ok || base == "janet_simple" {
+		if ok, _ := fileExists(base); ok || base == "janet_simple" { //nolint:errcheck // ok, we only care if it exists
 			continue
 		}
 
 		dst := filepath.Join(nvimRemaining, base)
-		if err = os.MkdirAll(dst, os.ModePerm); err != nil {
+		if err = os.MkdirAll(dst, 0o750); err != nil {
 			return
 		}
 
@@ -162,7 +167,6 @@ func copyFiles(pat, dstPath string, opts ...string) (err error) {
 		if in, err = os.Open(file); err != nil {
 			return err
 		}
-		defer in.Close()
 
 		if out, err = os.Create(dst); err != nil {
 			return
@@ -175,6 +179,8 @@ func copyFiles(pat, dstPath string, opts ...string) (err error) {
 		if err = out.Close(); err != nil {
 			return
 		}
+
+		in.Close() //nolint:errcheck // ok, it's readonly
 	}
 
 	return

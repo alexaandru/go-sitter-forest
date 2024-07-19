@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := check
 
+include *.make
+
 check-updates update-all update-queries force-update-all update-bindings update-forest:
 	@go run ./internal/automation $@
 
@@ -7,10 +9,6 @@ update-% force-update-% update-queries-%:
 	@lang=$@; lang=$${lang#update-queries-}; lang=$${lang#force-update-}; lang=$${lang#update-}; \
 		if [ "$$lang" != "nvim_treesitter" ]; then touch "$${lang}/_keep.scm"; fi
 	@go run ./internal/automation $@
-
-include Plugins.make
-include Test.make
-include Util.make
 
 update: update-all test
 	@git add -u .

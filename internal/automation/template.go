@@ -130,6 +130,7 @@ var tplBindings = map[string]string{
 // Creates a map between file paths to write to and corresponding content.
 func mkBindingMap(langIn string) (out map[string]string) {
 	out = map[string]string{}
+
 	for k, v := range tplBindings {
 		lang, pack, silencer := util.NormalizeLangPackName(langIn)
 		fpath := filepath.Join(langIn, k)

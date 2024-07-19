@@ -103,6 +103,8 @@ func Info() string {
 
 func TestBindingFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/binding.go", func(t *testing.T, act, pack, lang, silencer string) {
+		t.Helper()
+
 		exp := fmt.Sprintf(bindingTpl, "//go:build !plugin", pack, silencer, lang, lang)
 		if act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
@@ -112,6 +114,8 @@ func TestBindingFilesAreAllUpToDate(t *testing.T) {
 
 func TestPluginFilesAreAllUpToDate(t *testing.T) {
 	forEachFile(t, "*/plugin.go", func(t *testing.T, act, _, lang, silencer string) {
+		t.Helper()
+
 		exp := fmt.Sprintf(bindingTpl, "//go:build plugin", "main", silencer, lang, lang)
 		if act != exp {
 			t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
@@ -277,7 +281,7 @@ func TestGetQuery(t *testing.T) {
 
 func TestInfo(t *testing.T) {
 	act := Info("ada")
-	exp := fmt.Sprintf(`ada, src: "https://github.com/briot/tree-sitter-ada@master", sha: "%s"`, act.Revision)
+	exp := fmt.Sprintf(`ada, src: "https://github.com/briot/tree-sitter-ada@master", sha: %q`, act.Revision)
 
 	if a := act.String(); a != exp {
 		t.Fatalf("Expected %q got %q", exp, a)

@@ -1,7 +1,7 @@
 package grammar
 
 import (
-	"fmt"
+	"errors"
 	"maps"
 	"testing"
 )
@@ -144,8 +144,8 @@ func TestFetchLastCommit(t *testing.T) {
 		expLen      int
 		err         error
 	}{
-		{"", "", 0, fmt.Errorf("fetching @: exit status 128: fatal: no path specified; see 'git help pull' for valid url syntax\n")},
-		{"bogus URL", "", 0, fmt.Errorf("fetching bogus URL@: exit status 128: fatal: 'bogus URL' does not appear to be a git repository\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n")},
+		{"", "", 0, errors.New("fetching @: exit status 128: fatal: no path specified; see 'git help pull' for valid url syntax\n")},
+		{"bogus URL", "", 0, errors.New("fetching bogus URL@: exit status 128: fatal: 'bogus URL' does not appear to be a git repository\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n")},
 		{testURL, "", 0, nil},
 		{testURL, "bogus", 0, nil},
 		{testURL, "main", 40, nil},

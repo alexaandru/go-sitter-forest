@@ -1,11 +1,12 @@
+// Package util holds a few useful functions both for the forest package
+// as well as for automation.
 package util
 
+// NormalizeLangPackName normalizes the language and package names.
+// Normally (in ~98% of the cases) the language, package and folder name
+// are identical. In a few cases however, it is not (see the README).
 func NormalizeLangPackName(langIn string) (lang, pack, silencer string) {
-	// Normally, package name and language name match
-	// the folder name.
 	lang, pack = langIn, langIn
-
-	//... but not always!
 
 	switch lang {
 	case "go":

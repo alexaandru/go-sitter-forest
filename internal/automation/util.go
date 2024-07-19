@@ -4,36 +4,10 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-
-	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
-	"golang.org/x/sync/errgroup"
 )
 
-func forEachGrammar(fn func(gr *grammar.Grammar) error) error {
-	g := new(errgroup.Group)
-	seen := map[string]string{}
-
-	for _, gr := range grammars {
-		if v, ok := seen[gr.Language]; ok {
-			return fmt.Errorf("grammar %q seen twice: %q and %q", gr.Language, v, gr.URL)
-		}
-
-		seen[gr.Language] = gr.URL
-
-		if gr.Pending {
-			continue
-		}
-
-		g.Go(func() error {
-			return fn(gr)
-		})
-	}
-
-	return g.Wait()
-}
-
 func makeDir(path string) error {
-	return os.MkdirAll(path, 0o755)
+	return os.MkdirAll(path, 0o750)
 }
 
 func fileExists(path string) (ok bool, err error) {
@@ -55,26 +29,17 @@ func runCmd(dir, comm string, args ...string) (err error) {
 	var b []byte
 
 	if b, err = cmd.CombinedOutput(); err != nil {
-		fmt.Println(string(b))
+		fmt.Println(string(b)) //nolint:forbidigo // TODO, for now it's quite useful as is.
 	}
 
 	return
 }
 
-func touch(name string) (err error) {
-	f, err := os.OpenFile(name, os.O_RDONLY|os.O_CREATE, os.ModePerm)
-	if err != nil {
-		return
-	}
-
-	return f.Close()
-}
-
 func die(msg any) {
 	if logFile != nil {
-		logFile.Close()
+		logFile.Close() //nolint:errcheck // well, we were ask to die, every function for itself!
 	}
 
-	fmt.Println(msg)
+	fmt.Println(msg) //nolint:forbidigo // dying silently is sad.
 	os.Exit(1)
 }

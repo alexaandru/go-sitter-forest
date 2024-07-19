@@ -1,11 +1,16 @@
+// Package forest makes all the parsers, queries and filetype detection.
+//
+// This includes every single parser, as long as it is not pending
+// (even new/experimental, etc.).
+//
+// The parsers, queries and filetype detection work in tandem: the exact
+// same language returned by filetype detection, can be used to pull in
+// the language parser as well as the corresponding queries.
 package forest
 
 import (
-	"cmp"
 	"embed"
 	enc_json "encoding/json"
-	"errors"
-	"fmt"
 	"path/filepath"
 	"regexp"
 	"slices"
@@ -390,20 +395,19 @@ import (
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
+// Query fetching preference.
 const (
 	_ byte = iota
 
-	NvimFirst   // fetch both, prefer nvim
-	NativeFirst // fetch both, prefer native
-	NvimOnly    // fetch only from nvim_treesitter
-	NativeOnly  // fetch only from sitter repo
+	NvimFirst   // Fetch both, prefer nvim.
+	NativeFirst // Fetch both, prefer native.
+	NvimOnly    // Fetch only from nvim.
+	NativeOnly  // Fetch only from sitter repo.
 
 )
 
 //go:embed grammars.json
 var info []byte
-
-var ErrLanguageNotSupported = errors.New("language not supported")
 
 var languageFuncs = map[string]func() *sitter.Language{
 	"abap":               abap.GetLanguage,
@@ -1174,8 +1178,7 @@ var (
 //go:embed internal/queries/nvim_remaining/*/*.scm
 var remainingQueries embed.FS
 
-// Lang returns the corresponding TS language function for name.
-// Language name must follow the TS convention (lowercase, letters only).
+// GetLanguage returns the corresponding TS language function for given lang.
 func GetLanguage(lang string) func() *sitter.Language {
 	return languageFuncs[lang]
 }
@@ -1225,8 +1228,7 @@ func getQueryFromRemainingNvim(lang string, opts ...byte) func(string, ...byte) 
 	return func(kind string, _ ...byte) (out []byte) {
 		out, err := remainingQueries.ReadFile(filepath.Join(nvimRemaining, lang, kind))
 		if err != nil || len(out) == 0 {
-			// log somewhere/somehow
-			// fmt.Printf("unable to locate a %q query for %q\n", "highlights", lang)
+			// TODO: log somewhere/somehow.
 			return nil
 		}
 
@@ -1234,23 +1236,22 @@ func getQueryFromRemainingNvim(lang string, opts ...byte) func(string, ...byte) 
 	}
 }
 
+// SupportedLanguages returns the list of supported languages' names.
 func SupportedLanguages() []string {
 	return grammars.Supported()
 }
 
+// SupportedLanguage checks if the given language is supported.
 func SupportedLanguage(lang string) bool {
 	return slices.Index(SupportedLanguages(), lang) >= 0
 }
 
+// Info returns the language parser (grammar) related information.
+// TODO: Hmm, now that we also have queries, should it include info about them too?
+// Or offer a similar function?
 func Info(lang string) (gr *grammar.Grammar) {
-	i := slices.IndexFunc(grammars, func(x *grammar.Grammar) bool {
-		return x.Language == lang
-	})
-	if i < 0 {
-		return
-	}
-
-	return grammars[i]
+	gr, _ = grammars.Find(lang) //nolint:errcheck // the returned grammar is a pointer, will only be set if there is no error.
+	return
 }
 
 func init() {
@@ -1261,31 +1262,4 @@ func init() {
 	if err := ft.load(ftDetect); err != nil {
 		panic(err)
 	}
-
-	// TODO: Move this to a better place (load() itself? TBD)
-
-	isDigit := func(r rune) bool {
-		return r >= '0' && r <= '9'
-	}
-
-	// We need to place the ones ending in digits at the front (to favor them)
-	// as digit is one of the separators, i.e.:
-	// - we want to pick python for `python`, `python2`, `python3`, etc. BUT
-	// - we want to pick json5 for json5 (ok bad example as it's not an interpreter,
-	//   but you get the idea).
-	interpreters := append(ft.shebangs(), SupportedLanguages()...)
-	slices.SortFunc(interpreters, func(a, b string) int {
-		la, lb := rune(a[len(a)-1]), rune(b[len(b)-1])
-
-		if isDigit(la) && isDigit(lb) {
-			return cmp.Compare(a, b)
-		} else if isDigit(la) {
-			return -1
-		} else {
-			return 1
-		}
-	})
-
-	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/|/env"?\s+|/env"?\s+.*\s+)(%s)(?:"|\d|\s|$)`,
-		strings.Join(interpreters, "|")))
 }

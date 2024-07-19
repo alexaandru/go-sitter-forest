@@ -9,6 +9,7 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"slices"
 	"strings"
 
 	"golang.org/x/exp/maps"
@@ -21,6 +22,32 @@ import (
 type ftDetector struct {
 	Shebang, Glob, Basename, Ext map[string]string
 }
+
+// ftDetectorInverted corresponds to the format used for filetype.json.
+type ftDetectorInverted struct {
+	Shebang,
+	Glob,
+	Basename,
+	Ext map[string][]string
+}
+
+//go:embed filetype.json
+var ftDetect []byte
+
+var (
+	errMissingPattern  = errors.New("pattern is missing")
+	errMissingLanguage = errors.New("language is missing")
+	errInvalidLanguage = errors.New("language is invalid")
+)
+
+var (
+	sep = string(os.PathSeparator)
+	ft  = ftDetector{}
+	// See :he modeline for details. This is a pretty relaxed regex, can match even invalid modelines,
+	// as long as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
+	vimModelineRx = regexp.MustCompile(`(?:^|\s)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set\s)?.*(?:filetype|ft|syntax)\s*=\s*(\w+)(?:$|\s|:)`)
+	shebangRx     *regexp.Regexp
+)
 
 func (d *ftDetector) load(b []byte) (err error) {
 	ftInv := ftDetectorInverted{}
@@ -38,7 +65,7 @@ func (d *ftDetector) load(b []byte) (err error) {
 	fn := func(label string, dst map[string]string, src map[string][]string, pre func(string) string) error {
 		for lang, pats := range src {
 			if !SupportedLanguage(lang) && lang != "terraform" {
-				return fmt.Errorf("%w: %s", ErrLanguageNotSupported, lang)
+				return fmt.Errorf("%w: %s", errInvalidLanguage, lang)
 			}
 
 			for _, pat := range pats {
@@ -70,25 +97,36 @@ func (d *ftDetector) load(b []byte) (err error) {
 		return
 	}
 
+	isDigit := func(r rune) bool {
+		return r >= '0' && r <= '9'
+	}
+
+	// We need to place the ones ending in digits at the front (to favor them)
+	// as digit is one of the separators, i.e.:
+	// - we want to pick `python` for `python`, `python2`, `python3`, etc. BUT
+	// - we want to pick `json5` instead of `json` (ok bad example as it's not
+	//   an interpreter, but you get the idea).
+	interpreters := append(ft.shebangs(), SupportedLanguages()...)
+	slices.SortFunc(interpreters, func(a, b string) int {
+		la, lb := rune(a[len(a)-1]), rune(b[len(b)-1])
+
+		switch {
+		case isDigit(la) && isDigit(lb):
+			return cmp.Compare(a, b)
+		case isDigit(la):
+			return -1
+		default:
+			return 1
+		}
+	})
+
+	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/|/env"?\s+|/env"?\s+.*\s+)(%s)(?:"|\d|\s|$)`,
+		strings.Join(interpreters, "|")))
+
 	return
 }
 
-type ftDetectorInverted struct {
-	Shebang,
-	Glob,
-	Basename,
-	Ext map[string][]string
-}
-
-var (
-	sep = string(os.PathSeparator)
-	ft  = ftDetector{}
-)
-
-//go:embed filetype.json
-var ftDetect []byte
-
-// DetectLang detects the language name based on given file path.
+// DetectLanguage detects the language name based on given file path.
 // The given fpath should preferably be the absolute path as that guarantees
 // that all the detectors can be used. It can however work with relative
 // paths, the filename or even with just the file extension (including
@@ -101,19 +139,13 @@ func DetectLanguage(fpath string) string {
 // RegisterLanguage allows end users to register their own mappings,
 // potentially overriding existing ones. Typical use would be for
 // languages not maintained by this library, or overriding ambiguous
-// ones (i.e. v vs. verilog for .v, ldg or ledger for .ldg, etc.).
+// ones (i.e. v vs verilog for `v`, ldg or ledger for `ldg`, etc.).
 //
 // The pattern pat can be a glob, a path, a filename or a file
-// extension (incl. the leading dot).
+// extension (including the leading dot).
 func RegisterLanguage(pat, lang string) error {
 	return ft.register(pat, lang)
 }
-
-var (
-	errMissingPattern  = errors.New("pattern is missing")
-	errMissingLanguage = errors.New("language is missing")
-	errInvalidLanguage = errors.New("language is invalid")
-)
 
 func (d *ftDetector) register(pat, lang string) (err error) {
 	switch {
@@ -165,7 +197,7 @@ func (d ftDetector) detect(fname string) string {
 		} else if countFname != countGlob {
 			comps := []string{}
 
-			// we need the subpath from fname having as many levels as glob
+			// We need the subpath from fname having as many levels as glob.
 			for range countGlob + 1 {
 				comps = append([]string{filepath.Base(fname)}, comps...)
 				fname = filepath.Dir(fname)
@@ -190,21 +222,15 @@ func (d ftDetector) detect(fname string) string {
 	return "unknown"
 }
 
-var (
-	// See :he modeline for details. This is a pretty relaxed regex, can match even invalid modelines,
-	// as long as they have the vi/vim/ex: prefix and the ft/filetype/syntax=<lang> component.
-	vimModelineRx = regexp.MustCompile(`(?:^|\s|\t)(?:[Vv]im?|ex|[Vv]ox):\s*(?:set[\s\t])?.*(?:filetype|ft|syntax)[\s\t]*=[\s\t]*(\w+)(?:$|\s|:)`)
-	shebangRx     *regexp.Regexp
-)
-
 func (d ftDetector) detectByModelineOrShebang(fname string) (lang string) {
 	f, err := os.Open(fname)
 	if err != nil {
 		return
 	}
-	defer f.Close()
+	defer f.Close() //nolint:errcheck // it's readonly
 
 	b := make([]byte, 255)
+
 	n, err := f.Read(b)
 	if err != nil {
 		return

@@ -30,7 +30,7 @@ func updateForest() (err error) {
 	}
 
 	if err = runCmd(".", "goimports", "-w", "forest.go"); err != nil {
-		return err
+		return
 	}
 
 	return runCmd(".", "gofumpt", "-w", "-extra", "forest.go")

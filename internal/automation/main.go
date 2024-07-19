@@ -1,3 +1,4 @@
+//nolint:forbidigo // ok in here, we're main!
 package main
 
 import (
@@ -12,6 +13,7 @@ import (
 	"log/slog"
 	"maps"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"path"
@@ -38,11 +40,11 @@ const (
 )
 
 var (
-	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
-	grammars      = grammar.Grammars{}
-	replaceMap    = map[string]string{
+	grammars = grammar.Grammars{}
+
+	replaceMap = map[string]string{
 		`"../../common/scanner.h"`: `"scanner.h"`,
-		//`"../../../include/scanner.h"`:   `"scanner.h"`,
+		//`"../../../include/scanner.h"`:   `"scanner.h"`,.
 		`"../../../common/scanner.h"`:    `"scanner.h"`,
 		`"tree_sitter/parser.h"`:         `"parser.h"`,
 		`"tree_sitter_comment/parser.c"`: `"_parser.c"`,
@@ -53,7 +55,7 @@ var (
 		`"tree_sitter_rst/tokens.h"`:     `"tokens.h"`,
 		`"tree_sitter/array.h"`:          `"array.h"`,
 		`"tree_sitter/alloc.h"`:          `"alloc.h"`,
-		// vhdl
+		// VHDL.
 		`"libraries/std/env.h"`:             `"env.h"`,
 		`"../../TokenType.h"`:               `"TokenType.h"`,
 		`"libraries/std/standard.h"`:        `"standard.h"`,
@@ -68,12 +70,20 @@ var (
 
 	logFile *os.File
 	logger  *slog.Logger
+
+	nonRedirectingClient = new(http.Client)
+
+	rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
+
+	sem = semaphore.NewWeighted(4)
+
+	errUnknownCmd = errors.New("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
 )
 
 func checkUpdates() error {
 	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Branch", "Status", strings.Repeat("─", 100))
 
-	return forEachGrammar(func(gr *grammar.Grammar) (err error) {
+	return grammars.ForEach(func(gr *grammar.Grammar) (err error) {
 		if gr.SkipUpdate {
 			return
 		}
@@ -97,32 +107,33 @@ func checkUpdates() error {
 	})
 }
 
-var nonRedirectingClient = new(http.Client)
-
 // checkIfRedirect checks if the repo URL redirects to some other URL, in which
 // case it auto-updates the grammar to use the final URL and skip the redirect.
 func checkIfRedirect(gr *grammar.Grammar) {
-	req, err := http.NewRequest("GET", gr.URL, nil)
+	req, err := http.NewRequestWithContext(context.TODO(), http.MethodGet, gr.URL, http.NoBody)
 	if err != nil {
 		logger.Error("checkIfRedirect", "err", err)
 	}
 
-	resp, _ := nonRedirectingClient.Do(req)
-	if resp != nil && resp.StatusCode == http.StatusMovedPermanently {
-		loc, err := resp.Location()
-		if err == nil {
+	resp, err := nonRedirectingClient.Do(req)
+	if err == nil && resp.StatusCode == http.StatusMovedPermanently {
+		var loc *url.URL
+
+		if loc, err = resp.Location(); err == nil {
 			logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "new", loc.String())
 			gr.URL = loc.String()
 		} else {
 			logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "err", err)
 		}
 	}
+
+	resp.Body.Close() //nolint:errcheck // ok
 }
 
 func updateAll(force bool) (err error) {
 	fmt.Println("Updating all (applicable) languages ...")
 
-	if err = forEachGrammar(func(gr *grammar.Grammar) error {
+	if err = grammars.ForEach(func(gr *grammar.Grammar) error {
 		if gr.SkipUpdate {
 			return nil
 		}
@@ -150,7 +161,7 @@ func updateAll(force bool) (err error) {
 func updateBindings() error {
 	fmt.Println("Updating all languages' binding.go files ...")
 
-	return forEachGrammar(func(gr *grammar.Grammar) error {
+	return grammars.ForEach(func(gr *grammar.Grammar) error {
 		return createBindings(gr.Language, force)
 	})
 }
@@ -160,7 +171,7 @@ func updatePluginsMakefile() (err error) {
 	mkFileTargets := []string{}
 	mux := sync.Mutex{}
 
-	_ = forEachGrammar(func(gr *grammar.Grammar) error {
+	if err = grammars.ForEach(func(gr *grammar.Grammar) error {
 		mux.Lock()
 		defer mux.Unlock()
 
@@ -169,7 +180,9 @@ func updatePluginsMakefile() (err error) {
 		mkFileContent = append(mkFileContent, fmt.Sprintf(plugFmt, target, gr.Language))
 
 		return nil
-	})
+	}); err != nil {
+		return
+	}
 
 	slices.Sort(mkFileContent)
 	slices.Sort(mkFileTargets)
@@ -178,7 +191,7 @@ func updatePluginsMakefile() (err error) {
 		strings.Join(mkFileTargets, " ")},
 		mkFileContent)
 
-	return os.WriteFile("Plugins.make", []byte(strings.Join(content, "\n\n")), 0o644)
+	return os.WriteFile("Plugins.make", []byte(strings.Join(content, "\n\n")), 0o640)
 }
 
 func updateGrammars() (err error) {
@@ -190,7 +203,7 @@ func updateGrammars() (err error) {
 		return
 	}
 
-	if err = forEachGrammar(func(gr *grammar.Grammar) error {
+	if err = grammars.ForEach(func(gr *grammar.Grammar) error {
 		return writeJSON(filepath.Join(gr.Language, grammarJSON), gr)
 	}); err != nil {
 		return
@@ -210,7 +223,9 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 		return
 	}
 
-	msg, newSha, v := "", "", gr.NewVersion()
+	var msg, newSha string
+
+	v := gr.NewVersion()
 
 	if !gr.SkipGenerate {
 		if newSha, err = downloadGrammar(gr); err != nil {
@@ -218,13 +233,14 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 		}
 	}
 
-	if v != nil {
+	switch {
+	case v != nil:
 		msg, gr.Version = fmt.Sprintf("new version (%q -> %q)", gr.Revision, v.Revision), v
-	} else if newSha != "" && newSha != gr.GrammarSha {
+	case newSha != "" && newSha != gr.GrammarSha:
 		msg = fmt.Sprintf("grammar sha differs (%q -> %q)", gr.GrammarSha, newSha)
-	} else if force {
+	case force:
 		msg = "forced update"
-	} else {
+	default:
 		return
 	}
 
@@ -250,17 +266,13 @@ func update(gr *grammar.Grammar, force bool) (err error) {
 	return fetchQueries(gr)
 }
 
-// downloads the grammar.js file and any local dependencies
-// (files that are required by it).
-// FIXME: This is waaaaay too long and doing waaaaay too much.
-// It does the job though :-)
-func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
-	// We need to temporarily alter gr in here because in case of
-	// failure we do not want the grammars.js to be updatd with the
-	// new info.
+// downloads the grammar.js file and any local dependencies (files that are required by it).
+func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolint:funlen,gocognit // FIXME: This is waaaaay too long and doing waaaaay too much!
+	// We need to temporarily alter gr in here because in case of failure
+	// we do not want the grammars.js to be updatd with the new info.
 	gr, shas := *grRO, map[string]string{}
 
-	os.RemoveAll(filepath.Join("tmp", gr.Language)) // don't care about error, folder might not exist
+	os.RemoveAll(filepath.Join("tmp", gr.Language)) //nolint:errcheck // don't care about error, folder might not exist
 
 	src, dst := grammarJS, filepath.Join("tmp", gr.Language, grammarJS)
 	if gr.SrcRoot != "" {
@@ -283,30 +295,30 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		gr.Version = v
 	}
 
-	var url string
+	var uri string
 
-	if url, err = gr.ContentURL(); err != nil {
+	if uri, err = gr.ContentURL(); err != nil {
 		return
 	}
 
-	grammarJsUrl := url + src
+	grammarJsURL := uri + src
 
 	var grc []byte
 
-	if grc, err = fetchFile(grammarJsUrl); err != nil {
+	if grc, err = fetchFile(grammarJsURL); err != nil {
 		return
 	}
 
 	shas[grammarJS] = fmt.Sprintf("%x", sha256.Sum256(grc))
 	replMap := map[string]string{
 		// Patching broken grammars so that they compile.
-		// This is a bit "brute-force", but seems to do the job :-)
+		// This is a bit "brute-force", but seems to do the job ¯\_(ツ)_/¯.
 		`/u{[\da-fA-F]+}/`:    `/u[\da-fA-F]+/`,
 		`/u{[0-9a-fA-F]+}/`:   `/u[0-9a-fA-F]+/`,
 		`/u{[0-9a-fA-F ]+}/`:  `/u[0-9a-fA-F]+/`,
 		`/x{[0-9a-fA-F]+}/`:   `/x[0-9a-fA-F]+/`,
 		`/{([^}\n\\]|\\.)+}/`: `/\{([^}\n\\]|\\.)+\}/`,
-		// This is for sparql:
+		// This is for sparql.
 		`token.immediate(
 		choice(
 		  ...PN_CHARS_U,
@@ -332,36 +344,37 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		  choice(...PN_CHARS)
 		))
 	  ))`,
-		// for lexc
+		// This is for lexc.
 		`require("tree-sitter-xfst/grammar")`: `require("./grammar2.js")`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
-		var b []byte
-
 		base := path.Base(file)
 		if base == "grammar.js" {
 			// We must also check to not overwrite grammar.js file when pulling deps.
 			base = "grammar2.js"
 		}
 
-		if gr.Language == "dtd" || gr.Language == "xml" {
-			if file == "../common.js" {
+		switch gr.Language {
+		case "dtd", "xml":
+			switch file {
+			case "../common.js":
 				replMap["../common"] = "common.js"
-
 				continue
-			} else if file == "../common/index.js" {
+			case "../common/index.js":
 				base = "common.js"
-			} else {
+			default:
 				replMap[file] = base
 			}
-		} else {
+		default:
 			replMap[file] = base
 		}
 
 		// NOTE: Here we download from URLs with ../ ./ etc. in them.
 		// Looks fine for Github, untested for the others though.
-		fsrc, fdst := url+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, base)
+		fsrc, fdst := uri+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, base)
+
+		var b []byte //nolint:varnamelen // ok
 
 		if b, err = fetchFile(fsrc); err != nil {
 			return
@@ -378,7 +391,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		}
 
 		shas[base] = fmt.Sprintf("%x", sha256.Sum256(b))
-		if err = os.WriteFile(fdst, b, 0o644); err != nil {
+
+		if err = os.WriteFile(fdst, b, 0o640); err != nil {
 			return
 		}
 	}
@@ -396,7 +410,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		grc = bytes.ReplaceAll(grc, []byte(`"`+k+`"`), []byte("'"+v+"'"))
 	}
 
-	if err = os.WriteFile(dst, grc, 0o644); err != nil {
+	if err = os.WriteFile(dst, grc, 0o640); err != nil {
 		return
 	}
 
@@ -450,50 +464,47 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) {
 		}
 	}
 
-	return fmt.Sprintf("%x", n.Sum(nil)), nil
+	return fmt.Sprintf("%x", n.Sum(nil)), nil //nolint:perfsprint // TODO
 }
 
-var rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
-
-func extractDeps(lang string, content []byte) (files []string) {
+func extractDeps(lang string, content []byte) (deps []string) {
 	raw := rxReq.FindAllStringSubmatch(string(content), -1)
 	if len(raw) == 0 && !bytes.Contains(content, []byte("tree-sitter-xfst/grammar")) {
-		return nil
+		return
 	}
 
-	x := []string{}
 	for _, m := range raw {
 		if z := m[1]; z != "" {
 			if !strings.HasSuffix(z, ".js") {
 				z += ".js"
 			}
 
-			x = append(x, z)
+			deps = append(deps, z)
 		}
 	}
 
 	switch lang {
 	case "apex":
-		x = append(x, "../common/soql-grammar.js")
+		deps = append(deps, "../common/soql-grammar.js")
 	case "dtd", "xml":
-		x = append(x, "../common/index.js")
+		deps = append(deps, "../common/index.js")
 	case "sosl":
-		x = append(x, "../common/soql-grammar.js", "../common/common.js")
+		deps = append(deps, "../common/soql-grammar.js", "../common/common.js")
 	case "soql":
-		x = append(x, "../common/common.js")
+		deps = append(deps, "../common/common.js")
 	case "haskell", "haskell_persistent", "purescript":
-		x = append(x, "./grammar/util.js")
+		deps = append(deps, "./grammar/util.js")
 	case "markdown", "markdown_inline":
-		x = append(x, "../common/html_entities.json")
+		deps = append(deps, "../common/html_entities.json")
 	case "unison":
-		x = append(x, "./grammar/precedences.js", "./grammar/function-application.js")
+		deps = append(deps, "./grammar/precedences.js", "./grammar/function-application.js")
 	case "idris":
-		x = append(x, "./grammar/util.js")
+		deps = append(deps, "./grammar/util.js")
 	case "lexc":
-		x = append(x, "../tree-sitter-xfst/grammar.js")
+		deps = append(deps, "../tree-sitter-xfst/grammar.js")
 	}
 
-	return x
+	return
 }
 
 func downloadFiles(gr *grammar.Grammar) (err error) {
@@ -533,8 +544,6 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 	return
 }
 
-var sem = semaphore.NewWeighted(4)
-
 func regenerateGrammar(gr *grammar.Grammar) (err error) {
 	if err = sem.Acquire(context.TODO(), 1); err != nil {
 		return
@@ -547,13 +556,12 @@ func regenerateGrammar(gr *grammar.Grammar) (err error) {
 	cmd.Dir = tmpPath
 
 	var (
-		b      []byte
+		cmdOut []byte
 		hFiles []string
 	)
 
-	if b, err = cmd.CombinedOutput(); err != nil {
-		fmt.Println(string(b))
-
+	if cmdOut, err = cmd.CombinedOutput(); err != nil {
+		fmt.Println(string(cmdOut))
 		return
 	}
 
@@ -561,7 +569,7 @@ func regenerateGrammar(gr *grammar.Grammar) (err error) {
 		return
 	}
 
-	files := append(hFiles, filepath.Join(tmpPath, "src", "parser.c"))
+	files := append(hFiles, filepath.Join(tmpPath, "src", "parser.c")) //nolint:gocritic // ok
 	filesMap := map[string]string{}
 
 	for _, file := range files {
@@ -569,6 +577,8 @@ func regenerateGrammar(gr *grammar.Grammar) (err error) {
 	}
 
 	for src, dst := range filesMap {
+		var b []byte
+
 		if b, err = os.ReadFile(src); err != nil {
 			return
 		}
@@ -588,11 +598,13 @@ func createBindings(lang string, opts ...bool) (err error) {
 	}
 
 	for toPath, content := range mkBindingMap(lang) {
-		if found, err := fileExists(toPath); err != nil {
-			return err // Allow force overwriting except for binding_test.go.
+		var found bool
+
+		if found, err = fileExists(toPath); err != nil {
+			return // Allow force overwriting except for binding_test.go.
 		} else if !found || (force && filepath.Base(toPath) != "binding_test.go") {
 			if err = createBindingFile(toPath, content); err != nil {
-				return err
+				return
 			}
 		}
 	}
@@ -601,26 +613,25 @@ func createBindings(lang string, opts ...bool) (err error) {
 }
 
 func createBindingFile(toPath, content string) error {
-	return os.WriteFile(toPath, []byte(content), 0o644)
+	return os.WriteFile(toPath, []byte(content), 0o640)
 }
 
-func downloadFile(lang, url, toPath string) error {
-	b, err := fetchFile(url)
+func downloadFile(lang, uri, toPath string) (err error) {
+	b, err := fetchFile(uri)
 	if err != nil {
-		file := path.Base(url)
+		file := path.Base(uri)
 		if file == "alloc.h" || file == "array.h" {
 			logger.Warn("header file not found", "file", file, "lang", lang)
-
 			return nil
 		}
 
-		return err
+		return
 	}
 
 	return putFile(b, lang, toPath)
 }
 
-func putFile(b []byte, lang, toPath string) error {
+func putFile(content []byte, lang, toPath string) error {
 	reMap := maps.Clone(replaceMap)
 
 	switch filepath.Base(toPath) {
@@ -657,23 +668,23 @@ func putFile(b []byte, lang, toPath string) error {
 	}
 
 	for old, new := range reMap {
-		b = bytes.ReplaceAll(b, []byte(old), []byte(new))
+		content = bytes.ReplaceAll(content, []byte(old), []byte(new))
 	}
 
-	return os.WriteFile(toPath, b, 0o644)
+	return os.WriteFile(toPath, content, 0o640)
 }
 
-func fetchFile(url string) (b []byte, err error) {
+func fetchFile(uri string) (b []byte, err error) {
 	var resp *http.Response
 
-	if resp, err = http.Get(url); err != nil {
+	if resp, err = http.Get(uri); err != nil { //nolint:gosec,noctx // ok
 		return
 	}
 
-	defer resp.Body.Close()
+	defer resp.Body.Close() //nolint:errcheck // ok, readonly
 
 	if resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("incorrect response status code: %d when downloading %q", resp.StatusCode, url)
+		return nil, fmt.Errorf("incorrect response status code: %d when downloading %q", resp.StatusCode, uri)
 	}
 
 	return io.ReadAll(resp.Body)
@@ -685,10 +696,10 @@ func writeJSON(fname string, content any) error {
 		return err
 	}
 
-	return os.WriteFile(fname, b, 0o644)
+	return os.WriteFile(fname, b, 0o640)
 }
 
-func updateParsersMd() error {
+func updateParsersMd() error { //nolint:funlen // TODO
 	f, err := os.Create("PARSERS.md")
 	if err != nil {
 		return fmt.Errorf("creating PARSERS.md error: %w", err)
@@ -702,6 +713,7 @@ func updateParsersMd() error {
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
 `
+
 	for _, gr := range grammars {
 		lang := gr.Language
 		if gr.AltName != "" {
@@ -714,6 +726,7 @@ func updateParsersMd() error {
 		}
 
 		maint := ""
+
 		if x := gr.MaintainedBy; x != "" {
 			doc := ""
 			if gr.Doc != "" {
@@ -729,12 +742,13 @@ func updateParsersMd() error {
 			maint = fmt.Sprintf(" (maintained by %s%s)", x, doc)
 		}
 
-		if gr.Pending {
+		switch {
+		case gr.Pending:
 			planned++
-		} else if gr.SkipGenerate {
+		case gr.SkipGenerate:
 			implemented++
 			skipped++
-		} else {
+		default:
 			implemented++
 		}
 
@@ -743,7 +757,7 @@ func updateParsersMd() error {
 			attr = " 🗸"
 		}
 
-		if scms, _ := filepath.Glob(filepath.Join(gr.Language, "*.scm")); len(scms) > 1 {
+		if scms, _ := filepath.Glob(filepath.Join(gr.Language, "*.scm")); len(scms) > 1 { //nolint:errcheck // ok
 			if attr == " 🗸" {
 				attr = " ✔️"
 			} else {
@@ -814,24 +828,31 @@ func combineFiles(from, into string, gr *grammar.Grammar, opts ...string) (err e
 		}
 	}
 
-	// combine both files into one
+	// Combine both files into one.
 	b := bytes.Join([][]byte{[]byte(extra), f1b, f2b}, []byte("\n"))
-	// remove include expression
+	// Remove include expression.
 	b = bytes.ReplaceAll(b, []byte(`#include "./`+from+`"`), []byte(""))
 	b = bytes.ReplaceAll(b, []byte(`#include "`+from+`"`), []byte(""))
 
-	return os.WriteFile(filepath.Join(gr.Language, into), b, 0o644)
+	return os.WriteFile(filepath.Join(gr.Language, into), b, 0o640)
 }
 
-func main() {
-	defer logFile.Close()
+func main() { //nolint:funlen // ok
+	defer func() {
+		if err := logFile.Close(); err != nil {
+			fmt.Println("Failed to close the logfile:", err)
+		}
+	}()
 
 	args := os.Args[1:]
 	if len(args) < 1 {
 		die("command expected")
 	}
 
-	var err error
+	var (
+		err error
+		gr  *grammar.Grammar
+	)
 
 	switch cmd := args[0]; {
 	case cmd == "check-updates":
@@ -845,24 +866,18 @@ func main() {
 	case cmd == "update-forest":
 		err = updateForest()
 	case strings.HasPrefix(cmd, "update-queries-"):
-		var gr *grammar.Grammar
-
 		switch lang := cmd[15:]; lang {
 		case "nvim_treesitter":
 			gr = &grammar.Grammar{Language: lang, URL: nvimTreeSiterURL}
 		default:
-			var i int
-
-			if i, err = grammars.Find(lang); err != nil {
+			if gr, err = grammars.Find(lang); err != nil {
 				break
 			}
-
-			gr = grammars[i]
 		}
 
 		err = fetchQueries(gr)
 	default:
-		i, lang, force := 0, "", false
+		lang, force := "", false
 
 		switch {
 		case strings.HasPrefix(cmd, "update-"):
@@ -878,11 +893,11 @@ func main() {
 			break
 		}
 
-		if i, err = grammars.Find(lang); err != nil {
+		if gr, err = grammars.Find(lang); err != nil {
 			break
 		}
 
-		if err = update(grammars[i], force); err != nil {
+		if err = update(gr, force); err != nil {
 			break
 		}
 

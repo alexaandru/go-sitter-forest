@@ -1,0 +1,346 @@
+# https://github.com/golangci/golangci-lint/blob/master/.golangci.reference.yml
+run:
+  timeout: 1m
+  build-tags: []
+output:
+  print-issued-lines: false
+  sort-results: true
+linters-settings:
+  cyclop:
+    max-complexity: 10
+    package-average: 2
+    skip-tests: true
+  decorder:
+    disable-dec-order-check: false
+    disable-dec-num-check: true
+  errcheck:
+    severity: Warn
+    check-type-assertions: true
+    check-blank: true
+    #ignore: fmt:.*
+    disable-default-exclusions: false
+  errchkjson:
+    severity: Warn
+    report-no-exported: true
+  errorlint:
+    asserts: true
+  exhaustive:
+    check:
+      - switch
+      - map
+    check-generated: true
+    default-signifies-exhaustive: true
+  funlen:
+    lines: 69
+    statements: 40
+    ignore-comments: true
+  gocognit:
+    min-complexity: 30
+  nestif:
+    min-complexity: 5
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - style
+      - performance
+      - experimental
+      - opinionated
+    disabled-checks:
+      - commentFormatting
+      - exposedSyncMutex
+      # tmp below:
+      - commentedOutCode
+    settings:
+      captLocal:
+        paramsOnly: false
+      elseif:
+        skipBalanced: true
+      hugeParam:
+        sizeThreshold: 80
+      nestingReduce:
+        bodyWidth: 5
+      rangeExprCopy:
+        sizeThreshold: 512
+        skipTestFuncs: true
+      rangeValCopy:
+        sizeThreshold: 128
+        skipTestFuncs: true
+      truncateCmp:
+        skipArchDependent: true
+      underef:
+        skipRecvDeref: true
+  gocyclo:
+    min-complexity: 235
+  goconst:
+    min-occurrences: 3
+  godot:
+    scope: all # comments to be checked: `declarations`, `toplevel`, or `all`
+    capital: true
+    exclude:
+      - "^fixme:"
+      - "^todo:"
+  gofmt:
+    simplify: true
+  gosec:
+    config:
+      G302: "0640"
+      G306: "0640"
+  govet:
+    enable-all: true
+    settings:
+      shadow:
+        strict: true
+  ireturn:
+    allow:
+      - empty
+      - error
+      - stdlib
+      - generic
+  lll:
+    line-length: 120
+    tab-width: 1
+  nakedret:
+    max-func-lines: 30
+  prealloc:
+    simple: true
+    range-loops: true # Report preallocation suggestions on range loops, true by default
+    for-loops: false # Report preallocation suggestions on for loops, false by default
+  predeclared:
+    ignore: ""
+    q: false
+  revive:
+    rules:
+      - name: exported
+        disabled: false
+  nlreturn:
+    block-size: 2
+  nolintlint:
+    allow-unused: false
+    allow-no-explanation: []
+    require-explanation: true
+    require-specific: true
+  testpackage:
+    skip-regexp: (export|internal)_test\.go
+  thelper:
+    test:
+      first: true
+      name: true
+      begin: true
+    benchmark:
+      first: true
+      name: true
+      begin: true
+    tb:
+      first: true
+      name: true
+      begin: true
+  unparam:
+    check-exported: false
+  unused:
+    field-writes-are-uses: true
+    post-statements-are-reads: false
+    # FIXME: setting the below to false crashes.
+    # We need this check in order to get rid of `deadcode` linter.
+    exported-is-used: true
+    exported-fields-are-used: false
+    parameters-are-used: true
+    local-variables-are-used: false
+    generated-is-used: false
+  varnamelen:
+    max-distance: 14
+    min-name-length: 2
+    check-receiver: false
+    check-return: true
+    check-type-param: true
+    ignore-type-assert-ok: true
+    ignore-map-index-ok: true
+    ignore-chan-recv-ok: true
+    ignore-names:
+      - err
+    ignore-decls:
+      - gr *grammar.Grammar
+      - gr grammar.Grammar
+      - T any
+      - f *os.File
+      - t *template.Template
+      - g *errgroup.Group
+  wsl:
+    severity: warning
+    strict-append: true
+    allow-assign-and-call: true
+    allow-multiline-assign: true
+    allow-cuddle-declarations: false
+    allow-trailing-comment: false
+    force-case-trailing-whitespace: 0
+    force-err-cuddling: false
+    allow-separated-leading-comment: false
+  gofumpt:
+    extra-rules: true
+  makezero:
+    always: false
+linters:
+  fast: false
+  enable:
+    - asasalint
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - canonicalheader
+    - containedctx
+    #- contextcheck
+    #- copyloopvar # NOT needed post 1.22.0
+    #- cyclop
+    - decorder
+    #- depguard
+    - dogsled
+    #- dupl
+    - dupword
+    - durationcheck
+    #- err113
+    - errcheck # default
+    - errchkjson
+    - errname
+    - errorlint
+    #- execinquery # DEPRECATED
+    - exhaustive
+    #- exhaustruct
+    - exportloopref
+    - fatcontext
+    - forbidigo
+    - forcetypeassert
+    - funlen
+    #- gci # we use gofumpt
+    - ginkgolinter
+    - gocheckcompilerdirectives
+    #- gochecknoglobals # we want some globals for now, but we should reduce them to bare minimum
+    #- gochecknoinits # we want init()s for now
+    - gochecksumtype
+    - gocognit
+    - goconst
+    - gocritic
+    - gocyclo
+    - godot
+    #- godox
+    - gofmt
+    - gofumpt
+    #- goheader
+    - goimports
+    - gomoddirectives
+    - gomodguard
+    - goprintffuncname
+    - gosec
+    - gosimple # default
+    - gosmopolitan
+    - govet # default
+    - grouper
+    - importas
+    - inamedparam
+    - ineffassign # default
+    - interfacebloat
+    - intrange
+    - ireturn
+    #- lll
+    - loggercheck
+    #- maintidx
+    - makezero
+    - mirror
+    - misspell
+    #- mnd
+    #- musttag
+    #- nakedret
+    #- nestif
+    - nilerr
+    - nilnil
+    - nlreturn
+    - noctx
+    - nolintlint
+    #- nonamedreturns # we want named returns
+    - nosprintfhostport
+    #- paralleltest
+    - perfsprint
+    - prealloc
+    - predeclared
+    - promlinter
+    - protogetter
+    - reassign
+    - revive
+    - rowserrcheck
+    - sloglint
+    # - spancheck # we don't use Open Telemetry
+    - sqlclosecheck
+    - staticcheck # default
+    - stylecheck
+    - tagalign
+    #- tagliatelle
+    - tenv
+    - testableexamples
+    #- testifylint # we don't use testify
+    #- testpackage
+    - thelper
+    - tparallel
+    - typecheck
+    - unconvert
+    - unparam
+    - unused # default
+    - usestdlibvars
+    - varnamelen
+    - wastedassign
+    - whitespace
+    #- wrapcheck
+    - wsl
+    #- zerologlint # we don't use it
+issues:
+  exclude: []
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - decorder
+        - funlen
+        - gocognit
+        - godot
+        - goerr113
+        - govet
+        - varnamelen
+    - linters:
+        - staticcheck
+      text: "SA9003:"
+    - linters:
+        - revive
+      text: "exported: exported method [a-zA-Z]*.(Unm|M)arshalJSON should have comment or be unexported"
+    - linters:
+        - lll
+      source: "^//go:generate "
+    - linters:
+        - gosec
+      text: G104 # doubles errcheck error handling check
+    - linters:
+        - gosec
+      text: G601 # no longer an issue in 1.22+
+    - linters:
+        - gosec
+      text: G304 # way too many false positives about "file inclusion"
+    - path: _test\.go
+      linters:
+        - gosec
+      text: G404 # math/rand is just fine in tests
+    - path: _test\.go
+      linters:
+        - gocritic
+      text: rangeValCopy
+  exclude-use-default: false
+  exclude-case-sensitive: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
+  new: false
+  fix: false
+severity:
+  default-severity: Info
+  case-sensitive: false
+  rules:
+    - linters:
+        - errcheck
+        - gosec
+      severity: Warn
+    - linters:
+        - contextcheck
+      severity: Hint

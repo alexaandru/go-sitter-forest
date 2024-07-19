@@ -1,3 +1,7 @@
+// Package grammar holds the main structure that the automation operates with: the Grammar.
+// That encapsulates all the information we need in order to automate the updates of the
+// various aspects related to the parsers (parsers themselves, associated queries, the
+// documentation, etc.).
 package grammar
 
 import (
@@ -15,6 +19,18 @@ import (
 // exposes both typescript and tsx) each one will have its own separate
 // Grammar definition.
 type Grammar struct {
+	// Version holds the associated version information.
+	*Version
+
+	// The newVersion is used during updates: if an update is available, it
+	// will be populated, acting both as a "flag" and holding the data for
+	// the update. On success this will become the new Version.
+	newVersion *Version
+
+	// GrammarSha holds the SHA256 of the `grammar.js` (and all .js deps: TBD).
+	// Is used for determining if regeneration of parser files is needed.
+	GrammarSha string `json:"grammarSha,omitempty"`
+
 	// Language name. The same as folder name and nvim_treesitter query name.
 	Language string `json:"language"`
 
@@ -32,6 +48,13 @@ type Grammar struct {
 	// Optional, only populated when needed (at least for now).
 	Description string `json:"description,omitempty"`
 
+	// MaintainedBy indicates the repo maintainers.
+	MaintainedBy string `json:"maintainedBy,omitempty"`
+
+	// SrcRoot holds the source root when it differs from the default (src).
+	// Particularly useful for repos that expose multiple grammars.
+	SrcRoot string `json:"srcRoot,omitempty"`
+
 	// Files holds a list of files of interest from the repo.
 	//
 	// It MUST NOT include parser generated files (parser.c, parser.h,
@@ -43,13 +66,6 @@ type Grammar struct {
 	// fetched from the "source" folder, otherwise, if they include
 	// a slash, they will be considered repo absolute paths.
 	Files []string `json:"files,omitempty"`
-
-	// SrcRoot holds the source root when it differs from the default (src).
-	// Particularly useful for repos that expose multiple grammars.
-	SrcRoot string `json:"srcRoot,omitempty"`
-
-	// MaintainedBy indicates the repo maintainers.
-	MaintainedBy string `json:"maintainedBy,omitempty"`
 
 	// SkipGenerate flag is used to skip parser regeneration from `grammar.js`,
 	// for the files that cannot be regenerated. That way, they continue to use
@@ -64,23 +80,22 @@ type Grammar struct {
 
 	// Pending indicates to completly ignore this grammar, as not-yet-implemented.
 	Pending bool `json:"pending,omitempty"`
-
-	// GrammarSha holds the SHA256 of the `grammar.js` (and all .js deps: TBD).
-	// Is used for determining if regeneration of parser files is needed.
-	GrammarSha string `json:"grammarSha,omitempty"`
-
-	*Version
-	newVersion *Version
 }
 
+// Version holds the grammar version related info.
 type Version struct {
+	// Reference points to the branch to be used for updates.
 	Reference string `json:"reference"`
-	Revision  string `json:"revision"`
+	// Revision points to the latest revision we used for updating the grammar.
+	Revision string `json:"revision"`
 }
 
 const guc = "https://raw.githubusercontent.com/%s/%s/"
 
-var errUnkHosting = errors.New("unrecognized source code hosting")
+var (
+	errUnkHosting = errors.New("unrecognized source code hosting")
+	parserFiles   = []string{"parser.c", "parser.h", "array.h", "alloc.h"}
+)
 
 // FetchNewVersion attempts to fetch a new version, for the grammar.
 // If there is a new version, then gr.newVersion will be populated
@@ -103,8 +118,6 @@ func (gr *Grammar) NewVersion() *Version {
 	return gr.newVersion
 }
 
-var parserFiles = []string{"parser.c", "parser.h", "array.h", "alloc.h"}
-
 // FilesMap returns a map between remote files (to download) and local files (to save to).
 // Features:
 //   - determines the source inside repo based on default (src) or provided SrcRoot field;
@@ -120,31 +133,31 @@ func (gr *Grammar) FilesMap() (out map[string]string, err error) {
 		return
 	}
 
-	src := "src"
+	root := "src"
 	if gr.SrcRoot != "" {
-		src = path.Join(gr.SrcRoot, src)
+		root = path.Join(gr.SrcRoot, root)
 	}
 
 	out = map[string]string{}
 	add := func(pat string) {
-		var k, v string
+		var src, dst string
 
 		switch {
 		case strings.Contains(pat, "/"):
-			k, v = pat, path.Base(pat)
+			src, dst = pat, path.Base(pat)
 
 			if gr.Language == "comment" || gr.Language == "rst" {
-				if slices.Contains(parserFiles, v) || v == "scanner.c" {
-					v = "_" + v
+				if slices.Contains(parserFiles, dst) || dst == "scanner.c" {
+					dst = "_" + dst
 				}
 			}
 		case pat == "parser.h" || pat == "alloc.h" || pat == "array.h":
-			k, v = path.Join(src, "tree_sitter", pat), pat
+			src, dst = path.Join(root, "tree_sitter", pat), pat
 		default:
-			k, v = path.Join(src, pat), pat
+			src, dst = path.Join(root, pat), pat
 		}
 
-		out[url+k] = path.Join(gr.Language, v)
+		out[url+src] = path.Join(gr.Language, dst)
 	}
 
 	files := gr.Files
@@ -159,6 +172,8 @@ func (gr *Grammar) FilesMap() (out map[string]string, err error) {
 	return
 }
 
+// ContentURL returns the base URL for accessing content for the Grammar.
+// It can handle several git hosting providers.
 func (gr *Grammar) ContentURL() (url string, err error) {
 	switch {
 	case strings.Contains(gr.URL, "github.com"):
@@ -181,12 +196,12 @@ func (gr *Grammar) String() string {
 }
 
 func fetchLastCommit(repository, branch string) (sha string, err error) {
-	cmd := exec.Command("git", "ls-remote", "--heads", repository, fmt.Sprint("refs/heads/", branch))
+	cmd := exec.Command("git", "ls-remote", "--heads", repository, fmt.Sprint("refs/heads/", branch)) //nolint:gosec // false positive, content for command comes from this very repo
 
 	var b []byte
 
 	if b, err = cmd.Output(); err != nil {
-		err = fmt.Errorf("fetching %s@%s: %w: %s", repository, branch, err, string(err.(*exec.ExitError).Stderr))
+		err = fmt.Errorf("fetching %s@%s: %w: %s", repository, branch, err, string(err.(*exec.ExitError).Stderr)) //nolint:forcetypeassert,errorlint // TODO
 
 		return
 	}
@@ -195,10 +210,9 @@ func fetchLastCommit(repository, branch string) (sha string, err error) {
 
 	lines := bytes.Split(b, []byte{'\n'})
 	line := lines[0]
-	if bytes.HasPrefix(line, []byte("warning:")) {
-		// FIXME: Send this line to the log file.
-		// fmt.Println(string(line))
 
+	// FIXME: Send this line to the log file.
+	if bytes.HasPrefix(line, []byte("warning:")) {
 		if len(lines) > 1 {
 			line = lines[1]
 		} else {

@@ -22,7 +22,7 @@ func TestFTDetectorLoad(t *testing.T) {
 	t.Skip("Tested implicitly via the entire test suite: if it passes, then the loading worked as expected")
 }
 
-func TestDetectLanguage(t *testing.T) {
+func TestDetectLanguage(t *testing.T) { //nolint:tparallel // TODO
 	t.Parallel()
 
 	testCases := slices.Concat(
@@ -32,12 +32,13 @@ func TestDetectLanguage(t *testing.T) {
 		generateExtTestCases(t),
 	)
 
-	allLangs, _ := filepath.Glob("*/binding.go")
+	allLangs, _ := filepath.Glob("*/binding.go") //nolint:errcheck // this one is safe
 	for i, lang := range allLangs {
 		allLangs[i] = filepath.Dir(lang)
 	}
 
 	testedLangs := &sync.Map{}
+
 	for _, tc := range testCases {
 		s, exp := tc[0], tc[1]
 		t.Run(s+":"+exp, func(t *testing.T) {
@@ -63,7 +64,7 @@ func TestDetectLanguage(t *testing.T) {
 	}
 
 	testedLangs.Range(func(k, _ any) bool {
-		allLangs = slices.DeleteFunc(allLangs, func(s string) bool { return s == k.(string) })
+		allLangs = slices.DeleteFunc(allLangs, func(s string) bool { return s == k.(string) }) //nolint:forcetypeassert // ok
 		return true
 	})
 
