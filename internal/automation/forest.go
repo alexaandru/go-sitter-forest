@@ -3,29 +3,16 @@ package main
 import (
 	"os"
 	"slices"
-	"sync"
 	"text/template"
-
-	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 )
 
 func updateForest() (err error) {
-	m := new(sync.Map)
-	forEachGrammar(func(gr *grammar.Grammar) error { //nolint:errcheck // ok
-		m.Store(gr.Language, true)
-		return nil
-	})
-
-	langs := []string{"terraform"}
-	m.Range(func(k, v any) bool {
-		langs = append(langs, k.(string))
-		return true
-	})
-
 	t, err := template.ParseFiles("forest.tmpl")
 	if err != nil {
 		return
 	}
+
+	langs := append(grammars.Supported(), "terraform")
 
 	slices.Sort(langs)
 

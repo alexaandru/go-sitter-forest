@@ -39,7 +39,7 @@ const (
 
 var (
 	errUnknownCmd = fmt.Errorf("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
-	grammars      = Grammars{}
+	grammars      = grammar.Grammars{}
 	replaceMap    = map[string]string{
 		`"../../common/scanner.h"`: `"scanner.h"`,
 		//`"../../../include/scanner.h"`:   `"scanner.h"`,

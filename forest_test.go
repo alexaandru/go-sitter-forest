@@ -15,7 +15,7 @@ import (
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
-const langsCount = 376
+const langsCount = 375
 
 const bindingTpl = `%s
 

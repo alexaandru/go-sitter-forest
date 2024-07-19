@@ -9,7 +9,6 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
-	"slices"
 	"strings"
 
 	"golang.org/x/exp/maps"
@@ -38,7 +37,7 @@ func (d *ftDetector) load(b []byte) (err error) {
 	nop := func(s string) string { return s }
 	fn := func(label string, dst map[string]string, src map[string][]string, pre func(string) string) error {
 		for lang, pats := range src {
-			if !SupportedLanguage(lang) {
+			if !SupportedLanguage(lang) && lang != "terraform" {
 				return fmt.Errorf("%w: %s", ErrLanguageNotSupported, lang)
 			}
 
@@ -253,37 +252,4 @@ func contains(s string, opts ...string) (ok bool) {
 	}
 
 	return
-}
-
-func init() {
-	if err := ft.load(ftDetect); err != nil {
-		panic(err)
-	}
-
-	// TODO: Move this to a better place (load() itself? TBD)
-
-	isDigit := func(r rune) bool {
-		return r >= '0' && r <= '9'
-	}
-
-	// We need to place the ones ending in digits at the front (to favor them)
-	// as digit is one of the separators, i.e.:
-	// - we want to pick python for `python`, `python2`, `python3`, etc. BUT
-	// - we want to pick json5 for json5 (ok bad example as it's not an interpreter,
-	//   but you get the idea).
-	interpreters := append(ft.shebangs(), SupportedLanguages()...)
-	slices.SortFunc(interpreters, func(a, b string) int {
-		la, lb := rune(a[len(a)-1]), rune(b[len(b)-1])
-
-		if isDigit(la) && isDigit(lb) {
-			return cmp.Compare(a, b)
-		} else if isDigit(la) {
-			return -1
-		} else {
-			return 1
-		}
-	})
-
-	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/|/env"?\s+|/env"?\s+.*\s+)(%s)(?:"|\d|\s|$)`,
-		strings.Join(interpreters, "|")))
 }

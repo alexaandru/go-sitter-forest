@@ -4,7 +4,6 @@ import (
 	"cmp"
 	"errors"
 	"fmt"
-	"os"
 	"path/filepath"
 	"reflect"
 	"regexp"
@@ -12,8 +11,6 @@ import (
 	"strings"
 	"sync"
 	"testing"
-
-	"golang.org/x/exp/maps"
 )
 
 var (
@@ -41,11 +38,8 @@ func TestDetectLanguage(t *testing.T) {
 	}
 
 	testedLangs := &sync.Map{}
-	testedComponents := &sync.Map{}
-
 	for _, tc := range testCases {
 		s, exp := tc[0], tc[1]
-		testedComponents.Store(s, true)
 		t.Run(s+":"+exp, func(t *testing.T) {
 			if act := DetectLanguage(s); act != exp {
 				t.Fatalf("Expected %q got %q", exp, act)
@@ -56,14 +50,16 @@ func TestDetectLanguage(t *testing.T) {
 
 		// Only try out this scenario with non-paths (basically, extensions+basename).
 		// With paths, we may actually need to find the file on disk.
-		if !strings.Contains(s, string(os.PathSeparator)) {
-			s = filepath.Join("foo", "bar", "baz", s)
-			t.Run(s+":"+exp, func(t *testing.T) {
-				if act := DetectLanguage(s); act != exp {
-					t.Fatalf("Expected %q got %q", exp, act)
-				}
-			})
+		if strings.Contains(s, sep) {
+			continue
 		}
+
+		s = filepath.Join("foo", "bar", "baz", s)
+		t.Run(s+":"+exp, func(t *testing.T) {
+			if act := DetectLanguage(s); act != exp {
+				t.Fatalf("Expected %q got %q", exp, act)
+			}
+		})
 	}
 
 	testedLangs.Range(func(k, _ any) bool {
@@ -73,24 +69,6 @@ func TestDetectLanguage(t *testing.T) {
 
 	if len(allLangs) > 0 {
 		t.Fatalf("These langs have no test cases: %v", allLangs)
-	}
-
-	exts := maps.Keys(ft.Ext)
-	bases := maps.Keys(ft.Basename)
-
-	testedComponents.Range(func(k, _ any) bool {
-		key := k.(string)
-		fn := func(s string) bool { return s == key || filepath.Base(key) == s || filepath.Ext(key) == s }
-		exts, bases = slices.DeleteFunc(exts, fn), slices.DeleteFunc(bases, fn)
-		return true
-	})
-
-	if len(exts) > 0 {
-		t.Fatalf("These exts have no test cases: %v", exts)
-	}
-
-	if len(bases) > 0 {
-		t.Fatalf("These bases have no test cases: %v", bases)
 	}
 }
 

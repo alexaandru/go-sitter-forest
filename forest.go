@@ -1,9 +1,11 @@
 package forest
 
 import (
+	"cmp"
 	"embed"
 	enc_json "encoding/json"
 	"errors"
+	"fmt"
 	"path/filepath"
 	"regexp"
 	"slices"
@@ -1162,8 +1164,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 }
 
 var (
-	langNames []string
-	grammars  []*grammar.Grammar
+	grammars grammar.Grammars
 	// Making the colon optional is risky: most places use it AND
 	// there are many places that do NOT use it and mean something else...
 	rxInherits    = regexp.MustCompile(`^\s*;\s*inherits:?\s*(.*?)\n`)
@@ -1234,15 +1235,7 @@ func getQueryFromRemainingNvim(lang string, opts ...byte) func(string, ...byte) 
 }
 
 func SupportedLanguages() []string {
-	if langNames != nil {
-		return langNames
-	}
-
-	for k := range languageFuncs {
-		langNames = append(langNames, k)
-	}
-
-	return langNames
+	return grammars.Supported()
 }
 
 func SupportedLanguage(lang string) bool {
@@ -1261,8 +1254,38 @@ func Info(lang string) (gr *grammar.Grammar) {
 }
 
 func init() {
-	grammars = []*grammar.Grammar{}
 	if err := enc_json.Unmarshal(info, &grammars); err != nil {
 		panic(err)
 	}
+
+	if err := ft.load(ftDetect); err != nil {
+		panic(err)
+	}
+
+	// TODO: Move this to a better place (load() itself? TBD)
+
+	isDigit := func(r rune) bool {
+		return r >= '0' && r <= '9'
+	}
+
+	// We need to place the ones ending in digits at the front (to favor them)
+	// as digit is one of the separators, i.e.:
+	// - we want to pick python for `python`, `python2`, `python3`, etc. BUT
+	// - we want to pick json5 for json5 (ok bad example as it's not an interpreter,
+	//   but you get the idea).
+	interpreters := append(ft.shebangs(), SupportedLanguages()...)
+	slices.SortFunc(interpreters, func(a, b string) int {
+		la, lb := rune(a[len(a)-1]), rune(b[len(b)-1])
+
+		if isDigit(la) && isDigit(lb) {
+			return cmp.Compare(a, b)
+		} else if isDigit(la) {
+			return -1
+		} else {
+			return 1
+		}
+	})
+
+	shebangRx = regexp.MustCompile(fmt.Sprintf(`^#!.*(?:/|/env"?\s+|/env"?\s+.*\s+)(%s)(?:"|\d|\s|$)`,
+		strings.Join(interpreters, "|")))
 }
