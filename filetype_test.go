@@ -279,25 +279,25 @@ func TestExtractFromModeline(t *testing.T) {
 	}
 }
 
-var testCaseTemplate = "#!/usr/bin/%s"
-
 func TestExtractFromShebang(t *testing.T) {
 	for _, tc := range append(ft.shebangs(), SupportedLanguages()...) {
-		for _, cmdTemplate := range []string{"%s", `%s"`, `%s" -w`, "env %s", `env" %s`, "%s9", "env %s3", "%s -w", "env %s -w", "%s -whatever -else --foo=bar", "env -i -S %s"} {
-			for _, pre := range []string{"", "_bogus"} {
-				cmd := fmt.Sprintf(cmdTemplate, tc)
-				in := pre + fmt.Sprintf(testCaseTemplate, cmd)
+		for _, tpl := range []string{"#!/usr/bin/%s", "#! /usr/bin/%s", "#!\t\t\t\"/usr/bin/%s"} {
+			for _, cmdTemplate := range []string{"%s", `%s"`, `%s" -w`, "env %s", `env" %s`, "%s9", "env %s3", "%s -w", "env %s -w", "%s -whatever -else --foo=bar", "env -i -S %s"} {
+				for _, pre := range []string{"", "_bogus"} {
+					cmd := fmt.Sprintf(cmdTemplate, tc)
+					in := pre + fmt.Sprintf(tpl, cmd)
 
-				t.Run(in, func(t *testing.T) {
-					exp := ""
-					if pre == "" {
-						exp = cmp.Or(ft.Shebang[tc], tc)
-					}
+					t.Run(in, func(t *testing.T) {
+						exp := ""
+						if pre == "" {
+							exp = cmp.Or(ft.Shebang[tc], tc)
+						}
 
-					if act := ft.extractFromShebang(in); act != exp {
-						t.Fatalf("Expected %q got %q for %q", exp, act, in)
-					}
-				})
+						if act := ft.extractFromShebang(in); act != exp {
+							t.Fatalf("Expected %q got %q for %q", exp, act, in)
+						}
+					})
+				}
 			}
 		}
 	}
