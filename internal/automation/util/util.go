@@ -10,7 +10,7 @@ import (
 
 var (
 	// LuaMatchRx matches a lua-match predicate and it's corresponding pattern.
-	LuaMatchRx = regexp.MustCompile(`#lua-match\?.*?"(.*?)"\s*\)`)
+	LuaMatchRx = regexp.MustCompile(`#(?:not-)?lua-match\?.*?"(.*?)"\s*\)`)
 	luaEscRx   = regexp.MustCompile(`(%)[^[:alpha:]]`)
 	// https://www.lua.org/manual/5.3/manual.html#6.4.1
 	// https://go.dev/src/regexp/syntax/doc.go
@@ -71,13 +71,16 @@ func NormalizeLangPackName(langIn string) (lang, pack, silencer string) {
 	return
 }
 
-// QueryLuaMatch2Match converts all `lua-match?` predicates in a query
-// with `match?` predicates and the corresponding Lua pattern to Go regexp.
+// QueryLuaMatch2Match converts all `lua-match?` and not-lua-match? predicates in
+// a query with `match?` predicates and the corresponding Lua pattern to Go regexp.
 // TODO: Implement verification?
 // VerifyCount := bytes.Count(out, []byte("#lua-match? @")).
 func QueryLuaMatch2Match(content []byte) (out []byte) {
 	out = LuaMatchRx.ReplaceAllFunc(content, LuaPatternToGoRegexp)
-	return bytes.ReplaceAll(out, []byte("#lua-match?"), []byte("#match?"))
+	out = bytes.ReplaceAll(out, []byte("#lua-match?"), []byte("#match?"))
+	out = bytes.ReplaceAll(out, []byte("#not-lua-match?"), []byte("#not-match?"))
+
+	return
 }
 
 // LuaPatternToGoRegexp converts a Lua pattern to Go regexp.
