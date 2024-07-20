@@ -31,6 +31,7 @@
   },
 
   "Basename": {
+    "animationtxt":       ["animation.txt"],
     "bash":               [".bash_aliases", ".bash_functions", ".bash_history", ".bash_logout", ".bash_profile", ".bashrc",
                            ".cshrc", ".envrc", ".flaskenv", ".kshrc", ".login", ".profile", ".tmux.conf",
                            ".zlogin", ".zlogout", ".zprofile", ".zshenv", ".zshrc", "9fs", "PKGBUILD",
@@ -56,6 +57,7 @@
     "make":               ["Makefile", "makefile", "mkfile"],
     "meson":              ["meson.build", "meson_options.txt"],
     "passwd":             ["passwd", "passwd-"],
+    "pdxinfo":            ["pdxinfo"],
     "r":                  [".Rprofile"],
     "requirements":       ["requirements.txt", "requirements-dev.txt", "constraints.txt", "requirements.in"],
     "robots":             ["robots.txt"],
@@ -424,5 +426,9 @@
     "yuck":               ["yuck"],
     "zeek":               ["zeek"],
     "zig":                ["zig", "zon"]
+  },
+
+  "pending": {
+    "dataweave":          ["dwl"]
   }
 }

@@ -56,6 +56,14 @@
   },
   {
     "reference": "main",
+    "revision": "8b4f242519ebaaa6ee2158ccfddf965e11796b02",
+    "grammarSha": "68eeb0ad9ccbc86d2bfffa56556f275987462e71fab81a9a4f406d5611662922",
+    "language": "animationtxt",
+    "url": "https://github.com/notpeter/tree-sitter-animationtxt",
+    "maintainedBy": "@notpeter"
+  },
+  {
+    "reference": "main",
     "revision": "c99ad4b16d112fea91745e3f1b769754239fdaba",
     "grammarSha": "cfd28d5b3d85b71a2a9492bca27cba277dcdfdf51ad012834e5671c8d466f8d3",
     "language": "apex",
@@ -586,6 +594,14 @@
     "files": [
       "scanner.c"
     ]
+  },
+  {
+    "reference": "main",
+    "revision": "",
+    "language": "dataweave",
+    "url": "https://github.com/AndrewJarrett/tree-sitter-dataweave",
+    "maintainedBy": "@AndrewJarrett",
+    "pending": true
   },
   {
     "reference": "main",
@@ -2253,6 +2269,14 @@
     "language": "passwd",
     "url": "https://github.com/ath3/tree-sitter-passwd",
     "maintainedBy": "@amaanq"
+  },
+  {
+    "reference": "main",
+    "revision": "582981fd8a75ea043055c63935f2a42f535ba72f",
+    "grammarSha": "e11c957ef6a60fd58aa21cb936532c767af58cef1bece6bee7e24865cde1c344",
+    "language": "pdxinfo",
+    "url": "https://github.com/notpeter/tree-sitter-pdxinfo",
+    "maintainedBy": "@notpeter"
   },
   {
     "reference": "master",

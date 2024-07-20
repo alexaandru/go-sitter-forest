@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "8b4f242519ebaaa6ee2158ccfddf965e11796b02",
+  "grammarSha": "68eeb0ad9ccbc86d2bfffa56556f275987462e71fab81a9a4f406d5611662922",
+  "language": "animationtxt",
+  "url": "https://github.com/notpeter/tree-sitter-animationtxt",
+  "maintainedBy": "@notpeter"
+}

@@ -1,6 +1,6 @@
-# 375 Supported Parsers
+# 377 Supported Parsers
 
-11 pending, 4 skipped regeneration, 24 missing queries
+12 pending, 4 skipped regeneration, 24 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -10,6 +10,7 @@
 - [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) 🗸 (maintained by @Riley-Kilgore)
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
+- [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️ (maintained by @ObserverOfTime)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) ✔️ (maintained by @RubixDev)
@@ -65,6 +66,7 @@
 - [x] [d](https://github.com/gdamore/tree-sitter-d) ✔️ (maintained by @amaanq)
 - [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️ (maintained by @lomisk)
 - [x] [dart](https://github.com/UserNobody14/tree-sitter-dart) ✔️ (maintained by @akinsho)
+- [ ] [dataweave](https://github.com/AndrewJarrett/tree-sitter-dataweave) (maintained by @AndrewJarrett)
 - [x] [dbml](https://github.com/apexatoll/tree-sitter-dbml) 🗸 (maintained by @apexatoll)
 - [x] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) ✔️ (maintained by @jedrzejboczar)
 - [x] [dhall](https://github.com/jbellerb/tree-sitter-dhall) ✔️ (maintained by @amaanq)
@@ -241,6 +243,7 @@
 - [x] [ott](https://github.com/armonjam/tree-sitter-ott) ✔️ (maintained by @armonjam)
 - [x] [pascal](https://github.com/Isopod/tree-sitter-pascal) ✔️ (maintained by @Isopod)
 - [x] [passwd](https://github.com/ath3/tree-sitter-passwd) ✔️ (maintained by @amaanq)
+- [x] [pdxinfo](https://github.com/notpeter/tree-sitter-pdxinfo) ✔️ (maintained by @notpeter)
 - [x] [pem](https://github.com/tree-sitter-grammars/tree-sitter-pem) ✔️ (maintained by @ObserverOfTime)
 - [x] [perl](https://github.com/tree-sitter-perl/tree-sitter-perl) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
