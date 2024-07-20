@@ -9,6 +9,7 @@
 package forest
 
 import (
+	"bytes"
 	"embed"
 	enc_json "encoding/json"
 	"path/filepath"
@@ -1222,6 +1223,9 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 
 		out = slices.Concat(out2, []byte{10, 10}, out)
 	}
+
+	// FIXME: Temporary, until lua-match is implemented upstream.
+	out = bytes.ReplaceAll(out, []byte("#lua-match?"), []byte("#match?"))
 
 	return
 }

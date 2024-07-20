@@ -60,6 +60,9 @@ updates-status:
 		echo "parsers/$$LANG,$$SIZE,$${TAG_COUNT}"; \
 	done | treemap > updates.svg && xdg-open updates.svg
 
+browse:
+	@jq -r '.[].language' grammars.json|fzf --preview "jq '.[]|select(.language == \"{}\")' grammars.json|bat -l json"
+
 filetype-status:
 	@echo "$$(jq '[.Shebang[]]|flatten|length' filetype.json) shebangs + $$(jq '[.Ext[]]|flatten|length' filetype.json) extensions + $$(jq '[.Basename[]]|flatten|length' filetype.json) filenames + $$(jq '[.Glob[]]|flatten|length' filetype.json) patterns recognized (= $$(jq '[.Shebang[], .Basename[], .Ext[], .Glob[]]|flatten|length' filetype.json))"
 

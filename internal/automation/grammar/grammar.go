@@ -100,17 +100,17 @@ var (
 // FetchNewVersion attempts to fetch a new version, for the grammar.
 // If there is a new version, then gr.newVersion will be populated
 // and can be used for the upgrade.
-func (gr *Grammar) FetchNewVersion() error {
+func (gr *Grammar) FetchNewVersion() (err error) {
 	rev, err := fetchLastCommit(gr.URL, gr.Reference)
 	if err != nil {
-		return err
+		return
 	}
 
 	if rev != gr.Revision {
 		gr.newVersion = &Version{Reference: gr.Reference, Revision: rev}
 	}
 
-	return nil
+	return
 }
 
 // NewVersion returns the new version, if one is available.
@@ -127,9 +127,8 @@ func (gr *Grammar) NewVersion() *Version {
 //   - destination for all files is a file (no subfolders, everything is flattened out)
 //     inside the gr.Language folder.
 func (gr *Grammar) FilesMap() (out map[string]string, err error) {
-	var url string
-
-	if url, err = gr.ContentURL(); err != nil {
+	url, err := gr.ContentURL()
+	if err != nil {
 		return
 	}
 
@@ -202,7 +201,6 @@ func fetchLastCommit(repository, branch string) (sha string, err error) {
 
 	if b, err = cmd.Output(); err != nil {
 		err = fmt.Errorf("fetching %s@%s: %w: %s", repository, branch, err, string(err.(*exec.ExitError).Stderr)) //nolint:forcetypeassert,errorlint // TODO
-
 		return
 	}
 
@@ -217,7 +215,6 @@ func fetchLastCommit(repository, branch string) (sha string, err error) {
 			line = lines[1]
 		} else {
 			err = fmt.Errorf("cannot get sha for %s", repository)
-
 			return
 		}
 	}
