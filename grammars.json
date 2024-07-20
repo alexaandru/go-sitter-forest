@@ -545,7 +545,7 @@
   },
   {
     "reference": "master",
-    "revision": "30c29607aba8e23cf4f77ceaa0a19a34f93b3ae0",
+    "revision": "07f2f157d484a27dc91c04cc116f94f6fd4fc654",
     "grammarSha": "e2de644b8ea2fa2c472ffb3beddca2814aead6dcb2792a19277b7d5f205a358e",
     "language": "cuda",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
@@ -954,7 +954,7 @@
   },
   {
     "reference": "main",
-    "revision": "c95746eecf9a0f5f8da8702bc73c0c722916491e",
+    "revision": "246a296ffbac948ec4c4e60bb6fdfba25e97a385",
     "grammarSha": "93edea923363f7751fc26e2d86153d2481494a112da8a4a42111e44932663776",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -1097,7 +1097,7 @@
   },
   {
     "reference": "master",
-    "revision": "3736dfc811c07fa749ca818f94c9a3977734dd26",
+    "revision": "ddc3137a2d775aca93084ff997fa13cc1691058a",
     "grammarSha": "8e4348daa59e73aab734a074b66bb84808629bdd38dbb2bb8ed27faf32ff75a6",
     "language": "glsl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
@@ -2872,8 +2872,8 @@
   },
   {
     "reference": "main",
-    "revision": "e03b9a98f97d184ae1fe8b27faa6125e9240ccfa",
-    "grammarSha": "0f944558917c63afb3030f087e7896491dc84b50fe2fd437b763fe8db7b0fbd3",
+    "revision": "a2794fee550d2aa5a9b5d35f262d19f8b38f9f13",
+    "grammarSha": "5a648ec9cbe54b40b6d0a810e4d0a9cd48f70db273db384706eaa94289251b8a",
     "language": "smith",
     "url": "https://github.com/smith-lang/tree-sitter-smith",
     "maintainedBy": "@adam-r-kowalski"
@@ -3535,8 +3535,8 @@
   },
   {
     "reference": "master",
-    "revision": "db6e1f0719a36915a5ddc20c6bf08234f959c00e",
-    "grammarSha": "5b1050da42b0285620756ce8e963afc8565fc2d180abe7dc92acc844e142ef3b",
+    "revision": "0b00521715c6a565b9bcf5248cd8126601182918",
+    "grammarSha": "fa2390748e0a5ad41e302e37cf899ceada40af91556a137f081d998f7ea764dc",
     "language": "virdant",
     "url": "https://github.com/maloneymr/tree-sitter-virdant",
     "maintainedBy": "@maloneymr"

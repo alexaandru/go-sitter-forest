@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "30c29607aba8e23cf4f77ceaa0a19a34f93b3ae0",
+  "revision": "07f2f157d484a27dc91c04cc116f94f6fd4fc654",
   "grammarSha": "e2de644b8ea2fa2c472ffb3beddca2814aead6dcb2792a19277b7d5f205a358e",
   "language": "cuda",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",

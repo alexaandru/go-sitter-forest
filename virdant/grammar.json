@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "db6e1f0719a36915a5ddc20c6bf08234f959c00e",
-  "grammarSha": "5b1050da42b0285620756ce8e963afc8565fc2d180abe7dc92acc844e142ef3b",
+  "revision": "0b00521715c6a565b9bcf5248cd8126601182918",
+  "grammarSha": "fa2390748e0a5ad41e302e37cf899ceada40af91556a137f081d998f7ea764dc",
   "language": "virdant",
   "url": "https://github.com/maloneymr/tree-sitter-virdant",
   "maintainedBy": "@maloneymr"

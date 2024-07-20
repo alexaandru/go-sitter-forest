@@ -294,7 +294,7 @@ func TestLuaMatchPredicates(t *testing.T) {
 	forEachFile(t, "*/*.scm", func(t *testing.T, content, _, lang, _ string) {
 		t.Helper()
 
-		verifyCount := strings.Count(content, "#lua-match? @")
+		verifyCount := strings.Count(content, "#lua-match? @") + strings.Count(content, "#not-lua-match? @")
 		tokens := util.LuaMatchRx.FindAllSubmatch([]byte(content), -1)
 		tokensLen := 0
 		matches := [][]byte{}
@@ -305,7 +305,7 @@ func TestLuaMatchPredicates(t *testing.T) {
 		}
 
 		if verifyCount != tokensLen {
-			t.Fatalf("Plain string search found %d occurrences of #lua-match? but regexp only found %d: %v", verifyCount, tokensLen, tokens)
+			t.Fatalf("Plain string search found %d occurrences of #(not-)lua-match? but regexp found %d: %v", verifyCount, tokensLen, tokens)
 		}
 
 		if tokensLen == 0 {

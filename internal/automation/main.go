@@ -113,21 +113,28 @@ func checkIfRedirect(gr *grammar.Grammar) {
 	req, err := http.NewRequestWithContext(context.TODO(), http.MethodGet, gr.URL, http.NoBody)
 	if err != nil {
 		logger.Error("checkIfRedirect", "err", err)
+		return
 	}
 
 	resp, err := nonRedirectingClient.Do(req)
-	if err == nil && resp.StatusCode == http.StatusMovedPermanently {
-		var loc *url.URL
-
-		if loc, err = resp.Location(); err == nil {
-			logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "new", loc.String())
-			gr.URL = loc.String()
-		} else {
-			logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "err", err)
-		}
+	if err != nil {
+		return
 	}
 
 	resp.Body.Close() //nolint:errcheck // ok
+
+	if resp.StatusCode != http.StatusMovedPermanently {
+		return
+	}
+
+	var loc *url.URL
+
+	if loc, err = resp.Location(); err == nil {
+		logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "new", loc.String())
+		gr.URL = loc.String()
+	} else {
+		logger.Warn("Obsolete URL", "grammar", gr.Language, "old", gr.URL, "err", err)
+	}
 }
 
 func updateAll(force bool) (err error) {

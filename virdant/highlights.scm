@@ -1,6 +1,17 @@
 [
+    ; "in"
+    "import"
+    "ext"
     "mod"
+    "union"
+    "struct"
+    "type"
+    "mosi"
+    "miso"
     "pub"
+    "if"
+    "else"
+    "match"
     "incoming"
     "outgoing"
     "node"
@@ -11,15 +22,15 @@
 
 (connect connect_type: (connect_type) @keyword)
 
-(moddef name: (id) @function)
+(moddef name: (ident) @function)
 (type) @type
 (type_word "Word" @type.builtin (nat) @number)
 (type_clock) @type.builtin
-(incoming name: (id) @variable)
-(outgoing name: (id) @variable)
+(incoming name: (ident) @variable)
+(outgoing name: (ident) @variable)
 
 (expr_reference) @variable
-(expr_call method: (id) @function.method)
+(expr_call method: (ident) @function.method)
 
 (word) @number
 (nat) @number
