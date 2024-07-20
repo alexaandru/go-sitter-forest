@@ -112,7 +112,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.5.100
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.5.100
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.5.100
-	github.com/alexaandru/go-sitter-forest/gitignore v1.5.100
+	github.com/alexaandru/go-sitter-forest/gitignore v1.5.101
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.101
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.100
 	github.com/alexaandru/go-sitter-forest/glint v1.5.100
@@ -294,7 +294,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slim v1.5.100
 	github.com/alexaandru/go-sitter-forest/slint v1.5.100
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
-	github.com/alexaandru/go-sitter-forest/smith v1.5.101
+	github.com/alexaandru/go-sitter-forest/smith v1.5.102
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
 	github.com/alexaandru/go-sitter-forest/sml v1.5.103
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.100
@@ -361,7 +361,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vhs v1.5.100
 	github.com/alexaandru/go-sitter-forest/vim v1.5.100
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.100
-	github.com/alexaandru/go-sitter-forest/virdant v1.5.100
+	github.com/alexaandru/go-sitter-forest/virdant v1.5.101
 	github.com/alexaandru/go-sitter-forest/virgil v1.5.100
 	github.com/alexaandru/go-sitter-forest/vue v1.5.100
 	github.com/alexaandru/go-sitter-forest/walnut v1.5.100
