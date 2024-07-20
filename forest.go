@@ -9,7 +9,6 @@
 package forest
 
 import (
-	"bytes"
 	"embed"
 	enc_json "encoding/json"
 	"path/filepath"
@@ -175,6 +174,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ink"
 	"github.com/alexaandru/go-sitter-forest/inko"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
+	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 	"github.com/alexaandru/go-sitter-forest/ispc"
 	"github.com/alexaandru/go-sitter-forest/janet"
 	"github.com/alexaandru/go-sitter-forest/java"
@@ -1210,7 +1210,7 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 	}
 
 	// FIXME: Temporary, until lua-match is implemented upstream.
-	out = bytes.ReplaceAll(out, []byte("#lua-match?"), []byte("#match?"))
+	out = util.QueryLuaMatch2Match(out)
 
 	mx := rxInherits.FindSubmatch(out)
 	if mx == nil {

@@ -8,6 +8,7 @@ import (
 	"go/token"
 	"os"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"testing"
 
@@ -272,6 +273,7 @@ func TestGetQuery(t *testing.T) {
 				opts = append(opts, opt)
 			}
 
+			tc.exp = string(util.QueryLuaMatch2Match([]byte(tc.exp)))
 			if act := GetQuery(tc.lang, tc.kind, opts...); string(act) != tc.exp {
 				t.Fatalf("Expected\n\n%s\n\ngot\n\n%s", tc.exp, string(act))
 			}
@@ -286,6 +288,43 @@ func TestInfo(t *testing.T) {
 	if a := act.String(); a != exp {
 		t.Fatalf("Expected %q got %q", exp, a)
 	}
+}
+
+func TestLuaMatchPredicates(t *testing.T) {
+	forEachFile(t, "*/*.scm", func(t *testing.T, content, _, lang, _ string) {
+		t.Helper()
+
+		verifyCount := strings.Count(content, "#lua-match? @")
+		tokens := util.LuaMatchRx.FindAllSubmatch([]byte(content), -1)
+		tokensLen := 0
+		matches := [][]byte{}
+
+		for _, tks := range tokens {
+			tokensLen += len(tks) - 1
+			matches = append(matches, tks[1:]...)
+		}
+
+		if verifyCount != tokensLen {
+			t.Fatalf("Plain string search found %d occurrences of #lua-match? but regexp only found %d: %v", verifyCount, tokensLen, tokens)
+		}
+
+		if tokensLen == 0 {
+			return
+		}
+
+		for _, match := range matches {
+			t.Run(lang+":"+string(match), func(t *testing.T) {
+				t.Parallel()
+
+				// TODO: just because it compiles it doesn't mean it captures the same thing as Lua.
+				// Could be invalid regex logic, but valid regex syntax. It's a start though.
+				out := util.LuaPatternToGoRegexp(match)
+				if _, err := regexp.Compile(string(out)); err != nil {
+					t.Fatalf("Cannot convert lua-match pattern %s (-> %s) for lang %q: %v", match, out, lang, err)
+				}
+			})
+		}
+	})
 }
 
 func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang, silencer string)) {

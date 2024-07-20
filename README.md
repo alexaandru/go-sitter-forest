@@ -267,9 +267,11 @@ version everywhere, and keeping up with it too.
 ## TODO
 
 - `git grep lua-match|wc -l` # => 388 parsers are using lua-match but it is not implemented
-  by the go sitter binding library, thus they will never match; in the interim, I may
-  rewrite them to `match` it won't be worse than now, and many regexes will just work,
-  but ultimately, the best solution is for the sitter library to use lua;
+  by the go sitter binding library, thus they will never match; in the interim, we
+  dynamically rewrite lua-match to match (and corresponding Lua patterns go Go regexp),
+  which seems to work pretty well, but ultimately the best solution is for the sitter
+  library to use lua (maybe?? we'll see how well this works);
+- once the above fix is validated a bit in reallife, move the fix to individual modules;
 - update examples (files and snippets in this README) to include queries and filetype detection;
 - filter automatically high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
