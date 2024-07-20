@@ -9,6 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/aiken v1.5.100
 	github.com/alexaandru/go-sitter-forest/amber v1.5.101
 	github.com/alexaandru/go-sitter-forest/angular v1.5.102
+	github.com/alexaandru/go-sitter-forest/animationtxt v1.5.100
 	github.com/alexaandru/go-sitter-forest/apex v1.5.100
 	github.com/alexaandru/go-sitter-forest/arduino v1.5.100
 	github.com/alexaandru/go-sitter-forest/asm v1.5.100
@@ -232,6 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ott v1.5.100
 	github.com/alexaandru/go-sitter-forest/pascal v1.5.100
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.100
+	github.com/alexaandru/go-sitter-forest/pdxinfo v1.5.100
 	github.com/alexaandru/go-sitter-forest/pem v1.5.100
 	github.com/alexaandru/go-sitter-forest/perl v1.5.100
 	github.com/alexaandru/go-sitter-forest/php v1.5.100

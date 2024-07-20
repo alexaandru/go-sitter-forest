@@ -22,6 +22,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/aiken"
 	"github.com/alexaandru/go-sitter-forest/amber"
 	"github.com/alexaandru/go-sitter-forest/angular"
+	"github.com/alexaandru/go-sitter-forest/animationtxt"
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/arduino"
 	"github.com/alexaandru/go-sitter-forest/asm"
@@ -246,6 +247,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ott"
 	"github.com/alexaandru/go-sitter-forest/pascal"
 	"github.com/alexaandru/go-sitter-forest/passwd"
+	"github.com/alexaandru/go-sitter-forest/pdxinfo"
 	"github.com/alexaandru/go-sitter-forest/pem"
 	"github.com/alexaandru/go-sitter-forest/perl"
 	"github.com/alexaandru/go-sitter-forest/php"
@@ -416,6 +418,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"aiken":              aiken.GetLanguage,
 	"amber":              amber.GetLanguage,
 	"angular":            angular.GetLanguage,
+	"animationtxt":       animationtxt.GetLanguage,
 	"apex":               apex.GetLanguage,
 	"arduino":            arduino.GetLanguage,
 	"asm":                asm.GetLanguage,
@@ -639,6 +642,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"ott":                ott.GetLanguage,
 	"pascal":             pascal.GetLanguage,
 	"passwd":             passwd.GetLanguage,
+	"pdxinfo":            pdxinfo.GetLanguage,
 	"pem":                pem.GetLanguage,
 	"perl":               perl.GetLanguage,
 	"php":                php.GetLanguage,
@@ -795,6 +799,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"aiken":              aiken.GetQuery,
 	"amber":              amber.GetQuery,
 	"angular":            angular.GetQuery,
+	"animationtxt":       animationtxt.GetQuery,
 	"apex":               apex.GetQuery,
 	"arduino":            arduino.GetQuery,
 	"asm":                asm.GetQuery,
@@ -1018,6 +1023,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ott":                ott.GetQuery,
 	"pascal":             pascal.GetQuery,
 	"passwd":             passwd.GetQuery,
+	"pdxinfo":            pdxinfo.GetQuery,
 	"pem":                pem.GetQuery,
 	"perl":               perl.GetQuery,
 	"php":                php.GetQuery,
