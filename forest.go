@@ -1209,6 +1209,9 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 		return
 	}
 
+	// FIXME: Temporary, until lua-match is implemented upstream.
+	out = bytes.ReplaceAll(out, []byte("#lua-match?"), []byte("#match?"))
+
 	mx := rxInherits.FindSubmatch(out)
 	if mx == nil {
 		return
@@ -1223,9 +1226,6 @@ func GetQuery(lang, kind string, opts ...byte) (out []byte) {
 
 		out = slices.Concat(out2, []byte{10, 10}, out)
 	}
-
-	// FIXME: Temporary, until lua-match is implemented upstream.
-	out = bytes.ReplaceAll(out, []byte("#lua-match?"), []byte("#match?"))
 
 	return
 }
