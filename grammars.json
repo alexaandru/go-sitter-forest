@@ -142,7 +142,7 @@
   },
   {
     "reference": "master",
-    "revision": "c25f8034c977681653a8acd541c8b4877a58f474",
+    "revision": "384c55ede2a1f13e83d8e18dbef8f11304c379c2",
     "grammarSha": "dfde9c9d2d8b4ce6ce4f8c0de67d9c5bdb2b439bdddd27b8f6b13303c7efd252",
     "language": "beancount",
     "url": "https://github.com/polarmutex/tree-sitter-beancount",
@@ -806,8 +806,8 @@
   },
   {
     "reference": "master",
-    "revision": "395b132e707c7fe41f42c65c60b55cc640b68e58",
-    "grammarSha": "3495139dd655fa3df3891ba2e766d61ffaffb7b0aad9968aefb773cb83957e20",
+    "revision": "33e408de3ae0a2cdf14a808d881e17daf77147b9",
+    "grammarSha": "12c8d841c66ee7b45109c8edc1356d98191ba662797f74efba081faf9d156d4f",
     "language": "familymarkup",
     "url": "https://github.com/redexp/tree-sitter-familymarkup",
     "maintainedBy": "@redexp"
@@ -1050,8 +1050,8 @@
   },
   {
     "reference": "main",
-    "revision": "02a17bf9d0553406268cdbf466d57808ae712bf3",
-    "grammarSha": "107fa12f6f326c738a708c2a5f4c4390476ce874a94a42dd3352e2b1bab30863",
+    "revision": "84fa6b0d53b6dd9414797e659923719799e3b0a8",
+    "grammarSha": "5d64dbcb9986c00baf1804fb9088d85a6ef540b16ffd5646393e81e50379744a",
     "language": "gleam",
     "url": "https://github.com/gleam-lang/tree-sitter-gleam",
     "maintainedBy": "@amaanq",
@@ -2848,8 +2848,8 @@
   },
   {
     "reference": "main",
-    "revision": "90f551c6ffc73c70829c165635305aedc7d8c148",
-    "grammarSha": "6809cad63bccdb6a2d2a01f0448a020b29ecda0cfd648b6be79f1ddae94d50aa",
+    "revision": "e03b9a98f97d184ae1fe8b27faa6125e9240ccfa",
+    "grammarSha": "0f944558917c63afb3030f087e7896491dc84b50fe2fd437b763fe8db7b0fbd3",
     "language": "smith",
     "url": "https://github.com/smith-lang/tree-sitter-smith",
     "maintainedBy": "@adam-r-kowalski"
@@ -2973,7 +2973,7 @@
   },
   {
     "reference": "main",
-    "revision": "ad95be7a5ed2d35504698455531f75035bbb52a4",
+    "revision": "86cdf10f43bd18b8efbff982ab725d833e96ca69",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
