@@ -286,8 +286,22 @@ version everywhere, and keeping up with it too.
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally).
 
-### Alternative Candidates
+### Alternative/Candidates
 
 - https://github.com/omasanori/tree-sitter-hare (seems quite active, unlike the one we're using now)
 - https://github.com/poliorcetics/tree-sitter-just
 - https://github.com/nverno/tree-sitter-lox
+- https://github.com/alemuller/tree-sitter-vhdl
+- https://github.com/Decodetalkers/tree-sitter-groovy
+- https://github.com/Decodetalkers/tree-sitter-meson
+- https://github.com/Flakebi/tree-sitter-tablegen
+- https://github.com/GrayJack/tree-sitter-janet
+- https://github.com/Himujjal/tree-sitter-svelte
+- https://github.com/LumaKernel/tree-sitter-prisma
+- https://github.com/nedpals/tree-sitter-v
+- https://github.com/rush-rs/tree-sitter-asm
+- https://github.com/Rileran/tree-sitter-actionscript
+- https://github.com/tree-sitter-grammars/tree-sitter-scss
+- https://github.com/tree-sitter-grammars/tree-sitter-smali
+- https://github.com/tree-sitter-grammars/tree-sitter-test
+- https://github.com/tree-sitter-grammars/tree-sitter-toml

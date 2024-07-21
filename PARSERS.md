@@ -1,6 +1,6 @@
-# 379 Supported Parsers
+# 382 Supported Parsers
 
-12 pending, 4 skipped regeneration, 24 missing queries
+13 pending, 4 skipped regeneration, 24 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -83,6 +83,7 @@
 - [x] [editorconfig](https://github.com/ValdezFOmar/tree-sitter-editorconfig) ✔️ (maintained by @ValdezFOmar)
 - [x] [eds](https://github.com/uyha/tree-sitter-eds) ✔️ (maintained by @uyha)
 - [x] [eex](https://github.com/connorlay/tree-sitter-eex) ✔️ (maintained by @connorlay)
+- [x] [elisp](https://github.com/Wilfred/tree-sitter-elisp) ✔️ (maintained by @Wilfred)
 - [x] [elixir](https://github.com/elixir-lang/tree-sitter-elixir) ✔️ (maintained by @connorlay)
 - [x] [elm](https://github.com/elm-tooling/tree-sitter-elm) ✔️ (maintained by @zweimach)
 - [x] [elsa](https://github.com/glapa-grossklag/tree-sitter-elsa) ✔️ (maintained by @glapa-grossklag, @amaanq)
@@ -141,6 +142,7 @@
 - [x] [hare](https://github.com/tree-sitter-grammars/tree-sitter-hare) ✔️ (maintained by @amaanq)
 - [x] [haskell](https://github.com/tree-sitter/tree-sitter-haskell) ✔️ (maintained by @mrcjkb)
 - [x] [haskell_persistent](https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent) ✔️ (maintained by @lykahb)
+- [ ] [haxe](https://github.com/vantreeseba/tree-sitter-haxe) (maintained by @vantreeseba)
 - [x] [hcl](https://github.com/tree-sitter-grammars/tree-sitter-hcl) ✔️ (maintained by @MichaHoffmann)
 - [x] [heex](https://github.com/phoenixframework/tree-sitter-heex) ✔️ (maintained by @connorlay)
 - [x] [helm](https://github.com/ngalaiko/tree-sitter-go-template) ✔️ (maintained by @qvalentin)
@@ -247,6 +249,7 @@
 - [x] [pdxinfo](https://github.com/notpeter/tree-sitter-pdxinfo) ✔️ (maintained by @notpeter)
 - [x] [pem](https://github.com/tree-sitter-grammars/tree-sitter-pem) ✔️ (maintained by @ObserverOfTime)
 - [x] [perl](https://github.com/tree-sitter-perl/tree-sitter-perl) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
+- [x] [pgn](https://github.com/rolandwalker/tree-sitter-pgn) ✔️ (maintained by @rolandwalker)
 - [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
 - [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
 - [x] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) ✔️ (maintained by @mikehaertl)
@@ -256,6 +259,7 @@
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [Path of Exile item filter](https://github.com/tree-sitter-grammars/tree-sitter-poe-filter) ✔️ (maintained by @ObserverOfTime)
 - [x] [pony](https://github.com/tree-sitter-grammars/tree-sitter-pony) ✔️ (maintained by @amaanq, @mfelsche)
+- [x] [powershell](https://github.com/airbus-cert/tree-sitter-powershell) ✔️ (maintained by @citronneur)
 - [x] [printf](https://github.com/tree-sitter-grammars/tree-sitter-printf) ✔️ (maintained by @ObserverOfTime)
 - [x] [prisma](https://github.com/victorhqc/tree-sitter-prisma) ✔️ (maintained by @elianiva)
 - [x] [problog](https://codeberg.org/foxy/tree-sitter-prolog) ✔️ (maintained by @foxyseta)

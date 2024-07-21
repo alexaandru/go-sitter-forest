@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "804d86fd4ad286bd0cc1c1f0f7b28bd7af6755ad",
+  "grammarSha": "0e90c5cf93fd5695ec98fb7e9fe6c179789819802b56b21390cb9b7915b0cc95",
+  "language": "powershell",
+  "url": "https://github.com/airbus-cert/tree-sitter-powershell",
+  "maintainedBy": "@citronneur",
+  "files": [
+    "scanner.c"
+  ]
+}

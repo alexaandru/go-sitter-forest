@@ -754,6 +754,14 @@
   },
   {
     "reference": "main",
+    "revision": "12b547b470a4213dc63a20c7bd2db988d85c7693",
+    "grammarSha": "6da573aa55e5c98eef059e9a49d1c191851693f5e25f63be29c84d7cb6487d3c",
+    "language": "elisp",
+    "url": "https://github.com/Wilfred/tree-sitter-elisp",
+    "maintainedBy": "@Wilfred"
+  },
+  {
+    "reference": "main",
     "revision": "c7ae8b77e2749826dcf23df6514f08fdd68c66a3",
     "grammarSha": "759eb810f50579affb7ac892480e3df722f7125083b13c55800db7fd4dbeb2a5",
     "language": "elixir",
@@ -1288,6 +1296,13 @@
     "files": [
       "scanner.c"
     ]
+  },
+  {
+    "reference": "main",
+    "language": "haxe",
+    "url": "https://github.com/vantreeseba/tree-sitter-haxe",
+    "maintainedBy": "@vantreeseba",
+    "pending": true
   },
   {
     "reference": "main",
@@ -2298,6 +2313,14 @@
   },
   {
     "reference": "master",
+    "revision": "c5b2f2346e4148702b1343ec9bcc42b4a9aa88dc",
+    "grammarSha": "62682fe3b20e44e5ea9b038ba2f2d3f5345d028a487ba2f98f8dd348933a9f59",
+    "language": "pgn",
+    "url": "https://github.com/rolandwalker/tree-sitter-pgn",
+    "maintainedBy": "@rolandwalker"
+  },
+  {
+    "reference": "master",
     "revision": "575a0801f430c8672db70b73493c033a9dcfc328",
     "grammarSha": "7cd6703d100240cd10cf42797838a9f751e70f13f845b971c6a5253671e0589d",
     "language": "php",
@@ -2387,6 +2410,17 @@
     "language": "pony",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-pony",
     "maintainedBy": "@amaanq, @mfelsche",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
+    "revision": "804d86fd4ad286bd0cc1c1f0f7b28bd7af6755ad",
+    "grammarSha": "0e90c5cf93fd5695ec98fb7e9fe6c179789819802b56b21390cb9b7915b0cc95",
+    "language": "powershell",
+    "url": "https://github.com/airbus-cert/tree-sitter-powershell",
+    "maintainedBy": "@citronneur",
     "files": [
       "scanner.c"
     ]
