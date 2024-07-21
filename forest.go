@@ -166,6 +166,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/http2"
 	"github.com/alexaandru/go-sitter-forest/hungarian"
 	"github.com/alexaandru/go-sitter-forest/hurl"
+	"github.com/alexaandru/go-sitter-forest/hylo"
 	"github.com/alexaandru/go-sitter-forest/hyprlang"
 	"github.com/alexaandru/go-sitter-forest/idl"
 	"github.com/alexaandru/go-sitter-forest/idris"
@@ -563,6 +564,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"http2":              http2.GetLanguage,
 	"hungarian":          hungarian.GetLanguage,
 	"hurl":               hurl.GetLanguage,
+	"hylo":               hylo.GetLanguage,
 	"hyprlang":           hyprlang.GetLanguage,
 	"idl":                idl.GetLanguage,
 	"idris":              idris.GetLanguage,
@@ -944,6 +946,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"http2":              http2.GetQuery,
 	"hungarian":          hungarian.GetQuery,
 	"hurl":               hurl.GetQuery,
+	"hylo":               hylo.GetQuery,
 	"hyprlang":           hyprlang.GetQuery,
 	"idl":                idl.GetQuery,
 	"idris":              idris.GetQuery,

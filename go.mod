@@ -153,6 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http2 v1.5.101
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
+	github.com/alexaandru/go-sitter-forest/hylo v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/idl v1.5.104
 	github.com/alexaandru/go-sitter-forest/idris v1.5.103
