@@ -367,6 +367,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/udev"
 	"github.com/alexaandru/go-sitter-forest/ungrammar"
 	"github.com/alexaandru/go-sitter-forest/unison"
+	"github.com/alexaandru/go-sitter-forest/ursa"
 	"github.com/alexaandru/go-sitter-forest/usd"
 	"github.com/alexaandru/go-sitter-forest/uxntal"
 	"github.com/alexaandru/go-sitter-forest/v"
@@ -764,6 +765,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"udev":               udev.GetLanguage,
 	"ungrammar":          ungrammar.GetLanguage,
 	"unison":             unison.GetLanguage,
+	"ursa":               ursa.GetLanguage,
 	"usd":                usd.GetLanguage,
 	"uxntal":             uxntal.GetLanguage,
 	"v":                  v.GetLanguage,
@@ -1146,6 +1148,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"udev":               udev.GetQuery,
 	"ungrammar":          ungrammar.GetQuery,
 	"unison":             unison.GetQuery,
+	"ursa":               ursa.GetQuery,
 	"usd":                usd.GetQuery,
 	"uxntal":             uxntal.GetQuery,
 	"v":                  v.GetQuery,

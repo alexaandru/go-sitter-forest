@@ -352,6 +352,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.5.100
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.5.100
 	github.com/alexaandru/go-sitter-forest/unison v1.5.100
+	github.com/alexaandru/go-sitter-forest/ursa v1.5.100
 	github.com/alexaandru/go-sitter-forest/usd v1.5.100
 	github.com/alexaandru/go-sitter-forest/uxntal v1.5.100
 	github.com/alexaandru/go-sitter-forest/v v1.5.100
