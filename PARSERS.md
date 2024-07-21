@@ -1,4 +1,4 @@
-# 378 Supported Parsers
+# 379 Supported Parsers
 
 12 pending, 4 skipped regeneration, 24 missing queries
 
@@ -364,6 +364,7 @@
 - [x] [udev](https://github.com/tree-sitter-grammars/tree-sitter-udev) ✔️ (maintained by @ObserverOfTime)
 - [x] [ungrammar](https://github.com/tree-sitter-grammars/tree-sitter-ungrammar) ✔️ (maintained by @Philipp-M, @amaanq)
 - [x] [unison](https://github.com/kylegoetz/tree-sitter-unison) ✔️ (maintained by @tapegram)
+- [x] [ursa](https://github.com/ursalang/tree-sitter-ursa) ✔️ (maintained by @rrthomas)
 - [x] [usd](https://github.com/ColinKennedy/tree-sitter-usd) ✔️ (maintained by @ColinKennedy)
 - [x] [uxn tal](https://github.com/tree-sitter-grammars/tree-sitter-uxntal) ✔️ (maintained by @amaanq)
 - [x] [v](https://github.com/vlang/v-analyzer) ✔️ (maintained by @kkharji, @amaanq)

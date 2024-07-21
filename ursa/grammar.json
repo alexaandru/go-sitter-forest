@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "1976350fe1763d572be6e3aa3c9156eb008c1954",
+  "grammarSha": "4366975960be72657717df58b4059b9676b3e9dbef196c90f49656a06cde987d",
+  "language": "ursa",
+  "url": "https://github.com/ursalang/tree-sitter-ursa",
+  "maintainedBy": "@rrthomas",
+  "files": [
+    "scanner.c"
+  ]
+}

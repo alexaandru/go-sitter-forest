@@ -3431,6 +3431,17 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "1976350fe1763d572be6e3aa3c9156eb008c1954",
+    "grammarSha": "4366975960be72657717df58b4059b9676b3e9dbef196c90f49656a06cde987d",
+    "language": "ursa",
+    "url": "https://github.com/ursalang/tree-sitter-ursa",
+    "maintainedBy": "@rrthomas",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "4e0875f724d94d0c2ff36f9b8cb0b12f8b20d216",
     "grammarSha": "33db33c43f4ca3296c4fa25a54c7874572d51b4cf46c32915a4f291c66e311bb",
