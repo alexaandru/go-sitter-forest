@@ -80,6 +80,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.100
 	github.com/alexaandru/go-sitter-forest/eds v1.5.100
 	github.com/alexaandru/go-sitter-forest/eex v1.5.100
+	github.com/alexaandru/go-sitter-forest/elisp v1.5.100
 	github.com/alexaandru/go-sitter-forest/elixir v1.5.100
 	github.com/alexaandru/go-sitter-forest/elm v1.5.100
 	github.com/alexaandru/go-sitter-forest/elsa v1.5.100
@@ -237,6 +238,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.5.100
 	github.com/alexaandru/go-sitter-forest/pem v1.5.100
 	github.com/alexaandru/go-sitter-forest/perl v1.5.100
+	github.com/alexaandru/go-sitter-forest/pgn v1.5.100
 	github.com/alexaandru/go-sitter-forest/php v1.5.100
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
@@ -246,6 +248,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pod v1.5.100
 	github.com/alexaandru/go-sitter-forest/poe_filter v1.5.100
 	github.com/alexaandru/go-sitter-forest/pony v1.5.100
+	github.com/alexaandru/go-sitter-forest/powershell v1.5.100
 	github.com/alexaandru/go-sitter-forest/printf v1.5.100
 	github.com/alexaandru/go-sitter-forest/prisma v1.5.100
 	github.com/alexaandru/go-sitter-forest/problog v1.5.100

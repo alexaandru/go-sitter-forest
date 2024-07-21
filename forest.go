@@ -93,6 +93,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/editorconfig"
 	"github.com/alexaandru/go-sitter-forest/eds"
 	"github.com/alexaandru/go-sitter-forest/eex"
+	"github.com/alexaandru/go-sitter-forest/elisp"
 	"github.com/alexaandru/go-sitter-forest/elixir"
 	"github.com/alexaandru/go-sitter-forest/elm"
 	"github.com/alexaandru/go-sitter-forest/elsa"
@@ -252,6 +253,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pdxinfo"
 	"github.com/alexaandru/go-sitter-forest/pem"
 	"github.com/alexaandru/go-sitter-forest/perl"
+	"github.com/alexaandru/go-sitter-forest/pgn"
 	"github.com/alexaandru/go-sitter-forest/php"
 	"github.com/alexaandru/go-sitter-forest/php_only"
 	"github.com/alexaandru/go-sitter-forest/phpdoc"
@@ -261,6 +263,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pod"
 	"github.com/alexaandru/go-sitter-forest/poe_filter"
 	"github.com/alexaandru/go-sitter-forest/pony"
+	"github.com/alexaandru/go-sitter-forest/powershell"
 	"github.com/alexaandru/go-sitter-forest/printf"
 	"github.com/alexaandru/go-sitter-forest/prisma"
 	"github.com/alexaandru/go-sitter-forest/problog"
@@ -492,6 +495,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"editorconfig":       editorconfig.GetLanguage,
 	"eds":                eds.GetLanguage,
 	"eex":                eex.GetLanguage,
+	"elisp":              elisp.GetLanguage,
 	"elixir":             elixir.GetLanguage,
 	"elm":                elm.GetLanguage,
 	"elsa":               elsa.GetLanguage,
@@ -649,6 +653,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"pdxinfo":            pdxinfo.GetLanguage,
 	"pem":                pem.GetLanguage,
 	"perl":               perl.GetLanguage,
+	"pgn":                pgn.GetLanguage,
 	"php":                php.GetLanguage,
 	"php_only":           php_only.GetLanguage,
 	"phpdoc":             phpdoc.GetLanguage,
@@ -658,6 +663,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"pod":                pod.GetLanguage,
 	"poe_filter":         poe_filter.GetLanguage,
 	"pony":               pony.GetLanguage,
+	"powershell":         powershell.GetLanguage,
 	"printf":             printf.GetLanguage,
 	"prisma":             prisma.GetLanguage,
 	"problog":            problog.GetLanguage,
@@ -875,6 +881,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"editorconfig":       editorconfig.GetQuery,
 	"eds":                eds.GetQuery,
 	"eex":                eex.GetQuery,
+	"elisp":              elisp.GetQuery,
 	"elixir":             elixir.GetQuery,
 	"elm":                elm.GetQuery,
 	"elsa":               elsa.GetQuery,
@@ -1032,6 +1039,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pdxinfo":            pdxinfo.GetQuery,
 	"pem":                pem.GetQuery,
 	"perl":               perl.GetQuery,
+	"pgn":                pgn.GetQuery,
 	"php":                php.GetQuery,
 	"php_only":           php_only.GetQuery,
 	"phpdoc":             phpdoc.GetQuery,
@@ -1041,6 +1049,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pod":                pod.GetQuery,
 	"poe_filter":         poe_filter.GetQuery,
 	"pony":               pony.GetQuery,
+	"powershell":         powershell.GetQuery,
 	"printf":             printf.GetQuery,
 	"prisma":             prisma.GetQuery,
 	"problog":            problog.GetQuery,
