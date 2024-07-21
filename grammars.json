@@ -330,7 +330,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "cfml",
     "url": "https://github.com/cfmleditor/tree-sitter-cfml",
     "doc": "is broken similar to poe_filter but in MANY places",
@@ -596,7 +595,6 @@
   },
   {
     "reference": "main",
-    "revision": "",
     "language": "dataweave",
     "url": "https://github.com/AndrewJarrett/tree-sitter-dataweave",
     "maintainedBy": "@AndrewJarrett",
@@ -1414,7 +1412,6 @@
   },
   {
     "reference": "main",
-    "revision": "",
     "language": "hugo",
     "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
     "doc": "is looking for an external scanner but none is present in the repo",
@@ -1423,7 +1420,7 @@
   },
   {
     "reference": "master",
-    "revision": "ed004ba057355562a7a44e8641ba8994eb5b9edd",
+    "revision": "d5c95d0134f950b6099e056cc06a0cc4d12a1162",
     "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
     "language": "hungarian",
     "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
@@ -1533,7 +1530,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "jasmin",
     "url": "https://github.com/y4cer/tree-sitter-jasmin",
     "maintainedBy": "@y4cer",
@@ -1728,8 +1724,8 @@
   },
   {
     "reference": "master",
-    "revision": "d018f2e6620bbaee229cb31fc8b67fabd713d770",
-    "grammarSha": "25e2843d82b679da7f632d60062c120b66c91adb0e3aa887e6bcfe2f6568da29",
+    "revision": "12523bd1ffd2c428b2dad177e2b4555574d90973",
+    "grammarSha": "6f39a9bcb20424f4fdbe35f74e223c279098b91b607efe1c278be3015c541bed",
     "language": "latex",
     "url": "https://github.com/latex-lsp/tree-sitter-latex",
     "maintainedBy": "@theHamsta, @clason",
@@ -1784,7 +1780,6 @@
   },
   {
     "reference": "main",
-    "revision": "",
     "language": "lilypond",
     "url": "https://github.com/nwhetsell/tree-sitter-lilypond",
     "maintainedBy": "@nwhetsell",
@@ -1792,7 +1787,6 @@
   },
   {
     "reference": "main",
-    "revision": "",
     "language": "lilypond_scheme",
     "url": "https://github.com/nwhetsell/tree-sitter-lilypond-scheme",
     "maintainedBy": "@nwhetsell",
@@ -1838,7 +1832,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "loongdoc",
     "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
     "maintainedBy": "@cathaysia",
@@ -1847,7 +1840,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "loongdoc_inline",
     "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
     "maintainedBy": "@cathaysia",
@@ -2008,7 +2000,6 @@
   },
   {
     "reference": "main",
-    "revision": "",
     "language": "mix_lock",
     "url": "https://github.com/fluidattacks/tree-sitter-mix_lock",
     "maintainedBy": "@drestrepom",
@@ -2734,7 +2725,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "rst",
     "url": "https://github.com/stsewd/tree-sitter-rst",
     "maintainedBy": "@stsewd",
@@ -3203,7 +3193,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "terra",
     "url": "https://github.com/tpkessler/tree-sitter-terra-rewrite",
     "maintainedBy": "@tpkessler",
@@ -3736,7 +3725,6 @@
   },
   {
     "reference": "master",
-    "revision": "",
     "language": "zsh",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-zsh",
     "doc": "last (and only) commit says: 'do not use'",

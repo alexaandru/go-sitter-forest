@@ -87,7 +87,7 @@ type Version struct {
 	// Reference points to the branch to be used for updates.
 	Reference string `json:"reference"`
 	// Revision points to the latest revision we used for updating the grammar.
-	Revision string `json:"revision"`
+	Revision string `json:"revision,omitempty"`
 }
 
 const guc = "https://raw.githubusercontent.com/%s/%s/"
