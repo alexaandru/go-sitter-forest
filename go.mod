@@ -31,7 +31,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.102
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.103
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100

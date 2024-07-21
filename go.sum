@@ -56,6 +56,8 @@ github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100 h1:PdKagYKcTIQJxwSca5SP6
 github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100/go.mod h1:C8FPXlWAj8/Tnor5O17bLkDM4QHBMcxPOLflDgoGT2M=
 github.com/alexaandru/go-sitter-forest/ca65 v1.5.102 h1:Ss/ygElduoc6Vn2yIeYWdZ52yBZ0Wkz/7thxXn1lsLA=
 github.com/alexaandru/go-sitter-forest/ca65 v1.5.102/go.mod h1:1ye81ymCRU30Nvj/jB5fFq+LVQpZkehnrquyG4J5XiQ=
+github.com/alexaandru/go-sitter-forest/ca65 v1.5.103 h1:cy++wxQJtxSBLd8I8W31Vw/+VhUIR+OU3uVoJHXUxzE=
+github.com/alexaandru/go-sitter-forest/ca65 v1.5.103/go.mod h1:1ye81ymCRU30Nvj/jB5fFq+LVQpZkehnrquyG4J5XiQ=
 github.com/alexaandru/go-sitter-forest/cairo v1.5.100 h1:6LbAYj26q0/+g6n4fgx7S/+GZOoAhc/7p8/h2ClkyY0=
 github.com/alexaandru/go-sitter-forest/cairo v1.5.100/go.mod h1:3Yynn8lHYNZ+3C48jDZnx1y6qNJJ09kmaoInCPaTGSM=
 github.com/alexaandru/go-sitter-forest/calc v1.5.100 h1:bTGrsVChInhuk2M3Z9iys+5SJ0s6kZwMWXp3gPpjtc0=
