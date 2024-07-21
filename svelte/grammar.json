@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "7218cf622b057ae9c530e1f0a7a3ce49806ca55e",
+  "revision": "7ab8221e3f378a3b04b4b488f07c1f408c5bd0d8",
   "grammarSha": "fcd843e6aff1a14bb3543042bc7d8c2189523cdd56709c2193459a5dc2724cc4",
   "language": "svelte",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",

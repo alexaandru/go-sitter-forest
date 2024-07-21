@@ -96,12 +96,9 @@ typedef enum {
   DOT,
   WHERE,
   VARSYM,
-  CONSYM,
-  TYCONSYM,
   COMMENT,
   CPP,
   COMMA,
-  BAR,
   IN,
   INDENT,
   EMPTY,
@@ -116,12 +113,9 @@ static char *sym_names[] = {
   "dot",
   "where",
   "varsym",
-  "consym",
-  "tyconsym",
   "comment",
   "cpp",
   "comma",
-  "bar",
   "in",
   "indent",
   "empty",
@@ -499,7 +493,6 @@ typedef enum {
   S_OP,
   S_IMPLICIT,
   S_MODIFIER,
-  S_BAR,
   S_COMMENT,
   S_INVALID,
 } Symbolic;
@@ -514,12 +507,14 @@ typedef enum {
  */
 static Symbolic s_symop(wchar_vec s, State *state) {
   if (s.data == NULL || s.data[0] == 0) return S_INVALID;
-  int32_t c = s.data[0];
+  if (
+    (2 <= s.len && (s.data[0] == '-') && (s.data[1] == '-')) ||
+    (3 <= s.len && (s.data[0] == '|') && (s.data[1] == '|') && (s.data[2] == '|'))
+  ) return S_COMMENT;
   switch (s.len) {
     case 1:
-      switch (c) {
+      switch (s.data[0]) {
         case '|':
-          return S_BAR;
         case ':':
         case '=':
         case '@':
@@ -527,16 +522,12 @@ static Symbolic s_symop(wchar_vec s, State *state) {
           return S_INVALID;
         case '%': 
           if (iswalnum(PEEK)) return S_INVALID; // expect a pragma
-          break;
+          return S_OP;
         default: return S_OP;
       }
     case 2:
-      if ((s.data[0] == '-') && (s.data[1] == '-')) return S_COMMENT;
       if (valid_symop_two_chars(s.data[0], s.data[1])) return S_OP;
       return S_INVALID;
-    case 3:
-      if ((s.data[0] == '|') && (s.data[1] == '|') && (s.data[2] == '|')) return S_COMMENT;
-      return S_OP;
   }
   return S_OP;
 }
@@ -932,15 +923,6 @@ static Result symop_marked(Symbolic type, State *state) {
  */
 
 static Result symop(Symbolic type, State *state) {
-  if (type == S_BAR) {
-    if (SYM(BAR)) {
-      MARK("bar", false, state);
-      return finish(BAR, "bar");
-    }
-    Result res = layout_end("bar", state);
-    SHORT_SCANNER;
-    return res_fail;
-  }
   MARK("symop", false, state);
   Result res = symop_marked(type, state);
   SHORT_SCANNER;

@@ -101,6 +101,7 @@
 (op_sei) @keyword
 (op_sep) @keyword
 (op_sta) @keyword
+(op_stp) @keyword
 (op_stx) @keyword
 (op_sty) @keyword
 (op_stz) @keyword

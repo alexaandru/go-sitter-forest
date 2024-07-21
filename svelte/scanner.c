@@ -108,7 +108,7 @@ static void deserialize_svelte(Scanner *scanner, const char *buffer, unsigned le
 
 static String scan_tag_name(TSLexer *lexer) {
     String tag_name = array_new();
-    while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' || lexer->lookahead == ':') {
+    while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' || lexer->lookahead == ':' || lexer->lookahead == '.') {
         array_push(&tag_name, towupper(lexer->lookahead));
         advance_svelte(lexer);
     }
