@@ -182,7 +182,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.104
+	github.com/alexaandru/go-sitter-forest/latex v1.5.105
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -298,7 +298,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smith v1.5.103
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
 	github.com/alexaandru/go-sitter-forest/sml v1.5.103
-	github.com/alexaandru/go-sitter-forest/snakemake v1.5.101
+	github.com/alexaandru/go-sitter-forest/snakemake v1.5.102
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.100
