@@ -1444,6 +1444,14 @@
   },
   {
     "reference": "master",
+    "revision": "494cbdff0d13cbc67348316af2efa0286dbddf6f",
+    "grammarSha": "febbbbbf4f5f67b9b70ab5325c6f2ca21a077f46ce55a11ea6742d3f70827fb4",
+    "language": "hylo",
+    "url": "https://github.com/natsukagami/tree-sitter-hylo",
+    "maintainedBy": "@natsukagami"
+  },
+  {
+    "reference": "master",
     "revision": "6858695eba0e63b9e0fceef081d291eb352abce8",
     "grammarSha": "2d8178cf4dbb90a01e3c2a899339d5ad931b56d8a419d27c2d459f42d5a42659",
     "language": "hyprlang",

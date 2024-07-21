@@ -213,6 +213,7 @@
     "http2":              ["http2"],
     "hungarian":          ["hungarian"],
     "hurl":               ["hurl"],
+    "hylo":               ["hylo"],
     "hyprlang":           ["hyprlang"],
     "idl":                ["idl"],
     "idris":              ["idr", "lidr"],

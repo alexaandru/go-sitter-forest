@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "494cbdff0d13cbc67348316af2efa0286dbddf6f",
+  "grammarSha": "febbbbbf4f5f67b9b70ab5325c6f2ca21a077f46ce55a11ea6742d3f70827fb4",
+  "language": "hylo",
+  "url": "https://github.com/natsukagami/tree-sitter-hylo",
+  "maintainedBy": "@natsukagami"
+}
