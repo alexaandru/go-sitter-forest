@@ -286,6 +286,8 @@ version everywhere, and keeping up with it too.
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally).
 
-### Candidates
+### Alternative Candidates
 
 - https://github.com/omasanori/tree-sitter-hare (seems quite active, unlike the one we're using now)
+- https://github.com/poliorcetics/tree-sitter-just
+- https://github.com/nverno/tree-sitter-lox

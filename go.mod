@@ -155,7 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/idl v1.5.104
-	github.com/alexaandru/go-sitter-forest/idris v1.5.102
+	github.com/alexaandru/go-sitter-forest/idris v1.5.103
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
 	github.com/alexaandru/go-sitter-forest/ink v1.5.100
@@ -163,7 +163,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
 	github.com/alexaandru/go-sitter-forest/janet v1.5.100
 	github.com/alexaandru/go-sitter-forest/java v1.5.100
-	github.com/alexaandru/go-sitter-forest/javascript v1.5.100
+	github.com/alexaandru/go-sitter-forest/javascript v1.5.101
 	github.com/alexaandru/go-sitter-forest/jq v1.5.100
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.5.100
 	github.com/alexaandru/go-sitter-forest/json v1.5.100
@@ -181,7 +181,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.103
+	github.com/alexaandru/go-sitter-forest/latex v1.5.104
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/matlab v1.5.100
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.5.101
 	github.com/alexaandru/go-sitter-forest/menhir v1.5.100
-	github.com/alexaandru/go-sitter-forest/merlin6502 v1.5.100
+	github.com/alexaandru/go-sitter-forest/merlin6502 v1.5.101
 	github.com/alexaandru/go-sitter-forest/mermaid v1.5.100
 	github.com/alexaandru/go-sitter-forest/meson v1.5.100
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.100
@@ -294,10 +294,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/slim v1.5.100
 	github.com/alexaandru/go-sitter-forest/slint v1.5.100
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
-	github.com/alexaandru/go-sitter-forest/smith v1.5.102
+	github.com/alexaandru/go-sitter-forest/smith v1.5.103
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
 	github.com/alexaandru/go-sitter-forest/sml v1.5.103
-	github.com/alexaandru/go-sitter-forest/snakemake v1.5.100
+	github.com/alexaandru/go-sitter-forest/snakemake v1.5.101
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.100
@@ -316,7 +316,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/surface v1.5.100
 	github.com/alexaandru/go-sitter-forest/surrealql v1.5.100
 	github.com/alexaandru/go-sitter-forest/sus v1.5.101
-	github.com/alexaandru/go-sitter-forest/svelte v1.5.100
+	github.com/alexaandru/go-sitter-forest/svelte v1.5.101
 	github.com/alexaandru/go-sitter-forest/swift v1.5.100
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/syphon v1.5.101
@@ -339,12 +339,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/toml v1.5.100
 	github.com/alexaandru/go-sitter-forest/tort v1.5.101
 	github.com/alexaandru/go-sitter-forest/tsv v1.5.100
-	github.com/alexaandru/go-sitter-forest/tsx v1.5.100
+	github.com/alexaandru/go-sitter-forest/tsx v1.5.101
 	github.com/alexaandru/go-sitter-forest/tup v1.5.101
 	github.com/alexaandru/go-sitter-forest/turtle v1.5.100
 	github.com/alexaandru/go-sitter-forest/twig v1.5.100
 	github.com/alexaandru/go-sitter-forest/twolc v1.5.100
-	github.com/alexaandru/go-sitter-forest/typescript v1.5.100
+	github.com/alexaandru/go-sitter-forest/typescript v1.5.101
 	github.com/alexaandru/go-sitter-forest/typespec v1.5.100
 	github.com/alexaandru/go-sitter-forest/typoscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/typst v1.5.100
