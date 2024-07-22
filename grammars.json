@@ -1036,7 +1036,7 @@
   },
   {
     "reference": "main",
-    "revision": "274e27ea0f09371122ab55b8a812a32d6ef644e8",
+    "revision": "bff4b66b44b020d918d67e2828eada1974a966aa",
     "grammarSha": "97cc0fc399f96c98b68dc14981467ef61012b357dbb2d53356077b7c1800d96d",
     "language": "git_rebase",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
@@ -1507,8 +1507,8 @@
   },
   {
     "reference": "main",
-    "revision": "c3ff6c67bd826f09feb6ee532aa30e1cc2130e0a",
-    "grammarSha": "bfe900eaaa51c5763d64c3114a8e5ac89003492b7bece463aa9efb35b86b7f11",
+    "revision": "f6de09eac092323f137b5c94b29bcaf971ceb068",
+    "grammarSha": "fcb79ae5e2550572d41bf9dec51fba499018c372b34590d1bcb7b82bcfd2fe9e",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
     "maintainedBy": "@wldmr",
@@ -2301,8 +2301,8 @@
   },
   {
     "reference": "master",
-    "revision": "9c8d90cad59223a635f7c7ceed6efdfa85da3c29",
-    "grammarSha": "af90c9e925168ddcb203c0d2ebce62864fce7e90a0d63f5aa7c8b31b3e941c80",
+    "revision": "6f7e14fa467c2d979a15ce110e2bf6c9742e9b65",
+    "grammarSha": "993685dc0a245a9253c92e610df9b1d7f2e7db9c24981ca5571916fff335e0ad",
     "language": "perl",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
@@ -3645,7 +3645,7 @@
   },
   {
     "reference": "main",
-    "revision": "c94661c77c85cf0441de1b5fead14046b55dcbd1",
+    "revision": "2255b5f5d8b3ed4da62ed5889ce3ce6ab7d70898",
     "grammarSha": "37e38e2a9a861ba49f1779cfb559c14c7681add7f4a605b0ce16eb2a46f6e008",
     "language": "wing",
     "url": "https://github.com/winglang/wing",
@@ -3751,7 +3751,7 @@
   },
   {
     "reference": "main",
-    "revision": "af98cd90ee7692990b985e75c59ee17dc2ce9136",
+    "revision": "1fac7e8be2675b727de47fb50786d1ce122723a5",
     "grammarSha": "f96e32af1247d54e1649b989dfc18bcfa672d65b568b4656fc338f16efc755d3",
     "language": "zeek",
     "url": "https://github.com/zeek/tree-sitter-zeek",
