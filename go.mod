@@ -88,7 +88,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.100
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/facility v1.5.102
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.102
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.103
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101
 	github.com/alexaandru/go-sitter-forest/faust v1.5.100
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.100
@@ -97,7 +97,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/firrtl v1.5.100
 	github.com/alexaandru/go-sitter-forest/fish v1.5.100
 	github.com/alexaandru/go-sitter-forest/flamingo v1.5.101
-	github.com/alexaandru/go-sitter-forest/fluentbit v1.5.100
+	github.com/alexaandru/go-sitter-forest/fluentbit v1.5.101
 	github.com/alexaandru/go-sitter-forest/foam v1.5.100
 	github.com/alexaandru/go-sitter-forest/forth v1.5.100
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.100
@@ -127,7 +127,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gomod v1.5.100
 	github.com/alexaandru/go-sitter-forest/gooscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/gosum v1.5.100
-	github.com/alexaandru/go-sitter-forest/gotmpl v1.5.100
+	github.com/alexaandru/go-sitter-forest/gotmpl v1.5.101
 	github.com/alexaandru/go-sitter-forest/gowork v1.5.100
 	github.com/alexaandru/go-sitter-forest/gpg v1.5.100
 	github.com/alexaandru/go-sitter-forest/graphql v1.5.100
@@ -141,7 +141,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.100
 	github.com/alexaandru/go-sitter-forest/hcl v1.5.100
 	github.com/alexaandru/go-sitter-forest/heex v1.5.100
-	github.com/alexaandru/go-sitter-forest/helm v1.5.100
+	github.com/alexaandru/go-sitter-forest/helm v1.5.101
 	github.com/alexaandru/go-sitter-forest/hjson v1.5.100
 	github.com/alexaandru/go-sitter-forest/hlsl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.5.100
@@ -156,7 +156,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hylo v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.105
+	github.com/alexaandru/go-sitter-forest/idl v1.5.106
 	github.com/alexaandru/go-sitter-forest/idris v1.5.104
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.5.100
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.5.100
 	github.com/alexaandru/go-sitter-forest/pem v1.5.100
-	github.com/alexaandru/go-sitter-forest/perl v1.5.100
+	github.com/alexaandru/go-sitter-forest/perl v1.5.101
 	github.com/alexaandru/go-sitter-forest/pgn v1.5.100
 	github.com/alexaandru/go-sitter-forest/php v1.5.100
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
