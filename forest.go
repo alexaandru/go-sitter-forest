@@ -322,6 +322,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/sosl"
 	"github.com/alexaandru/go-sitter-forest/sourcepawn"
 	"github.com/alexaandru/go-sitter-forest/sparql"
+	"github.com/alexaandru/go-sitter-forest/spicy"
 	"github.com/alexaandru/go-sitter-forest/sql"
 	"github.com/alexaandru/go-sitter-forest/sql_bigquery"
 	"github.com/alexaandru/go-sitter-forest/sqlite"
@@ -722,6 +723,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"sosl":               sosl.GetLanguage,
 	"sourcepawn":         sourcepawn.GetLanguage,
 	"sparql":             sparql.GetLanguage,
+	"spicy":              spicy.GetLanguage,
 	"sql":                sql.GetLanguage,
 	"sql_bigquery":       sql_bigquery.GetLanguage,
 	"sqlite":             sqlite.GetLanguage,
@@ -1108,6 +1110,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"sosl":               sosl.GetQuery,
 	"sourcepawn":         sourcepawn.GetQuery,
 	"sparql":             sparql.GetQuery,
+	"spicy":              spicy.GetQuery,
 	"sql":                sql.GetQuery,
 	"sql_bigquery":       sql_bigquery.GetQuery,
 	"sqlite":             sqlite.GetQuery,

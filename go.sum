@@ -606,6 +606,8 @@ github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.100 h1:5wdNo0u4b8cetmlclM
 github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.100/go.mod h1:5qROsJbaTrT9VNMsy+2eq6BjISN/NPbXXR1EZgA5ls4=
 github.com/alexaandru/go-sitter-forest/sparql v1.5.100 h1:WUDM8+ZMn15C3vPPZvK7+FDcJNpkKrq45upx89odrZ4=
 github.com/alexaandru/go-sitter-forest/sparql v1.5.100/go.mod h1:ijETsfQ6XJ2OwmoI+VQBMZc+x+RWT0RpVBTU6FX+y7s=
+github.com/alexaandru/go-sitter-forest/spicy v0.0.0-20240722161043-6a8a4fd68eca h1:dqfZbqu0xRKHm3YUH+qQ1FFH4Y8JdNGO6BpT84vjtO4=
+github.com/alexaandru/go-sitter-forest/spicy v0.0.0-20240722161043-6a8a4fd68eca/go.mod h1:M56HLltldsMFYqvXV2HecVKaUEkh9CqsdBQIiBkH/zg=
 github.com/alexaandru/go-sitter-forest/sql v1.5.100 h1:mmxFGEyFispTy0ZklJfPftUTQILhNaYA7XcdiS1ImgE=
 github.com/alexaandru/go-sitter-forest/sql v1.5.100/go.mod h1:U4RmAjEKtm1heCSbkA0t9s5XzPULpnsTNooZl0gifwg=
 github.com/alexaandru/go-sitter-forest/sql_bigquery v1.5.100 h1:eSMB4kBt39B/uNctHfrBOkytgmYUF/8Quac+o75VstU=

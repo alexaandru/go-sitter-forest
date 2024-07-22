@@ -307,6 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.100
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.100
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.100
+	github.com/alexaandru/go-sitter-forest/spicy v0.0.0-20240722161043-6a8a4fd68eca
 	github.com/alexaandru/go-sitter-forest/sql v1.5.100
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.5.100
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.100
