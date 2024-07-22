@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "1676410334163c9f102e1ffc8167f52201666ba8",
-  "grammarSha": "2c75351564c93b0cacbcf136879f2066b3dff2d79c96d28c6ddb06cfa0eccf83",
+  "revision": "3d341e5f43b3a7da9605bf4a03a9b98d2a0767db",
+  "grammarSha": "91e03d8968ebe22d4ada3d01cb73282acf39b96113b528ce7c054599f48a52ff",
   "language": "smith",
   "url": "https://github.com/smith-lang/tree-sitter-smith",
   "maintainedBy": "@adam-r-kowalski"

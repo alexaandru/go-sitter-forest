@@ -97,3 +97,20 @@
   (y_register)
 ] @constant.builtin
 
+; control commands
+
+[
+  (a16_ctrl_cmd)
+  (a8_ctrl_cmd)
+  (addr_ctrl_cmd)
+  (align_ctrl_cmd)
+  (asciiz_ctrl_cmd)
+  (assert_ctrl_cmd)
+] @function.macro
+
+[
+  (warning_keyword)
+  (error_keyword)
+  (ldwarning_keyword)
+  (lderror_keyword)
+] @keyword

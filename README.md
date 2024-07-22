@@ -288,7 +288,7 @@ version everywhere, and keeping up with it too.
 
 ### Alternative/Candidates
 
-- https://github.com/omasanori/tree-sitter-hare (seems quite active, unlike the one we're using now)
+- https://github.com/omasanori/tree-sitter-hare
 - https://github.com/poliorcetics/tree-sitter-just
 - https://github.com/nverno/tree-sitter-lox
 - https://github.com/alemuller/tree-sitter-vhdl
@@ -305,3 +305,4 @@ version everywhere, and keeping up with it too.
 - https://github.com/tree-sitter-grammars/tree-sitter-smali
 - https://github.com/tree-sitter-grammars/tree-sitter-test
 - https://github.com/tree-sitter-grammars/tree-sitter-toml
+- https://github.com/jaswanth1507/tree-sitter-swift

@@ -67,8 +67,6 @@
 [
   (operator)
   (qualified_module) ; grabs the `.` (dot), ex: import System.IO
-  ; `_` wildcards in if-then-else and case-of expressions,
-  ; as well as record updates and operator sections
   (wildcard)
   "="
   "|"
@@ -111,14 +109,14 @@
   "record"
   "as"
   "do"
-  "forall"
-  "∀"
-  (equal)
+  (forall)
   (fixity)
   (visibility)
   (totality)
   (quantity)
   (impossible)
+  (with)
+  (proof)
 ] @keyword
 
 (hole) @label
