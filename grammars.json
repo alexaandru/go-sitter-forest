@@ -827,8 +827,8 @@
   },
   {
     "reference": "master",
-    "revision": "33e408de3ae0a2cdf14a808d881e17daf77147b9",
-    "grammarSha": "12c8d841c66ee7b45109c8edc1356d98191ba662797f74efba081faf9d156d4f",
+    "revision": "3659d236ffadf077bfabf3d0971b8ee0d761cdad",
+    "grammarSha": "c172bcfdf28d1199b5e36a52b4dd7d88fd8728d210f9be884efc5649b765f511",
     "language": "familymarkup",
     "url": "https://github.com/redexp/tree-sitter-familymarkup",
     "maintainedBy": "@redexp"
@@ -913,8 +913,8 @@
   },
   {
     "reference": "main",
-    "revision": "d54f69c92c4826683fc88ffb3ae28965290c3678",
-    "grammarSha": "4127950a818fbba767eef1bc1ea1c612fb094d24dfd680e2f700f731b5d4268f",
+    "revision": "c28a123c7f615c2b4ed0dee51a25a96c6f1ce5f4",
+    "grammarSha": "783eed0caf226b7b85496409cdf458351372c444bd0d5bf681b378d5fa4481f7",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
     "maintainedBy": "@sh-cho"
@@ -1471,8 +1471,8 @@
   },
   {
     "reference": "master",
-    "revision": "3e6c8bbdb5b3485f8a50d951040a6d80c70a97b0",
-    "grammarSha": "e6abcd458a99087c8576c13e0b9c53f6ca178f0cb7758c5cc3818b69fe60b896",
+    "revision": "e0fb8591d0acbb195d190d644140f821671f0011",
+    "grammarSha": "205d599638e6d18b09368cc40b315c73300e151201ef606840546dd7993d9287",
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa"
@@ -2301,8 +2301,8 @@
   },
   {
     "reference": "master",
-    "revision": "022c1c87e0010676849d7f52991f74fd4fb755bd",
-    "grammarSha": "7a29fc16cadfcf0d9c101211cd85acbc87b545da424d863066a2bcabdab7c1c9",
+    "revision": "9c8d90cad59223a635f7c7ceed6efdfa85da3c29",
+    "grammarSha": "af90c9e925168ddcb203c0d2ebce62864fce7e90a0d63f5aa7c8b31b3e941c80",
     "language": "perl",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
@@ -3414,7 +3414,7 @@
   },
   {
     "reference": "master",
-    "revision": "90f6af21271dee246a9cafe109e2b456c5bc10a6",
+    "revision": "abe60cbed7986ee475d93f816c1be287f220c5d8",
     "grammarSha": "10153d49c0cecc3760b4ed762a2e1b8b4267391fd4a0e2633f076d450268c63d",
     "language": "typst",
     "url": "https://github.com/uben0/tree-sitter-typst",

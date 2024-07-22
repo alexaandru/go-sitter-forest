@@ -1,26 +1,3 @@
-(sources
-  (name_ref (name) @constant.name.ref)
-)
-
-(targets
-  (name_def (name) @constant.name.ref)
-)
-
-(targets
-  (name_def 
-    (name_aliases (name) @constant.name.def.alias)
-  )
-)
-
-(relation
-  (sources delimiter: "+")
-  (targets
-    (name_def
-      (name) @constant.name.def
-    )
-  )
-)
-
 (family_name
   (name) @constant.family_name
 )
@@ -32,10 +9,39 @@
 )
 
 (name_ref
-  .
-  (name) @constant.family_name.ref
-  .
-  (name)
+  (surname) @constant.family_name.ref
+  (name) @constant.name.ref
+)
+
+(name_def 
+  (name) @constant.name.def
+)
+
+(name_def 
+  (name_aliases (name) @constant.name.def.alias)
+)
+
+(sources
+  (name) @constant.name.ref
+)
+
+(targets
+  (name_def
+    .
+    (name) @constant.name.ref
+    .
+  )
+)
+
+(relation
+  arrow: "="
+  (targets
+    (name_def
+      .
+      (name) @constant.name.def
+      .
+    )
+  )
 )
 
 (new_surname

@@ -306,3 +306,4 @@ version everywhere, and keeping up with it too.
 - https://github.com/tree-sitter-grammars/tree-sitter-test
 - https://github.com/tree-sitter-grammars/tree-sitter-toml
 - https://github.com/jaswanth1507/tree-sitter-swift
+- https://github.com/gmlarumbe/tree-sitter-systemverilog

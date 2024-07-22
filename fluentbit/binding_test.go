@@ -20,7 +20,7 @@ const (
     KEY1  VALUE1
     KEY2  VALUE2
 `
-	expected = "(config (directive (directive_include pattern: (value_type))) (directive (directive_set key: (key_type) value: (value_type))) (section header: (section_header name: (section_header_type)) body: (section_body (comment) (entry key: (key_type) value: (value_type)) (entry key: (key_type) value: (value_type)))))"
+	expected = "(config (directive (directive_include pattern: (value_type))) (directive (directive_set key: (key_type) value: (value_type))) (ERROR) (section header: (section_header name: (section_header_type)) body: (section_body (comment) (entry key: (key_type) value: (value_type)) (entry key: (key_type) value: (value_type)))))"
 )
 
 func TestGrammar(t *testing.T) {
