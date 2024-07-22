@@ -31,7 +31,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.103
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.104
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100
@@ -102,7 +102,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.5.100
 	github.com/alexaandru/go-sitter-forest/fortran v1.5.100
 	github.com/alexaandru/go-sitter-forest/fsh v1.5.100
-	github.com/alexaandru/go-sitter-forest/fsharp v1.5.100
+	github.com/alexaandru/go-sitter-forest/fsharp v1.5.101
 	github.com/alexaandru/go-sitter-forest/func v1.5.100
 	github.com/alexaandru/go-sitter-forest/fusion v1.5.100
 	github.com/alexaandru/go-sitter-forest/gdscript v1.5.100
@@ -156,8 +156,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
 	github.com/alexaandru/go-sitter-forest/hylo v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.104
-	github.com/alexaandru/go-sitter-forest/idris v1.5.103
+	github.com/alexaandru/go-sitter-forest/idl v1.5.105
+	github.com/alexaandru/go-sitter-forest/idris v1.5.104
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
 	github.com/alexaandru/go-sitter-forest/ink v1.5.100
@@ -183,7 +183,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.105
+	github.com/alexaandru/go-sitter-forest/latex v1.5.106
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -194,7 +194,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.100
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.100
 	github.com/alexaandru/go-sitter-forest/lox v1.5.101
-	github.com/alexaandru/go-sitter-forest/lua v1.5.101
+	github.com/alexaandru/go-sitter-forest/lua v1.5.102
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.100
 	github.com/alexaandru/go-sitter-forest/luap v1.5.100
 	github.com/alexaandru/go-sitter-forest/luau v1.5.100
@@ -298,7 +298,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/slim v1.5.100
 	github.com/alexaandru/go-sitter-forest/slint v1.5.100
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
-	github.com/alexaandru/go-sitter-forest/smith v1.5.103
+	github.com/alexaandru/go-sitter-forest/smith v1.5.104
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
 	github.com/alexaandru/go-sitter-forest/sml v1.5.103
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.102
