@@ -361,6 +361,7 @@
     "sosl":               ["sosl"],
     "sourcepawn":         ["sp"],
     "sparql":             ["rq", "sparql"],
+    "spicy":              ["spicy"],
     "sql":                ["sql"],
     "sql_bigquery":       ["sql_bigquery"],
     "sqlite":             ["sqlite"],

@@ -1,6 +1,6 @@
-# 382 Supported Parsers
+# 383 Supported Parsers
 
-13 pending, 4 skipped regeneration, 24 missing queries
+13 pending, 4 skipped regeneration, 25 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -319,6 +319,7 @@
 - [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️ (maintained by @Sarrus1)
 - [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) ✔️ (maintained by @BonaBeavis)
+- [x] [spicy](https://github.com/bbannier/tree-sitter-spicy) 🗸 (maintained by @bbannier)
 - [x] [sql](https://github.com/DerekStride/tree-sitter-sql) ✔️ (maintained by @DerekStride)
 - [x] [sql_bigquery](https://github.com/takegue/tree-sitter-sql-bigquery) ✔️ (maintained by @takegue; high memory usage (3.4GB))
 - [x] [sqlite](https://github.com/johndoe-o/tree-sitter-sqlite) ✔️ (maintained by @johndoe-o)
