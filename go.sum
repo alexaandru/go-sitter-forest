@@ -312,8 +312,8 @@ github.com/alexaandru/go-sitter-forest/ignis v1.5.100 h1:bB4ZShEculx9AyzDRv1z3mu
 github.com/alexaandru/go-sitter-forest/ignis v1.5.100/go.mod h1:Bt6hQ2P1l0wpXJp6eqNQeDOkC3YCmwG6IInVekB0pH4=
 github.com/alexaandru/go-sitter-forest/ini v1.5.100 h1:zy/Dd3BKDjGXVEm+brn9yhjdtV15o+dpyxSw+Rlyj1w=
 github.com/alexaandru/go-sitter-forest/ini v1.5.100/go.mod h1:tHMgOQtP4Cp7rvkDcC3+7n7iUhqcPcZWf98S5OCGp/s=
-github.com/alexaandru/go-sitter-forest/ink v1.5.100 h1:iWmphTemGyG4Zic1/DHAoFEEkgOuqnC+4Ey5xYF5YNs=
-github.com/alexaandru/go-sitter-forest/ink v1.5.100/go.mod h1:3wyCU+WiziS+LrGFsL8KTzVUJPOl/7qHh9qhI6PZ920=
+github.com/alexaandru/go-sitter-forest/ink v1.5.101 h1:GMMrbClZRVk92EBl1T2JyBNeOGJwvIjKfj53HjWk6s8=
+github.com/alexaandru/go-sitter-forest/ink v1.5.101/go.mod h1:3wyCU+WiziS+LrGFsL8KTzVUJPOl/7qHh9qhI6PZ920=
 github.com/alexaandru/go-sitter-forest/inko v1.5.100 h1:2/Bgj7cJ4X9GAAyKLY7cTqSb0yjMH4ODMNqhrjWfTYQ=
 github.com/alexaandru/go-sitter-forest/inko v1.5.100/go.mod h1:H7ggSv54RSTXiBtpqeyHqOzZTP5JKo3bmaDZnw6d2KM=
 github.com/alexaandru/go-sitter-forest/ispc v1.5.100 h1:alSTZD0Kg6WKmq9pgC08adqgftLvdc2xW/jytWsdofE=

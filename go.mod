@@ -160,7 +160,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/idris v1.5.104
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
-	github.com/alexaandru/go-sitter-forest/ink v1.5.100
+	github.com/alexaandru/go-sitter-forest/ink v1.5.101
 	github.com/alexaandru/go-sitter-forest/inko v1.5.100
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
 	github.com/alexaandru/go-sitter-forest/janet v1.5.100
