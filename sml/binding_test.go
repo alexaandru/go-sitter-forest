@@ -14,7 +14,7 @@ const (
 	code = `fun factorial 0 = 1
   | factorial n = n * factorial (n - 1)
 `
-	expected = "(source_file (fun_dec (fvalbind (fmrule name: (vid) args: (scon_pat (integer_scon)) def: (scon_exp (integer_scon))) (fmrule name: (vid) args: (vid_pat (longvid (vid))) def: (app_exp (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (paren_exp (app_exp (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (scon_exp (integer_scon)))))))))"
+	expected = "(source_file (fun_dec (fvalbind (fmrule name: (vid) arg: (scon_pat (integer_scon)) def: (scon_exp (integer_scon))) (fmrule name: (vid) arg: (vid_pat (longvid (vid))) def: (app_exp (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (paren_exp (app_exp (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (scon_exp (integer_scon)))))))))"
 )
 
 func TestGrammar(t *testing.T) {

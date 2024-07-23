@@ -1,15 +1,16 @@
-"component" @keyword
-"signal"    @keyword
-"end"       @keyword
+"component"    @keyword
+"synchronized" @keyword
+"signal"       @keyword
+"end"          @keyword
 
 "cat" @operator
-"^" @operator
+"^"   @operator
 "and" @operator
-"&" @operator
+"&"   @operator
 "or"  @operator
-"|"  @operator
+"|"   @operator
 "not" @operator
-"!" @operator
+"!"   @operator
 "=>"  @operator
 "<="  @operator
 

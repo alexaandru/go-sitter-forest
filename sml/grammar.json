@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "493577c0bbafbca4c77d92894d801a2e9c090283",
-  "grammarSha": "cf25dedc25cfc9be3b4d5a2a8c66f540d263962ab2515775c4d9d5a0e490f487",
+  "revision": "11f4e723a873b01c0ec93416c08e34e998ef58bd",
+  "grammarSha": "47e8f58c28b5ae2bbf1add488dfb62151f43e128756b36917523397d305900e1",
   "language": "sml",
   "url": "https://github.com/MatthewFluet/tree-sitter-sml",
   "maintainedBy": "@MatthewFluet",
