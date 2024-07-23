@@ -371,6 +371,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/virgil v1.5.100
 	github.com/alexaandru/go-sitter-forest/vue v1.5.100
 	github.com/alexaandru/go-sitter-forest/walnut v1.5.100
+	github.com/alexaandru/go-sitter-forest/wbproto v1.5.100
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.100
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.100
 	github.com/alexaandru/go-sitter-forest/wing v1.5.100

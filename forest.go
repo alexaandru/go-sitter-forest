@@ -386,6 +386,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/virgil"
 	"github.com/alexaandru/go-sitter-forest/vue"
 	"github.com/alexaandru/go-sitter-forest/walnut"
+	"github.com/alexaandru/go-sitter-forest/wbproto"
 	"github.com/alexaandru/go-sitter-forest/wgsl"
 	"github.com/alexaandru/go-sitter-forest/wgsl_bevy"
 	"github.com/alexaandru/go-sitter-forest/wing"
@@ -788,6 +789,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"virgil":             virgil.GetLanguage,
 	"vue":                vue.GetLanguage,
 	"walnut":             walnut.GetLanguage,
+	"wbproto":            wbproto.GetLanguage,
 	"wgsl":               wgsl.GetLanguage,
 	"wgsl_bevy":          wgsl_bevy.GetLanguage,
 	"wing":               wing.GetLanguage,
@@ -1175,6 +1177,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"virgil":             virgil.GetQuery,
 	"vue":                vue.GetQuery,
 	"walnut":             walnut.GetQuery,
+	"wbproto":            wbproto.GetQuery,
 	"wgsl":               wgsl.GetQuery,
 	"wgsl_bevy":          wgsl_bevy.GetQuery,
 	"wing":               wing.GetQuery,

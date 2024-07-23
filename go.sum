@@ -734,6 +734,8 @@ github.com/alexaandru/go-sitter-forest/vue v1.5.100 h1:gXjZl4n5pE6wIUb3Hr4vFJSrf
 github.com/alexaandru/go-sitter-forest/vue v1.5.100/go.mod h1:XQnOwD21Byq3JO+N61yODNECj4Tt7rtdpuO6Pstism4=
 github.com/alexaandru/go-sitter-forest/walnut v1.5.100 h1:Q8OYJrAfAEZxzJKy2ZaPfU8m4QZQo/h/TfVXAfFacUA=
 github.com/alexaandru/go-sitter-forest/walnut v1.5.100/go.mod h1:LWUb0Rdt9WpRvZb/kJTkvVACSuPjEX5NTiA8gMI1YFc=
+github.com/alexaandru/go-sitter-forest/wbproto v1.5.100 h1:hwNa5nWwf1082Zm9eZ1vDkR0AZlKMAyta4XmcPbgGk4=
+github.com/alexaandru/go-sitter-forest/wbproto v1.5.100/go.mod h1:+X56Ymo3YE2IHkdEgQSL+wK74MnJDaDEOM8zMM3O8tQ=
 github.com/alexaandru/go-sitter-forest/wgsl v1.5.100 h1:Zbp2Vc/vHHnhTrnyHH/sj+Gttf7hXyoCvHVCMmrdKWA=
 github.com/alexaandru/go-sitter-forest/wgsl v1.5.100/go.mod h1:M5VwOJPYYy8SW8AN2LX+7Hy/i1TK2VmETR0zQX85+hw=
 github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.100 h1:qnoU4PmlMzqQP9IsnY95hwCzLBL5ZxDZ7iBPv7VfaQA=
