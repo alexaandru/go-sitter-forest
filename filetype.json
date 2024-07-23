@@ -385,7 +385,7 @@
     "teal":               ["tl"],
     "templ":              ["templ"],
     "terraform":          ["tf"],
-    "textproto":          ["textproto"],
+    "textproto":          ["textproto", "pbt", "pbtxt"],
     "thrift":             ["thrift"],
     "tiger":              ["tig"],
     "tlaplus":            ["tla"],

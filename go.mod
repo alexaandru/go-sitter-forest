@@ -31,7 +31,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.104
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.105
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100
@@ -46,7 +46,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.5.100
 	github.com/alexaandru/go-sitter-forest/clojure v1.5.100
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.100
-	github.com/alexaandru/go-sitter-forest/cmdl v1.5.101
+	github.com/alexaandru/go-sitter-forest/cmdl v1.5.102
 	github.com/alexaandru/go-sitter-forest/cobol v1.5.100
 	github.com/alexaandru/go-sitter-forest/cognate v1.5.100
 	github.com/alexaandru/go-sitter-forest/comment v1.5.100
@@ -183,7 +183,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.106
+	github.com/alexaandru/go-sitter-forest/latex v1.5.107
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -248,7 +248,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pod v1.5.100
 	github.com/alexaandru/go-sitter-forest/poe_filter v1.5.100
 	github.com/alexaandru/go-sitter-forest/pony v1.5.100
-	github.com/alexaandru/go-sitter-forest/powershell v1.5.100
+	github.com/alexaandru/go-sitter-forest/powershell v1.5.101
 	github.com/alexaandru/go-sitter-forest/printf v1.5.100
 	github.com/alexaandru/go-sitter-forest/prisma v1.5.100
 	github.com/alexaandru/go-sitter-forest/problog v1.5.100
@@ -300,15 +300,15 @@ require (
 	github.com/alexaandru/go-sitter-forest/smali v1.5.100
 	github.com/alexaandru/go-sitter-forest/smith v1.5.104
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.100
-	github.com/alexaandru/go-sitter-forest/sml v1.5.103
+	github.com/alexaandru/go-sitter-forest/sml v1.5.104
 	github.com/alexaandru/go-sitter-forest/snakemake v1.5.102
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.100
-	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.100
+	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.101
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.100
 	github.com/alexaandru/go-sitter-forest/spicy v0.0.0-20240722161043-6a8a4fd68eca
-	github.com/alexaandru/go-sitter-forest/sql v1.5.100
+	github.com/alexaandru/go-sitter-forest/sql v1.5.101
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.5.100
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.100
 	github.com/alexaandru/go-sitter-forest/squirrel v1.5.100
