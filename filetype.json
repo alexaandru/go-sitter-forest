@@ -421,6 +421,7 @@
     "virgil":             ["v3"],
     "vue":                ["vue"],
     "walnut":             ["walnut"],
+    "wbproto":            ["wbproto", "wbp"],
     "wgsl":               ["wgsl"],
     "wgsl_bevy":          ["wgsl_bevy"],
     "wing":               ["wing"],

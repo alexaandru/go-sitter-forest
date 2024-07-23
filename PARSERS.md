@@ -1,4 +1,4 @@
-# 383 Supported Parsers
+# 384 Supported Parsers
 
 13 pending, 4 skipped regeneration, 25 missing queries
 
@@ -384,6 +384,7 @@
 - [x] [virgil](https://github.com/btwj/tree-sitter-virgil) ✔️ (maintained by @btwj)
 - [x] [vue](https://github.com/tree-sitter-grammars/tree-sitter-vue) ✔️ (maintained by @WhyNotHugo, @lucario387)
 - [x] [walnut](https://github.com/UserNobody14/tree-sitter-crystal-walnut) 🗸 (maintained by @UserNobody14)
+- [x] [wbproto](https://github.com/acristoffers/tree-sitter-wbproto) ✔️ (maintained by @acristoffers)
 - [x] [wgsl](https://github.com/szebniok/tree-sitter-wgsl) ✔️ (maintained by @szebniok)
 - [x] [wgsl_bevy](https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy) ✔️ (maintained by @theHamsta)
 - [x] [wing](https://github.com/winglang/wing) ✔️ (maintained by @gshpychka, @MarkMcCulloh)

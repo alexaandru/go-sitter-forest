@@ -3622,6 +3622,17 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "fd7c99b141635d9e046a829d78961dcdcfdd3c59",
+    "grammarSha": "a553d0caa37ecf1d9686c1800b58b5f1bbb67438d03ca9f8828957530aa50139",
+    "language": "wbproto",
+    "url": "https://github.com/acristoffers/tree-sitter-wbproto",
+    "maintainedBy": "@acristoffers",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "40259f3c77ea856841a4e0c4c807705f3e4a2b65",
     "grammarSha": "ff09adbea051c0a85fdd2b1bd69f7565590a3c5dfac7e918ddc3df12b2bb8e86",
