@@ -17,6 +17,7 @@ import (
 	"strings"
 
 	"github.com/alexaandru/go-sitter-forest/abap"
+	"github.com/alexaandru/go-sitter-forest/abl"
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
 	"github.com/alexaandru/go-sitter-forest/aiken"
@@ -187,6 +188,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/json5"
 	"github.com/alexaandru/go-sitter-forest/jsonc"
 	"github.com/alexaandru/go-sitter-forest/jsonnet"
+	"github.com/alexaandru/go-sitter-forest/jule"
 	"github.com/alexaandru/go-sitter-forest/julia"
 	"github.com/alexaandru/go-sitter-forest/just"
 	"github.com/alexaandru/go-sitter-forest/kcl"
@@ -421,6 +423,7 @@ var info []byte
 
 var languageFuncs = map[string]func() *sitter.Language{
 	"abap":               abap.GetLanguage,
+	"abl":                abl.GetLanguage,
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
 	"aiken":              aiken.GetLanguage,
@@ -589,6 +592,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"json5":              json5.GetLanguage,
 	"jsonc":              jsonc.GetLanguage,
 	"jsonnet":            jsonnet.GetLanguage,
+	"jule":               jule.GetLanguage,
 	"julia":              julia.GetLanguage,
 	"just":               just.GetLanguage,
 	"kcl":                kcl.GetLanguage,
@@ -809,6 +813,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 
 var queryFuncs = map[string]func(string, ...byte) []byte{
 	"abap":               abap.GetQuery,
+	"abl":                abl.GetQuery,
 	"ada":                ada.GetQuery,
 	"agda":               agda.GetQuery,
 	"aiken":              aiken.GetQuery,
@@ -977,6 +982,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"json5":              json5.GetQuery,
 	"jsonc":              jsonc.GetQuery,
 	"jsonnet":            jsonnet.GetQuery,
+	"jule":               jule.GetQuery,
 	"julia":              julia.GetQuery,
 	"just":               just.GetQuery,
 	"kcl":                kcl.GetQuery,

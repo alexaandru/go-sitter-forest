@@ -4,6 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.5.100
+	github.com/alexaandru/go-sitter-forest/abl v1.5.100
 	github.com/alexaandru/go-sitter-forest/ada v1.5.100
 	github.com/alexaandru/go-sitter-forest/agda v1.5.100
 	github.com/alexaandru/go-sitter-forest/aiken v1.5.100
@@ -172,6 +173,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/json5 v1.5.100
 	github.com/alexaandru/go-sitter-forest/jsonc v1.5.100
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.5.100
+	github.com/alexaandru/go-sitter-forest/jule v1.5.100
 	github.com/alexaandru/go-sitter-forest/julia v1.5.100
 	github.com/alexaandru/go-sitter-forest/just v1.5.100
 	github.com/alexaandru/go-sitter-forest/kcl v1.5.101
