@@ -32,7 +32,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.105
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.106
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100
@@ -161,7 +161,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/idris v1.5.104
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
-	github.com/alexaandru/go-sitter-forest/ink v1.5.101
+	github.com/alexaandru/go-sitter-forest/ink v1.5.102
 	github.com/alexaandru/go-sitter-forest/inko v1.5.100
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
 	github.com/alexaandru/go-sitter-forest/janet v1.5.100
@@ -185,7 +185,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.5.100
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.5.100
 	github.com/alexaandru/go-sitter-forest/lat v1.5.101
-	github.com/alexaandru/go-sitter-forest/latex v1.5.107
+	github.com/alexaandru/go-sitter-forest/latex v1.5.108
 	github.com/alexaandru/go-sitter-forest/ldg v1.5.100
 	github.com/alexaandru/go-sitter-forest/ledger v1.5.100
 	github.com/alexaandru/go-sitter-forest/leo v1.5.100
@@ -195,7 +195,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.100
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.100
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.100
-	github.com/alexaandru/go-sitter-forest/lox v1.5.101
+	github.com/alexaandru/go-sitter-forest/lox v1.5.102
 	github.com/alexaandru/go-sitter-forest/lua v1.5.102
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.100
 	github.com/alexaandru/go-sitter-forest/luap v1.5.100
@@ -388,7 +388,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yuck v1.5.100
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.100
 	github.com/alexaandru/go-sitter-forest/zeek v1.5.100
-	github.com/alexaandru/go-sitter-forest/zig v1.5.100
+	github.com/alexaandru/go-sitter-forest/zig v1.5.101
 	github.com/alexaandru/go-tree-sitter-bare v1.1.1
 	golang.org/x/exp v0.0.0-20240707233637-46b078467d37
 	golang.org/x/sync v0.7.0
