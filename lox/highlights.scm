@@ -17,10 +17,7 @@
 (call_expression
   callee: (identifier) @function.call)
 
-(call_expression
-  callee: (identifier) @function.builtin
-  (#eq? @function.builtin "clock")
-)
+((identifier) @function.builtin (#eq? @function.builtin "clock"))
 
 [
   "!"

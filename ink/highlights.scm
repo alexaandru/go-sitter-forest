@@ -72,8 +72,8 @@
 
 (gather_mark) @markup.list.unnumbered
 
-(params "ref" @keyword)
-(params (identifier) @variable.parameter)
+(param "ref" @keyword)
+(param (identifier) @variable.parameter)
 
 (cond_arm "-" @keyword)
 (alt_arm "-" @keyword)
@@ -96,7 +96,7 @@
 ["->" "->->" "<-"] @markup.link
 
 (divert (identifier)+ @markup.link.url)
-(params (divert (identifier) @variable.parameter)) ; exception to normal divert coloring: parameters should be distinguishable
+(param (divert (identifier) @variable.parameter)) ; exception to normal divert coloring: parameters should be distinguishable
 (divert (call (identifier) @markup.link.url))
 (divert (call (qualified_name (identifier) @markup.link.url)))
 (divert (identifier) @constant.builtin
