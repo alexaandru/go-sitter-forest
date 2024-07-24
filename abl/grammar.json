@@ -1,0 +1,11 @@
+{
+  "reference": "master",
+  "revision": "f89c2c1d4aa033381b09883c96d0e652bff9644e",
+  "grammarSha": "62de4fda9821ebd73ea9232883e2b4cb76f5c813c03b9c278180752a618eb8b0",
+  "language": "abl",
+  "url": "https://github.com/usagi-coffee/tree-sitter-abl",
+  "maintainedBy": "@jkbz64",
+  "files": [
+    "scanner.c"
+  ]
+}

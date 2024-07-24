@@ -9,6 +9,17 @@
   },
   {
     "reference": "master",
+    "revision": "f89c2c1d4aa033381b09883c96d0e652bff9644e",
+    "grammarSha": "62de4fda9821ebd73ea9232883e2b4cb76f5c813c03b9c278180752a618eb8b0",
+    "language": "abl",
+    "url": "https://github.com/usagi-coffee/tree-sitter-abl",
+    "maintainedBy": "@jkbz64",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "master",
     "revision": "e8e2515465cc2d7c444498e68bdb9f1d86767f95",
     "grammarSha": "d95b2f5aa3829021160b1cddc2ef9fe5f499b54a9db085b601e20e215eab57af",
     "language": "ada",
@@ -1623,6 +1634,14 @@
     "files": [
       "scanner.c"
     ]
+  },
+  {
+    "reference": "main",
+    "revision": "c0d7e357fc4099e3b1d0cb3bd10abeb0cc73ca0a",
+    "grammarSha": "658d24a5168794966a67accf9de02c35b4c8a35437c0f7693a9278e29d103ed6",
+    "language": "jule",
+    "url": "https://github.com/TheLooped/tree-sitter-jule",
+    "maintainedBy": "@TheLooped"
   },
   {
     "reference": "master",

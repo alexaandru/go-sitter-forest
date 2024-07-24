@@ -77,6 +77,7 @@
 
   "Ext": {
     "abap":               ["abap"],
+    "abl":                ["p", "cls", "w"],
     "ada":                ["ada", "adb", "ads", "gpr"],
     "agda":               ["agda"],
     "aiken":              ["aiken"],
@@ -183,7 +184,7 @@
     "glint":              ["glint"],
     "glsl":               ["glsl"],
     "gn":                 ["gn", "gni"],
-    "gnuplot":            ["gnuplot", "gpi", "gp", "gnu", "p", "plot", "plt"],
+    "gnuplot":            ["gnuplot", "gpi", "gp", "gnu", "plot", "plt"],
     "go":                 ["go"],
     "gobra":              ["gobra"],
     "goctl":              ["goctl"],
@@ -233,6 +234,7 @@
     "json5":              ["json5"],
     "jsonc":              ["jsonc"],
     "jsonnet":            ["jsonnet", "libsonnet"],
+    "jule":               ["jule"],
     "julia":              ["jl"],
     "just":               ["just"],
     "kcl":                ["kcl"],
@@ -434,6 +436,13 @@
     "yuck":               ["yuck"],
     "zeek":               ["zeek"],
     "zig":                ["zig", "zon"]
+  },
+
+  "conflicts": {
+    "pp": ["pascal", "puppet"],
+    "v": ["v", "verilog"],
+    "p": ["abl", "gnuplot"],
+    "m": ["matlab", "octave", "objc"]
   },
 
   "pending": {

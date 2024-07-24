@@ -1,10 +1,11 @@
-# 384 Supported Parsers
+# 386 Supported Parsers
 
-13 pending, 4 skipped regeneration, 25 missing queries
+13 pending, 4 skipped regeneration, 27 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
 - [x] [abap](https://github.com/mkoval1/tree-sitter-abap) ✔️ (maintained by @mkoval1)
+- [x] [abl](https://github.com/usagi-coffee/tree-sitter-abl) 🗸 (maintained by @jkbz64)
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️ (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️ (maintained by @Decodetalkers)
 - [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) 🗸 (maintained by @Riley-Kilgore)
@@ -178,6 +179,7 @@
 - [x] [json5](https://github.com/Joakker/tree-sitter-json5) ✔️ (maintained by @Joakker)
 - [x] [JSON with comments](https://gitlab.com/WhyNotHugo/tree-sitter-jsonc) ✔️ (maintained by @WhyNotHugo)
 - [x] [jsonnet](https://github.com/sourcegraph/tree-sitter-jsonnet) ✔️ (maintained by @nawordar)
+- [x] [jule](https://github.com/TheLooped/tree-sitter-jule) 🗸 (maintained by @TheLooped)
 - [x] [julia](https://github.com/tree-sitter/tree-sitter-julia) ✔️ (maintained by @theHamsta)
 - [x] [just](https://github.com/IndianBoy42/tree-sitter-just) ✔️ (maintained by @Hubro)
 - [x] [kcl](https://github.com/kcl-lang/tree-sitter-kcl) 🗸 (maintained by @Vishalk91-4)
