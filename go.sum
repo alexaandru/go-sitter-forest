@@ -382,6 +382,8 @@ github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.100 h1:LUHXA1jA4ShTG3DN+0
 github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.100/go.mod h1:GVAD7ftCSZjO6QTHZZOrFxABZXARiH73lkRRMfhCDRQ=
 github.com/alexaandru/go-sitter-forest/llvm v1.5.100 h1:++9/nY/0W5QxVxeRGZ1sIDWCmYVkQlYw89sskTsFV5s=
 github.com/alexaandru/go-sitter-forest/llvm v1.5.100/go.mod h1:g4uM5bf68Jdxj52wQyM96m5kWJCJM9HGddjP+06JERk=
+github.com/alexaandru/go-sitter-forest/lookml v1.5.100 h1:Afct+wCdZbG8nHYSdwqyUD+d2z1JXWgORVu92idBKlA=
+github.com/alexaandru/go-sitter-forest/lookml v1.5.100/go.mod h1:AK1FlotlXat4Hg/owubr0Xh0is4NzeJXbCN9yB3dcbM=
 github.com/alexaandru/go-sitter-forest/lox v1.5.102 h1:UmBm3DhZ6d1UEbCP4x3/i7VUPmy4nrx0rU0JEltL5n8=
 github.com/alexaandru/go-sitter-forest/lox v1.5.102/go.mod h1:DYxYiAwB+uk4dP+2ixE8dztqIdkqmpvrVotXHa2qIFc=
 github.com/alexaandru/go-sitter-forest/lua v1.5.102 h1:7H2s0K0BtrQF3md6F+tB2p3ELTavK7PaFDkDfS/hXZc=
@@ -482,6 +484,8 @@ github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100 h1:EhRoUNgmA8lBelrxf0APAg
 github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100/go.mod h1:qgpLTntcW4RQFPVu4nbpY3xL9ncy2pdhnCKgL2TEdqk=
 github.com/alexaandru/go-sitter-forest/pic v1.5.102 h1:ONqwjip4fwJus+qnoG43HOjRqna2nLITH5VMR+jUfOM=
 github.com/alexaandru/go-sitter-forest/pic v1.5.102/go.mod h1:r68w61+r1Ddacq0pCRI7/wXRwWUuzzJ3ytjZL2ncLeg=
+github.com/alexaandru/go-sitter-forest/pint v1.5.100 h1:UJ+bgYXiggOe/IogHmdmqihKdeO3FXpbld2TvvvmeMU=
+github.com/alexaandru/go-sitter-forest/pint v1.5.100/go.mod h1:L1zdOWwJi0zNEh99vUOxIL6TREbjWrVC79NZq0AGUGA=
 github.com/alexaandru/go-sitter-forest/pioasm v1.5.100 h1:q+sn4wGZs51U/9UVL43faNWPu8dRGu/Y1RHdrt1kzqA=
 github.com/alexaandru/go-sitter-forest/pioasm v1.5.100/go.mod h1:sJ7HmMIiDFU62o0HzZTlEvtchCjlv+fVUruxTKAseeY=
 github.com/alexaandru/go-sitter-forest/po v1.5.100 h1:bZ5jfuAGAawaqBZ+5BRdt1Ix4LwTas96X7OcUqHDRyY=

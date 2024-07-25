@@ -195,6 +195,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquid v1.5.100
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.5.100
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.100
+	github.com/alexaandru/go-sitter-forest/lookml v1.5.100
 	github.com/alexaandru/go-sitter-forest/lox v1.5.102
 	github.com/alexaandru/go-sitter-forest/lua v1.5.102
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.100
@@ -245,6 +246,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
 	github.com/alexaandru/go-sitter-forest/pic v1.5.102
+	github.com/alexaandru/go-sitter-forest/pint v1.5.100
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
 	github.com/alexaandru/go-sitter-forest/po v1.5.100
 	github.com/alexaandru/go-sitter-forest/pod v1.5.100

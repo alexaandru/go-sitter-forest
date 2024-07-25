@@ -210,6 +210,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/liquid"
 	"github.com/alexaandru/go-sitter-forest/liquidsoap"
 	"github.com/alexaandru/go-sitter-forest/llvm"
+	"github.com/alexaandru/go-sitter-forest/lookml"
 	"github.com/alexaandru/go-sitter-forest/lox"
 	"github.com/alexaandru/go-sitter-forest/lua"
 	"github.com/alexaandru/go-sitter-forest/luadoc"
@@ -260,6 +261,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/php_only"
 	"github.com/alexaandru/go-sitter-forest/phpdoc"
 	"github.com/alexaandru/go-sitter-forest/pic"
+	"github.com/alexaandru/go-sitter-forest/pint"
 	"github.com/alexaandru/go-sitter-forest/pioasm"
 	"github.com/alexaandru/go-sitter-forest/po"
 	"github.com/alexaandru/go-sitter-forest/pod"
@@ -614,6 +616,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"liquid":             liquid.GetLanguage,
 	"liquidsoap":         liquidsoap.GetLanguage,
 	"llvm":               llvm.GetLanguage,
+	"lookml":             lookml.GetLanguage,
 	"lox":                lox.GetLanguage,
 	"lua":                lua.GetLanguage,
 	"luadoc":             luadoc.GetLanguage,
@@ -664,6 +667,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"php_only":           php_only.GetLanguage,
 	"phpdoc":             phpdoc.GetLanguage,
 	"pic":                pic.GetLanguage,
+	"pint":               pint.GetLanguage,
 	"pioasm":             pioasm.GetLanguage,
 	"po":                 po.GetLanguage,
 	"pod":                pod.GetLanguage,
@@ -1004,6 +1008,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"liquid":             liquid.GetQuery,
 	"liquidsoap":         liquidsoap.GetQuery,
 	"llvm":               llvm.GetQuery,
+	"lookml":             lookml.GetQuery,
 	"lox":                lox.GetQuery,
 	"lua":                lua.GetQuery,
 	"luadoc":             luadoc.GetQuery,
@@ -1054,6 +1059,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"php_only":           php_only.GetQuery,
 	"phpdoc":             phpdoc.GetQuery,
 	"pic":                pic.GetQuery,
+	"pint":               pint.GetQuery,
 	"pioasm":             pioasm.GetQuery,
 	"po":                 po.GetQuery,
 	"pod":                pod.GetQuery,
