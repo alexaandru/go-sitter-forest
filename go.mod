@@ -76,6 +76,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dotenv v1.5.100
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.100
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.100
+	github.com/alexaandru/go-sitter-forest/dune v1.5.100
 	github.com/alexaandru/go-sitter-forest/earthfile v1.5.100
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.100
 	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.100

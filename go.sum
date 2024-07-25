@@ -144,6 +144,8 @@ github.com/alexaandru/go-sitter-forest/doxygen v1.5.100 h1:ILXAY24fnr/xHAyocWnto
 github.com/alexaandru/go-sitter-forest/doxygen v1.5.100/go.mod h1:5ScjK5CdKjXWLRA/alARAiVwuIrmns8tLf2GZl8BsR4=
 github.com/alexaandru/go-sitter-forest/dtd v1.5.100 h1:rXvZbX/d0H0ODctU217cMNTX1bmnIssEig9w+U3GwBw=
 github.com/alexaandru/go-sitter-forest/dtd v1.5.100/go.mod h1:YONgGvpSlRevdTTcyTb9hbpUYoy8ovh43LlATKPGVHk=
+github.com/alexaandru/go-sitter-forest/dune v1.5.100 h1:OepLzTKg4z8CqFBcVuvozZnmhL4XtzvVZbIGLJFxQjo=
+github.com/alexaandru/go-sitter-forest/dune v1.5.100/go.mod h1:N4F6yYxptaZ6Z4wrtDgrZQ7Z7QyMzH5/MAsC29uEiaE=
 github.com/alexaandru/go-sitter-forest/earthfile v1.5.100 h1:qF8autzkFolXCWQVMeSQpEPwmHlg7rAvvgd6VZSUeMk=
 github.com/alexaandru/go-sitter-forest/earthfile v1.5.100/go.mod h1:PszyE9ER0xNHtXFlxOYvm4trd3YXmuxD8o6jByLyr88=
 github.com/alexaandru/go-sitter-forest/ebnf v1.5.100 h1:umAUZGaOxCVmL6YGKEJkaJDxIyzepz9UzUTcFqQf0CA=

@@ -89,6 +89,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/dotenv"
 	"github.com/alexaandru/go-sitter-forest/doxygen"
 	"github.com/alexaandru/go-sitter-forest/dtd"
+	"github.com/alexaandru/go-sitter-forest/dune"
 	"github.com/alexaandru/go-sitter-forest/earthfile"
 	"github.com/alexaandru/go-sitter-forest/ebnf"
 	"github.com/alexaandru/go-sitter-forest/editorconfig"
@@ -497,6 +498,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"dotenv":             dotenv.GetLanguage,
 	"doxygen":            doxygen.GetLanguage,
 	"dtd":                dtd.GetLanguage,
+	"dune":               dune.GetLanguage,
 	"earthfile":          earthfile.GetLanguage,
 	"ebnf":               ebnf.GetLanguage,
 	"editorconfig":       editorconfig.GetLanguage,
@@ -889,6 +891,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"dotenv":             dotenv.GetQuery,
 	"doxygen":            doxygen.GetQuery,
 	"dtd":                dtd.GetQuery,
+	"dune":               dune.GetQuery,
 	"earthfile":          earthfile.GetQuery,
 	"ebnf":               ebnf.GetQuery,
 	"editorconfig":       editorconfig.GetQuery,
