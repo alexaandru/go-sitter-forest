@@ -10,6 +10,7 @@
 // #define DEBUG_NEXT_TOKEN 1
 
 #include "parser.h"
+#include "array.h"
 #include <assert.h>
 #ifdef DEBUG
 #include <stdio.h>
@@ -97,6 +98,8 @@ typedef enum {
   WHERE,
   VARSYM,
   COMMENT,
+  RAW_STRING_START,
+  RAW_STRING_END,
   CPP,
   COMMA,
   IN,
@@ -114,6 +117,8 @@ static char *sym_names[] = {
   "where",
   "varsym",
   "comment",
+  "raw_string_start",
+  "raw_string_end",
   "cpp",
   "comma",
   "in",
@@ -159,6 +164,7 @@ typedef struct {
   uint32_t len;
   uint32_t cap;
   uint16_t *data;
+  Array(uint32_t) raw_string_sharp_counts;
 } indent_vec;
 
 // --------------------------------------------------------------------------------------------------------
@@ -435,9 +441,8 @@ static bool uninitialized(State *state) { return !indent_exists(state); }
  */
 static bool after_error(State *state) { return all_syms(state->symbols); }
 
-#define SYMBOLICS_WITHOUT_BAR \
+#define SYMBOLIC_CASES \
     case '!': \
-    case '#': \
     case '$': \
     case '%': \
     case '&': \
@@ -454,15 +459,14 @@ static bool after_error(State *state) { return all_syms(state->symbols); }
     case '-': \
     case '~': \
     case '@': \
-    case '\\'
-
-#define SYMBOLIC_CASES \
-    SYMBOLICS_WITHOUT_BAR: \
+    case '\\': \
     case '|'
 
 static bool symbolic(uint32_t c) {
   switch (c) {
     SYMBOLIC_CASES:
+      return true;
+    case '#':
       return true;
     default:
       return unicode_symbol(c);
@@ -520,6 +524,9 @@ static Symbolic s_symop(wchar_vec s, State *state) {
         case '@':
         case '\\':
           return S_INVALID;
+        case '#':
+          if ('"' == PEEK) return S_INVALID; // raw string open
+          return S_OP;
         case '%': 
           if (iswalnum(PEEK)) return S_INVALID; // expect a pragma
           return S_OP;
@@ -957,6 +964,42 @@ static Result bar(State *state) {
   return inline_comment(state);
 }
 
+static Result raw_string_start(State *state) {
+  if (state->symbols[RAW_STRING_START]) {
+    if (!seq("#", state)) return res_cont;
+    int32_t n = 1;
+    while (PEEK == '#') {
+      n += 1;
+      S_ADVANCE;
+    }
+    if ('"' == PEEK) {
+      S_ADVANCE;
+      array_push(&state->indents->raw_string_sharp_counts, n);
+      MARK("raw_string_start", false, state);
+      return finish(RAW_STRING_START, "raw_string_start");
+    }
+    return res_fail;
+  }
+  return res_cont;
+}
+
+static Result raw_string_end(State *state) {
+  if (state->symbols[RAW_STRING_END]) {
+    if (!seq("\"", state)) return res_cont;
+    if (PEEK != '#') return res_fail;
+    uint32_t i = *array_back(&state->indents->raw_string_sharp_counts);
+    for (; 0 < i; --i) {
+      if (PEEK != '#') return res_fail;
+      S_ADVANCE;
+    }
+    if (PEEK == '#') return res_fail;
+    array_pop(&state->indents->raw_string_sharp_counts);
+    MARK("raw_string_end", false, state);
+    return finish(RAW_STRING_END, "raw_string_end");
+  }
+  return res_cont;
+}
+
 /**
  * Succeed for a comment.
  */
@@ -1108,6 +1151,17 @@ static Result inline_tokens(State *state) {
     }
     case '[': {
       return res_cont;
+    }
+    case '#': {
+      Result res = raw_string_start(state);
+      SHORT_SCANNER;
+      is_symbolic = true;
+      break;
+    }
+    case '"': {
+      Result res = raw_string_end(state);
+      SHORT_SCANNER;
+      return res_fail;
     }
     case '{': {
       Result res = comment(state);
@@ -1422,13 +1476,30 @@ bool tree_sitter_idris_external_scanner_scan(void *indents_v, TSLexer *lexer, co
  * copied.
  */
 unsigned tree_sitter_idris_external_scanner_serialize(void *indents_v, char *buffer) {
+  unsigned size = 0;
   indent_vec *indents = (indent_vec*) indents_v;
-  unsigned to_copy = sizeof(indents->data[0]) * indents->len;
-  if (to_copy > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
-    return 0;
+
+  {
+    unsigned len = sizeof(indents->data[0]) * indents->len;
+    if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
+      return 0;
+    }
+    buffer[size++] = len;
+    memcpy(&buffer[size], indents->data, len);
+    size += len;
   }
-  memcpy(buffer, indents->data, to_copy);
-  return to_copy;
+
+  {
+    unsigned len = indents->raw_string_sharp_counts.size;
+    if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
+      return 0;
+    }
+    buffer[size++] = len;
+    memcpy(&buffer[size], indents->raw_string_sharp_counts.contents, len);
+    size += len;
+  }
+
+  return size;
 }
 
 /**
@@ -1436,14 +1507,30 @@ unsigned tree_sitter_idris_external_scanner_serialize(void *indents_v, char *buf
  * `payload` is the state of the previous parser execution, while `buffer` is the saved state of a different position
  * (e.g. when doing incremental parsing).
  */
-void tree_sitter_idris_external_scanner_deserialize(void *indents_v, char *buffer, unsigned length) {
-  indent_vec *indents = (indent_vec*) indents_v;
-  unsigned els = length / sizeof(indents->data[0]);
-  if (els > 0) {
-    VEC_GROW(indents, els);
-    indents->len = els;
-    memcpy(indents->data, buffer, length);
+void tree_sitter_idris_external_scanner_deserialize(indent_vec *indents, char *buffer, unsigned length) {
+  if(length == 0) return;
+
+  unsigned size = 0;
+  {
+    unsigned len = buffer[size++];
+    unsigned n = len / sizeof(indents->data[0]);
+    if (n > 0) {
+      VEC_GROW(indents, n);
+      indents->len = n;
+      memcpy(indents->data, &buffer[size], len);
+    }
+    size += len;
   }
+  {
+    unsigned len = buffer[size++];
+    if (len > 0) {
+      array_reserve(&indents->raw_string_sharp_counts, len);
+      memcpy(indents->raw_string_sharp_counts.contents, &buffer[size], len);
+      indents->raw_string_sharp_counts.size = len;
+    }
+    size += len;
+  }
+  assert(size == length);
 }
 
 /**
@@ -1451,6 +1538,7 @@ void tree_sitter_idris_external_scanner_deserialize(void *indents_v, char *buffe
  */
 void tree_sitter_idris_external_scanner_destroy(void *indents_v) {
   indent_vec *indents = (indent_vec*) indents_v;
+  array_delete(&indents->raw_string_sharp_counts);
   VEC_FREE(indents);
   free(indents);
 }

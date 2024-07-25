@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "9d70b40d1f0e4f47569f051e41643b919539bc92",
-  "grammarSha": "6412bf03e7456791521aa4022b60bd5a8526a92a35796da8149854ce8c3295e1",
+  "revision": "cbb08f52b61c28add315ab468e528bffc40bf097",
+  "grammarSha": "9da7f0211b2466c4b21f31f44ff045ff8a626c60072dce5cd4e498c900ab934c",
   "language": "ink",
   "url": "https://github.com/wldmr/tree-sitter-ink",
   "maintainedBy": "@wldmr",

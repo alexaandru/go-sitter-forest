@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "9e082a2253c50eb3d80e84bbd635e57cfb1476a2",
-  "grammarSha": "8ae34c946de06a551c8d78c9bc56291b24302320c8b354e9972a7b61d237da34",
+  "revision": "e128454c2210c0e0c10b68fe45ddb8fee80182a3",
+  "grammarSha": "2489d7eff66c157262797af82915cbd2e1780eff5dbe071fa0fb2977e10ef704",
   "language": "m68k",
   "url": "https://github.com/grahambates/tree-sitter-m68k",
   "maintainedBy": "@grahambates"

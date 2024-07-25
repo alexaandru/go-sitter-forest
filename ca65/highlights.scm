@@ -108,4 +108,7 @@
   (error_keyword)
   (ldwarning_keyword)
   (lderror_keyword)
+  (constructor_keyword)
+  (destructor_keyword)
+  (interruptor_keyword)
 ] @keyword
