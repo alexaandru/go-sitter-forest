@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "fbd3f94e5ab9fb34c1d4d238ca6f440b4cdd4cda",
+  "grammarSha": "7792cbba76286503ad61247be1b79a5d1cc9a40ab9b1c1636aa8abd1033af0dc",
+  "language": "dune",
+  "url": "https://github.com/emillon/tree-sitter-dune",
+  "maintainedBy": "@emillon"
+}

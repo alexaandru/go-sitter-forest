@@ -1,4 +1,4 @@
-# 388 Supported Parsers
+# 389 Supported Parsers
 
 13 pending, 4 skipped regeneration, 27 missing queries
 
@@ -79,6 +79,7 @@
 - [x] [dotenv](https://github.com/zarifpour/tree-sitter-dotenv) 🗸 (maintained by @zarifpour)
 - [x] [doxygen](https://github.com/tree-sitter-grammars/tree-sitter-doxygen) ✔️ (maintained by @amaanq)
 - [x] [dtd](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️ (maintained by @ObserverOfTime)
+- [x] [dune](https://github.com/emillon/tree-sitter-dune) ✔️ (maintained by @emillon)
 - [x] [earthfile](https://github.com/glehmann/tree-sitter-earthfile) ✔️ (maintained by @glehmann)
 - [x] [ebnf](https://github.com/RubixDev/ebnf) ✔️ (maintained by @RubixDev)
 - [x] [editorconfig](https://github.com/ValdezFOmar/tree-sitter-editorconfig) ✔️ (maintained by @ValdezFOmar)

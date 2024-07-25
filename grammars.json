@@ -721,6 +721,14 @@
   },
   {
     "reference": "main",
+    "revision": "fbd3f94e5ab9fb34c1d4d238ca6f440b4cdd4cda",
+    "grammarSha": "7792cbba76286503ad61247be1b79a5d1cc9a40ab9b1c1636aa8abd1033af0dc",
+    "language": "dune",
+    "url": "https://github.com/emillon/tree-sitter-dune",
+    "maintainedBy": "@emillon"
+  },
+  {
+    "reference": "main",
     "revision": "b0a9bc5737340a9b80b489fe9ae93d7b2fe78cd7",
     "grammarSha": "f629dae075f7126a219238296f58d74052c129b98085775eb8d8f139192f0fe3",
     "language": "earthfile",

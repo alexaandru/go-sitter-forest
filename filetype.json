@@ -41,6 +41,7 @@
     "commonlisp":         ["Cask", ".viper", "sbclrc", ".sbclrc"],
     "dockerfile":         ["Containerfile", "Dockerfile", "dockerfile"],
     "doxygen":            ["Doxyfile"],
+    "dune":               ["dune"],
     "earthfile":          ["Earthfile"],
     "editorconfig":       [".editorconfig"],
     "elisp":              [".emacs", ".emacs.desktop"],
