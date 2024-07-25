@@ -21,7 +21,7 @@ const (
  (deps    config_common.ml config)
  (action  (run ocaml %{dep:real_configure.ml})))
 `
-	expected = "(source_file (stanza (stanza_name) (field_rule (field_rule_mode (field_name) (sexp (atom)))) (field_rule (sexp (list (sexp (atom)) (sexp (atom))))) (field_rule (field_rule_action (field_name) (action (sexp (list (sexp (atom)) (sexp (atom)) (sexp (atom)))))))) (stanza (stanza_name) (field_rule (sexp (list (sexp (atom)) (sexp (atom))))) (field_rule (field_rule_deps (field_name) (sexp (atom)) (ERROR (atom)))) (field_rule (field_rule_action (field_name) (action (sexp (list (sexp (atom)) (sexp (atom)) (sexp (atom)))))))))"
+	expected = "(source_file (stanza (stanza_name) (field_name) (sexp (atom)) (sexp (list (sexp (atom)) (sexp (atom)))) (field_name) (action (action_name) (sexp (atom)) (sexp (atom)))) (stanza (stanza_name) (sexp (list (sexp (atom)) (sexp (atom)))) (field_name) (sexps1 (sexp (atom)) (sexp (atom))) (field_name) (action (action_name) (sexp (atom)) (sexp (atom)))))"
 )
 
 func TestGrammar(t *testing.T) {

@@ -287,9 +287,9 @@ bool tree_sitter_ink_external_scanner_scan(
       return true;
     }
   }
-
-  if (valid_symbols[GATHER_BLOCK_START] || valid_symbols[GATHER_BLOCK_END]
-   || valid_symbols[CHOICE_BLOCK_START] || valid_symbols[CHOICE_BLOCK_END]) {
+  bool is_start = valid_symbols[GATHER_BLOCK_START] || valid_symbols[CHOICE_BLOCK_START];
+  bool is_end = valid_symbols[GATHER_BLOCK_END] || valid_symbols[CHOICE_BLOCK_END];
+  if (is_start || is_end) {
     MSG("Checking for Block delimiters.\n");
 
     BlockLevel current_block_level = *array_back(&scanner->blocks);

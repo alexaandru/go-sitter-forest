@@ -21,7 +21,7 @@ predicate Increment {
     constraint (counter == nil && counter' == 1) || counter' == counter + 1;
 }
 `
-	expected = "(source_file (decl (storage_decl (storage_var (ident) (type (custom_type (path (ident))))))) (decl (predicate_decl (ident) (predicate_body (state_decl (ident) (type (custom_type (path (ident)))) (state_init (storage_access (ident))))) (predicate_body (constraint_decl (expr (additive_expr (expr (comparison_expr (expr (postfix_expr (expr (logical_or_expr (expr (term (expr (comparison_expr (expr (postfix_expr (expr (logical_and_expr (expr (comparison_expr (expr (term (ident))) (expr (term (ident))))) (expr (term (ident))))))) (expr (term (number))))))) (expr (term (ident))))))) (expr (term (ident))))) (expr (term (number))))))))))"
+	expected = "(source_file (decl (decl_storage (storage_var (ident) (type (ty_custom (path (ident))))))) (decl (decl_pred (ident) (pred_body (decl_state (ident) (type (ty_custom (path (ident)))) (state_init (storage_access (path (ident)))))) (pred_body (decl_constraint (expr (expr_additive (expr (expr_cmp (expr (expr_logical_or (expr (term (expr (expr_cmp (expr (expr_logical_and (expr (expr_cmp (expr (term (ident))) (expr (term (ident))))) (expr (term (ident_post_state))))) (expr (term (lit (number)))))))) (expr (term (ident_post_state))))) (expr (term (ident))))) (expr (term (lit (number)))))))))))"
 )
 
 func TestGrammar(t *testing.T) {

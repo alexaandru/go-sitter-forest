@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "63fffe3f90f4146c44dbd7ed3110982b2a059d3d",
-  "grammarSha": "59d223c0cc9f5a3c3d61af675ffaebacad016de4feb8fb774452926f09c4ff0d",
+  "revision": "75a096ec6a037bd7dcaf70d1a8daca31eb951dda",
+  "grammarSha": "5f925df806afef4925f304795c9451c8c01f4cd84fdf0a9dcd75f302969ff12f",
   "language": "cleancopy",
   "url": "https://github.com/Taev-dev/tree-sitter-cleancopy",
   "maintainedBy": "@Badg",

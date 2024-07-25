@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "c9a1bcc013497b4cd2559664eccce835584f7241",
-  "grammarSha": "e8971eacea6303d631e6b6affab0bf9680966e938f6db17e6135b478f0384b0f",
+  "revision": "c5e5677d2959373b1c80c4ad8742e4f304bc34ca",
+  "grammarSha": "ce4b382c5e2dc8a901475519d374e59c1b42d7fef86630453a6df32a4e08bbce",
   "language": "pint",
   "url": "https://github.com/essential-contributions/tree-sitter-pint",
   "maintainedBy": "@mitchmindtree"

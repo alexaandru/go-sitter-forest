@@ -77,9 +77,8 @@
  *     surrounding whitespace.
  *   - where: Parse an inline `where` token. This is necessary because `where` tokens can end layouts and it's necesary
  *     to know whether it is valid at that position, which can mean that it belongs to the last statement of the layout
+ *   - varid: A variable id
  *   - varsym: A symbolic operator
- *   - consym: A symbolic constructor
- *   - tyconsym: A symbolic type operator
  *   - comment: A line or block comment, because they interfere with operators
  *   - cpp: A preprocessor directive. Needs to push and pop indent stacks
  *   - comma: Needed to terminate inline layouts like `of`, `do`
@@ -96,6 +95,7 @@ typedef enum {
   END,
   DOT,
   WHERE,
+  VARID,
   VARSYM,
   COMMENT,
   RAW_STRING_START,
@@ -115,6 +115,7 @@ static char *sym_names[] = {
   "end",
   "dot",
   "where",
+  "varid",
   "varsym",
   "comment",
   "raw_string_start",
@@ -126,6 +127,44 @@ static char *sym_names[] = {
   "empty",
 };
 #endif
+
+static char *keywords[] = {
+  "private",
+  "public",
+  "export",
+  "total",
+  "covering",
+  "partial",
+  "module",
+  "namespace",
+  "parameters",
+  "import",
+  "using",
+  "mutual",
+  "data",
+  "interface",
+  "implementation",
+  "record",
+  "constructor",
+  "infix",
+  "infixl",
+  "infixr",
+  "prefix",
+  "let",
+  "rewrite",
+  "if",
+  "then",
+  "else",
+  "case",
+  "of",
+  "do",
+  "impossible",
+  "with",
+  "proof",
+  "forall",
+  "auto",
+  "default",
+};
 
 /**
  * The parser appears to call `scan` with all symbols declared as valid directly after it encountered an error, so
@@ -160,6 +199,8 @@ static void debug_valid(const bool *syms) {
 }
 #endif
 
+typedef Array(char) String;
+
 typedef struct {
   uint32_t len;
   uint32_t cap;
@@ -183,6 +224,7 @@ typedef struct {
   TSLexer *lexer;
   const bool *symbols;
   indent_vec *indents;
+  String token;
 #ifdef DEBUG
   int marked;
   char *marked_by;
@@ -279,6 +321,28 @@ static bool varid_char(const uint32_t c) {
 }
 
 static bool quoter_char(const uint32_t c) { return varid_char(c) || c == '.'; };
+
+static String read_varid(State* state) {
+  String str = array_new();
+  if (varid_start_char(PEEK)) {
+    array_push(&str, PEEK);
+    S_ADVANCE;
+  }
+  while (varid_char(PEEK)) {
+    array_push(&str, PEEK);
+    S_ADVANCE;
+  }
+  array_push(&str, 0);
+  return str;
+}
+
+static void read_token(State* state) {
+  state->token = read_varid(state);
+}
+
+static bool is_token(const char* str, State* state) {
+  return 0 == strcmp(str, state->token.contents);
+}
 
 static bool seq(const char * restrict s, State *state) {
   size_t len = strlen(s);
@@ -411,8 +475,7 @@ static bool indent_lesseq(uint32_t indent, State *state) { return indent_exists(
 static bool is_newline_where(uint32_t indent, State *state) {
   return keep_layout(indent, state)
     && (SYM(SEMICOLON) || SYM(END))
-    && !SYM(WHERE)
-    && PEEK == 'w';
+    && !SYM(WHERE);
 }
 
 #define NEWLINE_CASES \
@@ -796,9 +859,7 @@ static Result dedent(uint32_t indent, State *state) {
 static Result newline_where(uint32_t indent, State *state) {
   if (is_newline_where(indent, state)) {
     MARK("newline_where", false, state);
-    if (token("where", state)) {
-      return end_or_semicolon("newline_where", state);
-    }
+    return end_or_semicolon("newline_where", state);
   }
   return res_cont;
 }
@@ -844,33 +905,30 @@ static Result newline_infix(uint32_t indent, Symbolic type, State *state) {
  * Necessary because `is_newline_where` needs to know that no `where` may follow.
  */
 static Result where(State *state) {
-  if (token("where", state)) {
-    if (SYM(WHERE)) {
-      MARK("where", false, state);
-      return finish(WHERE, "where");
-    }
-    return layout_end("where", state);
+  if (SYM(WHERE)) {
+    MARK("where", false, state);
+    return finish(WHERE, "where");
   }
-  return res_cont;
+  return layout_end("where", state);
 }
 
 /**
  * An `in` token ends the layout openend by a `let` and its nested layouts.
  */
 static Result in(State *state) {
-  if (SYM(IN) && token("in", state)) {
+  if (SYM(IN)) {
     MARK("in", false, state);
     pop(state);
     return finish(IN, "in");
   }
-  return res_cont;
+  return res_fail;
 }
 
 /**
  * An `else` token may end a layout opened in the body of a `then`.
  */
 static Result else_(State *state) {
-  return !token("else instance", state) && token("else", state) ? end_or_semicolon("else", state) : res_cont;
+  return end_or_semicolon("else", state);
 }
 
 
@@ -1094,6 +1152,7 @@ static Result comment(State *state) {
  * parsed here as well.
  */
 static Result close_layout_in_list(State *state) {
+  if (0 < state->token.size) return res_cont;
   switch (PEEK) {
     case ']': {
       if (state->symbols[END]) {
@@ -1128,22 +1187,25 @@ static Result close_layout_in_list(State *state) {
 static Result inline_tokens(State *state) {
   uint32_t c = PEEK;
   bool is_symbolic = false;
+
+  if (varid_start_char(c)) {
+    read_token(state);
+    if (is_token("_", state)) return res_cont;
+    if (is_token("where", state)) return where(state);
+    if (is_token("in", state)) return in(state);
+    if (is_token("else", state)) return else_(state);
+
+    for (int i = 0; i < sizeof(keywords)/sizeof(keywords[0]); ++i) {
+      if (is_token(keywords[i], state)) return res_cont;
+    }
+        
+    if (SYM(VARID)) {
+      MARK("varid", false, state);
+      return finish(VARID, "varid");
+    }
+  }
+
   switch (c) {
-    case 'w': {
-      Result res = where(state);
-      SHORT_SCANNER;
-      return res_fail;
-    }
-    case 'i': {
-      Result res = in(state);
-      SHORT_SCANNER;
-      return res_fail;
-    }
-    case 'e': {
-      Result res = else_(state);
-      SHORT_SCANNER;
-      return res_fail;
-    }
     case ')': {
       Result res = layout_end(")", state);
       SHORT_SCANNER;
@@ -1267,9 +1329,9 @@ static Result newline_token(uint32_t indent, State *state) {
     SHORT_SCANNER;
     return res_fail;
   }
-  Result res = newline_where(indent, state);
-  SHORT_SCANNER;
-  if (PEEK == 'i') return in(state);
+  read_token(state);
+  if (is_token("where", state)) return newline_where(indent, state);
+  if (is_token("in", state)) return in(state);
   return res_cont;
 }
 

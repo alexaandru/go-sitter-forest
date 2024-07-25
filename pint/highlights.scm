@@ -16,6 +16,7 @@
   "pub"
   "state"
   "storage"
+  "type"
   "use"
   "var"
   "where"
@@ -23,85 +24,88 @@
 
 ;; primitive types
 [
-  "b256_ty"
-  "bool_ty"
-  "int_ty"
-  "real_ty"
-  "string_ty"
-] @type
+  "ty_b256"
+  "ty_bool"
+  "ty_int"
+  "ty_real"
+  "ty_string"
+] @type.builtin
 
 ;; comments
-((comment) @comment)
+((comment) @comment.line)
 
 ;; constants
-((const_decl) @constant)
+((decl_const) @constant)
 
 ;; enums
-((enum_decl) @type)
+((decl_enum) @type.enum)
+((decl_new_ty) @type)
 
 ;; interface declarations
-((interface_decl) @type)
-((interface_var) @variable)
+((decl_iface) @type)
+((iface_var) @variable.member)
 
 ;; macros
-((macro_decl) @macro)
-((macro_name) @macro)
-((macro_param) @parameter)
+((decl_macro) @function.macro)
+((macro_name) @function.macro)
+((macro_param) @variable.parameter)
 
 ;; predicates
-((predicate_decl) @predicate)
-((predicate_body) @block)
+((decl_pred) @function)
+((pred_body) @block)
 
 ;; storage
-((storage_decl) @variable.builtin)
-((storage_var) @variable)
+((decl_storage) @variable.builtin)
+((storage_var) @variable.member)
 ((storage_access) @variable.builtin)
 
 ;; use statements
-((use_stmt) @include)
+((use_stmt) @keyword.control.import)
 ((use_tree) @namespace)
 
 ;; variable declarations
-((var_decl) @variable)
+((decl_var) @variable)
 
 ;; state declarations
-((state_decl) @variable)
+((decl_state) @variable)
 
 ;; constraint declarations
-((constraint_decl) @keyword)
+((decl_constraint) @keyword.control)
 
 ;; if statements
-((if_decl) @conditional)
+((decl_if) @keyword.control.conditional)
 
 ;; identifiers and paths
+((ident_post_state) @special)
 ((ident) @variable)
 ((path) @namespace)
-((custom_type) @type)
+((ty_custom) @type)
 
 ;; types
-((primitive_type) @type.builtin)
+((ty_prim) @type.builtin)
 
 ;; literals
-((number) @number)
-((string) @string)
+((hex) @constant.numeric)
+((number) @constant.numeric)
+((string) @constant.character)
 
 ;; operators directly
-((comparison_expr) @operator)
-((logical_or_expr) @operator)
-((logical_and_expr) @operator)
-((additive_expr) @operator)
-((multiplicative_expr) @operator)
-((unary_expr) @operator)
-((postfix_expr) @operator)
+((expr_cmp) @operator)
+((expr_logical_or) @operator)
+((expr_logical_and) @operator)
+((expr_additive) @operator)
+((expr_multiplicative) @operator)
+((expr_unary) @operator)
+((expr_postfix) @operator)
 
 ;; expressions
 ((expr) @expression)
-((select_expr) @conditional)
+((expr_select) @keyword.control.conditional)
 ((term) @expression)
 
 ;; statements
 ((block) @block)
-((cond_expr) @conditional)
-((generator_expr) @conditional)
-((array_expr) @constant)
-((tuple_expr) @constant)
+((expr_cond) @keyword.control.conditional)
+((expr_generator) @keyword.control.conditional)
+((expr_array) @constant)
+((expr_tuple) @constant)

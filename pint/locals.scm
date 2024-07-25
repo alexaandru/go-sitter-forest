@@ -1,23 +1,29 @@
-;; Predicate definitions as modules
-((predicate_decl (ident) @predicate.def))
+;; Functions and Predicates
+(decl_pred (ident) @function.def)
 
-;; Variable declarations
-((var_decl (ident) @variable.def))
+;; Types and Interfaces
+(decl_iface (ident) @type.def)
+(pred_iface (ident) @type.def)
+(decl_new_ty (ident) @type.def)
+(ty_custom (path) @type)
+(iface_instance (ident) @type)
 
-;; Constant declarations
-((const_decl (ident) @constant.def))
+;; Macros
+(decl_macro (macro_name) @function.macro.def)
+(macro_param (ident) @variable.parameter)
 
-;; Macro definitions
-((macro_decl (macro_name) @macro.def))
+;; Enums
+(decl_enum (ident) @type.enum)
 
-;; Type definitions
-((new_type_decl (ident) @type.def))
+;; Variables
+(decl_var (ident) @variable)
+(decl_state (ident) @variable)
+(storage_var (ident) @variable.member)
 
-;; Enum definitions
-((enum_decl (ident) @type.def))
+;; Constants
+(decl_const (ident) @constant)
 
-;; Interface definitions
-((interface_decl (ident) @type.def))
-
-;; Scope definition
-((block) @scope)
+;; Paths and Identifiers
+(path) @namespace
+(ident_post_state) @special
+(ident) @variable

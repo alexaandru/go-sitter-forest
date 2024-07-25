@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "276c452044cc999e9b11de81b4956054be950173",
-  "grammarSha": "649ba6eb20d4ad7405c250b8560871b9a832c61219703e8ffb1f3fca0ccac749",
+  "revision": "666a1f1fcc7f6ac802c6f447698881ea4ddbb659",
+  "grammarSha": "b258e963ef9883b464a33f87f1fcf8e441ac564c2b2912111c705a96a9947588",
   "language": "jule",
   "url": "https://github.com/TheLooped/tree-sitter-jule",
   "maintainedBy": "@TheLooped"
