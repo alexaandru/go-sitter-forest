@@ -1865,6 +1865,14 @@
     "maintainedBy": "@benwilliamgraham"
   },
   {
+    "reference": "main",
+    "revision": "7b66b2d0bc502bda45f614cc00a46faa0f690291",
+    "grammarSha": "e116e55c1bd542669888d38c995673775ecb8873740bac85640aa86295cd8acd",
+    "language": "lookml",
+    "url": "https://github.com/aclementev/tree-sitter-lookml",
+    "maintainedBy": "@aclementev"
+  },
+  {
     "reference": "master",
     "language": "loongdoc",
     "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
@@ -2382,6 +2390,14 @@
     "language": "pic",
     "url": "https://github.com/smoeding/tree-sitter-pic",
     "maintainedBy": "@smoeding"
+  },
+  {
+    "reference": "main",
+    "revision": "c9a1bcc013497b4cd2559664eccce835584f7241",
+    "grammarSha": "e8971eacea6303d631e6b6affab0bf9680966e938f6db17e6135b478f0384b0f",
+    "language": "pint",
+    "url": "https://github.com/essential-contributions/tree-sitter-pint",
+    "maintainedBy": "@mitchmindtree"
   },
   {
     "reference": "main",

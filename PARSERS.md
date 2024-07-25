@@ -1,4 +1,4 @@
-# 386 Supported Parsers
+# 388 Supported Parsers
 
 13 pending, 4 skipped regeneration, 27 missing queries
 
@@ -203,6 +203,7 @@
 - [x] [liquid](https://github.com/hankthetank27/tree-sitter-liquid) ✔️ (maintained by @hankthetank27)
 - [x] [liquidsoap](https://github.com/savonet/tree-sitter-liquidsoap) ✔️ (maintained by @toots)
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️ (maintained by @benwilliamgraham)
+- [x] [lookml](https://github.com/aclementev/tree-sitter-lookml) ✔️ (maintained by @aclementev)
 - [ ] [loongdoc](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [ ] [loongdoc_inline](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [x] [lox](https://github.com/marcuscaisey/lox) ✔️ (maintained by @marcuscaisey)
@@ -256,6 +257,7 @@
 - [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
 - [x] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) ✔️ (maintained by @mikehaertl)
 - [x] [pic](https://github.com/smoeding/tree-sitter-pic) 🗸 (maintained by @smoeding)
+- [x] [pint](https://github.com/essential-contributions/tree-sitter-pint) ✔️ (maintained by @mitchmindtree)
 - [x] [pioasm](https://github.com/leo60228/tree-sitter-pioasm) ✔️ (maintained by @leo60228)
 - [x] [po](https://github.com/tree-sitter-grammars/tree-sitter-po) ✔️ (maintained by @amaanq)
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
