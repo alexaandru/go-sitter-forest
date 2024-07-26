@@ -26,11 +26,19 @@
 ; Attributes
 
 (attributes
-  attr: (_ (tuple_list
+  (tuple_sq (tuple_list
     item: (complex_identifier (identifier) @function.macro))))
 
 (attributes
-  attr: (_ (tuple_list
+  (tuple (tuple_list
+    item: (complex_identifier (identifier) @function.macro))))
+
+(attributes
+  (tuple_sq (tuple_list
+    item: (ref_identifier (complex_identifier (identifier) @function.macro)))))
+
+(attributes
+  (tuple (tuple_list
     item: (ref_identifier (complex_identifier (identifier) @function.macro)))))
 
 (dot_expression

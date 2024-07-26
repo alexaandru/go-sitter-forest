@@ -24,6 +24,8 @@
 
 (moddef name: (ident) @function)
 (type) @type
+(uniondef name: (ident) @type)
+(structdef name: (ident) @type)
 (type_word "Word" @type.builtin (nat) @number)
 (type_clock) @type.builtin
 (incoming name: (ident) @variable)

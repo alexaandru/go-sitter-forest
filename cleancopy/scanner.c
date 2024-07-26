@@ -761,7 +761,9 @@ static void emit_token(
     } else if (token == TOKEN_NODE_END) {
         assert(scanner->context_stack->size > 0);
         assert(!scanner->pending_embed_node);
-        assert(scanner->pending_list_status == LSTAT_NO_LIST);
+        // Note: this is actually NOT true; we might have set it to something
+        // if we're de-indenting directly into the start of a list
+        // assert(scanner->pending_list_status == LSTAT_NO_LIST);
         Context *context_to_end = array_pop(scanner->context_stack);
         assert(context_to_end->list_status == LSTAT_NO_LIST);
         ts_free(context_to_end);
@@ -2070,56 +2072,252 @@ static void schedule_indentation_decreased(
             // In this case we don't even need to worry about list stuff; it's
             // not possible!
             if (context_to_check == NULL) {
-                schedule_token(
-                    scanner,
-                    scan_state,
-                    TOKEN_NODE_CONTINUE,
-                    0,
-                    true);
+                debug("... Detected de-intentation from a node into the root node\n");
 
                 if (
                     marker_detection != NULL && marker_detection->detected
-                    && marker_detection->marker == MARKER_ANNOTATION
                 ) {
-                    schedule_token(
-                        scanner,
-                        scan_state,
-                        TOKEN_MARKER_ANNOTATION,
-                        2,
-                        false);
-                }
-
-            // Here, though, all we can say is that there IS still a context;
-            // we don't know yet if it's a list or a regular node
-            } else {
-                // Node continues only consume the node indentation, so we
-                // still don't need to check about the list yet. BUT, be
-                // careful: 
-                schedule_token(
-                    scanner,
-                    scan_state,
-                    TOKEN_NODE_CONTINUE,
-                    context_to_check->node_level
-                        * scanner->indentation_char_repetitions,
-                    false);
-
-                if (context_to_check->list_status == LSTAT_NO_LIST) {
-                    if (
-                        marker_detection != NULL && marker_detection->detected
-                        && marker_detection->marker == MARKER_ANNOTATION
-                    ) {
+                    if (marker_detection->marker == MARKER_ANNOTATION){
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_NODE_CONTINUE,
+                            0,
+                            false);
                         schedule_token(
                             scanner,
                             scan_state,
                             TOKEN_MARKER_ANNOTATION,
                             2,
                             false);
+
+                    } else if (marker_detection->marker == MARKER_NODE_DEF){
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_NODE_CONTINUE,
+                            0,
+                            false);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_NODE_DEF,
+                            1,
+                            false);
+
+                    } else if (marker_detection->marker == MARKER_OL){
+                        scanner->pending_list_status = LSTAT_OL;
+
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_LIST_BEGIN,
+                            0,
+                            true);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_NODE_CONTINUE,
+                            0,
+                            false);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_LIST_CONTINUE,
+                            // By definition, we're starting a new list, so we know this is
+                            // a zero
+                            0,
+                            false);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_MARKER_OL_INDEX,
+                            marker_detection->marker_payload_charcount,
+                            false);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_MARKER_OL,
+                            2,
+                            false);
+
+                    } else {
+                        assert(marker_detection->marker == MARKER_UNOL);
+                        scanner->pending_list_status = LSTAT_UNOL;
+
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_LIST_BEGIN,
+                            0,
+                            true);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_NODE_CONTINUE,
+                            0,
+                            false);
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_LIST_CONTINUE,
+                            // By definition, we're starting a new list, so we know this is
+                            // a zero
+                            0,
+                            false);
+                        // And finally, the list marker and then we can get
+                        // on with our lives
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_MARKER_UNOL,
+                            2,
+                            false);
                     }
 
-                // That's the node continuation, but we might still have some
-                // LIST continuations (and also maybe markers!) depending on what
-                // the last context we found was.
                 } else {
+                    debug("... No marker detected.\n");
+                    schedule_token(
+                        scanner,
+                        scan_state,
+                        TOKEN_NODE_CONTINUE,
+                        0,
+                        false);
+                }
+
+            // Here, though, all we can say is that there IS still a context;
+            // we don't know yet if it's a list or a regular node
+            } else {
+                // De-indenting from a regular node. 
+                if (context_to_check->list_status == LSTAT_NO_LIST) {
+                    debug("... Detected de-indentation from a node into context\n");
+                    if (
+                        marker_detection != NULL && marker_detection->detected
+                    ){
+                        if (marker_detection->marker == MARKER_ANNOTATION){
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_NODE_CONTINUE,
+                                context_to_check->node_level
+                                    * scanner->indentation_char_repetitions,
+                                false);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_MARKER_ANNOTATION,
+                                2,
+                                false);
+
+                        } else if (marker_detection->marker == MARKER_NODE_DEF){
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_NODE_CONTINUE,
+                                context_to_check->node_level
+                                    * scanner->indentation_char_repetitions,
+                                false);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_NODE_DEF,
+                                1,
+                                false);
+
+                        } else if (marker_detection->marker == MARKER_OL){
+                            scanner->pending_list_status = LSTAT_OL;
+
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_LIST_BEGIN,
+                                0,
+                                true);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_NODE_CONTINUE,
+                                context_to_check->node_level
+                                    * scanner->indentation_char_repetitions,
+                                false);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_LIST_CONTINUE,
+                                // By definition, we're starting a new list, so we know this is
+                                // a zero
+                                0,
+                                false);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_MARKER_OL_INDEX,
+                                marker_detection->marker_payload_charcount,
+                                false);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_MARKER_OL,
+                                2,
+                                false);
+
+                        } else {
+                            assert(marker_detection->marker == MARKER_UNOL);
+                            scanner->pending_list_status = LSTAT_UNOL;
+
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_LIST_BEGIN,
+                                0,
+                                true);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_NODE_CONTINUE,
+                                context_to_check->node_level
+                                    * scanner->indentation_char_repetitions,
+                                false);
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_LIST_CONTINUE,
+                                // By definition, we're starting a new list, so we know this is
+                                // a zero
+                                0,
+                                false);
+                            // And finally, the list marker and then we can get
+                            // on with our lives
+                            schedule_token(
+                                scanner,
+                                scan_state,
+                                TOKEN_MARKER_UNOL,
+                                2,
+                                false);
+                        }
+                    } else {
+                        debug("... No marker detected.\n");
+                        schedule_token(
+                            scanner,
+                            scan_state,
+                            TOKEN_NODE_CONTINUE,
+                            context_to_check->node_level
+                                * scanner->indentation_char_repetitions,
+                            false);
+                    }
+
+                // De-indenting from a list. we might still have some
+                // LIST continuations (and also maybe markers!) depending on what
+                // the last context we found was (ie, the new top of the stack)
+                } else {
+                    debug("... Detected de-indentation from a list into context\n");
+                    schedule_token(
+                        scanner,
+                        scan_state,
+                        TOKEN_NODE_CONTINUE,
+                        context_to_check->node_level
+                            * scanner->indentation_char_repetitions,
+                        false);
                     schedule_token(
                         scanner,
                         scan_state,
@@ -2819,6 +3017,12 @@ static void peek_and_schedule_start_of_line(
     // null active_context!
     } else {
         marker_detection = detect_and_advance_through_SoL_marker(lexer, scan_state);
+        if (marker_detection != NULL) {
+            debug(
+                "Marker (detected=%d): detection %d\n",
+                marker_detection->detected, marker_detection->marker);
+        }
+
         // These can't do anything more than detection, because we might need
         // to reorder some empty lines first
         // Note that these aren't completely trivial because we have embeddings

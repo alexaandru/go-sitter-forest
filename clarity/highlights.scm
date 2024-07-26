@@ -11,8 +11,6 @@
 ] @number
 (bool_lit) @constant.builtin
 
-(constant) @constant
-
 ; Type
 [
   (native_type)

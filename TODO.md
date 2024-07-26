@@ -58,6 +58,8 @@ the cleanest (and simplest) way forward.
 
 ## Filetype Detection
 
+- cross verify our filetype.json against each parsers' own `package.json` -> `tree-sitter`
+  -> `file-types` list, automated of course;
 - MAYBE add a way to resolve file extension conflicts? That's a big MAYBE, we
   already have support for modeline which can control that on an individual file
   bases and projects using this library can make use of `forest.RegisterLanguage()`

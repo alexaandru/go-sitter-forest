@@ -378,15 +378,15 @@
   },
   {
     "reference": "main",
-    "revision": "e9164f18ddbc820149d7aa16eefafdde3543a8f2",
-    "grammarSha": "9ea4bb4e5b33712988d70d7cbbd491ea45c1efb29ddd49bd00abed42edd699ad",
+    "revision": "13fc552fd016f26ad1d16b7f839d55af0d90a775",
+    "grammarSha": "d433d09d09cdedd238b4ea520e61639b600c20c3cd70a2a5f2f64e7d558e0f99",
     "language": "clarity",
     "url": "https://github.com/xlittlerag/tree-sitter-clarity",
     "maintainedBy": "@xlittlerag"
   },
   {
     "reference": "main",
-    "revision": "75a096ec6a037bd7dcaf70d1a8daca31eb951dda",
+    "revision": "80bada3ad73aa32d62c13f2bc7ad5e544c5d6d34",
     "grammarSha": "5f925df806afef4925f304795c9451c8c01f4cd84fdf0a9dcd75f302969ff12f",
     "language": "cleancopy",
     "url": "https://github.com/Taev-dev/tree-sitter-cleancopy",
@@ -721,8 +721,8 @@
   },
   {
     "reference": "main",
-    "revision": "4f0ef72a605e45566e6f29433f848a1b2aacd0e1",
-    "grammarSha": "c2bb077bb46a71ba8755ca0aff9d8af6063d9794ce1073f5f12496a717de6e35",
+    "revision": "a601bd0e718000db8358c279534763d6fccf7bc5",
+    "grammarSha": "f3751f85b070650bb1b3e766e29f4937d09f77b4817c5264ba3a6bfd7c3ad575",
     "language": "dune",
     "url": "https://github.com/emillon/tree-sitter-dune",
     "maintainedBy": "@emillon"
@@ -1090,8 +1090,8 @@
   },
   {
     "reference": "main",
-    "revision": "84fa6b0d53b6dd9414797e659923719799e3b0a8",
-    "grammarSha": "5d64dbcb9986c00baf1804fb9088d85a6ef540b16ffd5646393e81e50379744a",
+    "revision": "426e67087fd62be5f4533581b5916b2cf010fb5b",
+    "grammarSha": "04e0a37ff81dcbceb2f6808def603e7a4a4e13b8ed31109d029fe4415c04f96b",
     "language": "gleam",
     "url": "https://github.com/gleam-lang/tree-sitter-gleam",
     "maintainedBy": "@amaanq",
@@ -1490,8 +1490,8 @@
   },
   {
     "reference": "master",
-    "revision": "e0fb8591d0acbb195d190d644140f821671f0011",
-    "grammarSha": "205d599638e6d18b09368cc40b315c73300e151201ef606840546dd7993d9287",
+    "revision": "1a6683f6809f7bc630f10fcad7d9ac6471deb706",
+    "grammarSha": "669861e1883da1d9acaead02ff667bc2babbb1181dce64465181aa6264356a7b",
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa"
@@ -1645,8 +1645,8 @@
   },
   {
     "reference": "main",
-    "revision": "666a1f1fcc7f6ac802c6f447698881ea4ddbb659",
-    "grammarSha": "b258e963ef9883b464a33f87f1fcf8e441ac564c2b2912111c705a96a9947588",
+    "revision": "e641329e178fc1ef74442ed66e94b0ab1134ff88",
+    "grammarSha": "53250835ec090f5692e676f9fc794834709fadbda9c07ef3214cc0fbed058ad3",
     "language": "jule",
     "url": "https://github.com/TheLooped/tree-sitter-jule",
     "maintainedBy": "@TheLooped"
@@ -2588,7 +2588,7 @@
   },
   {
     "reference": "main",
-    "revision": "a052a54151ca5a746314dc5f93411ef537eea1cc",
+    "revision": "3e4d42ea9a84b257e5c2548d7d8575eba7f60c11",
     "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
@@ -3037,7 +3037,7 @@
   },
   {
     "reference": "main",
-    "revision": "b4f846202badb9b515f279d0cd8709f68339ccd6",
+    "revision": "3f2001f3f4575f2d37472d15f51a876177c1b12d",
     "grammarSha": "ff9561b0004b928a370a8f3a5d6b156fa4fbaae4854e75966967d7fd79d3e891",
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
@@ -3207,7 +3207,7 @@
   },
   {
     "reference": "master",
-    "revision": "a478beb76be72fa8f305f5fe9cc6141ac91b91a4",
+    "revision": "4f897d5e3f0e38bf8fbb55e8f39dc97d2bc2229e",
     "grammarSha": "daf4b45c0f8192979d80b8fcb62a7f8c09b8d3dca71d9c7e2b9236f09b3281a6",
     "language": "systemverilog",
     "url": "https://github.com/zhangwwpeng/tree-sitter-systemverilog",
@@ -3627,8 +3627,8 @@
   },
   {
     "reference": "master",
-    "revision": "0b00521715c6a565b9bcf5248cd8126601182918",
-    "grammarSha": "fa2390748e0a5ad41e302e37cf899ceada40af91556a137f081d998f7ea764dc",
+    "revision": "446c0c36daae7e552d969c60fec917e5c2b85b9b",
+    "grammarSha": "1ebd2388886b959574f350a6ec7fe9761fb3ca022fae1df859ffa26f310cd8b3",
     "language": "virdant",
     "url": "https://github.com/maloneymr/tree-sitter-virdant",
     "maintainedBy": "@maloneymr"
