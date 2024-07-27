@@ -1,6 +1,6 @@
 # 389 Supported Parsers
 
-13 pending, 4 skipped regeneration, 27 missing queries
+13 pending, 4 skipped regeneration, 26 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -8,7 +8,7 @@
 - [x] [abl](https://github.com/usagi-coffee/tree-sitter-abl) 🗸 (maintained by @jkbz64)
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️ (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️ (maintained by @Decodetalkers)
-- [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) 🗸 (maintained by @Riley-Kilgore)
+- [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) ✔️ (maintained by @Riley-Kilgore)
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)

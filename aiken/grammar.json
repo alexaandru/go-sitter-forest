@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "d6465dc7887873dadd828c5522f3db59274f9726",
-  "grammarSha": "6a49124ddd173690d8097311557c8c644ace171256a335ed74b907002b1f6019",
+  "revision": "aa7ebdda5940c4481389e3e804346e41cabb4266",
+  "grammarSha": "bd150000b13d5c56b3f15cee792429ecfef60fa31c5a1bb85269b938b85e5984",
   "language": "aiken",
   "url": "https://github.com/aiken-lang/tree-sitter-aiken",
   "maintainedBy": "@Riley-Kilgore"

@@ -4,5 +4,6 @@
   "grammarSha": "53250835ec090f5692e676f9fc794834709fadbda9c07ef3214cc0fbed058ad3",
   "language": "jule",
   "url": "https://github.com/TheLooped/tree-sitter-jule",
-  "maintainedBy": "@TheLooped"
+  "maintainedBy": "@TheLooped",
+  "skipUpdate": true
 }

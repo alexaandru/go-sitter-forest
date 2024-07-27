@@ -373,6 +373,11 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 			default:
 				replMap[file] = base
 			}
+		case "lat":
+			if file == "./grammar_maker.js" {
+				file = "./grammar_maker.ts"
+				base = "grammar_maker.ts"
+			}
 		default:
 			replMap[file] = base
 		}
