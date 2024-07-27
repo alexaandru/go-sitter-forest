@@ -7,7 +7,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/abl v1.5.100
 	github.com/alexaandru/go-sitter-forest/ada v1.5.100
 	github.com/alexaandru/go-sitter-forest/agda v1.5.100
-	github.com/alexaandru/go-sitter-forest/aiken v1.5.100
+	github.com/alexaandru/go-sitter-forest/aiken v1.5.101
 	github.com/alexaandru/go-sitter-forest/amber v1.5.101
 	github.com/alexaandru/go-sitter-forest/angular v1.5.102
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.5.100
@@ -21,7 +21,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bash v1.5.101
 	github.com/alexaandru/go-sitter-forest/bass v1.5.100
 	github.com/alexaandru/go-sitter-forest/beancount v1.5.100
-	github.com/alexaandru/go-sitter-forest/bend v1.5.103
+	github.com/alexaandru/go-sitter-forest/bend v1.5.104
 	github.com/alexaandru/go-sitter-forest/bibtex v1.5.100
 	github.com/alexaandru/go-sitter-forest/bicep v1.5.100
 	github.com/alexaandru/go-sitter-forest/bitbake v1.5.100
@@ -32,7 +32,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
-	github.com/alexaandru/go-sitter-forest/ca65 v1.5.107
+	github.com/alexaandru/go-sitter-forest/ca65 v1.5.108
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
 	github.com/alexaandru/go-sitter-forest/calc v1.5.100
 	github.com/alexaandru/go-sitter-forest/capnp v1.5.100
@@ -76,7 +76,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dotenv v1.5.100
 	github.com/alexaandru/go-sitter-forest/doxygen v1.5.100
 	github.com/alexaandru/go-sitter-forest/dtd v1.5.100
-	github.com/alexaandru/go-sitter-forest/dune v1.5.102
+	github.com/alexaandru/go-sitter-forest/dune v1.5.103
 	github.com/alexaandru/go-sitter-forest/earthfile v1.5.100
 	github.com/alexaandru/go-sitter-forest/ebnf v1.5.100
 	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.100
@@ -134,7 +134,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gpg v1.5.100
 	github.com/alexaandru/go-sitter-forest/graphql v1.5.100
 	github.com/alexaandru/go-sitter-forest/gren v1.5.100
-	github.com/alexaandru/go-sitter-forest/groovy v1.5.100
+	github.com/alexaandru/go-sitter-forest/groovy v1.5.101
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.100
 	github.com/alexaandru/go-sitter-forest/hack v1.5.100
 	github.com/alexaandru/go-sitter-forest/haml v1.5.100
@@ -243,8 +243,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/pem v1.5.100
 	github.com/alexaandru/go-sitter-forest/perl v1.5.101
 	github.com/alexaandru/go-sitter-forest/pgn v1.5.100
-	github.com/alexaandru/go-sitter-forest/php v1.5.100
-	github.com/alexaandru/go-sitter-forest/php_only v1.5.100
+	github.com/alexaandru/go-sitter-forest/php v1.5.101
+	github.com/alexaandru/go-sitter-forest/php_only v1.5.101
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
 	github.com/alexaandru/go-sitter-forest/pic v1.5.102
 	github.com/alexaandru/go-sitter-forest/pint v1.5.101
