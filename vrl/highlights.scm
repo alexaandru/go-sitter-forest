@@ -8,14 +8,14 @@
 
 [
  (timestamp)
-] @constant
+] @string.special
 
 (closure_variables
   "|" @punctuation.bracket)
 
 (integer) @number
 
-(float) @number
+(float) @number.float
 
 [
  (string)
@@ -88,7 +88,6 @@
  "??"
  "|"
  "!"
- "."
 ] @operator
 
 [

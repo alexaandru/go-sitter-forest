@@ -142,8 +142,8 @@
   },
   {
     "reference": "main",
-    "revision": "49e2207594c98ea44d83ed6ea052f482f6b8c81e",
-    "grammarSha": "0c37d30a99b544062470f09e98f5fe13246ee684b06a588b213dde5a29794b38",
+    "revision": "432b8b0093df8fda989c262073aebe10a069132e",
+    "grammarSha": "6a32c9fb7b8db0576286f589b35e13ac2a85af0fa723e8c95e79988ff212a5b8",
     "language": "awa5_rs",
     "url": "https://github.com/liraymond04/tree-sitter-awa5_rs",
     "maintainedBy": "@liraymond04"
@@ -959,7 +959,7 @@
   },
   {
     "reference": "main",
-    "revision": "c28a123c7f615c2b4ed0dee51a25a96c6f1ce5f4",
+    "revision": "5bbf070eb9d7259b71f646550fa27222276f7ec6",
     "grammarSha": "783eed0caf226b7b85496409cdf458351372c444bd0d5bf681b378d5fa4481f7",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -2538,8 +2538,8 @@
   },
   {
     "reference": "main",
-    "revision": "d8bc22c007825d3af3d62b4326f9d8f9ca529974",
-    "grammarSha": "3460c09c83fcfd15ef479d826c514abf2255a6f572cd97e00216ca882a377584",
+    "revision": "93c69d2f84d8a167c0a3f4a8d51ccefe365a4dc8",
+    "grammarSha": "d0ddfbf6440077e27f38252e83898314fca8acf68fd7771bb580197ed10f4803",
     "language": "problog",
     "url": "https://codeberg.org/foxy/tree-sitter-prolog",
     "maintainedBy": "@foxyseta",
@@ -2547,8 +2547,8 @@
   },
   {
     "reference": "main",
-    "revision": "d8bc22c007825d3af3d62b4326f9d8f9ca529974",
-    "grammarSha": "3619c89c53644f5d792841f3524930d5b9d38b64ecffe3eec130b397492fc22a",
+    "revision": "93c69d2f84d8a167c0a3f4a8d51ccefe365a4dc8",
+    "grammarSha": "ec667b76436719cb657e091772187aa15cc96825377a8146b3441f7fadce9b74",
     "language": "prolog",
     "url": "https://codeberg.org/foxy/tree-sitter-prolog",
     "maintainedBy": "@foxyseta",
@@ -3730,8 +3730,8 @@
   },
   {
     "reference": "main",
-    "revision": "94370f1948567c9ae5983397b73a80d8601bf5db",
-    "grammarSha": "9fbf6a467cfff7fb6f05421fc3a9c7623b252bb83140e355bd49fe2cf1907c20",
+    "revision": "0e1d5261c79d2bf91cb3a3834b9ef6e3ead15075",
+    "grammarSha": "0350ca410e2bb792da4629ebe7af689789024878f67c95f75e4ff45d1f925974",
     "language": "vrl",
     "url": "https://github.com/belltoy/tree-sitter-vrl",
     "maintainedBy": "@belltoy"
