@@ -1,6 +1,6 @@
-# 390 Supported Parsers
+# 399 Supported Parsers
 
-13 pending, 4 skipped regeneration, 26 missing queries
+13 pending, 4 skipped regeneration, 28 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -13,11 +13,13 @@
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
+- [x] [applesoft](https://github.com/dfgordon/tree-sitter-applesoft) ✔️ (maintained by @dfgordon)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️ (maintained by @ObserverOfTime)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) ✔️ (maintained by @RubixDev)
 - [x] [astro](https://github.com/virchau13/tree-sitter-astro) ✔️ (maintained by @virchau13)
 - [x] [august](https://github.com/ScratchCat458/tree-sitter-august) ✔️ (maintained by @ScratchCat458)
 - [x] [authzed](https://github.com/mleonidas/tree-sitter-authzed) ✔️ (maintained by @mattpolzin)
+- [x] [awa5_rs](https://github.com/liraymond04/tree-sitter-awa5_rs) ✔️ (maintained by @liraymond04)
 - [x] [awk](https://github.com/Beaglefoot/tree-sitter-awk) ✔️ (maintained by @Beaglefoot)
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) ✔️ (maintained by @TravonteD)
 - [x] [bass](https://github.com/vito/tree-sitter-bass) ✔️ (maintained by @amaanq)
@@ -85,6 +87,7 @@
 - [x] [editorconfig](https://github.com/ValdezFOmar/tree-sitter-editorconfig) ✔️ (maintained by @ValdezFOmar)
 - [x] [eds](https://github.com/uyha/tree-sitter-eds) ✔️ (maintained by @uyha)
 - [x] [eex](https://github.com/connorlay/tree-sitter-eex) ✔️ (maintained by @connorlay)
+- [x] [effekt](https://github.com/leonfuss/tree-sitter-effekt) 🗸 (maintained by @leonfuss)
 - [x] [elisp](https://github.com/Wilfred/tree-sitter-elisp) ✔️ (maintained by @Wilfred)
 - [x] [elixir](https://github.com/elixir-lang/tree-sitter-elixir) ✔️ (maintained by @connorlay)
 - [x] [elm](https://github.com/elm-tooling/tree-sitter-elm) ✔️ (maintained by @zweimach)
@@ -169,6 +172,7 @@
 - [x] [ini](https://github.com/justinmk/tree-sitter-ini) ✔️ (maintained by @theHamsta)
 - [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr)
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
+- [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [ ] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) (maintained by @y4cer)
@@ -231,6 +235,7 @@
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️ (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️ (maintained by @ObserverOfTime)
 - [x] [nesfab](https://github.com/hnd2/tree-sitter-nesfab) ✔️ (maintained by @hnd2)
+- [x] [nftables](https://github.com/EinYakAmNil/tree-sitter-nftables) 🗸 (maintained by @EinYakAmNil)
 - [x] [nginx](https://github.com/opa-oz/tree-sitter-nginx) ✔️ (maintained by @opa-oz)
 - [x] [nickel](https://github.com/nickel-lang/tree-sitter-nickel) ✔️ (maintained by @ErinvanderVeen, @yannham)
 - [x] [nim](https://github.com/alaviss/tree-sitter-nim) ✔️ (maintained by @aMOPel; high memory usage (7GB))
@@ -253,6 +258,7 @@
 - [x] [pdxinfo](https://github.com/notpeter/tree-sitter-pdxinfo) ✔️ (maintained by @notpeter)
 - [x] [pem](https://github.com/tree-sitter-grammars/tree-sitter-pem) ✔️ (maintained by @ObserverOfTime)
 - [x] [perl](https://github.com/tree-sitter-perl/tree-sitter-perl) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
+- [x] [perm](https://github.com/theoriginalstove/tree-sitter-perm) ✔️ (maintained by @theoriginalstove)
 - [x] [pgn](https://github.com/rolandwalker/tree-sitter-pgn) ✔️ (maintained by @rolandwalker)
 - [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
 - [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
@@ -303,9 +309,11 @@
 - [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️ (maintained by @nat-418)
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️ (maintained by @amaanq)
 - [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd)
+- [x] [rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)
 - [x] [rtx](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️ (maintained by @TravonteD)
 - [x] [rust](https://github.com/tree-sitter/tree-sitter-rust) ✔️ (maintained by @amaanq)
+- [x] [rust_with_rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)
 - [x] [scala](https://github.com/tree-sitter/tree-sitter-scala) ✔️ (maintained by @stevanmilic)
 - [x] [scfg](https://git.sr.ht/~rockorager/tree-sitter-scfg) ✔️ (maintained by @WhyNotHugo)
 - [x] [scheme](https://github.com/6cdh/tree-sitter-scheme) ✔️ (maintained by @6cdh)
@@ -388,6 +396,7 @@
 - [x] [vimdoc](https://github.com/neovim/tree-sitter-vimdoc) ✔️ (maintained by @clason)
 - [x] [virdant](https://github.com/maloneymr/tree-sitter-virdant) ✔️ (maintained by @maloneymr)
 - [x] [virgil](https://github.com/btwj/tree-sitter-virgil) ✔️ (maintained by @btwj)
+- [x] [vrl](https://github.com/belltoy/tree-sitter-vrl) ✔️ (maintained by @belltoy)
 - [x] [vue](https://github.com/tree-sitter-grammars/tree-sitter-vue) ✔️ (maintained by @WhyNotHugo, @lucario387)
 - [x] [walnut](https://github.com/UserNobody14/tree-sitter-crystal-walnut) 🗸 (maintained by @UserNobody14)
 - [x] [wbproto](https://github.com/acristoffers/tree-sitter-wbproto) ✔️ (maintained by @acristoffers)

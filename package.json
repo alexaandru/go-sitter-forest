@@ -20,6 +20,7 @@
     "tree-sitter-jsonc": "^0.3.0",
     "tree-sitter-php": "0.22.2",
     "tree-sitter-python": "^0.21.0",
+    "tree-sitter-rust": "^0.21.0",
     "tree-sitter-typescript": "^0.20.5",
     "tree-sitter-wgsl": "git://github.com/szebniok/tree-sitter-wgsl.git"
   }

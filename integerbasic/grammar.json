@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "59d0c5f61e9c352584f378109cf364e68490c82e",
+  "grammarSha": "328c98159505d8add853ed85c44787997ce42154e4c1f5643294f446f1f5632a",
+  "language": "integerbasic",
+  "url": "https://github.com/dfgordon/tree-sitter-integerbasic",
+  "maintainedBy": "@dfgordon"
+}

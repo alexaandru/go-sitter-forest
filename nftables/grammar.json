@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "5c76278e9b26d6d8b779ced7cb4f481540841705",
+  "grammarSha": "37b321a30f157f147143a3eb82ba9220683fa0a0fa0ed34a352e209c392d35b9",
+  "language": "nftables",
+  "url": "https://github.com/EinYakAmNil/tree-sitter-nftables",
+  "maintainedBy": "@EinYakAmNil"
+}

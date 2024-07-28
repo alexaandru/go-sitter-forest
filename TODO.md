@@ -58,6 +58,9 @@ the cleanest (and simplest) way forward.
 
 ## Filetype Detection
 
+- there are many languages that don't have file extensions but are injections only
+  languages: we need a mechanism for those as well, and file extension (or file name, etc.)
+  is NOT it;
 - cross verify our filetype.json against each parsers' own `package.json` -> `tree-sitter`
   -> `file-types` list, automated of course;
 - MAYBE add a way to resolve file extension conflicts? That's a big MAYBE, we

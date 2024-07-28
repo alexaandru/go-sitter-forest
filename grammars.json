@@ -83,6 +83,17 @@
     "srcRoot": "apex"
   },
   {
+    "reference": "main",
+    "revision": "6888bc10422f0913e6a0779781cdcb6b7c4dc06a",
+    "grammarSha": "a211c9a29326bcf1771bb5aa9daf0d34b15b7e21a7d7bb795a9ea78342b01301",
+    "language": "applesoft",
+    "url": "https://github.com/dfgordon/tree-sitter-applesoft",
+    "maintainedBy": "@dfgordon",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "afb34b2c65f507932c5c6ddbf0d5a9ca6a772f2f",
     "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
@@ -128,6 +139,14 @@
     "language": "authzed",
     "url": "https://github.com/mleonidas/tree-sitter-authzed",
     "maintainedBy": "@mattpolzin"
+  },
+  {
+    "reference": "main",
+    "revision": "49e2207594c98ea44d83ed6ea052f482f6b8c81e",
+    "grammarSha": "0c37d30a99b544062470f09e98f5fe13246ee684b06a588b213dde5a29794b38",
+    "language": "awa5_rs",
+    "url": "https://github.com/liraymond04/tree-sitter-awa5_rs",
+    "maintainedBy": "@liraymond04"
   },
   {
     "reference": "master",
@@ -770,6 +789,14 @@
     "language": "eex",
     "url": "https://github.com/connorlay/tree-sitter-eex",
     "maintainedBy": "@connorlay"
+  },
+  {
+    "reference": "main",
+    "revision": "998a8f8bf852c359b24a72813caa0cfbb1417ca9",
+    "grammarSha": "c50d8a457db71519fd2616c69c722642f55bd2c9fa8fffd3c85846a2ba709adc",
+    "language": "effekt",
+    "url": "https://github.com/leonfuss/tree-sitter-effekt",
+    "maintainedBy": "@leonfuss"
   },
   {
     "reference": "main",
@@ -1545,6 +1572,14 @@
   },
   {
     "reference": "master",
+    "revision": "59d0c5f61e9c352584f378109cf364e68490c82e",
+    "grammarSha": "328c98159505d8add853ed85c44787997ce42154e4c1f5643294f446f1f5632a",
+    "language": "integerbasic",
+    "url": "https://github.com/dfgordon/tree-sitter-integerbasic",
+    "maintainedBy": "@dfgordon"
+  },
+  {
+    "reference": "master",
     "revision": "9b2f9aec2106b94b4e099fe75e73ebd8ae707c04",
     "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
     "language": "ispc",
@@ -2123,6 +2158,14 @@
     ]
   },
   {
+    "reference": "master",
+    "revision": "5c76278e9b26d6d8b779ced7cb4f481540841705",
+    "grammarSha": "37b321a30f157f147143a3eb82ba9220683fa0a0fa0ed34a352e209c392d35b9",
+    "language": "nftables",
+    "url": "https://github.com/EinYakAmNil/tree-sitter-nftables",
+    "maintainedBy": "@EinYakAmNil"
+  },
+  {
     "reference": "main",
     "revision": "281d184b8240b2b22670b8907b57b6d6842db6f3",
     "grammarSha": "e7fa39a2755a6047ce0714342cd6b4e3aeadb1c8c72922a4b4930c8ac39fed0f",
@@ -2346,6 +2389,14 @@
       "scanner.c",
       "tsp_unicode.h"
     ]
+  },
+  {
+    "reference": "main",
+    "revision": "a566eb3e26e926c744dce9b1aee6cf1dab2ad136",
+    "grammarSha": "a964a653c5a05c7160c53296c03574b7071d0caac4b851f9f436fc61170d045b",
+    "language": "perm",
+    "url": "https://github.com/theoriginalstove/tree-sitter-perm",
+    "maintainedBy": "@theoriginalstove"
   },
   {
     "reference": "master",
@@ -2831,6 +2882,18 @@
     "pending": true
   },
   {
+    "reference": "main",
+    "revision": "07a8e3b9bda09b648a6ccaca09e15dea3adf956f",
+    "grammarSha": "21651304588f6094f6fed109e3a1ea5b2e18382d6e7496cf5f5e07c78a568ab5",
+    "language": "rstml",
+    "url": "https://github.com/rayliwell/tree-sitter-rstml",
+    "maintainedBy": "@rayliwell",
+    "srcRoot": "rstml",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
     "grammarSha": "a08c0b2984516c9864d84274624b7afe9e03f89cb956c72e41ecead685e05e48",
@@ -2857,6 +2920,18 @@
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
     "maintainedBy": "@amaanq",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
+    "revision": "07a8e3b9bda09b648a6ccaca09e15dea3adf956f",
+    "grammarSha": "cb720e55e60bcf11606423f01730177b43c6c5e362e325fbba4845b4e0b57509",
+    "language": "rust_with_rstml",
+    "url": "https://github.com/rayliwell/tree-sitter-rstml",
+    "maintainedBy": "@rayliwell",
+    "srcRoot": "rust_with_rstml",
     "files": [
       "scanner.c"
     ]
@@ -3652,6 +3727,14 @@
     "language": "virgil",
     "url": "https://github.com/btwj/tree-sitter-virgil",
     "maintainedBy": "@btwj"
+  },
+  {
+    "reference": "main",
+    "revision": "94370f1948567c9ae5983397b73a80d8601bf5db",
+    "grammarSha": "9fbf6a467cfff7fb6f05421fc3a9c7623b252bb83140e355bd49fe2cf1907c20",
+    "language": "vrl",
+    "url": "https://github.com/belltoy/tree-sitter-vrl",
+    "maintainedBy": "@belltoy"
   },
   {
     "reference": "main",

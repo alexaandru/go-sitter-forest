@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "6888bc10422f0913e6a0779781cdcb6b7c4dc06a",
+  "grammarSha": "a211c9a29326bcf1771bb5aa9daf0d34b15b7e21a7d7bb795a9ea78342b01301",
+  "language": "applesoft",
+  "url": "https://github.com/dfgordon/tree-sitter-applesoft",
+  "maintainedBy": "@dfgordon",
+  "files": [
+    "scanner.c"
+  ]
+}

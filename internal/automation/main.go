@@ -514,6 +514,8 @@ func extractDeps(lang string, content []byte) (deps []string) {
 		deps = append(deps, "./grammar/util.js")
 	case "lexc":
 		deps = append(deps, "../tree-sitter-xfst/grammar.js")
+	case "rust_with_rstml", "rstml":
+		deps = append(deps, "../rust.grammar.js")
 	}
 
 	return

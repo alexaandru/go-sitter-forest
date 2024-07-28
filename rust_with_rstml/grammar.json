@@ -1,0 +1,12 @@
+{
+  "reference": "main",
+  "revision": "07a8e3b9bda09b648a6ccaca09e15dea3adf956f",
+  "grammarSha": "cb720e55e60bcf11606423f01730177b43c6c5e362e325fbba4845b4e0b57509",
+  "language": "rust_with_rstml",
+  "url": "https://github.com/rayliwell/tree-sitter-rstml",
+  "maintainedBy": "@rayliwell",
+  "srcRoot": "rust_with_rstml",
+  "files": [
+    "scanner.c"
+  ]
+}
