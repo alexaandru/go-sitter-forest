@@ -25,11 +25,13 @@ import (
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/animationtxt"
 	"github.com/alexaandru/go-sitter-forest/apex"
+	"github.com/alexaandru/go-sitter-forest/applesoft"
 	"github.com/alexaandru/go-sitter-forest/arduino"
 	"github.com/alexaandru/go-sitter-forest/asm"
 	"github.com/alexaandru/go-sitter-forest/astro"
 	"github.com/alexaandru/go-sitter-forest/august"
 	"github.com/alexaandru/go-sitter-forest/authzed"
+	"github.com/alexaandru/go-sitter-forest/awa5_rs"
 	"github.com/alexaandru/go-sitter-forest/awk"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
@@ -95,6 +97,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/editorconfig"
 	"github.com/alexaandru/go-sitter-forest/eds"
 	"github.com/alexaandru/go-sitter-forest/eex"
+	"github.com/alexaandru/go-sitter-forest/effekt"
 	"github.com/alexaandru/go-sitter-forest/elisp"
 	"github.com/alexaandru/go-sitter-forest/elixir"
 	"github.com/alexaandru/go-sitter-forest/elm"
@@ -177,6 +180,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ini"
 	"github.com/alexaandru/go-sitter-forest/ink"
 	"github.com/alexaandru/go-sitter-forest/inko"
+	"github.com/alexaandru/go-sitter-forest/integerbasic"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 	"github.com/alexaandru/go-sitter-forest/ispc"
@@ -235,6 +239,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/muttrc"
 	"github.com/alexaandru/go-sitter-forest/nasm"
 	"github.com/alexaandru/go-sitter-forest/nesfab"
+	"github.com/alexaandru/go-sitter-forest/nftables"
 	"github.com/alexaandru/go-sitter-forest/nginx"
 	"github.com/alexaandru/go-sitter-forest/nickel"
 	"github.com/alexaandru/go-sitter-forest/nim"
@@ -257,6 +262,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pdxinfo"
 	"github.com/alexaandru/go-sitter-forest/pem"
 	"github.com/alexaandru/go-sitter-forest/perl"
+	"github.com/alexaandru/go-sitter-forest/perm"
 	"github.com/alexaandru/go-sitter-forest/pgn"
 	"github.com/alexaandru/go-sitter-forest/php"
 	"github.com/alexaandru/go-sitter-forest/php_only"
@@ -306,9 +312,11 @@ import (
 	"github.com/alexaandru/go-sitter-forest/robots"
 	"github.com/alexaandru/go-sitter-forest/roc"
 	"github.com/alexaandru/go-sitter-forest/ron"
+	"github.com/alexaandru/go-sitter-forest/rstml"
 	"github.com/alexaandru/go-sitter-forest/rtx"
 	"github.com/alexaandru/go-sitter-forest/ruby"
 	"github.com/alexaandru/go-sitter-forest/rust"
+	"github.com/alexaandru/go-sitter-forest/rust_with_rstml"
 	"github.com/alexaandru/go-sitter-forest/scala"
 	"github.com/alexaandru/go-sitter-forest/scfg"
 	"github.com/alexaandru/go-sitter-forest/scheme"
@@ -390,6 +398,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/vimdoc"
 	"github.com/alexaandru/go-sitter-forest/virdant"
 	"github.com/alexaandru/go-sitter-forest/virgil"
+	"github.com/alexaandru/go-sitter-forest/vrl"
 	"github.com/alexaandru/go-sitter-forest/vue"
 	"github.com/alexaandru/go-sitter-forest/walnut"
 	"github.com/alexaandru/go-sitter-forest/wbproto"
@@ -435,11 +444,13 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"angular":            angular.GetLanguage,
 	"animationtxt":       animationtxt.GetLanguage,
 	"apex":               apex.GetLanguage,
+	"applesoft":          applesoft.GetLanguage,
 	"arduino":            arduino.GetLanguage,
 	"asm":                asm.GetLanguage,
 	"astro":              astro.GetLanguage,
 	"august":             august.GetLanguage,
 	"authzed":            authzed.GetLanguage,
+	"awa5_rs":            awa5_rs.GetLanguage,
 	"awk":                awk.GetLanguage,
 	"bash":               bash.GetLanguage,
 	"bass":               bass.GetLanguage,
@@ -505,6 +516,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"editorconfig":       editorconfig.GetLanguage,
 	"eds":                eds.GetLanguage,
 	"eex":                eex.GetLanguage,
+	"effekt":             effekt.GetLanguage,
 	"elisp":              elisp.GetLanguage,
 	"elixir":             elixir.GetLanguage,
 	"elm":                elm.GetLanguage,
@@ -587,6 +599,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"ini":                ini.GetLanguage,
 	"ink":                ink.GetLanguage,
 	"inko":               inko.GetLanguage,
+	"integerbasic":       integerbasic.GetLanguage,
 	"ispc":               ispc.GetLanguage,
 	"janet":              janet.GetLanguage,
 	"java":               java.GetLanguage,
@@ -643,6 +656,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"muttrc":             muttrc.GetLanguage,
 	"nasm":               nasm.GetLanguage,
 	"nesfab":             nesfab.GetLanguage,
+	"nftables":           nftables.GetLanguage,
 	"nginx":              nginx.GetLanguage,
 	"nickel":             nickel.GetLanguage,
 	"nim":                nim.GetLanguage,
@@ -665,6 +679,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"pdxinfo":            pdxinfo.GetLanguage,
 	"pem":                pem.GetLanguage,
 	"perl":               perl.GetLanguage,
+	"perm":               perm.GetLanguage,
 	"pgn":                pgn.GetLanguage,
 	"php":                php.GetLanguage,
 	"php_only":           php_only.GetLanguage,
@@ -714,9 +729,11 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"robots":             robots.GetLanguage,
 	"roc":                roc.GetLanguage,
 	"ron":                ron.GetLanguage,
+	"rstml":              rstml.GetLanguage,
 	"rtx":                rtx.GetLanguage,
 	"ruby":               ruby.GetLanguage,
 	"rust":               rust.GetLanguage,
+	"rust_with_rstml":    rust_with_rstml.GetLanguage,
 	"scala":              scala.GetLanguage,
 	"scfg":               scfg.GetLanguage,
 	"scheme":             scheme.GetLanguage,
@@ -799,6 +816,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"vimdoc":             vimdoc.GetLanguage,
 	"virdant":            virdant.GetLanguage,
 	"virgil":             virgil.GetLanguage,
+	"vrl":                vrl.GetLanguage,
 	"vue":                vue.GetLanguage,
 	"walnut":             walnut.GetLanguage,
 	"wbproto":            wbproto.GetLanguage,
@@ -829,11 +847,13 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"angular":            angular.GetQuery,
 	"animationtxt":       animationtxt.GetQuery,
 	"apex":               apex.GetQuery,
+	"applesoft":          applesoft.GetQuery,
 	"arduino":            arduino.GetQuery,
 	"asm":                asm.GetQuery,
 	"astro":              astro.GetQuery,
 	"august":             august.GetQuery,
 	"authzed":            authzed.GetQuery,
+	"awa5_rs":            awa5_rs.GetQuery,
 	"awk":                awk.GetQuery,
 	"bash":               bash.GetQuery,
 	"bass":               bass.GetQuery,
@@ -899,6 +919,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"editorconfig":       editorconfig.GetQuery,
 	"eds":                eds.GetQuery,
 	"eex":                eex.GetQuery,
+	"effekt":             effekt.GetQuery,
 	"elisp":              elisp.GetQuery,
 	"elixir":             elixir.GetQuery,
 	"elm":                elm.GetQuery,
@@ -981,6 +1002,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ini":                ini.GetQuery,
 	"ink":                ink.GetQuery,
 	"inko":               inko.GetQuery,
+	"integerbasic":       integerbasic.GetQuery,
 	"ispc":               ispc.GetQuery,
 	"janet":              janet.GetQuery,
 	"java":               java.GetQuery,
@@ -1037,6 +1059,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"muttrc":             muttrc.GetQuery,
 	"nasm":               nasm.GetQuery,
 	"nesfab":             nesfab.GetQuery,
+	"nftables":           nftables.GetQuery,
 	"nginx":              nginx.GetQuery,
 	"nickel":             nickel.GetQuery,
 	"nim":                nim.GetQuery,
@@ -1059,6 +1082,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pdxinfo":            pdxinfo.GetQuery,
 	"pem":                pem.GetQuery,
 	"perl":               perl.GetQuery,
+	"perm":               perm.GetQuery,
 	"pgn":                pgn.GetQuery,
 	"php":                php.GetQuery,
 	"php_only":           php_only.GetQuery,
@@ -1108,9 +1132,11 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"robots":             robots.GetQuery,
 	"roc":                roc.GetQuery,
 	"ron":                ron.GetQuery,
+	"rstml":              rstml.GetQuery,
 	"rtx":                rtx.GetQuery,
 	"ruby":               ruby.GetQuery,
 	"rust":               rust.GetQuery,
+	"rust_with_rstml":    rust_with_rstml.GetQuery,
 	"scala":              scala.GetQuery,
 	"scfg":               scfg.GetQuery,
 	"scheme":             scheme.GetQuery,
@@ -1193,6 +1219,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"vimdoc":             vimdoc.GetQuery,
 	"virdant":            virdant.GetQuery,
 	"virgil":             virgil.GetQuery,
+	"vrl":                vrl.GetQuery,
 	"vue":                vue.GetQuery,
 	"walnut":             walnut.GetQuery,
 	"wbproto":            wbproto.GetQuery,
