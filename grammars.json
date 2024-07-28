@@ -172,8 +172,8 @@
   },
   {
     "reference": "main",
-    "revision": "a4742b28f5af1ae671a11cbf8d3884828ded32e6",
-    "grammarSha": "97c69e1a087f736b6b221e2e9af3c2d187fbab57aeec31d2062b1c880d941d15",
+    "revision": "c65d41b701c80febcb0dc62e7703cb446bb283d2",
+    "grammarSha": "0b010c4f8a97e88500e86c6314a1a9e01f2acba43de923749b2b5132f30bc2f5",
     "language": "bend",
     "url": "https://github.com/HigherOrderCO/tree-sitter-bend",
     "maintainedBy": "@edusporto",
@@ -277,8 +277,8 @@
   },
   {
     "reference": "main",
-    "revision": "b6865187f99d5ee40b4cc4c278fc5c5b5baaf219",
-    "grammarSha": "2d564cb1f6feeb2145ac1b8048087ca4407bb5399fe944177032f6a4a20fcb30",
+    "revision": "fe4d6ccb849c8bc42096f9855aba6dc7cdf5d270",
+    "grammarSha": "db0d1e06f05a343b850fdfbdf5ca5345bb6ccba50365a4506826b0abac897fce",
     "language": "ca65",
     "url": "https://github.com/babasbot/tree-sitter-ca65",
     "maintainedBy": "@babasbot"
@@ -576,8 +576,8 @@
   },
   {
     "reference": "main",
-    "revision": "750dde90ed9cdbd82493bc28478d8ab1976b0e9f",
-    "grammarSha": "5dc380c0ca88cf2d34a57113cb918e181a0500c0358ba3eef22bfe8d31cb2fbc",
+    "revision": "f0fb364270b1a5a086b2b6b8cb7eb1a3fb9d9a8e",
+    "grammarSha": "5890f0df8af75012398c7f4a1d3e22b5edea2920e4bbebaabf4c0b1d12de4145",
     "language": "d",
     "url": "https://github.com/gdamore/tree-sitter-d",
     "maintainedBy": "@amaanq",
@@ -1498,8 +1498,8 @@
   },
   {
     "reference": "main",
-    "revision": "3c4c732d824789f46ea95ca55e8a95c82b7830e7",
-    "grammarSha": "a5dc3515e43aeba183aefe1a126d26cb4197f669503078eac45dca1f2acbc466",
+    "revision": "7d10013610bb8cd78fca328edaa9521bb390b602",
+    "grammarSha": "13ee0b4d0410a8cef2af7a928677e2f51c7aa67f0eff31414f0b4e844413358a",
     "language": "idris",
     "url": "https://github.com/kayhide/tree-sitter-idris",
     "maintainedBy": "@kayhide",
@@ -1768,8 +1768,8 @@
   },
   {
     "reference": "master",
-    "revision": "f074e142ade9cdc292346d0484be27f9ebdbc4ea",
-    "grammarSha": "b7e6d086535409192c31af9f822c7cbc6db289c6ada2d22607ecea7f956b9771",
+    "revision": "efe5afdbb59b70214e6d70db5197dc945d5b213e",
+    "grammarSha": "ff2c58416615311d35435b91d0975b787502ecb4fef544a4c49a1b06d42ab59b",
     "language": "latex",
     "url": "https://github.com/latex-lsp/tree-sitter-latex",
     "maintainedBy": "@theHamsta, @clason",
@@ -1900,7 +1900,7 @@
   },
   {
     "reference": "master",
-    "revision": "8cdb5740c4a2aaf5c143cf13dea83500e62ef4bd",
+    "revision": "e1735cf013f63c8df8629d6c68ceefee5c9341fe",
     "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -3165,7 +3165,7 @@
   },
   {
     "reference": "main",
-    "revision": "da2bc416b97ee66fd3c21937222891fb1bd0da5e",
+    "revision": "cec8bf7105e40e82f7e7ddf10586f201701ff84d",
     "grammarSha": "fb67699bc73de08f453cfc0e9669217bb79d38b03f8bec1bc03ae9651682a407",
     "language": "sus",
     "url": "https://github.com/pc2/tree-sitter-sus",
