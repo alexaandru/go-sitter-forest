@@ -560,6 +560,8 @@ github.com/alexaandru/go-sitter-forest/rego v1.5.100 h1:bNGW/cjKtr4yMcA8jL5KR1R9
 github.com/alexaandru/go-sitter-forest/rego v1.5.100/go.mod h1:Saq0KemH+zcWupWEAYtjoU4YDRu7oxZ4gb1RyDlkxLE=
 github.com/alexaandru/go-sitter-forest/requirements v1.5.100 h1:am1YdWEQfpx4mPz+eLuUM6uOEm0X0cgzrchYmMFnFkw=
 github.com/alexaandru/go-sitter-forest/requirements v1.5.100/go.mod h1:MhlBxev5+PkXyknLqyV2SCBrwlwpmKJ5BqkdYpra+io=
+github.com/alexaandru/go-sitter-forest/rescript v1.5.100 h1:uwEXOO7TJO8ZHbiSQFyMg3LHGsAuihFROYElJsfwFTY=
+github.com/alexaandru/go-sitter-forest/rescript v1.5.100/go.mod h1:G/+JKkmtI6uEmkITHBPVIU4IvdeXoMO2VvOuuIUGzX8=
 github.com/alexaandru/go-sitter-forest/risor v1.5.100 h1:X/x3XiN912aS8rvaBeiOU7vseKzxlYj3GazEvB4O0TQ=
 github.com/alexaandru/go-sitter-forest/risor v1.5.100/go.mod h1:Fj7cenSqg7F47j6Kd+F057mN/Y5vj3yMvxQPlJCDYNY=
 github.com/alexaandru/go-sitter-forest/rnoweb v1.5.100 h1:U8tzqUn+SgPeGI/Nsuiu2Mj4OOSBRoVQMrTuXLoHNt0=

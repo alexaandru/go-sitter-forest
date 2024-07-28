@@ -284,6 +284,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/regex v1.5.100
 	github.com/alexaandru/go-sitter-forest/rego v1.5.100
 	github.com/alexaandru/go-sitter-forest/requirements v1.5.100
+	github.com/alexaandru/go-sitter-forest/rescript v1.5.100
 	github.com/alexaandru/go-sitter-forest/risor v1.5.100
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.5.100
 	github.com/alexaandru/go-sitter-forest/robot v1.5.100

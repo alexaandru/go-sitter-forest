@@ -339,6 +339,7 @@
     "readline":           ["readline"],
     "regex":              ["regex"],
     "rego":               ["rego"],
+    "rescript":           ["res", "resi"],
     "risor":              ["risor"],
     "rnoweb":             ["Rnw", "Snw", "rnw", "snw"],
     "robot":              ["resource", "robot"],

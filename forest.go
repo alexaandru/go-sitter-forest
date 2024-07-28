@@ -299,6 +299,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/regex"
 	"github.com/alexaandru/go-sitter-forest/rego"
 	"github.com/alexaandru/go-sitter-forest/requirements"
+	"github.com/alexaandru/go-sitter-forest/rescript"
 	"github.com/alexaandru/go-sitter-forest/risor"
 	"github.com/alexaandru/go-sitter-forest/rnoweb"
 	"github.com/alexaandru/go-sitter-forest/robot"
@@ -706,6 +707,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"regex":              regex.GetLanguage,
 	"rego":               rego.GetLanguage,
 	"requirements":       requirements.GetLanguage,
+	"rescript":           rescript.GetLanguage,
 	"risor":              risor.GetLanguage,
 	"rnoweb":             rnoweb.GetLanguage,
 	"robot":              robot.GetLanguage,
@@ -1099,6 +1101,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"regex":              regex.GetQuery,
 	"rego":               rego.GetQuery,
 	"requirements":       requirements.GetQuery,
+	"rescript":           rescript.GetQuery,
 	"risor":              risor.GetQuery,
 	"rnoweb":             rnoweb.GetQuery,
 	"robot":              robot.GetQuery,
