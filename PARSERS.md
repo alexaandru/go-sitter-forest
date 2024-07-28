@@ -1,4 +1,4 @@
-# 389 Supported Parsers
+# 390 Supported Parsers
 
 13 pending, 4 skipped regeneration, 26 missing queries
 
@@ -295,6 +295,7 @@
 - [x] [regex](https://github.com/tree-sitter/tree-sitter-regex) ✔️ (maintained by @theHamsta)
 - [x] [rego](https://github.com/FallenAngel97/tree-sitter-rego) ✔️ (maintained by @FallenAngel97)
 - [x] [pip requirements](https://github.com/tree-sitter-grammars/tree-sitter-requirements) ✔️ (maintained by @ObserverOfTime)
+- [x] [rescript](https://github.com/rescript-lang/tree-sitter-rescript) ✔️ (maintained by @ribru17)
 - [x] [risor](https://github.com/applejag/tree-sitter-risor) ✔️ (maintained by @applejag)
 - [x] [rnoweb](https://github.com/bamonroe/tree-sitter-rnoweb) ✔️ (maintained by @bamonroe)
 - [x] [robot](https://github.com/Hubro/tree-sitter-robot) ✔️ (maintained by @Hubro)

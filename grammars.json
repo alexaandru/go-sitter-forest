@@ -2744,6 +2744,17 @@
   },
   {
     "reference": "main",
+    "revision": "444c127686714b2358622427c3bdba7eb09021c6",
+    "grammarSha": "5c58eb670ce1e7fea843da05988345c66fbc3103028f87922dffbef299a4f0e4",
+    "language": "rescript",
+    "url": "https://github.com/rescript-lang/tree-sitter-rescript",
+    "maintainedBy": "@ribru17",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "98f7c0d45176925338f91489964e0a0d819477a5",
     "grammarSha": "a2ff693bc0f7ffd4954cf0a940afbff4e06fb78a897f3aafbd1894e67f14057b",
     "language": "risor",
