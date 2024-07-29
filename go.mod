@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.5.100
-	github.com/alexaandru/go-sitter-forest/abl v1.5.100
+	github.com/alexaandru/go-sitter-forest/abl v1.5.101
 	github.com/alexaandru/go-sitter-forest/ada v1.5.100
 	github.com/alexaandru/go-sitter-forest/agda v1.5.100
 	github.com/alexaandru/go-sitter-forest/aiken v1.5.101
@@ -65,7 +65,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/csv v1.5.100
 	github.com/alexaandru/go-sitter-forest/cuda v1.5.100
 	github.com/alexaandru/go-sitter-forest/cue v1.5.100
-	github.com/alexaandru/go-sitter-forest/d v1.5.103
+	github.com/alexaandru/go-sitter-forest/d v1.5.104
 	github.com/alexaandru/go-sitter-forest/dale v1.5.100
 	github.com/alexaandru/go-sitter-forest/dart v1.5.100
 	github.com/alexaandru/go-sitter-forest/dbml v1.5.100
@@ -123,7 +123,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitignore v1.5.101
 	github.com/alexaandru/go-sitter-forest/gleam v1.5.102
 	github.com/alexaandru/go-sitter-forest/glimmer v1.5.100
-	github.com/alexaandru/go-sitter-forest/glint v1.5.100
+	github.com/alexaandru/go-sitter-forest/glint v1.5.101
 	github.com/alexaandru/go-sitter-forest/glsl v1.5.100
 	github.com/alexaandru/go-sitter-forest/gn v1.5.100
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.5.100
@@ -167,7 +167,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/idris v1.5.108
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
-	github.com/alexaandru/go-sitter-forest/ink v1.5.104
+	github.com/alexaandru/go-sitter-forest/ink v1.5.105
 	github.com/alexaandru/go-sitter-forest/inko v1.5.100
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.5.100
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
@@ -225,7 +225,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.100
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.104
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.105
 	github.com/alexaandru/go-sitter-forest/nftables v1.5.100
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.100
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.100
@@ -249,7 +249,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.5.100
 	github.com/alexaandru/go-sitter-forest/pem v1.5.100
 	github.com/alexaandru/go-sitter-forest/perl v1.5.102
-	github.com/alexaandru/go-sitter-forest/perm v1.5.101
+	github.com/alexaandru/go-sitter-forest/perm v1.5.102
 	github.com/alexaandru/go-sitter-forest/pgn v1.5.100
 	github.com/alexaandru/go-sitter-forest/php v1.5.101
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.101
@@ -262,7 +262,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pod v1.5.101
 	github.com/alexaandru/go-sitter-forest/poe_filter v1.5.100
 	github.com/alexaandru/go-sitter-forest/pony v1.5.101
-	github.com/alexaandru/go-sitter-forest/powershell v1.5.101
+	github.com/alexaandru/go-sitter-forest/powershell v1.5.102
 	github.com/alexaandru/go-sitter-forest/printf v1.5.100
 	github.com/alexaandru/go-sitter-forest/prisma v1.5.100
 	github.com/alexaandru/go-sitter-forest/problog v1.5.101
@@ -324,7 +324,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.100
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.5.101
 	github.com/alexaandru/go-sitter-forest/sparql v1.5.101
-	github.com/alexaandru/go-sitter-forest/spicy v1.5.100
+	github.com/alexaandru/go-sitter-forest/spicy v1.5.101
 	github.com/alexaandru/go-sitter-forest/sql v1.5.101
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.5.100
 	github.com/alexaandru/go-sitter-forest/sqlite v1.5.100
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.102
 	github.com/alexaandru/go-sitter-forest/virdant v1.5.102
 	github.com/alexaandru/go-sitter-forest/virgil v1.5.100
-	github.com/alexaandru/go-sitter-forest/vrl v1.5.101
+	github.com/alexaandru/go-sitter-forest/vrl v1.5.102
 	github.com/alexaandru/go-sitter-forest/vue v1.5.100
 	github.com/alexaandru/go-sitter-forest/walnut v1.5.100
 	github.com/alexaandru/go-sitter-forest/wbproto v1.5.100
