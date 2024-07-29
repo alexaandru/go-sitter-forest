@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "f508657f40fea50647ea47f223d8ab0cb47b73f5",
+  "grammarSha": "d6a60598475f7af366d84120788c8102be31006f7a79beaed8d94a1530eed8e3",
+  "language": "c3",
+  "url": "https://github.com/cbuttner/tree-sitter-c3",
+  "maintainedBy": "@cbuttner",
+  "files": [
+    "scanner.c"
+  ]
+}

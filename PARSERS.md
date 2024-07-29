@@ -1,4 +1,4 @@
-# 399 Supported Parsers
+# 401 Supported Parsers
 
 13 pending, 4 skipped regeneration, 28 missing queries
 
@@ -34,6 +34,7 @@
 - [x] [bp](https://github.com/ambroisie/tree-sitter-bp) ✔️ (maintained by @ambroisie)
 - [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️ (maintained by @ajdelcimmuto)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️ (maintained by @amaanq)
+- [x] [c3](https://github.com/cbuttner/tree-sitter-c3) ✔️ (maintained by @cbuttner)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) 🔍 (maintained by @Luxed; ❌OOM)
 - [x] [ca65](https://github.com/babasbot/tree-sitter-ca65) ✔️ (maintained by @babasbot)
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️ (maintained by @amaanq)
@@ -266,6 +267,7 @@
 - [x] [pic](https://github.com/smoeding/tree-sitter-pic) 🗸 (maintained by @smoeding)
 - [x] [pint](https://github.com/essential-contributions/tree-sitter-pint) ✔️ (maintained by @mitchmindtree)
 - [x] [pioasm](https://github.com/leo60228/tree-sitter-pioasm) ✔️ (maintained by @leo60228)
+- [x] [plantuml](https://github.com/ptdewey/tree-sitter-plantuml) ✔️ (maintained by @ptdewey)
 - [x] [po](https://github.com/tree-sitter-grammars/tree-sitter-po) ✔️ (maintained by @amaanq)
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [Path of Exile item filter](https://github.com/tree-sitter-grammars/tree-sitter-poe-filter) ✔️ (maintained by @ObserverOfTime)

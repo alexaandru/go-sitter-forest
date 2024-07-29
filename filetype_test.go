@@ -293,6 +293,11 @@ func TestExtractFromShebang(t *testing.T) {
 							exp = cmp.Or(ft.Shebang[tc], tc)
 						}
 
+						// c3 is an actual lang, unlike python3 which we want reduced down to python
+						if strings.Contains(in, "c3") && exp == "c" {
+							exp = "c3"
+						}
+
 						if act := ft.extractFromShebang(in); act != exp {
 							t.Fatalf("Expected %q got %q for %q", exp, act, in)
 						}

@@ -283,6 +283,17 @@
     "maintainedBy": "@amaanq"
   },
   {
+    "reference": "main",
+    "revision": "f508657f40fea50647ea47f223d8ab0cb47b73f5",
+    "grammarSha": "d6a60598475f7af366d84120788c8102be31006f7a79beaed8d94a1530eed8e3",
+    "language": "c3",
+    "url": "https://github.com/cbuttner/tree-sitter-c3",
+    "maintainedBy": "@cbuttner",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "31a64b28292aac6adf44071e449fa03fb80eaf4e",
     "language": "c_sharp",
@@ -2469,6 +2480,14 @@
     "files": [
       "scanner.c"
     ]
+  },
+  {
+    "reference": "main",
+    "revision": "92567c87e254894254382adc3fb18f8b0a7ab255",
+    "grammarSha": "c3d20c0647e35daeb1182532b98ed397b1923acef407511fa26991affcabe64f",
+    "language": "plantuml",
+    "url": "https://github.com/ptdewey/tree-sitter-plantuml",
+    "maintainedBy": "@ptdewey"
   },
   {
     "reference": "main",
