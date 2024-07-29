@@ -83,6 +83,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/dart"
 	"github.com/alexaandru/go-sitter-forest/dbml"
 	"github.com/alexaandru/go-sitter-forest/devicetree"
+	"github.com/alexaandru/go-sitter-forest/dezyne"
 	"github.com/alexaandru/go-sitter-forest/dhall"
 	"github.com/alexaandru/go-sitter-forest/diff"
 	"github.com/alexaandru/go-sitter-forest/disassembly"
@@ -504,6 +505,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"dart":               dart.GetLanguage,
 	"dbml":               dbml.GetLanguage,
 	"devicetree":         devicetree.GetLanguage,
+	"dezyne":             dezyne.GetLanguage,
 	"dhall":              dhall.GetLanguage,
 	"diff":               diff.GetLanguage,
 	"disassembly":        disassembly.GetLanguage,
@@ -909,6 +911,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"dart":               dart.GetQuery,
 	"dbml":               dbml.GetQuery,
 	"devicetree":         devicetree.GetQuery,
+	"dezyne":             dezyne.GetQuery,
 	"dhall":              dhall.GetQuery,
 	"diff":               diff.GetQuery,
 	"disassembly":        disassembly.GetQuery,

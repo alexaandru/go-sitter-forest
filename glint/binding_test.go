@@ -14,7 +14,7 @@ const (
 	code = `;; SYNTAX TEST
    "I am a string";
 `
-	expected = "(source_file (comment) (string))"
+	expected = "(source_file (comment) (string_literal))"
 )
 
 func TestGrammar(t *testing.T) {

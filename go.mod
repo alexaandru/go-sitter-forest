@@ -70,6 +70,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dart v1.5.100
 	github.com/alexaandru/go-sitter-forest/dbml v1.5.100
 	github.com/alexaandru/go-sitter-forest/devicetree v1.5.100
+	github.com/alexaandru/go-sitter-forest/dezyne v1.5.100
 	github.com/alexaandru/go-sitter-forest/dhall v1.5.100
 	github.com/alexaandru/go-sitter-forest/diff v1.5.100
 	github.com/alexaandru/go-sitter-forest/disassembly v1.5.100

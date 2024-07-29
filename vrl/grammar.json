@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "0e1d5261c79d2bf91cb3a3834b9ef6e3ead15075",
-  "grammarSha": "0350ca410e2bb792da4629ebe7af689789024878f67c95f75e4ff45d1f925974",
+  "revision": "2ccc1cf36cb4b6e391abbd539e70a9a002e2a1f0",
+  "grammarSha": "945353c19fee4644143b7fef3e2aa5f1fdc82abc24522f92934c78b683a9db36",
   "language": "vrl",
   "url": "https://github.com/belltoy/tree-sitter-vrl",
   "maintainedBy": "@belltoy"

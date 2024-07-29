@@ -1,26 +1,46 @@
-(number_literal) @constant
-(string) @string
-(bool_value) @constant.builtin
+(comment) @comment
+
+(integer_literal) @constant
+(bool_literal) @constant.builtin
+(string_literal) @string
 
 (declaration name: (identifier) @function
              type: (type_function))
 (declaration name: (identifier) @function
              type: (type_pointer (type_function)))
 
-[
-  ;; Function attributes
-  "discardable"
-  ;; Storage specifiers
-  "external" "export"
+;; Highlight the type of a declaration if it's an identifier.
+(declaration type: (identifier) @type)
 
-  "module"
+[
+  ;; Header
+  "import" "module"
+
+  ;; Control Flow
+  "if" "else" "while" ;; "cfor"
+
+  ;; Function attributes
+  ;; "discardable"
+
+  ;; Unary Operators
+  "not"
+
+  ;; Binary Operators
+  "and" "or"
+
+  ;; Types
+  "enum" "struct" "sum" "union"
+
+  ;; Storage specifiers
+  "export" "external"
+
   "return"
 ] @keyword
 
 [
   ;; Builtins
-  "bool" "boolean" "Bool" "Boolean"
-  "Byte"
+  "bool"
+  "byte"
   "int" "uint"
   "void"
 
@@ -31,13 +51,21 @@
   "clonglong" "culonglong"
   "csize" "cusize"
 
+  (type_array)
   (type_pointer)
   (type_reference)
-  (type_dynamic_array)
-  (type_fixed_array)
 ] @type
+
+[
+ "@" "!" ;; "~"
+ "+" "-" "*" "/" "&" "|" "^" "=" "!=" "<" "<=" ">" ">="
+ "::" ":" ":="
+ "++" "--"
+] @operator
 
 [
   "(" ")"
   "{" "}"
+  ;; "[" "]"
 ] @punctuation.bracket
+

@@ -9,8 +9,8 @@
   },
   {
     "reference": "master",
-    "revision": "f89c2c1d4aa033381b09883c96d0e652bff9644e",
-    "grammarSha": "62de4fda9821ebd73ea9232883e2b4cb76f5c813c03b9c278180752a618eb8b0",
+    "revision": "2c7d783956047767ca56b426cab3670d1a215c8d",
+    "grammarSha": "c96ccc2b0ea66915d1c3aefd99ce74b0e9aea0d087392fe6c741392bd33f1a27",
     "language": "abl",
     "url": "https://github.com/usagi-coffee/tree-sitter-abl",
     "maintainedBy": "@jkbz64",
@@ -284,7 +284,7 @@
   },
   {
     "reference": "main",
-    "revision": "f508657f40fea50647ea47f223d8ab0cb47b73f5",
+    "revision": "dd571e8a8ed4da58f5189e54f6dd0accf1daf388",
     "grammarSha": "d6a60598475f7af366d84120788c8102be31006f7a79beaed8d94a1530eed8e3",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
@@ -343,7 +343,7 @@
   },
   {
     "reference": "main",
-    "revision": "8fc4982aa9bd0d3a78ac1f20fcf5b7e1a6bd7627",
+    "revision": "b2fe41db9b5389ccfa46803073916b28c339d9d0",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -606,8 +606,8 @@
   },
   {
     "reference": "main",
-    "revision": "143a2e66c1a55973ed0d4704b4fd118c854b430d",
-    "grammarSha": "bec17a17c771444b69de3e28c8e42f98351fe16a810bc439a17b87f505ac0c25",
+    "revision": "c067ff38b84d860c993d8b8906124e96694593e4",
+    "grammarSha": "e509b10af0bdfd935ca2c97a64d1c3595d878602a663d67eddccfe151f91fbb1",
     "language": "d",
     "url": "https://github.com/gdamore/tree-sitter-d",
     "maintainedBy": "@amaanq",
@@ -1159,8 +1159,8 @@
   },
   {
     "reference": "main",
-    "revision": "0702b6c703e5a2d7136474e8e62aa3e43d9e8f94",
-    "grammarSha": "251defd7fd4d87e93ae593b6e50b09b6fbdc501bd43ebf27bcf30b90a9eb387d",
+    "revision": "c6cf1fb6479f4412bd390aa3366a57f9cd0d67cd",
+    "grammarSha": "f1b101e2bcc3c162f427a80b7763f79f9208aff4779d9f3a56d0cf9a764b4648",
     "language": "glint",
     "url": "https://github.com/LensPlaysGames/tree-sitter-glint",
     "maintainedBy": "@LensPlaysGames"
@@ -1572,8 +1572,8 @@
   },
   {
     "reference": "main",
-    "revision": "44d74de70e10a842c41b4b580bb04d92703f0226",
-    "grammarSha": "23d92f8357c70259d872e84b60aed2d8781cb50c6626e2301f78b1173a608d73",
+    "revision": "41abde9f23dc390037710f6421862af647bf78cc",
+    "grammarSha": "b33e24e30f413d86057cdb7322cb2844f490a747082dd541e960d402ab24e047",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
     "maintainedBy": "@wldmr",
@@ -2167,8 +2167,8 @@
   },
   {
     "reference": "main",
-    "revision": "3b36554557f64731ff39dd695814742f277d294e",
-    "grammarSha": "c86782cb86b9341e2c1c43cf624119fdad6ef2d2a38a6cc5e6f4f10351873947",
+    "revision": "94666f75b9f28eb48cbd66e36a6ddb4e8e3037a1",
+    "grammarSha": "f964c861fbb23da428c542f19a4bf08d725925a57dbbfa02869ef5c5a0d3bbbd",
     "language": "nesfab",
     "url": "https://github.com/hnd2/tree-sitter-nesfab",
     "maintainedBy": "@hnd2",
@@ -2411,8 +2411,8 @@
   },
   {
     "reference": "main",
-    "revision": "296f0c7c1af37707242d069b3b23c75cdd062f5e",
-    "grammarSha": "39beb14a19cf062db19bdf7ba479f1d3fac2969b9add3cb1a0d72d692d435367",
+    "revision": "661c6d5c928478889f6795e4cf791dfd90792672",
+    "grammarSha": "cba34b7eab9342596e352a81e3cf14abc4879dee8ff0ce19cb89fba92a00f573",
     "language": "perm",
     "url": "https://github.com/theoriginalstove/tree-sitter-perm",
     "maintainedBy": "@theoriginalstove"
@@ -3143,8 +3143,8 @@
   },
   {
     "reference": "main",
-    "revision": "aba0ac43647d57f5324c694419bd12ce42674768",
-    "grammarSha": "acd8fd1f487209e2258a3dc73ed8a1bad8771d04ae86053110e0cfba94979736",
+    "revision": "bab8378a906e9b9e537789fade103fdcafd61547",
+    "grammarSha": "a687302d890c703c0b74f350505871becdd7113ded5664740fa92903e184f794",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
     "maintainedBy": "@bbannier"
@@ -3757,8 +3757,8 @@
   },
   {
     "reference": "main",
-    "revision": "0e1d5261c79d2bf91cb3a3834b9ef6e3ead15075",
-    "grammarSha": "0350ca410e2bb792da4629ebe7af689789024878f67c95f75e4ff45d1f925974",
+    "revision": "2ccc1cf36cb4b6e391abbd539e70a9a002e2a1f0",
+    "grammarSha": "945353c19fee4644143b7fef3e2aa5f1fdc82abc24522f92934c78b683a9db36",
     "language": "vrl",
     "url": "https://github.com/belltoy/tree-sitter-vrl",
     "maintainedBy": "@belltoy"
