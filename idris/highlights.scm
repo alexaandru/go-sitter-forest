@@ -66,9 +66,9 @@
 
 [
   (operator)
-  (qualified_module) ; grabs the `.` (dot), ex: import System.IO
+  (equal)
   (wildcard)
-  "="
+  "."
   "|"
   "=>"
   "⇒"
@@ -82,20 +82,17 @@
   "`"
 ] @operator
 
-(qualified_module
-  (module) @constructor)
-
 (qualified_loname
-  (module) @namespace)
+  (caname) @namespace)
 
 (qualified_caname
-  (module) @namespace)
+  (caname) @namespace)
 
 (qualified_operator
-  (module) @namespace)
+  (caname) @namespace)
 
 (import
-  (module) @namespace)
+  (caname) @namespace)
 
 [
   (where)
@@ -117,6 +114,8 @@
   (impossible)
   (with)
   (proof)
+  "="
+  ":="
 ] @keyword
 
 (hole) @label

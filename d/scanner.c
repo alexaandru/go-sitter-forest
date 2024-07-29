@@ -26,7 +26,6 @@ enum TokenType {
 	SHEBANG,   // #!
 	L_INT,
 	L_FLOAT,
-	L_CHAR,   // 'c', or '\x12', or similar
 	L_STRING, // string literal (all forms)
 	NOT_IN,
 	NOT_IS,
@@ -36,136 +35,6 @@ static bool
 is_eol(int c)
 {
 	return ((c == '\n') || (c == '\r') || (c == 0x2028) || (c == 0x2029));
-}
-
-// This just looks for a valid escape sequence.
-// If it passes, it advances just past the escape and returns true.
-// Do not use this unless you are certainly in escape context.
-// The current lookahead should be \.  If this returns true
-// the the lexer will be pointing at the next character after
-// the escape sequence.
-static bool
-match_escape(TSLexer *lexer)
-{
-	assert(lexer->lookahead == '\\');
-
-	// now we parsing an escape
-	lexer->advance_d(lexer, false);
-	switch (lexer->lookahead) {
-	case '\'':
-	case '"':
-	case '?':
-	case '\\':
-	case 'a':
-	case 'b':
-	case 'f':
-	case 'n':
-	case 'r':
-	case 't':
-	case 'v':
-		lexer->advance_d(lexer, false);
-		return (true);
-	case 'x':
-		for (int i = 0; i < 2; i++) { // expect two hex digits
-			lexer->advance_d(lexer, false);
-			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
-			    !iswxdigit(lexer->lookahead)) {
-				return (false);
-			}
-		}
-		lexer->advance_d(lexer, false);
-		return (true);
-
-	case 'u':
-		for (int i = 0; i < 4; i++) {
-			lexer->advance_d(lexer, false);
-			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
-			    !iswxdigit(lexer->lookahead)) {
-				return (false);
-			}
-		}
-		lexer->advance_d(lexer, false);
-		return (true);
-
-	case 'U':
-		for (int i = 0; i < 8; i++) {
-			lexer->advance_d(lexer, false);
-			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
-			    !iswxdigit(lexer->lookahead)) {
-				return (false);
-			}
-		}
-		lexer->advance_d(lexer, false);
-		return (true);
-
-	case '0': // octal
-	case '1':
-	case '2':
-	case '3':
-	case '4':
-	case '5':
-	case '6':
-	case '7':
-		for (int i = 0; i < 3; i++) {
-			lexer->advance_d(lexer, false);
-			if (lexer->lookahead < '0' || lexer->lookahead > '7')
-				break;
-		}
-		return (true);
-
-	case '&': // HTML entity - we don't validate the names
-		for (int i = 0; i < 64; i++) { // no names longer than this
-			lexer->advance_d(lexer, false);
-			if (lexer->lookahead == ';') {
-				if (i < 2) {
-					// need at least 2 characters in an
-					// entity name
-					return (false);
-				}
-				break;
-			}
-			if (!(lexer->lookahead >= 0 && lexer->lookahead <= 127) ||
-			    !iswalnum(lexer->lookahead)) {
-				return (false);
-			}
-		}
-		lexer->advance_d(lexer, true);
-		return (true);
-
-	case '`':
-	default:
-		return (false);
-	}
-}
-
-static bool
-match_char_literal(TSLexer *lexer)
-{
-	assert(lexer->lookahead == '\'');
-	lexer->advance_d(lexer, false);
-	if (lexer->lookahead == '\'') {
-		// syntax error
-		return (false);
-	}
-	if (lexer->lookahead != '\\') {
-		// simple unescaped character
-		lexer->advance_d(lexer, false);
-		if (lexer->lookahead != '\'') {
-			return (false); // closing single quote missing
-		}
-		lexer->advance_d(lexer, false); // to get the closer
-		lexer->mark_end(lexer);
-		lexer->result_symbol = L_CHAR;
-		return (true);
-	}
-
-	if ((!match_escape(lexer)) || (lexer->lookahead != '\'')) {
-		return (false);
-	}
-	lexer->advance_d(lexer, false);
-	lexer->mark_end(lexer);
-	lexer->result_symbol = L_CHAR;
-	return (true); // missing closing quote
 }
 
 // this looks for the optional suffix closer on various
@@ -186,82 +55,6 @@ match_string_suffix(TSLexer *lexer)
 	// and mark the end (regardless whether we did or did not)
 	lexer->mark_end(lexer);
 }
-
-static bool
-match_dq_string(TSLexer *lexer)
-{
-	int c = lexer->lookahead;
-	assert(c == '"');
-
-	lexer->advance_d(lexer, false);
-
-	while ((c = lexer->lookahead) != 0) {
-
-		if (c == '\\') {
-			if (!match_escape(lexer)) {
-				return (false);
-			}
-			continue;
-		}
-
-		if (c == '"') {
-			// end of string!
-			lexer->result_symbol = L_STRING;
-			lexer->advance_d(lexer, false);
-			match_string_suffix(lexer);
-			return (true);
-		}
-		lexer->advance_d(lexer, false);
-	}
-	// unterminated
-	return (false);
-}
-
-static bool
-match_raw_string(TSLexer *lexer, int quote)
-{
-	int c = lexer->lookahead;
-	assert(c == quote);
-	lexer->advance_d(lexer, false); // skip over starting quote
-	while ((c = lexer->lookahead) != 0) {
-		if (c == quote) {
-			lexer->advance_d(lexer, false);
-			lexer->result_symbol = L_STRING;
-			match_string_suffix(lexer);
-			return (true);
-		}
-		lexer->advance_d(lexer, false);
-	}
-	// unterminated
-	return (false);
-}
-
-static bool
-match_hex_string(TSLexer *lexer)
-{
-	int c = lexer->lookahead;
-	assert(c == '"');
-
-	lexer->advance_d(lexer, false);
-
-	while ((c = lexer->lookahead) != 0) {
-
-		if (c == '"') {
-			// end of string!
-			lexer->result_symbol = L_STRING;
-			lexer->advance_d(lexer, false);
-			match_string_suffix(lexer);
-			return (true);
-		}
-		if (!iswxdigit(c) && !iswspace(c)) {
-		    return (false);
-		}
-		lexer->advance_d(lexer, false);
-	}
-	// unterminated
-	return (false);
-}
-
 
 static bool
 match_delimited_string(TSLexer *lexer, int start, int end)
@@ -848,29 +641,6 @@ tree_sitter_d_external_scanner_scan(
 		return (match_not_in_is(lexer, valid));
 	}
 
-	if (c == '\'') {
-		return (valid[L_CHAR] ? match_char_literal(lexer) : false);
-	}
-	if (c == '"') { // double quoted string, always unambiguous
-		return (valid[L_STRING] ? match_dq_string(lexer) : false);
-	}
-
-	if ((c == 'r') && (valid[L_STRING])) {
-		lexer->advance_d(lexer, false);
-		if (lexer->lookahead == '"') {
-			return (match_raw_string(lexer, '"'));
-		}
-		return (false);
-	}
-
-	if ((c == 'x') && (valid[L_STRING])) {
-		lexer->advance_d(lexer, false);
-		if (lexer->lookahead == '"') {
-			return (match_hex_string(lexer));
-		}
-		return (false);
-	}
-
 	if ((c == 'q') && (valid[L_STRING])) {
 		lexer->advance_d(lexer, false);
 		if (lexer->lookahead != '"') {
@@ -893,12 +663,6 @@ tree_sitter_d_external_scanner_scan(
 			// non-nesting deliimted string
 			return (match_delimited_string(lexer, 0, c));
 		}
-	}
-
-	if (c == '`') { // raw string, also unambiguous
-		return (valid[L_STRING]
-		        ? match_raw_string(lexer, '`')
-		        : false);
 	}
 
 	if (c == '#') {

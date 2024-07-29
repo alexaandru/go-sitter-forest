@@ -23,7 +23,7 @@ entity organization {
     relation admin @user and @player
 }
 `
-	expected = "(source_file (entity_definition name: (identifier) (opening_brace) (closing_brace)) (entity_definition name: (identifier) (opening_brace) (closing_brace)) (comment) (entity_definition name: (identifier) (opening_brace) (comment) (relation_definition name: (identifier) (relation_association name: (identifier))) (ERROR (and_statement) (UNEXPECTED 'p')) (closing_brace)))"
+	expected = "(source_file (entity_definition name: (identifier) (opening_brace) (closing_brace)) (entity_definition name: (identifier) (opening_brace) (closing_brace)) (comment) (entity_definition name: (identifier) (opening_brace) (comment) (relation_definition relation_name: (identifier) (relation_association association_name: (identifier)) (and_statement) (relation_association association_name: (identifier))) (closing_brace)))"
 )
 
 func TestGrammar(t *testing.T) {

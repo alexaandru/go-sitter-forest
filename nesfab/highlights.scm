@@ -62,6 +62,7 @@
    "goto"
    "if"
    "irq"
+   "label"
    "mode"
    "nmi"
    "nmi_counter"
@@ -75,8 +76,8 @@
    "vars"
    "while"
    "write"
+   (modifier)
 ] @keyword
-(modifier) @keyword
 
 [
     (string_literal)

@@ -37,24 +37,6 @@
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 
-#define VEC_RESIZE(vec, _cap) \
-  (vec)->data = realloc((vec)->data, (_cap) * sizeof((vec)->data[0])); \
-  assert((vec)->data != NULL); \
-  (vec)->cap = (_cap);
-
-#define VEC_GROW(vec, _cap) if ((vec)->cap < (_cap)) { VEC_RESIZE((vec), (_cap)); }
-
-#define VEC_PUSH(vec, el) \
-  if ((vec)->cap == (vec)->len) { VEC_RESIZE((vec), MAX(20, (vec)->len * 2)); } \
-  (vec)->data[(vec)->len++] = (el);
-
-#define VEC_POP(vec) (vec)->len--;
-
-#define VEC_NEW { .len = 0, .cap = 0, .data = NULL }
-
-#define VEC_BACK(vec) ((vec)->data[(vec)->len - 1])
-
-#define VEC_FREE(vec) { if ((vec)->data != NULL) free((vec)->data); }
 
 // --------------------------------------------------------------------------------------------------------
 // Symbols
@@ -166,6 +148,19 @@ static char *keywords[] = {
   "default",
 };
 
+static char *invalid_varops[] = {
+  "|",
+  ":",
+  "=",
+  "@",
+  "\\",
+  "->",
+  "=>",
+  "<-",
+  ":=",
+  "$=",
+};
+
 /**
  * The parser appears to call `scan` with all symbols declared as valid directly after it encountered an error, so
  * this function is used to detect them.
@@ -202,11 +197,9 @@ static void debug_valid(const bool *syms) {
 typedef Array(char) String;
 
 typedef struct {
-  uint32_t len;
-  uint32_t cap;
-  uint16_t *data;
+  Array(uint32_t) indents;
   Array(uint32_t) raw_string_sharp_counts;
-} indent_vec;
+} Payload;
 
 // --------------------------------------------------------------------------------------------------------
 // State
@@ -223,7 +216,7 @@ typedef struct {
 typedef struct {
   TSLexer *lexer;
   const bool *symbols;
-  indent_vec *indents;
+  Payload *payload;
   String token;
 #ifdef DEBUG
   int marked;
@@ -232,11 +225,11 @@ typedef struct {
 #endif
 } State;
 
-static State state_new_idris(TSLexer *l, const bool * restrict vs, indent_vec *is) {
+static State state_new_idris(TSLexer *l, const bool * restrict vs, Payload *is) {
   return (State) {
     .lexer = l,
     .symbols = vs,
-    .indents = is,
+    .payload = is,
 #ifdef DEBUG
     .marked = -1,
     .marked_by = "",
@@ -246,12 +239,12 @@ static State state_new_idris(TSLexer *l, const bool * restrict vs, indent_vec *i
 }
 
 #ifdef DEBUG
-static void debug_indents(indent_vec *indents) {
-  if (indents->len == 0) DEBUG_PRINTF("empty");
+static void debug_payload(Payload *payload) {
+  if (payload->indents.size == 0) DEBUG_PRINTF("empty");
   bool empty = true;
-  for (size_t i = 0; i < indents->len; i++) {
+  for (size_t i = 0; i < payload->indents.size; i++) {
     if (!empty) DEBUG_PRINTF("-");
-    DEBUG_PRINTF("%d", indents->data[i]);
+    DEBUG_PRINTF("%d", payload->indents.contents[i]);
     empty = false;
   }
 }
@@ -259,8 +252,8 @@ static void debug_indents(indent_vec *indents) {
 void debug_state(State *state) {
   DEBUG_PRINTF("State { syms = ");
   debug_valid(state->symbols);
-  DEBUG_PRINTF(", indents = ");
-  debug_indents(state->indents);
+  DEBUG_PRINTF(", payload = ");
+  debug_payload(state->payload);
   DEBUG_PRINTF(" }\n");
 }
 #endif
@@ -375,20 +368,18 @@ static void consume_until(char *target, State *state) {
   }
 }
 
-typedef struct {
-  uint32_t len;
-  uint32_t cap;
-  int32_t *data;
-} wchar_vec;
 
-static wchar_vec read_string(bool (*cond)(uint32_t), State *state) {
-  wchar_vec res = VEC_NEW;
-  int32_t c = PEEK;
-  while (cond(c)) {
-    VEC_PUSH(&res, c);
+static bool streq(const char* s, const char* t) {
+  return 0 == strcmp(s, t);
+}
+
+static String read_string(bool (*cond)(uint32_t), State *state) {
+  String res = array_new();
+  while (cond(PEEK)) {
+    array_push(&res, PEEK);
     S_ADVANCE;
-    c = PEEK;
   }
+  array_push(&res, 0);
   return res;
 }
 
@@ -439,29 +430,33 @@ static bool token(const char *restrict s, State *state) {
  * Require that the stack of layout indentations is not empty.
  * This is mostly used for safety.
  */
-static bool indent_exists(State *state) { return state->indents->len != 0; };
+static bool indent_exists(State *state) { return state->payload->indents.size != 0; };
 
 /**
  * Require that the current line's indent is greater or equal than the containing layout's, so the current layout is
  * continued.
  */
-static bool keep_layout(uint16_t indent, State *state) {
-  return indent_exists(state) && indent >= VEC_BACK(state->indents);
+static bool keep_layout(uint32_t indent, State *state) {
+  return indent_exists(state) && indent >= *array_back(&state->payload->indents);
 }
 
 /**
  * Require that the current line's indent is equal to the containing layout's, so the line may start a new `decl`.
  */
-static bool same_indent(uint32_t indent, State *state) { return indent_exists(state) && indent == VEC_BACK(state->indents); }
+static bool same_indent(uint32_t indent, State *state) { 
+  return indent_exists(state) && indent == *array_back(&state->payload->indents);
+}
 
 /**
  * Require that the current line's indent is smaller than the containing layout's, so the layout may be ended.
  */
 static bool smaller_indent(uint32_t indent, State *state) {
-  return indent_exists(state) && indent < VEC_BACK(state->indents);
+  return indent_exists(state) && indent < *array_back(&state->payload->indents);
 }
 
-static bool indent_lesseq(uint32_t indent, State *state) { return indent_exists(state) && indent <= VEC_BACK(state->indents); }
+static bool indent_lesseq(uint32_t indent, State *state) {
+   return indent_exists(state) && indent <= *array_back(&state->payload->indents);
+}
 
 /**
  * Composite condition examining whether the current layout can be terminated if the line after the position where the
@@ -536,25 +531,6 @@ static bool symbolic(uint32_t c) {
   }
 }
 
-/**
- * Test for reserved operators of two characters.
- */
-static bool valid_symop_two_chars(uint32_t first_char, uint32_t second_char) {
-  switch (first_char) {
-    case '-':
-      return second_char != '-' && second_char != '>';
-    case '=':
-      return second_char != '>';
-    case '<':
-      return second_char != '-';
-    case ':':
-      return second_char != '=';
-    case '$':
-      return second_char != '=';
-    default:
-      return true;
-  }
-}
 
 typedef enum {
   S_OP,
@@ -572,33 +548,20 @@ typedef enum {
  *  - is not a comment
  *
  */
-static Symbolic s_symop(wchar_vec s, State *state) {
-  if (s.data == NULL || s.data[0] == 0) return S_INVALID;
-  if (
-    (2 <= s.len && (s.data[0] == '-') && (s.data[1] == '-')) ||
-    (3 <= s.len && (s.data[0] == '|') && (s.data[1] == '|') && (s.data[2] == '|'))
-  ) return S_COMMENT;
-  switch (s.len) {
-    case 1:
-      switch (s.data[0]) {
-        case '|':
-        case ':':
-        case '=':
-        case '@':
-        case '\\':
-          return S_INVALID;
-        case '#':
-          if ('"' == PEEK) return S_INVALID; // raw string open
-          return S_OP;
-        case '%': 
-          if (iswalnum(PEEK)) return S_INVALID; // expect a pragma
-          return S_OP;
-        default: return S_OP;
-      }
-    case 2:
-      if (valid_symop_two_chars(s.data[0], s.data[1])) return S_OP;
-      return S_INVALID;
+static Symbolic s_symop(String s, State *state) {
+  if (s.size == 0 || s.contents[0] == 0) return S_INVALID;
+  if (streq("--", s.contents) || streq("|||", s.contents)) return S_COMMENT;
+
+  for (int i = 0; i < sizeof(invalid_varops)/sizeof(invalid_varops[0]); ++i) {
+    if (streq(invalid_varops[i], s.contents)) return S_INVALID;
   }
+
+  // raw string open
+  if (streq("#", s.contents) && '"' == PEEK) return S_INVALID;
+
+  // pragma
+  if (streq("%", s.contents) && iswalnum(PEEK)) return S_INVALID;
+
   return S_OP;
 }
 
@@ -655,9 +618,9 @@ static Result finish_if_valid(const Sym s, char *restrict desc, State *state) {
 /**
  * Add one level of indentation to the stack, caused by starting a layout.
  */
-static void push(uint16_t ind, State *state) {
+static void push(uint32_t ind, State *state) {
   DEBUG_PRINTF("push: %d\n", ind);
-  VEC_PUSH(state->indents, ind);
+  array_push(&state->payload->indents, ind);
 }
 
 /**
@@ -666,7 +629,7 @@ static void push(uint16_t ind, State *state) {
 static void pop(State *state) {
   if (indent_exists(state)) {
     DEBUG_PRINTF("pop\n");
-    VEC_POP(state->indents);
+    array_pop(&state->payload->indents);
   }
 }
 
@@ -957,9 +920,9 @@ inline_comment_after_skip:
  * This decides whether the sequence is an operator or a special case.
  */
 static Symbolic read_symop(State *state) {
-  wchar_vec s = read_string(symbolic, state);
+  String s = read_string(symbolic, state);
   Symbolic res = s_symop(s, state);
-  free(s.data);
+  // free(s.data);
   return res;
 }
 
@@ -1032,7 +995,7 @@ static Result raw_string_start(State *state) {
     }
     if ('"' == PEEK) {
       S_ADVANCE;
-      array_push(&state->indents->raw_string_sharp_counts, n);
+      array_push(&state->payload->raw_string_sharp_counts, n);
       MARK("raw_string_start", false, state);
       return finish(RAW_STRING_START, "raw_string_start");
     }
@@ -1045,13 +1008,13 @@ static Result raw_string_end(State *state) {
   if (state->symbols[RAW_STRING_END]) {
     if (!seq("\"", state)) return res_cont;
     if (PEEK != '#') return res_fail;
-    uint32_t i = *array_back(&state->indents->raw_string_sharp_counts);
+    uint32_t i = *array_back(&state->payload->raw_string_sharp_counts);
     for (; 0 < i; --i) {
       if (PEEK != '#') return res_fail;
       S_ADVANCE;
     }
     if (PEEK == '#') return res_fail;
-    array_pop(&state->indents->raw_string_sharp_counts);
+    array_pop(&state->payload->raw_string_sharp_counts);
     MARK("raw_string_end", false, state);
     return finish(RAW_STRING_END, "raw_string_end");
   }
@@ -1073,7 +1036,7 @@ static Result multiline_comment_success(State *state) {
  * outermost comment isn't closed prematurely.
  */
 static Result multiline_comment(State *state) {
-  uint16_t level = 0;
+  uint32_t level = 0;
   for (;;) {
     switch (PEEK) {
       case '{':
@@ -1510,20 +1473,18 @@ static bool eval(Result (*chk)(State *state), State *state) {
  * This function allocates the persistent state of the parser that is passed into the other API functions.
  */
 void *tree_sitter_idris_external_scanner_create() {
-  void *res = calloc(sizeof(indent_vec), 1);
+  void *res = calloc(sizeof(Payload), 1);
   return res;
 }
 
 /**
  * Main logic entry point.
- * Since the state is a singular vector, it can just be cast and used directly.
  */
-bool tree_sitter_idris_external_scanner_scan(void *indents_v, TSLexer *lexer, const bool *syms) {
-  indent_vec *indents = (indent_vec*) indents_v;
+bool tree_sitter_idris_external_scanner_scan(Payload *payload, TSLexer *lexer, const bool *syms) {
   State state = {
     .lexer = lexer,
     .symbols = syms,
-    .indents = indents
+    .payload = payload
   };
 #ifdef DEBUG
   debug_state(&state);
@@ -1537,27 +1498,21 @@ bool tree_sitter_idris_external_scanner_scan(void *indents_v, TSLexer *lexer, co
  * This is normally more complex, but since this parser's state constists solely of a vector of integers, it can just be
  * copied.
  */
-unsigned tree_sitter_idris_external_scanner_serialize(void *indents_v, char *buffer) {
+unsigned tree_sitter_idris_external_scanner_serialize(Payload *payload, char *buffer) {
   unsigned size = 0;
-  indent_vec *indents = (indent_vec*) indents_v;
-
   {
-    unsigned len = sizeof(indents->data[0]) * indents->len;
-    if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
-      return 0;
-    }
+    unsigned len = payload->indents.size;
+    if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) return 0;
     buffer[size++] = len;
-    memcpy(&buffer[size], indents->data, len);
+    memcpy(&buffer[size], payload->indents.contents, len);
     size += len;
   }
 
   {
-    unsigned len = indents->raw_string_sharp_counts.size;
-    if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
-      return 0;
-    }
+    unsigned len = payload->raw_string_sharp_counts.size;
+    if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) return 0;
     buffer[size++] = len;
-    memcpy(&buffer[size], indents->raw_string_sharp_counts.contents, len);
+    memcpy(&buffer[size], payload->raw_string_sharp_counts.contents, len);
     size += len;
   }
 
@@ -1569,26 +1524,25 @@ unsigned tree_sitter_idris_external_scanner_serialize(void *indents_v, char *buf
  * `payload` is the state of the previous parser execution, while `buffer` is the saved state of a different position
  * (e.g. when doing incremental parsing).
  */
-void tree_sitter_idris_external_scanner_deserialize(indent_vec *indents, char *buffer, unsigned length) {
+void tree_sitter_idris_external_scanner_deserialize(Payload *payload, char *buffer, unsigned length) {
   if(length == 0) return;
 
   unsigned size = 0;
   {
     unsigned len = buffer[size++];
-    unsigned n = len / sizeof(indents->data[0]);
-    if (n > 0) {
-      VEC_GROW(indents, n);
-      indents->len = n;
-      memcpy(indents->data, &buffer[size], len);
+    if (len > 0) {
+      array_reserve(&payload->indents, len);
+      memcpy(payload->indents.contents, &buffer[size], len);
+      payload->indents.size = len;
     }
     size += len;
   }
   {
     unsigned len = buffer[size++];
     if (len > 0) {
-      array_reserve(&indents->raw_string_sharp_counts, len);
-      memcpy(indents->raw_string_sharp_counts.contents, &buffer[size], len);
-      indents->raw_string_sharp_counts.size = len;
+      array_reserve(&payload->raw_string_sharp_counts, len);
+      memcpy(payload->raw_string_sharp_counts.contents, &buffer[size], len);
+     payload->raw_string_sharp_counts.size = len;
     }
     size += len;
   }
@@ -1598,9 +1552,6 @@ void tree_sitter_idris_external_scanner_deserialize(indent_vec *indents, char *b
 /**
  * Destroy the state.
  */
-void tree_sitter_idris_external_scanner_destroy(void *indents_v) {
-  indent_vec *indents = (indent_vec*) indents_v;
-  array_delete(&indents->raw_string_sharp_counts);
-  VEC_FREE(indents);
-  free(indents);
+void tree_sitter_idris_external_scanner_destroy(Payload *payload) {
+  free(payload);
 }

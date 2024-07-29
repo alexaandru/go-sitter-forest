@@ -42,6 +42,7 @@
 
 (call_expression (identifier) @function)
 (call_expression (type (identifier) @function))
+(named_argument (identifier) @variable.parameter)
 
 [
     (abstract)
@@ -220,7 +221,13 @@
     (real)
     (double)
     (float)
-] @type
+    (size_t)
+    (ptrdiff_t)
+    (string)
+    (cstring)
+    (wstring)
+    (noreturn)
+] @type.builtin
 
 [
     (cent)
@@ -236,8 +243,7 @@
 (label (identifier) @label)
 (goto_statement (goto) @keyword.control (identifier) @label)
 
-; builtin types and type aliases
-; this covers built-in types, also other cases where the identifier can only
+; this covers other cases where the identifier can only
 ; be a type (such as in an is-expression on a constraint)
 (type (identifier) @type)
 
