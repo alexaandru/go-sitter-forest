@@ -659,6 +659,14 @@
   },
   {
     "reference": "master",
+    "revision": "f46027745bf1f35df3fe289f7a59a4a6887b9267",
+    "grammarSha": "220fd7d46d38bdcb896545a744330a53011b41265fbc4b5b009127ad33aeb16a",
+    "language": "dezyne",
+    "url": "https://github.com/j0ran/tree-sitter-dezyne",
+    "maintainedBy": "@j0ran"
+  },
+  {
+    "reference": "master",
     "revision": "affb6ee38d629c9296749767ab832d69bb0d9ea8",
     "grammarSha": "e83d846f22773339e144a7d1adf75211f36420d723cca9d674483af008cdb175",
     "language": "dhall",

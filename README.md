@@ -90,7 +90,7 @@ func main() {
 #### 2. In Bulk
 
 If (and only IF) you want to use ALL (or most of) the parsers (beware, your binary
-size **will be huge**, as in 200MB+ huge) then you can use the root (`forest`) package:
+size **will be huge**, as in 300MB+ huge) then you can use the root (`forest`) package:
 
 ```Go
 package main
@@ -124,7 +124,7 @@ a text editor or something.
 
 #### 3. As a Plugin
 
-A third way, ~and perhaps the most convenient~ (no, it's not, it's \~250MB with all
+A third way, ~and perhaps the most convenient~ (no, it's not, it's \~300MB with all
 parsers built into the binary whereas all parsers built as plugins took \~1400MB
 for all 354 parsers), is to use the included [Plugins.make](Plugins.make)
 makefile, which allows easy creation of any and all plugins. Simply copy it to

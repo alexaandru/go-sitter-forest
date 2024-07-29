@@ -1,6 +1,6 @@
-# 401 Supported Parsers
+# 402 Supported Parsers
 
-13 pending, 4 skipped regeneration, 28 missing queries
+13 pending, 4 skipped regeneration, 29 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -73,6 +73,7 @@
 - [ ] [dataweave](https://github.com/AndrewJarrett/tree-sitter-dataweave) (maintained by @AndrewJarrett)
 - [x] [dbml](https://github.com/apexatoll/tree-sitter-dbml) 🗸 (maintained by @apexatoll)
 - [x] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) ✔️ (maintained by @jedrzejboczar)
+- [x] [dezyne](https://github.com/j0ran/tree-sitter-dezyne) 🗸 (maintained by @j0ran)
 - [x] [dhall](https://github.com/jbellerb/tree-sitter-dhall) ✔️ (maintained by @amaanq)
 - [x] [diff](https://github.com/the-mikedavis/tree-sitter-diff) ✔️ (maintained by @gbprod)
 - [x] [disassembly](https://github.com/ColinKennedy/tree-sitter-disassembly) ✔️ (maintained by @ColinKennedy)
