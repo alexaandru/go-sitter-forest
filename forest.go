@@ -46,6 +46,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/bp"
 	"github.com/alexaandru/go-sitter-forest/brightscript"
 	"github.com/alexaandru/go-sitter-forest/c"
+	"github.com/alexaandru/go-sitter-forest/c3"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
 	"github.com/alexaandru/go-sitter-forest/ca65"
 	"github.com/alexaandru/go-sitter-forest/cairo"
@@ -270,6 +271,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pic"
 	"github.com/alexaandru/go-sitter-forest/pint"
 	"github.com/alexaandru/go-sitter-forest/pioasm"
+	"github.com/alexaandru/go-sitter-forest/plantuml"
 	"github.com/alexaandru/go-sitter-forest/po"
 	"github.com/alexaandru/go-sitter-forest/pod"
 	"github.com/alexaandru/go-sitter-forest/poe_filter"
@@ -465,6 +467,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"bp":                 bp.GetLanguage,
 	"brightscript":       brightscript.GetLanguage,
 	"c":                  c.GetLanguage,
+	"c3":                 c3.GetLanguage,
 	"c_sharp":            c_sharp.GetLanguage,
 	"ca65":               ca65.GetLanguage,
 	"cairo":              cairo.GetLanguage,
@@ -687,6 +690,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"pic":                pic.GetLanguage,
 	"pint":               pint.GetLanguage,
 	"pioasm":             pioasm.GetLanguage,
+	"plantuml":           plantuml.GetLanguage,
 	"po":                 po.GetLanguage,
 	"pod":                pod.GetLanguage,
 	"poe_filter":         poe_filter.GetLanguage,
@@ -868,6 +872,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"bp":                 bp.GetQuery,
 	"brightscript":       brightscript.GetQuery,
 	"c":                  c.GetQuery,
+	"c3":                 c3.GetQuery,
 	"c_sharp":            c_sharp.GetQuery,
 	"ca65":               ca65.GetQuery,
 	"cairo":              cairo.GetQuery,
@@ -1090,6 +1095,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pic":                pic.GetQuery,
 	"pint":               pint.GetQuery,
 	"pioasm":             pioasm.GetQuery,
+	"plantuml":           plantuml.GetQuery,
 	"po":                 po.GetQuery,
 	"pod":                pod.GetQuery,
 	"poe_filter":         poe_filter.GetQuery,

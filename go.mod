@@ -33,6 +33,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bp v1.5.100
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.101
+	github.com/alexaandru/go-sitter-forest/c3 v1.5.100
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
 	github.com/alexaandru/go-sitter-forest/ca65 v1.5.109
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
@@ -255,6 +256,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pic v1.5.102
 	github.com/alexaandru/go-sitter-forest/pint v1.5.101
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
+	github.com/alexaandru/go-sitter-forest/plantuml v1.5.100
 	github.com/alexaandru/go-sitter-forest/po v1.5.100
 	github.com/alexaandru/go-sitter-forest/pod v1.5.101
 	github.com/alexaandru/go-sitter-forest/poe_filter v1.5.100
