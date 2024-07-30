@@ -25,7 +25,7 @@ move;
 arc; down; move; "arc"
 .PE
 `
-	expected = "(picture (element (primitive) (attribute_list (attribute (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text) (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text) (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text)))) (element (primitive)) (element (primitive)) (element (direction)) (element (primitive)) (element (primitive (text))))"
+	expected = "(picture (element (command_line)) (element (primitive) (attribute_list (attribute (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text)) (attribute (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text)) (attribute (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text)))) (element (primitive)) (element (primitive) (attribute_list (attribute (text)))) (element (primitive)) (element (primitive)) (element (direction)) (element (primitive)) (element (primitive (text))) (element (command_line)))"
 )
 
 func TestGrammar(t *testing.T) {

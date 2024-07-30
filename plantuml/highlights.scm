@@ -19,11 +19,17 @@
 (theme name: (identifier) @identifier)
 (theme url: (url) @string)
 
+;; Skinparameters
+(skinparameter "skinparam" @property)
+
 ;; Comments
 (comment) @comment
 
 ;; Strings
 (string) @string
+
+;; Number
+(number) @number
 
 ;; Components and Blocks
 (component) @type
@@ -49,3 +55,7 @@
 ;; URLs and Filepaths
 (url) @string
 (filepath) @string
+
+;; Style
+(style) @property
+(style (style_sep) @punctuation.delimiter)

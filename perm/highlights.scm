@@ -32,6 +32,13 @@
 (rule_definition
     name: (identifier) @function)
 
+; rule calls
+(call_expression
+    function: (identifier) @function)
+
+(selector_expression
+    field: (field_identifier) @function.method)
+
 [
   "boolean"
   "string"

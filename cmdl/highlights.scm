@@ -5,10 +5,20 @@
 
 "cat" @operator
 "^"   @operator
+"xnor" @operator
+"~"   @operator
+"xor" @operator
+"^"   @operator
+"nand" @operator
+"!&"   @operator
+"nor" @operator
+"!|"  @operator
 "and" @operator
 "&"   @operator
 "or"  @operator
 "|"   @operator
+"eq"  @operator
+"="   @operator
 "not" @operator
 "!"   @operator
 "=>"  @operator

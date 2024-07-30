@@ -1744,6 +1744,12 @@ static void schedule_indentation_increased(
 
         if (scanner->pending_embed_node) {
             schedule_token(scanner, scan_state, TOKEN_FLAG_EMBED, 0, true);
+            schedule_token(
+                scanner,
+                scan_state,
+                TOKEN_NODE_CONTINUE,
+                np1_indentation_level * scanner->indentation_char_repetitions,
+                false);
 
         // We need to be careful here! Yes, we just had a node start. But
         // we might also have a list as the first line in the node. So we

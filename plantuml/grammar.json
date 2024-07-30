@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "92567c87e254894254382adc3fb18f8b0a7ab255",
-  "grammarSha": "c3d20c0647e35daeb1182532b98ed397b1923acef407511fa26991affcabe64f",
+  "revision": "1050ab8ec92d8ac146c7025ac7ec87e9bcecbeee",
+  "grammarSha": "78d0b8e62db5b36d7ba79d056febb8cd4e6420b2d0d62e9e6fc6144907fd2a91",
   "language": "plantuml",
   "url": "https://github.com/ptdewey/tree-sitter-plantuml",
   "maintainedBy": "@ptdewey"

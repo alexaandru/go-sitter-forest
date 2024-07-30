@@ -2,25 +2,23 @@
 (identifier) @identifier
 
 (function_definition
-    function_name: (identifier) @function
+    (identifier) @function
 )
 (call
-    function_name: (identifier) @function
+    (identifier) @function
 )
-(goto_mode_statement
-    function_name: (identifier) @function
-)
+(asm_op_code) @function
 (file_expression
-    function_name: (identifier) @function.special
+    "file" @function.special
 )
 (macro_expression
-    function_name: (identifier) @function.special
+    "macro" @function.special
 )
 (mapfab_expression
-    function_name: (identifier) @function.special
+    "mapfab" @function.special
 )
 (audio_expression
-    function_name: (identifier) @function.special
+    "audio" @function.special
 )
 
 [
@@ -47,36 +45,42 @@
 ] @punctuation.delimiter
 
 [
-   "break"
-   "case"
-   "charmap"
-   "chrrom"
-   "continue"
-   "ct"
-   "default"
-   "do"
-   "else"
-   "fence"
-   "fn"
-   "for"
-   "goto"
-   "if"
-   "irq"
-   "label"
-   "mode"
-   "nmi"
-   "nmi_counter"
-   "omni"
-   "read"
-   "ready"
-   "return"
-   "struct"
-   "swap"
-   "switch"
-   "vars"
-   "while"
-   "write"
-   (modifier)
+    "abs"
+    "break"
+    "case"
+    "charmap"
+    "chrrom"
+    "continue"
+    "ct"
+    "data"
+    "default"
+    "do"
+    "else"
+    "fence"
+    "fn"
+    "for"
+    "goto"
+    "if"
+    "irq"
+    "label"
+    "len"
+    "min"
+    "max"
+    "mode"
+    "nmi"
+    "nmi_counter"
+    "omni"
+    "read"
+    "ready"
+    "return"
+    "sizeof"
+    "struct"
+    "swap"
+    "switch"
+    "vars"
+    "while"
+    "write"
+    (modifier)
 ] @keyword
 
 [
