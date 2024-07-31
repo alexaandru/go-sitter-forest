@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "432b8b0093df8fda989c262073aebe10a069132e",
-  "grammarSha": "6a32c9fb7b8db0576286f589b35e13ac2a85af0fa723e8c95e79988ff212a5b8",
+  "revision": "b690e108b95da69a12056641309927f32659b42f",
+  "grammarSha": "f2ac77c80cfb856e03c59aabbdae42d610a6c91014e2582def3da436f1348aa3",
   "language": "awa5_rs",
   "url": "https://github.com/liraymond04/tree-sitter-awa5_rs",
   "maintainedBy": "@liraymond04"

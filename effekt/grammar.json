@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "acb4f8c85c7906dc9adde5c4503cae7ac43a3854",
-  "grammarSha": "96f633ba1a4b0375525ae08e1150648980a00ab0612cc08f582855a02a16918d",
+  "revision": "c93fb220b95bdbade8415c36ae8266816148705b",
+  "grammarSha": "41552ee28344a069e5c8ff372dae6a40e72045c0e24e0aaf485d59514012fb25",
   "language": "effekt",
   "url": "https://github.com/leonfuss/tree-sitter-effekt",
   "maintainedBy": "@leonfuss"
