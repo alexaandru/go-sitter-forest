@@ -19,6 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/august v1.5.100
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.100
 	github.com/alexaandru/go-sitter-forest/awa5_rs v1.5.101
+	github.com/alexaandru/go-sitter-forest/awatalk v1.5.100
 	github.com/alexaandru/go-sitter-forest/awk v1.5.100
 	github.com/alexaandru/go-sitter-forest/bash v1.5.101
 	github.com/alexaandru/go-sitter-forest/bass v1.5.100

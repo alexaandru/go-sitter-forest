@@ -30,6 +30,8 @@ github.com/alexaandru/go-sitter-forest/authzed v1.5.100 h1:4wXZsJoaNQlQg1Bn47wlB
 github.com/alexaandru/go-sitter-forest/authzed v1.5.100/go.mod h1:m5htnBJZTcdu+42xYt2LEAEHkVXgOzVVxFcMsfqkuIg=
 github.com/alexaandru/go-sitter-forest/awa5_rs v1.5.101 h1:Z63dmSvvesE43B21Ylts1hr0qSE8xftZlwkZGHYuXf0=
 github.com/alexaandru/go-sitter-forest/awa5_rs v1.5.101/go.mod h1:hFKbeZcbLUY1BdLgETCXbaWGyMtXstURFgGdmW6QcuE=
+github.com/alexaandru/go-sitter-forest/awatalk v1.5.100 h1:VSSEjbnzMMvITdAfHwR52utpbh1Q5HORLbOjFgUHeb4=
+github.com/alexaandru/go-sitter-forest/awatalk v1.5.100/go.mod h1:l+wj8P03ULCerE10xi+HNU0ww4wTm03PL6r9MsxWoEw=
 github.com/alexaandru/go-sitter-forest/awk v1.5.100 h1:K5eLg5V064xdz4t70EHcjNlV70YsuASwcPERxjM2SoE=
 github.com/alexaandru/go-sitter-forest/awk v1.5.100/go.mod h1:RlRO1zUtMxPmuBM+iqW3om2/64eJTWT88OWm02jbWr4=
 github.com/alexaandru/go-sitter-forest/bash v1.5.101 h1:KD80jUYSP3lz2gYCO2/Rnivv5u/iu5UYhDE6wAH37T4=

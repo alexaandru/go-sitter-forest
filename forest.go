@@ -32,6 +32,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/august"
 	"github.com/alexaandru/go-sitter-forest/authzed"
 	"github.com/alexaandru/go-sitter-forest/awa5_rs"
+	"github.com/alexaandru/go-sitter-forest/awatalk"
 	"github.com/alexaandru/go-sitter-forest/awk"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
@@ -454,6 +455,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"august":             august.GetLanguage,
 	"authzed":            authzed.GetLanguage,
 	"awa5_rs":            awa5_rs.GetLanguage,
+	"awatalk":            awatalk.GetLanguage,
 	"awk":                awk.GetLanguage,
 	"bash":               bash.GetLanguage,
 	"bass":               bass.GetLanguage,
@@ -860,6 +862,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"august":             august.GetQuery,
 	"authzed":            authzed.GetQuery,
 	"awa5_rs":            awa5_rs.GetQuery,
+	"awatalk":            awatalk.GetQuery,
 	"awk":                awk.GetQuery,
 	"bash":               bash.GetQuery,
 	"bass":               bass.GetQuery,
