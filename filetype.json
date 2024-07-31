@@ -94,6 +94,7 @@
     "august":             ["august"],
     "authzed":            ["zed"],
     "awa5_rs":            ["awasm"],
+    "awatalk":            ["awa"],
     "awk":                ["awk", "gawk"],
     "bash":               ["sh", "bash", "csh", "ksh", "zsh", "zsh-theme"],
     "bass":               ["bass"],

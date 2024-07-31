@@ -1,4 +1,4 @@
-# 402 Supported Parsers
+# 403 Supported Parsers
 
 13 pending, 4 skipped regeneration, 29 missing queries
 
@@ -20,6 +20,7 @@
 - [x] [august](https://github.com/ScratchCat458/tree-sitter-august) ✔️ (maintained by @ScratchCat458)
 - [x] [authzed](https://github.com/mleonidas/tree-sitter-authzed) ✔️ (maintained by @mattpolzin)
 - [x] [awa5_rs](https://github.com/liraymond04/tree-sitter-awa5_rs) ✔️ (maintained by @liraymond04)
+- [x] [awatalk](https://github.com/liraymond04/tree-sitter-awatalk) ✔️ (maintained by @liraymond04)
 - [x] [awk](https://github.com/Beaglefoot/tree-sitter-awk) ✔️ (maintained by @Beaglefoot)
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) ✔️ (maintained by @TravonteD)
 - [x] [bass](https://github.com/vito/tree-sitter-bass) ✔️ (maintained by @amaanq)

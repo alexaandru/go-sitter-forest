@@ -149,6 +149,14 @@
     "maintainedBy": "@liraymond04"
   },
   {
+    "reference": "main",
+    "revision": "6a528e91db85b2a6798a1da5226edd63354a3ecb",
+    "grammarSha": "8823450b5a8c0645731f3610c2ec7666e04e9e611a03855f9934ad35c1d978b1",
+    "language": "awatalk",
+    "url": "https://github.com/liraymond04/tree-sitter-awatalk",
+    "maintainedBy": "@liraymond04"
+  },
+  {
     "reference": "master",
     "revision": "ba7472152d79a8c916550c80fdbfd5724d07a0c9",
     "grammarSha": "a9074597f237e6ad04274822189bb14bddbf70be1c4d7a21a3e1b4d70dc16204",
