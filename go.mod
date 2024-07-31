@@ -18,7 +18,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/astro v1.5.100
 	github.com/alexaandru/go-sitter-forest/august v1.5.100
 	github.com/alexaandru/go-sitter-forest/authzed v1.5.100
-	github.com/alexaandru/go-sitter-forest/awa5_rs v1.5.101
+	github.com/alexaandru/go-sitter-forest/awa5_rs v1.5.102
 	github.com/alexaandru/go-sitter-forest/awatalk v1.5.100
 	github.com/alexaandru/go-sitter-forest/awk v1.5.100
 	github.com/alexaandru/go-sitter-forest/bash v1.5.101
@@ -87,7 +87,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/editorconfig v1.5.100
 	github.com/alexaandru/go-sitter-forest/eds v1.5.100
 	github.com/alexaandru/go-sitter-forest/eex v1.5.100
-	github.com/alexaandru/go-sitter-forest/effekt v1.5.102
+	github.com/alexaandru/go-sitter-forest/effekt v1.5.103
 	github.com/alexaandru/go-sitter-forest/elisp v1.5.100
 	github.com/alexaandru/go-sitter-forest/elixir v1.5.100
 	github.com/alexaandru/go-sitter-forest/elm v1.5.100
@@ -161,7 +161,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.5.101
 	github.com/alexaandru/go-sitter-forest/http2 v1.5.101
 	github.com/alexaandru/go-sitter-forest/hungarian v1.5.100
-	github.com/alexaandru/go-sitter-forest/hurl v1.5.100
+	github.com/alexaandru/go-sitter-forest/hurl v1.5.101
 	github.com/alexaandru/go-sitter-forest/hylo v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
 	github.com/alexaandru/go-sitter-forest/idl v1.5.107
@@ -250,7 +250,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.5.100
 	github.com/alexaandru/go-sitter-forest/pem v1.5.100
 	github.com/alexaandru/go-sitter-forest/perl v1.5.102
-	github.com/alexaandru/go-sitter-forest/perm v1.5.103
+	github.com/alexaandru/go-sitter-forest/perm v1.5.104
 	github.com/alexaandru/go-sitter-forest/pgn v1.5.100
 	github.com/alexaandru/go-sitter-forest/php v1.5.101
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.101
@@ -258,7 +258,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pic v1.5.103
 	github.com/alexaandru/go-sitter-forest/pint v1.5.101
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
-	github.com/alexaandru/go-sitter-forest/plantuml v1.5.101
+	github.com/alexaandru/go-sitter-forest/plantuml v1.5.102
 	github.com/alexaandru/go-sitter-forest/po v1.5.100
 	github.com/alexaandru/go-sitter-forest/pod v1.5.101
 	github.com/alexaandru/go-sitter-forest/poe_filter v1.5.100
@@ -387,13 +387,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.5.102
 	github.com/alexaandru/go-sitter-forest/virdant v1.5.102
 	github.com/alexaandru/go-sitter-forest/virgil v1.5.100
-	github.com/alexaandru/go-sitter-forest/vrl v1.5.103
+	github.com/alexaandru/go-sitter-forest/vrl v1.5.104
 	github.com/alexaandru/go-sitter-forest/vue v1.5.100
 	github.com/alexaandru/go-sitter-forest/walnut v1.5.100
 	github.com/alexaandru/go-sitter-forest/wbproto v1.5.100
 	github.com/alexaandru/go-sitter-forest/wgsl v1.5.100
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.5.100
-	github.com/alexaandru/go-sitter-forest/wing v1.5.100
+	github.com/alexaandru/go-sitter-forest/wing v1.5.101
 	github.com/alexaandru/go-sitter-forest/wit v1.5.100
 	github.com/alexaandru/go-sitter-forest/woml v1.5.100
 	github.com/alexaandru/go-sitter-forest/xcompose v1.5.100
