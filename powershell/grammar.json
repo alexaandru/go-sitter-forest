@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "804d86fd4ad286bd0cc1c1f0f7b28bd7af6755ad",
-  "grammarSha": "0e90c5cf93fd5695ec98fb7e9fe6c179789819802b56b21390cb9b7915b0cc95",
+  "revision": "fc15514b2f1dbba9c58528d15a3708f89eda6a01",
+  "grammarSha": "a7222205c89bdf24d258a9163c7154f8c6db49e360e733ea61f14efea726c995",
   "language": "powershell",
   "url": "https://github.com/airbus-cert/tree-sitter-powershell",
   "maintainedBy": "@citronneur",

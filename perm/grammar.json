@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "3f5e10a6f5f6799ddac84b1a90edcd1d15e6cbaf",
+  "revision": "f0ed58fb94019f60362f06fdc3e4c614cac9b364",
   "grammarSha": "58de63ea99d6f783d9bda3454c6d2a7e8f10a1665463bcd21ba7b3978cbc7250",
   "language": "perm",
   "url": "https://github.com/theoriginalstove/tree-sitter-perm",

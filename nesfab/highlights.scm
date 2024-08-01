@@ -4,6 +4,9 @@
 (function_definition
     (identifier) @function
 )
+(asm_function_definition
+    (identifier) @function
+)
 (call
     (identifier) @function
 )
@@ -19,6 +22,9 @@
 )
 (audio_expression
     "audio" @function.special
+)
+(asm_file_statement
+    "file" @function.special
 )
 
 [
@@ -46,6 +52,7 @@
 
 [
     "abs"
+    "asm"
     "break"
     "case"
     "charmap"

@@ -23,5 +23,8 @@
   "https://github.com/0x1d1z3r/tree-sitter-opensmarts",
   "https://github.com/0x1d1z3r/tree-sitter-opensmiles",
   "https://github.com/omnetpp/tree-sitter-msg",
-  "https://github.com/mrseanman/tree-sitter-maxima"
+  "https://github.com/mrseanman/tree-sitter-maxima",
+  "https://github.com/cyber-cicco/tree-sitter-thymeleaf",
+  "https://github.com/andretun/tree-sitter-marte",
+  "https://github.com/faldor20/tree-sitter-roc"
 ]

@@ -338,6 +338,8 @@ bool tree_sitter_ink_external_scanner_scan(
     if (skip_ws_upto_cr(lexer)) {
       MSG("  at EOL\n");
       lexer->result_symbol = END_OF_LINE;
+      skip_ink(lexer);
+      mark_end(lexer);
       return true;
     } else if (is_eof(lexer)) {
       MSG("  at EOF\n");

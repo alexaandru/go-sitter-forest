@@ -18,7 +18,7 @@ const (
 fn baz() UUU[10]
     expression
 `
-	expected = "(module (function_definition (identifier) (type (scalar_type (integer_type))) (statement_block (expression (identifier)) (expression (identifier)))) (function_definition (identifier) (type (array_type (typed_element_array_type (scalar_type (integer_type)) (numeric_literal)))) (statement_block (expression (identifier)))))"
+	expected = "(module (function_definition (function_keyword) (identifier) (type (scalar_type (integer_type))) (statement_block (expression (identifier)) (expression (identifier)))) (function_definition (function_keyword) (identifier) (type (array_type (typed_element_array_type (scalar_type (integer_type)) (numeric_literal)))) (statement_block (expression (identifier)))))"
 )
 
 func TestGrammar(t *testing.T) {

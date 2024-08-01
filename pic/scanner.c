@@ -34,6 +34,12 @@
 
 #include "parser.h"
 
+
+/**
+ * The tokens that this scanner will detect. The order must be the same as
+ * defined in the 'externals' field in the grammar.
+ */
+
 enum TokenType {
   SIDE,
   SIDE_CORNER,
@@ -43,6 +49,11 @@ enum TokenType {
 static int32_t left[] = { U'l', U'e', U'f', U't', 0 };
 static int32_t right[] = { U'r', U'i', U'g', U'h', U't', 0 };
 static int32_t of[] = { U'o', U'f', 0 };
+
+
+/**
+ * The public interface used by the tree-sitter parser
+ */
 
 void *tree_sitter_pic_external_scanner_create() {
   return NULL;
@@ -82,6 +93,13 @@ static bool scan_word(TSLexer *lexer, int32_t word[], bool skip) {
 
 bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
   if (valid_symbols[SIDE] || valid_symbols[SIDE_CORNER]) {
+
+    // We try to parse the token 'left'. If that succeeds we check for the
+    // token 'of' but do not consume it. Otherwise we try to parse the token
+    // 'right' also optionally followed by 'of'.
+    // The implementation requires that both words start with different
+    // letters so that the first look-ahead is able to reject a word.
+
     if (scan_word(lexer, left, true)) {
       lexer->mark_end(lexer);
       lexer->result_symbol = SIDE;
