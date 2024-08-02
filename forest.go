@@ -304,6 +304,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ralph"
 	"github.com/alexaandru/go-sitter-forest/rasi"
 	"github.com/alexaandru/go-sitter-forest/rbs"
+	"github.com/alexaandru/go-sitter-forest/rcl"
 	"github.com/alexaandru/go-sitter-forest/re2c"
 	"github.com/alexaandru/go-sitter-forest/readline"
 	"github.com/alexaandru/go-sitter-forest/regex"
@@ -725,6 +726,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"ralph":              ralph.GetLanguage,
 	"rasi":               rasi.GetLanguage,
 	"rbs":                rbs.GetLanguage,
+	"rcl":                rcl.GetLanguage,
 	"re2c":               re2c.GetLanguage,
 	"readline":           readline.GetLanguage,
 	"regex":              regex.GetLanguage,
@@ -1132,6 +1134,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ralph":              ralph.GetQuery,
 	"rasi":               rasi.GetQuery,
 	"rbs":                rbs.GetQuery,
+	"rcl":                rcl.GetQuery,
 	"re2c":               re2c.GetQuery,
 	"readline":           readline.GetQuery,
 	"regex":              regex.GetQuery,

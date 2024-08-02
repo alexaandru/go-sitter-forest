@@ -289,6 +289,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ralph v1.5.100
 	github.com/alexaandru/go-sitter-forest/rasi v1.5.100
 	github.com/alexaandru/go-sitter-forest/rbs v1.5.100
+	github.com/alexaandru/go-sitter-forest/rcl v1.5.100
 	github.com/alexaandru/go-sitter-forest/re2c v1.5.100
 	github.com/alexaandru/go-sitter-forest/readline v1.5.100
 	github.com/alexaandru/go-sitter-forest/regex v1.5.100

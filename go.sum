@@ -570,6 +570,8 @@ github.com/alexaandru/go-sitter-forest/rasi v1.5.100 h1:fVH6p3SBhQftyCuuMeG/rWXu
 github.com/alexaandru/go-sitter-forest/rasi v1.5.100/go.mod h1:8hjHJ4uoe2OgSH3UMZDh62qGsCGk0jOCcv2OKRuTWbc=
 github.com/alexaandru/go-sitter-forest/rbs v1.5.100 h1:K9Prz7mffA2YHz4yMK49bZIKmRF06tsccnq0YIrbnNM=
 github.com/alexaandru/go-sitter-forest/rbs v1.5.100/go.mod h1:id5Z8wsMmHhcxe6Qck1mAJvatlQDZBj9w+czj/Dnn/0=
+github.com/alexaandru/go-sitter-forest/rcl v1.5.100 h1:N+NophnTAEoqnPQhTUruGLXM3L14C1sHDWDFXVvyIvs=
+github.com/alexaandru/go-sitter-forest/rcl v1.5.100/go.mod h1:fDWt3Y38UyGA21DeduVS/U5elm9YJjL1fErmLRX3CsE=
 github.com/alexaandru/go-sitter-forest/re2c v1.5.100 h1:DGNUWk1n214Ks0EYsYHkwFIGXzXSi/R7uiLBJzo6Jhs=
 github.com/alexaandru/go-sitter-forest/re2c v1.5.100/go.mod h1:WUZGfqbGZezvYbs51HWNQO1n8kfNr1yaq7hJPpwtcAE=
 github.com/alexaandru/go-sitter-forest/readline v1.5.100 h1:+iS8JXe5ve/xcP4/becXh6DWhMcHGJP6CaRPL7s+3TY=
