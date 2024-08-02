@@ -2792,6 +2792,14 @@
   },
   {
     "reference": "master",
+    "revision": "c206db926f2d2f33c5f666ee6211dc6bc309722c",
+    "grammarSha": "406663fa0d4d967b382d47ecdaf547439563ae2950fdaa2bc27528a52155f6dc",
+    "language": "rcl",
+    "url": "https://github.com/rcl-lang/tree-sitter-rcl",
+    "maintainedBy": "@ruuda"
+  },
+  {
+    "reference": "master",
     "revision": "47aa19cf5f7aba2ed30e2b377f7172df76e819a6",
     "grammarSha": "c5cccbda55131250d0ebab3c13b6ba6ccc8df6af84ae33637c900e10c1ccf53a",
     "language": "re2c",

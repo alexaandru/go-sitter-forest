@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "c206db926f2d2f33c5f666ee6211dc6bc309722c",
+  "grammarSha": "406663fa0d4d967b382d47ecdaf547439563ae2950fdaa2bc27528a52155f6dc",
+  "language": "rcl",
+  "url": "https://github.com/rcl-lang/tree-sitter-rcl",
+  "maintainedBy": "@ruuda"
+}

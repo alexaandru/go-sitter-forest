@@ -1,4 +1,4 @@
-# 403 Supported Parsers
+# 404 Supported Parsers
 
 13 pending, 4 skipped regeneration, 29 missing queries
 
@@ -300,6 +300,7 @@
 - [x] [ralph](https://github.com/alephium/tree-sitter-ralph) ✔️ (maintained by @tdroxler)
 - [x] [rasi](https://github.com/Fymyte/tree-sitter-rasi) ✔️ (maintained by @Fymyte)
 - [x] [rbs](https://github.com/joker1007/tree-sitter-rbs) ✔️ (maintained by @joker1007)
+- [x] [rcl](https://github.com/rcl-lang/tree-sitter-rcl) ✔️ (maintained by @ruuda)
 - [x] [re2c](https://github.com/tree-sitter-grammars/tree-sitter-re2c) ✔️ (maintained by @amaanq)
 - [x] [readline](https://github.com/tree-sitter-grammars/tree-sitter-readline) ✔️ (maintained by @ribru17)
 - [x] [regex](https://github.com/tree-sitter/tree-sitter-regex) ✔️ (maintained by @theHamsta)
