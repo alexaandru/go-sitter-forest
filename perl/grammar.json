@@ -1,12 +1,13 @@
 {
   "reference": "master",
-  "revision": "48e79a3f5047bee39a3081ce8c9933aac48d45a9",
-  "grammarSha": "5c39c7ab43ac00767928b49b743eb7868ce2a325b5e2ca5a05eed968d101055e",
+  "revision": "c8c228b26d4fb6016c285aec4a8cd11f8e6c22c4",
+  "grammarSha": "0b2a046a8b82abd8f8ac97c4ed7b29fd54359370d901315f629ef952d17438dc",
   "language": "perl",
   "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
   "maintainedBy": "@RabbiVeesh, @LeoNerd",
   "files": [
     "scanner.c",
+    "bsearch.c",
     "tsp_unicode.h"
   ]
 }

@@ -553,6 +553,8 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 		err = combineFiles("maybe.c", "scanner.c", gr)
 	case "comment":
 		err = combineFiles("chars.c", "scanner.c", gr, "touch")
+	case "perl":
+		err = combineFiles("bsearch.c", "tsp_unicode.h", gr)
 	}
 
 	return

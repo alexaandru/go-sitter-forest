@@ -35,8 +35,6 @@
 #define DEBUG_PRINTF(...) do{ } while ( false )
 #endif
 
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
-
 
 // --------------------------------------------------------------------------------------------------------
 // Symbols
@@ -239,14 +237,20 @@ static State state_new_idris(TSLexer *l, const bool * restrict vs, Payload *is) 
 }
 
 #ifdef DEBUG
-static void debug_payload(Payload *payload) {
-  if (payload->indents.size == 0) DEBUG_PRINTF("empty");
-  bool empty = true;
+static void debug_indents(Payload *payload) {
+  DEBUG_PRINTF("[");
   for (size_t i = 0; i < payload->indents.size; i++) {
-    if (!empty) DEBUG_PRINTF("-");
+    if (0 < i) DEBUG_PRINTF(",");
     DEBUG_PRINTF("%d", payload->indents.contents[i]);
-    empty = false;
   }
+  DEBUG_PRINTF("]");
+}
+
+static void debug_payload(Payload *payload) {
+  DEBUG_PRINTF("{ indents = ");
+  debug_indents(payload);
+  DEBUG_PRINTF(" }");
+
 }
 
 void debug_state(State *state) {
@@ -450,12 +454,16 @@ static bool same_indent(uint32_t indent, State *state) {
 /**
  * Require that the current line's indent is smaller than the containing layout's, so the layout may be ended.
  */
-static bool smaller_indent(uint32_t indent, State *state) {
+static bool less_indent(uint32_t indent, State *state) {
   return indent_exists(state) && indent < *array_back(&state->payload->indents);
 }
 
 static bool indent_lesseq(uint32_t indent, State *state) {
    return indent_exists(state) && indent <= *array_back(&state->payload->indents);
+}
+
+static bool more_indent(uint32_t indent, State *state) {
+  return indent_exists(state) && indent > *array_back(&state->payload->indents);
 }
 
 /**
@@ -618,7 +626,7 @@ static Result finish_if_valid(const Sym s, char *restrict desc, State *state) {
 /**
  * Add one level of indentation to the stack, caused by starting a layout.
  */
-static void push(uint32_t ind, State *state) {
+static void push_indent(uint32_t ind, State *state) {
   DEBUG_PRINTF("push: %d\n", ind);
   array_push(&state->payload->indents, ind);
 }
@@ -626,7 +634,7 @@ static void push(uint32_t ind, State *state) {
 /**
  * Remove one level of indentation from the stack, caused by the end of a layout.
  */
-static void pop(State *state) {
+static void pop_indent(State *state) {
   if (indent_exists(state)) {
     DEBUG_PRINTF("pop\n");
     array_pop(&state->payload->indents);
@@ -654,7 +662,7 @@ static void skipspace(State *state) {
  */
 static Result layout_end(char *desc, State *state) {
   if (SYM(END)) {
-    pop(state);
+    pop_indent(state);
     return finish(END, desc);
   }
   return res_cont;
@@ -738,7 +746,7 @@ static Result initialize(uint32_t column, State *state) {
     MARK("initialize", false, state);
     bool match = token("module", state);
     if (match) return res_fail;
-    push(column, state);
+    push_indent(column, state);
     return finish(INDENT, "init");
   }
   return res_cont;
@@ -810,7 +818,7 @@ static Result cpp(State *state) {
  * line after skipping whitespace) is smaller than the layout indent.
  */
 static Result dedent(uint32_t indent, State *state) {
-  if (smaller_indent(indent, state)) return layout_end("dedent", state);
+  if (less_indent(indent, state)) return layout_end("dedent", state);
   return res_cont;
 }
 
@@ -820,11 +828,9 @@ static Result dedent(uint32_t indent, State *state) {
  * This is the case after `do` or `of`, where the `where` can be on the same indent.
  */
 static Result newline_where(uint32_t indent, State *state) {
-  if (is_newline_where(indent, state)) {
-    MARK("newline_where", false, state);
-    return end_or_semicolon("newline_where", state);
-  }
-  return res_cont;
+  MARK("newline_where", false, state);
+  if (SYM (WHERE)) return finish(WHERE, "newline_where");
+  return res_fail;
 }
 
 /**
@@ -881,7 +887,7 @@ static Result where(State *state) {
 static Result in(State *state) {
   if (SYM(IN)) {
     MARK("in", false, state);
-    pop(state);
+    pop_indent(state);
     return finish(IN, "in");
   }
   return res_fail;
@@ -1119,7 +1125,7 @@ static Result close_layout_in_list(State *state) {
   switch (PEEK) {
     case ']': {
       if (state->symbols[END]) {
-        pop(state);
+        pop_indent(state);
         return finish(END, "bracket");
       }
       break;
@@ -1226,7 +1232,7 @@ static Result layout_start(uint32_t column, State *state) {
       default:
         break;
     }
-    push(column, state);
+    push_indent(column, state);
     return finish(START, "layout_start");
   }
   return res_cont;
@@ -1257,7 +1263,7 @@ static Result post_end_semicolon(uint32_t column, State *state) {
  * Like `post_end_semicolon`, but for layout end.
  */
 static Result repeat_end(uint32_t column, State *state) {
-  if (state->symbols[END] && smaller_indent(column, state)) {
+  if (state->symbols[END] && less_indent(column, state)) {
     return layout_end("repeat_end", state);
   }
   return res_cont;
@@ -1389,11 +1395,13 @@ static Result scan_main(State *state) {
   Result res = eof(state);
   SHORT_SCANNER;
   MARK("main", false, state);
+
   if (is_newline_idris(PEEK)) {
     S_SKIP;
     uint32_t indent = count_indent(state);
     return newline(indent, state);
   }
+
   uint32_t col = column(state);
   return immediate(col, state);
 }
@@ -1507,7 +1515,6 @@ unsigned tree_sitter_idris_external_scanner_serialize(Payload *payload, char *bu
     memcpy(&buffer[size], payload->indents.contents, len);
     size += len;
   }
-
   {
     unsigned len = payload->raw_string_sharp_counts.size;
     if (size + 1 + len > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) return 0;
@@ -1515,7 +1522,6 @@ unsigned tree_sitter_idris_external_scanner_serialize(Payload *payload, char *bu
     memcpy(&buffer[size], payload->raw_string_sharp_counts.contents, len);
     size += len;
   }
-
   return size;
 }
 

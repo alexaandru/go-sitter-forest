@@ -1,4 +1,5 @@
-(comment) @comment
+(line_comment) @comment
+(block_comment) @comment
 
 (identifier) @variable
 (qualified_name "." @punctuation.delimiter)

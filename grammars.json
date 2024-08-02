@@ -292,8 +292,8 @@
   },
   {
     "reference": "main",
-    "revision": "dd571e8a8ed4da58f5189e54f6dd0accf1daf388",
-    "grammarSha": "d6a60598475f7af366d84120788c8102be31006f7a79beaed8d94a1530eed8e3",
+    "revision": "7aa4e061367d64923151d29b9d06847042cbe98f",
+    "grammarSha": "8cb2253de33abf5834766e9e84da7f64f00db7eab70fd4a159c6373d9b949752",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -1552,7 +1552,7 @@
   },
   {
     "reference": "main",
-    "revision": "c570fa14951b3033ac84a650514e0fc47e8dfc2b",
+    "revision": "60fa928f224f657c3de2ae660ea52a4c08d592e9",
     "grammarSha": "ff6cdf728be89781fa3d396dea9188a4f2e7bde96767a576d02661e576d8781f",
     "language": "idris",
     "url": "https://github.com/kayhide/tree-sitter-idris",
@@ -1580,8 +1580,8 @@
   },
   {
     "reference": "main",
-    "revision": "af1eaf810d49f5382c81c1db3645138db6d51dfd",
-    "grammarSha": "09eb2bab41ea8297b3bd3bf8bd52bbc15eb3e82dfb491cef71b0cfb07e308820",
+    "revision": "0cd6a84c8114687f9e1dab3cd494aa895923c243",
+    "grammarSha": "4695221e4377a6696e8d44c46c9d4759aa87bfeb78c8619b38cab248186c048a",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
     "maintainedBy": "@wldmr",
@@ -1778,7 +1778,7 @@
   },
   {
     "reference": "main",
-    "revision": "fe73604cca8cac5c8756b286e7eeb1821852b7dc",
+    "revision": "754394c69811e5b586f16c462855d66dfc747a03",
     "grammarSha": "90c704380d10681ffbcd6b2a13b774945ded8c8c08e30de53aa3a1bfc45dcdc7",
     "language": "kotlin",
     "url": "https://github.com/fwcd/tree-sitter-kotlin",
@@ -2175,8 +2175,8 @@
   },
   {
     "reference": "main",
-    "revision": "5b4ecf522ecaa09c06232b35829942417c7e63d4",
-    "grammarSha": "c40eb3a5251e278d6b5b2a77b6697b9781481a706d59c957335ae3a931c92316",
+    "revision": "dfc0e4149210e9602ea30841c48bc43baa474800",
+    "grammarSha": "56189a44d89f0186ad0deeb1829181a16ca7bfd66c900f712c6e8b09a3ff0925",
     "language": "nesfab",
     "url": "https://github.com/hnd2/tree-sitter-nesfab",
     "maintainedBy": "@hnd2",
@@ -2244,8 +2244,8 @@
   },
   {
     "reference": "master",
-    "revision": "0fdada10f1f845ca9116e279ad8f5d0ca93e9949",
-    "grammarSha": "9405b063baad43af3f6a94aac79d4de1fe7523525d61f6e488e9e99e11e6a0d5",
+    "revision": "68d3b7999ad89d31690461884270e5658e0a22c4",
+    "grammarSha": "a62b81c1d6d2b2b2754ca6ed03fff42331710beba5d5e471859eca90d0542899",
     "language": "nix",
     "url": "https://github.com/nix-community/tree-sitter-nix",
     "maintainedBy": "@leo60228",
@@ -2407,13 +2407,14 @@
   },
   {
     "reference": "master",
-    "revision": "48e79a3f5047bee39a3081ce8c9933aac48d45a9",
-    "grammarSha": "5c39c7ab43ac00767928b49b743eb7868ce2a325b5e2ca5a05eed968d101055e",
+    "revision": "c8c228b26d4fb6016c285aec4a8cd11f8e6c22c4",
+    "grammarSha": "0b2a046a8b82abd8f8ac97c4ed7b29fd54359370d901315f629ef952d17438dc",
     "language": "perl",
     "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
     "files": [
       "scanner.c",
+      "bsearch.c",
       "tsp_unicode.h"
     ]
   },
@@ -3574,8 +3575,8 @@
   },
   {
     "reference": "main",
-    "revision": "28821d0d6da5f0a6b5eb02b9bad953fecafd7248",
-    "grammarSha": "80e4b2fa4e96de71f19f028bac79ac26793f401c07134cdcdf0b21ad9b4c9c4a",
+    "revision": "af7a97eea5d4c62473b29655a238d4f4e055798b",
+    "grammarSha": "c57049047a103a41e9f23e61ed8eceeb1afebc4be48ef7cf2470c70fe27d0ca3",
     "language": "typespec",
     "url": "https://github.com/happenslol/tree-sitter-typespec",
     "maintainedBy": "@happenslol"
@@ -3752,8 +3753,8 @@
   },
   {
     "reference": "master",
-    "revision": "446c0c36daae7e552d969c60fec917e5c2b85b9b",
-    "grammarSha": "1ebd2388886b959574f350a6ec7fe9761fb3ca022fae1df859ffa26f310cd8b3",
+    "revision": "574c722f816dd1b8a71f1c9b31e32874557bbabb",
+    "grammarSha": "47a9c0e2607637ab8ccec23c19238eac3b30924666f81f343cc79c7f9519ff5c",
     "language": "virdant",
     "url": "https://github.com/maloneymr/tree-sitter-virdant",
     "maintainedBy": "@maloneymr"
@@ -3832,7 +3833,7 @@
   },
   {
     "reference": "main",
-    "revision": "323d2af916ce9de45f151ee612e45c21ea4eee60",
+    "revision": "c1d414411585ce2eaf11b6c47c6fc03dc9ccc2cb",
     "grammarSha": "061c030795433719650befc5a25f92baf1d0b08c7562a91b088a5106f78cd274",
     "language": "wing",
     "url": "https://github.com/winglang/wing",
