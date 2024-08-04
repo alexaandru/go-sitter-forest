@@ -1,6 +1,6 @@
 # 404 Supported Parsers
 
-13 pending, 4 skipped regeneration, 29 missing queries
+13 pending, 4 skipped regeneration, 28 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -90,7 +90,7 @@
 - [x] [editorconfig](https://github.com/ValdezFOmar/tree-sitter-editorconfig) ✔️ (maintained by @ValdezFOmar)
 - [x] [eds](https://github.com/uyha/tree-sitter-eds) ✔️ (maintained by @uyha)
 - [x] [eex](https://github.com/connorlay/tree-sitter-eex) ✔️ (maintained by @connorlay)
-- [x] [effekt](https://github.com/leonfuss/tree-sitter-effekt) 🗸 (maintained by @leonfuss)
+- [x] [effekt](https://github.com/leonfuss/tree-sitter-effekt) ✔️ (maintained by @leonfuss)
 - [x] [elisp](https://github.com/Wilfred/tree-sitter-elisp) ✔️ (maintained by @Wilfred)
 - [x] [elixir](https://github.com/elixir-lang/tree-sitter-elixir) ✔️ (maintained by @connorlay)
 - [x] [elm](https://github.com/elm-tooling/tree-sitter-elm) ✔️ (maintained by @zweimach)
@@ -320,7 +320,7 @@
 - [x] [rust](https://github.com/tree-sitter/tree-sitter-rust) ✔️ (maintained by @amaanq)
 - [x] [rust_with_rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)
 - [x] [scala](https://github.com/tree-sitter/tree-sitter-scala) ✔️ (maintained by @stevanmilic)
-- [x] [scfg](https://git.sr.ht/~rockorager/tree-sitter-scfg) ✔️ (maintained by @WhyNotHugo)
+- [x] [scfg](https://github.com/rockorager/tree-sitter-scfg) ✔️ (maintained by @WhyNotHugo)
 - [x] [scheme](https://github.com/6cdh/tree-sitter-scheme) ✔️ (maintained by @6cdh)
 - [x] [scss](https://github.com/serenadeai/tree-sitter-scss) ✔️ (maintained by @elianiva)
 - [x] [sdml](https://github.com/sdm-lang/tree-sitter-sdml) ✔️ (maintained by @johnstonskj)

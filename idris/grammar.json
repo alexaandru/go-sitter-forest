@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "60fa928f224f657c3de2ae660ea52a4c08d592e9",
-  "grammarSha": "ff6cdf728be89781fa3d396dea9188a4f2e7bde96767a576d02661e576d8781f",
+  "revision": "310e659ce63d0f0061f47dad7ebb63dd1dbd6c5b",
+  "grammarSha": "2676dd83749f458e58b8c06115b818721c4073a636f0543e2024fc0416f41e84",
   "language": "idris",
   "url": "https://github.com/kayhide/tree-sitter-idris",
   "maintainedBy": "@kayhide",

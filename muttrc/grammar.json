@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "90ef60852c410bd964cd3b954366e4c403c17314",
+  "revision": "173b0ab53a9c07962c9777189c4c70e90f1c1837",
   "grammarSha": "6d13bf1ec8230703df2a53ab4cc2facc756166a585d8b977e3ebd10dba5ec63e",
   "language": "muttrc",
   "url": "https://github.com/neomutt/tree-sitter-muttrc",

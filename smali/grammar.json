@@ -7,5 +7,6 @@
   "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skipUpdate": true
 }

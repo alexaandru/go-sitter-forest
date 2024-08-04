@@ -19,7 +19,7 @@ ABC 1; ~~ Blah
 Let A be something;
 Def TheName (FnCall Aa Bb Cc;):
 `
-	expected = "(source_file (line_comment) (line_comment) (line_comment) (fn_stmt name: (identifier) args: (expression (operator) (number) (number))) (inline_comment) (fn_stmt name: (identifier) args: (expression (identifier))) (inline_comment) (inline_comment) (fn_stmt name: (identifier) args: (expression (number))) (line_comment) (fn_stmt name: (identifier) args: (expression (identifier))) (inline_comment) (inline_comment) (ERROR (def_stmt name: (identifier) body: (def_body (fn_stmt name: (identifier) args: (expression (identifier) (identifier) (identifier))))) (UNEXPECTED ':')))"
+	expected = "(source_file (line_comment) (line_comment) (line_comment) (statement (identifier) (identifier) (number) (number)) (inline_comment) (statement (identifier) (identifier) (inline_comment) (inline_comment)) (statement (identifier) (number)) (line_comment) (statement (identifier) (identifier) (inline_comment) (inline_comment)) (statement (identifier) (identifier) (block (statement (identifier) (identifier) (identifier) (identifier)))) (ERROR (UNEXPECTED ':')))"
 )
 
 func TestGrammar(t *testing.T) {
