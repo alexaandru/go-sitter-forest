@@ -34,7 +34,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bp v1.5.100
 	github.com/alexaandru/go-sitter-forest/brightscript v1.5.100
 	github.com/alexaandru/go-sitter-forest/c v1.5.101
-	github.com/alexaandru/go-sitter-forest/c3 v1.5.102
+	github.com/alexaandru/go-sitter-forest/c3 v1.5.103
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
 	github.com/alexaandru/go-sitter-forest/ca65 v1.5.109
 	github.com/alexaandru/go-sitter-forest/cairo v1.5.100
@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.100
 	github.com/alexaandru/go-sitter-forest/cmdl v1.5.103
 	github.com/alexaandru/go-sitter-forest/cobol v1.5.100
-	github.com/alexaandru/go-sitter-forest/cognate v1.5.101
+	github.com/alexaandru/go-sitter-forest/cognate v1.5.102
 	github.com/alexaandru/go-sitter-forest/comment v1.5.100
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.100
 	github.com/alexaandru/go-sitter-forest/context v1.5.100
@@ -143,7 +143,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.5.103
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.5.100
 	github.com/alexaandru/go-sitter-forest/hack v1.5.100
-	github.com/alexaandru/go-sitter-forest/haml v1.5.100
+	github.com/alexaandru/go-sitter-forest/haml v1.5.101
 	github.com/alexaandru/go-sitter-forest/hare v1.5.102
 	github.com/alexaandru/go-sitter-forest/haskell v1.5.101
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.5.100
@@ -164,7 +164,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.101
 	github.com/alexaandru/go-sitter-forest/hylo v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.107
+	github.com/alexaandru/go-sitter-forest/idl v1.5.108
 	github.com/alexaandru/go-sitter-forest/idris v1.5.110
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
@@ -205,7 +205,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/llvm v1.5.100
 	github.com/alexaandru/go-sitter-forest/lookml v1.5.100
 	github.com/alexaandru/go-sitter-forest/lox v1.5.102
-	github.com/alexaandru/go-sitter-forest/lua v1.5.102
+	github.com/alexaandru/go-sitter-forest/lua v1.5.103
 	github.com/alexaandru/go-sitter-forest/luadoc v1.5.101
 	github.com/alexaandru/go-sitter-forest/luap v1.5.101
 	github.com/alexaandru/go-sitter-forest/luau v1.5.100
@@ -226,7 +226,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.101
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
-	github.com/alexaandru/go-sitter-forest/nesfab v1.5.109
+	github.com/alexaandru/go-sitter-forest/nesfab v1.5.110
 	github.com/alexaandru/go-sitter-forest/nftables v1.5.100
 	github.com/alexaandru/go-sitter-forest/nginx v1.5.100
 	github.com/alexaandru/go-sitter-forest/nickel v1.5.100

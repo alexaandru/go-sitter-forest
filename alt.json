@@ -26,5 +26,13 @@
   "https://github.com/mrseanman/tree-sitter-maxima",
   "https://github.com/cyber-cicco/tree-sitter-thymeleaf",
   "https://github.com/andretun/tree-sitter-marte",
-  "https://github.com/faldor20/tree-sitter-roc"
+  "https://github.com/faldor20/tree-sitter-roc",
+  "https://github.com/ASoldo/tree-sitter-uxn",
+  "https://github.com/theoriginalstove/tree-sitter-cypher",
+  "https://github.com/ulic-youthlic/tree-sitter-mcscript",
+  "https://github.com/thartman83/tree-sitter-webreport",
+  "https://github.com/oxidecomputer/tree-sitter-p4",
+  "https://github.com/Or4c/tree-sitter-inform6",
+  "https://github.com/JamesWP/tree-sitter-anzu",
+  "https://github.com/xixiaofinland/tree-sitter-sflog"
 ]
