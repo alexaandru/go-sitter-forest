@@ -20,13 +20,15 @@
                                  "Puts" "Put" "Fold" "Show" "Reverse" "Twin"
                                  "Drop" "Swap" "Case" "When" "Do" "Map" "Range"
                                  "Read-file" "Unbox" "Floor" "Ceiling" "Round"
-                                 "Ln" "Log" "Triplet" "Head" "Tail" "Sin" "Cos"
-                                 "Tan" "Asin" "Acos" "Atan" "Sind" "Cosd"
-                                 "Tand" "Asind" "Acosd" "Atand" "Sinh" "Cosh"
-                                 "Tanh" "Sinhd" "Coshd" "Tanhd" "Filter"
-                                 "Number?" "Zero?" "Empty?" "Empty" "Any?"
-                                 "None" "All" "Sort" "Append" "Prepend" "Min"
-                                 "Max" "Times"))
+                                 "Ln" "Log" "Triplet" "Head" "Tail" "First"
+                                 "Rest" "Sin" "Cos" "Tan" "Asin" "Acos" "Atan"
+                                 "Sind" "Cosd" "Tand" "Asind" "Acosd" "Atand"
+                                 "Sinh" "Cosh" "Tanh" "Sinhd" "Coshd" "Tanhd"
+                                 "Filter" "Number?" "Zero?" "Empty?" "Empty"
+                                 "Any?" "None" "All" "Sort" "Append" "Prepend"
+                                 "Min" "Max" "Times" "Integer!" "Number!"
+                                 "Boolean!" "Block!" "Zero!" "String!"
+                                 "List!"))
 ((identifier) @operator (#any-of? @operator "+" "-" "*" "/" ">" "<" "<=" ">="
                          "==" "!=" "Modulo" "Exp" "Not" "And" "Or" "Xor"))
 ((identifier) @type.builtin (#any-of? @type.builtin "List" "Box" "Regex"

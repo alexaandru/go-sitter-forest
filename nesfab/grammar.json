@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "04c79c845d47a93a1c8b116d64e6d76cd974e273",
-  "grammarSha": "d1e812e7169279336bcdef30e0413711e9797e60303c4b2e69dbbef382473e69",
+  "revision": "07fc0f4204510b3522654f3f5fdf62f250c7094d",
+  "grammarSha": "cdcb8e3da98161f8afaf3b5e62d7d997247b2566dc65c7d12b2de851d64b4cb0",
   "language": "nesfab",
   "url": "https://github.com/hnd2/tree-sitter-nesfab",
   "maintainedBy": "@hnd2",

@@ -20,6 +20,7 @@
 ;; 2) Parameter
 (parameter name: (_) @variable.parameter)
 (call_invocation (arg (param_path (param_path_element [(ident) (ct_ident)] @variable.parameter))))
+(enum_param_declaration (ident) @variable.parameter)
 ;; 3) Declaration
 (global_declaration (ident) @variable.declaration)
 (local_decl_after_type name: [(ident) (ct_ident)] @variable.declaration)
@@ -192,6 +193,7 @@
 ] @operator
 
 (range_expr ":" @operator)
+(foreach_cond ":" @operator)
 
 (ternary_expr
   [
@@ -265,6 +267,7 @@
 (attribute name: (_) @attribute)
 (define_attribute name: (_) @attribute)
 (call_inline_attributes (at_ident) @attribute)
+(asm_block_stmt (at_ident) @attribute)
 
 ;; Type
 [
@@ -306,6 +309,10 @@
 ;; (unary_expr operator: ["--" "++"] argument: (module_ident_expr (ident) @variable.member))
 ;; (unary_expr operator: ["--" "++"] argument: (field_expr field: (access_ident (ident)) @variable.member))
 ;; (unary_expr operator: ["--" "++"] argument: (subscript_expr ["[" "]"] @variable.member))
+
+;; Asm
+(asm_instr [(ident) "int"] @function.builtin)
+(asm_expr [(ct_ident) (ct_const_ident)] @variable.builtin)
 
 ;; Comment
 [

@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "1001c3cd060ea128fdee0f75794bca6ada748be8",
-  "grammarSha": "2ae9cfee69d39eb07c0047cd995aadf0cd5513afd7fd8ee7a13f87149b3371a1",
+  "revision": "ca78e7e229176a7aad3b9bc23361943952ec0aa2",
+  "grammarSha": "9460e0636d912ba2e43d12409bd4a2948a8449e037276d902a373782d1c65fc7",
   "language": "cognate",
   "url": "https://github.com/hedyhli/tree-sitter-cognate",
   "maintainedBy": "@hedyhli"

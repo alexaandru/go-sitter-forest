@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "bab8378a906e9b9e537789fade103fdcafd61547",
+  "revision": "1ce12daf076ba78de09ec7f607bf88e17bd65feb",
   "grammarSha": "a687302d890c703c0b74f350505871becdd7113ded5664740fa92903e184f794",
   "language": "spicy",
   "url": "https://github.com/bbannier/tree-sitter-spicy",

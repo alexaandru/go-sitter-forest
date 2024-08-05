@@ -19,7 +19,7 @@ const (
         %span &middot;
         = render "import/shared/imported_badge", text_only: true, importable: _('event')
 `
-	expected = "(source_file (ruby_block_run) (tag (class) (class) (class) (attributes (ruby_attributes)) (text_content) (text_content) (text_content) (text_content) (text_content)))"
+	expected = "(source_file (ruby_block_run (tag (class) (class) (class) (attributes (ruby_attributes)) (tag (class) (class) (ruby_interpolation (ruby_expression)) (ruby_block_run (tag (name) (text_content)) (ruby_block_output))))))"
 )
 
 func TestGrammar(t *testing.T) {
