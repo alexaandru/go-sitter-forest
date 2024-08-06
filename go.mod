@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.5.100
 	github.com/alexaandru/go-sitter-forest/cmdl v1.5.103
 	github.com/alexaandru/go-sitter-forest/cobol v1.5.100
-	github.com/alexaandru/go-sitter-forest/cognate v1.5.102
+	github.com/alexaandru/go-sitter-forest/cognate v1.5.103
 	github.com/alexaandru/go-sitter-forest/comment v1.5.100
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.5.100
 	github.com/alexaandru/go-sitter-forest/context v1.5.100
@@ -96,7 +96,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.5.100
 	github.com/alexaandru/go-sitter-forest/erlang v1.5.101
 	github.com/alexaandru/go-sitter-forest/facility v1.5.102
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.103
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.5.104
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.5.101
 	github.com/alexaandru/go-sitter-forest/faust v1.5.100
 	github.com/alexaandru/go-sitter-forest/fennel v1.5.100
@@ -164,7 +164,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.5.101
 	github.com/alexaandru/go-sitter-forest/hylo v1.5.100
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.5.100
-	github.com/alexaandru/go-sitter-forest/idl v1.5.108
+	github.com/alexaandru/go-sitter-forest/idl v1.5.109
 	github.com/alexaandru/go-sitter-forest/idris v1.5.110
 	github.com/alexaandru/go-sitter-forest/ignis v1.5.100
 	github.com/alexaandru/go-sitter-forest/ini v1.5.100
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mlir v1.5.100
 	github.com/alexaandru/go-sitter-forest/motoko v1.5.100
 	github.com/alexaandru/go-sitter-forest/move v1.5.102
-	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.101
+	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.5.102
 	github.com/alexaandru/go-sitter-forest/muttrc v1.5.100
 	github.com/alexaandru/go-sitter-forest/nasm v1.5.100
 	github.com/alexaandru/go-sitter-forest/nesfab v1.5.110
@@ -255,7 +255,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.5.101
 	github.com/alexaandru/go-sitter-forest/php_only v1.5.101
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.5.100
-	github.com/alexaandru/go-sitter-forest/pic v1.5.104
+	github.com/alexaandru/go-sitter-forest/pic v1.5.105
 	github.com/alexaandru/go-sitter-forest/pint v1.5.101
 	github.com/alexaandru/go-sitter-forest/pioasm v1.5.100
 	github.com/alexaandru/go-sitter-forest/plantuml v1.5.103
@@ -320,7 +320,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smith v1.5.106
 	github.com/alexaandru/go-sitter-forest/smithy v1.5.101
 	github.com/alexaandru/go-sitter-forest/sml v1.5.104
-	github.com/alexaandru/go-sitter-forest/snakemake v1.5.102
+	github.com/alexaandru/go-sitter-forest/snakemake v1.5.103
 	github.com/alexaandru/go-sitter-forest/solidity v1.5.100
 	github.com/alexaandru/go-sitter-forest/soql v1.5.100
 	github.com/alexaandru/go-sitter-forest/sosl v1.5.100
@@ -339,7 +339,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.5.101
 	github.com/alexaandru/go-sitter-forest/surface v1.5.100
 	github.com/alexaandru/go-sitter-forest/surrealql v1.5.100
-	github.com/alexaandru/go-sitter-forest/sus v1.5.101
+	github.com/alexaandru/go-sitter-forest/sus v1.5.102
 	github.com/alexaandru/go-sitter-forest/svelte v1.5.101
 	github.com/alexaandru/go-sitter-forest/swift v1.5.100
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.5.100
