@@ -34,5 +34,7 @@
   "https://github.com/oxidecomputer/tree-sitter-p4",
   "https://github.com/Or4c/tree-sitter-inform6",
   "https://github.com/JamesWP/tree-sitter-anzu",
-  "https://github.com/xixiaofinland/tree-sitter-sflog"
+  "https://github.com/xixiaofinland/tree-sitter-sflog",
+  "https://github.com/kadena-community/tree-sitter-pact",
+  "https://github.com/marzeq/tree-sitter-mconf"
 ]

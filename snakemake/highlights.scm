@@ -13,7 +13,7 @@
     name: _ @keyword))
 
 ; Subordinate directives (eg. input, output)
-(_
+((_)
   body: (_
     (directive
       name: _ @label)))
@@ -33,6 +33,7 @@
   "use" @keyword.import
   "rule" @keyword.import
   "from" @keyword.import
+  "exclude"? @keyword.import
   "as"? @keyword.import
   "with"? @keyword.import)
 
@@ -43,9 +44,8 @@
   "with" @keyword)
 
 ; Wildcard names
-(wildcard
-  (identifier) @variable
-  (flag) @variable.parameter.builtin)
+(wildcard (identifier) @variable)
+(wildcard (flag) @variable.parameter.builtin)
 
 ; builtin variables
 ((identifier) @variable.builtin

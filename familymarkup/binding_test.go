@@ -22,7 +22,7 @@ Name + ? = word
 // test
 // two
 `
-	expected = "(root (family (family_name (name)) (relations (relation (sources (name) (unknown)) label: (words) (targets (name_def (new_surname (name)) (name) (name_aliases (name))) (comment) (name_def (new_surname (name)) (name)) (comment) (unknown) (comment) (comment))))))"
+	expected = "(root (family name: (family_name name: (name)) (relations (relation sources: (sources (name) (unknown)) label: (words) targets: (targets (name_def surname: (new_surname (name)) name: (name) aliases: (name_aliases (name))) (comment) (name_def surname: (new_surname (name)) name: (name)) (comment) (unknown) (comment) (comment))))))"
 )
 
 func TestGrammar(t *testing.T) {

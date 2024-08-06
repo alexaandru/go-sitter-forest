@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "cec8bf7105e40e82f7e7ddf10586f201701ff84d",
-  "grammarSha": "fb67699bc73de08f453cfc0e9669217bb79d38b03f8bec1bc03ae9651682a407",
+  "revision": "85d59d755ee107b6e4a56c53b8b62ed89c3a2cd6",
+  "grammarSha": "ebcce78975a53f20c7ae12f9fa953248527c9a9bfb122251eb96e2d437d5e6e3",
   "language": "sus",
   "url": "https://github.com/pc2/tree-sitter-sus",
   "maintainedBy": "@VonTum"
