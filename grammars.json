@@ -1369,7 +1369,9 @@
     "maintainedBy": "@lykahb",
     "files": [
       "scanner.c"
-    ]
+    ],
+    "skipUpdate": true,
+    "doc": "thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key"
   },
   {
     "reference": "main",
@@ -1581,8 +1583,8 @@
   },
   {
     "reference": "main",
-    "revision": "0cd6a84c8114687f9e1dab3cd494aa895923c243",
-    "grammarSha": "4695221e4377a6696e8d44c46c9d4759aa87bfeb78c8619b38cab248186c048a",
+    "revision": "c54cc61da1a132055ca79365be96c859bf77595f",
+    "grammarSha": "ce20cd9b2ab851cd5bd8d2814d5286b896e098a81197c34d92d21f8f2c04b2dd",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
     "maintainedBy": "@wldmr",
@@ -1612,7 +1614,9 @@
     "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
     "language": "ispc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
-    "maintainedBy": "@fab4100"
+    "maintainedBy": "@fab4100",
+    "skipUpdate": true,
+    "doc": "Error: Undefined symbol"
   },
   {
     "reference": "master",
@@ -2282,7 +2286,9 @@
     "grammarSha": "9c4164103e924312e970cba1c2078ff33b122985de47e816febe26684fe11f1d",
     "language": "nqc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
-    "maintainedBy": "@amaanq"
+    "maintainedBy": "@amaanq",
+    "skipUpdate": true,
+    "doc": "ReferenceError: Undefined symbol '_statement'"
   },
   {
     "reference": "master",
@@ -3160,7 +3166,9 @@
     "grammarSha": "3d3e320241461a9418ec8be548541538fff24cd123a075052928c1ecb40add0c",
     "language": "sparql",
     "url": "https://github.com/GordianDziwis/tree-sitter-sparql",
-    "maintainedBy": "@BonaBeavis"
+    "maintainedBy": "@BonaBeavis",
+    "skipUpdate": true,
+    "doc": "Error: The `token.immediate` function only takes one literal argument. You passed in multiple literals. Did you mean to call `seq`?"
   },
   {
     "reference": "main",
@@ -3842,8 +3850,8 @@
   },
   {
     "reference": "main",
-    "revision": "b72cfa83432177208841217bfdf489f671e06888",
-    "grammarSha": "d2619f843adacd8d4716868d52a884118f099f22b1d8a292608dae08d138e555",
+    "revision": "36e6b27f636e1010734911092304993427eccfe0",
+    "grammarSha": "aff9c5d4947d46b060e90fbe7fcf3980ecbf91d6cb43ef2a6e69609322b2c02b",
     "language": "wing",
     "url": "https://github.com/winglang/wing",
     "maintainedBy": "@gshpychka, @MarkMcCulloh",
@@ -3948,8 +3956,8 @@
   },
   {
     "reference": "main",
-    "revision": "f8e6d699d6aea003c70fe746543944cdfbce20e1",
-    "grammarSha": "f96e32af1247d54e1649b989dfc18bcfa672d65b568b4656fc338f16efc755d3",
+    "revision": "df7a4812663a828dc4e592b281686cac7b91756b",
+    "grammarSha": "d8304bd7f15f7c7b248ac51896443573d38c6faf5d99d6b0f6401c9242f8e8ae",
     "language": "zeek",
     "url": "https://github.com/zeek/tree-sitter-zeek",
     "maintainedBy": "@bbannier"

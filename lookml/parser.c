@@ -220,16 +220,18 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   switch (state) {
     case 0:
       if (eof) ADVANCE(18);
-      if (lookahead == '"') ADVANCE(32);
-      if (lookahead == '#') ADVANCE(19);
-      if (lookahead == '.') ADVANCE(12);
-      if (lookahead == ':') ADVANCE(22);
-      if (lookahead == 'f') ADVANCE(2);
-      if (lookahead == 'n') ADVANCE(7);
-      if (lookahead == 't') ADVANCE(8);
-      if (lookahead == 'y') ADVANCE(3);
+      ADVANCE_MAP(
+        '"', 32,
+        '#', 19,
+        '.', 12,
+        ':', 22,
+        'f', 2,
+        'n', 7,
+        't', 8,
+        'y', 3,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(16)
+          lookahead == ' ') SKIP(16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(28);
       END_STATE();
     case 1:
@@ -240,7 +242,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 't') ADVANCE(8);
       if (lookahead == 'y') ADVANCE(3);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(1)
+          lookahead == ' ') SKIP(1);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(28);
       END_STATE();
     case 2:
@@ -292,30 +294,32 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '"') ADVANCE(32);
       if (lookahead == '#') ADVANCE(19);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(17)
+          lookahead == ' ') SKIP(17);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(13);
       END_STATE();
     case 16:
       if (eof) ADVANCE(18);
-      if (lookahead == '"') ADVANCE(30);
-      if (lookahead == '#') ADVANCE(19);
-      if (lookahead == '.') ADVANCE(12);
-      if (lookahead == ':') ADVANCE(22);
-      if (lookahead == 'f') ADVANCE(2);
-      if (lookahead == 'n') ADVANCE(7);
-      if (lookahead == 't') ADVANCE(8);
-      if (lookahead == 'y') ADVANCE(3);
+      ADVANCE_MAP(
+        '"', 30,
+        '#', 19,
+        '.', 12,
+        ':', 22,
+        'f', 2,
+        'n', 7,
+        't', 8,
+        'y', 3,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(16)
+          lookahead == ' ') SKIP(16);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(28);
       END_STATE();
     case 17:
       if (eof) ADVANCE(18);
       if (lookahead == '#') ADVANCE(19);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(17)
+          lookahead == ' ') SKIP(17);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(13);
@@ -329,10 +333,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 20:
       ACCEPT_TOKEN(aux_sym_comment_token1);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r') ||
+          (0x0b <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(20);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(21);
+          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(21);
       END_STATE();
     case 21:
       ACCEPT_TOKEN(aux_sym_comment_token1);
@@ -546,17 +550,17 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [9] = {.entry = {.count = 1, .reusable = false}}, SHIFT(7),
   [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
   [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
-  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 1),
-  [17] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_object_repeat1, 2),
-  [19] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_object_repeat1, 2), SHIFT_REPEAT(10),
-  [22] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_object_repeat1, 2), SHIFT_REPEAT(11),
-  [25] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_comment, 2),
-  [27] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bool, 1),
-  [29] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number, 1),
-  [31] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_statement, 3),
-  [33] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 3),
+  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 1, 0, 0),
+  [17] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_object_repeat1, 2, 0, 0),
+  [19] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_object_repeat1, 2, 0, 0), SHIFT_REPEAT(10),
+  [22] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_object_repeat1, 2, 0, 0), SHIFT_REPEAT(11),
+  [25] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_comment, 2, 0, 0),
+  [27] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bool, 1, 0, 0),
+  [29] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number, 1, 0, 0),
+  [31] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_statement, 3, 0, 0),
+  [33] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 3, 0, 0),
   [35] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
-  [37] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_key, 1),
+  [37] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_key, 1, 0, 0),
   [39] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
   [41] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
   [43] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
@@ -574,7 +578,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_lookml() {
+TS_PUBLIC const TSLanguage *tree_sitter_lookml(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

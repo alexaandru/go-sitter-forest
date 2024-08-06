@@ -278,17 +278,19 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   switch (state) {
     case 0:
       if (eof) ADVANCE(4);
-      if (lookahead == '\'') ADVANCE(10);
-      if (lookahead == '(') ADVANCE(6);
-      if (lookahead == ')') ADVANCE(7);
-      if (lookahead == '*') ADVANCE(8);
-      if (lookahead == '/') ADVANCE(1);
-      if (lookahead == ':') ADVANCE(11);
-      if (lookahead == '=') ADVANCE(5);
-      if (lookahead == '?') ADVANCE(9);
-      if (lookahead == '|') ADVANCE(12);
+      ADVANCE_MAP(
+        '\'', 10,
+        '(', 6,
+        ')', 7,
+        '*', 8,
+        '/', 1,
+        ':', 11,
+        '=', 5,
+        '?', 9,
+        '|', 12,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(0)
+          lookahead == ' ') SKIP(0);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(13);
@@ -854,39 +856,39 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT_EXTRA(),
-  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_grammar, 0),
+  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_grammar, 0, 0, 0),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(29),
   [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
   [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
   [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
-  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2),
-  [17] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2), SHIFT_REPEAT(10),
-  [20] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2), SHIFT_REPEAT(4),
-  [23] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2), SHIFT_REPEAT(28),
-  [26] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_sequence, 1),
-  [28] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_sequence, 1), SHIFT(10),
-  [31] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_node_rule, 1),
+  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2, 0, 0),
+  [17] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2, 0, 0), SHIFT_REPEAT(10),
+  [20] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2, 0, 0), SHIFT_REPEAT(4),
+  [23] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 2, 0, 0), SHIFT_REPEAT(28),
+  [26] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_sequence, 1, 0, 0),
+  [28] = {.entry = {.count = 2, .reusable = true}}, REDUCE(sym_sequence, 1, 0, 0), SHIFT(10),
+  [31] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_node_rule, 1, 0, 0),
   [33] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
-  [35] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 1),
+  [35] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_sequence_repeat1, 1, 0, 0),
   [37] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
   [39] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
-  [41] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_repetition, 2),
-  [43] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_optional, 2),
-  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__atom_rule, 3),
-  [47] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_token, 3),
-  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_label, 3, .production_id = 2),
-  [51] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_alternation, 1),
+  [41] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_repetition, 2, 0, 0),
+  [43] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_optional, 2, 0, 0),
+  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__atom_rule, 3, 0, 0),
+  [47] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_token, 3, 0, 0),
+  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_label, 3, 0, 2),
+  [51] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_alternation, 1, 0, 0),
   [53] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
-  [55] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_grammar, 1),
-  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_grammar_repeat1, 2),
-  [59] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_grammar_repeat1, 2), SHIFT_REPEAT(29),
-  [62] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_alternation, 2),
-  [64] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_alternation_repeat1, 2),
-  [66] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_alternation_repeat1, 2), SHIFT_REPEAT(7),
-  [69] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_rule, 1),
+  [55] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_grammar, 1, 0, 0),
+  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_grammar_repeat1, 2, 0, 0),
+  [59] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_grammar_repeat1, 2, 0, 0), SHIFT_REPEAT(29),
+  [62] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_alternation, 2, 0, 0),
+  [64] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_alternation_repeat1, 2, 0, 0),
+  [66] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_alternation_repeat1, 2, 0, 0), SHIFT_REPEAT(7),
+  [69] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_rule, 1, 0, 0),
   [71] = {.entry = {.count = 1, .reusable = true}}, SHIFT(8),
-  [73] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_alternation_repeat1, 2), SHIFT_REPEAT(8),
-  [76] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_node, 3, .production_id = 1),
+  [73] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_alternation_repeat1, 2, 0, 0), SHIFT_REPEAT(8),
+  [76] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_node, 3, 0, 1),
   [78] = {.entry = {.count = 1, .reusable = false}}, SHIFT(30),
   [80] = {.entry = {.count = 1, .reusable = false}}, SHIFT_EXTRA(),
   [82] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
@@ -906,7 +908,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_ungrammar() {
+TS_PUBLIC const TSLanguage *tree_sitter_ungrammar(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

@@ -145,7 +145,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(9);
       if (lookahead == '}') ADVANCE(10);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(0)
+          lookahead == ' ') SKIP(0);
       if (lookahead != 0) ADVANCE(11);
       END_STATE();
     case 1:
@@ -157,25 +157,25 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 3:
       if (lookahead == '{') ADVANCE(9);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(3)
+          lookahead == ' ') SKIP(3);
       if (lookahead != 0) ADVANCE(11);
       END_STATE();
     case 4:
       if (lookahead == '}') ADVANCE(10);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(4)
+          lookahead == ' ') SKIP(4);
       if (lookahead != 0) ADVANCE(11);
       END_STATE();
     case 5:
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(5)
+          lookahead == ' ') SKIP(5);
       if (lookahead != 0) ADVANCE(11);
       END_STATE();
     case 6:
       if (eof) ADVANCE(7);
       if (lookahead == 't') ADVANCE(12);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(6)
+          lookahead == ' ') SKIP(6);
       if (lookahead != 0) ADVANCE(11);
       END_STATE();
     case 7:
@@ -337,22 +337,22 @@ static const uint32_t ts_small_parse_table_map[] = {
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0),
+  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0, 0, 0),
   [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
   [9] = {.entry = {.count = 1, .reusable = false}}, SHIFT(5),
-  [11] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
-  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2),
-  [15] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(2),
-  [18] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_chars, 1),
+  [11] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
+  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
+  [15] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(2),
+  [18] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_chars, 1, 0, 0),
   [20] = {.entry = {.count = 1, .reusable = false}}, SHIFT(6),
-  [22] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_chars_repeat1, 2),
-  [24] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_chars_repeat1, 2), SHIFT_REPEAT(6),
+  [22] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_chars_repeat1, 2, 0, 0),
+  [24] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_chars_repeat1, 2, 0, 0), SHIFT_REPEAT(6),
   [27] = {.entry = {.count = 1, .reusable = true}}, SHIFT(8),
   [29] = {.entry = {.count = 1, .reusable = false}}, SHIFT(9),
-  [31] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_chars_repeat1, 2), SHIFT_REPEAT(9),
-  [34] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_todo_definition, 2),
-  [36] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_block, 3),
+  [31] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_chars_repeat1, 2, 0, 0), SHIFT_REPEAT(9),
+  [34] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_todo_definition, 2, 0, 0),
+  [36] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_block, 3, 0, 0),
   [38] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
   [40] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
 };
@@ -368,7 +368,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_todolang() {
+TS_PUBLIC const TSLanguage *tree_sitter_todolang(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

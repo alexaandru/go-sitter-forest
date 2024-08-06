@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "b72cfa83432177208841217bfdf489f671e06888",
-  "grammarSha": "d2619f843adacd8d4716868d52a884118f099f22b1d8a292608dae08d138e555",
+  "revision": "36e6b27f636e1010734911092304993427eccfe0",
+  "grammarSha": "aff9c5d4947d46b060e90fbe7fcf3980ecbf91d6cb43ef2a6e69609322b2c02b",
   "language": "wing",
   "url": "https://github.com/winglang/wing",
   "maintainedBy": "@gshpychka, @MarkMcCulloh",

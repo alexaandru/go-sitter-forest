@@ -161,11 +161,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '[') ADVANCE(4);
       if (lookahead == ']') ADVANCE(5);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(0)
+          lookahead == ' ') SKIP(0);
       END_STATE();
     case 1:
       if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(1)
+          lookahead == '\r') SKIP(1);
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') ADVANCE(6);
       if (lookahead != 0 &&
@@ -177,7 +177,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == ';') ADVANCE(9);
       if (lookahead == '[') ADVANCE(4);
       if (lookahead == '\n' ||
-          lookahead == '\r') SKIP(2)
+          lookahead == '\r') SKIP(2);
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') ADVANCE(8);
       if (lookahead != 0 &&
@@ -196,11 +196,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 6:
       ACCEPT_TOKEN(aux_sym_section_name_token1);
       if (lookahead == '\t' ||
-          lookahead == 11 ||
+          lookahead == 0x0b ||
           lookahead == '\f' ||
           lookahead == ' ') ADVANCE(6);
       if (lookahead != 0 &&
-          (lookahead < '\n' || '\r' < lookahead) &&
+          (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != '[' &&
           lookahead != ']') ADVANCE(7);
       END_STATE();
@@ -216,11 +216,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(sym_key);
       if (lookahead == ';') ADVANCE(9);
       if (lookahead == '\t' ||
-          lookahead == 11 ||
+          lookahead == 0x0b ||
           lookahead == '\f' ||
           lookahead == ' ') ADVANCE(8);
       if (lookahead != 0 &&
-          (lookahead < '\n' || '\r' < lookahead) &&
+          (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != '=' &&
           lookahead != '[' &&
           lookahead != ']') ADVANCE(10);
@@ -403,30 +403,30 @@ static const uint32_t ts_small_parse_table_map[] = {
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0),
+  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0, 0, 0),
   [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
-  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_section, 3),
-  [11] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_section, 3),
+  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_section, 3, 0, 0),
+  [11] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_section, 3, 0, 0),
   [13] = {.entry = {.count = 1, .reusable = false}}, SHIFT(14),
-  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_section, 4),
-  [17] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_section, 4),
-  [19] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_section_repeat1, 2),
-  [21] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_section_repeat1, 2),
-  [23] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_section_repeat1, 2), SHIFT_REPEAT(14),
-  [26] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
+  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_section, 4, 0, 0),
+  [17] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_section, 4, 0, 0),
+  [19] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_section_repeat1, 2, 0, 0),
+  [21] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_section_repeat1, 2, 0, 0),
+  [23] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_section_repeat1, 2, 0, 0), SHIFT_REPEAT(14),
+  [26] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
   [28] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
-  [30] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2),
-  [32] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(9),
-  [35] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(6),
-  [38] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_value, 1),
-  [40] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_value, 1),
-  [42] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_statement, 3),
-  [44] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_statement, 3),
+  [30] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
+  [32] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(9),
+  [35] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(6),
+  [38] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_value, 1, 0, 0),
+  [40] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_value, 1, 0, 0),
+  [42] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_statement, 3, 0, 0),
+  [44] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_statement, 3, 0, 0),
   [46] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
   [48] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
   [50] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
-  [52] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_section_name, 1),
+  [52] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_section_name, 1, 0, 0),
   [54] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
   [56] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
 };
@@ -442,7 +442,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_eds() {
+TS_PUBLIC const TSLanguage *tree_sitter_eds(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

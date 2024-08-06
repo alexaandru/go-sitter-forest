@@ -445,7 +445,7 @@ static bool is_newline_where(uint32_t indent, State *state) {
   case '\r': \
   case '\f'
 
-static bool is_newline(uint32_t c) {
+static bool is_newline_purescript(uint32_t c) {
   switch (c) {
     NEWLINE_CASES:
       return true;
@@ -840,7 +840,7 @@ static Result dot(State *state) {
  */
 static void cpp_consume(State *state) {
   for (;;) {
-    while (PEEK != 0 && !is_newline(PEEK) && PEEK != '\\') S_ADVANCE;
+    while (PEEK != 0 && !is_newline_purescript(PEEK) && PEEK != '\\') S_ADVANCE;
     if (PEEK == '\\') {
       S_ADVANCE;
       S_ADVANCE;
@@ -1508,7 +1508,7 @@ static Result scan_main(State *state) {
   Result res = eof(state);
   SHORT_SCANNER;
   MARK("main", false, state);
-  if (is_newline(PEEK)) {
+  if (is_newline_purescript(PEEK)) {
     S_SKIP;
     uint32_t indent = count_indent(state);
     return newline(indent, state);

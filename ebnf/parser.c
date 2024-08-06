@@ -284,25 +284,27 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   switch (state) {
     case 0:
       if (eof) ADVANCE(6);
+      ADVANCE_MAP(
+        '"', 1,
+        '\'', 2,
+        '(', 22,
+        ')', 23,
+        '*', 17,
+        ',', 15,
+        '-', 16,
+        ';', 13,
+        '=', 12,
+        '?', 5,
+        '[', 18,
+        ']', 19,
+        '{', 20,
+        '|', 14,
+        '}', 21,
+      );
       if (lookahead == '\t' ||
           lookahead == '\n' ||
           lookahead == '\r' ||
-          lookahead == ' ') SKIP(0)
-      if (lookahead == '"') ADVANCE(1);
-      if (lookahead == '\'') ADVANCE(2);
-      if (lookahead == '(') ADVANCE(22);
-      if (lookahead == ')') ADVANCE(23);
-      if (lookahead == '*') ADVANCE(17);
-      if (lookahead == ',') ADVANCE(15);
-      if (lookahead == '-') ADVANCE(16);
-      if (lookahead == ';') ADVANCE(13);
-      if (lookahead == '=') ADVANCE(12);
-      if (lookahead == '?') ADVANCE(5);
-      if (lookahead == '[') ADVANCE(18);
-      if (lookahead == ']') ADVANCE(19);
-      if (lookahead == '{') ADVANCE(20);
-      if (lookahead == '|') ADVANCE(14);
-      if (lookahead == '}') ADVANCE(21);
+          lookahead == ' ') SKIP(0);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(9);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(8);
@@ -787,7 +789,7 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(24),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
   [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(25),
-  [11] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_binary_expression, 2, .production_id = 3),
+  [11] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_binary_expression, 2, 0, 3),
   [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
   [15] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
   [17] = {.entry = {.count = 1, .reusable = false}}, SHIFT(6),
@@ -800,19 +802,19 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [31] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
   [33] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
   [35] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
-  [37] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_binary_expression, 3, .production_id = 4),
+  [37] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_binary_expression, 3, 0, 4),
   [39] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
   [41] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
-  [43] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_group, 3),
-  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_group, 2),
+  [43] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_group, 3, 0, 0),
+  [45] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_group, 2, 0, 0),
   [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
   [49] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
   [51] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
-  [53] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_syntax_repeat1, 2),
-  [55] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_syntax_repeat1, 2), SHIFT_REPEAT(24),
-  [58] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_syntax, 1),
-  [60] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_syntax_rule, 4, .production_id = 2),
-  [62] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_syntax_rule, 3, .production_id = 1),
+  [53] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_syntax_repeat1, 2, 0, 0),
+  [55] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_syntax_repeat1, 2, 0, 0), SHIFT_REPEAT(24),
+  [58] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_syntax, 1, 0, 0),
+  [60] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_syntax_rule, 4, 0, 2),
+  [62] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_syntax_rule, 3, 0, 1),
   [64] = {.entry = {.count = 1, .reusable = true}}, SHIFT(3),
   [66] = {.entry = {.count = 1, .reusable = true}}, SHIFT(8),
   [68] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
@@ -829,7 +831,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_ebnf() {
+TS_PUBLIC const TSLanguage *tree_sitter_ebnf(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

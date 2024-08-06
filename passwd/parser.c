@@ -180,11 +180,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (eof) ADVANCE(4);
       if (lookahead == ':') ADVANCE(6);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(0)
+          lookahead == ' ') SKIP(0);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(10);
       END_STATE();
     case 1:
-      if (lookahead == '\n') SKIP(1)
+      if (lookahead == '\n') SKIP(1);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(11);
       if (lookahead != 0 &&
@@ -244,10 +244,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 11:
       ACCEPT_TOKEN(sym_shell);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r') ||
+          (0x0b <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(11);
       if (lookahead != 0 &&
-          lookahead != '\n' &&
+          (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != ':') ADVANCE(12);
       END_STATE();
     case 12:
@@ -469,38 +469,38 @@ static const uint32_t ts_small_parse_table_map[] = {
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0),
+  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0, 0, 0),
   [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
-  [7] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
-  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2),
-  [11] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(16),
-  [14] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_entry, 13),
+  [7] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
+  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
+  [11] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(16),
+  [14] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_entry, 13, 0, 0),
   [16] = {.entry = {.count = 1, .reusable = false}}, SHIFT(7),
-  [18] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_entry, 13),
-  [20] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_entry, 12),
+  [18] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_entry, 13, 0, 0),
+  [20] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_entry, 12, 0, 0),
   [22] = {.entry = {.count = 1, .reusable = false}}, SHIFT(8),
-  [24] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_entry, 12),
+  [24] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_entry, 12, 0, 0),
   [26] = {.entry = {.count = 1, .reusable = false}}, SHIFT(12),
   [28] = {.entry = {.count = 1, .reusable = true}}, SHIFT(18),
-  [30] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_entry, 14),
+  [30] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_entry, 14, 0, 0),
   [32] = {.entry = {.count = 1, .reusable = true}}, SHIFT(27),
   [34] = {.entry = {.count = 1, .reusable = true}}, SHIFT(20),
   [36] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
   [38] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
-  [40] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_gid, 1),
+  [40] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_gid, 1, 0, 0),
   [42] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
-  [44] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_user, 1),
+  [44] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_user, 1, 0, 0),
   [46] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
-  [48] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_gecos, 1),
+  [48] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_gecos, 1, 0, 0),
   [50] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
-  [52] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_home, 1),
+  [52] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_home, 1, 0, 0),
   [54] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
-  [56] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_uid, 1),
+  [56] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_uid, 1, 0, 0),
   [58] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
   [60] = {.entry = {.count = 1, .reusable = true}}, SHIFT(26),
   [62] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
   [64] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
-  [66] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_auth, 1),
+  [66] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_auth, 1, 0, 0),
   [68] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
   [70] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
 };
@@ -516,7 +516,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_passwd() {
+TS_PUBLIC const TSLanguage *tree_sitter_passwd(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

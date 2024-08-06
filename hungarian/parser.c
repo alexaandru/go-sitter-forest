@@ -161,9 +161,9 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT(2),
   [5] = {.entry = {.count = 1, .reusable = true}}, SHIFT(3),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
-  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_identifier, 1),
+  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_identifier, 1, 0, 0),
   [11] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
-  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__hungarian, 2),
+  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__hungarian, 2, 0, 0),
 };
 
 enum ts_external_scanner_symbol_identifiers {
@@ -213,7 +213,7 @@ void tree_sitter_hungarian_external_scanner_deserialize(void *, const char *, un
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_hungarian() {
+TS_PUBLIC const TSLanguage *tree_sitter_hungarian(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

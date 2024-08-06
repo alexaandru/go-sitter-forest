@@ -243,27 +243,10 @@ clear picture of all the changes performed to the code, changes which are detail
 
 ## Versions & Status
 
-We are currently aligned with TreeSitter `v0.22.6`: [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare)
+We are currently aligned with the latest TreeSitter, `v0.22.6`: [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare)
 `v1.4.2` uses `v0.22.6` (and this project uses that latest version of
 `go-tree-sitter-bare`) and the included [package.json](package.json)
 (which is used for regenerating grammars) is using the same version.
 
-The parsers were however NOT regenerated using the new tree-sitter
-version, they are still largely at `v0.22.2` and will upgrade naturally
-on updates OR I may force update all of them in bulk (TBD).
-
-As for the parsers in this repo:
-
-- almost of the parsers are now regenerating the `parser.{c,h}` files
-  using the latest `tree-sitter` (they are marked with a heavy checkmark
-  in [PARSERS.md](PARSERS.md) and they do NOT have the `skip` flag set
-  in [grammars.json](grammars.json)); this is preferred way going further;
-- a few parsers could not yet be regenerated locally. They can still
-  be used just fine, but they will use whatever `parser.{c,h}` files they
-  have in the upstream repo, which may or may not have been compiled with
-  the latest `tree-sitter` version (most likely not, or we'd also be able
-  to regenerate them). In general they should work too though, that's how
-  this project started after all, with downloaded files only.
-
-So there it is, we try to converge towards using the same `tree-sitter`
-version everywhere, and keeping up with it too.
+The parsers were almost all regenerated (394 out of 404),
+you can tell them by 1.6.0+ tag.

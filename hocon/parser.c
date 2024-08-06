@@ -1362,163 +1362,20 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [168] = 168,
 };
 
-static inline bool sym_unquoted_string_character_set_1(int32_t c) {
-  return (c < ':'
-    ? (c < '&'
-      ? (c < '\n'
-        ? c == 0
-        : (c <= '\n' || (c >= ' ' && c <= '$')))
-      : (c <= '&' || (c < '/'
-        ? (c >= '*' && c <= ',')
-        : c <= '/')))
-    : (c <= ':' || (c < '`'
-      ? (c < '?'
-        ? c == '='
-        : (c <= '?' || (c >= '[' && c <= '^')))
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
+static TSCharacterRange sym_unquoted_string_character_set_2[] = {
+  {0, '\t'}, {0x0b, 0x1f}, {'%', '%'}, {'\'', ')'}, {'-', '.'}, {'0', '9'}, {';', '<'}, {'>', '>'},
+  {'@', 'Z'}, {'_', '_'}, {'a', 'z'}, {'|', '|'}, {'~', 0x10ffff},
+};
 
-static inline bool sym_unquoted_string_character_set_2(int32_t c) {
-  return (c < ':'
-    ? (c < '&'
-      ? (c < '!'
-        ? c == 0
-        : c <= '!')
-      : (c <= '&' || (c >= '*' && c <= '+')))
-    : (c <= ':' || (c < '\\'
-      ? (c < '?'
-        ? c == '='
-        : c <= '?')
-      : (c <= '^' || c == '`'))));
-}
+static TSCharacterRange aux_sym_unquoted_path_token1_character_set_2[] = {
+  {0, '\t'}, {0x0b, ' '}, {'%', '%'}, {'\'', ')'}, {'-', '-'}, {'0', '9'}, {';', '<'}, {'>', '>'},
+  {'@', 'Z'}, {'_', '_'}, {'a', 'z'}, {'|', '|'}, {'~', 0x10ffff},
+};
 
-static inline bool sym_unquoted_string_character_set_3(int32_t c) {
-  return (c < '='
-    ? (c < '&'
-      ? (c < '\n'
-        ? c == 0
-        : (c <= '\n' || (c >= ' ' && c <= '$')))
-      : (c <= '&' || (c < ':'
-        ? (c >= '*' && c <= ',')
-        : c <= ':')))
-    : (c <= '=' || (c < '`'
-      ? (c < '['
-        ? c == '?'
-        : c <= '^')
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
-
-static inline bool aux_sym_unquoted_path_token1_character_set_1(int32_t c) {
-  return (c < ':'
-    ? (c < '&'
-      ? (c < '\t'
-        ? c == 0
-        : (c <= '\r' || (c >= ' ' && c <= '$')))
-      : (c <= '&' || (c < '.'
-        ? (c >= '*' && c <= ',')
-        : c <= '/')))
-    : (c <= ':' || (c < '`'
-      ? (c < '?'
-        ? c == '='
-        : (c <= '?' || (c >= '[' && c <= '^')))
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
-
-static inline bool aux_sym_unquoted_path_token1_character_set_2(int32_t c) {
-  return (c < ':'
-    ? (c < '&'
-      ? (c < '\n'
-        ? c == 0
-        : (c <= '\n' || (c >= '!' && c <= '$')))
-      : (c <= '&' || (c < '.'
-        ? (c >= '*' && c <= ',')
-        : c <= '/')))
-    : (c <= ':' || (c < '`'
-      ? (c < '?'
-        ? c == '='
-        : (c <= '?' || (c >= '[' && c <= '^')))
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
-
-static inline bool aux_sym_unquoted_path_token1_character_set_3(int32_t c) {
-  return (c < '='
-    ? (c < '&'
-      ? (c < '\n'
-        ? c == 0
-        : (c <= '\n' || (c >= '!' && c <= '$')))
-      : (c <= '&' || (c < ':'
-        ? (c >= '*' && c <= ',')
-        : c <= ':')))
-    : (c <= '=' || (c < '`'
-      ? (c < '['
-        ? c == '?'
-        : c <= '^')
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
-
-static inline bool aux_sym_unquoted_path_token1_character_set_4(int32_t c) {
-  return (c < '='
-    ? (c < '&'
-      ? (c < '\n'
-        ? c == 0
-        : (c <= '\n' || (c >= '!' && c <= '$')))
-      : (c <= '&' || (c < '.'
-        ? (c >= '*' && c <= ',')
-        : c <= ':')))
-    : (c <= '=' || (c < '`'
-      ? (c < '['
-        ? c == '?'
-        : c <= '^')
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
-
-static inline bool aux_sym_unquoted_path_token1_character_set_5(int32_t c) {
-  return (c < '='
-    ? (c < '!'
-      ? (c < '\n'
-        ? c == 0
-        : c <= '\n')
-      : (c <= '$' || (c < '*'
-        ? c == '&'
-        : c <= ':')))
-    : (c <= '=' || (c < '`'
-      ? (c < '['
-        ? c == '?'
-        : c <= '^')
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
-
-static inline bool aux_sym_unquoted_path_token1_character_set_6(int32_t c) {
-  return (c < ':'
-    ? (c < '&'
-      ? (c < '\n'
-        ? c == 0
-        : (c <= '\n' || (c >= '!' && c <= '$')))
-      : (c <= '&' || (c < '.'
-        ? (c >= '*' && c <= ',')
-        : c <= '.')))
-    : (c <= ':' || (c < '`'
-      ? (c < '?'
-        ? c == '='
-        : (c <= '?' || (c >= '[' && c <= '^')))
-      : (c <= '`' || (c < '}'
-        ? c == '{'
-        : c <= '}')))));
-}
+static TSCharacterRange aux_sym_unquoted_path_token1_character_set_3[] = {
+  {0, 0x08}, {0x0e, 0x1f}, {'%', '%'}, {'\'', ')'}, {'-', '-'}, {'0', '9'}, {';', '<'}, {'>', '>'},
+  {'@', 'Z'}, {'_', '_'}, {'a', 'z'}, {'|', '|'}, {'~', 0x10ffff},
+};
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
   START_LEXER();
@@ -1526,68 +1383,72 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   switch (state) {
     case 0:
       if (eof) ADVANCE(187);
-      if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == '"') ADVANCE(195);
-      if (lookahead == '#') ADVANCE(217);
-      if (lookahead == '$') ADVANCE(175);
-      if (lookahead == '(') ADVANCE(401);
-      if (lookahead == ')') ADVANCE(402);
-      if (lookahead == '+') ADVANCE(12);
-      if (lookahead == ',') ADVANCE(189);
-      if (lookahead == '-') ADVANCE(11);
-      if (lookahead == '.') ADVANCE(392);
-      if (lookahead == '/') ADVANCE(10);
-      if (lookahead == '0') ADVANCE(199);
-      if (lookahead == ':') ADVANCE(218);
-      if (lookahead == '=') ADVANCE(219);
-      if (lookahead == 'B') ADVANCE(479);
-      if (lookahead == 'E') ADVANCE(594);
-      if (lookahead == 'G') ADVANCE(558);
-      if (lookahead == 'K') ADVANCE(536);
-      if (lookahead == 'M') ADVANCE(548);
-      if (lookahead == 'P') ADVANCE(582);
-      if (lookahead == 'T') ADVANCE(570);
-      if (lookahead == 'Y') ADVANCE(618);
-      if (lookahead == 'Z') ADVANCE(606);
-      if (lookahead == '[') ADVANCE(192);
-      if (lookahead == '\\') ADVANCE(176);
-      if (lookahead == ']') ADVANCE(193);
-      if (lookahead == 'b') ADVANCE(482);
-      if (lookahead == 'c') ADVANCE(99);
-      if (lookahead == 'd') ADVANCE(456);
-      if (lookahead == 'e') ADVANCE(596);
-      if (lookahead == 'f') ADVANCE(15);
-      if (lookahead == 'g') ADVANCE(560);
-      if (lookahead == 'h') ADVANCE(450);
-      if (lookahead == 'i') ADVANCE(107);
-      if (lookahead == 'k') ADVANCE(538);
-      if (lookahead == 'm') ADVANCE(444);
-      if (lookahead == 'n') ADVANCE(16);
-      if (lookahead == 'p') ADVANCE(584);
-      if (lookahead == 'r') ADVANCE(60);
-      if (lookahead == 's') ADVANCE(438);
-      if (lookahead == 't') ADVANCE(572);
-      if (lookahead == 'u') ADVANCE(126);
-      if (lookahead == 'w') ADVANCE(462);
-      if (lookahead == 'y') ADVANCE(474);
-      if (lookahead == 'z') ADVANCE(608);
-      if (lookahead == '{') ADVANCE(190);
-      if (lookahead == '}') ADVANCE(191);
+      ADVANCE_MAP(
+        '\n', 188,
+        '"', 195,
+        '#', 217,
+        '$', 175,
+        '(', 401,
+        ')', 402,
+        '+', 12,
+        ',', 189,
+        '-', 11,
+        '.', 392,
+        '/', 10,
+        '0', 199,
+        ':', 218,
+        '=', 219,
+        'B', 479,
+        'E', 594,
+        'G', 558,
+        'K', 536,
+        'M', 548,
+        'P', 582,
+        'T', 570,
+        'Y', 618,
+        'Z', 606,
+        '[', 192,
+        '\\', 176,
+        ']', 193,
+        'b', 482,
+        'c', 99,
+        'd', 456,
+        'e', 596,
+        'f', 15,
+        'g', 560,
+        'h', 450,
+        'i', 107,
+        'k', 538,
+        'm', 444,
+        'n', 16,
+        'p', 584,
+        'r', 60,
+        's', 438,
+        't', 572,
+        'u', 126,
+        'w', 462,
+        'y', 474,
+        'z', 608,
+        '{', 190,
+        '}', 191,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(183)
+          lookahead == ' ') SKIP(183);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(200);
       END_STATE();
     case 1:
-      if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == '"') ADVANCE(194);
-      if (lookahead == '#') ADVANCE(217);
-      if (lookahead == '/') ADVANCE(10);
-      if (lookahead == 'c') ADVANCE(99);
-      if (lookahead == 'f') ADVANCE(88);
-      if (lookahead == 'r') ADVANCE(60);
-      if (lookahead == 'u') ADVANCE(125);
+      ADVANCE_MAP(
+        '\n', 188,
+        '"', 194,
+        '#', 217,
+        '/', 10,
+        'c', 99,
+        'f', 88,
+        'r', 60,
+        'u', 125,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(1)
+          lookahead == ' ') SKIP(1);
       END_STATE();
     case 2:
       if (lookahead == '"') ADVANCE(393);
@@ -1598,17 +1459,17 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '/') ADVANCE(222);
       if (lookahead == '\\') ADVANCE(176);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r') ||
+          (0x0b <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(221);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(224);
+          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(224);
       END_STATE();
     case 4:
       if (lookahead == '"') ADVANCE(8);
       if (lookahead == '#') ADVANCE(216);
       if (lookahead == '/') ADVANCE(5);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r') ||
+          (0x0b <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(4);
       if (lookahead != 0) ADVANCE(6);
       END_STATE();
@@ -2147,32 +2008,34 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '{') ADVANCE(397);
       END_STATE();
     case 176:
-      if (lookahead == '"' ||
-          lookahead == '/' ||
-          lookahead == '\\' ||
-          lookahead == 'b' ||
-          lookahead == 'f' ||
-          lookahead == 'n' ||
-          lookahead == 'r' ||
-          lookahead == 't' ||
-          lookahead == 'u') ADVANCE(196);
+      ADVANCE_MAP(
+        '"', 196,
+        '/', 196,
+        '\\', 196,
+        'b', 196,
+        'f', 196,
+        'n', 196,
+        'r', 196,
+        't', 196,
+        'u', 196,
+      );
       END_STATE();
     case 177:
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(207);
       END_STATE();
     case 178:
-      if (!aux_sym_unquoted_path_token1_character_set_1(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_3, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 179:
-      if (!sym_unquoted_string_character_set_1(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 180:
-      if (!aux_sym_unquoted_path_token1_character_set_2(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 181:
       if (eof) ADVANCE(187);
       if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == ' ') SKIP(181)
+      if (lookahead == ' ') SKIP(181);
       if (lookahead == '"') ADVANCE(195);
       if (lookahead == '#') ADVANCE(217);
       if (lookahead == '$') ADVANCE(175);
@@ -2211,12 +2074,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '}') ADVANCE(191);
       if (('\t' <= lookahead && lookahead <= '\r')) ADVANCE(225);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(201);
-      if (!sym_unquoted_string_character_set_2(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 182:
       if (eof) ADVANCE(187);
       if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == ' ') SKIP(182)
+      if (lookahead == ' ') SKIP(182);
       if (lookahead == '"') ADVANCE(195);
       if (lookahead == '#') ADVANCE(217);
       if (lookahead == '$') ADVANCE(175);
@@ -2233,77 +2096,81 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '}') ADVANCE(191);
       if (('\t' <= lookahead && lookahead <= '\r')) ADVANCE(226);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(201);
-      if (!sym_unquoted_string_character_set_2(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 183:
       if (eof) ADVANCE(187);
-      if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == '"') ADVANCE(195);
-      if (lookahead == '#') ADVANCE(217);
-      if (lookahead == '$') ADVANCE(175);
-      if (lookahead == '(') ADVANCE(401);
-      if (lookahead == ')') ADVANCE(402);
-      if (lookahead == '+') ADVANCE(12);
-      if (lookahead == ',') ADVANCE(189);
-      if (lookahead == '-') ADVANCE(11);
-      if (lookahead == '.') ADVANCE(406);
-      if (lookahead == '/') ADVANCE(10);
-      if (lookahead == '0') ADVANCE(199);
-      if (lookahead == ':') ADVANCE(218);
-      if (lookahead == '=') ADVANCE(219);
-      if (lookahead == 'B') ADVANCE(479);
-      if (lookahead == 'E') ADVANCE(594);
-      if (lookahead == 'G') ADVANCE(558);
-      if (lookahead == 'K') ADVANCE(536);
-      if (lookahead == 'M') ADVANCE(548);
-      if (lookahead == 'P') ADVANCE(582);
-      if (lookahead == 'T') ADVANCE(570);
-      if (lookahead == 'Y') ADVANCE(618);
-      if (lookahead == 'Z') ADVANCE(606);
-      if (lookahead == '[') ADVANCE(192);
-      if (lookahead == ']') ADVANCE(193);
-      if (lookahead == 'b') ADVANCE(482);
-      if (lookahead == 'c') ADVANCE(99);
-      if (lookahead == 'd') ADVANCE(456);
-      if (lookahead == 'e') ADVANCE(596);
-      if (lookahead == 'f') ADVANCE(15);
-      if (lookahead == 'g') ADVANCE(560);
-      if (lookahead == 'h') ADVANCE(450);
-      if (lookahead == 'i') ADVANCE(107);
-      if (lookahead == 'k') ADVANCE(538);
-      if (lookahead == 'm') ADVANCE(444);
-      if (lookahead == 'n') ADVANCE(16);
-      if (lookahead == 'p') ADVANCE(584);
-      if (lookahead == 'r') ADVANCE(60);
-      if (lookahead == 's') ADVANCE(438);
-      if (lookahead == 't') ADVANCE(572);
-      if (lookahead == 'u') ADVANCE(126);
-      if (lookahead == 'w') ADVANCE(462);
-      if (lookahead == 'y') ADVANCE(474);
-      if (lookahead == 'z') ADVANCE(608);
-      if (lookahead == '{') ADVANCE(190);
-      if (lookahead == '}') ADVANCE(191);
+      ADVANCE_MAP(
+        '\n', 188,
+        '"', 195,
+        '#', 217,
+        '$', 175,
+        '(', 401,
+        ')', 402,
+        '+', 12,
+        ',', 189,
+        '-', 11,
+        '.', 406,
+        '/', 10,
+        '0', 199,
+        ':', 218,
+        '=', 219,
+        'B', 479,
+        'E', 594,
+        'G', 558,
+        'K', 536,
+        'M', 548,
+        'P', 582,
+        'T', 570,
+        'Y', 618,
+        'Z', 606,
+        '[', 192,
+        ']', 193,
+        'b', 482,
+        'c', 99,
+        'd', 456,
+        'e', 596,
+        'f', 15,
+        'g', 560,
+        'h', 450,
+        'i', 107,
+        'k', 538,
+        'm', 444,
+        'n', 16,
+        'p', 584,
+        'r', 60,
+        's', 438,
+        't', 572,
+        'u', 126,
+        'w', 462,
+        'y', 474,
+        'z', 608,
+        '{', 190,
+        '}', 191,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(183)
+          lookahead == ' ') SKIP(183);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(200);
       END_STATE();
     case 184:
       if (eof) ADVANCE(187);
-      if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == '"') ADVANCE(194);
-      if (lookahead == '#') ADVANCE(217);
-      if (lookahead == ')') ADVANCE(402);
-      if (lookahead == '+') ADVANCE(12);
-      if (lookahead == ',') ADVANCE(189);
-      if (lookahead == '.') ADVANCE(392);
-      if (lookahead == '/') ADVANCE(371);
-      if (lookahead == ':') ADVANCE(218);
-      if (lookahead == '=') ADVANCE(219);
-      if (lookahead == 'i') ADVANCE(385);
-      if (lookahead == '{') ADVANCE(190);
-      if (lookahead == '}') ADVANCE(191);
+      ADVANCE_MAP(
+        '\n', 188,
+        '"', 194,
+        '#', 217,
+        ')', 402,
+        '+', 12,
+        ',', 189,
+        '.', 392,
+        '/', 371,
+        ':', 218,
+        '=', 219,
+        'i', 385,
+        '{', 190,
+        '}', 191,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(185)
+          lookahead == ' ') SKIP(185);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
@@ -2311,20 +2178,22 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 185:
       if (eof) ADVANCE(187);
-      if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == '"') ADVANCE(194);
-      if (lookahead == '#') ADVANCE(217);
-      if (lookahead == ')') ADVANCE(402);
-      if (lookahead == '+') ADVANCE(12);
-      if (lookahead == ',') ADVANCE(189);
-      if (lookahead == '/') ADVANCE(371);
-      if (lookahead == ':') ADVANCE(218);
-      if (lookahead == '=') ADVANCE(219);
-      if (lookahead == 'i') ADVANCE(385);
-      if (lookahead == '{') ADVANCE(190);
-      if (lookahead == '}') ADVANCE(191);
+      ADVANCE_MAP(
+        '\n', 188,
+        '"', 194,
+        '#', 217,
+        ')', 402,
+        '+', 12,
+        ',', 189,
+        '/', 371,
+        ':', 218,
+        '=', 219,
+        'i', 385,
+        '{', 190,
+        '}', 191,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(185)
+          lookahead == ' ') SKIP(185);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
@@ -2332,18 +2201,20 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 186:
       if (eof) ADVANCE(187);
-      if (lookahead == '\n') ADVANCE(188);
-      if (lookahead == '"') ADVANCE(194);
-      if (lookahead == '#') ADVANCE(217);
-      if (lookahead == '-') ADVANCE(11);
-      if (lookahead == '/') ADVANCE(371);
-      if (lookahead == '0') ADVANCE(198);
-      if (lookahead == '[') ADVANCE(192);
-      if (lookahead == 'i') ADVANCE(384);
-      if (lookahead == '{') ADVANCE(190);
-      if (lookahead == '}') ADVANCE(191);
+      ADVANCE_MAP(
+        '\n', 188,
+        '"', 194,
+        '#', 217,
+        '-', 11,
+        '/', 371,
+        '0', 198,
+        '[', 192,
+        'i', 384,
+        '{', 190,
+        '}', 191,
+      );
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(186)
+          lookahead == ' ') SKIP(186);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(197);
       if (('A' <= lookahead && lookahead <= 'Z') ||
           lookahead == '_' ||
@@ -2387,7 +2258,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(370);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(197);
-      if (!aux_sym_unquoted_path_token1_character_set_3(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 198:
       ACCEPT_TOKEN(sym_number);
@@ -2395,7 +2266,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(370);
-      if (!aux_sym_unquoted_path_token1_character_set_3(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 199:
       ACCEPT_TOKEN(sym_number);
@@ -2417,7 +2288,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(227);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(201);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 202:
       ACCEPT_TOKEN(sym_number);
@@ -2425,13 +2296,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(227);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 203:
       ACCEPT_TOKEN(sym_number);
       if (lookahead == '/') ADVANCE(180);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(203);
-      if (!aux_sym_unquoted_path_token1_character_set_4(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 204:
       ACCEPT_TOKEN(sym_number);
@@ -2439,13 +2310,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E' ||
           lookahead == 'e') ADVANCE(227);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(204);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 205:
       ACCEPT_TOKEN(sym_number);
       if (lookahead == '/') ADVANCE(179);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(205);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 206:
       ACCEPT_TOKEN(sym_number);
@@ -2463,7 +2334,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 209:
       ACCEPT_TOKEN(sym_true);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 210:
       ACCEPT_TOKEN(sym_false);
@@ -2471,7 +2342,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 211:
       ACCEPT_TOKEN(sym_false);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 212:
       ACCEPT_TOKEN(sym_null);
@@ -2479,7 +2350,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 213:
       ACCEPT_TOKEN(sym_null);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 214:
       ACCEPT_TOKEN(sym_comment);
@@ -2518,11 +2389,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '#') ADVANCE(223);
       if (lookahead == '/') ADVANCE(222);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r') ||
+          (0x0b <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(221);
       if (lookahead != 0 &&
-          lookahead != '\n' &&
+          (lookahead < '\t' || '\r' < lookahead) &&
           lookahead != '"' &&
+          lookahead != '#' &&
           lookahead != '\\') ADVANCE(224);
       END_STATE();
     case 222:
@@ -2549,38 +2421,40 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 225:
       ACCEPT_TOKEN(sym_unquoted_string);
-      if (lookahead == '-') ADVANCE(229);
-      if (lookahead == '/') ADVANCE(228);
-      if (lookahead == '0') ADVANCE(202);
-      if (lookahead == 'B') ADVANCE(480);
-      if (lookahead == 'E') ADVANCE(593);
-      if (lookahead == 'G') ADVANCE(557);
-      if (lookahead == 'K') ADVANCE(535);
-      if (lookahead == 'M') ADVANCE(547);
-      if (lookahead == 'P') ADVANCE(581);
-      if (lookahead == 'T') ADVANCE(569);
-      if (lookahead == 'Y') ADVANCE(617);
-      if (lookahead == 'Z') ADVANCE(605);
-      if (lookahead == 'b') ADVANCE(481);
-      if (lookahead == 'd') ADVANCE(455);
-      if (lookahead == 'e') ADVANCE(595);
-      if (lookahead == 'f') ADVANCE(230);
-      if (lookahead == 'g') ADVANCE(559);
-      if (lookahead == 'h') ADVANCE(449);
-      if (lookahead == 'k') ADVANCE(537);
-      if (lookahead == 'm') ADVANCE(443);
-      if (lookahead == 'n') ADVANCE(231);
-      if (lookahead == 'p') ADVANCE(583);
-      if (lookahead == 's') ADVANCE(437);
-      if (lookahead == 't') ADVANCE(571);
-      if (lookahead == 'u') ADVANCE(324);
-      if (lookahead == 'w') ADVANCE(461);
-      if (lookahead == 'y') ADVANCE(473);
-      if (lookahead == 'z') ADVANCE(607);
+      ADVANCE_MAP(
+        '-', 229,
+        '/', 228,
+        '0', 202,
+        'B', 480,
+        'E', 593,
+        'G', 557,
+        'K', 535,
+        'M', 547,
+        'P', 581,
+        'T', 569,
+        'Y', 617,
+        'Z', 605,
+        'b', 481,
+        'd', 455,
+        'e', 595,
+        'f', 230,
+        'g', 559,
+        'h', 449,
+        'k', 537,
+        'm', 443,
+        'n', 231,
+        'p', 583,
+        's', 437,
+        't', 571,
+        'u', 324,
+        'w', 461,
+        'y', 473,
+        'z', 607,
+      );
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r')) ADVANCE(225);
+          (0x0b <= lookahead && lookahead <= '\r')) ADVANCE(225);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(201);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 226:
       ACCEPT_TOKEN(sym_unquoted_string);
@@ -2591,34 +2465,34 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'n') ADVANCE(348);
       if (lookahead == 't') ADVANCE(322);
       if (lookahead == '\t' ||
-          (11 <= lookahead && lookahead <= '\r')) ADVANCE(226);
+          (0x0b <= lookahead && lookahead <= '\r')) ADVANCE(226);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(201);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 227:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '-') ADVANCE(368);
       if (lookahead == '/') ADVANCE(179);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(205);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 228:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(217);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 229:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == '0') ADVANCE(202);
       if (('1' <= lookahead && lookahead <= '9')) ADVANCE(201);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 230:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(305);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 231:
       ACCEPT_TOKEN(sym_unquoted_string);
@@ -2626,201 +2500,201 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'a') ADVANCE(309);
       if (lookahead == 's') ADVANCE(408);
       if (lookahead == 'u') ADVANCE(307);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 232:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(240);
       if (lookahead == 'b') ADVANCE(295);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 233:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(321);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 234:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(243);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 235:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(247);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 236:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(249);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 237:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(251);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 238:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(254);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 239:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(255);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 240:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(352);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 241:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(353);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 242:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(354);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 243:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(355);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 244:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(356);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 245:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(357);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 246:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(358);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 247:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(359);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 248:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(360);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 249:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(361);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 250:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(362);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 251:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(363);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 252:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(364);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 253:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(365);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 254:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(366);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 255:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(367);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 256:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(296);
       if (lookahead == 'g') ADVANCE(234);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 257:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(297);
       if (lookahead == 'l') ADVANCE(319);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 258:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(298);
       if (lookahead == 'g') ADVANCE(235);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 259:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(299);
       if (lookahead == 't') ADVANCE(236);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 260:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(300);
       if (lookahead == 'r') ADVANCE(237);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 261:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(301);
       if (lookahead == 't') ADVANCE(345);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 262:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'b') ADVANCE(302);
       if (lookahead == 't') ADVANCE(346);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 263:
       ACCEPT_TOKEN(sym_unquoted_string);
@@ -2828,649 +2702,649 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'c') ADVANCE(323);
       if (lookahead == 'l') ADVANCE(306);
       if (lookahead == 'n') ADVANCE(350);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 264:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'c') ADVANCE(315);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 265:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'c') ADVANCE(316);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 266:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'c') ADVANCE(317);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 267:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'c') ADVANCE(318);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 268:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'd') ADVANCE(439);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 269:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'd') ADVANCE(413);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 270:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'd') ADVANCE(423);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 271:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'd') ADVANCE(433);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 272:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(303);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 273:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(483);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 274:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(209);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 275:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(211);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 276:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(445);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 277:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(519);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 278:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(601);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 279:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(565);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 280:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(501);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 281:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(543);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 282:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(489);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 283:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(553);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 284:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(495);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 285:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(589);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 286:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(513);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 287:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(577);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 288:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(507);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 289:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(623);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 290:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(613);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 291:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(531);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 292:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(525);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 293:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'h') ADVANCE(469);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 294:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(429);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 295:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(241);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 296:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(242);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 297:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(244);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 298:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(246);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 299:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(248);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 300:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(250);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 301:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(252);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 302:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(253);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 303:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'k') ADVANCE(463);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 304:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'l') ADVANCE(213);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 305:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'l') ADVANCE(325);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 306:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'l') ADVANCE(294);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 307:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'l') ADVANCE(304);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 308:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'n') ADVANCE(268);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 309:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'n') ADVANCE(313);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 310:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'n') ADVANCE(269);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 311:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'n') ADVANCE(270);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 312:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'n') ADVANCE(271);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 313:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(409);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 314:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(419);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 315:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(308);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 316:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(310);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 317:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(311);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 318:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(312);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 319:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(245);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 320:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'r') ADVANCE(451);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 321:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'r') ADVANCE(475);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 322:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'r') ADVANCE(349);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 323:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'r') ADVANCE(314);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 324:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(418);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 325:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(275);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 326:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(293);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 327:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(273);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 328:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(276);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 329:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(277);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 330:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(278);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 331:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(279);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 332:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(280);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 333:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(281);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 334:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(282);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 335:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(283);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 336:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(284);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 337:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(285);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 338:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(286);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 339:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(287);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 340:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(288);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 341:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(289);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 342:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(290);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 343:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(291);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 344:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(292);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 345:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(238);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 346:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 't') ADVANCE(239);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 347:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'u') ADVANCE(320);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 348:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'u') ADVANCE(307);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 349:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'u') ADVANCE(274);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 350:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'u') ADVANCE(328);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 351:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(457);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 352:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(329);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 353:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(330);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 354:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(331);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 355:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(332);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 356:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(333);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 357:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(334);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 358:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(335);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 359:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(336);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 360:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(337);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 361:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(338);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 362:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(339);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 363:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(340);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 364:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(341);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 365:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(342);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 366:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(343);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 367:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(344);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 368:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(205);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 369:
       ACCEPT_TOKEN(sym_unquoted_string);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 370:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '-') ADVANCE(378);
       if (lookahead == '/') ADVANCE(180);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(203);
-      if (!aux_sym_unquoted_path_token1_character_set_5(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 371:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
@@ -3480,119 +3354,119 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'c') ADVANCE(376);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 373:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'd') ADVANCE(390);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 374:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'e') ADVANCE(399);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 375:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'e') ADVANCE(178);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 376:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'l') ADVANCE(377);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 377:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (lookahead == 'u') ADVANCE(373);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 378:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(203);
-      if (!aux_sym_unquoted_path_token1_character_set_4(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 379:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(180);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 380:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'c') ADVANCE(386);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 381:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'c') ADVANCE(387);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 382:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'd') ADVANCE(374);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 383:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'd') ADVANCE(375);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 384:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'l') ADVANCE(372);
       if (lookahead == 'n') ADVANCE(380);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 385:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'l') ADVANCE(372);
       if (lookahead == 'n') ADVANCE(381);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 386:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'l') ADVANCE(388);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 387:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'l') ADVANCE(389);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 388:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'u') ADVANCE(382);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 389:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
       if (lookahead == 'u') ADVANCE(383);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 390:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
       if (lookahead == '/') ADVANCE(391);
-      if (!aux_sym_unquoted_path_token1_character_set_6(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 391:
       ACCEPT_TOKEN(aux_sym_unquoted_path_token1);
-      if (!aux_sym_unquoted_path_token1_character_set_2(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_2, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 392:
       ACCEPT_TOKEN(anon_sym_DOT);
@@ -3620,7 +3494,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 399:
       ACCEPT_TOKEN(anon_sym_include);
-      if (!aux_sym_unquoted_path_token1_character_set_1(lookahead)) ADVANCE(379);
+      if ((!eof && set_contains(aux_sym_unquoted_path_token1_character_set_3, 13, lookahead))) ADVANCE(379);
       END_STATE();
     case 400:
       ACCEPT_TOKEN(anon_sym_required);
@@ -3649,13 +3523,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 408:
       ACCEPT_TOKEN(anon_sym_ns);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 409:
       ACCEPT_TOKEN(anon_sym_nano);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(411);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 410:
       ACCEPT_TOKEN(anon_sym_nano);
@@ -3665,7 +3539,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_nanos);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(265);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 412:
       ACCEPT_TOKEN(anon_sym_nanos);
@@ -3675,7 +3549,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_nanosecond);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(416);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 414:
       ACCEPT_TOKEN(anon_sym_nanosecond);
@@ -3687,7 +3561,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 416:
       ACCEPT_TOKEN(anon_sym_nanoseconds);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 417:
       ACCEPT_TOKEN(anon_sym_us);
@@ -3695,13 +3569,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 418:
       ACCEPT_TOKEN(anon_sym_us);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 419:
       ACCEPT_TOKEN(anon_sym_micro);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(421);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 420:
       ACCEPT_TOKEN(anon_sym_micro);
@@ -3711,7 +3585,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_micros);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(266);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 422:
       ACCEPT_TOKEN(anon_sym_micros);
@@ -3721,7 +3595,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_microsecond);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(426);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 424:
       ACCEPT_TOKEN(anon_sym_microsecond);
@@ -3733,7 +3607,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 426:
       ACCEPT_TOKEN(anon_sym_microseconds);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 427:
       ACCEPT_TOKEN(anon_sym_ms);
@@ -3741,13 +3615,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 428:
       ACCEPT_TOKEN(anon_sym_ms);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 429:
       ACCEPT_TOKEN(anon_sym_milli);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(431);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 430:
       ACCEPT_TOKEN(anon_sym_milli);
@@ -3757,7 +3631,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_millis);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(267);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 432:
       ACCEPT_TOKEN(anon_sym_millis);
@@ -3767,7 +3641,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_millisecond);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(436);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 434:
       ACCEPT_TOKEN(anon_sym_millisecond);
@@ -3779,13 +3653,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 436:
       ACCEPT_TOKEN(anon_sym_milliseconds);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 437:
       ACCEPT_TOKEN(anon_sym_s);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(264);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 438:
       ACCEPT_TOKEN(anon_sym_s);
@@ -3795,7 +3669,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_second);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(442);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 440:
       ACCEPT_TOKEN(anon_sym_second);
@@ -3807,7 +3681,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 442:
       ACCEPT_TOKEN(anon_sym_seconds);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 443:
       ACCEPT_TOKEN(anon_sym_m);
@@ -3816,7 +3690,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'i') ADVANCE(263);
       if (lookahead == 'o') ADVANCE(467);
       if (lookahead == 's') ADVANCE(428);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 444:
       ACCEPT_TOKEN(anon_sym_m);
@@ -3829,7 +3703,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_minute);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(448);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 446:
       ACCEPT_TOKEN(anon_sym_minute);
@@ -3841,13 +3715,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 448:
       ACCEPT_TOKEN(anon_sym_minutes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 449:
       ACCEPT_TOKEN(anon_sym_h);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'o') ADVANCE(347);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 450:
       ACCEPT_TOKEN(anon_sym_h);
@@ -3857,7 +3731,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_hour);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(454);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 452:
       ACCEPT_TOKEN(anon_sym_hour);
@@ -3869,13 +3743,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 454:
       ACCEPT_TOKEN(anon_sym_hours);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 455:
       ACCEPT_TOKEN(anon_sym_d);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'a') ADVANCE(351);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 456:
       ACCEPT_TOKEN(anon_sym_d);
@@ -3885,7 +3759,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_day);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(460);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 458:
       ACCEPT_TOKEN(anon_sym_day);
@@ -3897,13 +3771,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 460:
       ACCEPT_TOKEN(anon_sym_days);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 461:
       ACCEPT_TOKEN(anon_sym_w);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(272);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 462:
       ACCEPT_TOKEN(anon_sym_w);
@@ -3913,7 +3787,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_week);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(466);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 464:
       ACCEPT_TOKEN(anon_sym_week);
@@ -3925,13 +3799,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 466:
       ACCEPT_TOKEN(anon_sym_weeks);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 467:
       ACCEPT_TOKEN(anon_sym_mo);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'n') ADVANCE(326);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 468:
       ACCEPT_TOKEN(anon_sym_mo);
@@ -3941,7 +3815,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_month);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(472);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 470:
       ACCEPT_TOKEN(anon_sym_month);
@@ -3953,14 +3827,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 472:
       ACCEPT_TOKEN(anon_sym_months);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 473:
       ACCEPT_TOKEN(anon_sym_y);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(233);
       if (lookahead == 'o') ADVANCE(261);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 474:
       ACCEPT_TOKEN(anon_sym_y);
@@ -3971,7 +3845,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_year);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(478);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 476:
       ACCEPT_TOKEN(anon_sym_year);
@@ -3983,7 +3857,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 478:
       ACCEPT_TOKEN(anon_sym_years);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 479:
       ACCEPT_TOKEN(anon_sym_B);
@@ -3991,13 +3865,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 480:
       ACCEPT_TOKEN(anon_sym_B);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 481:
       ACCEPT_TOKEN(anon_sym_b);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'y') ADVANCE(327);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 482:
       ACCEPT_TOKEN(anon_sym_b);
@@ -4007,7 +3881,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_byte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(486);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 484:
       ACCEPT_TOKEN(anon_sym_byte);
@@ -4019,7 +3893,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 486:
       ACCEPT_TOKEN(anon_sym_bytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 487:
       ACCEPT_TOKEN(anon_sym_kB);
@@ -4027,13 +3901,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 488:
       ACCEPT_TOKEN(anon_sym_kB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 489:
       ACCEPT_TOKEN(anon_sym_kilobyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(492);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 490:
       ACCEPT_TOKEN(anon_sym_kilobyte);
@@ -4045,7 +3919,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 492:
       ACCEPT_TOKEN(anon_sym_kilobytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 493:
       ACCEPT_TOKEN(anon_sym_MB);
@@ -4053,13 +3927,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 494:
       ACCEPT_TOKEN(anon_sym_MB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 495:
       ACCEPT_TOKEN(anon_sym_megabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(498);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 496:
       ACCEPT_TOKEN(anon_sym_megabyte);
@@ -4071,7 +3945,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 498:
       ACCEPT_TOKEN(anon_sym_megabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 499:
       ACCEPT_TOKEN(anon_sym_GB);
@@ -4079,13 +3953,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 500:
       ACCEPT_TOKEN(anon_sym_GB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 501:
       ACCEPT_TOKEN(anon_sym_gigabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(504);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 502:
       ACCEPT_TOKEN(anon_sym_gigabyte);
@@ -4097,7 +3971,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 504:
       ACCEPT_TOKEN(anon_sym_gigabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 505:
       ACCEPT_TOKEN(anon_sym_TB);
@@ -4105,13 +3979,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 506:
       ACCEPT_TOKEN(anon_sym_TB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 507:
       ACCEPT_TOKEN(anon_sym_terabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(510);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 508:
       ACCEPT_TOKEN(anon_sym_terabyte);
@@ -4123,7 +3997,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 510:
       ACCEPT_TOKEN(anon_sym_terabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 511:
       ACCEPT_TOKEN(anon_sym_PB);
@@ -4131,13 +4005,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 512:
       ACCEPT_TOKEN(anon_sym_PB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 513:
       ACCEPT_TOKEN(anon_sym_petabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(516);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 514:
       ACCEPT_TOKEN(anon_sym_petabyte);
@@ -4149,7 +4023,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 516:
       ACCEPT_TOKEN(anon_sym_petabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 517:
       ACCEPT_TOKEN(anon_sym_EB);
@@ -4157,13 +4031,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 518:
       ACCEPT_TOKEN(anon_sym_EB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 519:
       ACCEPT_TOKEN(anon_sym_exabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(522);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 520:
       ACCEPT_TOKEN(anon_sym_exabyte);
@@ -4175,7 +4049,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 522:
       ACCEPT_TOKEN(anon_sym_exabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 523:
       ACCEPT_TOKEN(anon_sym_ZB);
@@ -4183,13 +4057,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 524:
       ACCEPT_TOKEN(anon_sym_ZB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 525:
       ACCEPT_TOKEN(anon_sym_zettabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(528);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 526:
       ACCEPT_TOKEN(anon_sym_zettabyte);
@@ -4201,7 +4075,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 528:
       ACCEPT_TOKEN(anon_sym_zettabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 529:
       ACCEPT_TOKEN(anon_sym_YB);
@@ -4209,13 +4083,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 530:
       ACCEPT_TOKEN(anon_sym_YB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 531:
       ACCEPT_TOKEN(anon_sym_yottabyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(534);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 532:
       ACCEPT_TOKEN(anon_sym_yottabyte);
@@ -4227,13 +4101,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 534:
       ACCEPT_TOKEN(anon_sym_yottabytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 535:
       ACCEPT_TOKEN(anon_sym_K);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(539);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 536:
       ACCEPT_TOKEN(anon_sym_K);
@@ -4244,7 +4118,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(488);
       if (lookahead == 'i') ADVANCE(257);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 538:
       ACCEPT_TOKEN(anon_sym_k);
@@ -4255,7 +4129,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Ki);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(542);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 540:
       ACCEPT_TOKEN(anon_sym_Ki);
@@ -4267,13 +4141,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 542:
       ACCEPT_TOKEN(anon_sym_KiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 543:
       ACCEPT_TOKEN(anon_sym_kibibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(546);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 544:
       ACCEPT_TOKEN(anon_sym_kibibyte);
@@ -4285,14 +4159,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 546:
       ACCEPT_TOKEN(anon_sym_kibibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 547:
       ACCEPT_TOKEN(anon_sym_M);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(494);
       if (lookahead == 'i') ADVANCE(549);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 548:
       ACCEPT_TOKEN(anon_sym_M);
@@ -4303,7 +4177,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Mi);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(552);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 550:
       ACCEPT_TOKEN(anon_sym_Mi);
@@ -4315,13 +4189,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 552:
       ACCEPT_TOKEN(anon_sym_MiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 553:
       ACCEPT_TOKEN(anon_sym_mebibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(556);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 554:
       ACCEPT_TOKEN(anon_sym_mebibyte);
@@ -4333,14 +4207,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 556:
       ACCEPT_TOKEN(anon_sym_mebibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 557:
       ACCEPT_TOKEN(anon_sym_G);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(500);
       if (lookahead == 'i') ADVANCE(561);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 558:
       ACCEPT_TOKEN(anon_sym_G);
@@ -4351,7 +4225,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_g);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'i') ADVANCE(256);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 560:
       ACCEPT_TOKEN(anon_sym_g);
@@ -4361,7 +4235,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Gi);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(564);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 562:
       ACCEPT_TOKEN(anon_sym_Gi);
@@ -4373,13 +4247,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 564:
       ACCEPT_TOKEN(anon_sym_GiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 565:
       ACCEPT_TOKEN(anon_sym_gibibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(568);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 566:
       ACCEPT_TOKEN(anon_sym_gibibyte);
@@ -4391,14 +4265,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 568:
       ACCEPT_TOKEN(anon_sym_gibibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 569:
       ACCEPT_TOKEN(anon_sym_T);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(506);
       if (lookahead == 'i') ADVANCE(573);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 570:
       ACCEPT_TOKEN(anon_sym_T);
@@ -4410,7 +4284,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(260);
       if (lookahead == 'r') ADVANCE(349);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 572:
       ACCEPT_TOKEN(anon_sym_t);
@@ -4421,7 +4295,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Ti);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(576);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 574:
       ACCEPT_TOKEN(anon_sym_Ti);
@@ -4433,13 +4307,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 576:
       ACCEPT_TOKEN(anon_sym_TiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 577:
       ACCEPT_TOKEN(anon_sym_tebibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(580);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 578:
       ACCEPT_TOKEN(anon_sym_tebibyte);
@@ -4451,14 +4325,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 580:
       ACCEPT_TOKEN(anon_sym_tebibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 581:
       ACCEPT_TOKEN(anon_sym_P);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(512);
       if (lookahead == 'i') ADVANCE(585);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 582:
       ACCEPT_TOKEN(anon_sym_P);
@@ -4469,7 +4343,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_p);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(259);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 584:
       ACCEPT_TOKEN(anon_sym_p);
@@ -4479,7 +4353,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Pi);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(588);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 586:
       ACCEPT_TOKEN(anon_sym_Pi);
@@ -4491,13 +4365,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 588:
       ACCEPT_TOKEN(anon_sym_PiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 589:
       ACCEPT_TOKEN(anon_sym_pebibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(592);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 590:
       ACCEPT_TOKEN(anon_sym_pebibyte);
@@ -4509,14 +4383,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 592:
       ACCEPT_TOKEN(anon_sym_pebibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 593:
       ACCEPT_TOKEN(anon_sym_E);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(518);
       if (lookahead == 'i') ADVANCE(597);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 594:
       ACCEPT_TOKEN(anon_sym_E);
@@ -4527,7 +4401,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_e);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'x') ADVANCE(232);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 596:
       ACCEPT_TOKEN(anon_sym_e);
@@ -4537,7 +4411,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Ei);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(600);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 598:
       ACCEPT_TOKEN(anon_sym_Ei);
@@ -4549,13 +4423,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 600:
       ACCEPT_TOKEN(anon_sym_EiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 601:
       ACCEPT_TOKEN(anon_sym_exbibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(604);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 602:
       ACCEPT_TOKEN(anon_sym_exbibyte);
@@ -4567,14 +4441,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 604:
       ACCEPT_TOKEN(anon_sym_exbibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 605:
       ACCEPT_TOKEN(anon_sym_Z);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(524);
       if (lookahead == 'i') ADVANCE(609);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 606:
       ACCEPT_TOKEN(anon_sym_Z);
@@ -4585,7 +4459,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_z);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'e') ADVANCE(262);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 608:
       ACCEPT_TOKEN(anon_sym_z);
@@ -4595,7 +4469,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Zi);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(612);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 610:
       ACCEPT_TOKEN(anon_sym_Zi);
@@ -4607,13 +4481,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 612:
       ACCEPT_TOKEN(anon_sym_ZiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 613:
       ACCEPT_TOKEN(anon_sym_zebibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(616);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 614:
       ACCEPT_TOKEN(anon_sym_zebibyte);
@@ -4625,14 +4499,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 616:
       ACCEPT_TOKEN(anon_sym_zebibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 617:
       ACCEPT_TOKEN(anon_sym_Y);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(530);
       if (lookahead == 'i') ADVANCE(619);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 618:
       ACCEPT_TOKEN(anon_sym_Y);
@@ -4643,7 +4517,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_Yi);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 'B') ADVANCE(622);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 620:
       ACCEPT_TOKEN(anon_sym_Yi);
@@ -4655,13 +4529,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 622:
       ACCEPT_TOKEN(anon_sym_YiB);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 623:
       ACCEPT_TOKEN(anon_sym_yobibyte);
       if (lookahead == '/') ADVANCE(179);
       if (lookahead == 's') ADVANCE(626);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     case 624:
       ACCEPT_TOKEN(anon_sym_yobibyte);
@@ -4673,7 +4547,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 626:
       ACCEPT_TOKEN(anon_sym_yobibytes);
       if (lookahead == '/') ADVANCE(179);
-      if (!sym_unquoted_string_character_set_3(lookahead)) ADVANCE(369);
+      if ((!eof && set_contains(sym_unquoted_string_character_set_2, 13, lookahead))) ADVANCE(369);
       END_STATE();
     default:
       return false;
@@ -8609,7 +8483,7 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT_EXTRA(),
-  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 0),
+  [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 0, 0, 0),
   [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(36),
   [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(63),
   [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
@@ -8617,8 +8491,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [15] = {.entry = {.count = 1, .reusable = false}}, SHIFT(127),
   [17] = {.entry = {.count = 1, .reusable = false}}, SHIFT(97),
   [19] = {.entry = {.count = 1, .reusable = false}}, SHIFT(99),
-  [21] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__value, 1),
-  [23] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__value, 1),
+  [21] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__value, 1, 0, 0),
+  [23] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__value, 1, 0, 0),
   [25] = {.entry = {.count = 1, .reusable = false}}, SHIFT_EXTRA(),
   [27] = {.entry = {.count = 1, .reusable = false}}, SHIFT(53),
   [29] = {.entry = {.count = 1, .reusable = false}}, SHIFT(29),
@@ -8631,15 +8505,15 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [43] = {.entry = {.count = 1, .reusable = false}}, SHIFT(4),
   [45] = {.entry = {.count = 1, .reusable = false}}, SHIFT(167),
   [47] = {.entry = {.count = 1, .reusable = false}}, SHIFT(106),
-  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__value, 2),
-  [51] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__value, 2),
-  [53] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(68),
-  [56] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(18),
-  [59] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(139),
-  [62] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(2),
-  [65] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(4),
-  [68] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(167),
-  [71] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2), SHIFT_REPEAT(106),
+  [49] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__value, 2, 0, 0),
+  [51] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0),
+  [53] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(68),
+  [56] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(18),
+  [59] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(139),
+  [62] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(2),
+  [65] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(4),
+  [68] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(167),
+  [71] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__value, 2, 0, 0), SHIFT_REPEAT(106),
   [74] = {.entry = {.count = 1, .reusable = false}}, SHIFT(20),
   [76] = {.entry = {.count = 1, .reusable = false}}, SHIFT(32),
   [78] = {.entry = {.count = 1, .reusable = false}}, SHIFT(154),
@@ -8649,8 +8523,8 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [86] = {.entry = {.count = 1, .reusable = false}}, SHIFT(14),
   [88] = {.entry = {.count = 1, .reusable = false}}, SHIFT(16),
   [90] = {.entry = {.count = 1, .reusable = false}}, SHIFT(38),
-  [92] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_value, 2),
-  [94] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_value, 2),
+  [92] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_value, 2, 0, 0),
+  [94] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_value, 2, 0, 0),
   [96] = {.entry = {.count = 1, .reusable = false}}, SHIFT(56),
   [98] = {.entry = {.count = 1, .reusable = false}}, SHIFT(50),
   [100] = {.entry = {.count = 1, .reusable = false}}, SHIFT(28),
@@ -8673,50 +8547,50 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [134] = {.entry = {.count = 1, .reusable = false}}, SHIFT(21),
   [136] = {.entry = {.count = 1, .reusable = false}}, SHIFT(27),
   [138] = {.entry = {.count = 1, .reusable = false}}, SHIFT(153),
-  [140] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_array_repeat1, 3),
-  [142] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_array_repeat1, 2),
+  [140] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_array_repeat1, 3, 0, 0),
+  [142] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_array_repeat1, 2, 0, 0),
   [144] = {.entry = {.count = 1, .reusable = false}}, SHIFT(31),
   [146] = {.entry = {.count = 1, .reusable = false}}, SHIFT(35),
-  [148] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 1),
+  [148] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 1, 0, 0),
   [150] = {.entry = {.count = 1, .reusable = true}}, SHIFT(95),
   [152] = {.entry = {.count = 1, .reusable = false}}, SHIFT(8),
-  [154] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 3),
-  [156] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 3),
-  [158] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 3),
-  [160] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 3),
-  [162] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_substitution, 3),
-  [164] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_substitution, 3),
-  [166] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 2),
-  [168] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 2),
-  [170] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 2),
-  [172] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 2),
-  [174] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 2),
-  [176] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string, 2),
-  [178] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 3),
-  [180] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string, 3),
-  [182] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 7),
-  [184] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 7),
-  [186] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 4),
-  [188] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 4),
-  [190] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 4),
-  [192] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 4),
-  [194] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 7),
-  [196] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 7),
-  [198] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 5),
-  [200] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 5),
-  [202] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 5),
-  [204] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 5),
-  [206] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_multiline_string, 2),
-  [208] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_multiline_string, 2),
-  [210] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unit, 1),
-  [212] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unit, 1),
-  [214] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 6),
-  [216] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 6),
-  [218] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 6),
-  [220] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 6),
-  [222] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(56),
-  [225] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2),
-  [227] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 3),
+  [154] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 3, 0, 0),
+  [156] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 3, 0, 0),
+  [158] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 3, 0, 0),
+  [160] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 3, 0, 0),
+  [162] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_substitution, 3, 0, 0),
+  [164] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_substitution, 3, 0, 0),
+  [166] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 2, 0, 0),
+  [168] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 2, 0, 0),
+  [170] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 2, 0, 0),
+  [172] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 2, 0, 0),
+  [174] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 2, 0, 0),
+  [176] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string, 2, 0, 0),
+  [178] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string, 3, 0, 0),
+  [180] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string, 3, 0, 0),
+  [182] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 7, 0, 0),
+  [184] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 7, 0, 0),
+  [186] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 4, 0, 0),
+  [188] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 4, 0, 0),
+  [190] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 4, 0, 0),
+  [192] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 4, 0, 0),
+  [194] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 7, 0, 0),
+  [196] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 7, 0, 0),
+  [198] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 5, 0, 0),
+  [200] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 5, 0, 0),
+  [202] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 5, 0, 0),
+  [204] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 5, 0, 0),
+  [206] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_multiline_string, 2, 0, 0),
+  [208] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_multiline_string, 2, 0, 0),
+  [210] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unit, 1, 0, 0),
+  [212] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unit, 1, 0, 0),
+  [214] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array, 6, 0, 0),
+  [216] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array, 6, 0, 0),
+  [218] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_object, 6, 0, 0),
+  [220] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_object, 6, 0, 0),
+  [222] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2, 0, 0), SHIFT_REPEAT(56),
+  [225] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_document_repeat1, 2, 0, 0),
+  [227] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 3, 0, 0),
   [229] = {.entry = {.count = 1, .reusable = true}}, SHIFT(85),
   [231] = {.entry = {.count = 1, .reusable = true}}, SHIFT(82),
   [233] = {.entry = {.count = 1, .reusable = true}}, SHIFT(55),
@@ -8730,13 +8604,13 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [249] = {.entry = {.count = 1, .reusable = true}}, SHIFT(46),
   [251] = {.entry = {.count = 1, .reusable = true}}, SHIFT(61),
   [253] = {.entry = {.count = 1, .reusable = true}}, SHIFT(41),
-  [255] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 5),
+  [255] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 5, 0, 0),
   [257] = {.entry = {.count = 1, .reusable = true}}, SHIFT(49),
   [259] = {.entry = {.count = 1, .reusable = true}}, SHIFT(79),
   [261] = {.entry = {.count = 1, .reusable = true}}, SHIFT(143),
   [263] = {.entry = {.count = 1, .reusable = true}}, SHIFT(60),
-  [265] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 4),
-  [267] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 2),
+  [265] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 4, 0, 0),
+  [267] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_document, 2, 0, 0),
   [269] = {.entry = {.count = 1, .reusable = true}}, SHIFT(57),
   [271] = {.entry = {.count = 1, .reusable = true}}, SHIFT(146),
   [273] = {.entry = {.count = 1, .reusable = true}}, SHIFT(66),
@@ -8744,40 +8618,40 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [277] = {.entry = {.count = 1, .reusable = true}}, SHIFT(141),
   [279] = {.entry = {.count = 1, .reusable = true}}, SHIFT(69),
   [281] = {.entry = {.count = 1, .reusable = true}}, SHIFT(90),
-  [283] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_path, 1),
-  [285] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_path_repeat1, 2),
-  [287] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_path_repeat1, 2), SHIFT_REPEAT(133),
-  [290] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_path_repeat1, 2), SHIFT_REPEAT(97),
-  [293] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2),
-  [295] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(95),
+  [283] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_path, 1, 0, 0),
+  [285] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_path_repeat1, 2, 0, 0),
+  [287] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_path_repeat1, 2, 0, 0), SHIFT_REPEAT(133),
+  [290] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_path_repeat1, 2, 0, 0), SHIFT_REPEAT(97),
+  [293] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2, 0, 0),
+  [295] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2, 0, 0), SHIFT_REPEAT(95),
   [298] = {.entry = {.count = 1, .reusable = true}}, SHIFT(104),
   [300] = {.entry = {.count = 1, .reusable = true}}, SHIFT(160),
   [302] = {.entry = {.count = 1, .reusable = true}}, SHIFT(166),
-  [304] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unquoted_path, 1),
-  [306] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unquoted_path, 1),
+  [304] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unquoted_path, 1, 0, 0),
+  [306] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unquoted_path, 1, 0, 0),
   [308] = {.entry = {.count = 1, .reusable = true}}, SHIFT(102),
-  [310] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_unquoted_path_repeat1, 2),
-  [312] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_unquoted_path_repeat1, 2),
-  [314] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_unquoted_path_repeat1, 2), SHIFT_REPEAT(161),
+  [310] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_unquoted_path_repeat1, 2, 0, 0),
+  [312] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_unquoted_path_repeat1, 2, 0, 0),
+  [314] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_unquoted_path_repeat1, 2, 0, 0), SHIFT_REPEAT(161),
   [317] = {.entry = {.count = 1, .reusable = true}}, SHIFT(96),
   [319] = {.entry = {.count = 1, .reusable = true}}, SHIFT(164),
-  [321] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unquoted_path, 2),
-  [323] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unquoted_path, 2),
+  [321] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unquoted_path, 2, 0, 0),
+  [323] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unquoted_path, 2, 0, 0),
   [325] = {.entry = {.count = 1, .reusable = true}}, SHIFT(105),
   [327] = {.entry = {.count = 1, .reusable = false}}, SHIFT(101),
   [329] = {.entry = {.count = 1, .reusable = true}}, SHIFT(37),
-  [331] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2), SHIFT_REPEAT(104),
-  [334] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unquoted_path, 3),
-  [336] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 2),
-  [338] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 2), SHIFT_REPEAT(89),
-  [341] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 2), SHIFT_REPEAT(88),
+  [331] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat1, 2, 0, 0), SHIFT_REPEAT(104),
+  [334] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_unquoted_path, 3, 0, 0),
+  [336] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 2, 0, 0),
+  [338] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 2, 0, 0), SHIFT_REPEAT(89),
+  [341] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 2, 0, 0), SHIFT_REPEAT(88),
   [344] = {.entry = {.count = 1, .reusable = true}}, SHIFT(75),
   [346] = {.entry = {.count = 1, .reusable = true}}, SHIFT(87),
   [348] = {.entry = {.count = 1, .reusable = true}}, SHIFT(74),
   [350] = {.entry = {.count = 1, .reusable = true}}, SHIFT(58),
-  [352] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_array_repeat1, 2), SHIFT_REPEAT(34),
-  [355] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_array_repeat1, 2), SHIFT_REPEAT(33),
-  [358] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_array_repeat1, 2),
+  [352] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_array_repeat1, 2, 0, 0), SHIFT_REPEAT(34),
+  [355] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_array_repeat1, 2, 0, 0), SHIFT_REPEAT(33),
+  [358] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_array_repeat1, 2, 0, 0),
   [360] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
   [362] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
   [364] = {.entry = {.count = 1, .reusable = true}}, SHIFT(47),
@@ -8794,7 +8668,7 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [386] = {.entry = {.count = 1, .reusable = true}}, SHIFT(78),
   [388] = {.entry = {.count = 1, .reusable = true}}, SHIFT(86),
   [390] = {.entry = {.count = 1, .reusable = true}}, SHIFT(71),
-  [392] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__resource_name, 4),
+  [392] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__resource_name, 4, 0, 0),
   [394] = {.entry = {.count = 1, .reusable = true}}, SHIFT(25),
   [396] = {.entry = {.count = 1, .reusable = true}}, SHIFT(24),
   [398] = {.entry = {.count = 1, .reusable = true}}, SHIFT(50),
@@ -8805,26 +8679,26 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [408] = {.entry = {.count = 1, .reusable = true}}, SHIFT(80),
   [410] = {.entry = {.count = 1, .reusable = true}}, SHIFT(84),
   [412] = {.entry = {.count = 1, .reusable = true}}, SHIFT(67),
-  [414] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 3),
+  [414] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 3, 0, 0),
   [416] = {.entry = {.count = 1, .reusable = false}}, SHIFT(44),
   [418] = {.entry = {.count = 1, .reusable = true}}, SHIFT(134),
   [420] = {.entry = {.count = 1, .reusable = false}}, SHIFT(134),
-  [422] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 5),
+  [422] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 5, 0, 0),
   [424] = {.entry = {.count = 1, .reusable = false}}, SHIFT(91),
   [426] = {.entry = {.count = 1, .reusable = true}}, SHIFT(137),
   [428] = {.entry = {.count = 1, .reusable = false}}, SHIFT(137),
-  [430] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__string_content, 2),
-  [432] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__string_content, 2), SHIFT_REPEAT(134),
-  [435] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__string_content, 2), SHIFT_REPEAT(134),
-  [438] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_value, 1),
-  [440] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_pair, 2),
+  [430] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__string_content, 2, 0, 0),
+  [432] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__string_content, 2, 0, 0), SHIFT_REPEAT(134),
+  [435] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__string_content, 2, 0, 0), SHIFT_REPEAT(134),
+  [438] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_value, 1, 0, 0),
+  [440] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_pair, 2, 0, 0),
   [442] = {.entry = {.count = 1, .reusable = false}}, SHIFT(92),
-  [444] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 2),
+  [444] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 2, 0, 0),
   [446] = {.entry = {.count = 1, .reusable = false}}, SHIFT(43),
   [448] = {.entry = {.count = 1, .reusable = true}}, SHIFT(130),
   [450] = {.entry = {.count = 1, .reusable = false}}, SHIFT(130),
-  [452] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 6),
-  [454] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 3),
+  [452] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_include, 6, 0, 0),
+  [454] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_document_repeat2, 3, 0, 0),
   [456] = {.entry = {.count = 1, .reusable = true}}, SHIFT(149),
   [458] = {.entry = {.count = 1, .reusable = true}}, SHIFT(150),
   [460] = {.entry = {.count = 1, .reusable = true}}, SHIFT(120),
@@ -8849,7 +8723,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_hocon() {
+TS_PUBLIC const TSLanguage *tree_sitter_hocon(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

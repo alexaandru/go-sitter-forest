@@ -422,7 +422,7 @@ static bool indent_lesseq(uint32_t indent, State *state) { return indent_exists(
   case '\r': \
   case '\f'
 
-static bool is_newline(uint32_t c) {
+static bool is_newline_unison(uint32_t c) {
   switch (c) {
     NEWLINE_CASES:
       return true;
@@ -742,7 +742,7 @@ static Result fold(State *state) {
         return finish(FOLD, "fold");
       }
       default: { // COMMENT
-        while(!is_eof(state) && !is_newline(PEEK)) S_ADVANCE;
+        while(!is_eof(state) && !is_newline_unison(PEEK)) S_ADVANCE;
         LOG(VERBOSE, "after advancing, PEEK is %c and should be EOF: %s\n", PEEK, is_eof(state) ? "true" : "false");
         MARK("fold", false, state);
         return finish(COMMENT, "comment");
@@ -1119,7 +1119,7 @@ static Result minus(State *state) {
       if (PEEK == '-') { // FOLD
         S_ADVANCE;
         LOG(VERBOSE, "After advancing, PEEK: %c\n", PEEK);
-        if (is_eof(state) || is_newline(PEEK)) {
+        if (is_eof(state) || is_newline_unison(PEEK)) {
           while(!is_eof(state)) S_ADVANCE;
           MARK("minus", false, state);
           return finish_if_valid(FOLD, "fold", state);
@@ -1733,7 +1733,7 @@ static Result scan_main(State *state) {
   Result res = eof(state);
   SHORT_SCANNER;
   MARK("main", false, state);
-  if (is_newline(PEEK)) {
+  if (is_newline_unison(PEEK)) {
     LOG(VERBOSE, "is newline\n");
     S_SKIP;
     uint32_t indent = count_indent(state);

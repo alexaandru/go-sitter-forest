@@ -168,8 +168,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   switch (state) {
     case 0:
       if (eof) ADVANCE(19);
-      if (lookahead == '\n') SKIP(0)
-      if (lookahead == '\r') SKIP(17)
+      if (lookahead == '\n') SKIP(0);
+      if (lookahead == '\r') SKIP(17);
       if (lookahead == ' ') ADVANCE(22);
       if (lookahead == '-') ADVANCE(10);
       if (lookahead == 'B') ADVANCE(27);
@@ -180,17 +180,17 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
       END_STATE();
     case 1:
-      if (lookahead == '\n') SKIP(1)
+      if (lookahead == '\n') SKIP(1);
       if (lookahead == '\r') ADVANCE(38);
       if (lookahead == '-') ADVANCE(42);
       if (lookahead != 0) ADVANCE(43);
       END_STATE();
     case 2:
-      if (lookahead == '\n') SKIP(3)
+      if (lookahead == '\n') SKIP(3);
       END_STATE();
     case 3:
-      if (lookahead == '\n') SKIP(3)
-      if (lookahead == '\r') SKIP(2)
+      if (lookahead == '\n') SKIP(3);
+      if (lookahead == '\r') SKIP(2);
       if (lookahead == '-') ADVANCE(10);
       if (lookahead == '+' ||
           ('/' <= lookahead && lookahead <= '9') ||
@@ -198,11 +198,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(32);
       END_STATE();
     case 4:
-      if (lookahead == '\n') SKIP(5)
+      if (lookahead == '\n') SKIP(5);
       END_STATE();
     case 5:
-      if (lookahead == '\n') SKIP(5)
-      if (lookahead == '\r') SKIP(4)
+      if (lookahead == '\n') SKIP(5);
+      if (lookahead == '\r') SKIP(4);
       if (lookahead == 'B') ADVANCE(12);
       if (lookahead == 'E') ADVANCE(15);
       END_STATE();
@@ -244,11 +244,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 17:
       if (eof) ADVANCE(19);
-      if (lookahead == '\n') SKIP(0)
+      if (lookahead == '\n') SKIP(0);
       END_STATE();
     case 18:
       if (eof) ADVANCE(19);
-      if (lookahead == '\n') SKIP(18)
+      if (lookahead == '\n') SKIP(18);
       if (lookahead == '\r') ADVANCE(38);
       if (lookahead == '-') ADVANCE(42);
       if (lookahead != 0) ADVANCE(43);
@@ -373,7 +373,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 38:
       ACCEPT_TOKEN(sym_comment);
-      if (lookahead == '\n') SKIP(1)
+      if (lookahead == '\n') SKIP(1);
       if (lookahead != 0) ADVANCE(43);
       END_STATE();
     case 39:
@@ -572,23 +572,23 @@ static const uint32_t ts_small_parse_table_map[] = {
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_pem, 0),
+  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_pem, 0, 0, 0),
   [5] = {.entry = {.count = 1, .reusable = false}}, SHIFT(10),
   [7] = {.entry = {.count = 1, .reusable = false}}, SHIFT(2),
-  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_pem, 1),
+  [9] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_pem, 1, 0, 0),
   [11] = {.entry = {.count = 1, .reusable = false}}, SHIFT(3),
-  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_pem_repeat1, 2),
-  [15] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_pem_repeat1, 2), SHIFT_REPEAT(10),
-  [18] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_pem_repeat1, 2), SHIFT_REPEAT(3),
+  [13] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_pem_repeat1, 2, 0, 0),
+  [15] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_pem_repeat1, 2, 0, 0), SHIFT_REPEAT(10),
+  [18] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_pem_repeat1, 2, 0, 0), SHIFT_REPEAT(3),
   [21] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
   [23] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
-  [25] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_data, 1),
-  [27] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_content, 3),
-  [29] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_content, 3),
-  [31] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_data_repeat1, 2), SHIFT_REPEAT(7),
-  [34] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_data_repeat1, 2),
-  [36] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_footer, 5),
-  [38] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_footer, 5),
+  [25] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_data, 1, 0, 0),
+  [27] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_content, 3, 0, 0),
+  [29] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_content, 3, 0, 0),
+  [31] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_data_repeat1, 2, 0, 0), SHIFT_REPEAT(7),
+  [34] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_data_repeat1, 2, 0, 0),
+  [36] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_footer, 5, 0, 0),
+  [38] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_footer, 5, 0, 0),
   [40] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
   [42] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
   [44] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
@@ -597,7 +597,7 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [50] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
   [52] = {.entry = {.count = 1, .reusable = true}}, SHIFT(17),
   [54] = {.entry = {.count = 1, .reusable = true}}, SHIFT(18),
-  [56] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_header, 5),
+  [56] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_header, 5, 0, 0),
   [58] = {.entry = {.count = 1, .reusable = true}}, SHIFT(19),
   [60] = {.entry = {.count = 1, .reusable = true}}, SHIFT(8),
 };
@@ -613,7 +613,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_pem() {
+TS_PUBLIC const TSLanguage *tree_sitter_pem(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

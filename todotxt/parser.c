@@ -175,7 +175,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '@') ADVANCE(21);
       if (lookahead == 'x') ADVANCE(6);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(0)
+          lookahead == ' ') SKIP(0);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(26);
       if (lookahead != 0) ADVANCE(30);
       END_STATE();
@@ -185,7 +185,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == ':') ADVANCE(31);
       if (lookahead == '@') ADVANCE(21);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(1)
+          lookahead == ' ') SKIP(1);
       if (lookahead != 0) ADVANCE(30);
       END_STATE();
     case 2:
@@ -193,7 +193,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == ':') ADVANCE(31);
       if (lookahead == '@') ADVANCE(21);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(2)
+          lookahead == ' ') SKIP(2);
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(26);
       if (lookahead != 0) ADVANCE(30);
       END_STATE();
@@ -202,7 +202,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == ':') ADVANCE(31);
       if (lookahead == '@') ADVANCE(21);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(3)
+          lookahead == ' ') SKIP(3);
       if (lookahead != 0) ADVANCE(30);
       END_STATE();
     case 4:
@@ -641,35 +641,35 @@ static const uint32_t ts_small_parse_table_map[] = {
 static const TSParseActionEntry ts_parse_actions[] = {
   [0] = {.entry = {.count = 0, .reusable = false}},
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
-  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0),
+  [3] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0, 0, 0),
   [5] = {.entry = {.count = 1, .reusable = false}}, SHIFT(6),
   [7] = {.entry = {.count = 1, .reusable = false}}, SHIFT(10),
   [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(8),
   [11] = {.entry = {.count = 1, .reusable = false}}, SHIFT(8),
   [13] = {.entry = {.count = 1, .reusable = false}}, SHIFT(7),
-  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
-  [17] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2),
-  [19] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(6),
-  [22] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(10),
-  [25] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(8),
-  [28] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(8),
-  [31] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(7),
-  [34] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2),
+  [15] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1, 0, 0),
+  [17] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
+  [19] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(6),
+  [22] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(10),
+  [25] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(8),
+  [28] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(8),
+  [31] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0), SHIFT_REPEAT(7),
+  [34] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2, 0, 0),
   [36] = {.entry = {.count = 1, .reusable = false}}, SHIFT(12),
   [38] = {.entry = {.count = 1, .reusable = false}}, SHIFT(5),
   [40] = {.entry = {.count = 1, .reusable = false}}, SHIFT(9),
-  [42] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__task, 1),
+  [42] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__task, 1, 0, 0),
   [44] = {.entry = {.count = 1, .reusable = false}}, SHIFT(11),
-  [46] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__task_repeat1, 2),
-  [48] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__task_repeat1, 2), SHIFT_REPEAT(11),
+  [46] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym__task_repeat1, 2, 0, 0),
+  [48] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym__task_repeat1, 2, 0, 0), SHIFT_REPEAT(11),
   [51] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
   [53] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
-  [55] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_task, 1),
-  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_done_task, 2),
-  [59] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_task, 2),
-  [61] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_done_task, 3),
-  [63] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_task, 3),
-  [65] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_done_task, 4),
+  [55] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_task, 1, 0, 0),
+  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_done_task, 2, 0, 0),
+  [59] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_task, 2, 0, 0),
+  [61] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_done_task, 3, 0, 0),
+  [63] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_task, 3, 0, 0),
+  [65] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_done_task, 4, 0, 0),
 };
 
 #ifdef __cplusplus
@@ -683,7 +683,7 @@ extern "C" {
 #define TS_PUBLIC __attribute__((visibility("default")))
 #endif
 
-TS_PUBLIC const TSLanguage *tree_sitter_todotxt() {
+TS_PUBLIC const TSLanguage *tree_sitter_todotxt(void) {
   static const TSLanguage language = {
     .version = LANGUAGE_VERSION,
     .symbol_count = SYMBOL_COUNT,

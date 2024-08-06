@@ -278,7 +278,7 @@ struct Scanner
             advance_norg();
             return parse_text();
         }
-        else if (is_newline(lexer->lookahead))
+        else if (is_newline_norg(lexer->lookahead))
         {
             advance_norg();
 
@@ -296,7 +296,7 @@ struct Scanner
                 return true;
             }
 
-            if (is_newline(lexer->lookahead))
+            if (is_newline_norg(lexer->lookahead))
             {
                 advance_norg();
                 lexer->result_symbol = m_LastToken = PARAGRAPH_BREAK;
@@ -371,7 +371,7 @@ struct Scanner
                 if (token("end") && (iswspace(lexer->lookahead) || !lexer->lookahead))
                 {
                     while (lexer->lookahead && iswspace(lexer->lookahead)
-                           && !is_newline(lexer->lookahead))
+                           && !is_newline_norg(lexer->lookahead))
                         advance_norg();
 
                     if ((iswspace(lexer->lookahead) || !lexer->lookahead) && m_TagLevel)
@@ -394,7 +394,7 @@ struct Scanner
                             advance_norg();
                         while (lexer->lookahead == '=');
 
-                        if (is_newline(lexer->lookahead))
+                        if (is_newline_norg(lexer->lookahead))
                         {
                             // reset the marked end
                             lexer->mark_end(lexer);
@@ -481,7 +481,7 @@ struct Scanner
 
                 if (!lexer->lookahead || iswspace(lexer->lookahead))
                 {
-                    if (is_newline(lexer->lookahead))
+                    if (is_newline_norg(lexer->lookahead))
                         lexer->result_symbol = m_LastToken = INDENT_SEGMENT;
                     else
                         lexer->result_symbol = m_LastToken = WORD;
@@ -555,7 +555,7 @@ struct Scanner
             // newline, which makes sense considering the parser head:
             // ---
             //   ^ will be here, and lexer->lookahead will return '\n'
-            else if (is_newline(lexer->lookahead) && m_ParsedChars >= 3)
+            else if (is_newline_norg(lexer->lookahead) && m_ParsedChars >= 3)
             {
                 advance_norg();
                 lexer->result_symbol = m_LastToken = WEAK_PARAGRAPH_DELIMITER;
@@ -565,7 +565,7 @@ struct Scanner
             if (check_detached({ORDERED_LIST1, ORDERED_LIST2, ORDERED_LIST3,
                                 ORDERED_LIST4, ORDERED_LIST5, ORDERED_LIST6}, '~'))
                 return true;
-            else if (is_newline(lexer->lookahead) && m_ParsedChars == 1)
+            else if (is_newline_norg(lexer->lookahead) && m_ParsedChars == 1)
             {
                 if (lexer->eof(lexer))
                 {
@@ -579,7 +579,7 @@ struct Scanner
 
             if (check_detached({SINGLE_DEFINITION, MULTI_DEFINITION, NONE}, '$'))
                 return true;
-            else if (is_newline(lexer->lookahead) && m_ParsedChars == 2)
+            else if (is_newline_norg(lexer->lookahead) && m_ParsedChars == 2)
             {
                 advance_norg();
                 lexer->result_symbol = MULTI_DEFINITION_SUFFIX;
@@ -588,7 +588,7 @@ struct Scanner
 
             if (check_detached({SINGLE_FOOTNOTE, MULTI_FOOTNOTE, NONE}, '^'))
                 return true;
-            else if (is_newline(lexer->lookahead) && m_ParsedChars == 2)
+            else if (is_newline_norg(lexer->lookahead) && m_ParsedChars == 2)
             {
                 advance_norg();
                 lexer->result_symbol = MULTI_FOOTNOTE_SUFFIX;
@@ -597,7 +597,7 @@ struct Scanner
 
             if (check_detached({SINGLE_TABLE_CELL, MULTI_TABLE_CELL, NONE}, ':'))
                 return true;
-            else if (is_newline(lexer->lookahead) && m_ParsedChars == 2)
+            else if (is_newline_norg(lexer->lookahead) && m_ParsedChars == 2)
             {
                 advance_norg();
                 lexer->result_symbol = MULTI_TABLE_CELL_SUFFIX;
@@ -606,7 +606,7 @@ struct Scanner
 
             if (check_detached({NONE, NONE}, '_'))
                 return true;
-            else if (is_newline(lexer->lookahead) && m_ParsedChars >= 3)
+            else if (is_newline_norg(lexer->lookahead) && m_ParsedChars >= 3)
             {
                 lexer->result_symbol = m_LastToken = HORIZONTAL_LINE;
                 return true;
@@ -618,7 +618,7 @@ struct Scanner
             advance_norg();
             lexer->mark_end(lexer);
 
-            if (is_newline(lexer->lookahead))
+            if (is_newline_norg(lexer->lookahead))
             {
                 advance_norg();
                 if (lexer->eof(lexer))
@@ -652,7 +652,7 @@ struct Scanner
                 is_indent_segment = true;
             }
 
-            if (!is_newline(lexer->lookahead))
+            if (!is_newline_norg(lexer->lookahead))
             {
                 lexer->result_symbol = m_LastToken = WORD;
                 return true;
@@ -746,7 +746,7 @@ struct Scanner
         case '}':
             advance_norg();
 
-            if (is_newline(m_Previous))
+            if (is_newline_norg(m_Previous))
             {
                 lexer->result_symbol = m_LastToken = NONE;
                 return true;
@@ -1232,7 +1232,7 @@ struct Scanner
     {
         if (m_TagContext == TagType::IN_VERBATIM_TAG)
         {
-            while (!is_newline(lexer->lookahead))
+            while (!is_newline_norg(lexer->lookahead))
                 advance_norg();
             lexer->result_symbol = m_LastToken = WORD;
             return true;
@@ -1245,7 +1245,7 @@ struct Scanner
             return true;
         }
 
-        if (is_newline(lexer->lookahead))
+        if (is_newline_norg(lexer->lookahead))
         {
             lexer->result_symbol = m_LastToken = WORD;
             return true;
@@ -1305,7 +1305,7 @@ struct Scanner
 
     inline void reset_active_modifiers() { m_ActiveModifiers.reset(); }
 
-    inline bool is_newline(int32_t c) { return !c || c == '\n' || c == '\r'; }
+    inline bool is_newline_norg(int32_t c) { return !c || c == '\n' || c == '\r'; }
 
     inline bool is_blank(int32_t c) { return c && std::iswblank(c); }
 };
