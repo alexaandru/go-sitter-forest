@@ -29,7 +29,7 @@ unmap [normal] <Esc>
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), zathurarc.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), zathurarc.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

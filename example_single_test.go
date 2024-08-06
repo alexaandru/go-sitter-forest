@@ -11,7 +11,7 @@ import (
 func ExampleGetLanguage() {
 	content := []byte("print('It works!')\n")
 
-	node, err := sitter.ParseCtx(context.TODO(), content, lua.GetLanguage())
+	node, err := sitter.Parse(context.TODO(), content, lua.GetLanguage())
 	if err != nil {
 		panic(err)
 	}

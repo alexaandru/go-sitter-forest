@@ -108,7 +108,7 @@ print(sizes.get(0) * sizes.get(1))
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), ursa.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), ursa.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

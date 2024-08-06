@@ -27,7 +27,7 @@ SELECT ALL count(*), max(a) FROM t1 WHERE 0 GROUP BY b HAVING count(*)=2;
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), sqlite.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), sqlite.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

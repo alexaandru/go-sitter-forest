@@ -21,7 +21,7 @@ for(Account acc : listOfAccounts){
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), apex.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), apex.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

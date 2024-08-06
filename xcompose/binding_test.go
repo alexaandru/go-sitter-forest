@@ -22,7 +22,7 @@ include "%L"
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), xcompose.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), xcompose.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

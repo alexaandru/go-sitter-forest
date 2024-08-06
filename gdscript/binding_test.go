@@ -23,7 +23,7 @@ var p = func(): if true: print(1); print(2) else: print(3); print(4)
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), gdscript.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), gdscript.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

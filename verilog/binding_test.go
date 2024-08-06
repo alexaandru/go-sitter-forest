@@ -27,7 +27,7 @@ module add_sub (x, y, z, sign);
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), verilog.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), verilog.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

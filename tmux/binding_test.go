@@ -37,7 +37,7 @@ bind -Tcopy-mode-vi C-v send-keys v M-v
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), tmux.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), tmux.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

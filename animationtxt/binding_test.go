@@ -19,7 +19,7 @@ introFrames = 1, 2x2, 3, 4x2
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), animationtxt.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), animationtxt.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

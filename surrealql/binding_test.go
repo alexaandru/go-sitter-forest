@@ -41,7 +41,7 @@ SELECT VALUE name FROM person:00e1nc508h9f7v63x72O;
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), surrealql.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), surrealql.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

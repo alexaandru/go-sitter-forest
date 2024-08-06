@@ -15,7 +15,7 @@ func ExampleInfo() {
 	parser := sitter.NewParser()
 	parser.SetLanguage(forest.GetLanguage("lua")())
 
-	tree, err := parser.ParseCtx(context.TODO(), nil, content)
+	tree, err := parser.ParseString(context.TODO(), nil, content)
 	if err != nil {
 		panic(err)
 	}

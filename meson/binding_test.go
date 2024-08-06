@@ -30,7 +30,7 @@ prefix = get_option('prefix')
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), meson.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), meson.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

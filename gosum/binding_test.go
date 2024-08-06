@@ -19,7 +19,7 @@ gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), gosum.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), gosum.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

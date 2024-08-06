@@ -27,7 +27,7 @@ check! [4, 16, 36, 64]
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), koto.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), koto.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

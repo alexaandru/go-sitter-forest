@@ -23,7 +23,7 @@ nobody:x:65534:65534:Kernel Overflow User:/:/usr/sbin/nologin
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), passwd.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), passwd.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

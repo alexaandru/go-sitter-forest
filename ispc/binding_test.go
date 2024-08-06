@@ -34,7 +34,7 @@ static inline int mandel(float c_re, float c_im, int count) {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), ispc.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), ispc.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

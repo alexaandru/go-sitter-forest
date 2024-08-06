@@ -24,7 +24,7 @@ process = no.noise * hslider("gain",0,0,1,0.1);
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), faust.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), faust.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

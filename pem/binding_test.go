@@ -37,7 +37,7 @@ lffygD5IymCSuuDim4qB/9bh7oi37heJ4ObpBIzroPUOthbG4gv/5blW3Dc=
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), pem.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), pem.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

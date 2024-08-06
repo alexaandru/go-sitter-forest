@@ -56,7 +56,7 @@ Bees.
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), ConTeXt.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), ConTeXt.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

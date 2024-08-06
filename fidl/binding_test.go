@@ -22,7 +22,7 @@ type Color = struct {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), fidl.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), fidl.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

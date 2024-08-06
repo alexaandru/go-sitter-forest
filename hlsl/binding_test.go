@@ -23,7 +23,7 @@ static const uint vblur_window_size = (group_width + kernel_radius) * 2;
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), hlsl.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), hlsl.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

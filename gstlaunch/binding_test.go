@@ -19,7 +19,7 @@ filesink location=input.ogg
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), gstlaunch.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), gstlaunch.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

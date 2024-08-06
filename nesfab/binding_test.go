@@ -22,7 +22,7 @@ fn baz() UUU[10]
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), nesfab.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), nesfab.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

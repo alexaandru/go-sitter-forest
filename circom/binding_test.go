@@ -34,7 +34,7 @@ component main = B();
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), circom.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), circom.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

@@ -107,7 +107,7 @@ cmd foo.bar[0]."A [crazy name]!".baz Items[1].tag.pages[3]
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), mcfuncx.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), mcfuncx.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

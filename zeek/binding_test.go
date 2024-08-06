@@ -150,7 +150,7 @@ event connection_rejected(c: connection)
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), zeek.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), zeek.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

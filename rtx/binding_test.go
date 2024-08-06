@@ -28,7 +28,7 @@ NP -> adj n {2 _ 1[number=2.number]};
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), rtx.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), rtx.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

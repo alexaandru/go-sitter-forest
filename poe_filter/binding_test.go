@@ -31,7 +31,7 @@ Show # %HS3 $type->jewels->generic $tier->anyrare
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), poe_filter.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), poe_filter.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

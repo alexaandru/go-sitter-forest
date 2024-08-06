@@ -22,7 +22,7 @@ fn main() {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), wgsl_bevy.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), wgsl_bevy.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

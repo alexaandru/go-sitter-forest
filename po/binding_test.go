@@ -43,7 +43,7 @@ msgstr[2] "%d slika uklonjenih"
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), po.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), po.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

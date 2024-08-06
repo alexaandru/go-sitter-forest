@@ -47,7 +47,7 @@ Kg1 72. Qe3+ 1/2-1/2
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), pgn.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), pgn.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

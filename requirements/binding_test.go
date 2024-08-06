@@ -37,7 +37,7 @@ FooProject >= 1.2 --global-option="--no-user-cfg"
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), requirements.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), requirements.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

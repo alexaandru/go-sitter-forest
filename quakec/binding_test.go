@@ -563,7 +563,7 @@ void() monster_zombie =
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), quakec.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), quakec.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

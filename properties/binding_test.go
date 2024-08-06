@@ -25,7 +25,7 @@ my.secret=${aes-gcm-nopadding::DJNrZ6LfpupFv6QbXyXhvzD8eVDnDa_kTliQBpuzTobDZxlg}
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), properties.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), properties.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

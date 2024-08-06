@@ -1702,7 +1702,7 @@ It's time I tackled a problem I can solve.
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), ink.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), ink.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

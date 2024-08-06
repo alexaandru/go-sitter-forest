@@ -31,7 +31,7 @@ i:0 <=> Vow %{VSUF%}:0 _ [ m | n ] ;
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), twolc.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), twolc.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

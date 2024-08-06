@@ -25,7 +25,7 @@ fibonacci <- function(n) {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), r.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), r.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

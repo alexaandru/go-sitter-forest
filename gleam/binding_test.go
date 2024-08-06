@@ -24,7 +24,7 @@ fn record_with_fun_field(record) {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), gleam.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), gleam.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

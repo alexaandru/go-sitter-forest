@@ -185,7 +185,7 @@ func TestAllParsers(t *testing.T) {
 				t.Skipf("Language %q does not have a function available", lang)
 			}
 
-			n, err := sitter.ParseCtx(context.Background(), []byte(code), fn())
+			n, err := sitter.Parse(context.Background(), []byte(code), fn())
 			if err != nil {
 				t.Fatal(err)
 			}

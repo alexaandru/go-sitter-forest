@@ -31,7 +31,7 @@ http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221225804/inde
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), hlsplaylist.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), hlsplaylist.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

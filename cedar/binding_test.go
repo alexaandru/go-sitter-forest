@@ -25,7 +25,7 @@ when { context.device_properties.contains({"os": "Windows", "version": 11}) };
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), cedar.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), cedar.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

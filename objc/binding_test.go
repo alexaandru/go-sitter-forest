@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), objc.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), objc.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

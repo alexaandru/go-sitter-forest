@@ -30,7 +30,7 @@ _ZNKSt15__uniq_ptr_implIN6engine13entityManager13EntityManagerESt14default_delet
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), objdump.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), objdump.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

@@ -24,7 +24,7 @@ contentWarning2=This game contains flashing content that may not be suitable for
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), pdxinfo.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), pdxinfo.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

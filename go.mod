@@ -407,7 +407,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.5.100
 	github.com/alexaandru/go-sitter-forest/zeek v1.5.100
 	github.com/alexaandru/go-sitter-forest/zig v1.5.101
-	github.com/alexaandru/go-tree-sitter-bare v1.1.1
+	github.com/alexaandru/go-tree-sitter-bare v1.4.2
 	golang.org/x/exp v0.0.0-20240707233637-46b078467d37
 	golang.org/x/sync v0.7.0
 )
@@ -416,6 +416,6 @@ retract (
 	v1.5.91 // Upgraded parsers' binding.go to include query functionality,
 	// but forgot to bump up the version, so forest was looking up
 	// functionality that wasn't there (in the versions pinned by go.mod).
-	v1.4.1 // Yes, messed up again...
-	v1.4.0 // Messed up with rebase.
+	v1.4.2 // Yes, messed up again...
+	v1.4.2 // Messed up with rebase.
 )

@@ -33,7 +33,7 @@ effect FileNotFound[A](path: String, msg: A): Unit
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), effekt.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), effekt.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

@@ -22,7 +22,7 @@ Set 1.0 qml/components/Set.qml
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), qmldir.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), qmldir.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

@@ -26,7 +26,7 @@ tuple empty_tuple() asm "NIL";
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), FunC.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), FunC.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

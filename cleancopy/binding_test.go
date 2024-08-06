@@ -31,7 +31,7 @@ Here we have a single content row followed by:
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), cleancopy.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), cleancopy.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

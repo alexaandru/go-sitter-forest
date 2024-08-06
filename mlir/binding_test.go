@@ -24,7 +24,7 @@ func @correct_number_of_regions() {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), mlir.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), mlir.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

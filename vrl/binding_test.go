@@ -28,7 +28,7 @@ structured = parse_key_value(message_parts[1], key_value_delimiter: ":", field_d
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), vrl.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), vrl.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

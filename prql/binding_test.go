@@ -39,7 +39,7 @@ derive db_version = s"version()"
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), prql.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), prql.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

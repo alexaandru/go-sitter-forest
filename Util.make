@@ -69,4 +69,12 @@ browse_pending:
 filetype-status:
 	@echo "$$(jq '[.Shebang[]]|flatten|length' filetype.json) shebangs + $$(jq '[.Ext[]]|flatten|length' filetype.json) extensions + $$(jq '[.Basename[]]|flatten|length' filetype.json) filenames + $$(jq '[.Glob[]]|flatten|length' filetype.json) patterns recognized (= $$(jq '[.Shebang[], .Basename[], .Ext[], .Glob[]]|flatten|length' filetype.json))"
 
+update_upstream:
+	@if [ -z "$(NEWVER)" ]; then echo Must pass NEWVER; exit 1; else \
+		#if [[ ! "$(NEWVER)" =~ "^v[0-9]\.[0-9]\.[0-9]$$" ]]; then echo Must pass a valid NEWVER, \"$(NEWVER)\" does not match \"^v[0-9]\.[0-9]\.[0-9]$$\"; exit 2; else \
+			sed -i "s/$$(grep go-tree-sitter-bare go/go.mod|cut -f3 -d' ')/$(NEWVER)/" */go.mod go.mod && \
+			make -s list_all_parsers|while read x; do (cd $x; go mod tidy); done; \
+		#	fi; \
+		fi
+
 .PHONY: clean

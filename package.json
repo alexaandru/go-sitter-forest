@@ -8,7 +8,7 @@
     "nan": "^2.14.1",
     "regexp-util": "^2.0.0",
     "tree-sitter-c": "^0.21.4",
-    "tree-sitter-cli": "^0.22.2",
+    "tree-sitter-cli": "^0.22.6",
     "tree-sitter-clojure": "git@github.com:theHamsta/tree-sitter-clojure-1.git#95c7959c461406381b42113dcf4591008c663d21",
     "tree-sitter-cpp": "^0.22.2",
     "tree-sitter-css": "^0.20.0",

@@ -1,4 +1,2 @@
-github.com/alexaandru/go-tree-sitter-bare v1.1.0 h1:9lIu0YxNIdsiI5Kli4qCVkTQW2wTZjiKD3JqMI5hxeA=
-github.com/alexaandru/go-tree-sitter-bare v1.1.0/go.mod h1:PTUvlXZbRX3x0NbgFgkL8TSwdce2d1ST7yUYotifxLk=
-github.com/alexaandru/go-tree-sitter-bare v1.1.1 h1:2UtaDczLIqcTGTV9VU3w/GgC6iKgNr6uPtgM+IXN0lQ=
-github.com/alexaandru/go-tree-sitter-bare v1.1.1/go.mod h1:PTUvlXZbRX3x0NbgFgkL8TSwdce2d1ST7yUYotifxLk=
+github.com/alexaandru/go-tree-sitter-bare v1.4.2 h1:n81qUvRk6Jb90q745njuOCXunBKcuciQqgTSxf39jGk=
+github.com/alexaandru/go-tree-sitter-bare v1.4.2/go.mod h1:5gx59gMtIPOLlnrkpP1KdREczENWSpgKKBAaXsyPumE=

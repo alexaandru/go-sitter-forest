@@ -27,7 +27,7 @@ ioctl(9, TCGETS, 0x7ffd9a3205d0)        = -1 ENOTTY (Ioctl() inappropré pour un
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), strace.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), strace.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

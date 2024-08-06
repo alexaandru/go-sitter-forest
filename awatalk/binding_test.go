@@ -23,7 +23,7 @@ awa awa awawa awawa awa awa awa awa awa awa awawa awa awawa awawa awa awa awa aw
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), awatalk.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), awatalk.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

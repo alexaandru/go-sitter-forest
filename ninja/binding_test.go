@@ -23,7 +23,7 @@ build foo.o: cc foo.c
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), ninja.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), ninja.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

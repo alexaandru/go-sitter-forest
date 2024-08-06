@@ -24,7 +24,7 @@ And **some more** [stuff](./stuff.txt) in here.
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), markdown.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), markdown.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}

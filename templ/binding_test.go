@@ -28,7 +28,7 @@ templ Greeting(person Person) {
 )
 
 func TestGrammar(t *testing.T) {
-	n, err := sitter.ParseCtx(context.Background(), []byte(code), templ.GetLanguage())
+	n, err := sitter.Parse(context.Background(), []byte(code), templ.GetLanguage())
 	if err != nil {
 		t.Fatalf("Expected no error got %v", err)
 	}
