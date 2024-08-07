@@ -36,5 +36,7 @@
   "https://github.com/JamesWP/tree-sitter-anzu",
   "https://github.com/xixiaofinland/tree-sitter-sflog",
   "https://github.com/kadena-community/tree-sitter-pact",
-  "https://github.com/marzeq/tree-sitter-mconf"
+  "https://github.com/marzeq/tree-sitter-mconf",
+  "https://github.com/cattokomo/tree-sitter-nelua",
+  "https://github.com/baabnq/tree-sitter-baabnq"
 ]

@@ -110,7 +110,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.6.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.6.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.6.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.6.0
+	github.com/alexaandru/go-sitter-forest/fsharp v1.6.1
 	github.com/alexaandru/go-sitter-forest/func v1.6.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.6.0
 	github.com/alexaandru/go-sitter-forest/gdscript v1.6.0
@@ -164,7 +164,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.6.0
 	github.com/alexaandru/go-sitter-forest/hylo v1.6.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.6.0
-	github.com/alexaandru/go-sitter-forest/idl v1.6.0
+	github.com/alexaandru/go-sitter-forest/idl v1.6.1
 	github.com/alexaandru/go-sitter-forest/idris v1.6.0
 	github.com/alexaandru/go-sitter-forest/ignis v1.6.0
 	github.com/alexaandru/go-sitter-forest/ini v1.6.0
@@ -182,7 +182,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.6.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.6.0
 	github.com/alexaandru/go-sitter-forest/jule v1.6.0
-	github.com/alexaandru/go-sitter-forest/julia v1.6.0
+	github.com/alexaandru/go-sitter-forest/julia v1.6.1
 	github.com/alexaandru/go-sitter-forest/just v1.6.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.6.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.6.0
@@ -192,7 +192,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.6.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.6.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.6.0
-	github.com/alexaandru/go-sitter-forest/lat v1.5.101
+	github.com/alexaandru/go-sitter-forest/lat v1.6.0
 	github.com/alexaandru/go-sitter-forest/latex v1.6.0
 	github.com/alexaandru/go-sitter-forest/ldg v1.6.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.6.0
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.6.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.6.0
 	github.com/alexaandru/go-sitter-forest/lookml v1.6.0
-	github.com/alexaandru/go-sitter-forest/lox v1.6.0
+	github.com/alexaandru/go-sitter-forest/lox v1.6.1
 	github.com/alexaandru/go-sitter-forest/lua v1.6.0
 	github.com/alexaandru/go-sitter-forest/luadoc v1.6.0
 	github.com/alexaandru/go-sitter-forest/luap v1.6.0
