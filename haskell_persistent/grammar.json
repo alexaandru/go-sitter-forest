@@ -4,8 +4,10 @@
   "grammarSha": "7ccf1eab60aa5a4532dc416eb8f4143ac3a0d60cf5079314b3b426ce49c4885a",
   "language": "haskell_persistent",
   "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
+  "doc": "thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key",
   "maintainedBy": "@lykahb",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skip": true
 }

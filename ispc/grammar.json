@@ -4,5 +4,7 @@
   "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
   "language": "ispc",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
-  "maintainedBy": "@fab4100"
+  "doc": "Error: Undefined symbol",
+  "maintainedBy": "@fab4100",
+  "skip": true
 }

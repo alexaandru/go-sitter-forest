@@ -1,6 +1,6 @@
 # 404 Supported Parsers
 
-13 pending, 4 skipped regeneration, 28 missing queries
+13 pending, 9 skipped regeneration, 28 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -149,7 +149,7 @@
 - [x] [haml](https://github.com/vitallium/tree-sitter-haml) 🗸 (maintained by @vitallium)
 - [x] [hare](https://github.com/tree-sitter-grammars/tree-sitter-hare) ✔️ (maintained by @amaanq)
 - [x] [haskell](https://github.com/tree-sitter/tree-sitter-haskell) ✔️ (maintained by @mrcjkb)
-- [x] [haskell_persistent](https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent) ✔️ (maintained by @lykahb)
+- [x] [haskell_persistent](https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent) ✔️ (maintained by @lykahb; ❌thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key)
 - [ ] [haxe](https://github.com/vantreeseba/tree-sitter-haxe) (maintained by @vantreeseba)
 - [x] [hcl](https://github.com/tree-sitter-grammars/tree-sitter-hcl) ✔️ (maintained by @MichaHoffmann)
 - [x] [heex](https://github.com/phoenixframework/tree-sitter-heex) ✔️ (maintained by @connorlay)
@@ -176,7 +176,7 @@
 - [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr)
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
 - [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
-- [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100)
+- [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌Error: Undefined symbol)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [ ] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) (maintained by @y4cer)
 - [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f)
@@ -247,7 +247,7 @@
 - [x] [nix](https://github.com/nix-community/tree-sitter-nix) ✔️ (maintained by @leo60228)
 - [x] [norg](https://github.com/nvim-neorg/tree-sitter-norg) 🗸 (maintained by @JoeyGrajciar, @vhyrro)
 - [x] [note](https://github.com/gsuuon/tree-sitter-note) 🗸 (maintained by @gsuuon)
-- [x] [nqc](https://github.com/tree-sitter-grammars/tree-sitter-nqc) ✔️ (maintained by @amaanq)
+- [x] [nqc](https://github.com/tree-sitter-grammars/tree-sitter-nqc) ✔️ (maintained by @amaanq; ❌ReferenceError: Undefined symbol '_statement')
 - [x] [objc](https://github.com/tree-sitter-grammars/tree-sitter-objc) 🔍 (maintained by @amaanq; ❌grammar.js throws error: Unresolved conflict for symbol sequence)
 - [x] [objdump](https://github.com/ColinKennedy/tree-sitter-objdump) ✔️ (maintained by @ColinKennedy)
 - [x] [ocaml](https://github.com/tree-sitter/tree-sitter-ocaml) ✔️ (maintained by @undu)
@@ -337,7 +337,7 @@
 - [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
 - [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️ (maintained by @Sarrus1)
-- [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) ✔️ (maintained by @BonaBeavis)
+- [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) ✔️ (maintained by @BonaBeavis; ❌Error: The `token.immediate` function only takes one literal argument. You passed in multiple literals. Did you mean to call `seq`?)
 - [x] [spicy](https://github.com/bbannier/tree-sitter-spicy) 🗸 (maintained by @bbannier)
 - [x] [sql](https://github.com/DerekStride/tree-sitter-sql) ✔️ (maintained by @DerekStride)
 - [x] [sql_bigquery](https://github.com/takegue/tree-sitter-sql-bigquery) ✔️ (maintained by @takegue; high memory usage (3.4GB))

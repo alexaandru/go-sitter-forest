@@ -4,5 +4,7 @@
   "grammarSha": "9c4164103e924312e970cba1c2078ff33b122985de47e816febe26684fe11f1d",
   "language": "nqc",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
-  "maintainedBy": "@amaanq"
+  "doc": "ReferenceError: Undefined symbol '_statement'",
+  "maintainedBy": "@amaanq",
+  "skip": true
 }

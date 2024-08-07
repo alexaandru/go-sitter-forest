@@ -1033,8 +1033,8 @@
   },
   {
     "reference": "main",
-    "revision": "2f93ed6ac40f79cfb9ba27f5fbc68a988b5bcec1",
-    "grammarSha": "59c5c5a2cec56c167ac9efd5f24b42228711c086bbf785275f204d08b4c68fa5",
+    "revision": "01c19eddaa7ae1968f23dd2fde8e36fbba901318",
+    "grammarSha": "ddbd897bbba44ce27817a2c93f0d0eb731ade931db36bc76cadf2953d0cc4ee7",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
     "maintainedBy": "@Nsidorenco",
@@ -1366,12 +1366,12 @@
     "grammarSha": "7ccf1eab60aa5a4532dc416eb8f4143ac3a0d60cf5079314b3b426ce49c4885a",
     "language": "haskell_persistent",
     "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
+    "doc": "thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key",
     "maintainedBy": "@lykahb",
     "files": [
       "scanner.c"
     ],
-    "skipUpdate": true,
-    "doc": "thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key"
+    "skip": true
   },
   {
     "reference": "main",
@@ -1547,8 +1547,8 @@
   },
   {
     "reference": "master",
-    "revision": "8db3dd0ca1d6de6952f9b51ca1a63bc5d103deeb",
-    "grammarSha": "bf61799210763d3452252b58b1a6665426c4502a4de6daa30f9ac39259af2a93",
+    "revision": "1ad1289813e237cb98cf8e5c3e792c8d2353acc6",
+    "grammarSha": "4c3ced545a66ef13175a532701fdee8c1bfb024bac3bfa3cbbcde1491b6beba1",
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa"
@@ -1614,9 +1614,9 @@
     "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
     "language": "ispc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
+    "doc": "Error: Undefined symbol",
     "maintainedBy": "@fab4100",
-    "skipUpdate": true,
-    "doc": "Error: Undefined symbol"
+    "skip": true
   },
   {
     "reference": "master",
@@ -1825,12 +1825,12 @@
   },
   {
     "reference": "main",
-    "revision": "ed984ce00757feb379b70799f3b819608e50f1e1",
+    "revision": "b6f2b459884252c9a4110c4258865dd62b1aa151",
     "grammarSha": "8afe3dac70b9d0c87406955b9cde097150d461db52517264258fa63117beaeda",
     "language": "lat",
     "url": "https://github.com/vilarfg/tree-sitter-lat",
     "maintainedBy": "@vilarfg",
-    "skipUpdate": true
+    "skip": true
   },
   {
     "reference": "master",
@@ -1966,8 +1966,8 @@
   },
   {
     "reference": "master",
-    "revision": "f08619795217815709dfde709f4b2160007108a5",
-    "grammarSha": "1597b0d51a8e4e2ccbc38f36854f05bab4d4e5403331ea142cad70f7b2e7cb66",
+    "revision": "017623f36e7290f13064f599279df836b7ae67b3",
+    "grammarSha": "611f563233d8637e4306863efa87180473cff32c8e2f5def91876aa28b55b0df",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
     "maintainedBy": "@marcuscaisey",
@@ -2286,9 +2286,9 @@
     "grammarSha": "9c4164103e924312e970cba1c2078ff33b122985de47e816febe26684fe11f1d",
     "language": "nqc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
+    "doc": "ReferenceError: Undefined symbol '_statement'",
     "maintainedBy": "@amaanq",
-    "skipUpdate": true,
-    "doc": "ReferenceError: Undefined symbol '_statement'"
+    "skip": true
   },
   {
     "reference": "master",
@@ -2686,7 +2686,7 @@
   },
   {
     "reference": "main",
-    "revision": "d26b682c8f0a3bff4f87b8ca395a5d366f7ea101",
+    "revision": "6308b511fa9aebce3b724c006afcdc4cf5fd1901",
     "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
@@ -2992,7 +2992,7 @@
   },
   {
     "reference": "master",
-    "revision": "a13f2d1ee9609cc5c4c8ffce9640c353b77a24d8",
+    "revision": "c694c1b623fa11a6b4f901b4ec713cc2265bebcc",
     "grammarSha": "cb450cd9a7ec218745412c512476b554a940208dcaf6c66fdaeebc2b0730ba0a",
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
@@ -3166,9 +3166,9 @@
     "grammarSha": "3d3e320241461a9418ec8be548541538fff24cd123a075052928c1ecb40add0c",
     "language": "sparql",
     "url": "https://github.com/GordianDziwis/tree-sitter-sparql",
+    "doc": "Error: The `token.immediate` function only takes one literal argument. You passed in multiple literals. Did you mean to call `seq`?",
     "maintainedBy": "@BonaBeavis",
-    "skipUpdate": true,
-    "doc": "Error: The `token.immediate` function only takes one literal argument. You passed in multiple literals. Did you mean to call `seq`?"
+    "skip": true
   },
   {
     "reference": "main",

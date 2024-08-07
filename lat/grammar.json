@@ -1,9 +1,9 @@
 {
   "reference": "main",
-  "revision": "ed984ce00757feb379b70799f3b819608e50f1e1",
+  "revision": "b6f2b459884252c9a4110c4258865dd62b1aa151",
   "grammarSha": "8afe3dac70b9d0c87406955b9cde097150d461db52517264258fa63117beaeda",
   "language": "lat",
   "url": "https://github.com/vilarfg/tree-sitter-lat",
   "maintainedBy": "@vilarfg",
-  "skipUpdate": true
+  "skip": true
 }
