@@ -29,9 +29,11 @@
 	(kNodefault)
 	(kStored)
 	(kIndex)
+	(kDispId)
 
 	(kClass)
 	(kInterface)
+	(kDispInterface)
 	(kObject)
 	(kRecord)
 	(kObjcclass)

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "a9ee969dec5b2e3b2ccccc5954fec04100c7619e",
-  "grammarSha": "984a69c374a5bea5b1fa5b75478f2adbee99a9da21614f54720b9901a91d8375",
+  "revision": "d0ebabefaea9ac3f6fc3004cf08cd121b66da9e4",
+  "grammarSha": "0c17dbe0884cb58458e597d3e34727f477d248674a33b69d6e0c172538f769de",
   "language": "pascal",
   "url": "https://github.com/Isopod/tree-sitter-pascal",
   "maintainedBy": "@Isopod"

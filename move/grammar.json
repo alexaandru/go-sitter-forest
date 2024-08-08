@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "187cb2000be54d49e125a5cf47ef3a51d01ca853",
-  "grammarSha": "2695e566798d7f49c201882e74403e25e936a633599537c1126843894e7b507c",
+  "revision": "b11fd6832742916079559aef8458279f5711d53d",
+  "grammarSha": "5ed41f0211961e2d33130b034439073dbbbc61ff59fe90e89113e7baa40a42a4",
   "language": "move",
   "url": "https://github.com/tzakian/tree-sitter-move",
   "maintainedBy": "@tzakian"

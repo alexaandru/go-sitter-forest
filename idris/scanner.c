@@ -78,6 +78,7 @@ typedef enum {
   VARID,
   VARSYM,
   COMMENT,
+  IN_STRING,
   RAW_STRING_START,
   RAW_STRING_END,
   CPP,
@@ -98,6 +99,7 @@ static char *sym_names[] = {
   "varid",
   "varsym",
   "comment",
+  "in_string",
   "raw_string_start",
   "raw_string_end",
   "cpp",
@@ -157,6 +159,7 @@ static char *invalid_varops[] = {
   "<-",
   ":=",
   "$=",
+  "**",
 };
 
 /**
@@ -197,6 +200,7 @@ typedef Array(char) String;
 typedef struct {
   Array(uint32_t) indents;
   Array(uint32_t) raw_string_sharp_counts;
+  uint32_t in_string;
 } Payload;
 
 // --------------------------------------------------------------------------------------------------------
@@ -923,6 +927,7 @@ static Result else_(State *state) {
  * Consume all characters up to the end of line and succeed with `syms::commment`.
  */
 static Result inline_comment(State *state) {
+  if (SYM(IN_STRING)) return res_cont;
   for (;;) {
     switch (PEEK) {
       NEWLINE_CASES:
@@ -1098,6 +1103,7 @@ static Result brace(State *state) {
  * Parse either inline or block comments.
  */
 static Result comment(State *state) {
+  if (SYM(IN_STRING)) return res_cont;
   switch (PEEK) {
     case '-': {
       Result res = minus(state);
@@ -1261,8 +1267,14 @@ static Result layout_start(uint32_t column, State *state) {
  *
  * Here, when the inner `do`'s  layout is ended, the next step is started at `f`, but the outer `do`'s layout expects a
  * semicolon. Since `f` is on the same indent as the outer `do`'s layout, this parser matches.
+ *
+ * `|` needs special care because an alternative pattern match does not finish the statement.
+ * _ = do
+ *   Just a <- b
+ *   | Nothing => ...
  */
 static Result post_end_semicolon(uint32_t column, State *state) {
+  if ('|' == PEEK) return res_cont;
   return SYM(SEMICOLON) && indent_lesseq(column, state)
     ? finish(SEMICOLON, "post_end_semicolon")
     : res_cont;
