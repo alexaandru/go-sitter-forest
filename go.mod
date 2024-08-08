@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.6.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.6.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.6.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.6.0
+	github.com/alexaandru/go-sitter-forest/cognate v1.6.1
 	github.com/alexaandru/go-sitter-forest/comment v1.6.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.6.0
 	github.com/alexaandru/go-sitter-forest/context v1.6.0
@@ -110,7 +110,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.6.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.6.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.6.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.6.1
+	github.com/alexaandru/go-sitter-forest/fsharp v1.6.2
 	github.com/alexaandru/go-sitter-forest/func v1.6.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.6.0
 	github.com/alexaandru/go-sitter-forest/gdscript v1.6.0
@@ -164,11 +164,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.6.0
 	github.com/alexaandru/go-sitter-forest/hylo v1.6.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.6.0
-	github.com/alexaandru/go-sitter-forest/idl v1.6.1
-	github.com/alexaandru/go-sitter-forest/idris v1.6.0
+	github.com/alexaandru/go-sitter-forest/idl v1.6.2
+	github.com/alexaandru/go-sitter-forest/idris v1.6.1
 	github.com/alexaandru/go-sitter-forest/ignis v1.6.0
 	github.com/alexaandru/go-sitter-forest/ini v1.6.0
-	github.com/alexaandru/go-sitter-forest/ink v1.6.0
+	github.com/alexaandru/go-sitter-forest/ink v1.6.1
 	github.com/alexaandru/go-sitter-forest/inko v1.6.0
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.6.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.6.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.6.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.6.0
-	github.com/alexaandru/go-sitter-forest/move v1.6.0
+	github.com/alexaandru/go-sitter-forest/move v1.6.1
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.6.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.6.0
 	github.com/alexaandru/go-sitter-forest/nasm v1.6.0
@@ -245,17 +245,17 @@ require (
 	github.com/alexaandru/go-sitter-forest/odin v1.6.0
 	github.com/alexaandru/go-sitter-forest/org v1.6.0
 	github.com/alexaandru/go-sitter-forest/ott v1.6.0
-	github.com/alexaandru/go-sitter-forest/pascal v1.6.0
+	github.com/alexaandru/go-sitter-forest/pascal v1.6.1
 	github.com/alexaandru/go-sitter-forest/passwd v1.6.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.6.0
 	github.com/alexaandru/go-sitter-forest/pem v1.6.0
-	github.com/alexaandru/go-sitter-forest/perl v1.6.0
+	github.com/alexaandru/go-sitter-forest/perl v1.6.1
 	github.com/alexaandru/go-sitter-forest/perm v1.6.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.6.0
 	github.com/alexaandru/go-sitter-forest/php v1.6.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.6.0
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.6.0
-	github.com/alexaandru/go-sitter-forest/pic v1.6.0
+	github.com/alexaandru/go-sitter-forest/pic v1.6.1
 	github.com/alexaandru/go-sitter-forest/pint v1.6.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.6.0
 	github.com/alexaandru/go-sitter-forest/plantuml v1.6.0
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ruby v1.6.0
 	github.com/alexaandru/go-sitter-forest/rust v1.6.0
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.6.0
-	github.com/alexaandru/go-sitter-forest/scala v1.6.0
+	github.com/alexaandru/go-sitter-forest/scala v1.6.1
 	github.com/alexaandru/go-sitter-forest/scfg v1.6.0
 	github.com/alexaandru/go-sitter-forest/scheme v1.6.0
 	github.com/alexaandru/go-sitter-forest/scss v1.6.0
@@ -320,7 +320,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smith v1.6.0
 	github.com/alexaandru/go-sitter-forest/smithy v1.6.0
 	github.com/alexaandru/go-sitter-forest/sml v1.6.0
-	github.com/alexaandru/go-sitter-forest/snakemake v1.6.0
+	github.com/alexaandru/go-sitter-forest/snakemake v1.6.1
 	github.com/alexaandru/go-sitter-forest/solidity v1.6.0
 	github.com/alexaandru/go-sitter-forest/soql v1.6.0
 	github.com/alexaandru/go-sitter-forest/sosl v1.6.0
