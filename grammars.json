@@ -79,7 +79,7 @@
     "grammarSha": "cfd28d5b3d85b71a2a9492bca27cba277dcdfdf51ad012834e5671c8d466f8d3",
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "maintainedBy": "@aheber",
+    "maintainedBy": "@aheber, @xixiaofinland",
     "srcRoot": "apex"
   },
   {
@@ -3038,6 +3038,15 @@
   },
   {
     "reference": "main",
+    "revision": "9fe5d1fbfd75c11ba48a32db27ac0ed5da57ec78",
+    "grammarSha": "2b5ab491844eef8d1d941c7ae3c80e5864ff6da5862f9e1ece83305b51091c9e",
+    "language": "sflog",
+    "url": "https://github.com/aheber/tree-sitter-sfapex",
+    "maintainedBy": "@aheber, @xixiaofinland",
+    "srcRoot": "sflog"
+  },
+  {
+    "reference": "main",
     "revision": "4b64be244a64a2362740b3d83d74517f15ebc16d",
     "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
     "language": "sincere",
@@ -3137,7 +3146,7 @@
     "grammarSha": "e4153b305dac0fc85acfb71f7e4666f111b267fc27df3b94a74b94af559ad1f6",
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "maintainedBy": "@aheber",
+    "maintainedBy": "@aheber, @xixiaofinland",
     "srcRoot": "soql"
   },
   {
@@ -3146,7 +3155,7 @@
     "grammarSha": "f314108f523cec98ab852aef5ea3e2cd4c019255a9e0d225c49880e1c00b8285",
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
-    "maintainedBy": "@aheber",
+    "maintainedBy": "@aheber, @xixiaofinland",
     "srcRoot": "sosl"
   },
   {

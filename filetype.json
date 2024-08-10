@@ -368,6 +368,7 @@
     "scheme":             ["scheme", "sld", "ss", "scm"],
     "scss":               ["scss"],
     "sdml":               ["sdml"],
+    "sflog":              ["sflog"],
     "sincere":            ["sc"],
     "slang":              ["slang"],
     "slim":               ["slim"],

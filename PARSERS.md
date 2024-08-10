@@ -1,4 +1,4 @@
-# 404 Supported Parsers
+# 405 Supported Parsers
 
 13 pending, 9 skipped regeneration, 28 missing queries
 
@@ -12,7 +12,7 @@
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
-- [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
+- [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [applesoft](https://github.com/dfgordon/tree-sitter-applesoft) ✔️ (maintained by @dfgordon)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️ (maintained by @ObserverOfTime)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) ✔️ (maintained by @RubixDev)
@@ -324,6 +324,7 @@
 - [x] [scheme](https://github.com/6cdh/tree-sitter-scheme) ✔️ (maintained by @6cdh)
 - [x] [scss](https://github.com/serenadeai/tree-sitter-scss) ✔️ (maintained by @elianiva)
 - [x] [sdml](https://github.com/sdm-lang/tree-sitter-sdml) ✔️ (maintained by @johnstonskj)
+- [x] [sflog](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [sincere](https://github.com/vincentvanecchi/tree-sitter-sincere) 🗸 (maintained by @vincentvanecchi)
 - [x] [slang](https://github.com/tree-sitter-grammars/tree-sitter-slang) ✔️ (maintained by @theHamsta)
 - [x] [slim](https://github.com/kolen/tree-sitter-slim) ✔️ (maintained by @kolen)
@@ -334,8 +335,8 @@
 - [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️ (maintained by @MatthewFluet)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) ✔️ (maintained by @osthomas)
 - [x] [solidity](https://github.com/JoranHonig/tree-sitter-solidity) ✔️ (maintained by @amaanq)
-- [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
-- [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber)
+- [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
+- [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️ (maintained by @Sarrus1)
 - [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) ✔️ (maintained by @BonaBeavis; ❌Error: The `token.immediate` function only takes one literal argument. You passed in multiple literals. Did you mean to call `seq`?)
 - [x] [spicy](https://github.com/bbannier/tree-sitter-spicy) 🗸 (maintained by @bbannier)
