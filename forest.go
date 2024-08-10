@@ -327,6 +327,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/scheme"
 	"github.com/alexaandru/go-sitter-forest/scss"
 	"github.com/alexaandru/go-sitter-forest/sdml"
+	"github.com/alexaandru/go-sitter-forest/sflog"
 	"github.com/alexaandru/go-sitter-forest/sincere"
 	"github.com/alexaandru/go-sitter-forest/slang"
 	"github.com/alexaandru/go-sitter-forest/slim"
@@ -749,6 +750,7 @@ var languageFuncs = map[string]func() *sitter.Language{
 	"scheme":             scheme.GetLanguage,
 	"scss":               scss.GetLanguage,
 	"sdml":               sdml.GetLanguage,
+	"sflog":              sflog.GetLanguage,
 	"sincere":            sincere.GetLanguage,
 	"slang":              slang.GetLanguage,
 	"slim":               slim.GetLanguage,
@@ -1157,6 +1159,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"scheme":             scheme.GetQuery,
 	"scss":               scss.GetQuery,
 	"sdml":               sdml.GetQuery,
+	"sflog":              sflog.GetQuery,
 	"sincere":            sincere.GetQuery,
 	"slang":              slang.GetQuery,
 	"slim":               slim.GetQuery,

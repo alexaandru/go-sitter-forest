@@ -616,6 +616,8 @@ github.com/alexaandru/go-sitter-forest/scss v1.6.0 h1:kO2Q3uiysBe4kwGFsOdSE7u6DX
 github.com/alexaandru/go-sitter-forest/scss v1.6.0/go.mod h1:ID7y5jcfEkhDrVr3aBS2RdBRLzWynJn09YCZlgdDJVY=
 github.com/alexaandru/go-sitter-forest/sdml v1.6.0 h1:dPW/uqj5F3gFsnvrskm98pioJOk3i2AESONaacbzToY=
 github.com/alexaandru/go-sitter-forest/sdml v1.6.0/go.mod h1:FvdmNIXg0CwMCUxCI1WIMkdRWYIksMpHrA3/HTjZS7g=
+github.com/alexaandru/go-sitter-forest/sflog v1.6.0 h1:uH+kZAPiH2WafVfni07LXly9dCWUA7X+ob73AS6ZmRs=
+github.com/alexaandru/go-sitter-forest/sflog v1.6.0/go.mod h1:bgqIiX2pGRBKRqm5Ywmydv7YC2dhEqNqAXOVDuXtbMk=
 github.com/alexaandru/go-sitter-forest/sincere v1.6.0 h1:1qIVv6rQCiXAb7gWQgEV3/9V/+LCvoXA7753ElN3wEo=
 github.com/alexaandru/go-sitter-forest/sincere v1.6.0/go.mod h1:M7WjVh56RyZJsiyuO6epYQQjUXTzv4Z07RlqapC2Z3g=
 github.com/alexaandru/go-sitter-forest/slang v1.6.0 h1:Y0I3+v07NYLtJLRfospb1L1xr5SvzmHTHn1VkgFwZEg=

@@ -312,6 +312,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scheme v1.6.0
 	github.com/alexaandru/go-sitter-forest/scss v1.6.0
 	github.com/alexaandru/go-sitter-forest/sdml v1.6.0
+	github.com/alexaandru/go-sitter-forest/sflog v1.6.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.6.0
 	github.com/alexaandru/go-sitter-forest/slang v1.6.0
 	github.com/alexaandru/go-sitter-forest/slim v1.6.0
