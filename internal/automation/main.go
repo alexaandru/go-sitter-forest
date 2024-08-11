@@ -353,6 +353,10 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 	  ))`,
 		// This is for lexc.
 		`require("tree-sitter-xfst/grammar")`: `require("./grammar2.js")`,
+		// This is for galvan.
+		`require("../helpers")`:    `require("./helpers.js")`,
+		`require("../precedence")`: `require("./precedence.js")`,
+		`require('../precedence')`: `require("./precedence.js")`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {

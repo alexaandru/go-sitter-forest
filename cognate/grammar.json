@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "892998182870a3bdf86a1e3a243d00185d605918",
+  "revision": "7139ea65fe0bf5c15d89f2abd9dc95d2634bc3e4",
   "grammarSha": "75e14cb5f3fb415f83a36951050d4770f8eeaff42b7b0f35bccca826f7eef8f1",
   "language": "cognate",
   "url": "https://github.com/hedyhli/tree-sitter-cognate",

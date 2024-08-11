@@ -13,6 +13,7 @@
  (dots)
   "|"
   "::"
+  "<::"
   "::="
   ","
 ] @punctuation.delimiter
@@ -32,6 +33,7 @@
 
 [
   "metavar"
+  "subrules"
   "indexvar"
   "grammar"
   "defns"

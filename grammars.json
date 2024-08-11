@@ -75,7 +75,7 @@
   },
   {
     "reference": "main",
-    "revision": "caffc6ebd1ab16ba4d4dec367cebb03ca2411872",
+    "revision": "9fe5d1fbfd75c11ba48a32db27ac0ed5da57ec78",
     "grammarSha": "cfd28d5b3d85b71a2a9492bca27cba277dcdfdf51ad012834e5671c8d466f8d3",
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -106,7 +106,7 @@
   },
   {
     "reference": "main",
-    "revision": "b0306e9bb2ebe01c6562f1aef265cc42ccc53070",
+    "revision": "2a35fccebcc08aa8b6c7bb3cff1f07cf0f8cff83",
     "grammarSha": "272c60ca9eddab6261601d9c6030d3469d629d1770938d396718971778ff4fb8",
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
@@ -293,8 +293,8 @@
   },
   {
     "reference": "main",
-    "revision": "7243aac2533c2ba5ca893c4a7a0ee8ee9000358b",
-    "grammarSha": "1cf4aafd397ca6ab69a7ab6ce8f79ac2d8d9fbc8d8aa5526b93fb96c5a591df5",
+    "revision": "127ee1f88dc7c20d5fb97c6cebdb50c31cd7a5e4",
+    "grammarSha": "97ec288953a57219fefd30e485b535adf35b956e69704d42db3c1ea6ad238970",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -392,8 +392,8 @@
   },
   {
     "reference": "master",
-    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
-    "grammarSha": "3a6676dca4088d22853492508925519d65573c8dc7434541812e3fdbec0e4418",
+    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
+    "grammarSha": "85fe374df42ff4f638ee91a0430601bd788b4747b9b7a5c620ef70ab26f19ed0",
     "language": "cg",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
@@ -484,7 +484,7 @@
   },
   {
     "reference": "main",
-    "revision": "892998182870a3bdf86a1e3a243d00185d605918",
+    "revision": "7139ea65fe0bf5c15d89f2abd9dc95d2634bc3e4",
     "grammarSha": "75e14cb5f3fb415f83a36951050d4770f8eeaff42b7b0f35bccca826f7eef8f1",
     "language": "cognate",
     "url": "https://github.com/hedyhli/tree-sitter-cognate",
@@ -634,7 +634,7 @@
   },
   {
     "reference": "master",
-    "revision": "ac0bb849ccd1a923963af47573b5e396736ff582",
+    "revision": "cf72df5d4a623ca705e81bf9e9d264e1fe9d5da0",
     "grammarSha": "4fd9ea14ec4fa3ce105c13677a05a002259585d9587f8900cd6a8e996c5fb241",
     "language": "dart",
     "url": "https://github.com/UserNobody14/tree-sitter-dart",
@@ -660,8 +660,8 @@
   },
   {
     "reference": "main",
-    "revision": "fb07e6044ffd36932c57a5be01ba5d6b8a9337bb",
-    "grammarSha": "9ecd7ff631a9e1bdc64c30f4136b0c2bd3cefd1c21d1794174fc966eee8e9495",
+    "revision": "296b3c294a8bcfca6673296d99f9cd37049b8026",
+    "grammarSha": "87704bd2981e4e4acc9dfa5fd65796d46bf6b4cf1534a11f8ab32c47dcaab1c8",
     "language": "devicetree",
     "url": "https://github.com/joelspadin/tree-sitter-devicetree",
     "maintainedBy": "@jedrzejboczar"
@@ -1547,8 +1547,8 @@
   },
   {
     "reference": "master",
-    "revision": "4ebc74fa805baec21fca01ff500f986dc0f595c5",
-    "grammarSha": "3a7f594f045894f54a6e903265aae7e82b54ebfcc63de17d1d28a90414399367",
+    "revision": "7412851348d9d8ba93dc6abd5e60aba9b50a4811",
+    "grammarSha": "b819611ced15178b66661a8fc5ebc9117c4c51180aaa8763368c5679f2d96396",
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
     "maintainedBy": "@cathaysa"
@@ -1567,8 +1567,8 @@
   },
   {
     "reference": "main",
-    "revision": "dfc6aa9232e0ed18da184d31ed2e39d70df10e86",
-    "grammarSha": "b372f633e06589fb2eedda5b6682d6c3451ab3d0f78960187437e4884ee98453",
+    "revision": "ec9d6bb16ef8a8017c3ba42e1fab5e4b4a959e1f",
+    "grammarSha": "cef08cf3f3d79c1e8b8cb946122899f495e8c5187c7f8ae5f909fa9de3a56572",
     "language": "ignis",
     "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
     "maintainedBy": "@BasileusErwin"
@@ -1583,8 +1583,8 @@
   },
   {
     "reference": "main",
-    "revision": "36338d1f36ad2c2a876ef7700de0900ede550dbc",
-    "grammarSha": "12272712cccf024e8ba6d2f351916b59ea8a00c73189d89f6512d6376d639365",
+    "revision": "fe1ef51a905a0841c166885c9937c961baafbd96",
+    "grammarSha": "6ac1bcffbdf50d4028e92c7c9721b35ed58edb01ed69ed1777dfc63539e8de2c",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
     "maintainedBy": "@wldmr",
@@ -1720,8 +1720,8 @@
   },
   {
     "reference": "master",
-    "revision": "f1baa5f8e271109d01cc8ff7473c11df2d8a9aee",
-    "grammarSha": "e1a9235dd9a3477903424c7739b9d35e26f33c0c102a1dde69a795d12e64e691",
+    "revision": "a528de39923448e6b809a6b9f686f3472728f202",
+    "grammarSha": "281b189160182f9a34991ef624089d8257fa1c077d99d509e2467cf277771f3e",
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
     "maintainedBy": "@theHamsta",
@@ -1872,7 +1872,7 @@
   },
   {
     "reference": "master",
-    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
+    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
     "grammarSha": "879b1128503c0d3bc6398d30e54bbc085c0d8881c6c4e3c2f0705d2458736bd4",
     "language": "lexc",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -1881,7 +1881,7 @@
   },
   {
     "reference": "master",
-    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
+    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
     "grammarSha": "2db19e565d8b0b77721fd9cede86b8efc9b6a85f824bf9c25d1f2328f47d9f41",
     "language": "lexd",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -1966,8 +1966,8 @@
   },
   {
     "reference": "master",
-    "revision": "017623f36e7290f13064f599279df836b7ae67b3",
-    "grammarSha": "611f563233d8637e4306863efa87180473cff32c8e2f5def91876aa28b55b0df",
+    "revision": "28b9d146587c87082b602c8efb7a2deebfe93aef",
+    "grammarSha": "79508e7c242d9498a4aadcba3ca38d0ae55a045e377de86b095a3808690a3595",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
     "maintainedBy": "@marcuscaisey",
@@ -2249,7 +2249,7 @@
   },
   {
     "reference": "master",
-    "revision": "486bb0337ee94575f53367b53bffeaea99063f2c",
+    "revision": "80b9318aa0e05d9539c7adb74f4aee5cf650a25e",
     "grammarSha": "a62b81c1d6d2b2b2754ca6ed03fff42331710beba5d5e471859eca90d0542899",
     "language": "nix",
     "url": "https://github.com/nix-community/tree-sitter-nix",
@@ -2371,8 +2371,8 @@
   },
   {
     "reference": "main",
-    "revision": "8ab99c5f7dcd5d9f30c08a549d62266a9d75467a",
-    "grammarSha": "76ee7f3d080f9712948d92a6442e44ed24886ef3f9483fde200032a51dffae63",
+    "revision": "67df80de360e04efde264508ec496916e3ddbd4c",
+    "grammarSha": "9e9cbd94b1941bf76eb29242f468f0109c6ae234fa52347c1a89df648421255d",
     "language": "ott",
     "url": "https://github.com/armonjam/tree-sitter-ott",
     "maintainedBy": "@armonjam",
@@ -2949,7 +2949,7 @@
   },
   {
     "reference": "master",
-    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
+    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
     "grammarSha": "a08c0b2984516c9864d84274624b7afe9e03f89cb956c72e41ecead685e05e48",
     "language": "rtx",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -2992,7 +2992,7 @@
   },
   {
     "reference": "master",
-    "revision": "d9017869dda79cefe2dc9d23c6125eda0a2d5d22",
+    "revision": "be7184df70dd3b5790becfb2c93ba796b2797781",
     "grammarSha": "7928ea00c8fdbd39add8799c57c205c3e27791525ebb83de2b17cc6d3d891407",
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
@@ -3142,7 +3142,7 @@
   },
   {
     "reference": "main",
-    "revision": "caffc6ebd1ab16ba4d4dec367cebb03ca2411872",
+    "revision": "9fe5d1fbfd75c11ba48a32db27ac0ed5da57ec78",
     "grammarSha": "e4153b305dac0fc85acfb71f7e4666f111b267fc27df3b94a74b94af559ad1f6",
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -3151,7 +3151,7 @@
   },
   {
     "reference": "main",
-    "revision": "caffc6ebd1ab16ba4d4dec367cebb03ca2411872",
+    "revision": "9fe5d1fbfd75c11ba48a32db27ac0ed5da57ec78",
     "grammarSha": "f314108f523cec98ab852aef5ea3e2cd4c019255a9e0d225c49880e1c00b8285",
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -3189,7 +3189,7 @@
   },
   {
     "reference": "main",
-    "revision": "cb6c05191ebf40ba81a00ef15d769588eafe60a0",
+    "revision": "b65df7f27d461ca7c47446fa530ba4cb9e9b8e45",
     "grammarSha": "ff9561b0004b928a370a8f3a5d6b156fa4fbaae4854e75966967d7fd79d3e891",
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
@@ -3578,7 +3578,7 @@
   },
   {
     "reference": "master",
-    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
+    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
     "grammarSha": "eaa7246f30f6fe6b2671f90059ed8ecc29b40170e6e1e5e93153a5ff4c181085",
     "language": "twolc",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -3895,7 +3895,7 @@
   },
   {
     "reference": "master",
-    "revision": "c9e136ba9b17c5f96994ce2ae5adcaca34ec9c1c",
+    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
     "grammarSha": "7fa68e1c2a0046de92b0bc197b46383941cdc159e410298676dba362d1292aa2",
     "language": "xfst",
     "url": "https://github.com/apertium/tree-sitter-apertium",

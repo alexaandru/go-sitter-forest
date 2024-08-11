@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "f1baa5f8e271109d01cc8ff7473c11df2d8a9aee",
-  "grammarSha": "e1a9235dd9a3477903424c7739b9d35e26f33c0c102a1dde69a795d12e64e691",
+  "revision": "a528de39923448e6b809a6b9f686f3472728f202",
+  "grammarSha": "281b189160182f9a34991ef624089d8257fa1c077d99d509e2467cf277771f3e",
   "language": "julia",
   "url": "https://github.com/tree-sitter/tree-sitter-julia",
   "maintainedBy": "@theHamsta",

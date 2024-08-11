@@ -37,6 +37,14 @@
   "https://github.com/xixiaofinland/tree-sitter-sflog",
   "https://github.com/kadena-community/tree-sitter-pact",
   "https://github.com/marzeq/tree-sitter-mconf",
+  "https://github.com/baabnq/tree-sitter-baabnq",
+  "https://github.com/5-pebbles/tree-sitter-dcl",
+  "https://github.com/gogamid/tree-sitter-gupta",
   "https://github.com/cattokomo/tree-sitter-nelua",
-  "https://github.com/baabnq/tree-sitter-baabnq"
+  "https://github.com/alexpasmantier/tree-sitter-vlog",
+  "https://github.com/cathaysia/tree-sitter-jinja2",
+  "https://github.com/block36underscore/tree-sitter-ws",
+  "https://github.com/novikovSU/tree-sitter-ssa",
+  "https://github.com/zuhanit/tree-sitter-epscript",
+  "https://github.com/antoniusnaumann/tree-sitter-galvan"
 ]
