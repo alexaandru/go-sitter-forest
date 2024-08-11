@@ -34,7 +34,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bp v1.6.0
 	github.com/alexaandru/go-sitter-forest/brightscript v1.6.0
 	github.com/alexaandru/go-sitter-forest/c v1.6.0
-	github.com/alexaandru/go-sitter-forest/c3 v1.6.0
+	github.com/alexaandru/go-sitter-forest/c3 v1.6.1
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.5.100
 	github.com/alexaandru/go-sitter-forest/ca65 v1.6.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.6.0
@@ -43,7 +43,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cds v1.6.0
 	github.com/alexaandru/go-sitter-forest/cedar v1.6.0
 	github.com/alexaandru/go-sitter-forest/cel v1.6.0
-	github.com/alexaandru/go-sitter-forest/cg v1.6.0
+	github.com/alexaandru/go-sitter-forest/cg v1.6.1
 	github.com/alexaandru/go-sitter-forest/chatito v1.6.0
 	github.com/alexaandru/go-sitter-forest/circom v1.6.0
 	github.com/alexaandru/go-sitter-forest/clarity v1.6.0
@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.6.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.6.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.6.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.6.1
+	github.com/alexaandru/go-sitter-forest/cognate v1.6.2
 	github.com/alexaandru/go-sitter-forest/comment v1.6.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.6.0
 	github.com/alexaandru/go-sitter-forest/context v1.6.0
@@ -68,9 +68,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/cue v1.6.0
 	github.com/alexaandru/go-sitter-forest/d v1.6.0
 	github.com/alexaandru/go-sitter-forest/dale v1.6.0
-	github.com/alexaandru/go-sitter-forest/dart v1.6.0
+	github.com/alexaandru/go-sitter-forest/dart v1.6.1
 	github.com/alexaandru/go-sitter-forest/dbml v1.6.0
-	github.com/alexaandru/go-sitter-forest/devicetree v1.6.0
+	github.com/alexaandru/go-sitter-forest/devicetree v1.6.1
 	github.com/alexaandru/go-sitter-forest/dezyne v1.6.0
 	github.com/alexaandru/go-sitter-forest/dhall v1.6.0
 	github.com/alexaandru/go-sitter-forest/diff v1.6.0
@@ -164,11 +164,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/hurl v1.6.0
 	github.com/alexaandru/go-sitter-forest/hylo v1.6.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.6.0
-	github.com/alexaandru/go-sitter-forest/idl v1.6.2
+	github.com/alexaandru/go-sitter-forest/idl v1.6.3
 	github.com/alexaandru/go-sitter-forest/idris v1.6.1
-	github.com/alexaandru/go-sitter-forest/ignis v1.6.0
+	github.com/alexaandru/go-sitter-forest/ignis v1.6.1
 	github.com/alexaandru/go-sitter-forest/ini v1.6.0
-	github.com/alexaandru/go-sitter-forest/ink v1.6.1
+	github.com/alexaandru/go-sitter-forest/ink v1.6.2
 	github.com/alexaandru/go-sitter-forest/inko v1.6.0
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.6.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.5.100
@@ -182,7 +182,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.6.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.6.0
 	github.com/alexaandru/go-sitter-forest/jule v1.6.0
-	github.com/alexaandru/go-sitter-forest/julia v1.6.1
+	github.com/alexaandru/go-sitter-forest/julia v1.6.2
 	github.com/alexaandru/go-sitter-forest/just v1.6.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.6.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.6.0
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.6.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.6.0
 	github.com/alexaandru/go-sitter-forest/lookml v1.6.0
-	github.com/alexaandru/go-sitter-forest/lox v1.6.1
+	github.com/alexaandru/go-sitter-forest/lox v1.6.2
 	github.com/alexaandru/go-sitter-forest/lua v1.6.0
 	github.com/alexaandru/go-sitter-forest/luadoc v1.6.0
 	github.com/alexaandru/go-sitter-forest/luap v1.6.0
@@ -244,7 +244,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.6.0
 	github.com/alexaandru/go-sitter-forest/odin v1.6.0
 	github.com/alexaandru/go-sitter-forest/org v1.6.0
-	github.com/alexaandru/go-sitter-forest/ott v1.6.0
+	github.com/alexaandru/go-sitter-forest/ott v1.6.1
 	github.com/alexaandru/go-sitter-forest/pascal v1.6.1
 	github.com/alexaandru/go-sitter-forest/passwd v1.6.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.6.0
@@ -312,7 +312,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scheme v1.6.0
 	github.com/alexaandru/go-sitter-forest/scss v1.6.0
 	github.com/alexaandru/go-sitter-forest/sdml v1.6.0
-	github.com/alexaandru/go-sitter-forest/sflog v1.6.0
+	github.com/alexaandru/go-sitter-forest/sflog v1.6.1
 	github.com/alexaandru/go-sitter-forest/sincere v1.6.0
 	github.com/alexaandru/go-sitter-forest/slang v1.6.0
 	github.com/alexaandru/go-sitter-forest/slim v1.6.0
