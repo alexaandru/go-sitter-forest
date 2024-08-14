@@ -1,0 +1,1 @@
+(source_file (ERROR (identifier) (identifier) (identifier)) (function_declaration name: (identifier) body: (compound_statement (ERROR (lhs_expression (identifier) (ERROR (identifier)) (postfix_expression (identifier)))))))

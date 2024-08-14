@@ -1,0 +1,81 @@
+# https://editorconfig.org/#file-format
+    
+# top-most EditorConfig file
+    root = true
+
+# Unix-style newlines with a newline ending every file
+    [*]
+end_of_line =      LF   
+    insert_final_newline = true   
+    spelling_language = true  
+
+[[c-h]]
+[[pa-e]]
+[[a-ea]]
+[[sa-e0]]
+
+[[!c-h]]
+[[!pa-e]]
+[[!a-ea]]
+[[!sa-e0]]
+
+[{10..2}]
+[{1..-20}]
+[{-10..2}]
+[{-1..-20}]
+[{1,2,3,4}]
+
+# Matches multiple files with brace expansion notation
+# Set default charset
+[*.{js,py}]
+charset = utf-8
+one = true   
+
+   # 4 space indentation
+[*.py]
+indent_style = space
+indent_size = 4
+
+# Tab indentation (no size specified)
+[Makefile]
+indent_style = tab
+
+# Indentation override for all JS under lib directory
+[lib/**.js]
+indent_style = space
+indent_size = 2
+
+# Matches the exact files either package.json or .travis.yml
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2
+
+[*.log[-a]]
+llave=valor
+
+[*]
+ley_=1
+
+[*.py[!io*a\-]\]]
+key=value
+
+[{}]
+empty = true
+
+[/usr/{ucb/{ex,edit},lib/{ex?.?*,how_ex}}]
+charset = latin1
+
+[*.{,txt,md,tex,\,}]
+trim_trailing_whitespace = false
+
+[*{-1..3}/***/*.py]
+indent_style = space
+
+[*.{js,ts}]
+        This is a valid key = 4_450
+end_of_line = utf-8
+
+# Also valid keys
+[typing/*.py?]
+charset = o
+v = one

@@ -1,0 +1,1 @@
+(program (comment) (command (output (path))) (comment) (command (set (setting (float)))) (command (set (setting (integer)))) (command (set (setting (integer)))) (comment) (command (type (string))) (comment) (command (sleep (time))) (comment) (command (enter)) (comment) (command (sleep (time))))

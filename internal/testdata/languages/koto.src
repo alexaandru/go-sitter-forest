@@ -1,0 +1,11 @@
+print 'Hello, World!'
+check! Hello, World!
+
+square = |n| n * n
+print! '8 squared is {square 8}'
+check! 8 squared is 64
+
+print! (2, 4, 6, 8)
+  .each square
+  .to_list()
+check! [4, 16, 36, 64]

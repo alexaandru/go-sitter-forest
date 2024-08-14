@@ -1,0 +1,10 @@
+
+;; Standard library for funC
+;;
+
+forall X -> tuple cons(X head, tuple tail) asm "CONS";
+forall X -> (X, tuple) uncons(tuple list) asm "UNCONS";
+forall X -> (tuple, X) list_next(tuple list) asm( -> 1 0) "UNCONS";
+forall X -> X car(tuple list) asm "CAR";
+tuple cdr(tuple list) asm "CDR";
+tuple empty_tuple() asm "NIL";

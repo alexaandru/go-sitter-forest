@@ -1,0 +1,1 @@
+(compilation (compilation_unit (with_clause (selected_component prefix: (identifier) selector_name: (identifier)))) (compilation_unit (use_clause (selected_component prefix: (identifier) selector_name: (identifier)))))

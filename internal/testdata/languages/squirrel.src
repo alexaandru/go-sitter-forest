@@ -1,0 +1,15 @@
+
+local table = {
+	a = "10"
+	subtable = {
+		array = [1,2,3]
+	},
+	[10 + 123] = "expression index"
+}
+ 
+local array=[ 1, 2, 3, { a = 10, b = "string" } ];
+ 
+foreach (i,val in array)
+{
+	::print("the type of val is"+typeof val);
+}

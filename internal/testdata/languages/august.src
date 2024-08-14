@@ -1,0 +1,18 @@
+unit Build {
+    depends_on(Test, Clean)
+
+    print_file("Cargo.toml")
+    ~(cargo build)
+}
+
+unit Test {
+    depends_on(Clean)    
+
+    ~(cargo fmt)
+    ~(cargo clippy)
+    ~(cargo test) 
+}
+
+unit Clean {
+    ~(cargo clean)
+}

@@ -1,0 +1,5 @@
+
+--- original_file.txt
++++ updated_file.txt
+@@ -1,10 +1,10 @@
+ This is the original text.

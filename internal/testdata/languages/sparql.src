@@ -1,0 +1,11 @@
+
+  SELECT ?protein ?organism ?isoform ?sequence
+  WHERE
+  {
+      ?protein a up:Protein .
+      ?protein up:organism ?organism .
+      # Taxon subclasses are materialized, do not use rdfs:subClassOf+
+      ?organism rdfs:subClassOf taxon:83333 .
+      ?protein up:sequence ?isoform .
+      ?isoform rdf:value ?sequence .
+  }

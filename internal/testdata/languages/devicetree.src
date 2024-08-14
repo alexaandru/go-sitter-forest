@@ -1,0 +1,10 @@
+
+/dts-v1/;
+
+/ {
+        a-node {
+                subnode_label: a-sub-node {
+                        foo = <3>;
+                };
+        };
+};

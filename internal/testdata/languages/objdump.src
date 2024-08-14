@@ -1,0 +1,14 @@
+
+0000000000000000 <engine::world::World::createEntity()> (File Offset: 0x70):
+
+_ZN6engine5world5World12createEntityEv():
+
+/home/selecaoone/repositories/jumpy/engine/src/lib/world.cpp:14
+   0:	48 89 f8                                              	mov    rax,rdi
+   # <- number
+   #    ^ field
+   #       ^ field
+
+_ZNKSt15__uniq_ptr_implIN6engine13entityManager13EntityManagerESt14default_deleteIS2_EE6_M_ptrEv():
+   23:	74 12                                                 	je     37 <engine::world::World::initialize()+0x25> (File Offset: 0xa7)
+   23:	00 00                                                 	(bad)

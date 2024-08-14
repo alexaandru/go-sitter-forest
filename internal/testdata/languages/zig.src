@@ -1,0 +1,7 @@
+
+const ray = @cImport({
+    @cInclude("raylib.h");
+});
+
+pub fn main() void {
+}

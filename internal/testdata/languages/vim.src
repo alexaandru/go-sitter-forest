@@ -1,0 +1,10 @@
+
+for i in foo
+  if i.bar
+    break
+  endif
+  continue
+endfor
+
+while v:false
+endwhile

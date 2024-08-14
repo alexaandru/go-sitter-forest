@@ -1,0 +1,9 @@
+
+import QtQuick
+
+Item {
+    signal foo(int name0, name1: MyType)
+
+    function bar(name: string) : MyType {
+    }
+}

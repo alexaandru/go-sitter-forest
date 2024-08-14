@@ -1,0 +1,1 @@
+(program (lexical_declaration (variable_declarator name: (identifier) value: (number))))

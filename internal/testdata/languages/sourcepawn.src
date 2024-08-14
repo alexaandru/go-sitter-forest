@@ -1,0 +1,13 @@
+
+public Plugin myinfo =
+{
+    name = "Test",
+    author = "Developer",
+    description = "demonstrating parser",
+    version = PLUGIN_VERSION,
+    url = "http://forums.alliedmods.net"
+};
+
+public void OnPluginStart() {
+    // your code
+}

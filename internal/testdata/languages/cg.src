@@ -1,0 +1,13 @@
+# Firstly, we need to define what tags should be considered sentence delimiters. For this example, only full stop is set as delimiter.
+DELIMITERS = "<.>" ;
+
+# We can define sets for common tag clusters
+LIST Case = (n s) (n p) ; # A set that matches either a Noun Singular or a Noun Plural
+
+SECTION
+
+# If there is a singular noun to the right, I cannot be a verb or noun.
+REMOVE (n) OR (v) IF (1 (n s)) ;
+
+# If there is a conjunction followed by a certain cohort of the same CASE as me, choose me.
+SELECT $$Case IF (1 (cnjcoo) LINK 1C $$Case) ;

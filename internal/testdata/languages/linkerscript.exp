@@ -1,0 +1,1 @@
+(linkerscript (sections_command (assignment (number)) (output_section name: (symbol) (input_section (wildcard_pattern) section: (symbol))) (assignment (number)) (output_section name: (symbol) (input_section (wildcard_pattern) section: (symbol))) (output_section name: (symbol) (input_section (wildcard_pattern) section: (symbol)))))

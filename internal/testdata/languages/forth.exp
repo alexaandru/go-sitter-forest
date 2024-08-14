@@ -1,0 +1,1 @@
+(source_file (builtin (core)) (word) (number) (builtin (core)) (word) (builtin (core)) (word) (word) (builtin (core)) (builtin (core)) (comment) (word_definition (start_definition) (word) (comment) (comment) (builtin (core)) (word) (builtin (operator)) (end_definition)) (string) (builtin (core)))

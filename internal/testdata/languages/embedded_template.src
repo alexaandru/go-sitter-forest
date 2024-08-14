@@ -1,0 +1,16 @@
+
+<%# Non-printing tag ↓ -%>
+<% if @keys_enable -%>
+<%# Expression-printing tag ↓ -%>
+keys <%= @keys_file %>
+<% unless @keys_trusted.empty? -%>
+trustedkey <%= @keys_trusted.join(' ') %>
+<% end -%>
+<% if @keys_requestkey != '' -%>
+requestkey <%= @keys_requestkey %>
+<% end -%>
+<% if @keys_controlkey != '' -%>
+controlkey <%= @keys_controlkey %>
+<% end -%>
+
+<% end -%>

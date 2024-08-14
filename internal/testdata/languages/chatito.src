@@ -1,0 +1,15 @@
+
+%[greet]('training': '2')
+    ~[hi] @[name?] ~[whatsUp?]
+
+~[hi]
+    hi
+    hey
+
+@[name]
+    Janis
+    Bob
+
+~[whatsUp]
+    whats up
+    how is it going

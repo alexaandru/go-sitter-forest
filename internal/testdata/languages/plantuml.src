@@ -1,0 +1,27 @@
+@startuml
+
+!theme C4_brown from https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/themes
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include <C4/C4_Context>
+!include ./include.puml
+
+rectangle r
+
+node "with text" as n
+
+interface "i" as int
+
+System(system, "system", "desc")
+
+System_Boundary(sys, "boundary") {
+    Container(con, "container", "tech", "descriptiion")
+}
+
+Rel(system, con, "text")
+
+together {
+  circle "circle text" as c
+  hexagon h
+}
+
+@enduml

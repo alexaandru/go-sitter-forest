@@ -1,0 +1,1 @@
+(pattern (character) (character) (set (character) (character) (zero_or_one)) (class_pattern (class) (one_or_more)) (character) (character))

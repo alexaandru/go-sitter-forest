@@ -1,0 +1,12 @@
+
+Alias: $LNC = http://loinc.org
+Alias: $SCT = http://snomed.info/sct
+
+Profile:  CancerDiseaseStatus
+Parent:   Observation
+Id:       mcode-cancer-disease-status
+Title:    "Cancer Disease Status"
+Description: "A clinician's qualitative judgment on the current trend of the cancer, e.g., whether it is stable, worsening (progressing), or improving (responding)."
+* ^status = #draft
+* extension contains EvidenceType named evidenceType 0..*
+* extension[evidenceType].valueCodeableConcept from CancerDiseaseStatusEvidenceTypeVS (required)

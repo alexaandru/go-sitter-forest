@@ -1,0 +1,1 @@
+(source (variable_setting (edit_mode_variable) (edit_mode_value)) (key_binding (keyseq (escape_sequence)) (function_name)) (key_binding (keyseq (escape_sequence) (escape_sequence)) (function_name)) (key_binding (keyseq (escape_sequence)) (macro)))

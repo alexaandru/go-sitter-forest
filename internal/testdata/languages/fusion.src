@@ -1,0 +1,15 @@
+
+include: SomeFile.fusion
+namespace: ns = Neos.Fusion.Space
+prototype(MyType) < prototype(ns:SuperType) {
+  deleteProp >
+  string = 'value'
+  number = 10.2
+  null = null
+  boolean = true
+  property.inner = "value"
+  property.@meta = "value"
+  property.type = SomeType
+  property.aliasedType = ns:SomeType
+  property.fullQualifiedType = SomeNamespace:SomeType
+}

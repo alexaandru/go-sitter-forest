@@ -1,0 +1,13 @@
+<delimiters attribute-name attribute:name attribute::name />
+<values string="Hello, world" true false=false number=0 call=function::call() />
+<closures numbers=move |_| x * x * x * x reactive=move |_| count() />
+<conditional value=if computation() { "true" } else { "false" } />
+
+<{ let block = "In node name position"; } />
+<div>{ let block = "In node position"; }</div>
+<div { let block = "In attribute position"; } />
+<div key={ let block = "In attribute value position"; } />
+
+<Component<Type> />
+<qualified::Component<qualified::Type> />
+<Component<Generic<Type>> />

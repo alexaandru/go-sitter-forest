@@ -1,0 +1,1 @@
+(source_file (object_definition (object) (block (property_definition (property_name) (property_binding (object_id) (property_name))) (comment) (comment) (comment) (comment) (comment) (property_definition (property_name) (number)) (comment) (signal_binding (signal_name (property_name)) (function (identifier (object_id)))))))

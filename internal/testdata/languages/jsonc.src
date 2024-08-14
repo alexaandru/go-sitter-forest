@@ -1,0 +1,13 @@
+
+{
+	// foo has comment,
+	"foo": "something",
+
+	/* bar has comment */
+	"bar": 1,
+
+	/**************************
+	* everyone has a comment! *
+	***************************/
+	"baz": [1, 2, 3]
+}

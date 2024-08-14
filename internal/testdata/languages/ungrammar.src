@@ -1,0 +1,16 @@
+
+Grammar =
+  Node*
+
+Node =
+  name:'ident' '=' Rule
+
+Rule =
+  'ident'                // Alphabetic identifier
+| 'token_ident'          // Single quoted string
+| Rule*                  // Concatenation
+| Rule ('|' Rule)*       // Alternation
+| Rule '?'               // Zero or one repetition
+| Rule '*'               // Kleene star
+| '(' Rule ')'           // Grouping
+| label:'ident' ':' Rule // Labeled rule

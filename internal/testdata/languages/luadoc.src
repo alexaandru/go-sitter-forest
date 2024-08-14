@@ -1,0 +1,5 @@
+
+@class Transport @parent class
+@public field name string
+@param type number @parameter type
+@return Car|Ship @may return Car or Ship

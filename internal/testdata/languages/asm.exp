@@ -1,0 +1,1 @@
+(program (instruction kind: (MISSING word)) (instruction kind: (word) (ident (reg (word))) (ident (reg (word)))) (instruction kind: (word) (ident (reg (word))) (ptr (reg (word)) (int))) (instruction kind: (word) (ident (reg (word))) (ptr (reg (word)) (int))) (instruction kind: (word) (ident (reg (word))) (ident (reg (word)))))

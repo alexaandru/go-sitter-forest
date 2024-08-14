@@ -1,0 +1,7 @@
+
+;defaccount De Assets:Fixed:Home                           USD
+1970-01-01 open Assets:UTrade:Account                                USD
+1970-01-01 open Assets:UTrade:Account:AAPL                           AAPL
+1970-01-01 open Assets:UTrade:Account:EWJ                            EWJ
+;defaccount De Assets:Loans
+1970-01-01 open Assets:AccountsReceivable

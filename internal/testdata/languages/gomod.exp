@@ -1,0 +1,1 @@
+(source_file (module_directive (module_path)) (go_directive (go_version)))

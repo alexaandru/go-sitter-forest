@@ -1,0 +1,19 @@
+
+module ChatApp
+  VERSION: String
+
+  class User
+    attr_reader login: String
+    attr_reader email: String
+
+    def initialize: (login: String, email: String) -> void
+  end
+
+  class Bot
+    attr_reader name: String
+    attr_reader email: String
+    attr_reader owner: User
+
+    def initialize: (name: String, owner: User) -> void
+  end
+end

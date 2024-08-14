@@ -1,0 +1,80 @@
+module invoice <https://example.com/rentals/> version "2023-12-21" <https://example.com/v2/rentals/> is
+  ; Part of a larger example.
+
+  import [dc skos xsd:decimal xsd:date xsd:string]
+
+  import customers:foo
+  import finance
+  import vehicles
+
+  @skos:release = xsd:date("2023-08-12")
+  @skos:definition = "hello"
+
+  structure DateRange is
+    assert valid_date_range is
+      forall self, self.end_date >= self.start_date
+    end
+    start_date -> xsd:date
+    end_date -> xsd:date
+  end
+
+  structure OdometerRange is
+    start_miles -> vehicles:OdometerReading
+    end_miles -> vehicles:OdometerReading is
+      assert valid_range = "self.end_miles >= self.start_miles"
+    end
+  end
+
+  entity Invoice is
+    identity id -> integer
+
+    customer -> customers:Customer
+    vehicle -> vehicles:Vehicle
+    rental_dates -> DateRange
+    mileage -> OdometerRange
+
+    day_rate -> finance:CurrencyRate
+    mile_rate -> finance:CurrencyRate
+    discount -> finance:DiscountPercentage
+
+  end
+
+  datatype Name <- xsd:string is
+    @xsd:minLength = true
+    @xsd:maxLength = 25
+  end
+
+  datatype InvoiceId <- opaque integer
+
+  event InvoiceCreated source Invoice is
+    at -> xsd:dateTime
+  end
+
+  event InvoicePayed source Invoice is
+    at -> xsd:dateTime
+  end
+
+  event InvoiceOverdue source Invoice is
+    at -> xsd:dateTime
+  end
+
+  structure Payment is
+    received -> xsd:dateTime
+    amount -> finance:CurrencyAmount
+    kind -> finance:PaymentKind
+  end
+
+  enum Terms of
+    Immediate is
+      @skos:preLabel = "NOW"
+    end
+    ThirtyDays
+    SixtyDays
+  end
+
+  union PaymentKind of
+    Cash
+    Card as Plastic
+  end
+
+end

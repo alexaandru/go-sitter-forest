@@ -1,0 +1,18 @@
+
+@base <http://one.example/> .
+BASE <http://one.example/>
+@prefix p: <http://two.example/> .
+PREFIX p: <http://two.example/>
+
+# Seperate triples by highlight
+<s> <o> <http://www.example.org/\u0020bar> .
+<s>  <p> foo:o .
+_:s <p> <0> .
+<s>
+  # a != :a
+  a <o> ;
+  :a <o> ;
+  # Types in one highlight
+  <p> 'foo'@foo-bar ;
+  <p> 'foo'^^<http://example.org/foo> ;
+  <p> 'foo'^^foo:bar .

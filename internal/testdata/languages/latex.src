@@ -1,0 +1,21 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\date{\today}
+\author{Eric Förster \and Patrick Förster}
+\title{\TeX{}Lab}
+
+\begin{document}
+
+\maketitle{}
+
+\section{Introduction}
+
+TexLab is a cross-platform implementation of the
+\href{https://microsoft.github.io/language-server-protocol/specifications/specification-current/}{Language Server Protocol}
+for the \LaTeX{} typesetting system.
+It aims to produce high quality code completion results.
+The server may be used with any editor that implements the Language Server Protocol.
+It is written in Rust, a blazingly fast systems programming language.

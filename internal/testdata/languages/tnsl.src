@@ -1,0 +1,24 @@
+import "asdf"
+
+asm "asdf"
+
+# asdf
+
+/; module ASDF
+	import "asdf.tnsl"
+;; export module ASDJ
+;/
+
+/; method Token
+;/
+
+/; main (uint argc, ~~uint8 argv) [int]
+
+	/; if (a)
+	;/
+
+;/
+
+/#
+	comment
+#/

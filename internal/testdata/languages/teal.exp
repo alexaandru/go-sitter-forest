@@ -1,0 +1,1 @@
+(program (record_declaration name: (identifier) record_body: (record_body (field key: (identifier) type: (simple_type name: (identifier))) (field key: (identifier) type: (simple_type name: (identifier))))) (record_declaration name: (identifier) record_body: (record_body (field key: (identifier) type: (simple_type name: (identifier))))))

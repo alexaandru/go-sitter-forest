@@ -1,0 +1,1 @@
+(start (program_definition (identification_division (program_name)) (environment_division (input_output_section (select_statement file_name: (WORD) (assign_clause to: (PRINTER)))))))

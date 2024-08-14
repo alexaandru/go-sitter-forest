@@ -1,0 +1,1 @@
+(source_file (go_directive (go_version)) (use_directive (use_spec (file_path)) (use_spec (file_path))))

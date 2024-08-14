@@ -1,0 +1,12 @@
+
+if { $a > 0 } { puts "The value is positive"
+} elseif { $a < 0 } {
+	puts "The value is negative"
+} else {
+	puts "The value is zero"
+}
+
+set a { 1 2 3 }
+for { set i 0 } { $i < [llength $a] } { incr i } {
+	puts "The list element at index $i is [lindex $a $i]"
+}

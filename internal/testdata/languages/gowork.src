@@ -1,0 +1,7 @@
+
+go 1.22
+
+use (
+       ./path-to-upstream-mod-dir
+       ./path-to-your-module
+)

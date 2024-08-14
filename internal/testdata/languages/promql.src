@@ -1,0 +1,11 @@
+
+(
+  topk (
+    3,
+    sum by (app, proc) (
+      rate (
+        instance_cpu_time_ns{container!~"(foo|bar).*"}[5m]
+      )
+    )
+  )
+) / 1000

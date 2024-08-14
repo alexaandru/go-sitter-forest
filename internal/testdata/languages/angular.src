@@ -1,0 +1,29 @@
+
+@if (user$ | async; as user) {
+  <h1>Hi {{ user.name }}</h1>
+  <div class="authenticated">
+    @for (link of links; track link.id) {
+      <a [routerLink]="link.url">{{ link.label }}</a>
+    } @empty {
+      <p>No links</p>
+    }
+  </div>
+  <router-outlet />
+} @else {
+  <div class="unauthenticated">
+    <p>Please login</p>
+    <button (click)="login()">Login</button>
+
+    @switch (error$ | async) {
+      @case (ErrorType.InvalidCredentials) {
+        <p>Invalid credentials</p>
+      }
+      @case (ErrorType.ServerError) {
+        <p>Server error</p>
+      }
+      @default {
+        <p>Unknown error</p>
+      }
+    }
+  </div>
+}

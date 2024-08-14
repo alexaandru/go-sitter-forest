@@ -1,0 +1,1 @@
+(program (local_form call: (symbol) (binding_pair lhs: (symbol_binding) rhs: (list call: (symbol) item: (string content: (string_content))))))

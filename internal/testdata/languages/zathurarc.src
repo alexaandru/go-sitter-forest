@@ -1,0 +1,13 @@
+
+# test
+include desktop/zathurarc
+map [normal] <Esc> zoom in#with argument
+map <F1> recolor          #without argument
+unmap F
+map F toggle_fullscreen
+map [fullscreen] F toggle_fullscreen
+map abc quit
+set recolor false
+set highlight-transparency 0.3
+unmap <F1>
+unmap [normal] <Esc>

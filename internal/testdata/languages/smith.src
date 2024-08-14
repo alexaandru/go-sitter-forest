@@ -1,0 +1,31 @@
+
+Slice = fn(T: type) -> type {
+    struct {
+        data: ptr(T),
+        len: usize,
+    }
+}
+
+main = fn() -> i32 {
+    42
+}
+
+id = fn(x: i32) -> i32 {
+    x
+}
+
+add = fn(x: i32, y: i32) -> i32 {
+    x + y
+}
+
+id = fn(T: type, x: T) -> T {
+    x
+}
+
+sum_of_squares = fn(x: i32, y: i32) -> i32 {
+    x2 = x * x
+    y2 = y * y
+    x2 + y2
+}
+
+main()

@@ -1,0 +1,5 @@
+jwt.extra_claims.exists(c, c.startsWith('group'))
+&& jwt.extra_claims
+  .filter(c, c.startsWith('group'))
+      .all(c, jwt.extra_claims[c]
+          .all(g, g.endsWith('@acme.co')))

@@ -1,0 +1,1 @@
+(source_file (function_definition name: (identifier) (ERROR) (parameter name: (identifier) type: (array_t type: (string_t))) return_type: (signed_int_t) body: (block (access lhs: (identifier) rhs: (call callable: (identifier) (argument value: (string_literal (string_literal_fragment) (escape_sequence))))) (return_statement (integer_literal)))))

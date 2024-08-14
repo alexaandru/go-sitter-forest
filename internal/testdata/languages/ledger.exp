@@ -1,0 +1,1 @@
+(source_file (journal_item (xact (plain_xact (date) (payee) (posting (account) (amount (commodity) (quantity))) (posting (account) (amount (commodity) (negative_quantity)))))))

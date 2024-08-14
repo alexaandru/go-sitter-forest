@@ -1,0 +1,13 @@
+module Button = {
+  @react.component
+  let make = (~count) => {
+    let times = switch count {
+    | 1 => "once"
+    | 2 => "twice"
+    | n => n->Int.toString ++ " times"
+    }
+    let text = "Click me " + times"
+
+    <button> {text->React.string} </button>
+  }
+}

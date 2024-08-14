@@ -1,0 +1,59 @@
+REPORT zprod.
+
+TYPES: BEGIN OF ty_final,
+  matnr TYPE mara-matnr,
+  werks TYPE marc-werks,
+  maktx TYPE makt-maktx,
+  plnum TYPE plaf-plnum,
+  gsmng TYPE plaf-gsmng,
+  pedtr TYPE plaf-pedtr,
+  aufnr TYPE afpo-aufnr,
+  DGLTS TYPE afpo-DGLTS,
+  psmng TYPE afpo-psmng,
+  meins TYPE afpo-meins,
+  bwart TYPE mseg-bwart,
+  menge TYPE mseg-menge,
+  budat_mkpf TYPE mseg-budat_mkpf,
+  END OF ty_final.
+
+data: it_final type STANDARD TABLE OF ty_final,
+      wa_final type ty_final.
+  DATA: smatnr TYPE mara-matnr,
+        swerks TYPE marc-werks.
+
+  SELECTION-SCREEN BEGIN OF BLOCK a.
+    SELECT-OPTIONS: s_matnr FOR smatnr,
+    s_werks FOR swerks.
+
+  SELECTION-SCREEN END OF BLOCK a.
+
+  START-OF-SELECTION.
+  select a~matnr b~werks c~maktx d~plnum d~gsmng d~pedtr e~aufnr e~DGLTS
+    e~psmng e~meins f~bwart f~menge f~meins f~budat_mkpf 
+    into CORRESPONDING FIELDS OF table it_final
+    from mara as a
+    INNER JOIN marc as b on a~matnr = b~matnr
+    INNER JOIN makt as c on a~matnr = c~matnr
+    INNER JOIN plaf as d on a~matnr = d~matnr and b~werks = d~plwrk
+    INNER JOIN afpo as e on a~matnr = e~matnr and b~werks = e~pwerk
+    INNER JOIN mseg as f on a~matnr = f~matnr and b~werks = f~werks and bwart = '101'
+    where a~matnr in s_matnr
+    and b~werks in s_werks.
+  END-OF-SELECTION.
+
+  sort it_final by matnr plnum ASCENDING.
+  delete ADJACENT DUPLICATES FROM it_final COMPARING plnum.
+
+  DATA: lr_alv          TYPE REF TO cl_salv_table.
+    TRY.
+        CALL METHOD cl_salv_table=>factory
+          EXPORTING
+            list_display = if_salv_c_bool_sap=>false
+          IMPORTING
+            r_salv_table = lr_alv
+          CHANGING
+            t_table      = it_final.
+        ##NO_HANDLER.
+      CATCH cx_salv_msg .
+    ENDTRY.
+    CALL METHOD lr_alv->display.

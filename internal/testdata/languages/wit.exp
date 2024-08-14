@@ -1,0 +1,1 @@
+(source_file (interface_item name: (id) (ERROR (UNEXPECTED 'x')) body: (interface_body interface_items: (interface_items typedef: (typedef_item (type_item alias: (id) type: (ty)))) (ERROR (id) (UNEXPECTED 'd')))))

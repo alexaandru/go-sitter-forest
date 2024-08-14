@@ -1,0 +1,8 @@
+
+(program
+  (function_declaration
+    name: (identifier) @function-name
+    parameters: (parameter_list
+      (parameter
+        (identifier) @parameter-name
+        (type_identifier) @parameter-type))))

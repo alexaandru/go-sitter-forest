@@ -1,0 +1,9 @@
+
+(A) 2022-02-02 This is a task with +project and @context due:2022-02-02   
+2022-02-02 This is a task with +project and @context due:2022-02-02
+x 2022-01-01 2022-02-02 Done task +project pri:A
+x 2022-01-01 Done task with one date
+Write tree-sitter parser
+this is legal (A)
+this is legal(A) +project
+xlegal task @home

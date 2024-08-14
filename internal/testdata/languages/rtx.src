@@ -1,0 +1,12 @@
+! sample code
+n: _.gender.number;
+
+adj: _.gender.number;
+
+NP: _;
+
+gender = m f mf;
+
+number = sg pl sp;
+
+NP -> adj n {2 _ 1[number=2.number]};

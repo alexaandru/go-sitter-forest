@@ -1,0 +1,8 @@
+
+<foo
+  string-attr="string"
+  number-attr=12
+  mustache-attr={{value}}
+  concat-attr="string {{mustache}}"
+  class="foo {{if condition "bar"}}"
+></foo>

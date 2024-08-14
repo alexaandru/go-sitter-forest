@@ -1,0 +1,7 @@
+gzip_srcs = ["src/test/minigzip.c"],
+cc_binary {
+    name: "gzip",
+    srcs: gzip_srcs,
+    shared_libs: ["libz"],
+    stl: "none",
+}

@@ -1,0 +1,1 @@
+(source_file (field (label (identifier)) (value (struct_lit (field (label alias: (identifier) (identifier)) (value (primitive_type))) (field (label alias: (identifier) (string)) (value (primitive_type)))))))

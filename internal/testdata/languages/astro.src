@@ -1,0 +1,6 @@
+
+import {something} from 'universe'
+
+function answer(){
+  return 42
+}

@@ -1,0 +1,22 @@
+#!/usr/sbin/nft -f
+flush ruleset # Reset configuration
+# This is also a comment
+
+define wandev = "enp0s3"
+define lan = 192.168.178.0/24
+define vpn = { 10.0.0.0/8, 172.16.0.0/12 }
+
+table inet filter {
+	chain forward {
+		type filter hook forward priority 0; policy drop;
+		iif $wandev ip daddr $lan accept
+	}
+}
+
+table nat {
+	chain postrouting {
+		type nat hook postrouting priority srcnat;
+		ip daddr $vpn return
+		oif $wandev masquerade
+	}
+}

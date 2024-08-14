@@ -1,0 +1,23 @@
+let N = 100;
+
+var n = 0;
+
+while n < N {
+  let fizz = n mod 3;
+  let buzz = n mod 5;
+
+
+  if fizz + buzz == 0 {
+    print(n);
+  } 
+  else if fizz + buzz == fizz {
+    print("Fizz");
+  }
+  else if fizz + buzz == buzz {
+    print("Buzz");
+  } else {
+    print("FizzBuzz");
+  }
+
+  n = n + 1;
+}

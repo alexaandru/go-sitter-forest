@@ -1,0 +1,10 @@
+
+definition user {}
+
+definition resource {
+	relation manager: user | usergroup#member | usergroup#manager
+	relation viewer: user  | usergroup#member | usergroup#manager
+
+	permission manage = manager
+	permission view = viewer + manager
+}

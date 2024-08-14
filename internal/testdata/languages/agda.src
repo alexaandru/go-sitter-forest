@@ -1,0 +1,7 @@
+
+module Introduction.Basics where
+
+postulate
+  N : Set
+  z : N
+  s : N -> N

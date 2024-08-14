@@ -1,0 +1,1 @@
+(query (binary_expression (function_call (function_name) (function_args (float_literal) (function_call (function_name) (grouping (label_name) (label_name)) (function_args (function_call (function_name) (function_args (range_vector_selector (metric_name) (label_selectors (label_matcher (label_name) (label_value))) (range_selection)))))))) (float_literal)))

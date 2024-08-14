@@ -1,0 +1,3 @@
+
+gst-launch-1.0 osssrc ! audioconvert ! vorbisenc ! oggmux !
+filesink location=input.ogg

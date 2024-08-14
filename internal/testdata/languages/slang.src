@@ -1,0 +1,20 @@
+
+void main() {
+  int a;
+  var a = 1; // OK, a is an int.
+  var b = float3(0, 1, 2); // OK, b is a float3.
+  var a : int = 1; // OK.
+  var b : int; // OK.
+  let a = 5; // OK, a is int.
+  let b : int = 5; // OK.
+}
+
+interface IFoo
+{
+    int myMethod(float arg);
+};
+
+extension IFoo
+{
+    int bar() { return 0; }
+};

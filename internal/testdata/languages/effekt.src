@@ -1,0 +1,17 @@
+
+record Position [A, B](line: List[A], col: Int, index: Int)
+
+type Locations = List[SomeLocation]
+
+type List[A] {
+  Nil();
+  Cons(head: A, tail: List[A])
+}
+
+def foo() = {}
+
+interface FileNotFound {
+  def FileNotFound(path: String): Unit
+}
+
+effect FileNotFound[A](path: String, msg: A): Unit

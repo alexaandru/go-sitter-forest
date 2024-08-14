@@ -1,0 +1,7 @@
+
+===========================================================================
+FUNCTIONS                                              *myplugin-functions*
+
+myplugin#MyFunction({required}, [optional])         *myplugin#MyFunction()*
+  This is my function. It does different things to the {required} argument,
+  depending upon the [optional] argument.

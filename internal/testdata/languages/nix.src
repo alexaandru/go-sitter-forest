@@ -1,0 +1,18 @@
+
+{
+  or = { or = 1; }.or or 42;
+  the-question = if builtins.true then "to be" else "not to be";
+  null = if null then true else false;
+  pkgs' = { inherit (pkgs) stdenv lib; };
+  thing' =
+    let inherit (pkgs) stdenv lib;
+    in derivation rec {
+      pname = "thing";
+      version = "v1.2.3";
+      name = "${pname}-${version}";
+      buildInputs = with pkgs; [ thing_a thing_b ];
+    };
+  assert_bool = bool: assert lib.isBool bool; bool;
+  import = import ./overlays.nix { inherit pkgs; };
+  uri = https://github.com;
+}

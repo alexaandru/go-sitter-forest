@@ -1,0 +1,20 @@
+
+\documentclass{article}
+
+\begin{document}
+
+<<initialize>>=
+count = 0
+sum = 0
+@
+
+\title{Example Rnoweb Document}
+\author{Your Name}
+
+\maketitle
+
+\section{Introduction}
+
+<<sum of a and b>>=
+a + b
+@

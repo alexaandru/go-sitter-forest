@@ -1,0 +1,8 @@
+name=b360
+author=Panic Inc.
+bundleID=com.panic.b360
+buildNumber=123
+imagePath=path/to/launcher/assets
+launchSoundPath=path/to/launch/sound/file
+contentWarning=This game contains mild realistic violence and bloodshed.
+contentWarning2=This game contains flashing content that may not be suitable for photosensitive epilepsy.

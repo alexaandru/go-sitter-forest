@@ -1,0 +1,55 @@
+include_rules
+include test.tup
+preload test1
+run ./test.sh
+
+VAR1 := hi
+VAR2 = hi2
+VAR2 += hi3
+
+
+# preserve
+: foreach *.c |> !tup_preserve |>
+
+import CC=gcc
+export CC
+.gitignore
+!cc = |> gcc -c %f -o %o |>
+!test = | orderonlyinputs |> command |> outputs
+
+: test.c |> !cc |> test.o
+
+: |> echo "foo" | cat - > test.foo |> test.foo
+: foreach *.c | test.foo |> cat %f > %o |> %B.bas
+: |> echo "yeet" > yeet && echo "yeet2" > yeet2 |> yeet | yeet2 <main> {yeet}
+# test comment
+: {yeet} |> |>
+: {yeet} |>^b %f^ echo "b" |>
+: {yeet} | yeet2 |>^c %i^ echo "c" |>
+: {yeet} |>^j %b %B^ echo "j" |>
+: {yeet} |>^o %o %O^ echo "o" > o |> o
+: {yeet} |>^s %d^ echo "s" |>
+: {yeet} |>^t %d %<main>^ echo "t" |>
+: {yeet} |> ^t $(VAR1) $(TUP_CWD) $(TUP_VARIANTDIR) $(TUP_VARIANT_OUTPUTDIR) @(TUP_ARCH) @(TUP_PLATFORM) hello string %% <- actual precent^ echo "t with text" |>
+: foreach *.c |> cat %f > %e.d |> %e.d
+
+&o := Tupfile.ini
+&c = Tupfile
+&c += Tupfile.ini
+: |> echo "&(o)&(c)" > %o |> o2
+
+ifeq (d,d)
+else
+error impossible
+endif
+
+ifneq (d,d)
+error impossible
+endif
+
+ifdef test
+error impossible
+endif
+ifndef test
+endif
+import TEST = hi

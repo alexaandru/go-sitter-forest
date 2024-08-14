@@ -1,0 +1,48 @@
+# file comment
+
+Host *
+    AddKeysToAgent yes
+    BatchMode no
+    CanonicalDomains no
+    Ciphers +chacha20-poly1305@openssh.com
+    ConnectTimeout 300
+    IdentityFile ~/.ssh/id_ed25519
+
+Host other
+    AddKeysToAgent no
+    AddressFamily inet6
+    CanonicalDomains yes
+    CanonicalizeFallbackLocal no
+    CASignatureAlgorithms +rsa-sha2-256
+    IdentityFile /Users/someone/.ssh/id_ed25519
+
+Match test
+    AddKeysToAgent no
+    AddressFamily inet
+    CanonicalDomains none
+    CASignatureAlgorithms -ssh-ed25519
+    CheckHostIP no
+    CertificateFile /Users/certs/priv.pem
+    Ciphers -aes128-ctr
+    ClearAllForwardings no
+    Compression no
+    ConnectionAttempts 123
+    IdentityFile /Users/other/.ssh/id_ed25519
+
+hOst lower
+    AddKeysToAgent no
+    AddressFamily any
+    BatchMode yes
+    BindAddress 0.0.0.0
+    BindInterface veth0
+    ChallengeResponseAuthentication no
+    CanonicalDomains always
+    CanonicalizeFallbackLocal yes
+    CanonicalizeMaxDots 123
+    CanonicalizePermittedCNAMEs *.a.example.com:*.b.example.com,*.c.example.com
+    CASignatureAlgorithms ssh-ed25519,ecdsa-sha2-nistp256
+    CheckHostIP yes
+    Ciphers 3des-cbc
+    ClearAllForwardings yes
+    Compression yes
+    IdentityFile /Users/someone/.ssh/id_ed25519

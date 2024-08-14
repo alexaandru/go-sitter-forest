@@ -1,0 +1,42 @@
+
+module example-module {
+  namespace "urn:example:module";
+  prefix "ex";
+
+  // Define a container for device configuration
+  container device-configuration {
+    description "Configuration parameters for the network device";
+
+    // Define leaf nodes for specific configuration parameters
+    leaf hostname {
+      type string;
+      description "Hostname of the device";
+    }
+
+    leaf ip-address {
+      type inet:ipv4-address;
+      description "IP address of the device";
+    }
+
+    leaf-list interfaces {
+      type string;
+      description "List of interface names";
+    }
+  }
+
+  // Define a container for device operational state
+  container device-state {
+    description "Operational state information for the network device";
+
+    // Define leaf nodes for operational state parameters
+    leaf uptime {
+      type uint32;
+      description "Uptime of the device in seconds";
+    }
+
+    leaf-list active-interfaces {
+      type string;
+      description "List of active interface names";
+    }
+  }
+}

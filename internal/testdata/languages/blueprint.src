@@ -1,0 +1,12 @@
+
+Window {
+  title: bind other.title bidirectional inverted;
+  // ^ property
+  //      ^ keyword
+  //                 ^ property
+  //                        ^ keyword
+  //                                     ^ keyword
+  title: 456;
+  // ^ property
+  clicked => $something();
+}

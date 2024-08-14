@@ -1,0 +1,19 @@
+
+# include patterns
+# <- comment
+
+include pat1 pat2
+
+recursive-include dir-pattern pat1 pat2
+
+global-include pat1 pat2
+
+graft dir-pattern
+
+prune **/__pycache__
+
+global-exclude [._]sw[a-p]
+
+include \
+  \ #   ^ escape
+  tests/[!._]*

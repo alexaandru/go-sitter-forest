@@ -1,0 +1,10 @@
+POST http://localhost/
+
+{
+  "json_key": [{
+    "name": "json_value"
+  }, {
+    "name": "json_value"
+  }]
+}
+

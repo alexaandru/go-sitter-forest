@@ -20,8 +20,6 @@ import (
 	"embed"
 	"strings"
 	"unsafe"
-
-	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 const (
@@ -37,9 +35,8 @@ const nvimts = "nvimts__"
 //go:embed grammar.json *.scm
 var files embed.FS
 
-func GetLanguage() *sitter.Language {
-	ptr := unsafe.Pointer(C.tree_sitter_%s())
-	return sitter.NewLanguage(ptr)
+func GetLanguage() unsafe.Pointer {
+	return unsafe.Pointer(C.tree_sitter_%s())
 }
 
 func GetQuery(kind string, opts ...byte) (out []byte) {
@@ -91,40 +88,11 @@ func Info() string {
 	return string(out)
 }
 `
-	bindingTestTpl = `//go:build !plugin
-
-package %s_test
-
-import (
-	"context"
-	"testing"
-
-	"github.com/alexaandru/go-sitter-forest/%s"
-	sitter "github.com/alexaandru/go-tree-sitter-bare"
-)
-
-const (
-	code     = ""
-	expected = "IMPLEMENT ME"
-)
-
-func TestGrammar(t *testing.T) {
-	n, err := sitter.Parse(context.Background(), []byte(code), %s.GetLanguage())
-	if err != nil {
-		t.Fatalf("Expected no error got %%v", err)
-	}
-
-	if act := n.String(); act != expected {
-		t.Fatalf("Expected %%q got %%q", expected, act)
-	}
-}
-`
 )
 
 var tplBindings = map[string]string{
-	"binding.go":      bindingTpl,
-	"binding_test.go": bindingTestTpl,
-	"plugin.go":       bindingTpl,
+	"binding.go": bindingTpl,
+	"plugin.go":  bindingTpl,
 }
 
 // Creates a map between file paths to write to and corresponding content.
@@ -138,8 +106,6 @@ func mkBindingMap(langIn string) (out map[string]string) {
 		switch k {
 		case "binding.go":
 			out[fpath] = fmt.Sprintf(v, "//go:build !plugin", pack, silencer, lang, lang)
-		case "binding_test.go":
-			out[fpath] = fmt.Sprintf(v, pack, pack, pack)
 		case "plugin.go":
 			out[fpath] = fmt.Sprintf(v, "//go:build plugin", "main", silencer, lang, lang)
 		}

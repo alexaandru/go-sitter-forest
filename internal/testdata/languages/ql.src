@@ -1,0 +1,9 @@
+
+import TaintTracking::Global<UnsafeDeserializationConfig>
+
+from PathNode source, PathNode sink
+  
+where flowPath(source, sink)
+  
+select sink.getNode().(UnsafeDeserializationSink).getMethodAccess(), source, sink,
+  "Unsafe deserialization of $@.", source.getNode(), "user input"

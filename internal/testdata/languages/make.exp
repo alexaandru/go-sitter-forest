@@ -1,0 +1,1 @@
+(makefile (comment) (variable_assignment name: (word) value: (text)) (variable_assignment name: (word) value: (text)) (comment) (rule (targets (word)) normal: (prerequisites (word))))

@@ -1,0 +1,15 @@
+==================
+Root UNOL-1 singles w/ EoF emptyline
+==================
+> Node title
+foo_bar: 'some embed type'
+<
+
+This is a simple cleancopy document with plain text in the root node and
+then an annotation line.
+## Because sometimes we want to add comments!
+
+Here we have a single content row followed by:
+++  an unordered list
+++  with three items, all single-line
+++  and no indentation changes

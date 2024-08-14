@@ -1,0 +1,36 @@
+
+PRIVATE &password
+ENTRY &password
+
+ENTRY %LINE &salt
+
+IF "&password"==""
+(
+    ECHO "Failed to provide password."
+    ENDDO
+)
+ELSE
+(
+    PRIVATE &pass
+
+    &pass=FALSE()
+    WHILE !&pass
+    (
+        GOSUB verify_password "&password"
+        RETURNVALUES &pass
+        WAIT 10.ms
+    )
+
+    IF !&pass
+        GOTO fail
+    ELSE
+    (
+        GOSUB start_debug
+    )
+)
+
+LOCAL &num
+
+&num = 2.
+
+RePeaT &num PRINT "Password: &password"

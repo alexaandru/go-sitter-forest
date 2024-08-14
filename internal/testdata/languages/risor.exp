@@ -1,0 +1,1 @@
+(source_file (for_statement (range_clause left: (expression_list (identifier) (identifier)) right: (call_expression function: (identifier) arguments: (argument_list (int_literal)))) body: (block (expression_statement (call_expression function: (identifier) arguments: (argument_list (string) (identifier)))))))

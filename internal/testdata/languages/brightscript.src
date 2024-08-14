@@ -1,0 +1,27 @@
+function init() as void
+  m.top.spinInterval = 0.75
+  'Set observable
+  m.top.observeField("visible", "onTopVisibilityChanged")
+  onPosterChanged()
+end function
+
+'* onParentVisibilityChanged()
+function onParentVisibilityChanged() as void
+  updateAlignment()
+  toggleSpinner(m.parent.visible)
+end function
+
+'* onTopVisibilityChanged()
+function onTopVisibilityChanged() as void
+  toggleSpinner(m.top.visible)
+end function
+
+'* toggleSpinner(isActive)
+function toggleSpinner(isActive = false) as boolean
+  if(isActive = true)
+    m.top.control = "start"
+  else
+    m.top.control = "stop"
+  end if
+  return isActive
+end function

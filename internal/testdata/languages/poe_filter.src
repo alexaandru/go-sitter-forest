@@ -1,0 +1,15 @@
+
+#------------------------------------
+#   [2704] Generic Jewels
+#------------------------------------
+# !! Waypoint c7.jewels.generic.all : "Jewels - Generic Jewels"
+
+Show # %HS3 $type->jewels->generic $tier->anyrare
+	Rarity Rare
+	BaseType == "Cobalt Jewel" "Crimson Jewel" "Viridian Jewel"
+	SetFontSize 35
+	SetTextColor 220 220 0 255
+	SetBorderColor 220 220 0 255
+	SetBackgroundColor 20 20 0 255
+	PlayEffect Grey Temp
+	MinimapIcon 2 Grey Diamond

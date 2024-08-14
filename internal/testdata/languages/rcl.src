@@ -1,0 +1,15 @@
+{
+  // A silly snippet to show some
+  // features in a limited space.
+  let data: List[String] = import "data.rcl";
+  assert
+    data.contains("Assertions"),
+    "Assertions are supported";
+  let f = () => ["List", "Dict", "Set"];
+  features = [
+    for d in data: d,
+    for collection in f():
+    f"{collection} comprehensions",
+  ],
+  export-to = "json, yaml, toml, ...",
+}

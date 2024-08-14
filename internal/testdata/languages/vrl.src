@@ -1,0 +1,12 @@
+. |= parse_regex!(.message, r'^(?P<timestamp>\d+/\d+/\d+ \d+:\d+:\d+ \+\d+) \[(?P<severity>\w+)\] (?P<pid>\d+)#(?P<tid>\d+):(?: \*(?P<connid>\d+))? (?P<message>.*)$')
+
+# Coerce parsed fields
+.timestamp = parse_timestamp(.timestamp, "%Y/%m/%d %H:%M:%S %z") ?? now()
+.pid = to_int!(.pid)
+.tid = to_int!(.tid)
+
+# Extract structured data
+message_parts = split(.message, ", ", limit: 2)
+structured = parse_key_value(message_parts[1], key_value_delimiter: ":", field_delimiter: ",") ?? {}
+.message = message_parts[0]
+. = merge(., structured)

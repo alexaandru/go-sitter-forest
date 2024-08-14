@@ -1,0 +1,16 @@
+
+multiclass ro_signed_pats<string T, string Rm, dag Base, dag Offset, dag Extend,
+                        dag address, ValueType sty> {
+def : Pat<(i32 (!cast<SDNode>("sextload" # sty) address)),
+          (!cast<Instruction>("LDRS" # T # "w_" # Rm # "_RegOffset")
+            Base, Offset, Extend)>;
+
+def : Pat<(i64 (!cast<SDNode>("sextload" # sty) address)),
+          (!cast<Instruction>("LDRS" # T # "x_" # Rm # "_RegOffset")
+            Base, Offset, Extend)>;
+}
+
+defm : ro_signed_pats<"B", Rm, Base, Offset, Extend,
+                      !foreach(decls.pattern, address,
+                               !subst(SHIFT, imm_eq0, decls.pattern)),
+                      i8>;

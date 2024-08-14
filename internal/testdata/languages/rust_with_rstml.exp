@@ -1,0 +1,1 @@
+(source_file (macro_invocation macro: (identifier) (delim_nodes (self_closing_element_node name: (node_identifier (identifier))))) (function_item name: (identifier) parameters: (parameters) body: (block (expression_statement (macro_invocation macro: (identifier) (token_tree (string_literal (string_content))))))))

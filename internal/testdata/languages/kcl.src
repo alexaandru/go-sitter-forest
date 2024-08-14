@@ -1,0 +1,11 @@
+a: int = 1
+b: str = "s"
+c: float = 1.0
+d: bool = True
+
+schema Person:
+    firstName: str = "John"
+
+import k8s.api
+
+if True: a = 1

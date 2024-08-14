@@ -1,0 +1,11 @@
+entity user {}
+
+entity player {}
+
+// this is a comment
+
+entity organization {
+    // create relation
+
+    relation admin @user and @player
+}

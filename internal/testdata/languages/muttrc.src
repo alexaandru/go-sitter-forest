@@ -1,0 +1,11 @@
+
+bind pager,index \ch<BackSpace> sidebar-toggle-visible
+set & allow_ansi ? allow_ansi noallow_ansi
+set allow_ansi=yes sleep_time = 0 ispell = aspell
+set real_name = $DEBFULLNAME
+set query_command = 'mutt_ldap_query.pl %s'
+set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
+mailboxes $spool_file $postponed $record $trash \
++[Gmail]/Spam +[Gmail]/Starred
+sidebar_unpin *
+source ~/.config/neomutt/neomuttrc

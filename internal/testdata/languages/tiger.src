@@ -1,0 +1,16 @@
+
+let
+  class A extends Object {}
+
+  type B = class extends A {
+    var a := 12
+
+    method meth() : int = self.a
+  }
+
+  var object := new B
+in
+  object.a := 27;
+
+  object.meth()
+end

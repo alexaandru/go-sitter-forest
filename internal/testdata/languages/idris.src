@@ -1,0 +1,10 @@
+fact : Expr ctxt (TyFun TyInt TyInt)
+fact = Lam (If (Op (==) (Var Stop) (Val 0))
+               (Val 1)
+               (Op (*) (App fact (Op (-) (Var Stop) (Val 1)))
+                       (Var Stop)))
+
+main : IO ()
+main = do putStr "Enter a number: "
+          x <- getLine
+          printLn (interp [] fact (cast x))

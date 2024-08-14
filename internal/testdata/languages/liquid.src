@@ -1,0 +1,13 @@
+<html>
+  {% liquid
+    include "file"
+    assign product_type = product.type | downcase
+
+    if product_type != blank
+      product_type | trim
+      echo product_type
+    else
+      assign product_type = "type"
+    endif
+  %}
+</html>

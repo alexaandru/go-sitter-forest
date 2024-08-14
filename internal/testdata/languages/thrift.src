@@ -1,0 +1,13 @@
+
+struct Location {                            // Multiple structs can be defined and referred to within the same Thrift file
+    1: required double latitude;
+    2: required double longitude;
+}
+
+struct Tweet {
+    1: required i32 userId;                  // Every field must have a unique, positive integer identifier
+    2: required string userName;             // Fields may be marked as required or optional
+    3: required string text;
+    4: optional Location loc;                // Structs may contain other structs
+    16: optional string language = "english" // You may specify an optional "default" value for a field
+}

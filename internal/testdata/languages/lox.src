@@ -1,0 +1,32 @@
+print 1;
+
+// Block Statement
+{
+    var a = 1;
+}
+
+if (1 < 2) {
+    print 3;
+} else {
+    print 4;
+}
+
+// While Statement
+while (1 < 2) {
+    print 3;
+}
+
+for (var i = 0; i < 10; i = i + 1) {
+    print 3;
+}
+
+break;
+
+continue;
+
+return 1;
+
+// Function Declaration
+fun add(x, y) {
+    return x + y;
+}

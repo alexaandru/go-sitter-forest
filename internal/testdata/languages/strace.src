@@ -1,0 +1,11 @@
+
+execve("/usr/bin/ls", ["ls"], 0x7ffdcc909270 /* 84 vars */) = 0
+brk(NULL)                               = 0x559677d5a000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc7f287280) = -1 EINVAL (Argument invalide)
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+read(9, "{\n  \"name\": \"tree-sitter-strace\""..., 527) = 527
+fcntl(0, F_GETFL)                       = 0x402 (flags O_RDWR|O_APPEND)
+ioctl(9, TCGETS, 0x7ffd9a3205d0)        = -1 ENOTTY (Ioctl() inappropré pour un périphérique)
+374673 rseq(0x7f8f38516fe0, 0x20, 0, 0x53053053 <unfinished ...>
+34724 <... rt_sigprocmask resumed>NULL, 8) = 0

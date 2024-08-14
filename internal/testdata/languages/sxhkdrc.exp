@@ -1,0 +1,1 @@
+(source_file (comment) (binding (hotkey (modifier) (operator) (keysym)) (command)) (comment) (binding (hotkey (modifier) (operator) (attribute) (keysym)) (command)) (comment) (binding (hotkey (modifier) (operator) (keysym)) (command)))

@@ -1,0 +1,13 @@
+
+{#case @value}
+  {#match [first|_]}
+    First {first}
+  {#match []}
+    Value is empty
+  {#match _}
+    Value is something else
+{/case}
+
+<div :if={@loading}>
+  Loading ...
+</div>

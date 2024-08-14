@@ -1,0 +1,1 @@
+(compilation_unit (class_type_definition (class_type_binding name: (class_type_name) body: (class_body_type (method_specification (method_name) (type_constructor_path (type_constructor)))))))

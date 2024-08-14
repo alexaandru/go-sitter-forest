@@ -1,0 +1,24 @@
+syntax = "v1"
+
+type (
+    // Define the request body of the login interface
+    LoginReq {
+        Username string
+        Password string
+    }
+    // Define the response body of the login interface
+    LoginResp {
+        Id       int64
+        Name     string
+        Token    string
+        ExpireAt string
+    }
+)
+
+// Define an HTTP service
+// The name of the microservice is user, and the generated code directory and configuration file will be related to the value of user
+service user {
+    // Define the name and method of the go file converted by http.HandleFunc
+    @handler Login
+    post /user/login (LoginReq) returns (LoginResp)
+}

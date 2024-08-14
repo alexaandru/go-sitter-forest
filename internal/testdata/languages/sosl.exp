@@ -1,0 +1,1 @@
+(source_file (sosl_query_body (find_clause (term_separator_start) (term) (term_separator_end)) (in_clause (in_type)) (returning_clause (sobject_return (identifier) (selected_fields (field_identifier (identifier)) (field_identifier (identifier)))))))

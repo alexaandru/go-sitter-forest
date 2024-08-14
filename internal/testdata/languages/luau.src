@@ -1,0 +1,9 @@
+
+--!strict
+
+function ispositive(x)
+    return x > 0
+end
+
+print(ispositive(1))
+print(ispositive("2"))

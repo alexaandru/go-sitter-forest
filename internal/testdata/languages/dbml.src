@@ -1,0 +1,23 @@
+
+// Enums
+enum enum_name {
+  foo [note: "foobar"]
+  bar
+  baz [note: "foobaz"]
+}
+
+/* Table with indexes */
+Table bookings {
+    id integer
+    country varchar
+    booking_date date
+    created_at timestamp
+
+    indexes {
+        (id, country) [pk] // composite primary key
+        created_at [name: 'created_at_index', note: 'Date']
+        booking_date
+        (country, booking_date) [unique]
+        booking_date [type: hash]
+    }
+}

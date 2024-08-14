@@ -1,11 +1,9 @@
 package forest
 
 import (
+	"bytes"
 	"context"
 	"fmt"
-	"go/ast"
-	"go/parser"
-	"go/token"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -30,8 +28,6 @@ import (
 	"embed"
 	"strings"
 	"unsafe"
-
-	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 const (
@@ -47,9 +43,8 @@ const nvimts = "nvimts__"
 //go:embed grammar.json *.scm
 var files embed.FS
 
-func GetLanguage() *sitter.Language {
-	ptr := unsafe.Pointer(C.tree_sitter_%s())
-	return sitter.NewLanguage(ptr)
+func GetLanguage() unsafe.Pointer {
+	return unsafe.Pointer(C.tree_sitter_%s())
 }
 
 func GetQuery(kind string, opts ...byte) (out []byte) {
@@ -127,71 +122,45 @@ func TestPluginFilesAreAllUpToDate(t *testing.T) {
 func TestAllParsers(t *testing.T) {
 	t.Parallel()
 
-	files, err := filepath.Glob("*/binding_test.go")
+	files, err := filepath.Glob("*/binding.go")
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	for _, fpath := range files {
-		t.Run(fpath, func(t *testing.T) {
+		lang := filepath.Dir(fpath)
+		src := filepath.Join("internal", "testdata", "languages", lang)
+
+		t.Run(lang, func(t *testing.T) {
 			t.Parallel()
 
-			f, err := parser.ParseFile(token.NewFileSet(), fpath, nil, parser.SkipObjectResolution)
+			code, err := os.ReadFile(src + ".src")
 			if err != nil {
 				t.Fatal(err)
 			}
 
-			var (
-				captureCode, captureExp, done bool
-				code, exp                     string
-			)
-
-			ast.Inspect(f, func(n ast.Node) bool {
-				switch x := n.(type) {
-				case *ast.BasicLit:
-					switch {
-					case captureCode:
-						code = x.Value
-						captureCode = false
-					case captureExp:
-						exp = x.Value
-						done = true
-					}
-				case *ast.Ident:
-					switch x.Name {
-					case "code":
-						captureCode = true
-					case "expected":
-						captureExp = true
-					}
-				}
-
-				return !done
-			})
-
-			lang := filepath.Dir(fpath)
-
-			code, exp = stripCode(code), stripExp(exp)
-			if exp == "IMPLEMENT ME" {
-				exp = ""
+			exp, err := os.ReadFile(src + ".exp")
+			if err != nil {
+				t.Fatal(err)
 			}
 
-			if code == "" || exp == "" {
+			exp = bytes.TrimSpace(exp)
+			if len(code) == 0 || len(exp) == 0 {
 				t.Skip("Not implemented")
 			}
 
-			fn := GetLanguage(lang)
-			if fn == nil {
+			l := GetLanguage(lang)
+			if l == nil {
 				t.Skipf("Language %q does not have a function available", lang)
 			}
 
-			n, err := sitter.Parse(context.Background(), []byte(code), fn())
+			n, err := sitter.Parse(context.Background(), code, l)
 			if err != nil {
 				t.Fatal(err)
 			}
 
-			if act := n.String(); act != exp {
-				t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", exp, act)
+			if act := n.String(); act != string(exp) {
+				t.Fatalf("Expected\n%s\n\ngot\n\n%s\n", string(exp), act)
 			}
 		})
 	}

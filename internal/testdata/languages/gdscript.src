@@ -1,0 +1,7 @@
+
+var p = func(): if true: pass else: pass
+
+# If stmts can be inline. (They do not eval to their last expr.)
+t(func(): if true: 'string' else: 100)
+
+var p = func(): if true: print(1); print(2) else: print(3); print(4)

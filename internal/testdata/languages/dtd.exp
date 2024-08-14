@@ -1,0 +1,1 @@
+(document (elementdecl (Name) (contentspec (children (Name)))) (elementdecl (Name) (contentspec (children (Name) (Name) (Name)))))

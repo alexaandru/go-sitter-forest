@@ -1,0 +1,40 @@
+
+Preamble nonsense
+
+\%
+
+% Beefs.
+
+\starttext
+
+\testcommand[foo=bar]
+
+\testcommand[foo=bar, cow=whee]
+
+\testcommand[foo=bar, boar={Snorty snorty}]
+
+\testcommand[foo=bar, bee=\buzz]
+
+\testcommand[foo=bar, bee={\whee}]
+
+% Hello!
+
+\%
+
+How are you?
+
+\startcow[vast]
+
+\startcow[vast,unrelenting]
+
+\stoptext
+
+Bees.
+
+\%
+
+% Postamble nonsense
+
+{ foo }
+
+{ { foo } }

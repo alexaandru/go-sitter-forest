@@ -1,0 +1,1 @@
+(source (par_tup_lit (sym_lit) (sqr_tup_lit (sym_lit) (sqr_arr_lit (num_lit) (num_lit) (num_lit) (num_lit) (num_lit) (num_lit) (num_lit) (num_lit) (num_lit) (num_lit) (num_lit))) (par_tup_lit (sym_lit) (str_lit) (sym_lit)) (par_tup_lit (sym_lit) (str_lit) (par_tup_lit (sym_lit) (sym_lit)))))

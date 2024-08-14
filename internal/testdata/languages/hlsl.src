@@ -1,0 +1,7 @@
+
+Texture2D<float4> input_tex;
+RWTexture2D<float4> output_tex;
+
+static const uint kernel_radius = 5;
+static const uint group_width = 64;
+static const uint vblur_window_size = (group_width + kernel_radius) * 2;

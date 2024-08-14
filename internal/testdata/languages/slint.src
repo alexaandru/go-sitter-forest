@@ -1,0 +1,14 @@
+
+global Palette := {
+    property<color> primary: blue;
+    property<color> secondary: green;
+}
+
+BoxWithLabel := GridLayout {
+    Row {
+        Text { text: "label text here"; }
+    }
+    Row {
+        @children
+    }
+}

@@ -1,0 +1,10 @@
+<x-layout>
+  <x-slot name="title">
+    Home | Example Website
+  </x-slot>
+  <ul>
+    @foreach ($todos as $todo)
+      <li>{{ $todo }}</li>
+    @endforeach
+  </ul>     
+</x-layout>

@@ -1,0 +1,1 @@
+(compilation_unit (expression_item (application_expression function: (value_path (value_name)) argument: (string (string_content)))))

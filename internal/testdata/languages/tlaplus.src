@@ -1,0 +1,23 @@
+
+EXTENDS A, B, C
+LOCAL INSTANCE D WITH X ← Y
+CONSTANTS Foo, Const(_, _), □ _, _ ≺ _, _ ^*
+VARIABLES bar, baz
+
+const_ref ≜ Foo
+const_op_ref ≜ Const(1, 2)
+
+n ≜ -10 \* this is a single-line comment
+s ≜ "Hello world!\nHere \"is a quote\""
+p ≜ Nat
+(* this (* is *) block comment *)
+postfix ≜ var'
+tuple ≜ (⟨1, 2, 3⟩)
+action ≜ ⟨TRUE⟩_⟨bar, baz⟩
+sq_action ≜ [TRUE]_⟨bar, baz⟩
+jlist ≜
+  ∧ 1
+  ∧ ∨ 2
+    ∨ 3 ∧ 4
+    ∨ 5
+  ∧ 6

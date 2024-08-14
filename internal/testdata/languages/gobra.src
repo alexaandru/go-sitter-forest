@@ -1,0 +1,16 @@
+
+package main
+
+import (
+	"fmt"
+)
+
+// Interface definition
+type Speaker interface {
+	Speak() string
+}
+
+// Method definition for the Person struct
+func (p Person) Speak() string {
+	return fmt.Sprintf("Hello, my name is %s and I am %d years old.", p.Name, p.Age)
+}

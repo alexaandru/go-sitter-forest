@@ -1,0 +1,23 @@
+
+@mixin renderGridStyles($settings) {
+  .container {
+    padding-right: map-get($settings, "margin");
+    padding-left: map-get($settings, "margin");
+    margin-right: auto;
+    margin-left: auto;
+    max-width: map-get($settings, "maxWidth");
+  }
+
+  .row {
+    margin-right: map-get($settings, "margin") * -1;
+    margin-left: map-get($settings, "margin") * -1;
+  }
+
+  $breakpoints: map-get($settings, "breakpoints");
+
+  @each $key, $breakpoint in $breakpoints {
+    @include media($breakpoint) {
+      @include renderGrid($key, $settings);
+    }
+  }
+}

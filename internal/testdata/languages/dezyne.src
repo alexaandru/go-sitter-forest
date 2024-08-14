@@ -1,0 +1,18 @@
+interface ihello_bool
+{
+  in void hello ();
+  in bool cruel ();
+  out void world ();
+
+  behavior
+  {
+    bool idle = true;
+    [idle] on hello: idle = false;
+    [!idle]
+      {
+        on cruel: {idle = true; reply (idle);}
+        on cruel: reply (idle);
+        on inevitable: {world; idle = true;}
+      }
+  }
+}

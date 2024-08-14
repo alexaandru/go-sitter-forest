@@ -1,0 +1,27 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-11-21 11:26+0800\n"
+"PO-Revision-Date: 2023-02-15 11:47+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+msgid "menu"
+msgstr ""
+"菜单\n"
+"菜单2"
+
+# test
+#: modules/user/views_handler_filter_user_name.inc:112
+msgid "Unable to find user: @users"
+msgid_plural "Unable to find users: @users"
+msgstr[0] "Benutzer konnte nicht gefunden werden: @users"
+msgstr[1] "Benutzer konnten nicht gefunden werden: @users"
+
+#, c-format
+msgid "One file removed"
+msgid_plural "%d files removed"
+msgstr[0] "%d slika je uklonjena"
+msgstr[1] "%d datoteke uklonjenih"
+msgstr[2] "%d slika uklonjenih"

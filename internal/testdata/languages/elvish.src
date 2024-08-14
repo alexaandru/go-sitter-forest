@@ -1,0 +1,5 @@
+
+var hosts = [[&name=a &cmd='apt update']
+             [&name=b &cmd='pacman -Syu']]
+# peach = "parallel each"
+peach {|h| ssh root@$h[name] $h[cmd] } $hosts

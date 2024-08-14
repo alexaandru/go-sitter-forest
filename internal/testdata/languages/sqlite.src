@@ -1,0 +1,11 @@
+
+PRAGMA schema.auto_vacuum;
+PRAGMA schema.auto_vacuum = 0;
+PRAGMA schema.auto_vacuum(NONE);
+
+SELECT EXISTS (SELECT cname FROM tblname);
+SELECT NOT EXISTS (SELECT cname FROM tblname);
+
+SELECT ALL count(*), max(a) FROM t1 WHERE b>'one' GROUP BY b;
+SELECT ALL count(*), max(a) FROM t1 WHERE a!='b' GROUP BY b HAVING count(*)=1;
+SELECT ALL count(*), max(a) FROM t1 WHERE 0 GROUP BY b HAVING count(*)=2;

@@ -1,0 +1,1 @@
+(stylesheet (rule_set (selectors (tag_name)) (block (declaration (property_name) (plain_value)))))

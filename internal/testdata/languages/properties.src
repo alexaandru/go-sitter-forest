@@ -1,0 +1,9 @@
+
+callable.url=https://${remote.host}/
+# <- @property
+
+application.host=${HOST:${remote.host}}
+
+my.indexed.collection[0]=dog
+
+my.secret=${aes-gcm-nopadding::DJNrZ6LfpupFv6QbXyXhvzD8eVDnDa_kTliQBpuzTobDZxlg}

@@ -1,0 +1,21 @@
+
+# https://github.com/tmux-plugins/tpm
+set -g @plugin tmux-plugins/tpm
+set -g word-separators ' -_@'
+set -g set-titles-string "#S:#I \
+#W#{session_alerts}\
+#W#{session_alerts}\
+#{==:#{battery_percentage},}\
+"
+set -g window-status-current-format \
+"#{window-status-current-format-left:black,#ffb86c,#[bold,fg=#ffb86c,noreverse]#I\
+#W\
+#{?window_bigger,,}}"
+set -g status-right \
+"#{status-right:%s;\
+white,colour04,#{prefix_highlight}#[bg=colour04];\
+black,yellow,#{pomodoro_status};\
+\
+black,#87ceeb,%F%H:%M%a}"
+bind -Tcopy-mode-vi M-v send-keys -X rectangle-toggle
+bind -Tcopy-mode-vi C-v send-keys v M-v

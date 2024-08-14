@@ -1,0 +1,1 @@
+(schema (comment) (enum (enum_name) (variant (variant_notes (note (note_text (string))))) (variant) (variant (variant_notes (note (note_text (string)))))) (ERROR))

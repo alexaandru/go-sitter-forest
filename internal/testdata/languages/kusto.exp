@@ -1,0 +1,1 @@
+(source_file (tabular_expression (source (identifier)) (operation (pipe) (operator) (binary_expression (identifier) (string))) (operation (pipe) (operator) (function_call (identifier)) (sub_operator) (identifier)) (operation (pipe) (operator) (sort_by (identifier) (sort_keyword)))))

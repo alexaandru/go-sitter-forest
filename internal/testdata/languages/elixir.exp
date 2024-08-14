@@ -1,0 +1,1 @@
+(source (binary_operator left: (string (quoted_content)) right: (string (quoted_content))))

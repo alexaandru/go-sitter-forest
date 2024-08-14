@@ -1,0 +1,4 @@
+interface Example {
+    type alias = string;
+    func doSomething() -> bool;
+}

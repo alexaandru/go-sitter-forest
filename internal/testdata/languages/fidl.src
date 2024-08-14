@@ -1,0 +1,6 @@
+
+library textures;
+
+type Color = struct {
+    rgba uint32;
+};

@@ -1,0 +1,1 @@
+(message (struct (type_identifier) (field (group (type_identifier) (field (field_identifier) (field_version) (field_type (primitive_type))) (field (field_identifier) (field_version) (field_type (primitive_type))) (field (field_identifier) (field_version) (field_type (primitive_type))) (field (field_identifier) (field_version) (field_type (primitive_type)))))))

@@ -1,0 +1,12 @@
+
+const
+  NimbleStableCommit = "168416290e49023894fc26106799d6f1fc964a2d" # master
+  # examples of possible values: #head, #ea82b54, 1.2.3
+  FusionStableHash = "#372ee4313827ef9f2ea388840f7d6b46c2b1b014"
+  ChecksumsStableCommit = "b4c73320253f78e3a265aec6d9e8feb83f97c77b"
+
+when defined(gcc) and defined(windows):
+  when defined(x86):
+    {.link: "icons/koch.res".}
+  else:
+    {.link: "icons/koch_icon.o".}

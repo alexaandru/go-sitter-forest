@@ -1,0 +1,9 @@
+install: map<str, str>
+
+fn run(args: vec<str>) -> int;
+
+## C compiler class.
+extern class CC {
+	extern fn add_opt(self, option: str) -> void;
+	extern fn compile(self, src_path: str) -> str;
+}

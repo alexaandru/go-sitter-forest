@@ -1,0 +1,1 @@
+(program (expression_statement (jsx_self_closing_element name: (identifier))))

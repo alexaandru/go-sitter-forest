@@ -1,0 +1,1 @@
+(program (rule (block (if_statement condition: (binary_exp left: (field_ref (number)) right: (string)) (print_statement (field_ref (number)))))))

@@ -10,8 +10,6 @@ import (
 	"embed"
 	"strings"
 	"unsafe"
-
-	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
 const (
@@ -27,9 +25,8 @@ const nvimts = "nvimts__"
 //go:embed grammar.json *.scm
 var files embed.FS
 
-func GetLanguage() *sitter.Language {
-	ptr := unsafe.Pointer(C.tree_sitter_rust_with_rstml())
-	return sitter.NewLanguage(ptr)
+func GetLanguage() unsafe.Pointer {
+	return unsafe.Pointer(C.tree_sitter_rust_with_rstml())
 }
 
 func GetQuery(kind string, opts ...byte) (out []byte) {

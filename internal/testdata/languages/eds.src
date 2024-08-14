@@ -1,0 +1,7 @@
+
+[FileInfo]
+ParameterName = "File"
+ObjectType = "FileObject"
+DataType = "String"
+AccessType = "ReadOnly"
+Comments = "This section contains information about the file."

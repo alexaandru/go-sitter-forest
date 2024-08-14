@@ -1,0 +1,8 @@
+
+*** Test Cases ***
+Verify Google Search
+    Open Browser    https://www.google.com    chrome
+    Input Text    name=q    Robot Framework
+    Click Button    name=btnK
+    Page Should Contain    Robot Framework
+    Close Browser

@@ -1,0 +1,17 @@
+(defun my-replace-greek-region ()
+  "Replace “alpha” to “α” and other greek letters in current region."
+  (interactive)
+  (let (
+        (p1 (region-beginning))
+        (p2 (region-end)))
+    (save-restriction
+      (narrow-to-region p1 p2)
+      (goto-char (point-min))
+      (while (search-forward " alpha" nil t)
+        (replace-match " α" nil t))
+      (goto-char (point-min))
+      (while (search-forward " beta" nil t)
+        (replace-match " β" nil t))
+      (goto-char (point-min))
+      (while (search-forward " gamma" nil t)
+        (replace-match " γ" nil t)))))

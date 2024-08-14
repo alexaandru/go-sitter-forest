@@ -1,0 +1,4 @@
+
+FIND {Joe Smith}
+IN Name Fields
+RETURNING lead(name, phone)

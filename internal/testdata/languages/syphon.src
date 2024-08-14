@@ -1,0 +1,9 @@
+arr = ["H", "e", "l", "l", "o", ",", " ", "W", "o", "r", "l", "d", "!", "\n"]
+
+i = 0
+
+while i < length(arr) {
+    print(arr[i])
+
+    i += 1
+}

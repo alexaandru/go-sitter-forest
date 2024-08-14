@@ -1,0 +1,18 @@
+pragma circom 2.0.0;
+
+template A(){
+   signal input in;
+   signal output outA; 
+   outA <== in;
+}
+
+template B(){
+   //Declaration of signals
+   signal output out;
+   out <== 0;
+   component comp = A();
+   comp.in <== 0;
+   out <== comp.outA;
+}
+
+component main = B();

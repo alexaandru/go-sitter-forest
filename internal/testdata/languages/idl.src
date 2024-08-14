@@ -1,0 +1,17 @@
+module M {
+	typedef long ArgType;
+	const long I = 10;
+	interface A {
+		struct S {
+			struct T {
+				ArgType x[I]; // ArgType and I introduced
+			} m;
+		};
+
+		struct U {
+			long I; // OK, I is not a type name
+		};
+
+		enum II { I1, I2 };
+	};
+}

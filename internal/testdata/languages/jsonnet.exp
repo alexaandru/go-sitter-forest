@@ -1,0 +1,1 @@
+(document (local_bind (local) (bind function: (id) params: (params (param identifier: (id)) (param identifier: (id) value: (number))) body: (binary left: (id) operator: (additive) right: (id))) (id (MISSING _ident))))

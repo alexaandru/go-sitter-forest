@@ -1,0 +1,1 @@
+(source_file (require (quoted_string)) (ERROR (identifier) (UNEXPECTED 'H') (constant) (identifier) (binary_operation (binary_operation (identifier) (operator) (identifier)) (operator) (identifier)) (identifier) (identifier)) (string (quoted_string)) (ERROR (identifier) (identifier) (identifier)) (string (quoted_string)) (identifier))

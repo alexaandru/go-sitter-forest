@@ -1,0 +1,1 @@
+(document root: (element (STag (Name)) (content (CharData) (element (STag (Name) (Attribute (Name) (AttValue))) (content (CharData) (element (STag (Name)) (content (CharData)) (ETag (Name))) (CharData) (element (STag (Name)) (content (CharData)) (ETag (Name))) (CharData)) (ETag (Name))) (CharData)) (ETag (Name))))

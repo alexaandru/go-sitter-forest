@@ -1,0 +1,7 @@
+
+syntax = "proto3";
+
+message Thing {
+  string name = 1;
+  repeated uint32 scores = 2;
+}

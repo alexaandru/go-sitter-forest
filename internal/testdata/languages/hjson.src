@@ -1,0 +1,9 @@
+
+{
+  JSON: "a string"
+
+  Hjson: a string
+
+  # notice, no escape necessary:
+  RegEx: \s+
+}

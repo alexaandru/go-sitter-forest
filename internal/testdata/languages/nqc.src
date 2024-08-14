@@ -1,0 +1,10 @@
+
+task main()
+{
+ OnFwd(OUT_A);
+ OnFwd(OUT_C);
+ Wait(400);
+ OnRev(OUT_A+OUT_C);
+ Wait(400);
+ Off(OUT_A+OUT_C);
+}

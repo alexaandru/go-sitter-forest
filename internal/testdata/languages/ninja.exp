@@ -1,0 +1,1 @@
+(manifest (let name: (identifier) value: (text)) (rule name: (identifier) (body (let name: (identifier) value: (text (expansion (identifier)) (expansion (identifier)) (expansion (identifier)))))) (build explicit: (outputs (path)) rule: (identifier) explicit: (dependencies (path))))

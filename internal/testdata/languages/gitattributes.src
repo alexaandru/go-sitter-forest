@@ -1,0 +1,5 @@
+
+[attr]nodiff -diff -merge
+vendor/** linguist-vendored=true
+[^._]-[[:lower:]] !something
+"_\u4E00\t\56txt" encoding=UTF-16

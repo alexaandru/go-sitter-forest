@@ -1,0 +1,96 @@
+<-- extends statement -->
+{% extends "layout.html" %}
+
+<-- include statement -->
+{% include "carrousel.html" %}
+
+{# Template Comment #}
+
+{#
+A Comment
+{# A nested comment #}
+#}
+
+<p>sanity check for comments</p>
+
+<-- Html comment -->
+<-- Multiline
+Html
+comment -->
+
+{{ 10 * count.upper() }}
+
+<-- https://djc.github.io/askama/template_syntax.html#assignments -->
+{% let thing = mything.call() %}
+{% let other_thing = user.name %}
+
+<-- https://djc.github.io/askama/template_syntax.html#macros -->
+{% macro heading(arg, bold) %}
+  <p>this is my macro content</p>
+  <p>Some other content</p>
+{% endmacro %}
+
+{% import "macros.html" %}
+{% import "macros.html" as scope %}
+
+{% macro sqrt(num) %}
+  {{ num ** 0.5 }}
+{% endmacro %}
+
+<-- block definition -->
+{% block myblock %}
+<p>this is my block content</p>
+{% endblock %}
+
+{% call crate::mything(hello, thing) %}
+{% set thing = mything.call() %}
+
+<-- https://djc.github.io/askama/template_syntax.html#if -->
+{% if thing %}
+  <p>hello</p>
+{% elif thingy.upper().map(|x| x.ok())|safe %}
+  <p>otherhello</p>
+{% else %}
+  <p>goodbye</p>
+{% endif %}
+
+<-- https://djc.github.io/askama/template_syntax.html#if-let -->
+{% if let Some(user) =user %}
+  <p>hello {{ user.name }}</p>
+{% else %}
+  No user
+{% endif %}
+
+<-- https://djc.github.io/askama/template_syntax.html#match -->
+{% match item.ok() %}
+  {% when Some with ("foo") %}
+    <p>foo</p>
+  {% when Some with ("bar") %}
+    <p>bar</p>
+  {% when None %}
+    <p>none</p>
+{% endmatch %}
+
+<-- https://djc.github.io/askama/template_syntax.html#filter-blocks -->
+{% filter format(name|escape) %}
+    {{ t }}
+    <p>my_text</p>
+    {{ u }}
+{% endfilter %}
+
+<-- https://djc.github.io/askama/template_syntax.html#for -->
+{% for user in users.map(|x| x.ok()) %}
+  <li>{{ user.name }}</li>
+{% endfor %}
+
+<-- Edge case: statements inside of html tags -->
+<section
+  {% if !monitor.paused %}
+    hx-get="/monitor/{{ monitor.id }}/uptime-graph" hx-swap="innerHTML"
+    hx-trigger="every {{ monitor.interval }}s"
+  {% else %}
+    hx-post="/monitor/{{ monitor.id }}/uptime-graph/start"
+  {% endif %}
+>
+  {{ uptime_graph |safe }}
+</section>

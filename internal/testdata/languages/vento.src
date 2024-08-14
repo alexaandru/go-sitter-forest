@@ -1,0 +1,6 @@
+
+<header>
+  {{ if printName }}
+  <h1>{{ (await getUser(34)).name |> toUpperCase }}</h1>
+  {{ /if }}
+</header>

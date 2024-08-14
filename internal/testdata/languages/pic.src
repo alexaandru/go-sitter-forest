@@ -1,0 +1,13 @@
+.PS
+box "box";
+move;
+line "line" "";
+move;
+arrow "arrow" "";
+move;
+circle "circle";
+move;
+ellipse "ellipse";
+move;
+arc; down; move; "arc"
+.PE

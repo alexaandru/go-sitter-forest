@@ -1,0 +1,7 @@
+
+config MODVERSIONS
+      bool "Set version information on all module symbols"
+      depends on MODULES
+      help
+        Usually, modules have to be recompiled whenever you switch to a new
+        kernel.

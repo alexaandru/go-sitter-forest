@@ -1,0 +1,18 @@
+
+MODULE BoundingBox_Method
+USE GlobalData, ONLY: DFP, I4B, LGT, stdout
+USE BaseType, ONLY: BoundingBox_
+IMPLICIT NONE
+
+PRIVATE
+
+INTERFACE
+  MODULE PURE SUBROUTINE initiate_1(obj, nsd, lim)
+    CLASS(BoundingBox_), INTENT(INOUT) :: obj
+    !! Instance of bounding box
+    INTEGER(I4B), INTENT(IN) :: NSD
+    !! Spatial dimension
+    REAL(DFP), INTENT(IN) :: lim(6)
+    !! Extent of bounding box
+  END SUBROUTINE initiate_1
+END INTERFACE

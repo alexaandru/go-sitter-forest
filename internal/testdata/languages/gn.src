@@ -1,0 +1,10 @@
+
+    group("a") {
+      metadata = {
+        doom_melon = [ "enable" ]
+        my_files = [ "foo.cpp" ]
+        my_extra_files = [ "bar.cpp" ]
+      }
+
+      deps = [ ":b" ]
+    }

@@ -1,0 +1,15 @@
+
+#!/usr/bin/perl
+
+=head1 NAME
+
+hello.pl - A simple Perl script to print "Hello, World!"
+
+=head1 AUTHOR
+
+John Doe
+
+=cut
+
+# Print "Hello, World!"
+print "Hello, World!\n";

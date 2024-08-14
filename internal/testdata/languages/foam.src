@@ -1,0 +1,48 @@
+
+/* Comment */
+// <- comment
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       vectorField;
+    object      kinematicCloudPositions;
+}
+
+internalField uniform 0.0;
+
+"(list|.*Wall)" (word 1 mor(2,phi(U)));
+
+dict
+{
+    class       vectorField;
+    div(phi,U1) K;
+    laplacian((1|A(U+v)*D-mT),p) Gauss linear corrected;
+}
+
+(this and that)
+{
+    dimensions [1 -1 2 0 0 0];
+    dimensions [m^2 s^-2];
+    enable true;
+    variable $:dict.div(phi,U1);
+    env ${FOAM_TUTORIALS};
+}
+
+code
+#{
+    /* Comment #{#} */
+    /* Another comment */
+    pointField points(30);
+    points[0]  = point(0.5, 0, -0.5);
+#};
+
+#include "Windowsy path\nto file.cfg"
+#   includeFunc writeObjects(d = gas)
+#includeFunc fieldAverage(U.particles, U.air, alpha.particles, p)
+
+#if #calc "${angle} < 75"
+    default  Gauss linear corrected;
+#else
+    default  Gauss linear limited corrected 0.5;
+#endif

@@ -1,0 +1,65 @@
+; fib.awasm
+;
+; calculate n fibonacci numbers
+; starting at 1 1, given n >= 2
+
+;fib vars
+blo 1
+blo 1
+
+;read n (>=2)
+r3d
+
+;print first 2 vals
+blo 1
+pr1
+blo 1
+pr1
+
+;remove first two from count
+blo 2
+sbm 1
+sub
+
+;init iter
+blo 0
+
+;start loop
+lbl 5
+
+;bring fib vars to top
+sbm 0
+sbm 0
+
+;calc fib
+dpl
+sbm 2
+4dd
+
+;print new fib
+dpl
+pr1
+
+;bring iter vars back to top
+sbm 0
+sbm 0
+
+;iterate
+pop
+blo 1
+sbm 1
+sub
+;dpl
+;pr1
+blo 0
+
+;exit loop
+eql
+jmp 2
+jmp 5
+
+;end prgm
+lbl 2
+blo 63
+prn
+trm

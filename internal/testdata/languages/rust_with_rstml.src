@@ -1,0 +1,7 @@
+view! {
+  <div />
+}
+
+fn main() {
+   println!("Hello, world!");
+}

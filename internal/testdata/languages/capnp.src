@@ -1,0 +1,9 @@
+
+struct Person {
+  address :group {
+    houseNumber @8 :UInt32;
+    street @9 :Text;
+    city @10 :Text;
+    country @11 :Text;
+  }
+}

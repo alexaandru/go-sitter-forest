@@ -1,0 +1,35 @@
+x: [] ||? empty
+
+||! y is FULL of heterogeneous stuff!
+y: [
+    @null,
+    @not @false, @true,
+    @nan,
+    -@infinity, @infinity,
+    0b101010, 0o52, 0x2a,
+    42,
+    "Look at me!... I'm inside a list",
+    { question: "What's the meaning of life?", answer: 42, list: [42] },
+
+    @if @true @then 42 @else -42, ||? A value will make it into the list, either 42 or -42
+    @if @false @then 42, ||? 42 will not make it into the list, as the condition is false
+
+
+    @each i, v @fallback 42 @in [42]  ["[i]: [v]"],
+    @each v @from 0 @until 10 @by 0.5 @if v @remainder 2 = 0 [ v + 1 ],
+
+    ||? the following match statement WILL add -42 to the list
+    @match [42] {
+        [0] 42,
+        _ -42
+    },
+
+    ||? the following match statement WILL NOT add -42 to the list
+    @match [42] {
+        [0] 42
+    },
+
+    ...[42, 42, 42]
+]
+
+z: {}

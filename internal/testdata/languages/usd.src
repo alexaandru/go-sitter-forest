@@ -1,0 +1,10 @@
+
+def "foo" (
+    add references = @foo.usda@
+    append references = @foo.usda@
+    delete references = @foo.usda@
+    reorder references = [@foo.usda@]
+    references = [@foo.usda@]  # explicit
+)
+{
+}

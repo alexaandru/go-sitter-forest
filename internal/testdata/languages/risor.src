@@ -1,0 +1,4 @@
+
+for _, value := range work(5) {
+	print("received:", value)
+}

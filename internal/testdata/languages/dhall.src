@@ -1,0 +1,5 @@
+
+{ home   = "/home/bill"
+, doc    = "/home/bill/doc"
+, music  = "/home/blil/music"
+}

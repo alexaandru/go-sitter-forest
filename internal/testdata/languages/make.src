@@ -1,0 +1,7 @@
+
+# Define variables
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99
+
+# Define targets and dependencies
+all: program

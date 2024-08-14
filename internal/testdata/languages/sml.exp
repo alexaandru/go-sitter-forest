@@ -1,0 +1,1 @@
+(source_file (fun_dec (fvalbind (fmrule name: (vid) arg: (scon_pat (integer_scon)) def: (scon_exp (integer_scon))) (fmrule name: (vid) arg: (vid_pat (longvid (vid))) def: (app_exp (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (paren_exp (app_exp (vid_exp (longvid (vid))) (vid_exp (longvid (vid))) (scon_exp (integer_scon)))))))))

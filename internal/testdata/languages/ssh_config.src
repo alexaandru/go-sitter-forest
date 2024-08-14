@@ -1,0 +1,9 @@
+
+ControlMaster auto
+ControlPath /tmp/ssh-%C
+
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
+
+Match host=github.com
+    IdentityFile ~/.ssh/id_rsa
+    User git

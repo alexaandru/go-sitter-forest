@@ -1,0 +1,32 @@
+this is a root text that you can type
+anything with multiline support and #tag @label
+#tag @label
+
+[aTextHeader]
+this is a text header
+
+
+[anObjectHeader]
+key1: value 1 #tag @label
+key2: value 2 #tag @label #tag @label
+key3: value 3 @label
+
+[aListHeader]
+- item 1 #tag @label
+- item 2 #tag @label #tag @label
+- item 3
+
+[woml]
+Whaterver Object Markup Language @simple @accessible @easy
+
+[settings]
+theme: dark
+color: gruvbox
+
+[todos]
+- support for more highlighting #neovim #vscode #zed
+
+- make it simpler nicer @0xWaleed
+- make value to match natural english langauge #enhancement
+
+- support Arabic parsing #important @Waleed

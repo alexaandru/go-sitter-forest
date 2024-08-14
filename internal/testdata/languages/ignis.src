@@ -1,0 +1,34 @@
+// This is a comment
+class User {
+  private name: string;
+  private lastName: string;
+  private age: i64;
+
+  public User(firstName: string, lastName: string, age: i64) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+}
+
+/* This is a comment */
+const HELLO_WORLD: string = "Hello, World!";
+const HELLO_WORLD_LEN: i64 = 13;
+
+decorator Only(IgnisLanguageSupported);
+
+enum Status {
+  PENDING,
+  ACTIVE,
+  INACTIVE,
+}
+
+extern io {
+  function println(s: unknown): void;
+}
+
+function main(): void {
+  let a: number = 10;
+
+  println(a);
+}

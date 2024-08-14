@@ -1,0 +1,11 @@
+metavar a {{ tex \alpha }}, b, c ::=
+indexvar i, j ::=
+
+grammar
+
+type, t :: 'ty_' ::=
+  | a                   ::  :: var
+  | </ ti // -> // i /> ::  :: arrow
+
+defns
+typing :: 'ty_' ::=

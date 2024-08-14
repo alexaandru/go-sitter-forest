@@ -1,0 +1,17 @@
+
+/// Example service for widgets.
+[http(url: "http://local.example.com/v1")]
+[csharp(namespace: Facility.ExampleApi)]
+service ExampleApi
+{
+	/// Gets widgets.
+	[http(method: GET, path: "/widgets")]
+	method getWidgets
+	{
+		/// The query.…		desc: boolean;
+
+		/// The maximum weight.
+		[obsolete]
+		maxWeight: double;
+	}
+}

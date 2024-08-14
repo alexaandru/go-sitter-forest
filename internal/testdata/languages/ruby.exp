@@ -1,0 +1,1 @@
+(program (call method: (identifier) arguments: (argument_list (integer))))

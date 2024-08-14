@@ -1,0 +1,14 @@
+import std.test.Tests
+
+class async Main {
+  fn async main {
+    let tests = Tests.new
+
+    tests.test('Adding two integers') fn (t) {
+      t.equal(10 + 5, 15)
+      t.equal(1 + -1, 0)
+    }
+
+    tests.run
+  }
+}

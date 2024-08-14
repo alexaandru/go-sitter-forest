@@ -1,0 +1,8 @@
+# Sample dotenv file
+SIMPLE=xyz123
+INTERPOLATED="Multiple\nLines and variable substitution: ${SIMPLE}"
+NON_INTERPOLATED='raw text without variable interpolation'
+MULTILINE = """
+long text here,
+e.g. a private SSH key
+"""

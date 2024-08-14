@@ -1,0 +1,6 @@
+
+# test, it  is comment
+module Qt3D.Core
+plugin quick3dcoreplugin
+classname Qt3DQuick3DCorePlugin 1.1
+Set 1.0 qml/components/Set.qml

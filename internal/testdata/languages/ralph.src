@@ -1,0 +1,18 @@
+Abstract Contract Math() {
+    @using(updateFields = false)
+    pub fn normalizeAmount(amount: U256, decimals: U256) -> (U256) {
+        if (decimals > 8) {
+            return amount / (10 ** (decimals - 8))
+        }
+        return amount
+    }
+
+    @using(updateFields = false)
+    pub fn deNormalizeAmount(amount: U256, decimals: U256) -> (U256) {
+        if (decimals > 8) {
+            return amount * (10 ** (decimals - 8))
+        }
+        let x = 8 - decimals
+        return amount
+    }
+}

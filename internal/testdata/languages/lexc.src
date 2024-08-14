@@ -1,0 +1,16 @@
+Multichar_Symbols
+%<x%>
+
+;
+! <- punctuation.delimiter
+
+LEXICON Root
+X ;
+
+LEXICON X
+x:y Z "weight: 3" ;
+a:b C "hi" ;
+<[ 1 | 2 | 3 ]+> # ;
+
+LEXICON Punct
+<[ %& | %= ]+> PUNCT ; ! Use/MT

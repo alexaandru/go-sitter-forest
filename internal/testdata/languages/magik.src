@@ -1,0 +1,35 @@
+# New method
+_method person.new(name, age)
+  _return _clone.init(name, age)
+_endmethod
+
+# Initialise method.
+_private _method person.init(name, age)
+   # Call the parent implementation.
+   _super.init(name, age)
+   # Initialise the slots.
+   .name << name
+   .age << age
+  _return _self
+_endmethod
+
+_block
+	_local s << 0 
+	_local i << 0
+	_while i <= 100
+	_loop 
+		s +<< i 
+		i +<< 1 
+	_endloop
+>> s
+_endblock
+
+my_procedure << _proc @my_procedure(a, b, c)
+  _return a + b + c
+_endproc
+
+x << my_procedure(1, 2, 3) # x = 6
+
+_if /Hello\,\s(\w)+!/.matches?("Hello, Magik!") _then
+    write("Got a match!")
+_endif

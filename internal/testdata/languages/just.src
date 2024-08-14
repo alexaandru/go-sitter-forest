@@ -1,0 +1,28 @@
+
+set shell := ["sh", "-c"]
+set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
+
+alias s := serve
+
+bt := '0'
+
+export RUST_BACKTRACE_1 := bt
+
+log := "warn"
+
+foo_c := if "hello" == "goodbye" {
+  "xyz"
+} else if "a" == "a" {
+  "abc"
+} else {
+  "123"
+}
+
+bar:
+  @echo {{foo}}
+
+shebang := if os() == 'windows' {
+  'powershell.exe'
+} else {
+  '/usr/bin/env pwsh'
+}

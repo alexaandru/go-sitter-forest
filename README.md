@@ -77,7 +77,7 @@ import (
 
 func main() {
 	content := []byte("print('It works!')\n")
-	node, err := sitter.ParseCtx(context.TODO(), content, risor.GetLanguage())
+	node, err := sitter.Parse(context.TODO(), content, sitter.NewLanguage(risor.GetLanguage()))
 	if err != nil {
 		panic(err)
 	}
@@ -106,9 +106,9 @@ import (
 func main() {
 	content := []byte("print('It works!')\n")
 	parser := sitter.NewParser()
-	parser.SetLanguage(forest.GetLanguage("risor")())
+	parser.SetLanguage(forest.GetLanguage("risor"))
 
-	tree, err := parser.ParseCtx(context.TODO(), nil, content)
+	tree, err := parser.Parse(context.TODO(), nil, content)
 	if err != nil {
 		panic(err)
 	}

@@ -1,0 +1,6 @@
+asl a
+sbc ($ff),y
+bcc $ffff
+lsr $ff ; comment
+cmp $ff,x
+ldx $ff,y

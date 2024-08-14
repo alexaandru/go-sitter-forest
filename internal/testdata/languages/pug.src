@@ -1,0 +1,11 @@
+
+// some comment
+  multiline though
+some-tag.class-one(attr="1" v-if='jsCode' :toggle='true') the content
+  sub-tag.some-slass
+    sub-sub-tag content
+  other-subtag#with-id.and-class(and-attr)
+    | Text
+div
+  | Text {{ variable() == "javascript" }} with inline JS
+.foo(style="width: 2px")

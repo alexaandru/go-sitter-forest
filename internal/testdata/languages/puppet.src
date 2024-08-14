@@ -1,0 +1,9 @@
+
+package { 'ntp':
+  ensure => installed,
+  before => File['ntp.conf'],
+}
+service { 'ntpd':
+  ensure    => running,
+  subscribe => File['ntp.conf'],
+}

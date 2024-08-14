@@ -1,0 +1,1 @@
+(source_file (module (module_name (qid))) (postulate (function (lhs (function_name (atom (qid)))) (rhs (expr (atom (SetN))))) (function (lhs (function_name (atom (qid)))) (rhs (expr (atom (qid))))) (function (lhs (function_name (atom (qid)))) (rhs (expr (atom (qid)) (expr (atom (qid)))))) (MISSING _dedent)))

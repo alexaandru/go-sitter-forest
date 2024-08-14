@@ -1,0 +1,15 @@
+
+x1(u,v)=cos(u)+.5*cos(u)*cos(v)
+y1(u,v)=sin(u)+.5*sin(u)*cos(v)
+#
+set style line 100 lw 0.1 lc rgb "navy"
+set pm3d depthorder hidden3d ls 100
+set palette defined (0 "dark-green", 1 "white")
+unset key
+set ticslevel 0
+splot x1(u,v), y1(u,v), z1(u,v) w pm3d,\
+      x2(u,v), y2(u,v), z2(u,v) w pm3d 
+pause 3
+set term pngcairo size 480,480 
+set output "tori.png"
+replot

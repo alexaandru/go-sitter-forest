@@ -1,0 +1,6 @@
+# <- keyword.control
+PATTERNS
+( X(1) | [ab:cd]+ )
+
+LEXICON X
+a<b>c:d>e{f}

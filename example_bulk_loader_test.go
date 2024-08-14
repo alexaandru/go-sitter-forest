@@ -13,7 +13,7 @@ import (
 func ExampleInfo() {
 	content := []byte("print('It works!')")
 	parser := sitter.NewParser()
-	parser.SetLanguage(forest.GetLanguage("lua")())
+	parser.SetLanguage(forest.GetLanguage("lua"))
 
 	tree, err := parser.ParseString(context.TODO(), nil, content)
 	if err != nil {

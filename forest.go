@@ -15,6 +15,8 @@ import (
 	"regexp"
 	"slices"
 	"strings"
+	"sync"
+	"unsafe"
 
 	"github.com/alexaandru/go-sitter-forest/abap"
 	"github.com/alexaandru/go-sitter-forest/abl"
@@ -440,7 +442,7 @@ const (
 //go:embed grammars.json
 var info []byte
 
-var languageFuncs = map[string]func() *sitter.Language{
+var languageFuncs = map[string]func() unsafe.Pointer{
 	"abap":               abap.GetLanguage,
 	"abl":                abl.GetLanguage,
 	"ada":                ada.GetLanguage,
@@ -1264,14 +1266,24 @@ var (
 	// there are many places that do NOT use it and mean something else...
 	rxInherits    = regexp.MustCompile(`^\s*;\s*inherits:?\s*(.*?)\n`)
 	nvimRemaining = filepath.Join("internal", "queries", "nvim_remaining")
+	cache         = sync.Map{}
 )
 
 //go:embed internal/queries/nvim_remaining/*/*.scm
 var remainingQueries embed.FS
 
-// GetLanguage returns the corresponding TS language function for given lang.
-func GetLanguage(lang string) func() *sitter.Language {
-	return languageFuncs[lang]
+// GetLanguage returns the corresponding TS language function for given lang,
+// and caches it so that language copies are not created unnecessarily.
+func GetLanguage(lang string) (l *sitter.Language) {
+	if x, ok := cache.Load(lang); ok {
+		return x.(*sitter.Language)
+	}
+
+	l = sitter.NewLanguage(languageFuncs[lang]())
+
+	cache.Store(lang, l)
+
+	return
 }
 
 // GetQuery returns (if it exists) the `kind`.scm query for `lang` language,
