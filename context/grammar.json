@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "4522ee13d58373f79d163df2baef80ea66908a8e",
+  "revision": "7ee6e0024056ec759769de480890d7f22da926f9",
   "grammarSha": "7926bb7633e507188cb3c32f6e4d284c01391508de3dbfad154724b167e0d72d",
   "language": "context",
   "url": "https://github.com/pmazaitis/tree-sitter-context",

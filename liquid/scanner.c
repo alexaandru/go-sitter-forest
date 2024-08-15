@@ -2,7 +2,7 @@
 #include "parser.h"
 #include <wctype.h>
 
-enum TokenType { 
+enum TokenType {
   INLINE_COMMENT_CONTENT,
   PAIRED_COMMENT_CONTENT,
   PAIRED_COMMENT_CONTENT_LIQ,
@@ -14,8 +14,8 @@ const char *end = "end";
 const char *raw_tag = "raw";
 const char *comment_tag = "comment";
 
-static void advance_liquid(TSLexer *lexer) { 
-  lexer->advance_liquid(lexer, false); 
+static void advance_liquid(TSLexer *lexer) {
+  lexer->advance_liquid(lexer, false);
 }
 
 static void advance_ws(TSLexer *lexer) {
@@ -42,8 +42,8 @@ static bool is_next_and_advance_liquid(TSLexer *lexer, char c) {
 }
 
 bool tree_sitter_liquid_external_scanner_scan(
-  void *payload, 
-  TSLexer *lexer, 
+  void *payload,
+  TSLexer *lexer,
   const bool *valid_symbols
 ) {
 
@@ -84,7 +84,7 @@ bool tree_sitter_liquid_external_scanner_scan(
 
 
   if (
-    valid_symbols[PAIRED_COMMENT_CONTENT] 
+    valid_symbols[PAIRED_COMMENT_CONTENT]
     || valid_symbols[PAIRED_COMMENT_CONTENT_LIQ]
     || valid_symbols[RAW_CONTENT]
   ) {
@@ -151,7 +151,7 @@ bool tree_sitter_liquid_external_scanner_scan(
 
       if (is_next_and_advance_liquid(lexer, '}')) {
         return true;
-      } 
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "d34615fa12cc1d1cfc1f1f1a80acc9db80ee4596",
+  "revision": "ddd075f1939aed8147b7aa67f042eda3fce22790",
   "grammarSha": "c1db3cca6f39128484024a11e21cc13e4b5a21477da0047abca2485f9f780cf5",
   "language": "jsonnet",
   "url": "https://github.com/sourcegraph/tree-sitter-jsonnet",

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "f107937259c7ec4bb05f7e3d2c24b89ac36d4cc3",
+  "revision": "49c43532689fe1f53e8b9e009d0521cab02c432b",
   "grammarSha": "97b326dad5c93e51d659560f092b482a4c72cd8001938c216e5b798f43b00fca",
   "language": "goctl",
   "url": "https://github.com/chaozwn/tree-sitter-goctl",

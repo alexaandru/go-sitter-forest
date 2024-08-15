@@ -71,8 +71,9 @@
  */
 typedef enum {
   SEMICOLON,
-  START,
-  END,
+  LAYOUT_START,
+  LAYOUT_END,
+  LAYOUT_RESTART,
   DOT,
   WHERE,
   VARID,
@@ -87,6 +88,7 @@ typedef enum {
   INDENT,
   EMPTY,
   FAIL,
+  ERROR_SENTINEL,
 } Sym;
 
 #ifdef DEBUG
@@ -94,6 +96,7 @@ static char *sym_names[] = {
   "semicolon",
   "start",
   "end",
+  "layout_restart",
   "dot",
   "where",
   "varid",
@@ -107,6 +110,7 @@ static char *sym_names[] = {
   "in",
   "indent",
   "empty",
+  "fail",
 };
 #endif
 
@@ -162,29 +166,18 @@ static char *invalid_varops[] = {
   "**",
 };
 
-/**
- * The parser appears to call `scan` with all symbols declared as valid directly after it encountered an error, so
- * this function is used to detect them.
- */
-static bool all_syms(const bool *syms) {
-  for (int i = 0; i <= EMPTY; i++) {
-    if (!syms[i]) return false;
-  }
-  return true;
-}
-
 #ifdef DEBUG
 /**
  * Produce a comma-separated string of valid symbols.
  */
 static void debug_valid(const bool *syms) {
-  if (all_syms(syms)) {
+  if (syms[ERROR_SENTINEL]) {
     DEBUG_PRINTF("all");
     return;
   }
   bool fst = true;
   DEBUG_PRINTF("\"");
-  for (Sym i = SEMICOLON; i <= EMPTY; i++) {
+  for (Sym i = SEMICOLON; i <= ERROR_SENTINEL; i++) {
     if (syms[i]) {
       if (!fst) DEBUG_PRINTF(",");
       DEBUG_PRINTF("%s", sym_names[i]);
@@ -200,7 +193,6 @@ typedef Array(char) String;
 typedef struct {
   Array(uint32_t) indents;
   Array(uint32_t) raw_string_sharp_counts;
-  uint32_t in_string;
 } Payload;
 
 // --------------------------------------------------------------------------------------------------------
@@ -245,7 +237,7 @@ static void debug_indents(Payload *payload) {
   DEBUG_PRINTF("[");
   for (size_t i = 0; i < payload->indents.size; i++) {
     if (0 < i) DEBUG_PRINTF(",");
-    DEBUG_PRINTF("%d", payload->indents.contents[i]);
+    DEBUG_PRINTF("%d", *array_get(&payload->indents, i));
   }
   DEBUG_PRINTF("]");
 }
@@ -254,7 +246,7 @@ static void debug_sharps(Payload *payload) {
   DEBUG_PRINTF("[");
   for (size_t i = 0; i < payload->raw_string_sharp_counts.size; i++) {
     if (0 < i) DEBUG_PRINTF(",");
-    DEBUG_PRINTF("%d", payload->raw_string_sharp_counts.contents[i]);
+    DEBUG_PRINTF("%d", *array_get(&payload->raw_string_sharp_counts, i));
   }
   DEBUG_PRINTF("]");
 }
@@ -478,6 +470,19 @@ static bool less_indent(uint32_t indent, State *state) {
   return indent_exists(state) && indent < *array_back(&state->payload->indents);
 }
 
+/**
+ * Dedented but still indented in outer scope. Needed to detect the following layout.
+ * 
+ * parent
+ *     foo
+ *   bar
+ */
+static bool less_and_more_indent(uint32_t indent, State *state) {
+  return 2 <= state->payload->indents.size && 
+    indent < *array_back(&state->payload->indents) &&
+    indent > *array_get(&state->payload->indents, state->payload->indents.size - 2);
+}
+
 static bool indent_lesseq(uint32_t indent, State *state) {
    return indent_exists(state) && indent <= *array_back(&state->payload->indents);
 }
@@ -485,6 +490,7 @@ static bool indent_lesseq(uint32_t indent, State *state) {
 static bool more_indent(uint32_t indent, State *state) {
   return indent_exists(state) && indent > *array_back(&state->payload->indents);
 }
+
 
 /**
  * Composite condition examining whether the current layout can be terminated if the line after the position where the
@@ -497,7 +503,7 @@ static bool more_indent(uint32_t indent, State *state) {
  */
 static bool is_newline_where(uint32_t indent, State *state) {
   return keep_layout(indent, state)
-    && (SYM(SEMICOLON) || SYM(END))
+    && (SYM(SEMICOLON) || SYM(LAYOUT_END))
     && !SYM(WHERE);
 }
 
@@ -523,9 +529,10 @@ static bool is_newline_idris(uint32_t c) {
 static bool uninitialized(State *state) { return !indent_exists(state); }
 
 /**
- * Require that the parser determined an error in the previous step (see `all_syms`).
+ * When recovering from an error, it sets all token valid, including unexposed token.
+ * Use ERROR_SENTINEL for this purpose.
  */
-static bool after_error(State *state) { return all_syms(state->symbols); }
+static bool after_error(State *state) { return SYM(ERROR_SENTINEL); }
 
 #define SYMBOLIC_CASES \
     case '!': \
@@ -680,12 +687,24 @@ static void skipspace(State *state) {
 }
 
 /**
+ * If the indent meets the condition, it updates the indents.
+ */
+static Result layout_restart(uint32_t indent, State *state) {
+  if (SYM(LAYOUT_RESTART) && less_and_more_indent(indent, state)) {
+    pop_indent(state);
+    push_indent(indent, state);
+    return finish(LAYOUT_RESTART, "layout_restart");
+  }
+  return res_cont;
+}
+
+/**
  * If a layout end is valid at this position, remove one indentation layer and succeed with layout end.
  */
 static Result layout_end(char *desc, State *state) {
-  if (SYM(END)) {
+  if (SYM(LAYOUT_END)) {
     pop_indent(state);
-    return finish(END, desc);
+    return finish(LAYOUT_END, desc);
   }
   return res_cont;
 }
@@ -840,7 +859,9 @@ static Result cpp(State *state) {
  * line after skipping whitespace) is smaller than the layout indent.
  */
 static Result dedent(uint32_t indent, State *state) {
-  if (less_indent(indent, state)) return layout_end("dedent", state);
+  if (less_indent(indent, state)) {
+    return layout_end("dedent", state);
+  }
   return res_cont;
 }
 
@@ -992,7 +1013,7 @@ static Result symop(Symbolic type, State *state) {
  *
  * To be called when it is certain that two minuses cannot succeed as a symbolic operator.
  * Those cases are:
- *   - `START` is valid
+ *   - `LAYOUT_START` is valid
  *   - Operator matching was done already
  */
 static Result minus(State *state) {
@@ -1139,15 +1160,15 @@ static Result close_layout_in_list(State *state) {
   if (0 < state->token.size) return res_cont;
   switch (PEEK) {
     case ']': {
-      if (state->symbols[END]) {
+      if (SYM(LAYOUT_END)) {
         pop_indent(state);
-        return finish(END, "bracket");
+        return finish(LAYOUT_END, "bracket");
       }
       break;
     }
     case ',': {
       S_ADVANCE;
-      if (state->symbols[COMMA]) {
+      if (SYM(COMMA)) {
         MARK("comma", false, state);
         return finish(COMMA, "comma");
       }
@@ -1225,7 +1246,7 @@ static Result inline_tokens(State *state) {
 }
 
 /**
- * If the symbol `START` is valid, starting a new layout is almost always indicated.
+ * If the symbol `LAYOUT_START` is valid, starting a new layout is almost always indicated.
  *
  * If the next character is a left brace, it is either a comment, pragma or an explicit layout. In the comment case, the
  * it must be parsed here.
@@ -1237,7 +1258,7 @@ static Result inline_tokens(State *state) {
  * This pushes the indentation of the first non-whitespace character onto the stack.
  */
 static Result layout_start(uint32_t column, State *state) {
-  if (state->symbols[START]) {
+  if (SYM(LAYOUT_START)) {
     switch (PEEK) {
       case '-': {
         Result res = minus(state);
@@ -1248,7 +1269,7 @@ static Result layout_start(uint32_t column, State *state) {
         break;
     }
     push_indent(column, state);
-    return finish(START, "layout_start");
+    return finish(LAYOUT_START, "layout_start");
   }
   return res_cont;
 }
@@ -1284,7 +1305,7 @@ static Result post_end_semicolon(uint32_t column, State *state) {
  * Like `post_end_semicolon`, but for layout end.
  */
 static Result repeat_end(uint32_t column, State *state) {
-  if (state->symbols[END] && less_indent(column, state)) {
+  if (SYM(LAYOUT_END) && less_indent(column, state)) {
     return layout_end("repeat_end", state);
   }
   return res_cont;
@@ -1332,6 +1353,8 @@ static Result newline(uint32_t indent, State *state) {
   Result res = eof(state);
   SHORT_SCANNER;
   res = initialize(indent, state);
+  SHORT_SCANNER;
+  res = layout_restart(indent, state);
   SHORT_SCANNER;
   res = cpp(state);
   SHORT_SCANNER;
