@@ -7,9 +7,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/abl v1.7.0
 	github.com/alexaandru/go-sitter-forest/ada v1.7.0
 	github.com/alexaandru/go-sitter-forest/agda v1.7.0
-	github.com/alexaandru/go-sitter-forest/aiken v1.7.0
-	github.com/alexaandru/go-sitter-forest/amber v1.7.0
-	github.com/alexaandru/go-sitter-forest/angular v1.7.0
+	github.com/alexaandru/go-sitter-forest/aiken v1.7.1
+	github.com/alexaandru/go-sitter-forest/amber v1.7.1
+	github.com/alexaandru/go-sitter-forest/angular v1.7.1
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.7.0
 	github.com/alexaandru/go-sitter-forest/apex v1.7.0
 	github.com/alexaandru/go-sitter-forest/applesoft v1.7.0
@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.7.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.7.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.7.0
+	github.com/alexaandru/go-sitter-forest/cognate v1.7.1
 	github.com/alexaandru/go-sitter-forest/comment v1.7.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.7.0
 	github.com/alexaandru/go-sitter-forest/context v1.7.0
@@ -104,7 +104,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.7.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.7.0
 	github.com/alexaandru/go-sitter-forest/fish v1.7.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.7.0
+	github.com/alexaandru/go-sitter-forest/flamingo v1.7.1
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.7.0
 	github.com/alexaandru/go-sitter-forest/foam v1.7.0
 	github.com/alexaandru/go-sitter-forest/forth v1.7.0
@@ -140,7 +140,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gpg v1.7.0
 	github.com/alexaandru/go-sitter-forest/graphql v1.7.0
 	github.com/alexaandru/go-sitter-forest/gren v1.7.0
-	github.com/alexaandru/go-sitter-forest/groovy v1.7.0
+	github.com/alexaandru/go-sitter-forest/groovy v1.7.1
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.7.0
 	github.com/alexaandru/go-sitter-forest/hack v1.7.0
 	github.com/alexaandru/go-sitter-forest/haml v1.7.0
@@ -165,10 +165,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/hylo v1.7.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.7.0
 	github.com/alexaandru/go-sitter-forest/idl v1.7.0
-	github.com/alexaandru/go-sitter-forest/idris v1.7.0
+	github.com/alexaandru/go-sitter-forest/idris v1.7.1
 	github.com/alexaandru/go-sitter-forest/ignis v1.7.0
-	github.com/alexaandru/go-sitter-forest/ini v1.7.0
-	github.com/alexaandru/go-sitter-forest/ink v1.7.0
+	github.com/alexaandru/go-sitter-forest/ini v1.7.1
+	github.com/alexaandru/go-sitter-forest/ink v1.7.1
 	github.com/alexaandru/go-sitter-forest/inko v1.7.0
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.7.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.7.0
@@ -200,11 +200,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/lexc v1.7.0
 	github.com/alexaandru/go-sitter-forest/lexd v1.7.0
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.7.0
-	github.com/alexaandru/go-sitter-forest/liquid v1.7.0
+	github.com/alexaandru/go-sitter-forest/liquid v1.7.1
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.7.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.7.0
 	github.com/alexaandru/go-sitter-forest/lookml v1.7.0
-	github.com/alexaandru/go-sitter-forest/lox v1.7.0
+	github.com/alexaandru/go-sitter-forest/lox v1.7.1
 	github.com/alexaandru/go-sitter-forest/lua v1.7.0
 	github.com/alexaandru/go-sitter-forest/luadoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/luap v1.7.0
@@ -229,7 +229,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/nesfab v1.7.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.7.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.7.0
-	github.com/alexaandru/go-sitter-forest/nickel v1.7.0
+	github.com/alexaandru/go-sitter-forest/nickel v1.7.1
 	github.com/alexaandru/go-sitter-forest/nim v1.7.0
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.7.0
 	github.com/alexaandru/go-sitter-forest/ninja v1.7.0
@@ -340,7 +340,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.7.0
 	github.com/alexaandru/go-sitter-forest/surface v1.7.0
 	github.com/alexaandru/go-sitter-forest/surrealql v1.7.0
-	github.com/alexaandru/go-sitter-forest/sus v1.7.0
+	github.com/alexaandru/go-sitter-forest/sus v1.7.1
 	github.com/alexaandru/go-sitter-forest/svelte v1.7.0
 	github.com/alexaandru/go-sitter-forest/swift v1.7.0
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.7.0
@@ -352,7 +352,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tact v1.7.0
 	github.com/alexaandru/go-sitter-forest/tcl v1.7.0
 	github.com/alexaandru/go-sitter-forest/teal v1.7.0
-	github.com/alexaandru/go-sitter-forest/templ v1.7.0
+	github.com/alexaandru/go-sitter-forest/templ v1.7.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.7.0
 	github.com/alexaandru/go-sitter-forest/thrift v1.7.0
 	github.com/alexaandru/go-sitter-forest/tiger v1.7.0
