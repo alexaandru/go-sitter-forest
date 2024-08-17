@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "d11dd2ca6c4c96e579b9860d577c6b2deb06443e",
-  "grammarSha": "fd5993cf05114f70d4af4c4bc54a471e0c5015c511b23f0112c8b170c3e398c3",
+  "revision": "4ef4e64be8c3f222c311af50b6dc064d808c1890",
+  "grammarSha": "4bb1d691afbcb76a92ed2e186df6cf1c3bc29d3a25cc700b5270496191856cc0",
   "language": "move_on_aptos",
   "altName": "Move on Aptos",
   "url": "https://github.com/aptos-labs/tree-sitter-move-on-aptos",

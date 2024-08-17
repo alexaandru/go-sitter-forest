@@ -1,6 +1,7 @@
 [
     ; "in"
-    "port"
+    "builtin"
+    "socket"
     "import"
     "ext"
     "mod"
@@ -22,6 +23,8 @@
     "reg"
     "on"
     "of"
+    "true"
+    "false"
 ] @keyword
 
 (connect connect_type: (connect_type) @keyword)
@@ -32,6 +35,7 @@
 (structdef name: (ident) @type)
 (type_word "Word" @type.builtin (nat) @number)
 (type_clock) @type.builtin
+(type_bit) @type.builtin
 (incoming name: (ident) @variable)
 (outgoing name: (ident) @variable)
 
@@ -39,4 +43,5 @@
 (expr_call method: (ident) @function.method)
 
 (word) @number
+(bool) @number
 (nat) @number

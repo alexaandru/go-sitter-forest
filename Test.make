@@ -5,7 +5,6 @@
 test: check_forest test_only
 
 test_only:
-	@go list -f '{{.Dir}}' -m | xargs go test -vet=all -cover -covermode=atomic -coverprofile=parsers.cov
 	@go test -vet=all -cover -covermode=atomic -coverprofile=forest.cov ./...
 	@gocovmerge parsers.cov forest.cov > unit.cov
 

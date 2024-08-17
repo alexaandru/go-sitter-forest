@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "f6be52c3d1cdb1c5e4dd7d8bce0a57497f55d6af",
-  "grammarSha": "110fba3bff364c9350a10adcc1cf08d49e13e5e62e36fe431b61552c7123893f",
+  "revision": "9af0bdd9d225edee12f489cfa8284e248321959b",
+  "grammarSha": "9d44c0e5f7b17f187f3a1ea6331680d78d73919eaf544df7f55c687473ced0d4",
   "language": "css",
   "url": "https://github.com/tree-sitter/tree-sitter-css",
   "maintainedBy": "@TravonteD",
