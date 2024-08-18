@@ -110,7 +110,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.7.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.7.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.7.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.7.0
+	github.com/alexaandru/go-sitter-forest/fsharp v1.7.1
 	github.com/alexaandru/go-sitter-forest/func v1.7.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.7.0
 	github.com/alexaandru/go-sitter-forest/gdscript v1.7.0
@@ -128,7 +128,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glsl v1.7.0
 	github.com/alexaandru/go-sitter-forest/gn v1.7.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.7.0
-	github.com/alexaandru/go-sitter-forest/go v1.7.1
+	github.com/alexaandru/go-sitter-forest/go v1.7.2
 	github.com/alexaandru/go-sitter-forest/gobra v1.7.0
 	github.com/alexaandru/go-sitter-forest/goctl v1.7.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.7.0
@@ -169,12 +169,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.7.0
 	github.com/alexaandru/go-sitter-forest/ini v1.7.1
 	github.com/alexaandru/go-sitter-forest/ink v1.7.1
-	github.com/alexaandru/go-sitter-forest/inko v1.7.0
+	github.com/alexaandru/go-sitter-forest/inko v1.7.1
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.7.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.7.0
 	github.com/alexaandru/go-sitter-forest/janet v1.7.0
 	github.com/alexaandru/go-sitter-forest/java v1.7.0
-	github.com/alexaandru/go-sitter-forest/javascript v1.7.0
+	github.com/alexaandru/go-sitter-forest/javascript v1.7.1
 	github.com/alexaandru/go-sitter-forest/jq v1.7.0
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/json v1.7.0
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/matlab v1.7.0
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.7.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.7.0
-	github.com/alexaandru/go-sitter-forest/merlin6502 v1.7.0
+	github.com/alexaandru/go-sitter-forest/merlin6502 v1.7.1
 	github.com/alexaandru/go-sitter-forest/mermaid v1.7.0
 	github.com/alexaandru/go-sitter-forest/meson v1.7.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.7.0
@@ -252,10 +252,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.7.0
 	github.com/alexaandru/go-sitter-forest/perm v1.7.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.7.0
-	github.com/alexaandru/go-sitter-forest/php v1.7.0
-	github.com/alexaandru/go-sitter-forest/php_only v1.7.0
+	github.com/alexaandru/go-sitter-forest/php v1.7.1
+	github.com/alexaandru/go-sitter-forest/php_only v1.7.1
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.7.0
-	github.com/alexaandru/go-sitter-forest/pic v1.7.1
+	github.com/alexaandru/go-sitter-forest/pic v1.7.2
 	github.com/alexaandru/go-sitter-forest/pint v1.7.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.7.0
 	github.com/alexaandru/go-sitter-forest/plantuml v1.7.0
@@ -278,7 +278,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/purescript v1.7.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.7.0
 	github.com/alexaandru/go-sitter-forest/pyrope v1.7.0
-	github.com/alexaandru/go-sitter-forest/python v1.7.1
+	github.com/alexaandru/go-sitter-forest/python v1.7.2
 	github.com/alexaandru/go-sitter-forest/ql v1.7.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.7.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.7.0
@@ -339,7 +339,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/styled v1.7.0
 	github.com/alexaandru/go-sitter-forest/supercollider v1.7.0
 	github.com/alexaandru/go-sitter-forest/surface v1.7.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.7.0
+	github.com/alexaandru/go-sitter-forest/surrealql v1.7.1
 	github.com/alexaandru/go-sitter-forest/sus v1.7.1
 	github.com/alexaandru/go-sitter-forest/svelte v1.7.0
 	github.com/alexaandru/go-sitter-forest/swift v1.7.0
@@ -384,7 +384,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vento v1.7.0
 	github.com/alexaandru/go-sitter-forest/verilog v1.7.0
 	github.com/alexaandru/go-sitter-forest/vhdl v1.7.0
-	github.com/alexaandru/go-sitter-forest/vhs v1.7.0
+	github.com/alexaandru/go-sitter-forest/vhs v1.7.1
 	github.com/alexaandru/go-sitter-forest/vim v1.7.0
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/virdant v1.7.1
