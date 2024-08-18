@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "c07d69739ba71b5a449bdbb7735991f8aabf8546",
-  "grammarSha": "43ca679411707469076032032b3ffbb5b439d784ed9c36b31ba074ced6f3c514",
+  "revision": "71605bf96303144c2ecfc2c0b69d95c716ed9e13",
+  "grammarSha": "14872df220fd8c7f3f111f7682031a60dd997b324ab28690f207d6a8ac7f6d37",
   "language": "php",
   "url": "https://github.com/tree-sitter/tree-sitter-php",
   "maintainedBy": "@tk-shirasaka",

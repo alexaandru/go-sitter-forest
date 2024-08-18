@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "a92640f158c208ca3be28b560b838b2bd60e8eac",
-  "grammarSha": "ef17622641ae969b5bb476fb019d99fc6220b3377d8bbe25a08e006a142d734b",
+  "revision": "15887341e5b57ffdb423aff840aef142b8f53d6d",
+  "grammarSha": "0adb42444e3fe0fc9710f8e43b6ef81ef51e9508e4efd86f43039de2d38d91f8",
   "language": "javascript",
   "url": "https://github.com/tree-sitter/tree-sitter-javascript",
   "maintainedBy": "@steelsojka",

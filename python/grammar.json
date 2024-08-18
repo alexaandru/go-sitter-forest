@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "62165d7fd1d6288456c6bb81872bdfc42656e71b",
-  "grammarSha": "8b9f42fa4e6ad54e674839e74cd23566c5333ec1856dbb19f351e65d8d014352",
+  "revision": "55a9b8a4fbfbaf0d10cdd47dd4a9d02606c4c218",
+  "grammarSha": "897b3904822d58487a6e3b1f5a462a7a0eea221c0d76ea13dfb54daf426592c9",
   "language": "python",
   "url": "https://github.com/tree-sitter/tree-sitter-python",
   "maintainedBy": "@stsewd, @theHamsta",
