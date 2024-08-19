@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.7.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.7.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.7.1
+	github.com/alexaandru/go-sitter-forest/cognate v1.7.2
 	github.com/alexaandru/go-sitter-forest/comment v1.7.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.7.0
 	github.com/alexaandru/go-sitter-forest/context v1.7.0
@@ -188,12 +188,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/kconfig v1.7.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/koan v1.7.0
-	github.com/alexaandru/go-sitter-forest/kotlin v1.7.0
+	github.com/alexaandru/go-sitter-forest/kotlin v1.7.1
 	github.com/alexaandru/go-sitter-forest/koto v1.7.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.7.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.7.0
 	github.com/alexaandru/go-sitter-forest/lat v1.7.0
-	github.com/alexaandru/go-sitter-forest/latex v1.7.0
+	github.com/alexaandru/go-sitter-forest/latex v1.7.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.7.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.7.0
 	github.com/alexaandru/go-sitter-forest/leo v1.7.0
@@ -253,7 +253,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/perm v1.7.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.7.0
 	github.com/alexaandru/go-sitter-forest/php v1.7.1
-	github.com/alexaandru/go-sitter-forest/php_only v1.7.1
+	github.com/alexaandru/go-sitter-forest/php_only v1.7.2
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/pic v1.7.2
 	github.com/alexaandru/go-sitter-forest/pint v1.7.0
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ruby v1.7.1
 	github.com/alexaandru/go-sitter-forest/rust v1.7.0
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.7.0
-	github.com/alexaandru/go-sitter-forest/scala v1.7.0
+	github.com/alexaandru/go-sitter-forest/scala v1.7.1
 	github.com/alexaandru/go-sitter-forest/scfg v1.7.0
 	github.com/alexaandru/go-sitter-forest/scheme v1.7.0
 	github.com/alexaandru/go-sitter-forest/scss v1.7.0
@@ -339,7 +339,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/styled v1.7.0
 	github.com/alexaandru/go-sitter-forest/supercollider v1.7.0
 	github.com/alexaandru/go-sitter-forest/surface v1.7.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.7.1
+	github.com/alexaandru/go-sitter-forest/surrealql v1.7.2
 	github.com/alexaandru/go-sitter-forest/sus v1.7.1
 	github.com/alexaandru/go-sitter-forest/svelte v1.7.0
 	github.com/alexaandru/go-sitter-forest/swift v1.7.0
