@@ -25,24 +25,8 @@
                         "Until"))
 
 ((identifier) @function.builtin (#any-of? @function.builtin
-                                 "Print" "Prints" "Puts" "Put" "Fold" "Show"
-                                 "Reverse" "Twin" "Drop" "Swap" "Case" "When"
-                                 "Do" "Map" "Range" "Read-file" "Unbox" "Floor"
-                                 "Ceiling" "Round" "Ln" "Log" "Triplet" "Head"
-                                 "Tail" "First" "Rest" "Index" "Length" "Sin"
-                                 "Cos" "Tan" "Asin" "Acos" "Atan" "Sind" "Cosd"
-                                 "Tand" "Asind" "Acosd" "Atand" "Sinh" "Cosh"
-                                 "Tanh" "Sinhd" "Coshd" "Tanhd" "Filter"
-                                 "Number?" "Zero?" "Empty?" "Empty" "Any?"
-                                 "None" "All" "Sort" "Append" "Prepend" "Min"
-                                 "Max" "Times" "Integer!" "Number!" "Boolean!"
-                                 "Block!" "Zero!" "String!" "List!" "Symbol!"
-                                 "Push" "Stack" "Take" "Discard" "Error"
-                                 "Assert" "Clear" "Open" "Close" "Input"
-                                 "List?" "String?" "Boolean?" "Integer?"
-                                 "Block?" "Zero?" "String-length" "Substring"
-                                 "Regex" "Character" "Ordinal" "Split"
+                                 "Empty" "Match" "Print" "Put" "Do" "Random" "Modulo" "Sqrt" "Integer?" "Zero?" "Integer!" "Zero!" "First" "Rest" "Head" "Tail" "Push" "Empty?" "Join" "String-length" "Substring" "Regex" "Ordinal" "Character" "Split" "Floor" "Round" "Ceiling" "Error" "Wait" "Stop" "Show" "Stack" "Clear" "Unbox" "Set" "Debug" "Begin" "Sind" "Cosd" "Tand" "Sin" "Cos" "Tan" "Exp" "Log" "Ln" "Asind" "Acosd" "Atand" "Asin" "Acos" "Atan" "Sinhd" "Coshd" "Tanhd" "Sinh" "Cosh" "Tanh" "Dict" "Insert" "Get" "Parameters" "Input" "Open" "Read-file" "Close" "Path" "Drop" "Prepend" "Index" "All" "Discard" "None" "Append" "Swap" "Fold" "Prints" "Times" "Range" "Twin" "Take" "Triplet" "Min" "Reverse" "Filter" "Max" "When" "Case" "Map" "Puts" "Sort" "Assert" "Length"
                                  ))
-((identifier) @operator (#any-of? @operator "+" "-" "*" "/" ">" "<" "<=" ">="
-                         "==" "!=" "Modulo" "Exp" "Not" "And" "Or" "Xor"))
-((identifier) @type.builtin (#any-of? @type.builtin "List" "Box" "Number"))
+((identifier) @operator (#any-of? @operator "+" "-" "*" "/" ">" "<" "<=" ">=" "^"
+                         "==" "!=" "Not" "And" "Or" "Xor"))
+((identifier) @type.builtin (#any-of? @type.builtin "List" "Box" "Number" "Number!" "String!" "List!" "Block!" "Symbol!" "Boolean!" "Box!" "Io!" "Any!" "Number?" "String?" "List?" "Block?" "Symbol?" "Boolean?" "Box?" "Io?" "Any?"))

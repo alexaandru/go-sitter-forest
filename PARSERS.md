@@ -1,6 +1,6 @@
 # 405 Supported Parsers
 
-13 pending, 10 skipped regeneration, 28 missing queries
+13 pending, 9 skipped regeneration, 28 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -351,7 +351,7 @@
 - [x] [styled](https://github.com/mskelton/tree-sitter-styled) ✔️ (maintained by @mskelton)
 - [x] [supercollider](https://github.com/madskjeldgaard/tree-sitter-supercollider) ✔️ (maintained by @madskjeldgaard)
 - [x] [surface](https://github.com/connorlay/tree-sitter-surface) ✔️ (maintained by @connorlay)
-- [x] [surrealql](https://github.com/Ce11an/tree-sitter-surrealql) ✔️ (maintained by @Ce11an)
+- [x] [surrealql](https://github.com/Ce11an/tree-sitter-surrealql) ✔️ (maintained by @Ce11an; high memory usage (3.1GB))
 - [x] [sus](https://github.com/pc2/tree-sitter-sus) 🗸 (maintained by @VonTum)
 - [x] [svelte](https://github.com/tree-sitter-grammars/tree-sitter-svelte) ✔️ (maintained by @amaanq)
 - [x] [swift](https://github.com/alex-pinkus/tree-sitter-swift) ✔️ (maintained by @alex-pinkus)

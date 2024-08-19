@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "5d8b29f6ef3bf64d59430dcfe76b31cc44b5abfd",
+  "revision": "ca6ef6c8ae0f1970d7e691d47f75ccca884a6060",
   "grammarSha": "322f2fb4c0b593afb6ef849ec2f0972daa9a3e57604b0274eee789e8b087d312",
   "language": "comment",
   "url": "https://github.com/stsewd/tree-sitter-comment",
