@@ -768,8 +768,16 @@ static inline bool scan_multioutput_var_start(TSLexer* lexer)
 
     advance_matlab(lexer);
 
-    while (!lexer->eof(lexer) && iswspace_matlab(lexer->lookahead)) {
-        advance_matlab(lexer);
+    while (!lexer->eof(lexer)) {
+        if (consume_char('.', lexer) && consume_char('.', lexer) && consume_char('.', lexer)) {
+            consume_comment_line(lexer);
+            advance_matlab(lexer);
+        } else if (iswspace_matlab(lexer->lookahead)){
+            advance_matlab(lexer);
+        } else
+        {
+            break;
+        }
     }
 
     if (lexer->lookahead == '=') {

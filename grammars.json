@@ -484,7 +484,7 @@
   },
   {
     "reference": "main",
-    "revision": "cf68a8e050b4fd2f2b42cb5f684036c3026dab8e",
+    "revision": "81c0e47adecb6bac6c9dd700292a39ce937c84c9",
     "grammarSha": "75e14cb5f3fb415f83a36951050d4770f8eeaff42b7b0f35bccca826f7eef8f1",
     "language": "cognate",
     "url": "https://github.com/hedyhli/tree-sitter-cognate",
@@ -1304,8 +1304,8 @@
   },
   {
     "reference": "main",
-    "revision": "6b91d508bee2e7679fcdac5312644fc5e5cfacb8",
-    "grammarSha": "5ee4a1cfa8efdd8f3de6d2c7c1fecbc0fb4d897925f46b5fc48d7e4c92ff12ee",
+    "revision": "171b3b7412bc93284fc0dad0a7a7bbbbd1b51289",
+    "grammarSha": "38449b615da4b3eb9b654e729a7d7b35213b3e16d763512a40d9e258297f31c4",
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
     "maintainedBy": "@murtaza64"
@@ -2064,8 +2064,8 @@
   },
   {
     "reference": "main",
-    "revision": "ad1c471f30ba754578d4b2e27a4c4ec662a10e6f",
-    "grammarSha": "888ef253d3c7a6ce08545c42c9267ec0e7f12728a80ec408904cdc9329f4e590",
+    "revision": "e770bddc7bfc938f24d06dd98dcbfe3469fcece4",
+    "grammarSha": "80a0a19b031c2cb76c279518aa8aa52cb34793e782670a0a8a593858117e541b",
     "language": "matlab",
     "url": "https://github.com/acristoffers/tree-sitter-matlab",
     "maintainedBy": "@acristoffers",
@@ -3860,7 +3860,7 @@
   },
   {
     "reference": "main",
-    "revision": "1dc08f58e8fe964fe7dd13c01fdea2fd0ef8d406",
+    "revision": "75ca07a279f37aee1b2097ad73978a85d4968da1",
     "grammarSha": "aff9c5d4947d46b060e90fbe7fcf3980ecbf91d6cb43ef2a6e69609322b2c02b",
     "language": "wing",
     "url": "https://github.com/winglang/wing",

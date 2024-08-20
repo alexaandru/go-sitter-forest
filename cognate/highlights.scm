@@ -6,11 +6,9 @@
 
 [(inline_comment) (line_comment) (multiline_comment)] @comment
 
-[
- ";"
- "("
- ")"
-] @punctuation.special
+";" @punctuation.special
+
+["(" ")"] @punctuation.bracket
 
 (statement
  (identifier) @keyword (#eq? @keyword "Def")
