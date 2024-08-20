@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.7.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.7.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.7.2
+	github.com/alexaandru/go-sitter-forest/cognate v1.7.3
 	github.com/alexaandru/go-sitter-forest/comment v1.7.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.7.0
 	github.com/alexaandru/go-sitter-forest/context v1.7.0
@@ -140,7 +140,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gpg v1.7.0
 	github.com/alexaandru/go-sitter-forest/graphql v1.7.0
 	github.com/alexaandru/go-sitter-forest/gren v1.7.0
-	github.com/alexaandru/go-sitter-forest/groovy v1.7.1
+	github.com/alexaandru/go-sitter-forest/groovy v1.7.2
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.7.0
 	github.com/alexaandru/go-sitter-forest/hack v1.7.0
 	github.com/alexaandru/go-sitter-forest/haml v1.7.0
@@ -188,7 +188,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kconfig v1.7.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/koan v1.7.0
-	github.com/alexaandru/go-sitter-forest/kotlin v1.7.1
+	github.com/alexaandru/go-sitter-forest/kotlin v1.7.2
 	github.com/alexaandru/go-sitter-forest/koto v1.7.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.7.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.7.0
@@ -214,7 +214,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/make v1.7.0
 	github.com/alexaandru/go-sitter-forest/markdown v1.7.0
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.7.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.7.0
+	github.com/alexaandru/go-sitter-forest/matlab v1.7.1
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.7.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.7.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.7.1
