@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.7.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.7.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.7.3
+	github.com/alexaandru/go-sitter-forest/cognate v1.7.4
 	github.com/alexaandru/go-sitter-forest/comment v1.7.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.7.0
 	github.com/alexaandru/go-sitter-forest/context v1.7.0
@@ -123,7 +123,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.7.0
 	github.com/alexaandru/go-sitter-forest/gitignore v1.7.0
 	github.com/alexaandru/go-sitter-forest/gleam v1.7.0
-	github.com/alexaandru/go-sitter-forest/glimmer v1.7.0
+	github.com/alexaandru/go-sitter-forest/glimmer v1.7.1
 	github.com/alexaandru/go-sitter-forest/glint v1.7.0
 	github.com/alexaandru/go-sitter-forest/glsl v1.7.0
 	github.com/alexaandru/go-sitter-forest/gn v1.7.0
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.7.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.7.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.7.0
-	github.com/alexaandru/go-sitter-forest/http v1.7.0
+	github.com/alexaandru/go-sitter-forest/http v1.7.1
 	github.com/alexaandru/go-sitter-forest/http2 v1.7.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.7.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.7.0
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.7.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.7.0
 	github.com/alexaandru/go-sitter-forest/lookml v1.7.0
-	github.com/alexaandru/go-sitter-forest/lox v1.7.1
+	github.com/alexaandru/go-sitter-forest/lox v1.7.2
 	github.com/alexaandru/go-sitter-forest/lua v1.7.0
 	github.com/alexaandru/go-sitter-forest/luadoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/luap v1.7.0
@@ -214,7 +214,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/make v1.7.0
 	github.com/alexaandru/go-sitter-forest/markdown v1.7.0
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.7.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.7.1
+	github.com/alexaandru/go-sitter-forest/matlab v1.7.2
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.7.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.7.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.7.1
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.7.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.7.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.7.0
-	github.com/alexaandru/go-sitter-forest/move v1.7.0
+	github.com/alexaandru/go-sitter-forest/move v1.7.1
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.7.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.7.0
 	github.com/alexaandru/go-sitter-forest/nasm v1.7.0
