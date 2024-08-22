@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "270731e5ea36107a9316f9f65c86e5c77ef65697",
+  "revision": "a49ae2837b07ff5421d64552fd61b2fc6157b308",
   "grammarSha": "dd62abcdf02210d916f285d520892d494c27287d25225f634afa44bc09a8e9d5",
   "language": "perl",
   "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",

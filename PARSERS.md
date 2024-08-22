@@ -1,6 +1,6 @@
 # 405 Supported Parsers
 
-13 pending, 9 skipped regeneration, 28 missing queries
+13 pending, 9 skipped regeneration, 27 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -233,7 +233,7 @@
 - [ ] [mix_lock](https://github.com/fluidattacks/tree-sitter-mix_lock) (maintained by @drestrepom)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️ (maintained by @artagnon)
 - [x] [motoko](https://github.com/f0i/tree-sitter-motoko) ✔️ (maintained by @f0i)
-- [x] [move](https://github.com/tzakian/tree-sitter-move) 🗸 (maintained by @tzakian)
+- [x] [move](https://github.com/tzakian/tree-sitter-move) ✔️ (maintained by @tzakian)
 - [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) 🗸 (maintained by @ArArgon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️ (maintained by @Freed-Wu)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️ (maintained by @ObserverOfTime)

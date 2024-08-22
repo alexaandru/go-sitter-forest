@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "5ae6c7cfa62a7d7325c26171a1de4f6b866702b5",
-  "grammarSha": "b1b0767f5e17ff46baca67d13a25f49ade3425852bf6a806aca43c515599e963",
+  "revision": "b88cd0c7dba0128b8f28fcb25cca13eea0d193b3",
+  "grammarSha": "df106723b9bb62b10405b6da13396073b0f60e14325444ff2207299b1e5dfafa",
   "language": "http",
   "url": "https://github.com/rest-nvim/tree-sitter-http",
   "maintainedBy": "@amaanq"

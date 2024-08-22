@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "7ef08cb706b6ab4878228cc28c4f9689e3cb86aa",
+  "revision": "0f24d8b305121dc84ce585cad0da509ef9ef88b1",
   "grammarSha": "dd95d29a211b31d2c6955dc178d244fbecd322d8acc9d0fc77c7eeb53247dc30",
   "language": "pod",
   "url": "https://github.com/tree-sitter-perl/tree-sitter-pod",
