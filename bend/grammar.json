@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "c65d41b701c80febcb0dc62e7703cb446bb283d2",
+  "revision": "c39cb453ce66612ddf5aaf3bee1f7c1b457610d4",
   "grammarSha": "0b010c4f8a97e88500e86c6314a1a9e01f2acba43de923749b2b5132f30bc2f5",
   "language": "bend",
   "url": "https://github.com/HigherOrderCO/tree-sitter-bend",
