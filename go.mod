@@ -9,7 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.7.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.7.1
 	github.com/alexaandru/go-sitter-forest/amber v1.7.1
-	github.com/alexaandru/go-sitter-forest/angular v1.7.1
+	github.com/alexaandru/go-sitter-forest/angular v1.7.2
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.7.0
 	github.com/alexaandru/go-sitter-forest/apex v1.7.0
 	github.com/alexaandru/go-sitter-forest/applesoft v1.7.0
@@ -64,7 +64,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/crystal v1.7.0
 	github.com/alexaandru/go-sitter-forest/css v1.7.1
 	github.com/alexaandru/go-sitter-forest/csv v1.7.0
-	github.com/alexaandru/go-sitter-forest/cuda v1.7.0
+	github.com/alexaandru/go-sitter-forest/cuda v1.7.1
 	github.com/alexaandru/go-sitter-forest/cue v1.7.0
 	github.com/alexaandru/go-sitter-forest/d v1.7.0
 	github.com/alexaandru/go-sitter-forest/dale v1.7.0
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.7.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.7.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.7.0
-	github.com/alexaandru/go-sitter-forest/http v1.7.1
+	github.com/alexaandru/go-sitter-forest/http v1.7.2
 	github.com/alexaandru/go-sitter-forest/http2 v1.7.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.7.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.7.0
@@ -305,7 +305,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rstml v1.7.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.7.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.7.1
-	github.com/alexaandru/go-sitter-forest/rust v1.7.0
+	github.com/alexaandru/go-sitter-forest/rust v1.7.1
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.7.0
 	github.com/alexaandru/go-sitter-forest/scala v1.7.1
 	github.com/alexaandru/go-sitter-forest/scfg v1.7.0
@@ -342,7 +342,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/surrealql v1.7.2
 	github.com/alexaandru/go-sitter-forest/sus v1.7.1
 	github.com/alexaandru/go-sitter-forest/svelte v1.7.0
-	github.com/alexaandru/go-sitter-forest/swift v1.7.0
+	github.com/alexaandru/go-sitter-forest/swift v1.7.1
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.7.0
 	github.com/alexaandru/go-sitter-forest/syphon v1.7.0
 	github.com/alexaandru/go-sitter-forest/systemtap v1.7.0
