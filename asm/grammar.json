@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "2a35fccebcc08aa8b6c7bb3cff1f07cf0f8cff83",
+  "revision": "55b2b913f1e71136027d6fce8212e760c64f3532",
   "grammarSha": "272c60ca9eddab6261601d9c6030d3469d629d1770938d396718971778ff4fb8",
   "language": "asm",
   "url": "https://github.com/RubixDev/tree-sitter-asm",

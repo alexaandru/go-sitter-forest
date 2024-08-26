@@ -31,6 +31,8 @@
 
 "self" @variable.builtin
 
+"async" @keyword.coroutine
+
 [
   "finalize"
   "function"
@@ -188,5 +190,7 @@
   (signed_literal)
   (unsigned_literal)
 ] @number
+
+(string_literal) @string
 
 (annotation) @attribute

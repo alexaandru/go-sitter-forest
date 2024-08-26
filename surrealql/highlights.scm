@@ -134,6 +134,7 @@
   (keyword_ignore)
   (keyword_values)
   (keyword_for)
+  (keyword_info)
   (keyword_comment)
   (keyword_fields)
   (keyword_columns)
@@ -145,6 +146,7 @@
   (keyword_if)
   (keyword_exists)
   (keyword_database)
+  (keyword_namespace)
   (keyword_password)
   (keyword_password_hash)
   (keyword_on_duplicate_key_update)
@@ -155,6 +157,7 @@
   (keyword_dimension)
   (keyword_mtree)
   (keyword_dist)
+  (keyword_overwrite)
 ] @keyword
 
 ; Operators
@@ -219,4 +222,3 @@
 (graph_path) @operator
 
 ; Errors
-(ERROR) @error

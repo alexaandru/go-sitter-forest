@@ -78,8 +78,11 @@
 
 "class" @keyword.type
 
-(modifiers
-  "static" @keyword.modifier)
+(modifiers [
+  "static"
+  "get"
+  "set"
+] @keyword.modifier)
 
 [
   "or"

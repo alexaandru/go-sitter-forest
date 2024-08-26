@@ -3,13 +3,11 @@
 #include "tsp_unicode.h"
 
 // grumble grumble no stdlib
-static char* tsp_strchr (register const char *s, int c)
-{
+static char *tsp_strchr(register const char *s, int c) {
   do {
-    if (*s == c)
-      {
-	return (char*)s;
-      }
+    if (*s == c) {
+      return (char *)s;
+    }
   } while (*s++);
   return (0);
 }
@@ -27,7 +25,6 @@ static char* tsp_strchr (register const char *s, int c)
 #define streq(a, b) (strcmp(a, b) == 0)
 
 #include <wctype.h>
-
 
 enum TokenType {
   /* non-ident tokens */
@@ -53,7 +50,8 @@ enum TokenType {
   TOKEN_GOBBLED_CONTENT,
   TOKEN_ATTRIBUTE_VALUE_BEGIN,
   TOKEN_ATTRIBUTE_VALUE,
-  TOKEN_PROTOTYPE_OR_SIGNATURE,
+  TOKEN_PROTOTYPE,
+  TOKEN_SIGNATURE_START,
   TOKEN_HEREDOC_DELIM,
   TOKEN_COMMAND_HEREDOC_DELIM,
   TOKEN_HEREDOC_START,
@@ -822,21 +820,15 @@ bool tree_sitter_perl_external_scanner_scan(void *payload, TSLexer *lexer,
     }
   }
 
-  if (valid_symbols[TOKEN_PROTOTYPE_OR_SIGNATURE] && c == '(') {
-    /* Distinguishing prototypes from signatures is impossible without a way
-     * to track what `use VERSION` or `use feature ...` is in scope at this
-     * point in the file. The best we can do without that is to claim this is
-     * just one of either, while accepting that it will not perfectly parse
-     * all possible code. It counts parens so it is likely to get most code
-     * about right, but it will get confused with a signature like
-     *
-     *    ($open = "(")
-     *
-     * and there's basically nothing we can do about that here.
-     */
-    DEBUG("prototype or signature\n", 0);
-
+  // we only check for the prototype token b/c it 100% overlaps w/ signatures
+  if (c == '(' && (valid_symbols[TOKEN_PROTOTYPE] || valid_symbols[TOKEN_SIGNATURE_START])) {
+    // you can't reallllllly know if you're getting a prototype or a signature, but we can
+    // be optimistic as follows - all alnums are invalid in a prototype, so if there's ANY
+    // valid identifier char, then we assume we got a sig; otherwise we make it to the end
+    // of the nested parens + assume it was all a prototype
     ADVANCE_C;
+    // Now, we begin lookahead
+    lexer->mark_end(lexer);
 
     int count = 0;
 
@@ -848,11 +840,15 @@ bool tree_sitter_perl_external_scanner_scan(void *payload, TSLexer *lexer,
         count--;
       else if (c == '(')
         count++;
+      else if (is_tsp_id_continue(c))
+        TOKEN(TOKEN_SIGNATURE_START);
 
       ADVANCE_C;
     }
 
-    TOKEN(TOKEN_PROTOTYPE_OR_SIGNATURE);
+    // we gotta accept all the stuff that was in the prototype now
+    lexer->mark_end(lexer);
+    TOKEN(TOKEN_PROTOTYPE);
   }
 
   // we hold on to the current char in case we need to do some fancy stuff w/ it in 2 char
@@ -877,15 +873,17 @@ bool tree_sitter_perl_external_scanner_scan(void *payload, TSLexer *lexer,
     // the comment char here - the quoting is space-sensitive so we'll have to track that
     // also
 
-    // NOTE - there seems to be a bug in TS with skipping chars after you've hit done
+    // NOTE - TS is annoying about skipping chars after you've hit done
     // mark_end, so we have to do the regular advance so our token actually shows up
     while (is_tsp_whitespace(c) || c == '#') {
       while (is_tsp_whitespace(c)) ADVANCE_C;
       // now we need to skip comments - we get in a funny way if we have a quotelike
       // operator followed by a comment as the quote char
       if (c == '#') {
+        ADVANCE_C;
         while (lexer->get_column(lexer)) ADVANCE_C;
       }
+      if (lexer->eof(lexer)) return false;
       // TODO - in theory there could be POD here that we needa skip over (EYES ROLL)
     }
     c1 = lexer->lookahead;

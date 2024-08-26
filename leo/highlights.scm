@@ -27,6 +27,8 @@
 
 "self" @variable.builtin
 
+"async" @keyword.coroutine
+
 [
  "finalize"
  "function"
