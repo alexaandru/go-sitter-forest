@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.7.0
-	github.com/alexaandru/go-sitter-forest/abl v1.7.1
+	github.com/alexaandru/go-sitter-forest/abl v1.7.2
 	github.com/alexaandru/go-sitter-forest/ada v1.7.0
 	github.com/alexaandru/go-sitter-forest/agda v1.7.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.7.1
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latex v1.7.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.7.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.7.0
-	github.com/alexaandru/go-sitter-forest/leo v1.7.0
+	github.com/alexaandru/go-sitter-forest/leo v1.7.1
 	github.com/alexaandru/go-sitter-forest/lexc v1.7.0
 	github.com/alexaandru/go-sitter-forest/lexd v1.7.0
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.7.0
@@ -204,17 +204,17 @@ require (
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.7.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.7.0
 	github.com/alexaandru/go-sitter-forest/lookml v1.7.0
-	github.com/alexaandru/go-sitter-forest/lox v1.7.2
+	github.com/alexaandru/go-sitter-forest/lox v1.7.3
 	github.com/alexaandru/go-sitter-forest/lua v1.7.0
 	github.com/alexaandru/go-sitter-forest/luadoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/luap v1.7.0
 	github.com/alexaandru/go-sitter-forest/luau v1.7.0
 	github.com/alexaandru/go-sitter-forest/m68k v1.7.0
 	github.com/alexaandru/go-sitter-forest/magik v1.7.0
-	github.com/alexaandru/go-sitter-forest/make v1.7.0
+	github.com/alexaandru/go-sitter-forest/make v1.7.1
 	github.com/alexaandru/go-sitter-forest/markdown v1.7.0
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.7.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.7.2
+	github.com/alexaandru/go-sitter-forest/matlab v1.7.3
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.7.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.7.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.7.1
@@ -249,7 +249,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.7.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.7.0
 	github.com/alexaandru/go-sitter-forest/pem v1.7.0
-	github.com/alexaandru/go-sitter-forest/perl v1.7.0
+	github.com/alexaandru/go-sitter-forest/perl v1.7.1
 	github.com/alexaandru/go-sitter-forest/perm v1.7.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.7.0
 	github.com/alexaandru/go-sitter-forest/php v1.7.1
@@ -270,7 +270,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/prolog v1.7.0
 	github.com/alexaandru/go-sitter-forest/promql v1.7.0
 	github.com/alexaandru/go-sitter-forest/properties v1.7.0
-	github.com/alexaandru/go-sitter-forest/proto v1.7.0
+	github.com/alexaandru/go-sitter-forest/proto v1.7.1
 	github.com/alexaandru/go-sitter-forest/prql v1.7.0
 	github.com/alexaandru/go-sitter-forest/psv v1.7.0
 	github.com/alexaandru/go-sitter-forest/pug v1.7.0
@@ -281,7 +281,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/python v1.7.2
 	github.com/alexaandru/go-sitter-forest/ql v1.7.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.7.0
-	github.com/alexaandru/go-sitter-forest/qmljs v1.7.0
+	github.com/alexaandru/go-sitter-forest/qmljs v1.7.1
 	github.com/alexaandru/go-sitter-forest/quakec v1.7.0
 	github.com/alexaandru/go-sitter-forest/query v1.7.0
 	github.com/alexaandru/go-sitter-forest/r v1.7.0
@@ -304,7 +304,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ron v1.7.0
 	github.com/alexaandru/go-sitter-forest/rstml v1.7.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.7.0
-	github.com/alexaandru/go-sitter-forest/ruby v1.7.1
+	github.com/alexaandru/go-sitter-forest/ruby v1.7.2
 	github.com/alexaandru/go-sitter-forest/rust v1.7.1
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.7.0
 	github.com/alexaandru/go-sitter-forest/scala v1.7.1
@@ -339,17 +339,17 @@ require (
 	github.com/alexaandru/go-sitter-forest/styled v1.7.0
 	github.com/alexaandru/go-sitter-forest/supercollider v1.7.0
 	github.com/alexaandru/go-sitter-forest/surface v1.7.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.7.2
-	github.com/alexaandru/go-sitter-forest/sus v1.7.1
+	github.com/alexaandru/go-sitter-forest/surrealql v1.7.3
+	github.com/alexaandru/go-sitter-forest/sus v1.7.2
 	github.com/alexaandru/go-sitter-forest/svelte v1.7.0
-	github.com/alexaandru/go-sitter-forest/swift v1.7.1
+	github.com/alexaandru/go-sitter-forest/swift v1.7.2
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.7.0
 	github.com/alexaandru/go-sitter-forest/syphon v1.7.0
 	github.com/alexaandru/go-sitter-forest/systemtap v1.7.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.7.0
 	github.com/alexaandru/go-sitter-forest/t32 v1.7.0
 	github.com/alexaandru/go-sitter-forest/tablegen v1.7.0
-	github.com/alexaandru/go-sitter-forest/tact v1.7.0
+	github.com/alexaandru/go-sitter-forest/tact v1.7.1
 	github.com/alexaandru/go-sitter-forest/tcl v1.7.0
 	github.com/alexaandru/go-sitter-forest/teal v1.7.0
 	github.com/alexaandru/go-sitter-forest/templ v1.7.1
