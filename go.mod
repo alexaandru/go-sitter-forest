@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.7.0
-	github.com/alexaandru/go-sitter-forest/abl v1.7.2
+	github.com/alexaandru/go-sitter-forest/abl v1.7.3
 	github.com/alexaandru/go-sitter-forest/ada v1.7.0
 	github.com/alexaandru/go-sitter-forest/agda v1.7.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.7.1
@@ -53,7 +53,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.7.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.7.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.7.4
+	github.com/alexaandru/go-sitter-forest/cognate v1.7.5
 	github.com/alexaandru/go-sitter-forest/comment v1.7.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.7.0
 	github.com/alexaandru/go-sitter-forest/context v1.7.0
@@ -84,7 +84,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dune v1.7.0
 	github.com/alexaandru/go-sitter-forest/earthfile v1.7.0
 	github.com/alexaandru/go-sitter-forest/ebnf v1.7.0
-	github.com/alexaandru/go-sitter-forest/editorconfig v1.7.0
+	github.com/alexaandru/go-sitter-forest/editorconfig v1.7.1
 	github.com/alexaandru/go-sitter-forest/eds v1.7.0
 	github.com/alexaandru/go-sitter-forest/eex v1.7.0
 	github.com/alexaandru/go-sitter-forest/effekt v1.7.0
@@ -128,7 +128,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glsl v1.7.0
 	github.com/alexaandru/go-sitter-forest/gn v1.7.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.7.0
-	github.com/alexaandru/go-sitter-forest/go v1.7.2
+	github.com/alexaandru/go-sitter-forest/go v1.7.3
 	github.com/alexaandru/go-sitter-forest/gobra v1.7.0
 	github.com/alexaandru/go-sitter-forest/goctl v1.7.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.7.0
@@ -172,7 +172,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/inko v1.7.1
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.7.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.7.0
-	github.com/alexaandru/go-sitter-forest/janet v1.7.0
+	github.com/alexaandru/go-sitter-forest/janet v1.7.1
 	github.com/alexaandru/go-sitter-forest/java v1.7.0
 	github.com/alexaandru/go-sitter-forest/javascript v1.7.1
 	github.com/alexaandru/go-sitter-forest/jq v1.7.0
@@ -184,7 +184,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.7.0
 	github.com/alexaandru/go-sitter-forest/julia v1.7.0
 	github.com/alexaandru/go-sitter-forest/just v1.7.0
-	github.com/alexaandru/go-sitter-forest/kcl v1.7.1
+	github.com/alexaandru/go-sitter-forest/kcl v1.7.2
 	github.com/alexaandru/go-sitter-forest/kconfig v1.7.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.7.0
 	github.com/alexaandru/go-sitter-forest/koan v1.7.0
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latex v1.7.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.7.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.7.0
-	github.com/alexaandru/go-sitter-forest/leo v1.7.1
+	github.com/alexaandru/go-sitter-forest/leo v1.7.2
 	github.com/alexaandru/go-sitter-forest/lexc v1.7.0
 	github.com/alexaandru/go-sitter-forest/lexd v1.7.0
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.7.0
@@ -328,7 +328,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.7.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.7.0
 	github.com/alexaandru/go-sitter-forest/spicy v1.7.0
-	github.com/alexaandru/go-sitter-forest/sql v1.7.0
+	github.com/alexaandru/go-sitter-forest/sql v1.7.1
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.7.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.7.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.7.0
@@ -376,7 +376,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.7.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.7.0
 	github.com/alexaandru/go-sitter-forest/unison v1.7.0
-	github.com/alexaandru/go-sitter-forest/ursa v1.7.0
+	github.com/alexaandru/go-sitter-forest/ursa v1.7.1
 	github.com/alexaandru/go-sitter-forest/usd v1.7.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.7.0
 	github.com/alexaandru/go-sitter-forest/v v1.7.0
