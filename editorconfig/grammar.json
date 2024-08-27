@@ -1,11 +1,12 @@
 {
   "reference": "main",
-  "revision": "fd0d64d2fc91eab903bed4c11ce280b62e46f16e",
+  "revision": "828befb986610c5c4cf465f26609e96027604a2a",
   "grammarSha": "02c0ab6af9199799802ce882692cda660bfa33748245e94a21b351a670d60783",
   "language": "editorconfig",
   "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
   "maintainedBy": "@ValdezFOmar",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skip": true
 }

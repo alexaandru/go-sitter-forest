@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "4a0558cc0fcd7a6110815b9bbd7cc12d7ab31e74",
+  "revision": "34ccfd58d3baee7636f62d9326f32092264e8407",
   "grammarSha": "40bc54c63ccec958dbb383cc9b0014bff4828df7690ebd6f1a6aefcad292247e",
   "language": "slint",
   "url": "https://github.com/slint-ui/tree-sitter-slint",

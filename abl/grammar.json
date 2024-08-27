@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "71173d89fb27484cce385969c5c6dd365d503be0",
-  "grammarSha": "1700f553d5641612b26f4a5ebda2f10c6d096dc37ee801ea856fde7c83ca8a26",
+  "revision": "382632902a7b0d1a62bbf9cd23dd9082011b4e23",
+  "grammarSha": "96be2ab529c2d71b9c15d63f2573b84bc2527239c27dd548624a276e5f476587",
   "language": "abl",
   "url": "https://github.com/usagi-coffee/tree-sitter-abl",
   "maintainedBy": "@jkbz64",

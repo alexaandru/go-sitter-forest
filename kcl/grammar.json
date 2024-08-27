@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "610f2b5946fe20ca8d6af1653119f206c8b0cfaa",
-  "grammarSha": "a368b663812bd06a20d2ee315d44b8a9fec68e6f73610aceb135c636365a9629",
+  "revision": "e7961cc32ad831723db37757fe265fb615bc310f",
+  "grammarSha": "41af4f0582648b6c84faacd4463c03ad36ad76bbf5980a627fbc78cd7a509036",
   "language": "kcl",
   "url": "https://github.com/kcl-lang/tree-sitter-kcl",
   "maintainedBy": "@Vishalk91-4",
