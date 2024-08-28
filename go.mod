@@ -9,7 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.7.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.7.1
 	github.com/alexaandru/go-sitter-forest/amber v1.7.1
-	github.com/alexaandru/go-sitter-forest/angular v1.7.2
+	github.com/alexaandru/go-sitter-forest/angular v1.7.3
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.7.0
 	github.com/alexaandru/go-sitter-forest/apex v1.7.0
 	github.com/alexaandru/go-sitter-forest/applesoft v1.7.0
@@ -73,7 +73,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/devicetree v1.7.0
 	github.com/alexaandru/go-sitter-forest/dezyne v1.7.0
 	github.com/alexaandru/go-sitter-forest/dhall v1.7.0
-	github.com/alexaandru/go-sitter-forest/diff v1.7.0
+	github.com/alexaandru/go-sitter-forest/diff v1.7.1
 	github.com/alexaandru/go-sitter-forest/disassembly v1.7.0
 	github.com/alexaandru/go-sitter-forest/djot v1.7.0
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.7.0
@@ -108,7 +108,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.7.0
 	github.com/alexaandru/go-sitter-forest/foam v1.7.0
 	github.com/alexaandru/go-sitter-forest/forth v1.7.0
-	github.com/alexaandru/go-sitter-forest/fortran v1.7.0
+	github.com/alexaandru/go-sitter-forest/fortran v1.7.1
 	github.com/alexaandru/go-sitter-forest/fsh v1.7.0
 	github.com/alexaandru/go-sitter-forest/fsharp v1.7.1
 	github.com/alexaandru/go-sitter-forest/func v1.7.0
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latex v1.7.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.7.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.7.0
-	github.com/alexaandru/go-sitter-forest/leo v1.7.2
+	github.com/alexaandru/go-sitter-forest/leo v1.7.3
 	github.com/alexaandru/go-sitter-forest/lexc v1.7.0
 	github.com/alexaandru/go-sitter-forest/lexd v1.7.0
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.7.0
@@ -252,8 +252,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.7.1
 	github.com/alexaandru/go-sitter-forest/perm v1.7.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.7.0
-	github.com/alexaandru/go-sitter-forest/php v1.7.1
-	github.com/alexaandru/go-sitter-forest/php_only v1.7.2
+	github.com/alexaandru/go-sitter-forest/php v1.7.2
+	github.com/alexaandru/go-sitter-forest/php_only v1.7.3
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.7.0
 	github.com/alexaandru/go-sitter-forest/pic v1.7.2
 	github.com/alexaandru/go-sitter-forest/pint v1.7.0
@@ -376,7 +376,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.7.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.7.0
 	github.com/alexaandru/go-sitter-forest/unison v1.7.0
-	github.com/alexaandru/go-sitter-forest/ursa v1.7.1
+	github.com/alexaandru/go-sitter-forest/ursa v1.7.2
 	github.com/alexaandru/go-sitter-forest/usd v1.7.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.7.0
 	github.com/alexaandru/go-sitter-forest/v v1.7.0
@@ -395,7 +395,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wbproto v1.7.0
 	github.com/alexaandru/go-sitter-forest/wgsl v1.7.0
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.7.0
-	github.com/alexaandru/go-sitter-forest/wing v1.7.0
+	github.com/alexaandru/go-sitter-forest/wing v1.7.1
 	github.com/alexaandru/go-sitter-forest/wit v1.7.0
 	github.com/alexaandru/go-sitter-forest/woml v1.7.0
 	github.com/alexaandru/go-sitter-forest/xcompose v1.7.0
