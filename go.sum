@@ -808,8 +808,8 @@ github.com/alexaandru/go-sitter-forest/zeek v1.7.0 h1:MH15YKKe98PJEHYDPkwNJnZ1Ot
 github.com/alexaandru/go-sitter-forest/zeek v1.7.0/go.mod h1:yi2cgxpd+a9ipPK3LMVMV8UrX/chZRoGly2UEFqqeJs=
 github.com/alexaandru/go-sitter-forest/zig v1.7.0 h1:beLDYaSZrhRZPWhb6yshX42twLES2F+MAOeUDmu4LEU=
 github.com/alexaandru/go-sitter-forest/zig v1.7.0/go.mod h1:TPYg0UtYJygZqe7x2LTAXT6ZDtK/nKq7cK3CJ6FxeU0=
-github.com/alexaandru/go-tree-sitter-bare v1.5.0 h1:+fCttVTxY1yOd5i1SGLohZeGzXCgBzvejaAKQtf9h3U=
-github.com/alexaandru/go-tree-sitter-bare v1.5.0/go.mod h1:5gx59gMtIPOLlnrkpP1KdREczENWSpgKKBAaXsyPumE=
+github.com/alexaandru/go-tree-sitter-bare v1.6.0 h1:UEI56MuGPiOUU9w6fh0GvtMTEtwLnB+1GquR+XjY7Mg=
+github.com/alexaandru/go-tree-sitter-bare v1.6.0/go.mod h1:5gx59gMtIPOLlnrkpP1KdREczENWSpgKKBAaXsyPumE=
 golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa h1:ELnwvuAXPNtPk1TJRuGkI9fDTwym6AYBu0qzT8AcHdI=
 golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa/go.mod h1:akd2r19cwCdwSwWeIdzYQGa/EZZyqcOdwWiwj5L5eKQ=
 golang.org/x/sync v0.8.0 h1:3NFvSEYkUoMifnESzZl15y791HH1qU2xm6eCJU5ZPXQ=

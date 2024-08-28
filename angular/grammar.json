@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "c2d1f6d4c5f1993afce7f984ca2675af8d67457c",
-  "grammarSha": "cc07f624cb747e8af53b586697fbf28988889314e7edbe648cd647832907cbb7",
+  "revision": "c473dbc54ca27f95d8928cfdb2a1a79300e16951",
+  "grammarSha": "e012febae8f18461fe27fd52fd8d2671f75b2a8d31d53c0f830cd0f528d2dfaa",
   "language": "angular",
   "url": "https://github.com/dlvandenberg/tree-sitter-angular",
   "maintainedBy": "@dlvandenberg",

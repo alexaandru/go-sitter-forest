@@ -318,6 +318,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 
 	shas[grammarJS] = fmt.Sprintf("%x", sha256.Sum256(grc))
 	replMap := map[string]string{
+		`export default `: `module.exports = `,
 		// Patching broken grammars so that they compile.
 		// This is a bit "brute-force", but seems to do the job ¯\_(ツ)_/¯.
 		`/u{[\da-fA-F]+}/`:    `/u[\da-fA-F]+/`,

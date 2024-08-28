@@ -408,7 +408,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.7.0
 	github.com/alexaandru/go-sitter-forest/zeek v1.7.0
 	github.com/alexaandru/go-sitter-forest/zig v1.7.0
-	github.com/alexaandru/go-tree-sitter-bare v1.5.0
+	github.com/alexaandru/go-tree-sitter-bare v1.6.0
 	golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa
 	golang.org/x/sync v0.8.0
 )

@@ -55,8 +55,8 @@
   },
   {
     "reference": "main",
-    "revision": "c2d1f6d4c5f1993afce7f984ca2675af8d67457c",
-    "grammarSha": "cc07f624cb747e8af53b586697fbf28988889314e7edbe648cd647832907cbb7",
+    "revision": "c473dbc54ca27f95d8928cfdb2a1a79300e16951",
+    "grammarSha": "e012febae8f18461fe27fd52fd8d2671f75b2a8d31d53c0f830cd0f528d2dfaa",
     "language": "angular",
     "url": "https://github.com/dlvandenberg/tree-sitter-angular",
     "maintainedBy": "@dlvandenberg",
@@ -793,15 +793,14 @@
   },
   {
     "reference": "main",
-    "revision": "828befb986610c5c4cf465f26609e96027604a2a",
-    "grammarSha": "02c0ab6af9199799802ce882692cda660bfa33748245e94a21b351a670d60783",
+    "revision": "faf014c607f912ff666b20183d32a03dcfc3111d",
+    "grammarSha": "42f5b4cc4bf87afccebfeaa0ca7aa0faeb3e1e11da0496c4d86b5994ab0020f7",
     "language": "editorconfig",
     "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
     "maintainedBy": "@ValdezFOmar",
     "files": [
       "scanner.c"
-    ],
-    "skip": true
+    ]
   },
   {
     "reference": "main",
@@ -1015,7 +1014,7 @@
   },
   {
     "reference": "master",
-    "revision": "6b633433fb3f132f21250cf8e8be76d5a6389b7e",
+    "revision": "8f842945abefb76b9a68c0835619b37060b8f098",
     "grammarSha": "228963cd669cd83562c52dc44445f94449ba3e870697e0a8ad963d7e4a39aa4a",
     "language": "fortran",
     "url": "https://github.com/stadelmanma/tree-sitter-fortran",
@@ -2444,7 +2443,7 @@
   },
   {
     "reference": "master",
-    "revision": "a552625b56c19006932cff1f207ebc07b55ed12d",
+    "revision": "d13c91bc48aedf7db8240c52503eee694134ec53",
     "grammarSha": "14872df220fd8c7f3f111f7682031a60dd997b324ab28690f207d6a8ac7f6d37",
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -2457,7 +2456,7 @@
   },
   {
     "reference": "master",
-    "revision": "a552625b56c19006932cff1f207ebc07b55ed12d",
+    "revision": "d13c91bc48aedf7db8240c52503eee694134ec53",
     "grammarSha": "5ff29d2e69a47c7fd1da1a4e6172bde5b40d5889934787941b09994ad5cc5414",
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -3660,8 +3659,8 @@
   },
   {
     "reference": "main",
-    "revision": "c7b40ac6cf00b635f89a93197190918e8ec1a684",
-    "grammarSha": "5661843015ce69fa99b3ea85cb7deb69b3c3e340d88090158ccf4a58a1b895c9",
+    "revision": "1d7d9b9d3c941d9b14078dd1377d68e398e8dea0",
+    "grammarSha": "47b3ecfcffcd83131e91f44df9278ce1a4565d5e0f44ea6532634e5185e0f1a7",
     "language": "ursa",
     "url": "https://github.com/ursalang/tree-sitter-ursa",
     "maintainedBy": "@rrthomas",
@@ -3861,7 +3860,7 @@
   },
   {
     "reference": "main",
-    "revision": "b06b407c0dd4c02da38f8f97b9438141e81c63a9",
+    "revision": "f773d4ad6336cf3116ecc7f360cee60937129b17",
     "grammarSha": "aff9c5d4947d46b060e90fbe7fcf3980ecbf91d6cb43ef2a6e69609322b2c02b",
     "language": "wing",
     "url": "https://github.com/winglang/wing",
