@@ -228,7 +228,7 @@ static TSCharacterRange sym_unknownDirective_character_set_1[] = {
   {0x104b0, 0x104d3}, {0x104d8, 0x104fb}, {0x10500, 0x10527}, {0x10530, 0x10563}, {0x10570, 0x1057a}, {0x1057c, 0x1058a}, {0x1058c, 0x10592}, {0x10594, 0x10595},
   {0x10597, 0x105a1}, {0x105a3, 0x105b1}, {0x105b3, 0x105b9}, {0x105bb, 0x105bc}, {0x10600, 0x10736}, {0x10740, 0x10755}, {0x10760, 0x10767}, {0x10780, 0x10785},
   {0x10787, 0x107b0}, {0x107b2, 0x107ba}, {0x10800, 0x10805}, {0x10808, 0x10808}, {0x1080a, 0x10835}, {0x10837, 0x10838}, {0x1083c, 0x1083c}, {0x1083f, 0x10855},
-  {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915}, {0x10920, 0x1092b},
+  {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915},
 };
 
 static TSCharacterRange sym_unknownDirective_character_set_2[] = {
@@ -285,7 +285,7 @@ static TSCharacterRange sym_unknownDirective_character_set_2[] = {
   {0x10400, 0x1049d}, {0x104b0, 0x104d3}, {0x104d8, 0x104fb}, {0x10500, 0x10527}, {0x10530, 0x10563}, {0x10570, 0x1057a}, {0x1057c, 0x1058a}, {0x1058c, 0x10592},
   {0x10594, 0x10595}, {0x10597, 0x105a1}, {0x105a3, 0x105b1}, {0x105b3, 0x105b9}, {0x105bb, 0x105bc}, {0x10600, 0x10736}, {0x10740, 0x10755}, {0x10760, 0x10767},
   {0x10780, 0x10785}, {0x10787, 0x107b0}, {0x107b2, 0x107ba}, {0x10800, 0x10805}, {0x10808, 0x10808}, {0x1080a, 0x10835}, {0x10837, 0x10838}, {0x1083c, 0x1083c},
-  {0x1083f, 0x10855}, {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915}, {0x10920, 0x1092b},
+  {0x1083f, 0x10855}, {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915},
 };
 
 static TSCharacterRange sym_value_character_set_1[] = {
@@ -343,7 +343,7 @@ static TSCharacterRange sym_value_character_set_1[] = {
   {0x10530, 0x10563}, {0x10570, 0x1057a}, {0x1057c, 0x1058a}, {0x1058c, 0x10592}, {0x10594, 0x10595}, {0x10597, 0x105a1}, {0x105a3, 0x105b1}, {0x105b3, 0x105b9},
   {0x105bb, 0x105bc}, {0x10600, 0x10736}, {0x10740, 0x10755}, {0x10760, 0x10767}, {0x10780, 0x10785}, {0x10787, 0x107b0}, {0x107b2, 0x107ba}, {0x10800, 0x10805},
   {0x10808, 0x10808}, {0x1080a, 0x10835}, {0x10837, 0x10838}, {0x1083c, 0x1083c}, {0x1083f, 0x10855}, {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2},
-  {0x108f4, 0x108f5}, {0x10900, 0x10915}, {0x10920, 0x1092b},
+  {0x108f4, 0x108f5}, {0x10900, 0x10915},
 };
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
@@ -370,7 +370,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0);
-      if (set_contains(sym_unknownDirective_character_set_1, 430, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_1, 429, lookahead)) ADVANCE(50);
       END_STATE();
     case 1:
       if (lookahead == ' ') ADVANCE(4);
@@ -379,7 +379,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '#') ADVANCE(1);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(2);
-      if (set_contains(sym_value_character_set_1, 435, lookahead)) ADVANCE(51);
+      if (set_contains(sym_value_character_set_1, 434, lookahead)) ADVANCE(51);
       END_STATE();
     case 3:
       ACCEPT_TOKEN(ts_builtin_sym_end);
@@ -391,232 +391,232 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 5:
       ACCEPT_TOKEN(sym_userAgent);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 6:
       ACCEPT_TOKEN(sym_allow);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 7:
       ACCEPT_TOKEN(sym_host);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 8:
       ACCEPT_TOKEN(sym_disallow);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 9:
       ACCEPT_TOKEN(sym_crawlDelay);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 10:
       ACCEPT_TOKEN(sym_sitemap);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 11:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == '-') ADVANCE(48);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 12:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == '-') ADVANCE(49);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 13:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'a') ADVANCE(46);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 14:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'a') ADVANCE(35);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 15:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'a') ADVANCE(47);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 16:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'a') ADVANCE(29);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 17:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'e') ADVANCE(30);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 18:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'e') ADVANCE(31);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 19:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'e') ADVANCE(37);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 20:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'e') ADVANCE(27);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 21:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'g') ADVANCE(18);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 22:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'i') ADVANCE(43);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 23:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'i') ADVANCE(39);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 24:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'l') ADVANCE(25);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 25:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'l') ADVANCE(32);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 26:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'l') ADVANCE(12);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 27:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'l') ADVANCE(15);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 28:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'l') ADVANCE(34);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 29:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'l') ADVANCE(28);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 30:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'm') ADVANCE(14);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 31:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'n') ADVANCE(42);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 32:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'o') ADVANCE(44);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 33:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'o') ADVANCE(40);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 34:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'o') ADVANCE(45);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 35:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'p') ADVANCE(10);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 36:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'r') ADVANCE(13);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 37:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'r') ADVANCE(11);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 38:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 's') ADVANCE(19);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 39:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 's') ADVANCE(16);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 40:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 's') ADVANCE(41);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 41:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 't') ADVANCE(7);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 42:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 't') ADVANCE(5);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 43:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 't') ADVANCE(17);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 44:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'w') ADVANCE(6);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 45:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'w') ADVANCE(8);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 46:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'w') ADVANCE(26);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 47:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'y') ADVANCE(9);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 48:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'A' ||
           lookahead == 'a') ADVANCE(21);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 49:
       ACCEPT_TOKEN(sym_unknownDirective);
       if (lookahead == 'D' ||
           lookahead == 'd') ADVANCE(20);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 50:
       ACCEPT_TOKEN(sym_unknownDirective);
-      if (set_contains(sym_unknownDirective_character_set_2, 431, lookahead)) ADVANCE(50);
+      if (set_contains(sym_unknownDirective_character_set_2, 430, lookahead)) ADVANCE(50);
       END_STATE();
     case 51:
       ACCEPT_TOKEN(sym_value);
-      if (set_contains(sym_value_character_set_1, 435, lookahead)) ADVANCE(51);
+      if (set_contains(sym_value_character_set_1, 434, lookahead)) ADVANCE(51);
       END_STATE();
     case 52:
       ACCEPT_TOKEN(anon_sym_COLON);

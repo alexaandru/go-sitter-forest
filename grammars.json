@@ -916,7 +916,8 @@
     "maintainedBy": "@pinbraerts",
     "files": [
       "scanner.c"
-    ]
+    ],
+    "skip": true
   },
   {
     "reference": "main",
@@ -1590,7 +1591,8 @@
     "maintainedBy": "@wldmr",
     "files": [
       "scanner.c"
-    ]
+    ],
+    "skip": true
   },
   {
     "reference": "main",
@@ -1966,7 +1968,7 @@
   },
   {
     "reference": "master",
-    "revision": "0f709b0e3f34596bd0de02ebbe382280ce90b351",
+    "revision": "f623b24edcfb7b40041ea8e22333a256d4edd777",
     "grammarSha": "b6a0b5811b4280e51c2bda1f7da79a66b0e6579ee22857667083377fa3d4f698",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -2125,7 +2127,7 @@
   },
   {
     "reference": "master",
-    "revision": "fd8cbd544bdff4acdfe1da63b403b5c591059aeb",
+    "revision": "02af5a1a1cfa69a094e3136b10dfb602f968232e",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",

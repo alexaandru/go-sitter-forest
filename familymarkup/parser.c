@@ -690,7 +690,7 @@ static TSCharacterRange sym_name_character_set_2[] = {
   {0x10570, 0x1057a}, {0x1057c, 0x1058a}, {0x1058c, 0x10592}, {0x10594, 0x10595}, {0x10597, 0x105a1}, {0x105a3, 0x105b1}, {0x105b3, 0x105b9}, {0x105bb, 0x105bc},
   {0x10600, 0x10736}, {0x10740, 0x10755}, {0x10760, 0x10767}, {0x10780, 0x10785}, {0x10787, 0x107b0}, {0x107b2, 0x107ba}, {0x10800, 0x10805}, {0x10808, 0x10808},
   {0x1080a, 0x10835}, {0x10837, 0x10838}, {0x1083c, 0x1083c}, {0x1083f, 0x10855}, {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5},
-  {0x10900, 0x10915}, {0x10920, 0x1092b},
+  {0x10900, 0x10915},
 };
 
 static TSCharacterRange aux_sym_unknown_token1_character_set_1[] = {
@@ -747,7 +747,7 @@ static TSCharacterRange aux_sym_unknown_token1_character_set_1[] = {
   {0x104b0, 0x104d3}, {0x104d8, 0x104fb}, {0x10500, 0x10527}, {0x10530, 0x10563}, {0x10570, 0x1057a}, {0x1057c, 0x1058a}, {0x1058c, 0x10592}, {0x10594, 0x10595},
   {0x10597, 0x105a1}, {0x105a3, 0x105b1}, {0x105b3, 0x105b9}, {0x105bb, 0x105bc}, {0x10600, 0x10736}, {0x10740, 0x10755}, {0x10760, 0x10767}, {0x10780, 0x10785},
   {0x10787, 0x107b0}, {0x107b2, 0x107ba}, {0x10800, 0x10805}, {0x10808, 0x10808}, {0x1080a, 0x10835}, {0x10837, 0x10838}, {0x1083c, 0x1083c}, {0x1083f, 0x10855},
-  {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915}, {0x10920, 0x1092b},
+  {0x10860, 0x10876}, {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915},
 };
 
 static TSCharacterRange aux_sym_unknown_token1_character_set_2[] = {
@@ -805,7 +805,7 @@ static TSCharacterRange aux_sym_unknown_token1_character_set_2[] = {
   {0x104d8, 0x104fb}, {0x10500, 0x10527}, {0x10530, 0x10563}, {0x10570, 0x1057a}, {0x1057c, 0x1058a}, {0x1058c, 0x10592}, {0x10594, 0x10595}, {0x10597, 0x105a1},
   {0x105a3, 0x105b1}, {0x105b3, 0x105b9}, {0x105bb, 0x105bc}, {0x10600, 0x10736}, {0x10740, 0x10755}, {0x10760, 0x10767}, {0x10780, 0x10785}, {0x10787, 0x107b0},
   {0x107b2, 0x107ba}, {0x10800, 0x10805}, {0x10808, 0x10808}, {0x1080a, 0x10835}, {0x10837, 0x10838}, {0x1083c, 0x1083c}, {0x1083f, 0x10855}, {0x10860, 0x10876},
-  {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915}, {0x10920, 0x1092b},
+  {0x10880, 0x1089e}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x10900, 0x10915},
 };
 
 static TSCharacterRange sym_words_character_set_1[] = {
@@ -997,7 +997,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(17);
       if (set_contains(sym_name_character_set_1, 611, lookahead)) ADVANCE(28);
       if (set_contains(sym_words_character_set_1, 623, lookahead)) ADVANCE(32);
-      if (set_contains(aux_sym_unknown_token1_character_set_1, 430, lookahead)) ADVANCE(5);
+      if (set_contains(aux_sym_unknown_token1_character_set_1, 429, lookahead)) ADVANCE(5);
       END_STATE();
     case 1:
       if (lookahead == '\n') ADVANCE(12);
@@ -1016,11 +1016,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(4);
       if (set_contains(sym_words_character_set_2, 627, lookahead)) ADVANCE(32);
-      if (set_contains(aux_sym_unknown_token1_character_set_2, 437, lookahead)) ADVANCE(5);
+      if (set_contains(aux_sym_unknown_token1_character_set_2, 436, lookahead)) ADVANCE(5);
       END_STATE();
     case 5:
       if (lookahead == '?') ADVANCE(31);
-      if (set_contains(aux_sym_unknown_token1_character_set_2, 437, lookahead)) ADVANCE(5);
+      if (set_contains(aux_sym_unknown_token1_character_set_2, 436, lookahead)) ADVANCE(5);
       END_STATE();
     case 6:
       if (('\t' <= lookahead && lookahead <= '\r') ||
@@ -1158,11 +1158,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '?') ADVANCE(31);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(5);
-      if (set_contains(aux_sym_unknown_token1_character_set_2, 437, lookahead)) ADVANCE(28);
+      if (set_contains(aux_sym_unknown_token1_character_set_2, 436, lookahead)) ADVANCE(28);
       END_STATE();
     case 29:
       ACCEPT_TOKEN(sym_name);
-      if (set_contains(sym_name_character_set_2, 434, lookahead)) ADVANCE(29);
+      if (set_contains(sym_name_character_set_2, 433, lookahead)) ADVANCE(29);
       END_STATE();
     case 30:
       ACCEPT_TOKEN(anon_sym_QMARK);
@@ -1176,7 +1176,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(4);
       if (set_contains(sym_words_character_set_2, 627, lookahead)) ADVANCE(32);
-      if (set_contains(aux_sym_unknown_token1_character_set_2, 437, lookahead)) ADVANCE(5);
+      if (set_contains(aux_sym_unknown_token1_character_set_2, 436, lookahead)) ADVANCE(5);
       END_STATE();
     case 33:
       ACCEPT_TOKEN(sym_words);
