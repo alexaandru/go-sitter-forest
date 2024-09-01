@@ -1,4 +1,4 @@
-# 405 Supported Parsers
+# 407 Supported Parsers
 
 13 pending, 11 skipped regeneration, 27 missing queries
 
@@ -127,6 +127,8 @@
 - [x] [gitignore](https://github.com/shunsambongi/tree-sitter-gitignore) ✔️ (maintained by @theHamsta)
 - [x] [gleam](https://github.com/gleam-lang/tree-sitter-gleam) ✔️ (maintained by @amaanq)
 - [x] [Glimmer and Ember](https://github.com/ember-tooling/tree-sitter-glimmer) ✔️ (maintained by @NullVoxPopuli)
+- [x] [glimmer_javascript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript) ✔️ (maintained by @NullVoxPopuli)
+- [x] [glimmer_typescript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript) ✔️ (maintained by @NullVoxPopuli)
 - [x] [glint](https://github.com/LensPlaysGames/tree-sitter-glint) ✔️ (maintained by @LensPlaysGames)
 - [x] [glsl](https://github.com/tree-sitter-grammars/tree-sitter-glsl) ✔️ (maintained by @theHamsta)
 - [x] [GN (Generate Ninja)](https://github.com/tree-sitter-grammars/tree-sitter-gn) ✔️ (maintained by @amaanq)
@@ -263,8 +265,8 @@
 - [x] [perl](https://github.com/tree-sitter-perl/tree-sitter-perl) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [perm](https://github.com/theoriginalstove/tree-sitter-perm) ✔️ (maintained by @theoriginalstove)
 - [x] [pgn](https://github.com/rolandwalker/tree-sitter-pgn) ✔️ (maintained by @rolandwalker)
-- [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
-- [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka)
+- [x] [php](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka, @calebdw)
+- [x] [php_only](https://github.com/tree-sitter/tree-sitter-php) ✔️ (maintained by @tk-shirasaka, @calebdw)
 - [x] [phpdoc](https://github.com/claytonrcarter/tree-sitter-phpdoc) ✔️ (maintained by @mikehaertl)
 - [x] [pic](https://github.com/smoeding/tree-sitter-pic) 🗸 (maintained by @smoeding)
 - [x] [pint](https://github.com/essential-contributions/tree-sitter-pint) ✔️ (maintained by @mitchmindtree)
@@ -420,7 +422,7 @@
 - [x] [yuck](https://github.com/tree-sitter-grammars/tree-sitter-yuck) ✔️ (maintained by @Philipp-M, @amaanq)
 - [x] [zathurarc](https://github.com/Freed-Wu/tree-sitter-zathurarc) ✔️ (maintained by @Freed-Wu)
 - [x] [zeek](https://github.com/zeek/tree-sitter-zeek) ✔️ (maintained by @bbannier)
-- [x] [zig](https://github.com/maxxnino/tree-sitter-zig) ✔️ (maintained by @maxxnino)
+- [x] [zig](https://github.com/tree-sitter-grammars/tree-sitter-zig) ✔️ (maintained by @amaanq)
 - [ ] [zsh](https://github.com/tree-sitter-grammars/tree-sitter-zsh) (maintained by @amaanq; last (and only) commit says: 'do not use')
 <!--parserinfo-->
 

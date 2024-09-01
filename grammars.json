@@ -1169,6 +1169,22 @@
   },
   {
     "reference": "main",
+    "revision": "a260911201684f80cf815418b3771e6c39309f81",
+    "grammarSha": "0a6f2bb79a88db91432066c4fb486deb5898d6d80e70b68a5bff5261fd3d6ad4",
+    "language": "glimmer_javascript",
+    "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
+    "maintainedBy": "@NullVoxPopuli"
+  },
+  {
+    "reference": "main",
+    "revision": "9d018a0f93417e6951264a26093b89ee63df7315",
+    "grammarSha": "a63bf7b026f1091fadd7483370f3b9b90bb35b33c5d82ade9600b6f079e3e85e",
+    "language": "glimmer_typescript",
+    "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
+    "maintainedBy": "@NullVoxPopuli"
+  },
+  {
+    "reference": "main",
     "revision": "c6cf1fb6479f4412bd390aa3366a57f9cd0d67cd",
     "grammarSha": "f1b101e2bcc3c162f427a80b7763f79f9208aff4779d9f3a56d0cf9a764b4648",
     "language": "glint",
@@ -2449,7 +2465,7 @@
     "grammarSha": "14872df220fd8c7f3f111f7682031a60dd997b324ab28690f207d6a8ac7f6d37",
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
-    "maintainedBy": "@tk-shirasaka",
+    "maintainedBy": "@tk-shirasaka, @calebdw",
     "srcRoot": "php",
     "files": [
       "scanner.c",
@@ -2462,7 +2478,7 @@
     "grammarSha": "5ff29d2e69a47c7fd1da1a4e6172bde5b40d5889934787941b09994ad5cc5414",
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
-    "maintainedBy": "@tk-shirasaka",
+    "maintainedBy": "@tk-shirasaka, @calebdw",
     "srcRoot": "php_only",
     "files": [
       "scanner.c",
@@ -3975,12 +3991,12 @@
     "maintainedBy": "@bbannier"
   },
   {
-    "reference": "main",
-    "revision": "2bac4cc6c697d46a193905fef6d003bfa0bfabfd",
-    "grammarSha": "ca1dd7bd1bef0bdfcec6c78d2c9a32e102b677cffc3d938a38e44dec5270aea3",
+    "reference": "master",
+    "revision": "21e2218e0ec7f4e3c0640d16bf8c67e6f0a61e18",
+    "grammarSha": "7fcdf1c893a0043eaf6fc5295c5052bd8cc62b0f24bcd6986b6883e96b97de30",
     "language": "zig",
-    "url": "https://github.com/maxxnino/tree-sitter-zig",
-    "maintainedBy": "@maxxnino"
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-zig",
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
