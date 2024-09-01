@@ -80,7 +80,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.8.0
 	github.com/alexaandru/go-sitter-forest/dotenv v1.8.0
 	github.com/alexaandru/go-sitter-forest/doxygen v1.8.0
-	github.com/alexaandru/go-sitter-forest/dtd v1.8.0
+	github.com/alexaandru/go-sitter-forest/dtd v1.8.1
 	github.com/alexaandru/go-sitter-forest/dune v1.8.0
 	github.com/alexaandru/go-sitter-forest/earthfile v1.8.0
 	github.com/alexaandru/go-sitter-forest/ebnf v1.8.0
@@ -151,7 +151,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.8.0
 	github.com/alexaandru/go-sitter-forest/hcl v1.8.0
 	github.com/alexaandru/go-sitter-forest/heex v1.8.0
-	github.com/alexaandru/go-sitter-forest/helm v1.8.0
+	github.com/alexaandru/go-sitter-forest/helm v1.8.1
 	github.com/alexaandru/go-sitter-forest/hjson v1.8.0
 	github.com/alexaandru/go-sitter-forest/hlsl v1.8.0
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.8.0
@@ -241,8 +241,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/nqc v1.8.0
 	github.com/alexaandru/go-sitter-forest/objc v1.8.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.8.0
-	github.com/alexaandru/go-sitter-forest/ocaml v1.8.0
-	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.8.0
+	github.com/alexaandru/go-sitter-forest/ocaml v1.8.1
+	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.8.1
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.8.0
 	github.com/alexaandru/go-sitter-forest/odin v1.8.0
 	github.com/alexaandru/go-sitter-forest/org v1.8.0
@@ -254,8 +254,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.8.1
 	github.com/alexaandru/go-sitter-forest/perm v1.8.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.8.1
-	github.com/alexaandru/go-sitter-forest/php v1.8.0
-	github.com/alexaandru/go-sitter-forest/php_only v1.8.0
+	github.com/alexaandru/go-sitter-forest/php v1.8.1
+	github.com/alexaandru/go-sitter-forest/php_only v1.8.1
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.0
 	github.com/alexaandru/go-sitter-forest/pic v1.8.0
 	github.com/alexaandru/go-sitter-forest/pint v1.8.0
@@ -366,12 +366,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/toml v1.8.0
 	github.com/alexaandru/go-sitter-forest/tort v1.8.0
 	github.com/alexaandru/go-sitter-forest/tsv v1.8.0
-	github.com/alexaandru/go-sitter-forest/tsx v1.8.0
+	github.com/alexaandru/go-sitter-forest/tsx v1.8.1
 	github.com/alexaandru/go-sitter-forest/tup v1.8.0
 	github.com/alexaandru/go-sitter-forest/turtle v1.8.0
 	github.com/alexaandru/go-sitter-forest/twig v1.8.0
 	github.com/alexaandru/go-sitter-forest/twolc v1.8.0
-	github.com/alexaandru/go-sitter-forest/typescript v1.8.0
+	github.com/alexaandru/go-sitter-forest/typescript v1.8.1
 	github.com/alexaandru/go-sitter-forest/typespec v1.8.0
 	github.com/alexaandru/go-sitter-forest/typoscript v1.8.0
 	github.com/alexaandru/go-sitter-forest/typst v1.8.0
@@ -402,7 +402,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/woml v1.8.0
 	github.com/alexaandru/go-sitter-forest/xcompose v1.8.0
 	github.com/alexaandru/go-sitter-forest/xfst v1.8.0
-	github.com/alexaandru/go-sitter-forest/xml v1.8.0
+	github.com/alexaandru/go-sitter-forest/xml v1.8.1
 	github.com/alexaandru/go-sitter-forest/yaml v1.8.0
 	github.com/alexaandru/go-sitter-forest/yang v1.8.0
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.8.0
