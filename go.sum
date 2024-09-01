@@ -212,8 +212,8 @@ github.com/alexaandru/go-sitter-forest/fortran v1.8.0 h1:OEsUVWaTRZPR62ThkKLzXlr
 github.com/alexaandru/go-sitter-forest/fortran v1.8.0/go.mod h1:mUhIgJpGZGWUVeoTWDbmdB3J1qLS07k+D7E7TRMDpfE=
 github.com/alexaandru/go-sitter-forest/fsh v1.8.0 h1:XomYHBPmXQN2xBv7FqIDZsx6dWn170bprP9lMujaq7I=
 github.com/alexaandru/go-sitter-forest/fsh v1.8.0/go.mod h1:BM3HluQ/YNa9/A4/bxnYLpEr8rF++B8Tt9g0OC8bsbY=
-github.com/alexaandru/go-sitter-forest/fsharp v1.8.1 h1:eTqYRi9dV7uWpXi4Oe8+M5abpnJGoGJHPZIXbAkMjmw=
-github.com/alexaandru/go-sitter-forest/fsharp v1.8.1/go.mod h1:dTsmrcn90hIRYZC4YobTtaIf+YYKVM1mhGqgIqLei0Y=
+github.com/alexaandru/go-sitter-forest/fsharp v1.8.2 h1:itWck0sc+gPF2nfKlzOZ6IR6+O4HvUHQldjmHfDMqAc=
+github.com/alexaandru/go-sitter-forest/fsharp v1.8.2/go.mod h1:dTsmrcn90hIRYZC4YobTtaIf+YYKVM1mhGqgIqLei0Y=
 github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.0 h1:PYDDqrCgbGO4CgtYyF16iTgUTtU72K3imjrf986Yr2w=
 github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.0/go.mod h1:rOFqWpr0fral8NBmGsbmwZRrtXxFJK9fF+CIre1GL7o=
 github.com/alexaandru/go-sitter-forest/func v1.8.0 h1:dKHlOkK3xvpqFkbLur33XOD0QunJE3PNhsiLO/g9zVA=

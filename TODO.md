@@ -45,9 +45,6 @@ start with this one.
 
 ### 2. Query Automation related work
 
-FSharp can no longer find its queries when it was moved under srcRoot. Check
-all langs that use srcRoot.
-
 Right now, the way we support query inheritance is at the `forest.GetQuery()`
 level, for pragmatic reasons: it has access to ALL the queries so it can resolve
 any inheritance needs, whereas individual modules do not have that capability

@@ -110,7 +110,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.8.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.8.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.8.1
+	github.com/alexaandru/go-sitter-forest/fsharp v1.8.2
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.0
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
