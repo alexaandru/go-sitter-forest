@@ -89,6 +89,7 @@
 
 (character) @character
 (comment) @comment
+(multiline_comment) @comment
 [
  (symbol)
  (string)

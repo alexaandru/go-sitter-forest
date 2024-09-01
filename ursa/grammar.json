@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "1d7d9b9d3c941d9b14078dd1377d68e398e8dea0",
-  "grammarSha": "47b3ecfcffcd83131e91f44df9278ce1a4565d5e0f44ea6532634e5185e0f1a7",
+  "revision": "f469fddb2f421fc9d000cdc01b641877a6287c73",
+  "grammarSha": "21986953f7a7367beeaddfb0d4cc001360b68d87aef9cbfbaa6f02b6ef207f3f",
   "language": "ursa",
   "url": "https://github.com/ursalang/tree-sitter-ursa",
   "maintainedBy": "@rrthomas",

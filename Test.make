@@ -5,8 +5,7 @@
 test: check_forest test_only
 
 test_only:
-	@go test -vet=all -cover -covermode=atomic -coverprofile=forest.cov ./...
-	@gocovmerge parsers.cov forest.cov > unit.cov
+	@go test -vet=all -cover -covermode=atomic -coverprofile=unit.cov ./...
 
 check_forest:
 	@diff <(grep \\.GetLanguage forest.go|cut -f2 -d'"'|sort|grep -v terraform) <(jq -r '.[]|select(.pending == null)|.language' grammars.json|sort)

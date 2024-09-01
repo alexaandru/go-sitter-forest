@@ -43,6 +43,9 @@ bool tree_sitter_bend_external_scanner_scan(void *payload, TSLexer *lexer, const
     bool found_end_of_line = false;
     uint32_t indent_length = 0;
     int32_t first_comment_indent_length = -1;
+
+    // printf("analyzing '%c', comment valid: %d\n", lexer->lookahead == '\n' ? 'N' : lexer->lookahead, valid_symbols[COMMENT]);
+
     for (;;) {
         if (lexer->lookahead == '\n') {
             found_end_of_line = true;

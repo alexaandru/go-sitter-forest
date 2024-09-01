@@ -2,7 +2,8 @@
     "unit"
     "expose"
     "as"
-]
+] @keyword
+
 (encap) @punctuation.bracket
 
 [

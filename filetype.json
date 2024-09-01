@@ -183,6 +183,7 @@
                            "f03", "f08", "f77", "f90", "f95", "for", "fpp", "ftn", "fortran"],
     "fsh":                ["fsh"],
     "fsharp":             ["fs", "fsi", "fsx"],
+    "fsharp_signature":   ["fssig"],
     "func":               ["func"],
     "fusion":             ["fusion"],
     "gdscript":           ["gd"],
@@ -190,6 +191,7 @@
     "gherkin":            ["feature", "story"],
     "gleam":              ["gleam"],
     "glimmer":            ["gjs", "gts"],
+    "glimmer_javascript": ["gljs"],
     "glint":              ["glint"],
     "glsl":               ["glsl"],
     "gn":                 ["gn", "gni"],
@@ -461,6 +463,8 @@
 
   "conflicts": {
     "bas": ["applesoft", "integerbasic"],
+    "gjs": ["glimmer", "glimmer_javascript"],
+    "gts": ["glimmer", "glimmer_typescript"],
     "pp": ["pascal", "puppet"],
     "v": ["v", "verilog"],
     "p": ["abl", "gnuplot"],
