@@ -1,6 +1,6 @@
 # 407 Supported Parsers
 
-14 pending, 11 skipped regeneration, 29 missing queries
+14 pending, 11 skipped regeneration, 28 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -113,7 +113,7 @@
 - [x] [forth](https://github.com/AlexanderBrevig/tree-sitter-forth) ✔️ (maintained by @amaanq)
 - [x] [fortran](https://github.com/stadelmanma/tree-sitter-fortran) ✔️ (maintained by @amaanq)
 - [x] [fsh](https://github.com/mgramigna/tree-sitter-fsh) ✔️ (maintained by @mgramigna)
-- [x] [fsharp](https://github.com/ionide/tree-sitter-fsharp) 🗸 (maintained by @Nsidorenco)
+- [x] [fsharp](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) 🗸 (maintained by @Nsidorenco)
 - [x] [func](https://github.com/tree-sitter-grammars/tree-sitter-func) ✔️ (maintained by @amaanq)
 - [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) ✔️ (maintained by @jirgn)

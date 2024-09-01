@@ -60,8 +60,14 @@ func fetchQueries(gr *grammar.Grammar) (err error) {
 	}()
 
 	src := filepath.Join(tmpPath, "queries")
+
 	if gr.SrcRoot != "" {
-		src = filepath.Join(tmpPath, gr.SrcRoot, "queries")
+		var ok bool
+
+		src2 := filepath.Join(tmpPath, gr.SrcRoot, "queries")
+		if ok, _ = fileExists(src2); ok { //nolint:errcheck // ok
+			src = src2
+		}
 	}
 
 	defer func() {
