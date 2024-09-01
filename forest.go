@@ -126,6 +126,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/fortran"
 	"github.com/alexaandru/go-sitter-forest/fsh"
 	"github.com/alexaandru/go-sitter-forest/fsharp"
+	"github.com/alexaandru/go-sitter-forest/fsharp_signature"
 	FunC "github.com/alexaandru/go-sitter-forest/func"
 	"github.com/alexaandru/go-sitter-forest/fusion"
 	"github.com/alexaandru/go-sitter-forest/gdscript"
@@ -139,6 +140,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gitignore"
 	"github.com/alexaandru/go-sitter-forest/gleam"
 	"github.com/alexaandru/go-sitter-forest/glimmer"
+	"github.com/alexaandru/go-sitter-forest/glimmer_javascript"
 	"github.com/alexaandru/go-sitter-forest/glint"
 	"github.com/alexaandru/go-sitter-forest/glsl"
 	"github.com/alexaandru/go-sitter-forest/gn"
@@ -551,6 +553,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"fortran":            fortran.GetLanguage,
 	"fsh":                fsh.GetLanguage,
 	"fsharp":             fsharp.GetLanguage,
+	"fsharp_signature":   fsharp_signature.GetLanguage,
 	"func":               FunC.GetLanguage,
 	"fusion":             fusion.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
@@ -564,6 +567,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"gitignore":          gitignore.GetLanguage,
 	"gleam":              gleam.GetLanguage,
 	"glimmer":            glimmer.GetLanguage,
+	"glimmer_javascript": glimmer_javascript.GetLanguage,
 	"glint":              glint.GetLanguage,
 	"glsl":               glsl.GetLanguage,
 	"gn":                 gn.GetLanguage,
@@ -960,6 +964,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"fortran":            fortran.GetQuery,
 	"fsh":                fsh.GetQuery,
 	"fsharp":             fsharp.GetQuery,
+	"fsharp_signature":   fsharp_signature.GetQuery,
 	"func":               FunC.GetQuery,
 	"fusion":             fusion.GetQuery,
 	"gdscript":           gdscript.GetQuery,
@@ -973,6 +978,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"gitignore":          gitignore.GetQuery,
 	"gleam":              gleam.GetQuery,
 	"glimmer":            glimmer.GetQuery,
+	"glimmer_javascript": glimmer_javascript.GetQuery,
 	"glint":              glint.GetQuery,
 	"glsl":               glsl.GetQuery,
 	"gn":                 gn.GetQuery,

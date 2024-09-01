@@ -1,11 +1,13 @@
 {
   "reference": "main",
-  "revision": "f54ac4e66843b5af4887b586888e01086646b515",
-  "grammarSha": "3358b8499c7baa9ef68e1b1c148cb5ed9b19b9890e8d49c5563ec17356c64b65",
+  "revision": "f14524f6b2fc07c626654fa30f630a65e017bca9",
+  "grammarSha": "6295da188b29d84e08d22bc060a6ae115eace0b93df19a8cc1d35bfbb00fd6dd",
   "language": "fsharp",
   "url": "https://github.com/ionide/tree-sitter-fsharp",
   "maintainedBy": "@Nsidorenco",
+  "srcRoot": "fsharp",
   "files": [
-    "scanner.c"
+    "scanner.c",
+    "common/scanner.h"
   ]
 }

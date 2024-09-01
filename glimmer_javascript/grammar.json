@@ -4,5 +4,8 @@
   "grammarSha": "0a6f2bb79a88db91432066c4fb486deb5898d6d80e70b68a5bff5261fd3d6ad4",
   "language": "glimmer_javascript",
   "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
-  "maintainedBy": "@NullVoxPopuli"
+  "maintainedBy": "@NullVoxPopuli",
+  "files": [
+    "scanner.c"
+  ]
 }

@@ -14,9 +14,11 @@
 
 ## Automation
 
+- need to make update more robust: currently if one update fails they all fail, this needs to
+  change to allow partial updates;
 - filter automatically high memory usage parsers and run them one by one (at the end?);
 - need to update the parsers automation to create a Go module for a new parser automatically;
-  (go mod init+tidy, create \_keep.scm file, go work use, what else... TBD);
+  (go mod init+tidy, go work use, what else... TBD);
 - need to be able to auto-delete files deleted remotely (i.e. if a scanner.c or whatever is deleted
   from the source repo, we should also be deleting it locally);
 
@@ -42,6 +44,9 @@ queries use predicates that we cannot currently process. We should probably
 start with this one.
 
 ### 2. Query Automation related work
+
+FSharp can no longer find its queries when it was moved under srcRoot. Check
+all langs that use srcRoot.
 
 Right now, the way we support query inheritance is at the `forest.GetQuery()`
 level, for pragmatic reasons: it has access to ALL the queries so it can resolve
