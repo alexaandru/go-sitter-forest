@@ -68,3 +68,4 @@
 (string) @string
 (number) @number
 (bool) @constant.builtin
+(none) @constant.builtin

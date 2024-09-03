@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "31a64b28292aac6adf44071e449fa03fb80eaf4e",
+  "revision": "fd7f7402db6e66afd70b402fb2e367b2d71c10d6",
   "language": "c_sharp",
   "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
   "doc": "OOM",

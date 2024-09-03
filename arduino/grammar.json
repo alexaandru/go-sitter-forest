@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "afb34b2c65f507932c5c6ddbf0d5a9ca6a772f2f",
+  "revision": "5cf85e6a429131605c41fc1842a7cd9f8ac946c3",
   "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
   "language": "arduino",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",

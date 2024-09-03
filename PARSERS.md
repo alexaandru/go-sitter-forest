@@ -1,6 +1,6 @@
 # 407 Supported Parsers
 
-14 pending, 11 skipped regeneration, 28 missing queries
+14 pending, 11 skipped regeneration, 27 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -114,7 +114,7 @@
 - [x] [fortran](https://github.com/stadelmanma/tree-sitter-fortran) ✔️ (maintained by @amaanq)
 - [x] [fsh](https://github.com/mgramigna/tree-sitter-fsh) ✔️ (maintained by @mgramigna)
 - [x] [fsharp](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
-- [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) 🗸 (maintained by @Nsidorenco)
+- [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [func](https://github.com/tree-sitter-grammars/tree-sitter-func) ✔️ (maintained by @amaanq)
 - [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) ✔️ (maintained by @jirgn)
 - [x] [Godot (gdscript)](https://github.com/PrestonKnopp/tree-sitter-gdscript) ✔️ (maintained by @PrestonKnopp)
@@ -203,7 +203,7 @@
 - [x] [lalrpop](https://github.com/traxys/tree-sitter-lalrpop) ✔️ (maintained by @traxys)
 - [x] [lat](https://github.com/vilarfg/tree-sitter-lat) ✔️ (maintained by @vilarfg)
 - [x] [latex](https://github.com/latex-lsp/tree-sitter-latex) ✔️ (maintained by @theHamsta, @clason)
-- [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️ (maintained by @lesserfish)
+- [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️ (maintained by @lesserfish; ❌repository was removed by owner)
 - [x] [ledger](https://github.com/cbarrete/tree-sitter-ledger) ✔️ (maintained by @cbarrete)
 - [x] [leo](https://github.com/r001/tree-sitter-leo) ✔️ (maintained by @r001)
 - [x] [lexc](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)

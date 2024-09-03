@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "198d03553f43a45b92ac5d0ee167db3fec6a6fd6",
-  "grammarSha": "eeb9e45b16276e6a454ae5be9f9421659e9f9ef462ecc0ddfc32283cb617e9bc",
+  "revision": "9951831c5f05be434514dce38b30eef213667601",
+  "grammarSha": "92ec42353af57acc6eb36f6d7b96c1cb8dde13af00b70bd8f998b3e4e5b8b079",
   "language": "typescript",
   "url": "https://github.com/tree-sitter/tree-sitter-typescript",
   "doc": "high memory usage (4GB)",

@@ -4,8 +4,10 @@
   "grammarSha": "ec35a5589b9230166e120ae0bf1c5595306f03b44fa526e05dcdc22ea8a3d704",
   "language": "ldg",
   "url": "https://github.com/lesserfish/tree-sitter-ldg",
+  "doc": "repository was removed by owner",
   "maintainedBy": "@lesserfish",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skipUpdate": true
 }

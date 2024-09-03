@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "a528de39923448e6b809a6b9f686f3472728f202",
+  "revision": "78b05f3506ecbb0cef10b228a2edeb73bf966e5f",
   "grammarSha": "281b189160182f9a34991ef624089d8257fa1c077d99d509e2467cf277771f3e",
   "language": "julia",
   "url": "https://github.com/tree-sitter/tree-sitter-julia",

@@ -9,8 +9,8 @@
   },
   {
     "reference": "master",
-    "revision": "ff2f7a3ab836784b83b5d39102b439cdae085e58",
-    "grammarSha": "13380332b8801345d9b75d5742c7bc0def544b7cb10ba247150cb2b0628d59d6",
+    "revision": "42df918aff23f7b381bb1c7af386e4e955009e3f",
+    "grammarSha": "060bada7c55cbe37ac9c09d4245e36ba3fe141a0c9e4d99262279fece6038a9a",
     "language": "abl",
     "url": "https://github.com/usagi-coffee/tree-sitter-abl",
     "maintainedBy": "@jkbz64",
@@ -95,7 +95,7 @@
   },
   {
     "reference": "master",
-    "revision": "afb34b2c65f507932c5c6ddbf0d5a9ca6a772f2f",
+    "revision": "5cf85e6a429131605c41fc1842a7cd9f8ac946c3",
     "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
     "language": "arduino",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",
@@ -169,7 +169,7 @@
   },
   {
     "reference": "master",
-    "revision": "2fbd860f802802ca76a6661ce025b3a3bca2d3ed",
+    "revision": "7f54376c8090cc55f41b4f15f984323f255a4ef8",
     "grammarSha": "b48fe3cb636d6b695d4601dd3d4a37cb67b4c406d51608acdcfee1458e44ee70",
     "language": "bash",
     "url": "https://github.com/tree-sitter/tree-sitter-bash",
@@ -285,8 +285,8 @@
   },
   {
     "reference": "master",
-    "revision": "927da1f210ebb24b7f109230a61a55b428875985",
-    "grammarSha": "0a633b22cf77b82390e86d6d38f8e94d16bc9fa9907a96dc2d655f9c5d29a73c",
+    "revision": "d8d5bf1ea34e82e0eee1bda9641ccfd093655ec2",
+    "grammarSha": "1161cc19e4afc8e1f9dd50fe9cb0a2e7217f0201d09a9ab2eb0676d0307a3120",
     "language": "c",
     "url": "https://github.com/tree-sitter/tree-sitter-c",
     "maintainedBy": "@amaanq"
@@ -304,7 +304,7 @@
   },
   {
     "reference": "master",
-    "revision": "31a64b28292aac6adf44071e449fa03fb80eaf4e",
+    "revision": "fd7f7402db6e66afd70b402fb2e367b2d71c10d6",
     "language": "c_sharp",
     "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
     "doc": "OOM",
@@ -352,7 +352,7 @@
   },
   {
     "reference": "main",
-    "revision": "670b3cbedee5d3bc8a89b210e630c044126a080d",
+    "revision": "57bb15f97f16ec88156fdcf26cf1f72e0edd7ece",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -484,8 +484,8 @@
   },
   {
     "reference": "main",
-    "revision": "d9c33411efc6aeb40d4d32585bd0f38c3194e8c8",
-    "grammarSha": "75e14cb5f3fb415f83a36951050d4770f8eeaff42b7b0f35bccca826f7eef8f1",
+    "revision": "3fee24cf0b1a073a2e0a12ab97db8f2c11379bd8",
+    "grammarSha": "edd1541a640db6f0b040bb3caa790935c969c1f593d562e9e3888633de50b607",
     "language": "cognate",
     "url": "https://github.com/hedyhli/tree-sitter-cognate",
     "maintainedBy": "@hedyhli"
@@ -554,8 +554,8 @@
   },
   {
     "reference": "master",
-    "revision": "b1a4e2b25148f3cfcb5f241cbc4c49f001a6fb35",
-    "grammarSha": "1fd0c5c53a69d1fd0e15bae105d3310e6d454cd76ae822a38b92fd96bbdf5868",
+    "revision": "30f973c2244f0bff444186185f475c3bd76bc3a5",
+    "grammarSha": "2272d7663e9a4bd0b5eb06dda74b04757cffd936c1953ac0a638c0cf6d42de1b",
     "language": "cpp",
     "url": "https://github.com/tree-sitter/tree-sitter-cpp",
     "maintainedBy": "@theHamsta",
@@ -573,7 +573,7 @@
   },
   {
     "reference": "master",
-    "revision": "9af0bdd9d225edee12f489cfa8284e248321959b",
+    "revision": "a68fcd1e6b03118d1e92ffa45e7ab7a39d52d3f7",
     "grammarSha": "9d44c0e5f7b17f187f3a1ea6331680d78d73919eaf544df7f55c687473ced0d4",
     "language": "css",
     "url": "https://github.com/tree-sitter/tree-sitter-css",
@@ -634,7 +634,7 @@
   },
   {
     "reference": "master",
-    "revision": "cf72df5d4a623ca705e81bf9e9d264e1fe9d5da0",
+    "revision": "9ac03bb2154316624fb4c41fe0f372a5f1597b43",
     "grammarSha": "4fd9ea14ec4fa3ce105c13677a05a002259585d9587f8900cd6a8e996c5fb241",
     "language": "dart",
     "url": "https://github.com/UserNobody14/tree-sitter-dart",
@@ -874,7 +874,7 @@
   },
   {
     "reference": "master",
-    "revision": "ffbf64942c334933ee7982e144557b6efb76d0b9",
+    "revision": "62b0a6e45900a7dff7c37da95fec20a09968ba52",
     "grammarSha": "989af9f9e9f043390422ee07c9ab4dad6111a7f211dff0affe01b0aab3864dc6",
     "language": "embedded_template",
     "url": "https://github.com/tree-sitter/tree-sitter-embedded-template",
@@ -980,15 +980,15 @@
   },
   {
     "reference": "main",
-    "revision": "658c812d3eb4f7ef58baf48d9331ec4da731a9fb",
-    "grammarSha": "967d2e1e582e47ea6b3c9bfd8644971683010e3c66687f0673acf2d16626186e",
+    "revision": "6a0e79d09fac03b11515ddfaa8b1ab6b1b40249e",
+    "grammarSha": "087991cc35b2d95d11bcd119b57e94f6f3e9192ae3050c933c808dab2e5f36e1",
     "language": "flamingo",
     "url": "https://github.com/inobulles/tree-sitter-flamingo",
     "maintainedBy": "@obiwac"
   },
   {
     "reference": "main",
-    "revision": "46fbe47ff4b33402f9b4fc456ef541913aa2c857",
+    "revision": "b47e35f09ca10e3d419c94c455067d2177d48705",
     "grammarSha": "783eed0caf226b7b85496409cdf458351372c444bd0d5bf681b378d5fa4481f7",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1034,7 +1034,7 @@
   },
   {
     "reference": "main",
-    "revision": "f14524f6b2fc07c626654fa30f630a65e017bca9",
+    "revision": "f10ccb59404dd19c061d951986e9ce0850edebf1",
     "grammarSha": "6295da188b29d84e08d22bc060a6ae115eace0b93df19a8cc1d35bfbb00fd6dd",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -1047,7 +1047,7 @@
   },
   {
     "reference": "main",
-    "revision": "f14524f6b2fc07c626654fa30f630a65e017bca9",
+    "revision": "f10ccb59404dd19c061d951986e9ce0850edebf1",
     "grammarSha": "7936665acde2f9dabf5e6cbb34c39ed509f2964d0349b449eb9398a9086fd1c4",
     "language": "fsharp_signature",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -1161,8 +1161,8 @@
   },
   {
     "reference": "main",
-    "revision": "426e67087fd62be5f4533581b5916b2cf010fb5b",
-    "grammarSha": "04e0a37ff81dcbceb2f6808def603e7a4a4e13b8ed31109d029fe4415c04f96b",
+    "revision": "0d38bfdc04cc90d7541c21e39089e35e40c429d3",
+    "grammarSha": "daa45b8dc535530c8736a3b40ff0352c1f83e895965b85177414a845c7df8e70",
     "language": "gleam",
     "url": "https://github.com/gleam-lang/tree-sitter-gleam",
     "maintainedBy": "@amaanq",
@@ -1244,7 +1244,7 @@
   },
   {
     "reference": "master",
-    "revision": "6204b7308a32e991a8daed2e9895a90be55a510a",
+    "revision": "81a11f8252998ee6b98d59e6da91fc307491e53d",
     "grammarSha": "d4786c03aeb8c36231186a60b3afac40d516f69ae0ed660479b46c524de6852f",
     "language": "go",
     "url": "https://github.com/tree-sitter/tree-sitter-go",
@@ -1390,7 +1390,7 @@
   },
   {
     "reference": "master",
-    "revision": "a50070d5bb5bd5c1281740a6102ecf1f4b0c4f19",
+    "revision": "558b997049fddcb07fc513528189c57d6129a260",
     "grammarSha": "058e7384dbe2d78a4cca4e9ee32fd0b91b21e5c0e6b7cb39b42093c690348a33",
     "language": "haskell",
     "url": "https://github.com/tree-sitter/tree-sitter-haskell",
@@ -1496,7 +1496,7 @@
   },
   {
     "reference": "master",
-    "revision": "d11201a263d02169d303db903ba0bb13dc59e068",
+    "revision": "14bdaf0da9e26e2de9b30178c2242539d2b0b285",
     "grammarSha": "c139ccf784d7f2c377cbf702e0fe1daaa8e9ac2d76a7a8c0f81bfdb387b45ee2",
     "language": "html",
     "url": "https://github.com/tree-sitter/tree-sitter-html",
@@ -1551,7 +1551,7 @@
   },
   {
     "reference": "master",
-    "revision": "d5c95d0134f950b6099e056cc06a0cc4d12a1162",
+    "revision": "892d39bbada06fde3fdc55a9fabe8a7a9b4ee2f1",
     "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
     "language": "hungarian",
     "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
@@ -1607,16 +1607,16 @@
   },
   {
     "reference": "main",
-    "revision": "ec9d6bb16ef8a8017c3ba42e1fab5e4b4a959e1f",
-    "grammarSha": "cef08cf3f3d79c1e8b8cb946122899f495e8c5187c7f8ae5f909fa9de3a56572",
+    "revision": "d04bdb2e1a7de0057b2bed49e25e84c3b76ae77c",
+    "grammarSha": "f0123b65e18def8d927e84fd32e43dc2c776e6b2e8f79af8ac296cbbac44db56",
     "language": "ignis",
     "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
     "maintainedBy": "@BasileusErwin"
   },
   {
     "reference": "master",
-    "revision": "fc37e95b8d9651c60d81cccbcbbc55867dbb0afd",
-    "grammarSha": "8f397c65cea13ecd56ccad4cb8e3616625ed1eabb630b4f9ff5e1e083516b328",
+    "revision": "962568c9efa71d25720ab42c5d36e222626ef3a6",
+    "grammarSha": "36869e24ba3d412c7d4e2a15f793a9577a092d3c6f3b1a1de6169dc6dd018d08",
     "language": "ini",
     "url": "https://github.com/justinmk/tree-sitter-ini",
     "maintainedBy": "@theHamsta"
@@ -1679,16 +1679,16 @@
   },
   {
     "reference": "master",
-    "revision": "576d8097e495b411f31daaee28cb34c1752ac702",
-    "grammarSha": "097080159bc89d1ddec9188d0809c2fd9fc7ca7c6aa82a89f1e395b698b302e3",
+    "revision": "245b05c6ba900fa708242835f6168ef76f9d951e",
+    "grammarSha": "644b2d167c38167e5b5b01276515ae2dfde3338d3729e86f4f6c5d58de4cac4e",
     "language": "java",
     "url": "https://github.com/tree-sitter/tree-sitter-java",
     "maintainedBy": "@p00f"
   },
   {
     "reference": "master",
-    "revision": "15887341e5b57ffdb423aff840aef142b8f53d6d",
-    "grammarSha": "0adb42444e3fe0fc9710f8e43b6ef81ef51e9508e4efd86f43039de2d38d91f8",
+    "revision": "b6f0624c1447bc209830b195999b78a56b10a579",
+    "grammarSha": "1922a051973c2d7019312a2b137a8d6dd162fdf4c9e3446835f4c092674a3c6d",
     "language": "javascript",
     "url": "https://github.com/tree-sitter/tree-sitter-javascript",
     "maintainedBy": "@steelsojka",
@@ -1706,7 +1706,7 @@
   },
   {
     "reference": "master",
-    "revision": "49fde205b59a1d9792efc21ee0b6d50bbd35ff14",
+    "revision": "bc09606fc786ead131a301e4b7524888f2d5c517",
     "grammarSha": "da7a172aceb1460e9ca9bfb80492bdff8fdd61255b02080aa78ffb4dee66b9b0",
     "language": "jsdoc",
     "url": "https://github.com/tree-sitter/tree-sitter-jsdoc",
@@ -1717,7 +1717,7 @@
   },
   {
     "reference": "master",
-    "revision": "bdd69eb8c8a58a9f54df03de0488d9990179be46",
+    "revision": "8bfdb43f47ad805bb1ce093203cfcbaa8ed2c571",
     "grammarSha": "eb94bbd6463cd5332ae0515df29d96a869494f3c5d6238ccaff1c1fe86ed4e9f",
     "language": "json",
     "url": "https://github.com/tree-sitter/tree-sitter-json",
@@ -1753,15 +1753,15 @@
   },
   {
     "reference": "main",
-    "revision": "b7b0391ba8c0f8237df95f42a8ed1374f10f3540",
-    "grammarSha": "5a18261ca36742bcc4779c7effbf632fa498f339d336d621cf6b675dfbd7b635",
+    "revision": "ea815c0ac2a87cec651b6693fc4bc0d180413277",
+    "grammarSha": "e354cfa62d042d69878c6ddd8e62ec45c7aeaf410af52c7a81f45d56c3b550dd",
     "language": "jule",
     "url": "https://github.com/TheLooped/tree-sitter-jule",
     "maintainedBy": "@TheLooped"
   },
   {
     "reference": "master",
-    "revision": "a528de39923448e6b809a6b9f686f3472728f202",
+    "revision": "78b05f3506ecbb0cef10b228a2edeb73bf966e5f",
     "grammarSha": "281b189160182f9a34991ef624089d8257fa1c077d99d509e2467cf277771f3e",
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
@@ -1890,10 +1890,12 @@
     "grammarSha": "ec35a5589b9230166e120ae0bf1c5595306f03b44fa526e05dcdc22ea8a3d704",
     "language": "ldg",
     "url": "https://github.com/lesserfish/tree-sitter-ldg",
+    "doc": "repository was removed by owner",
     "maintainedBy": "@lesserfish",
     "files": [
       "scanner.c"
-    ]
+    ],
+    "skipUpdate": true
   },
   {
     "reference": "master",
@@ -2007,7 +2009,7 @@
   },
   {
     "reference": "master",
-    "revision": "bfa89470ba849ad8d6ec34874ac0401ca6e58980",
+    "revision": "9e6431eef2d0a0a6b72abef152f2dcc322c0a4a0",
     "grammarSha": "b6a0b5811b4280e51c2bda1f7da79a66b0e6579ee22857667083377fa3d4f698",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -2063,8 +2065,8 @@
   },
   {
     "reference": "main",
-    "revision": "979a48ad55a1faa4d73b0b127472190ca6ff0a73",
-    "grammarSha": "4a41569a187c1adebddf77de379b51c767338a5dbec123ba9ba641900ebfedaa",
+    "revision": "3b38e004b5ec7b0e2be20291805139c042e34c2c",
+    "grammarSha": "dd460cde6d2a8b93309e19bd8a508b3201af5c8fb7be1d8d55ac9f434d18874c",
     "language": "magik",
     "url": "https://github.com/krn-robin/tree-sitter-magik",
     "maintainedBy": "@sebastiaanspeck"
@@ -2353,7 +2355,7 @@
   },
   {
     "reference": "master",
-    "revision": "036226e5edb410aec004cc7ac0f4b2014dd04a0e",
+    "revision": "14beb5ef0e7488bf1d93b8c67f69942324fee557",
     "grammarSha": "f841095516471874038cd38e758634ef5d3fceec6c798a925cb0753d023caa81",
     "language": "ocaml",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
@@ -2366,7 +2368,7 @@
   },
   {
     "reference": "master",
-    "revision": "036226e5edb410aec004cc7ac0f4b2014dd04a0e",
+    "revision": "14beb5ef0e7488bf1d93b8c67f69942324fee557",
     "grammarSha": "ed745a3b34f2a56f90cc3a15895367bd3adbc2c9684c8e52c8bf722eb764211b",
     "language": "ocaml_interface",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
@@ -2476,15 +2478,18 @@
   },
   {
     "reference": "master",
-    "revision": "0f6117f2521683b612a30b5e7f9feaadc96653e4",
-    "grammarSha": "6ff601bd299672033bc98cb29a1cd3b734fd5795e7fb54d237ca16189f45ffc6",
+    "revision": "cbe6e0036402c1e9c7e27be5f0b8d4ac29564e3d",
+    "grammarSha": "9fde12dc4e6ba9936a4b390800776a86d7f61eef6e3cf773d2d5f513121c1336",
     "language": "pgn",
     "url": "https://github.com/rolandwalker/tree-sitter-pgn",
-    "maintainedBy": "@rolandwalker"
+    "maintainedBy": "@rolandwalker",
+    "files": [
+      "scanner.c"
+    ]
   },
   {
     "reference": "master",
-    "revision": "d13c91bc48aedf7db8240c52503eee694134ec53",
+    "revision": "74c6b0d560c2660db4d9e8c76b681f538d494160",
     "grammarSha": "14872df220fd8c7f3f111f7682031a60dd997b324ab28690f207d6a8ac7f6d37",
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -2497,7 +2502,7 @@
   },
   {
     "reference": "master",
-    "revision": "d13c91bc48aedf7db8240c52503eee694134ec53",
+    "revision": "74c6b0d560c2660db4d9e8c76b681f538d494160",
     "grammarSha": "5ff29d2e69a47c7fd1da1a4e6172bde5b40d5889934787941b09994ad5cc5414",
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -2738,7 +2743,7 @@
   },
   {
     "reference": "master",
-    "revision": "346fa42dc2990d2a2736cc60891369d0d3d8e65c",
+    "revision": "8c65e256f971812276ff2a69a2f515c218ed7f82",
     "grammarSha": "897b3904822d58487a6e3b1f5a462a7a0eea221c0d76ea13dfb54daf426592c9",
     "language": "python",
     "url": "https://github.com/tree-sitter/tree-sitter-python",
@@ -2749,7 +2754,7 @@
   },
   {
     "reference": "master",
-    "revision": "42becd6f8f7bae82c818fa3abb1b6ff34b552310",
+    "revision": "c73c31c89cb0019ef56fe8bc1723e7c36e0be607",
     "grammarSha": "758524d418fde3eb51eda6418a71289effa101bbfe72fafa3e2747597daa6ade",
     "language": "ql",
     "url": "https://github.com/tree-sitter/tree-sitter-ql",
@@ -2805,8 +2810,8 @@
   },
   {
     "reference": "main",
-    "revision": "171f52a8c0ed635b85cd42d1e36d82f1066a03b4",
-    "grammarSha": "2326ca8a89f5d8dd025445baf6e6af6b5f0ef6786759d7a4efaa61abe73b0562",
+    "revision": "24dbb1dfc08e0f99dfbd0eddc5e73ef307f538dc",
+    "grammarSha": "bd25d380082b2571ce038550f52727d17834d82f67aabb9c9eba9c8efd6e8838",
     "language": "racket",
     "url": "https://github.com/6cdh/tree-sitter-racket",
     "maintainedBy": "@6cdh",
@@ -2864,7 +2869,7 @@
   },
   {
     "reference": "master",
-    "revision": "47007f195752d8e57bda80b0b6cdb2d173a9f7d7",
+    "revision": "f70251e1f1d72bd6dc1f897f956f9112f8668441",
     "grammarSha": "6c3d9767fd449cbc1470dbf499879ef48b56188bcd53a2a1d6345a945d07cf7c",
     "language": "regex",
     "url": "https://github.com/tree-sitter/tree-sitter-regex",
@@ -2999,7 +3004,7 @@
   },
   {
     "reference": "master",
-    "revision": "7dbc1e2d0e2d752577655881f73b4573f3fe85d4",
+    "revision": "a66579f70d6f50ffd81a16fc3d3358e2ac173c88",
     "grammarSha": "7ec686d554b6af2132d4219b8d8ebd0f52e28ac421dbaa192749d34a5480b306",
     "language": "ruby",
     "url": "https://github.com/tree-sitter/tree-sitter-ruby",
@@ -3010,7 +3015,7 @@
   },
   {
     "reference": "master",
-    "revision": "2b43eafe64470846cdaa0eaae1e287c120ee5f03",
+    "revision": "6b7d1fc73ded57f73b1619bcf4371618212208b1",
     "grammarSha": "8df6f48b1c8d29ae0aa72521fdceabca3b0817ff324edd6630f74103cbe2de96",
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
@@ -3033,7 +3038,7 @@
   },
   {
     "reference": "master",
-    "revision": "dd7fe4d7838ca751f5259718658dd309d999855b",
+    "revision": "a366c0d52485b84d2d9ba66dee530398526acb01",
     "grammarSha": "7928ea00c8fdbd39add8799c57c205c3e27791525ebb83de2b17cc6d3d891407",
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
@@ -3052,8 +3057,8 @@
   },
   {
     "reference": "main",
-    "revision": "8f9dff3d038f09934db5ea113cebc59c74447743",
-    "grammarSha": "05f7a7ef1fb277bc46e698b947f90489e78959703cc2db44c6067de86a2bca81",
+    "revision": "432c338093c69222efbeb124feb90715da306cc7",
+    "grammarSha": "7cf24fd1e03da19f573c18cbcd51cb2fa44753a76e0ad926b97d6dd841c8c900",
     "language": "scheme",
     "url": "https://github.com/6cdh/tree-sitter-scheme",
     "maintainedBy": "@6cdh"
@@ -3222,7 +3227,7 @@
   },
   {
     "reference": "main",
-    "revision": "a39b4ffdd8bc7bb83f653862f434bc1332b47005",
+    "revision": "1b8c6774c1564664b432789a37fcaaea3cc05916",
     "grammarSha": "a687302d890c703c0b74f350505871becdd7113ded5664740fa92903e184f794",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
@@ -3579,8 +3584,8 @@
   },
   {
     "reference": "master",
-    "revision": "198d03553f43a45b92ac5d0ee167db3fec6a6fd6",
-    "grammarSha": "9a52cc9f07d57b8c6298d36e6dd9c6ffe32feb5fa05cd1f93df656496c26bf97",
+    "revision": "9951831c5f05be434514dce38b30eef213667601",
+    "grammarSha": "77ff07ad3eba14c8be49b729c99ec2c32021e3417ae77fd69e394f1bb6e4d4e0",
     "language": "tsx",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
     "doc": "high memory usage (4GB)",
@@ -3629,8 +3634,8 @@
   },
   {
     "reference": "master",
-    "revision": "198d03553f43a45b92ac5d0ee167db3fec6a6fd6",
-    "grammarSha": "eeb9e45b16276e6a454ae5be9f9421659e9f9ef462ecc0ddfc32283cb617e9bc",
+    "revision": "9951831c5f05be434514dce38b30eef213667601",
+    "grammarSha": "92ec42353af57acc6eb36f6d7b96c1cb8dde13af00b70bd8f998b3e4e5b8b079",
     "language": "typescript",
     "url": "https://github.com/tree-sitter/tree-sitter-typescript",
     "doc": "high memory usage (4GB)",
@@ -3700,8 +3705,8 @@
   },
   {
     "reference": "main",
-    "revision": "f469fddb2f421fc9d000cdc01b641877a6287c73",
-    "grammarSha": "21986953f7a7367beeaddfb0d4cc001360b68d87aef9cbfbaa6f02b6ef207f3f",
+    "revision": "fe6a4a910c9bb911684abcec1ab3ccf9c0ef4f26",
+    "grammarSha": "728428f32312d8e069fa69ca23b9a238bedc154039b6889ffa0baf796317e754",
     "language": "ursa",
     "url": "https://github.com/ursalang/tree-sitter-ursa",
     "maintainedBy": "@rrthomas",
@@ -3767,7 +3772,7 @@
   },
   {
     "reference": "master",
-    "revision": "4ab3e251eae8890a020d083d00acd1b8c2653c07",
+    "revision": "3f13cd14952b39ccf6817f58880834b84565ca54",
     "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
     "language": "vhdl",
     "url": "https://github.com/jpt13653903/tree-sitter-vhdl",

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "576d8097e495b411f31daaee28cb34c1752ac702",
-  "grammarSha": "097080159bc89d1ddec9188d0809c2fd9fc7ca7c6aa82a89f1e395b698b302e3",
+  "revision": "245b05c6ba900fa708242835f6168ef76f9d951e",
+  "grammarSha": "644b2d167c38167e5b5b01276515ae2dfde3338d3729e86f4f6c5d58de4cac4e",
   "language": "java",
   "url": "https://github.com/tree-sitter/tree-sitter-java",
   "maintainedBy": "@p00f"
