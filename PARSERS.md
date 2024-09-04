@@ -1,4 +1,4 @@
-# 407 Supported Parsers
+# 409 Supported Parsers
 
 14 pending, 11 skipped regeneration, 27 missing queries
 
@@ -117,6 +117,8 @@
 - [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [func](https://github.com/tree-sitter-grammars/tree-sitter-func) ✔️ (maintained by @amaanq)
 - [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) ✔️ (maintained by @jirgn)
+- [x] [GAP system](https://github.com/gap-system/tree-sitter-gap) ✔️ (maintained by @reiniscirpons)
+- [x] [GAP system test files](https://github.com/gap-system/tree-sitter-gaptst) ✔️ (maintained by @reiniscirpons)
 - [x] [Godot (gdscript)](https://github.com/PrestonKnopp/tree-sitter-gdscript) ✔️ (maintained by @PrestonKnopp)
 - [x] [gdshader](https://github.com/GodOfAvacyn/tree-sitter-gdshader) ✔️ (maintained by @godofavacyn)
 - [x] [gemfilelock](https://github.com/fluidattacks/tree-sitter-gemfilelock) 🗸 (maintained by @drestrepom)

@@ -129,6 +129,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/fsharp_signature"
 	FunC "github.com/alexaandru/go-sitter-forest/func"
 	"github.com/alexaandru/go-sitter-forest/fusion"
+	"github.com/alexaandru/go-sitter-forest/gap"
+	"github.com/alexaandru/go-sitter-forest/gaptst"
 	"github.com/alexaandru/go-sitter-forest/gdscript"
 	"github.com/alexaandru/go-sitter-forest/gdshader"
 	"github.com/alexaandru/go-sitter-forest/gemfilelock"
@@ -556,6 +558,8 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"fsharp_signature":   fsharp_signature.GetLanguage,
 	"func":               FunC.GetLanguage,
 	"fusion":             fusion.GetLanguage,
+	"gap":                gap.GetLanguage,
+	"gaptst":             gaptst.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
 	"gdshader":           gdshader.GetLanguage,
 	"gemfilelock":        gemfilelock.GetLanguage,
@@ -967,6 +971,8 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"fsharp_signature":   fsharp_signature.GetQuery,
 	"func":               FunC.GetQuery,
 	"fusion":             fusion.GetQuery,
+	"gap":                gap.GetQuery,
+	"gaptst":             gaptst.GetQuery,
 	"gdscript":           gdscript.GetQuery,
 	"gdshader":           gdshader.GetQuery,
 	"gemfilelock":        gemfilelock.GetQuery,

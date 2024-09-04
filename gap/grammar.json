@@ -1,0 +1,12 @@
+{
+  "reference": "master",
+  "revision": "141b063335e85299bde3f61b4888d02d674a1abc",
+  "grammarSha": "4b75ddfa0be3f497bc96b80a99da0224c9b8b4aa22da5ac873e72de3c943f131",
+  "language": "gap",
+  "altName": "GAP system",
+  "url": "https://github.com/gap-system/tree-sitter-gap",
+  "maintainedBy": "@reiniscirpons",
+  "files": [
+    "scanner.c"
+  ]
+}

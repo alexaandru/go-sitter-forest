@@ -1,0 +1,12 @@
+{
+  "reference": "main",
+  "revision": "e0723dc6136309b3d5904dad2c73ef71267428c1",
+  "grammarSha": "044f23acab777a729c3cf6d1e7f77855b85701c4097551341f19f3248119c5f5",
+  "language": "gaptst",
+  "altName": "GAP system test files",
+  "url": "https://github.com/gap-system/tree-sitter-gaptst",
+  "maintainedBy": "@reiniscirpons",
+  "files": [
+    "scanner.c"
+  ]
+}

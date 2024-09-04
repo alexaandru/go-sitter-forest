@@ -186,6 +186,8 @@
     "fsharp_signature":   ["fssig"],
     "func":               ["func"],
     "fusion":             ["fusion"],
+    "gap":                ["g", "gi"],
+    "gaptst":             ["tst"],
     "gdscript":           ["gd"],
     "gdshader":           ["gdshader", "shader"],
     "gherkin":            ["feature", "story"],
@@ -463,12 +465,13 @@
 
   "conflicts": {
     "bas": ["applesoft", "integerbasic"],
+    "gd":  ["gap", "gdscript"],
     "gjs": ["glimmer", "glimmer_javascript"],
     "gts": ["glimmer", "glimmer_typescript"],
-    "pp": ["pascal", "puppet"],
-    "v": ["v", "verilog"],
-    "p": ["abl", "gnuplot"],
-    "m": ["matlab", "octave", "objc"]
+    "m":   ["matlab", "octave", "objc"],
+    "p":   ["abl", "gnuplot"],
+    "pp":  ["pascal", "puppet"],
+    "v":   ["v", "verilog"]
   },
 
   "pending": {
