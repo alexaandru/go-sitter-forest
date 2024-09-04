@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "cbe6e0036402c1e9c7e27be5f0b8d4ac29564e3d",
+  "revision": "2b03c35bd2ea506a9050531c15d83b7a2617b94d",
   "grammarSha": "9fde12dc4e6ba9936a4b390800776a86d7f61eef6e3cf773d2d5f513121c1336",
   "language": "pgn",
   "url": "https://github.com/rolandwalker/tree-sitter-pgn",

@@ -220,6 +220,10 @@ github.com/alexaandru/go-sitter-forest/func v1.8.0 h1:dKHlOkK3xvpqFkbLur33XOD0Qu
 github.com/alexaandru/go-sitter-forest/func v1.8.0/go.mod h1:tLBrW8ek3fJhbb2REvcy/R0IxIVBAgso50UUaHsGQOY=
 github.com/alexaandru/go-sitter-forest/fusion v1.8.0 h1:koZGGpwChQJ0CQQVL72PWN5wi804Qxf8q8u6ytkOFU4=
 github.com/alexaandru/go-sitter-forest/fusion v1.8.0/go.mod h1:NPUf3/1bDFrWhLzhlvOr95onrAPADS3dYAXye1Pa9jA=
+github.com/alexaandru/go-sitter-forest/gap v1.8.0 h1:ajaFGATA0vPjypAEtdjW6j5TF1+UUtUg+4xf64S/uGw=
+github.com/alexaandru/go-sitter-forest/gap v1.8.0/go.mod h1:QukPIXAFOv7GHLfSLoxeUBHXxNwa4glpHBQapcDfvXI=
+github.com/alexaandru/go-sitter-forest/gaptst v1.8.0 h1:CTthqore72EANDzIWhKp/1clrqJbmMfUFtlwZk0J1tA=
+github.com/alexaandru/go-sitter-forest/gaptst v1.8.0/go.mod h1:KOaCgu9DCpBgM/xD3iWZaJVYWKT9a5lF3q6lQL6JaR4=
 github.com/alexaandru/go-sitter-forest/gdscript v1.8.0 h1:ENrODohWecCX8i/ty4ko8DgmOD7VUGgS4QOJkeXz8vM=
 github.com/alexaandru/go-sitter-forest/gdscript v1.8.0/go.mod h1:bePnpjBZbV3SRQOIZDuMAtDOuv7jj4zAOBQoQNddjmw=
 github.com/alexaandru/go-sitter-forest/gdshader v1.8.0 h1:ADtjQZriJM8xCGRMvpzqC/8AjTFgcxIGO9RnrwEZL88=

@@ -114,6 +114,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.1
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
+	github.com/alexaandru/go-sitter-forest/gap v1.8.0
+	github.com/alexaandru/go-sitter-forest/gaptst v1.8.0
 	github.com/alexaandru/go-sitter-forest/gdscript v1.8.0
 	github.com/alexaandru/go-sitter-forest/gdshader v1.8.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.8.0
