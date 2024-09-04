@@ -209,6 +209,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
 	"github.com/alexaandru/go-sitter-forest/koan"
+	"github.com/alexaandru/go-sitter-forest/koka"
 	"github.com/alexaandru/go-sitter-forest/kotlin"
 	"github.com/alexaandru/go-sitter-forest/koto"
 	"github.com/alexaandru/go-sitter-forest/kusto"
@@ -636,6 +637,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"kconfig":            kconfig.GetLanguage,
 	"kdl":                kdl.GetLanguage,
 	"koan":               koan.GetLanguage,
+	"koka":               koka.GetLanguage,
 	"kotlin":             kotlin.GetLanguage,
 	"koto":               koto.GetLanguage,
 	"kusto":              kusto.GetLanguage,
@@ -1049,6 +1051,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"kconfig":            kconfig.GetQuery,
 	"kdl":                kdl.GetQuery,
 	"koan":               koan.GetQuery,
+	"koka":               koka.GetQuery,
 	"kotlin":             kotlin.GetQuery,
 	"koto":               koto.GetQuery,
 	"kusto":              kusto.GetQuery,

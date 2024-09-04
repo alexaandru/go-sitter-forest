@@ -14,7 +14,7 @@ typedef struct {
   int indent_stack_size;
 } Scanner;
 
-void scanner_reset(Scanner *scanner) {
+void scanner_reset_gemfilelock(Scanner *scanner) {
   scanner->indent_stack[0] = 0;
   scanner->indent_stack_size = 1;
 }
@@ -81,7 +81,7 @@ bool scanner_scan(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
 
 void *tree_sitter_gemfilelock_external_scanner_create() {
   Scanner *scanner = (Scanner *)malloc(sizeof(Scanner));
-  scanner_reset(scanner);
+  scanner_reset_gemfilelock(scanner);
   return scanner;
 }
 

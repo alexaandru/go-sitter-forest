@@ -669,6 +669,7 @@ func putFile(content []byte, lang, toPath string) error {
 		reMap["->deserialize("] = fmt.Sprintf("->deserialize_%s(", lang)
 		reMap[" state_new("] = fmt.Sprintf(" state_new_%s(", lang)
 		reMap[" scan("] = fmt.Sprintf(" scan_%s(", lang)
+		reMap[" scanner_reset("] = fmt.Sprintf(" scanner_reset_%s(", lang)
 		reMap["!scan("] = fmt.Sprintf("!scan_%s(", lang)
 		reMap["->scan("] = fmt.Sprintf("->scan_%s(", lang)
 		reMap["advance("] = fmt.Sprintf("advance_%s(", lang)

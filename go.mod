@@ -192,6 +192,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kconfig v1.8.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.8.0
 	github.com/alexaandru/go-sitter-forest/koan v1.8.0
+	github.com/alexaandru/go-sitter-forest/koka v1.8.0
 	github.com/alexaandru/go-sitter-forest/kotlin v1.8.1
 	github.com/alexaandru/go-sitter-forest/koto v1.8.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.8.0

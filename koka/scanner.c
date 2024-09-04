@@ -23,7 +23,7 @@ struct scanner {
   int *stack;
 };
 
-void scanner_reset(struct scanner *scanner) {
+void scanner_reset_koka(struct scanner *scanner) {
   scanner->close_braces_to_insert = 0;
   scanner->insert_open_brace = false;
   scanner->semis_to_insert = 0;
@@ -115,7 +115,7 @@ static inline bool resolve_maybe_start_cont(TSLexer *lexer) {
 void *tree_sitter_koka_external_scanner_create() {
   struct scanner *scanner = malloc(sizeof(struct scanner));
   assert(scanner);
-  scanner_reset(scanner);
+  scanner_reset_koka(scanner);
   return scanner;
 }
 
@@ -151,7 +151,7 @@ void tree_sitter_koka_external_scanner_deserialize(void *payload,
                                                    unsigned length) {
   struct scanner *scanner = payload;
   free(scanner->stack);
-  scanner_reset(scanner);
+  scanner_reset_koka(scanner);
 
   if (length == 0) {
     return;
