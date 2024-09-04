@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "96d070c3700692858035f3524cc0ad944cef2594",
+  "grammarSha": "c415f16a05e473e7029b0b1a44bf54440f6a1183d05fc078decf2fbe387ee328",
+  "language": "koka",
+  "url": "https://github.com/mtoohey31/tree-sitter-koka",
+  "maintainedBy": "@mtoohey31",
+  "files": [
+    "scanner.c"
+  ]
+}

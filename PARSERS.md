@@ -1,4 +1,4 @@
-# 409 Supported Parsers
+# 410 Supported Parsers
 
 14 pending, 12 skipped regeneration, 27 missing queries
 
@@ -199,6 +199,7 @@
 - [x] [kconfig](https://github.com/tree-sitter-grammars/tree-sitter-kconfig) ✔️ (maintained by @amaanq)
 - [x] [kdl](https://github.com/tree-sitter-grammars/tree-sitter-kdl) ✔️ (maintained by @amaanq)
 - [x] [koan](https://github.com/TogarashiPepper/tree-sitter-koan) ✔️ (maintained by @TogarashiPepper)
+- [x] [koka](https://github.com/mtoohey31/tree-sitter-koka) ✔️ (maintained by @mtoohey31)
 - [x] [kotlin](https://github.com/fwcd/tree-sitter-kotlin) ✔️ (maintained by @SalBakraa)
 - [x] [koto](https://github.com/koto-lang/tree-sitter-koto) ✔️ (maintained by @irh)
 - [x] [kusto](https://github.com/Willem-J-an/tree-sitter-kusto) ✔️ (maintained by @Willem-J-an)
