@@ -1,0 +1,69 @@
+codeunit 50200 "Comprehensive Test Codeunit"
+{
+    TableNo = "Customer";
+    Subtype = Test;
+    SingleInstance = true;
+    EventSubscriberInstance = Manual;
+
+    var
+        GlobalVar: Integer;
+
+    trigger OnRun()
+    var
+        LocalVar: Text;
+    begin
+        LocalVar := 'Hello from Comprehensive Test Codeunit!';
+        Message(LocalVar);
+        TestComplexProcedure(GlobalVar, LocalVar);
+    end;
+
+    local procedure TestComplexProcedure(var IntParam: Integer; TextParam: Text): Decimal
+    var
+        DecimalVar: Decimal;
+    begin
+        IntParam += 1;
+        DecimalVar := 3.14;
+
+        if IntParam > 10 then
+            exit(DecimalVar * 2)
+        else
+            case IntParam of
+                1..5:
+                    DecimalVar := DecimalVar * IntParam;
+                6..10:
+                    DecimalVar := DecimalVar + IntParam;
+            end;
+
+        while IntParam < 20 do begin
+            IntParam += 1;
+            DecimalVar += 0.5;
+        end;
+
+        repeat
+            IntParam -= 1;
+            DecimalVar -= 0.25;
+        until IntParam = 10;
+
+        exit(DecimalVar);
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Comprehensive Test Codeunit", 'OnSomeEvent', '', false, false)]
+    local procedure OnSomeEventSubscriber(var Rec: Record Customer)
+    begin
+        // Event subscriber logic
+    end;
+
+    trigger OnAfterTestRun(CodeunitId: Integer; CodeunitName: Text; FunctionName: Text; Permissions: TestPermissions; Success: Boolean)
+    begin
+        if Success then
+            Message('Test %1 in codeunit %2 completed successfully.', FunctionName, CodeunitName)
+        else
+            Error('Test %1 in codeunit %2 failed.', FunctionName, CodeunitName);
+    end;
+
+    trigger OnBeforeTestRun(CodeunitId: Integer; CodeunitName: Text; FunctionName: Text; Permissions: TestPermissions): Boolean
+    begin
+        Message('Starting test %1 in codeunit %2.', FunctionName, CodeunitName);
+        exit(true);
+    end;
+}

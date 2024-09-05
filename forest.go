@@ -23,6 +23,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/ada"
 	"github.com/alexaandru/go-sitter-forest/agda"
 	"github.com/alexaandru/go-sitter-forest/aiken"
+	"github.com/alexaandru/go-sitter-forest/al"
 	"github.com/alexaandru/go-sitter-forest/amber"
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/animationtxt"
@@ -47,6 +48,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/blueprint"
 	"github.com/alexaandru/go-sitter-forest/bluespec"
 	"github.com/alexaandru/go-sitter-forest/bp"
+	"github.com/alexaandru/go-sitter-forest/bqn"
 	"github.com/alexaandru/go-sitter-forest/brightscript"
 	"github.com/alexaandru/go-sitter-forest/c"
 	"github.com/alexaandru/go-sitter-forest/c3"
@@ -103,6 +105,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/eds"
 	"github.com/alexaandru/go-sitter-forest/eex"
 	"github.com/alexaandru/go-sitter-forest/effekt"
+	"github.com/alexaandru/go-sitter-forest/eiffel"
 	"github.com/alexaandru/go-sitter-forest/elisp"
 	"github.com/alexaandru/go-sitter-forest/elixir"
 	"github.com/alexaandru/go-sitter-forest/elm"
@@ -157,6 +160,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gotmpl"
 	"github.com/alexaandru/go-sitter-forest/gowork"
 	"github.com/alexaandru/go-sitter-forest/gpg"
+	"github.com/alexaandru/go-sitter-forest/gram"
 	"github.com/alexaandru/go-sitter-forest/graphql"
 	"github.com/alexaandru/go-sitter-forest/gren"
 	"github.com/alexaandru/go-sitter-forest/groovy"
@@ -301,6 +305,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pymanifest"
 	"github.com/alexaandru/go-sitter-forest/pyrope"
 	"github.com/alexaandru/go-sitter-forest/python"
+	"github.com/alexaandru/go-sitter-forest/qbe"
 	"github.com/alexaandru/go-sitter-forest/ql"
 	"github.com/alexaandru/go-sitter-forest/qmldir"
 	"github.com/alexaandru/go-sitter-forest/qmljs"
@@ -335,6 +340,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/scss"
 	"github.com/alexaandru/go-sitter-forest/sdml"
 	"github.com/alexaandru/go-sitter-forest/sflog"
+	"github.com/alexaandru/go-sitter-forest/simula"
 	"github.com/alexaandru/go-sitter-forest/sincere"
 	"github.com/alexaandru/go-sitter-forest/slang"
 	"github.com/alexaandru/go-sitter-forest/slim"
@@ -372,6 +378,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/t32"
 	"github.com/alexaandru/go-sitter-forest/tablegen"
 	"github.com/alexaandru/go-sitter-forest/tact"
+	"github.com/alexaandru/go-sitter-forest/talon"
 	"github.com/alexaandru/go-sitter-forest/tcl"
 	"github.com/alexaandru/go-sitter-forest/teal"
 	"github.com/alexaandru/go-sitter-forest/templ"
@@ -396,6 +403,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/typoscript"
 	"github.com/alexaandru/go-sitter-forest/typst"
 	"github.com/alexaandru/go-sitter-forest/udev"
+	"github.com/alexaandru/go-sitter-forest/uiua"
 	"github.com/alexaandru/go-sitter-forest/ungrammar"
 	"github.com/alexaandru/go-sitter-forest/unison"
 	"github.com/alexaandru/go-sitter-forest/ursa"
@@ -453,6 +461,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"ada":                ada.GetLanguage,
 	"agda":               agda.GetLanguage,
 	"aiken":              aiken.GetLanguage,
+	"al":                 al.GetLanguage,
 	"amber":              amber.GetLanguage,
 	"angular":            angular.GetLanguage,
 	"animationtxt":       animationtxt.GetLanguage,
@@ -477,6 +486,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"blueprint":          blueprint.GetLanguage,
 	"bluespec":           bluespec.GetLanguage,
 	"bp":                 bp.GetLanguage,
+	"bqn":                bqn.GetLanguage,
 	"brightscript":       brightscript.GetLanguage,
 	"c":                  c.GetLanguage,
 	"c3":                 c3.GetLanguage,
@@ -533,6 +543,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"eds":                eds.GetLanguage,
 	"eex":                eex.GetLanguage,
 	"effekt":             effekt.GetLanguage,
+	"eiffel":             eiffel.GetLanguage,
 	"elisp":              elisp.GetLanguage,
 	"elixir":             elixir.GetLanguage,
 	"elm":                elm.GetLanguage,
@@ -587,6 +598,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"gotmpl":             gotmpl.GetLanguage,
 	"gowork":             gowork.GetLanguage,
 	"gpg":                gpg.GetLanguage,
+	"gram":               gram.GetLanguage,
 	"graphql":            graphql.GetLanguage,
 	"gren":               gren.GetLanguage,
 	"groovy":             groovy.GetLanguage,
@@ -729,6 +741,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"pymanifest":         pymanifest.GetLanguage,
 	"pyrope":             pyrope.GetLanguage,
 	"python":             python.GetLanguage,
+	"qbe":                qbe.GetLanguage,
 	"ql":                 ql.GetLanguage,
 	"qmldir":             qmldir.GetLanguage,
 	"qmljs":              qmljs.GetLanguage,
@@ -763,6 +776,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"scss":               scss.GetLanguage,
 	"sdml":               sdml.GetLanguage,
 	"sflog":              sflog.GetLanguage,
+	"simula":             simula.GetLanguage,
 	"sincere":            sincere.GetLanguage,
 	"slang":              slang.GetLanguage,
 	"slim":               slim.GetLanguage,
@@ -800,6 +814,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"t32":                t32.GetLanguage,
 	"tablegen":           tablegen.GetLanguage,
 	"tact":               tact.GetLanguage,
+	"talon":              talon.GetLanguage,
 	"tcl":                tcl.GetLanguage,
 	"teal":               teal.GetLanguage,
 	"templ":              templ.GetLanguage,
@@ -825,6 +840,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"typoscript":         typoscript.GetLanguage,
 	"typst":              typst.GetLanguage,
 	"udev":               udev.GetLanguage,
+	"uiua":               uiua.GetLanguage,
 	"ungrammar":          ungrammar.GetLanguage,
 	"unison":             unison.GetLanguage,
 	"ursa":               ursa.GetLanguage,
@@ -867,6 +883,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ada":                ada.GetQuery,
 	"agda":               agda.GetQuery,
 	"aiken":              aiken.GetQuery,
+	"al":                 al.GetQuery,
 	"amber":              amber.GetQuery,
 	"angular":            angular.GetQuery,
 	"animationtxt":       animationtxt.GetQuery,
@@ -891,6 +908,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"blueprint":          blueprint.GetQuery,
 	"bluespec":           bluespec.GetQuery,
 	"bp":                 bp.GetQuery,
+	"bqn":                bqn.GetQuery,
 	"brightscript":       brightscript.GetQuery,
 	"c":                  c.GetQuery,
 	"c3":                 c3.GetQuery,
@@ -947,6 +965,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"eds":                eds.GetQuery,
 	"eex":                eex.GetQuery,
 	"effekt":             effekt.GetQuery,
+	"eiffel":             eiffel.GetQuery,
 	"elisp":              elisp.GetQuery,
 	"elixir":             elixir.GetQuery,
 	"elm":                elm.GetQuery,
@@ -1001,6 +1020,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"gotmpl":             gotmpl.GetQuery,
 	"gowork":             gowork.GetQuery,
 	"gpg":                gpg.GetQuery,
+	"gram":               gram.GetQuery,
 	"graphql":            graphql.GetQuery,
 	"gren":               gren.GetQuery,
 	"groovy":             groovy.GetQuery,
@@ -1143,6 +1163,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pymanifest":         pymanifest.GetQuery,
 	"pyrope":             pyrope.GetQuery,
 	"python":             python.GetQuery,
+	"qbe":                qbe.GetQuery,
 	"ql":                 ql.GetQuery,
 	"qmldir":             qmldir.GetQuery,
 	"qmljs":              qmljs.GetQuery,
@@ -1177,6 +1198,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"scss":               scss.GetQuery,
 	"sdml":               sdml.GetQuery,
 	"sflog":              sflog.GetQuery,
+	"simula":             simula.GetQuery,
 	"sincere":            sincere.GetQuery,
 	"slang":              slang.GetQuery,
 	"slim":               slim.GetQuery,
@@ -1214,6 +1236,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"t32":                t32.GetQuery,
 	"tablegen":           tablegen.GetQuery,
 	"tact":               tact.GetQuery,
+	"talon":              talon.GetQuery,
 	"tcl":                tcl.GetQuery,
 	"teal":               teal.GetQuery,
 	"templ":              templ.GetQuery,
@@ -1239,6 +1262,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"typoscript":         typoscript.GetQuery,
 	"typst":              typst.GetQuery,
 	"udev":               udev.GetQuery,
+	"uiua":               uiua.GetQuery,
 	"ungrammar":          ungrammar.GetQuery,
 	"unison":             unison.GetQuery,
 	"ursa":               ursa.GetQuery,

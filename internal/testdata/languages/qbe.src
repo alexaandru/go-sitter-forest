@@ -1,0 +1,133 @@
+# Please keep in mind, this is not supposed to be able to compile!
+# Mostly taken from: https://c9x.me/compile/doc/il.html
+
+# Define the string constant.
+data $str = { b "hello world", b 0 }
+
+export function w $main() {
+@start
+    # Call the puts function with $str as argument.
+    %r =w call $puts(l $str)
+    ret 0
+}
+
+function $stuff() {
+@start
+    %x =w sub -1, 0
+    %y =w sub 4294967295, 0
+    %x =d add d_0, d_-1
+    %y =d add d_0, -4616189618054758400
+    %x =w add 0, %y
+    %z =w add %x, %x
+    %c =w cgts %a, %b
+    %A0 =l alloc4 8      # stack allocate an array A of 2 words
+    %A1 =l add %A0, 4
+    storew 43,  %A0      # A[0] <- 43
+    storew 255, %A1      # A[1] <- 255
+    %v1 =w loadw  %A0    # %v1 <- A[0] as word
+    %v2 =w loadsb %A1    # %v2 <- A[1] as signed byte
+    %v3 =w add %v1, %v2  # %v3 is 42 here
+    %b0 =w cast %f
+    %b1 =w xor 2147483648, %b0  # flip the msb
+    %rs =s cast %b1
+    blit %0, %1, 2
+@start
+    %x =w copy 100
+    %s =w copy 0
+    hlt
+@loop
+    %s =w add %s, %x
+    %x =w sub %x, 1
+    jnz %x, @loop, @end
+@end
+    ret %s
+@ifstmt
+    jnz %x, @ift, @iff
+@ift
+    jmp @retstmt
+@iff
+    jmp @retstmt
+@retstmt
+    %y =w phi @ift 1, @iff 2
+    ret %y
+}
+
+section ".init_array"
+data $.init.f = { l $f }
+
+type :fourfloats = { s, s, d, d }
+type :abyteandmanywords = { b, w 100 }
+type :cryptovector = align 16 { w 4 }
+type :un9 = { { b } { s } }
+type :opaque = align 16 { 32 }
+
+# Three 32-bit values 1, 2, and 3
+# followed by a 0 byte.
+data $a = { w 1 2 3, b 0 }
+
+# A thousand bytes 0 initialized.
+data $b = { z 1000 }
+
+# An object containing two 64-bit
+# fields, one with all bits sets and the
+# other containing a pointer to the
+# object itself.
+data $c = { l -1, l $c }
+
+type :one = { w }
+
+function w $getone(:one %p) {
+@start
+        %val =w loadw %p
+        ret %val
+}
+
+function w $addbyte(w %a, sb %b) {
+@start
+        %bw =w extsb %b
+        %val =w add %a, %bw
+        ret %val
+}
+
+export function w $add(env %e, w %a, w %b) {
+@start
+        %c =w add %a, %b
+        ret %c
+}
+
+function $loop() {
+@start
+        jmp @loop
+@loop
+        %x =w phi @start 100, @loop %x1
+        %x1 =w sub %x, 1
+        jnz %x1, @loop, @end
+@end
+        ret
+}
+
+type :valist = align 8 { 24 }  # For amd64_sysv
+type :valist = align 8 { 32 }  # For arm64
+type :valist = align 8 { 8 }   # For rv64
+
+function s $add3(s %a, ...) {
+@start
+        %ap =l alloc8 32
+        vastart %ap
+        %r =s call $vadd(s %a, ..., l %ap)
+        ret %r
+}
+
+function s $vadd(s %a, l %ap) {
+@start
+        %b =s vaarg %ap
+        %c =s vaarg %ap
+        %d =s add %a, %b
+        %e =s add %d, %c
+        ret %e
+}
+
+function $blit(l %src, l %dst, w %size) {
+@start
+        blit %src, %dst, %size
+}
