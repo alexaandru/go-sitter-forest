@@ -3596,7 +3596,10 @@
     "grammarSha": "35750afce2dd77590c5ed6e155aa0b55732ac891494cd464ff2ae9ac0a222040",
     "language": "terra",
     "url": "https://github.com/tpkessler/tree-sitter-terra-rewrite",
-    "maintainedBy": "@tpkessler"
+    "maintainedBy": "@tpkessler",
+    "files": [
+      "scanner.c"
+    ]
   },
   {
     "reference": "main",
