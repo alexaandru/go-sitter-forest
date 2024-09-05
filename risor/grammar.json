@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "98f7c0d45176925338f91489964e0a0d819477a5",
+  "revision": "bec6f2e385597d0cae55b38f54515eee5f0ebffd",
   "grammarSha": "a2ff693bc0f7ffd4954cf0a940afbff4e06fb78a897f3aafbd1894e67f14057b",
   "language": "risor",
   "url": "https://github.com/applejag/tree-sitter-risor",

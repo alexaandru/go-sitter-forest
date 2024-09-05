@@ -9,8 +9,8 @@
   },
   {
     "reference": "master",
-    "revision": "ddf36da7da08978aa3f5718fab00ceaccf4a16d9",
-    "grammarSha": "dddf58ce8a0d928fd45b1a8856388e9c01441d5a90d40c83d3af881702d7e42c",
+    "revision": "5b1bb924e6bcc03022d7030907f7d60f4e89b597",
+    "grammarSha": "354ee09799833e80519c737514df30ce9dba367e5c14b8ffc877f7738b053e51",
     "language": "abl",
     "url": "https://github.com/usagi-coffee/tree-sitter-abl",
     "maintainedBy": "@jkbz64",
@@ -1310,8 +1310,8 @@
   },
   {
     "reference": "main",
-    "revision": "5e7831b663cd8a7b5c357c6317e50aa31b3d3b79",
-    "grammarSha": "bbfd85de760e5159f54b668d671df32caef3d387cd520965343db5a1a88e3fbb",
+    "revision": "d3d2c37fc117637fff6ccc1fb24c470740321a14",
+    "grammarSha": "90c77deb80e00f4232006d6c3e5f767fb6fabbebc1516cbcea4f6acb4d78fd52",
     "language": "gobra",
     "url": "https://github.com/HSMF/tree-sitter-gobra",
     "maintainedBy": "@HSMF"
@@ -2568,7 +2568,7 @@
   },
   {
     "reference": "master",
-    "revision": "2b03c35bd2ea506a9050531c15d83b7a2617b94d",
+    "revision": "6eab7d12690e4c04a2c4ef515279ca31b821057d",
     "grammarSha": "9fde12dc4e6ba9936a4b390800776a86d7f61eef6e3cf773d2d5f513121c1336",
     "language": "pgn",
     "url": "https://github.com/rolandwalker/tree-sitter-pgn",
@@ -3004,7 +3004,7 @@
   },
   {
     "reference": "main",
-    "revision": "98f7c0d45176925338f91489964e0a0d819477a5",
+    "revision": "bec6f2e385597d0cae55b38f54515eee5f0ebffd",
     "grammarSha": "a2ff693bc0f7ffd4954cf0a940afbff4e06fb78a897f3aafbd1894e67f14057b",
     "language": "risor",
     "url": "https://github.com/applejag/tree-sitter-risor",
@@ -3565,8 +3565,8 @@
   },
   {
     "reference": "main",
-    "revision": "46e6acd5c5376047338dd64d955b743f90d8e772",
-    "grammarSha": "0b8c080d22c3e13edcac3c9df4b0a43b0c61371df130ab0d0960b5af14535062",
+    "revision": "cdba4ab96a9896492d0d5219b70300c8783ca4e7",
+    "grammarSha": "2fdd9363910d8706d207cd34f18305773df60160bb2f3773b5adcd5ff572c7a6",
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "maintainedBy": "@lewis6991",

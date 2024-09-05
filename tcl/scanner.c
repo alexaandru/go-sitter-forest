@@ -2,7 +2,8 @@
 #include <wctype.h>
 
 enum TokenType {
-  CONCAT
+  CONCAT,
+  IMMEDIATE
 };
 
 void *tree_sitter_tcl_external_scanner_create() {
@@ -11,18 +12,24 @@ void *tree_sitter_tcl_external_scanner_create() {
 
 bool tree_sitter_tcl_external_scanner_scan(void *payload, TSLexer *lexer,
                                           const bool *valid_symbols) {
-  return valid_symbols[CONCAT] && (
-        !iswspace(lexer->lookahead) &&
-        lexer->lookahead != ')' &&
-        lexer->lookahead != '}' &&
-        lexer->lookahead != ']'
-        );
-  //   iswalpha(lexer->lookahead) ||
-  //   lexer->lookahead == '$' ||
-  //   lexer->lookahead == '/' ||
-  //   lexer->lookahead == '[' ||
-  //   lexer->lookahead == '_'
-  // );
+  int32_t c = lexer->lookahead;
+
+  if (valid_symbols[IMMEDIATE] && !iswspace(c)) {
+    lexer->result_symbol = IMMEDIATE;
+    return false;
+  }
+
+  if (valid_symbols[CONCAT] && (
+        !iswspace(c) &&
+        c != ')' &&
+        c != ':' &&
+        c != '}' &&
+        c != ']')) {
+    lexer->result_symbol = CONCAT;
+    return true;
+  }
+
+  return false;
 }
 
 unsigned tree_sitter_tcl_external_scanner_serialize(void *payload, char *state) {

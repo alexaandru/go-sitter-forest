@@ -11,7 +11,7 @@
 
 (call_expression
   function: (identifier) @function.builtin
-  (#match? @function.builtin "^(append|cap|close|complex|copy|delete|imag|len|make|new|panic|print|println|real|recover|acc)$"))
+  (#match? @function.builtin "^(append|cap|close|complex|copy|delete|imag|len|make|new|panic|print|println|real|recover|acc|old)$"))
 
 (call_expression
   function: (selector_expression
@@ -72,6 +72,7 @@
   "~"
   "--*"
   "==>"
+  "==="
 ] @operator
 
 ; Keywords
@@ -121,6 +122,11 @@
   "pred"
   "implements"
   "pure"
+  "opaque"
+  "trusted"
+  "ghost"
+  "apply"
+  "with"
 ] @keyword
 
 ; Literals
