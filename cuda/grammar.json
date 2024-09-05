@@ -1,12 +1,11 @@
 {
   "reference": "master",
-  "revision": "54be49cebec85f0f9b362b69d3946694298a99f2",
-  "grammarSha": "e2de644b8ea2fa2c472ffb3beddca2814aead6dcb2792a19277b7d5f205a358e",
+  "revision": "635e8aa3747823a0c4e9660c07cef76fe8d3ef93",
+  "grammarSha": "666c4a663fe8cf7df518953052d1ffe1139d3bc46cd18ad71460af1a586622af",
   "language": "cuda",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
   "maintainedBy": "@theHamsta",
   "files": [
     "scanner.c"
-  ],
-  "skip": true
+  ]
 }
