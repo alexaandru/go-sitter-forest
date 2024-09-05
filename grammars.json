@@ -3870,7 +3870,7 @@
   },
   {
     "reference": "main",
-    "revision": "a18d695ec105f0cda1903d1974f493207e122b35",
+    "revision": "d63bc6c08a88715c89f4b1b06642e130dd899aba",
     "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
     "language": "v",
     "url": "https://github.com/vlang/v-analyzer",

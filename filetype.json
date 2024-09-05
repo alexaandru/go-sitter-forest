@@ -198,6 +198,7 @@
     "gleam":              ["gleam"],
     "glimmer":            ["gjs", "gts"],
     "glimmer_javascript": ["gljs"],
+    "glimmer_typescript": ["glts"],
     "glint":              ["glint"],
     "glsl":               ["glsl"],
     "gn":                 ["gn", "gni"],

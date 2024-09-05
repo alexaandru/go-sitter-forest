@@ -146,6 +146,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gleam"
 	"github.com/alexaandru/go-sitter-forest/glimmer"
 	"github.com/alexaandru/go-sitter-forest/glimmer_javascript"
+	"github.com/alexaandru/go-sitter-forest/glimmer_typescript"
 	"github.com/alexaandru/go-sitter-forest/glint"
 	"github.com/alexaandru/go-sitter-forest/glsl"
 	"github.com/alexaandru/go-sitter-forest/gn"
@@ -588,6 +589,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"gleam":              gleam.GetLanguage,
 	"glimmer":            glimmer.GetLanguage,
 	"glimmer_javascript": glimmer_javascript.GetLanguage,
+	"glimmer_typescript": glimmer_typescript.GetLanguage,
 	"glint":              glint.GetLanguage,
 	"glsl":               glsl.GetLanguage,
 	"gn":                 gn.GetLanguage,
@@ -1014,6 +1016,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"gleam":              gleam.GetQuery,
 	"glimmer":            glimmer.GetQuery,
 	"glimmer_javascript": glimmer_javascript.GetQuery,
+	"glimmer_typescript": glimmer_typescript.GetQuery,
 	"glint":              glint.GetQuery,
 	"glsl":               glsl.GetQuery,
 	"gn":                 gn.GetQuery,
