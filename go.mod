@@ -131,6 +131,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gleam v1.8.1
 	github.com/alexaandru/go-sitter-forest/glimmer v1.8.1
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.8.1
+	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.8.1
 	github.com/alexaandru/go-sitter-forest/glint v1.8.0
 	github.com/alexaandru/go-sitter-forest/glsl v1.8.0
 	github.com/alexaandru/go-sitter-forest/gn v1.8.0

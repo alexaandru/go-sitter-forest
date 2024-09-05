@@ -254,6 +254,8 @@ github.com/alexaandru/go-sitter-forest/glimmer v1.8.1 h1:UwIfL78CIgE+Yxu2gZkuCVs
 github.com/alexaandru/go-sitter-forest/glimmer v1.8.1/go.mod h1:y8/aDZDJdDr7giOh7IPizVNm5TeRgTbHDTDwjniYHLI=
 github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.8.1 h1:QVm9aW2mHLf8peDWJNDcF7oKrBoU1glNQ62f2QfLgfI=
 github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.8.1/go.mod h1:uVsna51qcB00Niwh9dtX7NPzAVcc1x0/NiUXs3zUVoA=
+github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.8.1 h1:g62w90WsWSMsVtglxdUBL/Ra+woOmBFS9OZZekCWf4Q=
+github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.8.1/go.mod h1:2l97VuGFOKUfF/HTTUlH3kGiK4uAU5psOSjLKX+S9Us=
 github.com/alexaandru/go-sitter-forest/glint v1.8.0 h1:bK+50vLTfDQ0NNjhv5Pf1HbKR5eTLy/yH+n/8hkrNxw=
 github.com/alexaandru/go-sitter-forest/glint v1.8.0/go.mod h1:JBNLwNvJnq9S95dcayXIqkYQvnc1hu2+cXCLt0FsyZU=
 github.com/alexaandru/go-sitter-forest/glsl v1.8.0 h1:zyIl0mPsuOSeLHcfC01roikSJw75kGAOwhe8iy7ctsc=
