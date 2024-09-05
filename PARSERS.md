@@ -1,6 +1,6 @@
-# 422 Supported Parsers
+# 423 Supported Parsers
 
-12 pending, 13 skipped regeneration, 32 missing queries
+11 pending, 13 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -135,7 +135,7 @@
 - [x] [gleam](https://github.com/gleam-lang/tree-sitter-gleam) ✔️ (maintained by @amaanq)
 - [x] [Glimmer and Ember](https://github.com/ember-tooling/tree-sitter-glimmer) ✔️ (maintained by @NullVoxPopuli)
 - [x] [glimmer_javascript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript) ✔️ (maintained by @NullVoxPopuli)
-- [ ] [glimmer_typescript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript) 🗸 (maintained by @NullVoxPopuli; scanner.c:16:10: fatal error: ./tree-sitter-typescript/scanner.h: No such file or directory)
+- [x] [glimmer_typescript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript) ✔️ (maintained by @NullVoxPopuli)
 - [x] [glint](https://github.com/LensPlaysGames/tree-sitter-glint) ✔️ (maintained by @LensPlaysGames)
 - [x] [glsl](https://github.com/tree-sitter-grammars/tree-sitter-glsl) ✔️ (maintained by @theHamsta)
 - [x] [GN (Generate Ninja)](https://github.com/tree-sitter-grammars/tree-sitter-gn) ✔️ (maintained by @amaanq)

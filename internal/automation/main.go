@@ -66,6 +66,8 @@ var (
 		`"libraries/ieee/float_pkg.h"`:      `"float_pkg.h"`,
 		`"libraries/ieee/math_real.h"`:      `"math_real.h"`,
 		`"libraries/ieee/math_complex.h"`:   `"math_complex.h"`,
+		// Glimmer_typescript.
+		`"./tree-sitter-typescript/scanner.h"`: `"scanner.h"`,
 	}
 
 	logFile *os.File

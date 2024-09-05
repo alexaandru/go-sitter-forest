@@ -1259,12 +1259,11 @@
     "grammarSha": "a63bf7b026f1091fadd7483370f3b9b90bb35b33c5d82ade9600b6f079e3e85e",
     "language": "glimmer_typescript",
     "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
-    "doc": "scanner.c:16:10: fatal error: ./tree-sitter-typescript/scanner.h: No such file or directory",
     "maintainedBy": "@NullVoxPopuli",
     "files": [
-      "scanner.c"
-    ],
-    "pending": true
+      "scanner.c",
+      "src/tree-sitter-typescript/scanner.h"
+    ]
   },
   {
     "reference": "main",
