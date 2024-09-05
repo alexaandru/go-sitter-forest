@@ -358,6 +358,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		`require("../helpers")`:    `require("./helpers.js")`,
 		`require("../precedence")`: `require("./precedence.js")`,
 		`require('../precedence')`: `require("./precedence.js")`,
+		// This is for terra.
+		`require('tree-sitter-lua/grammar')`: `require('@tree-sitter-grammars/tree-sitter-lua/grammar')`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {

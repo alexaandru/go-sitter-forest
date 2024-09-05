@@ -1,6 +1,6 @@
-# 419 Supported Parsers
+# 421 Supported Parsers
 
-14 pending, 13 skipped regeneration, 30 missing queries
+12 pending, 13 skipped regeneration, 31 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -188,7 +188,7 @@
 - [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌Error: Undefined symbol)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
-- [ ] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) (maintained by @y4cer)
+- [x] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) ✔️ (maintained by @y4cer)
 - [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f)
 - [x] [javascript](https://github.com/tree-sitter/tree-sitter-javascript) ✔️ (maintained by @steelsojka)
 - [x] [jq](https://github.com/flurie/tree-sitter-jq) ✔️ (maintained by @ObserverOfTime)
@@ -379,7 +379,7 @@
 - [x] [tcl](https://github.com/tree-sitter-grammars/tree-sitter-tcl) ✔️ (maintained by @lewis6991)
 - [x] [teal](https://github.com/euclidianAce/tree-sitter-teal) ✔️ (maintained by @euclidianAce)
 - [x] [templ](https://github.com/vrischmann/tree-sitter-templ) ✔️ (maintained by @vrischmann)
-- [ ] [terra](https://github.com/tpkessler/tree-sitter-terra-rewrite) (maintained by @tpkessler)
+- [x] [terra](https://github.com/tpkessler/tree-sitter-terra-rewrite) 🗸 (maintained by @tpkessler)
 - [x] [textproto](https://github.com/PorterAtGoogle/tree-sitter-textproto) ✔️ (maintained by @Porter)
 - [x] [thrift](https://github.com/tree-sitter-grammars/tree-sitter-thrift) ✔️ (maintained by @amaanq, @duskmoon314)
 - [x] [tiger](https://github.com/ambroisie/tree-sitter-tiger) ✔️ (maintained by @ambroisie)

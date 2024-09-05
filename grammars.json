@@ -1744,10 +1744,11 @@
   },
   {
     "reference": "master",
+    "revision": "1639ed2eeaa3364f6df47bad4e3fc946ffc55a67",
+    "grammarSha": "0c52fc38ffb2927203f636c20578cdaa5d9e5ce79d558de07589e03fd3a956ca",
     "language": "jasmin",
     "url": "https://github.com/y4cer/tree-sitter-jasmin",
-    "maintainedBy": "@y4cer",
-    "pending": true
+    "maintainedBy": "@y4cer"
   },
   {
     "reference": "master",
@@ -3591,10 +3592,11 @@
   },
   {
     "reference": "master",
+    "revision": "e4574537627b5fc98b0a6cf53f732f7adf1d0312",
+    "grammarSha": "35750afce2dd77590c5ed6e155aa0b55732ac891494cd464ff2ae9ac0a222040",
     "language": "terra",
     "url": "https://github.com/tpkessler/tree-sitter-terra-rewrite",
-    "maintainedBy": "@tpkessler",
-    "pending": true
+    "maintainedBy": "@tpkessler"
   },
   {
     "reference": "main",

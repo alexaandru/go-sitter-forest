@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "1639ed2eeaa3364f6df47bad4e3fc946ffc55a67",
+  "grammarSha": "0c52fc38ffb2927203f636c20578cdaa5d9e5ce79d558de07589e03fd3a956ca",
+  "language": "jasmin",
+  "url": "https://github.com/y4cer/tree-sitter-jasmin",
+  "maintainedBy": "@y4cer"
+}
