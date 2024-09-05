@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.8.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.8.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.8.0
-	github.com/alexaandru/go-sitter-forest/move v1.8.1
+	github.com/alexaandru/go-sitter-forest/move v1.8.2
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.8.0
 	github.com/alexaandru/go-sitter-forest/nasm v1.8.0

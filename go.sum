@@ -458,8 +458,8 @@ github.com/alexaandru/go-sitter-forest/mlir v1.8.0 h1:1753i4i8fSMKFqxj/DBre8clnx
 github.com/alexaandru/go-sitter-forest/mlir v1.8.0/go.mod h1:wicbV41mdEW6d3oXgXgy3sK32qAFpA/D/6UO+T9gwDM=
 github.com/alexaandru/go-sitter-forest/motoko v1.8.0 h1:az16HbesC1qIFhLSFIq1XP1I07TuiuxMLPKQ+8F0G/s=
 github.com/alexaandru/go-sitter-forest/motoko v1.8.0/go.mod h1:ikRuk15HaVQuv//StEQpVcu6wKUJ/fZGReYbUzrjXVw=
-github.com/alexaandru/go-sitter-forest/move v1.8.1 h1:0Us4qa+AF2rpuvbRW1DCxR11Fh7yLBgl8Twxpayt1iA=
-github.com/alexaandru/go-sitter-forest/move v1.8.1/go.mod h1:y4XIpfIlcUIPjQT/hFZmhWKYLGmVhr6ADJiM4JIlVK8=
+github.com/alexaandru/go-sitter-forest/move v1.8.2 h1:MXrPNnoHTd+ZA2Q2DupUhWhoEBVx8NaxkOMAlJw54Is=
+github.com/alexaandru/go-sitter-forest/move v1.8.2/go.mod h1:y4XIpfIlcUIPjQT/hFZmhWKYLGmVhr6ADJiM4JIlVK8=
 github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0 h1:mNW5kjw4VQRjxT7OwwTFs68huGVuKEcfFxZQFizqthw=
 github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0/go.mod h1:bs0KXFhL/W8heCcFsHO0DoVKM9fVx/4cBy1/IL1myd4=
 github.com/alexaandru/go-sitter-forest/muttrc v1.8.0 h1:G+f2amZ0KR3+TxS9jMco660FQTvalETWrXM4Leb/m0Y=
