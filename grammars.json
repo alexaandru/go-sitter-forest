@@ -2260,6 +2260,14 @@
   },
   {
     "reference": "main",
+    "revision": "8c2c1c6f23984f843a43a76a9e44548dbdedff4b",
+    "grammarSha": "6f25dfe19dea642d4e48d86064b8657ccc104ac0503c65fad990d73cac1dcbc2",
+    "language": "modelica",
+    "url": "https://github.com/modelicahub/tree-sitter-modelica",
+    "maintainedBy": "@nachawati"
+  },
+  {
+    "reference": "main",
     "revision": "e52d7490e668e7411a489663792c83778a7d2d2d",
     "grammarSha": "2bc5dc869bc183b1e4a9ca21d15b410bf81dea4b2138a5cbec7c5b8a5bc1d47b",
     "language": "motoko",

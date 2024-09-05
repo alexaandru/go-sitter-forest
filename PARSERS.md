@@ -1,6 +1,6 @@
-# 421 Supported Parsers
+# 422 Supported Parsers
 
-12 pending, 13 skipped regeneration, 31 missing queries
+12 pending, 13 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -243,6 +243,7 @@
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️ (maintained by @Decodetalkers)
 - [ ] [mix_lock](https://github.com/fluidattacks/tree-sitter-mix_lock) (maintained by @drestrepom)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️ (maintained by @artagnon)
+- [x] [modelica](https://github.com/modelicahub/tree-sitter-modelica) 🗸 (maintained by @nachawati)
 - [x] [motoko](https://github.com/f0i/tree-sitter-motoko) ✔️ (maintained by @f0i)
 - [x] [move](https://github.com/tzakian/tree-sitter-move) ✔️ (maintained by @tzakian)
 - [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) 🗸 (maintained by @ArArgon)
