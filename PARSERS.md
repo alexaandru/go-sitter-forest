@@ -1,6 +1,6 @@
-# 418 Supported Parsers
+# 419 Supported Parsers
 
-15 pending, 13 skipped regeneration, 30 missing queries
+14 pending, 13 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -160,7 +160,7 @@
 - [x] [hare](https://github.com/tree-sitter-grammars/tree-sitter-hare) ✔️ (maintained by @amaanq)
 - [x] [haskell](https://github.com/tree-sitter/tree-sitter-haskell) ✔️ (maintained by @mrcjkb)
 - [x] [haskell_persistent](https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent) ✔️ (maintained by @lykahb; ❌thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key)
-- [ ] [haxe](https://github.com/vantreeseba/tree-sitter-haxe) (maintained by @vantreeseba)
+- [x] [haxe](https://github.com/vantreeseba/tree-sitter-haxe) ✔️ (maintained by @vantreeseba)
 - [x] [hcl](https://github.com/tree-sitter-grammars/tree-sitter-hcl) ✔️ (maintained by @MichaHoffmann)
 - [x] [heex](https://github.com/phoenixframework/tree-sitter-heex) ✔️ (maintained by @connorlay)
 - [x] [helm](https://github.com/ngalaiko/tree-sitter-go-template) ✔️ (maintained by @qvalentin)

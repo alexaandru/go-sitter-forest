@@ -496,6 +496,11 @@ func extractDeps(lang string, content []byte) (deps []string) {
 				z += ".js"
 			}
 
+			if lang == "haxe" && strings.Contains(z, "grammar-types") {
+				// It's commented out.
+				continue
+			}
+
 			deps = append(deps, z)
 		}
 	}
