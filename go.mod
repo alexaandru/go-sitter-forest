@@ -121,7 +121,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gaptst v1.8.1
 	github.com/alexaandru/go-sitter-forest/gdscript v1.8.0
 	github.com/alexaandru/go-sitter-forest/gdshader v1.8.0
-	github.com/alexaandru/go-sitter-forest/gemfilelock v1.8.0
+	github.com/alexaandru/go-sitter-forest/gemfilelock v1.8.1
 	github.com/alexaandru/go-sitter-forest/gherkin v1.8.0
 	github.com/alexaandru/go-sitter-forest/git_config v1.8.1
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.8.0
@@ -198,7 +198,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kconfig v1.8.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.8.0
 	github.com/alexaandru/go-sitter-forest/koan v1.8.0
-	github.com/alexaandru/go-sitter-forest/koka v1.8.0
+	github.com/alexaandru/go-sitter-forest/koka v1.8.1
 	github.com/alexaandru/go-sitter-forest/kotlin v1.8.1
 	github.com/alexaandru/go-sitter-forest/koto v1.8.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.8.0
@@ -431,6 +431,9 @@ require (
 )
 
 retract (
+	// Parsers koka and gemfilelock had a conflict.
+	v1.8.9
+
 	// I only update the Go bindings at the time, but the parsers weren't
 	// actually updated (rebuilt) with tree-sitter v0.22.6 so the tag
 	// and associated message was in fact incorrect.
