@@ -204,7 +204,6 @@ linters:
     #- execinquery # DEPRECATED
     - exhaustive
     #- exhaustruct
-    - exportloopref
     - fatcontext
     - forbidigo
     - forcetypeassert

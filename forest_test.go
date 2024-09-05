@@ -326,17 +326,3 @@ func getContent(args ...string) string {
 
 	return ""
 }
-
-func stripCode(s string) string {
-	if len(s) < 2 {
-		return s
-	}
-
-	s = s[1 : len(s)-1]
-
-	return strings.ReplaceAll(s, `\\`, `\`)
-}
-
-func stripExp(s string) string {
-	return strings.ReplaceAll(stripCode(s), `\"`, `"`)
-}

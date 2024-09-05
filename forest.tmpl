@@ -61,7 +61,7 @@ var remainingQueries embed.FS
 // and caches it so that language copies are not created unnecessarily.
 func GetLanguage(lang string) (l *sitter.Language) {
 	if x, ok := cache.Load(lang); ok {
-		return x.(*sitter.Language)
+		return x.(*sitter.Language) //nolint:forcetypeassert // safe
 	}
 
 	l = sitter.NewLanguage(languageFuncs[lang]())

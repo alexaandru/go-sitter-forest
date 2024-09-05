@@ -71,7 +71,7 @@ func NormalizeLangPackName(langIn string) (lang, pack, silencer string) {
 	return
 }
 
-// QueryLuaMatch2Match converts all `lua-match?` and not-lua-match? predicates in
+// QueryLuaMatch2Match converts all `lua-match?` and `not-lua-match?` predicates in
 // a query with `match?` predicates and the corresponding Lua pattern to Go regexp.
 // TODO: Implement verification?
 // VerifyCount := bytes.Count(out, []byte("#lua-match? @")).
