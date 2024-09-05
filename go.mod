@@ -182,6 +182,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.8.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.8.0
 	github.com/alexaandru/go-sitter-forest/janet v1.8.0
+	github.com/alexaandru/go-sitter-forest/jasmin v1.8.0
 	github.com/alexaandru/go-sitter-forest/java v1.8.0
 	github.com/alexaandru/go-sitter-forest/javascript v1.8.1
 	github.com/alexaandru/go-sitter-forest/jq v1.8.0
@@ -366,6 +367,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tcl v1.8.1
 	github.com/alexaandru/go-sitter-forest/teal v1.8.0
 	github.com/alexaandru/go-sitter-forest/templ v1.8.1
+	github.com/alexaandru/go-sitter-forest/terra v1.8.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.8.0
 	github.com/alexaandru/go-sitter-forest/thrift v1.8.0
 	github.com/alexaandru/go-sitter-forest/tiger v1.8.0

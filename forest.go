@@ -199,6 +199,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 	"github.com/alexaandru/go-sitter-forest/ispc"
 	"github.com/alexaandru/go-sitter-forest/janet"
+	"github.com/alexaandru/go-sitter-forest/jasmin"
 	"github.com/alexaandru/go-sitter-forest/java"
 	"github.com/alexaandru/go-sitter-forest/javascript"
 	"github.com/alexaandru/go-sitter-forest/jq"
@@ -383,6 +384,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/tcl"
 	"github.com/alexaandru/go-sitter-forest/teal"
 	"github.com/alexaandru/go-sitter-forest/templ"
+	"github.com/alexaandru/go-sitter-forest/terra"
 	"github.com/alexaandru/go-sitter-forest/textproto"
 	"github.com/alexaandru/go-sitter-forest/thrift"
 	"github.com/alexaandru/go-sitter-forest/tiger"
@@ -636,6 +638,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"integerbasic":       integerbasic.GetLanguage,
 	"ispc":               ispc.GetLanguage,
 	"janet":              janet.GetLanguage,
+	"jasmin":             jasmin.GetLanguage,
 	"java":               java.GetLanguage,
 	"javascript":         javascript.GetLanguage,
 	"jq":                 jq.GetLanguage,
@@ -820,6 +823,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"tcl":                tcl.GetLanguage,
 	"teal":               teal.GetLanguage,
 	"templ":              templ.GetLanguage,
+	"terra":              terra.GetLanguage,
 	"terraform":          hcl.GetLanguage,
 	"textproto":          textproto.GetLanguage,
 	"thrift":             thrift.GetLanguage,
@@ -1059,6 +1063,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"integerbasic":       integerbasic.GetQuery,
 	"ispc":               ispc.GetQuery,
 	"janet":              janet.GetQuery,
+	"jasmin":             jasmin.GetQuery,
 	"java":               java.GetQuery,
 	"javascript":         javascript.GetQuery,
 	"jq":                 jq.GetQuery,
@@ -1243,6 +1248,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"tcl":                tcl.GetQuery,
 	"teal":               teal.GetQuery,
 	"templ":              templ.GetQuery,
+	"terra":              terra.GetQuery,
 	"terraform":          hcl.GetQuery,
 	"textproto":          textproto.GetQuery,
 	"thrift":             thrift.GetQuery,
