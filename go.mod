@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.8.0
-	github.com/alexaandru/go-sitter-forest/abl v1.8.4
+	github.com/alexaandru/go-sitter-forest/abl v1.8.5
 	github.com/alexaandru/go-sitter-forest/ada v1.8.0
 	github.com/alexaandru/go-sitter-forest/agda v1.8.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
@@ -62,7 +62,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.8.0
 	github.com/alexaandru/go-sitter-forest/corn v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.8.0
-	github.com/alexaandru/go-sitter-forest/cpp v1.8.1
+	github.com/alexaandru/go-sitter-forest/cpp v1.8.2
 	github.com/alexaandru/go-sitter-forest/crystal v1.8.0
 	github.com/alexaandru/go-sitter-forest/css v1.8.0
 	github.com/alexaandru/go-sitter-forest/csv v1.8.0
@@ -137,7 +137,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gn v1.8.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.8.0
 	github.com/alexaandru/go-sitter-forest/go v1.8.1
-	github.com/alexaandru/go-sitter-forest/gobra v1.8.0
+	github.com/alexaandru/go-sitter-forest/gobra v1.8.1
 	github.com/alexaandru/go-sitter-forest/goctl v1.8.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.8.0
 	github.com/alexaandru/go-sitter-forest/gomod v1.8.0
@@ -366,7 +366,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tablegen v1.8.0
 	github.com/alexaandru/go-sitter-forest/tact v1.8.0
 	github.com/alexaandru/go-sitter-forest/talon v1.8.0
-	github.com/alexaandru/go-sitter-forest/tcl v1.8.1
+	github.com/alexaandru/go-sitter-forest/tcl v1.8.2
 	github.com/alexaandru/go-sitter-forest/teal v1.8.0
 	github.com/alexaandru/go-sitter-forest/templ v1.8.1
 	github.com/alexaandru/go-sitter-forest/terra v1.8.1
@@ -413,7 +413,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wbproto v1.8.0
 	github.com/alexaandru/go-sitter-forest/wgsl v1.8.0
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.8.0
-	github.com/alexaandru/go-sitter-forest/wing v1.8.1
+	github.com/alexaandru/go-sitter-forest/wing v1.8.2
 	github.com/alexaandru/go-sitter-forest/wit v1.8.0
 	github.com/alexaandru/go-sitter-forest/woml v1.8.0
 	github.com/alexaandru/go-sitter-forest/xcompose v1.8.0
