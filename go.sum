@@ -302,6 +302,8 @@ github.com/alexaandru/go-sitter-forest/haskell v1.8.1 h1:ql0jhb8oHRu3Z+BedM3rYt6
 github.com/alexaandru/go-sitter-forest/haskell v1.8.1/go.mod h1:bDVOESO7xhG0l8Fni1GAcBjQSQl2m/IluoJPddMvd6U=
 github.com/alexaandru/go-sitter-forest/haskell_persistent v1.8.0 h1:zjE2Dqq8WobgR/G3K3nJYnrurb5/SFLAQ8N7BB3w6PM=
 github.com/alexaandru/go-sitter-forest/haskell_persistent v1.8.0/go.mod h1:ODw/+ah6B7PfDrDA9Ccfeu/s8EYpjzlh1QMNXl2XkD0=
+github.com/alexaandru/go-sitter-forest/haxe v1.8.1 h1:TFnZg+tqw79qz+AW5R1uYghus1fdmM0fNVG6VTMoGi0=
+github.com/alexaandru/go-sitter-forest/haxe v1.8.1/go.mod h1:gwYuXAln5LI1NvaBpERXVm/w9PSAIxdKMSKd8y0LV8Q=
 github.com/alexaandru/go-sitter-forest/hcl v1.8.0 h1:DQXQ95NXTXQvxDQ/I1czjivn+94wzxOO7uxdRwhN0N8=
 github.com/alexaandru/go-sitter-forest/hcl v1.8.0/go.mod h1:EnB50IZP4KBR0V/Z0q9WUn/DmpIagAepBSoaLQfz6T8=
 github.com/alexaandru/go-sitter-forest/heex v1.8.0 h1:bHZRJxnbf8K5smkwQ758lwBvRDysR25jCjI2zPHtu7o=

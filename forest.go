@@ -170,6 +170,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/hare"
 	"github.com/alexaandru/go-sitter-forest/haskell"
 	"github.com/alexaandru/go-sitter-forest/haskell_persistent"
+	"github.com/alexaandru/go-sitter-forest/haxe"
 	"github.com/alexaandru/go-sitter-forest/hcl"
 	"github.com/alexaandru/go-sitter-forest/heex"
 	"github.com/alexaandru/go-sitter-forest/helm"
@@ -608,6 +609,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"hare":               hare.GetLanguage,
 	"haskell":            haskell.GetLanguage,
 	"haskell_persistent": haskell_persistent.GetLanguage,
+	"haxe":               haxe.GetLanguage,
 	"hcl":                hcl.GetLanguage,
 	"heex":               heex.GetLanguage,
 	"helm":               helm.GetLanguage,
@@ -1030,6 +1032,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"hare":               hare.GetQuery,
 	"haskell":            haskell.GetQuery,
 	"haskell_persistent": haskell_persistent.GetQuery,
+	"haxe":               haxe.GetQuery,
 	"hcl":                hcl.GetQuery,
 	"heex":               heex.GetQuery,
 	"helm":               helm.GetQuery,

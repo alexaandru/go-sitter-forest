@@ -155,6 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hare v1.8.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.8.1
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.8.0
+	github.com/alexaandru/go-sitter-forest/haxe v1.8.1
 	github.com/alexaandru/go-sitter-forest/hcl v1.8.0
 	github.com/alexaandru/go-sitter-forest/heex v1.8.0
 	github.com/alexaandru/go-sitter-forest/helm v1.8.1

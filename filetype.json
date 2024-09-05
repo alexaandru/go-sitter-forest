@@ -219,6 +219,7 @@
     "hare":               ["ha"],
     "haskell":            ["hs", "hs-boot", "hsc", "hsig"],
     "haskell_persistent": ["persistentmodels"],
+    "haxe":               ["hx"],
     "hcl":                ["hcl", "tfvars"],
     "heex":               ["heex"],
     "helm":               ["helm"],
