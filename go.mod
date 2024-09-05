@@ -66,7 +66,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/crystal v1.8.0
 	github.com/alexaandru/go-sitter-forest/css v1.8.0
 	github.com/alexaandru/go-sitter-forest/csv v1.8.0
-	github.com/alexaandru/go-sitter-forest/cuda v1.8.1
+	github.com/alexaandru/go-sitter-forest/cuda v1.8.2
 	github.com/alexaandru/go-sitter-forest/cue v1.8.0
 	github.com/alexaandru/go-sitter-forest/d v1.8.0
 	github.com/alexaandru/go-sitter-forest/dale v1.8.0
