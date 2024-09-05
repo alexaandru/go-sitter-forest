@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.8.0
-	github.com/alexaandru/go-sitter-forest/abl v1.8.3
+	github.com/alexaandru/go-sitter-forest/abl v1.8.4
 	github.com/alexaandru/go-sitter-forest/ada v1.8.0
 	github.com/alexaandru/go-sitter-forest/agda v1.8.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
@@ -21,7 +21,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/authzed v1.8.0
 	github.com/alexaandru/go-sitter-forest/awa5_rs v1.8.0
 	github.com/alexaandru/go-sitter-forest/awatalk v1.8.0
-	github.com/alexaandru/go-sitter-forest/awk v1.8.0
+	github.com/alexaandru/go-sitter-forest/awk v1.8.1
 	github.com/alexaandru/go-sitter-forest/bash v1.8.0
 	github.com/alexaandru/go-sitter-forest/bass v1.8.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.8.0
@@ -55,7 +55,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.8.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.8.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.8.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.8.1
+	github.com/alexaandru/go-sitter-forest/cognate v1.8.2
 	github.com/alexaandru/go-sitter-forest/comment v1.8.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.8.0
 	github.com/alexaandru/go-sitter-forest/context v1.8.0
@@ -107,7 +107,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.3
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.4
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.0
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
@@ -148,7 +148,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gram v1.8.0
 	github.com/alexaandru/go-sitter-forest/graphql v1.8.0
 	github.com/alexaandru/go-sitter-forest/gren v1.8.0
-	github.com/alexaandru/go-sitter-forest/groovy v1.8.0
+	github.com/alexaandru/go-sitter-forest/groovy v1.8.1
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.8.0
 	github.com/alexaandru/go-sitter-forest/hack v1.8.0
 	github.com/alexaandru/go-sitter-forest/haml v1.8.0
@@ -166,7 +166,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.8.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.8.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.8.0
-	github.com/alexaandru/go-sitter-forest/http v1.8.1
+	github.com/alexaandru/go-sitter-forest/http v1.8.2
 	github.com/alexaandru/go-sitter-forest/http2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.8.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.8.0
@@ -231,7 +231,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.8.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.8.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.8.0
-	github.com/alexaandru/go-sitter-forest/move v1.8.0
+	github.com/alexaandru/go-sitter-forest/move v1.8.1
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.8.0
 	github.com/alexaandru/go-sitter-forest/nasm v1.8.0
@@ -263,7 +263,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pgn v1.8.2
 	github.com/alexaandru/go-sitter-forest/php v1.8.1
 	github.com/alexaandru/go-sitter-forest/php_only v1.8.1
-	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.0
+	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.1
 	github.com/alexaandru/go-sitter-forest/pic v1.8.0
 	github.com/alexaandru/go-sitter-forest/pint v1.8.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.8.0
@@ -362,7 +362,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tablegen v1.8.0
 	github.com/alexaandru/go-sitter-forest/tact v1.8.0
 	github.com/alexaandru/go-sitter-forest/talon v1.8.0
-	github.com/alexaandru/go-sitter-forest/tcl v1.8.0
+	github.com/alexaandru/go-sitter-forest/tcl v1.8.1
 	github.com/alexaandru/go-sitter-forest/teal v1.8.0
 	github.com/alexaandru/go-sitter-forest/templ v1.8.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.8.0
@@ -389,7 +389,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/uiua v1.8.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.8.0
 	github.com/alexaandru/go-sitter-forest/unison v1.8.0
-	github.com/alexaandru/go-sitter-forest/ursa v1.8.1
+	github.com/alexaandru/go-sitter-forest/ursa v1.8.2
 	github.com/alexaandru/go-sitter-forest/usd v1.8.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.8.0
 	github.com/alexaandru/go-sitter-forest/v v1.8.0
