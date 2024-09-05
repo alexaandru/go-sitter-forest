@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "1aab69c95bd9d5e7c0e172ecbe5d29bcf5834612",
+  "revision": "d89d95af13d409f30a6c7676387bde311ec4a2c8",
   "grammarSha": "fa83a4ce377afd4947c3fff440dd3b225506cb5f57aab9b871f29e7348d106c2",
   "language": "norg",
   "url": "https://github.com/nvim-neorg/tree-sitter-norg",

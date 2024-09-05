@@ -13,7 +13,7 @@
 ;---------------------
 
 (let
-  (identifier) @function (lambda))
+  (identifier) @function (fn))
 
 ; Function and calls
 ;-------------------

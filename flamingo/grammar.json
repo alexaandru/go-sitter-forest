@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "b1ead544d64d43f026bac44dfcee38c087c4883c",
-  "grammarSha": "67bdce2fa626526dd77d9a05c97b0b2712aad2066e8fccca29555b5e6089ae40",
+  "revision": "163ea716ec3ca874e3339d0a73f821b171747728",
+  "grammarSha": "966f300fb6876d157ed97bf4a7306605bdeda7840fa753bff8f9e12b2db923a7",
   "language": "flamingo",
   "url": "https://github.com/inobulles/tree-sitter-flamingo",
   "maintainedBy": "@obiwac"

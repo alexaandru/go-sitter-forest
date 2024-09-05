@@ -1,6 +1,6 @@
 # 418 Supported Parsers
 
-15 pending, 12 skipped regeneration, 30 missing queries
+15 pending, 13 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->

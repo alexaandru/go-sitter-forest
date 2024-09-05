@@ -3,7 +3,7 @@
 
 [
   (block)
-  (lambda)
+  (fn)
 ] @local.scope
 
 ; Definitions
