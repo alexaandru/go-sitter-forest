@@ -46,5 +46,7 @@
   "https://github.com/block36underscore/tree-sitter-ws",
   "https://github.com/novikovSU/tree-sitter-ssa",
   "https://github.com/zuhanit/tree-sitter-epscript",
-  "https://github.com/antoniusnaumann/tree-sitter-galvan"
+  "https://github.com/antoniusnaumann/tree-sitter-galvan",
+  "https://github.com/dylanmcdiarmid/tree-sitter-neluablk",
+  "https://github.com/frefolli/tree-sitter-lart"
 ]

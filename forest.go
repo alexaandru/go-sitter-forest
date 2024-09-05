@@ -249,6 +249,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/mermaid"
 	"github.com/alexaandru/go-sitter-forest/meson"
 	"github.com/alexaandru/go-sitter-forest/mlir"
+	"github.com/alexaandru/go-sitter-forest/modelica"
 	"github.com/alexaandru/go-sitter-forest/motoko"
 	"github.com/alexaandru/go-sitter-forest/move"
 	"github.com/alexaandru/go-sitter-forest/move_on_aptos"
@@ -688,6 +689,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"mermaid":            mermaid.GetLanguage,
 	"meson":              meson.GetLanguage,
 	"mlir":               mlir.GetLanguage,
+	"modelica":           modelica.GetLanguage,
 	"motoko":             motoko.GetLanguage,
 	"move":               move.GetLanguage,
 	"move_on_aptos":      move_on_aptos.GetLanguage,
@@ -1113,6 +1115,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"mermaid":            mermaid.GetQuery,
 	"meson":              meson.GetQuery,
 	"mlir":               mlir.GetQuery,
+	"modelica":           modelica.GetQuery,
 	"motoko":             motoko.GetQuery,
 	"move":               move.GetQuery,
 	"move_on_aptos":      move_on_aptos.GetQuery,

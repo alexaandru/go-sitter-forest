@@ -295,6 +295,7 @@
     "merlin6502":         ["6502", "S6502"],
     "mermaid":            ["mermaid", "mmd", "mmdc"],
     "mlir":               ["mlir"],
+    "modelica":           ["moca"],
     "motoko":             ["mo"],
     "move":               ["move"],
     "move_on_aptos":      ["move_on_aptos"],
@@ -482,6 +483,7 @@
     "gjs": ["glimmer", "glimmer_javascript"],
     "gts": ["glimmer", "glimmer_typescript"],
     "m":   ["matlab", "octave", "objc"],
+    "mo":  ["motoko", "modelica"],
     "p":   ["abl", "gnuplot"],
     "pp":  ["pascal", "puppet"],
     "v":   ["v", "verilog"]

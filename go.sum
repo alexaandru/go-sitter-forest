@@ -456,6 +456,8 @@ github.com/alexaandru/go-sitter-forest/meson v1.8.0 h1:l56SBgHKUNtARAC/RGonCH2rW
 github.com/alexaandru/go-sitter-forest/meson v1.8.0/go.mod h1:whm8BjPiIDzLM3Ps967UGXnJITHjlJT6jd8hzlc/OPU=
 github.com/alexaandru/go-sitter-forest/mlir v1.8.0 h1:1753i4i8fSMKFqxj/DBre8clnxi7sz2BtBidlvC+dKg=
 github.com/alexaandru/go-sitter-forest/mlir v1.8.0/go.mod h1:wicbV41mdEW6d3oXgXgy3sK32qAFpA/D/6UO+T9gwDM=
+github.com/alexaandru/go-sitter-forest/modelica v1.8.0 h1:uzvG28fJpdZt3J9ukC4WYlQifLDefD7/jLhkQAzZtAk=
+github.com/alexaandru/go-sitter-forest/modelica v1.8.0/go.mod h1:sPe2Ktn8G40so7BqGTicojmO0Ajife2wrlsJJYDGlXM=
 github.com/alexaandru/go-sitter-forest/motoko v1.8.0 h1:az16HbesC1qIFhLSFIq1XP1I07TuiuxMLPKQ+8F0G/s=
 github.com/alexaandru/go-sitter-forest/motoko v1.8.0/go.mod h1:ikRuk15HaVQuv//StEQpVcu6wKUJ/fZGReYbUzrjXVw=
 github.com/alexaandru/go-sitter-forest/move v1.8.2 h1:MXrPNnoHTd+ZA2Q2DupUhWhoEBVx8NaxkOMAlJw54Is=
