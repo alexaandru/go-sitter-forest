@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "9d91a20228d1bc6490f6723028cab97d03964fa6",
+  "grammarSha": "a0e5d9cfbbd01ad169b0c23ea67391dfda94b21d7e23948a40d478700972deba",
+  "language": "simula",
+  "url": "https://github.com/eirslett/tree-sitter-simula",
+  "maintainedBy": "@eirslett",
+  "files": [
+    "scanner.c"
+  ]
+}

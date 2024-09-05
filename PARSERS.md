@@ -1,6 +1,6 @@
-# 410 Supported Parsers
+# 418 Supported Parsers
 
-14 pending, 12 skipped regeneration, 27 missing queries
+15 pending, 12 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -9,6 +9,7 @@
 - [x] [ada](https://github.com/briot/tree-sitter-ada) ✔️ (maintained by @briot)
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️ (maintained by @Decodetalkers)
 - [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) ✔️ (maintained by @Riley-Kilgore)
+- [x] [al](https://github.com/SShadowS/tree-sitter-al) 🗸 (maintained by @SShadowS)
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
@@ -33,6 +34,7 @@
 - [x] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint) ✔️ (maintained by @gabmus)
 - [x] [bluespec](https://github.com/panther03/tree-sitter-bluespec) 🗸 (maintained by @panther03)
 - [x] [bp](https://github.com/ambroisie/tree-sitter-bp) ✔️ (maintained by @ambroisie)
+- [x] [bqn](https://github.com/shnarazk/tree-sitter-bqn) ✔️ (maintained by @shnarazk)
 - [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️ (maintained by @ajdelcimmuto)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️ (maintained by @amaanq)
 - [x] [c3](https://github.com/cbuttner/tree-sitter-c3) ✔️ (maintained by @cbuttner)
@@ -63,6 +65,7 @@
 - [x] [corn](https://github.com/corn-config/tree-sitter-corn) ✔️ (maintained by @jakestanger)
 - [x] [cpon](https://github.com/tree-sitter-grammars/tree-sitter-cpon) ✔️ (maintained by @amaanq)
 - [x] [cpp](https://github.com/tree-sitter/tree-sitter-cpp) ✔️ (maintained by @theHamsta)
+- [ ] [cpp2](https://github.com/tsoj/tree-sitter-cpp2) (maintained by @tsoj; Unresolved conflict for symbol sequence)
 - [x] [crystal](https://github.com/crystal-lang-tools/tree-sitter) ✔️ (maintained by @devnote-dev)
 - [x] [css](https://github.com/tree-sitter/tree-sitter-css) ✔️ (maintained by @TravonteD)
 - [x] [csv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
@@ -91,6 +94,7 @@
 - [x] [eds](https://github.com/uyha/tree-sitter-eds) ✔️ (maintained by @uyha)
 - [x] [eex](https://github.com/connorlay/tree-sitter-eex) ✔️ (maintained by @connorlay)
 - [x] [effekt](https://github.com/leonfuss/tree-sitter-effekt) ✔️ (maintained by @leonfuss)
+- [x] [eiffel](https://github.com/imustafin/tree-sitter-eiffel) ✔️ (maintained by @imustafin)
 - [x] [elisp](https://github.com/Wilfred/tree-sitter-elisp) ✔️ (maintained by @Wilfred)
 - [x] [elixir](https://github.com/elixir-lang/tree-sitter-elixir) ✔️ (maintained by @connorlay)
 - [x] [elm](https://github.com/elm-tooling/tree-sitter-elm) ✔️ (maintained by @zweimach)
@@ -146,6 +150,7 @@
 - [x] [gotmpl](https://github.com/ngalaiko/tree-sitter-go-template) ✔️ (maintained by @qvalentin)
 - [x] [gowork](https://github.com/omertuc/tree-sitter-go-work) ✔️ (maintained by @omertuc)
 - [x] [gpg](https://github.com/tree-sitter-grammars/tree-sitter-gpg-config) ✔️ (maintained by @ObserverOfTime)
+- [x] [gram](https://github.com/gram-data/tree-sitter-gram) 🗸 (maintained by @akollegger)
 - [x] [graphql](https://github.com/bkegley/tree-sitter-graphql) ✔️ (maintained by @bkegley)
 - [x] [gren](https://github.com/MaeBrooks/tree-sitter-gren) 🗸 (maintained by @MaeBrooks)
 - [x] [groovy](https://github.com/murtaza64/tree-sitter-groovy) ✔️ (maintained by @murtaza64)
@@ -296,6 +301,7 @@
 - [x] [PyPA manifest](https://github.com/tree-sitter-grammars/tree-sitter-pymanifest) ✔️ (maintained by @ObserverOfTime)
 - [x] [pyrope](https://github.com/masc-ucsc/tree-sitter-pyrope) ✔️ (maintained by @russellbaxt)
 - [x] [python](https://github.com/tree-sitter/tree-sitter-python) ✔️ (maintained by @stsewd, @theHamsta)
+- [x] [qbe](https://github.com/bitterbloom/tree-sitter-qbe) ✔️ (maintained by @bitterbloom)
 - [x] [ql](https://github.com/tree-sitter/tree-sitter-ql) ✔️ (maintained by @pwntester)
 - [x] [qmldir](https://github.com/tree-sitter-grammars/tree-sitter-qmldir) ✔️ (maintained by @amaanq)
 - [x] [qmljs](https://github.com/yuja/tree-sitter-qmljs) ✔️ (maintained by @Decodetalkers)
@@ -331,6 +337,7 @@
 - [x] [scss](https://github.com/serenadeai/tree-sitter-scss) ✔️ (maintained by @elianiva)
 - [x] [sdml](https://github.com/sdm-lang/tree-sitter-sdml) ✔️ (maintained by @johnstonskj)
 - [x] [sflog](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
+- [x] [simula](https://github.com/eirslett/tree-sitter-simula) ✔️ (maintained by @eirslett)
 - [x] [sincere](https://github.com/vincentvanecchi/tree-sitter-sincere) 🗸 (maintained by @vincentvanecchi)
 - [x] [slang](https://github.com/tree-sitter-grammars/tree-sitter-slang) ✔️ (maintained by @theHamsta)
 - [x] [slim](https://github.com/kolen/tree-sitter-slim) ✔️ (maintained by @kolen)
@@ -368,6 +375,7 @@
 - [x] [t32](https://gitlab.com/xasc/tree-sitter-t32) ✔️ (maintained by @xasc)
 - [x] [tablegen](https://github.com/tree-sitter-grammars/tree-sitter-tablegen) ✔️ (maintained by @amaanq)
 - [x] [tact](https://github.com/tact-lang/tree-sitter-tact) ✔️ (maintained by @novusnota)
+- [x] [talon](https://github.com/wenkokke/tree-sitter-talon) 🗸 (maintained by @wenkokke)
 - [x] [tcl](https://github.com/tree-sitter-grammars/tree-sitter-tcl) ✔️ (maintained by @lewis6991)
 - [x] [teal](https://github.com/euclidianAce/tree-sitter-teal) ✔️ (maintained by @euclidianAce)
 - [x] [templ](https://github.com/vrischmann/tree-sitter-templ) ✔️ (maintained by @vrischmann)
@@ -393,6 +401,7 @@
 - [x] [typoscript](https://github.com/Teddytrombone/tree-sitter-typoscript) ✔️ (maintained by @Teddytrombone)
 - [x] [typst](https://github.com/uben0/tree-sitter-typst) ✔️ (maintained by @uben0, @RaafatTurki)
 - [x] [udev](https://github.com/tree-sitter-grammars/tree-sitter-udev) ✔️ (maintained by @ObserverOfTime)
+- [x] [uiua](https://github.com/shnarazk/tree-sitter-uiua) ✔️ (maintained by @shnarazk)
 - [x] [ungrammar](https://github.com/tree-sitter-grammars/tree-sitter-ungrammar) ✔️ (maintained by @Philipp-M, @amaanq)
 - [x] [unison](https://github.com/kylegoetz/tree-sitter-unison) ✔️ (maintained by @tapegram)
 - [x] [ursa](https://github.com/ursalang/tree-sitter-ursa) ✔️ (maintained by @rrthomas)

@@ -673,6 +673,7 @@ func putFile(content []byte, lang, toPath string) error {
 		reMap["!scan("] = fmt.Sprintf("!scan_%s(", lang)
 		reMap["->scan("] = fmt.Sprintf("->scan_%s(", lang)
 		reMap["advance("] = fmt.Sprintf("advance_%s(", lang)
+		reMap["advance ("] = fmt.Sprintf("advance_%s(", lang)
 		reMap["void (*advance)(TSLexer *, bool)"] = fmt.Sprintf("void (*advance_%s)(TSLexer *, bool)", lang)
 		reMap[" skip("] = fmt.Sprintf(" skip_%s(", lang)
 		reMap["\nskip("] = fmt.Sprintf("\nskip_%s(", lang)

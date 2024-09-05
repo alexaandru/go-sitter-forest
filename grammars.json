@@ -46,6 +46,14 @@
     "maintainedBy": "@Riley-Kilgore"
   },
   {
+    "reference": "main",
+    "revision": "7c2e479b148fe632a4c1751b285ad7224d861093",
+    "grammarSha": "14419cdb4b4a9080e61fa1d0b04b79728cc265edffe4e3c24c5205a72990ecf9",
+    "language": "al",
+    "url": "https://github.com/SShadowS/tree-sitter-al",
+    "maintainedBy": "@SShadowS"
+  },
+  {
     "reference": "master",
     "revision": "e75c9ddd5cb5048826b480328bca0579ca986611",
     "grammarSha": "b42b6c932792b3bbca0fa9e1d2ab3a4a8b851c25be49ed7872c645cc3e7fab10",
@@ -274,6 +282,14 @@
     "language": "bp",
     "url": "https://github.com/ambroisie/tree-sitter-bp",
     "maintainedBy": "@ambroisie"
+  },
+  {
+    "reference": "main",
+    "revision": "48f90c7ca434129a472537b4589a6d4147dffdfb",
+    "grammarSha": "c1e9b34f6d7ce710a9fe29f969c01f1a03cdeeb621fe422019630b2ff69a6576",
+    "language": "bqn",
+    "url": "https://github.com/shnarazk/tree-sitter-bqn",
+    "maintainedBy": "@shnarazk"
   },
   {
     "reference": "main",
@@ -565,6 +581,17 @@
   },
   {
     "reference": "main",
+    "language": "cpp2",
+    "url": "https://github.com/tsoj/tree-sitter-cpp2",
+    "doc": "Unresolved conflict for symbol sequence",
+    "maintainedBy": "@tsoj",
+    "files": [
+      "scanner.c"
+    ],
+    "pending": true
+  },
+  {
+    "reference": "main",
     "revision": "c67e9bc000f006212edae98d167c83411a3d8309",
     "grammarSha": "020f2eab82bdc80417848496ffdbaf9865795893653639f94c536c35503914c3",
     "language": "crystal",
@@ -826,6 +853,14 @@
     "language": "effekt",
     "url": "https://github.com/leonfuss/tree-sitter-effekt",
     "maintainedBy": "@leonfuss"
+  },
+  {
+    "reference": "master",
+    "revision": "650c54180b9dc0411bd16d57cdb6b3a13465704c",
+    "grammarSha": "fea75541f4e45480fbe5f107541e519c9fe634f0897859906b78030a73039c5f",
+    "language": "eiffel",
+    "url": "https://github.com/imustafin/tree-sitter-eiffel",
+    "maintainedBy": "@imustafin"
   },
   {
     "reference": "main",
@@ -1350,6 +1385,14 @@
     "language": "gpg",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
     "maintainedBy": "@ObserverOfTime"
+  },
+  {
+    "reference": "main",
+    "revision": "483644c03638beff687aa161384bbdd22f844d27",
+    "grammarSha": "0640ca344729da1b70e57299b622ce35f577d2a090cd7150711f6fd7431c5e2b",
+    "language": "gram",
+    "url": "https://github.com/gram-data/tree-sitter-gram",
+    "maintainedBy": "@akollegger"
   },
   {
     "reference": "master",
@@ -2789,6 +2832,14 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "20d1d194ee81c1a08d6681919d3cf09656c83b83",
+    "grammarSha": "1880d7b4a79037298381beea743cb393179c5028dc302b4e69a4fa7b58662c16",
+    "language": "qbe",
+    "url": "https://github.com/bitterbloom/tree-sitter-qbe",
+    "maintainedBy": "@bitterbloom"
+  },
+  {
     "reference": "master",
     "revision": "c73c31c89cb0019ef56fe8bc1723e7c36e0be607",
     "grammarSha": "758524d418fde3eb51eda6418a71289effa101bbfe72fafa3e2747597daa6ade",
@@ -3126,6 +3177,17 @@
     "url": "https://github.com/aheber/tree-sitter-sfapex",
     "maintainedBy": "@aheber, @xixiaofinland",
     "srcRoot": "sflog"
+  },
+  {
+    "reference": "main",
+    "revision": "9d91a20228d1bc6490f6723028cab97d03964fa6",
+    "grammarSha": "a0e5d9cfbbd01ad169b0c23ea67391dfda94b21d7e23948a40d478700972deba",
+    "language": "simula",
+    "url": "https://github.com/eirslett/tree-sitter-simula",
+    "maintainedBy": "@eirslett",
+    "files": [
+      "scanner.c"
+    ]
   },
   {
     "reference": "main",
@@ -3479,6 +3541,17 @@
     "maintainedBy": "@novusnota"
   },
   {
+    "reference": "dev",
+    "revision": "7119d7f3fefd0b0c7e900120b51f85a23e6c3160",
+    "grammarSha": "550e9ceea63a5801345b591f8373426bb3ee63714c2ee54a16d7a0003c7523aa",
+    "language": "talon",
+    "url": "https://github.com/wenkokke/tree-sitter-talon",
+    "maintainedBy": "@wenkokke",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "main",
     "revision": "8784024358c233efd0f3a6fd9e7a3c5852e628bc",
     "grammarSha": "d61014d737366f78f4210a6b6365b10191866989c99e6b555ec8d441bb13a47d",
@@ -3717,6 +3790,14 @@
     "language": "udev",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-udev",
     "maintainedBy": "@ObserverOfTime"
+  },
+  {
+    "reference": "main",
+    "revision": "8e02e623b87bd22c25ca78fcfb9d389abb7612fd",
+    "grammarSha": "f26a1fb0c2420af50efec78e0f3cfb69117cea469e93f9d367085688999d3967",
+    "language": "uiua",
+    "url": "https://github.com/shnarazk/tree-sitter-uiua",
+    "maintainedBy": "@shnarazk"
   },
   {
     "reference": "main",

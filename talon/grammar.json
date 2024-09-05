@@ -1,0 +1,11 @@
+{
+  "reference": "dev",
+  "revision": "7119d7f3fefd0b0c7e900120b51f85a23e6c3160",
+  "grammarSha": "550e9ceea63a5801345b591f8373426bb3ee63714c2ee54a16d7a0003c7523aa",
+  "language": "talon",
+  "url": "https://github.com/wenkokke/tree-sitter-talon",
+  "maintainedBy": "@wenkokke",
+  "files": [
+    "scanner.c"
+  ]
+}
