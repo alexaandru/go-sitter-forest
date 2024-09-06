@@ -1832,7 +1832,7 @@
   },
   {
     "reference": "master",
-    "revision": "78b05f3506ecbb0cef10b228a2edeb73bf966e5f",
+    "revision": "3520b57e418f734f582215181ecd926a6178c90f",
     "grammarSha": "281b189160182f9a34991ef624089d8257fa1c077d99d509e2467cf277771f3e",
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
@@ -1906,7 +1906,7 @@
   },
   {
     "reference": "main",
-    "revision": "7276b93ca6754c21f9630757e753f1b6aec500c1",
+    "revision": "ec985672ff21f7fd7f835869d8021e8f87304bb4",
     "grammarSha": "8b6c72e00438a0d644b201d6c7937c4e4ad1360f6064d63e32c659424d48862d",
     "language": "kotlin",
     "url": "https://github.com/fwcd/tree-sitter-kotlin",
@@ -2277,8 +2277,8 @@
   },
   {
     "reference": "main",
-    "revision": "8d30ce9d851babed2ad26f9a401e20b76dff782c",
-    "grammarSha": "0b91195965eba655839071e89fa48ee196cdf853ac0ad1a9adc64e6043871e21",
+    "revision": "688eb3c1107c81089743d9966f63edc27c94b9c0",
+    "grammarSha": "73e0ede788b3cd2da9282106e01f390f290e9f3187b8f14546831b8a99eb4bb6",
     "language": "move",
     "url": "https://github.com/tzakian/tree-sitter-move",
     "maintainedBy": "@tzakian"
@@ -2568,7 +2568,7 @@
   },
   {
     "reference": "master",
-    "revision": "6eab7d12690e4c04a2c4ef515279ca31b821057d",
+    "revision": "60c8ed52d75c8bb36f0313a2997ede5d4dd662bf",
     "grammarSha": "9fde12dc4e6ba9936a4b390800776a86d7f61eef6e3cf773d2d5f513121c1336",
     "language": "pgn",
     "url": "https://github.com/rolandwalker/tree-sitter-pgn",
