@@ -378,8 +378,8 @@ github.com/alexaandru/go-sitter-forest/jsonnet v1.8.0 h1:WEY1QgbNt+P2YkLn6Peo/8i
 github.com/alexaandru/go-sitter-forest/jsonnet v1.8.0/go.mod h1:TPEAbHi44oxIV1LbMHpwmqfLSr7ze32jAFPimh1h6ck=
 github.com/alexaandru/go-sitter-forest/jule v1.8.1 h1:MAMYCBrluKpW19N6PP+HCQ8DpaqboPnx7O28sesqEzc=
 github.com/alexaandru/go-sitter-forest/jule v1.8.1/go.mod h1:mgm6eij9T5mgF5LX7I/kHU6CjDRd5K1yLdUkXaruwWE=
-github.com/alexaandru/go-sitter-forest/julia v1.8.0 h1:cHACXqqvqxfebgNdkIbKFh81hlvwtYWD6TVlSrE5oJQ=
-github.com/alexaandru/go-sitter-forest/julia v1.8.0/go.mod h1:VMWcpM3Ka8qVhQVQzK0h54qgsNWRJPxiO0A0D7J3STg=
+github.com/alexaandru/go-sitter-forest/julia v1.8.1 h1:+SNx7ik9F2wmJNE3JtD85LqY266cwC2ZAI1T4pQWiXQ=
+github.com/alexaandru/go-sitter-forest/julia v1.8.1/go.mod h1:VMWcpM3Ka8qVhQVQzK0h54qgsNWRJPxiO0A0D7J3STg=
 github.com/alexaandru/go-sitter-forest/just v1.8.0 h1:4BIh7Z5dF3sqRp3fi3OJVttZEZhWBq3Xj48lJ39pWZ4=
 github.com/alexaandru/go-sitter-forest/just v1.8.0/go.mod h1:cnSsa2tjY2sue2G9lDOUNs5SEH8jT28Qog7MNq0hxOE=
 github.com/alexaandru/go-sitter-forest/kcl v1.8.0 h1:PcbLS7kC6WKkA8RxO8hCkB6z6PHd6yaGDf/+V/b0dtE=
@@ -462,8 +462,8 @@ github.com/alexaandru/go-sitter-forest/modelica v1.8.0 h1:uzvG28fJpdZt3J9ukC4WYl
 github.com/alexaandru/go-sitter-forest/modelica v1.8.0/go.mod h1:sPe2Ktn8G40so7BqGTicojmO0Ajife2wrlsJJYDGlXM=
 github.com/alexaandru/go-sitter-forest/motoko v1.8.0 h1:az16HbesC1qIFhLSFIq1XP1I07TuiuxMLPKQ+8F0G/s=
 github.com/alexaandru/go-sitter-forest/motoko v1.8.0/go.mod h1:ikRuk15HaVQuv//StEQpVcu6wKUJ/fZGReYbUzrjXVw=
-github.com/alexaandru/go-sitter-forest/move v1.8.2 h1:MXrPNnoHTd+ZA2Q2DupUhWhoEBVx8NaxkOMAlJw54Is=
-github.com/alexaandru/go-sitter-forest/move v1.8.2/go.mod h1:y4XIpfIlcUIPjQT/hFZmhWKYLGmVhr6ADJiM4JIlVK8=
+github.com/alexaandru/go-sitter-forest/move v1.8.3 h1:heM9kp/HzquHy220oYXaDvlkOYyWF+jjyokmCaCd+JI=
+github.com/alexaandru/go-sitter-forest/move v1.8.3/go.mod h1:y4XIpfIlcUIPjQT/hFZmhWKYLGmVhr6ADJiM4JIlVK8=
 github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0 h1:mNW5kjw4VQRjxT7OwwTFs68huGVuKEcfFxZQFizqthw=
 github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0/go.mod h1:bs0KXFhL/W8heCcFsHO0DoVKM9fVx/4cBy1/IL1myd4=
 github.com/alexaandru/go-sitter-forest/muttrc v1.8.0 h1:G+f2amZ0KR3+TxS9jMco660FQTvalETWrXM4Leb/m0Y=
