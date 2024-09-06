@@ -144,6 +144,7 @@
     "csv":                ["csv"],
     "cuda":               ["cu", "cuh"],
     "cue":                ["cue"],
+    "d2":                 ["d2"],
     "d":                  ["d", "di"],
     "dale":               ["dale"],
     "dart":               ["dart", "drt"],

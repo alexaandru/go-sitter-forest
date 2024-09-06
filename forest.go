@@ -84,6 +84,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cuda"
 	"github.com/alexaandru/go-sitter-forest/cue"
 	"github.com/alexaandru/go-sitter-forest/d"
+	"github.com/alexaandru/go-sitter-forest/d2"
 	"github.com/alexaandru/go-sitter-forest/dale"
 	"github.com/alexaandru/go-sitter-forest/dart"
 	"github.com/alexaandru/go-sitter-forest/dbml"
@@ -527,6 +528,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"cuda":               cuda.GetLanguage,
 	"cue":                cue.GetLanguage,
 	"d":                  d.GetLanguage,
+	"d2":                 d2.GetLanguage,
 	"dale":               dale.GetLanguage,
 	"dart":               dart.GetLanguage,
 	"dbml":               dbml.GetLanguage,
@@ -954,6 +956,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"cuda":               cuda.GetQuery,
 	"cue":                cue.GetQuery,
 	"d":                  d.GetQuery,
+	"d2":                 d2.GetQuery,
 	"dale":               dale.GetQuery,
 	"dart":               dart.GetQuery,
 	"dbml":               dbml.GetQuery,

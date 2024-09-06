@@ -69,6 +69,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cuda v1.8.2
 	github.com/alexaandru/go-sitter-forest/cue v1.8.0
 	github.com/alexaandru/go-sitter-forest/d v1.8.0
+	github.com/alexaandru/go-sitter-forest/d2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/dale v1.8.0
 	github.com/alexaandru/go-sitter-forest/dart v1.8.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.8.0

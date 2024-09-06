@@ -130,6 +130,8 @@ github.com/alexaandru/go-sitter-forest/cue v1.8.0 h1:BvQdqBWcEZduWzWN8hmwS4gj5jm
 github.com/alexaandru/go-sitter-forest/cue v1.8.0/go.mod h1:LAAU8XksDpU4K34PJ5nq2hJkvvfqFRA8vvF933Ud08M=
 github.com/alexaandru/go-sitter-forest/d v1.8.0 h1:feQaYzInJn7m8MyRGq7sy2lBKDIzAQRMNPa8x+xtgYM=
 github.com/alexaandru/go-sitter-forest/d v1.8.0/go.mod h1:h+jXbECGhUMYBK4ekzN68z0Z1Geh9UBGCcqZ682IhvU=
+github.com/alexaandru/go-sitter-forest/d2 v1.8.0 h1:hgvkCrJbkJ3wJG6WiGNvoMgvMY0jjqithAkGnNfI3tQ=
+github.com/alexaandru/go-sitter-forest/d2 v1.8.0/go.mod h1:8yxpwrZpaqLDMUAszgLuPAuTzLclZ6WHdpJ13OD6++o=
 github.com/alexaandru/go-sitter-forest/dale v1.8.0 h1:oGtIAWsVKfjB20WfWi084JJseaE0wR4jVtO3NDE9UOY=
 github.com/alexaandru/go-sitter-forest/dale v1.8.0/go.mod h1:VRX15gUfb8/HCm2ZnI5b2ruDnMZC1qN2n/uc97/Jk10=
 github.com/alexaandru/go-sitter-forest/dart v1.8.0 h1:X4ZSVQ8ibvCgqfPxFgK7+Ra8wQrvBBXViIoXGJ7z5TQ=
