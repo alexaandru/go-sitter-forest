@@ -48,5 +48,11 @@
   "https://github.com/zuhanit/tree-sitter-epscript",
   "https://github.com/antoniusnaumann/tree-sitter-galvan",
   "https://github.com/dylanmcdiarmid/tree-sitter-neluablk",
-  "https://github.com/frefolli/tree-sitter-lart"
+  "https://github.com/frefolli/tree-sitter-lart",
+  "https://github.com/mrdgo/tree-sitter-e2",
+  "https://github.com/mrdgo/tree-sitter-e2ir",
+  "https://github.com/MXfive/tree-sitter-yaral",
+  "https://github.com/vistormu/tree-sitter-proxima",
+  "https://github.com/pleshevskiy/tree-sitter-d2",
+  "https://codeberg.org/p8i/tree-sitter-d2"
 ]

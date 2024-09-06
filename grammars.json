@@ -653,6 +653,17 @@
   },
   {
     "reference": "main",
+    "revision": "1e6d8ca3d85c0031ff010759bb60804dd47b95f2",
+    "grammarSha": "65affb3e44a43360b951bbfeb0e4db04eb8876e6506ec41973440eb12f2f3bcf",
+    "language": "d2",
+    "url": "https://codeberg.org/p8i/tree-sitter-d2",
+    "maintainedBy": "@p8i",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "5a775720f3561ad4eda09a0039bc4f884736e10b",
     "grammarSha": "0bac886a26aaea40679ce164f21d415801fe61c30d0a43ab61f54ab5fa525c22",
     "language": "dale",
