@@ -1,4 +1,4 @@
-# 424 Supported Parsers
+# 427 Supported Parsers
 
 11 pending, 12 skipped regeneration, 32 missing queries
 
@@ -122,6 +122,7 @@
 - [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [func](https://github.com/tree-sitter-grammars/tree-sitter-func) ✔️ (maintained by @amaanq)
 - [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) ✔️ (maintained by @jirgn)
+- [x] [galvan](https://github.com/antoniusnaumann/tree-sitter-galvan) ✔️ (maintained by @antoniusnaumann)
 - [x] [GAP system](https://github.com/gap-system/tree-sitter-gap) ✔️ (maintained by @reiniscirpons)
 - [x] [GAP system test files](https://github.com/gap-system/tree-sitter-gaptst) ✔️ (maintained by @reiniscirpons)
 - [x] [Godot (gdscript)](https://github.com/PrestonKnopp/tree-sitter-gdscript) ✔️ (maintained by @PrestonKnopp)
@@ -210,6 +211,7 @@
 - [x] [koto](https://github.com/koto-lang/tree-sitter-koto) ✔️ (maintained by @irh)
 - [x] [kusto](https://github.com/Willem-J-an/tree-sitter-kusto) ✔️ (maintained by @Willem-J-an)
 - [x] [lalrpop](https://github.com/traxys/tree-sitter-lalrpop) ✔️ (maintained by @traxys)
+- [x] [lart](https://github.com/frefolli/tree-sitter-lart) ✔️ (maintained by @frefolli)
 - [x] [lat](https://github.com/vilarfg/tree-sitter-lat) ✔️ (maintained by @vilarfg)
 - [x] [latex](https://github.com/latex-lsp/tree-sitter-latex) ✔️ (maintained by @theHamsta, @clason)
 - [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️ (maintained by @lesserfish; ❌repository was removed by owner)
@@ -295,6 +297,7 @@
 - [x] [promql](https://github.com/MichaHoffmann/tree-sitter-promql) ✔️ (maintained by @MichaHoffmann)
 - [x] [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties) ✔️ (maintained by @ObserverOfTime)
 - [x] [proto](https://github.com/treywood/tree-sitter-proto) ✔️ (maintained by @treywood)
+- [x] [proxima](https://github.com/vistormu/tree-sitter-proxima) ✔️ (maintained by @vistormu)
 - [x] [prql](https://github.com/PRQL/tree-sitter-prql) ✔️ (maintained by @matthias-Q)
 - [x] [psv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
 - [x] [pug](https://github.com/zealot128/tree-sitter-pug) ✔️ (maintained by @zealot128)

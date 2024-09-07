@@ -1124,6 +1124,14 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "language": "galvan",
+    "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
+    "maintainedBy": "@antoniusnaumann"
+  },
+  {
     "reference": "master",
     "revision": "141b063335e85299bde3f61b4888d02d674a1abc",
     "grammarSha": "4b75ddfa0be3f497bc96b80a99da0224c9b8b4aa22da5ac873e72de3c943f131",
@@ -1958,6 +1966,14 @@
     ]
   },
   {
+    "reference": "master",
+    "revision": "971dde01c49d7ec0a0c8d2d7dd82f89b57f7defd",
+    "grammarSha": "4e60142fdd79015d08fedebcc56097a84021728a5b5a1acd7c972d6372bd379b",
+    "language": "lart",
+    "url": "https://github.com/frefolli/tree-sitter-lart",
+    "maintainedBy": "@frefolli"
+  },
+  {
     "reference": "main",
     "revision": "b6f2b459884252c9a4110c4258865dd62b1aa151",
     "grammarSha": "8afe3dac70b9d0c87406955b9cde097150d461db52517264258fa63117beaeda",
@@ -2774,6 +2790,14 @@
     "language": "proto",
     "url": "https://github.com/treywood/tree-sitter-proto",
     "maintainedBy": "@treywood"
+  },
+  {
+    "reference": "master",
+    "revision": "f11c16f804704f061f588da85f40de1940faad80",
+    "grammarSha": "fea7de799157c6740f33ca2b0961ac56f4ba0e94042a816967c5f1f34a59a2a7",
+    "language": "proxima",
+    "url": "https://github.com/vistormu/tree-sitter-proxima",
+    "maintainedBy": "@vistormu"
   },
   {
     "reference": "main",

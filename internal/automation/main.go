@@ -401,6 +401,20 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 			return
 		}
 
+		// FIXME: DRY this!
+		for k, v := range replMap {
+			if strings.HasSuffix(v, ".js") {
+				v = "./" + v
+			}
+
+			b = bytes.ReplaceAll(b, []byte(k), []byte(v))
+
+			k = k[:len(k)-3]
+
+			b = bytes.ReplaceAll(b, []byte("'"+k+"'"), []byte("'"+v+"'"))
+			b = bytes.ReplaceAll(b, []byte(`"`+k+`"`), []byte("'"+v+"'"))
+		}
+
 		var ok bool
 
 		if ok, err = fileExists(fdst); err != nil {
@@ -530,6 +544,8 @@ func extractDeps(lang string, content []byte) (deps []string) {
 		deps = append(deps, "../tree-sitter-xfst/grammar.js")
 	case "rust_with_rstml", "rstml":
 		deps = append(deps, "../rust.grammar.js")
+	case "galvan":
+		deps = append(deps, "precedence.js")
 	}
 
 	return

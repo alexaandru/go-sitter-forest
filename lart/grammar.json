@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "971dde01c49d7ec0a0c8d2d7dd82f89b57f7defd",
+  "grammarSha": "4e60142fdd79015d08fedebcc56097a84021728a5b5a1acd7c972d6372bd379b",
+  "language": "lart",
+  "url": "https://github.com/frefolli/tree-sitter-lart",
+  "maintainedBy": "@frefolli"
+}
