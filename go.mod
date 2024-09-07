@@ -118,6 +118,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.1
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
+	github.com/alexaandru/go-sitter-forest/galvan v1.8.1
 	github.com/alexaandru/go-sitter-forest/gap v1.8.1
 	github.com/alexaandru/go-sitter-forest/gaptst v1.8.1
 	github.com/alexaandru/go-sitter-forest/gdscript v1.8.0
@@ -205,6 +206,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.8.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.8.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.8.0
+	github.com/alexaandru/go-sitter-forest/lart v1.8.0
 	github.com/alexaandru/go-sitter-forest/lat v1.8.0
 	github.com/alexaandru/go-sitter-forest/latex v1.8.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.8.0
@@ -285,6 +287,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/promql v1.8.0
 	github.com/alexaandru/go-sitter-forest/properties v1.8.0
 	github.com/alexaandru/go-sitter-forest/proto v1.8.0
+	github.com/alexaandru/go-sitter-forest/proxima v1.8.0
 	github.com/alexaandru/go-sitter-forest/prql v1.8.0
 	github.com/alexaandru/go-sitter-forest/psv v1.8.0
 	github.com/alexaandru/go-sitter-forest/pug v1.8.0

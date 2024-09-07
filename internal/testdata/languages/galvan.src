@@ -1,0 +1,55 @@
+main { 
+    // see hello.galvan
+    greet("Galvan") // Hello, Galvan!
+
+    // see numbers.galvan
+    mut x: I64 = 0
+    enlighten(mut x)
+    println x // 42
+
+    mut y = 2
+    println y // 2
+    square(mut y)
+    println y // 4
+    // identity(y)
+
+    mut t = 5
+    t = 7
+
+    let z = y
+    println y  // 4
+    println z // 4
+
+    hi()
+
+    // see dog.galvan
+    mut dog = Dog(name: "Rex", age: 3)
+    dog.woof()
+    dog.happy_birthday()
+    println(dog.age)
+
+    dog = Dog(name: "Hasso", age: 4)
+    println(dog.name)
+    dog.age = 5
+
+    // TODO: Wrap this in Arc::new(Mutex::new)) in transpile output
+    // TODO: Create a galvan::Ref<T> trait that has a Ref::clone_into method that accepts both &T and Ref<T>
+    ref other_dog = Dog(name: "Fido", age: 5)
+    ref still_fido = other_dog
+    // println(still_fido.name) // "Fido"
+
+    let a = x + y
+    println(a) // 46
+
+    let b = x - y
+    println(b) // 38
+
+    // let c = x + 3i64 ^ 2
+    println(c) // 51
+
+    let d = 3_i64 ^ 2 + x
+    println(d) // 51
+
+    let truth = true
+    println(truth) // true
+}

@@ -133,6 +133,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/fsharp_signature"
 	FunC "github.com/alexaandru/go-sitter-forest/func"
 	"github.com/alexaandru/go-sitter-forest/fusion"
+	"github.com/alexaandru/go-sitter-forest/galvan"
 	"github.com/alexaandru/go-sitter-forest/gap"
 	"github.com/alexaandru/go-sitter-forest/gaptst"
 	"github.com/alexaandru/go-sitter-forest/gdscript"
@@ -222,6 +223,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/koto"
 	"github.com/alexaandru/go-sitter-forest/kusto"
 	"github.com/alexaandru/go-sitter-forest/lalrpop"
+	"github.com/alexaandru/go-sitter-forest/lart"
 	"github.com/alexaandru/go-sitter-forest/lat"
 	"github.com/alexaandru/go-sitter-forest/latex"
 	"github.com/alexaandru/go-sitter-forest/ldg"
@@ -302,6 +304,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/promql"
 	"github.com/alexaandru/go-sitter-forest/properties"
 	"github.com/alexaandru/go-sitter-forest/proto"
+	"github.com/alexaandru/go-sitter-forest/proxima"
 	"github.com/alexaandru/go-sitter-forest/prql"
 	"github.com/alexaandru/go-sitter-forest/psv"
 	"github.com/alexaandru/go-sitter-forest/pug"
@@ -577,6 +580,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"fsharp_signature":   fsharp_signature.GetLanguage,
 	"func":               FunC.GetLanguage,
 	"fusion":             fusion.GetLanguage,
+	"galvan":             galvan.GetLanguage,
 	"gap":                gap.GetLanguage,
 	"gaptst":             gaptst.GetLanguage,
 	"gdscript":           gdscript.GetLanguage,
@@ -664,6 +668,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"koto":               koto.GetLanguage,
 	"kusto":              kusto.GetLanguage,
 	"lalrpop":            lalrpop.GetLanguage,
+	"lart":               lart.GetLanguage,
 	"lat":                lat.GetLanguage,
 	"latex":              latex.GetLanguage,
 	"ldg":                ldg.GetLanguage,
@@ -744,6 +749,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"promql":             promql.GetLanguage,
 	"properties":         properties.GetLanguage,
 	"proto":              proto.GetLanguage,
+	"proxima":            proxima.GetLanguage,
 	"prql":               prql.GetLanguage,
 	"psv":                psv.GetLanguage,
 	"pug":                pug.GetLanguage,
@@ -1005,6 +1011,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"fsharp_signature":   fsharp_signature.GetQuery,
 	"func":               FunC.GetQuery,
 	"fusion":             fusion.GetQuery,
+	"galvan":             galvan.GetQuery,
 	"gap":                gap.GetQuery,
 	"gaptst":             gaptst.GetQuery,
 	"gdscript":           gdscript.GetQuery,
@@ -1092,6 +1099,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"koto":               koto.GetQuery,
 	"kusto":              kusto.GetQuery,
 	"lalrpop":            lalrpop.GetQuery,
+	"lart":               lart.GetQuery,
 	"lat":                lat.GetQuery,
 	"latex":              latex.GetQuery,
 	"ldg":                ldg.GetQuery,
@@ -1172,6 +1180,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"promql":             promql.GetQuery,
 	"properties":         properties.GetQuery,
 	"proto":              proto.GetQuery,
+	"proxima":            proxima.GetQuery,
 	"prql":               prql.GetQuery,
 	"psv":                psv.GetQuery,
 	"pug":                pug.GetQuery,
