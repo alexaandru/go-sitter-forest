@@ -15,6 +15,7 @@ enum TokenType {
     COMMENT,
     SVELTE_RAW_TEXT,
     SVELTE_RAW_TEXT_EACH,
+    SVELTE_RAW_TEXT_SNIPPET_ARGUMENTS,
     AT,
     HASH,
     SLASH,
@@ -109,7 +110,22 @@ static void deserialize_svelte(Scanner *scanner, const char *buffer, unsigned le
 static String scan_tag_name(TSLexer *lexer) {
     String tag_name = array_new();
     while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' || lexer->lookahead == ':' || lexer->lookahead == '.') {
-        array_push(&tag_name, towupper(lexer->lookahead));
+        // In `tree-sitter-html`, this is where each character is uppercased,
+        // but we're preserving the original case. Why?
+        //
+        // The comparisons for HTML are case-insensitive, since browsers parse
+        // HTML tag names in a case-insensitive manner. But Svelte enforces
+        // that all usages of plain HTML are in lowercase! Imported Svelte
+        // components, on the other hand, must have an initial capital letter.
+        //
+        // For the purposes of this parser, we'll enforce HTML's rules about
+        // containment and void tags only on all-lowercase tag names.
+        //
+        // There are some hypothetical tag names that we could confidently flag
+        // as invalid — element names like `inupt` that fail to meet the naming
+        // requirements for both custom elements and Svelte components. We can
+        // leave that for later, though.
+        array_push(&tag_name, lexer->lookahead);
         advance_svelte(lexer);
     }
     return tag_name;
@@ -148,6 +164,150 @@ static bool scan_comment(TSLexer *lexer) {
     return false;
 }
 
+static bool scan_javascript_template_string(TSLexer *lexer);
+static bool scan_javascript_quoted_string(TSLexer *lexer, char delimiter);
+
+// After consuming a forward slash and seeing an asterisk immediately after it,
+// call this function to advance the lexer to the end of the JavaScript block
+// comment.
+static bool scan_javascript_block_comment(TSLexer *lexer) {
+    if (lexer->lookahead != '*') {
+        return false;
+    }
+    advance_svelte(lexer);
+    while (lexer->lookahead) {
+        switch (lexer->lookahead) {
+            case '*':
+                advance_svelte(lexer);
+                if (lexer->lookahead == '/') {
+                    advance_svelte(lexer);
+                    return true;
+                }
+                break;
+            default:
+                advance_svelte(lexer);
+        }
+    }
+    return false;
+}
+
+// After consuming a forward slash and seeing another forward slash immediately
+// after it, call this function to advance the lexer to the end of the
+// JavaScript line comment.
+static bool scan_javascript_line_comment(TSLexer *lexer) {
+    if (lexer->lookahead != '/') {
+        return false;
+    }
+    advance_svelte(lexer);
+    while (lexer->lookahead) {
+        switch(lexer->lookahead) {
+            case '\n':
+            case '\r':
+                advance_svelte(lexer);
+                return true;
+            default:
+                advance_svelte(lexer);
+        }
+    }
+    return false;
+}
+
+// When you see a `{` in front of you in a JavaScript context, call this
+// function to scan through until the next balanced (unescaped) brace.
+static bool scan_javascript_balanced_brace(TSLexer *lexer) {
+    if (lexer->lookahead != '{') {
+        return false;
+    }
+    uint8_t brace_level = 0;
+    advance_svelte(lexer);
+    while (lexer->lookahead) {
+        switch (lexer->lookahead) {
+            case '`':
+                scan_javascript_template_string(lexer);
+                break;
+            case '\\':
+                // Escape character. Advance twice.
+                advance_svelte(lexer);
+                advance_svelte(lexer);
+                break;
+            case '\'':
+            case '"':
+                scan_javascript_quoted_string(lexer, lexer->lookahead);
+                break;
+            case '{':
+                brace_level++;
+                advance_svelte(lexer);
+                break;
+            case '}':
+                advance_svelte(lexer);
+                if (brace_level == 0) {
+                    return true;
+                }
+                brace_level--;
+                break;
+            default:
+                advance_svelte(lexer);
+        }
+    }
+    return false;
+}
+
+// When you see a single or double quote that starts a string, call this
+// function to scan through until the end of the quoted string.
+static bool scan_javascript_quoted_string(TSLexer *lexer, char delimiter) {
+    if (lexer->lookahead != delimiter) {
+        return false;
+    }
+    advance_svelte(lexer);
+    while (lexer->lookahead) {
+        switch (lexer->lookahead) {
+            case '\\':
+                // Escape character. Advance again.
+                advance_svelte(lexer);
+                advance_svelte(lexer);
+                break;
+            default:
+                if (lexer->lookahead == delimiter) {
+                    advance_svelte(lexer);
+                    return true;
+                }
+                advance_svelte(lexer);
+        }
+    }
+    return false;
+}
+
+// When you see a backtick in a JavaScript context, call this function to scan
+// through until the end of the template string.
+static bool scan_javascript_template_string(TSLexer *lexer) {
+    if (lexer->lookahead != '`') {
+        return false;
+    }
+    advance_svelte(lexer);
+    while (lexer->lookahead) {
+        switch (lexer->lookahead) {
+            case '$':
+                advance_svelte(lexer);
+                if (lexer->lookahead == '{') {
+                    scan_javascript_balanced_brace(lexer);
+                }
+                break;
+            case '\\':
+                // Escape character. Advance again.
+                advance_svelte(lexer);
+                advance_svelte(lexer);
+                break;
+            case '`':
+                advance_svelte(lexer);
+                return true;
+            default:
+                advance_svelte(lexer);
+
+        }
+    }
+    return false;
+}
+
 static bool scan_raw_text(Scanner *scanner, TSLexer *lexer) {
     if (scanner->tags.size == 0) {
         return false;
@@ -176,6 +336,62 @@ static bool scan_raw_text(Scanner *scanner, TSLexer *lexer) {
     return true;
 }
 
+// Like `scan_svelte_raw_text`, but designed to operate inside the parentheses
+// of a `#snippet` definition. Consumes everything until just before the next
+// balanced parenthesis.
+static bool scan_svelte_raw_text_snippet(TSLexer *lexer) {
+    while (iswspace(lexer->lookahead)) {
+        skip_svelte(lexer);
+    }
+    lexer->result_symbol = SVELTE_RAW_TEXT_SNIPPET_ARGUMENTS;
+    uint8_t paren_level = 0;
+    bool advanced_once = false;
+    while (!lexer->eof(lexer)) {
+        switch (lexer->lookahead) {
+            case '/':
+                advance_svelte(lexer);
+                if (lexer->lookahead == '*') {
+                    scan_javascript_block_comment(lexer);
+                } else if (lexer->lookahead == '/') {
+                    scan_javascript_line_comment(lexer);
+                }
+                break;
+            case '\\':
+                // Escape mode. Advance again.
+                advance_svelte(lexer);
+                break;
+            case '"':
+            case '\'':
+                // A quoted string is starting. Advance past the end of the
+                // closing delimiter.
+                scan_javascript_quoted_string(lexer, lexer->lookahead);
+                break;
+            case '`':
+                // A template string is starting. Advance past the end of the
+                // closing delimiter.
+                scan_javascript_template_string(lexer);
+                break;
+            case ')':
+                if (paren_level == 0) {
+                    lexer->mark_end(lexer);
+                    return advanced_once;
+                }
+                advance_svelte(lexer);
+                paren_level--;
+                break;
+            case '(':
+                advance_svelte(lexer);
+                paren_level++;
+                break;
+            default:
+                advance_svelte(lexer);
+                break;
+        }
+        advanced_once = true;
+    }
+    return false;
+}
+
 static bool scan_svelte_raw_text(TSLexer *lexer, const bool *valid_symbols) {
     while (iswspace(lexer->lookahead)) {
         skip_svelte(lexer);
@@ -186,11 +402,22 @@ static bool scan_svelte_raw_text(TSLexer *lexer, const bool *valid_symbols) {
         return false;
     }
 
+    // The presence of a special Svelte sigil disqualifies this as a raw text
+    // node. This helps us distinguish those nodes from things like `{:else}`.
+    bool has_sigil = lexer->lookahead == '@' || lexer->lookahead == '#' || lexer->lookahead == ':';
+    if (has_sigil) return false;
+
+
+    // Keep track of whether we've advanced even once. If we haven't, then that
+    // implies we've encountered `{}``, which isn't a valid `svelte_raw_text`
+    // node.
     bool advanced_once = false;
 
     if (lexer->lookahead == '/' && valid_symbols[SLASH]) {
         advance_svelte(lexer);
-        if (lexer->lookahead != '/') { // JavaScript comment
+        if (lexer->lookahead == '*') {
+            return scan_javascript_block_comment(lexer);
+        } else if (lexer->lookahead != '/') { // JavaScript comment
             return false;
         }
 
@@ -201,8 +428,40 @@ static bool scan_svelte_raw_text(TSLexer *lexer, const bool *valid_symbols) {
 
     uint8_t brace_level = 0;
 
+    // We're searching for a balanced `}`, but along the way we have to
+    // consider characters that might put us into contexts for which braces
+    // have a different meaning. For instance: a brace inside a comment
+    // shouldn't count toward brace balancing, nor should a brace inside of a
+    // string.
     while (!lexer->eof(lexer)) {
         switch (lexer->lookahead) {
+            case '/':
+                advance_svelte(lexer);
+                advanced_once = true;
+                if (lexer->lookahead == '*') {
+                    scan_javascript_block_comment(lexer);
+                } else if (lexer->lookahead == '/') {
+                    scan_javascript_line_comment(lexer);
+                }
+                break;
+            case '\\':
+                // Escape mode. Advance again.
+                advance_svelte(lexer);
+                advanced_once = true;
+                break;
+            case '"':
+            case '\'':
+                // A quoted string is starting. Advance past the end of the
+                // closing delimiter.
+                scan_javascript_quoted_string(lexer, lexer->lookahead);
+                advanced_once = true;
+                break;
+            case '`':
+                // A template string is starting. Advance past the end of the
+                // closing delimiter.
+                scan_javascript_template_string(lexer);
+                advanced_once = true;
+                break;
             case '}':
                 if (brace_level == 0) {
                     lexer->mark_end(lexer);
@@ -365,6 +624,10 @@ static bool scan_self_closing_tag_delimiter(Scanner *scanner, TSLexer *lexer) {
 static bool scan_svelte(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     if (valid_symbols[RAW_TEXT] && !valid_symbols[START_TAG_NAME] && !valid_symbols[END_TAG_NAME]) {
         return scan_raw_text(scanner, lexer);
+    }
+
+    if (valid_symbols[SVELTE_RAW_TEXT_SNIPPET_ARGUMENTS]) {
+        return scan_svelte_raw_text_snippet(lexer);
     }
 
     if (valid_symbols[SVELTE_RAW_TEXT] || valid_symbols[SVELTE_RAW_TEXT_EACH]) {

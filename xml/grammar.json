@@ -1,7 +1,7 @@
 {
   "reference": "master",
   "revision": "809266ed1694d64dedc168a18893cc254e3edf7e",
-  "grammarSha": "d4aa7b4292f9dbad492d943867db9f2bcc93a5b8dcbaa506d69d83873201202c",
+  "grammarSha": "9c89b4b03b6d4d2812f7dd10c77f95405e8bd09914a2006db7283db62b2bfc72",
   "language": "xml",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
   "maintainedBy": "@ObserverOfTime",

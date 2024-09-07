@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "7ab8221e3f378a3b04b4b488f07c1f408c5bd0d8",
-  "grammarSha": "fcd843e6aff1a14bb3543042bc7d8c2189523cdd56709c2193459a5dc2724cc4",
+  "revision": "6fe714f0c9026a986b916bf39c1021ffcb1e995b",
+  "grammarSha": "d76d1a74950196a2c10ef9c8ffa24c1e70181efaed88feedef4f329bacf2458e",
   "language": "svelte",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-svelte",
   "maintainedBy": "@amaanq",

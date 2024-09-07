@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "84077d93f8267f8374476f8ef636bf21c43f679f",
-  "grammarSha": "2a9b923641ffe71f41ba9a44ea2589df34f2dca4012d6ddcd61659ada7065996",
+  "revision": "0d8884514fe10c4fa47527d9a0284d207f38ddea",
+  "grammarSha": "f21908b23b53d5b2a799923a3f3a2ded3733e935514987d10492ad93070ef74f",
   "language": "groovy",
   "url": "https://github.com/murtaza64/tree-sitter-groovy",
   "maintainedBy": "@murtaza64"
