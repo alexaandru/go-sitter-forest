@@ -1129,7 +1129,10 @@
     "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
-    "maintainedBy": "@antoniusnaumann"
+    "maintainedBy": "@antoniusnaumann",
+    "files": [
+      "scanner.c"
+    ]
   },
   {
     "reference": "master",
