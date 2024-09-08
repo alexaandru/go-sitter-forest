@@ -1,6 +1,6 @@
 # 429 Supported Parsers
 
-11 pending, 12 skipped regeneration, 32 missing queries
+11 pending, 11 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -394,7 +394,7 @@
 - [x] [tnsl](https://github.com/CircleShift/tree-sitter-tnsl) ✔️ (maintained by @CircleShift)
 - [x] [todolang](https://github.com/Gnarus-G/tree-sitter-todolang) ✔️ (maintained by @Gnarus-G)
 - [x] [todotxt](https://github.com/arnarg/tree-sitter-todotxt) ✔️ (maintained by @arnarg)
-- [x] [toml](https://github.com/ikatyang/tree-sitter-toml) 🔍 (maintained by @tk-shirasaka; ❌require() of ES Module is not supported)
+- [x] [toml](https://github.com/tree-sitter-grammars/tree-sitter-toml) ✔️ (maintained by @tk-shirasaka, @ObserverOfTime)
 - [x] [tort](https://github.com/quendimax/tree-sitter-tort) ✔️ (maintained by @quendimax)
 - [x] [tsv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
 - [x] [tsx](https://github.com/tree-sitter/tree-sitter-typescript) ✔️ (maintained by @steelsojka; high memory usage (4GB))

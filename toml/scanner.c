@@ -5,20 +5,30 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #endif
 
-enum TokenType {
+typedef enum {
   LINE_ENDING_OR_EOF,
   MULTILINE_BASIC_STRING_CONTENT,
   MULTILINE_BASIC_STRING_END,
   MULTILINE_LITERAL_STRING_CONTENT,
   MULTILINE_LITERAL_STRING_END,
-};
+} TokenType;
 
 void *tree_sitter_toml_external_scanner_create() { return NULL; }
-void tree_sitter_toml_external_scanner_destroy(void *payload) {}
-unsigned tree_sitter_toml_external_scanner_serialize(void *payload, char *buffer) { return 0; }
-void tree_sitter_toml_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {}
 
-bool tree_sitter_toml_external_scanner_scan_multiline_string_end(TSLexer *lexer, const bool *valid_symbols, int32_t delimiter, enum TokenType content_symbol, enum TokenType end_symbol) {
+void tree_sitter_toml_external_scanner_destroy(void *payload) {}
+
+unsigned tree_sitter_toml_external_scanner_serialize(void *payload,
+                                                     char *buffer) {
+  return 0;
+}
+
+void tree_sitter_toml_external_scanner_deserialize(void *payload,
+                                                   const char *buffer,
+                                                   unsigned length) {}
+
+bool tree_sitter_toml_external_scanner_scan_multiline_string_end(
+    TSLexer *lexer, const bool *valid_symbols, int32_t delimiter,
+    TokenType content_symbol, TokenType end_symbol) {
   if (!valid_symbols[end_symbol] || lexer->lookahead != delimiter) {
     return false;
   }
@@ -51,15 +61,14 @@ bool tree_sitter_toml_external_scanner_scan_multiline_string_end(TSLexer *lexer,
   return true;
 }
 
-bool tree_sitter_toml_external_scanner_scan(
-  void *payload,
-  TSLexer *lexer,
-  const bool *valid_symbols
-) {
-  if (
-    tree_sitter_toml_external_scanner_scan_multiline_string_end(lexer, valid_symbols, '"', MULTILINE_BASIC_STRING_CONTENT, MULTILINE_BASIC_STRING_END)
-    || tree_sitter_toml_external_scanner_scan_multiline_string_end(lexer, valid_symbols, '\'', MULTILINE_LITERAL_STRING_CONTENT, MULTILINE_LITERAL_STRING_END)
-  ) {
+bool tree_sitter_toml_external_scanner_scan(void *payload, TSLexer *lexer,
+                                            const bool *valid_symbols) {
+  if (tree_sitter_toml_external_scanner_scan_multiline_string_end(
+          lexer, valid_symbols, '"', MULTILINE_BASIC_STRING_CONTENT,
+          MULTILINE_BASIC_STRING_END) ||
+      tree_sitter_toml_external_scanner_scan_multiline_string_end(
+          lexer, valid_symbols, '\'', MULTILINE_LITERAL_STRING_CONTENT,
+          MULTILINE_LITERAL_STRING_END)) {
     return true;
   }
 
@@ -81,7 +90,6 @@ bool tree_sitter_toml_external_scanner_scan(
       }
     }
   }
-
 
   return false;
 }

@@ -3729,15 +3729,14 @@
   },
   {
     "reference": "master",
-    "revision": "8bd2056818b21860e3d756b5a58c4f6e05fb744e",
+    "revision": "16a30c83ce427385b8d14939c45c137fcfca6c42",
+    "grammarSha": "6b543c054c136569f4d7284f9c25e87aee0716082a184e72a60abb0b1cf03cd6",
     "language": "toml",
-    "url": "https://github.com/ikatyang/tree-sitter-toml",
-    "doc": "require() of ES Module is not supported",
-    "maintainedBy": "@tk-shirasaka",
+    "url": "https://github.com/tree-sitter-grammars/tree-sitter-toml",
+    "maintainedBy": "@tk-shirasaka, @ObserverOfTime",
     "files": [
       "scanner.c"
-    ],
-    "skip": true
+    ]
   },
   {
     "reference": "main",
