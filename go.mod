@@ -237,7 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.8.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.8.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.8.1
-	github.com/alexaandru/go-sitter-forest/moonbit v1.8.0
+	github.com/alexaandru/go-sitter-forest/moonbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.8.0
 	github.com/alexaandru/go-sitter-forest/move v1.8.3
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0
@@ -346,7 +346,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/soql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sosl v1.8.0
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.8.0
-	github.com/alexaandru/go-sitter-forest/sparql v1.8.0
+	github.com/alexaandru/go-sitter-forest/sparql v1.8.1
 	github.com/alexaandru/go-sitter-forest/spicy v1.8.1
 	github.com/alexaandru/go-sitter-forest/sql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.8.0
@@ -383,7 +383,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tnsl v1.8.0
 	github.com/alexaandru/go-sitter-forest/todolang v1.8.0
 	github.com/alexaandru/go-sitter-forest/todotxt v1.8.0
-	github.com/alexaandru/go-sitter-forest/toml v1.8.0
+	github.com/alexaandru/go-sitter-forest/toml v1.8.1
 	github.com/alexaandru/go-sitter-forest/tort v1.8.0
 	github.com/alexaandru/go-sitter-forest/tsv v1.8.0
 	github.com/alexaandru/go-sitter-forest/tsx v1.8.2
