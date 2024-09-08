@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "432c338093c69222efbeb124feb90715da306cc7",
+  "revision": "63e25a4a84142ae7ee0ee01fe3a32c985ca16745",
   "grammarSha": "7cf24fd1e03da19f573c18cbcd51cb2fa44753a76e0ad926b97d6dd841c8c900",
   "language": "scheme",
   "url": "https://github.com/6cdh/tree-sitter-scheme",

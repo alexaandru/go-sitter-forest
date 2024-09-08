@@ -109,7 +109,8 @@ static void deserialize_svelte(Scanner *scanner, const char *buffer, unsigned le
 
 static String scan_tag_name(TSLexer *lexer) {
     String tag_name = array_new();
-    while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' || lexer->lookahead == ':' || lexer->lookahead == '.') {
+    while (iswalnum(lexer->lookahead) || lexer->lookahead == '-' || lexer->lookahead == ':' ||
+           lexer->lookahead == '.') {
         // In `tree-sitter-html`, this is where each character is uppercased,
         // but we're preserving the original case. Why?
         //
@@ -165,7 +166,8 @@ static bool scan_comment(TSLexer *lexer) {
 }
 
 static bool scan_javascript_template_string(TSLexer *lexer);
-static bool scan_javascript_quoted_string(TSLexer *lexer, char delimiter);
+
+static bool scan_javascript_quoted_string(TSLexer *lexer, int32_t delimiter);
 
 // After consuming a forward slash and seeing an asterisk immediately after it,
 // call this function to advance the lexer to the end of the JavaScript block
@@ -200,7 +202,7 @@ static bool scan_javascript_line_comment(TSLexer *lexer) {
     }
     advance_svelte(lexer);
     while (lexer->lookahead) {
-        switch(lexer->lookahead) {
+        switch (lexer->lookahead) {
             case '\n':
             case '\r':
                 advance_svelte(lexer);
@@ -254,7 +256,7 @@ static bool scan_javascript_balanced_brace(TSLexer *lexer) {
 
 // When you see a single or double quote that starts a string, call this
 // function to scan through until the end of the quoted string.
-static bool scan_javascript_quoted_string(TSLexer *lexer, char delimiter) {
+static bool scan_javascript_quoted_string(TSLexer *lexer, int32_t delimiter) {
     if (lexer->lookahead != delimiter) {
         return false;
     }
@@ -302,7 +304,6 @@ static bool scan_javascript_template_string(TSLexer *lexer) {
                 return true;
             default:
                 advance_svelte(lexer);
-
         }
     }
     return false;
@@ -405,8 +406,9 @@ static bool scan_svelte_raw_text(TSLexer *lexer, const bool *valid_symbols) {
     // The presence of a special Svelte sigil disqualifies this as a raw text
     // node. This helps us distinguish those nodes from things like `{:else}`.
     bool has_sigil = lexer->lookahead == '@' || lexer->lookahead == '#' || lexer->lookahead == ':';
-    if (has_sigil) return false;
-
+    if (has_sigil) {
+        return false;
+    }
 
     // Keep track of whether we've advanced even once. If we haven't, then that
     // implies we've encountered `{}``, which isn't a valid `svelte_raw_text`
@@ -417,7 +419,8 @@ static bool scan_svelte_raw_text(TSLexer *lexer, const bool *valid_symbols) {
         advance_svelte(lexer);
         if (lexer->lookahead == '*') {
             return scan_javascript_block_comment(lexer);
-        } else if (lexer->lookahead != '/') { // JavaScript comment
+        }
+        if (lexer->lookahead != '/') { // JavaScript comment
             return false;
         }
 
