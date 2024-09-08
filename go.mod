@@ -237,6 +237,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.8.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.8.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.8.1
+	github.com/alexaandru/go-sitter-forest/moonbit v1.8.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.8.0
 	github.com/alexaandru/go-sitter-forest/move v1.8.3
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0
@@ -425,6 +426,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xml v1.8.1
 	github.com/alexaandru/go-sitter-forest/yaml v1.8.0
 	github.com/alexaandru/go-sitter-forest/yang v1.8.0
+	github.com/alexaandru/go-sitter-forest/yaral v1.8.0
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.8.0
 	github.com/alexaandru/go-sitter-forest/yuck v1.8.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.8.0
