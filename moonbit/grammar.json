@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "7b685c20da419fb90bc2d18e15f44ad0b13bca9b",
+  "grammarSha": "004de69ac29fb487e8b840d14f923d9c7abdd18d1f259206045f0f897ddc4971",
+  "language": "moonbit",
+  "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
+  "maintainedBy": "@tonyfettes",
+  "files": [
+    "scanner.c"
+  ]
+}

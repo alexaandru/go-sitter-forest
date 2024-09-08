@@ -1,0 +1,23 @@
+rule OutcomeConditionalRule {
+    meta:
+        author = "alice@example.com"
+        description = "Rule that uses outcome conditionals"
+
+    events:
+        $u.metadata.event_type = "FILE_COPY"
+        $u.principal.file.size = $file_size
+        $u.principal.hostname = $hostname
+
+        // 1 = Sunday, 7 = Saturday.
+        $dayofweek = timestamp.get_day_of_week($u.metadata.collected_timestamp.seconds)
+
+    outcome:
+        $risk_score =
+            if($file_size > 500*1024*1024, 2) + // Files 500MB are moderately risky
+            if($file_size > 1024*1024*1024, 3) + // Files over 1G get assigned extra risk
+            if($dayofweek=1 or $dayofweek=7, 4) + // Events from the weekend are suspicious
+            if($hostname = /highly-privileged/, 5) // Check for files from highly privileged devices
+
+    condition:
+        $u and $risk_score >= 10
+}

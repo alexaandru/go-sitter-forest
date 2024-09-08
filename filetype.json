@@ -300,6 +300,7 @@
     "mermaid":            ["mermaid", "mmd", "mmdc"],
     "mlir":               ["mlir"],
     "modelica":           ["moca"],
+    "moonbit":            ["mbt"],
     "motoko":             ["mo"],
     "move":               ["move"],
     "move_on_aptos":      ["move_on_aptos"],
@@ -477,6 +478,7 @@
     "xml":                ["xml", "rss"],
     "yaml":               ["yaml", "yml"],
     "yang":               ["yang"],
+    "yaral":              ["yaral", "yl"],
     "yuck":               ["yuck"],
     "zeek":               ["zeek"],
     "zig":                ["zig", "zon"]

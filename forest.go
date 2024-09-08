@@ -254,6 +254,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/meson"
 	"github.com/alexaandru/go-sitter-forest/mlir"
 	"github.com/alexaandru/go-sitter-forest/modelica"
+	"github.com/alexaandru/go-sitter-forest/moonbit"
 	"github.com/alexaandru/go-sitter-forest/motoko"
 	"github.com/alexaandru/go-sitter-forest/move"
 	"github.com/alexaandru/go-sitter-forest/move_on_aptos"
@@ -442,6 +443,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/xml"
 	"github.com/alexaandru/go-sitter-forest/yaml"
 	"github.com/alexaandru/go-sitter-forest/yang"
+	"github.com/alexaandru/go-sitter-forest/yaral"
 	"github.com/alexaandru/go-sitter-forest/yarnlock"
 	"github.com/alexaandru/go-sitter-forest/yuck"
 	"github.com/alexaandru/go-sitter-forest/zathurarc"
@@ -699,6 +701,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"meson":              meson.GetLanguage,
 	"mlir":               mlir.GetLanguage,
 	"modelica":           modelica.GetLanguage,
+	"moonbit":            moonbit.GetLanguage,
 	"motoko":             motoko.GetLanguage,
 	"move":               move.GetLanguage,
 	"move_on_aptos":      move_on_aptos.GetLanguage,
@@ -888,6 +891,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"xml":                xml.GetLanguage,
 	"yaml":               yaml.GetLanguage,
 	"yang":               yang.GetLanguage,
+	"yaral":              yaral.GetLanguage,
 	"yarnlock":           yarnlock.GetLanguage,
 	"yuck":               yuck.GetLanguage,
 	"zathurarc":          zathurarc.GetLanguage,
@@ -1130,6 +1134,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"meson":              meson.GetQuery,
 	"mlir":               mlir.GetQuery,
 	"modelica":           modelica.GetQuery,
+	"moonbit":            moonbit.GetQuery,
 	"motoko":             motoko.GetQuery,
 	"move":               move.GetQuery,
 	"move_on_aptos":      move_on_aptos.GetQuery,
@@ -1319,6 +1324,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"xml":                xml.GetQuery,
 	"yaml":               yaml.GetQuery,
 	"yang":               yang.GetQuery,
+	"yaral":              yaral.GetQuery,
 	"yarnlock":           yarnlock.GetQuery,
 	"yuck":               yuck.GetQuery,
 	"zathurarc":          zathurarc.GetQuery,

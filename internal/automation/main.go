@@ -323,10 +323,10 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		`export default `: `module.exports = `,
 		// Patching broken grammars so that they compile.
 		// This is a bit "brute-force", but seems to do the job ¯\_(ツ)_/¯.
-		`/u{[\da-fA-F]+}/`:    `/u[\da-fA-F]+/`,
-		`/u{[0-9a-fA-F]+}/`:   `/u[0-9a-fA-F]+/`,
-		`/u{[0-9a-fA-F ]+}/`:  `/u[0-9a-fA-F]+/`,
-		`/x{[0-9a-fA-F]+}/`:   `/x[0-9a-fA-F]+/`,
+		`u{[\da-fA-F]+}`:      `u[\da-fA-F]+`,
+		`u{[0-9a-fA-F]+}`:     `u[0-9a-fA-F]+`,
+		`u{[0-9a-fA-F ]+}`:    `u[0-9a-fA-F]+`,
+		`x{[0-9a-fA-F]+}`:     `x[0-9a-fA-F]+`,
 		`/{([^}\n\\]|\\.)+}/`: `/\{([^}\n\\]|\\.)+\}/`,
 		// This is for sparql.
 		`token.immediate(

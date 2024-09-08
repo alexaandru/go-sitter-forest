@@ -2296,6 +2296,17 @@
   },
   {
     "reference": "main",
+    "revision": "7b685c20da419fb90bc2d18e15f44ad0b13bca9b",
+    "grammarSha": "004de69ac29fb487e8b840d14f923d9c7abdd18d1f259206045f0f897ddc4971",
+    "language": "moonbit",
+    "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
+    "maintainedBy": "@tonyfettes",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "e52d7490e668e7411a489663792c83778a7d2d2d",
     "grammarSha": "2bc5dc869bc183b1e4a9ca21d15b410bf81dea4b2138a5cbec7c5b8a5bc1d47b",
     "language": "motoko",
@@ -4153,6 +4164,17 @@
     "language": "yang",
     "url": "https://github.com/Hubro/tree-sitter-yang",
     "maintainedBy": "@Hubro"
+  },
+  {
+    "reference": "main",
+    "revision": "735b833f3872d4775328c854a699d4de5092bc18",
+    "grammarSha": "bab364de6f4f9cb3b13cf350c82f233c5801cd4bfb8b6a94ab9eeeb201e2053a",
+    "language": "yaral",
+    "url": "https://github.com/MXfive/tree-sitter-yaral",
+    "maintainedBy": "@MXfive",
+    "files": [
+      "scanner.c"
+    ]
   },
   {
     "reference": "master",
