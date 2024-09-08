@@ -1,6 +1,6 @@
 # 429 Supported Parsers
 
-11 pending, 11 skipped regeneration, 32 missing queries
+11 pending, 10 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -357,7 +357,7 @@
 - [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️ (maintained by @Sarrus1)
-- [x] [sparql](https://github.com/GordianDziwis/tree-sitter-sparql) ✔️ (maintained by @BonaBeavis; ❌Error: The `token.immediate` function only takes one literal argument. You passed in multiple literals. Did you mean to call `seq`?)
+- [x] [sparql](https://github.com/IoannisNezis/tree-sitter-sparql) ✔️ (maintained by @BonaBeavis, @IoannisNezis)
 - [x] [spicy](https://github.com/bbannier/tree-sitter-spicy) 🗸 (maintained by @bbannier)
 - [x] [sql](https://github.com/DerekStride/tree-sitter-sql) ✔️ (maintained by @DerekStride)
 - [x] [sql_bigquery](https://github.com/takegue/tree-sitter-sql-bigquery) ✔️ (maintained by @takegue; high memory usage (3.4GB))
