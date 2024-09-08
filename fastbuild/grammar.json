@@ -4,6 +4,7 @@
   "grammarSha": "29e9c0cc685c3824b90a142084b574091cabd2b2a59955ea867f8f9d82feff72",
   "language": "fastbuild",
   "url": "https://github.com/pinbraerts/tree-sitter-fastbuild",
+  "doc": "no crash but generate never completes (15min)",
   "maintainedBy": "@pinbraerts",
   "files": [
     "scanner.c"

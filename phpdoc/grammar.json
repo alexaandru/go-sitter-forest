@@ -1,12 +1,11 @@
 {
   "reference": "master",
   "revision": "df5e7da4b83da072f99135079ac3436550b8d67d",
-  "grammarSha": "5b52ad374dfe8505d460ac822f8d906fe97448037a334f12e4573630b0e66a93",
+  "grammarSha": "fd894576b64ed97f88005dc39b8720e5de9c092bdb8ff7ae810dc7b3657e49d9",
   "language": "phpdoc",
   "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
   "maintainedBy": "@mikehaertl",
   "files": [
     "scanner.c"
-  ],
-  "skip": true
+  ]
 }

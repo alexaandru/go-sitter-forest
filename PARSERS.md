@@ -1,6 +1,6 @@
 # 429 Supported Parsers
 
-11 pending, 10 skipped regeneration, 32 missing queries
+11 pending, 9 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -105,7 +105,7 @@
 - [x] [erlang](https://github.com/WhatsApp/tree-sitter-erlang) ✔️ (maintained by @filmor)
 - [x] [facility](https://github.com/FacilityApi/tree-sitter-facility) ✔️ (maintained by @bryankenote)
 - [x] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) ✔️ (maintained by @redexp)
-- [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts)
+- [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts; ❌no crash but generate never completes (15min))
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️ (maintained by @khiner)
 - [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️ (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents regeneration from working)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️ (maintained by @chaopeng)
@@ -185,7 +185,7 @@
 - [x] [idris](https://github.com/kayhide/tree-sitter-idris) ✔️ (maintained by @kayhide)
 - [x] [ignis](https://github.com/Ignis-lang/tree-sitter-ignis) ✔️ (maintained by @BasileusErwin)
 - [x] [ini](https://github.com/justinmk/tree-sitter-ini) ✔️ (maintained by @theHamsta)
-- [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr)
+- [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr; ❌no crash but generate never completes (15min): https://github.com/wldmr/tree-sitter-ink/issues/8)
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
 - [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌Error: Undefined symbol)
@@ -212,7 +212,7 @@
 - [x] [kusto](https://github.com/Willem-J-an/tree-sitter-kusto) ✔️ (maintained by @Willem-J-an)
 - [x] [lalrpop](https://github.com/traxys/tree-sitter-lalrpop) ✔️ (maintained by @traxys)
 - [x] [lart](https://github.com/frefolli/tree-sitter-lart) ✔️ (maintained by @frefolli)
-- [x] [lat](https://github.com/vilarfg/tree-sitter-lat) ✔️ (maintained by @vilarfg)
+- [x] [lat](https://github.com/vilarfg/tree-sitter-lat) ✔️ (maintained by @vilarfg; ❌uses TypeScript)
 - [x] [latex](https://github.com/latex-lsp/tree-sitter-latex) ✔️ (maintained by @theHamsta, @clason)
 - [x] [ldg](https://github.com/lesserfish/tree-sitter-ldg) ✔️ (maintained by @lesserfish; ❌repository was removed by owner)
 - [x] [ledger](https://github.com/cbarrete/tree-sitter-ledger) ✔️ (maintained by @cbarrete)

@@ -4,6 +4,7 @@
   "grammarSha": "04382f9a2eec5907498cad679096853f43fc808bdc646418770f2aba19e5f53c",
   "language": "ink",
   "url": "https://github.com/wldmr/tree-sitter-ink",
+  "doc": "no crash but generate never completes (15min): https://github.com/wldmr/tree-sitter-ink/issues/8",
   "maintainedBy": "@wldmr",
   "files": [
     "scanner.c"

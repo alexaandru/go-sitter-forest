@@ -959,6 +959,7 @@
     "grammarSha": "29e9c0cc685c3824b90a142084b574091cabd2b2a59955ea867f8f9d82feff72",
     "language": "fastbuild",
     "url": "https://github.com/pinbraerts/tree-sitter-fastbuild",
+    "doc": "no crash but generate never completes (15min)",
     "maintainedBy": "@pinbraerts",
     "files": [
       "scanner.c"
@@ -1719,6 +1720,7 @@
     "grammarSha": "04382f9a2eec5907498cad679096853f43fc808bdc646418770f2aba19e5f53c",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
+    "doc": "no crash but generate never completes (15min): https://github.com/wldmr/tree-sitter-ink/issues/8",
     "maintainedBy": "@wldmr",
     "files": [
       "scanner.c"
@@ -1982,6 +1984,7 @@
     "grammarSha": "8afe3dac70b9d0c87406955b9cde097150d461db52517264258fa63117beaeda",
     "language": "lat",
     "url": "https://github.com/vilarfg/tree-sitter-lat",
+    "doc": "uses TypeScript",
     "maintainedBy": "@vilarfg",
     "skip": true
   },
@@ -2647,14 +2650,13 @@
   {
     "reference": "master",
     "revision": "df5e7da4b83da072f99135079ac3436550b8d67d",
-    "grammarSha": "5b52ad374dfe8505d460ac822f8d906fe97448037a334f12e4573630b0e66a93",
+    "grammarSha": "fd894576b64ed97f88005dc39b8720e5de9c092bdb8ff7ae810dc7b3657e49d9",
     "language": "phpdoc",
     "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
     "maintainedBy": "@mikehaertl",
     "files": [
       "scanner.c"
-    ],
-    "skip": true
+    ]
   },
   {
     "reference": "main",
@@ -4225,3 +4227,4 @@
     "pending": true
   }
 ]
+

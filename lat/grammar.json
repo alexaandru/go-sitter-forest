@@ -4,6 +4,7 @@
   "grammarSha": "8afe3dac70b9d0c87406955b9cde097150d461db52517264258fa63117beaeda",
   "language": "lat",
   "url": "https://github.com/vilarfg/tree-sitter-lat",
+  "doc": "uses TypeScript",
   "maintainedBy": "@vilarfg",
   "skip": true
 }
