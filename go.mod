@@ -214,6 +214,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/leo v1.8.1
 	github.com/alexaandru/go-sitter-forest/lexc v1.8.0
 	github.com/alexaandru/go-sitter-forest/lexd v1.8.0
+	github.com/alexaandru/go-sitter-forest/lilypond v1.8.0
+	github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.8.0
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.8.0
 	github.com/alexaandru/go-sitter-forest/liquid v1.8.0
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.8.0

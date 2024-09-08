@@ -420,6 +420,10 @@ github.com/alexaandru/go-sitter-forest/lexc v1.8.0 h1:MD5qtRWYOLigOeLJlqynM7gVN2
 github.com/alexaandru/go-sitter-forest/lexc v1.8.0/go.mod h1:yK4B8NYLk2p7AQPsIKDvIkmBa4yjNv02/GcdwfzIwPU=
 github.com/alexaandru/go-sitter-forest/lexd v1.8.0 h1:RYSPMU/kC8x2BBy4tGvi1XlNzzl5zgdZkJXENPzunjU=
 github.com/alexaandru/go-sitter-forest/lexd v1.8.0/go.mod h1:DrDYsvXYViywonvrNHVX5ouHj9Uczh2x7NUpidLeKeA=
+github.com/alexaandru/go-sitter-forest/lilypond v1.8.0 h1:HWZ2Suqr6Aeynn/f600R7ntcYjko7hHkaxGWaTYE3ws=
+github.com/alexaandru/go-sitter-forest/lilypond v1.8.0/go.mod h1:oc/YsGCc+dEvD8raoyy+NeLI4caLkWmd0S80hW38Hi0=
+github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.8.0 h1:POdD64Rc7h5bAMQsTwYLEEe/2EI6BIVjmy46sVw4Qd4=
+github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.8.0/go.mod h1:2x/Jp6WKnq9/bpr2yDLl0Gl758MlchlHFPlb5RP46XE=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.8.0 h1:RKUyALIOPyBXGaOYesyXdPlOaC8rWwVsu+oND/59RZA=
 github.com/alexaandru/go-sitter-forest/linkerscript v1.8.0/go.mod h1:3C7ccKznTj7fTQStGH1Pted4qZvC13Swl6BnjSkk+p4=
 github.com/alexaandru/go-sitter-forest/liquid v1.8.0 h1:G9EvDXsfGoOHWs88bVL3PLxy6mWbCGr4zK9vN2VS47k=
