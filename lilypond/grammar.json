@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "008f830d02a5f47de8f7196ad867b48dbfd8992e",
+  "grammarSha": "6967bc09cc2f1f88cfcc6b50d2bf9cefd85eb79fa89c59af2ba6dd6bdf2a5b9a",
+  "language": "lilypond",
+  "url": "https://github.com/nwhetsell/tree-sitter-lilypond",
+  "maintainedBy": "@nwhetsell"
+}

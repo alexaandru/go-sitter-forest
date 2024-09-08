@@ -231,6 +231,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/leo"
 	"github.com/alexaandru/go-sitter-forest/lexc"
 	"github.com/alexaandru/go-sitter-forest/lexd"
+	"github.com/alexaandru/go-sitter-forest/lilypond"
+	"github.com/alexaandru/go-sitter-forest/lilypond_scheme"
 	"github.com/alexaandru/go-sitter-forest/linkerscript"
 	"github.com/alexaandru/go-sitter-forest/liquid"
 	"github.com/alexaandru/go-sitter-forest/liquidsoap"
@@ -678,6 +680,8 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"leo":                leo.GetLanguage,
 	"lexc":               lexc.GetLanguage,
 	"lexd":               lexd.GetLanguage,
+	"lilypond":           lilypond.GetLanguage,
+	"lilypond_scheme":    lilypond_scheme.GetLanguage,
 	"linkerscript":       linkerscript.GetLanguage,
 	"liquid":             liquid.GetLanguage,
 	"liquidsoap":         liquidsoap.GetLanguage,
@@ -1111,6 +1115,8 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"leo":                leo.GetQuery,
 	"lexc":               lexc.GetQuery,
 	"lexd":               lexd.GetQuery,
+	"lilypond":           lilypond.GetQuery,
+	"lilypond_scheme":    lilypond_scheme.GetQuery,
 	"linkerscript":       linkerscript.GetQuery,
 	"liquid":             liquid.GetQuery,
 	"liquidsoap":         liquidsoap.GetQuery,

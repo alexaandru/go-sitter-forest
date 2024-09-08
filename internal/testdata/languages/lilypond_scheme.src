@@ -1,0 +1,13 @@
+#(define (average a b c) (/ (+ a b c) 3))
+
+; this is a single-line comment
+
+#!
+  This a (non-nestable) Guile-style block comment
+  But these are rarely used by Schemers and never in
+  LilyPond source code
+!#
+
+#(begin
+  (define foo 0)
+  (define bar 1))

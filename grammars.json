@@ -2048,17 +2048,19 @@
   },
   {
     "reference": "main",
+    "revision": "008f830d02a5f47de8f7196ad867b48dbfd8992e",
+    "grammarSha": "6967bc09cc2f1f88cfcc6b50d2bf9cefd85eb79fa89c59af2ba6dd6bdf2a5b9a",
     "language": "lilypond",
     "url": "https://github.com/nwhetsell/tree-sitter-lilypond",
-    "maintainedBy": "@nwhetsell",
-    "pending": true
+    "maintainedBy": "@nwhetsell"
   },
   {
     "reference": "main",
+    "revision": "edd39e039815b517d25816d38a62a2c887de3200",
+    "grammarSha": "b90d9d6025d80d324562e380196ab75123e85f4cc024d5833946fff1a6353ff4",
     "language": "lilypond_scheme",
     "url": "https://github.com/nwhetsell/tree-sitter-lilypond-scheme",
-    "maintainedBy": "@nwhetsell",
-    "pending": true
+    "maintainedBy": "@nwhetsell"
   },
   {
     "reference": "master",
@@ -4227,4 +4229,3 @@
     "pending": true
   }
 ]
-

@@ -279,6 +279,8 @@
     "leo":                ["leo"],
     "lexc":               ["lexc"],
     "lexd":               ["lexd"],
+    "lilypond":           ["ly", "ily"],
+    "lilypond_scheme":    ["lypscm"],
     "linkerscript":       ["ld", "lds", "x"],
     "liquid":             ["liquid"],
     "liquidsoap":         ["liq"],

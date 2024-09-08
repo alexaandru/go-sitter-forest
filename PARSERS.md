@@ -1,6 +1,6 @@
-# 429 Supported Parsers
+# 431 Supported Parsers
 
-11 pending, 9 skipped regeneration, 32 missing queries
+9 pending, 9 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -219,8 +219,8 @@
 - [x] [leo](https://github.com/r001/tree-sitter-leo) ✔️ (maintained by @r001)
 - [x] [lexc](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [lexd](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
-- [ ] [lilypond](https://github.com/nwhetsell/tree-sitter-lilypond) (maintained by @nwhetsell)
-- [ ] [lilypond_scheme](https://github.com/nwhetsell/tree-sitter-lilypond-scheme) (maintained by @nwhetsell)
+- [x] [lilypond](https://github.com/nwhetsell/tree-sitter-lilypond) ✔️ (maintained by @nwhetsell)
+- [x] [lilypond_scheme](https://github.com/nwhetsell/tree-sitter-lilypond-scheme) ✔️ (maintained by @nwhetsell)
 - [x] [linkerscript](https://github.com/tree-sitter-grammars/tree-sitter-linkerscript) ✔️ (maintained by @amaanq)
 - [x] [liquid](https://github.com/hankthetank27/tree-sitter-liquid) ✔️ (maintained by @hankthetank27)
 - [x] [liquidsoap](https://github.com/savonet/tree-sitter-liquidsoap) ✔️ (maintained by @toots)

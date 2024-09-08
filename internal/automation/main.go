@@ -387,6 +387,42 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 				file = "./grammar_maker.ts"
 				base = "grammar_maker.ts"
 			}
+		case "lilypond":
+			// Pulling cross grammars. TODO: Need a nicer mechanism for this.
+			if file == "./tree-sitter-lilypond-scheme/rules.js" {
+				base = "rules.js"
+				replMap[file] = base
+				file = base
+
+				var grSrc *grammar.Grammar
+
+				grSrc, err = grammars.Find("lilypond_scheme")
+				if err != nil {
+					return
+				}
+
+				var uriSrc string
+
+				if uriSrc, err = grSrc.ContentURL(); err != nil {
+					return
+				}
+
+				fsrc, fdst := uriSrc+path.Dir(src)+"/"+file, filepath.Join("tmp", gr.Language, base)
+
+				var b []byte
+
+				if b, err = fetchFile(fsrc); err != nil {
+					return
+				}
+
+				shas[base] = fmt.Sprintf("%x", sha256.Sum256(b))
+
+				if err = os.WriteFile(fdst, b, 0o640); err != nil {
+					return
+				}
+
+				continue
+			}
 		default:
 			replMap[file] = base
 		}
