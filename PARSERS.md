@@ -1,4 +1,4 @@
-# 431 Supported Parsers
+# 432 Supported Parsers
 
 9 pending, 9 skipped regeneration, 32 missing queries
 
@@ -13,6 +13,7 @@
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
+- [x] [anzu](https://github.com/JamesWP/tree-sitter-anzu) ✔️ (maintained by @JamesWP)
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [applesoft](https://github.com/dfgordon/tree-sitter-applesoft) ✔️ (maintained by @dfgordon)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️ (maintained by @ObserverOfTime)
@@ -329,7 +330,7 @@
 - [x] [rnoweb](https://github.com/bamonroe/tree-sitter-rnoweb) ✔️ (maintained by @bamonroe)
 - [x] [robot](https://github.com/Hubro/tree-sitter-robot) ✔️ (maintained by @Hubro)
 - [x] [robots](https://github.com/opa-oz/tree-sitter-robots-txt) ✔️ (maintained by @opa-oz)
-- [x] [roc](https://github.com/nat-418/tree-sitter-roc) ✔️ (maintained by @nat-418)
+- [x] [roc](https://github.com/faldor20/tree-sitter-roc) ✔️ (maintained by @faldor20)
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️ (maintained by @amaanq)
 - [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd)
 - [x] [rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)

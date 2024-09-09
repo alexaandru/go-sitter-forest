@@ -8,7 +8,6 @@
   "https://github.com/Flakebi/tree-sitter-tablegen",
   "https://github.com/GrayJack/tree-sitter-janet",
   "https://github.com/Himujjal/tree-sitter-svelte",
-  "https://github.com/JamesWP/tree-sitter-anzu",
   "https://github.com/LumaKernel/tree-sitter-prisma",
   "https://github.com/Or4c/tree-sitter-inform6",
   "https://github.com/Rileran/tree-sitter-actionscript",
@@ -21,7 +20,6 @@
   "https://github.com/cattokomo/tree-sitter-nelua",
   "https://github.com/cyber-cicco/tree-sitter-thymeleaf",
   "https://github.com/dylanmcdiarmid/tree-sitter-neluablk",
-  "https://github.com/faldor20/tree-sitter-roc",
   "https://github.com/gmlarumbe/tree-sitter-systemverilog",
   "https://github.com/gogamid/tree-sitter-gupta",
   "https://github.com/haruleekim/tree-sitter-rust",
@@ -46,6 +44,5 @@
   "https://github.com/tree-sitter-grammars/tree-sitter-smali",
   "https://github.com/tree-sitter-grammars/tree-sitter-test",
   "https://github.com/ulic-youthlic/tree-sitter-mcscript",
-  "https://github.com/xixiaofinland/tree-sitter-sflog",
   "https://github.com/zuhanit/tree-sitter-epscript"
 ]

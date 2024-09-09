@@ -27,6 +27,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/amber"
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/animationtxt"
+	"github.com/alexaandru/go-sitter-forest/anzu"
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/applesoft"
 	"github.com/alexaandru/go-sitter-forest/arduino"
@@ -478,6 +479,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"amber":              amber.GetLanguage,
 	"angular":            angular.GetLanguage,
 	"animationtxt":       animationtxt.GetLanguage,
+	"anzu":               anzu.GetLanguage,
 	"apex":               apex.GetLanguage,
 	"applesoft":          applesoft.GetLanguage,
 	"arduino":            arduino.GetLanguage,
@@ -913,6 +915,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"amber":              amber.GetQuery,
 	"angular":            angular.GetQuery,
 	"animationtxt":       animationtxt.GetQuery,
+	"anzu":               anzu.GetQuery,
 	"apex":               apex.GetQuery,
 	"applesoft":          applesoft.GetQuery,
 	"arduino":            arduino.GetQuery,

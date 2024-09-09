@@ -1,10 +1,10 @@
 {
   "reference": "master",
-  "revision": "df46a85abda9f948d38f5d4e3684cec49c42fef2",
-  "grammarSha": "12c20b68c01beadd35c9409078416dd6b3c1d811dcbb8c0103e043a2a04d1dab",
+  "revision": "ef46edd0c03ea30a22f7e92bc68628fb7231dc8a",
+  "grammarSha": "b2d49114b764d0892337a8d73651af8d38b461b23b1f45eec867ff09bf527f64",
   "language": "roc",
-  "url": "https://github.com/nat-418/tree-sitter-roc",
-  "maintainedBy": "@nat-418",
+  "url": "https://github.com/faldor20/tree-sitter-roc",
+  "maintainedBy": "@faldor20",
   "files": [
     "scanner.c"
   ]

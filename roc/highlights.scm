@@ -52,7 +52,7 @@
 (back_arrow)
 (backslash)
 ] @punctuation.delimiter.structural
-
+(bang_expr "!" @punctuation.delimiter.structural)
 [
   ","
   ":"
@@ -70,8 +70,9 @@
 ] @punctuation.bracket
 
 [
-  "|" 
+  "|"
   "&"
+  "<-"
   ".."
   (operator)
   (wildcard_pattern)
@@ -103,23 +104,23 @@
 
 ;---annotations----
 
-(annotation_type_def 
- (annotation_pre_colon 
+(annotation_type_def
+ (annotation_pre_colon
   (identifier)@function )
  (function_type))
 
-(annotation_type_def 
- (annotation_pre_colon 
+(annotation_type_def
+ (annotation_pre_colon
   (identifier)@parameter.definition ))
 
 
 ;----decleration types----
-(value_declaration(decl_left 
-  (identifier_pattern 
+(value_declaration(decl_left
+  (identifier_pattern
    (identifier)@function.definition))(expr_body(anon_fun_expr)))
 
-(value_declaration(decl_left 
-  (identifier_pattern 
+(value_declaration(decl_left
+  (identifier_pattern
    (identifier) @parameter.definition)))
 
 (backpassing_expr assignee: (identifier_pattern (identifier) @parameter.definition))

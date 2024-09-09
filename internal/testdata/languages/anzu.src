@@ -1,0 +1,15 @@
+# project euler #1, sum of multiple of 3 and 5 below 1000
+
+var count := 0;
+var i := 0;
+
+while i < 100000 {
+    if i % 3 == 0 {
+        count = count + i;
+    } else if i % 5 == 0 {
+        count = count + i;
+    }
+    i = i + 1;
+}
+
+print("count={}", count);
