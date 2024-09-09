@@ -108,14 +108,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.5
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.6
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.0
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.8.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.8.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.8.3
-	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.2
+	github.com/alexaandru/go-sitter-forest/fsharp v1.8.4
+	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.3
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.8.1
@@ -238,7 +238,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mermaid v1.8.1
 	github.com/alexaandru/go-sitter-forest/meson v1.8.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.8.0
-	github.com/alexaandru/go-sitter-forest/modelica v1.8.1
+	github.com/alexaandru/go-sitter-forest/modelica v1.8.2
 	github.com/alexaandru/go-sitter-forest/moonbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.8.0
 	github.com/alexaandru/go-sitter-forest/move v1.8.3
@@ -273,7 +273,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pgn v1.8.3
 	github.com/alexaandru/go-sitter-forest/php v1.8.1
 	github.com/alexaandru/go-sitter-forest/php_only v1.8.1
-	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.1
+	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.2
 	github.com/alexaandru/go-sitter-forest/pic v1.8.0
 	github.com/alexaandru/go-sitter-forest/pint v1.8.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.8.0
@@ -321,7 +321,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.8.0
 	github.com/alexaandru/go-sitter-forest/robot v1.8.0
 	github.com/alexaandru/go-sitter-forest/robots v1.8.0
-	github.com/alexaandru/go-sitter-forest/roc v1.8.0
+	github.com/alexaandru/go-sitter-forest/roc v1.8.1
 	github.com/alexaandru/go-sitter-forest/ron v1.8.0
 	github.com/alexaandru/go-sitter-forest/rstml v1.8.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.8.0
@@ -401,7 +401,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/uiua v1.8.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.8.0
 	github.com/alexaandru/go-sitter-forest/unison v1.8.0
-	github.com/alexaandru/go-sitter-forest/ursa v1.8.4
+	github.com/alexaandru/go-sitter-forest/ursa v1.8.5
 	github.com/alexaandru/go-sitter-forest/usd v1.8.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.8.0
 	github.com/alexaandru/go-sitter-forest/v v1.8.0
@@ -438,6 +438,8 @@ require (
 	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948
 	golang.org/x/sync v0.8.0
 )
+
+require github.com/alexaandru/go-sitter-forest/anzu v1.8.0
 
 retract (
 	// Parsers koka and gemfilelock had a conflict.
