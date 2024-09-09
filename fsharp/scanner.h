@@ -19,10 +19,12 @@ enum TokenType {
   STRUCT,
   INTERFACE,
   END,
+  AND,
   TRIPLE_QUOTE_CONTENT,
   BLOCK_COMMENT_CONTENT,
   INSIDE_STRING,
   NEWLINE_NO_ALIGNED,
+  TUPLE_MARKER,
   ERROR_SENTINEL
 };
 
@@ -409,6 +411,19 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
         }
       }
     }
+  } else if (lexer->lookahead == 'a' && valid_symbols[AND]) {
+    advance_fsharp(lexer);
+    if (lexer->lookahead == 'n') {
+      advance_fsharp(lexer);
+      if (lexer->lookahead == 'd') {
+        advance_fsharp(lexer);
+        if (lexer->lookahead == ' ') {
+          lexer->result_symbol = AND;
+          lexer->mark_end(lexer);
+          return true;
+        }
+      }
+    }
   } else if (lexer->lookahead == 'e' &&
              (valid_symbols[ELSE] || valid_symbols[ELIF] ||
               valid_symbols[END] || valid_symbols[DEDENT])) {
@@ -572,7 +587,8 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
       }
 
       if (indent_length < current_indent_length && !found_bracket_end &&
-          can_dedent_preproc && can_dedent_infix_op) {
+          can_dedent_preproc && can_dedent_infix_op &&
+          !valid_symbols[TUPLE_MARKER]) {
         array_pop(&scanner->indents);
         lexer->result_symbol = DEDENT;
         return true;

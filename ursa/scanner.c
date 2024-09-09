@@ -44,11 +44,9 @@ static bool scan_automatic_semicolon(TSLexer *lexer)
     lexer->mark_end(lexer);
 
     for (;;) {
-        if (lexer->lookahead == 0)
+        if (lexer->eof(lexer))
             return true;
         if (lexer->lookahead == '}')
-            return true;
-        if (lexer->is_at_included_range_start(lexer))
             return true;
         if (lexer->lookahead == '\n')
             break;

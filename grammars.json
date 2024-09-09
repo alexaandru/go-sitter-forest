@@ -376,7 +376,7 @@
   },
   {
     "reference": "main",
-    "revision": "57bb15f97f16ec88156fdcf26cf1f72e0edd7ece",
+    "revision": "35d0576ae6dc0796de300719ad51ea8ffef49862",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -1035,15 +1035,15 @@
   },
   {
     "reference": "main",
-    "revision": "7237b1141e1d3ea69e154f6b284bd5f3cfbc8cf3",
-    "grammarSha": "d970e89caa1683e87b9c34eeca78193bb9f464de4541effd0f19ca432442da98",
+    "revision": "1383b9305d14e26be86faa881a4bc3e3a903d4f7",
+    "grammarSha": "e28e2d8552d398f7369029ed74bf2501c6f22a4ed0a50fbf4643227ec2360877",
     "language": "flamingo",
     "url": "https://github.com/inobulles/tree-sitter-flamingo",
     "maintainedBy": "@obiwac"
   },
   {
     "reference": "main",
-    "revision": "b47e35f09ca10e3d419c94c455067d2177d48705",
+    "revision": "44fd297648838d14d2f4e073748d2667411d3523",
     "grammarSha": "783eed0caf226b7b85496409cdf458351372c444bd0d5bf681b378d5fa4481f7",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1089,8 +1089,8 @@
   },
   {
     "reference": "main",
-    "revision": "9fb84adbdbe2024692b9b912cff7ff7e4cc8cd9b",
-    "grammarSha": "012a25c0fa336e1f22c4bf420207a75d9ce10e73b175558a82b47a955c958366",
+    "revision": "da528080b6dbac61d94bbdd3fb9590043d444414",
+    "grammarSha": "6a4459b03f57b5678bff1bd8aeb0a08955d60d38a2d373b448dc0241198243a8",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
     "maintainedBy": "@Nsidorenco",
@@ -1102,8 +1102,8 @@
   },
   {
     "reference": "main",
-    "revision": "9fb84adbdbe2024692b9b912cff7ff7e4cc8cd9b",
-    "grammarSha": "3baa717bc2346ae36d40edf8a6ef5d15f593fd583b37c10f675ff6ce705b96db",
+    "revision": "da528080b6dbac61d94bbdd3fb9590043d444414",
+    "grammarSha": "5e1b4a7c5f1f44aad0c652d4837589bcccb3ccb755a1e2ed7aa59a8d0788a897",
     "language": "fsharp_signature",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
     "maintainedBy": "@Nsidorenco",
@@ -2301,8 +2301,8 @@
   },
   {
     "reference": "main",
-    "revision": "87bffe4d925a954d25687756edb6fc2386194455",
-    "grammarSha": "1ac29fde69ed47760f8037111f2f3d4c56a842a896328a11252b213c4205009f",
+    "revision": "bbe6142309b3a18c6faf7decf0ff8e2fb13b21a5",
+    "grammarSha": "1ab56ecb6081698bce495c1d617292ac584a4de8f25e1731340a25db3c84f180",
     "language": "modelica",
     "url": "https://github.com/modelicahub/tree-sitter-modelica",
     "maintainedBy": "@nachawati"
@@ -3415,7 +3415,7 @@
   },
   {
     "reference": "main",
-    "revision": "bbeda88e5dd9026dbf1443e6a198a9f293de193c",
+    "revision": "57f42218a98e006480c61cd8ad466b42de01f8ce",
     "grammarSha": "7c376b54247514c0d896408030bf9f1da1bb0497e448ecdb79177bbcfd8e4f21",
     "language": "sql_bigquery",
     "url": "https://github.com/takegue/tree-sitter-sql-bigquery",
@@ -3896,8 +3896,8 @@
   },
   {
     "reference": "main",
-    "revision": "d49b39c1a58d79468e3e5bd6cc97056e74eccf3e",
-    "grammarSha": "7c3b9230d2ecdbe01913f6f5ac126b7ed78238ae66d79c054d0459426b2d1fe7",
+    "revision": "c2ce0c0dc4196faf3aaede47b2f7d197c624b80f",
+    "grammarSha": "44325151b0c081628fc6a1fec2025fbb4d49f9b1ba361b01131c3412606ed023",
     "language": "ursa",
     "url": "https://github.com/ursalang/tree-sitter-ursa",
     "maintainedBy": "@rrthomas",
