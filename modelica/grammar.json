@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "bbe6142309b3a18c6faf7decf0ff8e2fb13b21a5",
-  "grammarSha": "1ab56ecb6081698bce495c1d617292ac584a4de8f25e1731340a25db3c84f180",
+  "revision": "cf20fb1e68401d1c18825b82802101b3ad1d3f3b",
+  "grammarSha": "75536a02ff88c332d49d1d833f7ec937623171210ae4322ae250a59fdccda19d",
   "language": "modelica",
   "url": "https://github.com/modelicahub/tree-sitter-modelica",
   "maintainedBy": "@nachawati"

@@ -1,6 +1,6 @@
 # 433 Supported Parsers
 
-9 pending, 9 skipped regeneration, 32 missing queries
+9 pending, 9 skipped regeneration, 31 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -50,7 +50,7 @@
 - [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; is broken similar to poe_filter but in MANY places)
 - [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️ (maintained by @ObserverOfTime)
-- [x] [circom](https://github.com/Decurity/tree-sitter-circom) 🗸 (maintained by @Frodan)
+- [x] [circom](https://github.com/Decurity/tree-sitter-circom) ✔️ (maintained by @Frodan)
 - [x] [clarity](https://github.com/xlittlerag/tree-sitter-clarity) ✔️ (maintained by @xlittlerag)
 - [x] [cleancopy](https://github.com/Taev-dev/tree-sitter-cleancopy) 🗸 (maintained by @Badg)
 - [x] [clingo](https://github.com/potassco/tree-sitter-clingo) 🗸 (maintained by @sthiele)

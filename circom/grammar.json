@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "c4df0664be207e2eae9f5507f9f5f00ea0a952c9",
-  "grammarSha": "5c8faf57cbef9b88ae4fd24322efbb04d72c3431c3c57123532c097d6c127058",
+  "revision": "02150524228b1e6afef96949f2d6b7cc0aaf999e",
+  "grammarSha": "4d791951e837738e2c2ebb1d357815837c7a2a5f5a7e1a655b822398b4e17c08",
   "language": "circom",
   "url": "https://github.com/Decurity/tree-sitter-circom",
   "maintainedBy": "@Frodan"
