@@ -262,6 +262,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/move"
 	"github.com/alexaandru/go-sitter-forest/move_on_aptos"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
+	"github.com/alexaandru/go-sitter-forest/mylang"
 	"github.com/alexaandru/go-sitter-forest/nasm"
 	"github.com/alexaandru/go-sitter-forest/nesfab"
 	"github.com/alexaandru/go-sitter-forest/nftables"
@@ -712,6 +713,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"move":               move.GetLanguage,
 	"move_on_aptos":      move_on_aptos.GetLanguage,
 	"muttrc":             muttrc.GetLanguage,
+	"mylang":             mylang.GetLanguage,
 	"nasm":               nasm.GetLanguage,
 	"nesfab":             nesfab.GetLanguage,
 	"nftables":           nftables.GetLanguage,
@@ -1148,6 +1150,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"move":               move.GetQuery,
 	"move_on_aptos":      move_on_aptos.GetQuery,
 	"muttrc":             muttrc.GetQuery,
+	"mylang":             mylang.GetQuery,
 	"nasm":               nasm.GetQuery,
 	"nesfab":             nesfab.GetQuery,
 	"nftables":           nftables.GetQuery,

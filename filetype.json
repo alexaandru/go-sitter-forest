@@ -309,6 +309,7 @@
     "move":               ["move"],
     "move_on_aptos":      ["move_on_aptos"],
     "muttrc":             ["muttrc"],
+    "mylang":             ["mylang"],
     "nasm":               ["asm", "nasm"],
     "nesfab":             ["nesfab"],
     "nftables":           ["nftables"],

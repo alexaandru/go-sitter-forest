@@ -1,4 +1,4 @@
-# 432 Supported Parsers
+# 433 Supported Parsers
 
 9 pending, 9 skipped regeneration, 32 missing queries
 
@@ -253,6 +253,7 @@
 - [x] [move](https://github.com/tzakian/tree-sitter-move) ✔️ (maintained by @tzakian)
 - [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) 🗸 (maintained by @ArArgon)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️ (maintained by @Freed-Wu)
+- [x] [mylang](https://github.com/marc9622/tree-sitter-mylang) ✔️ (maintained by @marc9622)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️ (maintained by @ObserverOfTime)
 - [x] [nesfab](https://github.com/hnd2/tree-sitter-nesfab) ✔️ (maintained by @hnd2)
 - [x] [nftables](https://github.com/EinYakAmNil/tree-sitter-nftables) 🗸 (maintained by @EinYakAmNil)

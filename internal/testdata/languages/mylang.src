@@ -1,0 +1,424 @@
+import Std;
+use Namespace.Inner.Type;
+use Namespace.Inner.Type as T;
+
+var value             = uninit;
+var value:            = uninit;
+var value: Int        = uninit;
+var value: Arr(Int)   = uninit;
+var value: *Type      = uninit;
+var value: &Box(val)  = uninit;
+var value: []Thing()  = uninit;
+var value: *[]&String = uninit;
+var value: () -> Void = uninit;
+
+def value             = uninit;
+def value:            = uninit;
+def value: Int        = uninit;
+def value: Arr(Int)   = uninit;
+def value: *Type      = uninit;
+def value: &Box(val)  = uninit;
+def value: []Thing()  = uninit;
+def value: *[]&String = uninit;
+def value: () -> Void = uninit;
+
+var value                { yield uninit }
+var value:               { yield uninit }
+var value: *[]&String    { yield uninit }
+var value:            || { yield uninit }
+var value: *[]&String || { yield uninit }
+var value: () -> Void || { yield uninit }
+
+def value                { yield uninit }
+def value:               { yield uninit }
+def value: *[]&String    { yield uninit }
+def value:            || { yield uninit }
+def value: *[]&String || { yield uninit }
+def value: () -> Void || { yield uninit }
+
+var func  () ->        { return uninit }
+var func: () ->        { return uninit }
+var func: () -> Int    { return uninit }
+var func: () ->     || { return uninit }
+var func: () -> Int || { return uninit }
+
+var value        |*a, &b, copy c, move d| { yield uninit }
+var value:       |*a, &b, copy c, move d| { yield uninit }
+var value  () -> |*a, &b, copy c, move d| { yield uninit }
+var value: () -> |*a, &b, copy c, move d| { yield uninit }
+
+var func() ->        do uninit;
+var func() -> Int    do uninit;
+
+var func(a: Int        ) -> return uninit;
+var func(a: Int, b: Int) -> return uninit;
+
+def func(a:    Int        ) -> return uninit;
+def func(a: T: Any        ) -> return uninit;
+def func(a: T: Any, b: Int) -> return uninit;
+
+def func(a: &Int    ) -> return uninit;
+def func(a:  Int    ) -> return uninit;
+def func(a: T: &Type) -> return uninit;
+def func(a: T:  Type) -> return uninit;
+def func(a: &[]Int  ) -> return uninit;
+def func(a:  []Int  ) -> return uninit;
+
+var ownfn(a:  Int) ->  Int return move a;
+var imrfn(a: *Int) -> *Int return a;
+var murfn(a: &Int) -> &Int return &a;
+
+// Owned r-values can be used for anything
+// Owned l-values must be moved or copied to be used as owned values
+// Owned l-values can be used as immutable references
+// Owned l-values can be converted to mutable references
+var owned = ownfn(     get());
+var owned = ownfn(move value);
+var owned = ownfn(copy value);
+var owned = imrfn(     get());
+var owned = imrfn(     value);
+var owned = murfn(     get());
+var owned = murfn(    &value);
+
+// Immutable references must be copied to be used as owned values
+// Immutable references can be used as immutable references
+// Immutable references cannot be used as mutable references
+var imref = ownfn(copy get());
+var imref = ownfn(copy value);
+var imref = imrfn(     get());
+var imref = imrfn(     value);
+
+// Mutable references must be copied to be used as owned values
+// Mutable references can be used as immutable references
+// Mutable references can be used as immutable and mutable references
+// Mutable references can be used as immutable references
+// Mutable references can be converted to mutable references
+var muref = ownfn(copy get());
+var muref = ownfn(copy value);
+var muref = imrfn(     get());
+var muref = imrfn(     value);
+var muref = muref(     get());
+var muref = muref(    &value);
+
+def value = uninit;
+
+def value = true;
+def value = false;
+
+def value = 10;
+def value = 10f;
+def value = 10F;
+def value = 10i;
+def value = 10I;
+def value = 10u;
+def value = 10U;
+
+def value = 3.1415;
+def value = 3.1415f;
+def value = 3.1415F;
+
+def value = "Hello";
+
+def value =     c;
+def value =   b.c;
+def value = a.b.c;
+def value = copy a.b.c;
+
+def value =           c();
+def value =      b() .c();
+def value = a() .b() .c();
+def value = a(1).b(2).c(3);
+def value = copy a(1).b(2).c(3);
+
+def value =           Thing;
+def value =     Utils.Thing;
+def value = Lib.Utils.Thing;
+def value = Lib(1, a).Utils(2, b).Thing(3, b);
+
+def value = a.a.a().a(a).a.a().a().a;
+def value = ((((a).a).a()).a);
+
+def value =           Thing.thing();
+def value = Lib.Utils.Thing.thing();
+def value = Lib.Utils.thing.thing();
+def value = lib.utils.thing.thing();
+def value = Lib.Utils.thing;
+def value = lib.utils.thing;
+
+def value: Lib      .Utils      .Thing       = uninit;
+def value: Lib(1, a).Utils(2, b).Thing(3, c) = uninit;
+
+def value = true +  10 - "Hello"  * thing /  thing() % Thing().thing;
+def value = true + (10 - "Hello") * thing / (thing() % Thing().thing);
+
+def value = true and 10 or ("Hello" and (thing or thing())) and Thing().thing;
+def value = thing or thing() and Thing().thing;
+
+def value = true   ::Bool;
+def value = 10     ::Int;
+def value = "Hello"::Str;
+def value = thing  ::Thing();
+def value = thing()::Thing();
+def value = this.that::Thing();
+def value = (copy thing)::Thing();
+
+def value = thing::Thing.field;
+def value = thing::Thing.func();
+def value = (copy thing)::Thing.func();
+
+def value = this::This + that::That;
+def value = this::This.func(that::That);
+def value = (copy this)::This.func(that::That);
+
+def value = (this.that as Thing).func();
+def value = func(this.that as Thing);
+
+def value = Thing.{};
+def value = Thing.{uninit, true, 10, "Hello", thing, thing(), Thing()};
+def value = Thing.{field = uninit};
+
+def value =     Thing(      ).{};
+def value =     Thing(uninit).{};
+def value = Lib.Thing(      ).{};
+
+def value = &value;
+def value = value^;
+def value = copy value;
+
+def statements {
+    if (true) print(a);
+
+    if true do a;
+    if true do a else do b;
+    if true { yield a } else do b;
+
+    if true { yield a }
+    if true { yield a } else { yield b }
+    if true do a else { yield b }
+
+    if (true) if (true) a else b;
+
+    if true do { yield a };
+    if true do a else do { yield b };
+
+    /*
+    switch {
+        a == 1 do a;
+        a == 2 { yield b }
+        else do c;
+    }
+
+    switch {
+        maybe is Just.{inner} and true {
+            yield inner.woah()
+        }
+        else {
+            return;
+        }
+    }
+
+    // maybe is {
+    //     (Value value and value.check()) value.print()
+    //     else return uninit;
+    // }
+
+def for_expr {
+    for do a;
+    for do a else do b;
+    for { yield a } else do b;
+
+    for { yield a }
+    for { yield a } else { yield b }
+    for do a else { yield b }
+    
+    // for (list)   print(1);
+    // for (list) { print(1) }
+
+    // for (elem          in list) print(1);
+    // for (elem at index in list) print(1);
+
+    while (condition)   print(1);
+    while (condition) { print(1) }
+
+    // do   print(1)   while (condition)
+    // do { print(1) } while (condition)
+}
+
+def range = 0..=5;
+def range = 0..<5;
+def range = 5..=0;
+def range = 5..>0;
+
+def range = 0=..5;
+def range = 0<..5;
+def range = 5=..0;
+def range = 5<..0;
+
+def Vector          = Lib.Vector;
+def Vector(T: Type) = Lib.Vector(T);
+def Vector(n: UInt) = Lib.Vector(n);
+use Lib.Vector(Int)    as IntVector;
+use Lib.Vector(Int, n) as IntVector(n);
+
+def DynArr struct {
+    size: UInt,
+    cap: UInt,
+    arr: &[]Int,
+}
+def DynList(alloc: A: *Alloc, L: List(T: Any)) struct {
+    list: &L,
+}
+
+def Just(T: Type) struct { value: T }
+def Nothing struct {}
+def Never union {}
+
+def Maybe(T: Type) union {
+    Just(T),
+    Nothing,
+}
+
+def LinkedList(T: Any) struct {
+    next: &LL,
+}
+
+def LinkedList(T: Any) union {
+    &LL,
+}
+
+def Union union {
+    def Struct struct {},
+    def Other union {
+        def A struct {},
+        def B struct {},
+    },
+}
+def Struct struct {
+    field: def Other struct {},
+    field: def Union union {
+        def A struct {},
+        def B struct {},
+    },
+}
+
+for Person   def new (name: *String, age: *UInt)  -> Person       do Person.{copy name, copy age};
+for Person   def twin(name: *String, to: *Person) -> Person { return Person.{copy name, copy to.age} }
+for Person { def clone(person: *Person) -> Person   return copy person; }
+for Person { def clone(person: *Person) -> Person { return copy person } }
+
+for person: Person   def forget() -> Void   return;
+for person: Person { def forget() -> Void   return; }
+for person: Person { def forget() -> Void { return } }
+
+for person: *Person   def greet() -> Void return print(person.name);
+for person: *Person { def greet() -> Void return print(person.name); }
+for person: *Person { def greet() -> Void {      print(person.name) } }
+
+for person: &Person   def rename(name: *String) -> Void return &person.name = copy name;
+for person: &Person { def rename(name: *String) -> Void return &person.name = copy name; }
+for person: &Person { def rename(name: *String) -> Void {      &person.name = copy name } }
+
+for DynList(alloc: A: Allocator, L: List(T: Type)) as DL {
+    def new() -> D {
+        return D.{alloc.alloc(L.new_empty()}
+    }
+}
+
+for self: DynList(alloc: A: Allocator, L: List(T: Type)) as DL {
+    def delete() -> Void {
+        alloc.dealloc(&self.list)
+        _ = self
+    }
+}
+
+for self: *DynList(alloc: A: Allocator, L: List(T: Type)) as DL {
+    def get(index: UInt) -> T {
+        return self.get(index)
+    }
+}
+
+for self: &DynList(alloc: A: Allocator, L: List(T: Type)) as DL {
+    def resize(capacity: UInt) -> Void {
+        &self.list = alloc.realloc(self.list, capacity * sizeof T)
+    }
+}
+
+trait Self: DeepClone for self: *Self virt clone(alloc: A: &Allocator) -> Self
+
+trait Self: DeepClone {
+    for self: *Self virt clone(alloc: A: &Allocator) -> Self;
+}
+
+trait Self: DeepClone for self: *Self {
+    virt clone(alloc: A: &Allocator) -> Self;
+}
+
+trait Self: DeepClone {
+    for Self {
+        def clone_of(alloc: A: &Allocator, value: *Self) -> Self {
+            return value.clone(alloc);
+        }
+    }
+    for self: *Self {
+        virt clone(alloc: A: &Allocator) -> Self;
+    }
+}
+
+for person: *Person impl DeepClone
+    def clone(alloc: A: &Allocator) -> Person
+        return Person.{person.name.clone(alloc), copy person.age}
+
+for person: *Person {
+    impl DeepClone {
+        def clone(alloc: A: &Allocator) -> Person {
+            return Person.{person.name.clone(alloc), copy person.age}
+        }
+    }
+}
+
+impl DeepClone {
+    for person: *Person {
+        def clone(alloc: A: &Allocator) -> Person {
+            return Person.{person.name.clone(alloc), copy person.age}
+        }
+    }
+}
+
+trait Self: ShallowCopy {
+    for Self def copy_of(value: *Self) -> Self return value.copy();
+    for self: *Self virt copy() -> Self return copy self;
+}
+
+trait ImplicitCopy for Self: of ShallowCopy
+
+trait Left: Add(Right: Type) {
+    for left: *Left virt add(right: *Right) -> Left
+    for left: &Left def add_assign(right: *Right) -> Void {
+        &left = left + right;
+    }
+}
+
+trait Left: Multiply(Right: Type) {
+    for left: *Left virt multiply(right: *Right) -> Left
+    for left: &Left def multiply_assign(right: *Right) -> Left {
+        &left = left * right;
+    }
+}
+
+for left: Left: *Add(Right: Into(Int)) {
+    impl Multiply(Right) {
+        virt add(right: *Right) -> Left {
+            var result = copy left;
+            for (range 0..<right.into())
+                &result += left;
+            return result;
+        }
+    }
+}
+
+for left: Left: *Add(Right: Into(Int)) impl Multiply(Right) virt add(right: *Right) -> Left {
+    var result = copy left;
+    for (range 0..<right.into())
+        &result += left;
+    return result;
+}

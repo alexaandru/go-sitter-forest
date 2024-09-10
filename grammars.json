@@ -2359,6 +2359,14 @@
   },
   {
     "reference": "main",
+    "revision": "ec9e5e6d00353c2289a7b63cc8d0d17d13187e71",
+    "grammarSha": "6e04a08763a2c2a916b68f15fe9d5ba6a584a9df0ea1c3d4ebe8a8453fc7e864",
+    "language": "mylang",
+    "url": "https://github.com/marc9622/tree-sitter-mylang",
+    "maintainedBy": "@marc9622"
+  },
+  {
+    "reference": "main",
     "revision": "570f3d7be01fffc751237f4cfcf52d04e20532d1",
     "grammarSha": "62416145d98a6cea8b28c148ab8db3162ecbd96647bcdbd046a92af8a8b3883d",
     "language": "nasm",
