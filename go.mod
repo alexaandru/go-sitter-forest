@@ -108,7 +108,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.6
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.7
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.0
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
@@ -130,7 +130,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.8.0
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.8.0
 	github.com/alexaandru/go-sitter-forest/gitignore v1.8.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.8.2
+	github.com/alexaandru/go-sitter-forest/gleam v1.8.3
 	github.com/alexaandru/go-sitter-forest/glimmer v1.8.1
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.8.1
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.8.1
@@ -197,7 +197,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.8.1
 	github.com/alexaandru/go-sitter-forest/julia v1.8.1
 	github.com/alexaandru/go-sitter-forest/just v1.8.0
-	github.com/alexaandru/go-sitter-forest/kcl v1.8.0
+	github.com/alexaandru/go-sitter-forest/kcl v1.8.1
 	github.com/alexaandru/go-sitter-forest/kconfig v1.8.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.8.0
 	github.com/alexaandru/go-sitter-forest/koan v1.8.0
@@ -208,7 +208,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.8.0
 	github.com/alexaandru/go-sitter-forest/lart v1.8.1
 	github.com/alexaandru/go-sitter-forest/lat v1.8.0
-	github.com/alexaandru/go-sitter-forest/latex v1.8.1
+	github.com/alexaandru/go-sitter-forest/latex v1.8.2
 	github.com/alexaandru/go-sitter-forest/ldg v1.8.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.8.0
 	github.com/alexaandru/go-sitter-forest/leo v1.8.1
@@ -326,7 +326,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rstml v1.8.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.8.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.8.0
-	github.com/alexaandru/go-sitter-forest/rust v1.8.0
+	github.com/alexaandru/go-sitter-forest/rust v1.8.1
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.8.0
 	github.com/alexaandru/go-sitter-forest/scala v1.8.1
 	github.com/alexaandru/go-sitter-forest/scfg v1.8.0
