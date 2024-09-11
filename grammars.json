@@ -1035,15 +1035,15 @@
   },
   {
     "reference": "main",
-    "revision": "1383b9305d14e26be86faa881a4bc3e3a903d4f7",
-    "grammarSha": "e28e2d8552d398f7369029ed74bf2501c6f22a4ed0a50fbf4643227ec2360877",
+    "revision": "0e3e3bc6dd722648a71d7f8490761d7007ebd4d5",
+    "grammarSha": "2ca034d52ba0094a1954c4128419b2ae272251aa48bc499e8a9f99c7899bdf71",
     "language": "flamingo",
     "url": "https://github.com/inobulles/tree-sitter-flamingo",
     "maintainedBy": "@obiwac"
   },
   {
     "reference": "main",
-    "revision": "44fd297648838d14d2f4e073748d2667411d3523",
+    "revision": "c67615208b1224d4cf9a5eb1d38c1dcf1f1e11d9",
     "grammarSha": "783eed0caf226b7b85496409cdf458351372c444bd0d5bf681b378d5fa4481f7",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1417,8 +1417,8 @@
   },
   {
     "reference": "main",
-    "revision": "483644c03638beff687aa161384bbdd22f844d27",
-    "grammarSha": "0640ca344729da1b70e57299b622ce35f577d2a090cd7150711f6fd7431c5e2b",
+    "revision": "f53c325e313a50ae05e0a141bfeb7d9c66af9b2c",
+    "grammarSha": "966e847c7dc706ee6dc495229906d743880158c46d6f03ae7a830e4e962ec1a1",
     "language": "gram",
     "url": "https://github.com/gram-data/tree-sitter-gram",
     "maintainedBy": "@akollegger"
@@ -1886,8 +1886,8 @@
   },
   {
     "reference": "main",
-    "revision": "e7961cc32ad831723db37757fe265fb615bc310f",
-    "grammarSha": "41af4f0582648b6c84faacd4463c03ad36ad76bbf5980a627fbc78cd7a509036",
+    "revision": "3dbc65742ae6083f173334a12c5849852fa81f59",
+    "grammarSha": "fde9e0872f1410c4fec13fc6a6559ba38a191627144221d736440c03af1e026b",
     "language": "kcl",
     "url": "https://github.com/kcl-lang/tree-sitter-kcl",
     "maintainedBy": "@Vishalk91-4",
@@ -2206,7 +2206,7 @@
   },
   {
     "reference": "split_parser",
-    "revision": "a3481e1db0b5f9aecfa7124d362a6485286a8e72",
+    "revision": "c25b6354120182f1e0d5caa52f717b097a7e46a3",
     "grammarSha": "3852822202d08776192a3a1306ffc5205e30b03dcd274f6ea8a422812f58d4b2",
     "language": "markdown",
     "altName": "markdown (basic highlighting)",
@@ -2219,7 +2219,7 @@
   },
   {
     "reference": "split_parser",
-    "revision": "a3481e1db0b5f9aecfa7124d362a6485286a8e72",
+    "revision": "c25b6354120182f1e0d5caa52f717b097a7e46a3",
     "grammarSha": "dcc51b403a28e25e4e858bc237733539267b86abf396aaa61e869de704d78648",
     "language": "markdown_inline",
     "altName": "markdown_inline (needed for full highlighting)",
@@ -4105,7 +4105,7 @@
   },
   {
     "reference": "main",
-    "revision": "4f7008302c88a7ce0f71cf89670d1c98d4e333e7",
+    "revision": "fb736d51b85d18d14fbf5a3b0176d45d426b380c",
     "grammarSha": "aff9c5d4947d46b060e90fbe7fcf3980ecbf91d6cb43ef2a6e69609322b2c02b",
     "language": "wing",
     "url": "https://github.com/winglang/wing",

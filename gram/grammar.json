@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "483644c03638beff687aa161384bbdd22f844d27",
-  "grammarSha": "0640ca344729da1b70e57299b622ce35f577d2a090cd7150711f6fd7431c5e2b",
+  "revision": "f53c325e313a50ae05e0a141bfeb7d9c66af9b2c",
+  "grammarSha": "966e847c7dc706ee6dc495229906d743880158c46d6f03ae7a830e4e962ec1a1",
   "language": "gram",
   "url": "https://github.com/gram-data/tree-sitter-gram",
   "maintainedBy": "@akollegger"
