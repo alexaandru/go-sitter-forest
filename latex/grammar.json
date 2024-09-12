@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "90fd9894bebddce79f5b8041e7f82523364a619b",
-  "grammarSha": "eacf1e0cec2783e252c51bdeec894fee80b32a104dcbce555436aaa8b44ede14",
+  "revision": "1e4e30342b7a3b3a24886a632fbac53035d98871",
+  "grammarSha": "eec543dab4012b27fbdaf6a8cad90110bb9d789836607d89eeac06fc38c71583",
   "language": "latex",
   "url": "https://github.com/latex-lsp/tree-sitter-latex",
   "maintainedBy": "@theHamsta, @clason",
