@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.8.0
-	github.com/alexaandru/go-sitter-forest/abl v1.8.6
+	github.com/alexaandru/go-sitter-forest/abl v1.8.7
 	github.com/alexaandru/go-sitter-forest/ada v1.8.0
 	github.com/alexaandru/go-sitter-forest/agda v1.8.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
@@ -135,7 +135,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.8.1
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.8.1
 	github.com/alexaandru/go-sitter-forest/glint v1.8.0
-	github.com/alexaandru/go-sitter-forest/glsl v1.8.0
+	github.com/alexaandru/go-sitter-forest/glsl v1.8.1
 	github.com/alexaandru/go-sitter-forest/gn v1.8.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.8.0
 	github.com/alexaandru/go-sitter-forest/go v1.8.1
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hare v1.8.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.8.1
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.8.0
-	github.com/alexaandru/go-sitter-forest/haxe v1.8.1
+	github.com/alexaandru/go-sitter-forest/haxe v1.8.2
 	github.com/alexaandru/go-sitter-forest/hcl v1.8.0
 	github.com/alexaandru/go-sitter-forest/heex v1.8.0
 	github.com/alexaandru/go-sitter-forest/helm v1.8.1
@@ -239,7 +239,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.8.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.8.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.8.3
-	github.com/alexaandru/go-sitter-forest/moonbit v1.8.1
+	github.com/alexaandru/go-sitter-forest/moonbit v1.8.2
 	github.com/alexaandru/go-sitter-forest/motoko v1.8.0
 	github.com/alexaandru/go-sitter-forest/move v1.8.3
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0
@@ -328,7 +328,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ruby v1.8.1
 	github.com/alexaandru/go-sitter-forest/rust v1.8.1
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.8.0
-	github.com/alexaandru/go-sitter-forest/scala v1.8.1
+	github.com/alexaandru/go-sitter-forest/scala v1.8.2
 	github.com/alexaandru/go-sitter-forest/scfg v1.8.0
 	github.com/alexaandru/go-sitter-forest/scheme v1.8.0
 	github.com/alexaandru/go-sitter-forest/scss v1.8.0
