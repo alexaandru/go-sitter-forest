@@ -345,6 +345,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sml v1.8.0
 	github.com/alexaandru/go-sitter-forest/snakemake v1.8.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.8.0
+	github.com/alexaandru/go-sitter-forest/sop v1.8.0
 	github.com/alexaandru/go-sitter-forest/soql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sosl v1.8.0
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.8.0
