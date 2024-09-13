@@ -405,6 +405,7 @@
     "sml":                ["sml", "fun", "sig"],
     "snakemake":          ["smk"],
     "solidity":           ["sol"],
+    "sop":                ["sop"],
     "soql":               ["soql"],
     "sosl":               ["sosl"],
     "sourcepawn":         ["sp"],

@@ -364,6 +364,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/sml"
 	"github.com/alexaandru/go-sitter-forest/snakemake"
 	"github.com/alexaandru/go-sitter-forest/solidity"
+	"github.com/alexaandru/go-sitter-forest/sop"
 	"github.com/alexaandru/go-sitter-forest/soql"
 	"github.com/alexaandru/go-sitter-forest/sosl"
 	"github.com/alexaandru/go-sitter-forest/sourcepawn"
@@ -815,6 +816,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"sml":                sml.GetLanguage,
 	"snakemake":          snakemake.GetLanguage,
 	"solidity":           solidity.GetLanguage,
+	"sop":                sop.GetLanguage,
 	"soql":               soql.GetLanguage,
 	"sosl":               sosl.GetLanguage,
 	"sourcepawn":         sourcepawn.GetLanguage,
@@ -1252,6 +1254,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"sml":                sml.GetQuery,
 	"snakemake":          snakemake.GetQuery,
 	"solidity":           solidity.GetQuery,
+	"sop":                sop.GetQuery,
 	"soql":               soql.GetQuery,
 	"sosl":               sosl.GetQuery,
 	"sourcepawn":         sourcepawn.GetQuery,

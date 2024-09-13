@@ -3366,6 +3366,14 @@
     "maintainedBy": "@amaanq"
   },
   {
+    "reference": "master",
+    "revision": "5a6ce7d2cbc28ab7431c53a02a663f8a5e7b6ce0",
+    "grammarSha": "971f346693ac13c07d69e80109aa47b4661178645ebbd2180828056fb030e28b",
+    "language": "sop",
+    "url": "https://github.com/idjoo/tree-sitter-sop",
+    "maintainedBy": "@idjoo"
+  },
+  {
     "reference": "main",
     "revision": "602cc4b050ef1e14a69acc2ea094968bf928fa59",
     "grammarSha": "e4153b305dac0fc85acfb71f7e4666f111b267fc27df3b94a74b94af559ad1f6",

@@ -1,4 +1,4 @@
-# 433 Supported Parsers
+# 434 Supported Parsers
 
 9 pending, 9 skipped regeneration, 31 missing queries
 
@@ -356,6 +356,7 @@
 - [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️ (maintained by @MatthewFluet)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) ✔️ (maintained by @osthomas)
 - [x] [solidity](https://github.com/JoranHonig/tree-sitter-solidity) ✔️ (maintained by @amaanq)
+- [x] [sop](https://github.com/idjoo/tree-sitter-sop) ✔️ (maintained by @idjoo)
 - [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [sosl](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [sourcepawn](https://github.com/nilshelmig/tree-sitter-sourcepawn) ✔️ (maintained by @Sarrus1)

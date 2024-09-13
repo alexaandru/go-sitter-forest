@@ -1,0 +1,22 @@
+filter {
+  # initialize the token
+  mutate {
+    replace => {
+      "destination" => ""
+      }
+  }
+
+  # use the kv filter to split the log.
+  kv {
+    source => "message"
+    field_split => " "
+    trim_value => "\""
+  }
+
+  # assigned one of the field values to a UDM field
+  mutate {
+    replace => {
+      "event.idm.read_only_udm.target.hostname" => "%{destination}"
+    }
+  }
+}
