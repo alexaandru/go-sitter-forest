@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "4a3fabd26b09efd7431ea4899e5f2d81b568a4b9",
+  "revision": "dd991eb3b6957a33d9044e0f5914588f7f449a78",
   "grammarSha": "915a9a46cd2ada757424a4f9a2650e91e9199bb83a46afa960a9e90f1859f9f2",
   "language": "slang",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-slang",

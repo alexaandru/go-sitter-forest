@@ -15,29 +15,11 @@
 ; --------------
 (type_params
   "<" @punctuation.bracket
-  (type_param (identifier) @type)
   ">" @punctuation.bracket
 )
 
 ; Declarations
 ; ------------
-(import_statement name: [
-  (identifier) @type
-	(_ (identifier) @type)
-	(_(_ (identifier) @type))
-	(_(_(_ (identifier) @type)))
-	(_(_(_(_ (identifier) @type))))
-	(_(_(_(_(_ (identifier) @type)))))
-])
-
-; lol this is jank but okay.
-; (import_statement name: (_ (identifier) @type))
-; (import_statement name: (_(_ (identifier) @type)))
-; (import_statement name: (_(_(_ (identifier) @type))))
-; (import_statement name: (_(_(_(_ (identifier) @type)))))
-; (import_statement name: (_(_(_(_(_ (identifier) @type))))))
-
-(package_statement name: (identifier) @type)
 
 (class_declaration name: (identifier) @type.definition)
 (class_declaration super_class_name: (identifier) @type.definition)
@@ -66,16 +48,66 @@
 
 ; Literals
 ; --------
-[(keyword) (null)] @keyword
+; [(keyword) (null)] @keyword
 ; (type) @type
+(type_name) @type
+(package_name) @module
 (type (identifier) !built_in) @type
 (type built_in: (identifier)) @type.builtin
 [(integer) (float)] @number
 (string) @string
-(bool) @constant
+(bool) @boolean
 (operator) @operator
 (escape_sequence) @punctuation
+(null) @constant.builtin
+(access_identifiers "null" @keyword)
 
+; Keywords
+; --------
+[
+  "abstract"
+  "break"
+  "case"
+  "cast"
+  "catch"
+  "class"
+  "continue"
+  "default"
+  "do"
+  "dynamic"
+  "else"
+  "enum"
+  "extends"
+  "extern"
+  "final"
+  "for"
+  "function"
+  "if"
+  "implements"
+  "import"
+  "in"
+  "inline"
+  "interface"
+  "macro"
+  "new"
+  "operator"
+  "overload"
+  "override"
+  "package"
+  "private"
+  "public"
+  "return"
+  "static"
+  "switch"
+  "this"
+  "throw"
+  "try"
+  "typedef"
+  "untyped"
+  "using"
+  "var"
+  "while"
+] @keyword
 
 ; Tokens
 ; ------

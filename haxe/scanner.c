@@ -39,7 +39,7 @@ void tree_sitter_haxe_external_scanner_deserialize(
 }
 
 static bool is_whitespace(int32_t c) {
-    return c == ' ' || c == '\n';
+    return c == ' ' || c == '\n' || c == '\t' || c == '\r';
 }
 
 bool tree_sitter_haxe_external_scanner_scan(

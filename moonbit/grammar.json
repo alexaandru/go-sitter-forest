@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "aaa14833bb5e880dd0277aa1d3fd02156f92d8f2",
-  "grammarSha": "46ae44fec47e178a6bfc2c479e1d628944b9e3e59dbf4054080dcf110fe0ac66",
+  "revision": "c30239e4187c1f3e0afda789281b90415191a88a",
+  "grammarSha": "b99a8640c0b29621e58de73db11577cefba993e8cd4e3584a0ecdb7930fb5fe9",
   "language": "moonbit",
   "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
   "maintainedBy": "@tonyfettes",
