@@ -91,7 +91,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/eds v1.8.0
 	github.com/alexaandru/go-sitter-forest/eex v1.8.0
 	github.com/alexaandru/go-sitter-forest/effekt v1.8.0
-	github.com/alexaandru/go-sitter-forest/eiffel v1.8.0
+	github.com/alexaandru/go-sitter-forest/eiffel v1.8.1
 	github.com/alexaandru/go-sitter-forest/elisp v1.8.0
 	github.com/alexaandru/go-sitter-forest/elixir v1.8.0
 	github.com/alexaandru/go-sitter-forest/elm v1.8.0
@@ -139,7 +139,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gn v1.8.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.8.0
 	github.com/alexaandru/go-sitter-forest/go v1.8.1
-	github.com/alexaandru/go-sitter-forest/gobra v1.8.1
+	github.com/alexaandru/go-sitter-forest/gobra v1.8.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.8.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.8.0
 	github.com/alexaandru/go-sitter-forest/gomod v1.8.0
@@ -180,7 +180,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/idris v1.8.0
 	github.com/alexaandru/go-sitter-forest/ignis v1.8.1
 	github.com/alexaandru/go-sitter-forest/ini v1.8.3
-	github.com/alexaandru/go-sitter-forest/ink v1.8.0
+	github.com/alexaandru/go-sitter-forest/ink v1.8.1
 	github.com/alexaandru/go-sitter-forest/inko v1.8.0
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.8.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.8.0
