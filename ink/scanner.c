@@ -106,10 +106,13 @@ int32_t lookahead(TSLexer *lexer) {
 }
 
 bool consume_char(TSLexer *lexer, char c) {
+  MSG("Expecting %c", c);
   if (lexer->lookahead == c) {
+    MSG(", which we got. Consuming.\n");
     consume(lexer);
     return true;
   } else {
+    MSG(", but got '%c'.\n", lexer->lookahead);
     return false;
   }
 }
@@ -209,9 +212,6 @@ bool skip_ws_upto_cr(TSLexer *lexer) {
 }
 
 /// Set `token` as the lexer result and add `level` to the `scanner` block hierarchy.
-///
-/// Advances the `lexer` by one if at a carriage return, because we want all blocks to start and end at column 0.
-/// That way, selecting blocks always grabs complete lines.
 bool start_block(TSLexer *lexer, Scanner *scanner, Token token, BlockLevel level) {
   lexer->result_symbol = token;
   array_push(&scanner->blocks, level);
@@ -219,8 +219,6 @@ bool start_block(TSLexer *lexer, Scanner *scanner, Token token, BlockLevel level
 }
 
 /// Set `token` as the lexer result and pop/discard the topmest element from the `scanner`'s block hierarchy.
-///
-/// Advances the lexer by one if at a carriage return (like `start_block()`).
 bool end_block(TSLexer *lexer, Scanner *scanner, Token token) {
   lexer->result_symbol = token;
   (void) array_pop(&scanner->blocks);  // cast to void to shut up warnings about unused values.
@@ -238,7 +236,6 @@ typedef enum {
 /// If a block comment is still open at EOF then return NO_COMMENT_TOKEN,
 /// so that tree-sitter can treat it as an error.
 CommentType lookahead_comment(TSLexer *lexer) {
-  skip_ws_upto_cr(lexer);
   if (!consume_char(lexer, '/'))
     return NO_COMMENT_TOKEN;
 
@@ -257,7 +254,7 @@ CommentType lookahead_comment(TSLexer *lexer) {
       return LINE_COMMENT_TOKEN;
     } else if (type == BLOCK_COMMENT_TOKEN) {
       if (consume_char(lexer, '*') && consume_char(lexer, '/')) {
-        return BLOCK_COMMENT_TOKEN;
+          return BLOCK_COMMENT_TOKEN;
       }
     }
     consume(lexer);
@@ -293,7 +290,7 @@ BlockInfo lookahead_block_start(TSLexer *lexer) {
 
   BlockInfo block = BLOCK_INFO_INIT;
 
-    if (lookahead(lexer) == '=' || is_eof(lexer)) {
+  if (lookahead(lexer) == '=' || is_eof(lexer)) {
     MSG("Next block: None.\n");
     return block;
   }
@@ -314,6 +311,7 @@ BlockInfo lookahead_block_start(TSLexer *lexer) {
         break;
       }
       markers += 1;
+      skip_ws_upto_cr(lexer);
       lookahead_comment(lexer);
       skip_ws_upto_cr(lexer);
       c = lookahead(lexer);
@@ -364,6 +362,7 @@ bool tree_sitter_ink_external_scanner_scan(
   if (scanner->remaining_block_marks > 0) {
 
     // Block comments can creep in ANYWHERE >:-(, so we have to account for that.
+    skip_ws_upto_cr(lexer);
     if (valid_symbols[BLOCK_COMMENT] && lookahead_comment(lexer) == BLOCK_COMMENT_TOKEN) {
       lexer->result_symbol = BLOCK_COMMENT;
       mark_end(lexer);
@@ -399,10 +398,15 @@ bool tree_sitter_ink_external_scanner_scan(
   if (valid_symbols[END_OF_LINE]) {
     MSG("Checking for EO[L|F]\n");
     if (skip_ws_upto_cr(lexer)) {
-      MSG("  at EOL\n");
-      lexer->result_symbol = END_OF_LINE;
       consume(lexer);
-      mark_end(lexer);
+      mark_end(lexer);  // only mark the first newline as part of the EOL.
+      MSG("  at EOL\n");
+      while (skip_ws_upto_cr(lexer)) {
+        // skip as many empty lines as possible, but don't mark them as part of the match
+        MSG("  … one more line …\n");
+        skip_ink(lexer);
+      };
+      lexer->result_symbol = END_OF_LINE;
       return true;
     } else if (is_eof(lexer)) {
       MSG("  at EOF\n");
@@ -412,6 +416,7 @@ bool tree_sitter_ink_external_scanner_scan(
   }
 
   if (valid_symbols[LINE_COMMENT] || valid_symbols[BLOCK_COMMENT]) {
+    skip_ws(lexer);
     CommentType type = lookahead_comment(lexer);
     switch(type) {
       case LINE_COMMENT_TOKEN:

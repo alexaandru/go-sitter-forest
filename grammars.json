@@ -874,8 +874,8 @@
   },
   {
     "reference": "master",
-    "revision": "650c54180b9dc0411bd16d57cdb6b3a13465704c",
-    "grammarSha": "fea75541f4e45480fbe5f107541e519c9fe634f0897859906b78030a73039c5f",
+    "revision": "fc09120f12da7364e830ab7c6140534a3e62aed3",
+    "grammarSha": "6b4d14275a01997bd907c661005ad28834c260c425ee641ab688b04287afc7ff",
     "language": "eiffel",
     "url": "https://github.com/imustafin/tree-sitter-eiffel",
     "maintainedBy": "@imustafin"
@@ -1341,8 +1341,8 @@
   },
   {
     "reference": "main",
-    "revision": "d3d2c37fc117637fff6ccc1fb24c470740321a14",
-    "grammarSha": "90c77deb80e00f4232006d6c3e5f767fb6fabbebc1516cbcea4f6acb4d78fd52",
+    "revision": "b60c9ee00bad0e05a5e259fec046b9a0b47266b0",
+    "grammarSha": "3dbbcebd33dc20a757433048f08ea2102f1e0b756f83ce8d4e22b01a78514d14",
     "language": "gobra",
     "url": "https://github.com/HSMF/tree-sitter-gobra",
     "maintainedBy": "@HSMF"
@@ -1724,16 +1724,14 @@
   },
   {
     "reference": "main",
-    "revision": "22b5d2210b7b77ebfdddfe265578d1bbf259b69c",
-    "grammarSha": "04382f9a2eec5907498cad679096853f43fc808bdc646418770f2aba19e5f53c",
+    "revision": "1dd94082bf50431f98b37390bb66a89c11ab08fe",
+    "grammarSha": "1b35ba9c41bf2f95889d4d0aaafdcaced57a17c668be9b9a998089a6097833d1",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
-    "doc": "no crash but generate never completes (15min): https://github.com/wldmr/tree-sitter-ink/issues/8",
     "maintainedBy": "@wldmr",
     "files": [
       "scanner.c"
-    ],
-    "skip": true
+    ]
   },
   {
     "reference": "main",

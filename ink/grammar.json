@@ -1,13 +1,11 @@
 {
   "reference": "main",
-  "revision": "22b5d2210b7b77ebfdddfe265578d1bbf259b69c",
-  "grammarSha": "04382f9a2eec5907498cad679096853f43fc808bdc646418770f2aba19e5f53c",
+  "revision": "1dd94082bf50431f98b37390bb66a89c11ab08fe",
+  "grammarSha": "1b35ba9c41bf2f95889d4d0aaafdcaced57a17c668be9b9a998089a6097833d1",
   "language": "ink",
   "url": "https://github.com/wldmr/tree-sitter-ink",
-  "doc": "no crash but generate never completes (15min): https://github.com/wldmr/tree-sitter-ink/issues/8",
   "maintainedBy": "@wldmr",
   "files": [
     "scanner.c"
-  ],
-  "skip": true
+  ]
 }

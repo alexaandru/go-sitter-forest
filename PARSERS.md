@@ -1,6 +1,6 @@
 # 434 Supported Parsers
 
-9 pending, 9 skipped regeneration, 31 missing queries
+9 pending, 8 skipped regeneration, 31 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -186,7 +186,7 @@
 - [x] [idris](https://github.com/kayhide/tree-sitter-idris) ✔️ (maintained by @kayhide)
 - [x] [ignis](https://github.com/Ignis-lang/tree-sitter-ignis) ✔️ (maintained by @BasileusErwin)
 - [x] [ini](https://github.com/justinmk/tree-sitter-ini) ✔️ (maintained by @theHamsta)
-- [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr; ❌no crash but generate never completes (15min): https://github.com/wldmr/tree-sitter-ink/issues/8)
+- [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr)
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
 - [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌Error: Undefined symbol)
