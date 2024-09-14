@@ -398,8 +398,6 @@ bool tree_sitter_ink_external_scanner_scan(
   if (valid_symbols[END_OF_LINE]) {
     MSG("Checking for EO[L|F]\n");
     if (skip_ws_upto_cr(lexer)) {
-      consume(lexer);
-      mark_end(lexer);  // only mark the first newline as part of the EOL.
       MSG("  at EOL\n");
       while (skip_ws_upto_cr(lexer)) {
         // skip as many empty lines as possible, but don't mark them as part of the match

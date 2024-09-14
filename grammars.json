@@ -9,8 +9,8 @@
   },
   {
     "reference": "master",
-    "revision": "617394ca43c58d22dc3fcb05ea83b5777c09983a",
-    "grammarSha": "fc6701f798492417953368b8626eb7107bfea875d8428dfda594a76b22247522",
+    "revision": "2d3969ca662af3e6a10ca2462ef22a98a71b5c43",
+    "grammarSha": "703862a7dbfee61b2afe5ce391a5141921ee5af4e6ce41d6d0e16552dbb5e96e",
     "language": "abl",
     "url": "https://github.com/usagi-coffee/tree-sitter-abl",
     "maintainedBy": "@jkbz64",
@@ -1341,8 +1341,8 @@
   },
   {
     "reference": "main",
-    "revision": "b60c9ee00bad0e05a5e259fec046b9a0b47266b0",
-    "grammarSha": "3dbbcebd33dc20a757433048f08ea2102f1e0b756f83ce8d4e22b01a78514d14",
+    "revision": "a0c91ab3cba66c867b7c52a7ed4a046b67cc5e4a",
+    "grammarSha": "727d3ce06e154c2f8999f8f4c1a5e3355d250f572e8f5e69930d8a1fbe01707f",
     "language": "gobra",
     "url": "https://github.com/HSMF/tree-sitter-gobra",
     "maintainedBy": "@HSMF"
@@ -1724,7 +1724,7 @@
   },
   {
     "reference": "main",
-    "revision": "1dd94082bf50431f98b37390bb66a89c11ab08fe",
+    "revision": "5c559be8bf9630a3f2aae60184f1b3acf79872be",
     "grammarSha": "1b35ba9c41bf2f95889d4d0aaafdcaced57a17c668be9b9a998089a6097833d1",
     "language": "ink",
     "url": "https://github.com/wldmr/tree-sitter-ink",
@@ -2965,8 +2965,8 @@
   },
   {
     "reference": "main",
-    "revision": "c8b6e5f3f3c055cfc76471ebc912286e9e73d7d2",
-    "grammarSha": "707e07b44e11c83b565d300ef75f58c8d98ac066d240368bb4cb8dbdd78867eb",
+    "revision": "4279b699c47fa87956045980c46c7d30f8c0121b",
+    "grammarSha": "332a371479972a807c8d48ee677dd17c8215e30b6217928258a3cdf3d63a6c26",
     "language": "r",
     "url": "https://github.com/r-lib/tree-sitter-r",
     "maintainedBy": "@echasnovski",

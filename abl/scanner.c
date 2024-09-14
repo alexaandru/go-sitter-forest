@@ -4,8 +4,10 @@
 enum TokenType {
   NAMEDOT,
   NAMECOLON,
+  NAMEDOUBLECOLON,
   OR_OPERATOR,
   AND_OPERATOR, 
+  SPECIAL_CHARACTER,
 };
 
 void *tree_sitter_abl_external_scanner_create() {
@@ -36,7 +38,7 @@ bool tree_sitter_abl_external_scanner_scan(
   TSLexer *lexer,
   const bool *valid_symbols
 ) {
-  if (valid_symbols[NAMEDOT] || valid_symbols[NAMECOLON]) {
+  if (valid_symbols[NAMEDOT] || valid_symbols[NAMECOLON] || valid_symbols[NAMEDOUBLECOLON]) {
     while (!lexer->eof(lexer) && iswspace(lexer->lookahead)) {
       lexer->advance_abl(lexer, true);
     }
@@ -50,7 +52,15 @@ bool tree_sitter_abl_external_scanner_scan(
     }
     else if (!lexer->eof(lexer) && lexer->lookahead == ':') {
       lexer->advance_abl(lexer, false);
-      if (!lexer->eof(lexer) && !iswspace(lexer->lookahead)) {
+
+      if (!lexer->eof(lexer) && lexer->lookahead == ':') {
+        lexer->advance_abl(lexer, false);
+        if (!iswspace(lexer->lookahead)) {
+          lexer->result_symbol = NAMEDOUBLECOLON;
+          return true;
+        }
+      }
+      else if (!lexer->eof(lexer) && !iswspace(lexer->lookahead)) {
         lexer->result_symbol = NAMECOLON;
         return true;
       }
@@ -84,6 +94,19 @@ bool tree_sitter_abl_external_scanner_scan(
           }
         }
       }
+    }
+  }
+
+  if (valid_symbols[SPECIAL_CHARACTER]) {
+    while (!lexer->eof(lexer) && lexer->lookahead != '~') {
+      lexer->advance_abl(lexer, true);
+    }
+
+    lexer->advance_abl(lexer, false);
+    if (!lexer->eof(lexer) && !iswspace(lexer->lookahead)) {
+      lexer->advance_abl(lexer, false);
+      lexer->result_symbol = SPECIAL_CHARACTER;
+      return true;
     }
   }
 
