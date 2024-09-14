@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.8.0
-	github.com/alexaandru/go-sitter-forest/abl v1.8.7
+	github.com/alexaandru/go-sitter-forest/abl v1.8.8
 	github.com/alexaandru/go-sitter-forest/ada v1.8.0
 	github.com/alexaandru/go-sitter-forest/agda v1.8.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
@@ -139,7 +139,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gn v1.8.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.8.0
 	github.com/alexaandru/go-sitter-forest/go v1.8.1
-	github.com/alexaandru/go-sitter-forest/gobra v1.8.2
+	github.com/alexaandru/go-sitter-forest/gobra v1.8.3
 	github.com/alexaandru/go-sitter-forest/goctl v1.8.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.8.0
 	github.com/alexaandru/go-sitter-forest/gomod v1.8.0
@@ -180,7 +180,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/idris v1.8.0
 	github.com/alexaandru/go-sitter-forest/ignis v1.8.1
 	github.com/alexaandru/go-sitter-forest/ini v1.8.3
-	github.com/alexaandru/go-sitter-forest/ink v1.8.1
+	github.com/alexaandru/go-sitter-forest/ink v1.8.2
 	github.com/alexaandru/go-sitter-forest/inko v1.8.0
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.8.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.8.0
@@ -305,7 +305,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmljs v1.8.0
 	github.com/alexaandru/go-sitter-forest/quakec v1.8.0
 	github.com/alexaandru/go-sitter-forest/query v1.8.1
-	github.com/alexaandru/go-sitter-forest/r v1.8.1
+	github.com/alexaandru/go-sitter-forest/r v1.8.2
 	github.com/alexaandru/go-sitter-forest/racket v1.8.0
 	github.com/alexaandru/go-sitter-forest/ralph v1.8.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.8.0
