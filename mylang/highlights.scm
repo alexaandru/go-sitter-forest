@@ -58,7 +58,6 @@
 "as"
 "or"
 "and"
-"do"
 "if"
 "else"
 "switch"

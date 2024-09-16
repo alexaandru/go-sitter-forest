@@ -1,5 +1,6 @@
 #include "parser.h"
 #include <wctype.h>
+#include <stdio.h>
 
 enum TokenType {
   NAMEDOT,
@@ -7,7 +8,7 @@ enum TokenType {
   NAMEDOUBLECOLON,
   OR_OPERATOR,
   AND_OPERATOR, 
-  SPECIAL_CHARACTER,
+  ESCAPED_STRING,
 };
 
 void *tree_sitter_abl_external_scanner_create() {
@@ -97,15 +98,22 @@ bool tree_sitter_abl_external_scanner_scan(
     }
   }
 
-  if (valid_symbols[SPECIAL_CHARACTER]) {
-    while (!lexer->eof(lexer) && lexer->lookahead != '~') {
-      lexer->advance_abl(lexer, true);
+  if (valid_symbols[ESCAPED_STRING] && (lexer->lookahead == '"' || lexer->lookahead == '\'')) {
+    char start = lexer->lookahead;
+    lexer->advance_abl(lexer, false);
+
+    while (!lexer->eof(lexer) && lexer->lookahead != start) {
+      if (lexer->lookahead == '~') {
+        lexer->advance_abl(lexer, false);
+        if (!lexer->eof(lexer)) 
+          lexer->advance_abl(lexer, false);
+      }
+      else lexer->advance_abl(lexer, false);
     }
 
-    lexer->advance_abl(lexer, false);
-    if (!lexer->eof(lexer) && !iswspace(lexer->lookahead)) {
+    if (!lexer->eof(lexer) && lexer->lookahead == start) {
       lexer->advance_abl(lexer, false);
-      lexer->result_symbol = SPECIAL_CHARACTER;
+      lexer->result_symbol = ESCAPED_STRING;
       return true;
     }
   }

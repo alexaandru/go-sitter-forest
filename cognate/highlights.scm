@@ -27,7 +27,7 @@
 
 ((identifier) @function.builtin (#any-of? @function.builtin
 ;;BEGIN
-"Empty" "Match" "Print" "Put" "Random" "Modulo" "Sqrt" "Integer?" "Zero?" "First" "Rest" "Push" "Empty?" "Join" "Substring" "Regex" "Regex-match" "Ordinal" "Character" "Split" "Uppercase" "Lowercase" "Floor" "Round" "Ceiling" "Abs" "Error" "Wait" "Stop" "Show" "Stack" "Clear" "Unbox" "Begin" "Sind" "Cosd" "Tand" "Sin" "Cos" "Tan" "Exp" "Log" "Ln" "Asind" "Acosd" "Atand" "Asin" "Acos" "Atan" "Sinhd" "Coshd" "Tanhd" "Sinh" "Cosh" "Tanh" "Table" "Insert" "Remove" "." "Has" "Values" "Keys" "Length" "Parameters" "Input" "Open" "Read-file" "Read-line" "Close" "Path" "Seek" "Drop" "Prepend" "Index" "All" "Discard" "None" "Append" "Swap" "Fold" "Prints" "Times" "Range" "Twin" "Take" "Triplet" "Min" "Reverse" "Filter" "Max" "Map" "Puts" "Sort" "Assert" "Length" "Of" 
+"Empty" "Match" "Print" "Put" "Random" "Modulo" "Sqrt" "Integer?" "Zero?" "Table?" "Table!" "First" "Rest" "Push" "Empty?" "Append" "Substring" "Regex" "Regex-match" "Ordinal" "Character" "Split" "Uppercase" "Lowercase" "Floor" "Round" "Ceiling" "Abs" "Error" "Wait" "Stop" "Show" "Stack" "Clear" "Unbox" "Begin" "Sind" "Cosd" "Tand" "Sin" "Cos" "Tan" "Exp" "Log" "Ln" "Asind" "Acosd" "Atand" "Asin" "Acos" "Atan" "Sinhd" "Coshd" "Tanhd" "Sinh" "Cosh" "Tanh" "Table" "Insert" "Remove" "." "Has" "Values" "Keys" "Length" "Parameters" "Input" "Open" "Read-file" "Read-line" "Close" "Path" "Seek" "Drop" "Prepend" "Index" "All" "Discard" "None" "Append" "Swap" "Fold" "Prints" "Times" "Range" "Twin" "Take" "Triplet" "Min" "Reverse" "Filter" "Max" "Map" "Puts" "Sort" "Assert" "Length" "Of" 
 ;;END
                                  ))
 ((identifier) @operator (#any-of? @operator "+" "-" "*" "/" ">" "<" "<=" ">=" "^"

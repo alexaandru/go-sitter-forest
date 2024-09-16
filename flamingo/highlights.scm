@@ -45,9 +45,10 @@
 ; Keywords.
 
 [
-	"extern"
+	"static"
 	"pure"
 	"fn"
+	"proto"
 	"class"
 	"import"
 	"return"
@@ -84,6 +85,12 @@
 
 (var_decl name: (identifier) type: (type) @variable)
 (function_declaration name:
+	[
+		(identifier)
+		(overloadable_operator)
+	] @function
+)
+(proto name:
 	[
 		(identifier)
 		(overloadable_operator)
