@@ -109,7 +109,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
 	github.com/alexaandru/go-sitter-forest/flamingo v1.8.7
-	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.0
+	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.8.0
@@ -173,7 +173,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http v1.8.2
 	github.com/alexaandru/go-sitter-forest/http2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.8.0
-	github.com/alexaandru/go-sitter-forest/hurl v1.8.0
+	github.com/alexaandru/go-sitter-forest/hurl v1.8.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.8.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.8.0
 	github.com/alexaandru/go-sitter-forest/idl v1.8.0
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/llvm v1.8.0
 	github.com/alexaandru/go-sitter-forest/lookml v1.8.0
 	github.com/alexaandru/go-sitter-forest/lox v1.8.0
-	github.com/alexaandru/go-sitter-forest/lua v1.8.0
+	github.com/alexaandru/go-sitter-forest/lua v1.8.1
 	github.com/alexaandru/go-sitter-forest/luadoc v1.8.0
 	github.com/alexaandru/go-sitter-forest/luap v1.8.0
 	github.com/alexaandru/go-sitter-forest/luau v1.8.0
@@ -270,7 +270,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pem v1.8.0
 	github.com/alexaandru/go-sitter-forest/perl v1.8.3
 	github.com/alexaandru/go-sitter-forest/perm v1.8.0
-	github.com/alexaandru/go-sitter-forest/pgn v1.8.3
+	github.com/alexaandru/go-sitter-forest/pgn v1.8.4
 	github.com/alexaandru/go-sitter-forest/php v1.8.1
 	github.com/alexaandru/go-sitter-forest/php_only v1.8.1
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.2
@@ -346,8 +346,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/snakemake v1.8.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.8.0
 	github.com/alexaandru/go-sitter-forest/sop v1.8.0
-	github.com/alexaandru/go-sitter-forest/soql v1.8.0
-	github.com/alexaandru/go-sitter-forest/sosl v1.8.0
+	github.com/alexaandru/go-sitter-forest/soql v1.8.1
+	github.com/alexaandru/go-sitter-forest/sosl v1.8.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.8.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.8.1
 	github.com/alexaandru/go-sitter-forest/spicy v1.8.1
@@ -402,7 +402,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/uiua v1.8.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.8.0
 	github.com/alexaandru/go-sitter-forest/unison v1.8.0
-	github.com/alexaandru/go-sitter-forest/ursa v1.8.7
+	github.com/alexaandru/go-sitter-forest/ursa v1.8.8
 	github.com/alexaandru/go-sitter-forest/usd v1.8.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.8.0
 	github.com/alexaandru/go-sitter-forest/v v1.8.0
