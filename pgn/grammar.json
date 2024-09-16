@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "b1dd28fd9b900718bb4321c1d3f711aa9f5ea510",
-  "grammarSha": "eae755fe3dcd9e068186bd29ad203b5d9b66ebba654c8a7fda39d0c2cdd935cb",
+  "revision": "f86a119d21d01f6bf0dcd3247a366554e98dbbe5",
+  "grammarSha": "23f1dffba9927d89a29f35b108cb616ce6cf76db74f1b947b6c5973324218075",
   "language": "pgn",
   "url": "https://github.com/rolandwalker/tree-sitter-pgn",
   "maintainedBy": "@rolandwalker",
