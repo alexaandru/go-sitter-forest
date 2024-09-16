@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.8.0
-	github.com/alexaandru/go-sitter-forest/abl v1.8.8
+	github.com/alexaandru/go-sitter-forest/abl v1.8.9
 	github.com/alexaandru/go-sitter-forest/ada v1.8.0
 	github.com/alexaandru/go-sitter-forest/agda v1.8.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
@@ -12,7 +12,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/amber v1.8.0
 	github.com/alexaandru/go-sitter-forest/angular v1.8.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.8.0
-	github.com/alexaandru/go-sitter-forest/apex v1.8.0
+	github.com/alexaandru/go-sitter-forest/apex v1.8.2
 	github.com/alexaandru/go-sitter-forest/applesoft v1.8.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.8.1
 	github.com/alexaandru/go-sitter-forest/asm v1.8.0
@@ -55,7 +55,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmake v1.8.0
 	github.com/alexaandru/go-sitter-forest/cmdl v1.8.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.8.0
-	github.com/alexaandru/go-sitter-forest/cognate v1.8.3
+	github.com/alexaandru/go-sitter-forest/cognate v1.8.4
 	github.com/alexaandru/go-sitter-forest/comment v1.8.0
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.8.0
 	github.com/alexaandru/go-sitter-forest/context v1.8.0
@@ -108,7 +108,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.7
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.8
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
@@ -170,7 +170,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.8.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.8.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.8.0
-	github.com/alexaandru/go-sitter-forest/http v1.8.2
+	github.com/alexaandru/go-sitter-forest/http v1.8.3
 	github.com/alexaandru/go-sitter-forest/http2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.8.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.8.1
@@ -346,10 +346,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/snakemake v1.8.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.8.0
 	github.com/alexaandru/go-sitter-forest/sop v1.8.0
-	github.com/alexaandru/go-sitter-forest/soql v1.8.1
+	github.com/alexaandru/go-sitter-forest/soql v1.8.2
 	github.com/alexaandru/go-sitter-forest/sosl v1.8.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.8.0
-	github.com/alexaandru/go-sitter-forest/sparql v1.8.1
+	github.com/alexaandru/go-sitter-forest/sparql v1.8.2
 	github.com/alexaandru/go-sitter-forest/spicy v1.8.1
 	github.com/alexaandru/go-sitter-forest/sql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.8.0
@@ -421,7 +421,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wbproto v1.8.0
 	github.com/alexaandru/go-sitter-forest/wgsl v1.8.0
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.8.0
-	github.com/alexaandru/go-sitter-forest/wing v1.8.2
+	github.com/alexaandru/go-sitter-forest/wing v1.8.3
 	github.com/alexaandru/go-sitter-forest/wit v1.8.0
 	github.com/alexaandru/go-sitter-forest/woml v1.8.0
 	github.com/alexaandru/go-sitter-forest/xcompose v1.8.0
@@ -442,7 +442,7 @@ require (
 
 require github.com/alexaandru/go-sitter-forest/anzu v1.8.0
 
-require github.com/alexaandru/go-sitter-forest/mylang v1.8.0
+require github.com/alexaandru/go-sitter-forest/mylang v1.8.1
 
 retract (
 	// Parsers koka and gemfilelock had a conflict.
