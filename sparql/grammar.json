@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "8b1454b435b942816d310b0588a15df0abc1970f",
+  "revision": "b4aa050877ab884a402290fc40dffcf66e922d8e",
   "grammarSha": "abb8cc23e3a0a2c6ab27e2e542880fc456328e4e80cbf78e3a63c0882307a2b3",
   "language": "sparql",
   "url": "https://github.com/IoannisNezis/tree-sitter-sparql",

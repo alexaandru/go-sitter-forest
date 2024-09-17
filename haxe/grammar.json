@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "e16fcfe5ce1e244a92ca9190466f00be873ebab4",
-  "grammarSha": "6c20f730b68374520d5669269afef59d227c2289ad1feded76deae02de093cce",
+  "revision": "b3ee78f6686d15464846b031049008af89deaf28",
+  "grammarSha": "f34875d0bd02cd835c87524d6e5d9ac26ffa52b82376d025b5e90c7ef7def498",
   "language": "haxe",
   "url": "https://github.com/vantreeseba/tree-sitter-haxe",
   "maintainedBy": "@vantreeseba",

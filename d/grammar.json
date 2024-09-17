@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "ac584585a15c4cacd6cda8e6bfe7cb1ca7b3898e",
-  "grammarSha": "d4432c623bec6e7c64283d35050db806c3df1c119ce7bc0cb0359923949e3723",
+  "revision": "b0edd520697f7ea849fae0514490f5e094cfb680",
+  "grammarSha": "386325637d760c9e38f24ecd84269c2567adb063178ba24035d1239f4f7d38cb",
   "language": "d",
   "url": "https://github.com/gdamore/tree-sitter-d",
   "maintainedBy": "@amaanq",

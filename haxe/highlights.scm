@@ -22,10 +22,7 @@
 ; ------------
 
 (class_declaration name: (identifier) @type.definition)
-(class_declaration super_class_name: (identifier) @type.definition)
-(class_declaration interface_name: (identifier) @type.definition)
 (interface_declaration name: (identifier) @type.definition)
-(interface_declaration interface_name: (identifier) @type.definition)
 (typedef_declaration name: (identifier) @type.definition)
 
 (function_declaration name: (identifier) @function)
@@ -66,6 +63,7 @@
 ; --------
 [
   "abstract"
+  "as"
   "break"
   "case"
   "cast"
@@ -89,7 +87,6 @@
   "inline"
   "interface"
   "macro"
-  "new"
   "operator"
   "overload"
   "override"
@@ -108,6 +105,12 @@
   "var"
   "while"
 ] @keyword
+
+(function_declaration name: "new" @constructor)
+(call_expression
+  "new" @keyword
+  constructor: (type_name) @constructor
+)
 
 ; Tokens
 ; ------
