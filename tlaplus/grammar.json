@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "bba02e79f85e335f310fc95e21c677e49f2c4439",
+  "revision": "a9f9c136baa9b73c63850be92301fb5f1fc9b2fd",
   "grammarSha": "8d619358938f79d281257323a67d9d09c89a5544f09fcf2b083b81bae47fb9c1",
   "language": "tlaplus",
   "url": "https://github.com/tlaplus-community/tree-sitter-tlaplus",

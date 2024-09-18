@@ -9,6 +9,8 @@
 [
   (integer_literal)
   (float_literal)
+  (hex_literal)
+  (binary_literal)
 ] @number
 
 (boolean_literal) @boolean

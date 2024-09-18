@@ -9,7 +9,8 @@ enum TokenType {
     FLOAT_LITERAL,
     BOZ_LITERAL,
     STRING_LITERAL,
-    END_OF_STATEMENT
+    END_OF_STATEMENT,
+    PREPROC_UNARY_OPERATOR,
 };
 
 typedef struct {
@@ -290,6 +291,17 @@ static bool scan_string_literal(TSLexer *lexer) {
     return false;
 }
 
+/// Need an external scanner to catch '!' before its parsed as a comment
+static bool scan_preproc_unary_operator(TSLexer *lexer) {
+  const char next_char = lexer->lookahead;
+  if (next_char == '!' || next_char == '~' || next_char == '-' || next_char == '+') {
+    advance_fortran(lexer);
+    lexer->result_symbol = PREPROC_UNARY_OPERATOR;
+    return true;
+  }
+  return false;
+}
+
 static bool scan_fortran(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
     // Consume any leading whitespace except newlines
     while (iswblank(lexer->lookahead)) {
@@ -329,6 +341,12 @@ static bool scan_fortran(Scanner *scanner, TSLexer *lexer, const bool *valid_sym
         if (scan_boz(lexer)) {
             return true;
         }
+    }
+
+    if (valid_symbols[PREPROC_UNARY_OPERATOR]) {
+      if (scan_preproc_unary_operator(lexer)) {
+        return true;
+      }
     }
 
     if (scan_start_line_continuation(scanner, lexer)) {
