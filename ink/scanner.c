@@ -5,8 +5,10 @@
 
 typedef enum {
   END_OF_LINE,
-  LINE_COMMENT,
-  BLOCK_COMMENT,
+  KNOT_BLOCK_START,
+  KNOT_BLOCK_END,
+  STITCH_BLOCK_START,
+  STITCH_BLOCK_END,
   CHOICE_BLOCK_START,
   CHOICE_BLOCK_END,
   GATHER_BLOCK_START,
@@ -33,8 +35,10 @@ void print_valid_symbols(const bool *valid_symbols) {
   else
     MSG("========================================================================================\n");
   MSG(" %s END_OF_LINE        \n", valid_symbols[END_OF_LINE]        ? "*" : "-");
-  MSG(" %s LINE_COMMENT       \t", valid_symbols[LINE_COMMENT]       ? "*" : "-");
-  MSG(" %s BLOCK_COMMENT      \n", valid_symbols[BLOCK_COMMENT]      ? "*" : "-");
+  MSG(" %s KNOT_BLOCK_START   \t", valid_symbols[KNOT_BLOCK_START]   ? "*" : "-");
+  MSG(" %s KNOT_BLOCK_END     \n", valid_symbols[KNOT_BLOCK_END]     ? "*" : "-");
+  MSG(" %s STITCH_BLOCK_START \t", valid_symbols[STITCH_BLOCK_START] ? "*" : "-");
+  MSG(" %s STITCH_BLOCK_END   \n", valid_symbols[STITCH_BLOCK_END]   ? "*" : "-");
   MSG(" %s CHOICE_BLOCK_START \t", valid_symbols[CHOICE_BLOCK_START] ? "*" : "-");
   MSG(" %s CHOICE_BLOCK_END   \n", valid_symbols[CHOICE_BLOCK_END]   ? "*" : "-");
   MSG(" %s GATHER_BLOCK_START \t", valid_symbols[GATHER_BLOCK_START] ? "*" : "-");
@@ -44,13 +48,35 @@ void print_valid_symbols(const bool *valid_symbols) {
   MSG("------------------\n");
 }
 
-typedef enum { NONE, CONTENT, CHOICE, GATHER } BlockType;
+char pretty(char c) {
+  switch (c) {
+    case '\n':
+    case '\t':
+    case '\f':
+    case '\r':
+      return '\0';
+    default:
+      return c;
+  }
+}
+
+typedef enum {
+  BLOCK_TYPE_NONE,
+  BLOCK_TYPE_CONTENT,
+  BLOCK_TYPE_CHOICE,
+  BLOCK_TYPE_GATHER,
+  BLOCK_TYPE_STITCH,
+  BLOCK_TYPE_KNOT
+} BlockType;
 
 // Typedef for numeric block level; juuust in case we want to change the amount of nesting we allow.
 // To future self … CAUTION: This needs to be serialized to a string of bytes,
 // so account for that when changing it to something larger.
 typedef uint8_t BlockLevel;
-const BlockLevel BLOCK_LEVEL_MIN = 0;
+const BlockLevel BLOCK_LEVEL_NONE = 0; // treat this an _unset_
+const BlockLevel BLOCK_LEVEL_KNOT = 1;
+const BlockLevel BLOCK_LEVEL_STITCH = 2;
+const BlockLevel BLOCK_LEVEL_FLOW = 3;
 const BlockLevel BLOCK_LEVEL_MAX = UINT8_MAX;
 
 typedef struct BlockInfo {
@@ -58,11 +84,11 @@ typedef struct BlockInfo {
   BlockLevel level;
 } BlockInfo;
 
-#define BLOCK_INFO_INIT (BlockInfo) {.type = NONE, .level = BLOCK_LEVEL_MIN}
+#define BLOCK_INFO_INIT (BlockInfo) {.type = BLOCK_TYPE_NONE, .level = BLOCK_LEVEL_NONE}
 
 typedef struct {
   /// When parsing a gather/choice: Number of block chars remaining at current parse position
-  BlockLevel remaining_block_marks;
+  BlockLevel remaining_flow_marks;
 
   /// When parsing a gather/choice: Type of block delimiter currently being parsed
   BlockType block_type;
@@ -72,8 +98,8 @@ typedef struct {
 } Scanner;
 
 void print_scanner_state(Scanner *scanner) {
-  if (scanner->remaining_block_marks > 0)
-    MSG("Scanner: marks type %d ramaining: %d\n", scanner->block_type, scanner->remaining_block_marks);
+  if (scanner->remaining_flow_marks > 0)
+    MSG("Scanner: marks type %d ramaining: %d\n", scanner->block_type, scanner->remaining_flow_marks);
   MSG("Scanner: blocks=");
   for (uint32_t i = 0; i < scanner->blocks.size; i++)
     MSG("%d", *array_get(&scanner->blocks, i));
@@ -105,14 +131,14 @@ int32_t lookahead(TSLexer *lexer) {
   return lexer->lookahead;
 }
 
-bool consume_char(TSLexer *lexer, char c) {
-  MSG("Expecting %c", c);
+bool skip_char(TSLexer *lexer, char c) {
+  MSG("Expecting %c", pretty(c));
   if (lexer->lookahead == c) {
-    MSG(", which we got. Consuming.\n");
-    consume(lexer);
+    MSG(", which we got\n");
+    skip_ink(lexer);
     return true;
   } else {
-    MSG(", but got '%c'.\n", lexer->lookahead);
+    MSG(", but got '%c'.\n", pretty(lexer->lookahead));
     return false;
   }
 }
@@ -129,7 +155,7 @@ unsigned tree_sitter_ink_external_scanner_serialize(void *payload, char *buffer)
   Scanner *scanner = (Scanner *)payload;
   uint32_t size = 0;
 
-  buffer[size++] = scanner->remaining_block_marks;
+  buffer[size++] = scanner->remaining_flow_marks;
   buffer[size++] = scanner->block_type;
 
   for (uint32_t i = 0; i < scanner->blocks.size && size <= TREE_SITTER_SERIALIZATION_BUFFER_SIZE; i++) {
@@ -150,7 +176,7 @@ void tree_sitter_ink_external_scanner_deserialize(void *payload, const char *buf
   Scanner *scanner = (Scanner *)payload;
 
   // reset all members as per suggestion in the docs
-  scanner->remaining_block_marks = 0;
+  scanner->remaining_flow_marks = 0;
   scanner->block_type = 0;
   array_delete(&scanner->blocks);
 
@@ -159,7 +185,7 @@ void tree_sitter_ink_external_scanner_deserialize(void *payload, const char *buf
   if (buffer != NULL && length > 0) {
     uint32_t size = 0;
 
-    scanner->remaining_block_marks = (BlockLevel) buffer[size++];
+    scanner->remaining_flow_marks = (BlockLevel) buffer[size++];
     scanner->block_type = (BlockType) buffer[size++];
 
     while (size < length)
@@ -169,7 +195,7 @@ void tree_sitter_ink_external_scanner_deserialize(void *payload, const char *buf
 
   // Make sure the thing is never empty so we never have to check.
   if (scanner->blocks.size == 0)
-    array_push(&scanner->blocks, BLOCK_LEVEL_MIN);
+    array_push(&scanner->blocks, BLOCK_LEVEL_NONE);
 }
 
 
@@ -185,18 +211,6 @@ void tree_sitter_ink_external_scanner_destroy(void *payload) {
   ts_free(scanner);
 }
 
-char pretty(char c) {
-  switch (c) {
-    case '\n':
-    case '\t':
-    case '\f':
-    case '\r':
-      return '\0';
-    default:
-      return c;
-  }
-}
-
 /// Skip all whitspace (including carriage returns).
 void skip_ws(TSLexer *lexer) {
   while (lookahead(lexer) <= ' ' && !is_eof(lexer))
@@ -205,7 +219,7 @@ void skip_ws(TSLexer *lexer) {
 
 /// Skip whitespace until _before_ a carriage return (don't consume it).
 /// Return `true` if ended up at up carriage return, false otherwise.
-bool skip_ws_upto_cr(TSLexer *lexer) {
+bool skip_whitspace_to_newline(TSLexer *lexer) {
   while (lookahead(lexer) <= ' ' && lookahead(lexer) != '\n' && !is_eof(lexer))
     skip_ink(lexer);
   return lookahead(lexer) == '\n';
@@ -236,13 +250,13 @@ typedef enum {
 /// If a block comment is still open at EOF then return NO_COMMENT_TOKEN,
 /// so that tree-sitter can treat it as an error.
 CommentType lookahead_comment(TSLexer *lexer) {
-  if (!consume_char(lexer, '/'))
+  if (!skip_char(lexer, '/'))
     return NO_COMMENT_TOKEN;
 
   CommentType type = NO_COMMENT_TOKEN;
-  if (consume_char(lexer, '/')) {
+  if (skip_char(lexer, '/')) {
     type = LINE_COMMENT_TOKEN;
-  } else if (consume_char(lexer, '*')) {
+  } else if (skip_char(lexer, '*')) {
     type = BLOCK_COMMENT_TOKEN;
   } else {
     return NO_COMMENT_TOKEN;
@@ -253,27 +267,20 @@ CommentType lookahead_comment(TSLexer *lexer) {
       // NOTE: We don't eat the carriage return, because other syntax may depend on it.
       return LINE_COMMENT_TOKEN;
     } else if (type == BLOCK_COMMENT_TOKEN) {
-      if (consume_char(lexer, '*') && consume_char(lexer, '/')) {
+      if (skip_char(lexer, '*') && skip_char(lexer, '/')) {
           return BLOCK_COMMENT_TOKEN;
       }
     }
-    consume(lexer);
+    skip_ink(lexer);
   }
 
-  // We're at EOF; line comments can rightfully end here, but unterminated block comments are an error.
-  if (type == LINE_COMMENT_TOKEN) {
-    return LINE_COMMENT_TOKEN;
-  } else {
-    return NO_COMMENT_TOKEN;
-  }
+  // We're at EOF; all comments simply end here, even if they're unterminated.
+  return type;
 }
 
 /// Looks ahead to see if a new block could be started here.
 ///
-/// At ==, =, or EOF, BlockType is NONE.
-///
-/// Calls `lexer->mark_end()` at the start of next block marker.
-/// This means that all trailing empty lines will belong to the currently active block.
+/// At EOF BlockType is BLOCK_TYPE_NONE.
 ///
 /// It would have been nice to not include the the lines between blocks, but that would require rewinding
 /// to a previous position based on information that we only learn after we've hit a mark.
@@ -286,13 +293,23 @@ CommentType lookahead_comment(TSLexer *lexer) {
 BlockInfo lookahead_block_start(TSLexer *lexer) {
   MSG("Looking ahead for block start marker\n");
 
-  mark_end(lexer);
-
   BlockInfo block = BLOCK_INFO_INIT;
 
-  if (lookahead(lexer) == '=' || is_eof(lexer)) {
-    MSG("Next block: None.\n");
+  if (is_eof(lexer)) {
+    MSG("EOF, so no next block.\n");
     return block;
+  }
+
+  if (skip_char(lexer, '=')) {
+    if (skip_char(lexer, '=')) {
+      block.type = BLOCK_TYPE_KNOT;
+      block.level = BLOCK_LEVEL_KNOT;
+      return block;
+    } else {
+      block.type = BLOCK_TYPE_STITCH;
+      block.level= BLOCK_LEVEL_STITCH;
+      return block;
+    }
   }
 
   BlockLevel markers = 0;
@@ -311,27 +328,27 @@ BlockInfo lookahead_block_start(TSLexer *lexer) {
         break;
       }
       markers += 1;
-      skip_ws_upto_cr(lexer);
+      skip_whitspace_to_newline(lexer);  // flow markers can't span newlines
       lookahead_comment(lexer);
-      skip_ws_upto_cr(lexer);
+      skip_whitspace_to_newline(lexer);
       c = lookahead(lexer);
     }
   }
 
   MSG("Next block is flow. Level indicators: %d\n", markers);
 
-  block.level = markers;
+  block.level = BLOCK_LEVEL_FLOW + markers;
 
   switch (first_marker) {
   case '-':
-    block.type = GATHER;
+    block.type = BLOCK_TYPE_GATHER;
     break;
   case '*':
   case '+':
-    block.type = CHOICE;
+    block.type = BLOCK_TYPE_CHOICE;
     break;
   default:
-    block.type = CONTENT;
+    block.type = BLOCK_TYPE_CONTENT;
     break;
   }
 
@@ -354,56 +371,13 @@ bool tree_sitter_ink_external_scanner_scan(
     return false;
   }
 
-  // Must mark our starting place so that we don't advance the position when doing a lookahead.
-  mark_end(lexer);
   MSG("at '%c' (%d).\n", pretty(lookahead(lexer)), lookahead(lexer));
-
-  // If we've previously detected a block start, just emit the block marks.
-  if (scanner->remaining_block_marks > 0) {
-
-    // Block comments can creep in ANYWHERE >:-(, so we have to account for that.
-    skip_ws_upto_cr(lexer);
-    if (valid_symbols[BLOCK_COMMENT] && lookahead_comment(lexer) == BLOCK_COMMENT_TOKEN) {
-      lexer->result_symbol = BLOCK_COMMENT;
-      mark_end(lexer);
-      return true;
-    }
-    skip_ws_upto_cr(lexer);
-
-    switch (scanner->block_type) {
-    case CHOICE:
-      assert(valid_symbols[CHOICE_MARK]);
-      assert(lookahead(lexer) == '*' || lookahead(lexer) == '+');
-      lexer->result_symbol = CHOICE_MARK;
-      break;
-    case GATHER:
-      assert(valid_symbols[GATHER_MARK]);
-      lexer->result_symbol = GATHER_MARK;
-      assert(lookahead(lexer) == '-');
-      break;
-    case NONE:
-    case CONTENT:
-      MSG("BUG: This combination makes no sense");
-      exit(255);
-    }
-
-    consume(lexer);
-    mark_end(lexer);
-
-    scanner->remaining_block_marks--;
-    return true;
-  }
 
   // Try to end lines (that's always the innermost 'block')
   if (valid_symbols[END_OF_LINE]) {
     MSG("Checking for EO[L|F]\n");
-    if (skip_ws_upto_cr(lexer)) {
+    if (skip_whitspace_to_newline(lexer)) {
       MSG("  at EOL\n");
-      while (skip_ws_upto_cr(lexer)) {
-        // skip as many empty lines as possible, but don't mark them as part of the match
-        MSG("  … one more line …\n");
-        skip_ink(lexer);
-      };
       lexer->result_symbol = END_OF_LINE;
       return true;
     } else if (is_eof(lexer)) {
@@ -413,41 +387,66 @@ bool tree_sitter_ink_external_scanner_scan(
     }
   }
 
-  if (valid_symbols[LINE_COMMENT] || valid_symbols[BLOCK_COMMENT]) {
+  if (scanner->remaining_flow_marks) {
     skip_ws(lexer);
-    CommentType type = lookahead_comment(lexer);
-    switch(type) {
-      case LINE_COMMENT_TOKEN:
-        lexer->result_symbol = LINE_COMMENT;
-        mark_end(lexer);
-        return valid_symbols[LINE_COMMENT];
-      case BLOCK_COMMENT_TOKEN:
-        lexer->result_symbol = BLOCK_COMMENT;
-        mark_end(lexer);
-        return valid_symbols[BLOCK_COMMENT];
-      case NO_COMMENT_TOKEN:
-        break;
-      }
+    MSG("Still %d remaining block marks. Trying to emit one.\n", scanner->remaining_flow_marks);
+    bool found_correct_mark = false;
+    int32_t c = lookahead(lexer);
+    if (scanner->block_type == BLOCK_TYPE_CHOICE) {
+      found_correct_mark = c == '*' || c == '+';
+      lexer->result_symbol = CHOICE_MARK;
+    } else if (scanner->block_type == BLOCK_TYPE_GATHER) {
+      found_correct_mark = c == '-';
+      lexer->result_symbol = GATHER_MARK;
+    } else {
+      MSG("Unexpected block type %d while emitting choice/gather marks\n", scanner->block_type);
+      exit(255);
+    }
+    if (found_correct_mark) {
+      consume(lexer);
+      scanner->remaining_flow_marks--;
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  bool is_start = valid_symbols[GATHER_BLOCK_START] || valid_symbols[CHOICE_BLOCK_START];
-  bool is_end = valid_symbols[GATHER_BLOCK_END] || valid_symbols[CHOICE_BLOCK_END];
-  if (is_start || is_end) {
+  bool is_block_boundary = valid_symbols[KNOT_BLOCK_START]
+                        || valid_symbols[KNOT_BLOCK_END]
+                        || valid_symbols[STITCH_BLOCK_START]
+                        || valid_symbols[STITCH_BLOCK_END]
+                        || valid_symbols[CHOICE_BLOCK_START]
+                        || valid_symbols[CHOICE_BLOCK_END]
+                        || valid_symbols[GATHER_BLOCK_START]
+                        || valid_symbols[GATHER_BLOCK_END];
+
+  if (is_block_boundary) {
     MSG("Checking for Block delimiters.\n");
+
+    skip_ws(lexer);
+    mark_end(lexer);
+    while (lookahead_comment(lexer) != NO_COMMENT_TOKEN) {
+      skip_ws(lexer);
+    }
 
     BlockLevel current_block_level = *array_back(&scanner->blocks);
     BlockInfo next_block = lookahead_block_start(lexer);
 
-    if (next_block.type == NONE) {
+    if (next_block.type == BLOCK_TYPE_NONE) {
       MSG("Blocks can only end here.\n");
-      return valid_symbols[CHOICE_BLOCK_END]
-                 ? end_block(lexer, scanner, CHOICE_BLOCK_END)
-             : valid_symbols[GATHER_BLOCK_END]
-                 ? end_block(lexer, scanner, GATHER_BLOCK_END)
-                 : false;
+      if (valid_symbols[CHOICE_BLOCK_END])
+        return end_block(lexer, scanner, CHOICE_BLOCK_END);
+      else if (valid_symbols[GATHER_BLOCK_END])
+        return end_block(lexer, scanner, GATHER_BLOCK_END);
+      else if (valid_symbols[STITCH_BLOCK_END])
+        return end_block(lexer, scanner, STITCH_BLOCK_END);
+      else if (valid_symbols[KNOT_BLOCK_END])
+        return end_block(lexer, scanner, KNOT_BLOCK_END);
+      else
+        return false;
     }
 
-    if (next_block.type == CONTENT) {
+    if (next_block.type == BLOCK_TYPE_CONTENT) {
       MSG("Next up is just content, the block remains the same.\n");
       return false;
     }
@@ -458,12 +457,18 @@ bool tree_sitter_ink_external_scanner_scan(
 
       // Remember the marks we're going to emit next.
       scanner->block_type = next_block.type;
-      scanner->remaining_block_marks = next_block.level;
+      scanner->remaining_flow_marks = (next_block.level >= BLOCK_LEVEL_FLOW)
+                                       ? next_block.level - BLOCK_LEVEL_FLOW
+                                       : 0;
 
-      if (next_block.type == CHOICE && valid_symbols[CHOICE_BLOCK_START]) {
+      if (next_block.type == BLOCK_TYPE_CHOICE && valid_symbols[CHOICE_BLOCK_START]) {
         return start_block(lexer, scanner, CHOICE_BLOCK_START, next_block.level);
-      } else if (next_block.type == GATHER && valid_symbols[GATHER_BLOCK_START]) {
+      } else if (next_block.type == BLOCK_TYPE_GATHER && valid_symbols[GATHER_BLOCK_START]) {
         return start_block(lexer, scanner, GATHER_BLOCK_START, next_block.level);
+      } else if (next_block.type == BLOCK_TYPE_KNOT && valid_symbols[KNOT_BLOCK_START]) {
+        return start_block(lexer, scanner, KNOT_BLOCK_START, next_block.level);
+      } else if (next_block.type == BLOCK_TYPE_STITCH && valid_symbols[STITCH_BLOCK_START]) {
+        return start_block(lexer, scanner, STITCH_BLOCK_START, next_block.level);
       }
 
     } else {
@@ -473,6 +478,10 @@ bool tree_sitter_ink_external_scanner_scan(
         return end_block(lexer, scanner, CHOICE_BLOCK_END);
       } else if (valid_symbols[GATHER_BLOCK_END]) {
         return end_block(lexer, scanner, GATHER_BLOCK_END);
+      } else if (valid_symbols[STITCH_BLOCK_END]) {
+        return end_block(lexer, scanner, STITCH_BLOCK_END);
+      } else if (valid_symbols[KNOT_BLOCK_END]) {
+        return end_block(lexer, scanner, KNOT_BLOCK_END);
       } else {
         return false; // Weird. Error recovery next
       }

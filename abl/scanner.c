@@ -8,6 +8,7 @@ enum TokenType {
   NAMEDOUBLECOLON,
   OR_OPERATOR,
   AND_OPERATOR, 
+  AUGMENTED_ASSIGNMENT,
   ESCAPED_STRING,
 };
 
@@ -68,7 +69,7 @@ bool tree_sitter_abl_external_scanner_scan(
     }
   }
 
-  if (valid_symbols[OR_OPERATOR] || valid_symbols[AND_OPERATOR]) {
+  if (valid_symbols[OR_OPERATOR] || valid_symbols[AND_OPERATOR] || valid_symbols[AUGMENTED_ASSIGNMENT]) {
     while (!lexer->eof(lexer) && iswspace(lexer->lookahead)) {
       lexer->advance_abl(lexer, true);
     }
@@ -93,6 +94,16 @@ bool tree_sitter_abl_external_scanner_scan(
             lexer->result_symbol = AND_OPERATOR;
             return true;
           }
+        }
+      }
+    }
+    else if (!lexer->eof(lexer) && (lexer->lookahead == '+' || lexer->lookahead == '-' || lexer->lookahead == '*' || lexer->lookahead == '/' )) {
+      lexer->advance_abl(lexer, false);
+      if (!lexer->eof(lexer) && insensitive_equals(lexer->lookahead, '=')) {
+        lexer->advance_abl(lexer, false);
+        if (!lexer->eof(lexer) && iswspace(lexer->lookahead)) {
+          lexer->result_symbol = AUGMENTED_ASSIGNMENT;
+          return true;
         }
       }
     }

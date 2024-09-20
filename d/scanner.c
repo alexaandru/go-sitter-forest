@@ -20,12 +20,12 @@
 // Second, symbols and keywords must appear with least
 // specific matches in front of more specific matches.
 enum TokenType {
-	END_FILE,
-	COMMENT,
 	DIRECTIVE, // # <to end of line>
 	L_INT,
 	L_FLOAT,
 	L_STRING, // string literal (all forms)
+	L_AFTER_EOF,
+	L_ERROR,
 };
 
 static bool
@@ -141,39 +141,6 @@ match_heredoc_string(TSLexer *lexer)
 	return (false);
 }
 
-// NB: this scans ahead aggressively, so it cannot
-// be used if other symbols start with underscore.
-// As of right now, only __EOF__ needs special lexer support.
-static bool
-match_eof(TSLexer *lexer)
-{
-	const char *want = "__EOF__";
-	int         i    = 0;
-	int         l    = strlen(want);
-	int         c;
-
-	if ((c = lexer->lookahead) != '\x1a') { // 0x1A is always EOF
-		for (i = 0; i < l; i++) {
-			if (lexer->lookahead != want[i]) {
-				return (false);
-			}
-			lexer->advance_d(lexer, false);
-			c = lexer->lookahead;
-		}
-		if (iswalnum(c) || (c == '_') || (c > 0x7f && !is_eol(c))) {
-			return (false);
-		}
-	}
-	// eat entire file
-	while (lexer->lookahead != 0) {
-		lexer->advance_d(lexer, false);
-	}
-
-	lexer->mark_end(lexer);
-	lexer->result_symbol = END_FILE;
-	return (true);
-}
-
 static bool
 match_directive(TSLexer *lexer, const bool *valid)
 {
@@ -204,99 +171,6 @@ match_directive(TSLexer *lexer, const bool *valid)
 	lexer->mark_end(lexer);
 	lexer->result_symbol = DIRECTIVE;
 	return (true);
-}
-
-static bool
-match_line_comment(TSLexer *lexer, const bool *valid)
-{
-	int c = lexer->lookahead;
-	assert(c == '/');
-	if (!valid[COMMENT]) {
-		return (false);
-	}
-	while ((!is_eol(c)) && (c)) {
-		lexer->advance_d(lexer, false);
-		c = lexer->lookahead;
-	}
-	lexer->mark_end(lexer);
-	lexer->result_symbol = COMMENT;
-	return (true);
-}
-
-static bool
-match_block_comment(TSLexer *lexer, const bool *valid)
-{
-	int c = lexer->lookahead;
-	assert(c == '*');
-
-	if (!valid[COMMENT]) {
-		return (false);
-	}
-	int state = 0;
-	while (c != 0) {
-		lexer->advance_d(lexer, false);
-		c = lexer->lookahead;
-		switch (state) {
-		case 0:
-			if (c == '*') {
-				state = 1;
-			}
-			break;
-		case 1:
-			if (c == '/') {
-				// closing comment, hurrah!
-				lexer->advance_d(lexer, false);
-				lexer->mark_end(lexer);
-				lexer->result_symbol = COMMENT;
-				return (true);
-			} else if (c != '*') {
-				state = 0;
-			}
-			break;
-		}
-	}
-
-	return (false); // unterminated
-}
-
-static bool
-match_nest_comment(TSLexer *lexer, const bool *valid)
-{
-	int c    = lexer->lookahead;
-	int nest = 1;
-	int prev = 0;
-	assert(c == '+');
-
-	if (!valid[COMMENT]) {
-		return (false);
-	}
-
-	while (!lexer->eof(lexer)) {
-		lexer->advance_d(lexer, false);
-		c = lexer->lookahead;
-		switch (prev) {
-		case '/':
-			if (c == '+') {
-				nest++;
-				c = 0;
-			}
-			break;
-		case '+':
-			if (c == '/') {
-				nest--;
-				if (nest == 0) {
-					// outtermost closing comment, hurrah!
-					lexer->advance_d(lexer, false);
-					lexer->mark_end(lexer);
-					lexer->result_symbol = COMMENT;
-					return (true);
-				}
-				c = 0;
-			}
-		}
-		prev = c;
-	}
-	return (false);
 }
 
 static bool
@@ -570,6 +444,16 @@ tree_sitter_d_external_scanner_scan(
 {
 	int  c             = lexer->lookahead;
 	bool start_of_line = lexer->get_column(lexer) == 0;
+
+	if (valid[L_AFTER_EOF] && !valid[L_ERROR]) {
+	   while (lexer->lookahead != 0) {
+			lexer->advance_d(lexer, true);
+		}
+		lexer->mark_end(lexer);
+		lexer->result_symbol = L_AFTER_EOF;
+		return (true);
+	}
+
 	// consume whitespace -- we also skip newlines here
 	while ((iswspace(c) || is_eol(c)) && (c)) {
 		if (is_eol(c)) {
@@ -587,11 +471,6 @@ tree_sitter_d_external_scanner_scan(
 
 	if (lexer->eof(lexer)) { // in case we had ending whitespace
 		return (false);
-	}
-
-	// either possibly __EOF__ or the special EOF character
-	if ((c == '_') || (c == '\x1A')) {
-		return (match_eof(lexer));
 	}
 
 	if (c == '.' || isdigit(c)) {
@@ -620,22 +499,6 @@ tree_sitter_d_external_scanner_scan(
 			// non-nesting deliimted string
 			return (match_delimited_string(lexer, 0, c));
 		}
-	}
-
-	if (c == '/') {
-		// can be one of three comment forms, or /, or /=
-		lexer->advance_d(lexer, false);
-		c = lexer->lookahead;
-		if (c == '/') {
-			return (match_line_comment(lexer, valid));
-		}
-		if (c == '*') {
-			return (match_block_comment(lexer, valid));
-		}
-		if (c == '+') {
-			return (match_nest_comment(lexer, valid));
-		}
-		return (false);
 	}
 
 	return (false);

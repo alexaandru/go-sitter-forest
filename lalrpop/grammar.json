@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "854a40e99f7c70258e522bdb8ab584ede6196e2e",
-  "grammarSha": "5b494a4f3e1113393964cf1790d11817a49ff7049ced627972985011342ef7b6",
+  "revision": "194c25539f435de415ee0551a5f07058833da915",
+  "grammarSha": "16323462432602221fbee3e9dc9ad03aa466f432b7246295d7c723244336b4d1",
   "language": "lalrpop",
   "url": "https://github.com/traxys/tree-sitter-lalrpop",
   "maintainedBy": "@traxys",
