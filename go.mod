@@ -62,7 +62,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cooklang v1.8.0
 	github.com/alexaandru/go-sitter-forest/corn v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.8.0
-	github.com/alexaandru/go-sitter-forest/cpp v1.8.2
+	github.com/alexaandru/go-sitter-forest/cpp v1.8.3
 	github.com/alexaandru/go-sitter-forest/crystal v1.8.0
 	github.com/alexaandru/go-sitter-forest/css v1.8.0
 	github.com/alexaandru/go-sitter-forest/csv v1.8.0
@@ -114,8 +114,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.8.1
 	github.com/alexaandru/go-sitter-forest/fsh v1.8.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.8.6
-	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.5
+	github.com/alexaandru/go-sitter-forest/fsharp v1.8.7
+	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.6
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.8.1
@@ -170,7 +170,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.8.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.8.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.8.1
-	github.com/alexaandru/go-sitter-forest/http v1.8.3
+	github.com/alexaandru/go-sitter-forest/http v1.8.4
 	github.com/alexaandru/go-sitter-forest/http2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.8.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.8.1
@@ -230,7 +230,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/magik v1.8.0
 	github.com/alexaandru/go-sitter-forest/make v1.8.0
 	github.com/alexaandru/go-sitter-forest/markdown v1.8.0
-	github.com/alexaandru/go-sitter-forest/markdown_inline v1.8.1
+	github.com/alexaandru/go-sitter-forest/markdown_inline v1.8.2
 	github.com/alexaandru/go-sitter-forest/matlab v1.8.0
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.8.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.8.1
@@ -360,7 +360,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/starlark v1.8.0
 	github.com/alexaandru/go-sitter-forest/strace v1.8.0
 	github.com/alexaandru/go-sitter-forest/styled v1.8.0
-	github.com/alexaandru/go-sitter-forest/supercollider v1.8.0
+	github.com/alexaandru/go-sitter-forest/supercollider v1.8.1
 	github.com/alexaandru/go-sitter-forest/surface v1.8.0
 	github.com/alexaandru/go-sitter-forest/surrealql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sus v1.8.0
