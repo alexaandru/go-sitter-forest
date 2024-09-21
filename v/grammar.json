@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "8752a59e7a15807434aa324eccc4d814261ac302",
+  "revision": "4f93826aeb31066eb241f4ccbca61f052239803f",
   "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
   "language": "v",
   "url": "https://github.com/vlang/v-analyzer",

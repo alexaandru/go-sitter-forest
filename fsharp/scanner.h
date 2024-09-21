@@ -181,7 +181,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
   bool found_start_of_infix_op = false;
   bool found_bracket_end = false;
   bool found_preprocessor_end = false;
-  bool found_comment = false;
+  bool found_preproc_if = false;
   uint32_t indent_length = lexer->get_column(lexer);
 
   for (;;) {
@@ -204,7 +204,9 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
     } else if (lexer->lookahead == '/') {
       skip_fsharp(lexer);
       if (!valid_symbols[INSIDE_STRING] && lexer->lookahead == '/') {
-        found_comment = true;
+        if (!found_preproc_if) {
+          return false;
+        }
         while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
           skip_fsharp(lexer);
         }
@@ -236,7 +238,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
                     return true;
                   }
                 }
-                if (valid_symbols[PREPROC_END] && !found_comment) {
+                if (valid_symbols[PREPROC_END]) {
                   if (scanner->preprocessor_indents.size > 0) {
                     array_pop(&scanner->preprocessor_indents);
                   }
@@ -264,7 +266,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
                   return true;
                 }
               }
-              if (valid_symbols[PREPROC_ELSE] && !found_comment) {
+              if (valid_symbols[PREPROC_ELSE]) {
                 lexer->mark_end(lexer);
                 lexer->result_symbol = PREPROC_ELSE;
                 return true;
@@ -276,6 +278,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
         advance_fsharp(lexer);
         if (lexer->lookahead == 'f') {
           advance_fsharp(lexer);
+          found_preproc_if = true;
           if (valid_symbols[NEWLINE] || valid_symbols[INDENT]) {
             while (lexer->lookahead != '\n' && !lexer->eof(lexer)) {
               skip_fsharp(lexer);
@@ -291,7 +294,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
                 lexer->result_symbol = DEDENT;
                 return true;
               }
-            } else if (!found_comment) {
+            } else {
               lexer->mark_end(lexer);
               lexer->result_symbol = PREPROC_IF;
               return true;
@@ -392,6 +395,9 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
 
   if (valid_symbols[NEWLINE] && lexer->lookahead == ';') {
     advance_fsharp(lexer);
+    while (lexer->lookahead == ' ' || lexer->lookahead == '\n') {
+      advance_fsharp(lexer);
+    }
     lexer->mark_end(lexer);
     lexer->result_symbol = NEWLINE;
     return true;
@@ -421,23 +427,32 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
         }
       }
     }
-  } else if (lexer->lookahead == 'a' && valid_symbols[AND] && !found_comment) {
+  } else if (lexer->lookahead == 'a' &&
+             (valid_symbols[AND] || valid_symbols[DEDENT])) {
     advance_fsharp(lexer);
     if (lexer->lookahead == 'n') {
       advance_fsharp(lexer);
       if (lexer->lookahead == 'd') {
         advance_fsharp(lexer);
         if (lexer->lookahead == ' ') {
-          lexer->result_symbol = AND;
-          lexer->mark_end(lexer);
-          return true;
+          // the 'AND' token is only valid if we have popped the appropriate
+          // amount of dedent tokens.
+          // If 'AND' is not valid we just continue to pop dedent tokens.
+          if (valid_symbols[AND]) {
+            lexer->mark_end(lexer);
+            lexer->result_symbol = AND;
+            return true;
+          } else {
+            array_pop(&scanner->indents);
+            lexer->result_symbol = DEDENT;
+            return true;
+          }
         }
       }
     }
   } else if (lexer->lookahead == 'e' &&
              (valid_symbols[ELSE] || valid_symbols[ELIF] ||
-              valid_symbols[END] || valid_symbols[DEDENT]) &&
-             !found_comment) {
+              valid_symbols[END] || valid_symbols[DEDENT])) {
     advance_fsharp(lexer);
     int16_t token_indent_level = lexer->get_column(lexer);
     if (lexer->lookahead == 'l') {

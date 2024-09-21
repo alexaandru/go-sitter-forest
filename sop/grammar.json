@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "c233556de082f9430b39eeddf6a396cd928a1aff",
+  "revision": "b0675f7aa3b3e57e7322cffc3dd3a73701096677",
   "grammarSha": "971f346693ac13c07d69e80109aa47b4661178645ebbd2180828056fb030e28b",
   "language": "sop",
   "url": "https://github.com/idjoo/tree-sitter-sop",
