@@ -73,6 +73,9 @@
   "--*"
   "==>"
   "==="
+  "#"
+  "union"
+  "setminus"
 ] @operator
 
 ; Keywords
@@ -130,6 +133,8 @@
 ] @keyword
 
 ; Literals
+
+(binary_expression "in" @operator)
 
 [
   (interpreted_string_literal)

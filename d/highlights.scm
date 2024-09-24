@@ -2,7 +2,7 @@
 ;
 ; Highlighting queries for D code for use by Tree-Sitter.
 ;
-; Copyright 2023 Garrett D'Amore
+; Copyright 2024 Garrett D'Amore
 ;
 ; Distributed under the MIT License.
 ; (See accompanying file LICENSE.txt or https://opensource.org/licenses/MIT)
@@ -14,6 +14,8 @@
 (char_literal) @number
 (identifier) @variable
 (at_attribute) @property
+(htmlentity) @string.special
+(escape_sequence) @string.escape
 
 [
 	(lazy)
@@ -41,7 +43,9 @@
 (function_declaration (identifier) @function)
 
 (call_expression (identifier) @function)
-(call_expression (type (identifier) @function))
+(call_expression (type (template_instance (identifier) @function)))
+(template_arguments (identifier) @variable.parameter)
+
 (named_argument (identifier) @variable.parameter)
 
 [
