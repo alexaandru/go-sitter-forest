@@ -114,8 +114,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.8.1
 	github.com/alexaandru/go-sitter-forest/fsh v1.8.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.8.7
-	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.6
+	github.com/alexaandru/go-sitter-forest/fsharp v1.8.8
+	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.7
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.8.1
@@ -189,7 +189,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/java v1.8.1
 	github.com/alexaandru/go-sitter-forest/javascript v1.8.1
 	github.com/alexaandru/go-sitter-forest/jq v1.8.0
-	github.com/alexaandru/go-sitter-forest/jsdoc v1.8.0
+	github.com/alexaandru/go-sitter-forest/jsdoc v1.8.1
 	github.com/alexaandru/go-sitter-forest/json v1.8.0
 	github.com/alexaandru/go-sitter-forest/json5 v1.8.0
 	github.com/alexaandru/go-sitter-forest/jsonc v1.8.0
@@ -206,7 +206,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.8.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.8.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.8.1
-	github.com/alexaandru/go-sitter-forest/lart v1.8.3
+	github.com/alexaandru/go-sitter-forest/lart v1.8.4
 	github.com/alexaandru/go-sitter-forest/lat v1.8.0
 	github.com/alexaandru/go-sitter-forest/latex v1.8.3
 	github.com/alexaandru/go-sitter-forest/ldg v1.8.0
@@ -261,7 +261,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml v1.8.3
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.8.2
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.8.0
-	github.com/alexaandru/go-sitter-forest/odin v1.8.0
+	github.com/alexaandru/go-sitter-forest/odin v1.8.1
 	github.com/alexaandru/go-sitter-forest/org v1.8.0
 	github.com/alexaandru/go-sitter-forest/ott v1.8.0
 	github.com/alexaandru/go-sitter-forest/pascal v1.8.0
