@@ -1089,8 +1089,8 @@
   },
   {
     "reference": "main",
-    "revision": "5f819048d66d69ce90573c84138b20c326fdc167",
-    "grammarSha": "8423b0c1e2754870cee9c3fe00f2b9279878c31dd6b985b095a5e37ff3adc73f",
+    "revision": "aa03beba6ba774f921d6e3ce2868d3846a1890a5",
+    "grammarSha": "e4cc85c398893c4fead399b194fa5d8f16fed2ff0a2db5f82e40aff01fca89d2",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
     "maintainedBy": "@Nsidorenco",
@@ -1102,8 +1102,8 @@
   },
   {
     "reference": "main",
-    "revision": "5f819048d66d69ce90573c84138b20c326fdc167",
-    "grammarSha": "3a616390547150317ec061f3a7a4ba8860dfcba020ef22bee21a413969f8f7f4",
+    "revision": "aa03beba6ba774f921d6e3ce2868d3846a1890a5",
+    "grammarSha": "0e98f08e415cc73db069e8835ed704ee4f801feb1a5b3e0d592ce42e7c61d249",
     "language": "fsharp_signature",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
     "maintainedBy": "@Nsidorenco",
@@ -1978,8 +1978,8 @@
   },
   {
     "reference": "master",
-    "revision": "494f334f1183d9fa6b57d86c266e5231fda1007d",
-    "grammarSha": "3b9123497d52e2dbc80088f2e3761bf378c95d17ebac4880b5330bb27dd1629f",
+    "revision": "602517bb7511a681f56e45299540c9d249a24a0d",
+    "grammarSha": "3419a9cbb51ea0e0e014b7524e64a3bce794de17853d6cac35fd945ca1461ac9",
     "language": "lart",
     "url": "https://github.com/frefolli/tree-sitter-lart",
     "maintainedBy": "@frefolli"
@@ -2542,8 +2542,8 @@
   },
   {
     "reference": "master",
-    "revision": "d37b8f24f653378b268ec18404e9c14ad355b128",
-    "grammarSha": "fbefdd5feb3c89825794a7a6920e6ee33ed42e94f30e430542e7b9e165bfdb40",
+    "revision": "3fee7964bbfb2554deef12c224344f3870d15375",
+    "grammarSha": "8a880837502349658a95d845289f75fc09aadd1a498cf6c05bb839702f2327a2",
     "language": "odin",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-odin",
     "maintainedBy": "@amaanq",
@@ -2890,7 +2890,7 @@
   },
   {
     "reference": "main",
-    "revision": "120614cf0447160fb571c6818aff65f56eec2dc6",
+    "revision": "8f551dee75cb8fe522447bd51e0d1b1b3117284e",
     "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
@@ -4111,7 +4111,7 @@
   },
   {
     "reference": "main",
-    "revision": "2a78abbd1475589b7524265f6920bb896ce95b80",
+    "revision": "9176564a6c0dbb9197dc39d7fb392332e855d0bd",
     "grammarSha": "b4ed00749b4c53e5763ff1702e8742a4d26a6f0818f3b816b4bc1ea79dd37469",
     "language": "wing",
     "url": "https://github.com/winglang/wing",

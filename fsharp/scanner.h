@@ -20,6 +20,7 @@ enum TokenType {
   INTERFACE,
   END,
   AND,
+  WITH,
   TRIPLE_QUOTE_CONTENT,
   BLOCK_COMMENT_CONTENT,
   INSIDE_STRING,
@@ -178,10 +179,12 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
   lexer->mark_end(lexer);
 
   bool found_end_of_line = false;
+  bool found_end_of_line_semi_colon = false;
   bool found_start_of_infix_op = false;
   bool found_bracket_end = false;
   bool found_preprocessor_end = false;
   bool found_preproc_if = false;
+  bool found_comment_start = false;
   uint32_t indent_length = lexer->get_column(lexer);
 
   for (;;) {
@@ -213,7 +216,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
       } else {
         return false;
       }
-    } else if (lexer->lookahead == '#' && indent_length == 0) {
+    } else if (lexer->lookahead == '#') {
       advance_fsharp(lexer);
       if (lexer->lookahead == 'e') {
         advance_fsharp(lexer);
@@ -398,9 +401,9 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
     while (lexer->lookahead == ' ' || lexer->lookahead == '\n') {
       advance_fsharp(lexer);
     }
+    found_end_of_line = true;
+    found_end_of_line_semi_colon = true;
     lexer->mark_end(lexer);
-    lexer->result_symbol = NEWLINE;
-    return true;
   }
 
   if (lexer->lookahead == 't' &&
@@ -446,6 +449,32 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
             array_pop(&scanner->indents);
             lexer->result_symbol = DEDENT;
             return true;
+          }
+        }
+      }
+    }
+  } else if (lexer->lookahead == 'w' &&
+             (valid_symbols[WITH] || valid_symbols[DEDENT])) {
+    advance_fsharp(lexer);
+    if (lexer->lookahead == 'i') {
+      advance_fsharp(lexer);
+      if (lexer->lookahead == 't') {
+        advance_fsharp(lexer);
+        if (lexer->lookahead == 'h') {
+          advance_fsharp(lexer);
+          if (lexer->lookahead == ' ') {
+            // the 'WITH' token is only valid if we have popped the appropriate
+            // amount of dedent tokens.
+            // If 'WITH' is not valid we just continue to pop dedent tokens.
+            if (valid_symbols[WITH]) {
+              lexer->mark_end(lexer);
+              lexer->result_symbol = WITH;
+              return true;
+            } else {
+              array_pop(&scanner->indents);
+              lexer->result_symbol = DEDENT;
+              return true;
+            }
           }
         }
       }
@@ -552,7 +581,13 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
     case '}':
       found_bracket_end = true;
       break;
+    case '>':
+      found_start_of_infix_op = true;
+      break;
     case ' ':
+      if (indent_length == 0) {
+        indent_length = 1;
+      }
       if (scanner->indents.size > 0) {
         uint16_t current_indent_length = *array_back(&scanner->indents);
         if (found_end_of_line && indent_length == current_indent_length &&
@@ -569,6 +604,17 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
       found_start_of_infix_op = true;
       break;
     }
+  } else if (lexer->lookahead == '(') {
+    skip_fsharp(lexer);
+    if (lexer->lookahead == '*') {
+      found_comment_start = true;
+    }
+  }
+
+  if (valid_symbols[NEWLINE] && found_end_of_line_semi_colon &&
+      !found_comment_start) {
+    lexer->result_symbol = NEWLINE;
+    return true;
   }
 
   if (valid_symbols[INDENT] && !found_bracket_end && !found_preprocessor_end) {
@@ -589,7 +635,8 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
     if (found_end_of_line) {
       if (indent_length == current_indent_length && indent_length > 0 &&
           !found_start_of_infix_op && !found_bracket_end) {
-        if (valid_symbols[NEWLINE] && !found_preprocessor_end) {
+        if (valid_symbols[NEWLINE] && !found_preprocessor_end &&
+            !found_comment_start) {
           lexer->result_symbol = NEWLINE;
           return true;
         }
@@ -608,7 +655,7 @@ static bool scan_fsharp(Scanner *scanner, TSLexer *lexer, const bool *valid_symb
       bool can_dedent_infix_op;
 
       if (found_start_of_infix_op) {
-        can_dedent_infix_op = indent_length + 1 < current_indent_length;
+        can_dedent_infix_op = indent_length + 2 < current_indent_length;
       } else {
         can_dedent_infix_op = true;
       }
