@@ -1,6 +1,6 @@
 # 434 Supported Parsers
 
-9 pending, 8 skipped regeneration, 31 missing queries
+9 pending, 8 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -74,7 +74,7 @@
 - [x] [cue](https://github.com/eonpatapon/tree-sitter-cue) ✔️ (maintained by @amaanq)
 - [x] [d](https://github.com/gdamore/tree-sitter-d) ✔️ (maintained by @amaanq)
 - [x] [d2](https://codeberg.org/p8i/tree-sitter-d2) ✔️ (maintained by @p8i)
-- [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️ (maintained by @lomisk)
+- [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️ (maintained by @lomisk; ❌repository was removed by owner)
 - [x] [dart](https://github.com/UserNobody14/tree-sitter-dart) ✔️ (maintained by @akinsho)
 - [ ] [dataweave](https://github.com/AndrewJarrett/tree-sitter-dataweave) (maintained by @AndrewJarrett)
 - [x] [dbml](https://github.com/apexatoll/tree-sitter-dbml) 🗸 (maintained by @apexatoll)
@@ -155,7 +155,7 @@
 - [x] [gpg](https://github.com/tree-sitter-grammars/tree-sitter-gpg-config) ✔️ (maintained by @ObserverOfTime)
 - [x] [gram](https://github.com/gram-data/tree-sitter-gram) 🗸 (maintained by @akollegger)
 - [x] [graphql](https://github.com/bkegley/tree-sitter-graphql) ✔️ (maintained by @bkegley)
-- [x] [gren](https://github.com/MaeBrooks/tree-sitter-gren) 🗸 (maintained by @MaeBrooks)
+- [x] [gren](https://github.com/MaeBrooks/tree-sitter-gren) ✔️ (maintained by @MaeBrooks)
 - [x] [groovy](https://github.com/murtaza64/tree-sitter-groovy) ✔️ (maintained by @murtaza64)
 - [x] [gstlaunch](https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch) ✔️ (maintained by @theHamsta)
 - [x] [hack](https://github.com/slackhq/tree-sitter-hack) ✔️ (maintained by @aosq)

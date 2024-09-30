@@ -52,6 +52,7 @@
   ">" ">=" ">>"
   "&" "|" "^"
   "&&" "||"
+  "->"
 ] @operator
 
 ; constructor
@@ -75,7 +76,7 @@
   "as" @keyword
   type: (identifier) @type.builtin
   (#match? @type.builtin
-    "^(int8|int16|int32|int64|int128|int256|int257|uint8|uint16|uint32|uint64|uint128|uint256|coins|remaining|bytes32|bytes64)$"))
+    "^(coins|remaining|bytes32|bytes64|int257|u?int(?:2[0-5][0-6]|1[0-9][0-9]|[1-9][0-9]?))$"))
 
 ((type_identifier) @type.builtin
   (#match? @type.builtin "^(Address|Bool|Builder|Cell|Int|Slice|String|StringBuilder)$"))
@@ -91,7 +92,7 @@
   ">" @punctuation.bracket)
 
 ((identifier) @type.builtin
-  (#eq? @type.builtin "SendParameters")
+  (#match? @type.builtin "^(Context|SendParameters|StateInit|StdAddress|VarAddress)$")
   (#is-not? local))
 
 ; string
@@ -126,7 +127,7 @@
 
 ((identifier) @constant.builtin
   (#match? @constant.builtin
-    "^(SendBounceIfActionFail|SendPayGasSeparately|SendIgnoreErrors|SendDestroyIfZero|SendRemainingValue|SendRemainingBalance|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)$")
+    "^(SendBounceIfActionFail|SendPayGasSeparately|SendIgnoreErrors|SendDestroyIfZero|SendRemainingValue|SendRemainingBalance|SendOnlyEstimateFee|ReserveExact|ReserveAllExcept|ReserveAtMost|ReserveAddOriginalBalance|ReserveInvertSign|ReserveBounceIfActionFail)$")
   (#is-not? local))
 
 ; property
@@ -160,7 +161,7 @@
 [
   "get" "mutates" "extends" "virtual" "override" "inline" "abstract"
   "contract" "trait" "struct" "message" "with"
-  "const" "let" "fun" "native"
+  "const" "let" "fun" "native" "asm"
   "primitive" "import"
   "if" "else" "while" "repeat" "do" "until" "foreach"
   "try" "catch"
@@ -176,6 +177,9 @@
   name: (identifier) @function)
 
 (native_function
+  name: (identifier) @function)
+
+(asm_function
   name: (identifier) @function)
 
 (global_function
@@ -200,15 +204,6 @@
 
 (method_call_expression
   name: (identifier) @function)
-
-; function.builtin
-; ----------------
-
-(static_call_expression
-  name: (identifier) @function.builtin
-  (#match? @function.builtin
-     "^(log|log2|send|sender|require|now|myBalance|myAddress|newAddress|contractAddress|contractAddressExt|emit|cell|ton|dump|dumpStack|beginString|beginComment|beginTailString|beginStringFromBuilder|beginCell|emptyCell|randomInt|random|checkSignature|checkDataSignature|sha256|min|max|abs|pow|pow2|throw|nativeThrowIf|nativeThrowUnless|getConfigParam|nativeRandomize|nativeRandomizeLt|nativePrepareRandom|nativeRandom|nativeRandomInterval|nativeReserve)$")
-  (#is-not? local))
 
 ; attribute
 ; ---------

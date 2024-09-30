@@ -4,5 +4,7 @@
   "grammarSha": "0bac886a26aaea40679ce164f21d415801fe61c30d0a43ab61f54ab5fa525c22",
   "language": "dale",
   "url": "https://github.com/crumbtoo/tree-sitter-dale",
-  "maintainedBy": "@lomisk"
+  "doc": "repository was removed by owner",
+  "maintainedBy": "@lomisk",
+  "skipUpdate": true
 }

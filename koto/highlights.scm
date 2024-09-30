@@ -131,7 +131,7 @@
 (self) @variable.builtin
 
 (arg
-  (identifier) @variable.parameter)
+  (_ (identifier) @variable.parameter))
 
 (ellipsis) @variable.parameter
 

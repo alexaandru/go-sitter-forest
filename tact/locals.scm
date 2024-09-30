@@ -4,6 +4,7 @@
 ; -------------------------
 
 [
+  (asm_function)
   (global_function)
   (init_function)
   (bounced_function)

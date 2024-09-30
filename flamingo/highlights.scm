@@ -25,21 +25,12 @@
 (overloadable_operator) @operator
 
 [
-	"**"
-	"*"
-	"/"
-	"%"
-	"+"
-	"-"
-	"=="
-	"!="
-	"<"
-	">"
-	"<="
-	">="
-	"&&"
-	"||"
-	"^^"
+	(power_operator)
+	(multiplicative_operator)
+	(additive_operator)
+	(comparative_operator)
+	(and_operator)
+	(or_operator)
 ] @operator
 
 ; Keywords.

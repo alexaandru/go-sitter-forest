@@ -28,6 +28,8 @@
   [
     (native_function
       name: (identifier) @name)
+    (asm_function
+      name: (identifier) @name)
     (global_function
       name: (identifier) @name)
   ] @definition.function
