@@ -110,7 +110,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.9
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.10
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
@@ -208,7 +208,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.8.1
 	github.com/alexaandru/go-sitter-forest/kusto v1.8.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.8.1
-	github.com/alexaandru/go-sitter-forest/lart v1.8.4
+	github.com/alexaandru/go-sitter-forest/lart v1.8.5
 	github.com/alexaandru/go-sitter-forest/lat v1.8.0
 	github.com/alexaandru/go-sitter-forest/latex v1.8.3
 	github.com/alexaandru/go-sitter-forest/ldg v1.8.0
@@ -382,7 +382,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/teal v1.8.0
 	github.com/alexaandru/go-sitter-forest/templ v1.8.2
 	github.com/alexaandru/go-sitter-forest/terra v1.8.2
-	github.com/alexaandru/go-sitter-forest/textproto v1.8.0
+	github.com/alexaandru/go-sitter-forest/textproto v1.8.1
 	github.com/alexaandru/go-sitter-forest/thrift v1.8.0
 	github.com/alexaandru/go-sitter-forest/tiger v1.8.0
 	github.com/alexaandru/go-sitter-forest/tlaplus v1.8.0
@@ -440,8 +440,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.8.0
 	github.com/alexaandru/go-sitter-forest/zeek v1.8.0
 	github.com/alexaandru/go-sitter-forest/zig v1.8.3
-	github.com/alexaandru/go-sitter-forest/ziggy v1.8.0
-	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.8.0
+	github.com/alexaandru/go-sitter-forest/ziggy v1.8.1
+	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.8.1
 	github.com/alexaandru/go-tree-sitter-bare v1.6.0
 	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948
 	golang.org/x/sync v0.8.0
