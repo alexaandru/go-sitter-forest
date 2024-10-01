@@ -25,6 +25,7 @@
 (overloadable_operator) @operator
 
 [
+	(unary_operator)
 	(power_operator)
 	(multiplicative_operator)
 	(additive_operator)

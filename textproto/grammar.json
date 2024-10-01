@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "8dacf02aa402892c91079f8577998ed5148c0496",
-  "grammarSha": "6d1adc2304eadc200dccd7844a5c2ec472fda69617bf8a282d4e2728904ba6f4",
+  "revision": "d900077aef9f5dcb0d47c86be33585013ed5db9a",
+  "grammarSha": "fe665ee67b8820400bf9129c14d6e9abb48ba6a7ed9c18706edd0b545c4de4c8",
   "language": "textproto",
   "url": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
   "maintainedBy": "@Porter"
