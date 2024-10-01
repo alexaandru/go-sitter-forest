@@ -1,4 +1,4 @@
-# 434 Supported Parsers
+# 436 Supported Parsers
 
 9 pending, 8 skipped regeneration, 30 missing queries
 
@@ -446,6 +446,8 @@
 - [x] [zathurarc](https://github.com/Freed-Wu/tree-sitter-zathurarc) ✔️ (maintained by @Freed-Wu)
 - [x] [zeek](https://github.com/zeek/tree-sitter-zeek) ✔️ (maintained by @bbannier)
 - [x] [zig](https://github.com/tree-sitter-grammars/tree-sitter-zig) ✔️ (maintained by @amaanq)
+- [x] [ziggy](https://github.com/kristoff-it/ziggy) ✔️ (maintained by @rockorager)
+- [x] [ziggy_schema](https://github.com/kristoff-it/ziggy) ✔️ (maintained by @rockorager)
 - [ ] [zsh](https://github.com/tree-sitter-grammars/tree-sitter-zsh) (maintained by @amaanq; last (and only) commit says: 'do not use')
 <!--parserinfo-->
 

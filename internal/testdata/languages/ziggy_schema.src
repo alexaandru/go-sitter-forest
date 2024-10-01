@@ -1,0 +1,23 @@
+root = Message
+
+
+///A UUIDv4 value.
+@uuid = bytes,
+///Possible command actions.
+@action = enum { clear_chat, ban_user },
+
+struct Message {
+  id: @uuid,
+  payload: Command | Notification,
+}
+
+struct Command {
+  do: @action,
+  sender: bytes,
+}
+
+struct Notification {
+  title: bytes,
+  text: bytes,
+  level: int,
+}

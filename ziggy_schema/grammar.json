@@ -1,0 +1,9 @@
+{
+  "reference": "main",
+  "revision": "42b6f5d7320340bc5903c4c29d34065e8517a549",
+  "grammarSha": "cfcd336f97fec522b5f4f43881783a59a484f0c2f1cbf176f33bb243e36a243c",
+  "language": "ziggy_schema",
+  "url": "https://github.com/kristoff-it/ziggy",
+  "maintainedBy": "@rockorager",
+  "srcRoot": "tree-sitter-ziggy-schema"
+}

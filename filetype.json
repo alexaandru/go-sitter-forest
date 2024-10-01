@@ -487,7 +487,9 @@
     "yaral":              ["yaral", "yl"],
     "yuck":               ["yuck"],
     "zeek":               ["zeek"],
-    "zig":                ["zig", "zon"]
+    "zig":                ["zig", "zon"],
+    "ziggy":              ["ziggy", "zgy"],
+    "ziggy_schema":       ["ziggy-schema", "zgy-schema"]
   },
 
   "conflicts": {

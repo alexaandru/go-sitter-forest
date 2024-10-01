@@ -454,6 +454,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/zathurarc"
 	"github.com/alexaandru/go-sitter-forest/zeek"
 	"github.com/alexaandru/go-sitter-forest/zig"
+	"github.com/alexaandru/go-sitter-forest/ziggy"
+	"github.com/alexaandru/go-sitter-forest/ziggy_schema"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
@@ -907,6 +909,8 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"zathurarc":          zathurarc.GetLanguage,
 	"zeek":               zeek.GetLanguage,
 	"zig":                zig.GetLanguage,
+	"ziggy":              ziggy.GetLanguage,
+	"ziggy_schema":       ziggy_schema.GetLanguage,
 }
 
 var queryFuncs = map[string]func(string, ...byte) []byte{
@@ -1345,6 +1349,8 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"zathurarc":          zathurarc.GetQuery,
 	"zeek":               zeek.GetQuery,
 	"zig":                zig.GetQuery,
+	"ziggy":              ziggy.GetQuery,
+	"ziggy_schema":       ziggy_schema.GetQuery,
 }
 
 var (
