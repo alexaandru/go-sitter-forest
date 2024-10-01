@@ -1,0 +1,120 @@
+-- Globals
+glob x: pointer [ail_ctype = 'signed int'] :=
+  {-# <unknown location> #-} let strong a_531: pointer =
+    create(Ivalignof('signed int'), 'signed int') in
+  let strong a_532: loaded integer =
+    {-# §6.5#2 #-}
+    bound(
+      {-# <./de_facto_memory_model/35c3-nolib.c:1:6, ./de_facto_memory_model/35c3-nolib.c:1:7> #-} pure(
+        Specified(1)
+      )
+    ) in
+  store('signed int', a_531, conv_loaded_int('signed int', a_532)) ;
+  pure(a_531)
+
+glob secret_key: pointer [ail_ctype = 'signed int'] :=
+  {-# <unknown location> #-} let strong a_529: pointer =
+    create(Ivalignof('signed int'), 'signed int') in
+  let strong a_530: loaded integer =
+    {-# §6.5#2 #-}
+    bound(
+      {-# <./de_facto_memory_model/35c3-nolib.c:2:17, ./de_facto_memory_model/35c3-nolib.c:2:21> #-} pure(
+        Specified(83)
+      )
+    ) in
+  store('signed int', a_529, conv_loaded_int('signed int', a_530)) ;
+  pure(a_529)
+
+-- Fun map
+proc main (): eff loaded integer :=
+  {-# <./de_facto_memory_model/35c3-nolib.c:3:11, ./de_facto_memory_model/35c3-nolib.c:8:1> #-} let strong p: pointer =
+    create(Ivalignof('signed int*'), 'signed int*') in
+  {-# <./de_facto_memory_model/35c3-nolib.c:4:2, ./de_facto_memory_model/35c3-nolib.c:4:14> #-} let strong a_511: loaded pointer =
+    {-# §6.5#2 #-}
+    bound(
+      {-# §6.5.3.2#3, sentence 5 #-}
+      {-# <./de_facto_memory_model/35c3-nolib.c:4:11, ./de_facto_memory_model/35c3-nolib.c:4:13> ./de_facto_memory_model/35c3-nolib.c:4:11 #-} let weak a_512: pointer =
+        {-# <./de_facto_memory_model/35c3-nolib.c:4:12, ./de_facto_memory_model/35c3-nolib.c:4:13> #-} pure(
+          x
+        ) in
+      pure(Specified(a_512))
+    ) in
+  store('signed int*', p, a_511) ;
+  {-# <./de_facto_memory_model/35c3-nolib.c:5:2, ./de_facto_memory_model/35c3-nolib.c:5:10> #-} let strong _: loaded pointer =
+    {-# §6.5#2 #-}
+    bound(
+      {-# §6.5.16#3, sentence 4 #-}
+      {-# <./de_facto_memory_model/35c3-nolib.c:5:2, ./de_facto_memory_model/35c3-nolib.c:5:9> ./de_facto_memory_model/35c3-nolib.c:5:4 #-} let weak (a_510: pointer,
+      a_519: loaded pointer) =
+        {-# §6.5.16#3, sentence 5 #-}
+        unseq(
+          {-# <./de_facto_memory_model/35c3-nolib.c:5:2, ./de_facto_memory_model/35c3-nolib.c:5:3> #-} pure(
+            p
+          )
+        ,
+          {-# §6.5.6 #-}
+          {-# <./de_facto_memory_model/35c3-nolib.c:5:6, ./de_facto_memory_model/35c3-nolib.c:5:9> ./de_facto_memory_model/35c3-nolib.c:5:7 #-} let weak (a_513: loaded pointer,
+          a_515: loaded integer) =
+            unseq(
+              {-# <./de_facto_memory_model/35c3-nolib.c:5:6, ./de_facto_memory_model/35c3-nolib.c:5:7> #-} let weak a_518: pointer =
+                {-# <./de_facto_memory_model/35c3-nolib.c:5:6, ./de_facto_memory_model/35c3-nolib.c:5:7> #-} pure(
+                  p
+                ) in
+              load('signed int*', a_518)
+            ,
+              {-# <./de_facto_memory_model/35c3-nolib.c:5:8, ./de_facto_memory_model/35c3-nolib.c:5:9> #-} pure(
+                Specified(1)
+              )
+            ) in
+          let (Specified(a_514: pointer), Specified(a_516: integer)) =
+            (a_513, a_515) in
+          let weak a_517: pointer =
+            memop(PtrArrayShift, a_514, 'signed int', a_516) in
+          pure(Specified(a_517))
+        ) in
+      let weak _: unit =
+        {-# §6.5.16.1#2, store #-}
+        neg(store('signed int*', a_510, a_519)) in
+      pure(a_519)
+    ) in
+  pure(Unit) ;
+  {-# <./de_facto_memory_model/35c3-nolib.c:5:11, ./de_facto_memory_model/35c3-nolib.c:7:16> #-} let strong leak: pointer =
+    create(Ivalignof('signed int'), 'signed int') in
+  {-# <./de_facto_memory_model/35c3-nolib.c:6:2, ./de_facto_memory_model/35c3-nolib.c:6:16> #-} let strong a_520: loaded integer =
+    {-# §6.5#2 #-}
+    bound(
+      {-# <./de_facto_memory_model/35c3-nolib.c:6:13, ./de_facto_memory_model/35c3-nolib.c:6:15> ./de_facto_memory_model/35c3-nolib.c:6:13 #-} let weak a_525: pointer =
+        {-# §6.5.3.2 #-}
+        {-# <./de_facto_memory_model/35c3-nolib.c:6:13, ./de_facto_memory_model/35c3-nolib.c:6:15> ./de_facto_memory_model/35c3-nolib.c:6:13 #-} let weak a_521: loaded pointer =
+          {-# <./de_facto_memory_model/35c3-nolib.c:6:14, ./de_facto_memory_model/35c3-nolib.c:6:15> #-} let weak a_524: pointer =
+            {-# <./de_facto_memory_model/35c3-nolib.c:6:14, ./de_facto_memory_model/35c3-nolib.c:6:15> #-} pure(
+              p
+            ) in
+          load('signed int*', a_524) in
+        let Specified(a_522: pointer) = a_521 in
+        let weak a_523: boolean =
+          memop(PtrValidForDeref, 'signed int', a_522) in
+        pure(
+          if a_523 then a_522 else undef(<<UB043_indirection_invalid_value>>)
+        ) in
+      load('signed int', a_525)
+    ) in
+  store('signed int', leak, conv_loaded_int('signed int', a_520)) ;
+  {-# <./de_facto_memory_model/35c3-nolib.c:7:2, ./de_facto_memory_model/35c3-nolib.c:7:14> #-} let strong a_527: loaded integer =
+    {-# §6.5#2 #-}
+    bound(
+      {-# <./de_facto_memory_model/35c3-nolib.c:7:9, ./de_facto_memory_model/35c3-nolib.c:7:13> #-} let weak a_526: pointer =
+        {-# <./de_facto_memory_model/35c3-nolib.c:7:9, ./de_facto_memory_model/35c3-nolib.c:7:13> #-} pure(
+          leak
+        ) in
+      load('signed int', a_526)
+    ) in
+  kill('signed int', leak) ;
+  kill('signed int*', p) ;
+  run ret_509(conv_loaded_int('signed int', a_527)) ;
+  kill('signed int', leak) ;
+  pure(Unit) ;
+  kill('signed int*', p) ;
+  pure(Unit) ;
+  {-# <./de_facto_memory_model/35c3-nolib.c:3:0, ./de_facto_memory_model/35c3-nolib.c:8:1> ./de_facto_memory_model/35c3-nolib.c:3:4 - ./de_facto_memory_model/35c3-nolib.c:3:8 #-} save ret_509: loaded integer (a_528: loaded integer:= Specified(0)) in
+    pure(a_528)

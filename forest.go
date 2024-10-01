@@ -76,6 +76,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/commonlisp"
 	ConTeXt "github.com/alexaandru/go-sitter-forest/context"
 	"github.com/alexaandru/go-sitter-forest/cooklang"
+	"github.com/alexaandru/go-sitter-forest/core"
 	"github.com/alexaandru/go-sitter-forest/corn"
 	"github.com/alexaandru/go-sitter-forest/cpon"
 	"github.com/alexaandru/go-sitter-forest/cpp"
@@ -296,6 +297,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pic"
 	"github.com/alexaandru/go-sitter-forest/pint"
 	"github.com/alexaandru/go-sitter-forest/pioasm"
+	"github.com/alexaandru/go-sitter-forest/pkl"
 	"github.com/alexaandru/go-sitter-forest/plantuml"
 	"github.com/alexaandru/go-sitter-forest/po"
 	"github.com/alexaandru/go-sitter-forest/pod"
@@ -446,6 +448,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/xcompose"
 	"github.com/alexaandru/go-sitter-forest/xfst"
 	"github.com/alexaandru/go-sitter-forest/xml"
+	"github.com/alexaandru/go-sitter-forest/xresources"
 	"github.com/alexaandru/go-sitter-forest/yaml"
 	"github.com/alexaandru/go-sitter-forest/yang"
 	"github.com/alexaandru/go-sitter-forest/yaral"
@@ -532,6 +535,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"commonlisp":         commonlisp.GetLanguage,
 	"context":            ConTeXt.GetLanguage,
 	"cooklang":           cooklang.GetLanguage,
+	"core":               core.GetLanguage,
 	"corn":               corn.GetLanguage,
 	"cpon":               cpon.GetLanguage,
 	"cpp":                cpp.GetLanguage,
@@ -750,6 +754,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"pic":                pic.GetLanguage,
 	"pint":               pint.GetLanguage,
 	"pioasm":             pioasm.GetLanguage,
+	"pkl":                pkl.GetLanguage,
 	"plantuml":           plantuml.GetLanguage,
 	"po":                 po.GetLanguage,
 	"pod":                pod.GetLanguage,
@@ -901,6 +906,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"xcompose":           xcompose.GetLanguage,
 	"xfst":               xfst.GetLanguage,
 	"xml":                xml.GetLanguage,
+	"xresources":         xresources.GetLanguage,
 	"yaml":               yaml.GetLanguage,
 	"yang":               yang.GetLanguage,
 	"yaral":              yaral.GetLanguage,
@@ -972,6 +978,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"commonlisp":         commonlisp.GetQuery,
 	"context":            ConTeXt.GetQuery,
 	"cooklang":           cooklang.GetQuery,
+	"core":               core.GetQuery,
 	"corn":               corn.GetQuery,
 	"cpon":               cpon.GetQuery,
 	"cpp":                cpp.GetQuery,
@@ -1190,6 +1197,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pic":                pic.GetQuery,
 	"pint":               pint.GetQuery,
 	"pioasm":             pioasm.GetQuery,
+	"pkl":                pkl.GetQuery,
 	"plantuml":           plantuml.GetQuery,
 	"po":                 po.GetQuery,
 	"pod":                pod.GetQuery,
@@ -1341,6 +1349,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"xcompose":           xcompose.GetQuery,
 	"xfst":               xfst.GetQuery,
 	"xml":                xml.GetQuery,
+	"xresources":         xresources.GetQuery,
 	"yaml":               yaml.GetQuery,
 	"yang":               yang.GetQuery,
 	"yaral":              yaral.GetQuery,

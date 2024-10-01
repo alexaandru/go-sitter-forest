@@ -1,0 +1,27 @@
+#include "./foo/bar"
+
+! native comment
+
+// C style comments
+
+/*
+ * Multiline comments
+ */
+
+Xcursor.theme: Qogir-cursors
+
+Xcolor.description: This is a long \
+                    description\n over multiple \
+                    lines
+XTerm.separator: \000
+XTerm.prompt.foreground: \033[31m
+! Hello
+Nsxiv.window.background: #0A0C0D
+Nsxiv.?.foreground: #64d0e3
+Nsxiv.bar*font: sans 14
+Nsxiv.?*background: #1B1D1E
+Nsxiv.bar.foreground: #739df2
+Nsxiv.mark.foregorund: #8aec69
+
+Xterm.font: this \n is a new line
+! vim: ft=xdefaults

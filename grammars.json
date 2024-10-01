@@ -561,6 +561,15 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "57e5633b822d6a08d1eb3a52c5f737cfb3cc6e9f",
+    "grammarSha": "50c3a904d915bf96ab80e33754c4197b59a6bdc317a72b6db3981489acfc68dc",
+    "language": "core",
+    "altName": "Cerberus Core",
+    "url": "https://github.com/rems-project/tree-sitter-core",
+    "maintainedBy": "@vzaliva"
+  },
+  {
     "reference": "master",
     "revision": "464654742cbfd3a3de560aba120998f1d5dfa844",
     "grammarSha": "2bf9152b2654b1a00af56f008c2468bd684665268bbe124c8ad0e2187e173afc",
@@ -2711,6 +2720,17 @@
   },
   {
     "reference": "main",
+    "revision": "5bb7df9cb7de77b7f0be75dfe64fe3ee78eca46b",
+    "grammarSha": "b6dbf278e6e8d2238205e6806913bfced138815e1391d01346f3f1363254c3dc",
+    "language": "pkl",
+    "url": "https://github.com/apple/tree-sitter-pkl",
+    "maintainedBy": "@bioball",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "8d74e1fa9d37755cf5a2bffd9e979db402e7ad12",
     "grammarSha": "53fb90669f70d3e553b64d0892f92467713f2dc9722b043aee38e283b52db66d",
     "language": "plantuml",
@@ -4171,6 +4191,14 @@
       "scanner.c",
       "common/scanner.h"
     ]
+  },
+  {
+    "reference": "master",
+    "revision": "5d7e19bbd42576bc7914c9c298b6e30a54e34d70",
+    "grammarSha": "a67b6dc50b424edc9e73b17ea505a5a9e0bca60af7c71223f9ebf53b9860c4ff",
+    "language": "xresources",
+    "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",
+    "maintainedBy": "@ValdezFOmar"
   },
   {
     "reference": "master",

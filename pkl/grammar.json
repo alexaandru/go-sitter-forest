@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "5bb7df9cb7de77b7f0be75dfe64fe3ee78eca46b",
+  "grammarSha": "b6dbf278e6e8d2238205e6806913bfced138815e1391d01346f3f1363254c3dc",
+  "language": "pkl",
+  "url": "https://github.com/apple/tree-sitter-pkl",
+  "maintainedBy": "@bioball",
+  "files": [
+    "scanner.c"
+  ]
+}

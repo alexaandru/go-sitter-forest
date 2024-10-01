@@ -1,4 +1,4 @@
-# 436 Supported Parsers
+# 439 Supported Parsers
 
 9 pending, 8 skipped regeneration, 30 missing queries
 
@@ -63,6 +63,7 @@
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️ (maintained by @theHamsta)
 - [x] [context](https://github.com/pmazaitis/tree-sitter-context) ✔️ (maintained by @pmazaitis)
 - [x] [cooklang](https://github.com/addcninblue/tree-sitter-cooklang) ✔️ (maintained by @addcninblue)
+- [x] [Cerberus Core](https://github.com/rems-project/tree-sitter-core) ✔️ (maintained by @vzaliva)
 - [x] [corn](https://github.com/corn-config/tree-sitter-corn) ✔️ (maintained by @jakestanger)
 - [x] [cpon](https://github.com/tree-sitter-grammars/tree-sitter-cpon) ✔️ (maintained by @amaanq)
 - [x] [cpp](https://github.com/tree-sitter/tree-sitter-cpp) ✔️ (maintained by @theHamsta)
@@ -287,6 +288,7 @@
 - [x] [pic](https://github.com/smoeding/tree-sitter-pic) 🗸 (maintained by @smoeding)
 - [x] [pint](https://github.com/essential-contributions/tree-sitter-pint) ✔️ (maintained by @mitchmindtree)
 - [x] [pioasm](https://github.com/leo60228/tree-sitter-pioasm) ✔️ (maintained by @leo60228)
+- [x] [pkl](https://github.com/apple/tree-sitter-pkl) ✔️ (maintained by @bioball)
 - [x] [plantuml](https://github.com/ptdewey/tree-sitter-plantuml) ✔️ (maintained by @ptdewey)
 - [x] [po](https://github.com/tree-sitter-grammars/tree-sitter-po) ✔️ (maintained by @amaanq)
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
@@ -438,6 +440,7 @@
 - [x] [xcompose](https://github.com/tree-sitter-grammars/tree-sitter-xcompose) ✔️ (maintained by @ObserverOfTime)
 - [x] [xfst](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️ (maintained by @ObserverOfTime)
+- [x] [xresources](https://github.com/ValdezFOmar/tree-sitter-xresources) ✔️ (maintained by @ValdezFOmar)
 - [x] [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) ✔️ (maintained by @amaanq)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️ (maintained by @Hubro)
 - [x] [yaral](https://github.com/MXfive/tree-sitter-yaral) ✔️ (maintained by @MXfive)
