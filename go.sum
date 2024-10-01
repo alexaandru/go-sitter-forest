@@ -876,9 +876,11 @@ github.com/alexaandru/go-sitter-forest/ziggy v1.8.1 h1:nZXj9rrkwxGh5VujAtecy5Np5
 github.com/alexaandru/go-sitter-forest/ziggy v1.8.1/go.mod h1:ng1rynbDasnCbLdZ0cpajJOeDfZsr9OGPLYAtMOKchU=
 github.com/alexaandru/go-sitter-forest/ziggy_schema v1.8.1 h1:EV63jrGfajIeGvJWiuz5I8IydjwV755YTSYBTjCq9t0=
 github.com/alexaandru/go-sitter-forest/ziggy_schema v1.8.1/go.mod h1:CUa6GjlIFPDJ3QLsnbmwGWrDzrnhGImA9PWtPsqRuAM=
-github.com/alexaandru/go-tree-sitter-bare v1.6.0 h1:UEI56MuGPiOUU9w6fh0GvtMTEtwLnB+1GquR+XjY7Mg=
-github.com/alexaandru/go-tree-sitter-bare v1.6.0/go.mod h1:5gx59gMtIPOLlnrkpP1KdREczENWSpgKKBAaXsyPumE=
+github.com/alexaandru/go-tree-sitter-bare v1.6.1 h1:G1IXeoH9PggsBEYJS5Wia/dmGHZqmTZgfoghpNORzOc=
+github.com/alexaandru/go-tree-sitter-bare v1.6.1/go.mod h1:5gx59gMtIPOLlnrkpP1KdREczENWSpgKKBAaXsyPumE=
 golang.org/x/exp v0.0.0-20240823005443-9b4947da3948 h1:kx6Ds3MlpiUHKj7syVnbp57++8WpuKPcR5yjLBjvLEA=
 golang.org/x/exp v0.0.0-20240823005443-9b4947da3948/go.mod h1:akd2r19cwCdwSwWeIdzYQGa/EZZyqcOdwWiwj5L5eKQ=
+golang.org/x/exp v0.0.0-20240909161429-701f63a606c0 h1:e66Fs6Z+fZTbFBAxKfP3PALWBtpfqks2bwGcexMxgtk=
+golang.org/x/exp v0.0.0-20240909161429-701f63a606c0/go.mod h1:2TbTHSBQa924w8M6Xs1QcRcFwyucIwBGpK1p2f1YFFY=
 golang.org/x/sync v0.8.0 h1:3NFvSEYkUoMifnESzZl15y791HH1qU2xm6eCJU5ZPXQ=
 golang.org/x/sync v0.8.0/go.mod h1:Czt+wKu1gCyEFDUtn0jG5QVvpJ6rzVqr5aXyt9drQfk=

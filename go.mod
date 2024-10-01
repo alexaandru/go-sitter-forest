@@ -442,8 +442,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/zig v1.8.3
 	github.com/alexaandru/go-sitter-forest/ziggy v1.8.1
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.8.1
-	github.com/alexaandru/go-tree-sitter-bare v1.6.0
-	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948
+	github.com/alexaandru/go-tree-sitter-bare v1.6.1
+	golang.org/x/exp v0.0.0-20240909161429-701f63a606c0
 	golang.org/x/sync v0.8.0
 )
 

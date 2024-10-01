@@ -244,8 +244,8 @@ clear picture of all the changes performed to the code, changes which are detail
 
 ## Versions & Status
 
-We are currently aligned with the latest TreeSitter, `v0.23.0`: [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare)
-`v1.6.0` uses `v0.23.0` (and this project uses that latest version of
+We are currently aligned with the latest TreeSitter, `v0.23.1`: [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare)
+`v1.6.1` uses `v0.23.1` (and this project uses that latest version of
 `go-tree-sitter-bare`) and the included [package.json](package.json)
 (which is used for regenerating grammars) is using the same version.
 
