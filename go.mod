@@ -12,6 +12,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/amber v1.8.0
 	github.com/alexaandru/go-sitter-forest/angular v1.8.1
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.8.0
+	github.com/alexaandru/go-sitter-forest/anzu v1.8.0
 	github.com/alexaandru/go-sitter-forest/apex v1.8.3
 	github.com/alexaandru/go-sitter-forest/applesoft v1.8.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.8.1
@@ -244,6 +245,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move v1.8.3
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.8.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.8.0
+	github.com/alexaandru/go-sitter-forest/mylang v1.8.1
 	github.com/alexaandru/go-sitter-forest/nasm v1.8.0
 	github.com/alexaandru/go-sitter-forest/nesfab v1.8.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.8.0
@@ -435,14 +437,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.8.0
 	github.com/alexaandru/go-sitter-forest/zeek v1.8.0
 	github.com/alexaandru/go-sitter-forest/zig v1.8.3
+	github.com/alexaandru/go-sitter-forest/ziggy v1.8.0
+	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.8.0
 	github.com/alexaandru/go-tree-sitter-bare v1.6.0
 	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948
 	golang.org/x/sync v0.8.0
 )
-
-require github.com/alexaandru/go-sitter-forest/anzu v1.8.0
-
-require github.com/alexaandru/go-sitter-forest/mylang v1.8.1
 
 retract (
 	// Parsers koka and gemfilelock had a conflict.
