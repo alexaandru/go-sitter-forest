@@ -61,6 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.8.0
 	github.com/alexaandru/go-sitter-forest/context v1.8.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.8.0
+	github.com/alexaandru/go-sitter-forest/core v1.8.0
 	github.com/alexaandru/go-sitter-forest/corn v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.8.3
@@ -279,6 +280,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pic v1.8.0
 	github.com/alexaandru/go-sitter-forest/pint v1.8.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.8.0
+	github.com/alexaandru/go-sitter-forest/pkl v1.8.0
 	github.com/alexaandru/go-sitter-forest/plantuml v1.8.0
 	github.com/alexaandru/go-sitter-forest/po v1.8.0
 	github.com/alexaandru/go-sitter-forest/pod v1.8.0
@@ -429,6 +431,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xcompose v1.8.0
 	github.com/alexaandru/go-sitter-forest/xfst v1.8.0
 	github.com/alexaandru/go-sitter-forest/xml v1.8.1
+	github.com/alexaandru/go-sitter-forest/xresources v1.8.0
 	github.com/alexaandru/go-sitter-forest/yaml v1.8.0
 	github.com/alexaandru/go-sitter-forest/yang v1.8.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.8.0
