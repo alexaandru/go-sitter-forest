@@ -243,6 +243,7 @@
     "http2":              ["http2"],
     "hungarian":          ["hungarian"],
     "hurl":               ["hurl"],
+    "hygen_template":     ["hygen"],
     "hylo":               ["hylo"],
     "hyprlang":           ["hyprlang"],
     "idl":                ["idl"],

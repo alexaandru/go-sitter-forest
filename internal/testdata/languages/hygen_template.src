@@ -1,0 +1,7 @@
+---
+to: app/emails/<%= name %>.html
+---
+
+Hello <%= name %>,
+<%= message %>
+(version <%= version %>)

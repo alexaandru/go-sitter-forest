@@ -1,4 +1,4 @@
-# 439 Supported Parsers
+# 440 Supported Parsers
 
 9 pending, 8 skipped regeneration, 30 missing queries
 
@@ -181,6 +181,7 @@
 - [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz; is looking for an external scanner but none is present in the repo)
 - [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️ (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️ (maintained by @pfeiferj)
+- [x] [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template) ✔️ (maintained by @Hdoc1509)
 - [x] [hylo](https://github.com/natsukagami/tree-sitter-hylo) ✔️ (maintained by @natsukagami)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️ (maintained by @luckasRanarison)
 - [x] [idl](https://github.com/cathaysia/tree-sitter-idl) ✔️ (maintained by @cathaysa)

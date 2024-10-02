@@ -1686,6 +1686,14 @@
   },
   {
     "reference": "master",
+    "revision": "e99184a7f66274618a59475e45382a26b3e85b8a",
+    "grammarSha": "0a5c036c4a309f8f2e868ebafe8212237448e8f99ee38e31319545a380465337",
+    "language": "hygen_template",
+    "url": "https://github.com/Hdoc1509/tree-sitter-hygen-template",
+    "maintainedBy": "@Hdoc1509"
+  },
+  {
+    "reference": "master",
     "revision": "494cbdff0d13cbc67348316af2efa0286dbddf6f",
     "grammarSha": "febbbbbf4f5f67b9b70ab5325c6f2ca21a077f46ce55a11ea6742d3f70827fb4",
     "language": "hylo",

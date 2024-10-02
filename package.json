@@ -19,6 +19,7 @@
     "tree-sitter-json": "^0.23.0",
     "tree-sitter-jsonc": "^0.3.0",
     "@tree-sitter-grammars/tree-sitter-lua": "0.1.0",
+    "tree-sitter-embedded-template": "^0.23.0",
     "tree-sitter-php": "0.22.2",
     "tree-sitter-python": "^0.23.2",
     "tree-sitter-rust": "^0.23.0",
