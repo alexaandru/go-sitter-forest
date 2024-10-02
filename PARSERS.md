@@ -1,6 +1,6 @@
 # 440 Supported Parsers
 
-9 pending, 8 skipped regeneration, 30 missing queries
+9 pending, 9 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -63,7 +63,7 @@
 - [x] [commonlisp](https://github.com/tree-sitter-grammars/tree-sitter-commonlisp) ✔️ (maintained by @theHamsta)
 - [x] [context](https://github.com/pmazaitis/tree-sitter-context) ✔️ (maintained by @pmazaitis)
 - [x] [cooklang](https://github.com/addcninblue/tree-sitter-cooklang) ✔️ (maintained by @addcninblue)
-- [x] [Cerberus Core](https://github.com/rems-project/tree-sitter-core) ✔️ (maintained by @vzaliva)
+- [x] [Cerberus Core](https://github.com/rems-project/tree-sitter-core) ✔️ (maintained by @vzaliva; ❌thread 'main' panicked at cli/src/generate/render.rs:1146:36: no entry found for key)
 - [x] [corn](https://github.com/corn-config/tree-sitter-corn) ✔️ (maintained by @jakestanger)
 - [x] [cpon](https://github.com/tree-sitter-grammars/tree-sitter-cpon) ✔️ (maintained by @amaanq)
 - [x] [cpp](https://github.com/tree-sitter/tree-sitter-cpp) ✔️ (maintained by @theHamsta)

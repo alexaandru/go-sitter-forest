@@ -634,7 +634,7 @@ func regenerateGrammar(gr *grammar.Grammar) (err error) {
 	defer sem.Release(1)
 
 	tmpPath := filepath.Join("tmp", gr.Language)
-	cmd := exec.Command("npx", "tree-sitter", "generate")
+	cmd := exec.Command("npx", "tree-sitter", "generate", "--no-bindings")
 	cmd.Dir = tmpPath
 
 	var (

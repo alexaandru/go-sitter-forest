@@ -1,9 +1,11 @@
 {
   "reference": "main",
-  "revision": "57e5633b822d6a08d1eb3a52c5f737cfb3cc6e9f",
+  "revision": "e3ed98c468661f2468f6ddf3924476e5271cca75",
   "grammarSha": "50c3a904d915bf96ab80e33754c4197b59a6bdc317a72b6db3981489acfc68dc",
   "language": "core",
   "altName": "Cerberus Core",
   "url": "https://github.com/rems-project/tree-sitter-core",
-  "maintainedBy": "@vzaliva"
+  "doc": "thread 'main' panicked at cli/src/generate/render.rs:1146:36: no entry found for key",
+  "maintainedBy": "@vzaliva",
+  "skip": true
 }
