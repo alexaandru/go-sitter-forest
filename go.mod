@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.8.0
 	github.com/alexaandru/go-sitter-forest/context v1.8.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.8.0
-	github.com/alexaandru/go-sitter-forest/core v1.8.0
+	github.com/alexaandru/go-sitter-forest/core v1.8.1
 	github.com/alexaandru/go-sitter-forest/corn v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.8.3
@@ -100,7 +100,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/elsa v1.8.0
 	github.com/alexaandru/go-sitter-forest/elvish v1.8.0
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.8.0
-	github.com/alexaandru/go-sitter-forest/erlang v1.8.0
+	github.com/alexaandru/go-sitter-forest/erlang v1.8.1
 	github.com/alexaandru/go-sitter-forest/facility v1.8.0
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.8.1
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.8.0
@@ -110,7 +110,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.10
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.11
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
@@ -208,7 +208,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.8.1
 	github.com/alexaandru/go-sitter-forest/kusto v1.8.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.8.1
-	github.com/alexaandru/go-sitter-forest/lart v1.8.5
+	github.com/alexaandru/go-sitter-forest/lart v1.8.6
 	github.com/alexaandru/go-sitter-forest/lat v1.8.0
 	github.com/alexaandru/go-sitter-forest/latex v1.8.3
 	github.com/alexaandru/go-sitter-forest/ldg v1.8.0
@@ -274,8 +274,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.8.5
 	github.com/alexaandru/go-sitter-forest/perm v1.8.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.8.8
-	github.com/alexaandru/go-sitter-forest/php v1.8.1
-	github.com/alexaandru/go-sitter-forest/php_only v1.8.1
+	github.com/alexaandru/go-sitter-forest/php v1.8.2
+	github.com/alexaandru/go-sitter-forest/php_only v1.8.2
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.2
 	github.com/alexaandru/go-sitter-forest/pic v1.8.0
 	github.com/alexaandru/go-sitter-forest/pint v1.8.0
@@ -316,7 +316,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rbs v1.8.0
 	github.com/alexaandru/go-sitter-forest/rcl v1.8.0
 	github.com/alexaandru/go-sitter-forest/re2c v1.8.1
-	github.com/alexaandru/go-sitter-forest/readline v1.8.0
+	github.com/alexaandru/go-sitter-forest/readline v1.8.1
 	github.com/alexaandru/go-sitter-forest/regex v1.8.0
 	github.com/alexaandru/go-sitter-forest/rego v1.8.0
 	github.com/alexaandru/go-sitter-forest/requirements v1.8.0
@@ -363,7 +363,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.8.0
 	github.com/alexaandru/go-sitter-forest/starlark v1.8.0
 	github.com/alexaandru/go-sitter-forest/strace v1.8.0
-	github.com/alexaandru/go-sitter-forest/styled v1.8.0
+	github.com/alexaandru/go-sitter-forest/styled v1.8.1
 	github.com/alexaandru/go-sitter-forest/supercollider v1.8.1
 	github.com/alexaandru/go-sitter-forest/surface v1.8.0
 	github.com/alexaandru/go-sitter-forest/surrealql v1.8.0
@@ -446,6 +446,8 @@ require (
 	golang.org/x/exp v0.0.0-20240909161429-701f63a606c0
 	golang.org/x/sync v0.8.0
 )
+
+require github.com/alexaandru/go-sitter-forest/hygen_template v1.8.0
 
 retract (
 	// Parsers koka and gemfilelock had a conflict.
