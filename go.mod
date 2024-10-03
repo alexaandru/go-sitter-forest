@@ -70,6 +70,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/csv v1.8.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.8.2
 	github.com/alexaandru/go-sitter-forest/cue v1.8.0
+	github.com/alexaandru/go-sitter-forest/cylc v1.8.0
 	github.com/alexaandru/go-sitter-forest/d v1.8.3
 	github.com/alexaandru/go-sitter-forest/d2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/dale v1.8.0
@@ -176,6 +177,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http2 v1.8.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.8.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.8.1
+	github.com/alexaandru/go-sitter-forest/hygen_template v1.8.0
 	github.com/alexaandru/go-sitter-forest/hylo v1.8.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.8.0
 	github.com/alexaandru/go-sitter-forest/idl v1.8.0
@@ -446,8 +448,6 @@ require (
 	golang.org/x/exp v0.0.0-20240909161429-701f63a606c0
 	golang.org/x/sync v0.8.0
 )
-
-require github.com/alexaandru/go-sitter-forest/hygen_template v1.8.0
 
 retract (
 	// Parsers koka and gemfilelock had a conflict.
