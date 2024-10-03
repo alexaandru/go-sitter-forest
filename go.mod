@@ -10,7 +10,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
 	github.com/alexaandru/go-sitter-forest/al v1.8.0
 	github.com/alexaandru/go-sitter-forest/amber v1.8.0
-	github.com/alexaandru/go-sitter-forest/angular v1.8.1
+	github.com/alexaandru/go-sitter-forest/angular v1.8.2
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.8.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.8.0
 	github.com/alexaandru/go-sitter-forest/apex v1.8.3
@@ -111,14 +111,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.8.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.8.0
 	github.com/alexaandru/go-sitter-forest/fish v1.8.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.8.11
+	github.com/alexaandru/go-sitter-forest/flamingo v1.8.12
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.8.1
 	github.com/alexaandru/go-sitter-forest/foam v1.8.0
 	github.com/alexaandru/go-sitter-forest/forth v1.8.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.8.2
 	github.com/alexaandru/go-sitter-forest/fsh v1.8.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.8.9
-	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.7
+	github.com/alexaandru/go-sitter-forest/fsharp v1.8.10
+	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.8
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.8.1
@@ -428,12 +428,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.8.0
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.8.0
 	github.com/alexaandru/go-sitter-forest/wing v1.8.4
-	github.com/alexaandru/go-sitter-forest/wit v1.8.0
+	github.com/alexaandru/go-sitter-forest/wit v1.8.1
 	github.com/alexaandru/go-sitter-forest/woml v1.8.0
 	github.com/alexaandru/go-sitter-forest/xcompose v1.8.0
 	github.com/alexaandru/go-sitter-forest/xfst v1.8.0
 	github.com/alexaandru/go-sitter-forest/xml v1.8.1
-	github.com/alexaandru/go-sitter-forest/xresources v1.8.0
+	github.com/alexaandru/go-sitter-forest/xresources v1.8.1
 	github.com/alexaandru/go-sitter-forest/yaml v1.8.0
 	github.com/alexaandru/go-sitter-forest/yang v1.8.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.8.0
