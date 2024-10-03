@@ -149,6 +149,7 @@
     "csv":                ["csv"],
     "cuda":               ["cu", "cuh"],
     "cue":                ["cue"],
+    "cylc":               ["cylc", "rc"],
     "d2":                 ["d2"],
     "d":                  ["d", "di"],
     "dale":               ["dale"],

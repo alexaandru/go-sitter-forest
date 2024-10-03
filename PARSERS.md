@@ -1,4 +1,4 @@
-# 440 Supported Parsers
+# 441 Supported Parsers
 
 9 pending, 9 skipped regeneration, 30 missing queries
 
@@ -73,6 +73,7 @@
 - [x] [csv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
 - [x] [cuda](https://github.com/tree-sitter-grammars/tree-sitter-cuda) ✔️ (maintained by @theHamsta)
 - [x] [cue](https://github.com/eonpatapon/tree-sitter-cue) ✔️ (maintained by @amaanq)
+- [x] [cylc](https://github.com/elliotfontaine/tree-sitter-cylc) ✔️ (maintained by @elliotfontaine)
 - [x] [d](https://github.com/gdamore/tree-sitter-d) ✔️ (maintained by @amaanq)
 - [x] [d2](https://codeberg.org/p8i/tree-sitter-d2) ✔️ (maintained by @p8i)
 - [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️ (maintained by @lomisk; ❌repository was removed by owner)

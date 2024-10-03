@@ -1,0 +1,92 @@
+#!Jinja2
+
+[meta]
+    title = Real time satellite data processing demo, variant 3 of 3
+
+{% set N_DATASETS = 5 %}
+
+[scheduling]
+    cycling mode = integer
+    initial cycle point = 1
+    final cycle point = {{N_DATASETS}}
+    [[special tasks]]
+        external-trigger = get_data("new dataset ready for processing")
+    [[graph]]
+        R1 = prep => satsim & get_data
+        P1 = """
+            get_data => proc1 => proc2 => products # Processing chain for each dataset
+            get_data[-P1] => get_data # As one dataset is retrieved, start waiting on another.
+        """
+        R1//{{N_DATASETS}} = products => collate # last cycle
+
+[runtime]
+    [[prep]]
+        script = rm -rf $CYLC_WORKFLOW_SHARE_DIR $CYLC_WORKFLOW_WORK_DIR
+        [[[meta]]]
+            title = clean the workflow output directories
+    [[satsim]]
+        pre-script = mkdir -p $CYLC_WORKFLOW_SHARE_DIR/incoming
+        script = """
+            COUNT=0
+            while true; do
+                ((COUNT == {{N_DATASETS}})) && break
+                # sleep $((RANDOM % 20))
+                # Generate datasets very quickly to test parallel processing.
+                DATA_ID=$(date +%s).$((RANDOM % 100))
+                DATA_FILE=dataset-${DATA_ID}.raw
+                touch $CYLC_WORKFLOW_SHARE_DIR/incoming/$DATA_FILE
+                ((COUNT += 1))
+                # (required to distinguish fast-arriving messages).
+                # Trigger downstream processing in the workflow.
+                cylc ext-trigger $CYLC_WORKFLOW_ID \
+                   "new dataset ready for processing" $DATA_ID
+            done
+        """
+        [[[meta]]]
+            title = simulate a satellite data feed
+            description = """
+                Generates {{N_DATASETS}} arbitrarily labelled datasets very
+                quickly, to show parallel processing streams.
+            """
+    [[WORKDIR]]
+        # Define a common cycle-point-specific work-directory for all
+        # processing tasks so that they all work on the same dataset.
+        work sub-directory = proc-$CYLC_TASK_CYCLE_POINT
+        post-script = sleep 5
+        [[[environment]]]
+            DATASET = dataset-$CYLC_EXT_TRIGGER_ID
+
+    [[get_data]]
+        inherit = WORKDIR
+        script = mv $CYLC_WORKFLOW_SHARE_DIR/incoming/${DATASET}.raw $PWD
+        [[[meta]]]
+            title = retrieve next dataset
+            description = just do it - we know it exists already
+  [[proc1]]
+        inherit = WORKDIR
+        script = mv ${DATASET}.raw ${DATASET}.proc1
+        [[[meta]]]
+            title = convert .raw dataset to .proc1 form
+   [[proc2]]
+        inherit = WORKDIR
+        script = mv ${DATASET}.proc1 ${DATASET}.proc2
+        [[[meta]]]
+            title = convert .proc1 dataset to .proc2 form
+   [[products]]
+        inherit = WORKDIR
+        script = """
+            mkdir -p $CYLC_WORKFLOW_SHARE_DIR/products
+            mv ${DATASET}.proc2 $CYLC_WORKFLOW_SHARE_DIR/products/${DATASET}.prod
+        """
+        [[[meta]]]
+            title = generate products from .proc2 processed dataset
+    [[collate]]
+        # Note you might want to use "cylc workflow-state" to check that
+        # _all_ product tasks have finished before collating results.
+        script = """
+            echo PRODUCTS:
+            ls $CYLC_WORKFLOW_SHARE_DIR/products
+            sleep 20
+        """
+        [[[meta]]]
+            title = collate all products from the workflow run
