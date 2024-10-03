@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "f920105eec2d574eb911d7a25c81cdaa079a3f72",
-  "grammarSha": "ce0813596596e68e88b202857ae638a5c1b2c9db6fc371e79c6d244939b04e70",
+  "revision": "5202637c203fcf8876affbd18b04ff43256d4c4a",
+  "grammarSha": "4dd257dce33d97401e886c486e69d3ad10b44b72f9ac2b1520cecf4df018c086",
   "language": "fsharp_signature",
   "url": "https://github.com/ionide/tree-sitter-fsharp",
   "maintainedBy": "@Nsidorenco",
