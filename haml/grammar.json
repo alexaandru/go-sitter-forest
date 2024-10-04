@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "d6d3cd95fb9e40937da112f219417fb76ad2cab9",
+  "revision": "337567be17c7d68f8a87f4e0f18b40b01b2c09af",
   "grammarSha": "2e9bef1d3bdbe476e2022ec7db16dbfeda3150d56336d391865d053d87ce5906",
   "language": "haml",
   "url": "https://github.com/vitallium/tree-sitter-haml",

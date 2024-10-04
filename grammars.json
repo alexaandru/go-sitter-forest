@@ -47,8 +47,8 @@
   },
   {
     "reference": "main",
-    "revision": "7c2e479b148fe632a4c1751b285ad7224d861093",
-    "grammarSha": "14419cdb4b4a9080e61fa1d0b04b79728cc265edffe4e3c24c5205a72990ecf9",
+    "revision": "88103875b2fb61add20d1772942d40354b1f7132",
+    "grammarSha": "863ab978b11140b6a2c215c843a27f266c7470c7bd766c9704f54f0fbbcc794c",
     "language": "al",
     "url": "https://github.com/SShadowS/tree-sitter-al",
     "maintainedBy": "@SShadowS"
@@ -562,7 +562,7 @@
   },
   {
     "reference": "main",
-    "revision": "e3ed98c468661f2468f6ddf3924476e5271cca75",
+    "revision": "f3a2e52a64f49ae3cb739c08e15fdd1799c44cf3",
     "grammarSha": "50c3a904d915bf96ab80e33754c4197b59a6bdc317a72b6db3981489acfc68dc",
     "language": "core",
     "altName": "Cerberus Core",
@@ -1492,7 +1492,7 @@
   },
   {
     "reference": "main",
-    "revision": "d6d3cd95fb9e40937da112f219417fb76ad2cab9",
+    "revision": "337567be17c7d68f8a87f4e0f18b40b01b2c09af",
     "grammarSha": "2e9bef1d3bdbe476e2022ec7db16dbfeda3150d56336d391865d053d87ce5906",
     "language": "haml",
     "url": "https://github.com/vitallium/tree-sitter-haml",
@@ -1696,7 +1696,7 @@
   },
   {
     "reference": "master",
-    "revision": "99b079d5bfd85cfc87a6835d28e6fc17096eb0f7",
+    "revision": "e72b72494f5b6c814746c2a095d7117c178f7e2f",
     "grammarSha": "0a5c036c4a309f8f2e868ebafe8212237448e8f99ee38e31319545a380465337",
     "language": "hygen_template",
     "url": "https://github.com/Hdoc1509/tree-sitter-hygen-template",
@@ -2474,7 +2474,7 @@
   },
   {
     "reference": "master",
-    "revision": "49adb0f7656fe1737bb11aff593692157905d1b1",
+    "revision": "46a88861e76f110ad3d6cae735b2bbe46ca4fc24",
     "grammarSha": "a62b81c1d6d2b2b2754ca6ed03fff42331710beba5d5e471859eca90d0542899",
     "language": "nix",
     "url": "https://github.com/nix-community/tree-sitter-nix",
@@ -2671,7 +2671,7 @@
   },
   {
     "reference": "master",
-    "revision": "a342f7c0ad1db48afc6d2420cdd87b55b51a0644",
+    "revision": "07a04599ed9ac97f82c6383a24ae139a807930f3",
     "grammarSha": "d9069e21a9131448988495977ba8453245ddfd8b36e4060d5bcedfb67ba7bd3d",
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -2684,7 +2684,7 @@
   },
   {
     "reference": "master",
-    "revision": "a342f7c0ad1db48afc6d2420cdd87b55b51a0644",
+    "revision": "07a04599ed9ac97f82c6383a24ae139a807930f3",
     "grammarSha": "f90f27fe56fd41b6f8885e206c3fd82d8ea90f5c397009dd98d7da849c0856dc",
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -2933,7 +2933,7 @@
   },
   {
     "reference": "main",
-    "revision": "dee98d38e5f93a9a7e069d69ede83a37963129a3",
+    "revision": "2c3433ece05adeadeb9a9d998b7104682f43895f",
     "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
@@ -3343,7 +3343,7 @@
   },
   {
     "reference": "master",
-    "revision": "37c8e12ee1198f41d4eb5cc58d21a9c21196224f",
+    "revision": "4e2765d4cac1f03ada6f635eeb6008d1d0aff5a3",
     "grammarSha": "40bc54c63ccec958dbb383cc9b0014bff4828df7690ebd6f1a6aefcad292247e",
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
@@ -3453,8 +3453,8 @@
   },
   {
     "reference": "main",
-    "revision": "6f5be56dc1f822d034b2320ff9bb1258b8881694",
-    "grammarSha": "a7578f9b3a3e4f1204fb0777030d7fd584e27716fdbcf571c1d3778e2cf46662",
+    "revision": "c4c6900cba1fa80b32ddd7a495692d87a96ada9c",
+    "grammarSha": "df57fcf05ee9a011773c75540b7048ca8a22eedfae15f915d9671e92c0a87d07",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
     "maintainedBy": "@bbannier"
@@ -3940,8 +3940,8 @@
   },
   {
     "reference": "master",
-    "revision": "59d36a09282be7e4d3374854126590f3dcebee6e",
-    "grammarSha": "f24f6e98daf9fefb100c9ede63f7529688821179eae538b800ec71cf2bc9bce8",
+    "revision": "985aaf5857a61fad3aeb262e64816105b746ad30",
+    "grammarSha": "2ec9983b17196c5a7e0c42c4962078b4bec7323cf1f842c5f1bda53c9c69ad7e",
     "language": "unison",
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
     "maintainedBy": "@tapegram",

@@ -332,7 +332,7 @@ static void MARK(char *marked_by, bool needs_free, State *state) {
 /**
  * The set of conditions used in the parser implementation.
  */
- 
+
 static bool seq(const char * restrict s, State *state) {
   size_t len = strlen(s);
   for (size_t i = 0; i < len; i++) {
@@ -343,7 +343,7 @@ static bool seq(const char * restrict s, State *state) {
   }
   return true;
 }
- 
+
 #define WS_CASES \
   case ' ': \
   case '\f': \
@@ -361,7 +361,7 @@ static bool isws(uint32_t c) {
     default: return false;
   }
 }
- 
+
 /**
  * A token like a varsym can be terminated by whitespace or brackets.
  */
@@ -378,7 +378,7 @@ static bool token_end(uint32_t c) {
       return false;
   }
 }
- 
+
 /**
  * Require that the argument string follows the current position and is followed by whitespace.
  * See `seq`
@@ -386,13 +386,13 @@ static bool token_end(uint32_t c) {
 static bool token(const char *restrict s, State *state) {
   return seq(s, state) && token_end(PEEK);
 }
- 
+
 /**
  * Require that the stack of layout indentations is not empty.
  * This is mostly used for safety.
  */
 static bool indent_exists(State *state) { return state->indents->len != 0; };
- 
+
 /**
  * Require that the current line's indent is greater or equal than the containing layout's, so the current layout is
  * continued.
@@ -400,12 +400,12 @@ static bool indent_exists(State *state) { return state->indents->len != 0; };
 // static bool keep_layout(uint16_t indent, State *state) {
   // return indent_exists(state) && indent >= VEC_BACK(state->indents);
 // }
- 
+
 /**
  * Require that the current line's indent is equal to the containing layout's, so the line may start a new `decl`.
  */
 static bool same_indent(uint32_t indent, State *state) { return indent_exists(state) && indent == VEC_BACK(state->indents); }
- 
+
 /**
  * Require that the current line's indent is smaller than the containing layout's, so the layout may be ended.
  */
@@ -413,7 +413,7 @@ static bool smaller_indent(uint32_t indent, State *state) {
   LOG(INFO, "->smaller_indent (indent = %u, col = %u, PEEK = %c, indent exists: %s)\n", indent, COL, PEEK, indent_exists(state) ? "yes" : "no");
   return indent_exists(state) && indent < VEC_BACK(state->indents);
 }
- 
+
 static bool indent_lesseq(uint32_t indent, State *state) { return indent_exists(state) && indent <= VEC_BACK(state->indents); }
 
 
@@ -605,7 +605,7 @@ static Result end_or_semicolon(char *desc, State *state) {
 /**
  * These parsers constitute the higher-level logic, loosely.
  */
- 
+
 /**
  * Advance the parser until a non-whitespace character is encountered, while counting whitespace according to the rules
  * in the syntax reference, resetting the counter on each newline.
@@ -633,7 +633,7 @@ static uint32_t count_indent(State *state) {
     }
   }
 }
- 
+
 /** End-of-file check.
  *
  * If EOF has been reached, two scenarios are valid:
@@ -655,7 +655,7 @@ static Result eof(State *state) {
   }
   return res_cont;
 }
- 
+
  /**
  * NOT NECESSARY IN UNISON. JUST HASKELL.
  * Set the initial indentation at the beginning of the file or module decl to the column of first nonwhite character,
@@ -673,7 +673,7 @@ static Result eof(State *state) {
   // }
   // return res_cont;
 // }
- 
+
  // NOT NECESSARY IN UNISON. JUST HASKELL.
  // static Result initialize_init(State *state) {
   // if (uninitialized(state)) {
@@ -726,7 +726,7 @@ static Result hash(State *state) {
   }
   return res_cont;
 }
- 
+
 /**
  * Check for fold. However, because check for fold consumes -- it needs to consider line comments as well.
  */
@@ -736,6 +736,7 @@ static Result fold(State *state) {
     LOG(VERBOSE, "--- and PEEK is %c@%u\n", PEEK, column(state));
     switch(PEEK) {
       case '-': { // FOLD
+        // TODO ADVANCE and PEEK, it's only FOLD if newline!!
         while(!is_eof(state)) S_ADVANCE;
         LOG(VERBOSE, "after advancing, PEEK is %c and should be EOF: %s\n", PEEK, is_eof(state) ? "true" : "false");
         MARK("fold", false, state);
@@ -751,7 +752,7 @@ static Result fold(State *state) {
   }
   return res_cont;
 }
- 
+
 /**
  * End a layout by removing an indentation from the stack, but only if the current column (which should be in the next
  * line after skipping whitespace) is smaller than the layout indent.
@@ -762,7 +763,7 @@ static Result dedent(uint32_t indent, State *state) {
   if (smaller_indent(indent, state)) return layout_end("dedent", state);
   return res_cont;
 }
- 
+
 /**
  * Succeed if a `where` on a newline can end a statement or layout (see `is_newline_where`).
  *
@@ -778,7 +779,7 @@ static Result dedent(uint32_t indent, State *state) {
 //   }
 //   return res_cont;
 // }
- 
+
 /**
  * Succeed for `SEMICOLON` if the indent of the next line is equal to the current layout's.
  */
@@ -809,7 +810,7 @@ static Result where_or_with(State *state) {
   }
   return res_cont;
 }
- 
+
 /**
  * An `in` token ends the layout openend by a `let` and its nested layouts.
  */
@@ -897,7 +898,7 @@ static Result equals(State *state) {
 static Result paren_symop(State *state) {
   LOG(INFO, "->paren_symop (col = %u, peek = %c)\n", COL, PEEK);
   if (PEEK != '(') {
-    return res_cont; 
+    return res_cont;
   }
   S_ADVANCE;
   skipspace(state);
@@ -964,9 +965,9 @@ static bool found_pipe_or_logical_op(uint8_t pipe_count, uint8_t amp_count) {
  */
 static Result operator(State *state) {
   LOG(INFO, "->operator (%u, %c)\n", COL, PEEK);
-  
+
   if (is_eof(state)) return res_cont;
-  
+
   // Process WATCH
   if (COL == 0 && PEEK == '>') {
     S_ADVANCE;
@@ -975,20 +976,20 @@ static Result operator(State *state) {
       return finish_if_valid(WATCH, "watch", state);
     }
   }
-  
+
   if (PEEK == '(') {
     Result res = paren_symop(state);
     SHORT_SCANNER;
   }
-  
+
   bool parenthesized = false;
-  
+
   if (!symbolic(PEEK)) return res_fail;
   if (PEEK == '=') {
     Result res = equals(state);
     SHORT_SCANNER;
   }
-  
+
   // Detect bangs and let JS handle them
   if ( PEEK == '!') {
     S_ADVANCE;
@@ -1000,13 +1001,13 @@ static Result operator(State *state) {
   uint8_t and_count = 0;
   uint8_t or_count = 0;
   bool previous_was_colon = false;
-    
+
   /*
    * scan until:
    * - if parenthesized and space, skip all succeeding spaces
    * - if parenthesized and `)`, return successful operator
    * - if non-symbolic, succeed without advancing
-   * 
+   *
    */
   while (!is_eof(state)) {
     LOG(VERBOSE, "[operator] Looping with PEEK = %c\n", PEEK);
@@ -1032,7 +1033,7 @@ static Result operator(State *state) {
       }
       S_ADVANCE;
       MARK("operator", false, state);
-    } else if (parenthesized && PEEK == ' ') { 
+    } else if (parenthesized && PEEK == ' ') {
       skipspace(state);
     } else if (parenthesized && PEEK == ')') {
       S_ADVANCE;
@@ -1054,7 +1055,7 @@ static Result operator(State *state) {
  * The following cases must be handled:
  // * 2. SYMOP that begins with +/- and is terminated by whitespace or ')', the latter of which indicates a parenthetical operator
  // * 3. post-sign symbolic chars as SYMOP
- // * 4. 
+ // * 4.
  */
 static Result post_pos_neg_sign(State *state, bool can_be_operator) {
   (void) can_be_operator; // suppresses "unused variable" warning
@@ -1126,11 +1127,11 @@ static Result minus(State *state) {
         } else {
           return res_fail;
         }
-      } 
+      }
       return inline_comment(state);
-    } 
+    }
   }
-  return res_cont;  
+  return res_cont;
 }
 
 /**
@@ -1284,7 +1285,7 @@ static Result comment(State *state) {
   }
   return res_cont;
 }
- 
+
 static Result close_layout_in_list(State *state) {
   switch (PEEK) {
     case ']': {
@@ -1334,7 +1335,7 @@ static Result close_layout_in_list(State *state) {
 
 
 /**
- * Parse things that begin with `-`. This is 
+ * Parse things that begin with `-`. This is
  * 1. symops
  * 2. negative numbers
  * 3. inline comment (TODO)
@@ -1574,7 +1575,7 @@ static Result post_end_semicolon(uint32_t column, State *state) {
     : res_cont;
 }
 
-/** 
+/**
  * Like `post_end_semicolon`, but for layout end.
  */
 static Result repeat_end(uint32_t column, State *state) {
@@ -1584,7 +1585,7 @@ static Result repeat_end(uint32_t column, State *state) {
   }
   return res_cont;
 }
- 
+
 /**
  * Rules that decide based on the indent of the next line.
  */
@@ -1596,7 +1597,7 @@ static Result newline_indent(uint32_t indent, State *state) {
   SHORT_SCANNER;
   return newline_semicolon(indent, state);
 }
- 
+
 /**
  * Rules that decide based on the first token on the next line.
  * - starts with `-` (COMMENT, FOLD)
@@ -1641,7 +1642,7 @@ static Result newline_token(uint32_t indent, State *state) {
   if (PEEK == 'i') return in(state);
   return res_cont;
 }
- 
+
 /**
  * To be called after parsing a newline, with the indent of the next line as argument.
  */
@@ -1662,9 +1663,9 @@ static Result newline(uint32_t indent, State *state) {
   res = newline_indent(indent, state);
   SHORT_SCANNER;
   return newline_token(indent, state);
-  
+
 }
-      
+
 /**
  * Parsers that have to run when the next non-space character is not a newline:
  *
@@ -1697,27 +1698,27 @@ static Result immediate(uint32_t column, State *state) {
  */
 static Result init(State *state) {
   LOG(INFO, "->init (col = %u, PEEK = %c)\n", COL, PEEK);
-  
+
   Result res = after_error(state) ? res_fail : res_cont;
   SHORT_SCANNER;
-  
+
   res = eof(state);
   SHORT_SCANNER;
-  
-  
+
+
   // res = after_error(state) ? res_fail : res_cont;
   // SHORT_SCANNER;
-  
-  
+
+
   // res = initialize_init(state);
   // SHORT_SCANNER;
   res = hash(state);
-  SHORT_SCANNER;  
+  SHORT_SCANNER;
   if (SYM(FOLD)) {
     res = fold(state);
     SHORT_SCANNER;
   }
-  
+
   // if (state->symbols[QQ_BODY]) {
     // return qq_body(state);
   // }
@@ -1835,7 +1836,7 @@ bool tree_sitter_unison_external_scanner_scan(void *indents_v, TSLexer *lexer, c
   };
   LOG(WARN, "===================\nBeginning scanner\n");
   debug_state(&state);
-#if DEBUG 
+#if DEBUG
   if (state.needs_free) free(state.marked_by);
 #endif
   bool res = eval(scan_all, &state);
@@ -1887,4 +1888,4 @@ void tree_sitter_unison_external_scanner_destroy(void *indents_v) {
   // #ifdef DEBUG
   // assert()
   // #endif
-// } 
+// }
