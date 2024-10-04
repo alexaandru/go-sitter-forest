@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.8.0
 	github.com/alexaandru/go-sitter-forest/agda v1.8.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.8.0
-	github.com/alexaandru/go-sitter-forest/al v1.8.0
+	github.com/alexaandru/go-sitter-forest/al v1.8.1
 	github.com/alexaandru/go-sitter-forest/amber v1.8.0
 	github.com/alexaandru/go-sitter-forest/angular v1.8.2
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.8.0
@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.8.0
 	github.com/alexaandru/go-sitter-forest/context v1.8.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.8.0
-	github.com/alexaandru/go-sitter-forest/core v1.8.1
+	github.com/alexaandru/go-sitter-forest/core v1.8.2
 	github.com/alexaandru/go-sitter-forest/corn v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.8.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.8.3
@@ -356,7 +356,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.8.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.8.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.8.2
-	github.com/alexaandru/go-sitter-forest/spicy v1.8.1
+	github.com/alexaandru/go-sitter-forest/spicy v1.8.2
 	github.com/alexaandru/go-sitter-forest/sql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.8.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.8.0
@@ -407,7 +407,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.8.0
 	github.com/alexaandru/go-sitter-forest/uiua v1.8.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.8.0
-	github.com/alexaandru/go-sitter-forest/unison v1.8.0
+	github.com/alexaandru/go-sitter-forest/unison v1.8.1
 	github.com/alexaandru/go-sitter-forest/ursa v1.8.8
 	github.com/alexaandru/go-sitter-forest/usd v1.8.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.8.0
