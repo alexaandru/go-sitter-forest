@@ -13,7 +13,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.8.2
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.8.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.8.0
-	github.com/alexaandru/go-sitter-forest/apex v1.8.3
+	github.com/alexaandru/go-sitter-forest/apex v1.8.4
 	github.com/alexaandru/go-sitter-forest/applesoft v1.8.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.8.1
 	github.com/alexaandru/go-sitter-forest/asm v1.8.0
@@ -81,7 +81,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.8.0
 	github.com/alexaandru/go-sitter-forest/diff v1.8.0
 	github.com/alexaandru/go-sitter-forest/disassembly v1.8.0
-	github.com/alexaandru/go-sitter-forest/djot v1.8.0
+	github.com/alexaandru/go-sitter-forest/djot v1.8.1
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.8.0
 	github.com/alexaandru/go-sitter-forest/dot v1.8.0
 	github.com/alexaandru/go-sitter-forest/dotenv v1.8.0
@@ -157,7 +157,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.8.2
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.8.0
 	github.com/alexaandru/go-sitter-forest/hack v1.8.0
-	github.com/alexaandru/go-sitter-forest/haml v1.8.0
+	github.com/alexaandru/go-sitter-forest/haml v1.8.1
 	github.com/alexaandru/go-sitter-forest/hare v1.8.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.8.2
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.8.0
@@ -275,14 +275,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/pem v1.8.0
 	github.com/alexaandru/go-sitter-forest/perl v1.8.5
 	github.com/alexaandru/go-sitter-forest/perm v1.8.0
-	github.com/alexaandru/go-sitter-forest/pgn v1.8.8
+	github.com/alexaandru/go-sitter-forest/pgn v1.8.9
 	github.com/alexaandru/go-sitter-forest/php v1.8.2
 	github.com/alexaandru/go-sitter-forest/php_only v1.8.2
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.8.2
 	github.com/alexaandru/go-sitter-forest/pic v1.8.0
 	github.com/alexaandru/go-sitter-forest/pint v1.8.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.8.0
-	github.com/alexaandru/go-sitter-forest/pkl v1.8.0
+	github.com/alexaandru/go-sitter-forest/pkl v1.8.1
 	github.com/alexaandru/go-sitter-forest/plantuml v1.8.0
 	github.com/alexaandru/go-sitter-forest/po v1.8.0
 	github.com/alexaandru/go-sitter-forest/pod v1.8.0
@@ -356,7 +356,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.8.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.8.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.8.2
-	github.com/alexaandru/go-sitter-forest/spicy v1.8.2
+	github.com/alexaandru/go-sitter-forest/spicy v1.8.3
 	github.com/alexaandru/go-sitter-forest/sql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.8.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.8.0
@@ -407,7 +407,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.8.0
 	github.com/alexaandru/go-sitter-forest/uiua v1.8.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.8.0
-	github.com/alexaandru/go-sitter-forest/unison v1.8.1
+	github.com/alexaandru/go-sitter-forest/unison v1.8.2
 	github.com/alexaandru/go-sitter-forest/ursa v1.8.8
 	github.com/alexaandru/go-sitter-forest/usd v1.8.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.8.0
