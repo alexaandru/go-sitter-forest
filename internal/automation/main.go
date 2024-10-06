@@ -574,6 +574,7 @@ func extractDeps(lang string, content []byte) (deps []string) {
 		deps = append(deps, "../common/html_entities.json")
 	case "unison":
 		deps = append(deps, "./grammar/precedences.js", "./grammar/function-application.js")
+		deps = slices.DeleteFunc(deps, func(s string) bool { return s == "./grammar/revised-term.js" })
 	case "idris":
 		deps = append(deps, "./grammar/util.js")
 	case "lexc":

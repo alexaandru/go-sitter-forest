@@ -1,6 +1,6 @@
 # 441 Supported Parsers
 
-9 pending, 9 skipped regeneration, 30 missing queries
+10 pending, 9 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -86,6 +86,7 @@
 - [x] [diff](https://github.com/the-mikedavis/tree-sitter-diff) ✔️ (maintained by @gbprod)
 - [x] [disassembly](https://github.com/ColinKennedy/tree-sitter-disassembly) ✔️ (maintained by @ColinKennedy)
 - [x] [djot](https://github.com/treeman/tree-sitter-djot) ✔️ (maintained by @NoahTheDuke)
+- [ ] [djot_inline](https://github.com/treeman/tree-sitter-djot) (maintained by @NoahTheDuke; conflicts with djot (both define scanner/init))
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) ✔️ (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) ✔️ (maintained by @rydesun)
 - [x] [dotenv](https://github.com/zarifpour/tree-sitter-dotenv) 🗸 (maintained by @zarifpour)

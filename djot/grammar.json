@@ -1,10 +1,11 @@
 {
   "reference": "master",
-  "revision": "886601b67d1f4690173a4925c214343c30704d32",
-  "grammarSha": "05aec1cd0e158e1c493f7824f64572d1ff668db612b136c142afbe816050b774",
+  "revision": "f4dd1d6d2c2ab1590db9f063b43e06d23509e3af",
+  "grammarSha": "801d728008a2435b80f85bcca20f1ef96d5aa2a6da5fdd295462d72c841e8610",
   "language": "djot",
   "url": "https://github.com/treeman/tree-sitter-djot",
   "maintainedBy": "@NoahTheDuke",
+  "srcRoot": "tree-sitter-djot",
   "files": [
     "scanner.c"
   ]

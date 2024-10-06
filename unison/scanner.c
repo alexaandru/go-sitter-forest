@@ -71,8 +71,8 @@ typedef enum {
 #include <assert.h> // assert
 #include <string.h> // memcpy, strlen, strncat
 #include <ctype.h> // isalpha, isdigit
-#include "jtckdint.h" // needed to prevent integer overflow in get_whole
-
+// #include "jtckdint.h" // needed to prevent integer overflow in get_whole
+//
 
 #ifndef __wasm32__
 #include <inttypes.h> // needed for portability of PRId64

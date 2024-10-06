@@ -148,7 +148,7 @@
 
 (assignment_operator) @operator
 
-(update_expression ["++" "--"] @operator)
+(update_operator) @operator
 
 (instanceof_expression
   left: (identifier) @variable
@@ -278,6 +278,7 @@
   (static)
   "switch"
   (testMethod)
+  (webservice)
   "throw"
   (transient)
   "try"

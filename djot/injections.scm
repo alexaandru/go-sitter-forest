@@ -7,11 +7,12 @@
     (language) @injection.language)
   (content) @injection.content)
 
-(raw_inline
-  (content) @injection.content
-  (raw_inline_attribute
-    (language) @injection.language))
-
 (frontmatter
   (language) @injection.language
   (frontmatter_content) @injection.content)
+
+((table_cell) @injection.content (#set! injection.language "djot_inline"))
+((link_label) @injection.content (#set! injection.language "djot_inline"))
+((paragraph) @injection.content (#set! injection.language "djot_inline"))
+((table_caption (content) @injection.content (#set! injection.language "djot_inline")))
+((heading (content) @injection.content (#set! injection.language "djot_inline")))

@@ -1,6 +1,6 @@
-; Please note that each editor handles highlighting differently.
-; This file is made with Neovim in mind and will not
-; work correctly in other editors, but can serve as a starting point.
+; ; Please note that each editor handles highlighting differently.
+; ; This file is made with Neovim in mind and will not
+; ; work correctly in other editors, but can serve as a starting point.
 [
   (paragraph)
   (comment)
@@ -8,14 +8,9 @@
 ] @spell
 
 [
-  (autolink)
-  (inline_link_destination)
   (link_destination)
   (code_block)
   (raw_block)
-  (math)
-  (raw_inline)
-  (verbatim)
   (reference_label)
   (class)
   (class_name)
@@ -24,23 +19,14 @@
   (frontmatter)
 ] @nospell
 
-(full_reference_link
-  (link_label) @nospell)
+(heading) @markup.heading
 
-(full_reference_image
-  (link_label) @nospell)
-
-(heading1) @markup.heading.1
-
-(heading2) @markup.heading.2
-
-(heading3) @markup.heading.3
-
-(heading4) @markup.heading.4
-
-(heading5) @markup.heading.5
-
-(heading6) @markup.heading.6
+((heading) @markup.heading.1 (#match? @markup.heading.1 "^# "))
+((heading) @markup.heading.2 (#match? @markup.heading.2 "^## "))
+((heading) @markup.heading.3 (#match? @markup.heading.3 "^### "))
+((heading) @markup.heading.4 (#match? @markup.heading.4 "^#### "))
+((heading) @markup.heading.5 (#match? @markup.heading.5 "^##### "))
+((heading) @markup.heading.6 (#match? @markup.heading.6 "^###### "))
 
 (thematic_break) @string.special
 
@@ -72,10 +58,6 @@
 ] @punctuation.delimiter
 
 (language) @attribute
-
-(inline_attribute
-  _ @conceal
-  (#set! conceal ""))
 
 ((language_marker) @punctuation.delimiter
   (#set! conceal ""))
@@ -132,153 +114,12 @@
   (#offset! @constant.builtin 0 1 0 -1)
   (#set! conceal "✓"))
 
-[
-  (ellipsis)
-  (en_dash)
-  (em_dash)
-] @string.special
-
 (list_item
   (term) @type.definition)
 
-(quotation_marks) @string.special
-
-((quotation_marks) @string.special
-  (#eq? @string.special "{\"")
-  (#set! conceal "“"))
-
-((quotation_marks) @string.special
-  (#eq? @string.special "\"}")
-  (#set! conceal "”"))
-
-((quotation_marks) @string.special
-  (#eq? @string.special "{'")
-  (#set! conceal "‘"))
-
-((quotation_marks) @string.special
-  (#eq? @string.special "'}")
-  (#set! conceal "’"))
-
-((quotation_marks) @string.special
-  (#any-of? @string.special "\\\"" "\\'")
-  (#offset! @string.special 0 0 0 -1)
-  (#set! conceal ""))
-
-((hard_line_break) @string.escape
-  (#set! conceal "↵"))
-
-(backslash_escape) @string.escape
-
-; Only conceal \ but leave escaped character.
-((backslash_escape) @string.escape
-  (#offset! @string.escape 0 0 0 -1)
-  (#set! conceal ""))
-
 (frontmatter_marker) @punctuation.delimiter
 
-(emphasis) @markup.italic
-
-(strong) @markup.strong
-
-(symbol) @string.special.symbol
-
-(insert) @markup.underline
-
-(delete) @markup.strikethrough
-
-; Note that these aren't standard in nvim-treesitter,
-; but I didn't find any that fit well.
-(highlighted) @markup.highlighted
-
-(superscript) @markup.superscript
-
-(subscript) @markup.subscript
-
-; We need to target tokens specifically because `{=` etc can exist as fallback symbols in
-; regular text, which we don't want to highlight or conceal.
-(highlighted
-  [
-    "{="
-    "=}"
-  ] @punctuation.delimiter
-  (#set! conceal ""))
-
-(insert
-  [
-    "{+"
-    "+}"
-  ] @punctuation.delimiter
-  (#set! conceal ""))
-
-(delete
-  [
-    "{-"
-    "-}"
-  ] @punctuation.delimiter
-  (#set! conceal ""))
-
-(superscript
-  [
-    "^"
-    "{^"
-    "^}"
-  ] @punctuation.delimiter
-  (#set! conceal ""))
-
-(subscript
-  [
-    "~"
-    "{~"
-    "~}"
-  ] @punctuation.delimiter
-  (#set! conceal ""))
-
-([
-  (emphasis_begin)
-  (emphasis_end)
-  (strong_begin)
-  (strong_end)
-  (verbatim_marker_begin)
-  (verbatim_marker_end)
-  (math_marker)
-  (math_marker_begin)
-  (math_marker_end)
-  (raw_inline_attribute)
-  (raw_inline_marker_begin)
-  (raw_inline_marker_end)
-] @punctuation.delimiter
-  (#set! conceal ""))
-
-((math) @markup.math
-  (#set! "priority" 90))
-
-(verbatim) @markup.raw
-
-((raw_inline) @markup.raw
-  (#set! "priority" 90))
-
 (comment) @comment
-
-; Don't conceal standalone comments themselves, only delimiters.
-(comment
-  [
-    "{"
-    "}"
-    "%"
-  ] @comment
-  (#set! conceal ""))
-
-(span
-  [
-    "["
-    "]"
-  ] @punctuation.bracket)
-
-(inline_attribute
-  [
-    "{"
-    "}"
-  ] @punctuation.bracket)
 
 (block_attribute
   [
@@ -302,84 +143,9 @@
 (key_value
   (value) @string)
 
-(link_text
-  [
-    "["
-    "]"
-  ] @punctuation.bracket
-  (#set! conceal ""))
-
-(autolink
-  [
-    "<"
-    ">"
-  ] @punctuation.bracket
-  (#set! conceal ""))
-
-(inline_link
-  (inline_link_destination) @markup.link.url
-  (#set! conceal ""))
-
 (link_reference_definition
   ":" @punctuation.special)
 
-(full_reference_link
-  (link_text) @markup.link)
-
-(full_reference_link
-  (link_label) @markup.link.label
-  (#set! conceal ""))
-
-(collapsed_reference_link
-  "[]" @punctuation.bracket
-  (#set! conceal ""))
-
-(full_reference_link
-  [
-    "["
-    "]"
-  ] @punctuation.bracket
-  (#set! conceal ""))
-
-(collapsed_reference_link
-  (link_text) @markup.link)
-
-(collapsed_reference_link
-  (link_text) @markup.link.label)
-
-(inline_link
-  (link_text) @markup.link)
-
-(full_reference_image
-  (link_label) @markup.link.label)
-
-(full_reference_image
-  [
-    "!["
-    "["
-    "]"
-  ] @punctuation.bracket)
-
-(collapsed_reference_image
-  [
-    "!["
-    "]"
-  ] @punctuation.bracket)
-
-(inline_image
-  [
-    "!["
-    "]"
-  ] @punctuation.bracket)
-
-(image_description) @markup.italic
-
-(image_description
-  [
-    "["
-    "]"
-  ] @punctuation.bracket)
-
 (link_reference_definition
   [
     "["
@@ -388,24 +154,13 @@
 
 (link_reference_definition
   (link_label) @markup.link.label)
-
-(inline_link_destination
-  [
-    "("
-    ")"
-  ] @punctuation.bracket)
 
 [
-  (autolink)
-  (inline_link_destination)
-  (link_destination)
   (link_reference_definition)
 ] @markup.link.url
 
-(footnote
-  (reference_label) @markup.link.label)
 
-(footnote_reference
+(footnote
   (reference_label) @markup.link.label)
 
 [
@@ -413,8 +168,3 @@
   (footnote_marker_end)
 ] @punctuation.bracket
 
-(todo) @comment.todo
-
-(note) @comment.note
-
-(fixme) @comment.error

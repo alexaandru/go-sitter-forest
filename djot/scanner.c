@@ -21,18 +21,8 @@ typedef enum {
 
   FRONTMATTER_MARKER,
 
-  HEADING1_BEGIN,
-  HEADING1_CONTINUATION,
-  HEADING2_BEGIN,
-  HEADING2_CONTINUATION,
-  HEADING3_BEGIN,
-  HEADING3_CONTINUATION,
-  HEADING4_BEGIN,
-  HEADING4_CONTINUATION,
-  HEADING5_BEGIN,
-  HEADING5_CONTINUATION,
-  HEADING6_BEGIN,
-  HEADING6_CONTINUATION,
+  HEADING_BEGIN,
+  HEADING_CONTINUATION,
   DIV_BEGIN,
   DIV_END,
   CODE_BLOCK_BEGIN,
@@ -68,10 +58,6 @@ typedef enum {
   FOOTNOTE_END,
   TABLE_CAPTION_BEGIN,
   TABLE_CAPTION_END,
-
-  VERBATIM_BEGIN,
-  VERBATIM_END,
-  VERBATIM_CONTENT,
 
   ERROR,
 } TokenType;
@@ -532,76 +518,6 @@ static bool parse_code_block(Scanner *s, TSLexer *lexer, uint8_t ticks) {
   return true;
 }
 
-static void output_verbatim_begin(Scanner *s, TSLexer *lexer, uint8_t ticks) {
-  lexer->mark_end(lexer);
-  s->verbatim_tick_count = ticks;
-  lexer->result_symbol = VERBATIM_BEGIN;
-}
-
-static bool try_close_verbatim(Scanner *s, TSLexer *lexer) {
-  if (s->verbatim_tick_count > 0) {
-    s->verbatim_tick_count = 0;
-    lexer->result_symbol = VERBATIM_END;
-    return true;
-  } else {
-    return false;
-  }
-}
-
-// Parsing verbatim content is also responsible for parsing VERBATIM_END.
-static bool parse_verbatim_content(Scanner *s, TSLexer *lexer) {
-  if (s->verbatim_tick_count == 0) {
-    return false;
-  }
-
-  uint8_t ticks = 0;
-  while (!lexer->eof(lexer)) {
-    if (lexer->lookahead == '\n') {
-      // We should only end verbatim if the paragraph is ended by a
-      // blankline.
-
-      // Advance over the first newline.
-      advance_djot(s, lexer);
-      // Remove any whitespace on the next line.
-      consume_whitespace(s, lexer);
-      if (lexer->eof(lexer) || lexer->lookahead == '\n') {
-        // Found a blankline, meaning the paragraph containing the varbatim
-        // should be closed. So now we can close the verbatim.
-        break;
-      } else {
-        // No blankline, continue parsing.
-        lexer->mark_end(lexer);
-        ticks = 0;
-      }
-    } else if (lexer->lookahead == '`') {
-      // If we find a `, we need to count them to see if we should stop.
-      uint8_t current = consume_chars(s, lexer, '`');
-      if (current == s->verbatim_tick_count) {
-        // We found a matching number of `
-        // We need to return VERBATIM_CONTENT then VERBATIM_END in the next
-        // scan.
-        s->verbatim_tick_count = 0;
-        set_delayed_token(s, VERBATIM_END, current);
-        break;
-      } else {
-        // Found a number of ` that doesn't match the start,
-        // we should consume them.
-        lexer->mark_end(lexer);
-        ticks = 0;
-      }
-    } else {
-      // Non-` token found, this we should consume.
-      advance_djot(s, lexer);
-      lexer->mark_end(lexer);
-      ticks = 0;
-    }
-  }
-
-  // Scanned all the verbatim.
-  lexer->result_symbol = VERBATIM_CONTENT;
-  return true;
-}
-
 static bool parse_backtick(Scanner *s, TSLexer *lexer,
                            const bool *valid_symbols) {
   uint8_t ticks = consume_chars(s, lexer, '`');
@@ -616,12 +532,7 @@ static bool parse_backtick(Scanner *s, TSLexer *lexer,
       return true;
     }
   }
-  // VERBATIM_END is handled by `parse_verbatim_content`.
-  // Don't capture leading whitespace for prettier conceal.
-  if (valid_symbols[VERBATIM_BEGIN] && s->indent == 0) {
-    output_verbatim_begin(s, lexer, ticks);
-    return true;
-  }
+
   return false;
 }
 
@@ -1349,44 +1260,6 @@ static bool parse_colon(Scanner *s, TSLexer *lexer, const bool *valid_symbols) {
   }
 }
 
-static TokenType heading_start_token(uint8_t level) {
-  switch (level) {
-  case 1:
-    return HEADING1_BEGIN;
-  case 2:
-    return HEADING2_BEGIN;
-  case 3:
-    return HEADING3_BEGIN;
-  case 4:
-    return HEADING4_BEGIN;
-  case 5:
-    return HEADING5_BEGIN;
-  case 6:
-    return HEADING6_BEGIN;
-  default:
-    return ERROR;
-  }
-}
-
-static TokenType heading_continuation_token(uint8_t level) {
-  switch (level) {
-  case 1:
-    return HEADING1_CONTINUATION;
-  case 2:
-    return HEADING2_CONTINUATION;
-  case 3:
-    return HEADING3_CONTINUATION;
-  case 4:
-    return HEADING4_CONTINUATION;
-  case 5:
-    return HEADING5_CONTINUATION;
-  case 6:
-    return HEADING6_CONTINUATION;
-  default:
-    return ERROR;
-  }
-}
-
 static bool parse_heading(Scanner *s, TSLexer *lexer,
                           const bool *valid_symbols) {
   // Note that headings don't contain other blocks, only inline.
@@ -1403,21 +1276,18 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
 
   // We found a `# ` that can start or continue a heading.
   if (hash_count > 0 && lexer->lookahead == ' ') {
-    TokenType start_token = heading_start_token(hash_count);
-    TokenType continuation_token = heading_continuation_token(hash_count);
-
-    if (!valid_symbols[start_token] && !valid_symbols[continuation_token] &&
+    if (!valid_symbols[HEADING_BEGIN] && !valid_symbols[HEADING_CONTINUATION] &&
         !valid_symbols[BLOCK_CLOSE]) {
       return false;
     }
 
     advance_djot(s, lexer); // Consume the ' '.
 
-    if (valid_symbols[continuation_token] && top_heading &&
+    if (valid_symbols[HEADING_CONTINUATION] && top_heading &&
         top->level == hash_count) {
       // We're in a heading matching the same number of '#'.
       lexer->mark_end(lexer);
-      lexer->result_symbol = continuation_token;
+      lexer->result_symbol = HEADING_CONTINUATION;
       return true;
     }
 
@@ -1430,7 +1300,7 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
     }
 
     // Open a new heading.
-    if (valid_symbols[start_token]) {
+    if (valid_symbols[HEADING_BEGIN]) {
       // Sections are created on the root level (or nested inside other
       // sections). They should be closed when a header with the same or fewer
       // `#` is encountered, and then a new section should be started.
@@ -1446,7 +1316,7 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
 
       push_block(s, HEADING, hash_count);
       lexer->mark_end(lexer);
-      lexer->result_symbol = start_token;
+      lexer->result_symbol = HEADING_BEGIN;
       return true;
     }
   } else if (hash_count == 0 && top_heading) {
@@ -1465,9 +1335,8 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
     }
 
     // We should continue the heading, if it's open.
-    TokenType res = heading_continuation_token(top->level);
-    if (valid_symbols[res]) {
-      lexer->result_symbol = res;
+    if (valid_symbols[HEADING_CONTINUATION]) {
+      lexer->result_symbol = HEADING_CONTINUATION;
       return true;
     }
   }
@@ -1648,10 +1517,6 @@ static bool emit_newline_inline(Scanner *s, TSLexer *lexer,
 
 static bool parse_newline(Scanner *s, TSLexer *lexer,
                           const bool *valid_symbols) {
-  if (valid_symbols[VERBATIM_END] && try_close_verbatim(s, lexer)) {
-    return true;
-  }
-
   // Various different newline types share the `\n` consumption.
   if (!valid_symbols[NEWLINE] && !valid_symbols[NEWLINE_INLINE] &&
       !valid_symbols[EOF_OR_NEWLINE]) {
@@ -1772,17 +1637,6 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
   if (valid_symbols[LIST_ITEM_END] &&
       parse_list_item_end(s, lexer, valid_symbols)) {
     return true;
-  }
-
-  // Verbatim content parsing is responsible for setting VERBATIM_END
-  // for normal instances as well.
-  if (valid_symbols[VERBATIM_CONTENT] && parse_verbatim_content(s, lexer)) {
-    return true;
-  }
-  if (valid_symbols[VERBATIM_END] && lexer->eof) {
-    if (try_close_verbatim(s, lexer)) {
-      return true;
-    }
   }
 
   if (parse_block_quote(s, lexer, valid_symbols)) {
@@ -1948,30 +1802,10 @@ static char *token_type_s(TokenType t) {
   case FRONTMATTER_MARKER:
     return "FRONTMATTER_MARKER";
 
-  case HEADING1_BEGIN:
-    return "HEADING1_BEGIN";
-  case HEADING1_CONTINUATION:
-    return "HEADING1_CONTINUATION";
-  case HEADING2_BEGIN:
-    return "HEADING2_BEGIN";
-  case HEADING2_CONTINUATION:
-    return "HEADING2_CONTINUATION";
-  case HEADING3_BEGIN:
-    return "HEADING3_BEGIN";
-  case HEADING3_CONTINUATION:
-    return "HEADING3_CONTINUATION";
-  case HEADING4_BEGIN:
-    return "HEADING4_BEGIN";
-  case HEADING4_CONTINUATION:
-    return "HEADING4_CONTINUATION";
-  case HEADING5_BEGIN:
-    return "HEADING5_BEGIN";
-  case HEADING5_CONTINUATION:
-    return "HEADING5_CONTINUATION";
-  case HEADING6_BEGIN:
-    return "HEADING6_BEGIN";
-  case HEADING6_CONTINUATION:
-    return "HEADING6_CONTINUATION";
+  case HEADING_BEGIN:
+    return "HEADING_BEGIN";
+  case HEADING_CONTINUATION:
+    return "HEADING_CONTINUATION";
   case DIV_BEGIN:
     return "DIV_BEGIN";
   case DIV_END:
@@ -2042,13 +1876,6 @@ static char *token_type_s(TokenType t) {
     return "TABLE_CAPTION_BEGIN";
   case TABLE_CAPTION_END:
     return "TABLE_CAPTION_END";
-
-  case VERBATIM_BEGIN:
-    return "VERBATIM_BEGIN";
-  case VERBATIM_END:
-    return "VERBATIM_END";
-  case VERBATIM_CONTENT:
-    return "VERBATIM_CONTENT";
 
   case ERROR:
     return "ERROR";

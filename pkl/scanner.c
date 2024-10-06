@@ -2,6 +2,8 @@
 #include <stdio.h>
 
 enum TokenType {
+  // sequence of "normal" characters in a single line string without a pound sign
+  SL_STRING_CHARS,
   // sequence of "normal" characters in single line string with one pound sign
   SL1_STRING_CHARS,
   // sequence of "normal" characters in single line string with two pound signs
@@ -42,6 +44,24 @@ void tree_sitter_pkl_external_scanner_deserialize(void *p, const char *b, unsign
 
 static void advance_pkl(TSLexer *lexer) { lexer->advance_pkl(lexer, false); }
 static void skip_pkl(TSLexer *lexer) { lexer->advance_pkl(lexer, true); }
+
+static bool parse_sl_string_chars(TSLexer *lexer) {
+  bool has_content = false;
+  while (true) {
+    switch (lexer->lookahead) {
+      case '"':
+      case '\\':
+        return has_content;
+      case '\n':
+      case '\r':
+      case 0:
+        return has_content;
+      default:
+        has_content = true;
+        advance_pkl(lexer);
+    }
+  }
+}
 
 static bool parse_slx_string_chars(TSLexer *lexer, int num_pounds) {
   bool has_content = false;
@@ -225,6 +245,7 @@ static bool parse_open_subscript_or_argument(TSLexer *lexer, bool open_subscript
 }
 
 bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+  bool sl = valid_symbols[SL_STRING_CHARS];
   bool sl1 = valid_symbols[SL1_STRING_CHARS];
   bool sl2 = valid_symbols[SL2_STRING_CHARS];
   bool sl3 = valid_symbols[SL3_STRING_CHARS];
@@ -241,11 +262,14 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   bool osb = valid_symbols[OPEN_SUBSCRIPT_BRACKET];
   bool oap = valid_symbols[OPEN_ARGUMENT_PAREN];
   
-  if (sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oap) {
+  if (sl && sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oap) {
     // error recovery mode -> don't match any string chars
     return false;
   }
   
+  if (sl) {
+    return parse_sl_string_chars(lexer);
+  }
   if (ml) {
     return parse_ml_string_chars(lexer);
   }
