@@ -1,6 +1,6 @@
-# 441 Supported Parsers
+# 444 Supported Parsers
 
-10 pending, 9 skipped regeneration, 30 missing queries
+10 pending, 9 skipped regeneration, 31 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -126,6 +126,7 @@
 - [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [func](https://github.com/tree-sitter-grammars/tree-sitter-func) ✔️ (maintained by @amaanq)
 - [x] [fusion](https://gitlab.com/jirgn/tree-sitter-fusion) ✔️ (maintained by @jirgn)
+- [x] [gab](https://github.com/TeddyRandby/tree-sitter-gab) ✔️ (maintained by @TeddyRandby)
 - [x] [galvan](https://github.com/antoniusnaumann/tree-sitter-galvan) ✔️ (maintained by @antoniusnaumann)
 - [x] [GAP system](https://github.com/gap-system/tree-sitter-gap) ✔️ (maintained by @reiniscirpons)
 - [x] [GAP system test files](https://github.com/gap-system/tree-sitter-gaptst) ✔️ (maintained by @reiniscirpons)
@@ -360,6 +361,7 @@
 - [x] [smithy](https://github.com/indoorvivants/tree-sitter-smithy) ✔️ (maintained by @amaanq, @keynmol)
 - [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️ (maintained by @MatthewFluet)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) ✔️ (maintained by @osthomas)
+- [x] [sol](https://github.com/mrpedrobraga/tree-sitter-sol) 🗸 (maintained by @mrpedrobraga)
 - [x] [solidity](https://github.com/JoranHonig/tree-sitter-solidity) ✔️ (maintained by @amaanq)
 - [x] [sop](https://github.com/idjoo/tree-sitter-sop) ✔️ (maintained by @idjoo)
 - [x] [soql](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
@@ -377,6 +379,7 @@
 - [x] [strace](https://github.com/sigmaSd/tree-sitter-strace) ✔️ (maintained by @amaanq)
 - [x] [styled](https://github.com/mskelton/tree-sitter-styled) ✔️ (maintained by @mskelton)
 - [x] [supercollider](https://github.com/madskjeldgaard/tree-sitter-supercollider) ✔️ (maintained by @madskjeldgaard)
+- [x] [superhtml](https://github.com/kristoff-it/superhtml) ✔️ (maintained by @rockorager)
 - [x] [surface](https://github.com/connorlay/tree-sitter-surface) ✔️ (maintained by @connorlay)
 - [x] [surrealql](https://github.com/Ce11an/tree-sitter-surrealql) ✔️ (maintained by @Ce11an; high memory usage (3.1GB))
 - [x] [sus](https://github.com/pc2/tree-sitter-sus) 🗸 (maintained by @VonTum)

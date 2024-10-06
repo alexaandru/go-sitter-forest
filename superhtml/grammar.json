@@ -1,0 +1,13 @@
+{
+  "reference": "main",
+  "revision": "b684bbe28ecd740a7110ead5674355770186ca9c",
+  "grammarSha": "ed19c261e21220bd7df38f8682c1889230fd148a62b21b942aa6ec40807ff886",
+  "language": "superhtml",
+  "url": "https://github.com/kristoff-it/superhtml",
+  "maintainedBy": "@rockorager",
+  "srcRoot": "tree-sitter-superhtml",
+  "files": [
+    "scanner.c",
+    "tag.h"
+  ]
+}

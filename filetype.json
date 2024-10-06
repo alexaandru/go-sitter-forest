@@ -197,6 +197,7 @@
     "fsharp_signature":   ["fssig"],
     "func":               ["func"],
     "fusion":             ["fusion"],
+    "gab":                ["gab"],
     "galvan":             ["galvan"],
     "gap":                ["g", "gi"],
     "gaptst":             ["tst"],
@@ -410,6 +411,7 @@
     "smithy":             ["smithy"],
     "sml":                ["sml", "fun", "sig"],
     "snakemake":          ["smk"],
+    "sol":                ["conflict-sol"],
     "solidity":           ["sol"],
     "sop":                ["sop"],
     "soql":               ["soql"],
@@ -425,6 +427,7 @@
     "strace":             ["strace"],
     "styled":             ["styled"],
     "supercollider":      ["quark", "scd"],
+    "superhtml":          ["shtml"],
     "surface":            ["sface", "surface"],
     "surrealql":          ["surql"],
     "sus":                ["sus"],
@@ -508,6 +511,7 @@
     "mo":  ["motoko", "modelica"],
     "p":   ["abl", "gnuplot"],
     "pp":  ["pascal", "puppet"],
+    "sol": ["solidity", "sol"],
     "v":   ["v", "verilog"]
   },
 

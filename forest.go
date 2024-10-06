@@ -136,6 +136,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/fsharp_signature"
 	FunC "github.com/alexaandru/go-sitter-forest/func"
 	"github.com/alexaandru/go-sitter-forest/fusion"
+	"github.com/alexaandru/go-sitter-forest/gab"
 	"github.com/alexaandru/go-sitter-forest/galvan"
 	"github.com/alexaandru/go-sitter-forest/gap"
 	"github.com/alexaandru/go-sitter-forest/gaptst"
@@ -367,6 +368,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/smithy"
 	"github.com/alexaandru/go-sitter-forest/sml"
 	"github.com/alexaandru/go-sitter-forest/snakemake"
+	"github.com/alexaandru/go-sitter-forest/sol"
 	"github.com/alexaandru/go-sitter-forest/solidity"
 	"github.com/alexaandru/go-sitter-forest/sop"
 	"github.com/alexaandru/go-sitter-forest/soql"
@@ -384,6 +386,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/strace"
 	"github.com/alexaandru/go-sitter-forest/styled"
 	"github.com/alexaandru/go-sitter-forest/supercollider"
+	"github.com/alexaandru/go-sitter-forest/superhtml"
 	"github.com/alexaandru/go-sitter-forest/surface"
 	"github.com/alexaandru/go-sitter-forest/surrealql"
 	"github.com/alexaandru/go-sitter-forest/sus"
@@ -597,6 +600,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"fsharp_signature":   fsharp_signature.GetLanguage,
 	"func":               FunC.GetLanguage,
 	"fusion":             fusion.GetLanguage,
+	"gab":                gab.GetLanguage,
 	"galvan":             galvan.GetLanguage,
 	"gap":                gap.GetLanguage,
 	"gaptst":             gaptst.GetLanguage,
@@ -826,6 +830,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"smithy":             smithy.GetLanguage,
 	"sml":                sml.GetLanguage,
 	"snakemake":          snakemake.GetLanguage,
+	"sol":                sol.GetLanguage,
 	"solidity":           solidity.GetLanguage,
 	"sop":                sop.GetLanguage,
 	"soql":               soql.GetLanguage,
@@ -843,6 +848,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"strace":             strace.GetLanguage,
 	"styled":             styled.GetLanguage,
 	"supercollider":      supercollider.GetLanguage,
+	"superhtml":          superhtml.GetLanguage,
 	"surface":            surface.GetLanguage,
 	"surrealql":          surrealql.GetLanguage,
 	"sus":                sus.GetLanguage,
@@ -1042,6 +1048,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"fsharp_signature":   fsharp_signature.GetQuery,
 	"func":               FunC.GetQuery,
 	"fusion":             fusion.GetQuery,
+	"gab":                gab.GetQuery,
 	"galvan":             galvan.GetQuery,
 	"gap":                gap.GetQuery,
 	"gaptst":             gaptst.GetQuery,
@@ -1271,6 +1278,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"smithy":             smithy.GetQuery,
 	"sml":                sml.GetQuery,
 	"snakemake":          snakemake.GetQuery,
+	"sol":                sol.GetQuery,
 	"solidity":           solidity.GetQuery,
 	"sop":                sop.GetQuery,
 	"soql":               soql.GetQuery,
@@ -1288,6 +1296,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"strace":             strace.GetQuery,
 	"styled":             styled.GetQuery,
 	"supercollider":      supercollider.GetQuery,
+	"superhtml":          superhtml.GetQuery,
 	"surface":            surface.GetQuery,
 	"surrealql":          surrealql.GetQuery,
 	"sus":                sus.GetQuery,

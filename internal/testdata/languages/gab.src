@@ -1,0 +1,17 @@
+\variables.new_variables.test :def! t => do
+  a = 2
+  t:expect(a, \==, 2)
+
+  a = 3
+  t:expect(a, \==, 3)
+end
+
+\variables.mutltiple_variables.test :def! t => do
+  (a, b) = (1, 2)
+  t:expect(a, \==, 1)
+  t:expect(b, \==, 2)
+
+  (a, b) = (b, a)
+  t:expect(a, \==, 2)
+  t:expect(b, \==, 1)
+end

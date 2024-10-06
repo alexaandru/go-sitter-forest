@@ -1,0 +1,1 @@
+(source_file (fn_decl name: (string_double) content: (block_content (dialog prefix: (dialog_prefix) content: (dialog_content (text_raw_fragment))))))

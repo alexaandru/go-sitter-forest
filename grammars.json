@@ -1168,6 +1168,14 @@
   },
   {
     "reference": "main",
+    "revision": "603cce47cf3759dd69c42040c6a2ceca6f032633",
+    "grammarSha": "0dd869bdaf49f9f894d5f9aade4a5082b827c5da5f406db3d0c2f3f205edcae7",
+    "language": "gab",
+    "url": "https://github.com/TeddyRandby/tree-sitter-gab",
+    "maintainedBy": "@TeddyRandby"
+  },
+  {
+    "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
     "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
@@ -3412,6 +3420,14 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "239ef18506e222955783218c7d9914b5dac62e7a",
+    "grammarSha": "8f01b1cc8d13fbb4441cd2de099cec8c9cec38d19cf2b45661863d328ed6323b",
+    "language": "sol",
+    "url": "https://github.com/mrpedrobraga/tree-sitter-sol",
+    "maintainedBy": "@mrpedrobraga"
+  },
+  {
     "reference": "master",
     "revision": "ee5a2d2ba30b487c4bbf613d2ef310a454c09c7c",
     "grammarSha": "13943eaa07791bd412b2cce5cdd0f8a7bb12309cc03d1bef3a5f7f16c109c1fc",
@@ -3569,6 +3585,19 @@
     "maintainedBy": "@madskjeldgaard",
     "files": [
       "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
+    "revision": "b684bbe28ecd740a7110ead5674355770186ca9c",
+    "grammarSha": "ed19c261e21220bd7df38f8682c1889230fd148a62b21b942aa6ec40807ff886",
+    "language": "superhtml",
+    "url": "https://github.com/kristoff-it/superhtml",
+    "maintainedBy": "@rockorager",
+    "srcRoot": "tree-sitter-superhtml",
+    "files": [
+      "scanner.c",
+      "tag.h"
     ]
   },
   {
