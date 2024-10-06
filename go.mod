@@ -121,6 +121,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.8.8
 	github.com/alexaandru/go-sitter-forest/func v1.8.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.8.0
+	github.com/alexaandru/go-sitter-forest/gab v1.8.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.8.1
 	github.com/alexaandru/go-sitter-forest/gap v1.8.1
 	github.com/alexaandru/go-sitter-forest/gaptst v1.8.1
@@ -350,6 +351,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smithy v1.8.0
 	github.com/alexaandru/go-sitter-forest/sml v1.8.0
 	github.com/alexaandru/go-sitter-forest/snakemake v1.8.0
+	github.com/alexaandru/go-sitter-forest/sol v1.8.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.8.0
 	github.com/alexaandru/go-sitter-forest/sop v1.8.1
 	github.com/alexaandru/go-sitter-forest/soql v1.8.2
@@ -367,6 +369,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/strace v1.8.0
 	github.com/alexaandru/go-sitter-forest/styled v1.8.1
 	github.com/alexaandru/go-sitter-forest/supercollider v1.8.1
+	github.com/alexaandru/go-sitter-forest/superhtml v1.8.1
 	github.com/alexaandru/go-sitter-forest/surface v1.8.0
 	github.com/alexaandru/go-sitter-forest/surrealql v1.8.0
 	github.com/alexaandru/go-sitter-forest/sus v1.8.0

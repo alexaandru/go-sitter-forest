@@ -142,6 +142,15 @@ func checkIfRedirect(gr *grammar.Grammar) {
 func updateAll(force bool) (err error) {
 	fmt.Println("Updating all (applicable) languages ...")
 
+	sem = semaphore.NewWeighted(6)
+	if force {
+		// NOTE: There's a higher chance of two high mem updates to run
+		// in parallel when we force update for all. Let's see how this
+		// goes, we may actually need to go down to just 1 (effectively
+		// disable concurrency).
+		sem = semaphore.NewWeighted(2)
+	}
+
 	if err = grammars.ForEach(func(gr *grammar.Grammar) error {
 		if gr.SkipUpdate {
 			return nil
