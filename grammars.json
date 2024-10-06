@@ -91,7 +91,7 @@
   },
   {
     "reference": "main",
-    "revision": "779684231107cef4d86ac16f74320e9324680da3",
+    "revision": "943a3eb7f55733929ccafe06841087c3004cb4e0",
     "grammarSha": "f489b7634fb1db9fba7842c54fe7b6541c873a0d03d248470266e82198d6135f",
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -1513,8 +1513,8 @@
   },
   {
     "reference": "main",
-    "revision": "e249152a36e2020ed85cdf91d06435837862c3ce",
-    "grammarSha": "03b27a9c66e2bb506349d6f44b3112c164b11c74285118c0d16b36b457d06f1e",
+    "revision": "924e2b78da06c4de9c8b567237fd3bc7fbce7143",
+    "grammarSha": "7c0397b368a42337ac576020234a3b4519dc59df3b80788ee0ecff386857a12e",
     "language": "haml",
     "url": "https://github.com/vitallium/tree-sitter-haml",
     "maintainedBy": "@vitallium",
@@ -1548,12 +1548,10 @@
     "grammarSha": "7ccf1eab60aa5a4532dc416eb8f4143ac3a0d60cf5079314b3b426ce49c4885a",
     "language": "haskell_persistent",
     "url": "https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent",
-    "doc": "thread 'main' panicked at cli/src/generate/render.rs:259:63: no entry found for key",
     "maintainedBy": "@lykahb",
     "files": [
       "scanner.c"
-    ],
-    "skip": true
+    ]
   },
   {
     "reference": "main",
@@ -2722,10 +2720,12 @@
     "grammarSha": "fd894576b64ed97f88005dc39b8720e5de9c092bdb8ff7ae810dc7b3657e49d9",
     "language": "phpdoc",
     "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
+    "doc": "Unresolved conflict for symbol sequence: type_specifier  •  ';'  …",
     "maintainedBy": "@mikehaertl",
     "files": [
       "scanner.c"
-    ]
+    ],
+    "skip": true
   },
   {
     "reference": "main",
@@ -3314,7 +3314,7 @@
   },
   {
     "reference": "main",
-    "revision": "779684231107cef4d86ac16f74320e9324680da3",
+    "revision": "943a3eb7f55733929ccafe06841087c3004cb4e0",
     "grammarSha": "2b5ab491844eef8d1d941c7ae3c80e5864ff6da5862f9e1ece83305b51091c9e",
     "language": "sflog",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -3445,7 +3445,7 @@
   },
   {
     "reference": "main",
-    "revision": "779684231107cef4d86ac16f74320e9324680da3",
+    "revision": "943a3eb7f55733929ccafe06841087c3004cb4e0",
     "grammarSha": "1a6ce54ff28cedca55ccec5b2ccb6b5b90ec2eee5a1979ca70ec4d27c2f0fad4",
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -3454,7 +3454,7 @@
   },
   {
     "reference": "main",
-    "revision": "779684231107cef4d86ac16f74320e9324680da3",
+    "revision": "943a3eb7f55733929ccafe06841087c3004cb4e0",
     "grammarSha": "0c54969f9ac0b08a8653e60e350bef043641f3f07d6d4c9f31dbbb6fcfdcfeb2",
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",

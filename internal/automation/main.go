@@ -371,6 +371,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		`require('../precedence')`: `require("./precedence.js")`,
 		// This is for terra.
 		`require('tree-sitter-lua/grammar')`: `require('@tree-sitter-grammars/tree-sitter-lua/grammar')`,
+		// For luau.
+		`@muniftanjim/tree-sitter-lua/grammar`: `@tree-sitter-grammars/tree-sitter-lua/grammar`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
@@ -644,7 +646,7 @@ func regenerateGrammar(gr *grammar.Grammar) (err error) {
 	defer sem.Release(1)
 
 	tmpPath := filepath.Join("tmp", gr.Language)
-	cmd := exec.Command("npx", "tree-sitter", "generate", "--no-bindings")
+	cmd := exec.Command("npx", "tree-sitter", "generate")
 	cmd.Dir = tmpPath
 
 	var (

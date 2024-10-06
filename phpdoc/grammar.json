@@ -4,8 +4,10 @@
   "grammarSha": "fd894576b64ed97f88005dc39b8720e5de9c092bdb8ff7ae810dc7b3657e49d9",
   "language": "phpdoc",
   "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
+  "doc": "Unresolved conflict for symbol sequence: type_specifier  •  ';'  …",
   "maintainedBy": "@mikehaertl",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skip": true
 }
