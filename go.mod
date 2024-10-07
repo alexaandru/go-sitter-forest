@@ -75,6 +75,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/d2 v1.9.0
 	github.com/alexaandru/go-sitter-forest/dale v1.9.0
 	github.com/alexaandru/go-sitter-forest/dart v1.9.0
+	github.com/alexaandru/go-sitter-forest/dataweave v1.9.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.0
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.0
@@ -82,6 +83,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/diff v1.9.0
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
 	github.com/alexaandru/go-sitter-forest/djot v1.9.0
+	github.com/alexaandru/go-sitter-forest/djot_inline v1.9.0
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.9.0
 	github.com/alexaandru/go-sitter-forest/dot v1.9.0
 	github.com/alexaandru/go-sitter-forest/dotenv v1.9.0
@@ -94,7 +96,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/eds v1.9.0
 	github.com/alexaandru/go-sitter-forest/eex v1.9.0
 	github.com/alexaandru/go-sitter-forest/effekt v1.9.0
-	github.com/alexaandru/go-sitter-forest/eiffel v1.9.0
+	github.com/alexaandru/go-sitter-forest/eiffel v1.9.1
 	github.com/alexaandru/go-sitter-forest/elisp v1.9.0
 	github.com/alexaandru/go-sitter-forest/elixir v1.9.0
 	github.com/alexaandru/go-sitter-forest/elm v1.9.0
