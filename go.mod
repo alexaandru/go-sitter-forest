@@ -152,13 +152,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/gotmpl v1.9.0
 	github.com/alexaandru/go-sitter-forest/gowork v1.9.0
 	github.com/alexaandru/go-sitter-forest/gpg v1.9.0
-	github.com/alexaandru/go-sitter-forest/gram v1.9.0
+	github.com/alexaandru/go-sitter-forest/gram v1.9.1
 	github.com/alexaandru/go-sitter-forest/graphql v1.9.0
 	github.com/alexaandru/go-sitter-forest/gren v1.9.0
 	github.com/alexaandru/go-sitter-forest/groovy v1.9.0
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
-	github.com/alexaandru/go-sitter-forest/haml v1.9.0
+	github.com/alexaandru/go-sitter-forest/haml v1.9.1
 	github.com/alexaandru/go-sitter-forest/hare v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/teal v1.9.0
 	github.com/alexaandru/go-sitter-forest/templ v1.9.0
-	github.com/alexaandru/go-sitter-forest/terra v1.9.0
+	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
 	github.com/alexaandru/go-sitter-forest/thrift v1.9.0
 	github.com/alexaandru/go-sitter-forest/tiger v1.9.0
@@ -406,7 +406,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/typst v1.9.0
+	github.com/alexaandru/go-sitter-forest/typst v1.9.1
 	github.com/alexaandru/go-sitter-forest/udev v1.9.0
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
