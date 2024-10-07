@@ -924,8 +924,8 @@
   },
   {
     "reference": "master",
-    "revision": "b27448b1f99ba57794bf37403702f6877ee112d1",
-    "grammarSha": "6b4d14275a01997bd907c661005ad28834c260c425ee641ab688b04287afc7ff",
+    "revision": "1cbbd471a5ee5fbf5fc63822044a648fc937737a",
+    "grammarSha": "a1f5ff0dc6e01a4d7af525af200e8dcc3b37f4f6005b8a4b7a608dfcbac8202d",
     "language": "eiffel",
     "url": "https://github.com/imustafin/tree-sitter-eiffel",
     "maintainedBy": "@imustafin"
@@ -3213,6 +3213,7 @@
     "reference": "master",
     "language": "rst",
     "url": "https://github.com/stsewd/tree-sitter-rst",
+    "doc": "too much work to get automation to support it",
     "maintainedBy": "@stsewd",
     "files": [
       "scanner.c",
@@ -3225,7 +3226,6 @@
       "src/tree_sitter_rst/chars.h",
       "src/tree_sitter_rst/punctuation_chars.h"
     ],
-    "doc": "too much work to get automation to support it",
     "pending": true
   },
   {
@@ -3983,7 +3983,7 @@
   },
   {
     "reference": "main",
-    "revision": "8e02e623b87bd22c25ca78fcfb9d389abb7612fd",
+    "revision": "f98842d75f52f7c864f7db9f5d39d745560d8200",
     "grammarSha": "f26a1fb0c2420af50efec78e0f3cfb69117cea469e93f9d367085688999d3967",
     "language": "uiua",
     "url": "https://github.com/shnarazk/tree-sitter-uiua",
@@ -4379,4 +4379,3 @@
     "pending": true
   }
 ]
-
