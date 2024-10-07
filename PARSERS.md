@@ -1,6 +1,6 @@
 # 444 Supported Parsers
 
-10 pending, 9 skipped regeneration, 31 missing queries
+10 pending, 9 skipped regeneration, 30 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -163,7 +163,7 @@
 - [x] [groovy](https://github.com/murtaza64/tree-sitter-groovy) ✔️ (maintained by @murtaza64)
 - [x] [gstlaunch](https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch) ✔️ (maintained by @theHamsta)
 - [x] [hack](https://github.com/slackhq/tree-sitter-hack) ✔️ (maintained by @aosq)
-- [x] [haml](https://github.com/vitallium/tree-sitter-haml) 🗸 (maintained by @vitallium)
+- [x] [haml](https://github.com/vitallium/tree-sitter-haml) ✔️ (maintained by @vitallium)
 - [x] [hare](https://github.com/tree-sitter-grammars/tree-sitter-hare) ✔️ (maintained by @amaanq)
 - [x] [haskell](https://github.com/tree-sitter/tree-sitter-haskell) ✔️ (maintained by @mrcjkb)
 - [x] [haskell_persistent](https://github.com/MercuryTechnologies/tree-sitter-haskell-persistent) ✔️ (maintained by @lykahb)

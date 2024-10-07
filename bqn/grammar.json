@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "48f90c7ca434129a472537b4589a6d4147dffdfb",
+  "revision": "fa9bac138c61d23c47529da1a529d28adf919279",
   "grammarSha": "c1e9b34f6d7ce710a9fe29f969c01f1a03cdeeb621fe422019630b2ff69a6576",
   "language": "bqn",
   "url": "https://github.com/shnarazk/tree-sitter-bqn",

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "abe60cbed7986ee475d93f816c1be287f220c5d8",
-  "grammarSha": "10153d49c0cecc3760b4ed762a2e1b8b4267391fd4a0e2633f076d450268c63d",
+  "revision": "8b8b16ef1b40cbecbe3f754b1c1c966b5a0904fe",
+  "grammarSha": "4e825c0a0995dfa3f1b6938679ded81c478b9c9ad9da7fabc0da084efdbd65ac",
   "language": "typst",
   "url": "https://github.com/uben0/tree-sitter-typst",
   "maintainedBy": "@uben0, @RaafatTurki",

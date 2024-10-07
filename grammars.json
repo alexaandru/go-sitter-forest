@@ -293,7 +293,7 @@
   },
   {
     "reference": "main",
-    "revision": "48f90c7ca434129a472537b4589a6d4147dffdfb",
+    "revision": "fa9bac138c61d23c47529da1a529d28adf919279",
     "grammarSha": "c1e9b34f6d7ce710a9fe29f969c01f1a03cdeeb621fe422019630b2ff69a6576",
     "language": "bqn",
     "url": "https://github.com/shnarazk/tree-sitter-bqn",
@@ -376,7 +376,7 @@
   },
   {
     "reference": "main",
-    "revision": "654085ed0701c278120520a3781ffbefed32f4db",
+    "revision": "484824cb7b297e4118b8e3e043239505adcd2efd",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -478,7 +478,7 @@
   },
   {
     "reference": "master",
-    "revision": "69d7a8b0f7493b0dbb07d54e8fea96c5421e8a71",
+    "revision": "f2569dd1fce0f252097a25bcbcb9ed8898840310",
     "grammarSha": "d6dc94c6aa6ecfac745497e794af35c0b7551c53c68d05497f3f86995f7fad9d",
     "language": "cmake",
     "url": "https://github.com/uyha/tree-sitter-cmake",
@@ -908,7 +908,7 @@
   },
   {
     "reference": "master",
-    "revision": "fc09120f12da7364e830ab7c6140534a3e62aed3",
+    "revision": "b27448b1f99ba57794bf37403702f6877ee112d1",
     "grammarSha": "6b4d14275a01997bd907c661005ad28834c260c425ee641ab688b04287afc7ff",
     "language": "eiffel",
     "url": "https://github.com/imustafin/tree-sitter-eiffel",
@@ -1459,8 +1459,8 @@
   },
   {
     "reference": "main",
-    "revision": "f53c325e313a50ae05e0a141bfeb7d9c66af9b2c",
-    "grammarSha": "966e847c7dc706ee6dc495229906d743880158c46d6f03ae7a830e4e962ec1a1",
+    "revision": "66056d8ea649db3b079ba1eaefcb01c2b343421d",
+    "grammarSha": "569c2150acf69b5e0921f59e02a02324d06c9c9ce8077e6fe9d23916dcdf0db3",
     "language": "gram",
     "url": "https://github.com/gram-data/tree-sitter-gram",
     "maintainedBy": "@akollegger"
@@ -1513,8 +1513,8 @@
   },
   {
     "reference": "main",
-    "revision": "924e2b78da06c4de9c8b567237fd3bc7fbce7143",
-    "grammarSha": "7c0397b368a42337ac576020234a3b4519dc59df3b80788ee0ecff386857a12e",
+    "revision": "945b4806e11d969fc0b0edcdee068400971f3bf3",
+    "grammarSha": "cf47283ff4d46fa21e55e8ebe870b5730cc58439c9971c0fd2e19435238b732d",
     "language": "haml",
     "url": "https://github.com/vitallium/tree-sitter-haml",
     "maintainedBy": "@vitallium",
@@ -1715,7 +1715,7 @@
   },
   {
     "reference": "master",
-    "revision": "feff92cd342485ff6457153a6c78ea070b002332",
+    "revision": "503065a587a4f34d894029132debfe697762737c",
     "grammarSha": "0a5c036c4a309f8f2e868ebafe8212237448e8f99ee38e31319545a380465337",
     "language": "hygen_template",
     "url": "https://github.com/Hdoc1509/tree-sitter-hygen-template",
@@ -3639,7 +3639,7 @@
   },
   {
     "reference": "main",
-    "revision": "4bff50b78b4d3c0517e4d0f0a344aca165f00146",
+    "revision": "14668554259c5a82fc0c8ca825aa3bb895034c67",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
@@ -3745,7 +3745,7 @@
   },
   {
     "reference": "master",
-    "revision": "80d1a04e6bf3ced1c924bcb05527aa2eaf3f6239",
+    "revision": "e3e894ef9e490c3d36d94a51458ec55480991730",
     "grammarSha": "ec4c02ccbb8f374aa9bb12f41347834c42c9d4fa486cfd85c0cbc7e3fe4e9c37",
     "language": "templ",
     "url": "https://github.com/vrischmann/tree-sitter-templ",
@@ -3756,8 +3756,8 @@
   },
   {
     "reference": "master",
-    "revision": "e751240317268ddaaa54607c2303c3c6ef017bf4",
-    "grammarSha": "69e589ee5963801ab88c8caf78e35055c493a69b04a678179bd0dbb7ba1d7b31",
+    "revision": "80d0cf4a45ff2f6424bc9147e51fb97e91316629",
+    "grammarSha": "0696735e5c503ab5e1869c909d0f795ae1fb94c97c45fe6fe328cb4d4c0b840a",
     "language": "terra",
     "url": "https://github.com/tpkessler/tree-sitter-terra-rewrite",
     "maintainedBy": "@tpkessler",
@@ -3946,8 +3946,8 @@
   },
   {
     "reference": "master",
-    "revision": "abe60cbed7986ee475d93f816c1be287f220c5d8",
-    "grammarSha": "10153d49c0cecc3760b4ed762a2e1b8b4267391fd4a0e2633f076d450268c63d",
+    "revision": "8b8b16ef1b40cbecbe3f754b1c1c966b5a0904fe",
+    "grammarSha": "4e825c0a0995dfa3f1b6938679ded81c478b9c9ad9da7fabc0da084efdbd65ac",
     "language": "typst",
     "url": "https://github.com/uben0/tree-sitter-typst",
     "maintainedBy": "@uben0, @RaafatTurki",
