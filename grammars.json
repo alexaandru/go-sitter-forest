@@ -280,6 +280,7 @@
     "grammarSha": "59b1e8f8bf181b6d35e9d64913a18ed06f21bbc78b4ef42cc6d8f328ec94898a",
     "language": "bluespec",
     "url": "https://github.com/panther03/tree-sitter-bluespec",
+    "doc": "repository was removed by owner",
     "maintainedBy": "@panther03",
     "skipUpdate": true
   },
@@ -404,10 +405,24 @@
   },
   {
     "reference": "master",
+    "language": "cfhtml",
+    "url": "https://github.com/cfmleditor/tree-sitter-cfml",
+    "doc": "Undeclared precedence 'unary_void' in rule 'await_expression'",
+    "maintainedBy": "@ghedwards",
+    "srcRoot": "cfhtml",
+    "files": [
+      "scanner.c",
+      "tag.h"
+    ],
+    "pending": true
+  },
+  {
+    "reference": "master",
     "language": "cfml",
     "url": "https://github.com/cfmleditor/tree-sitter-cfml",
-    "doc": "is broken similar to poe_filter but in MANY places",
+    "doc": "Undeclared precedence 'unary_void' in rule 'await_expression'",
     "maintainedBy": "@ghedwards",
+    "srcRoot": "cfml",
     "files": [
       "scanner.c",
       "tag.h"
@@ -602,7 +617,7 @@
     "reference": "main",
     "language": "cpp2",
     "url": "https://github.com/tsoj/tree-sitter-cpp2",
-    "doc": "Unresolved conflict for symbol sequence",
+    "doc": "Unresolved conflict for symbol sequence: ';'  •  ';'  …",
     "maintainedBy": "@tsoj",
     "files": [
       "scanner.c"
@@ -712,10 +727,11 @@
   },
   {
     "reference": "main",
+    "revision": "f07651f2c3f4c4fa037ffaef6e56350272b29251",
+    "grammarSha": "61e0b21454480cf267366520986b2d0341d2b047ae0741abfaad17b8248fe779",
     "language": "dataweave",
     "url": "https://github.com/AndrewJarrett/tree-sitter-dataweave",
-    "maintainedBy": "@AndrewJarrett",
-    "pending": true
+    "maintainedBy": "@AndrewJarrett"
   },
   {
     "reference": "main",
@@ -785,15 +801,15 @@
   },
   {
     "reference": "master",
+    "revision": "f4dd1d6d2c2ab1590db9f063b43e06d23509e3af",
+    "grammarSha": "4ba05d1cfa3c6fa23653a209bd1d49b003e5744ee61a01fc8991b9ceeae8d1a2",
     "language": "djot_inline",
     "url": "https://github.com/treeman/tree-sitter-djot",
-    "doc": "conflicts with djot (both define scanner/init)",
     "maintainedBy": "@NoahTheDuke",
     "srcRoot": "tree-sitter-djot-inline",
     "files": [
       "scanner.c"
-    ],
-    "pending": true
+    ]
   },
   {
     "reference": "main",
@@ -1022,7 +1038,7 @@
     "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
     "language": "fennel",
     "url": "https://github.com/alexmozaidze/tree-sitter-fennel",
-    "doc": "some 'smart importing' feature prevents regeneration from working",
+    "doc": "some 'smart importing' feature prevents automation from working",
     "maintainedBy": "@alexmozaidze",
     "files": [
       "scanner.c"
@@ -1806,7 +1822,7 @@
     "grammarSha": "56be0209a91374f0ecb152b2c1c02bbbc3209cbc76614f21a9bbb5f05900b749",
     "language": "ispc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
-    "doc": "Error: Undefined symbol",
+    "doc": "invalid character '}' looking for beginning of object key string",
     "maintainedBy": "@fab4100",
     "skip": true
   },
@@ -3209,6 +3225,7 @@
       "src/tree_sitter_rst/chars.h",
       "src/tree_sitter_rst/punctuation_chars.h"
     ],
+    "doc": "too much work to get automation to support it",
     "pending": true
   },
   {
@@ -4362,3 +4379,4 @@
     "pending": true
   }
 ]
+

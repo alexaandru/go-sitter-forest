@@ -1,6 +1,6 @@
-# 444 Supported Parsers
+# 446 Supported Parsers
 
-10 pending, 9 skipped regeneration, 30 missing queries
+9 pending, 9 skipped regeneration, 31 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -33,7 +33,7 @@
 - [x] [bitbake](https://github.com/tree-sitter-grammars/tree-sitter-bitbake) ✔️ (maintained by @amaanq)
 - [x] [blade](https://github.com/deanrumsby/tree-sitter-blade) ✔️ (maintained by @deanrumsby)
 - [x] [blueprint](https://gitlab.com/gabmus/tree-sitter-blueprint) ✔️ (maintained by @gabmus)
-- [x] [bluespec](https://github.com/panther03/tree-sitter-bluespec) 🗸 (maintained by @panther03)
+- [x] [bluespec](https://github.com/panther03/tree-sitter-bluespec) 🗸 (maintained by @panther03; ❌repository was removed by owner)
 - [x] [bp](https://github.com/ambroisie/tree-sitter-bp) ✔️ (maintained by @ambroisie)
 - [x] [bqn](https://github.com/shnarazk/tree-sitter-bqn) ✔️ (maintained by @shnarazk)
 - [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️ (maintained by @ajdelcimmuto)
@@ -47,7 +47,8 @@
 - [x] [cds](https://github.com/cap-js-community/tree-sitter-cds) ✔️ (maintained by @bugwelle)
 - [x] [cedar](https://github.com/chrnorm/tree-sitter-cedar) ✔️ (maintained by @chrnorm)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️ (maintained by @Alfus)
-- [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; is broken similar to poe_filter but in MANY places)
+- [ ] [cfhtml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
+- [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
 - [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️ (maintained by @ObserverOfTime)
 - [x] [circom](https://github.com/Decurity/tree-sitter-circom) ✔️ (maintained by @Frodan)
@@ -67,7 +68,7 @@
 - [x] [corn](https://github.com/corn-config/tree-sitter-corn) ✔️ (maintained by @jakestanger)
 - [x] [cpon](https://github.com/tree-sitter-grammars/tree-sitter-cpon) ✔️ (maintained by @amaanq)
 - [x] [cpp](https://github.com/tree-sitter/tree-sitter-cpp) ✔️ (maintained by @theHamsta)
-- [ ] [cpp2](https://github.com/tsoj/tree-sitter-cpp2) (maintained by @tsoj; Unresolved conflict for symbol sequence)
+- [ ] [cpp2](https://github.com/tsoj/tree-sitter-cpp2) (maintained by @tsoj; Unresolved conflict for symbol sequence: ';'  •  ';'  …)
 - [x] [crystal](https://github.com/crystal-lang-tools/tree-sitter) ✔️ (maintained by @devnote-dev)
 - [x] [css](https://github.com/tree-sitter/tree-sitter-css) ✔️ (maintained by @TravonteD)
 - [x] [csv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
@@ -78,7 +79,7 @@
 - [x] [d2](https://codeberg.org/p8i/tree-sitter-d2) ✔️ (maintained by @p8i)
 - [x] [dale](https://github.com/crumbtoo/tree-sitter-dale) ✔️ (maintained by @lomisk; ❌repository was removed by owner)
 - [x] [dart](https://github.com/UserNobody14/tree-sitter-dart) ✔️ (maintained by @akinsho)
-- [ ] [dataweave](https://github.com/AndrewJarrett/tree-sitter-dataweave) (maintained by @AndrewJarrett)
+- [x] [dataweave](https://github.com/AndrewJarrett/tree-sitter-dataweave) 🗸 (maintained by @AndrewJarrett)
 - [x] [dbml](https://github.com/apexatoll/tree-sitter-dbml) 🗸 (maintained by @apexatoll)
 - [x] [devicetree](https://github.com/joelspadin/tree-sitter-devicetree) ✔️ (maintained by @jedrzejboczar)
 - [x] [dezyne](https://github.com/j0ran/tree-sitter-dezyne) 🗸 (maintained by @j0ran)
@@ -86,7 +87,7 @@
 - [x] [diff](https://github.com/the-mikedavis/tree-sitter-diff) ✔️ (maintained by @gbprod)
 - [x] [disassembly](https://github.com/ColinKennedy/tree-sitter-disassembly) ✔️ (maintained by @ColinKennedy)
 - [x] [djot](https://github.com/treeman/tree-sitter-djot) ✔️ (maintained by @NoahTheDuke)
-- [ ] [djot_inline](https://github.com/treeman/tree-sitter-djot) (maintained by @NoahTheDuke; conflicts with djot (both define scanner/init))
+- [x] [djot_inline](https://github.com/treeman/tree-sitter-djot) ✔️ (maintained by @NoahTheDuke)
 - [x] [dockerfile](https://github.com/camdencheek/tree-sitter-dockerfile) ✔️ (maintained by @camdencheek)
 - [x] [dot](https://github.com/rydesun/tree-sitter-dot) ✔️ (maintained by @rydesun)
 - [x] [dotenv](https://github.com/zarifpour/tree-sitter-dotenv) 🗸 (maintained by @zarifpour)
@@ -111,7 +112,7 @@
 - [x] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) ✔️ (maintained by @redexp)
 - [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts; ❌no crash but generate never completes (15min))
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️ (maintained by @khiner)
-- [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️ (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents regeneration from working)
+- [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️ (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents automation from working)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️ (maintained by @chaopeng)
 - [x] [fin](https://github.com/fin-org/tree-sitter-fin) ✔️ (maintained by @mrmcc3)
 - [x] [firrtl](https://github.com/tree-sitter-grammars/tree-sitter-firrtl) ✔️ (maintained by @amaanq)

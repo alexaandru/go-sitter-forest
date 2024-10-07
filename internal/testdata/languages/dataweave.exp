@@ -1,0 +1,1 @@
+(source_file (ERROR (version) (identifier) (UNEXPECTED '*') (identifier) (identifier) (identifier)) (script (identifier) (identifier) (identifier) (ERROR (UNEXPECTED '=')) (array (string) (string) (string) (string)) (identifier) (identifier) (ERROR) (identifier) (ERROR) (identifier) (ERROR (UNEXPECTED '(')) (identifier) (ERROR) (int)) (ERROR (UNEXPECTED ')')))

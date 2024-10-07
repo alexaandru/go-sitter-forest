@@ -90,6 +90,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/d2"
 	"github.com/alexaandru/go-sitter-forest/dale"
 	"github.com/alexaandru/go-sitter-forest/dart"
+	"github.com/alexaandru/go-sitter-forest/dataweave"
 	"github.com/alexaandru/go-sitter-forest/dbml"
 	"github.com/alexaandru/go-sitter-forest/devicetree"
 	"github.com/alexaandru/go-sitter-forest/dezyne"
@@ -97,6 +98,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/diff"
 	"github.com/alexaandru/go-sitter-forest/disassembly"
 	"github.com/alexaandru/go-sitter-forest/djot"
+	"github.com/alexaandru/go-sitter-forest/djot_inline"
 	"github.com/alexaandru/go-sitter-forest/dockerfile"
 	"github.com/alexaandru/go-sitter-forest/dot"
 	"github.com/alexaandru/go-sitter-forest/dotenv"
@@ -554,6 +556,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"d2":                 d2.GetLanguage,
 	"dale":               dale.GetLanguage,
 	"dart":               dart.GetLanguage,
+	"dataweave":          dataweave.GetLanguage,
 	"dbml":               dbml.GetLanguage,
 	"devicetree":         devicetree.GetLanguage,
 	"dezyne":             dezyne.GetLanguage,
@@ -561,6 +564,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"diff":               diff.GetLanguage,
 	"disassembly":        disassembly.GetLanguage,
 	"djot":               djot.GetLanguage,
+	"djot_inline":        djot_inline.GetLanguage,
 	"dockerfile":         dockerfile.GetLanguage,
 	"dot":                dot.GetLanguage,
 	"dotenv":             dotenv.GetLanguage,
@@ -1002,6 +1006,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"d2":                 d2.GetQuery,
 	"dale":               dale.GetQuery,
 	"dart":               dart.GetQuery,
+	"dataweave":          dataweave.GetQuery,
 	"dbml":               dbml.GetQuery,
 	"devicetree":         devicetree.GetQuery,
 	"dezyne":             dezyne.GetQuery,
@@ -1009,6 +1014,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"diff":               diff.GetQuery,
 	"disassembly":        disassembly.GetQuery,
 	"djot":               djot.GetQuery,
+	"djot_inline":        djot_inline.GetQuery,
 	"dockerfile":         dockerfile.GetQuery,
 	"dot":                dot.GetQuery,
 	"dotenv":             dotenv.GetQuery,

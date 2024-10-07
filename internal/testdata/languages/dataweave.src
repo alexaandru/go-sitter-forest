@@ -1,0 +1,7 @@
+%dw 2.0
+import * from dw::core::Arrays
+var samplearray = ["124", "35454", "Sachin","Amit"]
+output application/json
+---
+ 
+drop(samplearray, 2)

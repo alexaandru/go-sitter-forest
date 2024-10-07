@@ -1719,7 +1719,7 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
   return false;
 }
 
-void init(Scanner *s) {
+void init_djot(Scanner *s) {
   array_init(s->open_blocks);
   s->blocks_to_close = 0;
   s->delayed_token = IGNORED;
@@ -1732,7 +1732,7 @@ void init(Scanner *s) {
 void *tree_sitter_djot_external_scanner_create() {
   Scanner *s = (Scanner *)ts_malloc(sizeof(Scanner));
   s->open_blocks = ts_malloc(sizeof(Array(Block *)));
-  init(s);
+  init_djot(s);
   return s;
 }
 
@@ -1768,7 +1768,7 @@ unsigned tree_sitter_djot_external_scanner_serialize(void *payload,
 void tree_sitter_djot_external_scanner_deserialize(void *payload, char *buffer,
                                                    unsigned length) {
   Scanner *s = (Scanner *)payload;
-  init(s);
+  init_djot(s);
   if (length > 0) {
     size_t size = 0;
     s->blocks_to_close = (uint8_t)buffer[size++];

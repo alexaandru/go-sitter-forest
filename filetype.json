@@ -154,6 +154,7 @@
     "d":                  ["d", "di"],
     "dale":               ["dale"],
     "dart":               ["dart", "drt"],
+    "dataweave":          ["dwl"],
     "dbml":               ["dbml"],
     "devicetree":         ["dts"],
     "dezyne":             ["dzn"],
@@ -161,6 +162,7 @@
     "diff":               ["diff", "patch"],
     "disassembly":        ["disassembly"],
     "djot":               ["djot"],
+    "djot_inline":        ["djot_inline"],
     "dockerfile":         ["dockerfile"],
     "dot":                ["dot", "gv"],
     "dotenv":             ["env"],
@@ -516,6 +518,5 @@
   },
 
   "pending": {
-    "dataweave":          ["dwl"]
   }
 }

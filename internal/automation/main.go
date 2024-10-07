@@ -755,6 +755,7 @@ func putFile(content []byte, lang, toPath string) error {
 		reMap["is_newline("] = fmt.Sprintf("is_newline_%s(", lang)
 		reMap["is_space("] = fmt.Sprintf("is_space_%s(", lang)
 		reMap["is_internal_char("] = fmt.Sprintf("is_internal_char_%s(", lang)
+		reMap[" init("] = fmt.Sprintf(" init_%s(", lang)
 	}
 
 	if slices.Contains([]string{"_scanner.c", "chars.c", "chars.h"}, filepath.Base(toPath)) {
