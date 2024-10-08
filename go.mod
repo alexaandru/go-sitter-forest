@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cg v1.9.0
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.0
 	github.com/alexaandru/go-sitter-forest/circom v1.9.0
-	github.com/alexaandru/go-sitter-forest/clarity v1.9.0
+	github.com/alexaandru/go-sitter-forest/clarity v1.9.1
 	github.com/alexaandru/go-sitter-forest/cleancopy v1.9.0
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.9.0
 	github.com/alexaandru/go-sitter-forest/context v1.9.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.9.0
-	github.com/alexaandru/go-sitter-forest/core v1.9.0
+	github.com/alexaandru/go-sitter-forest/core v1.9.1
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
@@ -226,7 +226,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/liquid v1.9.0
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.9.0
-	github.com/alexaandru/go-sitter-forest/llvm v1.9.0
+	github.com/alexaandru/go-sitter-forest/llvm v1.9.1
 	github.com/alexaandru/go-sitter-forest/lookml v1.9.0
 	github.com/alexaandru/go-sitter-forest/lox v1.9.0
 	github.com/alexaandru/go-sitter-forest/lua v1.9.0
@@ -276,7 +276,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
-	github.com/alexaandru/go-sitter-forest/perl v1.9.0
+	github.com/alexaandru/go-sitter-forest/perl v1.9.1
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
