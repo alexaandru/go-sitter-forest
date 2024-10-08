@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "13fc552fd016f26ad1d16b7f839d55af0d90a775",
-  "grammarSha": "d433d09d09cdedd238b4ea520e61639b600c20c3cd70a2a5f2f64e7d558e0f99",
+  "revision": "ca24ba8e2866c025293f8b07c66df332fdd15d5e",
+  "grammarSha": "4e55c042324c5c4e2ed41cc4e8fae6023b9d5efc63ce53f50fe5c268a1a1113e",
   "language": "clarity",
   "url": "https://github.com/xlittlerag/tree-sitter-clarity",
   "maintainedBy": "@xlittlerag"

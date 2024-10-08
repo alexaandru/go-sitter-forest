@@ -6,10 +6,12 @@
  (int_lit)
  (uint_lit)
  (buffer_lit)
+] @number
+[
+ (bool_lit)
  (standard_principal_lit)
  (contract_principal_lit)
-] @number
-(bool_lit) @constant.builtin
+] @constant.builtin
 
 ; Type
 [
@@ -79,6 +81,3 @@
 [
   ","
 ] @punctuation.delimiter
-
-
-(identifier) @variable

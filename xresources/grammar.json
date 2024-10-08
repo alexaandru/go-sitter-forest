@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "9b578f6c73cd33263600fe88061abc664c225c6d",
+  "revision": "cc74d69d083efc9e5016700e53aabd4cf4487464",
   "grammarSha": "0002dbdcce9fa40a6676f127d53c4762e3e9bedf258566149e587afca1f1d895",
   "language": "xresources",
   "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",
