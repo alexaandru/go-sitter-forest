@@ -74,7 +74,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/d v1.9.0
 	github.com/alexaandru/go-sitter-forest/d2 v1.9.0
 	github.com/alexaandru/go-sitter-forest/dale v1.9.0
-	github.com/alexaandru/go-sitter-forest/dart v1.9.0
+	github.com/alexaandru/go-sitter-forest/dart v1.9.1
 	github.com/alexaandru/go-sitter-forest/dataweave v1.9.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.0
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.9.0
 	github.com/alexaandru/go-sitter-forest/go v1.9.0
-	github.com/alexaandru/go-sitter-forest/gobra v1.9.0
+	github.com/alexaandru/go-sitter-forest/gobra v1.9.1
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0
 	github.com/alexaandru/go-sitter-forest/gomod v1.9.0
@@ -160,7 +160,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.9.0
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
-	github.com/alexaandru/go-sitter-forest/haml v1.9.1
+	github.com/alexaandru/go-sitter-forest/haml v1.9.2
 	github.com/alexaandru/go-sitter-forest/hare v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
@@ -209,7 +209,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kotlin v1.9.0
+	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.0
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
@@ -282,10 +282,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.0
-	github.com/alexaandru/go-sitter-forest/pic v1.9.0
+	github.com/alexaandru/go-sitter-forest/pic v1.9.1
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.0
-	github.com/alexaandru/go-sitter-forest/pkl v1.9.0
+	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
 	github.com/alexaandru/go-sitter-forest/plantuml v1.9.0
 	github.com/alexaandru/go-sitter-forest/po v1.9.0
 	github.com/alexaandru/go-sitter-forest/pod v1.9.0
@@ -383,7 +383,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.0
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
-	github.com/alexaandru/go-sitter-forest/tact v1.9.0
+	github.com/alexaandru/go-sitter-forest/tact v1.9.1
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/teal v1.9.0
