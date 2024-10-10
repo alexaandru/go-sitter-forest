@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "66056d8ea649db3b079ba1eaefcb01c2b343421d",
+  "revision": "af2b7c9e17b27adf6b38fb0c3e0eff593757f43a",
   "grammarSha": "569c2150acf69b5e0921f59e02a02324d06c9c9ce8077e6fe9d23916dcdf0db3",
   "language": "gram",
   "url": "https://github.com/gram-data/tree-sitter-gram",

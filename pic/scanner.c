@@ -46,10 +46,11 @@
 enum TokenType {
   SIDE,
   SIDE_CORNER,
-  DELIMITER,
   SHELL_COMMAND,
   DATA_TABLE,
   DATA_TABLE_TAG,
+  OPEN_DELIMITER,
+  CLOSE_DELIMITER,
 };
 
 
@@ -67,7 +68,7 @@ typedef Array(int32_t) UTF32String;
 
 typedef struct ScannerState {
   UTF32String data_table_tag;
-  int32_t delimiter;  // the delimiter for a shell command
+  UTF32String delimiters;  // the various delimiters used
 } ScannerState;
 
 
@@ -85,7 +86,7 @@ static int32_t of[] = { U'o', U'f', 0 };
  */
 
 static bool scan_word(TSLexer *lexer, int32_t word[], bool skip) {
-  while ((lexer->lookahead == U' ') || (lexer->lookahead == U'\t')) {
+  while (isblank(lexer->lookahead)) {
     // FIXME: an escaped newline should also be skipped
     lexer->advance_pic(lexer, skip);
   }
@@ -147,13 +148,83 @@ static bool skip_balanced(TSLexer *lexer) {
 
 
 /**
- * Scan for a delimiter. If the delimiter is currently unset, we are at the
- * start and use the next non-whitespace character as the delimiter. The
- * delimiter is saved in the scanner state to be able to detect the end
- * later.
+ * Detect the start of a balanced body. The first non-whitespace character
+ * is the delimiter. It can be an opening brace or any other character.
  */
 
-static bool scan_delimiter(TSLexer *lexer, ScannerState *state) {
+static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
+  int32_t first_delimiter = 0;
+  int32_t last_delimiter = 0;
+
+  typedef enum ScanDelimiter {
+    INITIAL_WHITESPACE,
+    FIRST_CHAR,
+    MACRONAME,
+  } ScanDelimiter;
+
+  for(ScanDelimiter position=INITIAL_WHITESPACE;;) {
+    // We are done if the end of file is reached
+    if (lexer->eof(lexer)) return false;
+
+    switch (position) {
+    case INITIAL_WHITESPACE:
+      if (isspace(lexer->lookahead)) {
+        // Skip whitespace
+        lexer->advance_pic(lexer, true);
+        break;
+      }
+
+      position = FIRST_CHAR;
+      break;
+
+    case FIRST_CHAR:
+      if (lexer->lookahead == U'{') {
+        // Found an opening brace as delimiter; we store the closing brace
+        // as ending delimiter and stop scanning.
+        array_push(&state->delimiters, U'}');
+        lexer->advance_pic(lexer, false);
+        return true;
+      }
+      else if (isalpha(lexer->lookahead)) {
+        // Either a delimiting character or a macroname; we store the
+        // delimiter and mark this as the end of the token.
+        first_delimiter = lexer->lookahead;
+        lexer->advance_pic(lexer, false);
+        lexer->mark_end(lexer);
+        position = MACRONAME;
+      }
+      else {
+        // Anything else is a delimiting character; we store the character
+        // as ending delimiter and stop scanning.
+        array_push(&state->delimiters, lexer->lookahead);
+        lexer->advance_pic(lexer, false);
+        return true;
+      }
+      break;
+
+    case MACRONAME:
+      if (isalnum(lexer->lookahead) || (lexer->lookahead == U'_')) {
+        last_delimiter = lexer->lookahead;
+        lexer->advance_pic(lexer, false);
+      }
+      else {
+        return (last_delimiter == first_delimiter);
+      }
+      break;
+    }
+  }
+}
+
+
+/**
+ * Detect the end of a balanced body.
+ */
+
+static bool close_delimiter(TSLexer *lexer, ScannerState *state) {
+  if (state->delimiters.size == 0) return false;
+
+  int32_t *delimiter = array_back(&state->delimiters);
+
   for(;;) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
@@ -162,16 +233,9 @@ static bool scan_delimiter(TSLexer *lexer, ScannerState *state) {
       // Skip whitespace
       lexer->advance_pic(lexer, true);
     }
-    else if (state->delimiter == 0) {
-      // Remember new delimiter
-      state->delimiter = matching_delimiter(lexer->lookahead);
+    else if (lexer->lookahead == *delimiter) {
       lexer->advance_pic(lexer, false);
-      return true;
-    }
-    else if (lexer->lookahead == state->delimiter) {
-      // Look for end using saved delimiter
-      state->delimiter = 0;
-      lexer->advance_pic(lexer, false);
+      array_pop(&state->delimiters);
       return true;
     }
     else {
@@ -187,12 +251,16 @@ static bool scan_delimiter(TSLexer *lexer, ScannerState *state) {
  * delimiter from the start of the shell command.
  */
 
-static bool scan_shell_command(TSLexer *lexer, ScannerState *state) {
+static bool shell_command(TSLexer *lexer, ScannerState *state) {
+  if (state->delimiters.size == 0) return false;
+
+  int32_t *delimiter = array_back(&state->delimiters);
+
   for(bool has_content=false;; has_content=true) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
-    if (lexer->lookahead == state->delimiter) {
+    if (lexer->lookahead == *delimiter) {
       return has_content;
     }
     else if ((lexer->lookahead == U'"') || (lexer->lookahead == U'{')) {
@@ -215,7 +283,7 @@ static bool scan_shell_command(TSLexer *lexer, ScannerState *state) {
  * the copy statement line.
  */
 
-static bool scan_data_table(TSLexer *lexer, ScannerState *state) {
+static bool data_table(TSLexer *lexer, ScannerState *state) {
   bool has_content = false;  // Anything but a tag has been found
   bool tag_matched = true;   // Set to false if the line does not match the tag
   bool start_table = false;  // False until we are sure that the table starts
@@ -230,21 +298,19 @@ static bool scan_data_table(TSLexer *lexer, ScannerState *state) {
     uint32_t col = lexer->get_column(lexer);
 
     if (!start_table) {
-      switch (lexer->lookahead) {
-      case U' ':
-      case U'\t':
-        // Skip over horizontal whitespace
+      if (isblank(lexer->lookahead)) {
+        // Skip initial horizontal whitespace
         lexer->advance_pic(lexer, true);
         continue;
-
-      case U'\n':
+      }
+      else if (lexer->lookahead == U'\n') {
         // End of line for the copy statement; the data table starts here
         start_table = true;
-        break;
-
-      default:
+      }
+      else {
         // Anything else means the copy statement probably has an until
-        // clause and therefore this is not the start of the data table
+        // clause that needs to be parsed before we can go on here. So this
+        // is not (yet) the start of the data table.
         return false;
       }
     }
@@ -290,7 +356,7 @@ static bool scan_data_table(TSLexer *lexer, ScannerState *state) {
  * Scan for a data table tag.
  */
 
-static bool scan_data_table_tag(TSLexer *lexer, ScannerState *state) {
+static bool data_table_tag(TSLexer *lexer, ScannerState *state) {
   bool skip = true;
   int quote = 0;
 
@@ -307,7 +373,7 @@ static bool scan_data_table_tag(TSLexer *lexer, ScannerState *state) {
         quote = 1;
         skip = false;
       }
-      else if (!isspace(lexer->lookahead)) {
+      else if (!isblank(lexer->lookahead)) {
         return false;
       }
       break;
@@ -344,7 +410,7 @@ void *tree_sitter_pic_external_scanner_create() {
 
   if (state) {
     array_init(&state->data_table_tag);
-    state->delimiter = 0;  // 0 means not inside a shell command
+    array_init(&state->delimiters);
   }
 
   return state;
@@ -354,6 +420,7 @@ void tree_sitter_pic_external_scanner_destroy(void *payload) {
   ScannerState *state = (ScannerState*)payload;
 
   if (state) {
+    array_delete(&state->delimiters);
     array_delete(&state->data_table_tag);
     ts_free(state);
   }
@@ -364,9 +431,10 @@ unsigned tree_sitter_pic_external_scanner_serialize(void *payload, char *buffer)
   unsigned length = 0;  // total size of the serialized data in bytes
   unsigned objsiz;      // size of the current object to serialize
 
-  // Serialize the scanner state. To prevent serialization of each struct
-  // item we also include the bogus pointer to the array contents. The
-  // pointer will be reset when the object is deserialized (see below).
+  // Serialize the scanner state. To prevent serialization of each
+  // individual struct member we also include the bogus pointer to the
+  // array contents. The pointer will be reset when the object is
+  // deserialized (see below).
   objsiz = sizeof(ScannerState);
   memcpy(buffer, state, objsiz);
   buffer += objsiz;
@@ -376,6 +444,13 @@ unsigned tree_sitter_pic_external_scanner_serialize(void *payload, char *buffer)
   objsiz = state->data_table_tag.capacity * array_elem_size(&state->data_table_tag);
   if (objsiz > 0) {
     memcpy(buffer, state->data_table_tag.contents, objsiz);
+    buffer += objsiz;
+    length += objsiz;
+  }
+
+  objsiz = state->delimiters.capacity * array_elem_size(&state->delimiters);
+  if (objsiz > 0) {
+    memcpy(buffer, state->delimiters.contents, objsiz);
     buffer += objsiz;
     length += objsiz;
   }
@@ -390,7 +465,7 @@ void tree_sitter_pic_external_scanner_deserialize(void *payload, const char *buf
   // Initialize the structure since the deserialization function will
   // sometimes also be called with length set to zero.
   array_init(&state->data_table_tag);
-  state->delimiter = 0;
+  array_init(&state->delimiters);
 
   // Deserialize the scanner state.
   if (length >= sizeof(ScannerState)) {
@@ -399,14 +474,25 @@ void tree_sitter_pic_external_scanner_deserialize(void *payload, const char *buf
     buffer += objsiz;
     length -= objsiz;
 
-    // Check if the array content needs to be deserialized. In this case the
-    // contents pointer is invalid as is now contains the address of the
-    // contents when serialization has happened. So we need to allocate a new
-    // memory chunk and deserialize it there. The size and capacity elements
-    // are already defined correctly.
-    if (length > 0) {
-      state->data_table_tag.contents = ts_malloc(length);
-      memcpy(state->data_table_tag.contents, buffer, length);
+    // Check if the array contents need to be deserialized. In this case
+    // the contents pointer is invalid as is now contains the address of
+    // the contents when serialization has happened. So we need to allocate
+    // a new memory chunk and deserialize it there. The size and capacity
+    // elements are already defined correctly.
+    objsiz = state->data_table_tag.capacity * array_elem_size(&state->data_table_tag);
+    if (objsiz > 0) {
+      state->data_table_tag.contents = ts_malloc(objsiz);
+      memcpy(state->data_table_tag.contents, buffer, objsiz);
+      buffer += objsiz;
+      length -= objsiz;
+    }
+
+    objsiz = state->delimiters.capacity * array_elem_size(&state->delimiters);
+    if (objsiz > 0) {
+      state->delimiters.contents = ts_malloc(objsiz);
+      memcpy(state->delimiters.contents, buffer, objsiz);
+      buffer += objsiz;
+      length -= objsiz;
     }
   }
 }
@@ -444,22 +530,15 @@ bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const 
     }
   }
 
-  if (valid_symbols[DELIMITER]) {
-    if (scan_delimiter(lexer, state)) {
-      lexer->result_symbol = DELIMITER;
-      return true;
-    }
-  }
-
   if (valid_symbols[SHELL_COMMAND]) {
-    if (scan_shell_command(lexer, state)) {
+    if (shell_command(lexer, state)) {
       lexer->result_symbol = SHELL_COMMAND;
       return true;
     }
   }
 
   if (valid_symbols[DATA_TABLE]) {
-    if (scan_data_table(lexer, state)) {
+    if (data_table(lexer, state)) {
       array_clear(&state->data_table_tag);
       lexer->result_symbol = DATA_TABLE;
       return true;
@@ -467,8 +546,22 @@ bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const 
   }
 
   if (valid_symbols[DATA_TABLE_TAG]) {
-    if (scan_data_table_tag(lexer, state)) {
+    if (data_table_tag(lexer, state)) {
       lexer->result_symbol = DATA_TABLE_TAG;
+      return true;
+    }
+  }
+
+  if (valid_symbols[OPEN_DELIMITER]) {
+    if (open_delimiter(lexer, state)) {
+      lexer->result_symbol = OPEN_DELIMITER;
+      return true;
+    }
+  }
+
+  if (valid_symbols[CLOSE_DELIMITER]) {
+    if (close_delimiter(lexer, state)) {
+      lexer->result_symbol = CLOSE_DELIMITER;
       return true;
     }
   }
