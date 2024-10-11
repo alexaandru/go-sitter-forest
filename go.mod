@@ -8,12 +8,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.0
+	github.com/alexaandru/go-sitter-forest/al v1.9.1
 	github.com/alexaandru/go-sitter-forest/amber v1.9.0
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
-	github.com/alexaandru/go-sitter-forest/apex v1.9.0
+	github.com/alexaandru/go-sitter-forest/apex v1.9.1
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
 	github.com/alexaandru/go-sitter-forest/asm v1.9.0
@@ -281,7 +281,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
-	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.0
+	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/pic v1.9.1
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.0
@@ -356,8 +356,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.9.0
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
-	github.com/alexaandru/go-sitter-forest/soql v1.9.0
-	github.com/alexaandru/go-sitter-forest/sosl v1.9.0
+	github.com/alexaandru/go-sitter-forest/soql v1.9.1
+	github.com/alexaandru/go-sitter-forest/sosl v1.9.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.0
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.0
-	github.com/alexaandru/go-sitter-forest/teal v1.9.0
+	github.com/alexaandru/go-sitter-forest/teal v1.9.1
 	github.com/alexaandru/go-sitter-forest/templ v1.9.0
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
