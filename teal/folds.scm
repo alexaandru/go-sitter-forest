@@ -7,6 +7,7 @@
 (if_statement)
 (function_statement)
 (record_declaration)
+(interface_declaration)
 (enum_declaration)
 (anon_function)
 (table_constructor)

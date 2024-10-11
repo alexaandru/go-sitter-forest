@@ -27,7 +27,10 @@
 (type_declaration "global" @keyword)
 (function_statement "global" @keyword)
 (record_declaration "global" @keyword)
+(interface_declaration "global" @keyword)
 (enum_declaration "global" @keyword)
+
+(macroexp_statement "macroexp" @keyword)
 
 ;; Ops
 (bin_op (op) @operator)
@@ -63,8 +66,10 @@
   (method_index (_) key: (identifier) @function) . (arguments))
 
 ;; Types
+
+; Contextual keywords in record bodies
 (record_declaration
-  . "record" @keyword
+  . [ "record" ] @keyword
   name: (identifier) @type)
 (anon_record . "record" @keyword)
 (record_body
@@ -76,13 +81,45 @@
     . [ "enum" ] @keyword
     . name: (identifier) @type))
 (record_body
+  (interface_declaration
+    . [ "interface" ] @keyword
+    . name: (identifier) @type))
+(record_body
   (typedef
     . "type" @keyword
     . name: (identifier) @type . "="))
 (record_body
-  (metamethod "metamethod" @keyword))
-(record_body
-  (userdata) @keyword)
+  (macroexp_declaration
+    . [ "macroexp" ] @keyword))
+(record_body (metamethod "metamethod" @keyword))
+(record_body (userdata) @keyword)
+
+; Contextual keywords in interface bodies
+(interface_declaration
+  . [ "interface" ] @keyword
+  name: (identifier) @type)
+(anon_interface . "interface" @keyword)
+(interface_body
+  (record_declaration
+    . [ "record" ] @keyword
+    . name: (identifier) @type))
+(interface_body
+  (enum_declaration
+    . [ "enum" ] @keyword
+    . name: (identifier) @type))
+(interface_body
+  (interface_declaration
+    . [ "interface" ] @keyword
+    . name: (identifier) @type))
+(interface_body
+  (typedef
+    . "type" @keyword
+    . name: (identifier) @type . "="))
+(interface_body
+  (macroexp_declaration
+    . [ "macroexp" ] @keyword))
+(interface_body (metamethod "metamethod" @keyword))
+(interface_body (userdata) @keyword)
 
 (enum_declaration
   "enum" @keyword
