@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.9.0
-	github.com/alexaandru/go-sitter-forest/abl v1.9.0
+	github.com/alexaandru/go-sitter-forest/abl v1.9.1
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.9.0
 	github.com/alexaandru/go-sitter-forest/context v1.9.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.9.0
-	github.com/alexaandru/go-sitter-forest/core v1.9.1
+	github.com/alexaandru/go-sitter-forest/core v1.9.2
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
@@ -180,7 +180,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/http2 v1.9.0
 	github.com/alexaandru/go-sitter-forest/hungarian v1.9.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
-	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.0
+	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.0
@@ -276,15 +276,15 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
-	github.com/alexaandru/go-sitter-forest/perl v1.9.1
+	github.com/alexaandru/go-sitter-forest/perl v1.9.2
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
-	github.com/alexaandru/go-sitter-forest/pic v1.9.1
+	github.com/alexaandru/go-sitter-forest/pic v1.9.2
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
-	github.com/alexaandru/go-sitter-forest/pioasm v1.9.0
+	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
 	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
 	github.com/alexaandru/go-sitter-forest/plantuml v1.9.0
 	github.com/alexaandru/go-sitter-forest/po v1.9.0
