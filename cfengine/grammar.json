@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "dbb13c3538f8b04182b70d47218d4047ea7c7bc0",
+  "grammarSha": "3e132bd8df81f06ba438b9dae331b22550e645924720513c4fb365e38334b7c2",
+  "language": "cfengine",
+  "url": "https://github.com/olehermanse/tree-sitter-cfengine",
+  "maintainedBy": "@olehermanse"
+}

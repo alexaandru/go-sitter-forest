@@ -61,6 +61,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cds"
 	"github.com/alexaandru/go-sitter-forest/cedar"
 	"github.com/alexaandru/go-sitter-forest/cel"
+	"github.com/alexaandru/go-sitter-forest/cfengine"
 	"github.com/alexaandru/go-sitter-forest/cg"
 	"github.com/alexaandru/go-sitter-forest/chatito"
 	"github.com/alexaandru/go-sitter-forest/circom"
@@ -527,6 +528,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"cds":                cds.GetLanguage,
 	"cedar":              cedar.GetLanguage,
 	"cel":                cel.GetLanguage,
+	"cfengine":           cfengine.GetLanguage,
 	"cg":                 cg.GetLanguage,
 	"chatito":            chatito.GetLanguage,
 	"circom":             circom.GetLanguage,
@@ -977,6 +979,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"cds":                cds.GetQuery,
 	"cedar":              cedar.GetQuery,
 	"cel":                cel.GetQuery,
+	"cfengine":           cfengine.GetQuery,
 	"cg":                 cg.GetQuery,
 	"chatito":            chatito.GetQuery,
 	"circom":             circom.GetQuery,

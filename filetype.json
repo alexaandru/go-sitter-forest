@@ -125,6 +125,7 @@
     "cds":                ["cds"],
     "cedar":              ["cedar"],
     "cel":                ["cel"],
+    "cfengine":           ["cf"],
     "cg":                 ["cg"],
     "chatito":            ["chatito"],
     "circom":             ["circom"],

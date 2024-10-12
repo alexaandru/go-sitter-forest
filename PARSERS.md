@@ -1,6 +1,6 @@
-# 446 Supported Parsers
+# 447 Supported Parsers
 
-9 pending, 9 skipped regeneration, 31 missing queries
+9 pending, 9 skipped regeneration, 32 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -47,6 +47,7 @@
 - [x] [cds](https://github.com/cap-js-community/tree-sitter-cds) ✔️ (maintained by @bugwelle)
 - [x] [cedar](https://github.com/chrnorm/tree-sitter-cedar) ✔️ (maintained by @chrnorm)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️ (maintained by @Alfus)
+- [x] [cfengine](https://github.com/olehermanse/tree-sitter-cfengine) 🗸 (maintained by @olehermanse)
 - [ ] [cfhtml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
 - [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
 - [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
