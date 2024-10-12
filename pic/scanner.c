@@ -76,9 +76,10 @@ typedef struct ScannerState {
  * The words we need to match with the scan_word function.
  */
 
-static int32_t left[] = { U'l', U'e', U'f', U't', 0 };
+static int32_t left[]  = { U'l', U'e', U'f', U't', 0 };
 static int32_t right[] = { U'r', U'i', U'g', U'h', U't', 0 };
-static int32_t of[] = { U'o', U'f', 0 };
+static int32_t of[]    = { U'o', U'f', 0 };
+static int32_t until[] = { U'u', U'n', U't', U'i', U'l', 0 };
 
 
 /**
@@ -124,16 +125,14 @@ static inline int32_t matching_delimiter(int32_t ch) {
  */
 
 static bool skip_balanced(TSLexer *lexer) {
-  int32_t delimiter = 0;
+  for(int32_t delimiter = matching_delimiter(lexer->lookahead);;) {
+    lexer->advance_pic(lexer, false);
 
-  for(;;) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
-    if (delimiter == 0) {
-      delimiter = matching_delimiter(lexer->lookahead);
-    }
-    else if (lexer->lookahead == delimiter) {
+    if (lexer->lookahead == delimiter) {
+      // End of the balanced text is reached; skip delimiter and return.
       lexer->advance_pic(lexer, false);
       return true;
     }
@@ -141,8 +140,6 @@ static bool skip_balanced(TSLexer *lexer) {
       // Consume backslash and the following character
       lexer->advance_pic(lexer, false);
     }
-
-    lexer->advance_pic(lexer, false);
   }
 }
 
@@ -153,13 +150,13 @@ static bool skip_balanced(TSLexer *lexer) {
  */
 
 static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
-  int32_t first_delimiter = 0;
-  int32_t last_delimiter = 0;
+  int32_t delimiter = 0;
 
   typedef enum ScanDelimiter {
     INITIAL_WHITESPACE,
     FIRST_CHAR,
     MACRONAME,
+    UNTIL,
   } ScanDelimiter;
 
   for(ScanDelimiter position=INITIAL_WHITESPACE;;) {
@@ -175,7 +172,8 @@ static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
       }
 
       position = FIRST_CHAR;
-      break;
+
+      // Fall thru
 
     case FIRST_CHAR:
       if (lexer->lookahead == U'{') {
@@ -186,9 +184,9 @@ static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
         return true;
       }
       else if (isalpha(lexer->lookahead)) {
-        // Either a delimiting character or a macroname; we store the
-        // delimiter and mark this as the end of the token.
-        first_delimiter = lexer->lookahead;
+        // Either a delimiting character or a macroname; we remember the
+        // delimiter for later and mark this as the end of the token.
+        delimiter = lexer->lookahead;
         lexer->advance_pic(lexer, false);
         lexer->mark_end(lexer);
         position = MACRONAME;
@@ -200,32 +198,53 @@ static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
         lexer->advance_pic(lexer, false);
         return true;
       }
-      break;
+
+      // Fall thru
 
     case MACRONAME:
       if (isalnum(lexer->lookahead) || (lexer->lookahead == U'_')) {
-        last_delimiter = lexer->lookahead;
+        // More alphanumeric characters could mean we see a macroname.
         lexer->advance_pic(lexer, false);
+        break;
       }
-      else {
-        return (last_delimiter == first_delimiter);
+
+      position = UNTIL;
+
+      // Fall thru
+
+    case UNTIL:
+      if (isblank(lexer->lookahead)) {
+        // Skip whitespace
+        lexer->advance_pic(lexer, false);
+        break;
       }
-      break;
+      else if ((lexer->lookahead == U'\n') || (lexer->lookahead == U'#')) {
+        // Parse it as macroname since we don't know any better.
+        return false;
+      }
+
+      // Now check the next token.
+      if (scan_word(lexer, until, false)) {
+        // The next token is 'until' so it really seems to be a macroname.
+        return false;
+      }
+
+      // We still need to store the delimiting char before we are done.
+      array_push(&state->delimiters, delimiter);
+      return true;
     }
   }
 }
 
 
 /**
- * Detect the end of a balanced body.
+ * Detect the end of a balanced body using the last stored delimiter.
  */
 
 static bool close_delimiter(TSLexer *lexer, ScannerState *state) {
   if (state->delimiters.size == 0) return false;
 
-  int32_t *delimiter = array_back(&state->delimiters);
-
-  for(;;) {
+  for(int32_t *delimiter = array_back(&state->delimiters);;) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
@@ -234,11 +253,14 @@ static bool close_delimiter(TSLexer *lexer, ScannerState *state) {
       lexer->advance_pic(lexer, true);
     }
     else if (lexer->lookahead == *delimiter) {
+      // The matching delimiter is found so we skip over it and remove it
+      // from the array of delimiters.
       lexer->advance_pic(lexer, false);
       array_pop(&state->delimiters);
       return true;
     }
     else {
+      // Not our delimiter so let the parser try to match something else.
       return false;
     }
   }
@@ -254,6 +276,7 @@ static bool close_delimiter(TSLexer *lexer, ScannerState *state) {
 static bool shell_command(TSLexer *lexer, ScannerState *state) {
   if (state->delimiters.size == 0) return false;
 
+  // Use the last stored delimiter
   int32_t *delimiter = array_back(&state->delimiters);
 
   for(bool has_content=false;; has_content=true) {
@@ -357,31 +380,32 @@ static bool data_table(TSLexer *lexer, ScannerState *state) {
  */
 
 static bool data_table_tag(TSLexer *lexer, ScannerState *state) {
-  bool skip = true;
-  int quote = 0;
+  typedef enum DataTableQuote {
+    BEFORE_OPEN_QUOTE,
+    AFTER_OPEN_QUOTE,
+  } DataTableQuote;
 
   array_clear(&state->data_table_tag);
 
-  for(;;) {
+  for(DataTableQuote quote=BEFORE_OPEN_QUOTE;;) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
     switch (quote) {
-    case 0:
-      // before opening quote
+    case BEFORE_OPEN_QUOTE:
       if (lexer->lookahead == U'"') {
-        quote = 1;
-        skip = false;
+        quote = AFTER_OPEN_QUOTE;
       }
       else if (!isblank(lexer->lookahead)) {
         return false;
       }
       break;
 
-    case 1:
-      // after opening quote
+    case AFTER_OPEN_QUOTE:
       if (lexer->lookahead == U'"') {
-        quote = 2;
+        // Skip over closing quote
+        lexer->advance_pic(lexer, false);
+        return true;
       }
       else if (lexer->lookahead == U'\n') {
         return false;
@@ -390,13 +414,9 @@ static bool data_table_tag(TSLexer *lexer, ScannerState *state) {
         array_push(&state->data_table_tag, lexer->lookahead);
       }
       break;
-
-    case 2:
-      // closing quote
-      return true;
-      break;
     }
-    lexer->advance_pic(lexer, skip);
+
+    lexer->advance_pic(lexer, (quote == BEFORE_OPEN_QUOTE));
   }
 }
 
@@ -565,5 +585,6 @@ bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const 
       return true;
     }
   }
+
   return false;
 }

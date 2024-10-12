@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "924aadaf5dea2a6074d72027b064f939acf32e20",
-  "grammarSha": "4e2b2a6c4ff924e0c604e6230e866cb6042ca2c3f1d6056211d34c2a08cfe4da",
+  "revision": "afece58efdb30440bddd151ef1347fa8d6f744a9",
+  "grammarSha": "143d145197cf9f347372471b1eca8388d884035bc0f4fbdd42c2bf47d57b8c81",
   "language": "pioasm",
   "url": "https://github.com/leo60228/tree-sitter-pioasm",
   "maintainedBy": "@leo60228",
