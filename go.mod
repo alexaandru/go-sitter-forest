@@ -46,6 +46,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cds v1.9.0
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
+	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.0
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.0
 	github.com/alexaandru/go-sitter-forest/circom v1.9.0

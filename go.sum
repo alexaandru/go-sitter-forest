@@ -84,6 +84,8 @@ github.com/alexaandru/go-sitter-forest/cedar v1.9.0 h1:Fh4RWEUci1iP12UfSPqeEeFj4
 github.com/alexaandru/go-sitter-forest/cedar v1.9.0/go.mod h1:we/iMmg1Z91MiXdemOhFNdcqptesFCdPNh9/F8zdhfY=
 github.com/alexaandru/go-sitter-forest/cel v1.9.0 h1:SidxMBeUDOwyEL6FckuM8ugYjUZwNXOTsbFFL66bCPk=
 github.com/alexaandru/go-sitter-forest/cel v1.9.0/go.mod h1:Bt+cJ+RTYYHuAZ5inywkaOCWj4kHoR3np70QzPSxHLk=
+github.com/alexaandru/go-sitter-forest/cfengine v1.9.0 h1:SovhCdVB+PM33TcY9qzu44Ha79PsTfUj6t7wKL4yzII=
+github.com/alexaandru/go-sitter-forest/cfengine v1.9.0/go.mod h1:nTisVy4MkxkYk0oIqNHcyfcMwfN4CJ2yrqVUgEL8q3s=
 github.com/alexaandru/go-sitter-forest/cg v1.9.0 h1:HqwNEnquZvjAOgbGqP38axC6m9NNs4R4avttbvLqyi8=
 github.com/alexaandru/go-sitter-forest/cg v1.9.0/go.mod h1:xeiUuIfoDRaYmL+qi106WJ+PIzYYZCsJVoidDmzc5KQ=
 github.com/alexaandru/go-sitter-forest/chatito v1.9.0 h1:pjiG9DSo3cleP2S5xpng97i5xTdFiSs4eCAr5XNWCQs=
