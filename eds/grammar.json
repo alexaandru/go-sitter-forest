@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "0ad62cb635c2f4353359a88dec9e3a57bbf9f66d",
+  "revision": "26d529e6cfecde391a03c21d1474eb51e0285805",
   "grammarSha": "24b6d6feac50aabab59e13fa0bcd068451ad0b21a6bc19b646fe53885e463d62",
   "language": "eds",
   "url": "https://github.com/uyha/tree-sitter-eds",
