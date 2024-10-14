@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.9.0
-	github.com/alexaandru/go-sitter-forest/abl v1.9.1
+	github.com/alexaandru/go-sitter-forest/abl v1.9.2
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
@@ -178,7 +178,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.9.0
 	github.com/alexaandru/go-sitter-forest/http v1.9.0
-	github.com/alexaandru/go-sitter-forest/http2 v1.9.0
+	github.com/alexaandru/go-sitter-forest/http2 v1.9.1
 	github.com/alexaandru/go-sitter-forest/hungarian v1.9.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
@@ -283,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
-	github.com/alexaandru/go-sitter-forest/pic v1.9.3
+	github.com/alexaandru/go-sitter-forest/pic v1.9.4
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
 	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
