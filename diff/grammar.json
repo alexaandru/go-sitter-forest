@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "19dd5aa52fe339a1d974768a09ee2537303e8ca5",
+  "revision": "4867e8470e1b0ad7364c4e3ffab762c361bbb635",
   "grammarSha": "7e50abb16ea9fac756e9a1f5686965925e3a5f1e1bfc2ee79c251de1b5ff3dd3",
   "language": "diff",
   "url": "https://github.com/the-mikedavis/tree-sitter-diff",

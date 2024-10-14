@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "efbe0b2f2eaa248e8c657a80a8c2305056bda477",
+  "revision": "6544dd62198f5d14f151b5b2215ca25e38da3d7b",
   "grammarSha": "712ed2968427a3e48501c5a8db9de76ef7d5907603738578973bcef4fa118af3",
   "language": "editorconfig",
   "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",

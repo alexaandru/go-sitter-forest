@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "6648ac1c0cdadaec8ee8bcf9a4ca6ace5102cf21",
-  "grammarSha": "36653b15a93a70b70c5036844029b90beacc00b2c3ad772ea4c6a36d9e294c03",
+  "revision": "449a1a5aefcc701fb9efc4c295d8c026553af2a3",
+  "grammarSha": "f6f307044a34783f920867dbdab5bbcdfcae55cb5d71541d4319fcb6620071a8",
   "language": "just",
   "url": "https://github.com/IndianBoy42/tree-sitter-just",
   "maintainedBy": "@Hubro",

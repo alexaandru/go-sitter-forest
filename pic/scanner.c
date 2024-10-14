@@ -50,6 +50,7 @@ enum TokenType {
   DATA_TABLE,
   DATA_TABLE_TAG,
   OPEN_DELIMITER,
+  OPEN_DELIMITER_OR_MACRONAME,
   CLOSE_DELIMITER,
 };
 
@@ -145,11 +146,14 @@ static bool skip_balanced(TSLexer *lexer) {
 
 
 /**
- * Detect the start of a balanced body. The first non-whitespace character
- * is the delimiter. It can be an opening brace or any other character.
+ * Detect the start of a balanced body. If the parameter allow_macroname is
+ * set to true, then we need to handle the special case of the "copy thru"
+ * statement where either a balanced body or a macroname can follow. The
+ * first non-whitespace character is the delimiter. It can be an opening
+ * brace or any other character.
  */
 
-static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
+static bool open_delimiter(TSLexer *lexer, ScannerState *state, bool allow_macroname) {
   int32_t delimiter = 0;
 
   typedef enum ScanDelimiter {
@@ -183,9 +187,10 @@ static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
         lexer->advance_pic(lexer, false);
         return true;
       }
-      else if (isalpha(lexer->lookahead)) {
-        // Either a delimiting character or a macroname; we remember the
-        // delimiter for later and mark this as the end of the token.
+      else if (isalpha(lexer->lookahead) && allow_macroname) {
+        // Either a delimiting character or the first char of a macroname
+        // if that is allowed; we remember the delimiter for later and mark
+        // this as the end of the token.
         delimiter = lexer->lookahead;
         lexer->advance_pic(lexer, false);
         lexer->mark_end(lexer);
@@ -193,7 +198,10 @@ static bool open_delimiter(TSLexer *lexer, ScannerState *state) {
       }
       else {
         // Anything else is a delimiting character; we store the character
-        // as ending delimiter and stop scanning.
+        // as ending delimiter and stop scanning. The code is also used for
+        // a letter character if the parameter allow_macroname is false. In
+        // that case the first non-whitespace character is the delimiter
+        // and we return success here.
         array_push(&state->delimiters, lexer->lookahead);
         lexer->advance_pic(lexer, false);
         return true;
@@ -297,6 +305,31 @@ static bool shell_command(TSLexer *lexer, ScannerState *state) {
 
 
 /**
+ * Check the lookahead character for a match in the data table tag.
+ */
+
+static bool tag_match(TSLexer *lexer, UTF32String *array) {
+  int32_t character = lexer->lookahead;
+  uint32_t column = lexer->get_column(lexer);
+
+  if (array->size > 0) {
+    // Use the tag stored in the array
+    return ((column < array->size) && (character == *array_get(array, column)));
+  }
+  else {
+    // Use .PE/.PF as end tag
+    switch (column) {
+    case 0: return (character == U'.');
+    case 1: return (character == U'P');
+    case 2: return (character == U'E' || character == U'F');
+    default: break;
+    }
+  }
+  return false;
+}
+
+
+/**
  * Scan for a data table. A data table starts at the end of line of the copy
  * statement. A data table ends either with the tag given in the until clause
  * of the copy statement or with the next .PE/.PF line. A data table may be
@@ -311,14 +344,9 @@ static bool data_table(TSLexer *lexer, ScannerState *state) {
   bool tag_matched = true;   // Set to false if the line does not match the tag
   bool start_table = false;  // False until we are sure that the table starts
 
-  uint32_t tag_length = state->data_table_tag.size > 0 ?
-                        state->data_table_tag.size : 3;
-
   for(;;) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
-
-    uint32_t col = lexer->get_column(lexer);
 
     if (!start_table) {
       if (isblank(lexer->lookahead)) {
@@ -337,37 +365,31 @@ static bool data_table(TSLexer *lexer, ScannerState *state) {
         return false;
       }
     }
-
-    if ((state->data_table_tag.size == 0) && (col < tag_length)) {
-      // Tag is not set, so we use .PE or .PF as end tag
-      if ((col == 0) && (lexer->lookahead != U'.'))
-        tag_matched = false;
-      if ((col == 1) && (lexer->lookahead != U'P'))
-        tag_matched = false;
-      if ((col == 2) && (lexer->lookahead != U'E') && (lexer->lookahead != U'F'))
-        tag_matched = false;
-    }
-    else if ((col < tag_length) &&
-        (*array_get(&state->data_table_tag, col) != lexer->lookahead)) {
-      // Lookahead character does not match the tag we are looking for
-      tag_matched = false;
-    }
-    else if ((col == tag_length) && tag_matched && isspace(lexer->lookahead)) {
-      // Complete tag was matched
-      if (state->data_table_tag.size > 0) {
-        // Consume the end tag if a named tag has been used
-        lexer->mark_end(lexer);
-      }
-      return has_content;
-    }
     else if (lexer->lookahead == U'\n') {
-      // Tag not found; continue in next line and try to match the tag
+      if (tag_matched) {
+        // Consume the end tag if a named tag has been used and return the
+        // end tag as content of the data table.
+        if (state->data_table_tag.size > 0) {
+          lexer->mark_end(lexer);
+          has_content = true;
+        }
+        return has_content;
+      }
+
+      // Tag not found; continue in next line and try to match the tag again
       lexer->mark_end(lexer);
       tag_matched = true;
+    }
+    else if (tag_match(lexer, &state->data_table_tag)) {
+      // still trying to match the tag; nothing to do
+    }
+    else if (isblank(lexer->lookahead)) {
+      // ignore blanks
     }
     else {
       // Tag not matched but something else was found
       has_content = true;
+      tag_matched = false;
     }
 
     lexer->advance_pic(lexer, false);
@@ -573,8 +595,15 @@ bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const 
   }
 
   if (valid_symbols[OPEN_DELIMITER]) {
-    if (open_delimiter(lexer, state)) {
+    if (open_delimiter(lexer, state, false)) {
       lexer->result_symbol = OPEN_DELIMITER;
+      return true;
+    }
+  }
+
+  if (valid_symbols[OPEN_DELIMITER_OR_MACRONAME]) {
+    if (open_delimiter(lexer, state, true)) {
+      lexer->result_symbol = OPEN_DELIMITER_OR_MACRONAME;
       return true;
     }
   }

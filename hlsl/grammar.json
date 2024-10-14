@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "543930235970a04c2f0d549c9e88815847c7a74a",
+  "revision": "b309425a7ab4456605cfe78774b80f7e275ca87d",
   "grammarSha": "da0cddc899e03ceb3e433df64d3456d662fec48e141492ca643b5edb6f8d6b3e",
   "language": "hlsl",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hlsl",

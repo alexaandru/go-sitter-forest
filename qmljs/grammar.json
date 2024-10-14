@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "cc4186f15e2829385be33440561fdd17b1c40cf7",
+  "revision": "6d4db242185721e1f5ef21fde613ca90c743ec47",
   "grammarSha": "b3c1f4c9768f5f82b1259e1056f088d975dea213812c1fec94d36af83bb38214",
   "language": "qmljs",
   "url": "https://github.com/yuja/tree-sitter-qmljs",
