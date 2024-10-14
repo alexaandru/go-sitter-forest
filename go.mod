@@ -20,7 +20,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/astro v1.9.0
 	github.com/alexaandru/go-sitter-forest/august v1.9.0
 	github.com/alexaandru/go-sitter-forest/authzed v1.9.0
-	github.com/alexaandru/go-sitter-forest/awa5_rs v1.9.0
+	github.com/alexaandru/go-sitter-forest/awa5_rs v1.9.1
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.0
 	github.com/alexaandru/go-sitter-forest/bash v1.9.0
@@ -152,7 +152,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gomod v1.9.0
 	github.com/alexaandru/go-sitter-forest/gooscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/gosum v1.9.0
-	github.com/alexaandru/go-sitter-forest/gotmpl v1.9.0
+	github.com/alexaandru/go-sitter-forest/gotmpl v1.9.1
 	github.com/alexaandru/go-sitter-forest/gowork v1.9.0
 	github.com/alexaandru/go-sitter-forest/gpg v1.9.0
 	github.com/alexaandru/go-sitter-forest/gram v1.9.1
@@ -168,7 +168,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/haxe v1.9.0
 	github.com/alexaandru/go-sitter-forest/hcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/heex v1.9.0
-	github.com/alexaandru/go-sitter-forest/helm v1.9.0
+	github.com/alexaandru/go-sitter-forest/helm v1.9.1
 	github.com/alexaandru/go-sitter-forest/hjson v1.9.0
 	github.com/alexaandru/go-sitter-forest/hlsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.9.0
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
 	github.com/alexaandru/go-sitter-forest/julia v1.9.0
-	github.com/alexaandru/go-sitter-forest/just v1.9.0
+	github.com/alexaandru/go-sitter-forest/just v1.9.1
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
@@ -283,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
-	github.com/alexaandru/go-sitter-forest/pic v1.9.2
+	github.com/alexaandru/go-sitter-forest/pic v1.9.3
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
 	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
@@ -312,7 +312,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
-	github.com/alexaandru/go-sitter-forest/qmljs v1.9.0
+	github.com/alexaandru/go-sitter-forest/qmljs v1.9.1
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
 	github.com/alexaandru/go-sitter-forest/query v1.9.0
 	github.com/alexaandru/go-sitter-forest/r v1.9.0
@@ -388,7 +388,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
-	github.com/alexaandru/go-sitter-forest/templ v1.9.0
+	github.com/alexaandru/go-sitter-forest/templ v1.9.1
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
 	github.com/alexaandru/go-sitter-forest/thrift v1.9.0
