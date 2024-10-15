@@ -37,8 +37,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/bqn v1.9.0
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/c v1.9.0
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.0
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.0
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.1
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.1
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
@@ -50,7 +50,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cg v1.9.0
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.0
 	github.com/alexaandru/go-sitter-forest/circom v1.9.0
-	github.com/alexaandru/go-sitter-forest/clarity v1.9.1
+	github.com/alexaandru/go-sitter-forest/clarity v1.9.2
 	github.com/alexaandru/go-sitter-forest/cleancopy v1.9.0
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
 	github.com/alexaandru/go-sitter-forest/julia v1.9.0
-	github.com/alexaandru/go-sitter-forest/just v1.9.1
+	github.com/alexaandru/go-sitter-forest/just v1.9.2
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
@@ -216,7 +216,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
 	github.com/alexaandru/go-sitter-forest/lart v1.9.0
 	github.com/alexaandru/go-sitter-forest/lat v1.9.0
-	github.com/alexaandru/go-sitter-forest/latex v1.9.0
+	github.com/alexaandru/go-sitter-forest/latex v1.9.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.9.0
 	github.com/alexaandru/go-sitter-forest/leo v1.9.0
@@ -283,7 +283,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/php v1.9.0
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
-	github.com/alexaandru/go-sitter-forest/pic v1.9.4
+	github.com/alexaandru/go-sitter-forest/pic v1.9.5
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
 	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
@@ -346,7 +346,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sflog v1.9.0
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
-	github.com/alexaandru/go-sitter-forest/slang v1.9.0
+	github.com/alexaandru/go-sitter-forest/slang v1.9.1
 	github.com/alexaandru/go-sitter-forest/slim v1.9.0
 	github.com/alexaandru/go-sitter-forest/slint v1.9.0
 	github.com/alexaandru/go-sitter-forest/smali v1.9.0
@@ -361,7 +361,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
-	github.com/alexaandru/go-sitter-forest/spicy v1.9.0
+	github.com/alexaandru/go-sitter-forest/spicy v1.9.1
 	github.com/alexaandru/go-sitter-forest/sql v1.9.0
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
