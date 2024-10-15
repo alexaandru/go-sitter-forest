@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "0b4729672f9aec4810c01a0f971541dcb433fef5",
+  "revision": "83aec5f7d1659aaa79e6f24b406a9cd49b87e8e8",
   "grammarSha": "7ec686d554b6af2132d4219b8d8ebd0f52e28ac421dbaa192749d34a5480b306",
   "language": "ruby",
   "url": "https://github.com/tree-sitter/tree-sitter-ruby",

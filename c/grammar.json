@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "f4c21152f1952a99f4744e8c41d3ffb8038ae78c",
+  "revision": "79284a14a0d7e4495b095b38acdd8a27acbe870e",
   "grammarSha": "cdec2d67fc898700eb80056ee9a84f54f8771488f249e884dadfa757c8020d7e",
   "language": "c",
   "url": "https://github.com/tree-sitter/tree-sitter-c",

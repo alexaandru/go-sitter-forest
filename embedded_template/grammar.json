@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "62b0a6e45900a7dff7c37da95fec20a09968ba52",
+  "revision": "7e319b065c5864bac2fb68f7e14a338b919e8bb3",
   "grammarSha": "989af9f9e9f043390422ee07c9ab4dad6111a7f211dff0affe01b0aab3864dc6",
   "language": "embedded_template",
   "url": "https://github.com/tree-sitter/tree-sitter-embedded-template",

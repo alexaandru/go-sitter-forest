@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "d3dc807692e6bca671d4491b3bf5c67eeca8c016",
-  "grammarSha": "cec88b01595c69bf14deaa72a1bb52b88061bb7b777a2e9f17084514a6072e35",
+  "revision": "6516cfec35479d62c0ad3c8e7e546a9774b489fd",
+  "grammarSha": "59b6e05a3522de085db461aabf364b1af0cf696996bb0cafd1f85b6a05280eea",
   "language": "agda",
   "url": "https://github.com/tree-sitter/tree-sitter-agda",
   "maintainedBy": "@Decodetalkers",

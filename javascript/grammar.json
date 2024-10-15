@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "b6f0624c1447bc209830b195999b78a56b10a579",
+  "revision": "c4ce9dc8e7e98ea25757ea26bfe9a022043ccd77",
   "grammarSha": "1922a051973c2d7019312a2b137a8d6dd162fdf4c9e3446835f4c092674a3c6d",
   "language": "javascript",
   "url": "https://github.com/tree-sitter/tree-sitter-javascript",

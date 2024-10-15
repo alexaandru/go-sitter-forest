@@ -199,7 +199,7 @@
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌invalid character '}' looking for beginning of object key string)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [x] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) ✔️ (maintained by @y4cer)
-- [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f)
+- [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f; ❌Error: Supertype rule `comment` is not defined.)
 - [x] [javascript](https://github.com/tree-sitter/tree-sitter-javascript) ✔️ (maintained by @steelsojka)
 - [x] [jq](https://github.com/flurie/tree-sitter-jq) ✔️ (maintained by @ObserverOfTime)
 - [x] [jsdoc](https://github.com/tree-sitter/tree-sitter-jsdoc) ✔️ (maintained by @steelsojka)
