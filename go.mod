@@ -81,7 +81,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.0
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.0
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.0
-	github.com/alexaandru/go-sitter-forest/diff v1.9.0
+	github.com/alexaandru/go-sitter-forest/diff v1.9.1
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
 	github.com/alexaandru/go-sitter-forest/djot v1.9.0
 	github.com/alexaandru/go-sitter-forest/djot_inline v1.9.0
@@ -120,8 +120,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.9.0
-	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.0
+	github.com/alexaandru/go-sitter-forest/fsharp v1.9.1
+	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.1
 	github.com/alexaandru/go-sitter-forest/func v1.9.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.9.0
 	github.com/alexaandru/go-sitter-forest/gab v1.9.0
@@ -140,7 +140,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gleam v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.0
-	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.0
+	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.1
 	github.com/alexaandru/go-sitter-forest/glint v1.9.0
 	github.com/alexaandru/go-sitter-forest/glsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
@@ -157,7 +157,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gpg v1.9.0
 	github.com/alexaandru/go-sitter-forest/gram v1.9.1
 	github.com/alexaandru/go-sitter-forest/graphql v1.9.0
-	github.com/alexaandru/go-sitter-forest/gren v1.9.0
+	github.com/alexaandru/go-sitter-forest/gren v1.9.1
 	github.com/alexaandru/go-sitter-forest/groovy v1.9.0
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
@@ -280,10 +280,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.9.2
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
-	github.com/alexaandru/go-sitter-forest/php v1.9.0
-	github.com/alexaandru/go-sitter-forest/php_only v1.9.0
+	github.com/alexaandru/go-sitter-forest/php v1.9.1
+	github.com/alexaandru/go-sitter-forest/php_only v1.9.1
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
-	github.com/alexaandru/go-sitter-forest/pic v1.9.5
+	github.com/alexaandru/go-sitter-forest/pic v1.9.6
 	github.com/alexaandru/go-sitter-forest/pint v1.9.0
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
 	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
@@ -323,7 +323,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.0
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
-	github.com/alexaandru/go-sitter-forest/regex v1.9.0
+	github.com/alexaandru/go-sitter-forest/regex v1.9.1
 	github.com/alexaandru/go-sitter-forest/rego v1.9.0
 	github.com/alexaandru/go-sitter-forest/requirements v1.9.0
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
@@ -398,7 +398,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tnsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/todolang v1.9.0
 	github.com/alexaandru/go-sitter-forest/todotxt v1.9.0
-	github.com/alexaandru/go-sitter-forest/toml v1.9.0
+	github.com/alexaandru/go-sitter-forest/toml v1.9.1
 	github.com/alexaandru/go-sitter-forest/tort v1.9.0
 	github.com/alexaandru/go-sitter-forest/tsv v1.9.0
 	github.com/alexaandru/go-sitter-forest/tsx v1.9.0
@@ -409,7 +409,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/typst v1.9.1
+	github.com/alexaandru/go-sitter-forest/typst v1.9.2
 	github.com/alexaandru/go-sitter-forest/udev v1.9.0
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.0
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
@@ -420,7 +420,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/v v1.9.0
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.0
-	github.com/alexaandru/go-sitter-forest/verilog v1.9.0
+	github.com/alexaandru/go-sitter-forest/verilog v1.9.1
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.0
 	github.com/alexaandru/go-sitter-forest/vim v1.9.0
