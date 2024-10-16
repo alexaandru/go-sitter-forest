@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "87c01e37b80d323fef39e02c3e149a3214bea100",
-  "grammarSha": "182b96564dd634c7e9f03772fcfe7e8815ec9b84c20dc28a1618fba5eee4951d",
+  "revision": "06af1731d01ce2261f6794dd390cac389743eb43",
+  "grammarSha": "a866e206ddfda3a0a753572d7e5191adda62db0a681c4aa18531bd91a9f69296",
   "language": "pic",
   "url": "https://github.com/smoeding/tree-sitter-pic",
   "maintainedBy": "@smoeding",

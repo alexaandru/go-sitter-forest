@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "a260911201684f80cf815418b3771e6c39309f81",
+  "revision": "7e8ea8cf39fc360cb97bd253442cd48e4f7a9ce3",
   "grammarSha": "0a6f2bb79a88db91432066c4fb486deb5898d6d80e70b68a5bff5261fd3d6ad4",
   "language": "glimmer_javascript",
   "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
