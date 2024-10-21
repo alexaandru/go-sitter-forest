@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "0f06f24e259ac725045956436b9025dab008ff9f",
+  "revision": "47c1818d245a6156a488c4c4d06e9336714bae9b",
   "grammarSha": "b3121fb63be59a217a5bc48ccc95d37f166184e800a72465a73c2a418a4ac92c",
   "language": "wgsl_bevy",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-wgsl-bevy",

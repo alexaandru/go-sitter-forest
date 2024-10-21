@@ -1,7 +1,7 @@
 [
   (comment)
   (preprocessor_comment)
-] @comment
+] @comment @spell
 
 "#include" @keyword.import
 
@@ -21,6 +21,8 @@
   "#endif"
   (directive)
 ] @keyword.directive
+
+(identifier) @variable
 
 (define_directive
   name: (identifier) @constant.macro)
@@ -45,9 +47,6 @@
 (expansion) @markup.raw
 
 (component) @variable.member
-
-((component) @type
-  (#match? @type "^[A-Z]"))
 
 (components
   (component) @property .)

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "123552e5849fae9a7c536eac84d471579c7f3328",
-  "grammarSha": "ecfcd005e3a10afa42020936efc0f4105c01f53e6ab7bac0af75fdfa9fce4fd5",
+  "revision": "58f4caf9db12db3b38b81c77d274aa73c9e85aca",
+  "grammarSha": "835bce23f0244c4a1c2254a66d543779c78316288e878ec25a8be9ebdfe65b3d",
   "language": "regex",
   "url": "https://github.com/tree-sitter/tree-sitter-regex",
   "maintainedBy": "@theHamsta"
