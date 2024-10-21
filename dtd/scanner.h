@@ -7,6 +7,8 @@ enum TokenType {
     PI_TARGET,
     PI_CONTENT,
     COMMENT,
+
+#ifdef TS_XML
     CHAR_DATA,
     CDATA,
     XML_MODEL,
@@ -15,6 +17,7 @@ enum TokenType {
     END_TAG_NAME,
     ERRONEOUS_END_NAME,
     SELF_CLOSING_TAG_DELIMITER,
+#endif
 };
 
 /// Advance the lexer if the next token matches the given character
@@ -52,6 +55,9 @@ static inline bool check_word(TSLexer *lexer, const char *const word, unsigned l
 /// Scan for the target of a PI node
 static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
     bool advanced_once = false, found_x_first = false;
+#ifndef TS_XML
+    (void)valid_symbols;
+#endif
 
     if (is_valid_name_start_char(lexer->lookahead)) {
         if (lexer->lookahead == 'x' || lexer->lookahead == 'X') {
@@ -69,6 +75,7 @@ static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
                 if (lexer->lookahead == 'l' || lexer->lookahead == 'L') {
                     advance_dtd(lexer);
                     if (is_valid_name_char(lexer->lookahead)) {
+#ifdef TS_XML
                         found_x_first = false;
                         bool last_char_hyphen = lexer->lookahead == '-';
                         advance_dtd(lexer);
@@ -78,6 +85,7 @@ static bool scan_pi_target(TSLexer *lexer, const bool *valid_symbols) {
                             if (valid_symbols[XML_STYLESHEET] && check_word(lexer, "stylesheet", 10))
                                 return false;
                         }
+#endif
                     } else {
                         return false;
                     }

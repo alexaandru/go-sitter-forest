@@ -76,13 +76,21 @@ var (
 
 	rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
 
-	errUnknownCmd = errors.New("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
+	errUnknownCmd = errors.New("unknown command, must be one of: check-updates, [force-]update-all, [force-]update <lang>, update-bindings")
 )
 
 func checkUpdates() error {
-	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Branch", "Status", strings.Repeat("─", 100))
+	updates := []string{}
+	mx := &sync.Mutex{}
 
-    return grammars.ForEach(func(gr *grammar.Grammar) (err error) {
+	fmt.Print("Checking for updates ")
+
+	defer func() {
+		fmt.Printf(" done! Found %d updates:\n", len(updates))
+		fmt.Println(strings.Join(updates, "\n"))
+	}()
+
+	return grammars.ForEach(func(gr *grammar.Grammar) (err error) {
 		if gr.SkipUpdate {
 			return
 		}
@@ -91,19 +99,18 @@ func checkUpdates() error {
 			return
 		}
 
-		status := upToDate
-		if nextVersion := gr.NewVersion(); nextVersion != nil {
-			status = fmt.Sprintf("(update available: %s -> %s)", gr.Revision, nextVersion.Revision)
-		} else if !gr.SkipGenerate && gr.GrammarSha == "" {
-			status = "(grammar was never re-generated)"
-		}
+		if n := gr.NewVersion(); n != nil {
+			fmt.Print("N")
 
-		if status != upToDate {
-			fmt.Printf("%-40s\t%-10s\t%s\n", gr.Language, gr.Reference, status)
+			mx.Lock()
+			updates = append(updates, fmt.Sprintf("%-20s|%s -> %s", gr.Language, gr.Revision, n.Revision))
+			mx.Unlock()
+		} else {
+			fmt.Print(".")
 		}
 
 		return
-	})
+	}, 128)
 }
 
 // checkIfRedirect checks if the repo URL redirects to some other URL, in which
@@ -305,6 +312,13 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		}
 	}
 
+	if gr.Language == "dtd" || gr.Language == "xml" {
+		err = os.WriteFile(filepath.Join(filepath.Dir(dst), "package.json"), []byte(`{"type":"module"}`), os.ModePerm) //nolint:gosec // ok
+		if err != nil {
+			return
+		}
+	}
+
 	v := gr.NewVersion()
 	if v != nil {
 		gr.Version = v
@@ -326,7 +340,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 
 	shas[grammarJS] = fmt.Sprintf("%x", sha256.Sum256(grc))
 	replMap := map[string]string{
-		`export default `: `module.exports = `,
+		//`module.exports = `: `export default `,
 		// Patching broken grammars so that they compile.
 		// This is a bit "brute-force", but seems to do the job ¯\_(ツ)_/¯.
 		`u{[\da-fA-F]+}`:      `u[\da-fA-F]+`,
@@ -380,16 +394,6 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		}
 
 		switch gr.Language {
-		case "dtd", "xml":
-			switch file {
-			case "../common.js":
-				replMap["../common"] = "common.js"
-				continue
-			case "../common/index.js":
-				base = "common.js"
-			default:
-				replMap[file] = base
-			}
 		case "lat":
 			if file == "./grammar_maker.js" {
 				file = "./grammar_maker.ts"
@@ -432,7 +436,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 				continue
 			}
 		default:
-			replMap[file] = base
+			replMap[file] = "./" + base
 		}
 
 		// NOTE: Here we download from URLs with ../ ./ etc. in them.
@@ -548,10 +552,6 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 
 func extractDeps(lang string, content []byte) (deps []string) {
 	raw := rxReq.FindAllStringSubmatch(string(content), -1)
-	if len(raw) == 0 && !bytes.Contains(content, []byte("tree-sitter-xfst/grammar")) {
-		return
-	}
-
 	for _, m := range raw {
 		if z := m[1]; z != "" {
 			if !strings.HasSuffix(z, ".js") {
@@ -571,7 +571,7 @@ func extractDeps(lang string, content []byte) (deps []string) {
 	case "apex":
 		deps = append(deps, "../common/soql-grammar.js")
 	case "dtd", "xml":
-		deps = append(deps, "../common/index.js")
+		deps = append(deps, "../common/common.mjs")
 	case "sosl":
 		deps = append(deps, "../common/soql-grammar.js", "../common/common.js")
 	case "soql":

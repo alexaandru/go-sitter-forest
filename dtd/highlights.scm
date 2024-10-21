@@ -1,12 +1,12 @@
 ;; XML declaration
 
-(XMLDecl "xml" @keyword)
+"xml" @keyword
 
-(XMLDecl [ "version" "encoding" ] @property)
+[ "version" "encoding" ] @property
 
-(XMLDecl (EncName) @string.special)
+(EncName) @string.special
 
-(XMLDecl (VersionNum) @number)
+(VersionNum) @number
 
 ;; Processing instructions
 
@@ -107,7 +107,11 @@
 
 ;; Delimiters & punctuation
 
-[ "<?" "?>" "<!" ">" "]]>" ] @punctuation.delimiter
+[
+  "<?" "?>"
+  "<!" ">"
+  "<![" "]]>"
+] @punctuation.delimiter
 
 [ "(" ")" "[" ] @punctuation.bracket
 
@@ -117,7 +121,8 @@
 
 ;; Misc
 
-[ "INCLUDE" "IGNORE" ] @keyword
+; FIXME: enable when ts test is fixed
+; [ "INCLUDE" "IGNORE" ] @keyword
 
 (Comment) @comment
 

@@ -1,7 +1,7 @@
 {
   "reference": "split_parser",
-  "revision": "be81c59efc552bd875650fe078bf6b78d57330ca",
-  "grammarSha": "dac989b0d5acdc932f5ceb44b9ae69491cbbb60ea97c4fb30ab069ed7878a6a5",
+  "revision": "5cdc549ab8f461aff876c5be9741027189299cec",
+  "grammarSha": "0a0d8aa0e2431a810cd0e9097e5345333c37728ef53033f9ec85da7dc03f55aa",
   "language": "markdown_inline",
   "altName": "markdown_inline (needed for full highlighting)",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-markdown",

@@ -1,3 +1,4 @@
+#define TS_XML
 #include "scanner.h"
 #include "array.h"
 

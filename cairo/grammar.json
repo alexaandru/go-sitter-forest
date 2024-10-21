@@ -1,7 +1,7 @@
 {
   "reference": "master",
   "revision": "6238f609bea233040fe927858156dee5515a0745",
-  "grammarSha": "0e35cd0f41f078b18fe5999d5389cc3d318a90f1297ec563f6c5dd52e65fdb33",
+  "grammarSha": "c9c48869968a5f2a1b9460bf9b0fb910a59a5a0921718454efd9dde942326b83",
   "language": "cairo",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-cairo",
   "maintainedBy": "@amaanq",
