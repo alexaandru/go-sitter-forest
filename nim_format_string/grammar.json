@@ -4,5 +4,6 @@
   "grammarSha": "5bc636c61c08e467de8631a2fe3c3c5d85f1684e9ed0ab0c95cbb8e410bfbdcf",
   "language": "nim_format_string",
   "url": "https://github.com/aMOPel/tree-sitter-nim-format-string",
-  "maintainedBy": "@aMOPel"
+  "maintainedBy": "@aMOPel",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.188673177+03:00"
 }

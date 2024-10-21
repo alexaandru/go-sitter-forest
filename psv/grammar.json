@@ -5,5 +5,6 @@
   "language": "psv",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
   "maintainedBy": "@amaanq",
-  "srcRoot": "psv"
+  "srcRoot": "psv",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.498970911+03:00"
 }

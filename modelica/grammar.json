@@ -4,5 +4,6 @@
   "grammarSha": "75536a02ff88c332d49d1d833f7ec937623171210ae4322ae250a59fdccda19d",
   "language": "modelica",
   "url": "https://github.com/modelicahub/tree-sitter-modelica",
-  "maintainedBy": "@nachawati"
+  "maintainedBy": "@nachawati",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.922653234+03:00"
 }

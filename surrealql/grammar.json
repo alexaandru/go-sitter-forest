@@ -5,5 +5,6 @@
   "language": "surrealql",
   "url": "https://github.com/Ce11an/tree-sitter-surrealql",
   "doc": "high memory usage (3.1GB)",
-  "maintainedBy": "@Ce11an"
+  "maintainedBy": "@Ce11an",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.962587518+03:00"
 }

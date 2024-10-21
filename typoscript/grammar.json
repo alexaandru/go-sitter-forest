@@ -4,5 +4,6 @@
   "grammarSha": "60569ad8b4b835c2603c2ec55f03d575905d2cf9bebff8343edc7838294913a9",
   "language": "typoscript",
   "url": "https://github.com/Teddytrombone/tree-sitter-typoscript",
-  "maintainedBy": "@Teddytrombone"
+  "maintainedBy": "@Teddytrombone",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.877446392+03:00"
 }

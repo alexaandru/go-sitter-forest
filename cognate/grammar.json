@@ -4,5 +4,6 @@
   "grammarSha": "edd1541a640db6f0b040bb3caa790935c969c1f593d562e9e3888633de50b607",
   "language": "cognate",
   "url": "https://github.com/hedyhli/tree-sitter-cognate",
-  "maintainedBy": "@hedyhli"
+  "maintainedBy": "@hedyhli",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.058071232+03:00"
 }

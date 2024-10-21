@@ -4,5 +4,6 @@
   "grammarSha": "22a721a0f8ddf88912f84182eb1dde9ca38acf1dfa2338bc40a017bcafdc91e8",
   "language": "dune",
   "url": "https://github.com/emillon/tree-sitter-dune",
-  "maintainedBy": "@emillon"
+  "maintainedBy": "@emillon",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.370740571+03:00"
 }

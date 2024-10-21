@@ -4,5 +4,6 @@
   "grammarSha": "6da573aa55e5c98eef059e9a49d1c191851693f5e25f63be29c84d7cb6487d3c",
   "language": "elisp",
   "url": "https://github.com/Wilfred/tree-sitter-elisp",
-  "maintainedBy": "@Wilfred"
+  "maintainedBy": "@Wilfred",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.434483504+03:00"
 }

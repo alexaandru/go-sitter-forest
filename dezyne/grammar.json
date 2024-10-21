@@ -4,5 +4,6 @@
   "grammarSha": "220fd7d46d38bdcb896545a744330a53011b41265fbc4b5b009127ad33aeb16a",
   "language": "dezyne",
   "url": "https://github.com/j0ran/tree-sitter-dezyne",
-  "maintainedBy": "@j0ran"
+  "maintainedBy": "@j0ran",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.205360709+03:00"
 }

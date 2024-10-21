@@ -5,5 +5,6 @@
   "language": "ziggy_schema",
   "url": "https://github.com/kristoff-it/ziggy",
   "maintainedBy": "@rockorager",
-  "srcRoot": "tree-sitter-ziggy-schema"
+  "srcRoot": "tree-sitter-ziggy-schema",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.008226987+03:00"
 }

@@ -5,5 +5,6 @@
   "language": "v",
   "url": "https://github.com/vlang/v-analyzer",
   "maintainedBy": "@kkharji, @amaanq",
-  "srcRoot": "tree_sitter_v"
+  "srcRoot": "tree_sitter_v",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.979199768+03:00"
 }

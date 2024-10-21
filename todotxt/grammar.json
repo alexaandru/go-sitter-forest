@@ -4,5 +4,6 @@
   "grammarSha": "57fcca3fa5f0b2e820116df26e5020fcdd506d7b5ef18b33f21ee925f860723b",
   "language": "todotxt",
   "url": "https://github.com/arnarg/tree-sitter-todotxt",
-  "maintainedBy": "@arnarg"
+  "maintainedBy": "@arnarg",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.278755091+03:00"
 }

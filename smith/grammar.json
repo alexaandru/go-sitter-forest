@@ -4,5 +4,6 @@
   "grammarSha": "6dfa8df4d93299ee86291f5ffbbf9da91f703aa4771464868882cd70c81624f0",
   "language": "smith",
   "url": "https://github.com/smith-lang/tree-sitter-smith",
-  "maintainedBy": "@adam-r-kowalski"
+  "maintainedBy": "@adam-r-kowalski",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.611883572+03:00"
 }

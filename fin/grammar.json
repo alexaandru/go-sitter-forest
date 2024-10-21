@@ -4,5 +4,6 @@
   "grammarSha": "e7d595287605b6ba788e9c8b7ef31cd58f806d2e3eabc9f0bc2dc310e46a9da4",
   "language": "fin",
   "url": "https://github.com/fin-org/tree-sitter-fin",
-  "maintainedBy": "@mrmcc3"
+  "maintainedBy": "@mrmcc3",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.288364468+03:00"
 }

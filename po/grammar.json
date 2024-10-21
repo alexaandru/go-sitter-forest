@@ -4,5 +4,6 @@
   "grammarSha": "1c174bcad62d2a227f819318694e9044b56138e73d13d3dbd26d2aed38e701b7",
   "language": "po",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-po",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.380741186+03:00"
 }

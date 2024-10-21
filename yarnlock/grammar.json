@@ -4,5 +4,6 @@
   "grammarSha": "d385849e6e31cdb3e6c776516a12512ec68acd1aa86d930df8f8d66b0cd2ba3f",
   "language": "yarnlock",
   "url": "https://github.com/amaanq/tree-sitter-yarnlock",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.045932212+03:00"
 }

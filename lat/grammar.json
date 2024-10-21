@@ -6,5 +6,6 @@
   "url": "https://github.com/vilarfg/tree-sitter-lat",
   "doc": "uses TypeScript",
   "maintainedBy": "@vilarfg",
-  "skip": true
+  "skip": true,
+  "lastVersionCheckAt": "2024-10-21T09:15:24.248026944+03:00"
 }

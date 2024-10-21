@@ -4,5 +4,6 @@
   "grammarSha": "fabd0bbaa5658ef0edee0a003d206dc5c0fd749460ac12ac8f096300ab2e8ee3",
   "language": "systemtap",
   "url": "https://github.com/ok-ryoko/tree-sitter-systemtap",
-  "maintainedBy": "@ok-ryoko"
+  "maintainedBy": "@ok-ryoko",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.747239208+03:00"
 }

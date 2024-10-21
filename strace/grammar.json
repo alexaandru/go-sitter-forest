@@ -4,5 +4,6 @@
   "grammarSha": "2a74d3dd62f23213ec71abb790b89e6b43ebf1d75dd1797c068a2ce5b1d36358",
   "language": "strace",
   "url": "https://github.com/sigmaSd/tree-sitter-strace",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.079053881+03:00"
 }

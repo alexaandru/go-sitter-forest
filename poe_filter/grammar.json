@@ -5,5 +5,6 @@
   "language": "poe_filter",
   "altName": "Path of Exile item filter",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-poe-filter",
-  "maintainedBy": "@ObserverOfTime"
+  "maintainedBy": "@ObserverOfTime",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.74619405+03:00"
 }

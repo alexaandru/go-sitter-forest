@@ -4,5 +4,6 @@
   "grammarSha": "b1d74b5455e31c1691d2cde887c414811ecd1d569934c0eab4bc10c542b5f58e",
   "language": "passwd",
   "url": "https://github.com/ath3/tree-sitter-passwd",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.435028351+03:00"
 }

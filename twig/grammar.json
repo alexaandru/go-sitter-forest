@@ -4,5 +4,6 @@
   "grammarSha": "c2245f31a52c6034a7af09d8c06fab0a9810fe55bd683ec0e63b51946c2c6369",
   "language": "twig",
   "url": "https://github.com/gbprod/tree-sitter-twig",
-  "maintainedBy": "@gbprod"
+  "maintainedBy": "@gbprod",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.956387968+03:00"
 }

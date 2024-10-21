@@ -4,5 +4,6 @@
   "grammarSha": "d27349ddfe8a5b6436ea78e029bbd507dcc936a083967af382d64b2375126dad",
   "language": "udev",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-udev",
-  "maintainedBy": "@ObserverOfTime"
+  "maintainedBy": "@ObserverOfTime",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.38261032+03:00"
 }

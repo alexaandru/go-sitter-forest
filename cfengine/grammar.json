@@ -4,5 +4,6 @@
   "grammarSha": "010a35c252b7f8b6c761493a07366ebfb9f578038bceb14e20a7b8991eb5159c",
   "language": "cfengine",
   "url": "https://github.com/olehermanse/tree-sitter-cfengine",
-  "maintainedBy": "@olehermanse"
+  "maintainedBy": "@olehermanse",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.099452038+03:00"
 }

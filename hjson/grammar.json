@@ -4,5 +4,6 @@
   "grammarSha": "8cc7d9dfe2f995fd21d56c2647db21d52f259d8cf204e64a583c6c16936a4dba",
   "language": "hjson",
   "url": "https://github.com/winston0410/tree-sitter-hjson",
-  "maintainedBy": "@winston0410"
+  "maintainedBy": "@winston0410",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.910843629+03:00"
 }

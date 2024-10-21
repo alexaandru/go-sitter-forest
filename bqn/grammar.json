@@ -4,5 +4,6 @@
   "grammarSha": "c1e9b34f6d7ce710a9fe29f969c01f1a03cdeeb621fe422019630b2ff69a6576",
   "language": "bqn",
   "url": "https://github.com/shnarazk/tree-sitter-bqn",
-  "maintainedBy": "@shnarazk"
+  "maintainedBy": "@shnarazk",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.881272991+03:00"
 }

@@ -4,5 +4,6 @@
   "grammarSha": "4eaf6b6f1842c6107a872381620b9452602f356a43c8f389ebf72586333b965c",
   "language": "devicetree",
   "url": "https://github.com/joelspadin/tree-sitter-devicetree",
-  "maintainedBy": "@jedrzejboczar"
+  "maintainedBy": "@jedrzejboczar",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.124658926+03:00"
 }

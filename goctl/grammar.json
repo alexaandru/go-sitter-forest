@@ -4,5 +4,6 @@
   "grammarSha": "97b326dad5c93e51d659560f092b482a4c72cd8001938c216e5b798f43b00fca",
   "language": "goctl",
   "url": "https://github.com/chaozwn/tree-sitter-goctl",
-  "maintainedBy": "@chaozwn"
+  "maintainedBy": "@chaozwn",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.254672399+03:00"
 }

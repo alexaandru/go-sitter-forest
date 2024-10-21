@@ -4,5 +4,6 @@
   "grammarSha": "fcfe10a0ec522652409a8346417865907a7b480e16483f71cd270d4eee592ad7",
   "language": "robot",
   "url": "https://github.com/Hubro/tree-sitter-robot",
-  "maintainedBy": "@Hubro"
+  "maintainedBy": "@Hubro",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.488622681+03:00"
 }

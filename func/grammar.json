@@ -4,5 +4,6 @@
   "grammarSha": "7e70d7a0b369d37193ce3eb428b7279c927b3c9e66d62d396a5cd9a7bc1cd5ad",
   "language": "func",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-func",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.563385465+03:00"
 }

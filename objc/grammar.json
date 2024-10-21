@@ -5,5 +5,6 @@
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-objc",
   "doc": "grammar.js throws error: Unresolved conflict for symbol sequence",
   "maintainedBy": "@amaanq",
-  "skip": true
+  "skip": true,
+  "lastVersionCheckAt": "2024-10-21T09:15:24.881775522+03:00"
 }

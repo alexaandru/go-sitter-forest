@@ -4,5 +4,6 @@
   "grammarSha": "da720e90310ab42445030c0b22121a04b081ccea605ec5511f17d028373c05a1",
   "language": "dot",
   "url": "https://github.com/rydesun/tree-sitter-dot",
-  "maintainedBy": "@rydesun"
+  "maintainedBy": "@rydesun",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.499278086+03:00"
 }

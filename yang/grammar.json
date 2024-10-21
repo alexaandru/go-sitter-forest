@@ -4,5 +4,6 @@
   "grammarSha": "f939643c72b8221d5db2b4044895222fb5c2d355aae681b8fa2a90c8c0d1e35b",
   "language": "yang",
   "url": "https://github.com/Hubro/tree-sitter-yang",
-  "maintainedBy": "@Hubro"
+  "maintainedBy": "@Hubro",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.104977312+03:00"
 }

@@ -4,5 +4,6 @@
   "grammarSha": "a82cfcf385779c3624b09e9eb31672349a046f94369ed7a67e3b4b8f6d92bf94",
   "language": "sqlite",
   "url": "https://github.com/johndoe-o/tree-sitter-sqlite",
-  "maintainedBy": "@johndoe-o"
+  "maintainedBy": "@johndoe-o",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.445572163+03:00"
 }

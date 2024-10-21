@@ -4,5 +4,6 @@
   "grammarSha": "4ef67c26567c0c6195b5d9811380799c76365a030e82bf471779a0550e59e626",
   "language": "gnuplot",
   "url": "https://github.com/dpezto/tree-sitter-gnuplot",
-  "maintainedBy": "@dpezto"
+  "maintainedBy": "@dpezto",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.165515349+03:00"
 }

@@ -9,5 +9,6 @@
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ]
+  ],
+  "lastVersionCheckAt": "2024-10-21T09:15:24.709865423+03:00"
 }

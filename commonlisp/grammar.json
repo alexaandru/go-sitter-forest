@@ -4,5 +4,6 @@
   "grammarSha": "67694aa144004e79088da09c29652bca050b6600097cb79be4e2f164bd5c6882",
   "language": "commonlisp",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
-  "maintainedBy": "@theHamsta"
+  "maintainedBy": "@theHamsta",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.116485631+03:00"
 }

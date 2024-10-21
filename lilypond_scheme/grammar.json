@@ -4,5 +4,6 @@
   "grammarSha": "b90d9d6025d80d324562e380196ab75123e85f4cc024d5833946fff1a6353ff4",
   "language": "lilypond_scheme",
   "url": "https://github.com/nwhetsell/tree-sitter-lilypond-scheme",
-  "maintainedBy": "@nwhetsell"
+  "maintainedBy": "@nwhetsell",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.157498293+03:00"
 }

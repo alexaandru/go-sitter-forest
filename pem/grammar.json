@@ -4,5 +4,6 @@
   "grammarSha": "15d39dc1718ffd7b05a726517c1a748995e22cf8352e49c87adcfb5dcea50159",
   "language": "pem",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-pem",
-  "maintainedBy": "@ObserverOfTime"
+  "maintainedBy": "@ObserverOfTime",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.845701499+03:00"
 }

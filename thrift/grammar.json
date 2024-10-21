@@ -4,5 +4,6 @@
   "grammarSha": "e391fd8ec1e994e19c800249c7c8ea84b85adcd6e4978c633df73293c8a24fca",
   "language": "thrift",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-thrift",
-  "maintainedBy": "@amaanq, @duskmoon314"
+  "maintainedBy": "@amaanq, @duskmoon314",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.737444693+03:00"
 }

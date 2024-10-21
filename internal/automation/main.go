@@ -82,10 +82,17 @@ var (
 	errUnknownCmd = errors.New("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
 )
 
-func checkUpdates() error {
+func checkUpdates() (err error) {
 	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Branch", "Status", strings.Repeat("─", 100))
 
-	return grammars.ForEach(func(gr *grammar.Grammar) (err error) {
+	// FIXME: This is a more general issue with ALL places that use ForEach, but will document it here:
+	// Currently we abort on any error, however, we could have a case where we checked...
+	// 440 parsers OK, and errored out on the 441th. It is very wasteful to throw away ALL that
+	// work for just one error. Ideally, we should be able to update the grammars file for those
+	// 440 successful ones and only skip the one(s) that errored out.
+	// This applies to checks, updats, etc. We need a much more robust mechanism, at the current
+	// scale we cannot afford to treat retries lightly.
+	if err = grammars.ForEach(func(gr *grammar.Grammar) (err error) {
 		if gr.SkipUpdate {
 			return
 		}
@@ -106,7 +113,11 @@ func checkUpdates() error {
 		}
 
 		return
-	})
+	}); err != nil {
+		return
+	}
+
+	return updateGrammars()
 }
 
 // checkIfRedirect checks if the repo URL redirects to some other URL, in which

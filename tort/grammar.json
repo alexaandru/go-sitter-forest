@@ -4,5 +4,6 @@
   "grammarSha": "0676b9e30a1f9c36983556e8d36f5f35bb056fb279fe47b13fa2736c261f9f29",
   "language": "tort",
   "url": "https://github.com/quendimax/tree-sitter-tort",
-  "maintainedBy": "@quendimax"
+  "maintainedBy": "@quendimax",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.854783626+03:00"
 }

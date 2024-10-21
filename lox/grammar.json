@@ -5,5 +5,6 @@
   "language": "lox",
   "url": "https://github.com/marcuscaisey/lox",
   "maintainedBy": "@marcuscaisey",
-  "srcRoot": "tree-sitter-lox"
+  "srcRoot": "tree-sitter-lox",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.830528381+03:00"
 }

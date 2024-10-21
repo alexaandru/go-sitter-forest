@@ -4,5 +4,6 @@
   "grammarSha": "f35f4bfc5ca0d368bc14ff1c6cb5bd7c5366b1761d3e0d45a270523496d42ddc",
   "language": "gotmpl",
   "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-  "maintainedBy": "@qvalentin"
+  "maintainedBy": "@qvalentin",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.37556384+03:00"
 }

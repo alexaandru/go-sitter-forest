@@ -4,5 +4,6 @@
   "grammarSha": "7c0c76b349f1cae6d2d3190df35f20006fb7d48a86d075dadf151852f3627424",
   "language": "gstlaunch",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch",
-  "maintainedBy": "@theHamsta"
+  "maintainedBy": "@theHamsta",
+  "lastVersionCheckAt": "2024-10-21T09:15:23.935583317+03:00"
 }

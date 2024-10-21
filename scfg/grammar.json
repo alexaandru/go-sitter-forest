@@ -4,5 +4,6 @@
   "grammarSha": "bf371a3f393b5b01a5b1949511e6cf9dd352a19274caa8a374df348b3bd1f93c",
   "language": "scfg",
   "url": "https://github.com/rockorager/tree-sitter-scfg",
-  "maintainedBy": "@WhyNotHugo"
+  "maintainedBy": "@WhyNotHugo",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.424273952+03:00"
 }

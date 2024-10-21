@@ -4,5 +4,6 @@
   "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
   "language": "mlir",
   "url": "https://github.com/artagnon/tree-sitter-mlir",
-  "maintainedBy": "@artagnon"
+  "maintainedBy": "@artagnon",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.201875533+03:00"
 }

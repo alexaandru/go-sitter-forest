@@ -4,5 +4,6 @@
   "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
   "language": "xcompose",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
-  "maintainedBy": "@ObserverOfTime"
+  "maintainedBy": "@ObserverOfTime",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.30038175+03:00"
 }

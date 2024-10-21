@@ -4,5 +4,6 @@
   "grammarSha": "8b153a42b82a394a2ee455264d95a654296a5991f5047fefed95b0ca7e9094cd",
   "language": "bibtex",
   "url": "https://github.com/latex-lsp/tree-sitter-bibtex",
-  "maintainedBy": "@theHamsta, @clason"
+  "maintainedBy": "@theHamsta, @clason",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.087068154+03:00"
 }

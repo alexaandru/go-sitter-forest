@@ -4,5 +4,6 @@
   "grammarSha": "52d2dfaf3c6a68bc3acb93735f467ee35ce9d72218d834137d909ec344814a08",
   "language": "lart",
   "url": "https://github.com/frefolli/tree-sitter-lart",
-  "maintainedBy": "@frefolli"
+  "maintainedBy": "@frefolli",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.182193947+03:00"
 }

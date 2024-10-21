@@ -4,5 +4,6 @@
   "grammarSha": "76cf4d3514f0ebd4fec5e6132b269df88097b8823606c87c629c958aeac84b75",
   "language": "anzu",
   "url": "https://github.com/JamesWP/tree-sitter-anzu",
-  "maintainedBy": "@JamesWP"
+  "maintainedBy": "@JamesWP",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.421693582+03:00"
 }

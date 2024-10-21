@@ -4,5 +4,6 @@
   "grammarSha": "0d2f1e099b8e8b9d10f941205dd22b8b6de153e6cc47823fb06ffb45fab0ed13",
   "language": "effekt",
   "url": "https://github.com/leonfuss/tree-sitter-effekt",
-  "maintainedBy": "@leonfuss"
+  "maintainedBy": "@leonfuss",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.848454933+03:00"
 }

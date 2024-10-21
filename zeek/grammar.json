@@ -4,5 +4,6 @@
   "grammarSha": "d8304bd7f15f7c7b248ac51896443573d38c6faf5d99d6b0f6401c9242f8e8ae",
   "language": "zeek",
   "url": "https://github.com/zeek/tree-sitter-zeek",
-  "maintainedBy": "@bbannier"
+  "maintainedBy": "@bbannier",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.203632303+03:00"
 }

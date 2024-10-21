@@ -4,5 +4,6 @@
   "grammarSha": "31f5c6557ab4073e0a7910d7fadb6cf9286bda2fc940cd0d57f8a5bd86d31c7f",
   "language": "ignis",
   "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
-  "maintainedBy": "@BasileusErwin"
+  "maintainedBy": "@BasileusErwin",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.808343795+03:00"
 }

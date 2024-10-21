@@ -4,5 +4,6 @@
   "grammarSha": "5640f359dd610e35037c85414d38e56443cbad1fbe8f4d0640f3643ac31f7f19",
   "language": "qmldir",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-qmldir",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.00239671+03:00"
 }

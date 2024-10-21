@@ -6,5 +6,6 @@
   "url": "https://github.com/tree-sitter/tree-sitter-java",
   "doc": "Error: Supertype rule `comment` is not defined.",
   "maintainedBy": "@p00f",
-  "skipUpdate": true
+  "skipUpdate": true,
+  "lastVersionCheckAt": "0001-01-01T00:00:00Z"
 }

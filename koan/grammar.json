@@ -4,5 +4,6 @@
   "grammarSha": "fc75f7a854dfc489a2942e67578bf27dd2f4294473f46e57f26e3257e7325141",
   "language": "koan",
   "url": "https://github.com/TogarashiPepper/tree-sitter-koan",
-  "maintainedBy": "@TogarashiPepper"
+  "maintainedBy": "@TogarashiPepper",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.678567245+03:00"
 }

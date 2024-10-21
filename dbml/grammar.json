@@ -4,5 +4,6 @@
   "grammarSha": "c86d40e5f6123d505584c4d2a1a2f8162149fda36d0116b5b1c59a65c494fa4f",
   "language": "dbml",
   "url": "https://github.com/apexatoll/tree-sitter-dbml",
-  "maintainedBy": "@apexatoll"
+  "maintainedBy": "@apexatoll",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.320322724+03:00"
 }

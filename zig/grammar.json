@@ -4,5 +4,6 @@
   "grammarSha": "09f41d6a3b76ebd25972c912a2716ec6f77ac5de1d073f597823f9ac4d31c7b8",
   "language": "zig",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-zig",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.251326613+03:00"
 }

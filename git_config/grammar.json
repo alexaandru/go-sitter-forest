@@ -4,5 +4,6 @@
   "grammarSha": "0a6a46bc0cf042dd45b10584b8e574a89e4cd0ccc995d53fed2f7efcc2b2119b",
   "language": "git_config",
   "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.679717142+03:00"
 }

@@ -4,5 +4,6 @@
   "grammarSha": "df27ded872f96efd65c28ad96e22311d0b133eb16a3c24242470941ec5c8289d",
   "language": "faust",
   "url": "https://github.com/khiner/tree-sitter-faust",
-  "maintainedBy": "@khiner"
+  "maintainedBy": "@khiner",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.155601506+03:00"
 }

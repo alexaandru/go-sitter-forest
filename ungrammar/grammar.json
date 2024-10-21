@@ -4,5 +4,6 @@
   "grammarSha": "61592f44491139dd73362f8b3752e9cfde7ec232515f2144e43e80b61b566abb",
   "language": "ungrammar",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ungrammar",
-  "maintainedBy": "@Philipp-M, @amaanq"
+  "maintainedBy": "@Philipp-M, @amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.265234067+03:00"
 }

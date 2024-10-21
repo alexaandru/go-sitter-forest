@@ -4,5 +4,6 @@
   "grammarSha": "80402e3642fc46a08de1fbac9ea634da0075d57b854b6c19f215016a4ba3a59b",
   "language": "make",
   "url": "https://github.com/alemuller/tree-sitter-make",
-  "maintainedBy": "@lewis6991"
+  "maintainedBy": "@lewis6991",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.222856096+03:00"
 }

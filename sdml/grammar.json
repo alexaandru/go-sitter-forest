@@ -4,5 +4,6 @@
   "grammarSha": "49663e6305c8943edc627622d476259007625898cf0b3a4d6959d5f531334713",
   "language": "sdml",
   "url": "https://github.com/sdm-lang/tree-sitter-sdml",
-  "maintainedBy": "@johnstonskj"
+  "maintainedBy": "@johnstonskj",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.634816339+03:00"
 }

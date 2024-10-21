@@ -4,5 +4,6 @@
   "grammarSha": "0c52fc38ffb2927203f636c20578cdaa5d9e5ce79d558de07589e03fd3a956ca",
   "language": "jasmin",
   "url": "https://github.com/y4cer/tree-sitter-jasmin",
-  "maintainedBy": "@y4cer"
+  "maintainedBy": "@y4cer",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.186023581+03:00"
 }

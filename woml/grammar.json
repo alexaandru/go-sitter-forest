@@ -4,5 +4,6 @@
   "grammarSha": "d0ff48f26872bc53e1e70498701829fdcdac1e0ccbc96a5c2d78e485f6aa3068",
   "language": "woml",
   "url": "https://github.com/0xWaleed/tree-sitter-woml",
-  "maintainedBy": "@0xWaleed"
+  "maintainedBy": "@0xWaleed",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.945387099+03:00"
 }

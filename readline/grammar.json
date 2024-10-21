@@ -4,5 +4,6 @@
   "grammarSha": "ae2d23a7175fe4114b2e5fab77c0d0e109cb8a0aa2f999875c87c753d9b94084",
   "language": "readline",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-readline",
-  "maintainedBy": "@ribru17"
+  "maintainedBy": "@ribru17",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.210608264+03:00"
 }

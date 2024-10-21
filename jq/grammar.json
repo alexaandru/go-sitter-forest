@@ -4,5 +4,6 @@
   "grammarSha": "618ea236fc5e2b79ff461bb189c81d5d6444154f83c1979d650dd451f1f5845c",
   "language": "jq",
   "url": "https://github.com/flurie/tree-sitter-jq",
-  "maintainedBy": "@ObserverOfTime"
+  "maintainedBy": "@ObserverOfTime",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.285417922+03:00"
 }

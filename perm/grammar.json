@@ -4,5 +4,6 @@
   "grammarSha": "58de63ea99d6f783d9bda3454c6d2a7e8f10a1665463bcd21ba7b3978cbc7250",
   "language": "perm",
   "url": "https://github.com/theoriginalstove/tree-sitter-perm",
-  "maintainedBy": "@theoriginalstove"
+  "maintainedBy": "@theoriginalstove",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.192050574+03:00"
 }

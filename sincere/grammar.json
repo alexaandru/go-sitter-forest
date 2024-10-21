@@ -4,5 +4,6 @@
   "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
   "language": "sincere",
   "url": "https://github.com/vincentvanecchi/tree-sitter-sincere",
-  "maintainedBy": "@vincentvanecchi"
+  "maintainedBy": "@vincentvanecchi",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.143200245+03:00"
 }

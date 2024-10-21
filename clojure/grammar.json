@@ -4,5 +4,6 @@
   "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
   "language": "clojure",
   "url": "https://github.com/sogaiu/tree-sitter-clojure",
-  "maintainedBy": "@NoahTheDuke"
+  "maintainedBy": "@NoahTheDuke",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.553993491+03:00"
 }

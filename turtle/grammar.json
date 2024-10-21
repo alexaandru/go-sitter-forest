@@ -4,5 +4,6 @@
   "grammarSha": "3999181dd85bc5b8d167959a9d6bafb8be8c496e214f138d595e3d75f878a5ca",
   "language": "turtle",
   "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
-  "maintainedBy": "@BonaBeavis"
+  "maintainedBy": "@BonaBeavis",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.736881034+03:00"
 }

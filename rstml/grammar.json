@@ -8,5 +8,6 @@
   "srcRoot": "rstml",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "lastVersionCheckAt": "2024-10-21T09:15:25.167319044+03:00"
 }

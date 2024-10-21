@@ -4,5 +4,6 @@
   "grammarSha": "b2ac0412db1c00688675139dd78c2daec1191f2fa29ad97df4173da117b5490a",
   "language": "bp",
   "url": "https://github.com/ambroisie/tree-sitter-bp",
-  "maintainedBy": "@ambroisie"
+  "maintainedBy": "@ambroisie",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.223120707+03:00"
 }

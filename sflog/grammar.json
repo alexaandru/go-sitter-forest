@@ -5,5 +5,6 @@
   "language": "sflog",
   "url": "https://github.com/aheber/tree-sitter-sfapex",
   "maintainedBy": "@aheber, @xixiaofinland",
-  "srcRoot": "sflog"
+  "srcRoot": "sflog",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.846879206+03:00"
 }

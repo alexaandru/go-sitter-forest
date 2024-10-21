@@ -4,5 +4,6 @@
   "grammarSha": "4d791951e837738e2c2ebb1d357815837c7a2a5f5a7e1a655b822398b4e17c08",
   "language": "circom",
   "url": "https://github.com/Decurity/tree-sitter-circom",
-  "maintainedBy": "@Frodan"
+  "maintainedBy": "@Frodan",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.456132662+03:00"
 }

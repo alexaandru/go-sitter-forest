@@ -7,5 +7,6 @@
   "url": "https://github.com/rems-project/tree-sitter-core",
   "doc": "thread 'main' panicked at cli/src/generate/render.rs:1146:36: no entry found for key",
   "maintainedBy": "@vzaliva",
-  "skip": true
+  "skip": true,
+  "lastVersionCheckAt": "2024-10-21T09:15:24.678296469+03:00"
 }

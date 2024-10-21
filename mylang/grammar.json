@@ -4,5 +4,6 @@
   "grammarSha": "5608900a6d2fbccfe0aad172839d087125b267e0835d6ef8854c2a5625104595",
   "language": "mylang",
   "url": "https://github.com/marc9622/tree-sitter-mylang",
-  "maintainedBy": "@marc9622"
+  "maintainedBy": "@marc9622",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.178007841+03:00"
 }

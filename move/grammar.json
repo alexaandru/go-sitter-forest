@@ -4,5 +4,6 @@
   "grammarSha": "73e0ede788b3cd2da9282106e01f390f290e9f3187b8f14546831b8a99eb4bb6",
   "language": "move",
   "url": "https://github.com/tzakian/tree-sitter-move",
-  "maintainedBy": "@tzakian"
+  "maintainedBy": "@tzakian",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.69511094+03:00"
 }

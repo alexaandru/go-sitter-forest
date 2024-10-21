@@ -4,5 +4,6 @@
   "grammarSha": "7aac91f8a611e05f48e647fa19a2be54ce84796b5debc022331ab15fb69d62d7",
   "language": "prisma",
   "url": "https://github.com/victorhqc/tree-sitter-prisma",
-  "maintainedBy": "@elianiva"
+  "maintainedBy": "@elianiva",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.73721669+03:00"
 }

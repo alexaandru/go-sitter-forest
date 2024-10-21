@@ -4,5 +4,6 @@
   "grammarSha": "b97de80da008e57299a99edb06f970febd524e2c925b7d778eaedc53da4b9bc1",
   "language": "tnsl",
   "url": "https://github.com/CircleShift/tree-sitter-tnsl",
-  "maintainedBy": "@CircleShift"
+  "maintainedBy": "@CircleShift",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.200075025+03:00"
 }

@@ -4,5 +4,6 @@
   "grammarSha": "fea7de799157c6740f33ca2b0961ac56f4ba0e94042a816967c5f1f34a59a2a7",
   "language": "proxima",
   "url": "https://github.com/vistormu/tree-sitter-proxima",
-  "maintainedBy": "@vistormu"
+  "maintainedBy": "@vistormu",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.88215114+03:00"
 }

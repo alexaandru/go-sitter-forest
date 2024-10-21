@@ -5,5 +5,6 @@
   "language": "prolog",
   "url": "https://codeberg.org/foxy/tree-sitter-prolog",
   "maintainedBy": "@foxyseta",
-  "srcRoot": "grammars/prolog"
+  "srcRoot": "grammars/prolog",
+  "lastVersionCheckAt": "2024-10-21T09:15:23.101660514+03:00"
 }

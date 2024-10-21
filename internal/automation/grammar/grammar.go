@@ -12,6 +12,7 @@ import (
 	"path"
 	"slices"
 	"strings"
+	"time"
 )
 
 // Grammar holds all the information related to one language grammar.
@@ -80,6 +81,10 @@ type Grammar struct {
 
 	// Pending indicates to completly ignore this grammar, as not-yet-implemented.
 	Pending bool `json:"pending,omitempty"`
+
+	// LastVersionCheckAt caches the time of last check, so that we do
+	// not abuse git ls-remote.
+	LastVersionCheckAt time.Time `json:"lastVersionCheckAt,omitzero"`
 }
 
 // Version holds the grammar version related info.
@@ -90,7 +95,10 @@ type Version struct {
 	Revision string `json:"revision,omitempty"`
 }
 
-const guc = "https://raw.githubusercontent.com/%s/%s/"
+const (
+	guc                  = "https://raw.githubusercontent.com/%s/%s/"
+	versionCheckCooldown = time.Hour
+)
 
 var (
 	errUnkHosting = errors.New("unrecognized source code hosting")
@@ -101,10 +109,16 @@ var (
 // If there is a new version, then gr.newVersion will be populated
 // and can be used for the upgrade.
 func (gr *Grammar) FetchNewVersion() (err error) {
+	if !gr.canCheckVersion() {
+		return
+	}
+
 	rev, err := fetchLastCommit(gr.URL, gr.Reference)
 	if err != nil {
 		return
 	}
+
+	gr.LastVersionCheckAt = time.Now()
 
 	if rev != gr.Revision {
 		gr.newVersion = &Version{Reference: gr.Reference, Revision: rev}
@@ -116,6 +130,11 @@ func (gr *Grammar) FetchNewVersion() (err error) {
 // NewVersion returns the new version, if one is available.
 func (gr *Grammar) NewVersion() *Version {
 	return gr.newVersion
+}
+
+func (gr *Grammar) canCheckVersion() bool {
+	return gr.LastVersionCheckAt.IsZero() ||
+		time.Since(gr.LastVersionCheckAt) > versionCheckCooldown
 }
 
 // FilesMap returns a map between remote files (to download) and local files (to save to).

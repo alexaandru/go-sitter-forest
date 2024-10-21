@@ -4,5 +4,6 @@
   "grammarSha": "05e7db1bcd55456667f2219bfed634fdd5479e1866b917b5998584c32ce891ad",
   "language": "llvm",
   "url": "https://github.com/benwilliamgraham/tree-sitter-llvm",
-  "maintainedBy": "@benwilliamgraham"
+  "maintainedBy": "@benwilliamgraham",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.656472593+03:00"
 }

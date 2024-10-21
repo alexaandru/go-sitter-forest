@@ -4,5 +4,6 @@
   "grammarSha": "02f54dc9a381455fcc423a8c172193b7a679bfa75be60e6aa082a4bf9e11b907",
   "language": "cmdl",
   "url": "https://github.com/lyktstolpe/tree-sitter-cmdl",
-  "maintainedBy": "@lyktstolpe"
+  "maintainedBy": "@lyktstolpe",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.221083227+03:00"
 }

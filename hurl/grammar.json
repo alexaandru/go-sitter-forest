@@ -4,5 +4,6 @@
   "grammarSha": "16d54d1ae7cc43ec66f216836cbe8041715a11fed46fcd229a45968682b4a5f3",
   "language": "hurl",
   "url": "https://github.com/pfeiferj/tree-sitter-hurl",
-  "maintainedBy": "@pfeiferj"
+  "maintainedBy": "@pfeiferj",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.320334757+03:00"
 }

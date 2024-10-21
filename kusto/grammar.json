@@ -4,5 +4,6 @@
   "grammarSha": "f5933024921cc30620aa4f7a25ed95a0959847211f54feb19b9eb86534ce6dca",
   "language": "kusto",
   "url": "https://github.com/Willem-J-an/tree-sitter-kusto",
-  "maintainedBy": "@Willem-J-an"
+  "maintainedBy": "@Willem-J-an",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.684922237+03:00"
 }

@@ -4,5 +4,6 @@
   "grammarSha": "328c98159505d8add853ed85c44787997ce42154e4c1f5643294f446f1f5632a",
   "language": "integerbasic",
   "url": "https://github.com/dfgordon/tree-sitter-integerbasic",
-  "maintainedBy": "@dfgordon"
+  "maintainedBy": "@dfgordon",
+  "lastVersionCheckAt": "2024-10-21T09:15:25.064370193+03:00"
 }

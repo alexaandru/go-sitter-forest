@@ -8,5 +8,6 @@
   "srcRoot": "packages/@winglang/tree-sitter-wing",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "lastVersionCheckAt": "2024-10-21T09:15:24.714554355+03:00"
 }

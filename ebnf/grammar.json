@@ -5,5 +5,6 @@
   "language": "ebnf",
   "url": "https://github.com/RubixDev/ebnf",
   "maintainedBy": "@RubixDev",
-  "srcRoot": "crates/tree-sitter-ebnf"
+  "srcRoot": "crates/tree-sitter-ebnf",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.996831708+03:00"
 }

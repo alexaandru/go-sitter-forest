@@ -4,5 +4,6 @@
   "grammarSha": "020f2eab82bdc80417848496ffdbaf9865795893653639f94c536c35503914c3",
   "language": "crystal",
   "url": "https://github.com/crystal-lang-tools/tree-sitter",
-  "maintainedBy": "@devnote-dev"
+  "maintainedBy": "@devnote-dev",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.599232975+03:00"
 }

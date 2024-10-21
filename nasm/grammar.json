@@ -4,5 +4,6 @@
   "grammarSha": "62416145d98a6cea8b28c148ab8db3162ecbd96647bcdbd046a92af8a8b3883d",
   "language": "nasm",
   "url": "https://github.com/naclsn/tree-sitter-nasm",
-  "maintainedBy": "@ObserverOfTime"
+  "maintainedBy": "@ObserverOfTime",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.700580321+03:00"
 }

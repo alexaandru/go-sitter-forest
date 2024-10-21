@@ -4,5 +4,6 @@
   "grammarSha": "aa92dfe02638bc425249a2734167d8ff27fa6662b5f92e32c11260fb782676fe",
   "language": "cylc",
   "url": "https://github.com/elliotfontaine/tree-sitter-cylc",
-  "maintainedBy": "@elliotfontaine"
+  "maintainedBy": "@elliotfontaine",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.664734872+03:00"
 }

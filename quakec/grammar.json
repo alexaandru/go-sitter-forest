@@ -4,5 +4,6 @@
   "grammarSha": "1bc1aef664d57d8c9a9688a6a52cd0df05d06b3071faa227f15cd78ef80d7b29",
   "language": "quakec",
   "url": "https://github.com/vkazanov/tree-sitter-quakec",
-  "maintainedBy": "@vkazanov"
+  "maintainedBy": "@vkazanov",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.420974042+03:00"
 }

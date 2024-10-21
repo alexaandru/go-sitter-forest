@@ -4,5 +4,6 @@
   "grammarSha": "a1f5ff0dc6e01a4d7af525af200e8dcc3b37f4f6005b8a4b7a608dfcbac8202d",
   "language": "eiffel",
   "url": "https://github.com/imustafin/tree-sitter-eiffel",
-  "maintainedBy": "@imustafin"
+  "maintainedBy": "@imustafin",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.337764887+03:00"
 }

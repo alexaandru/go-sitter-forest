@@ -4,5 +4,6 @@
   "grammarSha": "c6b5953f1a9f87a08ed16204186ed3b46bc4b0a4793ea5f538e473c8461116bf",
   "language": "bass",
   "url": "https://github.com/vito/tree-sitter-bass",
-  "maintainedBy": "@amaanq"
+  "maintainedBy": "@amaanq",
+  "lastVersionCheckAt": "2024-10-21T09:15:24.650662885+03:00"
 }
