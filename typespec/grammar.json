@@ -4,6 +4,5 @@
   "grammarSha": "c57049047a103a41e9f23e61ed8eceeb1afebc4be48ef7cf2470c70fe27d0ca3",
   "language": "typespec",
   "url": "https://github.com/happenslol/tree-sitter-typespec",
-  "maintainedBy": "@happenslol",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.880527491+03:00"
+  "maintainedBy": "@happenslol"
 }

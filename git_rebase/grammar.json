@@ -4,6 +4,5 @@
   "grammarSha": "97cc0fc399f96c98b68dc14981467ef61012b357dbb2d53356077b7c1800d96d",
   "language": "git_rebase",
   "url": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
-  "maintainedBy": "@gbprod",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.428195086+03:00"
+  "maintainedBy": "@gbprod"
 }

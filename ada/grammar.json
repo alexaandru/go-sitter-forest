@@ -4,6 +4,5 @@
   "grammarSha": "d95b2f5aa3829021160b1cddc2ef9fe5f499b54a9db085b601e20e215eab57af",
   "language": "ada",
   "url": "https://github.com/briot/tree-sitter-ada",
-  "maintainedBy": "@briot",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.769296889+03:00"
+  "maintainedBy": "@briot"
 }

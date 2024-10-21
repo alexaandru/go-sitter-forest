@@ -4,6 +4,5 @@
   "grammarSha": "62e073c8cdf78b31af859a0d6995a462a3275131cb25899ad031d6931f953209",
   "language": "ql",
   "url": "https://github.com/tree-sitter/tree-sitter-ql",
-  "maintainedBy": "@pwntester",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.390503716+03:00"
+  "maintainedBy": "@pwntester"
 }

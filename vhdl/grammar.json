@@ -22,6 +22,5 @@
     "src/libraries/ieee/numeric_std.h",
     "src/libraries/ieee/std_logic_1164.h",
     "core.h"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:25.071358154+03:00"
+  ]
 }

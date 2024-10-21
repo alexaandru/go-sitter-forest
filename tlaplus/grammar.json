@@ -8,6 +8,5 @@
   "maintainedBy": "@ahelwer, @susliko",
   "files": [
     "scanner.c"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:24.314789487+03:00"
+  ]
 }

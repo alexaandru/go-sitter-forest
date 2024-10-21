@@ -25,7 +25,6 @@ import (
 
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"golang.org/x/sync/errgroup"
-	"golang.org/x/sync/semaphore"
 )
 
 const (
@@ -77,22 +76,13 @@ var (
 
 	rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
 
-	sem = semaphore.NewWeighted(4)
-
 	errUnknownCmd = errors.New("unknown command, must be one of: check-updates, update-all, [force-]update <lang>, update-bindings")
 )
 
-func checkUpdates() (err error) {
+func checkUpdates() error {
 	fmt.Printf("%-40s\t%-10s\t%s\n%s\n", "Language", "Branch", "Status", strings.Repeat("─", 100))
 
-	// FIXME: This is a more general issue with ALL places that use ForEach, but will document it here:
-	// Currently we abort on any error, however, we could have a case where we checked...
-	// 440 parsers OK, and errored out on the 441th. It is very wasteful to throw away ALL that
-	// work for just one error. Ideally, we should be able to update the grammars file for those
-	// 440 successful ones and only skip the one(s) that errored out.
-	// This applies to checks, updats, etc. We need a much more robust mechanism, at the current
-	// scale we cannot afford to treat retries lightly.
-	if err = grammars.ForEach(func(gr *grammar.Grammar) (err error) {
+    return grammars.ForEach(func(gr *grammar.Grammar) (err error) {
 		if gr.SkipUpdate {
 			return
 		}
@@ -113,11 +103,7 @@ func checkUpdates() (err error) {
 		}
 
 		return
-	}); err != nil {
-		return
-	}
-
-	return updateGrammars()
+	})
 }
 
 // checkIfRedirect checks if the repo URL redirects to some other URL, in which
@@ -153,13 +139,13 @@ func checkIfRedirect(gr *grammar.Grammar) {
 func updateAll(force bool) (err error) {
 	fmt.Println("Updating all (applicable) languages ...")
 
-	sem = semaphore.NewWeighted(6)
+	weight := int64(6)
 	if force {
 		// NOTE: There's a higher chance of two high mem updates to run
 		// in parallel when we force update for all. Let's see how this
 		// goes, we may actually need to go down to just 1 (effectively
 		// disable concurrency).
-		sem = semaphore.NewWeighted(2)
+		weight = 2
 	}
 
 	if err = grammars.ForEach(func(gr *grammar.Grammar) error {
@@ -168,7 +154,7 @@ func updateAll(force bool) (err error) {
 		}
 
 		return update(gr, force)
-	}); err != nil {
+	}, weight); err != nil {
 		return
 	}
 
@@ -648,12 +634,6 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 }
 
 func regenerateGrammar(gr *grammar.Grammar) (err error) {
-	if err = sem.Acquire(context.TODO(), 1); err != nil {
-		return
-	}
-
-	defer sem.Release(1)
-
 	tmpPath := filepath.Join("tmp", gr.Language)
 	cmd := exec.Command("npx", "tree-sitter", "generate")
 	cmd.Dir = tmpPath

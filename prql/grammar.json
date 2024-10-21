@@ -4,6 +4,5 @@
   "grammarSha": "b7030737aabdb8a48a3cb3dc8b0b386b47397e6ad3fb689b0797902d0d56125d",
   "language": "prql",
   "url": "https://github.com/PRQL/tree-sitter-prql",
-  "maintainedBy": "@matthias-Q",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.618464458+03:00"
+  "maintainedBy": "@matthias-Q"
 }

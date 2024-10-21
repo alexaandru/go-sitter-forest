@@ -4,6 +4,5 @@
   "grammarSha": "9398a46037546f10e9f20fb09b5f56137690ff08c1ee12cb1036a211b676d2dd",
   "language": "ralph",
   "url": "https://github.com/alephium/tree-sitter-ralph",
-  "maintainedBy": "@tdroxler",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.199125993+03:00"
+  "maintainedBy": "@tdroxler"
 }

@@ -4,6 +4,5 @@
   "grammarSha": "ce4b382c5e2dc8a901475519d374e59c1b42d7fef86630453a6df32a4e08bbce",
   "language": "pint",
   "url": "https://github.com/essential-contributions/tree-sitter-pint",
-  "maintainedBy": "@mitchmindtree",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.407141088+03:00"
+  "maintainedBy": "@mitchmindtree"
 }

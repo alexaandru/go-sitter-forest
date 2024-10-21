@@ -9,6 +9,5 @@
     "scanner.c",
     "bsearch.h",
     "tsp_unicode.h"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:24.255146082+03:00"
+  ]
 }

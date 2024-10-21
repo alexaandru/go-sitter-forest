@@ -4,6 +4,5 @@
   "grammarSha": "971f346693ac13c07d69e80109aa47b4661178645ebbd2180828056fb030e28b",
   "language": "sop",
   "url": "https://github.com/idjoo/tree-sitter-sop",
-  "maintainedBy": "@idjoo",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.170298187+03:00"
+  "maintainedBy": "@idjoo"
 }

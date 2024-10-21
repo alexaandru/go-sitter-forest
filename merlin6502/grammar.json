@@ -4,6 +4,5 @@
   "grammarSha": "00190f96b71b030e8e2c8e6e5da29cdf01f5d78874bf632866ef6bbf1698eb8b",
   "language": "merlin6502",
   "url": "https://github.com/dfgordon/tree-sitter-merlin6502",
-  "maintainedBy": "@dfgordon",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.697935015+03:00"
+  "maintainedBy": "@dfgordon"
 }

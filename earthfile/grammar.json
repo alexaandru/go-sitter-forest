@@ -4,6 +4,5 @@
   "grammarSha": "f629dae075f7126a219238296f58d74052c129b98085775eb8d8f139192f0fe3",
   "language": "earthfile",
   "url": "https://github.com/glehmann/tree-sitter-earthfile",
-  "maintainedBy": "@glehmann",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.62406429+03:00"
+  "maintainedBy": "@glehmann"
 }

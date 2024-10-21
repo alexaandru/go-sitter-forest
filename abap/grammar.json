@@ -4,6 +4,5 @@
   "grammarSha": "78db84b0cc60f4883b127d80e770d543681655aaaeb6ef5e90c5bb7ed844c313",
   "language": "abap",
   "url": "https://github.com/mkoval1/tree-sitter-abap",
-  "maintainedBy": "@mkoval1",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.770248743+03:00"
+  "maintainedBy": "@mkoval1"
 }

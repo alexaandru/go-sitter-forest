@@ -4,6 +4,5 @@
   "grammarSha": "abb8cc23e3a0a2c6ab27e2e542880fc456328e4e80cbf78e3a63c0882307a2b3",
   "language": "sparql",
   "url": "https://github.com/IoannisNezis/tree-sitter-sparql",
-  "maintainedBy": "@BonaBeavis, @IoannisNezis",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.712665087+03:00"
+  "maintainedBy": "@BonaBeavis, @IoannisNezis"
 }

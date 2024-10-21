@@ -4,6 +4,5 @@
   "grammarSha": "ea981a296a7ed9883e687e8b83cee54989b51854cd07af90480637ea7b0e1dd5",
   "language": "blueprint",
   "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
-  "maintainedBy": "@gabmus",
-  "lastVersionCheckAt": "2024-10-21T09:15:23.206721677+03:00"
+  "maintainedBy": "@gabmus"
 }

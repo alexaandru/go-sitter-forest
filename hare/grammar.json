@@ -4,6 +4,5 @@
   "grammarSha": "b17e1806f2057bf3f86b8b901a5eb3e493570747e5e389b61dbf7730850e7e6e",
   "language": "hare",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
-  "maintainedBy": "@amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.504752007+03:00"
+  "maintainedBy": "@amaanq"
 }

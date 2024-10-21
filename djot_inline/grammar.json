@@ -8,6 +8,5 @@
   "srcRoot": "tree-sitter-djot-inline",
   "files": [
     "scanner.c"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:25.354644605+03:00"
+  ]
 }

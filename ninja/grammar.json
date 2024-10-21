@@ -4,6 +4,5 @@
   "grammarSha": "6778081b91d51b0b9f55c73e3a33d5bc6d277b7986647f964263e33ec187de91",
   "language": "ninja",
   "url": "https://github.com/alemuller/tree-sitter-ninja",
-  "maintainedBy": "@alemuller",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.168874165+03:00"
+  "maintainedBy": "@alemuller"
 }

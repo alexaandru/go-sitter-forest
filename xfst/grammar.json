@@ -5,6 +5,5 @@
   "language": "xfst",
   "url": "https://github.com/apertium/tree-sitter-apertium",
   "maintainedBy": "@mr-martian",
-  "srcRoot": "tree-sitter-xfst",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.993913143+03:00"
+  "srcRoot": "tree-sitter-xfst"
 }

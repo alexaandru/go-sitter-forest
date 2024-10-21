@@ -7,6 +7,5 @@
   "maintainedBy": "@p8i",
   "files": [
     "scanner.c"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:23.825516609+03:00"
+  ]
 }

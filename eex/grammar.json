@@ -4,6 +4,5 @@
   "grammarSha": "6a04d086c0315019d8bf4efd0484936176d085b7a7c674e8dd92dddbebfdb870",
   "language": "eex",
   "url": "https://github.com/connorlay/tree-sitter-eex",
-  "maintainedBy": "@connorlay",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.175936083+03:00"
+  "maintainedBy": "@connorlay"
 }

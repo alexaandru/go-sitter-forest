@@ -4,6 +4,5 @@
   "grammarSha": "835bce23f0244c4a1c2254a66d543779c78316288e878ec25a8be9ebdfe65b3d",
   "language": "regex",
   "url": "https://github.com/tree-sitter/tree-sitter-regex",
-  "maintainedBy": "@theHamsta",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.601058306+03:00"
+  "maintainedBy": "@theHamsta"
 }

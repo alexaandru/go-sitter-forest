@@ -4,6 +4,5 @@
   "grammarSha": "569c2150acf69b5e0921f59e02a02324d06c9c9ce8077e6fe9d23916dcdf0db3",
   "language": "gram",
   "url": "https://github.com/gram-data/tree-sitter-gram",
-  "maintainedBy": "@akollegger",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.961072634+03:00"
+  "maintainedBy": "@akollegger"
 }

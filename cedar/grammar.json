@@ -4,6 +4,5 @@
   "grammarSha": "912f21e450329b50308ed1f4feb7bf336263f591b8d6778c800950fb053f485b",
   "language": "cedar",
   "url": "https://github.com/chrnorm/tree-sitter-cedar",
-  "maintainedBy": "@chrnorm",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.413283756+03:00"
+  "maintainedBy": "@chrnorm"
 }

@@ -4,6 +4,5 @@
   "grammarSha": "4f264b0a701eb111ddf1601b0521606f30f520c6f6ffb7d6fd25aae3ce38198a",
   "language": "vrl",
   "url": "https://github.com/belltoy/tree-sitter-vrl",
-  "maintainedBy": "@belltoy",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.068810292+03:00"
+  "maintainedBy": "@belltoy"
 }

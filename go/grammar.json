@@ -4,6 +4,5 @@
   "grammarSha": "b5db9316773bbfe67b42a71135ec7192db9823b8413a024c6563a1279a19bca7",
   "language": "go",
   "url": "https://github.com/tree-sitter/tree-sitter-go",
-  "maintainedBy": "@theHamsta, @WinWisely268",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.101953885+03:00"
+  "maintainedBy": "@theHamsta, @WinWisely268"
 }

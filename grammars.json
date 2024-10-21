@@ -5,8 +5,7 @@
     "grammarSha": "78db84b0cc60f4883b127d80e770d543681655aaaeb6ef5e90c5bb7ed844c313",
     "language": "abap",
     "url": "https://github.com/mkoval1/tree-sitter-abap",
-    "maintainedBy": "@mkoval1",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.770248743+03:00"
+    "maintainedBy": "@mkoval1"
   },
   {
     "reference": "master",
@@ -17,8 +16,7 @@
     "maintainedBy": "@jkbz64",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:23.820458795+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -26,8 +24,7 @@
     "grammarSha": "d95b2f5aa3829021160b1cddc2ef9fe5f499b54a9db085b601e20e215eab57af",
     "language": "ada",
     "url": "https://github.com/briot/tree-sitter-ada",
-    "maintainedBy": "@briot",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.769296889+03:00"
+    "maintainedBy": "@briot"
   },
   {
     "reference": "master",
@@ -38,8 +35,7 @@
     "maintainedBy": "@Decodetalkers",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.652797538+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -47,8 +43,7 @@
     "grammarSha": "347c1b7dd07ac6f215d23a7d6085cbec23a46c01ebc0d56cb343de2e440da1e7",
     "language": "aiken",
     "url": "https://github.com/aiken-lang/tree-sitter-aiken",
-    "maintainedBy": "@Riley-Kilgore",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.784327189+03:00"
+    "maintainedBy": "@Riley-Kilgore"
   },
   {
     "reference": "main",
@@ -56,8 +51,7 @@
     "grammarSha": "b5724f53aa410ef63b350cb581f1143bc89f61b2ebbfcda5bd753696eecffe54",
     "language": "al",
     "url": "https://github.com/SShadowS/tree-sitter-al",
-    "maintainedBy": "@SShadowS",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.217458757+03:00"
+    "maintainedBy": "@SShadowS"
   },
   {
     "reference": "master",
@@ -65,8 +59,7 @@
     "grammarSha": "b42b6c932792b3bbca0fa9e1d2ab3a4a8b851c25be49ed7872c645cc3e7fab10",
     "language": "amber",
     "url": "https://github.com/amber-lang/tree-sitter-amber",
-    "maintainedBy": "@Ph0enixKM",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.425817313+03:00"
+    "maintainedBy": "@Ph0enixKM"
   },
   {
     "reference": "main",
@@ -78,8 +71,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:23.746236661+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -87,8 +79,7 @@
     "grammarSha": "68eeb0ad9ccbc86d2bfffa56556f275987462e71fab81a9a4f406d5611662922",
     "language": "animationtxt",
     "url": "https://github.com/notpeter/tree-sitter-animationtxt",
-    "maintainedBy": "@notpeter",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.026824013+03:00"
+    "maintainedBy": "@notpeter"
   },
   {
     "reference": "main",
@@ -96,8 +87,7 @@
     "grammarSha": "76cf4d3514f0ebd4fec5e6132b269df88097b8823606c87c629c958aeac84b75",
     "language": "anzu",
     "url": "https://github.com/JamesWP/tree-sitter-anzu",
-    "maintainedBy": "@JamesWP",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.421693582+03:00"
+    "maintainedBy": "@JamesWP"
   },
   {
     "reference": "main",
@@ -106,8 +96,7 @@
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
     "maintainedBy": "@aheber, @xixiaofinland",
-    "srcRoot": "apex",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.495580502+03:00"
+    "srcRoot": "apex"
   },
   {
     "reference": "main",
@@ -118,8 +107,7 @@
     "maintainedBy": "@dfgordon",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.28745064+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -130,8 +118,7 @@
     "maintainedBy": "@ObserverOfTime",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.983474997+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -139,8 +126,7 @@
     "grammarSha": "272c60ca9eddab6261601d9c6030d3469d629d1770938d396718971778ff4fb8",
     "language": "asm",
     "url": "https://github.com/RubixDev/tree-sitter-asm",
-    "maintainedBy": "@RubixDev",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.42820096+03:00"
+    "maintainedBy": "@RubixDev"
   },
   {
     "reference": "master",
@@ -152,8 +138,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.203577646+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -161,8 +146,7 @@
     "grammarSha": "21f97bf59b37eafb5025dc1a3f11281b526070069bffe2d43d92e0259fdd90fe",
     "language": "august",
     "url": "https://github.com/ScratchCat458/tree-sitter-august",
-    "maintainedBy": "@ScratchCat458",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.794047124+03:00"
+    "maintainedBy": "@ScratchCat458"
   },
   {
     "reference": "main",
@@ -170,8 +154,7 @@
     "grammarSha": "0accde10565f40ed8fd61d0ce2ee8f53b38502e098eb874fee11b9ca6da04e19",
     "language": "authzed",
     "url": "https://github.com/mleonidas/tree-sitter-authzed",
-    "maintainedBy": "@mattpolzin",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.760514157+03:00"
+    "maintainedBy": "@mattpolzin"
   },
   {
     "reference": "main",
@@ -179,8 +162,7 @@
     "grammarSha": "54bedf773950d8515be3f44b0c87817e690eb8545db04ec51de49a07b62c8a60",
     "language": "awa5_rs",
     "url": "https://github.com/liraymond04/tree-sitter-awa5_rs",
-    "maintainedBy": "@liraymond04",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.816973507+03:00"
+    "maintainedBy": "@liraymond04"
   },
   {
     "reference": "main",
@@ -188,8 +170,7 @@
     "grammarSha": "8823450b5a8c0645731f3610c2ec7666e04e9e611a03855f9934ad35c1d978b1",
     "language": "awatalk",
     "url": "https://github.com/liraymond04/tree-sitter-awatalk",
-    "maintainedBy": "@liraymond04",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.491269962+03:00"
+    "maintainedBy": "@liraymond04"
   },
   {
     "reference": "master",
@@ -200,8 +181,7 @@
     "maintainedBy": "@Beaglefoot",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.217624194+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -212,8 +192,7 @@
     "maintainedBy": "@TravonteD",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.632382565+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -221,8 +200,7 @@
     "grammarSha": "c6b5953f1a9f87a08ed16204186ed3b46bc4b0a4793ea5f538e473c8461116bf",
     "language": "bass",
     "url": "https://github.com/vito/tree-sitter-bass",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.650662885+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -233,8 +211,7 @@
     "maintainedBy": "@polarmutex",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.763074108+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -245,8 +222,7 @@
     "maintainedBy": "@edusporto",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.584367426+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -254,8 +230,7 @@
     "grammarSha": "8b153a42b82a394a2ee455264d95a654296a5991f5047fefed95b0ca7e9094cd",
     "language": "bibtex",
     "url": "https://github.com/latex-lsp/tree-sitter-bibtex",
-    "maintainedBy": "@theHamsta, @clason",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.087068154+03:00"
+    "maintainedBy": "@theHamsta, @clason"
   },
   {
     "reference": "master",
@@ -266,8 +241,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.107981955+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -278,8 +252,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.207816074+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -291,8 +264,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.645271328+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -300,8 +272,7 @@
     "grammarSha": "ea981a296a7ed9883e687e8b83cee54989b51854cd07af90480637ea7b0e1dd5",
     "language": "blueprint",
     "url": "https://gitlab.com/gabmus/tree-sitter-blueprint",
-    "maintainedBy": "@gabmus",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.206721677+03:00"
+    "maintainedBy": "@gabmus"
   },
   {
     "reference": "master",
@@ -311,8 +282,7 @@
     "url": "https://github.com/panther03/tree-sitter-bluespec",
     "doc": "repository was removed by owner",
     "maintainedBy": "@panther03",
-    "skipUpdate": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "skipUpdate": true
   },
   {
     "reference": "main",
@@ -320,8 +290,7 @@
     "grammarSha": "b2ac0412db1c00688675139dd78c2daec1191f2fa29ad97df4173da117b5490a",
     "language": "bp",
     "url": "https://github.com/ambroisie/tree-sitter-bp",
-    "maintainedBy": "@ambroisie",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.223120707+03:00"
+    "maintainedBy": "@ambroisie"
   },
   {
     "reference": "main",
@@ -329,8 +298,7 @@
     "grammarSha": "c1e9b34f6d7ce710a9fe29f969c01f1a03cdeeb621fe422019630b2ff69a6576",
     "language": "bqn",
     "url": "https://github.com/shnarazk/tree-sitter-bqn",
-    "maintainedBy": "@shnarazk",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.881272991+03:00"
+    "maintainedBy": "@shnarazk"
   },
   {
     "reference": "main",
@@ -338,8 +306,7 @@
     "grammarSha": "a9d58337d5d1ce22575aa1c916aaed8ca2f7b346b8ce97b5cac8ae308d2f93eb",
     "language": "brightscript",
     "url": "https://github.com/ajdelcimmuto/tree-sitter-brightscript",
-    "maintainedBy": "@ajdelcimmuto",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.205191632+03:00"
+    "maintainedBy": "@ajdelcimmuto"
   },
   {
     "reference": "master",
@@ -347,8 +314,7 @@
     "grammarSha": "cdec2d67fc898700eb80056ee9a84f54f8771488f249e884dadfa757c8020d7e",
     "language": "c",
     "url": "https://github.com/tree-sitter/tree-sitter-c",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.532022387+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -359,8 +325,7 @@
     "maintainedBy": "@cbuttner",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.067904883+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -372,8 +337,7 @@
     "files": [
       "scanner.c"
     ],
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.587113417+03:00"
+    "skip": true
   },
   {
     "reference": "main",
@@ -381,8 +345,7 @@
     "grammarSha": "db0d1e06f05a343b850fdfbdf5ca5345bb6ccba50365a4506826b0abac897fce",
     "language": "ca65",
     "url": "https://github.com/babasbot/tree-sitter-ca65",
-    "maintainedBy": "@babasbot",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.741627778+03:00"
+    "maintainedBy": "@babasbot"
   },
   {
     "reference": "master",
@@ -393,8 +356,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.53194299+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -403,8 +365,7 @@
     "language": "calc",
     "url": "https://github.com/zeromake/tree-sitter-calc",
     "description": "Calc is a small functional language implemented in Go",
-    "maintainedBy": "@zeromake",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.261804463+03:00"
+    "maintainedBy": "@zeromake"
   },
   {
     "reference": "master",
@@ -412,8 +373,7 @@
     "grammarSha": "1e7791c44ad85fe199cd46c51a12d40fa1b47ea7ba4071bed037e370eb09901c",
     "language": "capnp",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-capnp",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.613939496+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -424,8 +384,7 @@
     "maintainedBy": "@bugwelle",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.137661763+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -433,8 +392,7 @@
     "grammarSha": "912f21e450329b50308ed1f4feb7bf336263f591b8d6778c800950fb053f485b",
     "language": "cedar",
     "url": "https://github.com/chrnorm/tree-sitter-cedar",
-    "maintainedBy": "@chrnorm",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.413283756+03:00"
+    "maintainedBy": "@chrnorm"
   },
   {
     "reference": "main",
@@ -443,8 +401,7 @@
     "language": "cel",
     "altName": "Common Expression Language",
     "url": "https://github.com/bufbuild/tree-sitter-cel",
-    "maintainedBy": "@Alfus",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.659424317+03:00"
+    "maintainedBy": "@Alfus"
   },
   {
     "reference": "main",
@@ -452,8 +409,7 @@
     "grammarSha": "010a35c252b7f8b6c761493a07366ebfb9f578038bceb14e20a7b8991eb5159c",
     "language": "cfengine",
     "url": "https://github.com/olehermanse/tree-sitter-cfengine",
-    "maintainedBy": "@olehermanse",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.099452038+03:00"
+    "maintainedBy": "@olehermanse"
   },
   {
     "reference": "master",
@@ -466,8 +422,7 @@
       "scanner.c",
       "tag.h"
     ],
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "master",
@@ -480,8 +435,7 @@
       "scanner.c",
       "tag.h"
     ],
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "master",
@@ -490,8 +444,7 @@
     "language": "cg",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
-    "srcRoot": "tree-sitter-cg",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.88400774+03:00"
+    "srcRoot": "tree-sitter-cg"
   },
   {
     "reference": "master",
@@ -499,8 +452,7 @@
     "grammarSha": "18d0205daf6e17480dc79d1dd9ed02af7fa64299a5137a7542f6abd35b426161",
     "language": "chatito",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-chatito",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.217442983+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -508,8 +460,7 @@
     "grammarSha": "4d791951e837738e2c2ebb1d357815837c7a2a5f5a7e1a655b822398b4e17c08",
     "language": "circom",
     "url": "https://github.com/Decurity/tree-sitter-circom",
-    "maintainedBy": "@Frodan",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.456132662+03:00"
+    "maintainedBy": "@Frodan"
   },
   {
     "reference": "main",
@@ -517,8 +468,7 @@
     "grammarSha": "83a2f420329a9c2a2617ff274d146ad00d1dc078d379fa20ed2472e1292dea1f",
     "language": "clarity",
     "url": "https://github.com/xlittlerag/tree-sitter-clarity",
-    "maintainedBy": "@xlittlerag",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.754025752+03:00"
+    "maintainedBy": "@xlittlerag"
   },
   {
     "reference": "main",
@@ -531,8 +481,7 @@
       "scanner.c",
       "cleancopy_utils.h",
       "cleancopy_chars.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.440617476+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -540,8 +489,7 @@
     "grammarSha": "0b488c9bbd135597365ba826cc6ee9c8f1208571512568f3eb98becb0e183b04",
     "language": "clingo",
     "url": "https://github.com/potassco/tree-sitter-clingo",
-    "maintainedBy": "@sthiele",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.53728192+03:00"
+    "maintainedBy": "@sthiele"
   },
   {
     "reference": "master",
@@ -549,8 +497,7 @@
     "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
     "language": "clojure",
     "url": "https://github.com/sogaiu/tree-sitter-clojure",
-    "maintainedBy": "@NoahTheDuke",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.553993491+03:00"
+    "maintainedBy": "@NoahTheDuke"
   },
   {
     "reference": "master",
@@ -561,8 +508,7 @@
     "maintainedBy": "@uyha",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.402320231+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -570,8 +516,7 @@
     "grammarSha": "02f54dc9a381455fcc423a8c172193b7a679bfa75be60e6aa082a4bf9e11b907",
     "language": "cmdl",
     "url": "https://github.com/lyktstolpe/tree-sitter-cmdl",
-    "maintainedBy": "@lyktstolpe",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.221083227+03:00"
+    "maintainedBy": "@lyktstolpe"
   },
   {
     "reference": "main",
@@ -582,8 +527,7 @@
     "maintainedBy": "@yutaro-sakamoto",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.089212868+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -591,8 +535,7 @@
     "grammarSha": "edd1541a640db6f0b040bb3caa790935c969c1f593d562e9e3888633de50b607",
     "language": "cognate",
     "url": "https://github.com/hedyhli/tree-sitter-cognate",
-    "maintainedBy": "@hedyhli",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.058071232+03:00"
+    "maintainedBy": "@hedyhli"
   },
   {
     "reference": "master",
@@ -608,8 +551,7 @@
       "src/tree_sitter_comment/tokens.h",
       "src/tree_sitter_comment/chars.c",
       "src/tree_sitter_comment/chars.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.273942788+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -617,8 +559,7 @@
     "grammarSha": "67694aa144004e79088da09c29652bca050b6600097cb79be4e2f164bd5c6882",
     "language": "commonlisp",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
-    "maintainedBy": "@theHamsta",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.116485631+03:00"
+    "maintainedBy": "@theHamsta"
   },
   {
     "reference": "main",
@@ -629,8 +570,7 @@
     "maintainedBy": "@pmazaitis",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.535262725+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -641,8 +581,7 @@
     "maintainedBy": "@addcninblue",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.243910142+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -653,8 +592,7 @@
     "url": "https://github.com/rems-project/tree-sitter-core",
     "doc": "thread 'main' panicked at cli/src/generate/render.rs:1146:36: no entry found for key",
     "maintainedBy": "@vzaliva",
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.678296469+03:00"
+    "skip": true
   },
   {
     "reference": "master",
@@ -662,8 +600,7 @@
     "grammarSha": "2bf9152b2654b1a00af56f008c2468bd684665268bbe124c8ad0e2187e173afc",
     "language": "corn",
     "url": "https://github.com/corn-config/tree-sitter-corn",
-    "maintainedBy": "@jakestanger",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.906663466+03:00"
+    "maintainedBy": "@jakestanger"
   },
   {
     "reference": "master",
@@ -671,8 +608,7 @@
     "grammarSha": "fad25b074c4eff8aef2412d9c9c3df06aebf4cd494319b8d18f4b88643f6f190",
     "language": "cpon",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-cpon",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.884540466+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -683,8 +619,7 @@
     "maintainedBy": "@theHamsta",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.59511477+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -695,8 +630,7 @@
     "files": [
       "scanner.c"
     ],
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "main",
@@ -704,8 +638,7 @@
     "grammarSha": "020f2eab82bdc80417848496ffdbaf9865795893653639f94c536c35503914c3",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter",
-    "maintainedBy": "@devnote-dev",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.599232975+03:00"
+    "maintainedBy": "@devnote-dev"
   },
   {
     "reference": "master",
@@ -716,8 +649,7 @@
     "maintainedBy": "@TravonteD",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.170339157+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -726,8 +658,7 @@
     "language": "csv",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
     "maintainedBy": "@amaanq",
-    "srcRoot": "csv",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.562203542+03:00"
+    "srcRoot": "csv"
   },
   {
     "reference": "master",
@@ -738,8 +669,7 @@
     "maintainedBy": "@theHamsta",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.1099413+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -750,8 +680,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.799720493+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -759,8 +688,7 @@
     "grammarSha": "aa92dfe02638bc425249a2734167d8ff27fa6662b5f92e32c11260fb782676fe",
     "language": "cylc",
     "url": "https://github.com/elliotfontaine/tree-sitter-cylc",
-    "maintainedBy": "@elliotfontaine",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.664734872+03:00"
+    "maintainedBy": "@elliotfontaine"
   },
   {
     "reference": "main",
@@ -771,8 +699,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.081911731+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -783,8 +710,7 @@
     "maintainedBy": "@p8i",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:23.825516609+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -794,8 +720,7 @@
     "url": "https://github.com/crumbtoo/tree-sitter-dale",
     "doc": "repository was removed by owner",
     "maintainedBy": "@lomisk",
-    "skipUpdate": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "skipUpdate": true
   },
   {
     "reference": "master",
@@ -806,8 +731,7 @@
     "maintainedBy": "@akinsho",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.786322827+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -815,8 +739,7 @@
     "grammarSha": "61e0b21454480cf267366520986b2d0341d2b047ae0741abfaad17b8248fe779",
     "language": "dataweave",
     "url": "https://github.com/AndrewJarrett/tree-sitter-dataweave",
-    "maintainedBy": "@AndrewJarrett",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.407073313+03:00"
+    "maintainedBy": "@AndrewJarrett"
   },
   {
     "reference": "main",
@@ -824,8 +747,7 @@
     "grammarSha": "c86d40e5f6123d505584c4d2a1a2f8162149fda36d0116b5b1c59a65c494fa4f",
     "language": "dbml",
     "url": "https://github.com/apexatoll/tree-sitter-dbml",
-    "maintainedBy": "@apexatoll",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.320322724+03:00"
+    "maintainedBy": "@apexatoll"
   },
   {
     "reference": "main",
@@ -833,8 +755,7 @@
     "grammarSha": "4eaf6b6f1842c6107a872381620b9452602f356a43c8f389ebf72586333b965c",
     "language": "devicetree",
     "url": "https://github.com/joelspadin/tree-sitter-devicetree",
-    "maintainedBy": "@jedrzejboczar",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.124658926+03:00"
+    "maintainedBy": "@jedrzejboczar"
   },
   {
     "reference": "master",
@@ -842,8 +763,7 @@
     "grammarSha": "220fd7d46d38bdcb896545a744330a53011b41265fbc4b5b009127ad33aeb16a",
     "language": "dezyne",
     "url": "https://github.com/j0ran/tree-sitter-dezyne",
-    "maintainedBy": "@j0ran",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.205360709+03:00"
+    "maintainedBy": "@j0ran"
   },
   {
     "reference": "master",
@@ -854,8 +774,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.126581209+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -863,8 +782,7 @@
     "grammarSha": "7e50abb16ea9fac756e9a1f5686965925e3a5f1e1bfc2ee79c251de1b5ff3dd3",
     "language": "diff",
     "url": "https://github.com/the-mikedavis/tree-sitter-diff",
-    "maintainedBy": "@gbprod",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.784448256+03:00"
+    "maintainedBy": "@gbprod"
   },
   {
     "reference": "master",
@@ -875,8 +793,7 @@
     "maintainedBy": "@ColinKennedy",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.153968741+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -888,8 +805,7 @@
     "srcRoot": "tree-sitter-djot",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.173501669+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -901,8 +817,7 @@
     "srcRoot": "tree-sitter-djot-inline",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.354644605+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -913,8 +828,7 @@
     "maintainedBy": "@camdencheek",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.526186662+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -922,8 +836,7 @@
     "grammarSha": "da720e90310ab42445030c0b22121a04b081ccea605ec5511f17d028373c05a1",
     "language": "dot",
     "url": "https://github.com/rydesun/tree-sitter-dot",
-    "maintainedBy": "@rydesun",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.499278086+03:00"
+    "maintainedBy": "@rydesun"
   },
   {
     "reference": "master",
@@ -931,8 +844,7 @@
     "grammarSha": "d7bec9650c11662e710404f321e8a4608ba8ae11ae7c20d360beab9788fd39be",
     "language": "dotenv",
     "url": "https://github.com/zarifpour/tree-sitter-dotenv",
-    "maintainedBy": "@zarifpour",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.883024775+03:00"
+    "maintainedBy": "@zarifpour"
   },
   {
     "reference": "master",
@@ -943,8 +855,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.610885496+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -957,8 +868,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.303001573+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -966,8 +876,7 @@
     "grammarSha": "22a721a0f8ddf88912f84182eb1dde9ca38acf1dfa2338bc40a017bcafdc91e8",
     "language": "dune",
     "url": "https://github.com/emillon/tree-sitter-dune",
-    "maintainedBy": "@emillon",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.370740571+03:00"
+    "maintainedBy": "@emillon"
   },
   {
     "reference": "main",
@@ -975,8 +884,7 @@
     "grammarSha": "f629dae075f7126a219238296f58d74052c129b98085775eb8d8f139192f0fe3",
     "language": "earthfile",
     "url": "https://github.com/glehmann/tree-sitter-earthfile",
-    "maintainedBy": "@glehmann",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.62406429+03:00"
+    "maintainedBy": "@glehmann"
   },
   {
     "reference": "main",
@@ -985,8 +893,7 @@
     "language": "ebnf",
     "url": "https://github.com/RubixDev/ebnf",
     "maintainedBy": "@RubixDev",
-    "srcRoot": "crates/tree-sitter-ebnf",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.996831708+03:00"
+    "srcRoot": "crates/tree-sitter-ebnf"
   },
   {
     "reference": "main",
@@ -997,8 +904,7 @@
     "maintainedBy": "@ValdezFOmar",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.122288135+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1006,8 +912,7 @@
     "grammarSha": "24b6d6feac50aabab59e13fa0bcd068451ad0b21a6bc19b646fe53885e463d62",
     "language": "eds",
     "url": "https://github.com/uyha/tree-sitter-eds",
-    "maintainedBy": "@uyha",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.17237244+03:00"
+    "maintainedBy": "@uyha"
   },
   {
     "reference": "main",
@@ -1015,8 +920,7 @@
     "grammarSha": "6a04d086c0315019d8bf4efd0484936176d085b7a7c674e8dd92dddbebfdb870",
     "language": "eex",
     "url": "https://github.com/connorlay/tree-sitter-eex",
-    "maintainedBy": "@connorlay",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.175936083+03:00"
+    "maintainedBy": "@connorlay"
   },
   {
     "reference": "main",
@@ -1024,8 +928,7 @@
     "grammarSha": "0d2f1e099b8e8b9d10f941205dd22b8b6de153e6cc47823fb06ffb45fab0ed13",
     "language": "effekt",
     "url": "https://github.com/leonfuss/tree-sitter-effekt",
-    "maintainedBy": "@leonfuss",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.848454933+03:00"
+    "maintainedBy": "@leonfuss"
   },
   {
     "reference": "master",
@@ -1033,8 +936,7 @@
     "grammarSha": "a1f5ff0dc6e01a4d7af525af200e8dcc3b37f4f6005b8a4b7a608dfcbac8202d",
     "language": "eiffel",
     "url": "https://github.com/imustafin/tree-sitter-eiffel",
-    "maintainedBy": "@imustafin",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.337764887+03:00"
+    "maintainedBy": "@imustafin"
   },
   {
     "reference": "main",
@@ -1042,8 +944,7 @@
     "grammarSha": "6da573aa55e5c98eef059e9a49d1c191851693f5e25f63be29c84d7cb6487d3c",
     "language": "elisp",
     "url": "https://github.com/Wilfred/tree-sitter-elisp",
-    "maintainedBy": "@Wilfred",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.434483504+03:00"
+    "maintainedBy": "@Wilfred"
   },
   {
     "reference": "main",
@@ -1054,8 +955,7 @@
     "maintainedBy": "@connorlay",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.863784696+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1066,8 +966,7 @@
     "maintainedBy": "@zweimach",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.561363466+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1075,8 +974,7 @@
     "grammarSha": "33370fb33f48c3f2ead7025a22364554f4d66574ac05bad528b4d4778f84942f",
     "language": "elsa",
     "url": "https://github.com/glapa-grossklag/tree-sitter-elsa",
-    "maintainedBy": "@glapa-grossklag, @amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.015041583+03:00"
+    "maintainedBy": "@glapa-grossklag, @amaanq"
   },
   {
     "reference": "main",
@@ -1084,8 +982,7 @@
     "grammarSha": "dcf540b33305d75524dd956b893f996aed3e6e044b16d99b9681c482c22ec2fe",
     "language": "elvish",
     "url": "https://github.com/elves/tree-sitter-elvish",
-    "maintainedBy": "@elves",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.459871927+03:00"
+    "maintainedBy": "@elves"
   },
   {
     "reference": "master",
@@ -1093,8 +990,7 @@
     "grammarSha": "989af9f9e9f043390422ee07c9ab4dad6111a7f211dff0affe01b0aab3864dc6",
     "language": "embedded_template",
     "url": "https://github.com/tree-sitter/tree-sitter-embedded-template",
-    "maintainedBy": "@maxbrunsfeld",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.355005691+03:00"
+    "maintainedBy": "@maxbrunsfeld"
   },
   {
     "reference": "main",
@@ -1105,8 +1001,7 @@
     "maintainedBy": "@filmor",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.803973827+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1114,8 +1009,7 @@
     "grammarSha": "c3960cc1628f05a89586fb10367e96d936e1a7a4131781872ade534a86a5ac06",
     "language": "facility",
     "url": "https://github.com/FacilityApi/tree-sitter-facility",
-    "maintainedBy": "@bryankenote",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.192881422+03:00"
+    "maintainedBy": "@bryankenote"
   },
   {
     "reference": "master",
@@ -1123,8 +1017,7 @@
     "grammarSha": "57009b47c1b5d44ab6d288d9793320782fc958ec4487bc0253b3b940596fb9ff",
     "language": "familymarkup",
     "url": "https://github.com/redexp/tree-sitter-familymarkup",
-    "maintainedBy": "@redexp",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.695710749+03:00"
+    "maintainedBy": "@redexp"
   },
   {
     "reference": "main",
@@ -1137,8 +1030,7 @@
     "files": [
       "scanner.c"
     ],
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:25.064406013+03:00"
+    "skip": true
   },
   {
     "reference": "main",
@@ -1146,8 +1038,7 @@
     "grammarSha": "df27ded872f96efd65c28ad96e22311d0b133eb16a3c24242470941ec5c8289d",
     "language": "faust",
     "url": "https://github.com/khiner/tree-sitter-faust",
-    "maintainedBy": "@khiner",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.155601506+03:00"
+    "maintainedBy": "@khiner"
   },
   {
     "reference": "main",
@@ -1160,8 +1051,7 @@
     "files": [
       "scanner.c"
     ],
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:25.246316624+03:00"
+    "skip": true
   },
   {
     "reference": "main",
@@ -1169,8 +1059,7 @@
     "grammarSha": "21a258e2c5d3413847a9c716253712bfb85973107ca18bb41cb9458576fa06be",
     "language": "fidl",
     "url": "https://github.com/google/tree-sitter-fidl",
-    "maintainedBy": "@chaopeng",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.774388855+03:00"
+    "maintainedBy": "@chaopeng"
   },
   {
     "reference": "main",
@@ -1178,8 +1067,7 @@
     "grammarSha": "e7d595287605b6ba788e9c8b7ef31cd58f806d2e3eabc9f0bc2dc310e46a9da4",
     "language": "fin",
     "url": "https://github.com/fin-org/tree-sitter-fin",
-    "maintainedBy": "@mrmcc3",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.288364468+03:00"
+    "maintainedBy": "@mrmcc3"
   },
   {
     "reference": "master",
@@ -1190,8 +1078,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.331733454+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1202,8 +1089,7 @@
     "maintainedBy": "@ram02z",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.213049919+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1211,8 +1097,7 @@
     "grammarSha": "9121e8bd08f5024bfd3d4c8d3435fe6826a12c229535b4197b972262b72001f6",
     "language": "flamingo",
     "url": "https://github.com/inobulles/tree-sitter-flamingo",
-    "maintainedBy": "@obiwac",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.355025594+03:00"
+    "maintainedBy": "@obiwac"
   },
   {
     "reference": "main",
@@ -1220,8 +1105,7 @@
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
-    "maintainedBy": "@sh-cho",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.377556982+03:00"
+    "maintainedBy": "@sh-cho"
   },
   {
     "reference": "master",
@@ -1232,8 +1116,7 @@
     "maintainedBy": "@FoamScience",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.831466272+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1241,8 +1124,7 @@
     "grammarSha": "3ff134c9cd47a612c29faf03d8efd8c98ec7d59cafc00a787fb88a06f331c087",
     "language": "forth",
     "url": "https://github.com/AlexanderBrevig/tree-sitter-forth",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.808115565+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -1253,8 +1135,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.525850646+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1262,8 +1143,7 @@
     "grammarSha": "fad3ef16cccf6761a49b835cd74dcb013cf696259ae7db0bbbb4d1bf9daccebc",
     "language": "fsh",
     "url": "https://github.com/mgramigna/tree-sitter-fsh",
-    "maintainedBy": "@mgramigna",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.557378058+03:00"
+    "maintainedBy": "@mgramigna"
   },
   {
     "reference": "main",
@@ -1276,8 +1156,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.709865423+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1290,8 +1169,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.45183452+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1299,8 +1177,7 @@
     "grammarSha": "7e70d7a0b369d37193ce3eb428b7279c927b3c9e66d62d396a5cd9a7bc1cd5ad",
     "language": "func",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-func",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.563385465+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -1311,8 +1188,7 @@
     "maintainedBy": "@jirgn",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.787714849+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1320,8 +1196,7 @@
     "grammarSha": "0dd869bdaf49f9f894d5f9aade4a5082b827c5da5f406db3d0c2f3f205edcae7",
     "language": "gab",
     "url": "https://github.com/TeddyRandby/tree-sitter-gab",
-    "maintainedBy": "@TeddyRandby",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.508674557+03:00"
+    "maintainedBy": "@TeddyRandby"
   },
   {
     "reference": "main",
@@ -1332,8 +1207,7 @@
     "maintainedBy": "@antoniusnaumann",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.945723181+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1345,8 +1219,7 @@
     "maintainedBy": "@reiniscirpons",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.63142926+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1358,8 +1231,7 @@
     "maintainedBy": "@reiniscirpons",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.95933513+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1371,8 +1243,7 @@
     "maintainedBy": "@PrestonKnopp",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.153925594+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1380,8 +1251,7 @@
     "grammarSha": "3b8e5c148d7c189be38818da5c0afe237fab685626150d726ec32d0b14d8711d",
     "language": "gdshader",
     "url": "https://github.com/GodOfAvacyn/tree-sitter-gdshader",
-    "maintainedBy": "@godofavacyn",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.51769578+03:00"
+    "maintainedBy": "@godofavacyn"
   },
   {
     "reference": "main",
@@ -1392,8 +1262,7 @@
     "maintainedBy": "@drestrepom",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.13227935+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1401,8 +1270,7 @@
     "grammarSha": "56ae07efd20f90f8a00945ea83f33f85c84ca53cb987ebf3b381f7ccac25e57e",
     "language": "gherkin",
     "url": "https://github.com/SamyAB/tree-sitter-gherkin",
-    "maintainedBy": "@SamyAB",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.547711414+03:00"
+    "maintainedBy": "@SamyAB"
   },
   {
     "reference": "main",
@@ -1410,8 +1278,7 @@
     "grammarSha": "0a6a46bc0cf042dd45b10584b8e574a89e4cd0ccc995d53fed2f7efcc2b2119b",
     "language": "git_config",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.679717142+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -1419,8 +1286,7 @@
     "grammarSha": "97cc0fc399f96c98b68dc14981467ef61012b357dbb2d53356077b7c1800d96d",
     "language": "git_rebase",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-rebase",
-    "maintainedBy": "@gbprod",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.428195086+03:00"
+    "maintainedBy": "@gbprod"
   },
   {
     "reference": "master",
@@ -1428,8 +1294,7 @@
     "grammarSha": "a9ef77390db0868e1c246ff010377b0bbc7742b21771c094303ef63e5bd1176d",
     "language": "gitattributes",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-gitattributes",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.636819447+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -1440,8 +1305,7 @@
     "maintainedBy": "@gbprod",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.777353935+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1449,8 +1313,7 @@
     "grammarSha": "e9175700860229aff28750afa3e21bdb7b44a724cda2d11a562b4fc6ff0f3714",
     "language": "gitignore",
     "url": "https://github.com/shunsambongi/tree-sitter-gitignore",
-    "maintainedBy": "@theHamsta",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.471960127+03:00"
+    "maintainedBy": "@theHamsta"
   },
   {
     "reference": "main",
@@ -1461,8 +1324,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.631437096+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1474,8 +1336,7 @@
     "maintainedBy": "@NullVoxPopuli",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.722912596+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1486,8 +1347,7 @@
     "maintainedBy": "@NullVoxPopuli",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.954456723+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1499,8 +1359,7 @@
     "files": [
       "scanner.c",
       "src/tree-sitter-typescript/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.198808731+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1508,8 +1367,7 @@
     "grammarSha": "f1b101e2bcc3c162f427a80b7763f79f9208aff4779d9f3a56d0cf9a764b4648",
     "language": "glint",
     "url": "https://github.com/LensPlaysGames/tree-sitter-glint",
-    "maintainedBy": "@LensPlaysGames",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.04092726+03:00"
+    "maintainedBy": "@LensPlaysGames"
   },
   {
     "reference": "master",
@@ -1517,8 +1375,7 @@
     "grammarSha": "8e4348daa59e73aab734a074b66bb84808629bdd38dbb2bb8ed27faf32ff75a6",
     "language": "glsl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
-    "maintainedBy": "@theHamsta",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.836477432+03:00"
+    "maintainedBy": "@theHamsta"
   },
   {
     "reference": "master",
@@ -1530,8 +1387,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.578746239+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1539,8 +1395,7 @@
     "grammarSha": "4ef67c26567c0c6195b5d9811380799c76365a030e82bf471779a0550e59e626",
     "language": "gnuplot",
     "url": "https://github.com/dpezto/tree-sitter-gnuplot",
-    "maintainedBy": "@dpezto",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.165515349+03:00"
+    "maintainedBy": "@dpezto"
   },
   {
     "reference": "master",
@@ -1548,8 +1403,7 @@
     "grammarSha": "b5db9316773bbfe67b42a71135ec7192db9823b8413a024c6563a1279a19bca7",
     "language": "go",
     "url": "https://github.com/tree-sitter/tree-sitter-go",
-    "maintainedBy": "@theHamsta, @WinWisely268",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.101953885+03:00"
+    "maintainedBy": "@theHamsta, @WinWisely268"
   },
   {
     "reference": "main",
@@ -1557,8 +1411,7 @@
     "grammarSha": "d34b92aae7393392d36c644acb8c3d9f3027eb5eb07500ee6d819d463a9e2cc8",
     "language": "gobra",
     "url": "https://github.com/HSMF/tree-sitter-gobra",
-    "maintainedBy": "@HSMF",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.380782943+03:00"
+    "maintainedBy": "@HSMF"
   },
   {
     "reference": "main",
@@ -1566,8 +1419,7 @@
     "grammarSha": "97b326dad5c93e51d659560f092b482a4c72cd8001938c216e5b798f43b00fca",
     "language": "goctl",
     "url": "https://github.com/chaozwn/tree-sitter-goctl",
-    "maintainedBy": "@chaozwn",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.254672399+03:00"
+    "maintainedBy": "@chaozwn"
   },
   {
     "reference": "master",
@@ -1579,8 +1431,7 @@
     "maintainedBy": "@pierpo",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.291220014+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1588,8 +1439,7 @@
     "grammarSha": "5e96409a9b0f3241a586ab12138e75df6992a2d860574b1b008acc6b46ae2474",
     "language": "gomod",
     "url": "https://github.com/camdencheek/tree-sitter-go-mod",
-    "maintainedBy": "@camdencheek",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.712823699+03:00"
+    "maintainedBy": "@camdencheek"
   },
   {
     "reference": "mucho",
@@ -1597,8 +1447,7 @@
     "grammarSha": "18a30ab54a5dc4f1ca9a317798a4829e4631c4c3df38844117a0c82f377077c9",
     "language": "gooscript",
     "url": "https://github.com/bishan-batel/tree-sitter-gooscript",
-    "maintainedBy": "@bishan-batel",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.325548506+03:00"
+    "maintainedBy": "@bishan-batel"
   },
   {
     "reference": "master",
@@ -1606,8 +1455,7 @@
     "grammarSha": "c8e57d0bad6bf049ac323fff4f8215b6b250e31c38b40e6f9993f3c5a9138971",
     "language": "gosum",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-go-sum",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.279762221+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -1615,8 +1463,7 @@
     "grammarSha": "f35f4bfc5ca0d368bc14ff1c6cb5bd7c5366b1761d3e0d45a270523496d42ddc",
     "language": "gotmpl",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
-    "maintainedBy": "@qvalentin",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.37556384+03:00"
+    "maintainedBy": "@qvalentin"
   },
   {
     "reference": "main",
@@ -1624,8 +1471,7 @@
     "grammarSha": "4b5e4c85ae52a3950681b835060deb86c1fbb5ea359b2164f4a522ed402f00e3",
     "language": "gowork",
     "url": "https://github.com/omertuc/tree-sitter-go-work",
-    "maintainedBy": "@omertuc",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.618259276+03:00"
+    "maintainedBy": "@omertuc"
   },
   {
     "reference": "master",
@@ -1633,8 +1479,7 @@
     "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
     "language": "gpg",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.419310729+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -1642,8 +1487,7 @@
     "grammarSha": "569c2150acf69b5e0921f59e02a02324d06c9c9ce8077e6fe9d23916dcdf0db3",
     "language": "gram",
     "url": "https://github.com/gram-data/tree-sitter-gram",
-    "maintainedBy": "@akollegger",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.961072634+03:00"
+    "maintainedBy": "@akollegger"
   },
   {
     "reference": "master",
@@ -1651,8 +1495,7 @@
     "grammarSha": "67120043a4d9c4e70c38fee8edb67fc3f48a785cc5e7101f6d56fcf1d55d9acf",
     "language": "graphql",
     "url": "https://github.com/bkegley/tree-sitter-graphql",
-    "maintainedBy": "@bkegley",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.171618853+03:00"
+    "maintainedBy": "@bkegley"
   },
   {
     "reference": "main",
@@ -1663,8 +1506,7 @@
     "maintainedBy": "@MaeBrooks",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.449814827+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1672,8 +1514,7 @@
     "grammarSha": "f21908b23b53d5b2a799923a3f3a2ded3733e935514987d10492ad93070ef74f",
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
-    "maintainedBy": "@murtaza64",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.943285802+03:00"
+    "maintainedBy": "@murtaza64"
   },
   {
     "reference": "master",
@@ -1681,8 +1522,7 @@
     "grammarSha": "7c0c76b349f1cae6d2d3190df35f20006fb7d48a86d075dadf151852f3627424",
     "language": "gstlaunch",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-gstlaunch",
-    "maintainedBy": "@theHamsta",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.935583317+03:00"
+    "maintainedBy": "@theHamsta"
   },
   {
     "reference": "main",
@@ -1693,8 +1533,7 @@
     "maintainedBy": "@aosq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.618637827+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1705,8 +1544,7 @@
     "maintainedBy": "@vitallium",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.580342583+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1714,8 +1552,7 @@
     "grammarSha": "b17e1806f2057bf3f86b8b901a5eb3e493570747e5e389b61dbf7730850e7e6e",
     "language": "hare",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-hare",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.504752007+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -1727,8 +1564,7 @@
     "files": [
       "scanner.c",
       "unicode.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.784458584+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1739,8 +1575,7 @@
     "maintainedBy": "@lykahb",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.141344349+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1751,8 +1586,7 @@
     "maintainedBy": "@vantreeseba",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.863772563+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1763,8 +1597,7 @@
     "maintainedBy": "@MichaHoffmann",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.054419333+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1772,8 +1605,7 @@
     "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
     "language": "heex",
     "url": "https://github.com/phoenixframework/tree-sitter-heex",
-    "maintainedBy": "@connorlay",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.818726353+03:00"
+    "maintainedBy": "@connorlay"
   },
   {
     "reference": "master",
@@ -1782,8 +1614,7 @@
     "language": "helm",
     "url": "https://github.com/ngalaiko/tree-sitter-go-template",
     "maintainedBy": "@qvalentin",
-    "srcRoot": "dialects/helm",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.846321437+03:00"
+    "srcRoot": "dialects/helm"
   },
   {
     "reference": "master",
@@ -1791,8 +1622,7 @@
     "grammarSha": "8cc7d9dfe2f995fd21d56c2647db21d52f259d8cf204e64a583c6c16936a4dba",
     "language": "hjson",
     "url": "https://github.com/winston0410/tree-sitter-hjson",
-    "maintainedBy": "@winston0410",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.910843629+03:00"
+    "maintainedBy": "@winston0410"
   },
   {
     "reference": "master",
@@ -1803,8 +1633,7 @@
     "maintainedBy": "@theHamsta",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.866423221+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1812,8 +1641,7 @@
     "grammarSha": "6b52938ffbe7af9879617a46d2e23f5f9884739fa976f0f86b7553a22414c66e",
     "language": "hlsplaylist",
     "url": "https://github.com/Freed-Wu/tree-sitter-hlsplaylist",
-    "maintainedBy": "@Freed-Wu",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.084828863+03:00"
+    "maintainedBy": "@Freed-Wu"
   },
   {
     "reference": "master",
@@ -1821,8 +1649,7 @@
     "grammarSha": "39ddc35b2ec00208925a88971b77909018f215cda7a943e4f9eb1e1bb2ce86a5",
     "language": "hocon",
     "url": "https://github.com/antosha417/tree-sitter-hocon",
-    "maintainedBy": "@antosha417",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.760654904+03:00"
+    "maintainedBy": "@antosha417"
   },
   {
     "reference": "master",
@@ -1833,8 +1660,7 @@
     "maintainedBy": "@urbit-pilled",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.757004122+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -1846,8 +1672,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.434382239+03:00"
+    ]
   },
   {
     "reference": "stable",
@@ -1858,8 +1683,7 @@
     "maintainedBy": "@juliamertz",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.424279439+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1867,8 +1691,7 @@
     "grammarSha": "3f8d1cc38aa19a4cbeda808b4728adc440ade97b0a09f3c3d19b526cbb737fd5",
     "language": "htmldjango",
     "url": "https://github.com/interdependence/tree-sitter-htmldjango",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.068225268+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -1876,8 +1699,7 @@
     "grammarSha": "ca9114607dfeb3788abe6e7a68d02fe4e630caed460be02b0372f07822930b74",
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.267937664+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -1885,8 +1707,7 @@
     "grammarSha": "863e7524a0e5fce138c5db2e31495cfdc2c5e1057ab5e932b5bfdb42b6636b05",
     "language": "http2",
     "url": "https://github.com/rstcruzo/tree-sitter-http2",
-    "maintainedBy": "@rstcruzo",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.398202674+03:00"
+    "maintainedBy": "@rstcruzo"
   },
   {
     "reference": "main",
@@ -1894,8 +1715,7 @@
     "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
     "doc": "is looking for an external scanner but none is present in the repo",
     "maintainedBy": "@GitesHubisz",
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "master",
@@ -1907,8 +1727,7 @@
     "files": [
       "scanner.c",
       "debug_macros.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.318007698+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1916,8 +1735,7 @@
     "grammarSha": "16d54d1ae7cc43ec66f216836cbe8041715a11fed46fcd229a45968682b4a5f3",
     "language": "hurl",
     "url": "https://github.com/pfeiferj/tree-sitter-hurl",
-    "maintainedBy": "@pfeiferj",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.320334757+03:00"
+    "maintainedBy": "@pfeiferj"
   },
   {
     "reference": "master",
@@ -1925,8 +1743,7 @@
     "grammarSha": "0a5c036c4a309f8f2e868ebafe8212237448e8f99ee38e31319545a380465337",
     "language": "hygen_template",
     "url": "https://github.com/Hdoc1509/tree-sitter-hygen-template",
-    "maintainedBy": "@Hdoc1509",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.677912485+03:00"
+    "maintainedBy": "@Hdoc1509"
   },
   {
     "reference": "master",
@@ -1934,8 +1751,7 @@
     "grammarSha": "febbbbbf4f5f67b9b70ab5325c6f2ca21a077f46ce55a11ea6742d3f70827fb4",
     "language": "hylo",
     "url": "https://github.com/natsukagami/tree-sitter-hylo",
-    "maintainedBy": "@natsukagami",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.619734499+03:00"
+    "maintainedBy": "@natsukagami"
   },
   {
     "reference": "master",
@@ -1943,8 +1759,7 @@
     "grammarSha": "2d8178cf4dbb90a01e3c2a899339d5ad931b56d8a419d27c2d459f42d5a42659",
     "language": "hyprlang",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
-    "maintainedBy": "@luckasRanarison",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.735760504+03:00"
+    "maintainedBy": "@luckasRanarison"
   },
   {
     "reference": "master",
@@ -1952,8 +1767,7 @@
     "grammarSha": "c31a1d6507cd183d174981229b88a129dfa2897466d0d9f2dd98b941654a0833",
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
-    "maintainedBy": "@cathaysa",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.648200531+03:00"
+    "maintainedBy": "@cathaysa"
   },
   {
     "reference": "main",
@@ -1965,8 +1779,7 @@
     "files": [
       "scanner.c",
       "unicode.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.845027937+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -1974,8 +1787,7 @@
     "grammarSha": "31f5c6557ab4073e0a7910d7fadb6cf9286bda2fc940cd0d57f8a5bd86d31c7f",
     "language": "ignis",
     "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
-    "maintainedBy": "@BasileusErwin",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.808343795+03:00"
+    "maintainedBy": "@BasileusErwin"
   },
   {
     "reference": "master",
@@ -1983,8 +1795,7 @@
     "grammarSha": "36869e24ba3d412c7d4e2a15f793a9577a092d3c6f3b1a1de6169dc6dd018d08",
     "language": "ini",
     "url": "https://github.com/justinmk/tree-sitter-ini",
-    "maintainedBy": "@theHamsta",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.33798602+03:00"
+    "maintainedBy": "@theHamsta"
   },
   {
     "reference": "main",
@@ -1995,8 +1806,7 @@
     "maintainedBy": "@wldmr",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.921775655+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2004,8 +1814,7 @@
     "grammarSha": "fa89551787f1982418e05956b1bf4ffafa50c28fe82434239de23fc583c23a9c",
     "language": "inko",
     "url": "https://github.com/inko-lang/tree-sitter-inko",
-    "maintainedBy": "@yorickpeterse",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.018823592+03:00"
+    "maintainedBy": "@yorickpeterse"
   },
   {
     "reference": "master",
@@ -2013,8 +1822,7 @@
     "grammarSha": "328c98159505d8add853ed85c44787997ce42154e4c1f5643294f446f1f5632a",
     "language": "integerbasic",
     "url": "https://github.com/dfgordon/tree-sitter-integerbasic",
-    "maintainedBy": "@dfgordon",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.064370193+03:00"
+    "maintainedBy": "@dfgordon"
   },
   {
     "reference": "master",
@@ -2024,8 +1832,7 @@
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
     "doc": "invalid character '}' looking for beginning of object key string",
     "maintainedBy": "@fab4100",
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.11782316+03:00"
+    "skip": true
   },
   {
     "reference": "master",
@@ -2036,8 +1843,7 @@
     "maintainedBy": "@sogaiu",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.313947374+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2045,8 +1851,7 @@
     "grammarSha": "0c52fc38ffb2927203f636c20578cdaa5d9e5ce79d558de07589e03fd3a956ca",
     "language": "jasmin",
     "url": "https://github.com/y4cer/tree-sitter-jasmin",
-    "maintainedBy": "@y4cer",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.186023581+03:00"
+    "maintainedBy": "@y4cer"
   },
   {
     "reference": "master",
@@ -2056,8 +1861,7 @@
     "url": "https://github.com/tree-sitter/tree-sitter-java",
     "doc": "Error: Supertype rule `comment` is not defined.",
     "maintainedBy": "@p00f",
-    "skipUpdate": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "skipUpdate": true
   },
   {
     "reference": "master",
@@ -2068,8 +1872,7 @@
     "maintainedBy": "@steelsojka",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.367376171+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2077,8 +1880,7 @@
     "grammarSha": "618ea236fc5e2b79ff461bb189c81d5d6444154f83c1979d650dd451f1f5845c",
     "language": "jq",
     "url": "https://github.com/flurie/tree-sitter-jq",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.285417922+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "master",
@@ -2089,8 +1891,7 @@
     "maintainedBy": "@steelsojka",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.315093632+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2098,8 +1899,7 @@
     "grammarSha": "ecf4f5324171c5c1a94ba428c16711dc0316d3b2405ebf103be6e3eeb17de5dc",
     "language": "json",
     "url": "https://github.com/tree-sitter/tree-sitter-json",
-    "maintainedBy": "@steelsojka",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.970031745+03:00"
+    "maintainedBy": "@steelsojka"
   },
   {
     "reference": "master",
@@ -2107,8 +1907,7 @@
     "grammarSha": "3078cb21dd100399e6be0ccdca0ac55656cba1c8910a5877a0d1f563fd1df3ad",
     "language": "json5",
     "url": "https://github.com/Joakker/tree-sitter-json5",
-    "maintainedBy": "@Joakker",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.176589111+03:00"
+    "maintainedBy": "@Joakker"
   },
   {
     "reference": "main",
@@ -2117,8 +1916,7 @@
     "language": "jsonc",
     "altName": "JSON with comments",
     "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc",
-    "maintainedBy": "@WhyNotHugo",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.534632519+03:00"
+    "maintainedBy": "@WhyNotHugo"
   },
   {
     "reference": "main",
@@ -2129,8 +1927,7 @@
     "maintainedBy": "@nawordar",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.53242245+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2138,8 +1935,7 @@
     "grammarSha": "e354cfa62d042d69878c6ddd8e62ec45c7aeaf410af52c7a81f45d56c3b550dd",
     "language": "jule",
     "url": "https://github.com/TheLooped/tree-sitter-jule",
-    "maintainedBy": "@TheLooped",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.513367062+03:00"
+    "maintainedBy": "@TheLooped"
   },
   {
     "reference": "master",
@@ -2150,8 +1946,7 @@
     "maintainedBy": "@theHamsta",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.467691979+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2162,8 +1957,7 @@
     "maintainedBy": "@Hubro",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.815124739+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2174,8 +1968,7 @@
     "maintainedBy": "@Vishalk91-4",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.895614204+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2186,8 +1979,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.753659619+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2198,8 +1990,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.586402556+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2207,8 +1998,7 @@
     "grammarSha": "fc75f7a854dfc489a2942e67578bf27dd2f4294473f46e57f26e3257e7325141",
     "language": "koan",
     "url": "https://github.com/TogarashiPepper/tree-sitter-koan",
-    "maintainedBy": "@TogarashiPepper",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.678567245+03:00"
+    "maintainedBy": "@TogarashiPepper"
   },
   {
     "reference": "main",
@@ -2219,8 +2009,7 @@
     "maintainedBy": "@mtoohey31",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.693980694+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2231,8 +2020,7 @@
     "maintainedBy": "@SalBakraa",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.269805434+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2243,8 +2031,7 @@
     "maintainedBy": "@irh",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.333898826+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2252,8 +2039,7 @@
     "grammarSha": "f5933024921cc30620aa4f7a25ed95a0959847211f54feb19b9eb86534ce6dca",
     "language": "kusto",
     "url": "https://github.com/Willem-J-an/tree-sitter-kusto",
-    "maintainedBy": "@Willem-J-an",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.684922237+03:00"
+    "maintainedBy": "@Willem-J-an"
   },
   {
     "reference": "master",
@@ -2265,8 +2051,7 @@
     "files": [
       "scanner.c",
       "scanner_table.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.344966029+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2274,8 +2059,7 @@
     "grammarSha": "52d2dfaf3c6a68bc3acb93735f467ee35ce9d72218d834137d909ec344814a08",
     "language": "lart",
     "url": "https://github.com/frefolli/tree-sitter-lart",
-    "maintainedBy": "@frefolli",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.182193947+03:00"
+    "maintainedBy": "@frefolli"
   },
   {
     "reference": "main",
@@ -2285,8 +2069,7 @@
     "url": "https://github.com/vilarfg/tree-sitter-lat",
     "doc": "uses TypeScript",
     "maintainedBy": "@vilarfg",
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.248026944+03:00"
+    "skip": true
   },
   {
     "reference": "master",
@@ -2297,8 +2080,7 @@
     "maintainedBy": "@theHamsta, @clason",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.239513334+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2311,8 +2093,7 @@
     "files": [
       "scanner.c"
     ],
-    "skipUpdate": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "skipUpdate": true
   },
   {
     "reference": "master",
@@ -2320,8 +2101,7 @@
     "grammarSha": "db41a3e6a4ec72fc058180ae12c2b7c8dc1b828f50a75e59fcbc9766e3078f74",
     "language": "ledger",
     "url": "https://github.com/cbarrete/tree-sitter-ledger",
-    "maintainedBy": "@cbarrete",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.768219432+03:00"
+    "maintainedBy": "@cbarrete"
   },
   {
     "reference": "main",
@@ -2329,8 +2109,7 @@
     "grammarSha": "951d49255b4de74fc8c6347defde3fc094ce1005d300ffdb2a80dbe01a0a2ceb",
     "language": "leo",
     "url": "https://github.com/r001/tree-sitter-leo",
-    "maintainedBy": "@r001",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.344985483+03:00"
+    "maintainedBy": "@r001"
   },
   {
     "reference": "master",
@@ -2339,8 +2118,7 @@
     "language": "lexc",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
-    "srcRoot": "tree-sitter-lexc",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.214053309+03:00"
+    "srcRoot": "tree-sitter-lexc"
   },
   {
     "reference": "master",
@@ -2349,8 +2127,7 @@
     "language": "lexd",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
-    "srcRoot": "tree-sitter-lexd",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.173206319+03:00"
+    "srcRoot": "tree-sitter-lexd"
   },
   {
     "reference": "main",
@@ -2358,8 +2135,7 @@
     "grammarSha": "6967bc09cc2f1f88cfcc6b50d2bf9cefd85eb79fa89c59af2ba6dd6bdf2a5b9a",
     "language": "lilypond",
     "url": "https://github.com/nwhetsell/tree-sitter-lilypond",
-    "maintainedBy": "@nwhetsell",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.508682647+03:00"
+    "maintainedBy": "@nwhetsell"
   },
   {
     "reference": "main",
@@ -2367,8 +2143,7 @@
     "grammarSha": "b90d9d6025d80d324562e380196ab75123e85f4cc024d5833946fff1a6353ff4",
     "language": "lilypond_scheme",
     "url": "https://github.com/nwhetsell/tree-sitter-lilypond-scheme",
-    "maintainedBy": "@nwhetsell",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.157498293+03:00"
+    "maintainedBy": "@nwhetsell"
   },
   {
     "reference": "master",
@@ -2376,8 +2151,7 @@
     "grammarSha": "6a4b083d98ba1c09baa00fba81216d067af13a91cf5bcce2fde4fbd198353900",
     "language": "linkerscript",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.866383897+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -2388,8 +2162,7 @@
     "maintainedBy": "@hankthetank27",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.699049725+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2400,8 +2173,7 @@
     "maintainedBy": "@toots",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.980075574+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2409,8 +2181,7 @@
     "grammarSha": "05e7db1bcd55456667f2219bfed634fdd5479e1866b917b5998584c32ce891ad",
     "language": "llvm",
     "url": "https://github.com/benwilliamgraham/tree-sitter-llvm",
-    "maintainedBy": "@benwilliamgraham",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.656472593+03:00"
+    "maintainedBy": "@benwilliamgraham"
   },
   {
     "reference": "main",
@@ -2418,8 +2189,7 @@
     "grammarSha": "e116e55c1bd542669888d38c995673775ecb8873740bac85640aa86295cd8acd",
     "language": "lookml",
     "url": "https://github.com/aclementev/tree-sitter-lookml",
-    "maintainedBy": "@aclementev",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.133209444+03:00"
+    "maintainedBy": "@aclementev"
   },
   {
     "reference": "master",
@@ -2427,8 +2197,7 @@
     "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
     "maintainedBy": "@cathaysia",
     "srcRoot": "tree-sitter-loongdoc",
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "master",
@@ -2436,8 +2205,7 @@
     "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
     "maintainedBy": "@cathaysia",
     "srcRoot": "tree-sitter-loongdoc_inline",
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "master",
@@ -2446,8 +2214,7 @@
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
     "maintainedBy": "@marcuscaisey",
-    "srcRoot": "tree-sitter-lox",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.830528381+03:00"
+    "srcRoot": "tree-sitter-lox"
   },
   {
     "reference": "main",
@@ -2458,8 +2225,7 @@
     "maintainedBy": "@MunifTanjim",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.629247596+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2467,8 +2233,7 @@
     "grammarSha": "c137cb2a941c104d4028ba2b592f78fd4c4e9b344bcfd4b8802c9089090bbe86",
     "language": "luadoc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-luadoc",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.230656804+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -2477,8 +2242,7 @@
     "language": "luap",
     "altName": "lua patterns",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-luap",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.592984549+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -2489,8 +2253,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.669657229+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2498,8 +2261,7 @@
     "grammarSha": "2489d7eff66c157262797af82915cbd2e1780eff5dbe071fa0fb2977e10ef704",
     "language": "m68k",
     "url": "https://github.com/grahambates/tree-sitter-m68k",
-    "maintainedBy": "@grahambates",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.709791005+03:00"
+    "maintainedBy": "@grahambates"
   },
   {
     "reference": "main",
@@ -2507,8 +2269,7 @@
     "grammarSha": "a6aae979f589424c848b308df4bfe700d07138f965f70108d35e121d5819e1b8",
     "language": "magik",
     "url": "https://github.com/krn-robin/tree-sitter-magik",
-    "maintainedBy": "@sebastiaanspeck",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.328079672+03:00"
+    "maintainedBy": "@sebastiaanspeck"
   },
   {
     "reference": "main",
@@ -2516,8 +2277,7 @@
     "grammarSha": "80402e3642fc46a08de1fbac9ea634da0075d57b854b6c19f215016a4ba3a59b",
     "language": "make",
     "url": "https://github.com/alemuller/tree-sitter-make",
-    "maintainedBy": "@lewis6991",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.222856096+03:00"
+    "maintainedBy": "@lewis6991"
   },
   {
     "reference": "split_parser",
@@ -2530,8 +2290,7 @@
     "srcRoot": "tree-sitter-markdown",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.943444688+03:00"
+    ]
   },
   {
     "reference": "split_parser",
@@ -2544,8 +2303,7 @@
     "srcRoot": "tree-sitter-markdown-inline",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.734252949+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2556,8 +2314,7 @@
     "maintainedBy": "@acristoffers",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.586396718+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2565,8 +2322,7 @@
     "grammarSha": "f8637367cbc1b258d8b879c203991ed76bb51ebb8f872673e43aace8d4f181cd",
     "language": "mcfuncx",
     "url": "https://github.com/PFiS1737/tree-sitter-mcfuncx",
-    "maintainedBy": "@PFiS1737",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.830501444+03:00"
+    "maintainedBy": "@PFiS1737"
   },
   {
     "reference": "master",
@@ -2577,8 +2333,7 @@
     "maintainedBy": "@Kerl13",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.482120445+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2586,8 +2341,7 @@
     "grammarSha": "00190f96b71b030e8e2c8e6e5da29cdf01f5d78874bf632866ef6bbf1698eb8b",
     "language": "merlin6502",
     "url": "https://github.com/dfgordon/tree-sitter-merlin6502",
-    "maintainedBy": "@dfgordon",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.697935015+03:00"
+    "maintainedBy": "@dfgordon"
   },
   {
     "reference": "master",
@@ -2595,8 +2349,7 @@
     "grammarSha": "51fd1d09d2744f0e81e2e62ab1c9b7c8aebe293826ff5096a153c7d674219a6b",
     "language": "mermaid",
     "url": "https://github.com/monaqa/tree-sitter-mermaid",
-    "maintainedBy": "@monaqa",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.330116039+03:00"
+    "maintainedBy": "@monaqa"
   },
   {
     "reference": "master",
@@ -2604,16 +2357,14 @@
     "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "language": "meson",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
-    "maintainedBy": "@Decodetalkers",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.45395212+03:00"
+    "maintainedBy": "@Decodetalkers"
   },
   {
     "reference": "main",
     "language": "mix_lock",
     "url": "https://github.com/fluidattacks/tree-sitter-mix_lock",
     "maintainedBy": "@drestrepom",
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "master",
@@ -2621,8 +2372,7 @@
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
-    "maintainedBy": "@artagnon",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.201875533+03:00"
+    "maintainedBy": "@artagnon"
   },
   {
     "reference": "main",
@@ -2630,8 +2380,7 @@
     "grammarSha": "75536a02ff88c332d49d1d833f7ec937623171210ae4322ae250a59fdccda19d",
     "language": "modelica",
     "url": "https://github.com/modelicahub/tree-sitter-modelica",
-    "maintainedBy": "@nachawati",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.922653234+03:00"
+    "maintainedBy": "@nachawati"
   },
   {
     "reference": "main",
@@ -2642,8 +2391,7 @@
     "maintainedBy": "@tonyfettes",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.155929818+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2654,8 +2402,7 @@
     "maintainedBy": "@f0i",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.661298915+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2663,8 +2410,7 @@
     "grammarSha": "73e0ede788b3cd2da9282106e01f390f290e9f3187b8f14546831b8a99eb4bb6",
     "language": "move",
     "url": "https://github.com/tzakian/tree-sitter-move",
-    "maintainedBy": "@tzakian",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.69511094+03:00"
+    "maintainedBy": "@tzakian"
   },
   {
     "reference": "main",
@@ -2676,8 +2422,7 @@
     "maintainedBy": "@ArArgon",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.772252525+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2685,8 +2430,7 @@
     "grammarSha": "6d13bf1ec8230703df2a53ab4cc2facc756166a585d8b977e3ebd10dba5ec63e",
     "language": "muttrc",
     "url": "https://github.com/neomutt/tree-sitter-muttrc",
-    "maintainedBy": "@Freed-Wu",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.658050725+03:00"
+    "maintainedBy": "@Freed-Wu"
   },
   {
     "reference": "main",
@@ -2694,8 +2438,7 @@
     "grammarSha": "5608900a6d2fbccfe0aad172839d087125b267e0835d6ef8854c2a5625104595",
     "language": "mylang",
     "url": "https://github.com/marc9622/tree-sitter-mylang",
-    "maintainedBy": "@marc9622",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.178007841+03:00"
+    "maintainedBy": "@marc9622"
   },
   {
     "reference": "main",
@@ -2703,8 +2446,7 @@
     "grammarSha": "62416145d98a6cea8b28c148ab8db3162ecbd96647bcdbd046a92af8a8b3883d",
     "language": "nasm",
     "url": "https://github.com/naclsn/tree-sitter-nasm",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.700580321+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -2715,8 +2457,7 @@
     "maintainedBy": "@hnd2",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.062465271+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2724,8 +2465,7 @@
     "grammarSha": "37b321a30f157f147143a3eb82ba9220683fa0a0fa0ed34a352e209c392d35b9",
     "language": "nftables",
     "url": "https://github.com/EinYakAmNil/tree-sitter-nftables",
-    "maintainedBy": "@EinYakAmNil",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.067649471+03:00"
+    "maintainedBy": "@EinYakAmNil"
   },
   {
     "reference": "main",
@@ -2736,8 +2476,7 @@
     "maintainedBy": "@opa-oz",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.846647611+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2748,8 +2487,7 @@
     "maintainedBy": "@ErinvanderVeen, @yannham",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.752148567+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2761,8 +2499,7 @@
     "maintainedBy": "@aMOPel",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.407531633+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2770,8 +2507,7 @@
     "grammarSha": "5bc636c61c08e467de8631a2fe3c3c5d85f1684e9ed0ab0c95cbb8e410bfbdcf",
     "language": "nim_format_string",
     "url": "https://github.com/aMOPel/tree-sitter-nim-format-string",
-    "maintainedBy": "@aMOPel",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.188673177+03:00"
+    "maintainedBy": "@aMOPel"
   },
   {
     "reference": "main",
@@ -2779,8 +2515,7 @@
     "grammarSha": "6778081b91d51b0b9f55c73e3a33d5bc6d277b7986647f964263e33ec187de91",
     "language": "ninja",
     "url": "https://github.com/alemuller/tree-sitter-ninja",
-    "maintainedBy": "@alemuller",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.168874165+03:00"
+    "maintainedBy": "@alemuller"
   },
   {
     "reference": "master",
@@ -2791,8 +2526,7 @@
     "maintainedBy": "@leo60228",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.361839423+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2803,8 +2537,7 @@
     "maintainedBy": "@JoeyGrajciar, @vhyrro",
     "files": [
       "scanner.cc"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.721457129+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2815,8 +2548,7 @@
     "maintainedBy": "@gsuuon",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.179989917+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2826,8 +2558,7 @@
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-nqc",
     "doc": "ReferenceError: Undefined symbol '_statement'",
     "maintainedBy": "@amaanq",
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.834004576+03:00"
+    "skip": true
   },
   {
     "reference": "master",
@@ -2836,8 +2567,7 @@
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-objc",
     "doc": "grammar.js throws error: Unresolved conflict for symbol sequence",
     "maintainedBy": "@amaanq",
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.881775522+03:00"
+    "skip": true
   },
   {
     "reference": "master",
@@ -2848,8 +2578,7 @@
     "maintainedBy": "@ColinKennedy",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.909039111+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2862,8 +2591,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.228519198+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2876,8 +2604,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.918458055+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2888,8 +2615,7 @@
     "maintainedBy": "@undu",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.58454021+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2900,8 +2626,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.590606408+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2912,8 +2637,7 @@
     "maintainedBy": "@milisims",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.532663786+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2924,8 +2648,7 @@
     "maintainedBy": "@armonjam",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.449984557+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -2933,8 +2656,7 @@
     "grammarSha": "0c17dbe0884cb58458e597d3e34727f477d248674a33b69d6e0c172538f769de",
     "language": "pascal",
     "url": "https://github.com/Isopod/tree-sitter-pascal",
-    "maintainedBy": "@Isopod",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.387087813+03:00"
+    "maintainedBy": "@Isopod"
   },
   {
     "reference": "main",
@@ -2942,8 +2664,7 @@
     "grammarSha": "b1d74b5455e31c1691d2cde887c414811ecd1d569934c0eab4bc10c542b5f58e",
     "language": "passwd",
     "url": "https://github.com/ath3/tree-sitter-passwd",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.435028351+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -2951,8 +2672,7 @@
     "grammarSha": "e11c957ef6a60fd58aa21cb936532c767af58cef1bece6bee7e24865cde1c344",
     "language": "pdxinfo",
     "url": "https://github.com/notpeter/tree-sitter-pdxinfo",
-    "maintainedBy": "@notpeter",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.833442346+03:00"
+    "maintainedBy": "@notpeter"
   },
   {
     "reference": "master",
@@ -2960,8 +2680,7 @@
     "grammarSha": "15d39dc1718ffd7b05a726517c1a748995e22cf8352e49c87adcfb5dcea50159",
     "language": "pem",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-pem",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.845701499+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "master",
@@ -2974,8 +2693,7 @@
       "scanner.c",
       "bsearch.h",
       "tsp_unicode.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.255146082+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -2983,8 +2701,7 @@
     "grammarSha": "58de63ea99d6f783d9bda3454c6d2a7e8f10a1665463bcd21ba7b3978cbc7250",
     "language": "perm",
     "url": "https://github.com/theoriginalstove/tree-sitter-perm",
-    "maintainedBy": "@theoriginalstove",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.192050574+03:00"
+    "maintainedBy": "@theoriginalstove"
   },
   {
     "reference": "master",
@@ -2995,8 +2712,7 @@
     "maintainedBy": "@rolandwalker",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.544575353+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3009,8 +2725,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.027301062+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3023,8 +2738,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.874708434+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3037,8 +2751,7 @@
     "files": [
       "scanner.c"
     ],
-    "skip": true,
-    "lastVersionCheckAt": "2024-10-21T09:15:24.387082126+03:00"
+    "skip": true
   },
   {
     "reference": "main",
@@ -3049,8 +2762,7 @@
     "maintainedBy": "@smoeding",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.557278342+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3058,8 +2770,7 @@
     "grammarSha": "ce4b382c5e2dc8a901475519d374e59c1b42d7fef86630453a6df32a4e08bbce",
     "language": "pint",
     "url": "https://github.com/essential-contributions/tree-sitter-pint",
-    "maintainedBy": "@mitchmindtree",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.407141088+03:00"
+    "maintainedBy": "@mitchmindtree"
   },
   {
     "reference": "main",
@@ -3070,8 +2781,7 @@
     "maintainedBy": "@leo60228",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.76179118+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3082,8 +2792,7 @@
     "maintainedBy": "@bioball",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.399622164+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3091,8 +2800,7 @@
     "grammarSha": "53fb90669f70d3e553b64d0892f92467713f2dc9722b043aee38e283b52db66d",
     "language": "plantuml",
     "url": "https://github.com/ptdewey/tree-sitter-plantuml",
-    "maintainedBy": "@ptdewey",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.216592857+03:00"
+    "maintainedBy": "@ptdewey"
   },
   {
     "reference": "main",
@@ -3100,8 +2808,7 @@
     "grammarSha": "1c174bcad62d2a227f819318694e9044b56138e73d13d3dbd26d2aed38e701b7",
     "language": "po",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-po",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.380741186+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -3112,8 +2819,7 @@
     "maintainedBy": "@RabbiVeesh, @LeoNerd",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.868270962+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3122,8 +2828,7 @@
     "language": "poe_filter",
     "altName": "Path of Exile item filter",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-poe-filter",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.74619405+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "master",
@@ -3134,8 +2839,7 @@
     "maintainedBy": "@amaanq, @mfelsche",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.337812686+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3146,8 +2850,7 @@
     "maintainedBy": "@citronneur",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.239482669+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3155,8 +2858,7 @@
     "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
     "language": "printf",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.210091837+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "master",
@@ -3164,8 +2866,7 @@
     "grammarSha": "7aac91f8a611e05f48e647fa19a2be54ce84796b5debc022331ab15fb69d62d7",
     "language": "prisma",
     "url": "https://github.com/victorhqc/tree-sitter-prisma",
-    "maintainedBy": "@elianiva",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.73721669+03:00"
+    "maintainedBy": "@elianiva"
   },
   {
     "reference": "main",
@@ -3174,8 +2875,7 @@
     "language": "problog",
     "url": "https://codeberg.org/foxy/tree-sitter-prolog",
     "maintainedBy": "@foxyseta",
-    "srcRoot": "grammars/problog",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.037302938+03:00"
+    "srcRoot": "grammars/problog"
   },
   {
     "reference": "main",
@@ -3184,8 +2884,7 @@
     "language": "prolog",
     "url": "https://codeberg.org/foxy/tree-sitter-prolog",
     "maintainedBy": "@foxyseta",
-    "srcRoot": "grammars/prolog",
-    "lastVersionCheckAt": "2024-10-21T09:15:23.101660514+03:00"
+    "srcRoot": "grammars/prolog"
   },
   {
     "reference": "main",
@@ -3193,8 +2892,7 @@
     "grammarSha": "8c9ad18e98d5060dd1a33c9eeb0973631dfe373656e3ead2dfc2ee46935ca117",
     "language": "promql",
     "url": "https://github.com/MichaHoffmann/tree-sitter-promql",
-    "maintainedBy": "@MichaHoffmann",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.803933777+03:00"
+    "maintainedBy": "@MichaHoffmann"
   },
   {
     "reference": "master",
@@ -3205,8 +2903,7 @@
     "maintainedBy": "@ObserverOfTime",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.504999274+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3214,8 +2911,7 @@
     "grammarSha": "d14600c4784ec5f98287868569085648b0873710157981ca57c8252eb22a13fd",
     "language": "proto",
     "url": "https://github.com/treywood/tree-sitter-proto",
-    "maintainedBy": "@treywood",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.757291582+03:00"
+    "maintainedBy": "@treywood"
   },
   {
     "reference": "master",
@@ -3223,8 +2919,7 @@
     "grammarSha": "fea7de799157c6740f33ca2b0961ac56f4ba0e94042a816967c5f1f34a59a2a7",
     "language": "proxima",
     "url": "https://github.com/vistormu/tree-sitter-proxima",
-    "maintainedBy": "@vistormu",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.88215114+03:00"
+    "maintainedBy": "@vistormu"
   },
   {
     "reference": "main",
@@ -3232,8 +2927,7 @@
     "grammarSha": "b7030737aabdb8a48a3cb3dc8b0b386b47397e6ad3fb689b0797902d0d56125d",
     "language": "prql",
     "url": "https://github.com/PRQL/tree-sitter-prql",
-    "maintainedBy": "@matthias-Q",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.618464458+03:00"
+    "maintainedBy": "@matthias-Q"
   },
   {
     "reference": "master",
@@ -3242,8 +2936,7 @@
     "language": "psv",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
     "maintainedBy": "@amaanq",
-    "srcRoot": "psv",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.498970911+03:00"
+    "srcRoot": "psv"
   },
   {
     "reference": "master",
@@ -3254,8 +2947,7 @@
     "maintainedBy": "@zealot128",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.765952563+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3263,8 +2955,7 @@
     "grammarSha": "023a6a0545590f658c374b2b0bf84246b0ef94f4e72272b4112e06ce76972f6a",
     "language": "puppet",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-puppet",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.845687664+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -3276,8 +2967,7 @@
     "files": [
       "scanner.c",
       "unicode.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.216572607+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3286,8 +2976,7 @@
     "language": "pymanifest",
     "altName": "PyPA manifest",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-pymanifest",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.398501616+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -3298,8 +2987,7 @@
     "maintainedBy": "@russellbaxt",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.930189658+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3310,8 +2998,7 @@
     "maintainedBy": "@stsewd, @theHamsta",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.208782886+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3319,8 +3006,7 @@
     "grammarSha": "1880d7b4a79037298381beea743cb393179c5028dc302b4e69a4fa7b58662c16",
     "language": "qbe",
     "url": "https://github.com/bitterbloom/tree-sitter-qbe",
-    "maintainedBy": "@bitterbloom",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.14832447+03:00"
+    "maintainedBy": "@bitterbloom"
   },
   {
     "reference": "master",
@@ -3328,8 +3014,7 @@
     "grammarSha": "62e073c8cdf78b31af859a0d6995a462a3275131cb25899ad031d6931f953209",
     "language": "ql",
     "url": "https://github.com/tree-sitter/tree-sitter-ql",
-    "maintainedBy": "@pwntester",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.390503716+03:00"
+    "maintainedBy": "@pwntester"
   },
   {
     "reference": "master",
@@ -3337,8 +3022,7 @@
     "grammarSha": "5640f359dd610e35037c85414d38e56443cbad1fbe8f4d0640f3643ac31f7f19",
     "language": "qmldir",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-qmldir",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.00239671+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -3350,8 +3034,7 @@
     "files": [
       "scanner.c",
       "typescript-scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.17128423+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3359,8 +3042,7 @@
     "grammarSha": "1bc1aef664d57d8c9a9688a6a52cd0df05d06b3071faa227f15cd78ef80d7b29",
     "language": "quakec",
     "url": "https://github.com/vkazanov/tree-sitter-quakec",
-    "maintainedBy": "@vkazanov",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.420974042+03:00"
+    "maintainedBy": "@vkazanov"
   },
   {
     "reference": "master",
@@ -3369,8 +3051,7 @@
     "language": "query",
     "altName": "Tree-Sitter query language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
-    "maintainedBy": "@steelsojka",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.658076519+03:00"
+    "maintainedBy": "@steelsojka"
   },
   {
     "reference": "main",
@@ -3381,8 +3062,7 @@
     "maintainedBy": "@echasnovski",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.900912617+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3393,8 +3073,7 @@
     "maintainedBy": "@6cdh",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.301744824+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3402,8 +3081,7 @@
     "grammarSha": "9398a46037546f10e9f20fb09b5f56137690ff08c1ee12cb1036a211b676d2dd",
     "language": "ralph",
     "url": "https://github.com/alephium/tree-sitter-ralph",
-    "maintainedBy": "@tdroxler",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.199125993+03:00"
+    "maintainedBy": "@tdroxler"
   },
   {
     "reference": "main",
@@ -3411,8 +3089,7 @@
     "grammarSha": "676d6b0179ec3189b2cc8ef47dc7543906eec01200f290dfd8169ae93584c4ab",
     "language": "rasi",
     "url": "https://github.com/Fymyte/tree-sitter-rasi",
-    "maintainedBy": "@Fymyte",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.244935725+03:00"
+    "maintainedBy": "@Fymyte"
   },
   {
     "reference": "main",
@@ -3420,8 +3097,7 @@
     "grammarSha": "a227eee7249c43e6ef385371350ae3463c69e3fbc24b54cf826ac2c9328a8c06",
     "language": "rbs",
     "url": "https://github.com/joker1007/tree-sitter-rbs",
-    "maintainedBy": "@joker1007",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.140122477+03:00"
+    "maintainedBy": "@joker1007"
   },
   {
     "reference": "master",
@@ -3429,8 +3105,7 @@
     "grammarSha": "406663fa0d4d967b382d47ecdaf547439563ae2950fdaa2bc27528a52155f6dc",
     "language": "rcl",
     "url": "https://github.com/rcl-lang/tree-sitter-rcl",
-    "maintainedBy": "@ruuda",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.174656333+03:00"
+    "maintainedBy": "@ruuda"
   },
   {
     "reference": "master",
@@ -3438,8 +3113,7 @@
     "grammarSha": "2ec0b337df0764ffcaaa54d7400b2a5a03d5e33c7bd736625a769667f132318f",
     "language": "re2c",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-re2c",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.517854671+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -3447,8 +3121,7 @@
     "grammarSha": "ae2d23a7175fe4114b2e5fab77c0d0e109cb8a0aa2f999875c87c753d9b94084",
     "language": "readline",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-readline",
-    "maintainedBy": "@ribru17",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.210608264+03:00"
+    "maintainedBy": "@ribru17"
   },
   {
     "reference": "master",
@@ -3456,8 +3129,7 @@
     "grammarSha": "835bce23f0244c4a1c2254a66d543779c78316288e878ec25a8be9ebdfe65b3d",
     "language": "regex",
     "url": "https://github.com/tree-sitter/tree-sitter-regex",
-    "maintainedBy": "@theHamsta",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.601058306+03:00"
+    "maintainedBy": "@theHamsta"
   },
   {
     "reference": "master",
@@ -3465,8 +3137,7 @@
     "grammarSha": "518bc76c2a6d6a7bfb46158d09cc73a66c1322b56cdbf030b3baaccfb73a3987",
     "language": "rego",
     "url": "https://github.com/FallenAngel97/tree-sitter-rego",
-    "maintainedBy": "@FallenAngel97",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.195288307+03:00"
+    "maintainedBy": "@FallenAngel97"
   },
   {
     "reference": "master",
@@ -3475,8 +3146,7 @@
     "language": "requirements",
     "altName": "pip requirements",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.05693655+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -3487,8 +3157,7 @@
     "maintainedBy": "@ribru17",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.788312015+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3496,8 +3165,7 @@
     "grammarSha": "a2ff693bc0f7ffd4954cf0a940afbff4e06fb78a897f3aafbd1894e67f14057b",
     "language": "risor",
     "url": "https://github.com/applejag/tree-sitter-risor",
-    "maintainedBy": "@applejag",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.017145209+03:00"
+    "maintainedBy": "@applejag"
   },
   {
     "reference": "master",
@@ -3508,8 +3176,7 @@
     "maintainedBy": "@bamonroe",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.830545206+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3517,8 +3184,7 @@
     "grammarSha": "fcfe10a0ec522652409a8346417865907a7b480e16483f71cd270d4eee592ad7",
     "language": "robot",
     "url": "https://github.com/Hubro/tree-sitter-robot",
-    "maintainedBy": "@Hubro",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.488622681+03:00"
+    "maintainedBy": "@Hubro"
   },
   {
     "reference": "main",
@@ -3529,8 +3195,7 @@
     "maintainedBy": "@opa-oz",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.139007299+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3541,8 +3206,7 @@
     "maintainedBy": "@faldor20",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.15186555+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3553,8 +3217,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.537275442+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3573,8 +3236,7 @@
       "src/tree_sitter_rst/chars.h",
       "src/tree_sitter_rst/punctuation_chars.h"
     ],
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   },
   {
     "reference": "main",
@@ -3586,8 +3248,7 @@
     "srcRoot": "rstml",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.167319044+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3596,8 +3257,7 @@
     "language": "rtx",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
-    "srcRoot": "tree-sitter-rtx",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.51016171+03:00"
+    "srcRoot": "tree-sitter-rtx"
   },
   {
     "reference": "master",
@@ -3608,8 +3268,7 @@
     "maintainedBy": "@TravonteD",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.828538043+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3620,8 +3279,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.479886418+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3633,8 +3291,7 @@
     "srcRoot": "rust_with_rstml",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.462096949+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3645,8 +3302,7 @@
     "maintainedBy": "@stevanmilic",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.983461857+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3654,8 +3310,7 @@
     "grammarSha": "bf371a3f393b5b01a5b1949511e6cf9dd352a19274caa8a374df348b3bd1f93c",
     "language": "scfg",
     "url": "https://github.com/rockorager/tree-sitter-scfg",
-    "maintainedBy": "@WhyNotHugo",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.424273952+03:00"
+    "maintainedBy": "@WhyNotHugo"
   },
   {
     "reference": "main",
@@ -3663,8 +3318,7 @@
     "grammarSha": "7cf24fd1e03da19f573c18cbcd51cb2fa44753a76e0ad926b97d6dd841c8c900",
     "language": "scheme",
     "url": "https://github.com/6cdh/tree-sitter-scheme",
-    "maintainedBy": "@6cdh",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.820621936+03:00"
+    "maintainedBy": "@6cdh"
   },
   {
     "reference": "master",
@@ -3675,8 +3329,7 @@
     "maintainedBy": "@elianiva",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.894632276+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3684,8 +3337,7 @@
     "grammarSha": "49663e6305c8943edc627622d476259007625898cf0b3a4d6959d5f531334713",
     "language": "sdml",
     "url": "https://github.com/sdm-lang/tree-sitter-sdml",
-    "maintainedBy": "@johnstonskj",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.634816339+03:00"
+    "maintainedBy": "@johnstonskj"
   },
   {
     "reference": "main",
@@ -3694,8 +3346,7 @@
     "language": "sflog",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
     "maintainedBy": "@aheber, @xixiaofinland",
-    "srcRoot": "sflog",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.846879206+03:00"
+    "srcRoot": "sflog"
   },
   {
     "reference": "main",
@@ -3706,8 +3357,7 @@
     "maintainedBy": "@eirslett",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.087908345+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3715,8 +3365,7 @@
     "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
     "language": "sincere",
     "url": "https://github.com/vincentvanecchi/tree-sitter-sincere",
-    "maintainedBy": "@vincentvanecchi",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.143200245+03:00"
+    "maintainedBy": "@vincentvanecchi"
   },
   {
     "reference": "master",
@@ -3729,8 +3378,7 @@
     "files": [
       "scanner.c"
     ],
-    "skipUpdate": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "skipUpdate": true
   },
   {
     "reference": "master",
@@ -3741,8 +3389,7 @@
     "maintainedBy": "@kolen",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.932061677+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3750,8 +3397,7 @@
     "grammarSha": "40bc54c63ccec958dbb383cc9b0014bff4828df7690ebd6f1a6aefcad292247e",
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
-    "maintainedBy": "@hunger",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.086501306+03:00"
+    "maintainedBy": "@hunger"
   },
   {
     "reference": "master",
@@ -3762,8 +3408,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:22.753951705+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3771,8 +3416,7 @@
     "grammarSha": "6dfa8df4d93299ee86291f5ffbbf9da91f703aa4771464868882cd70c81624f0",
     "language": "smith",
     "url": "https://github.com/smith-lang/tree-sitter-smith",
-    "maintainedBy": "@adam-r-kowalski",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.611883572+03:00"
+    "maintainedBy": "@adam-r-kowalski"
   },
   {
     "reference": "main",
@@ -3780,8 +3424,7 @@
     "grammarSha": "c2fcc45eb965b76e4832e12f6bbbd4d58d5e08291218d837213f6194ff6a4383",
     "language": "smithy",
     "url": "https://github.com/indoorvivants/tree-sitter-smithy",
-    "maintainedBy": "@amaanq, @keynmol",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.037343324+03:00"
+    "maintainedBy": "@amaanq, @keynmol"
   },
   {
     "reference": "main",
@@ -3792,8 +3435,7 @@
     "maintainedBy": "@MatthewFluet",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.158730069+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3804,8 +3446,7 @@
     "maintainedBy": "@osthomas",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.661745739+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3813,8 +3454,7 @@
     "grammarSha": "8f01b1cc8d13fbb4441cd2de099cec8c9cec38d19cf2b45661863d328ed6323b",
     "language": "sol",
     "url": "https://github.com/mrpedrobraga/tree-sitter-sol",
-    "maintainedBy": "@mrpedrobraga",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.117913068+03:00"
+    "maintainedBy": "@mrpedrobraga"
   },
   {
     "reference": "master",
@@ -3822,8 +3462,7 @@
     "grammarSha": "13943eaa07791bd412b2cce5cdd0f8a7bb12309cc03d1bef3a5f7f16c109c1fc",
     "language": "solidity",
     "url": "https://github.com/JoranHonig/tree-sitter-solidity",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.158720664+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -3831,8 +3470,7 @@
     "grammarSha": "971f346693ac13c07d69e80109aa47b4661178645ebbd2180828056fb030e28b",
     "language": "sop",
     "url": "https://github.com/idjoo/tree-sitter-sop",
-    "maintainedBy": "@idjoo",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.170298187+03:00"
+    "maintainedBy": "@idjoo"
   },
   {
     "reference": "main",
@@ -3841,8 +3479,7 @@
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
     "maintainedBy": "@aheber, @xixiaofinland",
-    "srcRoot": "soql",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.277525306+03:00"
+    "srcRoot": "soql"
   },
   {
     "reference": "main",
@@ -3851,8 +3488,7 @@
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
     "maintainedBy": "@aheber, @xixiaofinland",
-    "srcRoot": "sosl",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.202933125+03:00"
+    "srcRoot": "sosl"
   },
   {
     "reference": "main",
@@ -3863,8 +3499,7 @@
     "maintainedBy": "@Sarrus1",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.269325039+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3872,8 +3507,7 @@
     "grammarSha": "abb8cc23e3a0a2c6ab27e2e542880fc456328e4e80cbf78e3a63c0882307a2b3",
     "language": "sparql",
     "url": "https://github.com/IoannisNezis/tree-sitter-sparql",
-    "maintainedBy": "@BonaBeavis, @IoannisNezis",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.712665087+03:00"
+    "maintainedBy": "@BonaBeavis, @IoannisNezis"
   },
   {
     "reference": "main",
@@ -3881,8 +3515,7 @@
     "grammarSha": "22c6265b59805a6fae2a1898f9be8fd02f6032fcdf4de66e9777c43cbf0e9fd8",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
-    "maintainedBy": "@bbannier",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.458336486+03:00"
+    "maintainedBy": "@bbannier"
   },
   {
     "reference": "main",
@@ -3893,8 +3526,7 @@
     "maintainedBy": "@DerekStride",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.121612199+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3906,8 +3538,7 @@
     "maintainedBy": "@takegue",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.226203865+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3915,8 +3546,7 @@
     "grammarSha": "a82cfcf385779c3624b09e9eb31672349a046f94369ed7a67e3b4b8f6d92bf94",
     "language": "sqlite",
     "url": "https://github.com/johndoe-o/tree-sitter-sqlite",
-    "maintainedBy": "@johndoe-o",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.445572163+03:00"
+    "maintainedBy": "@johndoe-o"
   },
   {
     "reference": "master",
@@ -3927,8 +3557,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.148335873+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3936,8 +3565,7 @@
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
-    "maintainedBy": "@sebhoss",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.77731255+03:00"
+    "maintainedBy": "@sebhoss"
   },
   {
     "reference": "master",
@@ -3945,8 +3573,7 @@
     "grammarSha": "4c1a881ed173d0f15135b5e2af8281a524a2b16d070f3772db28360b9a0c8cf2",
     "language": "ssh_config",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.211544633+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "master",
@@ -3957,8 +3584,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.754510383+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -3966,8 +3592,7 @@
     "grammarSha": "2a74d3dd62f23213ec71abb790b89e6b43ebf1d75dd1797c068a2ce5b1d36358",
     "language": "strace",
     "url": "https://github.com/sigmaSd/tree-sitter-strace",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.079053881+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -3978,8 +3603,7 @@
     "maintainedBy": "@mskelton",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.043380477+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -3990,8 +3614,7 @@
     "maintainedBy": "@madskjeldgaard",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.992180891+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4004,8 +3627,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.224466222+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4013,8 +3635,7 @@
     "grammarSha": "94c36d90c5e6e531bf696f05d87bca4ded4ef0c0e6b732c23dc29578170fd620",
     "language": "surface",
     "url": "https://github.com/connorlay/tree-sitter-surface",
-    "maintainedBy": "@connorlay",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.974039284+03:00"
+    "maintainedBy": "@connorlay"
   },
   {
     "reference": "main",
@@ -4023,8 +3644,7 @@
     "language": "surrealql",
     "url": "https://github.com/Ce11an/tree-sitter-surrealql",
     "doc": "high memory usage (3.1GB)",
-    "maintainedBy": "@Ce11an",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.962587518+03:00"
+    "maintainedBy": "@Ce11an"
   },
   {
     "reference": "main",
@@ -4032,8 +3652,7 @@
     "grammarSha": "2f64a8c216509825196109adedfe853b801c25a53db9eecfcdf0d530abf4d3ac",
     "language": "sus",
     "url": "https://github.com/pc2/tree-sitter-sus",
-    "maintainedBy": "@VonTum",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.955078085+03:00"
+    "maintainedBy": "@VonTum"
   },
   {
     "reference": "master",
@@ -4045,8 +3664,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.257923973+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4057,8 +3675,7 @@
     "maintainedBy": "@alex-pinkus",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.771349029+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4066,8 +3683,7 @@
     "grammarSha": "80eee0f4554a5a9a056e01252ad634c0762fb0a8c1dbcd1b1bbc2cb54cf5a4ad",
     "language": "sxhkdrc",
     "url": "https://github.com/RaafatTurki/tree-sitter-sxhkdrc",
-    "maintainedBy": "@RaafatTurki",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.058014476+03:00"
+    "maintainedBy": "@RaafatTurki"
   },
   {
     "reference": "master",
@@ -4075,8 +3691,7 @@
     "grammarSha": "424125ed6f12462adedbfb4b31716df1cd2173903860193dad6d8f20124e0d19",
     "language": "syphon",
     "url": "https://github.com/yhyadev/tree-sitter-syphon",
-    "maintainedBy": "@yhyadev",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.076602714+03:00"
+    "maintainedBy": "@yhyadev"
   },
   {
     "reference": "main",
@@ -4084,8 +3699,7 @@
     "grammarSha": "fabd0bbaa5658ef0edee0a003d206dc5c0fd749460ac12ac8f096300ab2e8ee3",
     "language": "systemtap",
     "url": "https://github.com/ok-ryoko/tree-sitter-systemtap",
-    "maintainedBy": "@ok-ryoko",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.747239208+03:00"
+    "maintainedBy": "@ok-ryoko"
   },
   {
     "reference": "master",
@@ -4093,8 +3707,7 @@
     "grammarSha": "daf4b45c0f8192979d80b8fcb62a7f8c09b8d3dca71d9c7e2b9236f09b3281a6",
     "language": "systemverilog",
     "url": "https://github.com/zhangwwpeng/tree-sitter-systemverilog",
-    "maintainedBy": "@zhangwwpeng",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.828553844+03:00"
+    "maintainedBy": "@zhangwwpeng"
   },
   {
     "reference": "main",
@@ -4105,8 +3718,7 @@
     "maintainedBy": "@xasc",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.514946436+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4117,8 +3729,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.655953788+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4126,8 +3737,7 @@
     "grammarSha": "409813f54e28946d04cf6ee43d199e7b1c8b70144a2db328e4d5cbce9b82ea85",
     "language": "tact",
     "url": "https://github.com/tact-lang/tree-sitter-tact",
-    "maintainedBy": "@novusnota",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.346789526+03:00"
+    "maintainedBy": "@novusnota"
   },
   {
     "reference": "dev",
@@ -4138,8 +3748,7 @@
     "maintainedBy": "@wenkokke",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:23.999528271+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4150,8 +3759,7 @@
     "maintainedBy": "@lewis6991",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.236014283+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4162,8 +3770,7 @@
     "maintainedBy": "@euclidianAce",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.941267997+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4174,8 +3781,7 @@
     "maintainedBy": "@vrischmann",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.84884847+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4186,8 +3792,7 @@
     "maintainedBy": "@tpkessler",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.83406937+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4195,8 +3800,7 @@
     "grammarSha": "fe665ee67b8820400bf9129c14d6e9abb48ba6a7ed9c18706edd0b545c4de4c8",
     "language": "textproto",
     "url": "https://github.com/PorterAtGoogle/tree-sitter-textproto",
-    "maintainedBy": "@Porter",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.051967355+03:00"
+    "maintainedBy": "@Porter"
   },
   {
     "reference": "main",
@@ -4204,8 +3808,7 @@
     "grammarSha": "e391fd8ec1e994e19c800249c7c8ea84b85adcd6e4978c633df73293c8a24fca",
     "language": "thrift",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-thrift",
-    "maintainedBy": "@amaanq, @duskmoon314",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.737444693+03:00"
+    "maintainedBy": "@amaanq, @duskmoon314"
   },
   {
     "reference": "main",
@@ -4216,8 +3819,7 @@
     "maintainedBy": "@ambroisie",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.496073941+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4229,8 +3831,7 @@
     "maintainedBy": "@ahelwer, @susliko",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.314789487+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4238,8 +3839,7 @@
     "grammarSha": "b43b8d1b6c2b183d0a4040744d3a3dd1de68df9b45ef9e8b9d2422625352335a",
     "language": "tmux",
     "url": "https://github.com/Freed-Wu/tree-sitter-tmux",
-    "maintainedBy": "@Freed-Wu",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.135330478+03:00"
+    "maintainedBy": "@Freed-Wu"
   },
   {
     "reference": "main",
@@ -4247,8 +3847,7 @@
     "grammarSha": "b97de80da008e57299a99edb06f970febd524e2c925b7d778eaedc53da4b9bc1",
     "language": "tnsl",
     "url": "https://github.com/CircleShift/tree-sitter-tnsl",
-    "maintainedBy": "@CircleShift",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.200075025+03:00"
+    "maintainedBy": "@CircleShift"
   },
   {
     "reference": "main",
@@ -4256,8 +3855,7 @@
     "grammarSha": "1fda17dd0ded0060d9ce28a99fb0df1d020b9441a29346771a7062968b53a133",
     "language": "todolang",
     "url": "https://github.com/Gnarus-G/tree-sitter-todolang",
-    "maintainedBy": "@Gnarus-G",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.938302603+03:00"
+    "maintainedBy": "@Gnarus-G"
   },
   {
     "reference": "main",
@@ -4265,8 +3863,7 @@
     "grammarSha": "57fcca3fa5f0b2e820116df26e5020fcdd506d7b5ef18b33f21ee925f860723b",
     "language": "todotxt",
     "url": "https://github.com/arnarg/tree-sitter-todotxt",
-    "maintainedBy": "@arnarg",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.278755091+03:00"
+    "maintainedBy": "@arnarg"
   },
   {
     "reference": "master",
@@ -4277,8 +3874,7 @@
     "maintainedBy": "@tk-shirasaka, @ObserverOfTime",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.876489539+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4286,8 +3882,7 @@
     "grammarSha": "0676b9e30a1f9c36983556e8d36f5f35bb056fb279fe47b13fa2736c261f9f29",
     "language": "tort",
     "url": "https://github.com/quendimax/tree-sitter-tort",
-    "maintainedBy": "@quendimax",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.854783626+03:00"
+    "maintainedBy": "@quendimax"
   },
   {
     "reference": "master",
@@ -4296,8 +3891,7 @@
     "language": "tsv",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-csv",
     "maintainedBy": "@amaanq",
-    "srcRoot": "tsv",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.008978111+03:00"
+    "srcRoot": "tsv"
   },
   {
     "reference": "master",
@@ -4311,8 +3905,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.296578863+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4323,8 +3916,7 @@
     "maintainedBy": "@RoBaertschi",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.742164009+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4332,8 +3924,7 @@
     "grammarSha": "3999181dd85bc5b8d167959a9d6bafb8be8c496e214f138d595e3d75f878a5ca",
     "language": "turtle",
     "url": "https://github.com/GordianDziwis/tree-sitter-turtle",
-    "maintainedBy": "@BonaBeavis",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.736881034+03:00"
+    "maintainedBy": "@BonaBeavis"
   },
   {
     "reference": "main",
@@ -4341,8 +3932,7 @@
     "grammarSha": "c2245f31a52c6034a7af09d8c06fab0a9810fe55bd683ec0e63b51946c2c6369",
     "language": "twig",
     "url": "https://github.com/gbprod/tree-sitter-twig",
-    "maintainedBy": "@gbprod",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.956387968+03:00"
+    "maintainedBy": "@gbprod"
   },
   {
     "reference": "master",
@@ -4351,8 +3941,7 @@
     "language": "twolc",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
-    "srcRoot": "tree-sitter-twolc",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.623886922+03:00"
+    "srcRoot": "tree-sitter-twolc"
   },
   {
     "reference": "master",
@@ -4366,8 +3955,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.788500928+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4375,8 +3963,7 @@
     "grammarSha": "c57049047a103a41e9f23e61ed8eceeb1afebc4be48ef7cf2470c70fe27d0ca3",
     "language": "typespec",
     "url": "https://github.com/happenslol/tree-sitter-typespec",
-    "maintainedBy": "@happenslol",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.880527491+03:00"
+    "maintainedBy": "@happenslol"
   },
   {
     "reference": "main",
@@ -4384,8 +3971,7 @@
     "grammarSha": "60569ad8b4b835c2603c2ec55f03d575905d2cf9bebff8343edc7838294913a9",
     "language": "typoscript",
     "url": "https://github.com/Teddytrombone/tree-sitter-typoscript",
-    "maintainedBy": "@Teddytrombone",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.877446392+03:00"
+    "maintainedBy": "@Teddytrombone"
   },
   {
     "reference": "master",
@@ -4397,8 +3983,7 @@
     "files": [
       "scanner.c",
       "unicode.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.365709873+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4406,8 +3991,7 @@
     "grammarSha": "d27349ddfe8a5b6436ea78e029bbd507dcc936a083967af382d64b2375126dad",
     "language": "udev",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-udev",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.38261032+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "main",
@@ -4415,8 +3999,7 @@
     "grammarSha": "a422552c8b3994a58db500104584744519eb51afab3150ea3ace9be263a95e40",
     "language": "uiua",
     "url": "https://github.com/shnarazk/tree-sitter-uiua",
-    "maintainedBy": "@shnarazk",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.719563868+03:00"
+    "maintainedBy": "@shnarazk"
   },
   {
     "reference": "main",
@@ -4424,8 +4007,7 @@
     "grammarSha": "61592f44491139dd73362f8b3752e9cfde7ec232515f2144e43e80b61b566abb",
     "language": "ungrammar",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-ungrammar",
-    "maintainedBy": "@Philipp-M, @amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.265234067+03:00"
+    "maintainedBy": "@Philipp-M, @amaanq"
   },
   {
     "reference": "master",
@@ -4438,8 +4020,7 @@
       "scanner.c",
       "maybe.c",
       "jtckdint.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.227337707+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4450,8 +4031,7 @@
     "maintainedBy": "@rrthomas",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.88282579+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4459,8 +4039,7 @@
     "grammarSha": "33db33c43f4ca3296c4fa25a54c7874572d51b4cf46c32915a4f291c66e311bb",
     "language": "usd",
     "url": "https://github.com/ColinKennedy/tree-sitter-usd",
-    "maintainedBy": "@ColinKennedy",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.045236095+03:00"
+    "maintainedBy": "@ColinKennedy"
   },
   {
     "reference": "master",
@@ -4472,8 +4051,7 @@
     "maintainedBy": "@amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.006076694+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4482,8 +4060,7 @@
     "language": "v",
     "url": "https://github.com/vlang/v-analyzer",
     "maintainedBy": "@kkharji, @amaanq",
-    "srcRoot": "tree_sitter_v",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.979199768+03:00"
+    "srcRoot": "tree_sitter_v"
   },
   {
     "reference": "master",
@@ -4491,8 +4068,7 @@
     "grammarSha": "6cb1d0b274ffd263d8f422e2e206844186e1fea912ab529a2a137080be568883",
     "language": "vala",
     "url": "https://github.com/vala-lang/tree-sitter-vala",
-    "maintainedBy": "@Prince781",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.121567194+03:00"
+    "maintainedBy": "@Prince781"
   },
   {
     "reference": "main",
@@ -4503,8 +4079,7 @@
     "maintainedBy": "@wrapperup, @oscarotero",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.971086739+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4512,8 +4087,7 @@
     "grammarSha": "7894f2301d41d09dcefc8a56aa38317358639a9a815afcb0a86211ed27d0cb29",
     "language": "verilog",
     "url": "https://github.com/tree-sitter/tree-sitter-verilog",
-    "maintainedBy": "@zegervdv",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.128346572+03:00"
+    "maintainedBy": "@zegervdv"
   },
   {
     "reference": "master",
@@ -4539,8 +4113,7 @@
       "src/libraries/ieee/numeric_std.h",
       "src/libraries/ieee/std_logic_1164.h",
       "core.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.071358154+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4548,8 +4121,7 @@
     "grammarSha": "0be3f59d5e254cee82731a44074c335de140b775eacd3e56ecf082179aa61e9a",
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
-    "maintainedBy": "@caarlos0",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.847033381+03:00"
+    "maintainedBy": "@caarlos0"
   },
   {
     "reference": "master",
@@ -4561,8 +4133,7 @@
     "files": [
       "scanner.c",
       "keywords.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.071058659+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4570,8 +4141,7 @@
     "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
     "language": "vimdoc",
     "url": "https://github.com/neovim/tree-sitter-vimdoc",
-    "maintainedBy": "@clason",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.829552791+03:00"
+    "maintainedBy": "@clason"
   },
   {
     "reference": "master",
@@ -4579,8 +4149,7 @@
     "grammarSha": "ec4454b03ce5eadf13a2e9859c836cb6ecb4a65b2efa36582888f57b94d5849e",
     "language": "virdant",
     "url": "https://github.com/maloneymr/tree-sitter-virdant",
-    "maintainedBy": "@maloneymr",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.981637625+03:00"
+    "maintainedBy": "@maloneymr"
   },
   {
     "reference": "main",
@@ -4588,8 +4157,7 @@
     "grammarSha": "dcacdd05553043214a11f8f37041ac6c64610ebd04ada293df47db7f3322fea1",
     "language": "virgil",
     "url": "https://github.com/btwj/tree-sitter-virgil",
-    "maintainedBy": "@btwj",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.824758795+03:00"
+    "maintainedBy": "@btwj"
   },
   {
     "reference": "main",
@@ -4597,8 +4165,7 @@
     "grammarSha": "4f264b0a701eb111ddf1601b0521606f30f520c6f6ffb7d6fd25aae3ce38198a",
     "language": "vrl",
     "url": "https://github.com/belltoy/tree-sitter-vrl",
-    "maintainedBy": "@belltoy",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.068810292+03:00"
+    "maintainedBy": "@belltoy"
   },
   {
     "reference": "main",
@@ -4610,8 +4177,7 @@
     "files": [
       "scanner.c",
       "tag.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.979980125+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4622,8 +4188,7 @@
     "maintainedBy": "@UserNobody14",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.144029724+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4634,8 +4199,7 @@
     "maintainedBy": "@acristoffers",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.725675321+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4646,8 +4210,7 @@
     "maintainedBy": "@szebniok",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.144751849+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4658,8 +4221,7 @@
     "maintainedBy": "@theHamsta",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.446926982+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4671,8 +4233,7 @@
     "srcRoot": "packages/@winglang/tree-sitter-wing",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.714554355+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4680,8 +4241,7 @@
     "grammarSha": "cc33b4f305bacaee6a6234cfcfd2f452948add03956b8da1424f5068d440b5af",
     "language": "wit",
     "url": "https://github.com/liamwh/tree-sitter-wit",
-    "maintainedBy": "@liamwh",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.505005609+03:00"
+    "maintainedBy": "@liamwh"
   },
   {
     "reference": "main",
@@ -4689,8 +4249,7 @@
     "grammarSha": "d0ff48f26872bc53e1e70498701829fdcdac1e0ccbc96a5c2d78e485f6aa3068",
     "language": "woml",
     "url": "https://github.com/0xWaleed/tree-sitter-woml",
-    "maintainedBy": "@0xWaleed",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.945387099+03:00"
+    "maintainedBy": "@0xWaleed"
   },
   {
     "reference": "master",
@@ -4698,8 +4257,7 @@
     "grammarSha": "d1b73745a5f849889376f5b1f224fa9d8e10d6a1fe3df508e0ada83c470229ae",
     "language": "xcompose",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
-    "maintainedBy": "@ObserverOfTime",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.30038175+03:00"
+    "maintainedBy": "@ObserverOfTime"
   },
   {
     "reference": "master",
@@ -4708,8 +4266,7 @@
     "language": "xfst",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
-    "srcRoot": "tree-sitter-xfst",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.993913143+03:00"
+    "srcRoot": "tree-sitter-xfst"
   },
   {
     "reference": "master",
@@ -4722,8 +4279,7 @@
     "files": [
       "scanner.c",
       "common/scanner.h"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:24.916835859+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4731,8 +4287,7 @@
     "grammarSha": "0514bfb0d1b0a806376d8232c1aa6781b02b134e1a20dffa4fac6e0166435bd4",
     "language": "xresources",
     "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",
-    "maintainedBy": "@ValdezFOmar",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.165826314+03:00"
+    "maintainedBy": "@ValdezFOmar"
   },
   {
     "reference": "master",
@@ -4745,8 +4300,7 @@
       "scanner.c",
       "schema.core.c",
       "schema.json.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.115557837+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4754,8 +4308,7 @@
     "grammarSha": "f939643c72b8221d5db2b4044895222fb5c2d355aae681b8fa2a90c8c0d1e35b",
     "language": "yang",
     "url": "https://github.com/Hubro/tree-sitter-yang",
-    "maintainedBy": "@Hubro",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.104977312+03:00"
+    "maintainedBy": "@Hubro"
   },
   {
     "reference": "main",
@@ -4766,8 +4319,7 @@
     "maintainedBy": "@MXfive",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.075563156+03:00"
+    ]
   },
   {
     "reference": "master",
@@ -4775,8 +4327,7 @@
     "grammarSha": "d385849e6e31cdb3e6c776516a12512ec68acd1aa86d930df8f8d66b0cd2ba3f",
     "language": "yarnlock",
     "url": "https://github.com/amaanq/tree-sitter-yarnlock",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.045932212+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -4787,8 +4338,7 @@
     "maintainedBy": "@Philipp-M, @amaanq",
     "files": [
       "scanner.c"
-    ],
-    "lastVersionCheckAt": "2024-10-21T09:15:25.00141387+03:00"
+    ]
   },
   {
     "reference": "main",
@@ -4796,8 +4346,7 @@
     "grammarSha": "41765dc4689b4646780f87faa90f9084b7c49c6e8a61fb5f6486dbdc9be792c3",
     "language": "zathurarc",
     "url": "https://github.com/Freed-Wu/tree-sitter-zathurarc",
-    "maintainedBy": "@Freed-Wu",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.198797399+03:00"
+    "maintainedBy": "@Freed-Wu"
   },
   {
     "reference": "main",
@@ -4805,8 +4354,7 @@
     "grammarSha": "d8304bd7f15f7c7b248ac51896443573d38c6faf5d99d6b0f6401c9242f8e8ae",
     "language": "zeek",
     "url": "https://github.com/zeek/tree-sitter-zeek",
-    "maintainedBy": "@bbannier",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.203632303+03:00"
+    "maintainedBy": "@bbannier"
   },
   {
     "reference": "master",
@@ -4814,8 +4362,7 @@
     "grammarSha": "09f41d6a3b76ebd25972c912a2716ec6f77ac5de1d073f597823f9ac4d31c7b8",
     "language": "zig",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-zig",
-    "maintainedBy": "@amaanq",
-    "lastVersionCheckAt": "2024-10-21T09:15:25.251326613+03:00"
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "main",
@@ -4824,8 +4371,7 @@
     "language": "ziggy",
     "url": "https://github.com/kristoff-it/ziggy",
     "maintainedBy": "@rockorager",
-    "srcRoot": "tree-sitter-ziggy",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.981749829+03:00"
+    "srcRoot": "tree-sitter-ziggy"
   },
   {
     "reference": "main",
@@ -4834,8 +4380,7 @@
     "language": "ziggy_schema",
     "url": "https://github.com/kristoff-it/ziggy",
     "maintainedBy": "@rockorager",
-    "srcRoot": "tree-sitter-ziggy-schema",
-    "lastVersionCheckAt": "2024-10-21T09:15:24.008226987+03:00"
+    "srcRoot": "tree-sitter-ziggy-schema"
   },
   {
     "reference": "master",
@@ -4843,7 +4388,6 @@
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-zsh",
     "doc": "last (and only) commit says: 'do not use'",
     "maintainedBy": "@amaanq",
-    "pending": true,
-    "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+    "pending": true
   }
 ]

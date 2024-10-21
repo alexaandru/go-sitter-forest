@@ -4,6 +4,5 @@
   "grammarSha": "2d8178cf4dbb90a01e3c2a899339d5ad931b56d8a419d27c2d459f42d5a42659",
   "language": "hyprlang",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
-  "maintainedBy": "@luckasRanarison",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.735760504+03:00"
+  "maintainedBy": "@luckasRanarison"
 }

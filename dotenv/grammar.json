@@ -4,6 +4,5 @@
   "grammarSha": "d7bec9650c11662e710404f321e8a4608ba8ae11ae7c20d360beab9788fd39be",
   "language": "dotenv",
   "url": "https://github.com/zarifpour/tree-sitter-dotenv",
-  "maintainedBy": "@zarifpour",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.883024775+03:00"
+  "maintainedBy": "@zarifpour"
 }

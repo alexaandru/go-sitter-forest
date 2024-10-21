@@ -4,6 +4,5 @@
   "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
   "language": "gpg",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
-  "maintainedBy": "@ObserverOfTime",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.419310729+03:00"
+  "maintainedBy": "@ObserverOfTime"
 }

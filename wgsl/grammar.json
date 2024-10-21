@@ -7,6 +7,5 @@
   "maintainedBy": "@szebniok",
   "files": [
     "scanner.c"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:24.144751849+03:00"
+  ]
 }

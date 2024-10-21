@@ -4,6 +4,5 @@
   "grammarSha": "c31a1d6507cd183d174981229b88a129dfa2897466d0d9f2dd98b941654a0833",
   "language": "idl",
   "url": "https://github.com/cathaysia/tree-sitter-idl",
-  "maintainedBy": "@cathaysa",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.648200531+03:00"
+  "maintainedBy": "@cathaysa"
 }

@@ -4,6 +4,5 @@
   "grammarSha": "0accde10565f40ed8fd61d0ce2ee8f53b38502e098eb874fee11b9ca6da04e19",
   "language": "authzed",
   "url": "https://github.com/mleonidas/tree-sitter-authzed",
-  "maintainedBy": "@mattpolzin",
-  "lastVersionCheckAt": "2024-10-21T09:15:23.760514157+03:00"
+  "maintainedBy": "@mattpolzin"
 }

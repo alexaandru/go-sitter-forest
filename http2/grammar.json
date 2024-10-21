@@ -4,6 +4,5 @@
   "grammarSha": "863e7524a0e5fce138c5db2e31495cfdc2c5e1057ab5e932b5bfdb42b6636b05",
   "language": "http2",
   "url": "https://github.com/rstcruzo/tree-sitter-http2",
-  "maintainedBy": "@rstcruzo",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.398202674+03:00"
+  "maintainedBy": "@rstcruzo"
 }

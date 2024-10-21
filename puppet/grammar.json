@@ -4,6 +4,5 @@
   "grammarSha": "023a6a0545590f658c374b2b0bf84246b0ef94f4e72272b4112e06ce76972f6a",
   "language": "puppet",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-puppet",
-  "maintainedBy": "@amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.845687664+03:00"
+  "maintainedBy": "@amaanq"
 }

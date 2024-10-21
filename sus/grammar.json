@@ -4,6 +4,5 @@
   "grammarSha": "2f64a8c216509825196109adedfe853b801c25a53db9eecfcdf0d530abf4d3ac",
   "language": "sus",
   "url": "https://github.com/pc2/tree-sitter-sus",
-  "maintainedBy": "@VonTum",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.955078085+03:00"
+  "maintainedBy": "@VonTum"
 }

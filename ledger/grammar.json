@@ -4,6 +4,5 @@
   "grammarSha": "db41a3e6a4ec72fc058180ae12c2b7c8dc1b828f50a75e59fcbc9766e3078f74",
   "language": "ledger",
   "url": "https://github.com/cbarrete/tree-sitter-ledger",
-  "maintainedBy": "@cbarrete",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.768219432+03:00"
+  "maintainedBy": "@cbarrete"
 }

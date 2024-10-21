@@ -4,6 +4,5 @@
   "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
   "language": "fluentbit",
   "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
-  "maintainedBy": "@sh-cho",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.377556982+03:00"
+  "maintainedBy": "@sh-cho"
 }

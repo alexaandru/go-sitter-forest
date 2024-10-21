@@ -4,6 +4,5 @@
   "grammarSha": "8f01b1cc8d13fbb4441cd2de099cec8c9cec38d19cf2b45661863d328ed6323b",
   "language": "sol",
   "url": "https://github.com/mrpedrobraga/tree-sitter-sol",
-  "maintainedBy": "@mrpedrobraga",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.117913068+03:00"
+  "maintainedBy": "@mrpedrobraga"
 }

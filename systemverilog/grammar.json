@@ -4,6 +4,5 @@
   "grammarSha": "daf4b45c0f8192979d80b8fcb62a7f8c09b8d3dca71d9c7e2b9236f09b3281a6",
   "language": "systemverilog",
   "url": "https://github.com/zhangwwpeng/tree-sitter-systemverilog",
-  "maintainedBy": "@zhangwwpeng",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.828553844+03:00"
+  "maintainedBy": "@zhangwwpeng"
 }

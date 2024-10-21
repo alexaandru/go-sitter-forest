@@ -4,6 +4,5 @@
   "grammarSha": "518bc76c2a6d6a7bfb46158d09cc73a66c1322b56cdbf030b3baaccfb73a3987",
   "language": "rego",
   "url": "https://github.com/FallenAngel97/tree-sitter-rego",
-  "maintainedBy": "@FallenAngel97",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.195288307+03:00"
+  "maintainedBy": "@FallenAngel97"
 }

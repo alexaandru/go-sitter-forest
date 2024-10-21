@@ -4,6 +4,5 @@
   "grammarSha": "33370fb33f48c3f2ead7025a22364554f4d66574ac05bad528b4d4778f84942f",
   "language": "elsa",
   "url": "https://github.com/glapa-grossklag/tree-sitter-elsa",
-  "maintainedBy": "@glapa-grossklag, @amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.015041583+03:00"
+  "maintainedBy": "@glapa-grossklag, @amaanq"
 }

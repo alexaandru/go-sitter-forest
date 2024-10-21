@@ -4,6 +4,5 @@
   "grammarSha": "1880d7b4a79037298381beea743cb393179c5028dc302b4e69a4fa7b58662c16",
   "language": "qbe",
   "url": "https://github.com/bitterbloom/tree-sitter-qbe",
-  "maintainedBy": "@bitterbloom",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.14832447+03:00"
+  "maintainedBy": "@bitterbloom"
 }

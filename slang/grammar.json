@@ -9,6 +9,5 @@
   "files": [
     "scanner.c"
   ],
-  "skipUpdate": true,
-  "lastVersionCheckAt": "0001-01-01T00:00:00Z"
+  "skipUpdate": true
 }

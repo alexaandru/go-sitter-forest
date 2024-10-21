@@ -4,6 +4,5 @@
   "grammarSha": "d14600c4784ec5f98287868569085648b0873710157981ca57c8252eb22a13fd",
   "language": "proto",
   "url": "https://github.com/treywood/tree-sitter-proto",
-  "maintainedBy": "@treywood",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.757291582+03:00"
+  "maintainedBy": "@treywood"
 }

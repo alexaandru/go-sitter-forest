@@ -4,6 +4,5 @@
   "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
   "language": "meson",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
-  "maintainedBy": "@Decodetalkers",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.45395212+03:00"
+  "maintainedBy": "@Decodetalkers"
 }

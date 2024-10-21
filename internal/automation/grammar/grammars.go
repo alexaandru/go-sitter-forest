@@ -1,10 +1,12 @@
 package grammar
 
 import (
+	"context"
 	"fmt"
 	"slices"
 
 	"golang.org/x/sync/errgroup"
+	"golang.org/x/sync/semaphore"
 )
 
 // Grammars holds a collection of Grammar's.
@@ -13,9 +15,16 @@ type Grammars []*Grammar
 var supportedGrammars, pendingGrammars []string
 
 // ForEach iterates over all the Grammars in collection.
-func (gx Grammars) ForEach(fn func(gr *Grammar) error) error {
+func (gx Grammars) ForEach(fn func(gr *Grammar) error, opts ...int64) error {
 	g := new(errgroup.Group)
 	seen := map[string]string{}
+
+	weight := int64(6)
+	if len(opts) > 0 {
+		weight = opts[0]
+	}
+
+	sem := semaphore.NewWeighted(weight)
 
 	for _, gr := range gx {
 		if v, ok := seen[gr.Language]; ok {
@@ -28,7 +37,13 @@ func (gx Grammars) ForEach(fn func(gr *Grammar) error) error {
 			continue
 		}
 
-		g.Go(func() error {
+		g.Go(func() (err error) {
+			if err = sem.Acquire(context.TODO(), 1); err != nil {
+				return
+			}
+
+			defer sem.Release(1)
+
 			return fn(gr)
 		})
 	}

@@ -4,6 +4,5 @@
   "grammarSha": "409813f54e28946d04cf6ee43d199e7b1c8b70144a2db328e4d5cbce9b82ea85",
   "language": "tact",
   "url": "https://github.com/tact-lang/tree-sitter-tact",
-  "maintainedBy": "@novusnota",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.346789526+03:00"
+  "maintainedBy": "@novusnota"
 }

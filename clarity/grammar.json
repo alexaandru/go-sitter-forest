@@ -4,6 +4,5 @@
   "grammarSha": "83a2f420329a9c2a2617ff274d146ad00d1dc078d379fa20ed2472e1292dea1f",
   "language": "clarity",
   "url": "https://github.com/xlittlerag/tree-sitter-clarity",
-  "maintainedBy": "@xlittlerag",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.754025752+03:00"
+  "maintainedBy": "@xlittlerag"
 }

@@ -8,6 +8,5 @@
   "files": [
     "scanner.c"
   ],
-  "skip": true,
-  "lastVersionCheckAt": "2024-10-21T09:15:24.587113417+03:00"
+  "skip": true
 }

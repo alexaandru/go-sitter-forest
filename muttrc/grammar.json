@@ -4,6 +4,5 @@
   "grammarSha": "6d13bf1ec8230703df2a53ab4cc2facc756166a585d8b977e3ebd10dba5ec63e",
   "language": "muttrc",
   "url": "https://github.com/neomutt/tree-sitter-muttrc",
-  "maintainedBy": "@Freed-Wu",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.658050725+03:00"
+  "maintainedBy": "@Freed-Wu"
 }

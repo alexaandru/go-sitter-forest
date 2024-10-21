@@ -4,6 +4,5 @@
   "grammarSha": "dcacdd05553043214a11f8f37041ac6c64610ebd04ada293df47db7f3322fea1",
   "language": "virgil",
   "url": "https://github.com/btwj/tree-sitter-virgil",
-  "maintainedBy": "@btwj",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.824758795+03:00"
+  "maintainedBy": "@btwj"
 }

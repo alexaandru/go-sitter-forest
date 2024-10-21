@@ -4,6 +4,5 @@
   "grammarSha": "a6aae979f589424c848b308df4bfe700d07138f965f70108d35e121d5819e1b8",
   "language": "magik",
   "url": "https://github.com/krn-robin/tree-sitter-magik",
-  "maintainedBy": "@sebastiaanspeck",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.328079672+03:00"
+  "maintainedBy": "@sebastiaanspeck"
 }

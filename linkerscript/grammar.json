@@ -4,6 +4,5 @@
   "grammarSha": "6a4b083d98ba1c09baa00fba81216d067af13a91cf5bcce2fde4fbd198353900",
   "language": "linkerscript",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-linkerscript",
-  "maintainedBy": "@amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.866383897+03:00"
+  "maintainedBy": "@amaanq"
 }

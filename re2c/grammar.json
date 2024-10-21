@@ -4,6 +4,5 @@
   "grammarSha": "2ec0b337df0764ffcaaa54d7400b2a5a03d5e33c7bd736625a769667f132318f",
   "language": "re2c",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-re2c",
-  "maintainedBy": "@amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.517854671+03:00"
+  "maintainedBy": "@amaanq"
 }

@@ -4,6 +4,5 @@
   "grammarSha": "21a258e2c5d3413847a9c716253712bfb85973107ca18bb41cb9458576fa06be",
   "language": "fidl",
   "url": "https://github.com/google/tree-sitter-fidl",
-  "maintainedBy": "@chaopeng",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.774388855+03:00"
+  "maintainedBy": "@chaopeng"
 }

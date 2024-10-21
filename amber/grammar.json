@@ -4,6 +4,5 @@
   "grammarSha": "b42b6c932792b3bbca0fa9e1d2ab3a4a8b851c25be49ed7872c645cc3e7fab10",
   "language": "amber",
   "url": "https://github.com/amber-lang/tree-sitter-amber",
-  "maintainedBy": "@Ph0enixKM",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.425817313+03:00"
+  "maintainedBy": "@Ph0enixKM"
 }

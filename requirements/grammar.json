@@ -5,6 +5,5 @@
   "language": "requirements",
   "altName": "pip requirements",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-requirements",
-  "maintainedBy": "@ObserverOfTime",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.05693655+03:00"
+  "maintainedBy": "@ObserverOfTime"
 }

@@ -4,6 +4,5 @@
   "grammarSha": "33db33c43f4ca3296c4fa25a54c7874572d51b4cf46c32915a4f291c66e311bb",
   "language": "usd",
   "url": "https://github.com/ColinKennedy/tree-sitter-usd",
-  "maintainedBy": "@ColinKennedy",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.045236095+03:00"
+  "maintainedBy": "@ColinKennedy"
 }

@@ -5,6 +5,5 @@
   "language": "cel",
   "altName": "Common Expression Language",
   "url": "https://github.com/bufbuild/tree-sitter-cel",
-  "maintainedBy": "@Alfus",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.659424317+03:00"
+  "maintainedBy": "@Alfus"
 }

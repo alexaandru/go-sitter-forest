@@ -4,6 +4,5 @@
   "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
   "language": "vimdoc",
   "url": "https://github.com/neovim/tree-sitter-vimdoc",
-  "maintainedBy": "@clason",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.829552791+03:00"
+  "maintainedBy": "@clason"
 }

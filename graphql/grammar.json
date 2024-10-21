@@ -4,6 +4,5 @@
   "grammarSha": "67120043a4d9c4e70c38fee8edb67fc3f48a785cc5e7101f6d56fcf1d55d9acf",
   "language": "graphql",
   "url": "https://github.com/bkegley/tree-sitter-graphql",
-  "maintainedBy": "@bkegley",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.171618853+03:00"
+  "maintainedBy": "@bkegley"
 }

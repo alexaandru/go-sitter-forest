@@ -4,6 +4,5 @@
   "grammarSha": "fad25b074c4eff8aef2412d9c9c3df06aebf4cd494319b8d18f4b88643f6f190",
   "language": "cpon",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-cpon",
-  "maintainedBy": "@amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.884540466+03:00"
+  "maintainedBy": "@amaanq"
 }

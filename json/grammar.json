@@ -4,6 +4,5 @@
   "grammarSha": "ecf4f5324171c5c1a94ba428c16711dc0316d3b2405ebf103be6e3eeb17de5dc",
   "language": "json",
   "url": "https://github.com/tree-sitter/tree-sitter-json",
-  "maintainedBy": "@steelsojka",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.970031745+03:00"
+  "maintainedBy": "@steelsojka"
 }

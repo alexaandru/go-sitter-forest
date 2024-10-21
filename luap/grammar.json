@@ -5,6 +5,5 @@
   "language": "luap",
   "altName": "lua patterns",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-luap",
-  "maintainedBy": "@amaanq",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.592984549+03:00"
+  "maintainedBy": "@amaanq"
 }

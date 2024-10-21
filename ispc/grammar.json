@@ -6,6 +6,5 @@
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ispc",
   "doc": "invalid character '}' looking for beginning of object key string",
   "maintainedBy": "@fab4100",
-  "skip": true,
-  "lastVersionCheckAt": "2024-10-21T09:15:24.11782316+03:00"
+  "skip": true
 }

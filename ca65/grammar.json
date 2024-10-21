@@ -4,6 +4,5 @@
   "grammarSha": "db0d1e06f05a343b850fdfbdf5ca5345bb6ccba50365a4506826b0abac897fce",
   "language": "ca65",
   "url": "https://github.com/babasbot/tree-sitter-ca65",
-  "maintainedBy": "@babasbot",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.741627778+03:00"
+  "maintainedBy": "@babasbot"
 }

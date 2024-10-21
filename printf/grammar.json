@@ -4,6 +4,5 @@
   "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
   "language": "printf",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
-  "maintainedBy": "@ObserverOfTime",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.210091837+03:00"
+  "maintainedBy": "@ObserverOfTime"
 }

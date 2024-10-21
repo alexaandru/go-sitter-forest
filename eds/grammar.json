@@ -4,6 +4,5 @@
   "grammarSha": "24b6d6feac50aabab59e13fa0bcd068451ad0b21a6bc19b646fe53885e463d62",
   "language": "eds",
   "url": "https://github.com/uyha/tree-sitter-eds",
-  "maintainedBy": "@uyha",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.17237244+03:00"
+  "maintainedBy": "@uyha"
 }

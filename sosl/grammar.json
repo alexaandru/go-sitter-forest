@@ -5,6 +5,5 @@
   "language": "sosl",
   "url": "https://github.com/aheber/tree-sitter-sfapex",
   "maintainedBy": "@aheber, @xixiaofinland",
-  "srcRoot": "sosl",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.202933125+03:00"
+  "srcRoot": "sosl"
 }

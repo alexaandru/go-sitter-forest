@@ -4,6 +4,5 @@
   "grammarSha": "94c36d90c5e6e531bf696f05d87bca4ded4ef0c0e6b732c23dc29578170fd620",
   "language": "surface",
   "url": "https://github.com/connorlay/tree-sitter-surface",
-  "maintainedBy": "@connorlay",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.974039284+03:00"
+  "maintainedBy": "@connorlay"
 }

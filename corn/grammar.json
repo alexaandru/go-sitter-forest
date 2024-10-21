@@ -4,6 +4,5 @@
   "grammarSha": "2bf9152b2654b1a00af56f008c2468bd684665268bbe124c8ad0e2187e173afc",
   "language": "corn",
   "url": "https://github.com/corn-config/tree-sitter-corn",
-  "maintainedBy": "@jakestanger",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.906663466+03:00"
+  "maintainedBy": "@jakestanger"
 }

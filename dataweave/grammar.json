@@ -4,6 +4,5 @@
   "grammarSha": "61e0b21454480cf267366520986b2d0341d2b047ae0741abfaad17b8248fe779",
   "language": "dataweave",
   "url": "https://github.com/AndrewJarrett/tree-sitter-dataweave",
-  "maintainedBy": "@AndrewJarrett",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.407073313+03:00"
+  "maintainedBy": "@AndrewJarrett"
 }

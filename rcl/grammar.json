@@ -4,6 +4,5 @@
   "grammarSha": "406663fa0d4d967b382d47ecdaf547439563ae2950fdaa2bc27528a52155f6dc",
   "language": "rcl",
   "url": "https://github.com/rcl-lang/tree-sitter-rcl",
-  "maintainedBy": "@ruuda",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.174656333+03:00"
+  "maintainedBy": "@ruuda"
 }

@@ -7,6 +7,5 @@
   "maintainedBy": "@eirslett",
   "files": [
     "scanner.c"
-  ],
-  "lastVersionCheckAt": "2024-10-21T09:15:24.087908345+03:00"
+  ]
 }

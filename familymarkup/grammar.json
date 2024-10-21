@@ -4,6 +4,5 @@
   "grammarSha": "57009b47c1b5d44ab6d288d9793320782fc958ec4487bc0253b3b940596fb9ff",
   "language": "familymarkup",
   "url": "https://github.com/redexp/tree-sitter-familymarkup",
-  "maintainedBy": "@redexp",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.695710749+03:00"
+  "maintainedBy": "@redexp"
 }

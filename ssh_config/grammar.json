@@ -4,6 +4,5 @@
   "grammarSha": "4c1a881ed173d0f15135b5e2af8281a524a2b16d070f3772db28360b9a0c8cf2",
   "language": "ssh_config",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",
-  "maintainedBy": "@ObserverOfTime",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.211544633+03:00"
+  "maintainedBy": "@ObserverOfTime"
 }

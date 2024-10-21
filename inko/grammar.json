@@ -4,6 +4,5 @@
   "grammarSha": "fa89551787f1982418e05956b1bf4ffafa50c28fe82434239de23fc583c23a9c",
   "language": "inko",
   "url": "https://github.com/inko-lang/tree-sitter-inko",
-  "maintainedBy": "@yorickpeterse",
-  "lastVersionCheckAt": "2024-10-21T09:15:25.018823592+03:00"
+  "maintainedBy": "@yorickpeterse"
 }

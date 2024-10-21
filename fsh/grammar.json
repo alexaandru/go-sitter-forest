@@ -4,6 +4,5 @@
   "grammarSha": "fad3ef16cccf6761a49b835cd74dcb013cf696259ae7db0bbbb4d1bf9daccebc",
   "language": "fsh",
   "url": "https://github.com/mgramigna/tree-sitter-fsh",
-  "maintainedBy": "@mgramigna",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.557378058+03:00"
+  "maintainedBy": "@mgramigna"
 }

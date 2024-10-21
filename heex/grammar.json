@@ -4,6 +4,5 @@
   "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
   "language": "heex",
   "url": "https://github.com/phoenixframework/tree-sitter-heex",
-  "maintainedBy": "@connorlay",
-  "lastVersionCheckAt": "2024-10-21T09:15:24.818726353+03:00"
+  "maintainedBy": "@connorlay"
 }
