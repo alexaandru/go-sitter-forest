@@ -89,7 +89,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dot v1.9.0
 	github.com/alexaandru/go-sitter-forest/dotenv v1.9.0
 	github.com/alexaandru/go-sitter-forest/doxygen v1.9.0
-	github.com/alexaandru/go-sitter-forest/dtd v1.9.0
+	github.com/alexaandru/go-sitter-forest/dtd v1.9.1
 	github.com/alexaandru/go-sitter-forest/dune v1.9.0
 	github.com/alexaandru/go-sitter-forest/earthfile v1.9.0
 	github.com/alexaandru/go-sitter-forest/ebnf v1.9.0
@@ -135,7 +135,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/git_config v1.9.0
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
-	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.2
+	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.3
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
 	github.com/alexaandru/go-sitter-forest/gleam v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
@@ -438,7 +438,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/woml v1.9.0
 	github.com/alexaandru/go-sitter-forest/xcompose v1.9.0
 	github.com/alexaandru/go-sitter-forest/xfst v1.9.0
-	github.com/alexaandru/go-sitter-forest/xml v1.9.1
+	github.com/alexaandru/go-sitter-forest/xml v1.9.2
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.1
 	github.com/alexaandru/go-sitter-forest/yaml v1.9.0
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
