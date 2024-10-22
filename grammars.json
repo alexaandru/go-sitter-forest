@@ -318,8 +318,8 @@
   },
   {
     "reference": "main",
-    "revision": "38557dc99b9a5607d02f935848a387041f63bb43",
-    "grammarSha": "67b1ab6698f4eec64aa7de49d030f79e1d73f688c77440835d7947a414e9c73b",
+    "revision": "6d0cb694d9119ca918f3ef2e310603c0f961af05",
+    "grammarSha": "6ea9e86b477dfff797a94095cc01de99272496fb9870a8a2a4e537c344ba8964",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -377,7 +377,7 @@
   },
   {
     "reference": "main",
-    "revision": "f932263d7a25ccf3fe9b684915e436ec75e69abc",
+    "revision": "84639221f656ff27b482d1fc00892805c8f61c7f",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -994,7 +994,7 @@
   },
   {
     "reference": "main",
-    "revision": "f1919a34af3a9c79402c4a3d6c52986e9c2ea949",
+    "revision": "b4ddbbd277532b2df50d4c87242d650789a5e124",
     "grammarSha": "ec2da0d16f6737a2f927bdba9999476cd92f6fe4eadddaf3961d38fdcae40376",
     "language": "erlang",
     "url": "https://github.com/WhatsApp/tree-sitter-erlang",
@@ -3561,7 +3561,7 @@
   },
   {
     "reference": "main",
-    "revision": "e804cc978f9172f8cd52fd537ab4a14848399c65",
+    "revision": "35ea1893a1e3100fa2cf1efd598a64c8113756bf",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
