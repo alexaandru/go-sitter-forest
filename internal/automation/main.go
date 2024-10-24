@@ -312,7 +312,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		}
 	}
 
-	if gr.Language == "dtd" || gr.Language == "xml" {
+	if gr.Language == "dtd" || gr.Language == "xml" || gr.Language == "editorconfig" {
 		err = os.WriteFile(filepath.Join(filepath.Dir(dst), "package.json"), []byte(`{"type":"module"}`), os.ModePerm) //nolint:gosec // ok
 		if err != nil {
 			return

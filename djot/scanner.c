@@ -54,10 +54,12 @@ typedef enum {
   BLOCK_QUOTE_CONTINUATION,
   THEMATIC_BREAK_DASH,
   THEMATIC_BREAK_STAR,
-  FOOTNOTE_BEGIN,
+  FOOTNOTE_MARK_BEGIN,
   FOOTNOTE_END,
   TABLE_CAPTION_BEGIN,
   TABLE_CAPTION_END,
+
+  IN_FALLBACK,
 
   ERROR,
 } TokenType;
@@ -1344,20 +1346,18 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
   return false;
 }
 
-static bool parse_open_bracket(Scanner *s, TSLexer *lexer,
-                               const bool *valid_symbols) {
-  if (!valid_symbols[FOOTNOTE_BEGIN]) {
+static bool parse_footnote_begin(Scanner *s, TSLexer *lexer,
+                                 const bool *valid_symbols) {
+  if (!valid_symbols[FOOTNOTE_MARK_BEGIN]) {
     return false;
   }
 
-  advance_djot(s, lexer);
-  if (lexer->lookahead != '^') {
-    return false;
+  if (!valid_symbols[IN_FALLBACK]) {
+    push_block(s, FOOTNOTE, s->indent + 2);
   }
-  advance_djot(s, lexer);
-  push_block(s, FOOTNOTE, s->indent + 2);
-  lexer->mark_end(lexer);
-  lexer->result_symbol = FOOTNOTE_BEGIN;
+
+  lexer->result_symbol = FOOTNOTE_MARK_BEGIN;
+
   return true;
 }
 
@@ -1627,6 +1627,9 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
   if (parse_footnote_end(s, lexer, valid_symbols)) {
     return true;
   }
+  if (parse_footnote_begin(s, lexer, valid_symbols)) {
+    return true;
+  }
 
   if (valid_symbols[BLOCK_CLOSE] &&
       close_list_nested_block_if_needed(s, lexer, !is_newline)) {
@@ -1669,11 +1672,6 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
     break;
   case '`':
     if (parse_backtick(s, lexer, valid_symbols)) {
-      return true;
-    }
-    break;
-  case '[':
-    if (parse_open_bracket(s, lexer, valid_symbols)) {
       return true;
     }
     break;

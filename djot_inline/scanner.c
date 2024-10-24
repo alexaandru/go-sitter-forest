@@ -34,14 +34,12 @@ typedef enum {
   DELETE_MARK_BEGIN,
   DELETE_END,
 
-  IMAGE_DESCRIPTION_MARK_BEGIN,
-  IMAGE_DESCRIPTION_END,
-  BRACKETED_TEXT_MARK_BEGIN,
-  BRACKETED_TEXT_END,
-  INLINE_ATTRIBUTE_MARK_BEGIN,
-  INLINE_ATTRIBUTE_END,
-  FOOTNOTE_MARKER_MARK_BEGIN,
-  FOOTNOTE_MARKER_END,
+  PARENS_SPAN_MARK_BEGIN,
+  PARENS_SPAN_END,
+  CURLY_BRACKET_SPAN_MARK_BEGIN,
+  CURLY_BRACKET_SPAN_END,
+  SQUARE_BRACKET_SPAN_MARK_BEGIN,
+  SQUARE_BRACKET_SPAN_END,
 
   // If we're scanning a fallback token then we should accept the beginning
   // markers, but not push anything on the stack.
@@ -61,12 +59,11 @@ typedef enum {
   HIGHLIGHTED,
   INSERT,
   DELETE,
-  // Covers the `![text]` part in images.
-  IMAGE_DESCRIPTION,
-  // Covers the initial `[text]` part in spans and links.
-  BRACKETED_TEXT,
-  INLINE_ATTRIBUTE,
-  FOOTNOTE_MARKER,
+  // Spans where the start token is managed by `grammar.js`
+  // and the tokens specify the ending token ), }, or ]
+  PARENS_SPAN,
+  CURLY_BRACKET_SPAN,
+  SQUARE_BRACKET_SPAN,
 } ElementType;
 
 // What kind of span we should parse.
@@ -457,29 +454,22 @@ static bool parse_delete(Scanner *s, TSLexer *lexer,
   return parse_span(s, lexer, valid_symbols, DELETE, DELETE_MARK_BEGIN,
                     DELETE_END, '-', SpanBracketed);
 }
-static bool parse_image_description(Scanner *s, TSLexer *lexer,
-                                    const bool *valid_symbols) {
-  return parse_span(s, lexer, valid_symbols, IMAGE_DESCRIPTION,
-                    IMAGE_DESCRIPTION_MARK_BEGIN, IMAGE_DESCRIPTION_END, ']',
+static bool parse_parens_span(Scanner *s, TSLexer *lexer,
+                              const bool *valid_symbols) {
+  return parse_span(s, lexer, valid_symbols, PARENS_SPAN,
+                    PARENS_SPAN_MARK_BEGIN, PARENS_SPAN_END, ')', SpanSingle);
+}
+static bool parse_curly_bracket_span(Scanner *s, TSLexer *lexer,
+                                     const bool *valid_symbols) {
+  return parse_span(s, lexer, valid_symbols, CURLY_BRACKET_SPAN,
+                    CURLY_BRACKET_SPAN_MARK_BEGIN, CURLY_BRACKET_SPAN_END, '}',
                     SpanSingle);
 }
-static bool parse_bracketed_text(Scanner *s, TSLexer *lexer,
-                                 const bool *valid_symbols) {
-  return parse_span(s, lexer, valid_symbols, BRACKETED_TEXT,
-                    BRACKETED_TEXT_MARK_BEGIN, BRACKETED_TEXT_END, ']',
-                    SpanSingle);
-}
-static bool parse_inline_attribute(Scanner *s, TSLexer *lexer,
-                                   const bool *valid_symbols) {
-  return parse_span(s, lexer, valid_symbols, INLINE_ATTRIBUTE,
-                    INLINE_ATTRIBUTE_MARK_BEGIN, INLINE_ATTRIBUTE_END, '}',
-                    SpanSingle);
-}
-static bool parse_footnote_marker(Scanner *s, TSLexer *lexer,
-                                  const bool *valid_symbols) {
-  return parse_span(s, lexer, valid_symbols, FOOTNOTE_MARKER,
-                    FOOTNOTE_MARKER_MARK_BEGIN, FOOTNOTE_MARKER_END, ']',
-                    SpanSingle);
+static bool parse_square_bracket_span(Scanner *s, TSLexer *lexer,
+                                      const bool *valid_symbols) {
+  return parse_span(s, lexer, valid_symbols, SQUARE_BRACKET_SPAN,
+                    SQUARE_BRACKET_SPAN_MARK_BEGIN, SQUARE_BRACKET_SPAN_END,
+                    ']', SpanSingle);
 }
 
 static bool check_non_whitespace(Scanner *s, TSLexer *lexer) {
@@ -548,16 +538,13 @@ bool tree_sitter_djot_inline_external_scanner_scan(void *payload,
   if (parse_delete(s, lexer, valid_symbols)) {
     return true;
   }
-  if (parse_image_description(s, lexer, valid_symbols)) {
+  if (parse_parens_span(s, lexer, valid_symbols)) {
     return true;
   }
-  if (parse_bracketed_text(s, lexer, valid_symbols)) {
+  if (parse_curly_bracket_span(s, lexer, valid_symbols)) {
     return true;
   }
-  if (parse_inline_attribute(s, lexer, valid_symbols)) {
-    return true;
-  }
-  if (parse_footnote_marker(s, lexer, valid_symbols)) {
+  if (parse_square_bracket_span(s, lexer, valid_symbols)) {
     return true;
   }
 
@@ -651,14 +638,14 @@ static char *token_type_s(TokenType t) {
     return "IMAGE_DESCRIPTION_MARK_BEGIN";
   case IMAGE_DESCRIPTION_END:
     return "IMAGE_DESCRIPTION_END";
-  case BRACKETED_TEXT_MARK_BEGIN:
-    return "BRACKETED_TEXT_MARK_BEGIN";
-  case BRACKETED_TEXT_END:
-    return "BRACKETED_TEXT_END";
-  case INLINE_ATTRIBUTE_MARK_BEGIN:
-    return "INLINE_ATTRIBUTE_MARK_BEGIN";
-  case INLINE_ATTRIBUTE_END:
-    return "INLINE_ATTRIBUTE_END";
+  case SQUARE_BRACKET_SPAN_MARK_BEGIN:
+    return "SQUARE_BRACKET_SPAN_MARK_BEGIN";
+  case SQUARE_BRACKET_SPAN_END:
+    return "SQUARE_BRACKET_SPAN_END";
+  case CURLY_BRACKET_SPAN_MARK_BEGIN:
+    return "CURLY_BRACKET_SPAN_MARK_BEGIN";
+  case CURLY_BRACKET_SPAN_END:
+    return "CURLY_BRACKET_SPAN_END";
   case FOOTNOTE_MARKER_MARK_BEGIN:
     return "FOOTNOTE_MARKER_MARK_BEGIN";
   case FOOTNOTE_MARKER_END:
@@ -696,10 +683,10 @@ static char *element_type_s(ElementType t) {
     return "DELETE";
   case IMAGE_DESCRIPTION:
     return "IMAGE_DESCRIPTION";
-  case BRACKETED_TEXT:
-    return "BRACKETED_TEXT";
-  case INLINE_ATTRIBUTE:
-    return "INLINE_ATTRIBUTE";
+  case SQUARE_BRACKET_SPAN:
+    return "SQUARE_BRACKET_SPAN";
+  case CURLY_BRACKET_SPAN:
+    return "CURLY_BRACKET_SPAN";
   case FOOTNOTE_MARKER:
     return "FOOTNOTE_MARKER";
   }

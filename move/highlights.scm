@@ -34,8 +34,8 @@
 (module_identity module: (module_identifier)  @namespace.module.name)
 
 ;; Function calls
-(call_expression access: (module_access module: (module_identifier)  @namespace.module.name))
-(call_expression access: (module_access member: (identifier)  @function.call))
+(call_expression (name_expression access: (module_access module: (module_identifier)  @namespace.module.name)))
+(call_expression (name_expression access: (module_access member: (identifier)  @function.call)))
 
 
 (label (identifier)  @label)
@@ -43,7 +43,7 @@
 ;; Macro calls
 (macro_call_expression access: (macro_module_access) @macro.call)
 
-;; Literals 
+;; Literals
 (num_literal) @number
 (bool_literal) @boolean
 (hex_string_literal) @string.hex
@@ -52,7 +52,7 @@
 
 ;; Binders
 
-;; Uses 
+;; Uses
 (use_member member: (identifier)  @include.member)
 (use_module alias: (module_identifier) @namespace.module.name)
 
@@ -61,7 +61,7 @@
 
 (function_identifier) @function.name
 
-;; Friends 
+;; Friends
 ; (friend_access local_module: (identifier)  @namespace.module.name)
 
 ;; Structs
@@ -75,7 +75,7 @@
 (variant variant_name: (variant_identifier)  @constructor.name)
 
 ;; Packs
-(pack_expression access: (module_access)  @constructor.name)
+(pack_expression (name_expression access: (module_access)  @constructor.name))
 
 ;; Unpacks
 ;; TODO: go into variants
@@ -86,7 +86,8 @@
 (module_access module: (module_identifier)  member: (identifier) @constructor.name)
 
 ;; Lambdas
-(lambda_bindings (bind_var (variable_identifier)  @variable.parameter))
+; (lambda_binding bind: (bind_var (variable_identifier)  @variable.parameter))
+; (lambda_bindings (bind_var (variable_identifier)  @variable.parameter))
 
 
 ;; Operators
@@ -109,33 +110,31 @@
 ; "aborts_if" @keyword
 ; "abstract" @keyword
 [
- "pragma" 
+ "pragma"
 ] @keyword
 
 ;; Source Language Keywords
 [
- "fun" 
- "return" 
- "if" 
- "else" 
- "while" 
- "native" 
- "struct" 
- "use" 
- "public" 
- "public(package)" 
- "public(friend)" 
- "spec" 
- "module" 
- "abort" 
- "const" 
- "let" 
- "has" 
- "as" 
- "&" 
- "&mut" 
- "abort" 
- "friend" 
+ "fun"
+ "return"
+ "if"
+ "else"
+ "while"
+ "native"
+ "struct"
+ "use"
+ "public"
+ "spec"
+ "module"
+ "abort"
+ "const"
+ "let"
+ "has"
+ "as"
+ "&"
+ "&mut"
+ "abort"
+ "friend"
  "entry"
  "mut"
  "macro"

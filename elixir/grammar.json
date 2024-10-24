@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "2ac7a0f81f0731d83068b2872c4a8fee39263a85",
+  "revision": "53458546e3bb717beee1d15df30724c81eb41d1c",
   "grammarSha": "759eb810f50579affb7ac892480e3df722f7125083b13c55800db7fd4dbeb2a5",
   "language": "elixir",
   "url": "https://github.com/elixir-lang/tree-sitter-elixir",

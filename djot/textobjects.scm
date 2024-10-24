@@ -12,7 +12,22 @@
   (#offset! @class.inner 0 0 -1 0)) @class.outer
 
 ; Functions, the next level
-(heading
+(heading1
+  (content) @function.inner) @function.outer
+
+(heading2
+  (content) @function.inner) @function.outer
+
+(heading3
+  (content) @function.inner) @function.outer
+
+(heading4
+  (content) @function.inner) @function.outer
+
+(heading5
+  (content) @function.inner) @function.outer
+
+(heading6
   (content) @function.inner) @function.outer
 
 (div
@@ -55,37 +70,37 @@
 (block_attribute
   (args) @attribute.inner) @attribute.outer
 
-; (inline_attribute
-;   (args) @attribute.inner) @attribute.outer
+(inline_attribute
+  (args) @attribute.inner) @attribute.outer
 
-; (table_caption
-;   (content) @attribute.inner) @attribute.outer
-;
-; (emphasis
-;   (content) @attribute.inner) @attribute.outer
-;
-; (strong
-;   (content) @attribute.inner) @attribute.outer
-;
-; (highlighted
-;   (content) @attribute.inner) @attribute.outer
-;
-; (insert
-;   (content) @attribute.inner) @attribute.outer
-;
-; (delete
-;   (content) @attribute.inner) @attribute.outer
-;
-; (symbol) @attribute.outer
-;
-; (superscript
-;   (content) @attribute.inner) @attribute.outer
-;
-; (subscript
-;   (content) @attribute.inner) @attribute.outer
-;
-; (verbatim
-;   (content) @attribute.inner) @attribute.outer
+(table_caption
+  (content) @attribute.inner) @attribute.outer
+
+(emphasis
+  (content) @attribute.inner) @attribute.outer
+
+(strong
+  (content) @attribute.inner) @attribute.outer
+
+(highlighted
+  (content) @attribute.inner) @attribute.outer
+
+(insert
+  (content) @attribute.inner) @attribute.outer
+
+(delete
+  (content) @attribute.inner) @attribute.outer
+
+(symbol) @attribute.outer
+
+(superscript
+  (content) @attribute.inner) @attribute.outer
+
+(subscript
+  (content) @attribute.inner) @attribute.outer
+
+(verbatim
+  (content) @attribute.inner) @attribute.outer
 
 ; Parameters, inside a description of a thing
 [

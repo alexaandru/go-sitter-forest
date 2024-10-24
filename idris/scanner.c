@@ -1417,7 +1417,7 @@ static Result dot(State *state) {
  *   - Qualified module dot (leading whitespace would mean it would be `(.)`)
  *   - cpp
  */
-static Result init(State *state) {
+static Result init_idris(State *state) {
   Result res = eof(state);
   SHORT_SCANNER;
   res = after_error(state) ? res_fail : res_cont;
@@ -1454,7 +1454,7 @@ static Result scan_main(State *state) {
  * The entry point to the parser.
  */
 static Result scan_all(State *state) {
-  Result res = init(state);
+  Result res = init_idris(state);
   SHORT_SCANNER;
   return scan_main(state);
 }
