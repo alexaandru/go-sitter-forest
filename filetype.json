@@ -158,6 +158,7 @@
     "dataweave":          ["dwl"],
     "dbml":               ["dbml"],
     "devicetree":         ["dts"],
+    "desktop":            ["desktop", "directory"],
     "dezyne":             ["dzn"],
     "dhall":              ["dhall"],
     "diff":               ["diff", "patch"],

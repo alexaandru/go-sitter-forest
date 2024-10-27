@@ -93,6 +93,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/dart"
 	"github.com/alexaandru/go-sitter-forest/dataweave"
 	"github.com/alexaandru/go-sitter-forest/dbml"
+	"github.com/alexaandru/go-sitter-forest/desktop"
 	"github.com/alexaandru/go-sitter-forest/devicetree"
 	"github.com/alexaandru/go-sitter-forest/dezyne"
 	"github.com/alexaandru/go-sitter-forest/dhall"
@@ -560,6 +561,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"dart":               dart.GetLanguage,
 	"dataweave":          dataweave.GetLanguage,
 	"dbml":               dbml.GetLanguage,
+	"desktop":            desktop.GetLanguage,
 	"devicetree":         devicetree.GetLanguage,
 	"dezyne":             dezyne.GetLanguage,
 	"dhall":              dhall.GetLanguage,
@@ -1011,6 +1013,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"dart":               dart.GetQuery,
 	"dataweave":          dataweave.GetQuery,
 	"dbml":               dbml.GetQuery,
+	"desktop":            desktop.GetQuery,
 	"devicetree":         devicetree.GetQuery,
 	"dezyne":             dezyne.GetQuery,
 	"dhall":              dhall.GetQuery,
