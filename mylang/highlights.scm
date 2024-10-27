@@ -14,6 +14,15 @@
 (call_oper func_ident: (lower_ident) @function)
 (func_decl func_ident: (lower_ident) @function)
 
+(member_oper member: (lower_ident) @variable.member)
+(member_oper member: (deref_oper (lower_ident) @variable.member))
+(member_oper member: (index_oper array: (lower_ident) @variable.member))
+
+[
+"null"
+"uninit"
+] @constant
+
 [
 "="
 "+"
@@ -69,7 +78,6 @@
 "break"
 "yield"
 "return"
-"uninit"
 "view"
 "len"
 "own"

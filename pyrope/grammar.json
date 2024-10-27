@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "174cdcd854983b9e17a201bd433c9610056f0b00",
+  "revision": "3c3ad87c9088dd028a9b0e6aa9055ad6c29857be",
   "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
   "language": "pyrope",
   "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",

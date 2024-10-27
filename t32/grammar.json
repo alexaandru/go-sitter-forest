@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "0f6a5b1e031c97ebf58d3c76eadb2c6bf1e4f780",
-  "grammarSha": "7bebd6f6db27ce3efac1e77a471fc0d899542d3ee158c69200fa58e284864e81",
+  "revision": "e455373021812abf4a0b5170caa0d882a9578bab",
+  "grammarSha": "4d3afbe96410fe83e2258447c7595f9ce3b59e4da17a0c285c12534197aef085",
   "language": "t32",
   "url": "https://gitlab.com/xasc/tree-sitter-t32",
   "maintainedBy": "@xasc",
