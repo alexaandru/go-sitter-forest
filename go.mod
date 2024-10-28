@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
 	github.com/alexaandru/go-sitter-forest/julia v1.9.0
-	github.com/alexaandru/go-sitter-forest/just v1.9.2
+	github.com/alexaandru/go-sitter-forest/just v1.9.3
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
@@ -411,7 +411,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typst v1.9.2
 	github.com/alexaandru/go-sitter-forest/udev v1.9.0
-	github.com/alexaandru/go-sitter-forest/uiua v1.9.2
+	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
 	github.com/alexaandru/go-sitter-forest/unison v1.9.0
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0

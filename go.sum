@@ -402,8 +402,8 @@ github.com/alexaandru/go-sitter-forest/jule v1.9.0 h1:hD5Zbdvf1aJ8prXgNf4RyBd18E
 github.com/alexaandru/go-sitter-forest/jule v1.9.0/go.mod h1:mgm6eij9T5mgF5LX7I/kHU6CjDRd5K1yLdUkXaruwWE=
 github.com/alexaandru/go-sitter-forest/julia v1.9.0 h1:wRMQO25IJiCb3Y22AjjMVzwN4weuFnsGhFCUQCf7OdI=
 github.com/alexaandru/go-sitter-forest/julia v1.9.0/go.mod h1:VMWcpM3Ka8qVhQVQzK0h54qgsNWRJPxiO0A0D7J3STg=
-github.com/alexaandru/go-sitter-forest/just v1.9.2 h1:iPYbtsq5EwCpc+s/26IhkqmOe2Ao2GjII256/59tDSE=
-github.com/alexaandru/go-sitter-forest/just v1.9.2/go.mod h1:cnSsa2tjY2sue2G9lDOUNs5SEH8jT28Qog7MNq0hxOE=
+github.com/alexaandru/go-sitter-forest/just v1.9.3 h1:I17AvtGa+Uw5wvdBcdHf529LEQ8Wrh6rgKejD6xdXLA=
+github.com/alexaandru/go-sitter-forest/just v1.9.3/go.mod h1:cnSsa2tjY2sue2G9lDOUNs5SEH8jT28Qog7MNq0hxOE=
 github.com/alexaandru/go-sitter-forest/kcl v1.9.0 h1:Vy8touXmpx8lSzVkgIZK3y/Gf27Ue/WsqaF0e+AztV8=
 github.com/alexaandru/go-sitter-forest/kcl v1.9.0/go.mod h1:CyrshWirDrpOxASlKNFSq2ZN7YWNPYKr653rTpSNFuk=
 github.com/alexaandru/go-sitter-forest/kconfig v1.9.0 h1:yFTQxIU7C4eJonaPYFTViuAd/J3Udxsc203fcYviSck=
@@ -816,8 +816,8 @@ github.com/alexaandru/go-sitter-forest/typst v1.9.2 h1:0rGx9RgxBtjZIQ7J0hyNc1hEP
 github.com/alexaandru/go-sitter-forest/typst v1.9.2/go.mod h1:1I119aKYzWqMrN1flF/TxIyHHn5zlXM++JRDtKDdL+g=
 github.com/alexaandru/go-sitter-forest/udev v1.9.0 h1:nCJYJ64cWcwyqrjQvUAjU9YFcUZ5YswnMzvnGjpyczo=
 github.com/alexaandru/go-sitter-forest/udev v1.9.0/go.mod h1:eByrVxT98qLpMJFdwAh2tl1A1wRKI/hE/mmkyZ94BAg=
-github.com/alexaandru/go-sitter-forest/uiua v1.9.2 h1:KrlSLb/cjwtWDqdwivuDvJwPh3jWVkI8cYy3E6k8Wek=
-github.com/alexaandru/go-sitter-forest/uiua v1.9.2/go.mod h1:53LsmWBunICKvxNgtvEouEMox9DKQz6Ae+Gmcp1eyjo=
+github.com/alexaandru/go-sitter-forest/uiua v1.9.3 h1:UInwkwa7dbNJfexVOASvqY0gqx2fndUds/vvcciKI88=
+github.com/alexaandru/go-sitter-forest/uiua v1.9.3/go.mod h1:53LsmWBunICKvxNgtvEouEMox9DKQz6Ae+Gmcp1eyjo=
 github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0 h1:nXm4tYKiFXuqVpYXxXH8NJWawDGqZYZ/444C83S5rJQ=
 github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0/go.mod h1:ytWytwEu/UNweFlcVBMHiUiODKU6Yh2vDisQyex3OdM=
 github.com/alexaandru/go-sitter-forest/unison v1.9.0 h1:+xjRYh7YEi0uoBWWnRTumlo9sd3Wt3E69ugRoAhlWXk=
