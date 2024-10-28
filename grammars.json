@@ -905,7 +905,7 @@
   },
   {
     "reference": "main",
-    "revision": "777f774d6381f1bb84adffa02a4e476fb61486ae",
+    "revision": "38cf8d0af6049025de0e5486a40881dac06285b4",
     "grammarSha": "7f46626389c27915cdf2c9905ed303df4d1d13cfd83f4c789c8e2a864d66f766",
     "language": "editorconfig",
     "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
@@ -1109,7 +1109,7 @@
   },
   {
     "reference": "main",
-    "revision": "4f18f7dc2881ce428ee7252fb21fd3b403d50963",
+    "revision": "1d12d74694b6fb28325637ee6f37127973044437",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1209,7 +1209,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1958,8 +1958,8 @@
   },
   {
     "reference": "main",
-    "revision": "6aee3d2f5b3a47286bae0916daaa6c7a217f6fa4",
-    "grammarSha": "75dbc577ef7499b48f8e621b8eacaefd89cf480230c0de8b7b46557d32b81a55",
+    "revision": "1014d2fd6396856c312054d6c30df4d78b62966c",
+    "grammarSha": "df4a93a86f1fa0c938a1e2d6a2682c262d25ef75a3748d652364544dc60d7d7d",
     "language": "just",
     "url": "https://github.com/IndianBoy42/tree-sitter-just",
     "maintainedBy": "@Hubro",
@@ -3676,7 +3676,7 @@
   },
   {
     "reference": "main",
-    "revision": "d351cb321c28f0a3e66242ef2f61b1f890ec4b44",
+    "revision": "5098007f58f4663a5613b2fecb6b866e3d41e37b",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
@@ -4005,8 +4005,8 @@
   },
   {
     "reference": "main",
-    "revision": "f3fb8b8fe367b00e2ad858a419da3dedc8cbeeeb",
-    "grammarSha": "4a4922968a1e5f3ec9eed134bf3f644e45ebc356696b120c09eb2defcde31b22",
+    "revision": "868b3d672d5622add493437eb7f2ee6956f14ccf",
+    "grammarSha": "fb12505123719a29927aa0239f0fa245be47cfc55fe54686cc2cb372b4d81e19",
     "language": "uiua",
     "url": "https://github.com/shnarazk/tree-sitter-uiua",
     "maintainedBy": "@shnarazk"
