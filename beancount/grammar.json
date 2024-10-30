@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "01c0da29e0fc7130420a09d939ecc524e09b6ba6",
+  "revision": "9bc460a05b5f096d69568b5fb36105032ff4ff97",
   "grammarSha": "dfde9c9d2d8b4ce6ce4f8c0de67d9c5bdb2b439bdddd27b8f6b13303c7efd252",
   "language": "beancount",
   "url": "https://github.com/polarmutex/tree-sitter-beancount",

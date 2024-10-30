@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "8f690bfa639f2b83d1fb938ed3dd98a7ba453e8b",
+  "revision": "97e6db3c8c73b15a9541a458d8e797a07f588ef4",
   "grammarSha": "6cb1d0b274ffd263d8f422e2e206844186e1fea912ab529a2a137080be568883",
   "language": "vala",
   "url": "https://github.com/vala-lang/tree-sitter-vala",

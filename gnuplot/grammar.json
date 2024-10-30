@@ -1,8 +1,11 @@
 {
   "reference": "main",
-  "revision": "3c895f5d9c0b3a3c7e02383766b462c21913c000",
-  "grammarSha": "4ef67c26567c0c6195b5d9811380799c76365a030e82bf471779a0550e59e626",
+  "revision": "bb6afacdb5eecfb2b9b215531267ac42f46720c8",
+  "grammarSha": "f5091fa47d1cc56f7159e084222afd659ce8cb4885200f54e30cc24a86c47df2",
   "language": "gnuplot",
   "url": "https://github.com/dpezto/tree-sitter-gnuplot",
-  "maintainedBy": "@dpezto"
+  "maintainedBy": "@dpezto",
+  "files": [
+    "scanner.c"
+  ]
 }

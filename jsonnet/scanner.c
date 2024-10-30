@@ -45,18 +45,18 @@ void tree_sitter_jsonnet_external_scanner_destroy(void *payload) {}
 enum InsideNode { INSIDE_NONE,  INSIDE_STRING };
 
 uint8_t inside_node = INSIDE_NONE;
-char ending_char = 0;
+char ending_char_jsonnet = 0;
 uint8_t level_count = 0;
 
 static inline void reset_state() {
   inside_node = INSIDE_NONE;
-  ending_char = 0;
+  ending_char_jsonnet = 0;
   level_count = 0;
 }
 
 unsigned tree_sitter_jsonnet_external_scanner_serialize(void *payload, char *buffer) {
   buffer[0] = inside_node;
-  buffer[1] = ending_char;
+  buffer[1] = ending_char_jsonnet;
   buffer[2] = level_count;
   return 3;
 }
@@ -65,7 +65,7 @@ void tree_sitter_jsonnet_external_scanner_deserialize(void *payload, const char 
   if (length == 0) return;
   inside_node = buffer[0];
   if (length == 1) return;
-  ending_char = buffer[1];
+  ending_char_jsonnet = buffer[1];
   if (length == 2) return;
   level_count = buffer[2];
 }
@@ -105,7 +105,7 @@ static bool scan_block_content(TSLexer *lexer) {
 static bool scan_string_start(TSLexer *lexer) {
   if (lexer->lookahead == '"' || lexer->lookahead == '\'') {
     inside_node = INSIDE_STRING;
-    ending_char = lexer->lookahead;
+    ending_char_jsonnet = lexer->lookahead;
     consume(lexer);
     return true;
   }
@@ -119,11 +119,11 @@ static bool scan_string_start(TSLexer *lexer) {
 }
 
 static bool scan_string_end(TSLexer *lexer) {
-  if (ending_char == 0) { // block string
+  if (ending_char_jsonnet == 0) { // block string
     return scan_block_end(lexer);
   }
 
-  if (consume_char(ending_char, lexer)) {
+  if (consume_char(ending_char_jsonnet, lexer)) {
     return true;
   }
 
@@ -131,11 +131,11 @@ static bool scan_string_end(TSLexer *lexer) {
 }
 
 static bool scan_string_content(TSLexer *lexer) {
-  if (ending_char == 0) { // block string
+  if (ending_char_jsonnet == 0) { // block string
     return scan_block_content(lexer);
   }
 
-  while (lexer->lookahead != '\n' && lexer->lookahead != 0 && lexer->lookahead != ending_char) {
+  while (lexer->lookahead != '\n' && lexer->lookahead != 0 && lexer->lookahead != ending_char_jsonnet) {
     while (consume_char('\\', lexer) && consume_char('z', lexer)) continue;
 
     if (lexer->lookahead == 0) {

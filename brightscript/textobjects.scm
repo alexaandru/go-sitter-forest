@@ -6,12 +6,15 @@
 
 ; If statement
 (if_statement) @if.outer
+(conditional_compl) @if.outer
 
 ; Else if clause
 (else_if_clause) @elseif.outer
+(conditional_compl_else_if_clause) @elseif.outer
 
 ; Else clause
 (else_clause) @else.outer
+(conditional_compl_else_clause) @elseif.outer
 
 ; For statement
 (for_statement) @for.outer

@@ -127,10 +127,10 @@ static bool scan_boz(TSLexer *lexer) {
     if (lexer->lookahead == '\'' || lexer->lookahead == '"') {
         quote = lexer->lookahead;
         advance_fortran(lexer);
-        if (!isxdigit(lexer->lookahead)) {
+        if (!iswxdigit(lexer->lookahead)) {
             return false;
         }
-        while (isxdigit(lexer->lookahead)) {
+        while (iswxdigit(lexer->lookahead)) {
             advance_fortran(lexer); // store all hex digits
         }
         if (lexer->lookahead != quote) {

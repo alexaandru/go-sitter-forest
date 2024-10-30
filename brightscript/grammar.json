@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "52bf1e379631b68479996ea91081f1ed92712a8e",
-  "grammarSha": "a9d58337d5d1ce22575aa1c916aaed8ca2f7b346b8ce97b5cac8ae308d2f93eb",
+  "revision": "5535c964ed2e420b12ed2fde2518dc38b8e6388d",
+  "grammarSha": "f58989fe6348062adf5f53ec832d189703b6bc58b86a6d3a044672296c0c864a",
   "language": "brightscript",
   "url": "https://github.com/ajdelcimmuto/tree-sitter-brightscript",
   "maintainedBy": "@ajdelcimmuto"

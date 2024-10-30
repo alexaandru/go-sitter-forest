@@ -39,6 +39,7 @@
 
 ; Statements
 (if_statement) @conditional
+(conditional_compl) @conditional
 (for_statement) @repeat
 (while_statement) @repeat
 (try_statement) @exception
@@ -127,10 +128,11 @@
   (end_for)
   (end_while)
   (end_try)
+  (conditional_compl_end_if)
 ] @keyword
 
 ; Special keywords (these might still need to be strings if not defined as separate nodes)
-["then" "else" "else if"] @keyword
+["then" "else" "else if" "#else" "#else if"] @keyword
 
 ; Exit statements
 [
