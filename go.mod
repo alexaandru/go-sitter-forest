@@ -35,7 +35,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bluespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/bp v1.9.0
 	github.com/alexaandru/go-sitter-forest/bqn v1.9.0
-	github.com/alexaandru/go-sitter-forest/brightscript v1.9.0
+	github.com/alexaandru/go-sitter-forest/brightscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.1
 	github.com/alexaandru/go-sitter-forest/c3 v1.9.3
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.1
@@ -118,7 +118,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.0
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
-	github.com/alexaandru/go-sitter-forest/fortran v1.9.1
+	github.com/alexaandru/go-sitter-forest/fortran v1.9.2
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsharp v1.9.1
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.1
@@ -144,7 +144,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glint v1.9.0
 	github.com/alexaandru/go-sitter-forest/glsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
-	github.com/alexaandru/go-sitter-forest/gnuplot v1.9.0
+	github.com/alexaandru/go-sitter-forest/gnuplot v1.9.1
 	github.com/alexaandru/go-sitter-forest/go v1.9.0
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.1
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
@@ -201,7 +201,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/json v1.9.0
 	github.com/alexaandru/go-sitter-forest/json5 v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
-	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.0
+	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
 	github.com/alexaandru/go-sitter-forest/julia v1.9.0
 	github.com/alexaandru/go-sitter-forest/just v1.9.3
@@ -211,7 +211,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
-	github.com/alexaandru/go-sitter-forest/koto v1.9.2
+	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
 	github.com/alexaandru/go-sitter-forest/lart v1.9.0
