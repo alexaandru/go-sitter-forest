@@ -23,7 +23,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awa5_rs v1.9.1
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.0
-	github.com/alexaandru/go-sitter-forest/bash v1.9.1
+	github.com/alexaandru/go-sitter-forest/bash v1.9.2
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
 	github.com/alexaandru/go-sitter-forest/bend v1.9.0
@@ -71,7 +71,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
 	github.com/alexaandru/go-sitter-forest/cue v1.9.0
-	github.com/alexaandru/go-sitter-forest/cylc v1.9.0
+	github.com/alexaandru/go-sitter-forest/cylc v1.9.1
 	github.com/alexaandru/go-sitter-forest/d v1.9.0
 	github.com/alexaandru/go-sitter-forest/d2 v1.9.0
 	github.com/alexaandru/go-sitter-forest/dale v1.9.0
@@ -93,7 +93,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dune v1.9.0
 	github.com/alexaandru/go-sitter-forest/earthfile v1.9.0
 	github.com/alexaandru/go-sitter-forest/ebnf v1.9.0
-	github.com/alexaandru/go-sitter-forest/editorconfig v1.9.0
+	github.com/alexaandru/go-sitter-forest/editorconfig v1.9.1
 	github.com/alexaandru/go-sitter-forest/eds v1.9.0
 	github.com/alexaandru/go-sitter-forest/eex v1.9.0
 	github.com/alexaandru/go-sitter-forest/effekt v1.9.0
@@ -137,7 +137,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.3
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.9.0
+	github.com/alexaandru/go-sitter-forest/gleam v1.9.1
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.1
@@ -185,10 +185,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.0
-	github.com/alexaandru/go-sitter-forest/idris v1.9.1
+	github.com/alexaandru/go-sitter-forest/idris v1.9.2
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.0
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
-	github.com/alexaandru/go-sitter-forest/ink v1.9.0
+	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.0
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
@@ -391,7 +391,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/templ v1.9.1
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
-	github.com/alexaandru/go-sitter-forest/thrift v1.9.0
+	github.com/alexaandru/go-sitter-forest/thrift v1.9.1
 	github.com/alexaandru/go-sitter-forest/tiger v1.9.0
 	github.com/alexaandru/go-sitter-forest/tlaplus v1.9.2
 	github.com/alexaandru/go-sitter-forest/tmux v1.9.0
