@@ -3,68 +3,11 @@
 enum TokenType {
     END_OF_FILE,
     INTEGER_RANGE_START,
-    KEY_NAME_TRIMMED,
 };
 
 static inline bool is_digit_editorconfig(int32_t character)
 {
     return character >= '0' && character <= '9';
-}
-
-static inline bool is_space_editorconfig(int32_t character)
-{
-    return character == ' ' || character == '\t';
-}
-
-static inline bool is_newline_editorconfig(int32_t character)
-{
-    return character == '\n' || character == '\r';
-}
-
-/// Parse the name of the key in a pair, without including trainling white space.
-/// See 'Key-Value Pair' in: https://spec.editorconfig.org/#file-format
-static inline bool parse_key_name(TSLexer *lexer)
-{
-    while (is_space_editorconfig(lexer->lookahead)) {
-        lexer->advance_editorconfig(lexer, true);
-    }
-
-    if (is_newline_editorconfig(lexer->lookahead) || lexer->eof(lexer)) {
-        return false;
-    }
-
-    // Characters not allowed as the first character of the
-    // key since they correspond to different tokens
-    switch (lexer->lookahead) {
-        case ';': // comment
-        case '#':
-        case '[': // section header
-        case '=': // this would mean an 'empty key', which is not allowed
-            return false;
-        default:
-            break;
-    }
-
-    lexer->advance_editorconfig(lexer, false);
-    lexer->mark_end(lexer);
-
-    while (lexer->lookahead != '=') {
-        if (is_newline_editorconfig(lexer->lookahead) || lexer->eof(lexer)) {
-            // NOTE: Tecnically this is not valid since there is no value
-            // on the right side, but it gives better error recovery
-            lexer->result_symbol = KEY_NAME_TRIMMED;
-            return true;
-        }
-        if (is_space_editorconfig(lexer->lookahead)) {
-            lexer->advance_editorconfig(lexer, false);
-        } else {
-            lexer->advance_editorconfig(lexer, false);
-            lexer->mark_end(lexer);
-        }
-    }
-
-    lexer->result_symbol = KEY_NAME_TRIMMED;
-    return true;
 }
 
 static inline bool parse_integer_range(TSLexer *lexer)
@@ -96,8 +39,7 @@ static inline bool parse_integer_range(TSLexer *lexer)
 bool tree_sitter_editorconfig_external_scanner_scan(
     void *payload, TSLexer *lexer, const bool *valid_symbols)
 {
-    if (valid_symbols[END_OF_FILE] && valid_symbols[KEY_NAME_TRIMMED] &&
-        valid_symbols[INTEGER_RANGE_START]) {
+    if (valid_symbols[END_OF_FILE] && valid_symbols[INTEGER_RANGE_START]) {
         // Tree-sitter is in error correction mode, don't parse anything
         return false;
     }
@@ -107,10 +49,6 @@ bool tree_sitter_editorconfig_external_scanner_scan(
         lexer->mark_end(lexer);
         lexer->result_symbol = END_OF_FILE;
         return true;
-    }
-
-    if (valid_symbols[KEY_NAME_TRIMMED]) {
-        return parse_key_name(lexer);
     }
 
     const int32_t next_char = lexer->lookahead;

@@ -74,7 +74,7 @@ var (
 
 	nonRedirectingClient = new(http.Client)
 
-	rxReq = regexp.MustCompile(`require\(['"](\..*?)['"]\)`)
+	rxReq = regexp.MustCompile(`(?:require|import\s+.*\s+from\s+)\(?['"](\..*?)['"]\)?`)
 
 	errUnknownCmd = errors.New("unknown command, must be one of: check-updates, [force-]update-all, [force-]update <lang>, update-bindings")
 )
@@ -312,7 +312,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		}
 	}
 
-	if gr.Language == "dtd" || gr.Language == "xml" || gr.Language == "editorconfig" {
+	// TODO: Need to figure out an heuristic here, this is not scalable.
+	if gr.Language == "dtd" || gr.Language == "xml" || gr.Language == "editorconfig" || gr.Language == "idris" {
 		err = os.WriteFile(filepath.Join(filepath.Dir(dst), "package.json"), []byte(`{"type":"module"}`), os.ModePerm) //nolint:gosec // ok
 		if err != nil {
 			return
@@ -469,7 +470,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 			return
 		}
 
-		if ok {
+		if ok && grRO.Language != "idris" && grRO.Language != "dtd" && grRO.Language != "xml" {
 			return "", fmt.Errorf("file %s already exists", fdst)
 		}
 
@@ -554,7 +555,7 @@ func extractDeps(lang string, content []byte) (deps []string) {
 	raw := rxReq.FindAllStringSubmatch(string(content), -1)
 	for _, m := range raw {
 		if z := m[1]; z != "" {
-			if !strings.HasSuffix(z, ".js") {
+			if !strings.HasSuffix(z, ".js") && !strings.HasSuffix(z, ".mjs") {
 				z += ".js"
 			}
 

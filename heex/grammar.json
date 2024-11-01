@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "6dd0303acf7138dd2b9b432a229e16539581c701",
+  "revision": "9359017bd0dc6b023044713aa215544885663637",
   "grammarSha": "1959d7f26da88c82302d8f291e1f65b8b28f4836b0e2c49cbd5f1ed063f8b38b",
   "language": "heex",
   "url": "https://github.com/phoenixframework/tree-sitter-heex",
