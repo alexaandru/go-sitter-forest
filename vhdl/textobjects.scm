@@ -5,7 +5,6 @@
 ;-------------------------------------------------------------------------------
 ;
 ; Comments
-; Remove the two dashes for "inner"
 (line_comment
   (comment_content) @comment.inner) @comment.outer
 
@@ -414,26 +413,25 @@
 
 ; Scope names
 (package_declaration
-  (identifier) @scopename.inner) @scopename.outer
+  (identifier) @scopename.inner)
 
 (package_definition
-  (identifier) @scopename.inner) @scopename.outer
+  (identifier) @scopename.inner)
 
 (entity_declaration
-  (identifier) @scopename.inner) @scopename.outer
+  (identifier) @scopename.inner)
 
 (architecture_definition
-  (identifier) @scopename.inner) @scopename.outer
+  (identifier) @scopename.inner)
 
 (configuration_declaration
-  (identifier) @scopename.inner) @scopename.outer
+  (identifier) @scopename.inner)
 
 (library_clause
-  (logical_name_list) @scopename.inner) @scopename.outer
+  (logical_name_list) @scopename.inner)
 
 (use_clause
-  (selected_name_list
-    (selected_name) @scopename.inner)) @scopename.outer
+  (selected_name_list) @scopename.inner)
 
 (component_instantiation_statement
-  (instantiated_unit) @scopename.inner) @scopename.outer
+  (instantiated_unit) @scopename.inner)
