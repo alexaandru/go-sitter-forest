@@ -22,7 +22,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/authzed v1.9.0
 	github.com/alexaandru/go-sitter-forest/awa5_rs v1.9.1
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
-	github.com/alexaandru/go-sitter-forest/awk v1.9.0
+	github.com/alexaandru/go-sitter-forest/awk v1.9.1
 	github.com/alexaandru/go-sitter-forest/bash v1.9.2
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
@@ -30,7 +30,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bibtex v1.9.0
 	github.com/alexaandru/go-sitter-forest/bicep v1.9.0
 	github.com/alexaandru/go-sitter-forest/bitbake v1.9.1
-	github.com/alexaandru/go-sitter-forest/blade v1.9.0
+	github.com/alexaandru/go-sitter-forest/blade v1.9.1
 	github.com/alexaandru/go-sitter-forest/blueprint v1.9.0
 	github.com/alexaandru/go-sitter-forest/bluespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/bp v1.9.0
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gram v1.9.1
 	github.com/alexaandru/go-sitter-forest/graphql v1.9.0
 	github.com/alexaandru/go-sitter-forest/gren v1.9.1
-	github.com/alexaandru/go-sitter-forest/groovy v1.9.0
+	github.com/alexaandru/go-sitter-forest/groovy v1.9.1
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
 	github.com/alexaandru/go-sitter-forest/haml v1.9.2
@@ -335,7 +335,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ron v1.9.0
 	github.com/alexaandru/go-sitter-forest/rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
-	github.com/alexaandru/go-sitter-forest/ruby v1.9.0
+	github.com/alexaandru/go-sitter-forest/ruby v1.9.1
 	github.com/alexaandru/go-sitter-forest/rust v1.9.2
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.1
@@ -375,7 +375,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.0
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
 	github.com/alexaandru/go-sitter-forest/surrealql v1.9.0
-	github.com/alexaandru/go-sitter-forest/sus v1.9.1
+	github.com/alexaandru/go-sitter-forest/sus v1.9.2
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/swift v1.9.0
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.0
@@ -421,7 +421,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.0
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.2
-	github.com/alexaandru/go-sitter-forest/vhdl v1.9.0
+	github.com/alexaandru/go-sitter-forest/vhdl v1.9.1
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.0
 	github.com/alexaandru/go-sitter-forest/vim v1.9.0
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.0
@@ -455,7 +455,7 @@ require (
 	golang.org/x/sync v0.8.0
 )
 
-require github.com/alexaandru/go-sitter-forest/desktop v1.9.1
+require github.com/alexaandru/go-sitter-forest/desktop v1.9.2
 
 retract (
 	// Lost its meaning as I kept wrongly pushing 1.8.x releases
