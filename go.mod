@@ -458,6 +458,10 @@ require (
 require github.com/alexaandru/go-sitter-forest/desktop v1.9.1
 
 retract (
+	// Lost its meaning as I kept wrongly pushing 1.8.x releases
+	// AFTER tagging 1.9.0 :-(
+	v1.9.0
+
 	// Parsers koka and gemfilelock had a conflict.
 	v1.8.9
 
