@@ -395,6 +395,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/surrealql"
 	"github.com/alexaandru/go-sitter-forest/sus"
 	"github.com/alexaandru/go-sitter-forest/svelte"
+	"github.com/alexaandru/go-sitter-forest/sway"
 	"github.com/alexaandru/go-sitter-forest/swift"
 	"github.com/alexaandru/go-sitter-forest/sxhkdrc"
 	"github.com/alexaandru/go-sitter-forest/syphon"
@@ -861,6 +862,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"surrealql":          surrealql.GetLanguage,
 	"sus":                sus.GetLanguage,
 	"svelte":             svelte.GetLanguage,
+	"sway":               sway.GetLanguage,
 	"swift":              swift.GetLanguage,
 	"sxhkdrc":            sxhkdrc.GetLanguage,
 	"syphon":             syphon.GetLanguage,
@@ -1313,6 +1315,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"surrealql":          surrealql.GetQuery,
 	"sus":                sus.GetQuery,
 	"svelte":             svelte.GetQuery,
+	"sway":               sway.GetQuery,
 	"swift":              swift.GetQuery,
 	"sxhkdrc":            sxhkdrc.GetQuery,
 	"syphon":             syphon.GetQuery,

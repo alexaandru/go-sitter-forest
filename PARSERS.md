@@ -1,4 +1,4 @@
-# 448 Supported Parsers
+# 449 Supported Parsers
 
 9 pending, 9 skipped regeneration, 32 missing queries
 
@@ -387,6 +387,7 @@
 - [x] [surrealql](https://github.com/Ce11an/tree-sitter-surrealql) ✔️ (maintained by @Ce11an; high memory usage (3.1GB))
 - [x] [sus](https://github.com/pc2/tree-sitter-sus) 🗸 (maintained by @VonTum)
 - [x] [svelte](https://github.com/tree-sitter-grammars/tree-sitter-svelte) ✔️ (maintained by @amaanq)
+- [x] [sway](https://github.com/FuelLabs/tree-sitter-sway) ✔️ (maintained by @ribru17)
 - [x] [swift](https://github.com/alex-pinkus/tree-sitter-swift) ✔️ (maintained by @alex-pinkus)
 - [x] [sxhkdrc](https://github.com/RaafatTurki/tree-sitter-sxhkdrc) ✔️ (maintained by @RaafatTurki)
 - [x] [syphon](https://github.com/yhyadev/tree-sitter-syphon) ✔️ (maintained by @yhyadev)

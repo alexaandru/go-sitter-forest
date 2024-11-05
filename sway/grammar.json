@@ -1,0 +1,11 @@
+{
+  "reference": "master",
+  "revision": "03d97aad336ecc6b302f23bdd9b695ddc937160b",
+  "grammarSha": "c650078d982c4428e275fbca78fd835fe42996a80b255a9467b19b12327a5b06",
+  "language": "sway",
+  "url": "https://github.com/FuelLabs/tree-sitter-sway",
+  "maintainedBy": "@ribru17",
+  "files": [
+    "scanner.c"
+  ]
+}

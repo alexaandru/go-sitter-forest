@@ -436,6 +436,7 @@
     "surrealql":          ["surql"],
     "sus":                ["sus"],
     "svelte":             ["svelte"],
+    "sway":               ["sw"],
     "swift":              ["swift"],
     "syphon":             ["sy"],
     "systemtap":          ["stp"],
