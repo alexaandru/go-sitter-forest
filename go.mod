@@ -185,7 +185,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.1
-	github.com/alexaandru/go-sitter-forest/idris v1.9.3
+	github.com/alexaandru/go-sitter-forest/idris v1.9.4
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.0
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
@@ -298,7 +298,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/problog v1.9.0
 	github.com/alexaandru/go-sitter-forest/prolog v1.9.0
 	github.com/alexaandru/go-sitter-forest/promql v1.9.0
-	github.com/alexaandru/go-sitter-forest/properties v1.9.0
+	github.com/alexaandru/go-sitter-forest/properties v1.9.1
 	github.com/alexaandru/go-sitter-forest/proto v1.9.0
 	github.com/alexaandru/go-sitter-forest/proxima v1.9.0
 	github.com/alexaandru/go-sitter-forest/prql v1.9.1
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
-	github.com/alexaandru/go-sitter-forest/tcl v1.9.0
+	github.com/alexaandru/go-sitter-forest/tcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
 	github.com/alexaandru/go-sitter-forest/templ v1.9.1
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
@@ -458,6 +458,8 @@ require (
 require github.com/alexaandru/go-sitter-forest/desktop v1.9.2
 
 require github.com/alexaandru/go-sitter-forest/sway v1.9.0
+
+require github.com/alexaandru/go-sitter-forest/carbon v1.9.0
 
 retract (
 	// Lost its meaning as I kept wrongly pushing 1.8.x releases
