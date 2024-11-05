@@ -1,4 +1,4 @@
-# 449 Supported Parsers
+# 450 Supported Parsers
 
 9 pending, 9 skipped regeneration, 32 missing queries
 
@@ -44,6 +44,7 @@
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️ (maintained by @amaanq)
 - [x] [calc](https://github.com/zeromake/tree-sitter-calc) 🗸 (maintained by @zeromake)
 - [x] [capnp](https://github.com/tree-sitter-grammars/tree-sitter-capnp) ✔️ (maintained by @amaanq)
+- [x] [carbon](https://github.com/carbon-language/carbon-lang) ✔️ (maintained by @carbon-language)
 - [x] [cds](https://github.com/cap-js-community/tree-sitter-cds) ✔️ (maintained by @bugwelle)
 - [x] [cedar](https://github.com/chrnorm/tree-sitter-cedar) ✔️ (maintained by @chrnorm)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️ (maintained by @Alfus)

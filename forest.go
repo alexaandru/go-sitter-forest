@@ -58,6 +58,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cairo"
 	"github.com/alexaandru/go-sitter-forest/calc"
 	"github.com/alexaandru/go-sitter-forest/capnp"
+	"github.com/alexaandru/go-sitter-forest/carbon"
 	"github.com/alexaandru/go-sitter-forest/cds"
 	"github.com/alexaandru/go-sitter-forest/cedar"
 	"github.com/alexaandru/go-sitter-forest/cel"
@@ -527,6 +528,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"cairo":              cairo.GetLanguage,
 	"calc":               calc.GetLanguage,
 	"capnp":              capnp.GetLanguage,
+	"carbon":             carbon.GetLanguage,
 	"cds":                cds.GetLanguage,
 	"cedar":              cedar.GetLanguage,
 	"cel":                cel.GetLanguage,
@@ -980,6 +982,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"cairo":              cairo.GetQuery,
 	"calc":               calc.GetQuery,
 	"capnp":              capnp.GetQuery,
+	"carbon":             carbon.GetQuery,
 	"cds":                cds.GetQuery,
 	"cedar":              cedar.GetQuery,
 	"cel":                cel.GetQuery,

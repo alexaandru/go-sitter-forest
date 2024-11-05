@@ -376,6 +376,18 @@
     "maintainedBy": "@amaanq"
   },
   {
+    "reference": "trunk",
+    "revision": "9c8ca2f6e9df1109f5c27bfd8e254b6538b10e1d",
+    "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
+    "language": "carbon",
+    "url": "https://github.com/carbon-language/carbon-lang",
+    "maintainedBy": "@carbon-language",
+    "srcRoot": "utils/treesitter",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "main",
     "revision": "00b5523d5678a301dc64da971fa06707c9e8f8ee",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",

@@ -122,6 +122,7 @@
     "cairo":              ["cairo"],
     "calc":               ["calc"],
     "capnp":              ["capnp"],
+    "carbon":             ["carbon"],
     "cds":                ["cds"],
     "cedar":              ["cedar"],
     "cel":                ["cel"],
