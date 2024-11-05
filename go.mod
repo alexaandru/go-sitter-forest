@@ -62,7 +62,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.9.0
 	github.com/alexaandru/go-sitter-forest/context v1.9.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.9.0
-	github.com/alexaandru/go-sitter-forest/core v1.9.2
+	github.com/alexaandru/go-sitter-forest/core v1.9.3
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
@@ -75,12 +75,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/d v1.9.0
 	github.com/alexaandru/go-sitter-forest/d2 v1.9.0
 	github.com/alexaandru/go-sitter-forest/dale v1.9.0
-	github.com/alexaandru/go-sitter-forest/dart v1.9.2
+	github.com/alexaandru/go-sitter-forest/dart v1.9.3
 	github.com/alexaandru/go-sitter-forest/dataweave v1.9.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
-	github.com/alexaandru/go-sitter-forest/devicetree v1.9.0
+	github.com/alexaandru/go-sitter-forest/devicetree v1.9.1
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.0
-	github.com/alexaandru/go-sitter-forest/dhall v1.9.0
+	github.com/alexaandru/go-sitter-forest/dhall v1.9.1
 	github.com/alexaandru/go-sitter-forest/diff v1.9.1
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
 	github.com/alexaandru/go-sitter-forest/djot v1.9.1
@@ -106,7 +106,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.0
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.1
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
@@ -161,7 +161,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.9.1
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
-	github.com/alexaandru/go-sitter-forest/haml v1.9.2
+	github.com/alexaandru/go-sitter-forest/haml v1.9.3
 	github.com/alexaandru/go-sitter-forest/hare v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
@@ -184,8 +184,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
-	github.com/alexaandru/go-sitter-forest/idl v1.9.0
-	github.com/alexaandru/go-sitter-forest/idris v1.9.2
+	github.com/alexaandru/go-sitter-forest/idl v1.9.1
+	github.com/alexaandru/go-sitter-forest/idris v1.9.3
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.0
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
@@ -215,7 +215,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
 	github.com/alexaandru/go-sitter-forest/lart v1.9.0
-	github.com/alexaandru/go-sitter-forest/lat v1.9.0
+	github.com/alexaandru/go-sitter-forest/lat v1.9.1
 	github.com/alexaandru/go-sitter-forest/latex v1.9.1
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.9.0
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/puppet v1.9.0
 	github.com/alexaandru/go-sitter-forest/purescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.9.0
-	github.com/alexaandru/go-sitter-forest/pyrope v1.9.0
+	github.com/alexaandru/go-sitter-forest/pyrope v1.9.1
 	github.com/alexaandru/go-sitter-forest/python v1.9.0
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
@@ -323,7 +323,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
-	github.com/alexaandru/go-sitter-forest/regex v1.9.2
+	github.com/alexaandru/go-sitter-forest/regex v1.9.3
 	github.com/alexaandru/go-sitter-forest/rego v1.9.0
 	github.com/alexaandru/go-sitter-forest/requirements v1.9.0
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
@@ -336,13 +336,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.1
-	github.com/alexaandru/go-sitter-forest/rust v1.9.2
+	github.com/alexaandru/go-sitter-forest/rust v1.9.3
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.1
 	github.com/alexaandru/go-sitter-forest/scfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/scheme v1.9.0
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
-	github.com/alexaandru/go-sitter-forest/sdml v1.9.1
+	github.com/alexaandru/go-sitter-forest/sdml v1.9.2
 	github.com/alexaandru/go-sitter-forest/sflog v1.9.0
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
@@ -456,6 +456,8 @@ require (
 )
 
 require github.com/alexaandru/go-sitter-forest/desktop v1.9.2
+
+require github.com/alexaandru/go-sitter-forest/sway v1.9.0
 
 retract (
 	// Lost its meaning as I kept wrongly pushing 1.8.x releases
