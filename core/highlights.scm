@@ -88,5 +88,9 @@
 
 (memop_op) @constant.builtin
 
-(comment) @comment
+(single_line_comment) @comment
+(iso_ref) @comment
+(location) @comment
+(multiline_comment) @comment
+
 

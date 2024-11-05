@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "9ac03bb2154316624fb4c41fe0f372a5f1597b43",
+  "revision": "a7496b9d562be91e6588eecd5d7045832f575cd0",
   "grammarSha": "4fd9ea14ec4fa3ce105c13677a05a002259585d9587f8900cd6a8e996c5fb241",
   "language": "dart",
   "url": "https://github.com/UserNobody14/tree-sitter-dart",

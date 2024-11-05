@@ -155,7 +155,10 @@
  "reg" 
 ] @type.qualifier
 
-["{" "}" "(" ")" "[" "]"] @punctuation.bracket
+["(" ")" "[" "]"] @punctuation.bracket
+(scope_statement "{" @punctuation.bracket)
+(scope_statement "}" @punctuation.bracket)
+
 ["," "." ":"] @punctuation.delimiter
 
 (pipestage_scope_statement "#>" @punctuation.special)

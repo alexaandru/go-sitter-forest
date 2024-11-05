@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "affb6ee38d629c9296749767ab832d69bb0d9ea8",
-  "grammarSha": "e83d846f22773339e144a7d1adf75211f36420d723cca9d674483af008cdb175",
+  "revision": "4a6c08abfb54827db4e722d6cdca81b093898988",
+  "grammarSha": "0ffdaf4b6ebd7ef4a486fafb18180e1f19568e8469b6a6e4d785cfd17ae816bf",
   "language": "dhall",
   "url": "https://github.com/jbellerb/tree-sitter-dhall",
   "maintainedBy": "@amaanq",

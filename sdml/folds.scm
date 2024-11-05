@@ -1,5 +1,6 @@
 [
  (data_type_def)
+ (dimension_def)
  (entity_def)
  (enum_def)
  (event_def)
@@ -10,9 +11,11 @@
  (rdf_def)
  ;; ----------------
  (annotation_only_body)
+ (dimension_body)
  (entity_body)
  (enum_body)
- (structured_body)
+ (event_body)
+ (structure_body)
  (type_class_body)
  (union_body)
  ;; ----------------

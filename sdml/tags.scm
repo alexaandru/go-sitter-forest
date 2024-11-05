@@ -5,8 +5,8 @@
 (module
  name: (identifier) @name) @definition.module
 
-(module_import
- name: (identifier) @name) @reference.module
+(module_import name: (identifier) @name) @reference.module
+(module_import rename: (identifier) @name) @reference.module
 
 (member_import
  name: (qualified_identifier
@@ -15,57 +15,52 @@
 (member_import
  name: (qualified_identifier
         member: (identifier) @name)) @reference.type
+(member_import rename: (identifier) @name) @reference.type
 
 ;; ---------------------------------------------------------------------------
 ;; Types
 ;; ---------------------------------------------------------------------------
 
-(data_type_def
- name: (identifier) @name) @definition.datatype
-(data_type_def
- base: (_) @name) @reference.datatype
+(data_type_def name: (identifier) @name) @definition.datatype
+(data_type_def base: (_) @name) @reference.datatype
 
-(entity_def
- name: (identifier) @name) @definition.entity
+(dimension_def name: (identifier) @name) @definition.dimension
 
-(enum_def
- name: (identifier) @name) @definition.enum
+(entity_def name: (identifier) @name) @definition.entity
 
-(event_def
- name: (identifier) @name) @definition.event
-(event_def
- source: (identifier_reference) @name) @reference.entity
+(enum_def name: (identifier) @name) @definition.enum
 
-(rdf_def
- name: (identifier) @name) @definition.rdf
+(event_def name: (identifier) @name) @definition.event
 
-(structure_def
- name: (identifier) @name) @definition.structure
+(rdf_def name: (identifier) @name) @definition.rdf
 
-(type_class_def
- name: (identifier) @name) @definition.class
+(structure_def name: (identifier) @name) @definition.structure
 
-(union_def
- name: (identifier) @name) @definition.union
+(type_class_def name: (identifier) @name) @definition.class
+
+(union_def name: (identifier) @name) @definition.union
+
+(source_entity entity: (identifier_reference) @name) @reference.entity
+(source_entity member: (identifier) @name) @reference.field
 
 ;; ---------------------------------------------------------------------------
 ;; Members
 ;; ---------------------------------------------------------------------------
 
-(member_def
- name: (identifier) @name) @definition.field
+(dimension_parent name: (identifier) @name)  @definition.field
+(dimension_parent entity: (identifier_reference) @name)  @reference.type
+
+(member_def name: (identifier) @name) @definition.field
 
 (type_reference (identifier_reference) @name) @reference.type
 (type_reference (builtin_simple_type) @name) @reference.type
 
-(property_ref
- property: (identifier_reference) @name) @definition.field
+(property_ref property: (identifier_reference) @name) @definition.field
 
 (type_variant (identifier_reference) @name) @reference.type
 (type_variant rename: (identifier) @name) @definition.type
 
-(value_variant
- name: (identifier) @name) @definition.constant
+(value_variant name: (identifier) @name) @definition.constant
 
 (method_def name: (identifier) @name) @definition.method
 

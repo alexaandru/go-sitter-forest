@@ -13,6 +13,8 @@
  (function_body)
  ] @indent.auto
 
+(source_entity "[" @indent "]" @indent.end)
+
 (constraint_environment_end) @indent.dedent
 
 (function_signature "(" @indent ")" @indent.end)

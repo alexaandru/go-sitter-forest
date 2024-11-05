@@ -10,6 +10,9 @@
 
 (name_ref
   (surname) @constant.family_name.ref
+)
+
+(name_ref
   (name) @constant.name.ref
 )
 
