@@ -1221,7 +1221,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1310,8 +1310,8 @@
   },
   {
     "reference": "master",
-    "revision": "41940e199ba5763abea1d21b4f717014b45f01ea",
-    "grammarSha": "a9ef77390db0868e1c246ff010377b0bbc7742b21771c094303ef63e5bd1176d",
+    "revision": "5425944fd61bf2b3bad2c17c2dc9f53172b0f01d",
+    "grammarSha": "d00d0900dff4e22727776d441d206684a399e6c445c000c601876df0e0302015",
     "language": "gitattributes",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-gitattributes",
     "maintainedBy": "@ObserverOfTime"
@@ -1794,8 +1794,8 @@
   },
   {
     "reference": "main",
-    "revision": "2e86d10d002275e406d63870a131d555db8f9ad4",
-    "grammarSha": "2e87012206e39b3a3aad6162bf487f1064c87d6044c3f568c3bf77717e81f047",
+    "revision": "c56a25cf57c68ff929356db25505c1cc4c7820f6",
+    "grammarSha": "2245207e0db65a1b887c337a58332445828245dbde5b4bc646678692f58efb1a",
     "language": "idris",
     "url": "https://github.com/kayhide/tree-sitter-idris",
     "maintainedBy": "@kayhide",
@@ -2877,7 +2877,7 @@
   },
   {
     "reference": "main",
-    "revision": "94b84fbc4768a7cbdeadfe5e489a45a6a8af400e",
+    "revision": "60d50a2247b0c1fb72b967562c64711d65c6a060",
     "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
     "language": "printf",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
@@ -2919,8 +2919,8 @@
   },
   {
     "reference": "master",
-    "revision": "9d09f5f200c356c50c4103d36441309fd61b48d1",
-    "grammarSha": "96028b79d50a79bcf15d910845ccda66be1efcdf28b3aad04be8ecd2ae930625",
+    "revision": "f93f673990deffbfa548826eebade93af81887b4",
+    "grammarSha": "26bfc860164cf00a3bafe62e7c3814260b6faca48be11ad809e05b8a36404aff",
     "language": "properties",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-properties",
     "maintainedBy": "@ObserverOfTime",
@@ -3788,8 +3788,8 @@
   },
   {
     "reference": "main",
-    "revision": "cdba4ab96a9896492d0d5219b70300c8783ca4e7",
-    "grammarSha": "2fdd9363910d8706d207cd34f18305773df60160bb2f3773b5adcd5ff572c7a6",
+    "revision": "98015ebe182d94e5a4439e32ffd91beaac32fcb9",
+    "grammarSha": "5f4c584d0f1ba581af224f1607d2b92adc8632532bd27a2f1f15a877cb5c279d",
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "maintainedBy": "@lewis6991",
@@ -4261,7 +4261,7 @@
   },
   {
     "reference": "main",
-    "revision": "ee1ab4b31ee462d95406cc3ffe407bacd5e69942",
+    "revision": "fce5d2807fb60166d0dd4789f335c9a5a5ad723a",
     "grammarSha": "a79e2d0f4789843d712ae81b6ac9b94e730230abe26a981a57a88208e02ac372",
     "language": "wing",
     "url": "https://github.com/winglang/wing",

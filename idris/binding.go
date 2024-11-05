@@ -3,7 +3,7 @@
 package idris
 
 //#include "parser.h"
-//TSLanguage *tree_sitter_idris2();
+//TSLanguage *tree_sitter_idris();
 import "C"
 
 import (
@@ -26,7 +26,7 @@ const nvimts = "nvimts__"
 var files embed.FS
 
 func GetLanguage() unsafe.Pointer {
-	return unsafe.Pointer(C.tree_sitter_idris2())
+	return unsafe.Pointer(C.tree_sitter_idris())
 }
 
 func GetQuery(kind string, opts ...byte) (out []byte) {

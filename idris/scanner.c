@@ -459,7 +459,7 @@ static bool keep_layout(uint32_t indent, State *state) {
 /**
  * Require that the current line's indent is equal to the containing layout's, so the line may start a new `decl`.
  */
-static bool same_indent(uint32_t indent, State *state) {
+static bool same_indent(uint32_t indent, State *state) { 
   return indent_exists(state) && indent == *array_back(&state->payload->indents);
 }
 
@@ -472,13 +472,13 @@ static bool less_indent(uint32_t indent, State *state) {
 
 /**
  * Dedented but still indented in outer scope. Needed to detect the following layout.
- *
+ * 
  * parent
  *     foo
  *   bar
  */
 static bool less_and_more_indent(uint32_t indent, State *state) {
-  return 2 <= state->payload->indents.size &&
+  return 2 <= state->payload->indents.size && 
     indent < *array_back(&state->payload->indents) &&
     indent > *array_get(&state->payload->indents, state->payload->indents.size - 2);
 }
@@ -1035,7 +1035,7 @@ static Result bar(State *state) {
 
 static Result raw_string_start(String s, State *state) {
   if (
-    SYM(RAW_STRING_START) &&
+    SYM(RAW_STRING_START) && 
     strall('#', s.contents) &&
     '"' == PEEK) {
     S_ADVANCE;
@@ -1203,7 +1203,7 @@ static Result inline_tokens(State *state) {
     for (int i = 0; i < sizeof(keywords)/sizeof(keywords[0]); ++i) {
       if (is_token(keywords[i], state)) return res_cont;
     }
-
+        
     if (SYM(VARID)) {
       MARK("varid", false, state);
       return finish(VARID, "varid");
@@ -1524,7 +1524,7 @@ static bool eval(Result (*chk)(State *state), State *state) {
 /**
  * This function allocates the persistent state of the parser that is passed into the other API functions.
  */
-void *tree_sitter_idris2_external_scanner_create() {
+void *tree_sitter_idris_external_scanner_create() {
   void *res = calloc(sizeof(Payload), 1);
   return res;
 }
@@ -1532,7 +1532,7 @@ void *tree_sitter_idris2_external_scanner_create() {
 /**
  * Main logic entry point.
  */
-bool tree_sitter_idris2_external_scanner_scan(Payload *payload, TSLexer *lexer, const bool *syms) {
+bool tree_sitter_idris_external_scanner_scan(Payload *payload, TSLexer *lexer, const bool *syms) {
   State state = {
     .lexer = lexer,
     .symbols = syms,
@@ -1550,7 +1550,7 @@ bool tree_sitter_idris2_external_scanner_scan(Payload *payload, TSLexer *lexer, 
  * This is normally more complex, but since this parser's state constists solely of a vector of integers, it can just be
  * copied.
  */
-unsigned tree_sitter_idris2_external_scanner_serialize(Payload *payload, char *buffer) {
+unsigned tree_sitter_idris_external_scanner_serialize(Payload *payload, char *buffer) {
   unsigned size = 0;
   {
     unsigned len = payload->indents.size;
@@ -1574,7 +1574,7 @@ unsigned tree_sitter_idris2_external_scanner_serialize(Payload *payload, char *b
  * `payload` is the state of the previous parser execution, while `buffer` is the saved state of a different position
  * (e.g. when doing incremental parsing).
  */
-void tree_sitter_idris2_external_scanner_deserialize(Payload *payload, char *buffer, unsigned length) {
+void tree_sitter_idris_external_scanner_deserialize(Payload *payload, char *buffer, unsigned length) {
   if(length == 0) return;
 
   unsigned size = 0;
@@ -1602,6 +1602,6 @@ void tree_sitter_idris2_external_scanner_deserialize(Payload *payload, char *buf
 /**
  * Destroy the state.
  */
-void tree_sitter_idris2_external_scanner_destroy(Payload *payload) {
+void tree_sitter_idris_external_scanner_destroy(Payload *payload) {
   free(payload);
 }

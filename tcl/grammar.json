@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "cdba4ab96a9896492d0d5219b70300c8783ca4e7",
-  "grammarSha": "2fdd9363910d8706d207cd34f18305773df60160bb2f3773b5adcd5ff572c7a6",
+  "revision": "98015ebe182d94e5a4439e32ffd91beaac32fcb9",
+  "grammarSha": "5f4c584d0f1ba581af224f1607d2b92adc8632532bd27a2f1f15a877cb5c279d",
   "language": "tcl",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
   "maintainedBy": "@lewis6991",

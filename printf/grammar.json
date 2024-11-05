@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "94b84fbc4768a7cbdeadfe5e489a45a6a8af400e",
+  "revision": "60d50a2247b0c1fb72b967562c64711d65c6a060",
   "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
   "language": "printf",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",

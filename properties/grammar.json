@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "9d09f5f200c356c50c4103d36441309fd61b48d1",
-  "grammarSha": "96028b79d50a79bcf15d910845ccda66be1efcdf28b3aad04be8ecd2ae930625",
+  "revision": "f93f673990deffbfa548826eebade93af81887b4",
+  "grammarSha": "26bfc860164cf00a3bafe62e7c3814260b6faca48be11ad809e05b8a36404aff",
   "language": "properties",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-properties",
   "maintainedBy": "@ObserverOfTime",

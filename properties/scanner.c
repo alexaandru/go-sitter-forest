@@ -1,5 +1,11 @@
 #include "parser.h"
 
+#ifdef _MSC_VER
+#pragma warning(disable : 4100)
+#elif defined(__GNUC__) || defined(__clang__)
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#endif
+
 enum TokenType { FAKE_EOL };
 
 static bool reached_eof = false;
