@@ -41,9 +41,7 @@ In rare cases, the Go package name differs from the language name:
 - `dotenv` language is named `env` in grammar.js but we expose it as `dotenv`;
 - `walnut` language is named `cwal` in grammar.js but we retain it as `walnut`;
 - `janet` language is named `janet_simple` in grammar.js but in here is
-  simply named `janet`;
-- `idris` language is now renamed to `idris2` in the grammar, but we still
-  refer to it as `idris`, to keep things simple.
+  simply named `janet`.
 
 Also, some languages may have names that are not very straightforward acronyms.
 In those cases, an `altName` field will be populated, i.e. `requirements` language

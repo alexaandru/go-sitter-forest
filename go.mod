@@ -205,7 +205,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
-	github.com/alexaandru/go-sitter-forest/julia v1.9.0
+	github.com/alexaandru/go-sitter-forest/julia v1.9.1
 	github.com/alexaandru/go-sitter-forest/just v1.9.3
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
@@ -267,6 +267,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
+	github.com/alexaandru/go-sitter-forest/nu v1.9.1
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -302,7 +303,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/promql v1.9.0
 	github.com/alexaandru/go-sitter-forest/properties v1.9.1
 	github.com/alexaandru/go-sitter-forest/proto v1.9.0
-	github.com/alexaandru/go-sitter-forest/proxima v1.9.0
+	github.com/alexaandru/go-sitter-forest/proxima v1.9.1
 	github.com/alexaandru/go-sitter-forest/prql v1.9.1
 	github.com/alexaandru/go-sitter-forest/psv v1.9.0
 	github.com/alexaandru/go-sitter-forest/pug v1.9.0
