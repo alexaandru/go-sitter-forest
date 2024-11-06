@@ -377,7 +377,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "9c8ca2f6e9df1109f5c27bfd8e254b6538b10e1d",
+    "revision": "9aae9de43cf438c1f30a5e163fdec1bb14a4370f",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1221,7 +1221,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1962,8 +1962,8 @@
   },
   {
     "reference": "master",
-    "revision": "19f62656dc7f2ff3756a8ef3dcf9ab1c01a9eb58",
-    "grammarSha": "8fc76c9695d91832656f0c343135f6138636dafabbbcf196f05497809d0b9240",
+    "revision": "3f51e8e4d9b0c7b10d663d72064c45a883c2c998",
+    "grammarSha": "d64dcbc5316f869e8b7f8c7f277a88e0ee3266933e5985a8f8f1f01d399e51c1",
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
     "maintainedBy": "@theHamsta",
@@ -2542,7 +2542,7 @@
   },
   {
     "reference": "master",
-    "revision": "1b26cb63284287344bc3820804cea18419b3edec",
+    "revision": "4cb8ccf74f44cf9d648d02298de6e9ba515d7c56",
     "grammarSha": "a62b81c1d6d2b2b2754ca6ed03fff42331710beba5d5e471859eca90d0542899",
     "language": "nix",
     "url": "https://github.com/nix-community/tree-sitter-nix",
@@ -2946,8 +2946,8 @@
   },
   {
     "reference": "master",
-    "revision": "f11c16f804704f061f588da85f40de1940faad80",
-    "grammarSha": "fea7de799157c6740f33ca2b0961ac56f4ba0e94042a816967c5f1f34a59a2a7",
+    "revision": "578a0057e464a9ce68c8154c45ae150952043331",
+    "grammarSha": "3a586ee23410da2709d6432432a70e9ad9931c047be775462e985f81efe64d57",
     "language": "proxima",
     "url": "https://github.com/vistormu/tree-sitter-proxima",
     "maintainedBy": "@vistormu"
@@ -3592,7 +3592,7 @@
   },
   {
     "reference": "main",
-    "revision": "694a3a8ad1104e79b276d1b051dcbc6332bb1648",
+    "revision": "390e4a9e83bfda40977fb748a0de1ae134d3e091",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
@@ -4269,7 +4269,7 @@
   },
   {
     "reference": "main",
-    "revision": "fce5d2807fb60166d0dd4789f335c9a5a5ad723a",
+    "revision": "cb705f3db03001646172c8f690b24eec68057d07",
     "grammarSha": "a79e2d0f4789843d712ae81b6ac9b94e730230abe26a981a57a88208e02ac372",
     "language": "wing",
     "url": "https://github.com/winglang/wing",
