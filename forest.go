@@ -284,6 +284,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/norg"
 	"github.com/alexaandru/go-sitter-forest/note"
 	"github.com/alexaandru/go-sitter-forest/nqc"
+	"github.com/alexaandru/go-sitter-forest/nu"
 	"github.com/alexaandru/go-sitter-forest/objc"
 	"github.com/alexaandru/go-sitter-forest/objdump"
 	"github.com/alexaandru/go-sitter-forest/ocaml"
@@ -752,6 +753,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"norg":               norg.GetLanguage,
 	"note":               note.GetLanguage,
 	"nqc":                nqc.GetLanguage,
+	"nu":                 nu.GetLanguage,
 	"objc":               objc.GetLanguage,
 	"objdump":            objdump.GetLanguage,
 	"ocaml":              ocaml.GetLanguage,
@@ -1206,6 +1208,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"norg":               norg.GetQuery,
 	"note":               note.GetQuery,
 	"nqc":                nqc.GetQuery,
+	"nu":                 nu.GetQuery,
 	"objc":               objc.GetQuery,
 	"objdump":            objdump.GetQuery,
 	"ocaml":              ocaml.GetQuery,

@@ -332,6 +332,7 @@
     "norg":               ["norg"],
     "note":               ["note"],
     "nqc":                ["nqc"],
+    "nu":                 ["nu"],
     "objc":               ["m"],
     "objdump":            ["objdump"],
     "ocaml":              ["ml", "mli", "mlip", "mll", "mlp", "mlt", "mly"],

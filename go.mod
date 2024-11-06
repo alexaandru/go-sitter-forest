@@ -43,6 +43,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
 	github.com/alexaandru/go-sitter-forest/capnp v1.9.0
+	github.com/alexaandru/go-sitter-forest/carbon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cds v1.9.0
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
@@ -78,6 +79,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dart v1.9.3
 	github.com/alexaandru/go-sitter-forest/dataweave v1.9.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
+	github.com/alexaandru/go-sitter-forest/desktop v1.9.2
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.1
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.0
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.1
@@ -377,6 +379,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/surrealql v1.9.0
 	github.com/alexaandru/go-sitter-forest/sus v1.9.2
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
+	github.com/alexaandru/go-sitter-forest/sway v1.9.0
 	github.com/alexaandru/go-sitter-forest/swift v1.9.0
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.0
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.0
@@ -454,12 +457,6 @@ require (
 	golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c
 	golang.org/x/sync v0.8.0
 )
-
-require github.com/alexaandru/go-sitter-forest/desktop v1.9.2
-
-require github.com/alexaandru/go-sitter-forest/sway v1.9.0
-
-require github.com/alexaandru/go-sitter-forest/carbon v1.9.0
 
 retract (
 	// Lost its meaning as I kept wrongly pushing 1.8.x releases

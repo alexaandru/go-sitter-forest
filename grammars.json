@@ -2584,6 +2584,14 @@
     "skip": true
   },
   {
+    "reference": "main",
+    "revision": "2142e883c5edfd7fc99b6d933a3d80ea84ac278f",
+    "grammarSha": "03e544161020723f7e84a291c69a29ac16292995eb7c1324a513e6df1f086008",
+    "language": "nu",
+    "url": "https://github.com/nushell/tree-sitter-nu",
+    "maintainedBy": "@abhisheksingh0x558"
+  },
+  {
     "reference": "master",
     "revision": "62e61b6f5c0289c376d61a8c91faf6435cde9012",
     "language": "objc",
