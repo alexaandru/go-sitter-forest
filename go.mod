@@ -249,7 +249,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.0
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.1
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.9.0
@@ -267,7 +267,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.1
+	github.com/alexaandru/go-sitter-forest/nu v1.9.2
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -339,6 +339,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.1
+	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
 	github.com/alexaandru/go-sitter-forest/rust v1.9.3
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.1
@@ -417,7 +418,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.9.0
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
-	github.com/alexaandru/go-sitter-forest/unison v1.9.0
+	github.com/alexaandru/go-sitter-forest/unison v1.9.1
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
 	github.com/alexaandru/go-sitter-forest/usd v1.9.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.9.0
@@ -435,7 +436,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vue v1.9.0
 	github.com/alexaandru/go-sitter-forest/walnut v1.9.0
 	github.com/alexaandru/go-sitter-forest/wbproto v1.9.0
-	github.com/alexaandru/go-sitter-forest/wgsl v1.9.0
+	github.com/alexaandru/go-sitter-forest/wgsl v1.9.1
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.9.0
 	github.com/alexaandru/go-sitter-forest/wing v1.9.0
 	github.com/alexaandru/go-sitter-forest/wit v1.9.0
@@ -450,7 +451,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.0
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
-	github.com/alexaandru/go-sitter-forest/zeek v1.9.0
+	github.com/alexaandru/go-sitter-forest/zeek v1.9.1
 	github.com/alexaandru/go-sitter-forest/zig v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
