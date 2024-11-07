@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"strings"
 )
 
 func makeDir(path string) error {
@@ -33,6 +34,16 @@ func runCmd(dir, comm string, args ...string) (err error) {
 	}
 
 	return
+}
+
+func appendDeps(deps *[]string, common string, moreDeps ...string) {
+	for _, dep := range moreDeps {
+		if !strings.HasSuffix(dep, ".js") {
+			dep += ".js"
+		}
+
+		*deps = append(*deps, common+dep)
+	}
 }
 
 func die(msg any) {

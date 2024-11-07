@@ -582,7 +582,9 @@ func extractDeps(lang string, content []byte) (deps []string) {
 	case "markdown", "markdown_inline":
 		deps = append(deps, "../common/html_entities.json")
 	case "unison":
-		deps = append(deps, "./grammar/precedences.js", "./grammar/function-application.js")
+		appendDeps(&deps, "./grammar/", "precedences", "function-application", "terms", "util", "literal",
+			"regex", "term", "pattern-matching", "conditionals", "delayed-computation", "expression",
+			"blocks", "type", "effect")
 		deps = slices.DeleteFunc(deps, func(s string) bool { return s == "./grammar/revised-term.js" })
 	case "idris":
 		deps = append(deps, "./grammar/util.js")

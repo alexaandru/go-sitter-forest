@@ -69,6 +69,7 @@
 
 [
  "add"
+ "assert"
  "break"
  "case"
  "const"

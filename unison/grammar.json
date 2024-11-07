@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "bc06e1eb100e1c0fab9bd89a9ca55d646ac80fc4",
-  "grammarSha": "1092e3599d57b98b673594671d4bf4b9f10522c731092f5a182cd2c8a2f1f285",
+  "revision": "e18194c2bd1a12a3231b526fcc5476182c3ec3e1",
+  "grammarSha": "e86fd4f111fa4342ac70353166187490a4c7b858a7f5fed90a486672b89fded6",
   "language": "unison",
   "url": "https://github.com/kylegoetz/tree-sitter-unison",
   "maintainedBy": "@tapegram",
