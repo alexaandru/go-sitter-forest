@@ -1,0 +1,9 @@
+[label,foobar]
+def_int $baz = random(128);
+gosub(any_where);
+if (finduid(~some_character) = true)
+{
+  gosub(some_where_else);
+  ~do_smth(npc_coord, npc_param(x_drop));
+  obj_add(npc_coord, golden_medal, 1, 100);
+}

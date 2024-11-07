@@ -1,4 +1,4 @@
-# 451 Supported Parsers
+# 452 Supported Parsers
 
 9 pending, 9 skipped regeneration, 32 missing queries
 
@@ -348,6 +348,7 @@
 - [x] [rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)
 - [x] [rtx](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️ (maintained by @TravonteD)
+- [x] [runescript](https://github.com/2004Scape/tree-sitter-runescript) ✔️ (maintained by @2004Scape)
 - [x] [rust](https://github.com/tree-sitter/tree-sitter-rust) ✔️ (maintained by @amaanq)
 - [x] [rust_with_rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)
 - [x] [scala](https://github.com/tree-sitter/tree-sitter-scala) ✔️ (maintained by @stevanmilic)

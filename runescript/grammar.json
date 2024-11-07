@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "cf85bbd5da0c5ad243301d889c7f84d790a4cae4",
+  "grammarSha": "0eb64604e69d8004905ff237733dcfdddfa56d70d8eb6570d5b37dc8a85e5146",
+  "language": "runescript",
+  "url": "https://github.com/2004Scape/tree-sitter-runescript",
+  "maintainedBy": "@2004Scape",
+  "files": [
+    "scanner.c"
+  ]
+}

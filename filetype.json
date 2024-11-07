@@ -399,6 +399,7 @@
     "rstml":              ["rstml"],
     "rtx":                ["rtx"],
     "ruby":               ["builder", "gemspec", "rake", "rb"],
+    "runescript":         ["rs2", "cs2"],
     "rust":               ["rs"],
     "rust_with_rstml":    ["rust_with_rstml"],
     "scala":              ["scala", "kojo", "sbt"],

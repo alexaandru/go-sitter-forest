@@ -356,6 +356,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/rstml"
 	"github.com/alexaandru/go-sitter-forest/rtx"
 	"github.com/alexaandru/go-sitter-forest/ruby"
+	"github.com/alexaandru/go-sitter-forest/runescript"
 	"github.com/alexaandru/go-sitter-forest/rust"
 	"github.com/alexaandru/go-sitter-forest/rust_with_rstml"
 	"github.com/alexaandru/go-sitter-forest/scala"
@@ -825,6 +826,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"rstml":              rstml.GetLanguage,
 	"rtx":                rtx.GetLanguage,
 	"ruby":               ruby.GetLanguage,
+	"runescript":         runescript.GetLanguage,
 	"rust":               rust.GetLanguage,
 	"rust_with_rstml":    rust_with_rstml.GetLanguage,
 	"scala":              scala.GetLanguage,
@@ -1280,6 +1282,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"rstml":              rstml.GetQuery,
 	"rtx":                rtx.GetQuery,
 	"ruby":               ruby.GetQuery,
+	"runescript":         runescript.GetQuery,
 	"rust":               rust.GetQuery,
 	"rust_with_rstml":    rust_with_rstml.GetQuery,
 	"scala":              scala.GetQuery,
