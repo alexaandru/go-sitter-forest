@@ -1,5 +1,5 @@
 ((match
-  key: "PROGRAM"
+  key: [ "PROGRAM" "RUN" ]
   (value (content) @injection.content))
   (#set! injection.language "bash"))
 
