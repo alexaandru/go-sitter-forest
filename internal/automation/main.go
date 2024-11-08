@@ -385,6 +385,10 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		`require('tree-sitter-lua/grammar')`: `require('@tree-sitter-grammars/tree-sitter-lua/grammar')`,
 		// For luau.
 		`@muniftanjim/tree-sitter-lua/grammar`: `@tree-sitter-grammars/tree-sitter-lua/grammar`,
+		// For Jinja.
+		`require('./common/common')`:     `require('./common.js')`,
+		`require('./common/literal')`:    `require('./literal.js')`,
+		`require('./common/expression')`: `require('./expression.js')`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
@@ -594,6 +598,8 @@ func extractDeps(lang string, content []byte) (deps []string) {
 		deps = append(deps, "../rust.grammar.js")
 	case "galvan":
 		deps = append(deps, "precedence.js")
+	case "jinja", "jinja_inline":
+		appendDeps(&deps, "../common/", "common", "literal", "expression")
 	}
 
 	return

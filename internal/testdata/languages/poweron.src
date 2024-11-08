@@ -1,0 +1,289 @@
+[  ER.PINCHANGE.HTML
+
+   Created by
+   Ethan Roberts
+   on 04/30/2019
+
+   This creates an HTML form for users to use when changing pins for a card.
+]
+
+
+WINDOWS
+
+TARGET=ACCOUNT
+
+
+DEFINE
+ #INCLUDE "RD.GETDATA.DEF"
+
+ HTMLFNUMBER=NUMBER
+ HTMLFLINE=CHARACTER
+ HTMLFERROR=CHARACTER
+
+ ERRORTEXT = CHARACTER
+ NEWPIN = CHARACTER
+ CARDLOC = NUMBER
+ CARDNUMBER = CHARACTER
+ LASTFOUR = CHARACTER
+ CARDCOUNTER = NUMBER
+
+ I = NUMBER
+ TRUE = NUMBER
+ FALSE = NUMBER
+ FOUND = NUMBER
+ VALIDUSER = NUMBER
+ CARDCHKID = CHARACTER
+END
+
+SETUP
+ FALSE = 0
+ TRUE = 1  
+
+ CALL CHECKPRIVS
+ IF VALIDUSER = FALSE THEN
+  DO
+   POPUPMESSAGE(0,"You do not have sufficient privileges to run this program.")
+   TERMINATE
+  END
+
+ CARDCOUNTER = 0
+ FOR EACH CARD WITH (CARD:STATUS = 0 OR     [ not issued ] 
+                     CARD:STATUS = 1)       [ issued     ]
+  DO
+   CARDCOUNTER = CARDCOUNTER + 1
+  END
+  IF CARDCOUNTER < 1 THEN
+   DO
+    POPUPMESSAGE(0,"There are no active debit cards on this account.")
+    TERMINATE
+   END
+ HTMLVIEWOPEN(0)
+ HTMLVIEWLINE("<!DOCTYPE>")
+ [HTMLVIEWLINE("<meta http-equiv='Access-Control-Allow-Origin' content='*'>")]
+ HTMLVIEWLINE("<meta charset='iso-8859-1'>")
+ HTMLVIEWLINE("<meta http-equiv='X-UA-Compatible' content='IE=edge' />")
+ HTMLVIEWLINE(" <head><script src='jquery-3.4.0.min.js'></script></head> ")
+
+HTMLVIEWLINE(" <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' ")
+HTMLVIEWLINE(" integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'> ")
+HTMLVIEWLINE("<link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'> ")
+
+
+ HTMLVIEWLINE("<style>")
+ HTMLVIEWLINE(" body {background-color: white; font-family: 'Calibri'; }  ")
+
+
+ HTMLVIEWLINE(" div {   border-radius: 5px;}   ")
+
+
+ HTMLVIEWLINE("input[type='submit'] {  width: 400px; border: none; color: white; background-color: #3b5998; cursor: pointer;  padding: 9px 9px; }  ") 
+ HTMLVIEWLINE("input[type='submit']:hover { text-decoration: none; background-color: #4e71ba; } ")
+
+
+ HTMLVIEWLINE(" .radio { cursor: pointer;}  ") 
+ HTMLVIEWLINE("h2 { padding-top: 15px; text-align: center; font-family: 'Calibri'; font-size: 30px; }  ") 
+
+
+ HTMLVIEWLINE(" label { font-weight: bold;}   ")
+
+ HTMLVIEWLINE(" .boxhead a {margin: auto; display: block; width: 100px; height: 30px; color: white; background-color: #3CAEA3; ")  
+ HTMLVIEWLINE(" font-size: 14px; text-decoration: none; padding: 7px; border-radius: 10px; text-align: center; } ")  
+ HTMLVIEWLINE(".boxhead a:hover { text-decoration: underline; background-color: #79CDCD; color: white; }   ")
+
+ HTMLVIEWLINE(" form { width: 400px; margin: auto; border: 3px solid gray; background-color: white; border-radius: 9px; ")
+ HTMLVIEWLINE("    padding-top: 40px; padding-left: 0px; padding-right: 0px; padding-bottom: 0px; margin-top: 30px; }    ")
+ 
+ HTMLVIEWLINE(" legend {  font-size: 20px; background-color: #e8e8e8; color: black; padding: 5px 9px; margin-bottom: 20px; }   ")
+ HTMLVIEWLINE(" fieldset {  border: 0;  }   ")
+
+ HTMLVIEWLINE(" .joint { font-size: 12px; margin-left: 20px; padding-top: 1px;}  ") 
+ HTMLVIEWLINE(" span:hover {  color: green; text-align: center; } ")
+
+ HTMLVIEWLINE(" #submit { width: 394px;  margin: auto; margin-top: 35px;} ")
+ HTMLVIEWLINE(" input:focus { border-color: black; } ")
+
+HTMLVIEWLINE(" .center { margin: auto; } ")
+
+HTMLVIEWLINE("</style>")
+
+
+[ END CSS ]
+
+
+
+HTMLVIEWLINE("<head></head>")
+HTMLVIEWLINE("<br><br>")
+HTMLVIEWLINE("<body>")
+
+
+HTMLVIEWLINE("<div class='container'>")
+  HTMLVIEWLINE("<div class='row'>")
+   HTMLVIEWLINE("<div class='col text-center'>  ")
+  HTMLVIEWLINE(" <a class='btn btn-info' href='https://cardatonce.eftsource.com/Home/Login' target='_blank'>Login to Card@Once </a> ")
+   HTMLVIEWLINE("</div>")
+  HTMLVIEWLINE("</div>")
+HTMLVIEWLINE("</div>")
+
+HTMLVIEWLINE("<div class='pinOffsetForm'>")
+HTMLVIEWLINE("<form name='htmlrginputform' METHOD=POST ACTION=symitar://HTMLView~Action=Post>")
+
+
+HTMLVIEWLINE("<h2>Pin-Offset Change")
+HTMLVIEWLINE("<br>")
+
+
+HTMLVIEWLINE("</h2><br><br>")
+
+
+
+
+HTMLVIEWLINE("<fieldset><legend> Choose a card:</legend>")
+
+HTMLVIEWLINE("<div class='cardList'>")
+  FOR EACH CARD WITH (CARD:STATUS = 0 OR CARD:STATUS = 1)
+    DO
+     CARDLOC=CARD:LOCATOR
+     HTMLVIEWLINE("<span onclick=highlight(this);  >")
+     HTMLVIEWLINE("<input type='radio' class='radio' name='cardLoc' id="+FORMAT("999",CARDLOC)+" ")
+     HTMLVIEWLINE(" style='font-size: 17px; margin-left: 15px; margin-top: 15px; margin-bottom: 10px;'  value="+FORMAT("999",CARDLOC)+"  required>  ")
+     HTMLVIEWLINE("  "+SEGMENT(CARD:NUMBER,1,6)+"  ")
+     HTMLVIEWLINE("  "+" "+"  ")
+     HTMLVIEWLINE("  "+SEGMENT(CARD:NUMBER,7,LENGTH(CARD:NUMBER))+"  ")
+     HTMLVIEWLINE("</span><br>")
+     HTMLVIEWLINE("<ul class='list-group list-group-flush'  style='margin-left: 10px;' >")
+     HTMLVIEWLINE("<li  class='list-group-item py-2'  style='font-size: 13px;'  >")
+     HTMLVIEWLINE(NAME:LONGNAME)    [ *** Listing primary name on every card since they are primary on account *** ]
+     HTMLVIEWLINE("</li></ul>")
+     HTMLVIEWLINE("<ul class='list-group list-group-flush' style='margin-left: 10px;'>")
+
+     [ *** Get all names linked to each card *** ]
+     FOR EACH CARD NAME WITH CARD NAME:LONGNAME <> NAME:LONGNAME
+	 DO
+       HTMLVIEWLINE("<li class='list-group-item py-2'  style='font-size: 13px;'>")
+       HTMLVIEWLINE(CARD NAME:LONGNAME)
+       HTMLVIEWLINE("</li>")
+	 END
+    HTMLVIEWLINE("</ul>")
+    HTMLVIEWLINE("<br>")
+    END
+
+HTMLVIEWLINE("<div style='margin-left: 10px; margin-top: 50px;' text-align='center' > ")
+HTMLVIEWLINE("<label for='pinOffset'>Enter Card@Once Offset:&nbsp&nbsp&nbsp </label>")
+
+
+HTMLVIEWLINE("<input type='text' name='pinOffset' id='pinOffset' value='' maxlength='4' ") 
+HTMLVIEWLINE(" placeholder='Enter new pin...' onkeypress='return func(event)'>    ")
+HTMLVIEWLINE("<div > ")
+
+HTMLVIEWLINE("</div>")
+
+HTMLVIEWLINE("</fieldset>")
+HTMLVIEWLINE("<input type='submit' onClick='return validateInput(this)' name='submit' id='submit' value='Submit' > ")
+HTMLVIEWLINE("</form>")
+HTMLVIEWLINE("</div>")
+
+
+
+
+
+HTMLVIEWLINE("<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'  ")
+HTMLVIEWLINE(" integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script> ")
+
+HTMLVIEWLINE("<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' ") 
+HTMLVIEWLINE(" integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script> ")
+
+HTMLVIEWLINE("<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' ")
+HTMLVIEWLINE("integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script> ")
+
+HTMLVIEWLINE("<script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script> ")
+HTMLVIEWLINE("</body>")
+
+
+
+
+
+HTMLVIEWLINE("<script>")
+HTMLVIEWLINE(" function validateInput(card){ ")
+HTMLVIEWLINE(" var pin = document.getElementById('pinOffset').value; ")
+HTMLVIEWLINE(" if (pin.length != 4 || isNaN(pin) ){    ")
+HTMLVIEWLINE(" alert('Invalid pin entry.  The PIN must be exactly 4 digits.'); ")
+HTMLVIEWLINE(" return false; } ")
+HTMLVIEWLINE(" else if (pin == 0000){    ")
+HTMLVIEWLINE(" alert('The PIN entered is already in use with this debit card.  Please have the member enter a different PIN.'); ")
+HTMLVIEWLINE(" return false; ")
+HTMLVIEWLINE("} else{")
+HTMLVIEWLINE("return true; }")
+HTMLVIEWLINE("}")
+
+
+
+HTMLVIEWLINE(" function func(e){ ")
+HTMLVIEWLINE(" var key = e.which || e.keyCode; ") 
+HTMLVIEWLINE(" if(key == 13){  alert('You must click the Submit button.'); return false;  }")
+HTMLVIEWLINE(" } ")
+
+
+HTMLVIEWLINE(" function highlight(e){ ")
+HTMLVIEWLINE(" var inputs = document.getElementsByTagName('span'); ") 
+HTMLVIEWLINE(" for (var i = 0; i < inputs.length; ++i){ ")
+HTMLVIEWLINE(" inputs[i].style.color='black'; ")
+HTMLVIEWLINE(" }  ")
+HTMLVIEWLINE(" e.style.color='green'; ")
+HTMLVIEWLINE(" }  ")
+HTMLVIEWLINE("</script>")
+HTMLVIEWLINE("</html>")
+HTMLVIEWDISPLAY
+CALL PROCESSSUBMIT  [ get values from form ]
+END
+
+
+
+
+
+
+PRINT TITLE="PINCHANGE"
+ SUPPRESSNEWLINE
+END
+
+
+
+PROCEDURE PROCESSSUBMIT
+ HTMLFLINE = ""
+ NEWPIN = ""
+
+ WHILE HTMLFLINE<>"EOD"
+  DO
+   HTMLFLINE=ENTERLINE(0)  [ get value submitted by user ]
+
+  IF CHARACTERSEARCH(HTMLFLINE,"pinOffset=") >  0 THEN
+    NEWPIN = HTMLFLINE
+  IF CHARACTERSEARCH(HTMLFLINE,"cardLoc=") >  0 THEN
+    CARDLOC = VALUE(HTMLFLINE)
+  END
+  
+  FOR EACH CARD WITH CARD:LOCATOR = CARDLOC
+   DO
+    CARDNUMBER = CARD:NUMBER
+    LASTFOUR = SEGMENT(CARD:NUMBER,13,16)
+   END
+ 
+  FMPERFORM REVISE CARD LOC CARDLOC (0,0,ERRORTEXT)
+   DO
+    SET PINOFFSET TO VALUE(NEWPIN)
+   END
+   POPUPMESSAGE(0, "PIN Successfully Changed for Card Ending In: "+LASTFOUR )
+END
+
+
+
+PROCEDURE CHECKPRIVS
+  VALIDUSER = FALSE
+  FOR I = 1 TO 99
+   DO
+    IF (I = 1 OR I = 4 OR I = 5 OR I = 6) AND   [ Security Group 1 is InfoSys, Group 4 is Head-Teller, Group 5 is FSO, Group 6 is branch mgr ]
+       GETDATANUMBER(GETUSERPRIVILEGEGROUP,SYSUSERNUMBER,I) = TRUE THEN
+     DO
+      VALIDUSER = TRUE   [ This user can run this specfile ]
+     END
+   END
+END

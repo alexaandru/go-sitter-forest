@@ -1,0 +1,9 @@
+{
+  "reference": "master",
+  "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
+  "grammarSha": "cba95bf7374dda029dd9549f68f8087c096a798cd4485d5d6beebdad22d9b871",
+  "language": "snl",
+  "url": "https://github.com/epics-extensions/tree-sitter-epics",
+  "maintainedBy": "@minijackson",
+  "srcRoot": "snl"
+}

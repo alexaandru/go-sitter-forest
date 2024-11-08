@@ -1,0 +1,1 @@
+(macro_expansion (variable) default: (string (macro_expansion (variable)) (macro_expansion (variable)) (macro_expansion (variable)) (macro_expansion (variable))) overrides: (override (variable) (string)) overrides: (override (variable) (string)) overrides: (override (variable) (string)) overrides: (override (variable) (string)))

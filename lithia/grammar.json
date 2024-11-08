@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "de4a310cbabdb67fe4c106116006c386ab6b5896",
+  "grammarSha": "3756c0bcea41f18cc08c6cd65c16fabd14954ebeb03c8b627bc1e5471dc7ce62",
+  "language": "lithia",
+  "url": "https://github.com/vknabel/tree-sitter-lithia",
+  "maintainedBy": "@vknabel"
+}

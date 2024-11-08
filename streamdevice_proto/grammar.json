@@ -1,0 +1,9 @@
+{
+  "reference": "master",
+  "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
+  "grammarSha": "edc3258f086561a51e8d548c28b8dacaf064d295a213339c01d288f22267f205",
+  "language": "streamdevice_proto",
+  "url": "https://github.com/epics-extensions/tree-sitter-epics",
+  "maintainedBy": "@minijackson",
+  "srcRoot": "streamdevice-proto"
+}

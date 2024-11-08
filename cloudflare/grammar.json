@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "6cfec8711ca7b1a6e24a710d7987f6286d504caa",
+  "grammarSha": "a782b114f9b3d7fd0bf1225066512186043f8b933ae2a25ad8009f052fefad2c",
+  "language": "cloudflare",
+  "url": "https://github.com/nfowl/tree-sitter-cloudflare",
+  "maintainedBy": "@nfowl"
+}

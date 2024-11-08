@@ -1,0 +1,1 @@
+(source_file (db_template file: (string) (substitutions (pattern (pattern_variables (identifier) (identifier)) (pattern_values (string (quoted_string (quoted_string_text_fragment))) (string (quoted_string (quoted_string_text_fragment)))) (pattern_values (string (quoted_string (quoted_string_text_fragment))) (string (quoted_string (quoted_string_text_fragment))))))))

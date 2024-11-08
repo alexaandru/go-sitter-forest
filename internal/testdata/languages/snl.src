@@ -1,0 +1,5 @@
+program a
+struct a {};
+struct a {int a;};
+struct a {int a; int a;};
+ss b { state c {} }

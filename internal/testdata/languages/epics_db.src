@@ -1,0 +1,20 @@
+recordtype(record_type) {}
+
+recordtype(record_type) {
+    include "file.dbd"
+    field(field_name, field_type) {
+        asl(as_level)
+        initial("init_value")
+        promptgroup("group_name")
+        prompt("prompt_value")
+        special(special_value)
+        pp(pp_value)
+        interest(interest_level)
+        base(base_type)
+        size(size_value)
+        extra("extra_info")
+        menu(name)
+        prop(yesno)
+    }
+    %C_declaration
+}

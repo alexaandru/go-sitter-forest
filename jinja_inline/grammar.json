@@ -1,0 +1,12 @@
+{
+  "reference": "master",
+  "revision": "1722645860a7e877fa096f7a243edd39d91f8326",
+  "grammarSha": "69bce2f1921de6c5db72ab810ac0beb7806941634f6973d1a71fc502e95200a5",
+  "language": "jinja_inline",
+  "url": "https://github.com/cathaysia/tree-sitter-jinja2",
+  "maintainedBy": "@cathaysia",
+  "srcRoot": "tree-sitter-jinja_inline",
+  "files": [
+    "scanner.c"
+  ]
+}

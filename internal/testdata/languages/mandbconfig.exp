@@ -1,0 +1,1 @@
+(file (comment) (mandatory_manpath manpath_element: (path)) (manpath_map path_element: (path) manpath_element: (path)) (mandb_map manpath_element: (path) catpath_element: (path)) (define key: (word) value: (word)) (section (word)) (mincatwidth (width)) (maxcatwidth (width)) (catwidth (width)) (nocache))

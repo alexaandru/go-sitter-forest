@@ -1,0 +1,115 @@
+$TestApp = {
+    Class = RealTimeApplication
+    +Functions = {
+        Class = ReferenceContainer
+        +GAMTimer = {
+            Class = IOGAM
+            InputSignals = {
+                Counter = {
+                    DataSource = Timer
+                    Type = uint32
+                }
+                Time = {
+                    Frequency = (uint32|"a//Parameters.freq")
+                    DataSource = Timer
+                    Type = uint32
+                }
+            }
+            OutputSignals = {
+                Counter = {
+                    DataSource = DDB1
+                    Type = uint32
+                }                
+                Time = {
+                    DataSource = DDB1
+                    Type = uint32
+                }            
+            }
+        }
+        +aGAM = {
+            Class = ExampleGAM
+            Param = 2 
+            InputSignals = {
+                Counter = {
+                    DataSource = DDB1
+                    Type = uint32
+                }
+            }
+            OutputSignals = {
+                Output = {
+                    DataSource = DDB1
+                    Type = uint32
+                }                
+            }
+        }
+        +bGAM = {
+            Class = IOGAM            
+            InputSignals = {
+                Counter = {
+                    DataSource = DDB1
+                    Type = uint32
+                }
+                GainCounter = {
+                    DataSource = DDB1
+                    Type = uint32
+                }
+            } 
+            OutputSignals = {
+                Counter = {
+                    DataSource = RTThreadSynch 
+                    Type = uint32
+                } // random comment
+                GainCounter = {
+                    DataSource = RTThreadSynch 
+                    Type = uint32
+                }
+            }
+        }
+    }
+    +Data = {
+        Class = ReferenceContainer
+        DefaultDataSource = DDB1
+        +DDB1 = {
+            Class = GAMDataSource
+       	}
+        +Timings = {
+            Class = TimingDataSource
+        }
+        +Timer = {
+            Class = LinuxTimer
+            SleepNature = "Default"
+            Signals = {
+                Counter = {
+                    Type = uint32
+                }
+                Time = {
+                    Type = uint32
+                }
+            }
+        }        
+    }
+    +States = {
+        Class = ReferenceContainer
+        +State1 = {
+            Class = RealTimeState
+            +Threads = {
+                Class = ReferenceContainer
+                +Thread1 = {
+                    Class = RealTimeThread
+                    CPUs = 0x2
+                    Functions = {GAMTimer aGAM}
+                }
+                +Thread2 = {
+                    Class = RealTimeThread
+                    CPUs = 0x1
+                    Functions = {aGAM bGAM}
+                }
+
+            }
+        }        
+    }
+    +Scheduler = {
+        Class = GAMScheduler
+        TimingDataSource = Timings
+    }
+}

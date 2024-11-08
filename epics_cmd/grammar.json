@@ -1,0 +1,9 @@
+{
+  "reference": "master",
+  "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
+  "grammarSha": "9bcf57797452536ed0fc426d264d0319297f62f479001c28d627fec2ffa43518",
+  "language": "epics_cmd",
+  "url": "https://github.com/epics-extensions/tree-sitter-epics",
+  "maintainedBy": "@minijackson",
+  "srcRoot": "epics-cmd"
+}

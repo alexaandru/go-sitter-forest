@@ -1,0 +1,1 @@
+cf.edge.server_port eq 80 or (to_string(cf.edge.server_port) == "443" && ssl && cf.bot_management.corporate_proxy)

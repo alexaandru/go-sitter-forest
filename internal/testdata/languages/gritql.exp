@@ -1,0 +1,1 @@
+(source_file language: (langdecl name: (languageName)) pattern: (patternWhere pattern: (rewrite left: (codeSnippet source: (backtickSnippet)) right: (codeSnippet source: (backtickSnippet))) side_condition: (predicateAnd predicates: (predicateMatch left: (variable) right: (nodeLike name: (name))))))

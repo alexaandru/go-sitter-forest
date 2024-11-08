@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "d6eb82027c355e70f8186a47d17e6afd97fc7c81",
+  "grammarSha": "977ca80d841366c844f29729d683651c6e6a55977f1b0b734de77712bb04759a",
+  "language": "mandbconfig",
+  "url": "https://github.com/TornaxO7/tree-sitter-man-db-config",
+  "maintainedBy": "@TornaxO7"
+}

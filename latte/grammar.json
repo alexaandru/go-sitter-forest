@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "721a5023a4e53457ea1ff6b0b700787dac420f30",
+  "grammarSha": "51980ef60bfed182b05ccb72d8ca8661bdbb413452a540e125492d816a40eb29",
+  "language": "latte",
+  "url": "https://github.com/daun/tree-sitter-latte",
+  "maintainedBy": "@daun"
+}

@@ -1,0 +1,5 @@
+{var $text = "O'Neill"}
+- in text: <span>{$text}</span>
+- in attribute: <span title={$text}></span>
+- in unquoted attribute: <span title={$text}></span>
+- in JavaScript: <script>var = {$text}</script>

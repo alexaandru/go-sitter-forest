@@ -1,0 +1,1 @@
+(source_file (compound_expression lhs: (simple_expression lhs: (numberlike_field (number_field)) rhs: (number)) rhs: (group inner: (compound_expression lhs: (compound_expression lhs: (simple_expression lhs: (stringlike_field (string_func field: (numberlike_field (number_field)))) rhs: (string)) rhs: (boollike_field (bool_field))) rhs: (boollike_field (bool_field))))))

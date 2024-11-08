@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "27d0549cb603fff04176e62e79a5439fd93a3f75",
+  "grammarSha": "86458d9150ad80439e6b585f6d01f4d4aa895b203f91c12cdda2f0c78024e7de",
+  "language": "gritql",
+  "url": "https://github.com/getgrit/tree-sitter-gritql",
+  "maintainedBy": "@getgrit",
+  "files": [
+    "scanner.c"
+  ]
+}

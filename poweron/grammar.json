@@ -1,0 +1,12 @@
+{
+  "reference": "main",
+  "revision": "e82ab78f232c24e577e63fe348ed3c55566524a3",
+  "grammarSha": "e158b73154ff9da626faa9aeba427fa49d9cf8b85e1d4a635d48334dd34bc370",
+  "language": "poweron",
+  "url": "https://github.com/phileagleson/tree-sitter-poweron",
+  "doc": "high memory usage (5GB)",
+  "maintainedBy": "@phileagleson",
+  "files": [
+    "scanner.cc"
+  ]
+}

@@ -1,0 +1,95 @@
+package antoniusnaumann:example@0.1.0;
+
+use numbers:bigint/bigint.u128
+use motorcorp:vehicles/eco.{train, bicycle}
+
+enum color {
+	blue
+	green
+	yellow
+	magenta
+}
+
+variant color {
+	rgb(r: u8, g: u8, b: u8)
+	grayscale(luminance: f64)
+}
+
+// a point in 3D space
+export record point {
+	x: s32
+	y: s32
+	z: s32
+}
+
+func add(a: s32, b: s32) -> s32 {
+	// unused char
+	let ch = 'c'
+	
+	return a + b
+}
+
+func trunc_mul(x: s32, f: s32, threshold: s32) -> s32 {
+	let y = x * f
+
+	if y > threshold {
+		return threshold
+	} else {
+		return y
+	}
+}
+
+func call_safe_div(a: s32, b: s32) -> s32!error {
+	let res = safe_div(a, b)!
+
+	return res
+}
+
+func safe_div(a: s32, b: s32) -> s32! {
+	if b == 0 {
+		throw "Divisor is 0"
+	}
+
+	return a / b
+}
+
+export func or_default(original: point?) -> point {
+	if point.is_none() { print("Point is none, setting default!") }
+	original ?= point { x: 0, y: 0, z: 0 }
+
+	return original
+}
+
+func append_twice(list: [u8], element: u8) -> [u8] {
+	return list + [element, element]
+}
+
+export func is_none(a: point?) -> bool {
+	// we use if-else here just to test boolean constant highlighting
+	return if a == none {
+		true
+	} else {
+		false
+	}
+}
+
+export func is_origin(p: point) -> bool {
+	return p.x == 0 && p.y == 0 && p.z == 0
+}
+
+resource car {
+	km_driven: u64
+
+	constructor(driven: u64) {
+		self.km_driven = driven
+	}
+
+	func drive(km: u64) {
+		self.km_driven += km
+	}
+
+	func honk() {
+		print("Honk!")
+	}
+}
+

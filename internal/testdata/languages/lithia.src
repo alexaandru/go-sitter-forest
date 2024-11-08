@@ -1,0 +1,42 @@
+module example
+
+import tests
+import lists
+import strings
+
+tests.test "booleans are cool", { fail =>
+    with True, type Bool {
+        True: { _ => },
+        False: { _ =>
+            fail "type switch not working for Bool"
+        }
+    }
+}
+
+tests.test "strings.concat rocks", { fail =>
+    fail strings.concat ["oops there are no ", "comparisions"]
+}
+
+tests.test "any in enums matches all types", { fail =>
+    enum AnyEnum {
+        Int
+        Any
+    }
+
+    let isCorrect = with "should be any", type AnyEnum {
+        Int: { _ => False },
+        Any: { _ => True }
+    }
+    unless isCorrect, fail "should not be the case"
+}
+
+tests.test "when true succeeds", { fail =>
+    let isTrue = when True, True
+    with isTrue, type Bool {
+        True: { true => "" },
+        False: { false => fail "should be True" }
+    }
+}
+
+
+when tests.enabled, tests.runTests

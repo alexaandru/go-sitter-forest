@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "e4886986109e088041274147c829a89123fd182a",
+  "grammarSha": "868def0528bdb7b798cbcc82aa1ed1cc894a50a205814750dac1c9985341ee01",
+  "language": "mustache",
+  "url": "https://github.com/TheLeoP/tree-sitter-mustache",
+  "maintainedBy": "@TheLeoP",
+  "files": [
+    "scanner.c"
+  ]
+}

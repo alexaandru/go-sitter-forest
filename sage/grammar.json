@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "de002c5abf9e14bf92a643b4af9057d0ceb612a5",
+  "grammarSha": "9e98b91935fd26260d1ea3058d9d36b26de16425ad6b85b3d773b91b71076d0e",
+  "language": "sage",
+  "url": "https://github.com/havarddj/tree-sitter-sage",
+  "maintainedBy": "@havarddj",
+  "files": [
+    "scanner.c"
+  ]
+}

@@ -1,0 +1,5 @@
+file myDBfile.template {
+    pattern { PREFIX,     SCAN }
+            { "P" "1 second"}
+            { "P" "3 second"}
+}

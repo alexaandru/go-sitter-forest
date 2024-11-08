@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "420753abfe3873ec9e31b0c9640741756671292c",
+  "grammarSha": "4e2b94f17fee12f4ac9700cd09a593a9e6bce8f3cfe8dc42913f1d2e27c5a666",
+  "language": "hl7",
+  "url": "https://github.com/hamaluik/tree-sitter-hl7",
+  "maintainedBy": "@hamaluik"
+}

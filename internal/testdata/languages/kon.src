@@ -1,0 +1,9 @@
+fn greet() Str {
+  "Hello World"
+}
+
+mut count = 0
+do while count < 10 {
+  print(greet())
+  count =+ 1
+}

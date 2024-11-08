@@ -1,0 +1,13 @@
+# comment
+
+MANDATORY_MANPATH /test /yo
+MANPATH_MAP /kekw /bro
+MANDB_MAP /yes /no
+
+DEFINE something awesome
+SECTION yes
+
+MINCATWIDTH 69
+MAXCATWIDTH 42
+CATWIDTH 1337
+NOCACHE

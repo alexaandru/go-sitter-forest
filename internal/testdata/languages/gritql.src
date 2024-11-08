@@ -1,0 +1,5 @@
+language js
+
+`console.log($my_message)` => `winston.info($my_message)` where {
+  $my_message <: string()
+}

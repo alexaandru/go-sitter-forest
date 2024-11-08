@@ -1,0 +1,1 @@
+(template (tag (assignment_statement (keyword) (variable) (interpolated_string))) (content) (tag (variable)) (content) (tag (variable)) (content) (tag (variable)) (content) (tag (variable)) (content))

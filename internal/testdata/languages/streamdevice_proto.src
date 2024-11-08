@@ -1,0 +1,36 @@
+# This is an example protocol file
+
+Terminator = CR LF;
+
+# Frequency is a float
+# use ai and ao records
+
+getFrequency {
+    out "FREQ?"; in "%f";
+}
+
+setFrequency {
+    out "FREQ %f";
+    @init { getFrequency; }
+}
+
+# Switch is an enum, either OFF or ON
+# use bi and bo records
+
+getSwitch {
+    out "SW?"; in "SW %{OFF|ON}";
+}
+
+setSwitch {
+    out "SW %{OFF|ON}";
+    @init { getSwitch; }
+}
+
+# Connect a stringout record to this to get
+# a generic command interface.
+# After processing finishes, the record contains the reply.
+
+debug {
+    ExtraInput = Ignore;
+    out "%s"; in "%39c"
+}

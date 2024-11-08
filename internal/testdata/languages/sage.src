@@ -1,0 +1,7 @@
+X = set([1,19,'a']);   Y = set([1,1,1, 2/3])
+X   # random sort order
+X == set(['a', 1, 1, 19])
+Y
+'a' in X
+'a' in Y
+X.intersection(Y)

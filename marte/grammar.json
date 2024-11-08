@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "72f5ad69f7352b2643fd3239b3f270236780c751",
+  "grammarSha": "71b0b5b50a82e9fc921aa4b1b09b394345bb55d1793677f0b73b1cc634878d6b",
+  "language": "marte",
+  "url": "https://github.com/andretun/tree-sitter-marte",
+  "maintainedBy": "@andretun"
+}
