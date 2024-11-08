@@ -163,7 +163,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.9.1
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
-	github.com/alexaandru/go-sitter-forest/haml v1.9.3
+	github.com/alexaandru/go-sitter-forest/haml v1.9.4
 	github.com/alexaandru/go-sitter-forest/hare v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
@@ -191,7 +191,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.0
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
-	github.com/alexaandru/go-sitter-forest/inko v1.9.0
+	github.com/alexaandru/go-sitter-forest/inko v1.9.1
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
@@ -267,7 +267,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.2
+	github.com/alexaandru/go-sitter-forest/nu v1.9.3
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -326,7 +326,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
-	github.com/alexaandru/go-sitter-forest/regex v1.9.3
+	github.com/alexaandru/go-sitter-forest/regex v1.9.4
 	github.com/alexaandru/go-sitter-forest/rego v1.9.0
 	github.com/alexaandru/go-sitter-forest/requirements v1.9.0
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
@@ -418,7 +418,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.9.0
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
-	github.com/alexaandru/go-sitter-forest/unison v1.9.1
+	github.com/alexaandru/go-sitter-forest/unison v1.9.2
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
 	github.com/alexaandru/go-sitter-forest/usd v1.9.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.9.0
