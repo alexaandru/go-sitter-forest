@@ -11,6 +11,8 @@
   having forests by... "degrees of popularity" criteria maybe (or other, TBD) should be useful;
 - and/or maybe I just tag the grammars and use those tags to create the forests? Though automatic
   criteria (like no. of stars) sounds more appealing than manually tagging 400 grammars...
+- could we use Git LFS? Seems like it: https://stackoverflow.com/questions/58280942/import-a-golang-module-with-lfs-objects
+  need a POC
 
 ## Automation
 
