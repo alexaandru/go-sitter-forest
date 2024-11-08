@@ -377,7 +377,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "be56ff87c659b080b43c710667c2d6cb6917e105",
+    "revision": "cab7818df8ccab265aeba4279a34d43e0db6fd6d",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1221,7 +1221,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1560,8 +1560,8 @@
   },
   {
     "reference": "main",
-    "revision": "00ad8f7b4f1596073c276d03c75254046d5af002",
-    "grammarSha": "7c1d8c61f6637f23a824a5f00705cf453b3fa0e6c94c2a8bb73c115229613304",
+    "revision": "f99259f8a2e6600f5cd5f87b42648db2519e6f73",
+    "grammarSha": "da7f023551719f1680be8f6f909bf0341b771150390408474f94a0141b7bd512",
     "language": "haml",
     "url": "https://github.com/vitallium/tree-sitter-haml",
     "maintainedBy": "@vitallium",
@@ -1833,8 +1833,8 @@
   },
   {
     "reference": "main",
-    "revision": "6f9c072d023c3886aabcd8012274461b35d2d0a9",
-    "grammarSha": "fa89551787f1982418e05956b1bf4ffafa50c28fe82434239de23fc583c23a9c",
+    "revision": "aecabede39b0db05678e2d4686258d4f71b00a51",
+    "grammarSha": "0f1e890dc9a7104489ffbfb542f994895b97c93760f25de270732d4a628b4315",
     "language": "inko",
     "url": "https://github.com/inko-lang/tree-sitter-inko",
     "maintainedBy": "@yorickpeterse"
@@ -2585,8 +2585,8 @@
   },
   {
     "reference": "main",
-    "revision": "d8b33566737f849353d08a9f8fdc86ce78d411c2",
-    "grammarSha": "44e8176c801bfadb11466869a692c028144e71a654c71a8226f6d41dc2bb9695",
+    "revision": "24f9e4103dd70c2a3a27b20bba9255065353f782",
+    "grammarSha": "e00963bf5226ce76d1dcc9e683846166e191b835d8bbe90ff9133d397a89934a",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558"
@@ -4066,8 +4066,8 @@
   },
   {
     "reference": "master",
-    "revision": "e18194c2bd1a12a3231b526fcc5476182c3ec3e1",
-    "grammarSha": "e86fd4f111fa4342ac70353166187490a4c7b858a7f5fed90a486672b89fded6",
+    "revision": "3c97db76d3cdbd002dfba493620c2d5df2fd6fa9",
+    "grammarSha": "a73a2186c712e218750aee24a0f01a6c815ec42690a639829048c1b6fe0996d4",
     "language": "unison",
     "url": "https://github.com/kylegoetz/tree-sitter-unison",
     "maintainedBy": "@tapegram",
