@@ -388,7 +388,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
-	github.com/alexaandru/go-sitter-forest/spicy v1.9.1
+	github.com/alexaandru/go-sitter-forest/spicy v1.9.2
 	github.com/alexaandru/go-sitter-forest/sql v1.9.2
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
@@ -440,7 +440,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typst v1.9.2
-	github.com/alexaandru/go-sitter-forest/udev v1.9.0
+	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
 	github.com/alexaandru/go-sitter-forest/unison v1.9.2
