@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "ea538758a1273b59774dc9179cde460d9c73fd89",
-  "grammarSha": "959f7836f214894079d86c7a90c89374044a47378b55a6616a4407b1a08dfb98",
+  "revision": "6d9c64ee6527bb35650300809bfebac37693e99f",
+  "grammarSha": "2e636a3b4cbfdfec711b76cb4d27919d89331d025884c0ac46fb0c021147fce1",
   "language": "v",
   "url": "https://github.com/vlang/v-analyzer",
   "maintainedBy": "@kkharji, @amaanq",

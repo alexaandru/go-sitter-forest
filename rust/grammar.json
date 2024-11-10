@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "2ace7a922a755960f44d73a7bb1efffeb4cc5501",
+  "revision": "48eef06e8d806413d9a617f4a3f4d3168c4e5918",
   "grammarSha": "8df6f48b1c8d29ae0aa72521fdceabca3b0817ff324edd6630f74103cbe2de96",
   "language": "rust",
   "url": "https://github.com/tree-sitter/tree-sitter-rust",
