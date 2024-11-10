@@ -39,7 +39,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.1
 	github.com/alexaandru/go-sitter-forest/c3 v1.9.3
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.1
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.2
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
@@ -95,7 +95,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/doxygen v1.9.0
 	github.com/alexaandru/go-sitter-forest/dtd v1.9.2
 	github.com/alexaandru/go-sitter-forest/dune v1.9.0
-	github.com/alexaandru/go-sitter-forest/earthfile v1.9.0
+	github.com/alexaandru/go-sitter-forest/earthfile v1.9.1
 	github.com/alexaandru/go-sitter-forest/ebnf v1.9.0
 	github.com/alexaandru/go-sitter-forest/editorconfig v1.9.1
 	github.com/alexaandru/go-sitter-forest/eds v1.9.0
@@ -153,7 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.9.1
-	github.com/alexaandru/go-sitter-forest/go v1.9.0
+	github.com/alexaandru/go-sitter-forest/go v1.9.1
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.1
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.1
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
-	github.com/alexaandru/go-sitter-forest/ignis v1.9.0
+	github.com/alexaandru/go-sitter-forest/ignis v1.9.1
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.1
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.0
+	github.com/alexaandru/go-sitter-forest/kon v1.9.1
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.3
+	github.com/alexaandru/go-sitter-forest/nu v1.9.4
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -337,7 +337,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.1
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.0
+	github.com/alexaandru/go-sitter-forest/query v1.9.1
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
 	github.com/alexaandru/go-sitter-forest/r v1.9.0
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
@@ -347,7 +347,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
-	github.com/alexaandru/go-sitter-forest/regex v1.9.4
+	github.com/alexaandru/go-sitter-forest/regex v1.9.5
 	github.com/alexaandru/go-sitter-forest/rego v1.9.0
 	github.com/alexaandru/go-sitter-forest/requirements v1.9.0
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
@@ -447,7 +447,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
 	github.com/alexaandru/go-sitter-forest/usd v1.9.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.9.0
-	github.com/alexaandru/go-sitter-forest/v v1.9.0
+	github.com/alexaandru/go-sitter-forest/v v1.9.1
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.0
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.2
