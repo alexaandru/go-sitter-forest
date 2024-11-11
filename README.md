@@ -15,8 +15,17 @@ mentioned repo then added a bunch more parsers on top of it and updated
 automation (to support more parsers and also to automatically update the
 PARSERS.md file, git tags, etc.).
 
+The credits for the parsers go to all the parsers' respective authors
+(see [grammars.json](grammars.json) for the source of each and all parsers).
+
+This repository **does NOT implement any parsers at all**, it simply automates
+pulling them in from upstream, re-generating them from `grammar.js` and
+providing the Go bindings with it.
+
 See [PARSERS.md](PARSERS.md) for the list of supported parsers.
-The end goal is (at least) parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages).
+The end goal is to maintain parity with [nvim_treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages)
+and to add any other parsers I find, so that it becomes as complete
+as possible.
 
 For contributing (or just to see how the automation works) see [CONTRIBUTING.md](CONTRIBUTING.md).
 
