@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "5a01c57fa8e3d8801953a67ae7c6b240e2284ee8",
+  "revision": "227d277b6a1a5e2bf818d6206935722a7503de08",
   "grammarSha": "7894f2301d41d09dcefc8a56aa38317358639a9a815afcb0a86211ed27d0cb29",
   "language": "verilog",
   "url": "https://github.com/tree-sitter/tree-sitter-verilog",

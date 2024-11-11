@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "04664b40c0dadb7ef37028acf3422c63271d377b",
+  "revision": "f08bb76892b93e5b23c45ac3bd6b1eea5df323cc",
   "grammarSha": "85b049335450477ef7ae5380ef3b440e7c74a310c67f822c20fc84435cffabbe",
   "language": "foam",
   "url": "https://github.com/FoamScience/tree-sitter-foam",

@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "6516cfec35479d62c0ad3c8e7e546a9774b489fd",
+  "revision": "b9b32fa042c2952a7bfca86847ea325e44ccc897",
   "grammarSha": "59b6e05a3522de085db461aabf364b1af0cf696996bb0cafd1f85b6a05280eea",
   "language": "agda",
   "url": "https://github.com/tree-sitter/tree-sitter-agda",

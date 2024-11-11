@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "6e5c043c26f2a5e8f263600290b4373ae289c1db",
+  "revision": "bb32234013bde5608c3124017072d52bfb6eb9e6",
   "grammarSha": "d539c95de189d56f63917efe36c5104f90a7bc5aea2b862ad2e9eda506e1aae0",
   "language": "ignis",
   "url": "https://github.com/Ignis-lang/tree-sitter-ignis",

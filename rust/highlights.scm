@@ -110,6 +110,7 @@
 "extern" @keyword
 "fn" @keyword
 "for" @keyword
+"gen" @keyword
 "if" @keyword
 "impl" @keyword
 "in" @keyword
@@ -120,6 +121,7 @@
 "mod" @keyword
 "move" @keyword
 "pub" @keyword
+"raw" @keyword
 "ref" @keyword
 "return" @keyword
 "static" @keyword

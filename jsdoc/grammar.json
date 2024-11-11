@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "64ba0cd3bcab20dcb9d798de9d8b50445159d81a",
+  "revision": "b253abf68a73217b7a52c0ec254f4b6a7bb86665",
   "grammarSha": "da7a172aceb1460e9ca9bfb80492bdff8fdd61255b02080aa78ffb4dee66b9b0",
   "language": "jsdoc",
   "url": "https://github.com/tree-sitter/tree-sitter-jsdoc",

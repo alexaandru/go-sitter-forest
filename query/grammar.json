@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "d0d9126a9b80a0bb609acdf960d3f1613fc319db",
-  "grammarSha": "0ab1219ff4c4de9aaf477687508b62368d6df92d3b11d47c2d42e8869b9571df",
+  "revision": "a6674e279b14958625d7a530cabe06119c7a1532",
+  "grammarSha": "4d62f78f7c3bba553e71ee5d8b9fb71f71e40eb1d5778407045103c21b1a9a61",
   "language": "query",
   "altName": "Tree-Sitter query language",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
