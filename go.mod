@@ -39,7 +39,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.1
 	github.com/alexaandru/go-sitter-forest/c3 v1.9.3
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.2
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.3
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
@@ -70,7 +70,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
 	github.com/alexaandru/go-sitter-forest/crystal v1.9.0
-	github.com/alexaandru/go-sitter-forest/css v1.9.0
+	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
 	github.com/alexaandru/go-sitter-forest/cue v1.9.0
@@ -215,7 +215,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
-	github.com/alexaandru/go-sitter-forest/julia v1.9.1
+	github.com/alexaandru/go-sitter-forest/julia v1.9.2
 	github.com/alexaandru/go-sitter-forest/just v1.9.3
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
@@ -337,7 +337,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.1
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.1
+	github.com/alexaandru/go-sitter-forest/query v1.9.2
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
 	github.com/alexaandru/go-sitter-forest/r v1.9.0
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
@@ -361,7 +361,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.1
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/rust v1.9.3
+	github.com/alexaandru/go-sitter-forest/rust v1.9.4
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.1
@@ -431,12 +431,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/toml v1.9.1
 	github.com/alexaandru/go-sitter-forest/tort v1.9.0
 	github.com/alexaandru/go-sitter-forest/tsv v1.9.0
-	github.com/alexaandru/go-sitter-forest/tsx v1.9.0
+	github.com/alexaandru/go-sitter-forest/tsx v1.9.1
 	github.com/alexaandru/go-sitter-forest/tup v1.9.0
 	github.com/alexaandru/go-sitter-forest/turtle v1.9.0
 	github.com/alexaandru/go-sitter-forest/twig v1.9.0
 	github.com/alexaandru/go-sitter-forest/twolc v1.9.0
-	github.com/alexaandru/go-sitter-forest/typescript v1.9.0
+	github.com/alexaandru/go-sitter-forest/typescript v1.9.1
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typst v1.9.2
