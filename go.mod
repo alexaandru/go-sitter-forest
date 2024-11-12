@@ -194,9 +194,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
-	github.com/alexaandru/go-sitter-forest/idl v1.9.1
+	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
-	github.com/alexaandru/go-sitter-forest/ignis v1.9.1
+	github.com/alexaandru/go-sitter-forest/ignis v1.9.2
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.1
@@ -405,7 +405,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/surrealql v1.9.0
 	github.com/alexaandru/go-sitter-forest/sus v1.9.2
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
-	github.com/alexaandru/go-sitter-forest/sway v1.9.0
+	github.com/alexaandru/go-sitter-forest/sway v1.9.1
 	github.com/alexaandru/go-sitter-forest/swift v1.9.0
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.0
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.0
