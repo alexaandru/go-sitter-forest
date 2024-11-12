@@ -4058,6 +4058,17 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "7b0199a46387d86791c448a6c9188d89a319077a",
+    "grammarSha": "81a88576edc77a8ec06c652a91734d71a9f40b295b1ba7a470f8511dfbc26933",
+    "language": "tera",
+    "url": "https://github.com/uncenter/tree-sitter-tera",
+    "maintainedBy": "@uncenter",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "80d0cf4a45ff2f6424bc9147e51fb97e91316629",
     "grammarSha": "0696735e5c503ab5e1869c909d0f795ae1fb94c97c45fe6fe328cb4d4c0b840a",

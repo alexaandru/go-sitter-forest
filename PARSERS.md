@@ -1,4 +1,4 @@
-# 478 Supported Parsers
+# 479 Supported Parsers
 
 9 pending, 9 skipped regeneration, 34 missing queries
 
@@ -427,6 +427,7 @@
 - [x] [tcl](https://github.com/tree-sitter-grammars/tree-sitter-tcl) ✔️ (maintained by @lewis6991)
 - [x] [teal](https://github.com/euclidianAce/tree-sitter-teal) ✔️ (maintained by @euclidianAce)
 - [x] [templ](https://github.com/vrischmann/tree-sitter-templ) ✔️ (maintained by @vrischmann)
+- [x] [tera](https://github.com/uncenter/tree-sitter-tera) ✔️ (maintained by @uncenter)
 - [x] [terra](https://github.com/tpkessler/tree-sitter-terra-rewrite) ✔️ (maintained by @tpkessler)
 - [x] [test](https://github.com/tree-sitter-grammars/tree-sitter-test) ✔️ (maintained by @ObserverOfTime)
 - [x] [textproto](https://github.com/PorterAtGoogle/tree-sitter-textproto) ✔️ (maintained by @Porter)

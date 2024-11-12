@@ -435,6 +435,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/tcl"
 	"github.com/alexaandru/go-sitter-forest/teal"
 	"github.com/alexaandru/go-sitter-forest/templ"
+	"github.com/alexaandru/go-sitter-forest/tera"
 	"github.com/alexaandru/go-sitter-forest/terra"
 	"github.com/alexaandru/go-sitter-forest/test"
 	"github.com/alexaandru/go-sitter-forest/textproto"
@@ -931,6 +932,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"tcl":                    tcl.GetLanguage,
 	"teal":                   teal.GetLanguage,
 	"templ":                  templ.GetLanguage,
+	"tera":                   tera.GetLanguage,
 	"terra":                  terra.GetLanguage,
 	"terraform":              hcl.GetLanguage,
 	"test":                   test.GetLanguage,
@@ -1413,6 +1415,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"tcl":                    tcl.GetQuery,
 	"teal":                   teal.GetQuery,
 	"templ":                  templ.GetQuery,
+	"tera":                   tera.GetQuery,
 	"terra":                  terra.GetQuery,
 	"terraform":              hcl.GetQuery,
 	"test":                   test.GetQuery,

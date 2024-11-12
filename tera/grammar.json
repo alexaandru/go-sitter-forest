@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "7b0199a46387d86791c448a6c9188d89a319077a",
+  "grammarSha": "81a88576edc77a8ec06c652a91734d71a9f40b295b1ba7a470f8511dfbc26933",
+  "language": "tera",
+  "url": "https://github.com/uncenter/tree-sitter-tera",
+  "maintainedBy": "@uncenter",
+  "files": [
+    "scanner.c"
+  ]
+}

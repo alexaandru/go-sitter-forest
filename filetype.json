@@ -475,6 +475,7 @@
     "tcl":                ["tcl"],
     "teal":               ["tl"],
     "templ":              ["templ"],
+    "tera":               ["tera"],
     "terra":              ["terra"],
     "terraform":          ["tf"],
     "test":               ["test"],
