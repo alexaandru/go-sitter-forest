@@ -16,7 +16,7 @@ automation (to support more parsers and also to automatically update the
 PARSERS.md file, git tags, etc.).
 
 The credits for the parsers go to all the parsers' respective authors
-(see [grammars.json](grammars.json) for the source of each and all parsers).
+(see [grammars.json](grammars.json) for the source of each and all of the parsers).
 
 This repository **does NOT implement any parsers at all**, it simply automates
 pulling them in from upstream, re-generating them from `grammar.js` and
@@ -28,6 +28,50 @@ and to add any other parsers I find, so that it becomes as complete
 as possible.
 
 For contributing (or just to see how the automation works) see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Differences
+
+- ~480 parsers in this repo vs. ~30 in the parent repo;
+- all (but 9) are regenerated from `grammar.js` (via `tree-sitter generate`)
+  instead of copying the pre-generated files from the parser repo;
+- end-to-end "tree-sitter version alignment", see below,
+- [queries fetching](#queries) mechanism, so that you can get the queries along
+  with the parsers;
+- [filetype detection](#file-type-detection) mechanism that allows
+  to quickly determine which parser and/or query you should pull for
+  a given file (see [filetype.json](filetype.json));
+- [3 different ways you can use parsers](#usage);
+- kept up to date pretty much on a daily basis with the parsers' changes;
+- kept up to date with [tree-sitter](https://github.com/tree-sitter/tree-sitter);
+- constantly adding new parsers as they become available, even
+  new/experimental ones;
+- tests suite to ensure all the parsers in the repo can actually parse
+  content (can build & run successfuly).
+
+### Tree-Sitter Version Alignment
+
+This library is designed to ensure that we are aligned end-to-end with
+the latest tree-sitter version:
+
+- the bindings library [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare)
+  (itself forked from the same repo - see it's own README for why and/or differences),
+- the `tree-sitter-cli` in [package.json](package.json) and consequently
+- the generated parsers included, ALL use the same tree-sitter version
+  (generally the latest).
+
+Contrast that with the parent repo where bindings lag quite a bit
+behind tree-sitter (was last updated to v0.22.5) and then on top of that,
+the parsers' files (`parser.c`, `parser.h`, etc.) are copied from the
+parser repos, meaning that they are each built with whatever version
+happend to be last built by the parsers' repo maintainers, so it
+can vary greatly from each other AND from the version the bindings
+are built with.
+
+Just as an example, in the parent repo, **toml** parser
+was generated with `https://github.com/ikatyang/tree-sitter/tree/fc5a692`
+which is `v0.19.3~10` of **tree-sitter**, vs. in here where it was
+last rebuilt with `v0.24.2` (actually, with `0.24.4` but there were no
+changes in `parser.c` so nothing was committed).
 
 ## Naming Conventions
 
