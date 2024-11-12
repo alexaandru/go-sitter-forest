@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "5a5ca8551a179998360b4a4ca2c0f366a35acc03",
+  "revision": "d9219ada6e1a2c8f0ab0304a8bd9ca4285ae0468",
   "grammarSha": "c139ccf784d7f2c377cbf702e0fe1daaa8e9ac2d76a7a8c0f81bfdb387b45ee2",
   "language": "html",
   "url": "https://github.com/tree-sitter/tree-sitter-html",

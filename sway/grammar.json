@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "03d97aad336ecc6b302f23bdd9b695ddc937160b",
-  "grammarSha": "c650078d982c4428e275fbca78fd835fe42996a80b255a9467b19b12327a5b06",
+  "revision": "395006713db3bbb90d267ebdfcbf1881b399b05c",
+  "grammarSha": "3fcfb89eb0d7b3f5259cbc5ba27c1cf5b6fb8fc621d65ebcc9462f8b525b11ea",
   "language": "sway",
   "url": "https://github.com/FuelLabs/tree-sitter-sway",
   "maintainedBy": "@ribru17",

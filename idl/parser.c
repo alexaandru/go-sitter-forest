@@ -572,7 +572,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_TRUE] = "TRUE",
   [anon_sym_FALSE] = "FALSE",
   [anon_sym_POUNDdefine] = "#define",
-  [aux_sym_preproc_define_token1] = "preproc_define_token1",
+  [aux_sym_preproc_define_token1] = "args",
   [aux_sym_preproc_call_token1] = "preproc_call_token1",
   [sym_preproc_directive] = "preproc_directive",
   [sym_preproc_arg] = "preproc_arg",
@@ -1734,8 +1734,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [aux_sym_preproc_define_token1] = {
-    .visible = false,
-    .named = false,
+    .visible = true,
+    .named = true,
   },
   [aux_sym_preproc_call_token1] = {
     .visible = false,
