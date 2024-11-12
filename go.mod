@@ -418,6 +418,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
 	github.com/alexaandru/go-sitter-forest/templ v1.9.1
+	github.com/alexaandru/go-sitter-forest/tera v1.9.0
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
