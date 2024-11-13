@@ -29,6 +29,9 @@
 
 ;; Types
 (type_identifier) @type
+
+(type_identifier (identifier)) @variable
+
 (primitive_keyword) @type.builtin
 
 ;; Funciones
