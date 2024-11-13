@@ -38,7 +38,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bqn v1.9.0
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.1
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.3
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.4
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.3
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
-	github.com/alexaandru/go-sitter-forest/ignis v1.9.2
+	github.com/alexaandru/go-sitter-forest/ignis v1.9.3
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.1
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.1
+	github.com/alexaandru/go-sitter-forest/kon v1.9.2
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -444,7 +444,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
-	github.com/alexaandru/go-sitter-forest/unison v1.9.2
+	github.com/alexaandru/go-sitter-forest/unison v1.9.3
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
 	github.com/alexaandru/go-sitter-forest/usd v1.9.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.9.0
