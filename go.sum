@@ -426,6 +426,8 @@ github.com/alexaandru/go-sitter-forest/julia v1.9.2 h1:auAS4tRcjKn4PN33Za5V1r7aE
 github.com/alexaandru/go-sitter-forest/julia v1.9.2/go.mod h1:VMWcpM3Ka8qVhQVQzK0h54qgsNWRJPxiO0A0D7J3STg=
 github.com/alexaandru/go-sitter-forest/just v1.9.3 h1:I17AvtGa+Uw5wvdBcdHf529LEQ8Wrh6rgKejD6xdXLA=
 github.com/alexaandru/go-sitter-forest/just v1.9.3/go.mod h1:cnSsa2tjY2sue2G9lDOUNs5SEH8jT28Qog7MNq0hxOE=
+github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0 h1:EsQmhGmcl3Stdq4Zl9ugzJ/e8hIiefQWxUwkRFlhbzM=
+github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0/go.mod h1:f6v1n2+DyV4cq85BQ/vbYR+6BLpi/M7oLZVFRbZfP0Y=
 github.com/alexaandru/go-sitter-forest/kcl v1.9.0 h1:Vy8touXmpx8lSzVkgIZK3y/Gf27Ue/WsqaF0e+AztV8=
 github.com/alexaandru/go-sitter-forest/kcl v1.9.0/go.mod h1:CyrshWirDrpOxASlKNFSq2ZN7YWNPYKr653rTpSNFuk=
 github.com/alexaandru/go-sitter-forest/kconfig v1.9.0 h1:yFTQxIU7C4eJonaPYFTViuAd/J3Udxsc203fcYviSck=
