@@ -140,10 +140,17 @@ func main() {
 }
 ```
 
+Please note that in standalone mode, the `GetLanguage()` returns an `unsafe.Pointer`
+rather than a `*sitter.Language`. To pass it to `sitter.Parse()` or `parser.SetLanguage()`
+you need to wrap it in `sitter.NewLanguage()` as above.
+
+The rationale is to enable end users to use the parsers with the bindings library
+of their choice, whether it's @smacker's library or [go-tree-sitter-bare](https://github.com/alexaandru/go-tree-sitter-bare).
+
 #### 2. In Bulk
 
 If (and only IF) you want to use ALL (or most of) the parsers (beware, your binary
-size **will be huge**, as in 300MB+ huge) then you can use the root (`forest`) package:
+size **will be huge**, as in 350MB+ huge) then you can use the root (`forest`) package:
 
 ```Go
 package main
@@ -174,6 +181,9 @@ func main() {
 this way you can fetch and use any of the parsers dynamically, without having to
 manually import them. You should rarely need this though, unless you're writing
 a text editor or something.
+
+Note that unlike individual mode, the `forest.GetLanguage()` returns
+a `*sitter.Language` which can be passed directly to `parser.SetLanguage()`.
 
 #### 3. As a Plugin
 
