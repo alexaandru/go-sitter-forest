@@ -1,4 +1,4 @@
-# 479 Supported Parsers
+# 480 Supported Parsers
 
 9 pending, 9 skipped regeneration, 34 missing queries
 
@@ -222,6 +222,7 @@
 - [x] [jule](https://github.com/TheLooped/tree-sitter-jule) 🗸 (maintained by @TheLooped)
 - [x] [julia](https://github.com/tree-sitter/tree-sitter-julia) ✔️ (maintained by @theHamsta)
 - [x] [just](https://github.com/IndianBoy42/tree-sitter-just) ✔️ (maintained by @Hubro)
+- [x] [kamailio_cfg](https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg) ✔️ (maintained by @IbrahimShahzad)
 - [x] [kcl](https://github.com/kcl-lang/tree-sitter-kcl) 🗸 (maintained by @Vishalk91-4)
 - [x] [kconfig](https://github.com/tree-sitter-grammars/tree-sitter-kconfig) ✔️ (maintained by @amaanq)
 - [x] [kdl](https://github.com/tree-sitter-grammars/tree-sitter-kdl) ✔️ (maintained by @amaanq)

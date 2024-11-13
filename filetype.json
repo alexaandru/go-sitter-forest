@@ -59,6 +59,7 @@
     "gowork":             ["go.work"],
     "json":               ["Pipfile.lock", "composer.lock", "deno.lock", "flake.lock", ".prettierrc", ".babelrc", ".eslintrc"],
     "just":               [".JUSTFILE", ".Justfile", ".justfile", "JUSTFILE", "Justfile", "justfile"],
+    "kamailio_cfg":       ["kamailio.cfg"],
     "linkerscript":       ["ld.script"],
     "make":               ["Makefile", "makefile", "mkfile"],
     "mandbconfig":        ["man_db.conf"],

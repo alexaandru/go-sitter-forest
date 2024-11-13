@@ -234,6 +234,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/jule"
 	"github.com/alexaandru/go-sitter-forest/julia"
 	"github.com/alexaandru/go-sitter-forest/just"
+	"github.com/alexaandru/go-sitter-forest/kamailio_cfg"
 	"github.com/alexaandru/go-sitter-forest/kcl"
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
@@ -731,6 +732,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"jule":                   jule.GetLanguage,
 	"julia":                  julia.GetLanguage,
 	"just":                   just.GetLanguage,
+	"kamailio_cfg":           kamailio_cfg.GetLanguage,
 	"kcl":                    kcl.GetLanguage,
 	"kconfig":                kconfig.GetLanguage,
 	"kdl":                    kdl.GetLanguage,
@@ -1214,6 +1216,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"jule":                   jule.GetQuery,
 	"julia":                  julia.GetQuery,
 	"just":                   just.GetQuery,
+	"kamailio_cfg":           kamailio_cfg.GetQuery,
 	"kcl":                    kcl.GetQuery,
 	"kconfig":                kconfig.GetQuery,
 	"kdl":                    kdl.GetQuery,
