@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "b4aa050877ab884a402290fc40dffcf66e922d8e",
-  "grammarSha": "abb8cc23e3a0a2c6ab27e2e542880fc456328e4e80cbf78e3a63c0882307a2b3",
+  "revision": "3c468620e7c2ffa69441de60161c4e4a919969f7",
+  "grammarSha": "b4aa48441a814b94306bb9fcf77ad0b44a6094e7f23dbb1023c43fda4d514a4e",
   "language": "sparql",
   "url": "https://github.com/IoannisNezis/tree-sitter-sparql",
   "maintainedBy": "@BonaBeavis, @IoannisNezis"
