@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "2097fa502efa21349d26af0ffee55d773015e481",
-  "grammarSha": "6a8c3ee248441b0dd28f344f372f48b6f8fc0c7ff9e9735beb81142ba7d7214e",
+  "revision": "c094bd57652f8a08edc31d79a31222268fe798ee",
+  "grammarSha": "8031d87f81c7e59621af9bab1826669c8a12f87e11f5db3a5c64d945d5a3ef6d",
   "language": "r",
   "url": "https://github.com/r-lib/tree-sitter-r",
   "maintainedBy": "@echasnovski",

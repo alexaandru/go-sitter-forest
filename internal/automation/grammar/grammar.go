@@ -67,6 +67,10 @@ type Grammar struct {
 	// a slash, they will be considered repo absolute paths.
 	Files []string `json:"files,omitempty"`
 
+	// Tags is a way to group various grammars together.
+	// The intended use is for creating smaller, more focused "forests".
+	Tags []string `json:"tags,omitempty"`
+
 	// SkipGenerate flag is used to skip parser regeneration from `grammar.js`,
 	// for the files that cannot be regenerated. That way, they continue to use
 	// the parser files provided by their repo, which may or may not be generated
