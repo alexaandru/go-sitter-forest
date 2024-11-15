@@ -101,7 +101,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/eds v1.9.0
 	github.com/alexaandru/go-sitter-forest/eex v1.9.0
 	github.com/alexaandru/go-sitter-forest/effekt v1.9.0
-	github.com/alexaandru/go-sitter-forest/eiffel v1.9.1
+	github.com/alexaandru/go-sitter-forest/eiffel v1.9.2
 	github.com/alexaandru/go-sitter-forest/elisp v1.9.0
 	github.com/alexaandru/go-sitter-forest/elixir v1.9.1
 	github.com/alexaandru/go-sitter-forest/elm v1.9.0
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.3
+	github.com/alexaandru/go-sitter-forest/kon v1.9.4
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -340,7 +340,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
 	github.com/alexaandru/go-sitter-forest/query v1.9.2
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
-	github.com/alexaandru/go-sitter-forest/r v1.9.0
+	github.com/alexaandru/go-sitter-forest/r v1.9.1
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.0
@@ -409,7 +409,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
 	github.com/alexaandru/go-sitter-forest/swift v1.9.0
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.0
-	github.com/alexaandru/go-sitter-forest/syphon v1.9.0
+	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.1
@@ -480,7 +480,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
 	github.com/alexaandru/go-sitter-forest/zeek v1.9.1
-	github.com/alexaandru/go-sitter-forest/zig v1.9.0
+	github.com/alexaandru/go-sitter-forest/zig v1.9.1
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
 	github.com/alexaandru/go-tree-sitter-bare v1.7.3
