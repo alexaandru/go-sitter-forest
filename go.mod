@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
-	github.com/alexaandru/go-sitter-forest/ignis v1.9.3
+	github.com/alexaandru/go-sitter-forest/ignis v1.9.4
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.1
@@ -215,7 +215,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
-	github.com/alexaandru/go-sitter-forest/julia v1.9.2
+	github.com/alexaandru/go-sitter-forest/julia v1.9.3
 	github.com/alexaandru/go-sitter-forest/just v1.9.3
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.4
+	github.com/alexaandru/go-sitter-forest/kon v1.9.5
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.4
+	github.com/alexaandru/go-sitter-forest/nu v1.9.5
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -389,8 +389,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.1
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
-	github.com/alexaandru/go-sitter-forest/spicy v1.9.2
-	github.com/alexaandru/go-sitter-forest/sql v1.9.2
+	github.com/alexaandru/go-sitter-forest/spicy v1.9.3
+	github.com/alexaandru/go-sitter-forest/sql v1.9.3
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
