@@ -263,7 +263,7 @@
 - [x] [mandbconfig](https://github.com/TornaxO7/tree-sitter-man-db-config) 🗸 (maintained by @TornaxO7)
 - [x] [markdown (basic highlighting)](https://github.com/tree-sitter-grammars/tree-sitter-markdown) ✔️ (maintained by @MDeiml)
 - [x] [markdown_inline (needed for full highlighting)](https://github.com/tree-sitter-grammars/tree-sitter-markdown) ✔️ (maintained by @MDeiml)
-- [x] [marte](https://github.com/andretun/tree-sitter-marte) ✔️ (maintained by @andretun)
+- [x] [marte](https://github.com/andretun/tree-sitter-marte) ✔️ (maintained by @andretun; ❌repository was removed by owner)
 - [x] [matlab](https://github.com/acristoffers/tree-sitter-matlab) ✔️ (maintained by @acristoffers)
 - [x] [mcfuncx](https://github.com/PFiS1737/tree-sitter-mcfuncx) ✔️ (maintained by @PFiS1737)
 - [x] [menhir](https://github.com/Kerl13/tree-sitter-menhir) ✔️ (maintained by @Kerl13)

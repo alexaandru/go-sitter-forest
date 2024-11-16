@@ -385,7 +385,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "fe5d3cecbd2ad167b44951916b42eda111377b86",
+    "revision": "bc395eb8896813e810524af6023972b2757fb97c",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1273,7 +1273,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1877,8 +1877,8 @@
   },
   {
     "reference": "main",
-    "revision": "4d27b9408e980b428070ddb87ceabe0ce618b680",
-    "grammarSha": "91019f4bd43fc10a4e62df2dfdf3d9d29b50215cc0d6159acae6167c25d7fdbb",
+    "revision": "7385a03b06b978b5f865f028e5ada80f6eb96611",
+    "grammarSha": "89dd3aadf6b1f20f273820745e66a5137b4c5293824349e567d971c1f616f37e",
     "language": "ignis",
     "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
     "maintainedBy": "@BasileusErwin"
@@ -2057,7 +2057,7 @@
   },
   {
     "reference": "master",
-    "revision": "a8e1262997d5a45520a06cbe1b86c0737d507054",
+    "revision": "fe553797479a8f58abc713330b640af0f569f915",
     "grammarSha": "d64dcbc5316f869e8b7f8c7f277a88e0ee3266933e5985a8f8f1f01d399e51c1",
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
@@ -2139,8 +2139,8 @@
   },
   {
     "reference": "main",
-    "revision": "3c87e3b4a9409b5c43fe83aadc75997acd77b037",
-    "grammarSha": "e005de480c833dc49eb114ea71d25355fea3e1aaf7b32c0957e81c65431d1f6c",
+    "revision": "5893244bff99138842152fbd6ef52b700348669f",
+    "grammarSha": "9478b808b077e3f0b65afee837c3cf544b47e6da2c164e51cac1375c095f057e",
     "language": "kon",
     "url": "https://github.com/akonwi/tree-sitter-kon",
     "maintainedBy": "@akonwi"
@@ -2469,7 +2469,9 @@
     "grammarSha": "71b0b5b50a82e9fc921aa4b1b09b394345bb55d1793677f0b73b1cc634878d6b",
     "language": "marte",
     "url": "https://github.com/andretun/tree-sitter-marte",
-    "maintainedBy": "@andretun"
+    "doc": "repository was removed by owner",
+    "maintainedBy": "@andretun",
+    "skipUpdate": true
   },
   {
     "reference": "main",
@@ -2755,8 +2757,8 @@
   },
   {
     "reference": "main",
-    "revision": "86aabeeaf4d3fc544d132904ef9981a888314ec0",
-    "grammarSha": "0363da88c941e9797dcf0fa3bff5913aa2b1a0e46891f2ec4ce083cbdf5e7163",
+    "revision": "59baf26c9d19a21b18e3a4d83a3c2ced41ac0a8f",
+    "grammarSha": "7034144bc8143db3063937e6cabad333b830f55b9918704fe2013589f4ae7a32",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558"
@@ -3584,8 +3586,8 @@
   },
   {
     "reference": "main",
-    "revision": "3efb5f36e25681404f074a5bcdef8b7d594e1df5",
-    "grammarSha": "352570dd10cefdc1a8b793207270f3c1a63b62bf5e9fb21362059f050f1a43ad",
+    "revision": "22264a87e7a263d4ac36eaeec730db5030a1d43b",
+    "grammarSha": "7215d5c5c487d11379ded6ec05edcb061abae00b0747f84d0408a5e011508533",
     "language": "sdml",
     "url": "https://github.com/sdm-lang/tree-sitter-sdml",
     "maintainedBy": "@johnstonskj"
@@ -3771,16 +3773,16 @@
   },
   {
     "reference": "main",
-    "revision": "07fe81c375421f5fe3b5b9a233f129900d41fcd1",
-    "grammarSha": "d4506aa668141d3964f1f54a2b0220a47fe05ddec16849a40f804d7af915cb46",
+    "revision": "5cb2d6ea6725c146ea146d58407e91ed915cacd3",
+    "grammarSha": "032d8a1c9efea5fa1386d32822e3b4fe806ea0d9d839bae95b673b86c489fa0e",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
     "maintainedBy": "@bbannier"
   },
   {
     "reference": "main",
-    "revision": "dc2b8f53b6e2f5cdbe6f2a08cf63cfebe0002119",
-    "grammarSha": "6f3776b36726aacd110c11eef59da48e939e1e586af407ce18d6f017432d70dd",
+    "revision": "9383eec31d637e73bb6f5b1b8c9963c4a6936d49",
+    "grammarSha": "f2a54e07633b85aeb77308dc6cb6d115f2db6b3f29bb164d99dd1ccc40dade3d",
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
     "maintainedBy": "@DerekStride",

@@ -4,5 +4,7 @@
   "grammarSha": "71b0b5b50a82e9fc921aa4b1b09b394345bb55d1793677f0b73b1cc634878d6b",
   "language": "marte",
   "url": "https://github.com/andretun/tree-sitter-marte",
-  "maintainedBy": "@andretun"
+  "doc": "repository was removed by owner",
+  "maintainedBy": "@andretun",
+  "skipUpdate": true
 }
