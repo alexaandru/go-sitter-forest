@@ -122,7 +122,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.9.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.9.0
 	github.com/alexaandru/go-sitter-forest/fish v1.9.0
-	github.com/alexaandru/go-sitter-forest/flamingo v1.9.0
+	github.com/alexaandru/go-sitter-forest/flamingo v1.9.1
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.0
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
@@ -215,7 +215,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
-	github.com/alexaandru/go-sitter-forest/julia v1.9.3
+	github.com/alexaandru/go-sitter-forest/julia v1.9.4
 	github.com/alexaandru/go-sitter-forest/just v1.9.3
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
@@ -300,7 +300,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
-	github.com/alexaandru/go-sitter-forest/perl v1.9.2
+	github.com/alexaandru/go-sitter-forest/perl v1.9.3
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.1
