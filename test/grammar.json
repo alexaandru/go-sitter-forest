@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "d777a9ea8c9bbae622b79e76ccd4f4fe184db410",
+  "revision": "377893aa0af0095eccd44b0112e19ae5b569c080",
   "grammarSha": "bc156f60f2849090ea0e2c69a7d423b39a3af3e5863448003d3f8528b7842acf",
   "language": "test",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-test",

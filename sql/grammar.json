@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "9383eec31d637e73bb6f5b1b8c9963c4a6936d49",
+  "revision": "42400853c89b3ebd01606d358c6b96b78e076ffc",
   "grammarSha": "f2a54e07633b85aeb77308dc6cb6d115f2db6b3f29bb164d99dd1ccc40dade3d",
   "language": "sql",
   "url": "https://github.com/DerekStride/tree-sitter-sql",
