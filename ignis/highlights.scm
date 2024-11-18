@@ -13,17 +13,18 @@
 ;; Symbols
 ["(" ")" "{" "}" "[" "]"] @punctuation.bracket
 [":" "." "," ";" ] @punctuation.delimiter
-["+" "-" "*" "/" "%" "&" "|" "^" "<<" ">>" "<" ">" "<=" ">=" "==" "!=" "!" "..." ".." "::" "=" "+=" "-=" "*=" "/=" "%=" "&=" "|=" "^=" "<<=" ">>="] @operator
+["+" "-" "*" "/" "%" "&" "|" "^" "<<" ">>" "<" ">" "<=" ">=" "==" "!=" "!" "..." ".." "::" "=" "+=" "-=" "*=" "/=" "%=" "&=" "|=" "^=" "<<=" ">>=" "#" "?" "->"] @operator
 
 ;; keyword
 [
   "if" "else" "let" "return" "function" "import" "from" "for" "enum" "export"
   "while" "of" "interface" "extends" "public" "private" "new" "class"
   "implements" "static" "final" "const" "as" "void" "extern" "unknown" "type" "record"
-  "decorator" (this_expression) "match" "when" "abstract" "mut" "namespace" "meta"
+  "decorator" (this_expression) "match" "when" "abstract" "mut" "namespace" "meta" "declare"
 ] @keyword
 
 (identifier) @variable
+"_" @variable
 
 (primitive_keyword) @keyword
 
@@ -72,3 +73,5 @@
 (type_definition (identifier) @type)
 
 (vector_access_expression (identifier) @variable)
+
+(metadata_expression (identifier) @variable)
