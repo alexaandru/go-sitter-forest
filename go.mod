@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.9.0
-	github.com/alexaandru/go-sitter-forest/abl v1.9.2
+	github.com/alexaandru/go-sitter-forest/abl v1.9.3
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
@@ -136,7 +136,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.0
 	github.com/alexaandru/go-sitter-forest/gap v1.9.0
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.0
-	github.com/alexaandru/go-sitter-forest/gdscript v1.9.1
+	github.com/alexaandru/go-sitter-forest/gdscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
 	github.com/alexaandru/go-sitter-forest/gherkin v1.9.0
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
-	github.com/alexaandru/go-sitter-forest/ignis v1.9.4
+	github.com/alexaandru/go-sitter-forest/ignis v1.9.5
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.1
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.5
+	github.com/alexaandru/go-sitter-forest/kon v1.9.6
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.5
+	github.com/alexaandru/go-sitter-forest/nu v1.9.6
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -327,7 +327,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/proxima v1.9.1
 	github.com/alexaandru/go-sitter-forest/prql v1.9.1
 	github.com/alexaandru/go-sitter-forest/psv v1.9.0
-	github.com/alexaandru/go-sitter-forest/pug v1.9.0
+	github.com/alexaandru/go-sitter-forest/pug v1.9.1
 	github.com/alexaandru/go-sitter-forest/puppet v1.9.0
 	github.com/alexaandru/go-sitter-forest/purescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.9.0
