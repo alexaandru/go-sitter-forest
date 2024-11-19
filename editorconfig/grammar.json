@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "e47638f125a4d8256f4c45f0570c8918d3a1b237",
-  "grammarSha": "5ec5e6fd3bb918bce3f9251251756eb0e5177d00e3c4aef1f4aef65d62013fa2",
+  "revision": "511d5f387426ba555d7fb33e726ab6770f477a49",
+  "grammarSha": "6ce82e9a519321b0fbb6c25ea097f22c7f667dab4e1240a042d1d9e38651be43",
   "language": "editorconfig",
   "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
   "maintainedBy": "@ValdezFOmar",

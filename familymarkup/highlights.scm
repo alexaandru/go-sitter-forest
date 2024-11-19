@@ -1,37 +1,37 @@
 (family_name
-  (name) @constant.family_name
+  (name) @class.declaration.family_name
 )
 
 (family_name
   (name_aliases
-    (name) @constant.family_name.alias
+    (name) @class.declaration.family_name.alias
   )
 )
 
 (name_ref
-  (surname) @constant.family_name.ref
+  (surname) @class.family_name.ref
 )
 
 (name_ref
-  (name) @constant.name.ref
+  (name) @property.static.name.ref
 )
 
 (name_def 
-  (name) @constant.name.def
+  (name) @property.declaration.static.name.def
 )
 
 (name_def 
-  (name_aliases (name) @constant.name.def.alias)
+  (name_aliases (name) @property.declaration.static.name.def.alias)
 )
 
 (sources
-  (name) @constant.name.ref
+  (name) @property.static.name.ref
 )
 
 (targets
   (name_def
     .
-    (name) @constant.name.ref
+    (name) @property.static.name.ref
     .
   )
 )
@@ -41,14 +41,14 @@
   (targets
     (name_def
       .
-      (name) @constant.name.def
+      (name) @property.declaration.static.name.def
       .
     )
   )
 )
 
 (new_surname
-  (name) @constant.family_name.ref
+  (name) @class.family_name.ref
 )
 
 (unknown) @string.unknown

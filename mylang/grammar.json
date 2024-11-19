@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "2fb34787def6a1f31a3f0c53d7b7f3fbdc5963c6",
-  "grammarSha": "2878ffcf2afc83c1551a1b1ca5a94e919025169b0b8a1d1ab7ec44c16f423756",
+  "revision": "72bbf026b26e08aa283984f197ebd9febc394b93",
+  "grammarSha": "97ccb83314645e325d5eca9076ae178e72277ab0d06cf5961a295ca313098979",
   "language": "mylang",
   "url": "https://github.com/marc9622/tree-sitter-mylang",
   "maintainedBy": "@marc9622"

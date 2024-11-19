@@ -313,7 +313,7 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 	}
 
 	// TODO: Need to figure out an heuristic here, this is not scalable.
-	if gr.Language == "dtd" || gr.Language == "xml" || gr.Language == "editorconfig" || gr.Language == "idris" || gr.Language == "xresources" {
+	if gr.Language == "dtd" || gr.Language == "xml" || gr.Language == "idris" {
 		err = os.WriteFile(filepath.Join(filepath.Dir(dst), "package.json"), []byte(`{"type":"module"}`), os.ModePerm) //nolint:gosec // ok
 		if err != nil {
 			return
