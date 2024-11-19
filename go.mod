@@ -114,7 +114,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.1
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.2
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
@@ -196,7 +196,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
-	github.com/alexaandru/go-sitter-forest/ignis v1.9.5
+	github.com/alexaandru/go-sitter-forest/ignis v1.9.6
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.1
@@ -272,7 +272,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.9.0
 	github.com/alexaandru/go-sitter-forest/mustache v1.9.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.9.0
-	github.com/alexaandru/go-sitter-forest/mylang v1.9.1
+	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.0
 	github.com/alexaandru/go-sitter-forest/nelua v1.9.0
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.6
+	github.com/alexaandru/go-sitter-forest/nu v1.9.7
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
