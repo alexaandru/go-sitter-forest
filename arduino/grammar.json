@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "415ebc8f75eb02a748faa03f5af199f08ced120f",
-  "grammarSha": "e64b5f1a882101f66aeec408b9fe68ea2c149674db1cdf747eab6f4c367db047",
+  "revision": "017696bdf47ca2b10948c5a511f9ab387722d0f3",
+  "grammarSha": "a778a232a40235c5c89b367059fa1ef56f239087ca76d73bfe9fcfbe7563cfaa",
   "language": "arduino",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-arduino",
   "maintainedBy": "@ObserverOfTime",

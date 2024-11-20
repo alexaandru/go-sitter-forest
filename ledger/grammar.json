@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "a2eff7fee59ee6adfc4a3646e2f41ba3b340a97d",
-  "grammarSha": "db41a3e6a4ec72fc058180ae12c2b7c8dc1b828f50a75e59fcbc9766e3078f74",
+  "revision": "f00dcc4039082d1c253c81f23f9242bb143d41e6",
+  "grammarSha": "2aa038d8212bcb23b390312b88a47563e58fda7fc1d50565d5feeec22b3ed739",
   "language": "ledger",
   "url": "https://github.com/cbarrete/tree-sitter-ledger",
   "maintainedBy": "@cbarrete"
