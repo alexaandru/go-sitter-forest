@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latex v1.9.1
 	github.com/alexaandru/go-sitter-forest/latte v1.9.0
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
-	github.com/alexaandru/go-sitter-forest/ledger v1.9.1
+	github.com/alexaandru/go-sitter-forest/ledger v1.9.2
 	github.com/alexaandru/go-sitter-forest/leo v1.9.0
 	github.com/alexaandru/go-sitter-forest/lexc v1.9.0
 	github.com/alexaandru/go-sitter-forest/lexd v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.7
+	github.com/alexaandru/go-sitter-forest/nu v1.9.8
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -354,7 +354,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/risor v1.9.0
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.9.0
-	github.com/alexaandru/go-sitter-forest/robot v1.9.0
+	github.com/alexaandru/go-sitter-forest/robot v1.9.1
 	github.com/alexaandru/go-sitter-forest/robots v1.9.0
 	github.com/alexaandru/go-sitter-forest/roc v1.9.0
 	github.com/alexaandru/go-sitter-forest/ron v1.9.0
@@ -455,7 +455,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.2
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.1
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.0
-	github.com/alexaandru/go-sitter-forest/vim v1.9.0
+	github.com/alexaandru/go-sitter-forest/vim v1.9.1
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.0
 	github.com/alexaandru/go-sitter-forest/virdant v1.9.0
 	github.com/alexaandru/go-sitter-forest/virgil v1.9.0
