@@ -52,6 +52,9 @@ void tree_sitter_scala_external_scanner_destroy(void *payload) {
 }
 
 unsigned tree_sitter_scala_external_scanner_serialize(void *payload, char *buffer) {
+  if (!payload) {
+    return 0;
+  }
   Scanner *scanner = (Scanner*)payload;
 
   if ((scanner->indents.size + 3) * sizeof(int16_t) > TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
