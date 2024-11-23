@@ -57,6 +57,7 @@
  "define-map"
  "block-height"
  "burn-block-height"
+ "tenure-height"
  "contract-caller"
  "is-in-regtest"
  "stx-liquid-supply"

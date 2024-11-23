@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "5070d0ea089ca60503275170cdfe8107d96a6d43",
-  "grammarSha": "fc2cb896bb383a7e8d6b632547f1a26a2d1f396238fa4b139a1d7e69e3f42dd0",
+  "revision": "67c206734bda89497f644c7dffcbc5931470d504",
+  "grammarSha": "75f2aa3c376b3bac84745f4bf2c8815489a6bd3da176a208c74b999d1319b162",
   "language": "pact",
   "url": "https://github.com/kadena-community/tree-sitter-pact",
   "maintainedBy": "@salamaashoush"

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "f75345b15efdf2a4e652e2202060edd6aa9c4096",
+  "revision": "aa0494f48bee402a13e653a9173863bbf86d8902",
   "grammarSha": "863e7524a0e5fce138c5db2e31495cfdc2c5e1057ab5e932b5bfdb42b6636b05",
   "language": "http2",
   "url": "https://github.com/rstcruzo/tree-sitter-http2",

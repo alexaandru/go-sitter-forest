@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "f99323fb8f3f10b6c69db0c2f6d0a14bd7330675",
+  "revision": "63e80cfe1302da9f9c7ee8d9df295f47d7d181bf",
   "grammarSha": "f55291202049997137c2ef594b90606581f0388c1107bc02ed3dbc77defe9163",
   "language": "gpg",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
