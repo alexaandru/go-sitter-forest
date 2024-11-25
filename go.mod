@@ -39,7 +39,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.1
 	github.com/alexaandru/go-sitter-forest/c3 v1.9.4
-	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.3
+	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.4
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
@@ -114,7 +114,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.2
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.3
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
@@ -153,7 +153,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/glsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.9.1
-	github.com/alexaandru/go-sitter-forest/go v1.9.1
+	github.com/alexaandru/go-sitter-forest/go v1.9.2
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.1
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.9
+	github.com/alexaandru/go-sitter-forest/kon v1.9.10
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.10
+	github.com/alexaandru/go-sitter-forest/nu v1.9.11
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -452,7 +452,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/v v1.9.1
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.0
-	github.com/alexaandru/go-sitter-forest/verilog v1.9.2
+	github.com/alexaandru/go-sitter-forest/verilog v1.9.3
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.1
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.0
 	github.com/alexaandru/go-sitter-forest/vim v1.9.1
