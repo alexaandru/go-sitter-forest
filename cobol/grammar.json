@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "c7a36d749e7f1db021588259f2b1b765e59d0c12",
+  "revision": "2e7b996247c990756ad5fcc97d08e30ce4ddbfd2",
   "grammarSha": "a4a83f4d0012f022900be8da247e71aec77de637011823778661475a6538a3be",
   "language": "cobol",
   "url": "https://github.com/yutaro-sakamoto/tree-sitter-cobol",

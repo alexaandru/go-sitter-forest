@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "2fb18b8ca7d3717a0475f35c5c7e8142a82f3200",
-  "grammarSha": "8b6f8acc3df7aec5510ed56f13abd62808a54803d36eb0e1e7be061e46364ed5",
+  "revision": "ce8129b03f03413f18f8cd989f88c05c59151bb5",
+  "grammarSha": "c56111dcc2a94adab966dc18d1a9ba7490ebb1d01ce95d3a9dca492190474dc0",
   "language": "xresources",
   "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",
   "maintainedBy": "@ValdezFOmar"

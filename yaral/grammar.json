@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "735b833f3872d4775328c854a699d4de5092bc18",
+  "revision": "07dd9db196270d4af276cb5f5a0efcb149894585",
   "grammarSha": "bab364de6f4f9cb3b13cf350c82f233c5801cd4bfb8b6a94ab9eeeb201e2053a",
   "language": "yaral",
   "url": "https://github.com/MXfive/tree-sitter-yaral",

@@ -452,7 +452,7 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
   [0] = {0},
   [3] = {
-    [0] = alias_sym_surname,
+    [1] = alias_sym_surname,
   },
   [4] = {
     [0] = anon_alias_sym__words,
