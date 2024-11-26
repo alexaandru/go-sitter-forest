@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "d07e8a2d10f9358b3cb7f1afbdc8490f83aa14ea",
+  "revision": "5319325b2ad34e41fb2582594dadb98525ccc487",
   "grammarSha": "81a88576edc77a8ec06c652a91734d71a9f40b295b1ba7a470f8511dfbc26933",
   "language": "tera",
   "url": "https://github.com/uncenter/tree-sitter-tera",

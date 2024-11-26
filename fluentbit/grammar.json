@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "58edd2907fbd8eec3213be4bffc768079eee65fc",
+  "revision": "d460561158f7da3a7e9190f8768004b381c99e3f",
   "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
   "language": "fluentbit",
   "url": "https://github.com/sh-cho/tree-sitter-fluentbit",

@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "151e2b3a0af449272d6d336b2e977e553702e04e",
-  "grammarSha": "ce23abe25185e8f252d9219aa1fccb5cfec100209922c6e1481bdd38af4907c6",
+  "revision": "b72940364e076d72d10ab398a3c06cebbc2a0ba6",
+  "grammarSha": "4eef3da865f5f1017dd2c564435ee68785b76d18fcedc2ca157de86b76b5d3b0",
   "language": "kon",
   "url": "https://github.com/akonwi/tree-sitter-kon",
   "maintainedBy": "@akonwi"
