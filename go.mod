@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.3
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.9.1
+	github.com/alexaandru/go-sitter-forest/gleam v1.9.2
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.1
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.10
+	github.com/alexaandru/go-sitter-forest/kon v1.9.11
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -419,7 +419,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
 	github.com/alexaandru/go-sitter-forest/templ v1.9.1
-	github.com/alexaandru/go-sitter-forest/tera v1.9.0
+	github.com/alexaandru/go-sitter-forest/tera v1.9.1
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
@@ -479,7 +479,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.0
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
-	github.com/alexaandru/go-sitter-forest/zeek v1.9.1
+	github.com/alexaandru/go-sitter-forest/zeek v1.9.2
 	github.com/alexaandru/go-sitter-forest/zig v1.9.1
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
