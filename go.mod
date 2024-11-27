@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.11
+	github.com/alexaandru/go-sitter-forest/kon v1.9.12
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -265,7 +265,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.2
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.3
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.1
@@ -412,7 +412,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0
-	github.com/alexaandru/go-sitter-forest/t32 v1.9.1
+	github.com/alexaandru/go-sitter-forest/t32 v1.9.2
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
