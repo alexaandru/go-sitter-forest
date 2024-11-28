@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.9.0
-	github.com/alexaandru/go-sitter-forest/abl v1.9.3
+	github.com/alexaandru/go-sitter-forest/abl v1.9.4
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
@@ -383,7 +383,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/snakemake v1.9.0
 	github.com/alexaandru/go-sitter-forest/snl v1.9.0
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
-	github.com/alexaandru/go-sitter-forest/solidity v1.9.0
+	github.com/alexaandru/go-sitter-forest/solidity v1.9.1
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
 	github.com/alexaandru/go-sitter-forest/soql v1.9.2
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.1
@@ -419,7 +419,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
 	github.com/alexaandru/go-sitter-forest/templ v1.9.1
-	github.com/alexaandru/go-sitter-forest/tera v1.9.1
+	github.com/alexaandru/go-sitter-forest/tera v1.9.2
 	github.com/alexaandru/go-sitter-forest/terra v1.9.1
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
@@ -480,7 +480,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
 	github.com/alexaandru/go-sitter-forest/zeek v1.9.2
-	github.com/alexaandru/go-sitter-forest/zig v1.9.1
+	github.com/alexaandru/go-sitter-forest/zig v1.9.2
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
 	github.com/alexaandru/go-tree-sitter-bare v1.7.3
