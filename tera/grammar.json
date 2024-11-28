@@ -7,5 +7,6 @@
   "maintainedBy": "@uncenter",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skipUpdate": true
 }
