@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/alexaandru/go-sitter-forest/abap v1.9.0
-	github.com/alexaandru/go-sitter-forest/abl v1.9.4
+	github.com/alexaandru/go-sitter-forest/abl v1.9.5
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
@@ -154,7 +154,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
 	github.com/alexaandru/go-sitter-forest/gnuplot v1.9.1
 	github.com/alexaandru/go-sitter-forest/go v1.9.2
-	github.com/alexaandru/go-sitter-forest/gobra v1.9.1
+	github.com/alexaandru/go-sitter-forest/gobra v1.9.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0
 	github.com/alexaandru/go-sitter-forest/gomod v1.9.0
@@ -199,7 +199,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.6
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
-	github.com/alexaandru/go-sitter-forest/inko v1.9.1
+	github.com/alexaandru/go-sitter-forest/inko v1.9.2
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
@@ -215,7 +215,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
-	github.com/alexaandru/go-sitter-forest/julia v1.9.5
+	github.com/alexaandru/go-sitter-forest/julia v1.9.6
 	github.com/alexaandru/go-sitter-forest/just v1.9.4
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.11
+	github.com/alexaandru/go-sitter-forest/nu v1.9.12
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -390,7 +390,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.3
-	github.com/alexaandru/go-sitter-forest/sql v1.9.4
+	github.com/alexaandru/go-sitter-forest/sql v1.9.5
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.0
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
