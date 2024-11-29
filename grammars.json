@@ -9,8 +9,8 @@
   },
   {
     "reference": "master",
-    "revision": "ea8aae3322964be9ac67de29c0943935d34863b0",
-    "grammarSha": "84bedb894df4b02081e3b4ec1c10e9f12b5a962e3baef09facc46ddb5b90ed97",
+    "revision": "51b237a136014566f1ff744f68d0c8262ab8f726",
+    "grammarSha": "d5f2b7cb03c22dd1b797a4b6c5c775b2e0a5dcd87716fa79103dd6c7e24b829b",
     "language": "abl",
     "url": "https://github.com/usagi-coffee/tree-sitter-abl",
     "maintainedBy": "@jkbz64",
@@ -1273,7 +1273,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1482,8 +1482,8 @@
   },
   {
     "reference": "main",
-    "revision": "afaf86a17654d9b1be5027f5f06af1a482ea12a2",
-    "grammarSha": "d34b92aae7393392d36c644acb8c3d9f3027eb5eb07500ee6d819d463a9e2cc8",
+    "revision": "fc0d8be6169ef296b031e65a8d9ebcad6a974cdf",
+    "grammarSha": "4a61256e5ace144ec2b711db50df058fedc48a46f75fbccd210d3339fbf38f3c",
     "language": "gobra",
     "url": "https://github.com/HSMF/tree-sitter-gobra",
     "maintainedBy": "@HSMF"
@@ -1904,8 +1904,8 @@
   },
   {
     "reference": "main",
-    "revision": "aecabede39b0db05678e2d4686258d4f71b00a51",
-    "grammarSha": "0f1e890dc9a7104489ffbfb542f994895b97c93760f25de270732d4a628b4315",
+    "revision": "a6fb0b0bfee5dede688968fd91282da799e5aa8e",
+    "grammarSha": "5798de38c26925cbac79881fa4e00f10c5f2d2575948e42be231ccc9a2ed7cec",
     "language": "inko",
     "url": "https://github.com/inko-lang/tree-sitter-inko",
     "maintainedBy": "@yorickpeterse"
@@ -2757,8 +2757,8 @@
   },
   {
     "reference": "main",
-    "revision": "74e6037383ce3a77ed6fdb8281bbd69316c723a4",
-    "grammarSha": "5e0fc8793f7c0220b29c8b98c723f00c15db8c16ddc5dbd526d9b6a0fc79172c",
+    "revision": "7c0628f578904d918afefe62dd639b3ac457ce51",
+    "grammarSha": "b5a8132ba56dcdd472a74c4a746a37bb6d1f8707fc062ff063a64b9855f8b891",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558",
@@ -3784,8 +3784,8 @@
   },
   {
     "reference": "main",
-    "revision": "44bb86456e6d4cd7ddd1c573b82d46999a2dbc9c",
-    "grammarSha": "0589e23fdfdaf7c1b57e5c72b0c6b74ed1ae4b56d69f70ee67675b30214a0cd4",
+    "revision": "7a001064fb24f8dda35f473836f2664b5fea134d",
+    "grammarSha": "bafbae88639fc7ddc41bd47af0b41f75e117ce0d4449879a3154474f58ad755d",
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
     "maintainedBy": "@DerekStride",
@@ -4269,7 +4269,7 @@
   },
   {
     "reference": "main",
-    "revision": "0ee05546d73d8eb64635ed8125de6f35c77759fe",
+    "revision": "0acb668f04cf12ff5a96a09ce915e0b2d6797e9b",
     "grammarSha": "c57049047a103a41e9f23e61ed8eceeb1afebc4be48ef7cf2470c70fe27d0ca3",
     "language": "typespec",
     "url": "https://github.com/happenslol/tree-sitter-typespec",
