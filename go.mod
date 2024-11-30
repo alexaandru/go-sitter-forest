@@ -69,7 +69,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.0
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.1
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.12
+	github.com/alexaandru/go-sitter-forest/kon v1.9.13
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -235,7 +235,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.9.2
 	github.com/alexaandru/go-sitter-forest/leo v1.9.0
-	github.com/alexaandru/go-sitter-forest/lexc v1.9.0
+	github.com/alexaandru/go-sitter-forest/lexc v1.9.1
 	github.com/alexaandru/go-sitter-forest/lexd v1.9.0
 	github.com/alexaandru/go-sitter-forest/lilypond v1.9.0
 	github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.9.0
@@ -286,7 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.12
+	github.com/alexaandru/go-sitter-forest/nu v1.9.13
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -362,7 +362,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.1
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/rust v1.9.4
+	github.com/alexaandru/go-sitter-forest/rust v1.9.5
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.1
@@ -439,7 +439,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.9.0
 	github.com/alexaandru/go-sitter-forest/twolc v1.9.0
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/typespec v1.9.0
+	github.com/alexaandru/go-sitter-forest/typespec v1.9.1
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typst v1.9.2
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
