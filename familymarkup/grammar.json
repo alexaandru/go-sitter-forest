@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "33e8bcc174209bf960157b7748d191290c2efbcf",
+  "revision": "c8a26d46d2df08830698edc89867ce135b47c2a2",
   "grammarSha": "16f378a7962148b7aa63891d8aa450c77115f67987fd6b529da4f763c04cbe4d",
   "language": "familymarkup",
   "url": "https://github.com/redexp/tree-sitter-familymarkup",

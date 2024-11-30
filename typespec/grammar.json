@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "0acb668f04cf12ff5a96a09ce915e0b2d6797e9b",
-  "grammarSha": "c57049047a103a41e9f23e61ed8eceeb1afebc4be48ef7cf2470c70fe27d0ca3",
+  "revision": "53d892fd975da3f81374f7732af3cd3abb6b85d9",
+  "grammarSha": "c4732557c550fe017baf26e5859df2e055b2334f9c6eadf120d9e0a293d43188",
   "language": "typespec",
   "url": "https://github.com/happenslol/tree-sitter-typespec",
   "maintainedBy": "@happenslol"

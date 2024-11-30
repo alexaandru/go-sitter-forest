@@ -8,8 +8,9 @@
 (lexicon (lexicon_name) @entity.name.function)
 
 (lexicon_line continuation: (lexicon_name) @keyword.control
-              (#match? @keyword.control "#"))
-(lexicon_line continuation: (lexicon_name) @entity.name.function)
+              (#eq? @keyword.control "#"))
+(lexicon_line continuation: (lexicon_name) @entity.name.function
+              (#not-eq? @entity.name.function "#"))
 
 [
  (comment)
@@ -23,7 +24,8 @@
 
 ((gloss) @number
  (#match? @number "\"weight: *-?[0-9]+(\.[0-9]+)?\""))
-(gloss) @string.quoted
+((gloss) @string.quoted
+ (#not-match? @string.quoted "\"weight: *-?[0-9]+(\.[0-9]+)?\""))
 
 (regex "<" @punctuation.bracket)
 (regex ">" @punctuation.bracket)

@@ -459,7 +459,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
+    "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
     "grammarSha": "85fe374df42ff4f638ee91a0430601bd788b4747b9b7a5c620ef70ab26f19ed0",
     "language": "cg",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -662,8 +662,8 @@
   },
   {
     "reference": "main",
-    "revision": "c67e9bc000f006212edae98d167c83411a3d8309",
-    "grammarSha": "020f2eab82bdc80417848496ffdbaf9865795893653639f94c536c35503914c3",
+    "revision": "61d5b2c6756c472312219a0846912fa976143317",
+    "grammarSha": "1ee857c06ca8c252aea43848417c5152d269d7b1381577db905308f844c6ff84",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter",
     "maintainedBy": "@devnote-dev"
@@ -1085,7 +1085,7 @@
   },
   {
     "reference": "master",
-    "revision": "33e8bcc174209bf960157b7748d191290c2efbcf",
+    "revision": "c8a26d46d2df08830698edc89867ce135b47c2a2",
     "grammarSha": "16f378a7962148b7aa63891d8aa450c77115f67987fd6b529da4f763c04cbe4d",
     "language": "familymarkup",
     "url": "https://github.com/redexp/tree-sitter-familymarkup",
@@ -1200,7 +1200,7 @@
   },
   {
     "reference": "master",
-    "revision": "4c96c4d00b5c17b109028e8627407971085034ce",
+    "revision": "6f16bab7455cd2906a86679a1be83dd4f378db81",
     "grammarSha": "c8f6e514f53e7db52c2b85c3c73ab8be1bc626d13d1e4d995e971177554c30fc",
     "language": "fortran",
     "url": "https://github.com/stadelmanma/tree-sitter-fortran",
@@ -1273,7 +1273,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2139,8 +2139,8 @@
   },
   {
     "reference": "main",
-    "revision": "bab69f7dc424f3a5a5a2ec7261895a9b3980e494",
-    "grammarSha": "86b347aa988c05dfbf79fcd494a85672f41ad23d1f7d9bf431828c8c0659327f",
+    "revision": "2749cb7d8e32553c092c12fbd5317a267e53f698",
+    "grammarSha": "10fe419d0f1822bd011d2305cc3ebc9de99d2c99ceeec897d63f66567f141653",
     "language": "kon",
     "url": "https://github.com/akonwi/tree-sitter-kon",
     "maintainedBy": "@akonwi"
@@ -2255,7 +2255,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
+    "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
     "grammarSha": "879b1128503c0d3bc6398d30e54bbc085c0d8881c6c4e3c2f0705d2458736bd4",
     "language": "lexc",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -2264,8 +2264,8 @@
   },
   {
     "reference": "master",
-    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
-    "grammarSha": "2db19e565d8b0b77721fd9cede86b8efc9b6a85f824bf9c25d1f2328f47d9f41",
+    "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
+    "grammarSha": "eb4a80a580148af08cc67e1de8afb281be7afe397509a0af8eadfdfce60ce329",
     "language": "lexd",
     "url": "https://github.com/apertium/tree-sitter-apertium",
     "maintainedBy": "@mr-martian",
@@ -2536,7 +2536,7 @@
   },
   {
     "reference": "master",
-    "revision": "3362ba5caab4de11f42b4a736a0e2bcdc9343480",
+    "revision": "72929ac13d7e1c46010114202262b7102a821293",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
@@ -2714,7 +2714,7 @@
   },
   {
     "reference": "master",
-    "revision": "0eca4c5cb06196cca6d9e81a64cb4b73bdab1c87",
+    "revision": "21897cc3dcd15325303e46b85295b743742af6ab",
     "grammarSha": "a62b81c1d6d2b2b2754ca6ed03fff42331710beba5d5e471859eca90d0542899",
     "language": "nix",
     "url": "https://github.com/nix-community/tree-sitter-nix",
@@ -2757,8 +2757,8 @@
   },
   {
     "reference": "main",
-    "revision": "7c0628f578904d918afefe62dd639b3ac457ce51",
-    "grammarSha": "b5a8132ba56dcdd472a74c4a746a37bb6d1f8707fc062ff063a64b9855f8b891",
+    "revision": "41a1c570b57987386ed9a928fc214928f8ddc669",
+    "grammarSha": "427f500d1fd52b0b877f0e7c5daf98e77fdb6be11adf05aae5c3ea4639ceb52c",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558",
@@ -3206,7 +3206,7 @@
   },
   {
     "reference": "main",
-    "revision": "d440944aede55bd1750c94937ed6cbbceb51d144",
+    "revision": "49f3d448bbd0b649892ed7d43fdb68526fbe2d9b",
     "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
@@ -3486,7 +3486,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
+    "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
     "grammarSha": "a08c0b2984516c9864d84274624b7afe9e03f89cb956c72e41ecead685e05e48",
     "language": "rtx",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -3826,7 +3826,7 @@
   },
   {
     "reference": "main",
-    "revision": "b64973cf590e041aa6b8993a97b52ce75f449de4",
+    "revision": "a232356a7f82ec3cc538b42a85a771dab838a823",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
@@ -4246,7 +4246,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
+    "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
     "grammarSha": "eaa7246f30f6fe6b2671f90059ed8ecc29b40170e6e1e5e93153a5ff4c181085",
     "language": "twolc",
     "url": "https://github.com/apertium/tree-sitter-apertium",
@@ -4269,8 +4269,8 @@
   },
   {
     "reference": "main",
-    "revision": "0acb668f04cf12ff5a96a09ce915e0b2d6797e9b",
-    "grammarSha": "c57049047a103a41e9f23e61ed8eceeb1afebc4be48ef7cf2470c70fe27d0ca3",
+    "revision": "53d892fd975da3f81374f7732af3cd3abb6b85d9",
+    "grammarSha": "c4732557c550fe017baf26e5859df2e055b2334f9c6eadf120d9e0a293d43188",
     "language": "typespec",
     "url": "https://github.com/happenslol/tree-sitter-typespec",
     "maintainedBy": "@happenslol"
@@ -4579,7 +4579,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7aa2f3c94ad33eefb943d162a6605ec9256c140",
+    "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
     "grammarSha": "7fa68e1c2a0046de92b0bc197b46383941cdc159e410298676dba362d1292aa2",
     "language": "xfst",
     "url": "https://github.com/apertium/tree-sitter-apertium",

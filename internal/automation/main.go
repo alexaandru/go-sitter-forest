@@ -600,6 +600,8 @@ func extractDeps(lang string, content []byte) (deps []string) {
 		deps = append(deps, "precedence.js")
 	case "jinja", "jinja_inline":
 		appendDeps(&deps, "../common/", "common", "literal", "expression")
+	case "nu":
+		deps = append(deps, "internal.txt")
 	}
 
 	return
