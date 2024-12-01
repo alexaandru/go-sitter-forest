@@ -28,7 +28,8 @@ enum TokenType {
 	HLL_NUMBER_LITERAL_PRE_HOOK,
 	PATH,
 	LOGICAL_AND,
-	BITWISE_AND
+	BITWISE_AND,
+	AMPERSAND_CHAR
 };
 
 typedef struct scannerState_s {
@@ -820,6 +821,16 @@ bool tree_sitter_t32_external_scanner_scan(
 			lexer->result_symbol = LOGICAL_AND;
 			return true;
 		}
+	}
+	else if (valid_symbols[AMPERSAND_CHAR] && lexer->lookahead == '&') {
+		Advance(lexer);
+
+		/* PRACTICE macros may not start with a number */
+		if (IsEof(lexer) || IsAlpha(lexer->lookahead)) {
+			return false;
+		}
+		lexer->result_symbol = AMPERSAND_CHAR;
+		return true;
 	}
 	else if (valid_symbols[DECIMAL_NUMBER_PRE_HOOK] && IsDecimalDigit(lexer->lookahead)) {
 		state->decimal_number_len = ScanLengthDecimalNumber(lexer);

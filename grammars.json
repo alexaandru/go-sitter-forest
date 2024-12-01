@@ -933,7 +933,7 @@
   },
   {
     "reference": "main",
-    "revision": "5f4f84f0e79049e4526c0a1db669378092ecb256",
+    "revision": "a84ab6361d3df04bd1566d3b0657a4f6dc5aade4",
     "grammarSha": "6ce82e9a519321b0fbb6c25ea097f22c7f667dab4e1240a042d1d9e38651be43",
     "language": "editorconfig",
     "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
@@ -1273,7 +1273,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -3953,7 +3953,7 @@
   },
   {
     "reference": "main",
-    "revision": "6accc2f720c7ff8573f6956a34ea22f50c44d839",
+    "revision": "ba1b982fc45a049f0e40a8c7a796d1c802be349c",
     "grammarSha": "26523dc10e5094d49e936305ae5255a19a714775ff122210f4d45c36888edce1",
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
@@ -3998,8 +3998,8 @@
   },
   {
     "reference": "main",
-    "revision": "6f8509f7d310386544fa8855f3486759f6e04c08",
-    "grammarSha": "f6b12dab4b08658d28d8cef163edaebf1b75f5b834027374eb2d4a166d4e4149",
+    "revision": "f82ee0035b6553f6771d5bb51b0798602c7b54ab",
+    "grammarSha": "67039ae0c7bba1e1d7d545f9ebf2f7095fd4fbbe9579bfa771de668214ad4cbd",
     "language": "t32",
     "url": "https://gitlab.com/xasc/tree-sitter-t32",
     "maintainedBy": "@xasc",
