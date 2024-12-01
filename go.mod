@@ -412,7 +412,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0
-	github.com/alexaandru/go-sitter-forest/t32 v1.9.2
+	github.com/alexaandru/go-sitter-forest/t32 v1.9.3
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0

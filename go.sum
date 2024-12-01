@@ -816,8 +816,8 @@ github.com/alexaandru/go-sitter-forest/systemtap v1.9.0 h1:wZ7G7XNhCghxnKIzxExA+
 github.com/alexaandru/go-sitter-forest/systemtap v1.9.0/go.mod h1:uBa9xxMcHV5NRP2TBpEYgqxUn3/cDuOsusThiS0eMuY=
 github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0 h1:X6xIgqXNSyPgVSti+tGy47Bf7ZYXEOGaFHMdSe38hmw=
 github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0/go.mod h1:G26dEGCboAdg/sHXGWES6AsF1GQ/GzbobiAp6DtXR7g=
-github.com/alexaandru/go-sitter-forest/t32 v1.9.2 h1:Dzb0bezh1NnLJ6CnKHTrdR5M5avhyfDLpWVmAQ2kQpg=
-github.com/alexaandru/go-sitter-forest/t32 v1.9.2/go.mod h1:+JhRR/0bUbItVySqnjreXwRCEssXzDmFfz0rEVCBoho=
+github.com/alexaandru/go-sitter-forest/t32 v1.9.3 h1:E4lz1qkiph0J4s+x76SKORw1f5oVxeMu5dYm+IXeF50=
+github.com/alexaandru/go-sitter-forest/t32 v1.9.3/go.mod h1:+JhRR/0bUbItVySqnjreXwRCEssXzDmFfz0rEVCBoho=
 github.com/alexaandru/go-sitter-forest/tablegen v1.9.0 h1:h4cK0OLf8vC3CEMtGmZhSldH7nJuBVD48pdcn6Z+E6o=
 github.com/alexaandru/go-sitter-forest/tablegen v1.9.0/go.mod h1:uJu01DiTbe2g8DPuZrSJIvcavYSA7TwuqYRSnic3XtE=
 github.com/alexaandru/go-sitter-forest/tact v1.9.1 h1:tjUxSftBLYK4PF2Eavb7CODwwM6ke2pC1v6EvKgBYu4=
