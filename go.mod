@@ -13,7 +13,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
-	github.com/alexaandru/go-sitter-forest/apex v1.9.2
+	github.com/alexaandru/go-sitter-forest/apex v1.9.3
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
 	github.com/alexaandru/go-sitter-forest/asm v1.9.0
@@ -188,7 +188,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.9.0
 	github.com/alexaandru/go-sitter-forest/http v1.9.1
-	github.com/alexaandru/go-sitter-forest/http2 v1.9.3
+	github.com/alexaandru/go-sitter-forest/http2 v1.9.4
 	github.com/alexaandru/go-sitter-forest/hungarian v1.9.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latex v1.9.1
 	github.com/alexaandru/go-sitter-forest/latte v1.9.0
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
-	github.com/alexaandru/go-sitter-forest/ledger v1.9.2
+	github.com/alexaandru/go-sitter-forest/ledger v1.9.3
 	github.com/alexaandru/go-sitter-forest/leo v1.9.0
 	github.com/alexaandru/go-sitter-forest/lexc v1.9.1
 	github.com/alexaandru/go-sitter-forest/lexd v1.9.0
@@ -385,8 +385,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.9.1
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
-	github.com/alexaandru/go-sitter-forest/soql v1.9.2
-	github.com/alexaandru/go-sitter-forest/sosl v1.9.1
+	github.com/alexaandru/go-sitter-forest/soql v1.9.3
+	github.com/alexaandru/go-sitter-forest/sosl v1.9.2
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.3
@@ -407,7 +407,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sus v1.9.2
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
-	github.com/alexaandru/go-sitter-forest/swift v1.9.0
+	github.com/alexaandru/go-sitter-forest/swift v1.9.1
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.0
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
