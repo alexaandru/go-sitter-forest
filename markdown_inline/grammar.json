@@ -1,6 +1,6 @@
 {
   "reference": "split_parser",
-  "revision": "5cdc549ab8f461aff876c5be9741027189299cec",
+  "revision": "c89a30ce556a5ea5552e816e5dc2f2c0de96237d",
   "grammarSha": "0a0d8aa0e2431a810cd0e9097e5345333c37728ef53033f9ec85da7dc03f55aa",
   "language": "markdown_inline",
   "altName": "markdown_inline (needed for full highlighting)",

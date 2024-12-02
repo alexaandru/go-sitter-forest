@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "2e0e6231348d8cb0a82406490771825b8ac80422",
+  "revision": "75d3ad20818c30c49b445ca2cb35999c278b3453",
   "grammarSha": "e47c79e14d31ac7774cf20ff7582297a41b47b1dfe56006b112a4e3e2e0528fa",
   "language": "styled",
   "url": "https://github.com/mskelton/tree-sitter-styled",
