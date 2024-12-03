@@ -67,6 +67,12 @@ var (
 		`"libraries/ieee/math_complex.h"`:   `"math_complex.h"`,
 		// Glimmer_typescript.
 		`"./tree-sitter-typescript/scanner.h"`: `"scanner.h"`,
+		// Asciidoc.
+		`"include/scanner.h"`:       `"scanner.h"`,
+		`"include/base_types.h"`:    `"base_types.h"`,
+		`"include/quick_buffer.h"`:  `"quick_buffer.h"`,
+		`"include/utils.h"`:         `"utils.h"`,
+		`"../tree_sitter/parser.h"`: `"parser.h"`,
 	}
 
 	logFile *os.File
@@ -389,6 +395,8 @@ func downloadGrammar(grRO *grammar.Grammar) (newSha string, err error) { //nolin
 		`require('./common/common')`:     `require('./common.js')`,
 		`require('./common/literal')`:    `require('./literal.js')`,
 		`require('./common/expression')`: `require('./expression.js')`,
+		// For asciidoc.
+		`require('../../common/common');`: `require('./common.js');`,
 	}
 
 	for _, file := range extractDeps(gr.Language, grc) {
@@ -733,7 +741,7 @@ func putFile(content []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h", "_parser.c", "chars.c", "chars.h", "_scanner.c", "TokenTree.inc":
+	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h", "_parser.c", "chars.c", "chars.h", "_scanner.c", "TokenTree.inc", "utils.h":
 		// These identifiers clash between many (org, beancount, etc.) parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)

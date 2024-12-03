@@ -1,0 +1,13 @@
+{
+  "reference": "master",
+  "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+  "grammarSha": "a1244f888f229c0b18c7420219a2e841cd0ffc523d84471a37f4f099a6aaa040",
+  "language": "asciidoc_inline",
+  "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
+  "maintainedBy": "@cathaysia",
+  "srcRoot": "tree-sitter-asciidoc_inline",
+  "files": [
+    "scanner.c",
+    "tree-sitter-asciidoc_inline/src/include/base_types.h"
+  ]
+}

@@ -1,0 +1,1 @@
+(inline (inline_element (word)) (inline_element (word)) (inline_element (word)) (inline_element (id_assignment (id))) (inline_element (word)) (inline_element (id_assignment (id))) (inline_element (word)) (inline_element (inline_macro (macro_name) (target))) (inline_element (word)) (inline_element (inline_macro (macro_name) (target) (attr))))

@@ -97,6 +97,8 @@
     "apex":               ["apex"],
     "applesoft":          ["bas"],
     "arduino":            ["ino", "pde"],
+    "asciidoc":           ["asciidoc"],
+    "asciidoc_inline":    ["asciidoc_inline"],
     "asm":                ["S"],
     "astro":              ["astro"],
     "august":             ["august"],

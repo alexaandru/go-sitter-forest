@@ -121,6 +121,35 @@
     ]
   },
   {
+    "reference": "master",
+    "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+    "grammarSha": "3b321af9eda8212e9c2cf68ebddf46674aced89076a79fecd00b523942110c02",
+    "language": "asciidoc",
+    "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
+    "maintainedBy": "@cathaysia",
+    "srcRoot": "tree-sitter-asciidoc",
+    "files": [
+      "scanner.c",
+      "tree-sitter-asciidoc/src/include/scanner.h",
+      "tree-sitter-asciidoc/src/include/base_types.h",
+      "tree-sitter-asciidoc/src/include/quick_buffer.h",
+      "tree-sitter-asciidoc/src/include/utils.h"
+    ]
+  },
+  {
+    "reference": "master",
+    "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+    "grammarSha": "a1244f888f229c0b18c7420219a2e841cd0ffc523d84471a37f4f099a6aaa040",
+    "language": "asciidoc_inline",
+    "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
+    "maintainedBy": "@cathaysia",
+    "srcRoot": "tree-sitter-asciidoc_inline",
+    "files": [
+      "scanner.c",
+      "tree-sitter-asciidoc_inline/src/include/base_types.h"
+    ]
+  },
+  {
     "reference": "main",
     "revision": "55b2b913f1e71136027d6fce8212e760c64f3532",
     "grammarSha": "272c60ca9eddab6261601d9c6030d3469d629d1770938d396718971778ff4fb8",
@@ -2340,22 +2369,6 @@
     "language": "lookml",
     "url": "https://github.com/aclementev/tree-sitter-lookml",
     "maintainedBy": "@aclementev"
-  },
-  {
-    "reference": "master",
-    "language": "loongdoc",
-    "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
-    "maintainedBy": "@cathaysia",
-    "srcRoot": "tree-sitter-loongdoc",
-    "pending": true
-  },
-  {
-    "reference": "master",
-    "language": "loongdoc_inline",
-    "url": "https://github.com/cathaysia/tree-sitter-loongdoc",
-    "maintainedBy": "@cathaysia",
-    "srcRoot": "tree-sitter-loongdoc_inline",
-    "pending": true
   },
   {
     "reference": "master",

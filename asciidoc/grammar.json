@@ -1,0 +1,16 @@
+{
+  "reference": "master",
+  "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+  "grammarSha": "3b321af9eda8212e9c2cf68ebddf46674aced89076a79fecd00b523942110c02",
+  "language": "asciidoc",
+  "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
+  "maintainedBy": "@cathaysia",
+  "srcRoot": "tree-sitter-asciidoc",
+  "files": [
+    "scanner.c",
+    "tree-sitter-asciidoc/src/include/scanner.h",
+    "tree-sitter-asciidoc/src/include/base_types.h",
+    "tree-sitter-asciidoc/src/include/quick_buffer.h",
+    "tree-sitter-asciidoc/src/include/utils.h"
+  ]
+}

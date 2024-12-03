@@ -1,6 +1,6 @@
-# 480 Supported Parsers
+# 482 Supported Parsers
 
-9 pending, 9 skipped regeneration, 34 missing queries
+7 pending, 9 skipped regeneration, 34 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -17,6 +17,8 @@
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [applesoft](https://github.com/dfgordon/tree-sitter-applesoft) ✔️ (maintained by @dfgordon)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️ (maintained by @ObserverOfTime)
+- [x] [asciidoc](https://github.com/cathaysia/tree-sitter-asciidoc) ✔️ (maintained by @cathaysia)
+- [x] [asciidoc_inline](https://github.com/cathaysia/tree-sitter-asciidoc) ✔️ (maintained by @cathaysia)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) ✔️ (maintained by @RubixDev)
 - [x] [astro](https://github.com/virchau13/tree-sitter-astro) ✔️ (maintained by @virchau13)
 - [x] [august](https://github.com/ScratchCat458/tree-sitter-august) ✔️ (maintained by @ScratchCat458)
@@ -250,8 +252,6 @@
 - [x] [lithia](https://github.com/vknabel/tree-sitter-lithia) ✔️ (maintained by @vknabel)
 - [x] [llvm](https://github.com/benwilliamgraham/tree-sitter-llvm) ✔️ (maintained by @benwilliamgraham)
 - [x] [lookml](https://github.com/aclementev/tree-sitter-lookml) ✔️ (maintained by @aclementev)
-- [ ] [loongdoc](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
-- [ ] [loongdoc_inline](https://github.com/cathaysia/tree-sitter-loongdoc) (maintained by @cathaysia)
 - [x] [lox](https://github.com/marcuscaisey/lox) ✔️ (maintained by @marcuscaisey)
 - [x] [lua](https://github.com/tree-sitter-grammars/tree-sitter-lua) ✔️ (maintained by @MunifTanjim)
 - [x] [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc) ✔️ (maintained by @amaanq)

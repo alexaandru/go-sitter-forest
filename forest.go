@@ -31,6 +31,8 @@ import (
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/applesoft"
 	"github.com/alexaandru/go-sitter-forest/arduino"
+	"github.com/alexaandru/go-sitter-forest/asciidoc"
+	"github.com/alexaandru/go-sitter-forest/asciidoc_inline"
 	"github.com/alexaandru/go-sitter-forest/asm"
 	"github.com/alexaandru/go-sitter-forest/astro"
 	"github.com/alexaandru/go-sitter-forest/august"
@@ -531,6 +533,8 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"apex":                   apex.GetLanguage,
 	"applesoft":              applesoft.GetLanguage,
 	"arduino":                arduino.GetLanguage,
+	"asciidoc":               asciidoc.GetLanguage,
+	"asciidoc_inline":        asciidoc_inline.GetLanguage,
 	"asm":                    asm.GetLanguage,
 	"astro":                  astro.GetLanguage,
 	"august":                 august.GetLanguage,
@@ -1015,6 +1019,8 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"apex":                   apex.GetQuery,
 	"applesoft":              applesoft.GetQuery,
 	"arduino":                arduino.GetQuery,
+	"asciidoc":               asciidoc.GetQuery,
+	"asciidoc_inline":        asciidoc_inline.GetQuery,
 	"asm":                    asm.GetQuery,
 	"astro":                  astro.GetQuery,
 	"august":                 august.GetQuery,
