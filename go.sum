@@ -24,6 +24,10 @@ github.com/alexaandru/go-sitter-forest/applesoft v1.9.0 h1:75+8VK94k363oFTlW+40s
 github.com/alexaandru/go-sitter-forest/applesoft v1.9.0/go.mod h1:0Lm+H6Dd8NQEX2Cfjebe3XOsZEYAYStW58mmMWK9cRk=
 github.com/alexaandru/go-sitter-forest/arduino v1.9.0 h1:37uB3jPuXjjER8m8vFcB+vl12pzmZPpmWgZGpqD2TG8=
 github.com/alexaandru/go-sitter-forest/arduino v1.9.0/go.mod h1:7Aq/fJEkZB+jFW3bVcTDWHGUSn3LCRvka7YsEx375RI=
+github.com/alexaandru/go-sitter-forest/asciidoc v1.9.0 h1:uHaYAbsAbWGGuROt+04/irV5LPJwWVBaWNlgilhsmcc=
+github.com/alexaandru/go-sitter-forest/asciidoc v1.9.0/go.mod h1:MxTE6p3tth1TsFcCrN6hsiTBXe3v/zSdx9b7+8nBCKY=
+github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.0 h1:v+RwlUGZjSocnP7Oeiycgm+taV6CA2es3ntTlszs60o=
+github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.0/go.mod h1:eDcZmJOyiOQvRX7TYreCK5zzgsidqEteeC+1hAtKsI0=
 github.com/alexaandru/go-sitter-forest/asm v1.9.0 h1:vwVAkW/DiWgbRHFUNezCXWl0SgkI60mC8Ickoj2gwis=
 github.com/alexaandru/go-sitter-forest/asm v1.9.0/go.mod h1:TMGi0OBTAPmJ86MhznPbForh5NsAyGMS1s7YWH14TXM=
 github.com/alexaandru/go-sitter-forest/astro v1.9.2 h1:bJweYmEECn9IRZffXmPQUrpHYUG0LbYkNWc500E1qHg=

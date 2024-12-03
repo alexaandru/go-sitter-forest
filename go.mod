@@ -16,6 +16,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/apex v1.9.4
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
+	github.com/alexaandru/go-sitter-forest/asciidoc v1.9.0
+	github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.0
 	github.com/alexaandru/go-sitter-forest/asm v1.9.0
 	github.com/alexaandru/go-sitter-forest/astro v1.9.2
 	github.com/alexaandru/go-sitter-forest/august v1.9.0
