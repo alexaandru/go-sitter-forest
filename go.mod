@@ -13,7 +13,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
-	github.com/alexaandru/go-sitter-forest/apex v1.9.3
+	github.com/alexaandru/go-sitter-forest/apex v1.9.4
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
 	github.com/alexaandru/go-sitter-forest/asm v1.9.0
@@ -157,7 +157,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0
-	github.com/alexaandru/go-sitter-forest/gomod v1.9.0
+	github.com/alexaandru/go-sitter-forest/gomod v1.9.1
 	github.com/alexaandru/go-sitter-forest/gooscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/gosum v1.9.0
 	github.com/alexaandru/go-sitter-forest/gotmpl v1.9.1
@@ -204,7 +204,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
-	github.com/alexaandru/go-sitter-forest/java v1.9.0
+	github.com/alexaandru/go-sitter-forest/java v1.9.1
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.1
 	github.com/alexaandru/go-sitter-forest/jinja v1.9.0
 	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.0
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
-	github.com/alexaandru/go-sitter-forest/kon v1.9.13
+	github.com/alexaandru/go-sitter-forest/kon v1.9.14
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -412,7 +412,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0
-	github.com/alexaandru/go-sitter-forest/t32 v1.9.3
+	github.com/alexaandru/go-sitter-forest/t32 v1.9.4
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
@@ -430,7 +430,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/tnsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/todolang v1.9.0
 	github.com/alexaandru/go-sitter-forest/todotxt v1.9.0
-	github.com/alexaandru/go-sitter-forest/toml v1.9.1
+	github.com/alexaandru/go-sitter-forest/toml v1.9.2
 	github.com/alexaandru/go-sitter-forest/tort v1.9.0
 	github.com/alexaandru/go-sitter-forest/tsv v1.9.0
 	github.com/alexaandru/go-sitter-forest/tsx v1.9.1
