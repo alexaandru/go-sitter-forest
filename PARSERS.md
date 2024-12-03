@@ -1,6 +1,6 @@
 # 482 Supported Parsers
 
-7 pending, 9 skipped regeneration, 34 missing queries
+5 pending, 9 skipped regeneration, 34 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -195,7 +195,6 @@
 - [x] [htmldjango](https://github.com/interdependence/tree-sitter-htmldjango) ✔️ (maintained by @ObserverOfTime)
 - [x] [http](https://github.com/rest-nvim/tree-sitter-http) ✔️ (maintained by @amaanq)
 - [x] [http2](https://github.com/rstcruzo/tree-sitter-http2) ✔️ (maintained by @rstcruzo)
-- [ ] [hugo](https://github.com/GitesHubisz/tree-sitter-hugo) (maintained by @GitesHubisz; is looking for an external scanner but none is present in the repo)
 - [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️ (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️ (maintained by @pfeiferj)
 - [x] [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template) ✔️ (maintained by @Hdoc1509)
@@ -270,7 +269,6 @@
 - [x] [merlin6502](https://github.com/dfgordon/tree-sitter-merlin6502) ✔️ (maintained by @dfgordon)
 - [x] [mermaid](https://github.com/monaqa/tree-sitter-mermaid) ✔️ (maintained by @monaqa)
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️ (maintained by @Decodetalkers)
-- [ ] [mix_lock](https://github.com/fluidattacks/tree-sitter-mix_lock) (maintained by @drestrepom)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️ (maintained by @artagnon)
 - [x] [modelica](https://github.com/modelicahub/tree-sitter-modelica) 🗸 (maintained by @nachawati)
 - [x] [moonbit](https://github.com/moonbitlang/tree-sitter-moonbit) ✔️ (maintained by @tonyfettes)

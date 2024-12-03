@@ -1302,7 +1302,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1831,14 +1831,6 @@
     "language": "http2",
     "url": "https://github.com/rstcruzo/tree-sitter-http2",
     "maintainedBy": "@rstcruzo"
-  },
-  {
-    "reference": "main",
-    "language": "hugo",
-    "url": "https://github.com/GitesHubisz/tree-sitter-hugo",
-    "doc": "is looking for an external scanner but none is present in the repo",
-    "maintainedBy": "@GitesHubisz",
-    "pending": true
   },
   {
     "reference": "master",
@@ -2541,13 +2533,6 @@
     "maintainedBy": "@Decodetalkers"
   },
   {
-    "reference": "main",
-    "language": "mix_lock",
-    "url": "https://github.com/fluidattacks/tree-sitter-mix_lock",
-    "maintainedBy": "@drestrepom",
-    "pending": true
-  },
-  {
     "reference": "master",
     "revision": "72929ac13d7e1c46010114202262b7102a821293",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
@@ -3082,7 +3067,7 @@
   },
   {
     "reference": "main",
-    "revision": "ebe2ab2f642eda2072c68c8de02e83973c26f33c",
+    "revision": "efbefa2fcf61ddbecb0af48df4a8bde1d2cab446",
     "grammarSha": "000a7eeeadd234c9c97bc1d06e76d16b9316d824caa858f06f666d19eb5e9684",
     "language": "powershell",
     "url": "https://github.com/airbus-cert/tree-sitter-powershell",
