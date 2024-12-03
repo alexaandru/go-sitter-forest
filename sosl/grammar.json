@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "0dc9e80dfeee2330a4793eb379515dac1607b4a9",
+  "revision": "f5a1d2188ff711a06c6a8daa65bbf2f17c8378a5",
   "grammarSha": "c411c7e27e48a5c00d5e94e1da7402c5521915edcb0ef17bb6b795b213715274",
   "language": "sosl",
   "url": "https://github.com/aheber/tree-sitter-sfapex",

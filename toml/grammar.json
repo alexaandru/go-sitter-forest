@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "16a30c83ce427385b8d14939c45c137fcfca6c42",
-  "grammarSha": "6b543c054c136569f4d7284f9c25e87aee0716082a184e72a60abb0b1cf03cd6",
+  "revision": "64b56832c2cffe41758f28e05c756a3a98d16f41",
+  "grammarSha": "ed5125db94891531c9fe79f50850a8694510cf0cf24794c28176b13766c09ed4",
   "language": "toml",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-toml",
   "maintainedBy": "@tk-shirasaka, @ObserverOfTime",
