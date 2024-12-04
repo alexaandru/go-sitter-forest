@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.2
+	github.com/alexaandru/go-sitter-forest/al v1.9.3
 	github.com/alexaandru/go-sitter-forest/amber v1.9.1
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -116,7 +116,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.3
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.4
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
@@ -201,7 +201,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.6
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
-	github.com/alexaandru/go-sitter-forest/inko v1.9.2
+	github.com/alexaandru/go-sitter-forest/inko v1.9.3
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
@@ -422,7 +422,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
 	github.com/alexaandru/go-sitter-forest/templ v1.9.1
 	github.com/alexaandru/go-sitter-forest/tera v1.9.2
-	github.com/alexaandru/go-sitter-forest/terra v1.9.1
+	github.com/alexaandru/go-sitter-forest/terra v1.9.2
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
 	github.com/alexaandru/go-sitter-forest/thrift v1.9.1
@@ -475,7 +475,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xfst v1.9.0
 	github.com/alexaandru/go-sitter-forest/xml v1.9.3
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.1
-	github.com/alexaandru/go-sitter-forest/yaml v1.9.0
+	github.com/alexaandru/go-sitter-forest/yaml v1.9.1
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.0
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.0
