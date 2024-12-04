@@ -239,7 +239,7 @@ static inline void mrk_end(Scanner *scanner, TSLexer *lexer) {
     lexer->mark_end(lexer);
 }
 
-static inline void init(Scanner *scanner) {
+static inline void init_yaml(Scanner *scanner) {
     scanner->cur_row = scanner->row;
     scanner->cur_col = scanner->col;
     scanner->cur_chr = 0;
@@ -812,7 +812,7 @@ static char scn_pln_cnt(Scanner *scanner, TSLexer *lexer, bool (*is_plain_safe)(
 }
 
 static bool scan_yaml(Scanner *scanner, TSLexer *lexer, const bool *valid_symbols) {
-    init(scanner);
+    init_yaml(scanner);
     mrk_end(scanner, lexer);
 
     bool allow_comment = !(valid_symbols[R_DQT_STR_CTN] || valid_symbols[BR_DQT_STR_CTN] ||

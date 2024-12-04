@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "80d0cf4a45ff2f6424bc9147e51fb97e91316629",
-  "grammarSha": "0696735e5c503ab5e1869c909d0f795ae1fb94c97c45fe6fe328cb4d4c0b840a",
+  "revision": "df519b4395605b6257a0f3a88008a703cf7e8558",
+  "grammarSha": "21d99dd643d8eb3f7884c07bdd010a13755a212c8c1b963a99a1fbc703c88dfc",
   "language": "terra",
   "url": "https://github.com/tpkessler/tree-sitter-terra-rewrite",
   "maintainedBy": "@tpkessler",

@@ -41,12 +41,12 @@ static inline void skip_whitespaces(TSLexer *lexer) {
 }
 
 typedef struct {
-  char ending_char;
+  char ending_char_terra;
   uint8_t level_count;
 } Scanner;
 
 static inline void reset_state(Scanner *scanner) {
-  scanner->ending_char = 0;
+  scanner->ending_char_terra = 0;
   scanner->level_count = 0;
 }
 
@@ -62,7 +62,7 @@ void tree_sitter_terra_external_scanner_destroy(void *payload) {
 
 unsigned tree_sitter_terra_external_scanner_serialize(void *payload, char *buffer) {
   Scanner *scanner = (Scanner *)payload;
-  buffer[0] = scanner->ending_char;
+  buffer[0] = scanner->ending_char_terra;
   buffer[1] = (char)scanner->level_count;
   return 2;
 }
@@ -70,7 +70,7 @@ unsigned tree_sitter_terra_external_scanner_serialize(void *payload, char *buffe
 void tree_sitter_terra_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
   Scanner *scanner = (Scanner *)payload;
   if (length == 0) return;
-  scanner->ending_char = buffer[0];
+  scanner->ending_char_terra = buffer[0];
   if (length == 1) return;
   scanner->level_count = buffer[1];
 }
@@ -131,7 +131,7 @@ static bool scan_comment_start(Scanner *scanner, TSLexer *lexer) {
 }
 
 static bool scan_comment_content(Scanner *scanner, TSLexer *lexer) {
-  if (scanner->ending_char == 0) { // block comment
+  if (scanner->ending_char_terra == 0) { // block comment
     if (scan_block_content(scanner, lexer)) {
       lexer->result_symbol = BLOCK_COMMENT_CONTENT;
       return true;
@@ -141,7 +141,7 @@ static bool scan_comment_content(Scanner *scanner, TSLexer *lexer) {
   }
 
   while (lexer->lookahead != 0) {
-    if (lexer->lookahead == scanner->ending_char) {
+    if (lexer->lookahead == scanner->ending_char_terra) {
       reset_state(scanner);
       lexer->result_symbol = BLOCK_COMMENT_CONTENT;
       return true;
@@ -167,7 +167,7 @@ bool tree_sitter_terra_external_scanner_scan(void *payload, TSLexer *lexer, cons
     return true;
   }
 
-  if (valid_symbols[BLOCK_COMMENT_END] && scanner->ending_char == 0 && scan_block_end(scanner, lexer)) {
+  if (valid_symbols[BLOCK_COMMENT_END] && scanner->ending_char_terra == 0 && scan_block_end(scanner, lexer)) {
     reset_state(scanner);
     lexer->result_symbol = BLOCK_COMMENT_END;
     return true;
