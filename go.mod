@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.3
+	github.com/alexaandru/go-sitter-forest/al v1.9.4
 	github.com/alexaandru/go-sitter-forest/amber v1.9.1
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -201,7 +201,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.6
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
-	github.com/alexaandru/go-sitter-forest/inko v1.9.3
+	github.com/alexaandru/go-sitter-forest/inko v1.9.4
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.0
-	github.com/alexaandru/go-sitter-forest/julia v1.9.6
+	github.com/alexaandru/go-sitter-forest/julia v1.9.7
 	github.com/alexaandru/go-sitter-forest/just v1.9.4
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
@@ -398,7 +398,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
 	github.com/alexaandru/go-sitter-forest/ssh_client_config v1.9.0
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.9.0
-	github.com/alexaandru/go-sitter-forest/starlark v1.9.1
+	github.com/alexaandru/go-sitter-forest/starlark v1.9.2
 	github.com/alexaandru/go-sitter-forest/strace v1.9.0
 	github.com/alexaandru/go-sitter-forest/streamdevice_proto v1.9.0
 	github.com/alexaandru/go-sitter-forest/styled v1.9.0
