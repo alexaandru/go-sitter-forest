@@ -218,9 +218,7 @@
 
 [
   "async"
-  "await"
   "exec"
-  "nonlocal"
   "pass"
   "print"
   "with"

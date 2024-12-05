@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "018d0e09d9d0f0dd6740a37682b8ee4512e8b2ac",
-  "grammarSha": "33ea96a44600d31b8c17fb5ea021bc98fa02503482c1c3f7dd202ac3f2ddb971",
+  "revision": "a453dbf3ba433db0e5ec621a38a7e59d72e4dc69",
+  "grammarSha": "51a4aff211e4ad3e2acc6579b57b3d85b09994a6f622825161b996d3b9b25fc0",
   "language": "starlark",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-starlark",
   "maintainedBy": "@amaanq",
