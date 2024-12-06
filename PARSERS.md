@@ -1,6 +1,6 @@
 # 482 Supported Parsers
 
-5 pending, 9 skipped regeneration, 34 missing queries
+5 pending, 8 skipped regeneration, 34 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -42,7 +42,7 @@
 - [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️ (maintained by @ajdelcimmuto)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️ (maintained by @amaanq)
 - [x] [c3](https://github.com/cbuttner/tree-sitter-c3) ✔️ (maintained by @cbuttner)
-- [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) 🔍 (maintained by @Luxed; ❌OOM)
+- [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) ✔️ (maintained by @Luxed; high memory usage (1.7GB))
 - [x] [ca65](https://github.com/babasbot/tree-sitter-ca65) ✔️ (maintained by @babasbot)
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️ (maintained by @amaanq)
 - [x] [calc](https://github.com/zeromake/tree-sitter-calc) 🗸 (maintained by @zeromake)

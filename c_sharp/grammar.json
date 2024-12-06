@@ -1,12 +1,12 @@
 {
   "reference": "master",
-  "revision": "285c993f01d9955932b45a6192055003aa70a570",
+  "revision": "4bf615f8d688f50d69fc5677187dc35f22e03ad6",
+  "grammarSha": "cfb4d628b0dd7781a0920fb83ea0b536d2aeec1ebe2ccb1ecd0c38a70e861b57",
   "language": "c_sharp",
   "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
-  "doc": "OOM",
+  "doc": "high memory usage (1.7GB)",
   "maintainedBy": "@Luxed",
   "files": [
     "scanner.c"
-  ],
-  "skip": true
+  ]
 }
