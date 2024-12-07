@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "1816984688b338ff3fcbcd7b7e3168bfb96773e7",
-  "grammarSha": "a2b337ec4cab40e36c5727715ae4ceb0491a44494179722bc3cabda3c0565b43",
+  "revision": "b071a650ca0dca29723693e7e0be04581c61cd4b",
+  "grammarSha": "ba51f8371e76a04e877d480c048b85b0d0df7c2e74871451f0e2c380ab324020",
   "language": "ignis",
   "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
   "maintainedBy": "@BasileusErwin"

@@ -44,6 +44,7 @@
 (while_statement) @repeat
 (try_statement) @exception
 (return_statement) @keyword.return
+(throw_statement) @keyword.throw
 (assignment_statement) @operator
 (print_statement) @function.builtin
 
@@ -139,4 +140,3 @@
   (exit_while_statement)
   (exit_for_statement)
 ] @keyword
-

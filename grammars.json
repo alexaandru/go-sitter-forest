@@ -339,8 +339,8 @@
   },
   {
     "reference": "main",
-    "revision": "5535c964ed2e420b12ed2fde2518dc38b8e6388d",
-    "grammarSha": "f58989fe6348062adf5f53ec832d189703b6bc58b86a6d3a044672296c0c864a",
+    "revision": "70f1b3596bea6d330f97841c0ffcb48971cecc79",
+    "grammarSha": "c15e58e4305ef4cd42cb0802435118a8c84c3bec6753a253865154fad1863175",
     "language": "brightscript",
     "url": "https://github.com/ajdelcimmuto/tree-sitter-brightscript",
     "maintainedBy": "@ajdelcimmuto"
@@ -414,7 +414,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "cd1ecf1297808623b3aff1c4d105c058a4ee5724",
+    "revision": "bd0f620583a49318d143c42d613cc686d44619d4",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -691,7 +691,7 @@
   },
   {
     "reference": "main",
-    "revision": "8c59563e924f3fa4cc6501eb6dfb0ae53a246234",
+    "revision": "3360d9e75bcf535797f90920dcc24e98ec83d2f9",
     "grammarSha": "5b845ac52a31150ba005691cfa61c30477873e80db595a4648ee5444db7fab89",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter",
@@ -1302,7 +1302,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1898,8 +1898,8 @@
   },
   {
     "reference": "main",
-    "revision": "1816984688b338ff3fcbcd7b7e3168bfb96773e7",
-    "grammarSha": "a2b337ec4cab40e36c5727715ae4ceb0491a44494179722bc3cabda3c0565b43",
+    "revision": "b071a650ca0dca29723693e7e0be04581c61cd4b",
+    "grammarSha": "ba51f8371e76a04e877d480c048b85b0d0df7c2e74871451f0e2c380ab324020",
     "language": "ignis",
     "url": "https://github.com/Ignis-lang/tree-sitter-ignis",
     "maintainedBy": "@BasileusErwin"
@@ -2160,8 +2160,8 @@
   },
   {
     "reference": "main",
-    "revision": "bc83f12bd893563fd09e1f3d1b9bc501764ed161",
-    "grammarSha": "ba339a597c6f89b30b9bbfc9f3d7270f47cf46e95de75a4f507c65a6af1fb3c4",
+    "revision": "0e907dcd099358087c44e6b0e96d882fa9ab049a",
+    "grammarSha": "bb59185eaf9a444bbe99da2c5090e2e2a494267302109a99462f2613a3d53f21",
     "language": "kon",
     "url": "https://github.com/akonwi/tree-sitter-kon",
     "maintainedBy": "@akonwi"
@@ -2755,8 +2755,8 @@
   },
   {
     "reference": "main",
-    "revision": "41a1c570b57987386ed9a928fc214928f8ddc669",
-    "grammarSha": "427f500d1fd52b0b877f0e7c5daf98e77fdb6be11adf05aae5c3ea4639ceb52c",
+    "revision": "a94fdf1df5deba1aa1a3fff23e1276333b5ab666",
+    "grammarSha": "b2f483f6e4bfea21618691331e5f433c8ebceb52613fdb1907308571b6e5eab2",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558",
@@ -3824,7 +3824,7 @@
   },
   {
     "reference": "main",
-    "revision": "a232356a7f82ec3cc538b42a85a771dab838a823",
+    "revision": "3170aad97dbfeec9427d5f39ff068a8b39b5061c",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
@@ -3996,7 +3996,7 @@
   },
   {
     "reference": "main",
-    "revision": "8b367f7ce2b2e4cbc0adea033edd94a8e2282969",
+    "revision": "e9e334539a07ca044128592c41946daa68d626dd",
     "grammarSha": "77a299e6f6529519c1eb0af57731ffbc0638f762ef0175506f199be13f9b3ca9",
     "language": "t32",
     "url": "https://gitlab.com/xasc/tree-sitter-t32",
@@ -4267,8 +4267,8 @@
   },
   {
     "reference": "main",
-    "revision": "53d892fd975da3f81374f7732af3cd3abb6b85d9",
-    "grammarSha": "c4732557c550fe017baf26e5859df2e055b2334f9c6eadf120d9e0a293d43188",
+    "revision": "8455e6601de80c9641b6e6f54c7320573eec0300",
+    "grammarSha": "a8a324b39ceeb18b7b92d0fa9bc6d98625fcca1f5ae2f9eca0c30d4abfab7ca6",
     "language": "typespec",
     "url": "https://github.com/happenslol/tree-sitter-typespec",
     "maintainedBy": "@happenslol"
