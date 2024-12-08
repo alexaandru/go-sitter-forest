@@ -308,8 +308,8 @@ github.com/alexaandru/go-sitter-forest/gobra v1.9.2 h1:o8DVcIdP55O02ICCh9a9dZrLJ
 github.com/alexaandru/go-sitter-forest/gobra v1.9.2/go.mod h1:32sTDSsUbIWG7ECDO825OitSa3vv4jA6Hv1Z+XVWbxg=
 github.com/alexaandru/go-sitter-forest/goctl v1.9.0 h1:NSStUnZuHq+5H6WDa6PQMzcXRrMwudIPePSD7GhJ+uo=
 github.com/alexaandru/go-sitter-forest/goctl v1.9.0/go.mod h1:Zx+bTnRl3vlqIndv5C3IRUyR4JV+SeTkPPThcj3drk0=
-github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0 h1:YqSKgstlp/qupthleG4OvABTvmUxBFTo0nQxcjoWDag=
-github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0/go.mod h1:zhTm9qmO1v5paUJqbHttnEmeg6UOu6oAnM/Gj1dkiFs=
+github.com/alexaandru/go-sitter-forest/godot_resource v1.9.1 h1:oWoyL++peX/r3lRgGVjjMZEDwRA0bjT2yCU6KoM6P3Y=
+github.com/alexaandru/go-sitter-forest/godot_resource v1.9.1/go.mod h1:zhTm9qmO1v5paUJqbHttnEmeg6UOu6oAnM/Gj1dkiFs=
 github.com/alexaandru/go-sitter-forest/gomod v1.9.1 h1:RwjRV+zrBXSnEROd+rYSILsY9fuZ7hhyR64vGph3PWU=
 github.com/alexaandru/go-sitter-forest/gomod v1.9.1/go.mod h1:z9q2oQeKuqXvbKNfRH02mvfR8e284eTgBDncHFAv8GE=
 github.com/alexaandru/go-sitter-forest/gooscript v1.9.0 h1:VbsRLxTY9f6qX1YyAsyP/xB3ZSEIfFhkJuUv4D9qcXk=

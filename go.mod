@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/go v1.9.2
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
-	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.0
+	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.1
 	github.com/alexaandru/go-sitter-forest/gomod v1.9.1
 	github.com/alexaandru/go-sitter-forest/gooscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/gosum v1.9.0
