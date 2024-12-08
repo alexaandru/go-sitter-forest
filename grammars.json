@@ -1302,7 +1302,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "3e6b97ce7ff4f6e9ec0e8d587c1e80fea75aef6c04483cf5e3347aa413934160",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1527,8 +1527,8 @@
   },
   {
     "reference": "master",
-    "revision": "2ffb90de47417018651fc3b970e5f6b67214dc9d",
-    "grammarSha": "d3457db5546a9850cb2a64f712ba10527b386fee97e36140019eefacbffff520",
+    "revision": "74105cc46a09850ebe626b894ecc6c61a12fb999",
+    "grammarSha": "019426d36d69910648d634308078eeeb2d5aadce2a6e29686c885f849f32c72b",
     "language": "godot_resource",
     "altName": "Godot Resources (gdresource)",
     "url": "https://github.com/PrestonKnopp/tree-sitter-godot-resource",
@@ -2364,7 +2364,7 @@
   },
   {
     "reference": "master",
-    "revision": "3770510baf2d8a4f549b72f988a4c234c66f2497",
+    "revision": "a7a9b45367498c14b49e2890b492f3fe367fa46b",
     "grammarSha": "b6a0b5811b4280e51c2bda1f7da79a66b0e6579ee22857667083377fa3d4f698",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -4059,7 +4059,7 @@
   },
   {
     "reference": "master",
-    "revision": "dc41c080783c6305d66471672a9c9147561126e4",
+    "revision": "ebcb4f7a6abde0156f7f2bf7744592afd0ec38b0",
     "grammarSha": "ec4c02ccbb8f374aa9bb12f41347834c42c9d4fa486cfd85c0cbc7e3fe4e9c37",
     "language": "templ",
     "url": "https://github.com/vrischmann/tree-sitter-templ",
@@ -4599,7 +4599,7 @@
   },
   {
     "reference": "master",
-    "revision": "1fffefe05bb7f37016f2ada74b50a29e9820b52f",
+    "revision": "724ce1e841f2b9097625756a67f5847ff00178db",
     "grammarSha": "c56111dcc2a94adab966dc18d1a9ba7490ebb1d01ce95d3a9dca492190474dc0",
     "language": "xresources",
     "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",
