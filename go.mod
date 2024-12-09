@@ -116,7 +116,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.4
+	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.5
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
@@ -478,7 +478,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yaml v1.9.1
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.0
-	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.0
+	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
 	github.com/alexaandru/go-sitter-forest/zeek v1.9.2

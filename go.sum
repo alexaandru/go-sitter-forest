@@ -224,8 +224,8 @@ github.com/alexaandru/go-sitter-forest/erlang v1.9.0 h1:tSylSahq1RwhBzSoYbfAB+vj
 github.com/alexaandru/go-sitter-forest/erlang v1.9.0/go.mod h1:w44gyZikbQBpzX7/RJqNxsLzMrLqn4Tvh9r649ml9xI=
 github.com/alexaandru/go-sitter-forest/facility v1.9.0 h1:+l9OIXdscmqQKo0+eXV61/8160KzghcrEnUHrYhog0M=
 github.com/alexaandru/go-sitter-forest/facility v1.9.0/go.mod h1:lZO0YOyZpTw5e6XLsc/ebEZIwfLDBe8pHzgG6hGkrEY=
-github.com/alexaandru/go-sitter-forest/familymarkup v1.9.4 h1:zKdQhaGDBAJG0BUwWZUcU+iCQmAS+e1B0LmrTYiEifE=
-github.com/alexaandru/go-sitter-forest/familymarkup v1.9.4/go.mod h1:JPbYWpJRZUQL776pO3bof1/lsQJarkkyCwT0pF5JcZQ=
+github.com/alexaandru/go-sitter-forest/familymarkup v1.9.5 h1:SdxOtqVI7o0QTGVR6xCOwayaR0r/d2rggULH3SwDVrk=
+github.com/alexaandru/go-sitter-forest/familymarkup v1.9.5/go.mod h1:JPbYWpJRZUQL776pO3bof1/lsQJarkkyCwT0pF5JcZQ=
 github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0 h1:Mv72klI12C6oDKfHZtUgG9PT6OzBwvH5Q8exAjTtLKs=
 github.com/alexaandru/go-sitter-forest/fastbuild v1.9.0/go.mod h1:Zonxo3eN+Mv9uchDFcY14xJgf1/Z+X3UOdZIGrX1QkM=
 github.com/alexaandru/go-sitter-forest/faust v1.9.0 h1:sEtphwvEvGLCsiJzk5mdQtkMJSXsIxd7SAbW7N6gVzQ=
@@ -948,8 +948,8 @@ github.com/alexaandru/go-sitter-forest/yang v1.9.0 h1:qLTMYVwn6RZe+9RL7fx2/110YD
 github.com/alexaandru/go-sitter-forest/yang v1.9.0/go.mod h1:zp3Q9MGfGQFRqynj2ahnulVNDOT90DHpUMctg2Uh3vM=
 github.com/alexaandru/go-sitter-forest/yaral v1.9.0 h1:81xiX/XxkyUuqkvE1nMmbWCH1YspYjBH68DIsm4sFzc=
 github.com/alexaandru/go-sitter-forest/yaral v1.9.0/go.mod h1:+B/7iSv77uERRjjMWotAJ+qFez0ckf+pMOFhOtl3FFk=
-github.com/alexaandru/go-sitter-forest/yarnlock v1.9.0 h1:DG85Sgasuwj3mFDpcBTbE2oo3Ut2+WlcIDe+bA80pKk=
-github.com/alexaandru/go-sitter-forest/yarnlock v1.9.0/go.mod h1:QEKUIqSByTKs6URuyle+2NBuMlGzKUhV8KWDEUhcJ+M=
+github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1 h1:/WaLvquNeiN5d1iqiEMfZs1yvEwXeGdHGA0Uf3h99ic=
+github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1/go.mod h1:QEKUIqSByTKs6URuyle+2NBuMlGzKUhV8KWDEUhcJ+M=
 github.com/alexaandru/go-sitter-forest/yuck v1.9.0 h1:eGDg3jhtb8OGB/3w9dwIspRsP60J6sx+FUi0wIASmcY=
 github.com/alexaandru/go-sitter-forest/yuck v1.9.0/go.mod h1:mZHOHfZ5I0HdfzKlKHr+zCOvoQXjq0l8qUVgnzREdWY=
 github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0 h1:nDo6G3dimpJynkeZElkn4grCwXMZOkJ/Zivj5YjDQjw=
