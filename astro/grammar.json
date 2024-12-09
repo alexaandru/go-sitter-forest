@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "4be180759ec13651f72bacee65fa477c64222a1a",
+  "revision": "6e3bad36a8c12d579e73ed4f05676141a4ccf68d",
   "grammarSha": "e53c10208f450ad12dd2d9af3f5222804713b651943d72165da1de74fc843e3a",
   "language": "astro",
   "url": "https://github.com/virchau13/tree-sitter-astro",

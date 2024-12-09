@@ -21,7 +21,8 @@
 )
 
 (relation
-  arrow: "="
+  (sources)
+  (eq)
   (targets
     (name_def
       (new_surname
