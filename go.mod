@@ -105,7 +105,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/effekt v1.9.0
 	github.com/alexaandru/go-sitter-forest/eiffel v1.9.2
 	github.com/alexaandru/go-sitter-forest/elisp v1.9.0
-	github.com/alexaandru/go-sitter-forest/elixir v1.9.1
+	github.com/alexaandru/go-sitter-forest/elixir v1.9.2
 	github.com/alexaandru/go-sitter-forest/elm v1.9.0
 	github.com/alexaandru/go-sitter-forest/elsa v1.9.0
 	github.com/alexaandru/go-sitter-forest/elvish v1.9.0
@@ -256,7 +256,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/magik v1.9.0
 	github.com/alexaandru/go-sitter-forest/make v1.9.0
 	github.com/alexaandru/go-sitter-forest/mandbconfig v1.9.0
-	github.com/alexaandru/go-sitter-forest/markdown v1.9.1
+	github.com/alexaandru/go-sitter-forest/markdown v1.9.2
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
 	github.com/alexaandru/go-sitter-forest/matlab v1.9.0
@@ -270,13 +270,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/moonbit v1.9.3
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
-	github.com/alexaandru/go-sitter-forest/move v1.9.1
+	github.com/alexaandru/go-sitter-forest/move v1.9.2
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.9.0
 	github.com/alexaandru/go-sitter-forest/mustache v1.9.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.9.0
 	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/nelua v1.9.0
+	github.com/alexaandru/go-sitter-forest/nelua v1.9.1
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.0
@@ -410,7 +410,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
 	github.com/alexaandru/go-sitter-forest/swift v1.9.1
-	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.0
+	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.0
