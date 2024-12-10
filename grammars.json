@@ -414,7 +414,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "bd0f620583a49318d143c42d613cc686d44619d4",
+    "revision": "eabe9f117aafd3bfb6633188760d34f907dfb78a",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -426,7 +426,7 @@
   },
   {
     "reference": "main",
-    "revision": "ad76e6b29c732a46424026a272890cc68ca72be4",
+    "revision": "cdfc4efcf7c78ab8d358cf605786ffd273a77dac",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -997,7 +997,7 @@
   },
   {
     "reference": "master",
-    "revision": "dda24f561c0c518feee0451bc753be0ea86a7786",
+    "revision": "74e87d89439a990ebbbc9325543110e90bcc9935",
     "grammarSha": "c276c647f394fd789e020692edd1c9d348618cdbc9c9ab5def4fda43b0089c90",
     "language": "eiffel",
     "url": "https://github.com/imustafin/tree-sitter-eiffel",
@@ -1013,8 +1013,8 @@
   },
   {
     "reference": "main",
-    "revision": "d30189581a8b2802f237884287fdb7c40f32a041",
-    "grammarSha": "759eb810f50579affb7ac892480e3df722f7125083b13c55800db7fd4dbeb2a5",
+    "revision": "02a6f7fd4be28dd94ee4dd2ca19cb777053ea74e",
+    "grammarSha": "930a986debc8b83772bab3475e363c5fdae66d540962696327839d32cef0885b",
     "language": "elixir",
     "url": "https://github.com/elixir-lang/tree-sitter-elixir",
     "maintainedBy": "@connorlay",
@@ -1302,7 +1302,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2444,7 +2444,7 @@
   },
   {
     "reference": "split_parser",
-    "revision": "c89a30ce556a5ea5552e816e5dc2f2c0de96237d",
+    "revision": "192407ab5a24bfc24f13332979b5e7967518754a",
     "grammarSha": "20398dfcbc3c975821d8093638477815d8374ff41dc32cdbc08cbed5d3c71c53",
     "language": "markdown",
     "altName": "markdown (basic highlighting)",
@@ -2457,7 +2457,7 @@
   },
   {
     "reference": "split_parser",
-    "revision": "c89a30ce556a5ea5552e816e5dc2f2c0de96237d",
+    "revision": "192407ab5a24bfc24f13332979b5e7967518754a",
     "grammarSha": "0a0d8aa0e2431a810cd0e9097e5345333c37728ef53033f9ec85da7dc03f55aa",
     "language": "markdown_inline",
     "altName": "markdown_inline (needed for full highlighting)",
@@ -2580,8 +2580,8 @@
   },
   {
     "reference": "main",
-    "revision": "a104cd723ae94251242c9b9ded597164af40f4fb",
-    "grammarSha": "5d32e5f940156c52a009ff753c1e77446e22fd6c4050d87a6cc3816032e9b7c4",
+    "revision": "f5b37f63569f69dfbe7a9950527786d2f6b1d35c",
+    "grammarSha": "5081afe6456ea57a383b86b9c4351ea8da33c033f57c822028aecc31efa728bb",
     "language": "move",
     "url": "https://github.com/tzakian/tree-sitter-move",
     "maintainedBy": "@tzakian"
@@ -2635,8 +2635,8 @@
   },
   {
     "reference": "main",
-    "revision": "1a41e7dfaf234dc6b658ccae5d8517c062495009",
-    "grammarSha": "4542fdc14f9c2c801c3b6b18af0befed2d7f34ffb550b27c05862f2a9c10a5ff",
+    "revision": "b29bdf171913e69eddc06b00a76088cc0b854280",
+    "grammarSha": "79d113ab0b18d675af39b41e44d2f5937996c5c3626f70a0739a797b6b6d15f9",
     "language": "nelua",
     "url": "https://github.com/kmafeni04/tree-sitter-nelua",
     "maintainedBy": "@kmafeni04"
@@ -3067,7 +3067,7 @@
   },
   {
     "reference": "main",
-    "revision": "7e6ccf19774a098bb3c996690c65cc1a6f439dc0",
+    "revision": "b3fe65637fca35e426dc8c889d86c8724aaa73d5",
     "grammarSha": "000a7eeeadd234c9c97bc1d06e76d16b9316d824caa858f06f666d19eb5e9684",
     "language": "powershell",
     "url": "https://github.com/airbus-cert/tree-sitter-powershell",
@@ -3824,7 +3824,7 @@
   },
   {
     "reference": "main",
-    "revision": "3170aad97dbfeec9427d5f39ff068a8b39b5061c",
+    "revision": "ba3b7e193f1b3fdfea0a29305b57a124d4180a36",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",

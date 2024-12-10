@@ -79,11 +79,14 @@
 
 ;; Unpacks
 ;; TODO: go into variants
-(bind_unpack (module_access)  @type.name)
+(bind_unpack (name_expression)  @type.name)
 (module_access "$" (identifier)  @macro.variable)
 "$"  @macro.variable
 
 (module_access module: (module_identifier)  member: (identifier) @constructor.name)
+
+(abort_expression) @keyword
+(mut_ref) @keyword
 
 ;; Lambdas
 ; (lambda_binding bind: (bind_var (variable_identifier)  @variable.parameter))
@@ -124,6 +127,7 @@
  "struct"
  "use"
  "public"
+ "package"
  "spec"
  "module"
  "abort"
@@ -132,8 +136,6 @@
  "has"
  "as"
  "&"
- "&mut"
- "abort"
  "friend"
  "entry"
  "mut"

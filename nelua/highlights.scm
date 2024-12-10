@@ -67,7 +67,6 @@
   "do"
   "return" 
   (break)
-  "in"
   "defer"
   "goto"
   (continue)
