@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "ef46edd0c03ea30a22f7e92bc68628fb7231dc8a",
+  "revision": "7d29fc24b36119494b4dc3f3d967075e261706c1",
   "grammarSha": "b2d49114b764d0892337a8d73651af8d38b461b23b1f45eec867ff09bf527f64",
   "language": "roc",
   "url": "https://github.com/faldor20/tree-sitter-roc",

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "2ac017d168aca1e75b3df94dbbb6b3083f79cdfe",
-  "grammarSha": "c5f616558a506504fc9f358f53a0ffb49f3a5e629cbea30249aebce396874046",
+  "revision": "16d4a5fd4a52069fcc6491f0ec6a5bad21f1d705",
+  "grammarSha": "df579dbc8cb058ff2a47d25462d5ead852ed61a360003cf87f924743e0094026",
   "language": "hoon",
   "url": "https://github.com/urbit-pilled/tree-sitter-hoon",
   "maintainedBy": "@urbit-pilled",

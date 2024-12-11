@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "ebcb4f7a6abde0156f7f2bf7744592afd0ec38b0",
-  "grammarSha": "ec4c02ccbb8f374aa9bb12f41347834c42c9d4fa486cfd85c0cbc7e3fe4e9c37",
+  "revision": "80944bb7413a6d06845c33537805d0ee0419a13d",
+  "grammarSha": "a1348fe2fccc7a42e3496fa7cf993e46df36832e72262f0f86118326e61bca67",
   "language": "templ",
   "url": "https://github.com/vrischmann/tree-sitter-templ",
   "maintainedBy": "@vrischmann",

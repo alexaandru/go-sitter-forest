@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "73676a03abfe62810d9e4270cb4f4af1571677b8",
+  "revision": "f72e11e8fc9ec5ed4bff710522c0ff10de54e3ef",
   "grammarSha": "eb4a80a580148af08cc67e1de8afb281be7afe397509a0af8eadfdfce60ce329",
   "language": "lexd",
   "url": "https://github.com/apertium/tree-sitter-apertium",

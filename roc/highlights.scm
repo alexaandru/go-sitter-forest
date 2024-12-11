@@ -34,11 +34,11 @@
 
 
 ((concrete_type) @type.builtin
-  (#match? @type.builtin "^(Bool|Str|Num|List|Result|Dict|Set|Dec)"))
+  (#match? @type.builtin "^(Bool|Str|Num|List|Result|Dict|Set|Dec|Encode|Decode|Hash|Box|Inspect)"))
 ((concrete_type) @type.builtin
   (#match? @type.builtin "^[IU](8|16|32|64|128)"))
 ((concrete_type) @type.builtin
-  (#match? @type.builtin "^F(32|64)"))
+  (#match? @type.builtin "^(F(32|64)|Dec)"))
 
 (bound_variable) @type.parameter
 (tags_type (apply_type(concrete_type) @type.enum.variant))
@@ -213,6 +213,11 @@
 ((module) @namespace.builtin (#eq? @namespace.builtin "Result"))
 ((module) @namespace.builtin (#eq? @namespace.builtin "Dict"))
 ((module) @namespace.builtin (#eq? @namespace.builtin "Set"))
+((module) @namespace.builtin (#eq? @namespace.builtin "Decode"))
+((module) @namespace.builtin (#eq? @namespace.builtin "Encode"))
+((module) @namespace.builtin (#eq? @namespace.builtin "Hash"))
+((module) @namespace.builtin (#eq? @namespace.builtin "Box"))
+((module) @namespace.builtin (#eq? @namespace.builtin "Inspect"))
 (module)@namespace
 (module)@module
 
