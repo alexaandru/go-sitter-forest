@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.5
+	github.com/alexaandru/go-sitter-forest/al v1.9.6
 	github.com/alexaandru/go-sitter-forest/amber v1.9.1
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -51,7 +51,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
-	github.com/alexaandru/go-sitter-forest/cg v1.9.0
+	github.com/alexaandru/go-sitter-forest/cg v1.9.1
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
 	github.com/alexaandru/go-sitter-forest/circom v1.9.1
 	github.com/alexaandru/go-sitter-forest/clarity v1.9.3
@@ -185,7 +185,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hlsl v1.9.0
 	github.com/alexaandru/go-sitter-forest/hlsplaylist v1.9.0
 	github.com/alexaandru/go-sitter-forest/hocon v1.9.0
-	github.com/alexaandru/go-sitter-forest/hoon v1.9.1
+	github.com/alexaandru/go-sitter-forest/hoon v1.9.2
 	github.com/alexaandru/go-sitter-forest/html v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.9.0
@@ -288,7 +288,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.14
+	github.com/alexaandru/go-sitter-forest/nu v1.9.15
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -358,7 +358,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.9.0
 	github.com/alexaandru/go-sitter-forest/robot v1.9.3
 	github.com/alexaandru/go-sitter-forest/robots v1.9.0
-	github.com/alexaandru/go-sitter-forest/roc v1.9.0
+	github.com/alexaandru/go-sitter-forest/roc v1.9.1
 	github.com/alexaandru/go-sitter-forest/ron v1.9.0
 	github.com/alexaandru/go-sitter-forest/rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
@@ -420,7 +420,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
-	github.com/alexaandru/go-sitter-forest/templ v1.9.1
+	github.com/alexaandru/go-sitter-forest/templ v1.9.2
 	github.com/alexaandru/go-sitter-forest/tera v1.9.2
 	github.com/alexaandru/go-sitter-forest/terra v1.9.2
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
@@ -441,7 +441,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.9.0
 	github.com/alexaandru/go-sitter-forest/twolc v1.9.0
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/typespec v1.9.2
+	github.com/alexaandru/go-sitter-forest/typespec v1.9.3
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typst v1.9.2
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
