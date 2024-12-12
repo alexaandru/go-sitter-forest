@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "6820f7cc814580a4a9486497bb1c553f55d5a998",
+  "revision": "244bcf839d7d0c963bad359ab1694462a15992a1",
   "grammarSha": "382f1d0f65c9814a7c3d6077854735c78fbc7df7e187f8124028c6648d19d1a2",
   "language": "bond",
   "url": "https://github.com/jorgenbele/tree-sitter-bond",

@@ -23,6 +23,8 @@
         "global"
         "len"
         "clone"
+	"inputs"
+	"outputs"
         "each"))
 
 (eval_expression "eval" @function.builtin)
@@ -60,6 +62,10 @@
         "idx"
         "readline"
         "len"
+	"main"
+	"ready"
+	"process"
+        "func"
         "clone"))
 )
 
@@ -200,8 +206,8 @@
 [
   "mod"
   "not"
-	"or"
-	"and"
+  "or"
+  "and"
 ] @keyword.operator
 
 

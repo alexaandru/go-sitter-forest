@@ -361,6 +361,7 @@ bool tree_sitter_liquidsoap_external_scanner_scan(void *payload, TSLexer *lexer,
 
     if (!ustring_equal(&config->parser_decorator, "json.parse") &&
         !ustring_equal(&config->parser_decorator, "yaml.parse") &&
+        !ustring_equal(&config->parser_decorator, "xml.parse") &&
         !ustring_equal(&config->parser_decorator, "sqlite.row") &&
         !ustring_equal(&config->parser_decorator, "sqlite.query")) {
       END_STATE();

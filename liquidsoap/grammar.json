@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "14feafa91630afb1ab9988cf9b738b7ea29f3f89",
+  "revision": "8e51fa63ddb93ac179d4e34a311d3d3f03780b42",
   "grammarSha": "9646d8c3100106c0e21c907c4fa888cba2b6fa24aae4ffcfd07e50668278f5a5",
   "language": "liquidsoap",
   "url": "https://github.com/savonet/tree-sitter-liquidsoap",

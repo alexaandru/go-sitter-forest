@@ -1,10 +1,13 @@
 
 [
  "{"
- "}"
  "["
- "]"
  "("
+] @indent.branch
+
+[
+ "}"
+ "]"
  ")"
 ] @indent.branch
 
@@ -12,7 +15,6 @@
  (match_statement)
  (dictionary)
  (fn_statement)
-  ; (variable_declare)
  (block)
 ] @indent.begin
 
