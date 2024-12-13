@@ -83,6 +83,19 @@
   },
   {
     "reference": "main",
+    "revision": "95243a35141b8e531c90b684f9ba83e91f2e3a40",
+    "grammarSha": "232542cd13effe027271819850cd465d016eb1193e110fdd9cb3048641c58c1d",
+    "language": "ansible",
+    "url": "https://github.com/kartikvashistha/zed-tree-sitter-ansible",
+    "maintainedBy": "@kartikvashistha",
+    "files": [
+      "scanner.c",
+      "schema.core.c",
+      "schema.json.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "927404171299590e8d24bfabeaeeab7b4e2843cb",
     "grammarSha": "76cf4d3514f0ebd4fec5e6132b269df88097b8823606c87c629c958aeac84b75",
     "language": "anzu",
@@ -1853,6 +1866,17 @@
     "maintainedBy": "@pfeiferj"
   },
   {
+    "reference": "main",
+    "revision": "ae065db01a00aff3c0b5b3883217c03d83278d50",
+    "grammarSha": "79f39149af57c9d0cd64c65c296495996c533e27d7908431ffcf2a502127c574",
+    "language": "hy",
+    "url": "https://github.com/MinmusxMinmus/tree-sitter-hy",
+    "maintainedBy": "@MinmusxMinmus",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
     "reference": "master",
     "revision": "247782ae40c726d4416bebb8e85fd2f250d8247f",
     "grammarSha": "0a5c036c4a309f8f2e868ebafe8212237448e8f99ee38e31319545a380465337",
@@ -1875,6 +1899,14 @@
     "language": "hyprlang",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
     "maintainedBy": "@luckasRanarison"
+  },
+  {
+    "reference": "main",
+    "revision": "9015225204774ec16ae9679b0fa465fa55d1c336",
+    "grammarSha": "5d71bb1cc545a1fb6b42de02251932b64f1141c931f3a9a0dd5387cafa0fb905",
+    "language": "i3config",
+    "url": "https://github.com/abdellatif-temsamani/tree-sitter-i3config",
+    "maintainedBy": "@abdellatif-temsamani"
   },
   {
     "reference": "master",
@@ -1948,6 +1980,14 @@
     "doc": "invalid character '}' looking for beginning of object key string",
     "maintainedBy": "@fab4100",
     "skip": true
+  },
+  {
+    "reference": "master",
+    "revision": "3c60f5cb8508b26db15e37c84e71375a86b44a95",
+    "grammarSha": "0adf974dd311c5b9b762a78b00eafa7f41702a8f044251625b707f337b3a4adf",
+    "language": "jai",
+    "url": "https://github.com/constantitus/tree-sitter-jai",
+    "maintainedBy": "@constantitus"
   },
   {
     "reference": "master",
@@ -2105,6 +2145,14 @@
     "language": "kamailio_cfg",
     "url": "https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg",
     "maintainedBy": "@IbrahimShahzad"
+  },
+  {
+    "reference": "main",
+    "revision": "bb650b1275ba8e4e76f6ffff06cff1408a0f926f",
+    "grammarSha": "554419928fd4f0ca51f2e067b54e121a170b74c77d8ac75e73db24ac19c95b3b",
+    "language": "kanshi",
+    "url": "https://github.com/marcelarie/tree-sitter-kanshi",
+    "maintainedBy": "@marcelarie"
   },
   {
     "reference": "main",

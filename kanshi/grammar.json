@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "bb650b1275ba8e4e76f6ffff06cff1408a0f926f",
+  "grammarSha": "554419928fd4f0ca51f2e067b54e121a170b74c77d8ac75e73db24ac19c95b3b",
+  "language": "kanshi",
+  "url": "https://github.com/marcelarie/tree-sitter-kanshi",
+  "maintainedBy": "@marcelarie"
+}

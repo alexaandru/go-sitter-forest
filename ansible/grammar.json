@@ -1,0 +1,13 @@
+{
+  "reference": "main",
+  "revision": "95243a35141b8e531c90b684f9ba83e91f2e3a40",
+  "grammarSha": "232542cd13effe027271819850cd465d016eb1193e110fdd9cb3048641c58c1d",
+  "language": "ansible",
+  "url": "https://github.com/kartikvashistha/zed-tree-sitter-ansible",
+  "maintainedBy": "@kartikvashistha",
+  "files": [
+    "scanner.c",
+    "schema.core.c",
+    "schema.json.c"
+  ]
+}

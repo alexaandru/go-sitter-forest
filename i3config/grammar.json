@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "9015225204774ec16ae9679b0fa465fa55d1c336",
+  "grammarSha": "5d71bb1cc545a1fb6b42de02251932b64f1141c931f3a9a0dd5387cafa0fb905",
+  "language": "i3config",
+  "url": "https://github.com/abdellatif-temsamani/tree-sitter-i3config",
+  "maintainedBy": "@abdellatif-temsamani"
+}

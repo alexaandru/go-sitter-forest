@@ -1,6 +1,6 @@
-# 482 Supported Parsers
+# 487 Supported Parsers
 
-5 pending, 8 skipped regeneration, 33 missing queries
+5 pending, 8 skipped regeneration, 34 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -13,6 +13,7 @@
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
+- [x] [ansible](https://github.com/kartikvashistha/zed-tree-sitter-ansible) ✔️ (maintained by @kartikvashistha)
 - [x] [anzu](https://github.com/JamesWP/tree-sitter-anzu) ✔️ (maintained by @JamesWP)
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [applesoft](https://github.com/dfgordon/tree-sitter-applesoft) ✔️ (maintained by @dfgordon)
@@ -197,9 +198,11 @@
 - [x] [http2](https://github.com/rstcruzo/tree-sitter-http2) ✔️ (maintained by @rstcruzo)
 - [x] [hungarian](https://github.com/jpt13653903/tree-sitter-hungarian) ✔️ (maintained by @jpt13653903)
 - [x] [hurl](https://github.com/pfeiferj/tree-sitter-hurl) ✔️ (maintained by @pfeiferj)
+- [x] [hy](https://github.com/MinmusxMinmus/tree-sitter-hy) 🗸 (maintained by @MinmusxMinmus)
 - [x] [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template) ✔️ (maintained by @Hdoc1509)
 - [x] [hylo](https://github.com/natsukagami/tree-sitter-hylo) ✔️ (maintained by @natsukagami)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️ (maintained by @luckasRanarison)
+- [x] [i3config](https://github.com/abdellatif-temsamani/tree-sitter-i3config) ✔️ (maintained by @abdellatif-temsamani)
 - [x] [idl](https://github.com/cathaysia/tree-sitter-idl) ✔️ (maintained by @cathaysa)
 - [x] [idris](https://github.com/kayhide/tree-sitter-idris) ✔️ (maintained by @kayhide)
 - [x] [ignis](https://github.com/Ignis-lang/tree-sitter-ignis) ✔️ (maintained by @BasileusErwin)
@@ -208,6 +211,7 @@
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
 - [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌invalid character '}' looking for beginning of object key string)
+- [x] [jai](https://github.com/constantitus/tree-sitter-jai) ✔️ (maintained by @constantitus)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [x] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) ✔️ (maintained by @y4cer)
 - [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f; ❌Error: Supertype rule `comment` is not defined.)
@@ -224,6 +228,7 @@
 - [x] [julia](https://github.com/tree-sitter/tree-sitter-julia) ✔️ (maintained by @theHamsta)
 - [x] [just](https://github.com/IndianBoy42/tree-sitter-just) ✔️ (maintained by @Hubro)
 - [x] [kamailio_cfg](https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg) ✔️ (maintained by @IbrahimShahzad)
+- [x] [kanshi](https://github.com/marcelarie/tree-sitter-kanshi) ✔️ (maintained by @marcelarie)
 - [x] [kcl](https://github.com/kcl-lang/tree-sitter-kcl) 🗸 (maintained by @Vishalk91-4)
 - [x] [kconfig](https://github.com/tree-sitter-grammars/tree-sitter-kconfig) ✔️ (maintained by @amaanq)
 - [x] [kdl](https://github.com/tree-sitter-grammars/tree-sitter-kdl) ✔️ (maintained by @amaanq)

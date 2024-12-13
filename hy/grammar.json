@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "ae065db01a00aff3c0b5b3883217c03d83278d50",
+  "grammarSha": "79f39149af57c9d0cd64c65c296495996c533e27d7908431ffcf2a502127c574",
+  "language": "hy",
+  "url": "https://github.com/MinmusxMinmus/tree-sitter-hy",
+  "maintainedBy": "@MinmusxMinmus",
+  "files": [
+    "scanner.c"
+  ]
+}

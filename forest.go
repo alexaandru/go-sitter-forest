@@ -27,6 +27,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/amber"
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/animationtxt"
+	"github.com/alexaandru/go-sitter-forest/ansible"
 	"github.com/alexaandru/go-sitter-forest/anzu"
 	"github.com/alexaandru/go-sitter-forest/apex"
 	"github.com/alexaandru/go-sitter-forest/applesoft"
@@ -208,9 +209,11 @@ import (
 	"github.com/alexaandru/go-sitter-forest/http2"
 	"github.com/alexaandru/go-sitter-forest/hungarian"
 	"github.com/alexaandru/go-sitter-forest/hurl"
+	"github.com/alexaandru/go-sitter-forest/hy"
 	"github.com/alexaandru/go-sitter-forest/hygen_template"
 	"github.com/alexaandru/go-sitter-forest/hylo"
 	"github.com/alexaandru/go-sitter-forest/hyprlang"
+	"github.com/alexaandru/go-sitter-forest/i3config"
 	"github.com/alexaandru/go-sitter-forest/idl"
 	"github.com/alexaandru/go-sitter-forest/idris"
 	"github.com/alexaandru/go-sitter-forest/ignis"
@@ -221,6 +224,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 	"github.com/alexaandru/go-sitter-forest/ispc"
+	"github.com/alexaandru/go-sitter-forest/jai"
 	"github.com/alexaandru/go-sitter-forest/janet"
 	"github.com/alexaandru/go-sitter-forest/jasmin"
 	"github.com/alexaandru/go-sitter-forest/java"
@@ -237,6 +241,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/julia"
 	"github.com/alexaandru/go-sitter-forest/just"
 	"github.com/alexaandru/go-sitter-forest/kamailio_cfg"
+	"github.com/alexaandru/go-sitter-forest/kanshi"
 	"github.com/alexaandru/go-sitter-forest/kcl"
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
@@ -529,6 +534,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"amber":                  amber.GetLanguage,
 	"angular":                angular.GetLanguage,
 	"animationtxt":           animationtxt.GetLanguage,
+	"ansible":                ansible.GetLanguage,
 	"anzu":                   anzu.GetLanguage,
 	"apex":                   apex.GetLanguage,
 	"applesoft":              applesoft.GetLanguage,
@@ -710,9 +716,11 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"http2":                  http2.GetLanguage,
 	"hungarian":              hungarian.GetLanguage,
 	"hurl":                   hurl.GetLanguage,
+	"hy":                     hy.GetLanguage,
 	"hygen_template":         hygen_template.GetLanguage,
 	"hylo":                   hylo.GetLanguage,
 	"hyprlang":               hyprlang.GetLanguage,
+	"i3config":               i3config.GetLanguage,
 	"idl":                    idl.GetLanguage,
 	"idris":                  idris.GetLanguage,
 	"ignis":                  ignis.GetLanguage,
@@ -721,6 +729,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"inko":                   inko.GetLanguage,
 	"integerbasic":           integerbasic.GetLanguage,
 	"ispc":                   ispc.GetLanguage,
+	"jai":                    jai.GetLanguage,
 	"janet":                  janet.GetLanguage,
 	"jasmin":                 jasmin.GetLanguage,
 	"java":                   java.GetLanguage,
@@ -737,6 +746,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"julia":                  julia.GetLanguage,
 	"just":                   just.GetLanguage,
 	"kamailio_cfg":           kamailio_cfg.GetLanguage,
+	"kanshi":                 kanshi.GetLanguage,
 	"kcl":                    kcl.GetLanguage,
 	"kconfig":                kconfig.GetLanguage,
 	"kdl":                    kdl.GetLanguage,
@@ -1015,6 +1025,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"amber":                  amber.GetQuery,
 	"angular":                angular.GetQuery,
 	"animationtxt":           animationtxt.GetQuery,
+	"ansible":                ansible.GetQuery,
 	"anzu":                   anzu.GetQuery,
 	"apex":                   apex.GetQuery,
 	"applesoft":              applesoft.GetQuery,
@@ -1196,9 +1207,11 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"http2":                  http2.GetQuery,
 	"hungarian":              hungarian.GetQuery,
 	"hurl":                   hurl.GetQuery,
+	"hy":                     hy.GetQuery,
 	"hygen_template":         hygen_template.GetQuery,
 	"hylo":                   hylo.GetQuery,
 	"hyprlang":               hyprlang.GetQuery,
+	"i3config":               i3config.GetQuery,
 	"idl":                    idl.GetQuery,
 	"idris":                  idris.GetQuery,
 	"ignis":                  ignis.GetQuery,
@@ -1207,6 +1220,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"inko":                   inko.GetQuery,
 	"integerbasic":           integerbasic.GetQuery,
 	"ispc":                   ispc.GetQuery,
+	"jai":                    jai.GetQuery,
 	"janet":                  janet.GetQuery,
 	"jasmin":                 jasmin.GetQuery,
 	"java":                   java.GetQuery,
@@ -1223,6 +1237,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"julia":                  julia.GetQuery,
 	"just":                   just.GetQuery,
 	"kamailio_cfg":           kamailio_cfg.GetQuery,
+	"kanshi":                 kanshi.GetQuery,
 	"kcl":                    kcl.GetQuery,
 	"kconfig":                kconfig.GetQuery,
 	"kdl":                    kdl.GetQuery,

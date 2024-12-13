@@ -1,0 +1,17 @@
+- name: Host Basic Apache Website
+  hosts: node1
+  become: true
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+    - name: Create HTML file
+      template:
+        src: index.html
+        dest: /var/www/html/index.html
+    - name: Restart Apache and enable on boot
+      service:
+        name: apache2
+        state: restarted
+        enabled: true
