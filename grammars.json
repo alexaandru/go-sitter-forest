@@ -414,7 +414,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "79ba184dabcda5003374df634a7481b639e00fdd",
+    "revision": "aee098b8e2d5a4225e6ce5c966c329f3bbc238c2",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1302,7 +1302,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
+    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1818,8 +1818,8 @@
   },
   {
     "reference": "main",
-    "revision": "231f1b1bafd12e46c8ed8c21dbbdd940d9f15e94",
-    "grammarSha": "ca9114607dfeb3788abe6e7a68d02fe4e630caed460be02b0372f07822930b74",
+    "revision": "d2e4e4c7d03f70e0465d436f2b5f67497cd544ca",
+    "grammarSha": "e309c4ac9a0586c053317ded2d0a53ca214c024f95bc8edfd65649a54cec16c2",
     "language": "http",
     "url": "https://github.com/rest-nvim/tree-sitter-http",
     "maintainedBy": "@amaanq"
@@ -2755,8 +2755,8 @@
   },
   {
     "reference": "main",
-    "revision": "ac878320cd624b3402a50fa875ad5f90bf6dd6d7",
-    "grammarSha": "d0c33db543a4214a9f4f5ccb354b5070d47c2f487c28349f1e954bb3cced1264",
+    "revision": "f85d2481616537d1d54894bc278d64b24581ea5c",
+    "grammarSha": "4d5e86bb94473a8285ca6d362de12e192b05e632d4cd9d3f16c18b17fe7b7d28",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558",
@@ -3549,8 +3549,8 @@
   },
   {
     "reference": "master",
-    "revision": "14058535212e3d01a4c4b34b06c524fae289ec18",
-    "grammarSha": "d72dd18e6050cace7fcbacf253b4975f0e6c6f19abaff91feebbcf2037727da4",
+    "revision": "68773dfed7fee05b3549aaf52ebf8be7c7fe7d5f",
+    "grammarSha": "78a051071f802df37619017bee293b0892dd4035685958f44c8a574bd9a8ec0a",
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
     "maintainedBy": "@stevanmilic",
@@ -4363,7 +4363,7 @@
   },
   {
     "reference": "main",
-    "revision": "bbba20d654a764c2d2de272fd5f45a2433870640",
+    "revision": "bc2aa2993851ed5ad10caf4571aa2aaee3c80a7f",
     "grammarSha": "2e636a3b4cbfdfec711b76cb4d27919d89331d025884c0ac46fb0c021147fce1",
     "language": "v",
     "url": "https://github.com/vlang/v-analyzer",
