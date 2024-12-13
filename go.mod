@@ -12,6 +12,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/amber v1.9.1
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
+	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
 	github.com/alexaandru/go-sitter-forest/apex v1.9.5
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
@@ -193,9 +194,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/http2 v1.9.4
 	github.com/alexaandru/go-sitter-forest/hungarian v1.9.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
+	github.com/alexaandru/go-sitter-forest/hy v1.9.0
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
 	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.0
+	github.com/alexaandru/go-sitter-forest/i3config v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.4
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.7
@@ -204,6 +207,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/inko v1.9.4
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
+	github.com/alexaandru/go-sitter-forest/jai v1.9.0
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.1
@@ -220,6 +224,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/julia v1.9.8
 	github.com/alexaandru/go-sitter-forest/just v1.9.4
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
+	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
