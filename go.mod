@@ -190,7 +190,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/html v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.9.0
-	github.com/alexaandru/go-sitter-forest/http v1.9.1
+	github.com/alexaandru/go-sitter-forest/http v1.9.2
 	github.com/alexaandru/go-sitter-forest/http2 v1.9.4
 	github.com/alexaandru/go-sitter-forest/hungarian v1.9.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
@@ -390,7 +390,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/snakemake v1.9.0
 	github.com/alexaandru/go-sitter-forest/snl v1.9.0
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
-	github.com/alexaandru/go-sitter-forest/solidity v1.9.1
+	github.com/alexaandru/go-sitter-forest/solidity v1.9.2
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
 	github.com/alexaandru/go-sitter-forest/soql v1.9.4
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.3
