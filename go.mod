@@ -288,7 +288,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.15
+	github.com/alexaandru/go-sitter-forest/nu v1.9.16
 	github.com/alexaandru/go-sitter-forest/objc v1.9.0
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
@@ -367,7 +367,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rust v1.9.5
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
-	github.com/alexaandru/go-sitter-forest/scala v1.9.2
+	github.com/alexaandru/go-sitter-forest/scala v1.9.3
 	github.com/alexaandru/go-sitter-forest/scfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/scheme v1.9.0
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
@@ -451,7 +451,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
 	github.com/alexaandru/go-sitter-forest/usd v1.9.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.9.0
-	github.com/alexaandru/go-sitter-forest/v v1.9.1
+	github.com/alexaandru/go-sitter-forest/v v1.9.2
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.0
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.3
