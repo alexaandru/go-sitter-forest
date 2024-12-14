@@ -191,7 +191,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmlaskama v1.9.0
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.9.0
 	github.com/alexaandru/go-sitter-forest/http v1.9.2
-	github.com/alexaandru/go-sitter-forest/http2 v1.9.4
+	github.com/alexaandru/go-sitter-forest/http2 v1.9.5
 	github.com/alexaandru/go-sitter-forest/hungarian v1.9.0
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
 	github.com/alexaandru/go-sitter-forest/hy v1.9.0
