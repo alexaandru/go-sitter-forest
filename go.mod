@@ -14,7 +14,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
-	github.com/alexaandru/go-sitter-forest/apex v1.9.5
+	github.com/alexaandru/go-sitter-forest/apex v1.9.6
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
 	github.com/alexaandru/go-sitter-forest/asciidoc v1.9.0
@@ -207,7 +207,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/inko v1.9.4
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.0
+	github.com/alexaandru/go-sitter-forest/jai v1.9.1
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.1
@@ -392,8 +392,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.9.2
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
-	github.com/alexaandru/go-sitter-forest/soql v1.9.4
-	github.com/alexaandru/go-sitter-forest/sosl v1.9.3
+	github.com/alexaandru/go-sitter-forest/soql v1.9.5
+	github.com/alexaandru/go-sitter-forest/sosl v1.9.4
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.0
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.0
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.3

@@ -1315,7 +1315,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1839,8 +1839,8 @@
   },
   {
     "reference": "main",
-    "revision": "279762bf7302c55a268c49e484771546445266b4",
-    "grammarSha": "63703feb164d7d7c6f341a55512ea8ddd78dabf5aae685e7776af32ea4e352c2",
+    "revision": "97fcbdd4d1901bd5b0745f23044762b6372c6890",
+    "grammarSha": "e6b133b0686f0ee88dcf76545227ae7b68296e8c0a4b0b7a4557e28c76173ef3",
     "language": "http2",
     "url": "https://github.com/rstcruzo/tree-sitter-http2",
     "maintainedBy": "@rstcruzo"
