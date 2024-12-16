@@ -8,6 +8,5 @@
   "maintainedBy": "@pinbraerts",
   "files": [
     "scanner.c"
-  ],
-  "skip": true
+  ]
 }

@@ -1143,8 +1143,7 @@
     "maintainedBy": "@pinbraerts",
     "files": [
       "scanner.c"
-    ],
-    "skip": true
+    ]
   },
   {
     "reference": "main",

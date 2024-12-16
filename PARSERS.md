@@ -1,6 +1,6 @@
 # 487 Supported Parsers
 
-5 pending, 8 skipped regeneration, 34 missing queries
+5 pending, 7 skipped regeneration, 34 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -122,7 +122,7 @@
 - [x] [erlang](https://github.com/WhatsApp/tree-sitter-erlang) ✔️ (maintained by @filmor)
 - [x] [facility](https://github.com/FacilityApi/tree-sitter-facility) ✔️ (maintained by @bryankenote)
 - [x] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) ✔️ (maintained by @redexp)
-- [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts; ❌no crash but generate never completes (15min))
+- [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts; no crash but generate never completes (15min))
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️ (maintained by @khiner)
 - [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️ (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents automation from working)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️ (maintained by @chaopeng)
