@@ -40,6 +40,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bp v1.9.0
 	github.com/alexaandru/go-sitter-forest/bqn v1.9.0
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
+	github.com/alexaandru/go-sitter-forest/bruno v1.9.0
 	github.com/alexaandru/go-sitter-forest/c v1.9.2
 	github.com/alexaandru/go-sitter-forest/c3 v1.9.4
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.4
@@ -231,6 +232,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
 	github.com/alexaandru/go-sitter-forest/kon v1.9.16
+	github.com/alexaandru/go-sitter-forest/kos v1.9.0
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.1
 	github.com/alexaandru/go-sitter-forest/koto v1.9.3
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
