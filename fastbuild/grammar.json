@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "0e8547f1be9189df22ae1151f184e91e211bd8d8",
+  "revision": "d96b1a639034190690ae4eb57c2b33ce9bf3336e",
   "grammarSha": "29e9c0cc685c3824b90a142084b574091cabd2b2a59955ea867f8f9d82feff72",
   "language": "fastbuild",
   "url": "https://github.com/pinbraerts/tree-sitter-fastbuild",

@@ -13,10 +13,9 @@
     name: _ @keyword))
 
 ; Subordinate directives (eg. input, output)
-((_)
-  body: (_
-    (directive
-      name: _ @label)))
+body: (_
+  (directive
+    name: _ @label))
 
 ; rule/module/checkpoint names
 (rule_definition
@@ -30,12 +29,14 @@
 
 ; Rule imports
 (rule_import
-  "use" @keyword.import
-  "rule" @keyword.import
-  "from" @keyword.import
-  "exclude"? @keyword.import
-  "as"? @keyword.import
-  "with"? @keyword.import)
+  [
+    "use"
+    "rule"
+    "from"
+    "exclude"
+    "as"
+    "with"
+  ] @keyword.import)
 
 ; Rule inheritance
 (rule_inheritance
@@ -44,8 +45,11 @@
   "with" @keyword)
 
 ; Wildcard names
-(wildcard (identifier) @variable)
-(wildcard (flag) @variable.parameter.builtin)
+(wildcard
+  (identifier) @variable)
+
+(wildcard
+  (flag) @variable.parameter.builtin)
 
 ; builtin variables
 ((identifier) @variable.builtin
@@ -59,20 +63,20 @@
 ; directive labels in wildcard context
 ((wildcard
   (identifier) @label)
-  (#any-of? @label "input" "log" "output" "params" "resources" "threads" "wildcards"))
+  (#any-of? @label "input" "jobid" "log" "output" "params" "resources" "rule" "threads" "wildcards"))
 
 ((wildcard
   (attribute
     object: (identifier) @label))
-  (#any-of? @label "input" "log" "output" "params" "resources" "threads" "wildcards"))
+  (#any-of? @label "input" "jobid" "log" "output" "params" "resources" "rule" "threads" "wildcards"))
 
 ((wildcard
   (subscript
     value: (identifier) @label))
-  (#any-of? @label "input" "log" "output" "params" "resources" "threads" "wildcards"))
+  (#any-of? @label "input" "jobid" "log" "output" "params" "resources" "rule" "threads" "wildcards"))
 
 ; directive labels in block context (eg. within 'run:')
 ((identifier) @label
-  (#any-of? @label "input" "log" "output" "params" "resources" "threads" "wildcards")
+  (#any-of? @label "input" "jobid" "log" "output" "params" "resources" "rule" "threads" "wildcards")
   (#has-ancestor? @label "directive")
   (#has-ancestor? @label "block"))

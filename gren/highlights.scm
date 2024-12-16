@@ -6,8 +6,8 @@
     "let"
     "in"
  ] @keyword.control.gren
-(case) @keyword.control.gren
-(of) @keyword.control.gren
+(when) @keyword.control.gren
+(is) @keyword.control.gren
 
 (colon) @keyword.other.gren
 (backslash) @keyword.other.gren

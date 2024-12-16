@@ -98,7 +98,7 @@ typedef struct {
 
 
 // Opening bracket for wildcard interpolation
-bool parse_wc_interp_open(TSLexer *lexer, const bool *valid_symbols, bool has_content) {
+static bool parse_wc_interp_open(TSLexer *lexer, const bool *valid_symbols, bool has_content) {
     // Encountered '{' as next symbol and a wildcard interpolation is allowed
     lexer->mark_end(lexer);
     lexer->advance_snakemake(lexer, false);
@@ -116,7 +116,7 @@ bool parse_wc_interp_open(TSLexer *lexer, const bool *valid_symbols, bool has_co
 
 
 // Opening bracket for wildcard definition
-bool parse_wc_def_open(
+static bool parse_wc_def_open(
         TSLexer *lexer,
         const bool *valid_symbols,
         bool has_content,

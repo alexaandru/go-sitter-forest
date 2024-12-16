@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "e909815acdbe37e69440261ebb1091ed52e1dec6",
-  "grammarSha": "773172b891358617c4742ef2b73eedaf25da79a996fcce299364dd9d36654be1",
+  "revision": "29a82ddde86c0d428acf971b04794c13525c4bc5",
+  "grammarSha": "a6ba4aa22bf4d5c81053604edd70aec87b63ec511109bc06191c1680bf19e9ff",
   "language": "snakemake",
   "url": "https://github.com/osthomas/tree-sitter-snakemake",
   "maintainedBy": "@osthomas",
