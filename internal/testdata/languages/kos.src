@@ -1,0 +1,58 @@
+#!/usr/bin/env kos
+import base: print, range, enumerate
+import math.sqrt
+
+# Prime number generator with a fixed-size sieve
+fun primes(sieve_size)
+{
+    yield 2 # Yield the only even prime number from the generator
+
+    const sieve = [] # Empty array
+
+    # Set array size, fills with 'void' values.
+    # We set to half of the max number checked, because
+    # we ignore even numbers and only check odd numbers.
+    const len = sieve_size / 2
+    sieve.resize(len)
+
+    const sqrt_sieve_size = sqrt(sieve_size)
+
+    # Find and yield all odd primes
+    for var number in range(3, sieve_size, 2) {
+
+        const idx = number >> 1
+
+        # Yield this number as prime if it hasn't been sifted-out
+        if ! sieve[idx] {
+
+            yield number
+
+            # Don't clear above square root of sieve size, because
+            # these numbers have already been cleared by lower primes
+            if number > sqrt_sieve_size {
+                continue
+            }
+
+            # Mark all multiplicities of this prime as non-primes
+            # Start from square of prime, because lower numbers have
+            # already been cleared
+            for var i in range(number * number / 2, len, number) {
+                sieve[i] = true # Mark a non-prime
+            }
+        }
+    }
+}
+
+public fun main
+{
+    print("Prime numbers:")
+
+    var count = 0
+
+    for var idx, prime in enumerate(primes(7920)) {
+        print("    prime \(idx + 1) is: \(prime)")
+        count += 1
+    }
+
+    print("Printed \(count) primes")
+}

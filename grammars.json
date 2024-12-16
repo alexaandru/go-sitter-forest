@@ -2226,6 +2226,14 @@
   },
   {
     "reference": "main",
+    "revision": "028f8ceef2a0e9553155f1356a83ad9608082e00",
+    "grammarSha": "a0bd966905acecc27d3f799e50e3232d14d2723c9058f42e41ee8b07a744f410",
+    "language": "kos",
+    "url": "https://github.com/kos-lang/tree-sitter-kos",
+    "maintainedBy": "@cdragan"
+  },
+  {
+    "reference": "main",
     "revision": "76f53c48d29e8588934fb55b0240d7bdfe00bfe5",
     "grammarSha": "8b6c72e00438a0d644b201d6c7937c4e4ad1360f6064d63e32c659424d48862d",
     "language": "kotlin",

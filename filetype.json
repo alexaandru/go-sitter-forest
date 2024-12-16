@@ -300,6 +300,7 @@
     "koan":               ["koan"],
     "koka":               ["kk"],
     "kon":                ["kon"],
+    "kos":                ["kos"],
     "kotlin":             ["kt", "ktm", "kts"],
     "koto":               ["koto"],
     "kusto":              ["csl", "kql"],

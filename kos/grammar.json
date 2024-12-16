@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "028f8ceef2a0e9553155f1356a83ad9608082e00",
+  "grammarSha": "a0bd966905acecc27d3f799e50e3232d14d2723c9058f42e41ee8b07a744f410",
+  "language": "kos",
+  "url": "https://github.com/kos-lang/tree-sitter-kos",
+  "maintainedBy": "@cdragan"
+}
