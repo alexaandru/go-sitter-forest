@@ -49,7 +49,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
 	github.com/alexaandru/go-sitter-forest/capnp v1.9.0
 	github.com/alexaandru/go-sitter-forest/carbon v1.9.1
-	github.com/alexaandru/go-sitter-forest/cds v1.9.0
+	github.com/alexaandru/go-sitter-forest/cds v1.9.1
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
