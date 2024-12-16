@@ -122,6 +122,7 @@
     "bp":                 ["bp"],
     "bqn":                ["bqn"],
     "brightscript":       ["brs"],
+    "bruno":              ["bru"],
     "c3":                 ["c3"],
     "c":                  ["c", "h"],
     "c_sharp":            ["cs", "cake", "csx"],

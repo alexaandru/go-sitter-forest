@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "4c8da45da6537ab8c27018b9f2cf92768f9123c2",
+  "grammarSha": "e8b47a9b44a64861a9f4ca52abdf7bd564a2e4ea7541475377b7360b8575f642",
+  "language": "bruno",
+  "url": "https://github.com/kristoferssolo/tree-sitter-bruno",
+  "maintainedBy": "@kristoferssolo",
+  "files": [
+    "scanner.c"
+  ]
+}

@@ -55,6 +55,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/bp"
 	"github.com/alexaandru/go-sitter-forest/bqn"
 	"github.com/alexaandru/go-sitter-forest/brightscript"
+	"github.com/alexaandru/go-sitter-forest/bruno"
 	"github.com/alexaandru/go-sitter-forest/c"
 	"github.com/alexaandru/go-sitter-forest/c3"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
@@ -562,6 +563,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"bp":                     bp.GetLanguage,
 	"bqn":                    bqn.GetLanguage,
 	"brightscript":           brightscript.GetLanguage,
+	"bruno":                  bruno.GetLanguage,
 	"c":                      c.GetLanguage,
 	"c3":                     c3.GetLanguage,
 	"c_sharp":                c_sharp.GetLanguage,
@@ -1053,6 +1055,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"bp":                     bp.GetQuery,
 	"bqn":                    bqn.GetQuery,
 	"brightscript":           brightscript.GetQuery,
+	"bruno":                  bruno.GetQuery,
 	"c":                      c.GetQuery,
 	"c3":                     c3.GetQuery,
 	"c_sharp":                c_sharp.GetQuery,

@@ -1,4 +1,4 @@
-# 487 Supported Parsers
+# 488 Supported Parsers
 
 5 pending, 7 skipped regeneration, 34 missing queries
 
@@ -41,6 +41,7 @@
 - [x] [bp](https://github.com/ambroisie/tree-sitter-bp) ✔️ (maintained by @ambroisie)
 - [x] [bqn](https://github.com/shnarazk/tree-sitter-bqn) ✔️ (maintained by @shnarazk)
 - [x] [brightscript](https://github.com/ajdelcimmuto/tree-sitter-brightscript) ✔️ (maintained by @ajdelcimmuto)
+- [x] [bruno](https://github.com/kristoferssolo/tree-sitter-bruno) ✔️ (maintained by @kristoferssolo)
 - [x] [c](https://github.com/tree-sitter/tree-sitter-c) ✔️ (maintained by @amaanq)
 - [x] [c3](https://github.com/cbuttner/tree-sitter-c3) ✔️ (maintained by @cbuttner)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) ✔️ (maintained by @Luxed; high memory usage (1.7GB))
