@@ -13,7 +13,7 @@ parsers I can add.
 So here it is: started with the parsers and the automation from the above
 mentioned repo then added a bunch more parsers on top of it and updated
 automation (to support more parsers and also to automatically update the
-PARSERS.md file, git tags, etc.).
+[PARSERS.md](PARSERS.md) file, git tags, etc.).
 
 The credits for the parsers go to all the parsers' respective authors
 (see [grammars.json](grammars.json) for the source of each and all of the parsers).
@@ -31,8 +31,8 @@ For contributing (or just to see how the automation works) see [CONTRIBUTING.md]
 
 ## Differences
 
-- ~480 parsers in this repo vs. ~30 in the parent repo;
-- all (but 9) are regenerated from `grammar.js` (via `tree-sitter generate`)
+- ~490 parsers in this repo vs. ~30 in the parent repo;
+- all (but 7) are regenerated from `grammar.js` (via `tree-sitter generate`)
   instead of copying the pre-generated files from the parser repo;
 - end-to-end "tree-sitter version alignment", see below,
 - [queries fetching](#queries) mechanism, so that you can get the queries along
@@ -46,7 +46,7 @@ For contributing (or just to see how the automation works) see [CONTRIBUTING.md]
 - constantly adding new parsers as they become available, even
   new/experimental ones;
 - tests suite to ensure all the parsers in the repo can actually parse
-  content (can build & run successfuly).
+  content (can build & run successfully).
 
 ### Tree-Sitter Version Alignment
 
@@ -63,7 +63,7 @@ Contrast that with the parent repo where bindings lag quite a bit
 behind tree-sitter (was last updated to v0.22.5) and then on top of that,
 the parsers' files (`parser.c`, `parser.h`, etc.) are copied from the
 parser repos, meaning that they are each built with whatever version
-happend to be last built by the parsers' repo maintainers, so it
+happened to be last built by the parsers' repo maintainers, so it
 can vary greatly from each other AND from the version the bindings
 are built with.
 
