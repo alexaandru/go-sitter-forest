@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"path/filepath"
 
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 )
 
@@ -96,11 +97,12 @@ var tplBindings = map[string]string{
 }
 
 // Creates a map between file paths to write to and corresponding content.
-func mkBindingMap(langIn string) (out map[string]string) {
+func mkBindingMap(gr *grammar.Grammar) (out map[string]string) {
 	out = map[string]string{}
+	langIn := gr.Language
 
 	for k, v := range tplBindings {
-		lang, pack, silencer := util.NormalizeLangPackName(langIn)
+		lang, pack, silencer := util.NormalizeLangPackName(gr)
 		fpath := filepath.Join(langIn, k)
 
 		switch k {

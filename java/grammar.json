@@ -1,10 +1,8 @@
 {
   "reference": "master",
-  "revision": "490d878cf33b0ad5ae7a7253ff30597a5bdc348e",
-  "grammarSha": "644b2d167c38167e5b5b01276515ae2dfde3338d3729e86f4f6c5d58de4cac4e",
+  "revision": "a1bbe92a6370bb4c15386735fbda12f2b812a923",
+  "grammarSha": "bc46993017918b80951acb96c827da03a0de721d82ddd29ca61002c40f5e63d4",
   "language": "java",
   "url": "https://github.com/tree-sitter/tree-sitter-java",
-  "doc": "Error: Supertype rule `comment` is not defined.",
-  "maintainedBy": "@p00f",
-  "skipUpdate": true
+  "maintainedBy": "@p00f"
 }

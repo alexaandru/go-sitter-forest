@@ -6,6 +6,9 @@ import (
 	"bytes"
 	"regexp"
 	"slices"
+	"strings"
+
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 )
 
 var (
@@ -31,7 +34,8 @@ var (
 // NormalizeLangPackName normalizes the language and package names.
 // Normally (in ~98% of the cases) the language, package and folder name
 // are identical. In a few cases however, it is not (see the README).
-func NormalizeLangPackName(langIn string) (lang, pack, silencer string) {
+func NormalizeLangPackName(gr *grammar.Grammar) (lang, pack, silencer string) {
+	langIn := gr.Language
 	lang, pack = langIn, langIn
 
 	switch lang {
@@ -51,6 +55,10 @@ func NormalizeLangPackName(langIn string) (lang, pack, silencer string) {
 		lang = "janet_simple"
 	case "cgsql":
 		lang = "cql"
+	case "verilog":
+		if strings.Contains(gr.URL, "systemverilog") {
+			lang = "systemverilog"
+		}
 	}
 
 	switch langIn {

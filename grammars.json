@@ -2028,13 +2028,11 @@
   },
   {
     "reference": "master",
-    "revision": "490d878cf33b0ad5ae7a7253ff30597a5bdc348e",
-    "grammarSha": "644b2d167c38167e5b5b01276515ae2dfde3338d3729e86f4f6c5d58de4cac4e",
+    "revision": "a1bbe92a6370bb4c15386735fbda12f2b812a923",
+    "grammarSha": "bc46993017918b80951acb96c827da03a0de721d82ddd29ca61002c40f5e63d4",
     "language": "java",
     "url": "https://github.com/tree-sitter/tree-sitter-java",
-    "doc": "Error: Supertype rule `comment` is not defined.",
-    "maintainedBy": "@p00f",
-    "skipUpdate": true
+    "maintainedBy": "@p00f"
   },
   {
     "reference": "master",
@@ -2841,11 +2839,10 @@
   {
     "reference": "master",
     "revision": "18802acf31d0b5c1c1d50bdbc9eb0e1636cab9ed",
+    "grammarSha": "b19bf5b588a19828e926a904e3670b2313fd1de9412c301b1dc074cb0ccb9cba",
     "language": "objc",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-objc",
-    "doc": "grammar.js throws error: Unresolved conflict for symbol sequence",
-    "maintainedBy": "@amaanq",
-    "skip": true
+    "maintainedBy": "@amaanq"
   },
   {
     "reference": "master",
@@ -4060,13 +4057,12 @@
   },
   {
     "reference": "master",
-    "revision": "4f897d5e3f0e38bf8fbb55e8f39dc97d2bc2229e",
-    "grammarSha": "daf4b45c0f8192979d80b8fcb62a7f8c09b8d3dca71d9c7e2b9236f09b3281a6",
+    "revision": "0dacb911daa9614a7c7e79a594d4cb9f478e6554",
+    "grammarSha": "49c15d7c74170a3505e1b63098a910f48cd3b27fbfac3ae4bb4b542bb9e746d8",
     "language": "systemverilog",
-    "url": "https://github.com/zhangwwpeng/tree-sitter-systemverilog",
-    "doc": "repository was removed by owner",
-    "maintainedBy": "@zhangwwpeng",
-    "skipUpdate": true
+    "url": "https://github.com/gmlarumbe/tree-sitter-systemverilog",
+    "doc": "high memory usage (3.9GB)",
+    "maintainedBy": "@gmlarumbe"
   },
   {
     "reference": "main",

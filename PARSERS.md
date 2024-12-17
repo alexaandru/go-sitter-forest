@@ -1,6 +1,6 @@
 # 490 Supported Parsers
 
-5 pending, 7 skipped regeneration, 34 missing queries
+5 pending, 6 skipped regeneration, 34 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -216,7 +216,7 @@
 - [x] [jai](https://github.com/constantitus/tree-sitter-jai) ✔️ (maintained by @constantitus)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [x] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) ✔️ (maintained by @y4cer)
-- [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f; ❌Error: Supertype rule `comment` is not defined.)
+- [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f)
 - [x] [javascript](https://github.com/tree-sitter/tree-sitter-javascript) ✔️ (maintained by @steelsojka)
 - [x] [jinja](https://github.com/cathaysia/tree-sitter-jinja2) ✔️ (maintained by @cathaysia)
 - [x] [jinja_inline](https://github.com/cathaysia/tree-sitter-jinja2) ✔️ (maintained by @cathaysia)
@@ -301,7 +301,7 @@
 - [x] [note](https://github.com/gsuuon/tree-sitter-note) 🗸 (maintained by @gsuuon)
 - [x] [nqc](https://github.com/tree-sitter-grammars/tree-sitter-nqc) ✔️ (maintained by @amaanq; ❌ReferenceError: Undefined symbol '_statement')
 - [x] [nu](https://github.com/nushell/tree-sitter-nu) ✔️ (maintained by @abhisheksingh0x558)
-- [x] [objc](https://github.com/tree-sitter-grammars/tree-sitter-objc) 🔍 (maintained by @amaanq; ❌grammar.js throws error: Unresolved conflict for symbol sequence)
+- [x] [objc](https://github.com/tree-sitter-grammars/tree-sitter-objc) ✔️ (maintained by @amaanq)
 - [x] [objdump](https://github.com/ColinKennedy/tree-sitter-objdump) ✔️ (maintained by @ColinKennedy)
 - [x] [ocaml](https://github.com/tree-sitter/tree-sitter-ocaml) ✔️ (maintained by @undu)
 - [x] [ocaml_interface](https://github.com/tree-sitter/tree-sitter-ocaml) ✔️ (maintained by @undu)
@@ -426,7 +426,7 @@
 - [x] [sxhkdrc](https://github.com/RaafatTurki/tree-sitter-sxhkdrc) ✔️ (maintained by @RaafatTurki)
 - [x] [syphon](https://github.com/yhyadev/tree-sitter-syphon) ✔️ (maintained by @yhyadev)
 - [x] [systemtap](https://github.com/ok-ryoko/tree-sitter-systemtap) ✔️ (maintained by @ok-ryoko)
-- [x] [systemverilog](https://github.com/zhangwwpeng/tree-sitter-systemverilog) ✔️ (maintained by @zhangwwpeng; ❌repository was removed by owner)
+- [x] [systemverilog](https://github.com/gmlarumbe/tree-sitter-systemverilog) ✔️ (maintained by @gmlarumbe; high memory usage (3.9GB))
 - [x] [t32](https://gitlab.com/xasc/tree-sitter-t32) ✔️ (maintained by @xasc)
 - [x] [tablegen](https://github.com/tree-sitter-grammars/tree-sitter-tablegen) ✔️ (maintained by @amaanq)
 - [x] [tact](https://github.com/tact-lang/tree-sitter-tact) ✔️ (maintained by @novusnota)

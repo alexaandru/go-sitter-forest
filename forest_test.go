@@ -10,6 +10,7 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
@@ -309,7 +310,11 @@ func forEachFile(t *testing.T, pat string, fn func(t *testing.T, act, pack, lang
 		t.Run(fpath, func(t *testing.T) {
 			t.Parallel()
 
-			lang, pack, silencer := util.NormalizeLangPackName(filepath.Dir(fpath))
+			gr := &grammar.Grammar{
+				Language: filepath.Dir(fpath),
+				URL:      fpath,
+			}
+			lang, pack, silencer := util.NormalizeLangPackName(gr)
 
 			fn(t, getContent(fpath), pack, lang, silencer)
 		})

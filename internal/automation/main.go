@@ -190,7 +190,7 @@ func updateBindings() error {
 	fmt.Println("Updating all languages' binding.go files ...")
 
 	return grammars.ForEach(func(gr *grammar.Grammar) error {
-		return createBindings(gr.Language, force)
+		return createBindings(gr, force)
 	})
 }
 
@@ -620,7 +620,7 @@ func downloadFiles(gr *grammar.Grammar) (err error) {
 		return
 	}
 
-	if err = createBindings(gr.Language); err != nil {
+	if err = createBindings(gr); err != nil {
 		return
 	}
 
@@ -693,13 +693,13 @@ func regenerateGrammar(gr *grammar.Grammar) (err error) {
 	return
 }
 
-func createBindings(lang string, opts ...bool) (err error) {
+func createBindings(gr *grammar.Grammar, opts ...bool) (err error) {
 	force := false
 	if len(opts) > 0 {
 		force = opts[0]
 	}
 
-	for toPath, content := range mkBindingMap(lang) {
+	for toPath, content := range mkBindingMap(gr) {
 		var found bool
 
 		if found, err = fileExists(toPath); err != nil {
@@ -771,6 +771,10 @@ func putFile(content []byte, lang, toPath string) error {
 		reMap[`"parser.c"`] = `"_parser.c"`
 		reMap[`"parser.h"`] = `"_parser.h"`
 		reMap[`"scanner.c"`] = `"_scanner.c"`
+	}
+
+	if strings.Contains(toPath, "systemverilog") {
+		reMap["tree_sitter_verilog"] = "tree_sitter_systemverilog"
 	}
 
 	for old, new := range reMap {

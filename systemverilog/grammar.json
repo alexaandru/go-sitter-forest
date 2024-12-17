@@ -1,10 +1,9 @@
 {
   "reference": "master",
-  "revision": "4f897d5e3f0e38bf8fbb55e8f39dc97d2bc2229e",
-  "grammarSha": "daf4b45c0f8192979d80b8fcb62a7f8c09b8d3dca71d9c7e2b9236f09b3281a6",
+  "revision": "0dacb911daa9614a7c7e79a594d4cb9f478e6554",
+  "grammarSha": "49c15d7c74170a3505e1b63098a910f48cd3b27fbfac3ae4bb4b542bb9e746d8",
   "language": "systemverilog",
-  "url": "https://github.com/zhangwwpeng/tree-sitter-systemverilog",
-  "doc": "repository was removed by owner",
-  "maintainedBy": "@zhangwwpeng",
-  "skipUpdate": true
+  "url": "https://github.com/gmlarumbe/tree-sitter-systemverilog",
+  "doc": "high memory usage (3.9GB)",
+  "maintainedBy": "@gmlarumbe"
 }
