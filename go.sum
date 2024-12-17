@@ -100,6 +100,8 @@ github.com/alexaandru/go-sitter-forest/cfengine v1.9.0 h1:SovhCdVB+PM33TcY9qzu44
 github.com/alexaandru/go-sitter-forest/cfengine v1.9.0/go.mod h1:nTisVy4MkxkYk0oIqNHcyfcMwfN4CJ2yrqVUgEL8q3s=
 github.com/alexaandru/go-sitter-forest/cg v1.9.1 h1:wYvV3A+8HJvGGMCSxzXjamH607DgzS0t1XwEnFyfGow=
 github.com/alexaandru/go-sitter-forest/cg v1.9.1/go.mod h1:xeiUuIfoDRaYmL+qi106WJ+PIzYYZCsJVoidDmzc5KQ=
+github.com/alexaandru/go-sitter-forest/cgsql v1.9.0 h1:dUhErAUnfE/Hpw1w7Z+qxdWJLUV2aqhHgop/S/SEo9Y=
+github.com/alexaandru/go-sitter-forest/cgsql v1.9.0/go.mod h1:NpmeMHv878NJJV2lO7IGy4Vhy8FSbuhZyXMmMH4lL2E=
 github.com/alexaandru/go-sitter-forest/chatito v1.9.1 h1:a4QQHTvwS7W5fU64VkRHq7EAHJtZyCqkQlQeZtIMtiQ=
 github.com/alexaandru/go-sitter-forest/chatito v1.9.1/go.mod h1:MCBRzbrIP5AKWhT9qH20NEri6+CmL11dEGNmgEwMwi0=
 github.com/alexaandru/go-sitter-forest/circom v1.9.1 h1:A4u/8OqKx0CoQNwn1ZnfcJCxfxJvcWybBwiH+ePGXeY=
