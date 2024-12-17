@@ -73,7 +73,7 @@ named_argument: (identifier) @variable
 
 ; Functions
 
-(procedure_declaration (identifier) @function (procedure (block)))
+(procedure_declaration (identifier) @function (block))
 
 (call_expression function: (identifier) @function.call)
 
