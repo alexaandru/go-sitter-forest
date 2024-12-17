@@ -49,6 +49,8 @@ func NormalizeLangPackName(langIn string) (lang, pack, silencer string) {
 		lang = "cwal"
 	case "janet":
 		lang = "janet_simple"
+	case "cgsql":
+		lang = "cql"
 	}
 
 	switch langIn {

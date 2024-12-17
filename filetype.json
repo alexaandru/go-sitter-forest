@@ -136,6 +136,7 @@
     "cel":                ["cel"],
     "cfengine":           ["cf"],
     "cg":                 ["cg"],
+    "cgsql":              ["cql", "cgsql"],
     "chatito":            ["chatito"],
     "circom":             ["circom"],
     "clarity":            ["clar"],

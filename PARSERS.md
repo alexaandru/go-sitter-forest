@@ -1,4 +1,4 @@
-# 489 Supported Parsers
+# 490 Supported Parsers
 
 5 pending, 7 skipped regeneration, 34 missing queries
 
@@ -57,6 +57,7 @@
 - [ ] [cfhtml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
 - [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
 - [x] [cg](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
+- [x] [cgsql](https://github.com/ricomariani/tree-sitter-cgsql) ✔️ (maintained by @ricomariani)
 - [x] [chatito](https://github.com/tree-sitter-grammars/tree-sitter-chatito) ✔️ (maintained by @ObserverOfTime)
 - [x] [circom](https://github.com/Decurity/tree-sitter-circom) ✔️ (maintained by @Frodan)
 - [x] [clarity](https://github.com/xlittlerag/tree-sitter-clarity) ✔️ (maintained by @xlittlerag)

@@ -520,6 +520,14 @@
     "srcRoot": "tree-sitter-cg"
   },
   {
+    "reference": "main",
+    "revision": "5a40ff998531f0a7c9a986cb316fb1964c9e7431",
+    "grammarSha": "3766f0988ddbbdb2530d788cbcc3c4d5cd4365e7d4cc9bbd7f595e3ffed9a5c6",
+    "language": "cgsql",
+    "url": "https://github.com/ricomariani/tree-sitter-cgsql",
+    "maintainedBy": "@ricomariani"
+  },
+  {
     "reference": "master",
     "revision": "b4cbe9ab7672d5106e9550d8413835395a1be362",
     "grammarSha": "ef1b94c66a90d55c700a6b8b9c322ebeb83da6866224d9e547223b49ed11522e",
