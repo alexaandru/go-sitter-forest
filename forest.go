@@ -67,6 +67,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cds"
 	"github.com/alexaandru/go-sitter-forest/cedar"
 	"github.com/alexaandru/go-sitter-forest/cel"
+	"github.com/alexaandru/go-sitter-forest/cerium"
 	"github.com/alexaandru/go-sitter-forest/cfengine"
 	"github.com/alexaandru/go-sitter-forest/cg"
 	"github.com/alexaandru/go-sitter-forest/cgsql"
@@ -342,6 +343,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/pod"
 	"github.com/alexaandru/go-sitter-forest/poe_filter"
 	"github.com/alexaandru/go-sitter-forest/pony"
+	"github.com/alexaandru/go-sitter-forest/postscript"
 	"github.com/alexaandru/go-sitter-forest/poweron"
 	"github.com/alexaandru/go-sitter-forest/powershell"
 	"github.com/alexaandru/go-sitter-forest/printf"
@@ -500,6 +502,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/xfst"
 	"github.com/alexaandru/go-sitter-forest/xml"
 	"github.com/alexaandru/go-sitter-forest/xresources"
+	"github.com/alexaandru/go-sitter-forest/yadl"
 	"github.com/alexaandru/go-sitter-forest/yaml"
 	"github.com/alexaandru/go-sitter-forest/yang"
 	"github.com/alexaandru/go-sitter-forest/yaral"
@@ -510,6 +513,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/zig"
 	"github.com/alexaandru/go-sitter-forest/ziggy"
 	"github.com/alexaandru/go-sitter-forest/ziggy_schema"
+	"github.com/alexaandru/go-sitter-forest/zoomba"
 	sitter "github.com/alexaandru/go-tree-sitter-bare"
 )
 
@@ -577,6 +581,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"cds":                    cds.GetLanguage,
 	"cedar":                  cedar.GetLanguage,
 	"cel":                    cel.GetLanguage,
+	"cerium":                 cerium.GetLanguage,
 	"cfengine":               cfengine.GetLanguage,
 	"cg":                     cg.GetLanguage,
 	"cgsql":                  cgsql.GetLanguage,
@@ -850,6 +855,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"pod":                    pod.GetLanguage,
 	"poe_filter":             poe_filter.GetLanguage,
 	"pony":                   pony.GetLanguage,
+	"postscript":             postscript.GetLanguage,
 	"poweron":                poweron.GetLanguage,
 	"powershell":             powershell.GetLanguage,
 	"printf":                 printf.GetLanguage,
@@ -1009,6 +1015,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"xfst":                   xfst.GetLanguage,
 	"xml":                    xml.GetLanguage,
 	"xresources":             xresources.GetLanguage,
+	"yadl":                   yadl.GetLanguage,
 	"yaml":                   yaml.GetLanguage,
 	"yang":                   yang.GetLanguage,
 	"yaral":                  yaral.GetLanguage,
@@ -1019,6 +1026,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"zig":                    zig.GetLanguage,
 	"ziggy":                  ziggy.GetLanguage,
 	"ziggy_schema":           ziggy_schema.GetLanguage,
+	"zoomba":                 zoomba.GetLanguage,
 }
 
 var queryFuncs = map[string]func(string, ...byte) []byte{
@@ -1071,6 +1079,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"cds":                    cds.GetQuery,
 	"cedar":                  cedar.GetQuery,
 	"cel":                    cel.GetQuery,
+	"cerium":                 cerium.GetQuery,
 	"cfengine":               cfengine.GetQuery,
 	"cg":                     cg.GetQuery,
 	"cgsql":                  cgsql.GetQuery,
@@ -1344,6 +1353,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"pod":                    pod.GetQuery,
 	"poe_filter":             poe_filter.GetQuery,
 	"pony":                   pony.GetQuery,
+	"postscript":             postscript.GetQuery,
 	"poweron":                poweron.GetQuery,
 	"powershell":             powershell.GetQuery,
 	"printf":                 printf.GetQuery,
@@ -1503,6 +1513,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"xfst":                   xfst.GetQuery,
 	"xml":                    xml.GetQuery,
 	"xresources":             xresources.GetQuery,
+	"yadl":                   yadl.GetQuery,
 	"yaml":                   yaml.GetQuery,
 	"yang":                   yang.GetQuery,
 	"yaral":                  yaral.GetQuery,
@@ -1513,6 +1524,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"zig":                    zig.GetQuery,
 	"ziggy":                  ziggy.GetQuery,
 	"ziggy_schema":           ziggy_schema.GetQuery,
+	"zoomba":                 zoomba.GetQuery,
 }
 
 var (

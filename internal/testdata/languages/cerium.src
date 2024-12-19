@@ -1,0 +1,38 @@
+module examples::checker_board;
+
+import "std/os/linux/x86_64.cerm";
+
+// TODO: We don't support slices yet
+fn strlen(str [*]const u8) usize {
+    var len usize = 0;
+
+    while str[len] != 0 {
+        len = len + 1;
+    }
+
+    return len;
+}
+
+const STDOUT = 1;
+
+fn print(str [*]const u8) {
+    std::os::linux::x86_64::write(STDOUT, str as usize, strlen(str));
+}
+
+fn main() {
+    var i s32 = 0;
+
+    while (i = i + 1) < 9 {
+        var j s32 = 0;
+
+        while (j = j + 1) < 9 {
+            if (i + j) % 2 == 0 {
+                print("\e[47m  \e[0m");
+            } else {
+                print("\e[100m  \e[0m");
+            }
+        }
+
+        print("\n");
+    }
+}

@@ -1,6 +1,6 @@
-# 490 Supported Parsers
+# 494 Supported Parsers
 
-5 pending, 6 skipped regeneration, 34 missing queries
+5 pending, 6 skipped regeneration, 36 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -53,6 +53,7 @@
 - [x] [cds](https://github.com/cap-js-community/tree-sitter-cds) ✔️ (maintained by @bugwelle)
 - [x] [cedar](https://github.com/chrnorm/tree-sitter-cedar) ✔️ (maintained by @chrnorm)
 - [x] [Common Expression Language](https://github.com/bufbuild/tree-sitter-cel) ✔️ (maintained by @Alfus)
+- [x] [cerium](https://github.com/yhyadev/tree-sitter-cerium) ✔️ (maintained by @yhyadev)
 - [x] [cfengine](https://github.com/olehermanse/tree-sitter-cfengine) 🗸 (maintained by @olehermanse)
 - [ ] [cfhtml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
 - [ ] [cfml](https://github.com/cfmleditor/tree-sitter-cfml) (maintained by @ghedwards; Undeclared precedence 'unary_void' in rule 'await_expression')
@@ -329,6 +330,7 @@
 - [x] [pod](https://github.com/tree-sitter-perl/tree-sitter-pod) ✔️ (maintained by @RabbiVeesh, @LeoNerd)
 - [x] [Path of Exile item filter](https://github.com/tree-sitter-grammars/tree-sitter-poe-filter) ✔️ (maintained by @ObserverOfTime)
 - [x] [pony](https://github.com/tree-sitter-grammars/tree-sitter-pony) ✔️ (maintained by @amaanq, @mfelsche)
+- [x] [postscript](https://github.com/smoeding/tree-sitter-postscript) 🗸 (maintained by @smoeding)
 - [x] [poweron](https://github.com/phileagleson/tree-sitter-poweron) ✔️ (maintained by @phileagleson; high memory usage (5GB))
 - [x] [powershell](https://github.com/airbus-cert/tree-sitter-powershell) ✔️ (maintained by @citronneur)
 - [x] [printf](https://github.com/tree-sitter-grammars/tree-sitter-printf) ✔️ (maintained by @ObserverOfTime)
@@ -488,6 +490,7 @@
 - [x] [xfst](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [xml](https://github.com/tree-sitter-grammars/tree-sitter-xml) ✔️ (maintained by @ObserverOfTime)
 - [x] [xresources](https://github.com/ValdezFOmar/tree-sitter-xresources) ✔️ (maintained by @ValdezFOmar)
+- [x] [yadl](https://github.com/DeSc1998/tree-sitter-yadl) ✔️ (maintained by @DeSc1998)
 - [x] [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml) ✔️ (maintained by @amaanq)
 - [x] [yang](https://github.com/Hubro/tree-sitter-yang) ✔️ (maintained by @Hubro)
 - [x] [yaral](https://github.com/MXfive/tree-sitter-yaral) ✔️ (maintained by @MXfive)
@@ -498,6 +501,7 @@
 - [x] [zig](https://github.com/tree-sitter-grammars/tree-sitter-zig) ✔️ (maintained by @amaanq)
 - [x] [ziggy](https://github.com/kristoff-it/ziggy) ✔️ (maintained by @rockorager)
 - [x] [ziggy_schema](https://github.com/kristoff-it/ziggy) ✔️ (maintained by @rockorager)
+- [x] [zoomba](https://github.com/ajafri2001/tree-sitter-zoomba) 🗸 (maintained by @ajafri2001)
 - [ ] [zsh](https://github.com/tree-sitter-grammars/tree-sitter-zsh) (maintained by @amaanq; last (and only) commit says: 'do not use')
 <!--parserinfo-->
 

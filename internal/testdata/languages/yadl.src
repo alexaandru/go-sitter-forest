@@ -1,0 +1,27 @@
+weather_data = load("fancy-tests/weather-data.json", "json")
+
+bern = weather_data["bern"]
+
+has_freezing_days = (city) => {
+    return check_any(city, (item) => item["temp"] < 0)
+}
+
+print3("Has Bern freezing days?: " + has_freezing_days(bern))
+
+print3("Has Bern not freezing days?: " + check_all(bern, (item) => item["temp"] < 0))
+
+print3("Is Bern the best city?: idk, im a computer")
+
+print3("Has Bern continuous data?:")
+
+index = 1
+continuous_data = true
+while (index < len(bern) and continuous_data) {
+    if (bern[index-1]["day"] +1 != bern[((i) => i)(index)]["day"]) {
+        continuous_data = false
+    }
+
+    index = index + 1
+}
+
+print3(continuous_data)

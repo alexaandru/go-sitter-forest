@@ -134,6 +134,7 @@
     "cds":                ["cds"],
     "cedar":              ["cedar"],
     "cel":                ["cel"],
+    "cerium":             ["cerm"],
     "cfengine":           ["cf"],
     "cg":                 ["cg"],
     "cgsql":              ["cql", "cgsql"],
@@ -390,6 +391,7 @@
     "pony":               ["pony"],
     "poweron":            ["poweron"],
     "powershell":         ["ps1", "psd1", "psm1"],
+    "postscript":         ["ps"],
     "printf":             ["printf"],
     "prisma":             ["prisma"],
     "problog":            ["problog"],
@@ -538,6 +540,7 @@
     "xfst":               ["xfst"],
     "xml":                ["xml", "rss"],
     "xresources":         ["xdefaults", "xresources", "Xdefaults", "Xresources"],
+    "yadl":               ["yadl"],
     "yaml":               ["yaml", "yml"],
     "yang":               ["yang"],
     "yaral":              ["yaral", "yl"],
@@ -545,7 +548,8 @@
     "zeek":               ["zeek"],
     "zig":                ["zig", "zon"],
     "ziggy":              ["ziggy", "zgy"],
-    "ziggy_schema":       ["ziggy-schema", "zgy-schema"]
+    "ziggy_schema":       ["ziggy-schema", "zgy-schema"],
+    "zoomba":             ["zm", "zmb"]
   },
 
   "conflicts": {

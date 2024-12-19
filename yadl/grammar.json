@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "8ef12bce3893893c9e74ed15ad7e85c6aedfca75",
+  "grammarSha": "6b3d97bd31cd10e3bac40d6f163d724365ef729cb05e047a3fae5522d16d47e6",
+  "language": "yadl",
+  "url": "https://github.com/DeSc1998/tree-sitter-yadl",
+  "maintainedBy": "@DeSc1998"
+}

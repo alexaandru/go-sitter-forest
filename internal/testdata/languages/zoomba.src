@@ -1,0 +1,9 @@
+def parent_function( a ) {
+        def child_function (b) {
+                // child can use parents args: happily.
+                a + b
+        }
+        if ( a != null ) {
+                return child_function
+        }
+}

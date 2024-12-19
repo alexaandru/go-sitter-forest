@@ -477,6 +477,14 @@
     "maintainedBy": "@Alfus"
   },
   {
+    "reference": "master",
+    "revision": "c9c4e628280251b7f6e3c9acff290fed002cb748",
+    "grammarSha": "4e5d43a4bdfa2a0cf2245e426e44fb42343ee351897fa1a64bddc6cadc971ff9",
+    "language": "cerium",
+    "url": "https://github.com/yhyadev/tree-sitter-cerium",
+    "maintainedBy": "@yhyadev"
+  },
+  {
     "reference": "main",
     "revision": "ed58fad9a5658f7da17147eb2ba12e87ad16ba3c",
     "grammarSha": "010a35c252b7f8b6c761493a07366ebfb9f578038bceb14e20a7b8991eb5159c",
@@ -3126,6 +3134,17 @@
   },
   {
     "reference": "main",
+    "revision": "8a948aa2b3ec90d24dd4fba6ef59e931a4abf075",
+    "grammarSha": "517106c2b351866e1096e4c34091b1bb20bc1fb8cbb10c1676abb82183d7fec2",
+    "language": "postscript",
+    "url": "https://github.com/smoeding/tree-sitter-postscript",
+    "maintainedBy": "@smoeding",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "e82ab78f232c24e577e63fe348ed3c55566524a3",
     "grammarSha": "e158b73154ff9da626faa9aeba427fa49d9cf8b85e1d4a635d48334dd34bc370",
     "language": "poweron",
@@ -4676,6 +4695,14 @@
     "maintainedBy": "@ValdezFOmar"
   },
   {
+    "reference": "main",
+    "revision": "8ef12bce3893893c9e74ed15ad7e85c6aedfca75",
+    "grammarSha": "6b3d97bd31cd10e3bac40d6f163d724365ef729cb05e047a3fae5522d16d47e6",
+    "language": "yadl",
+    "url": "https://github.com/DeSc1998/tree-sitter-yadl",
+    "maintainedBy": "@DeSc1998"
+  },
+  {
     "reference": "master",
     "revision": "b733d3f5f5005890f324333dd57e1f0badec5c87",
     "grammarSha": "9253d2da55b42b745b366bcfb3cc7bdf18b25a46c85f7b876d3436e1ea0e3a4b",
@@ -4767,6 +4794,14 @@
     "url": "https://github.com/kristoff-it/ziggy",
     "maintainedBy": "@rockorager",
     "srcRoot": "tree-sitter-ziggy-schema"
+  },
+  {
+    "reference": "main",
+    "revision": "9f09f42597b8358de736500adbe0e36ec7c5837d",
+    "grammarSha": "886246e4f29d00eb383a00c3a66b5f054d32919af173f4a7ca08e8fb1d926cbe",
+    "language": "zoomba",
+    "url": "https://github.com/ajafri2001/tree-sitter-zoomba",
+    "maintainedBy": "@ajafri2001"
   },
   {
     "reference": "master",
