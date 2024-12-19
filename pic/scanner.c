@@ -46,12 +46,12 @@
 enum TokenType {
   SIDE,
   SIDE_CORNER,
-  SHELL_COMMAND,
   DATA_TABLE,
   DATA_TABLE_TAG,
   OPEN_DELIMITER,
   OPEN_DELIMITER_OR_MACRONAME,
   CLOSE_DELIMITER,
+  BALANCED_TEXT,
 };
 
 
@@ -276,12 +276,12 @@ static bool close_delimiter(TSLexer *lexer, ScannerState *state) {
 
 
 /**
- * Scan for a shell command between delimiters. Strings and balanced braces
- * are allowed with so we skip over these as well until we find the matching
- * delimiter from the start of the shell command.
+ * Scan for a block between delimiters. Strings and balanced braces are
+ * allowed with so we skip over these as well until we find the matching
+ * delimiter from the start of the block.
  */
 
-static bool shell_command(TSLexer *lexer, ScannerState *state) {
+static bool balanced_text(TSLexer *lexer, ScannerState *state) {
   if (state->delimiters.size == 0) return false;
 
   // Use the last stored delimiter
@@ -572,13 +572,6 @@ bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const 
     }
   }
 
-  if (valid_symbols[SHELL_COMMAND]) {
-    if (shell_command(lexer, state)) {
-      lexer->result_symbol = SHELL_COMMAND;
-      return true;
-    }
-  }
-
   if (valid_symbols[DATA_TABLE]) {
     if (data_table(lexer, state)) {
       array_clear(&state->data_table_tag);
@@ -611,6 +604,13 @@ bool tree_sitter_pic_external_scanner_scan(void *payload, TSLexer *lexer, const 
   if (valid_symbols[CLOSE_DELIMITER]) {
     if (close_delimiter(lexer, state)) {
       lexer->result_symbol = CLOSE_DELIMITER;
+      return true;
+    }
+  }
+
+  if (valid_symbols[BALANCED_TEXT]) {
+    if (balanced_text(lexer, state)) {
+      lexer->result_symbol = BALANCED_TEXT;
       return true;
     }
   }

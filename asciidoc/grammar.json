@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+  "revision": "241f0c1ffeab76fef463be28c7c498757dedd7ee",
   "grammarSha": "3b321af9eda8212e9c2cf68ebddf46674aced89076a79fecd00b523942110c02",
   "language": "asciidoc",
   "url": "https://github.com/cathaysia/tree-sitter-asciidoc",

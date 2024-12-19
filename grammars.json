@@ -135,7 +135,7 @@
   },
   {
     "reference": "master",
-    "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+    "revision": "241f0c1ffeab76fef463be28c7c498757dedd7ee",
     "grammarSha": "3b321af9eda8212e9c2cf68ebddf46674aced89076a79fecd00b523942110c02",
     "language": "asciidoc",
     "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
@@ -151,7 +151,7 @@
   },
   {
     "reference": "master",
-    "revision": "6d6e6adebd0a65476b1e91595f01171c51067533",
+    "revision": "241f0c1ffeab76fef463be28c7c498757dedd7ee",
     "grammarSha": "a1244f888f229c0b18c7420219a2e841cd0ffc523d84471a37f4f099a6aaa040",
     "language": "asciidoc_inline",
     "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
@@ -438,7 +438,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "c832d523beb0f98a6a33e82f62927300ec7f85af",
+    "revision": "b54a27e9e76994bf523cd3dcbadf90127b6f9c72",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -545,8 +545,8 @@
   },
   {
     "reference": "main",
-    "revision": "c86c33e42c7a48d6a43b76fbd71d2b2473018a27",
-    "grammarSha": "3c45b01ed7f969b60e1230471806378873aea159b762689d35f39ae918d65473",
+    "revision": "7fa54825fdd971a1a676f885384f024fe2b7384a",
+    "grammarSha": "bda51f00d70993ec6e7127dfe514eb49e978c666d6d040bb95525fe978cbb7f2",
     "language": "clarity",
     "url": "https://github.com/xlittlerag/tree-sitter-clarity",
     "maintainedBy": "@xlittlerag"
@@ -1233,7 +1233,7 @@
   },
   {
     "reference": "main",
-    "revision": "d31f18af5febfc4c2f4447ed96d566dd9efea8e1",
+    "revision": "52cd0f8a8142bf361125bac78e44049f6e134689",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1333,7 +1333,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1807,8 +1807,8 @@
   },
   {
     "reference": "master",
-    "revision": "16d4a5fd4a52069fcc6491f0ec6a5bad21f1d705",
-    "grammarSha": "df579dbc8cb058ff2a47d25462d5ead852ed61a360003cf87f924743e0094026",
+    "revision": "1545137aadcc63660c47db9ad98d02fa602655d0",
+    "grammarSha": "c5f616558a506504fc9f358f53a0ffb49f3a5e629cbea30249aebce396874046",
     "language": "hoon",
     "url": "https://github.com/urbit-pilled/tree-sitter-hoon",
     "maintainedBy": "@urbit-pilled",
@@ -2240,8 +2240,8 @@
   },
   {
     "reference": "main",
-    "revision": "76f53c48d29e8588934fb55b0240d7bdfe00bfe5",
-    "grammarSha": "8b6c72e00438a0d644b201d6c7937c4e4ad1360f6064d63e32c659424d48862d",
+    "revision": "0662afbd2ce19b17c603acf67ae707b4d69ab8f4",
+    "grammarSha": "d4dc2046d2ecac79227afcc39e92b473415b1bf43ece13a7aeb48f572cce3694",
     "language": "kotlin",
     "url": "https://github.com/fwcd/tree-sitter-kotlin",
     "maintainedBy": "@SalBakraa",
@@ -2827,7 +2827,7 @@
   },
   {
     "reference": "main",
-    "revision": "e36dde8d98549da7c9ef9e8f8698a3e77d4015ac",
+    "revision": "dc22e2577eb09d1d0de50802c59da2eca98a0e7b",
     "grammarSha": "4d5e86bb94473a8285ca6d362de12e192b05e632d4cd9d3f16c18b17fe7b7d28",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
@@ -3038,8 +3038,8 @@
   },
   {
     "reference": "main",
-    "revision": "c305de0ab6f85fae2c6bdaac7f038f54f137d157",
-    "grammarSha": "1419a5bfb64c797b22a7a4ebae6b49a20489174cd569a798b32a0503ba7e7d93",
+    "revision": "b866e4f310a40a279bd1b5803c7eba9d457dbea5",
+    "grammarSha": "b998ee64fb5d5e4816895c52139d850c4b3089cb25e3861d7d686feb92acbb00",
     "language": "pic",
     "url": "https://github.com/smoeding/tree-sitter-pic",
     "maintainedBy": "@smoeding",
@@ -3106,8 +3106,8 @@
   },
   {
     "reference": "master",
-    "revision": "908ba6accbd9cd3fdf0a208fdc186b9ca3db123c",
-    "grammarSha": "a58fba5ad81765c871e4fffd7958a8de00efa851840ebf1f0b1323c3d8c7d1ac",
+    "revision": "2902dc45439125b9386812c1089a8e9b5f71c4ab",
+    "grammarSha": "b413c463daefd61dffe48e642fae24922f4216656882c924a6576e951e559a10",
     "language": "poe_filter",
     "altName": "Path of Exile item filter",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-poe-filter",
@@ -3586,7 +3586,7 @@
   },
   {
     "reference": "master",
-    "revision": "cad8a206f2e4194676b9699f26f6560d07130d3f",
+    "revision": "1f63b33efee17e833e0ea29266dd3d713e27e321",
     "grammarSha": "699c1c39408e3428ed6561b24f87e9599aec6861729297ecbb0b0d3c8271579c",
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
@@ -3718,8 +3718,8 @@
   },
   {
     "reference": "master",
-    "revision": "baf0eea12535caaab5e2b0e532299bb239409bad",
-    "grammarSha": "40bc54c63ccec958dbb383cc9b0014bff4828df7690ebd6f1a6aefcad292247e",
+    "revision": "f11da7e62051ba8b9d4faa299c26de8aeedfc1cd",
+    "grammarSha": "60221e2fdff04a8918235d8e82d1ce4406dcb03b07274bb201dd908e6ae3959d",
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
     "maintainedBy": "@hunger"

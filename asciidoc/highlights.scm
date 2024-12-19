@@ -94,8 +94,6 @@
 
 (callout_list_marker) @punctuation.special
 
-(delimited_block) @punctuation.bracket
-
 (block_macro
   (block_macro_name) @keyword
   "::" @punctuation.delimiter

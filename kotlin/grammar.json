@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "76f53c48d29e8588934fb55b0240d7bdfe00bfe5",
-  "grammarSha": "8b6c72e00438a0d644b201d6c7937c4e4ad1360f6064d63e32c659424d48862d",
+  "revision": "0662afbd2ce19b17c603acf67ae707b4d69ab8f4",
+  "grammarSha": "d4dc2046d2ecac79227afcc39e92b473415b1bf43ece13a7aeb48f572cce3694",
   "language": "kotlin",
   "url": "https://github.com/fwcd/tree-sitter-kotlin",
   "maintainedBy": "@SalBakraa",

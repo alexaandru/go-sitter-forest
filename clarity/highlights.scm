@@ -57,10 +57,12 @@
  "define-map"
  "block-height"
  "burn-block-height"
- "tenure-height"
+ "chain-id"
  "contract-caller"
  "is-in-regtest"
+ "stacks-block-height"
  "stx-liquid-supply"
+ "tenure-height"
  "tx-sender"
  (none_lit)
  "some"
