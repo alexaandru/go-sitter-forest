@@ -52,6 +52,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cds v1.9.1
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
+	github.com/alexaandru/go-sitter-forest/cerium v1.9.0
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.1
 	github.com/alexaandru/go-sitter-forest/cgsql v1.9.0
@@ -325,6 +326,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pod v1.9.0
 	github.com/alexaandru/go-sitter-forest/poe_filter v1.9.1
 	github.com/alexaandru/go-sitter-forest/pony v1.9.0
+	github.com/alexaandru/go-sitter-forest/postscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/poweron v1.9.0
 	github.com/alexaandru/go-sitter-forest/powershell v1.9.2
 	github.com/alexaandru/go-sitter-forest/printf v1.9.0
@@ -483,6 +485,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xfst v1.9.0
 	github.com/alexaandru/go-sitter-forest/xml v1.9.3
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.2
+	github.com/alexaandru/go-sitter-forest/yadl v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaml v1.9.1
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.0
@@ -493,6 +496,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/zig v1.9.3
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
+	github.com/alexaandru/go-sitter-forest/zoomba v1.9.0
 	github.com/alexaandru/go-tree-sitter-bare v1.7.4
 	golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f
 	golang.org/x/sync v0.9.0
