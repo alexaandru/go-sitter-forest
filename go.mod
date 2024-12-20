@@ -228,6 +228,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/just v1.9.4
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
+	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.0
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
@@ -371,6 +372,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/roc v1.9.1
 	github.com/alexaandru/go-sitter-forest/ron v1.9.0
 	github.com/alexaandru/go-sitter-forest/rstml v1.9.0
+	github.com/alexaandru/go-sitter-forest/rsx v1.9.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.0
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.1
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
@@ -411,6 +413,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/starlark v1.9.2
 	github.com/alexaandru/go-sitter-forest/strace v1.9.0
 	github.com/alexaandru/go-sitter-forest/streamdevice_proto v1.9.0
+	github.com/alexaandru/go-sitter-forest/structurizr v1.9.0
 	github.com/alexaandru/go-sitter-forest/styled v1.9.0
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.0
