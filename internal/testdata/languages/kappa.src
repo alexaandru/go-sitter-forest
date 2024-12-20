@@ -1,0 +1,16 @@
+%var: rabbitbirth 2.1
+%var: rabbiteaten 0.4
+%var: foxbirth 0.01
+
+%agent: Rabbit()
+%agent: Fox()
+
+// These rabbits reproduce asexually
+'rabbits born'  Rabbit(), . -> Rabbit(), Rabbit() @ rabbitbirth
+// Foxes die of natural causes
+'foxes died'    Fox() -> . @ foxdeath
+// Foxes reproduce by eating a rabbit
+'foxes born'    Fox(), Rabbit(), . -> Fox(), ., Fox() @ foxbirth
+
+%obs: 'Rabbits' |Rabbit()|
+%obs: 'Foxes'   |Fox()|

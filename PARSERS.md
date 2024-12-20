@@ -1,6 +1,6 @@
-# 494 Supported Parsers
+# 497 Supported Parsers
 
-5 pending, 6 skipped regeneration, 36 missing queries
+5 pending, 6 skipped regeneration, 39 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -232,6 +232,7 @@
 - [x] [just](https://github.com/IndianBoy42/tree-sitter-just) ✔️ (maintained by @Hubro)
 - [x] [kamailio_cfg](https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg) ✔️ (maintained by @IbrahimShahzad)
 - [x] [kanshi](https://github.com/marcelarie/tree-sitter-kanshi) ✔️ (maintained by @marcelarie)
+- [x] [kappa](https://github.com/Spyderisk/tree-sitter-kappa) 🗸 (maintained by @Jaso5)
 - [x] [kcl](https://github.com/kcl-lang/tree-sitter-kcl) 🗸 (maintained by @Vishalk91-4)
 - [x] [kconfig](https://github.com/tree-sitter-grammars/tree-sitter-kconfig) ✔️ (maintained by @amaanq)
 - [x] [kdl](https://github.com/tree-sitter-grammars/tree-sitter-kdl) ✔️ (maintained by @amaanq)
@@ -376,6 +377,7 @@
 - [x] [ron](https://github.com/tree-sitter-grammars/tree-sitter-ron) ✔️ (maintained by @amaanq)
 - [ ] [rst](https://github.com/stsewd/tree-sitter-rst) (maintained by @stsewd; too much work to get automation to support it)
 - [x] [rstml](https://github.com/rayliwell/tree-sitter-rstml) ✔️ (maintained by @rayliwell)
+- [x] [rsx](https://github.com/guobin211/tree-sitter-rsx) 🗸 (maintained by @guobin211)
 - [x] [rtx](https://github.com/apertium/tree-sitter-apertium) ✔️ (maintained by @mr-martian)
 - [x] [ruby](https://github.com/tree-sitter/tree-sitter-ruby) ✔️ (maintained by @TravonteD)
 - [x] [runescript](https://github.com/2004Scape/tree-sitter-runescript) ✔️ (maintained by @2004Scape)
@@ -416,6 +418,7 @@
 - [x] [starlark](https://github.com/tree-sitter-grammars/tree-sitter-starlark) ✔️ (maintained by @amaanq)
 - [x] [strace](https://github.com/sigmaSd/tree-sitter-strace) ✔️ (maintained by @amaanq)
 - [x] [streamdevice_proto](https://github.com/epics-extensions/tree-sitter-epics) ✔️ (maintained by @minijackson)
+- [x] [structurizr](https://github.com/josteink/tree-sitter-structurizr) 🗸 (maintained by @josteink)
 - [x] [styled](https://github.com/mskelton/tree-sitter-styled) ✔️ (maintained by @mskelton)
 - [x] [supercollider](https://github.com/madskjeldgaard/tree-sitter-supercollider) ✔️ (maintained by @madskjeldgaard)
 - [x] [superhtml](https://github.com/kristoff-it/superhtml) ✔️ (maintained by @rockorager)

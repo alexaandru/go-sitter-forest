@@ -245,6 +245,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/just"
 	"github.com/alexaandru/go-sitter-forest/kamailio_cfg"
 	"github.com/alexaandru/go-sitter-forest/kanshi"
+	"github.com/alexaandru/go-sitter-forest/kappa"
 	"github.com/alexaandru/go-sitter-forest/kcl"
 	"github.com/alexaandru/go-sitter-forest/kconfig"
 	"github.com/alexaandru/go-sitter-forest/kdl"
@@ -388,6 +389,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/roc"
 	"github.com/alexaandru/go-sitter-forest/ron"
 	"github.com/alexaandru/go-sitter-forest/rstml"
+	"github.com/alexaandru/go-sitter-forest/rsx"
 	"github.com/alexaandru/go-sitter-forest/rtx"
 	"github.com/alexaandru/go-sitter-forest/ruby"
 	"github.com/alexaandru/go-sitter-forest/runescript"
@@ -428,6 +430,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/starlark"
 	"github.com/alexaandru/go-sitter-forest/strace"
 	"github.com/alexaandru/go-sitter-forest/streamdevice_proto"
+	"github.com/alexaandru/go-sitter-forest/structurizr"
 	"github.com/alexaandru/go-sitter-forest/styled"
 	"github.com/alexaandru/go-sitter-forest/supercollider"
 	"github.com/alexaandru/go-sitter-forest/superhtml"
@@ -757,6 +760,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"just":                   just.GetLanguage,
 	"kamailio_cfg":           kamailio_cfg.GetLanguage,
 	"kanshi":                 kanshi.GetLanguage,
+	"kappa":                  kappa.GetLanguage,
 	"kcl":                    kcl.GetLanguage,
 	"kconfig":                kconfig.GetLanguage,
 	"kdl":                    kdl.GetLanguage,
@@ -900,6 +904,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"roc":                    roc.GetLanguage,
 	"ron":                    ron.GetLanguage,
 	"rstml":                  rstml.GetLanguage,
+	"rsx":                    rsx.GetLanguage,
 	"rtx":                    rtx.GetLanguage,
 	"ruby":                   ruby.GetLanguage,
 	"runescript":             runescript.GetLanguage,
@@ -940,6 +945,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"starlark":               starlark.GetLanguage,
 	"strace":                 strace.GetLanguage,
 	"streamdevice_proto":     streamdevice_proto.GetLanguage,
+	"structurizr":            structurizr.GetLanguage,
 	"styled":                 styled.GetLanguage,
 	"supercollider":          supercollider.GetLanguage,
 	"superhtml":              superhtml.GetLanguage,
@@ -1255,6 +1261,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"just":                   just.GetQuery,
 	"kamailio_cfg":           kamailio_cfg.GetQuery,
 	"kanshi":                 kanshi.GetQuery,
+	"kappa":                  kappa.GetQuery,
 	"kcl":                    kcl.GetQuery,
 	"kconfig":                kconfig.GetQuery,
 	"kdl":                    kdl.GetQuery,
@@ -1398,6 +1405,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"roc":                    roc.GetQuery,
 	"ron":                    ron.GetQuery,
 	"rstml":                  rstml.GetQuery,
+	"rsx":                    rsx.GetQuery,
 	"rtx":                    rtx.GetQuery,
 	"ruby":                   ruby.GetQuery,
 	"runescript":             runescript.GetQuery,
@@ -1438,6 +1446,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"starlark":               starlark.GetQuery,
 	"strace":                 strace.GetQuery,
 	"streamdevice_proto":     streamdevice_proto.GetQuery,
+	"structurizr":            structurizr.GetQuery,
 	"styled":                 styled.GetQuery,
 	"supercollider":          supercollider.GetQuery,
 	"superhtml":              superhtml.GetQuery,

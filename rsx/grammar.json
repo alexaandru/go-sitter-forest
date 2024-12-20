@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "d1436a2dd7f70404c2f791437e1ed23b1809a975",
+  "grammarSha": "64e59b073b673a6348da116d09f0cf621783f4897c43da32e196f79d2b000aa6",
+  "language": "rsx",
+  "url": "https://github.com/guobin211/tree-sitter-rsx",
+  "maintainedBy": "@guobin211"
+}

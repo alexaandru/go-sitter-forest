@@ -2180,6 +2180,14 @@
   },
   {
     "reference": "main",
+    "revision": "45fcd46d3769f45421c2a5d9651bf8621de8ff86",
+    "grammarSha": "4a246ad08fc7320b7f8ba6edd46f7717ab02848fe3b32e71977f510cdd9672c8",
+    "language": "kappa",
+    "url": "https://github.com/Spyderisk/tree-sitter-kappa",
+    "maintainedBy": "@Jaso5"
+  },
+  {
+    "reference": "main",
     "revision": "3dbc65742ae6083f173334a12c5849852fa81f59",
     "grammarSha": "fde9e0872f1410c4fec13fc6a6559ba38a191627144221d736440c03af1e026b",
     "language": "kcl",
@@ -3573,6 +3581,14 @@
     ]
   },
   {
+    "reference": "main",
+    "revision": "d1436a2dd7f70404c2f791437e1ed23b1809a975",
+    "grammarSha": "64e59b073b673a6348da116d09f0cf621783f4897c43da32e196f79d2b000aa6",
+    "language": "rsx",
+    "url": "https://github.com/guobin211/tree-sitter-rsx",
+    "maintainedBy": "@guobin211"
+  },
+  {
     "reference": "master",
     "revision": "f72e11e8fc9ec5ed4bff710522c0ff10de54e3ef",
     "grammarSha": "a08c0b2984516c9864d84274624b7afe9e03f89cb956c72e41ecead685e05e48",
@@ -3955,6 +3971,14 @@
     "url": "https://github.com/epics-extensions/tree-sitter-epics",
     "maintainedBy": "@minijackson",
     "srcRoot": "streamdevice-proto"
+  },
+  {
+    "reference": "master",
+    "revision": "4071f56cc369e173e797e14125084983b5fe9e58",
+    "grammarSha": "9d6ad38a0b80e5df2d30061e33d4cf1dc0004e12d0af40997cdf3e47f96a807f",
+    "language": "structurizr",
+    "url": "https://github.com/josteink/tree-sitter-structurizr",
+    "maintainedBy": "@josteink"
   },
   {
     "reference": "main",

@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "45fcd46d3769f45421c2a5d9651bf8621de8ff86",
+  "grammarSha": "4a246ad08fc7320b7f8ba6edd46f7717ab02848fe3b32e71977f510cdd9672c8",
+  "language": "kappa",
+  "url": "https://github.com/Spyderisk/tree-sitter-kappa",
+  "maintainedBy": "@Jaso5"
+}
