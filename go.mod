@@ -55,7 +55,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cerium v1.9.0
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.1
-	github.com/alexaandru/go-sitter-forest/cgsql v1.9.0
+	github.com/alexaandru/go-sitter-forest/cgsql v1.9.1
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
 	github.com/alexaandru/go-sitter-forest/circom v1.9.1
 	github.com/alexaandru/go-sitter-forest/clarity v1.9.4
@@ -213,7 +213,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jai v1.9.2
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
-	github.com/alexaandru/go-sitter-forest/java v1.9.1
+	github.com/alexaandru/go-sitter-forest/java v1.9.2
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.1
 	github.com/alexaandru/go-sitter-forest/jinja v1.9.0
 	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.0
@@ -256,7 +256,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lithia v1.9.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.9.1
 	github.com/alexaandru/go-sitter-forest/lookml v1.9.0
-	github.com/alexaandru/go-sitter-forest/lox v1.9.0
+	github.com/alexaandru/go-sitter-forest/lox v1.9.1
 	github.com/alexaandru/go-sitter-forest/lua v1.9.1
 	github.com/alexaandru/go-sitter-forest/luadoc v1.9.0
 	github.com/alexaandru/go-sitter-forest/luap v1.9.0
@@ -496,7 +496,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/zig v1.9.3
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
-	github.com/alexaandru/go-sitter-forest/zoomba v1.9.0
+	github.com/alexaandru/go-sitter-forest/zoomba v1.9.1
 	github.com/alexaandru/go-tree-sitter-bare v1.7.4
 	golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f
 	golang.org/x/sync v0.9.0
