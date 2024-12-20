@@ -1,1 +1,1 @@
-(source_file (ERROR (identifier) (function_params (parameter (identifier))) (identifier) (function_params (parameter (identifier))) (comment) (ERROR (UNEXPECTED 'a') (UNEXPECTED 'i') (UNEXPECTED 'a') (UNEXPECTED 'n')) (UNEXPECTED 'c')))
+(source_file (function_definition (identifier) (parameters (identifier)) (function_body (function_definition (identifier) (parameters (identifier)) (function_body (comment) (binary_expression (identifier) (identifier)))) (identifier) (identifier) (ERROR (UNEXPECTED '!') (identifier)) (ERROR) (return_statement (identifier)))) (ERROR))
