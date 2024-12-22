@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "eb7d58c2dc4fbeea4745019dee8df013034ae66b",
-  "grammarSha": "09f41d6a3b76ebd25972c912a2716ec6f77ac5de1d073f597823f9ac4d31c7b8",
+  "revision": "b670c8df85a1568f498aa5c8cae42f51a90473c0",
+  "grammarSha": "c4a524b2826f9484e5376a6c686af48ba52a8331f446de144754cb1ce11695cb",
   "language": "zig",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-zig",
   "maintainedBy": "@amaanq"

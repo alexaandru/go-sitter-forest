@@ -1,6 +1,6 @@
 [
   (symbol)
-  (prompt)
+  (string)
 ] @reference
 
 [
@@ -12,6 +12,6 @@
   (if)
 ] @scope
 
-(type_definition (prompt) @definition.var)
-(type_definition (input_prompt (prompt) @definition.var))
-(type_definition_default (expression (prompt) @definition.var))
+(type_definition (string) @definition.var)
+(type_definition (input_prompt (string) @definition.var))
+(type_definition_default (expression (string) @definition.var))

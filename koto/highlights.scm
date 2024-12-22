@@ -79,6 +79,11 @@
   "|"
 ] @punctuation.bracket
 
+[
+  ";"
+  ":"
+] @punctuation.delimiter
+
 (identifier) @variable
 
 (import_module

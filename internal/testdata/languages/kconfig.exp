@@ -1,1 +1,1 @@
-(configuration (config name: (symbol) (type_definition (prompt)) (dependencies (symbol)) (help_text (text))))
+(configuration (config name: (name (symbol)) (type_definition (string (string_content))) (dependencies (symbol)) (help_text (text))))

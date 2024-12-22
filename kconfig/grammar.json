@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "486fea71f61ad9f3fd4072a118402e97fe88d26c",
-  "grammarSha": "47150496c6c18055eded0f6676ca9463ace24c66ce9d550cf80bf57b7b3fa38f",
+  "revision": "9934ff456d867d0d0f98ef365a0de410ff4e6705",
+  "grammarSha": "bed4d69bb10fb46e4446c8c884087bf30d45eec002574658bb11b36eba885bca",
   "language": "kconfig",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",
   "maintainedBy": "@amaanq",

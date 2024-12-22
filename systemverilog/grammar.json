@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "0dacb911daa9614a7c7e79a594d4cb9f478e6554",
+  "revision": "4344f7e6c7fd8a9ccaf4cb93da17a37a544b492c",
   "grammarSha": "49c15d7c74170a3505e1b63098a910f48cd3b27fbfac3ae4bb4b542bb9e746d8",
   "language": "systemverilog",
   "url": "https://github.com/gmlarumbe/tree-sitter-systemverilog",

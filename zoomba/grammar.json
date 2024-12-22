@@ -4,5 +4,7 @@
   "grammarSha": "e75335196c974e5013720fee8efe38560ae52f5626f964fb044b37cd3e6f93e8",
   "language": "zoomba",
   "url": "https://github.com/ajafri2001/tree-sitter-zoomba",
-  "maintainedBy": "@ajafri2001"
+  "doc": "too volatile atm",
+  "maintainedBy": "@ajafri2001",
+  "skipUpdate": true
 }

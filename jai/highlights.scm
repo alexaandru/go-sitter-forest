@@ -56,7 +56,7 @@
 name: (identifier) @variable
 argument: (identifier) @variable
 named_argument: (identifier) @variable
-
+(member_expression (identifier) @parameter)
 
 ((identifier) @variable.builtin
   (#any-of? @variable.builtin "context"))

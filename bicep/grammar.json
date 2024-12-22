@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "0092c7d1bd6bb22ce0a6f78497d50ea2b87f19c0",
+  "revision": "bff59884307c0ab009bd5e81afd9324b46a6c0f9",
   "grammarSha": "2ec5e56674bfa5499491c6f4082e897d6ec945823a488a3da02638bd859a439c",
   "language": "bicep",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-bicep",

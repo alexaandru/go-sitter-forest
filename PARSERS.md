@@ -504,7 +504,7 @@
 - [x] [zig](https://github.com/tree-sitter-grammars/tree-sitter-zig) ✔️ (maintained by @amaanq)
 - [x] [ziggy](https://github.com/kristoff-it/ziggy) ✔️ (maintained by @rockorager)
 - [x] [ziggy_schema](https://github.com/kristoff-it/ziggy) ✔️ (maintained by @rockorager)
-- [x] [zoomba](https://github.com/ajafri2001/tree-sitter-zoomba) 🗸 (maintained by @ajafri2001)
+- [x] [zoomba](https://github.com/ajafri2001/tree-sitter-zoomba) 🗸 (maintained by @ajafri2001; ❌too volatile atm)
 - [ ] [zsh](https://github.com/tree-sitter-grammars/tree-sitter-zsh) (maintained by @amaanq; last (and only) commit says: 'do not use')
 <!--parserinfo-->
 

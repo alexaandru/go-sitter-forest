@@ -58,23 +58,24 @@
 (symbol) @variable
 
 [
-  (prompt)
+  (string)
   (macro_content)
   (text)
 ] @string
 
-(config name: (symbol) @constant)
-(menuconfig name: (symbol) @constant)
-(choice name: (symbol) @constant)
+(config name: (name (symbol) @constant))
+(configdefault name: (name (symbol) @constant))
+(menuconfig name: (name (symbol) @constant))
+(choice name: (name (symbol) @constant))
 
 ((symbol) @constant
   (#lua-match? @constant "[A-Z0-9]+"))
 
-(mainmenu name: (prompt) @text.title)
-(comment_entry name: (prompt) @text.title)
-(menu name: (prompt) @text.title)
+(mainmenu name: (string) @text.title)
+(comment_entry name: (string) @text.title)
+(menu name: (string) @text.title)
 
-(source (prompt) @text.uri @string.special)
+(source (string) @text.uri @string.special)
 
 (comment) @comment
 

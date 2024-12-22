@@ -1,6 +1,6 @@
+#include "alloc.h"
 #include "parser.h"
 
-#include <stdio.h>
 #include <wctype.h>
 
 typedef enum {
@@ -16,20 +16,9 @@ static inline void advance_bicep(TSLexer *lexer) { lexer->advance_bicep(lexer, f
 
 static inline void skip_bicep(TSLexer *lexer) { lexer->advance_bicep(lexer, true); }
 
-void *tree_sitter_bicep_external_scanner_create() {
-    Scanner *scanner = (Scanner *)calloc(sizeof(Scanner), 1);
+void *tree_sitter_bicep_external_scanner_create() { return ts_calloc(1, sizeof(Scanner)); }
 
-    if (scanner == NULL) {
-        fprintf(stderr, "tree-sitter-bicep: out of memory\n");
-    }
-
-    return scanner;
-}
-
-void tree_sitter_bicep_external_scanner_destroy(void *payload) {
-    Scanner *scanner = (Scanner *)payload;
-    free(scanner);
-}
+void tree_sitter_bicep_external_scanner_destroy(void *payload) { ts_free(payload); }
 
 unsigned tree_sitter_bicep_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
@@ -61,12 +50,9 @@ bool tree_sitter_bicep_external_scanner_scan(void *payload, TSLexer *lexer, cons
         }
     }
 
-    // read anything until triple '''
-
     if (valid_symbols[MULTILINE_STRING_CONTENT]) {
         bool advanced_once = false;
         while (!lexer->eof(lexer)) {
-            // printf("lexer->lookahead: %c\n", lexer->lookahead);
             if (lexer->lookahead == '\'') {
                 if (scanner->quote_before_end_count > 0) {
                     while (scanner->quote_before_end_count > 0) {
@@ -79,23 +65,17 @@ bool tree_sitter_bicep_external_scanner_scan(void *payload, TSLexer *lexer, cons
                 }
 
                 lexer->mark_end(lexer);
-                // printf("mark_end\n");
                 advance_bicep(lexer);
                 if (lexer->lookahead == '\'') {
-                    // printf("two single quotes\n");
                     advance_bicep(lexer);
                     if (lexer->lookahead == '\'') {
-                        // printf("three single quotes\n");
                         advance_bicep(lexer);
-                        // printf("lexer->lookahead: %d\n", lexer->lookahead);
 
-                        // how many quotes to advance on the next external scanner invocation
+                        // How many quotes to advance on the next external scanner invocation
                         while (lexer->lookahead == '\'') {
                             scanner->quote_before_end_count++;
                             advance_bicep(lexer);
                         }
-
-                        // printf("scanner->quote_before_end_count: %d\n", scanner->quote_before_end_count);
 
                         lexer->result_symbol = MULTILINE_STRING_CONTENT;
                         return advanced_once;

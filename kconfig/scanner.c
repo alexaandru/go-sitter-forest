@@ -28,6 +28,8 @@ bool tree_sitter_kconfig_external_scanner_scan(void *payload, TSLexer *lexer, co
                     break;
                 case '\t':
                     start_col += 8;
+                    // Align col to next tab stop, ignore up to 7 leading spaces
+                    start_col -= start_col % 8;
                     break;
                 default:
                     break;
@@ -55,6 +57,8 @@ bool tree_sitter_kconfig_external_scanner_scan(void *payload, TSLexer *lexer, co
                     break;
                 case '\t':
                     next_col += 8;
+                    // Align col to next tab stop, ignore up to 7 leading spaces
+                    next_col -= next_col % 8;
                     break;
                 default:
                     break;
