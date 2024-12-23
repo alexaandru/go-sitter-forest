@@ -230,7 +230,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
-	github.com/alexaandru/go-sitter-forest/kconfig v1.9.1
+	github.com/alexaandru/go-sitter-forest/kconfig v1.9.2
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
@@ -261,7 +261,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lua v1.9.1
 	github.com/alexaandru/go-sitter-forest/luadoc v1.9.0
 	github.com/alexaandru/go-sitter-forest/luap v1.9.0
-	github.com/alexaandru/go-sitter-forest/luau v1.9.0
+	github.com/alexaandru/go-sitter-forest/luau v1.9.1
 	github.com/alexaandru/go-sitter-forest/m68k v1.9.0
 	github.com/alexaandru/go-sitter-forest/magik v1.9.0
 	github.com/alexaandru/go-sitter-forest/make v1.9.0
@@ -304,7 +304,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.9.1
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.9.0
-	github.com/alexaandru/go-sitter-forest/odin v1.9.0
+	github.com/alexaandru/go-sitter-forest/odin v1.9.1
 	github.com/alexaandru/go-sitter-forest/org v1.9.0
 	github.com/alexaandru/go-sitter-forest/ott v1.9.0
 	github.com/alexaandru/go-sitter-forest/pact v1.9.0
@@ -345,7 +345,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/purescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.9.0
 	github.com/alexaandru/go-sitter-forest/pyrope v1.9.1
-	github.com/alexaandru/go-sitter-forest/python v1.9.2
+	github.com/alexaandru/go-sitter-forest/python v1.9.3
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
@@ -361,7 +361,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.0
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
-	github.com/alexaandru/go-sitter-forest/regex v1.9.5
+	github.com/alexaandru/go-sitter-forest/regex v1.9.6
 	github.com/alexaandru/go-sitter-forest/rego v1.9.0
 	github.com/alexaandru/go-sitter-forest/requirements v1.9.0
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
