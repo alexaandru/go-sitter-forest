@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "9934ff456d867d0d0f98ef365a0de410ff4e6705",
+  "revision": "9ac99fe4c0c27a35dc6f757cef534c646e944881",
   "grammarSha": "bed4d69bb10fb46e4446c8c884087bf30d45eec002574658bb11b36eba885bca",
   "language": "kconfig",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-kconfig",

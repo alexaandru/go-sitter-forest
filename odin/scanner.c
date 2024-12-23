@@ -1,6 +1,7 @@
 #include "parser.h"
 
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 #include <wctype.h>
 
@@ -106,7 +107,7 @@ bool tree_sitter_odin_external_scanner_scan(void *payload, TSLexer *lexer, const
                     }
                     break;
                 default:
-                    if (isdigit(lexer->lookahead)) {
+                    if (lexer->lookahead <= 255 && isdigit(lexer->lookahead)) {
                         advance_odin(lexer);
                         if (found_decimal) {
                             found_number_after_decimal = true;
@@ -231,7 +232,7 @@ backslash:
         skip_odin(lexer);
     }
 
-    if (valid_symbols[BLOCK_COMMENT] && !valid_symbols[QUOTE] && lexer->lookahead == '/') {
+    if (valid_symbols[BLOCK_COMMENT] && lexer->lookahead == '/') {
         advance_odin(lexer);
         if (lexer->lookahead != '*') {
             return false;

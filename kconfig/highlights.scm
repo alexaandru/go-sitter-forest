@@ -1,8 +1,14 @@
-"source" @include
+[
+  "source"
+  "osource"
+  "rsource"
+  "orsource"
+] @include
 
 [
   "mainmenu"
   "config"
+  "configdefault"
   "menuconfig"
   "choice"
   "endchoice"

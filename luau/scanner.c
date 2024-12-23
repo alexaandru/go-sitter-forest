@@ -13,12 +13,12 @@ enum TokenType {
 };
 
 typedef struct {
-    char ending_char;
+    char ending_char_luau;
     uint8_t level_count;
 } Scanner;
 
 static inline void reset_state(Scanner *scanner) {
-    scanner->ending_char = 0;
+    scanner->ending_char_luau = 0;
     scanner->level_count = 0;
 }
 
@@ -62,7 +62,7 @@ void tree_sitter_luau_external_scanner_destroy(void *payload) {
 
 unsigned tree_sitter_luau_external_scanner_serialize(void *payload, char *buffer) {
     Scanner *scanner = (Scanner *)payload;
-    buffer[0] = scanner->ending_char;
+    buffer[0] = scanner->ending_char_luau;
     buffer[1] = (char)scanner->level_count;
     return 2;
 }
@@ -72,7 +72,7 @@ void tree_sitter_luau_external_scanner_deserialize(void *payload, const char *bu
     if (length == 0) {
         return;
     }
-    scanner->ending_char = buffer[0];
+    scanner->ending_char_luau = buffer[0];
     if (length == 1) {
         return;
     }
@@ -135,7 +135,7 @@ static bool scan_comment_start(Scanner *scanner, TSLexer *lexer) {
 }
 
 static bool scan_comment_content(Scanner *scanner, TSLexer *lexer) {
-    if (scanner->ending_char == 0) { // block comment
+    if (scanner->ending_char_luau == 0) { // block comment
         if (scan_block_content(scanner, lexer)) {
             lexer->result_symbol = BLOCK_COMMENT_CONTENT;
             return true;
@@ -145,7 +145,7 @@ static bool scan_comment_content(Scanner *scanner, TSLexer *lexer) {
     }
 
     while (lexer->lookahead != 0) {
-        if (lexer->lookahead == scanner->ending_char) {
+        if (lexer->lookahead == scanner->ending_char_luau) {
             reset_state(scanner);
             lexer->result_symbol = BLOCK_COMMENT_CONTENT;
             return true;
@@ -159,7 +159,7 @@ static bool scan_comment_content(Scanner *scanner, TSLexer *lexer) {
 
 static bool scan_string_start(Scanner *scanner, TSLexer *lexer) {
     if (lexer->lookahead == '"' || lexer->lookahead == '\'') {
-        scanner->ending_char = (char)lexer->lookahead;
+        scanner->ending_char_luau = (char)lexer->lookahead;
         consume(lexer);
         return true;
     }
@@ -172,11 +172,11 @@ static bool scan_string_start(Scanner *scanner, TSLexer *lexer) {
 }
 
 static bool scan_string_end(Scanner *scanner, TSLexer *lexer) {
-    if (scanner->ending_char == 0) { // block string
+    if (scanner->ending_char_luau == 0) { // block string
         return scan_block_end(scanner, lexer);
     }
 
-    if (consume_char(scanner->ending_char, lexer)) {
+    if (consume_char(scanner->ending_char_luau, lexer)) {
         return true;
     }
 
@@ -184,11 +184,11 @@ static bool scan_string_end(Scanner *scanner, TSLexer *lexer) {
 }
 
 static bool scan_string_content(Scanner *scanner, TSLexer *lexer) {
-    if (scanner->ending_char == 0) { // block string
+    if (scanner->ending_char_luau == 0) { // block string
         return scan_block_content(scanner, lexer);
     }
 
-    while (lexer->lookahead != '\n' && lexer->lookahead != 0 && lexer->lookahead != scanner->ending_char) {
+    while (lexer->lookahead != '\n' && lexer->lookahead != 0 && lexer->lookahead != scanner->ending_char_luau) {
         if (consume_char('\\', lexer) && consume_char('z', lexer)) {
             while (iswspace(lexer->lookahead)) {
                 consume(lexer);
@@ -219,7 +219,7 @@ bool tree_sitter_luau_external_scanner_scan(void *payload, TSLexer *lexer, const
         return true;
     }
 
-    if (valid_symbols[BLOCK_COMMENT_END] && scanner->ending_char == 0 && scan_block_end(scanner, lexer)) {
+    if (valid_symbols[BLOCK_COMMENT_END] && scanner->ending_char_luau == 0 && scan_block_end(scanner, lexer)) {
         reset_state(scanner);
         lexer->result_symbol = BLOCK_COMMENT_END;
         return true;

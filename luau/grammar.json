@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "fbadc96272f718dba267628ba7b0e694c368cef3",
-  "grammarSha": "564a66f6c6c36572bbc7e94634663efdfa00b0ab19ea1ebae5a27724ae1bd94a",
+  "revision": "a8914d6c1fc5131f8e1c13f769fa704c9f5eb02f",
+  "grammarSha": "ad99a020e2a2273c790161188f13cdf1a41c364c0f59609018ac2ee117deaae4",
   "language": "luau",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-luau",
   "maintainedBy": "@amaanq",
