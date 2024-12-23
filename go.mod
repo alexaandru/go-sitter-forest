@@ -9,6 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
 	github.com/alexaandru/go-sitter-forest/al v1.9.6
+	github.com/alexaandru/go-sitter-forest/alcha v1.9.0
 	github.com/alexaandru/go-sitter-forest/amber v1.9.2
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -26,6 +27,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awa5_rs v1.9.1
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.1
+	github.com/alexaandru/go-sitter-forest/bara v1.9.0
 	github.com/alexaandru/go-sitter-forest/bash v1.9.3
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
@@ -75,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.2
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.3
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -284,6 +286,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.9.0
 	github.com/alexaandru/go-sitter-forest/mustache v1.9.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.9.0
+	github.com/alexaandru/go-sitter-forest/mxml v1.9.0
 	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.1
 	github.com/alexaandru/go-sitter-forest/nelua v1.9.1
@@ -336,7 +339,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/prolog v1.9.0
 	github.com/alexaandru/go-sitter-forest/promql v1.9.0
 	github.com/alexaandru/go-sitter-forest/properties v1.9.1
-	github.com/alexaandru/go-sitter-forest/proto v1.9.0
+	github.com/alexaandru/go-sitter-forest/proto v1.9.1
 	github.com/alexaandru/go-sitter-forest/proxima v1.9.1
 	github.com/alexaandru/go-sitter-forest/prql v1.9.1
 	github.com/alexaandru/go-sitter-forest/psv v1.9.0
@@ -468,7 +471,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.0
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.3
-	github.com/alexaandru/go-sitter-forest/vhdl v1.9.2
+	github.com/alexaandru/go-sitter-forest/vhdl v1.9.3
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.0
 	github.com/alexaandru/go-sitter-forest/vim v1.9.1
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.0
