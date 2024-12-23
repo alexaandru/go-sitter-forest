@@ -1,0 +1,12 @@
+{
+  "reference": "main",
+  "revision": "fa4e0d1f0a0c35de3d03825d443897316cbc4cc9",
+  "grammarSha": "3ba29f499512801cdb2a9ffa78192747f261e51402757eb8401b78c9490a1613",
+  "language": "mxml",
+  "url": "https://github.com/AmigaAbattoir/tree-sitter-mxml",
+  "maintainedBy": "@AmigaAbattoir",
+  "files": [
+    "scanner.c",
+    "tag.h"
+  ]
+}

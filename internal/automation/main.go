@@ -741,7 +741,10 @@ func putFile(content []byte, lang, toPath string) error {
 		// This identifier is common across tag.h files and causes issues.
 		// It needs it's own unique name per lang.
 		reMap["TAG_TYPES_BY_TAG_NAME"] = "TAG_TYPES_BY_TAG_NAME_" + lang
-	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h", "_parser.c", "chars.c", "chars.h", "_scanner.c", "TokenTree.inc", "utils.h":
+	case "scanner.c", "scanner.cc", "scanner.h", "parser.h", "typescript-scanner.h",
+		"_parser.c", "chars.c", "chars.h", "_scanner.c", "utils.h", "core.h", "env.h",
+		"TokenTree.inc", "TokenTree.h", "standard.h", "textio.h", "fixed_pkg.h",
+		"float_pkg.h", "math_complex.h", "math_real.h", "numeric_std.h", "std_logic_1164.h":
 		// These identifiers clash between many (org, beancount, etc.) parsers.
 		// They also need their own unique name per lang.
 		reMap[" serialize("] = fmt.Sprintf(" serialize_%s(", lang)
@@ -765,6 +768,12 @@ func putFile(content []byte, lang, toPath string) error {
 		reMap["is_internal_char("] = fmt.Sprintf("is_internal_char_%s(", lang)
 		reMap[" init("] = fmt.Sprintf(" init_%s(", lang)
 		reMap["ending_char"] = "ending_char_" + lang
+		reMap["token_tree_new"] = fmt.Sprintf("token_tree_%s_new", lang)
+		reMap["token_tree_free"] = fmt.Sprintf("token_tree_%s_free", lang)
+		reMap["token_tree_insert"] = fmt.Sprintf("token_tree_%s_insert", lang)
+		reMap["token_tree_balance"] = fmt.Sprintf("token_tree_%s_balance", lang)
+		reMap["token_tree_match"] = fmt.Sprintf("token_tree_%s_match", lang)
+		reMap["register_core"] = fmt.Sprintf("register_%s_core", lang)
 	}
 
 	if slices.Contains([]string{"_scanner.c", "chars.c", "chars.h"}, filepath.Base(toPath)) {

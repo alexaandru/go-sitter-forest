@@ -24,6 +24,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/agda"
 	"github.com/alexaandru/go-sitter-forest/aiken"
 	"github.com/alexaandru/go-sitter-forest/al"
+	"github.com/alexaandru/go-sitter-forest/alcha"
 	"github.com/alexaandru/go-sitter-forest/amber"
 	"github.com/alexaandru/go-sitter-forest/angular"
 	"github.com/alexaandru/go-sitter-forest/animationtxt"
@@ -41,6 +42,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/awa5_rs"
 	"github.com/alexaandru/go-sitter-forest/awatalk"
 	"github.com/alexaandru/go-sitter-forest/awk"
+	"github.com/alexaandru/go-sitter-forest/bara"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
 	"github.com/alexaandru/go-sitter-forest/beancount"
@@ -301,6 +303,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/move_on_aptos"
 	"github.com/alexaandru/go-sitter-forest/mustache"
 	"github.com/alexaandru/go-sitter-forest/muttrc"
+	"github.com/alexaandru/go-sitter-forest/mxml"
 	"github.com/alexaandru/go-sitter-forest/mylang"
 	"github.com/alexaandru/go-sitter-forest/nasm"
 	"github.com/alexaandru/go-sitter-forest/nelua"
@@ -541,6 +544,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"agda":                   agda.GetLanguage,
 	"aiken":                  aiken.GetLanguage,
 	"al":                     al.GetLanguage,
+	"alcha":                  alcha.GetLanguage,
 	"amber":                  amber.GetLanguage,
 	"angular":                angular.GetLanguage,
 	"animationtxt":           animationtxt.GetLanguage,
@@ -558,6 +562,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"awa5_rs":                awa5_rs.GetLanguage,
 	"awatalk":                awatalk.GetLanguage,
 	"awk":                    awk.GetLanguage,
+	"bara":                   bara.GetLanguage,
 	"bash":                   bash.GetLanguage,
 	"bass":                   bass.GetLanguage,
 	"beancount":              beancount.GetLanguage,
@@ -816,6 +821,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"move_on_aptos":          move_on_aptos.GetLanguage,
 	"mustache":               mustache.GetLanguage,
 	"muttrc":                 muttrc.GetLanguage,
+	"mxml":                   mxml.GetLanguage,
 	"mylang":                 mylang.GetLanguage,
 	"nasm":                   nasm.GetLanguage,
 	"nelua":                  nelua.GetLanguage,
@@ -1042,6 +1048,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"agda":                   agda.GetQuery,
 	"aiken":                  aiken.GetQuery,
 	"al":                     al.GetQuery,
+	"alcha":                  alcha.GetQuery,
 	"amber":                  amber.GetQuery,
 	"angular":                angular.GetQuery,
 	"animationtxt":           animationtxt.GetQuery,
@@ -1059,6 +1066,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"awa5_rs":                awa5_rs.GetQuery,
 	"awatalk":                awatalk.GetQuery,
 	"awk":                    awk.GetQuery,
+	"bara":                   bara.GetQuery,
 	"bash":                   bash.GetQuery,
 	"bass":                   bass.GetQuery,
 	"beancount":              beancount.GetQuery,
@@ -1317,6 +1325,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"move_on_aptos":          move_on_aptos.GetQuery,
 	"mustache":               mustache.GetQuery,
 	"muttrc":                 muttrc.GetQuery,
+	"mxml":                   mxml.GetQuery,
 	"mylang":                 mylang.GetQuery,
 	"nasm":                   nasm.GetQuery,
 	"nelua":                  nelua.GetQuery,

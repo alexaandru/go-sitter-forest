@@ -1,5 +1,12 @@
 # TODO
 
+## Critical
+
+- Crystal repo was changed and the repo we pointed at was archived.
+  Therefore, we kept saying "no updates" while the updates were happening elsewhere.
+  How can we detect this? At the very least detect when a repo is archived... ?
+  Check for stale repos? What else...?
+
 ## General
 
 - update examples (files and snippets in this README) to include queries and filetype detection;

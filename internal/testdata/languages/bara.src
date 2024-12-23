@@ -1,0 +1,42 @@
+// RUN: bara %s -ast-print | FileCheck %s
+
+//===----------------------------------------------------------------------===//
+/// Sum 
+//===----------------------------------------------------------------------===//
+
+var sum = 0;
+var i = 0;
+
+while i < 10 {
+  sum += i;
+  i += 1;
+}
+
+print(sum);
+
+// CHECK: var sum = 0;
+// CHECK: var i = 0;
+
+// CHECK-LABEL: while i < 10  
+// CHECK-NEXT:   sum += i;
+// CHECK-NEXT:   i += 1;
+
+// CHECK: print(sum);
+
+//===----------------------------------------------------------------------===//
+/// Do while 
+//===----------------------------------------------------------------------===//
+
+var j = 0;
+
+do {
+  print(j);
+  j += 1;
+} while j < 10;
+
+// CHECK: var j = 0;
+
+// CHECK-LABEL: do  
+// CHECK-NEXT:    print(j); 
+// CHECK-NEXT:    j += 1;
+// CHECK-NEXT:  while j < 10;

@@ -1,5 +1,6 @@
 [
   "syntax"
+  "edition"
   "package"
   "option"
   "import"

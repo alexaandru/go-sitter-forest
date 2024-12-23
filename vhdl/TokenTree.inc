@@ -76,7 +76,7 @@ static void node_free(Node* this)
 }
 //------------------------------------------------------------------------------
 
-TokenTree* token_tree_new()
+TokenTree* token_tree_vhdl_new()
 {
     TokenTree* this = ts_malloc(sizeof(TokenTree));
     if(!this) return 0;
@@ -86,14 +86,14 @@ TokenTree* token_tree_new()
 }
 //------------------------------------------------------------------------------
 
-void token_tree_free(TokenTree* this)
+void token_tree_vhdl_free(TokenTree* this)
 {
     if(this->root) node_free(this->root);
     ts_free(this);
 }
 //------------------------------------------------------------------------------
 
-void token_tree_insert(TokenTree* this, const char* pattern, TokenType type)
+void token_tree_vhdl_insert(TokenTree* this, const char* pattern, TokenType type)
 {
     this->root = insert(this->root, pattern, type);
 }
@@ -155,7 +155,7 @@ static Node* insert(
     https://web.eecs.umich.edu/~qstout/pap/CACM86.pdf
     https://deepblue.lib.umich.edu/bitstream/handle/2027.42/7801/bad3920.0001.001.pdf?sequence=5&isAllowed=y */
 
-void token_tree_balance(TokenTree* this)
+void token_tree_vhdl_balance(TokenTree* this)
 {
     this->root = balance(this->root);
 }
@@ -238,7 +238,7 @@ static int32_t advance_vhdl(TSLexer* lexer)
 }
 //------------------------------------------------------------------------------
 
-TypeNode* token_tree_match(TokenTree* this, TSLexer* lexer)
+TypeNode* token_tree_vhdl_match(TokenTree* this, TSLexer* lexer)
 {
     uint32_t  lookahead = lowercase(lexer->lookahead);
     TypeNode* type      = 0;

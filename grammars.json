@@ -54,6 +54,23 @@
     "maintainedBy": "@SShadowS"
   },
   {
+    "reference": "master",
+    "revision": "68de497b48752d2d6af2437a7775d5e483e2273f",
+    "grammarSha": "b3768bdbd3314c0a18a8db90c9a795045485469b47603ee8eb3ea91e65fbd1e7",
+    "language": "alcha",
+    "url": "https://github.com/jpt13653903/tree-sitter-alcha",
+    "maintainedBy": "@jpt13653903",
+    "files": [
+      "core.h",
+      "scanner.c",
+      "debug_macros.h",
+      "src/TokenTree.h",
+      "src/TokenTree.inc",
+      "src/TokenType.h",
+      "src/TokenType.inc"
+    ]
+  },
+  {
     "reference": "main",
     "revision": "c6df3ec2ec243ed76550c525e7ac3d9a10c6c814",
     "grammarSha": "19c441293aa85eb88ade71057c13de75bec73117a54148480e1f6c1e7ae14766",
@@ -224,6 +241,14 @@
     "files": [
       "scanner.c"
     ]
+  },
+  {
+    "reference": "main",
+    "revision": "8f2db096ef11309a9c9a36309398ce6fc92131dd",
+    "grammarSha": "e57d2fc43f606b73b8262d84c6897679ca24393b44bc9245d09aaadd1e5bf2e0",
+    "language": "bara",
+    "url": "https://github.com/Seungwuk98/tree-sitter-bara",
+    "maintainedBy": "@Seungwuk98"
   },
   {
     "reference": "master",
@@ -731,11 +756,15 @@
   },
   {
     "reference": "main",
-    "revision": "3360d9e75bcf535797f90920dcc24e98ec83d2f9",
-    "grammarSha": "5b845ac52a31150ba005691cfa61c30477873e80db595a4648ee5444db7fab89",
+    "revision": "6a84f0e4a88545ce7e3488bf5ef317a9684f505f",
+    "grammarSha": "4dc51f10132eea9f9e12c926d3ddd568b890e87907e75633acf83264d3371cd5",
     "language": "crystal",
-    "url": "https://github.com/crystal-lang-tools/tree-sitter",
-    "maintainedBy": "@devnote-dev"
+    "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
+    "maintainedBy": "@crystal-lang-tools",
+    "files": [
+      "scanner.c",
+      "unicode.c"
+    ]
   },
   {
     "reference": "master",
@@ -2707,6 +2736,18 @@
   },
   {
     "reference": "main",
+    "revision": "fa4e0d1f0a0c35de3d03825d443897316cbc4cc9",
+    "grammarSha": "3ba29f499512801cdb2a9ffa78192747f261e51402757eb8401b78c9490a1613",
+    "language": "mxml",
+    "url": "https://github.com/AmigaAbattoir/tree-sitter-mxml",
+    "maintainedBy": "@AmigaAbattoir",
+    "files": [
+      "scanner.c",
+      "tag.h"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "72bbf026b26e08aa283984f197ebd9febc394b93",
     "grammarSha": "97ccb83314645e325d5eca9076ae178e72277ab0d06cf5961a295ca313098979",
     "language": "mylang",
@@ -3229,11 +3270,11 @@
   },
   {
     "reference": "main",
-    "revision": "e9f6b43f6844bd2189b50a422d4e2094313f6aa3",
-    "grammarSha": "d14600c4784ec5f98287868569085648b0873710157981ca57c8252eb22a13fd",
+    "revision": "46ae8a8143453b076b5b402cee13c5b47a2c62ee",
+    "grammarSha": "426287da22812f15ff15da1e32cbdedb2ba00c6df1753c1397e65dd300be03a5",
     "language": "proto",
-    "url": "https://github.com/treywood/tree-sitter-proto",
-    "maintainedBy": "@treywood"
+    "url": "https://github.com/coder3101/tree-sitter-proto",
+    "maintainedBy": "@coder3101"
   },
   {
     "reference": "master",

@@ -1,0 +1,298 @@
+alias A    = Namespace.SubSpace.ClassName.Member;
+alias Calc = 8*4+B@cast.member;
+
+
+print(__FILE__);
+print(__LINE__);
+print(__CLASS__);
+print(__FUNCTION__);
+print(__DATE__);
+print(__TIME__);
+print(__NAMESPACE__);
+
+enum STATE {Idle, Writing, Done, Others}
+STATE State;
+
+switch(State){
+  case(Idle){
+    // Do some stuff
+    State = Writing;
+  }
+  case(Writing){
+    // Do some stuff
+    State = Done;
+  }
+  case(Done){
+    // Do some stuff
+    State = Idle;
+  }
+  default{
+    // Do some stuff
+  }
+}
+
+pin(STATE) PinState; // Pin enumeration
+net(STATE) SigState; // Net enumeration
+
+x = 123.456e789;
+x = 1____2____3____.____4____5____6____e____7____8____9____;
+x = 123.456e+8;
+
+x = .123;
+x = x._123;
+x = .123;
+x = _._123,
+x = 0b.1010101;
+x = 0b._1010101,
+x = 0b_.1010101;
+x = 0b_._1010101;
+
+net(  8) x = 3, y = 5; // Generate an assignment with AST_Declaration left-child
+num(300) y = sin(x);   // and AST_Expression right-child
+
+class<attribute = "value"> MyClass(int x): A, B, C(7){};
+
+Namespace.MyClass(parameters) <attribute = "value"> Instance;
+
+A = B@MyClass + C@(NameSpace.TheOtherClass);
+A = B@MyClass + C@TheOtherClass.Member;
+
+return 3;
+break 78;
+continue 2;
+
+return;
+break;
+continue;
+
+net           w = e;
+net( 8      ) x = e@  8       ;
+net(32, 2*pi) z = e@(32, 2*pi);
+
+a  = b ** c;
+a  = b ^ c;
+a  = b ~^ c;
+a  = ^b;
+a  = ~^b;
+a ^= b;
+
+a = :b + :c;
+a = :b.c;
+a = :(b, c);
+a = :[b, c];
+
+a = ++x * y--;
+
+a = x - x**3/3! + x**5/5! - x**7/7!;
+
+group<voltage = 2.5, current = 5> Named_Group{
+ input  pin<location = "N5"> B1;
+ output pin<location = "A7"> LED7;
+}
+group<voltage = 2.5, current = 5>{
+ input  pin<location = "N5"> B1;
+ output pin<location = "A7"> LED7;
+}
+
+// Target definition
+group target{
+  char Type[] = "Simulation";
+  num  Time   = 1e-3;
+};
+
+net x;
+pin<location = "AB11"> y, z, w;
+
+pin<Attrib = "xyz"> y[1], z[1][2], w[1][2][3];
+
+input pin<frequency = 50e6, location = "C8"> Clk;
+      net<frequency = 10e6                 > CPU_Clk;
+
+output pin(3)<location = ["A", "B", "C"]> Output;
+
+net( 8    ) X;
+net(12, -8) Y[A][A.B][A.B.C][8];
+
+num      A, B, C;
+num      D[]; // Dynamic array;
+num( 80) E;
+num(120) F = 1 + 2j;
+
+void X(){}
+
+// Class instance
+Class   Reference;
+Class() Instance;
+Namespace.Class Instance;
+Namespace.Class(Z+7, 5..8:2, sin(x)) Instance;
+
+// Function call
+Func();
+Class.Func();
+Namespace.Class.Func();
+
+// RHS expression testing...
+A  =  (x+y)*z?A: :(B,C,5@3,9);
+A +=  A.B[5].C(5..3, 7..2:-1);
+A *=  A + B++ - C--;
+A %=  7 << &A.B(7).C[5].D % 3;
+A /=  :(A,B@(3,(7+4)),C`(8+C));
+A ~=  :[A,B + C,D * F,8..77:2];
+A <<= A[][5..3,7][][5,2,9,A];
+
+A = a + :[b , c]*5 - d;
+
+// These are illegal
+// Namespace.Class.Func() = 5;
+// Namespace().Class Instance;
+
+Class<Attribute = "Value"> Instance;
+Class() Instance;
+Namespace.Class(A, B, C.B(), 8.2) Instance;
+Class(Parameter)<Attribute = "Value"> Instance;
+Class(A, B(x, y(), z), C) A, B, C[5], D[6][9];
+
+// Function definition
+Class Function(){}
+Class Function(A, B){}
+net(8) Func(){}
+net(8) Func(x, y, A, B, C, X){}
+net(8) Func[7](x, y, A, B, C, X){
+  x <<= y(B);
+}
+void Func(x){}
+
+auto Func(x){}
+auto Func(int x, y, net z[]){}
+
+Namespace.Func(Calling, Function);
+
+// LHS Expression
+:[A,B,C] = D;
+:(A,B,C) = D;
+A.B.C = D;
+A.B[5..7].C = D;
+
+x = fft(Z+7+8i, Hanning, 1024);
+
+// Namespace Push
+A.{B.{}}
+A.B.C.{
+ Some Stuff;
+ A = Z * 4;
+}
+
+// Target query
+if(Target.Type == "Simulation"){
+  x = 3;
+}else{
+  x = 5;
+}
+
+if(x+2 == 7-1) print("x");
+else           print("z");
+
+if(x);
+if(y) A();
+if(z) B(); else C();
+
+for(j in 5..7){
+  !! Do Something;
+}
+for(x in [5,7,1]);
+
+while(x == 3) y++;
+while(1){
+  Stuff();
+  x = 7;
+}
+
+loop(7) x--;
+loop{
+ Do  = Stuff;
+ And = more + stuff;
+}
+
+switch(A){
+  case(B, C, D){
+    // if A is equal to B, C or D, do this
+    x = 3;
+  }
+  case(E){
+    // if A is equal to E, do this
+    y = 4;
+  }
+  default{
+    // otherwise do this
+    z = 5;
+  }
+}
+
+rtl{
+  x = 4;
+  y = 5;
+}
+rtl(Clk) Count++;
+
+fsm{
+  x = 4;
+  y = 5;
+}
+fsm(Clk, Reset) Count++;
+
+hdl("Library/RS232.v", "Library/RS232_Rx.v", "Library/RS232_Tx.v") RS232_V(
+  CountBits =  5; // Parameters
+  Count0_5  =  8;
+  Count1    = 17;
+  Count1_5  = 25;
+){
+  input net nReset;
+  input net Clk;
+
+  input  net(8) TxData;
+  input  net    Send;
+  output net    Busy;
+
+  output net    DataReady;
+  output net(8) RxData;
+  input  net    Ack;
+
+  output net    Tx;
+  input  net    Rx;
+}
+
+class X{
+  net Y;
+}
+
+class P: X{
+  net A;
+}
+
+class X(Z){
+  net Y;
+}
+
+class P(A): X(B){
+  net C;
+}
+
+class<Attribute1 = "Value1", A2 = "V2"> Child(A, B, C): Parent(5..7, B.C(), X**Y*Z){
+  net(8,16) A, B, C;
+  A  = 3;
+  B  = 5 + A;
+  C := A * B;
+}
+
+import "RS232";
+import "Ethernet" as Eth;
+
+X = Y+2;
+
+X = "Hello \&ohm; \&odblac; \&ZHcy; \&Pi; \&pi; \&uparrow; \&Afr; \&acE;";
+
+fsm(Clk, Reset){
+  loop{
+
+  }
+}

@@ -47,7 +47,7 @@ static int        instance_count = 0;
 void* tree_sitter_vhdl_external_scanner_create()
 {
     if(!token_tree){
-        token_tree = token_tree_new();
+        token_tree = token_tree_vhdl_new();
         if(!token_tree){
             error("Cannot allocate memory for the token tree");
             return 0;
@@ -55,7 +55,7 @@ void* tree_sitter_vhdl_external_scanner_create()
 
         debug("Building the token tree...");
 
-        register_core               (token_tree);
+        register_vhdl_core               (token_tree);
         register_std_env            (token_tree);
         register_std_standard       (token_tree);
         register_std_textio         (token_tree);
@@ -67,7 +67,7 @@ void* tree_sitter_vhdl_external_scanner_create()
         register_ieee_math_complex  (token_tree);
 
         debug("Balancing the token tree");
-        token_tree_balance(token_tree);
+        token_tree_vhdl_balance(token_tree);
     }
     instance_count++;
 
@@ -83,7 +83,7 @@ void tree_sitter_vhdl_external_scanner_destroy(Scanner* scanner)
 
     instance_count--;
     if(!instance_count){
-        if(token_tree) token_tree_free(token_tree);
+        if(token_tree) token_tree_vhdl_free(token_tree);
         token_tree = 0;
     }
 }
@@ -581,7 +581,7 @@ bool tree_sitter_vhdl_external_scanner_scan(Scanner* scanner, TSLexer* lexer, co
 
     bool first_char_is_double_quote = (lexer->lookahead == '"');
 
-    TypeNode* types = token_tree_match(token_tree, lexer);
+    TypeNode* types = token_tree_vhdl_match(token_tree, lexer);
 
     if(!types && first_char_is_letter){
         /* This works because all registered tokens in the search tree that

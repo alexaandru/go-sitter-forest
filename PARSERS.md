@@ -1,4 +1,4 @@
-# 497 Supported Parsers
+# 500 Supported Parsers
 
 5 pending, 6 skipped regeneration, 39 missing queries
 
@@ -10,6 +10,7 @@
 - [x] [agda](https://github.com/tree-sitter/tree-sitter-agda) ✔️ (maintained by @Decodetalkers)
 - [x] [aiken](https://github.com/aiken-lang/tree-sitter-aiken) ✔️ (maintained by @Riley-Kilgore)
 - [x] [al](https://github.com/SShadowS/tree-sitter-al) ✔️ (maintained by @SShadowS)
+- [x] [alcha](https://github.com/jpt13653903/tree-sitter-alcha) ✔️ (maintained by @jpt13653903)
 - [x] [amber](https://github.com/amber-lang/tree-sitter-amber) 🗸 (maintained by @Ph0enixKM)
 - [x] [angular](https://github.com/dlvandenberg/tree-sitter-angular) ✔️ (maintained by @dlvandenberg)
 - [x] [animationtxt](https://github.com/notpeter/tree-sitter-animationtxt) ✔️ (maintained by @notpeter)
@@ -27,6 +28,7 @@
 - [x] [awa5_rs](https://github.com/liraymond04/tree-sitter-awa5_rs) ✔️ (maintained by @liraymond04)
 - [x] [awatalk](https://github.com/liraymond04/tree-sitter-awatalk) ✔️ (maintained by @liraymond04)
 - [x] [awk](https://github.com/Beaglefoot/tree-sitter-awk) ✔️ (maintained by @Beaglefoot)
+- [x] [bara](https://github.com/Seungwuk98/tree-sitter-bara) ✔️ (maintained by @Seungwuk98)
 - [x] [bash](https://github.com/tree-sitter/tree-sitter-bash) ✔️ (maintained by @TravonteD)
 - [x] [bass](https://github.com/vito/tree-sitter-bass) ✔️ (maintained by @amaanq)
 - [x] [beancount](https://github.com/polarmutex/tree-sitter-beancount) ✔️ (maintained by @polarmutex)
@@ -79,7 +81,7 @@
 - [x] [cpon](https://github.com/tree-sitter-grammars/tree-sitter-cpon) ✔️ (maintained by @amaanq)
 - [x] [cpp](https://github.com/tree-sitter/tree-sitter-cpp) ✔️ (maintained by @theHamsta)
 - [ ] [cpp2](https://github.com/tsoj/tree-sitter-cpp2) (maintained by @tsoj; Unresolved conflict for symbol sequence: ';'  •  ';'  …)
-- [x] [crystal](https://github.com/crystal-lang-tools/tree-sitter) ✔️ (maintained by @devnote-dev)
+- [x] [crystal](https://github.com/crystal-lang-tools/tree-sitter-crystal) ✔️ (maintained by @crystal-lang-tools)
 - [x] [css](https://github.com/tree-sitter/tree-sitter-css) ✔️ (maintained by @TravonteD)
 - [x] [csv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
 - [x] [cuda](https://github.com/tree-sitter-grammars/tree-sitter-cuda) ✔️ (maintained by @theHamsta)
@@ -288,6 +290,7 @@
 - [x] [Move on Aptos](https://github.com/aptos-labs/tree-sitter-move-on-aptos) 🗸 (maintained by @ArArgon)
 - [x] [mustache](https://github.com/TheLeoP/tree-sitter-mustache) ✔️ (maintained by @TheLeoP)
 - [x] [muttrc](https://github.com/neomutt/tree-sitter-muttrc) ✔️ (maintained by @Freed-Wu)
+- [x] [mxml](https://github.com/AmigaAbattoir/tree-sitter-mxml) ✔️ (maintained by @AmigaAbattoir)
 - [x] [mylang](https://github.com/marc9622/tree-sitter-mylang) ✔️ (maintained by @marc9622)
 - [x] [nasm](https://github.com/naclsn/tree-sitter-nasm) ✔️ (maintained by @ObserverOfTime)
 - [x] [nelua](https://github.com/kmafeni04/tree-sitter-nelua) ✔️ (maintained by @kmafeni04)
@@ -340,7 +343,7 @@
 - [x] [prolog](https://codeberg.org/foxy/tree-sitter-prolog) ✔️ (maintained by @foxyseta)
 - [x] [promql](https://github.com/MichaHoffmann/tree-sitter-promql) ✔️ (maintained by @MichaHoffmann)
 - [x] [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties) ✔️ (maintained by @ObserverOfTime)
-- [x] [proto](https://github.com/treywood/tree-sitter-proto) ✔️ (maintained by @treywood)
+- [x] [proto](https://github.com/coder3101/tree-sitter-proto) ✔️ (maintained by @coder3101)
 - [x] [proxima](https://github.com/vistormu/tree-sitter-proxima) ✔️ (maintained by @vistormu)
 - [x] [prql](https://github.com/PRQL/tree-sitter-prql) ✔️ (maintained by @matthias-Q)
 - [x] [psv](https://github.com/tree-sitter-grammars/tree-sitter-csv) ✔️ (maintained by @amaanq)
