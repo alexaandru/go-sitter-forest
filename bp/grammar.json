@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "4e60cf3c2e613625c06f6f85540b3631e2d06cd3",
-  "grammarSha": "b2ac0412db1c00688675139dd78c2daec1191f2fa29ad97df4173da117b5490a",
+  "revision": "16c43068ec30828c5aed11e87262c56f36782595",
+  "grammarSha": "603d01c414ca0ec8f0a807f463bec36f7554ebffdd64fb6d2ee73485aed8de50",
   "language": "bp",
   "url": "https://github.com/ambroisie/tree-sitter-bp",
   "maintainedBy": "@ambroisie"

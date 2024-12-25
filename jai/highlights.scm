@@ -135,7 +135,7 @@ keyword: (identifier) @keyword
 
 ;(character) @character
 
-(escape_sequence) @string.escape
+(string (escape_sequence) @string.escape)
 
 (boolean) @boolean
 

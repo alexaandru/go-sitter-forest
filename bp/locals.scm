@@ -13,5 +13,3 @@
   binding: (identifier) @local.definition.var)
 
 (identifier) @local.reference
-
-; vim: sw=2 foldmethod=marker

@@ -40,7 +40,7 @@
   [
     "?"
     ":"
-  ] @keyword.conditional.ternary)
+  ] @conditional.ternary)
 
 "sum" @function.builtin
 
@@ -71,12 +71,12 @@
   "vfill"
 ] @keyword
 
-(c_pause
+(c_pause 
   "pause" @keyword
-  "mouse" @variable.member
-  _? @attribute
+  "mouse" @field 
+  _? @attribute 
   (","
-    _ @attribute)?)
+   _ @attribute)?)
 
 (c_plot
   "plot" @keyword)
@@ -88,7 +88,7 @@
 (c_stats
   "stats" @keyword
   ("name"
-    (_))? @variable.member)
+   (_))? @field)
 
 [
   "via"
@@ -102,16 +102,16 @@
 ] @keyword.conditional
 
 (plot_element
-  "axes"? @variable.member)
+  "axes"? @field)
 
 (cntrparam
-  "auto"? @variable.member)
+  "auto"? @property)
 
 (colorbox
   "origin"? @attribute)
 
 (contourfill
-  "auto"? @variable.member)
+  "auto"? @field)
 
 (format
   _? @attribute
@@ -119,17 +119,16 @@
   _? @attribute)
 
 (key
-  "auto"? @variable.member)
+  "auto"? @property)
+
+(polar
+  "r" @attribute)
 
 (style ; TODO: complete
   [
     "arrow"
     "boxplot"
-    ("data"
-      [
-        (_)
-        "spiderplot" @attribute
-      ])
+    "data"
     "fs"
     "function"
     "line"
@@ -137,15 +136,16 @@
     "rectangle"
     "ellipse"
     "parallelaxis"
-    ; (spiderplot) ; TODO: complete
+    "spiderplot"
     "textbox"
     ("watchpoint"
       "labels" @attribute
       (_)?)
-  ] @variable.member)
+    "histogram"
+  ] @property)
 
-(terminal
-  "name" @variable.member)
+(terminal 
+  "name" @property)
 
 ; TODO: complete terminals in grammar and then simplify its options here
 (t_cairolatex
@@ -158,39 +158,26 @@
     "blacktext"
     "colortext"
     "colourtext"
-    "header"
-    "noheader"
-    "monochrome"
+    ("header"
+      (_))
+    "mono"
     "color"
-    "crop"
-    "transparent"
-    "resolution"
-    "lw"
-    "dl"
-    "ps"
-  ]* @attribute)
-
-(t_canvas)
-(t_cgm)
-(t_context)
+    "background"
+    "rounded"
+    "butt"
+  ]* 
+    @attribute)
+; (t_canvas)
+; (t_cgm)
+; (t_context)
 ; (t_domterm)
-(t_dumb)
+; (t_dumb)
 ; (t_dxf)
 ; (t_emf)
-(t_epscairo)
+; (t_epscairo)
 ; (t_epslatex)
 ; (t_fig)
-(t_gif
-  [
-  "enhanced"
-  "transparent"
-  "lw"
-  "dl"
-  "crop"
-  "animate"
-  "delay"
-  "loop"
-   ]* @attribute)
+; (t_gif)
 ; (t_hpgl)
 ; (t_jpeg)
 ; (t_lua)
@@ -208,6 +195,7 @@
 ; (t_texdraw)
 ; (t_tikz)
 ; (t_tkcanvas)
+
 (plot_style
   [
     "lines"
@@ -237,7 +225,8 @@
     "circles"
     "zerrorfill"
     "ellipses"
-    "filledcurves"
+    ("filledcurves"
+     "r" @property)
     "fillsteps"
     "histograms"
     "image"
@@ -282,7 +271,6 @@
   "cb"
   "arg"
   "prefix"
-  "output"
   "primary"
   "specular"
   "spec2"
@@ -290,6 +278,7 @@
   "width"
   "height"
   "expand"
+  "level"
   "array"
   "dx"
   "dy"
@@ -297,9 +286,8 @@
   "filetype"
   "center"
   "record"
-] @variable.member
+] @field
 
-; Workaround because formatter cannot handle 300 list nodes
 [
   (angles)
   (clip)
@@ -422,6 +410,11 @@
   "nodraw"
   "size"
   "new"
+  "clustered"
+  "columnstacked"
+  "rowstacked"
+  "nokeyseparators"
+  "errorbars"
   "first"
   "second"
   "screen"
@@ -463,6 +456,8 @@
   "hypertext"
   "defaults"
   "keyentry"
+  "newhistogram"
+  "newspiderplot"
   "splines"
   "qnorm"
   "gauss"
@@ -470,6 +465,7 @@
   "exp"
   "box"
   "hann"
+  "theta"
   "implicit"
   "explicit"
   "rotate"
@@ -501,6 +497,8 @@
   "lambda-factor"
   "script"
   "clip"
+  "noclip"
+  "units"
   "fontscale"
   "lighting"
   "depthorder"
@@ -528,6 +526,7 @@
   "nonuniform"
   "sparse"
   "matrix"
+  "output"
 ] @attribute
 
 [
@@ -536,9 +535,10 @@
   "y1"
   "y2"
   "y"
-  "r"
   "z"
+  "xx"
   "xy"
+  "yy"
   "xz"
   "yz"
   "xyz"
@@ -573,6 +573,7 @@
   "bezier"
   "sbezier"
   "unwrap"
+  "grid"
   "kdensity"
   "closed"
   "between"
@@ -580,6 +581,7 @@
   "below"
   "variable"
   "pixels"
+  "whiskerbars"
   "RGB"
   "CMY"
   "HSV"
@@ -600,65 +602,43 @@
   "flipx"
   "flipy"
   "flipz"
-] @variable.member
+] @property
 
 (colorspec
   "palette" @attribute)
 
 (datafile_modifiers
-  "origin"? @variable.member)
+  "origin"? @field)
 
 ((datafile_modifiers
-  filetype: (identifier) @variable.member)
-  (#any-of? @variable.member
-    "avs" "bin" "edf" "ehf" "gif" "gpbin" "jpeg" "jpg" "png" "raw" "rgb" "auto"))
+   filetype: (identifier) @property)
+    (#any-of? @property "avs""bin""edf""ehf""gif""gpbin""jpeg""jpg""png""raw""rgb""auto"))
 
 (macro) @function.macro
 
-(datablock) @function.macro
+(datablock) @namespace
 
 (function
   name: (identifier) @function)
 
 ((function
   name: (identifier) @function.builtin)
-  (#any-of? @function.builtin
-    "abs" "acos" "acosh" "airy" "arg" "asin" "asinh" "atan" "atan2" "atanh" "besj0" "besj1" "besjn"
-    "besy0" "besy1" "besyn" "besi0" "besi1" "besin" "cbrt" "ceil" "conj" "cos" "cosh" "EllipticK"
-    "EllipticE" "EllipticPi" "erf" "erfc" "exp" "expint" "floor" "gamma" "ibeta" "inverf" "igamma"
-    "imag" "int" "invnorm" "invibeta" "invigamma" "LambertW" "lambertw" "lgamma" "lnGamma" "log"
-    "log10" "norm" "rand" "real" "round" "sgn" "sin" "sinh" "sqrt" "SynchrotronF" "tan" "tanh"
-    "uigamma" "voigt" "zeta" "cerf" "cdawson" "faddeva" "erfi" "FresnelC" "FresnelS" "VP" "VP_fwhm"
-    "Ai" "Bi" "BesselH1" "BesselH2" "BesselJ" "BesselY" "BesselI" "BesselK" "gprintf" "sprintf"
-    "strlen" "strstrt" "substr" "strptime" "srtftime" "system" "trim" "word" "words" "time"
-    "timecolumn" "tm_hour" "tm_mday" "tm_min" "tm_mon" "tm_sec" "tm_wday" "tm_week" "tm_yday"
-    "tm_year" "weekday_iso" "weekday_cdc" "column" "columnhead" "exists" "hsv2rgb" "index" "palette"
-    "rgbcolor" "stringcolumn" "valid" "value" "voxel"))
+  (#any-of? @function.builtin "abs""acos""acosh""airy""arg""asin""asinh""atan""atan2""atanh""besj0""besj1""besjn""besy0""besy1""besyn""besi0""besi1""besin""cbrt""ceil""conj""cos""cosh""EllipticK""EllipticE""EllipticPi""erf""erfc""exp""expint""floor""gamma""ibeta""inverf""igamma""imag""int""invnorm""invibeta""invigamma""LambertW""lambertw""lgamma""lnGamma""log""log10""norm""rand""real""round""sgn""sin""sinh""sqrt""SynchrotronF""tan""tanh""uigamma""voigt""zeta""cerf""cdawson""faddeva""erfi""FresnelC""FresnelS""VP""VP_fwhm""Ai""Bi""BesselH1""BesselH2""BesselJ""BesselY""BesselI""BesselK""gprintf""sprintf""strlen""strstrt""substr""strptime""srtftime""system""trim""word""words""time""timecolumn""tm_hour""tm_mday""tm_min""tm_mon""tm_sec""tm_wday""tm_week""tm_yday""tm_year""weekday_iso""weekday_cdc""column""columnhead""exists""hsv2rgb""index""palette""rgbcolor""stringcolumn""valid""value""voxel"))
 
 ((identifier) @variable.builtin
-  (#any-of? @variable.builtin
-    "GNUTERM" "NaN" "VoxelDistance" "GridDistance" "pi"))
+  (#match? @variable.builtin "^\\w+_(records|headers|outofrange|invalid|blank|blocks|columns|column_header|index_(min|max)(_x|_y)?|(min|max)(_x|_y)?|mean(_err)?(_x|_y)?|stddev(_err)?(_x|_y)?)$"))
 
 ((identifier) @variable.builtin
-  (#match? @variable.builtin
-    "^\\w+_(records|headers|outofrange|invalid|blank|blocks|columns|column_header|index_(min|max)(_x|_y)?|(min|max)(_x|_y)?|mean(_err)?(_x|_y)?|stddev(_err)?(_x|_y)?)$"))
+  (#match? @variable.builtin "^\\w+_(sdd(_x|_y)?|(lo|up)_quartile(_x|_y)?|median(_x|_y)?|sum(sq)?(_x|_y)?|skewness(_err)?(_x|_y)?)$"))
 
 ((identifier) @variable.builtin
-  (#match? @variable.builtin
-    "^\\w+_(sdd(_x|_y)?|(lo|up)_quartile(_x|_y)?|median(_x|_y)?|sum(sq)?(_x|_y)?|skewness(_err)?(_x|_y)?)$"))
+  (#match? @variable.builtin "^\\w+_(kurtosis(_err)?(_x|_y)?|adev(_x|_y)?|correlation|slope(_err)?|intercept(_err)?|sumxy|pos(_min|_max)_y|size(_x|_y))$"))
 
 ((identifier) @variable.builtin
-  (#match? @variable.builtin
-    "^\\w+_(kurtosis(_err)?(_x|_y)?|adev(_x|_y)?|correlation|slope(_err)?|intercept(_err)?|sumxy|pos(_min|_max)_y|size(_x|_y))$"))
+  (#match? @variable.builtin "^((GPVAL|MOUSE|FIT)_\\w+|GNUTERM|NaN|VoxelDistance|GridDistance|pi)$"))
 
-((identifier) @variable.builtin
-  (#match? @variable.builtin "^(GPVAL|MOUSE|FIT)_\\w+$"))
-
-(array_def
-  "array" @keyword.function)
-
-(array
-  (identifier) @function)
+(array_def "array" @keyword.function)
+(array (identifier) @function)
 
 (number) @number
 

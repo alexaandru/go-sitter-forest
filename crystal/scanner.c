@@ -2206,7 +2206,8 @@ unsigned tree_sitter_crystal_external_scanner_serialize(void *payload, char *buf
     return offset;
 }
 
-_Static_assert(
+#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201112L)
+static_assert(
     2                                                    // boolean variables
             + 1                                          // literals count
             + sizeof(PercentLiteral) * MAX_LITERAL_COUNT // each literal
@@ -2215,6 +2216,7 @@ _Static_assert(
             + HEREDOC_BUFFER_SIZE                        // heredoc buffer total
         <= TREE_SITTER_SERIALIZATION_BUFFER_SIZE,
     "Maximum serialized size is too large");
+#endif
 
 void tree_sitter_crystal_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     State *state = (State *)payload;
