@@ -55,8 +55,8 @@
   },
   {
     "reference": "master",
-    "revision": "68de497b48752d2d6af2437a7775d5e483e2273f",
-    "grammarSha": "b3768bdbd3314c0a18a8db90c9a795045485469b47603ee8eb3ea91e65fbd1e7",
+    "revision": "e912297bc008b3235e098bdb5f1d5f753d86821e",
+    "grammarSha": "4765311f2e7586bd8036b0dd936ad1c71ccd9ecef563a93be154ba4e1b9040d4",
     "language": "alcha",
     "url": "https://github.com/jpt13653903/tree-sitter-alcha",
     "maintainedBy": "@jpt13653903",
@@ -189,7 +189,7 @@
   },
   {
     "reference": "master",
-    "revision": "6e3bad36a8c12d579e73ed4f05676141a4ccf68d",
+    "revision": "0ad33e32ae9726e151d16ca20ba3e507ff65e01f",
     "grammarSha": "e53c10208f450ad12dd2d9af3f5222804713b651943d72165da1de74fc843e3a",
     "language": "astro",
     "url": "https://github.com/virchau13/tree-sitter-astro",
@@ -463,7 +463,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "1a5107efa4fd01a6dc015507cea3f02a091ffeac",
+    "revision": "724fc7623ef483a2c67e73e74d7a2460470d0b5a",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -554,8 +554,8 @@
   },
   {
     "reference": "main",
-    "revision": "c832f34ac367af1ba2bd616a008d2fb8af774d23",
-    "grammarSha": "9aea637a69c4a63710b9fe4a364de8954fd4e27f17541c247609c80374293c2e",
+    "revision": "6259e8347b998f0247e0ac194c7641f6d624c3c8",
+    "grammarSha": "72b8087e3183924bb4f4c2c62fa5c0c83242f1b16f89752d42853cd21b3ae3be",
     "language": "cgsql",
     "url": "https://github.com/ricomariani/tree-sitter-cgsql",
     "maintainedBy": "@ricomariani"
@@ -2035,7 +2035,7 @@
   },
   {
     "reference": "master",
-    "revision": "7719a0f6057f57019af97be8631d6a3adc09d202",
+    "revision": "bed7ef6f1f2d58f511f721d50a5539d8c7f54b54",
     "grammarSha": "dc3b397ad523bede9e63d291d9cc385c994f14c708561f7ae77b6ec68af2dbc2",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
@@ -2478,7 +2478,7 @@
   },
   {
     "reference": "master",
-    "revision": "0e3375cd85a013534e772f84cadcd44050bd5165",
+    "revision": "405c5eb50bb91228e7926ce93bf2e63309842eda",
     "grammarSha": "b6a0b5811b4280e51c2bda1f7da79a66b0e6579ee22857667083377fa3d4f698",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -2664,8 +2664,8 @@
   },
   {
     "reference": "main",
-    "revision": "5f88ac4708e41087015295d7eff66a740f056c28",
-    "grammarSha": "14812e5f02c94045e4176dd82941fdb267fc66f57c5322b0fea552170600727a",
+    "revision": "96c3c697644df70c84c7098721ef519c781f89ef",
+    "grammarSha": "ed380c4896d6d4744595b9c8476063cadda022aa95f88d11684687210275c3dd",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
     "maintainedBy": "@tonyfettes",
@@ -3763,7 +3763,9 @@
     "grammarSha": "2a24c56d059d975a3d11c43dfb9c73713e124bc7fdfee6c4991fe9a1f23859e7",
     "language": "sincere",
     "url": "https://github.com/vincentvanecchi/tree-sitter-sincere",
-    "maintainedBy": "@vincentvanecchi"
+    "doc": "repository was removed by owner",
+    "maintainedBy": "@vincentvanecchi",
+    "skipUpdate": true
   },
   {
     "reference": "master",

@@ -394,7 +394,7 @@
 - [x] [sdml](https://github.com/sdm-lang/tree-sitter-sdml) ✔️ (maintained by @johnstonskj)
 - [x] [sflog](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [simula](https://github.com/eirslett/tree-sitter-simula) ✔️ (maintained by @eirslett)
-- [x] [sincere](https://github.com/vincentvanecchi/tree-sitter-sincere) 🗸 (maintained by @vincentvanecchi)
+- [x] [sincere](https://github.com/vincentvanecchi/tree-sitter-sincere) 🗸 (maintained by @vincentvanecchi; ❌repository was removed by owner)
 - [x] [slang](https://github.com/tree-sitter-grammars/tree-sitter-slang) ✔️ (maintained by @theHamsta; ❌Unresolved conflict for symbol sequence: type_specifier  •  ';'  …)
 - [x] [slim](https://github.com/kolen/tree-sitter-slim) ✔️ (maintained by @kolen)
 - [x] [slint](https://github.com/slint-ui/tree-sitter-slint) ✔️ (maintained by @hunger)
