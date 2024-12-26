@@ -125,6 +125,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.6
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.1
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
+	github.com/alexaandru/go-sitter-forest/fe v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
 	github.com/alexaandru/go-sitter-forest/fidl v1.9.0
 	github.com/alexaandru/go-sitter-forest/fin v1.9.0

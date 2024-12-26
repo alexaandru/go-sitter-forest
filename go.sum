@@ -242,6 +242,8 @@ github.com/alexaandru/go-sitter-forest/fastbuild v1.9.1 h1:EmFuzXhvJRuJfGzPfIPxQ
 github.com/alexaandru/go-sitter-forest/fastbuild v1.9.1/go.mod h1:Zonxo3eN+Mv9uchDFcY14xJgf1/Z+X3UOdZIGrX1QkM=
 github.com/alexaandru/go-sitter-forest/faust v1.9.0 h1:sEtphwvEvGLCsiJzk5mdQtkMJSXsIxd7SAbW7N6gVzQ=
 github.com/alexaandru/go-sitter-forest/faust v1.9.0/go.mod h1:v51B96eaED1LhLquCUH9AFXBgQQLkP+kKgeAFH9QHoQ=
+github.com/alexaandru/go-sitter-forest/fe v1.9.0 h1:oAmH7KkYIR2AM82P7C3puRUwSUhpx+pxHwMl6BLnYCw=
+github.com/alexaandru/go-sitter-forest/fe v1.9.0/go.mod h1:Pot7PUp5uN9W024giL0Z16S1IJZOfFoXzZJEayUVij8=
 github.com/alexaandru/go-sitter-forest/fennel v1.9.0 h1:9NVPp9DvNw5+xO2l8fkRExHyGLKmSWxRdjKpWVVL5Ng=
 github.com/alexaandru/go-sitter-forest/fennel v1.9.0/go.mod h1:2FolQK6HEjzSzK7Mj2n2U6tVg7g52BpAltDf+vUkEOE=
 github.com/alexaandru/go-sitter-forest/fidl v1.9.0 h1:4FENay5FIzIDBDECO7Mbnq2ADGfuaK8D5VDVUIEG/gI=
