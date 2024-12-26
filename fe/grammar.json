@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "0c43c601f6abdb69e13b260b45b77c6c63fa4e7a",
+  "grammarSha": "03a1b22d89e700dd6b21d012600cbed4260d6e7eab50a4736468a70b41a8aa0b",
+  "language": "fe",
+  "url": "https://github.com/fe-lang/tree-sitter-fe",
+  "maintainedBy": "@micahscopes",
+  "files": [
+    "scanner.c"
+  ]
+}

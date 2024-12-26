@@ -1,4 +1,4 @@
-# 500 Supported Parsers
+# 501 Supported Parsers
 
 5 pending, 6 skipped regeneration, 39 missing queries
 
@@ -129,6 +129,7 @@
 - [x] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) ✔️ (maintained by @redexp)
 - [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts; no crash but generate never completes (15min))
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️ (maintained by @khiner)
+- [x] [fe](https://github.com/fe-lang/tree-sitter-fe) ✔️ (maintained by @micahscopes)
 - [x] [fennel](https://github.com/alexmozaidze/tree-sitter-fennel) ✔️ (maintained by @alexmozaidze; ❌some 'smart importing' feature prevents automation from working)
 - [x] [fidl](https://github.com/google/tree-sitter-fidl) ✔️ (maintained by @chaopeng)
 - [x] [fin](https://github.com/fin-org/tree-sitter-fin) ✔️ (maintained by @mrmcc3)

@@ -203,6 +203,7 @@
     "familymarkup":       ["familymarkup"],
     "fastbuild":          ["bff"],
     "faust":              ["dsp"],
+    "fe":                 ["fe"],
     "fennel":             ["fnl"],
     "fidl":               ["fidl"],
     "fin":                ["fin"],

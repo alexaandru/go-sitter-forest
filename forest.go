@@ -140,6 +140,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/familymarkup"
 	"github.com/alexaandru/go-sitter-forest/fastbuild"
 	"github.com/alexaandru/go-sitter-forest/faust"
+	"github.com/alexaandru/go-sitter-forest/fe"
 	"github.com/alexaandru/go-sitter-forest/fennel"
 	"github.com/alexaandru/go-sitter-forest/fidl"
 	"github.com/alexaandru/go-sitter-forest/fin"
@@ -660,6 +661,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"familymarkup":           familymarkup.GetLanguage,
 	"fastbuild":              fastbuild.GetLanguage,
 	"faust":                  faust.GetLanguage,
+	"fe":                     fe.GetLanguage,
 	"fennel":                 fennel.GetLanguage,
 	"fidl":                   fidl.GetLanguage,
 	"fin":                    fin.GetLanguage,
@@ -1164,6 +1166,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"familymarkup":           familymarkup.GetQuery,
 	"fastbuild":              fastbuild.GetQuery,
 	"faust":                  faust.GetQuery,
+	"fe":                     fe.GetQuery,
 	"fennel":                 fennel.GetQuery,
 	"fidl":                   fidl.GetQuery,
 	"fin":                    fin.GetQuery,
