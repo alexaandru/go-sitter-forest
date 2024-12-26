@@ -9,7 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
 	github.com/alexaandru/go-sitter-forest/al v1.9.6
-	github.com/alexaandru/go-sitter-forest/alcha v1.9.0
+	github.com/alexaandru/go-sitter-forest/alcha v1.9.1
 	github.com/alexaandru/go-sitter-forest/amber v1.9.2
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -21,7 +21,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/asciidoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/asm v1.9.0
-	github.com/alexaandru/go-sitter-forest/astro v1.9.2
+	github.com/alexaandru/go-sitter-forest/astro v1.9.3
 	github.com/alexaandru/go-sitter-forest/august v1.9.0
 	github.com/alexaandru/go-sitter-forest/authzed v1.9.0
 	github.com/alexaandru/go-sitter-forest/awa5_rs v1.9.1
@@ -57,7 +57,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cerium v1.9.0
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.1
-	github.com/alexaandru/go-sitter-forest/cgsql v1.9.2
+	github.com/alexaandru/go-sitter-forest/cgsql v1.9.3
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
 	github.com/alexaandru/go-sitter-forest/circom v1.9.1
 	github.com/alexaandru/go-sitter-forest/clarity v1.9.4
@@ -212,7 +212,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/inko v1.9.5
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.4
+	github.com/alexaandru/go-sitter-forest/jai v1.9.5
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -279,7 +279,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.3
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.4
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
