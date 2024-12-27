@@ -172,11 +172,11 @@
   "@"
   "#"
   "##"
-  ; "[*"
-  ; "[->"
-  ; "[="
-  ; "|->"
-  ; "|=>"
+  "[*"
+  "[->"
+  "[="
+  "|->"
+  "|=>"
   "||"
   "&&"
   "&&&"
@@ -227,14 +227,23 @@
   (identifier) @variable.member)
 
 (type_identifier
+  (identifier)* @module
   (identifier) @type .)
 (class_definition
-  name: (identifier) @type)
+  name: (identifier) @type.definition)
+(struct_definition
+  name: (identifier) @type.definition)
+(enum_definition
+  name: (identifier) @type.definition)
+(group_definition
+  name: (identifier) @type.definition)
 
 (function_call
   (identifier) @function.call)
 (function_def
   name: (identifier) @function)
+(def_parameter
+  parameter: (_) @variable.parameter)
 
 (attribute_reference
   (_)

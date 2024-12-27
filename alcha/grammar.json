@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "e912297bc008b3235e098bdb5f1d5f753d86821e",
-  "grammarSha": "4765311f2e7586bd8036b0dd936ad1c71ccd9ecef563a93be154ba4e1b9040d4",
+  "revision": "72405e3100fb46e67737d7fab2993579be1d7f4c",
+  "grammarSha": "841dab6bbca854aeb2b57f42142ebdad53acd802cc86939449e959d2efffc5cb",
   "language": "alcha",
   "url": "https://github.com/jpt13653903/tree-sitter-alcha",
   "maintainedBy": "@jpt13653903",

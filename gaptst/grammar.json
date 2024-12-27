@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "e0723dc6136309b3d5904dad2c73ef71267428c1",
-  "grammarSha": "044f23acab777a729c3cf6d1e7f77855b85701c4097551341f19f3248119c5f5",
+  "revision": "69086d7627c03e1f4baf766bcef14c60d9e92331",
+  "grammarSha": "cc61d7d90022a5807cb1751c689dde9ffb527f07955ef4b85f299e9f925dacbc",
   "language": "gaptst",
   "altName": "GAP system test files",
   "url": "https://github.com/gap-system/tree-sitter-gaptst",
