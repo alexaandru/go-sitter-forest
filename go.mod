@@ -9,7 +9,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
 	github.com/alexaandru/go-sitter-forest/al v1.9.6
-	github.com/alexaandru/go-sitter-forest/alcha v1.9.1
+	github.com/alexaandru/go-sitter-forest/alcha v1.9.2
 	github.com/alexaandru/go-sitter-forest/amber v1.9.2
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -143,8 +143,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/fusion v1.9.0
 	github.com/alexaandru/go-sitter-forest/gab v1.9.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
-	github.com/alexaandru/go-sitter-forest/gap v1.9.0
-	github.com/alexaandru/go-sitter-forest/gaptst v1.9.0
+	github.com/alexaandru/go-sitter-forest/gap v1.9.1
+	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
 	github.com/alexaandru/go-sitter-forest/gdscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
