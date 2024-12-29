@@ -13,6 +13,7 @@ typedef enum TokenTypeTag{
     BUILTIN_FUNC,
 
     STRING_BYTE,
+    INTERPOLATED_BYTE,
     ESCAPE_SEQUENCE,
 
     BIN_PREFIX,

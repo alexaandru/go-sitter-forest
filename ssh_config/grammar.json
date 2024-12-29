@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "dd32616275c6e9d7800c58f40c16a09ad1c7c238",
-  "grammarSha": "e3995bed40a8f7e223ac410c3ae16b12f36cde3739c1652367668a0a9aa26713",
+  "revision": "0dd3c7e9f301758f6c69a6efde43d3048deb4d8a",
+  "grammarSha": "0333fc9cce5c8edb99be2e62fdf8e794ccf867439765faefbe5805a4646a10a4",
   "language": "ssh_config",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",
   "maintainedBy": "@ObserverOfTime"

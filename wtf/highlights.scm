@@ -2,6 +2,8 @@
 
 [
   "func"
+  "test"
+  "assert"
   "record"
   "resource"
   "enum"

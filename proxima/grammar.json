@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "578a0057e464a9ce68c8154c45ae150952043331",
-  "grammarSha": "3a586ee23410da2709d6432432a70e9ad9931c047be775462e985f81efe64d57",
+  "revision": "38738f3394b21d252c387c302596ea97517efe7e",
+  "grammarSha": "65672a49996689ef2dbf3bc37e3f3ef0e717063c5b3e17337cf9d761877670d7",
   "language": "proxima",
   "url": "https://github.com/vistormu/tree-sitter-proxima",
   "maintainedBy": "@vistormu"

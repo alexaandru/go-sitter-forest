@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "3efee11f784605d44623d7dadd6cd12a0f73ea92",
-  "grammarSha": "cdec2d67fc898700eb80056ee9a84f54f8771488f249e884dadfa757c8020d7e",
+  "revision": "3aa2995549d5d8b26928e8d3fa2770fd4327414e",
+  "grammarSha": "de17436000a73169d9341b3eeabc4f0f4fbfa174ad5ad828135976dd8e2eb17f",
   "language": "c",
   "url": "https://github.com/tree-sitter/tree-sitter-c",
   "maintainedBy": "@amaanq"

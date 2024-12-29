@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "45af49560396d67a710b21a3ce315fcaa09006ff",
+  "revision": "8e13e1db35b941fc57f2bd2dd4628180448c17d5",
   "grammarSha": "77ff07ad3eba14c8be49b729c99ec2c32021e3417ae77fd69e394f1bb6e4d4e0",
   "language": "tsx",
   "url": "https://github.com/tree-sitter/tree-sitter-typescript",

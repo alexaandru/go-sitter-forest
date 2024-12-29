@@ -394,7 +394,7 @@ bool tree_sitter_alcha_external_scanner_scan(Scanner* scanner, TSLexer* lexer, c
         }
     #endif
 
-    if((valid_symbols[STRING_BYTE] || valid_symbols[ESCAPE_SEQUENCE]) && !valid_symbols[ERROR_SENTINEL]){
+    if(valid_symbols[STRING_BYTE] && valid_symbols[ESCAPE_SEQUENCE] && !valid_symbols[ERROR_SENTINEL]){
         switch(lexer->lookahead){
             case '"':
                 RETURN_FALSE;
@@ -404,6 +404,20 @@ bool tree_sitter_alcha_external_scanner_scan(Scanner* scanner, TSLexer* lexer, c
             default:
                 lexer->advance_alcha(lexer, false);
                 RETURN(STRING_BYTE);
+        }
+    }
+
+    if(valid_symbols[INTERPOLATED_BYTE] && valid_symbols[ESCAPE_SEQUENCE] && !valid_symbols[ERROR_SENTINEL]){
+        switch(lexer->lookahead){
+            case '"':
+            case '{':
+                RETURN_FALSE;
+            case '\\':
+                escape_sequence(lexer);
+                RETURN(ESCAPE_SEQUENCE);
+            default:
+                lexer->advance_alcha(lexer, false);
+                RETURN(INTERPOLATED_BYTE);
         }
     }
 
