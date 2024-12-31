@@ -416,6 +416,8 @@ github.com/alexaandru/go-sitter-forest/inko v1.9.5 h1:vm4i1P1v7jn7gC5RQ7dR/3dRXF
 github.com/alexaandru/go-sitter-forest/inko v1.9.5/go.mod h1:gn+rvJBTwjfGfYVcaCMJcNM9e+mMds7p3hz2AatZGgM=
 github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0 h1:7lumY+10WuTR3eo196WuIlSQd32vfwrzllPwQsMPYUA=
 github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0/go.mod h1:lhp2oUYnRk8kUFHooBrt/6ng1bQ2JswAUgNdCu+co6M=
+github.com/alexaandru/go-sitter-forest/ipkg v1.9.0 h1:3AiGKCByn7U7xkbLliyVZAeaNoU5bx/WowvEdm81hfA=
+github.com/alexaandru/go-sitter-forest/ipkg v1.9.0/go.mod h1:/s5LSR19N8cQGvYMRCWo7eym7q9nVTiSf4H7RmyWaxI=
 github.com/alexaandru/go-sitter-forest/ispc v1.9.1 h1:oIoqIhG2Tqg/Wwsencc9vpdzPQ+nrVglzu3Pbd//jKI=
 github.com/alexaandru/go-sitter-forest/ispc v1.9.1/go.mod h1:Z4DMyFrwIWx7n2ssNhMJu9q8sZyMAMWYmizk0fMv0Fc=
 github.com/alexaandru/go-sitter-forest/jai v1.9.5 h1:aiyuevoMsRNiQXc2IduxzRw/vHg7fI2b1/g6mQmOKz8=

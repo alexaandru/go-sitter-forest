@@ -212,6 +212,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ink v1.9.1
 	github.com/alexaandru/go-sitter-forest/inko v1.9.5
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
+	github.com/alexaandru/go-sitter-forest/ipkg v1.9.0
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
 	github.com/alexaandru/go-sitter-forest/jai v1.9.5
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
