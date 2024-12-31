@@ -281,6 +281,7 @@
     "ink":                ["ink"],
     "inko":               ["inko"],
     "integerbasic":       ["ibas", "I"],
+    "ipkg":               ["ipkg"],
     "ispc":               ["ispc"],
     "jai":                ["jai"],
     "janet":              ["janet"],

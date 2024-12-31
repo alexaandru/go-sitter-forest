@@ -229,6 +229,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/integerbasic"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/grammar"
 	"github.com/alexaandru/go-sitter-forest/internal/automation/util"
+	"github.com/alexaandru/go-sitter-forest/ipkg"
 	"github.com/alexaandru/go-sitter-forest/ispc"
 	"github.com/alexaandru/go-sitter-forest/jai"
 	"github.com/alexaandru/go-sitter-forest/janet"
@@ -748,6 +749,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"ink":                    ink.GetLanguage,
 	"inko":                   inko.GetLanguage,
 	"integerbasic":           integerbasic.GetLanguage,
+	"ipkg":                   ipkg.GetLanguage,
 	"ispc":                   ispc.GetLanguage,
 	"jai":                    jai.GetLanguage,
 	"janet":                  janet.GetLanguage,
@@ -1253,6 +1255,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"ink":                    ink.GetQuery,
 	"inko":                   inko.GetQuery,
 	"integerbasic":           integerbasic.GetQuery,
+	"ipkg":                   ipkg.GetQuery,
 	"ispc":                   ispc.GetQuery,
 	"jai":                    jai.GetQuery,
 	"janet":                  janet.GetQuery,

@@ -1,0 +1,10 @@
+package parser-json-test
+version = 0.1.0
+authors = "stefan-hoeck"
+
+depends = parser-json
+        , hedgehog
+
+main = Main
+executable = "parser-json-test"
+sourcedir = "src"

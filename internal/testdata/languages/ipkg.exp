@@ -1,0 +1,1 @@
+(source_file (package_declaration (package_name)) (version_declaration (version_number)) (field_declaration (field_name) (string_value)) (dependency_declaration (dependency_list (dependency_item (package_name)) (dependency_item (package_name)))) (main_declaration (module_name)) (executable_declaration (string_value)) (field_declaration (field_name) (string_value)))

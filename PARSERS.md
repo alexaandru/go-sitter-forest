@@ -1,4 +1,4 @@
-# 501 Supported Parsers
+# 502 Supported Parsers
 
 5 pending, 6 skipped regeneration, 39 missing queries
 
@@ -216,6 +216,7 @@
 - [x] [ink](https://github.com/wldmr/tree-sitter-ink) ✔️ (maintained by @wldmr)
 - [x] [inko](https://github.com/inko-lang/tree-sitter-inko) ✔️ (maintained by @yorickpeterse)
 - [x] [integerbasic](https://github.com/dfgordon/tree-sitter-integerbasic) ✔️ (maintained by @dfgordon)
+- [x] [ipkg](https://github.com/srghma/tree-sitter-ipkg) ✔️ (maintained by @srghma)
 - [x] [ispc](https://github.com/tree-sitter-grammars/tree-sitter-ispc) ✔️ (maintained by @fab4100; ❌invalid character '}' looking for beginning of object key string)
 - [x] [jai](https://github.com/constantitus/tree-sitter-jai) ✔️ (maintained by @constantitus)
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)

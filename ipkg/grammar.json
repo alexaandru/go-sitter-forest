@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "8d3e9782f2d091d0cd39c13bfb3068db0c675960",
+  "grammarSha": "afa70365da6b3d268f262d4ac4459bea8a7423343b3a8099073ee5c4fbd3e6f4",
+  "language": "ipkg",
+  "url": "https://github.com/srghma/tree-sitter-ipkg",
+  "maintainedBy": "@srghma",
+  "files": [
+    "scanner.c"
+  ]
+}
