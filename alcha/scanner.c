@@ -553,7 +553,10 @@ bool tree_sitter_alcha_external_scanner_scan(Scanner* scanner, TSLexer* lexer, c
                 }
             }
 
-            if((valid_symbols[IDENTIFIER] || valid_symbols[BUILTIN_CONST] || valid_symbols[BUILTIN_FUNC]) && non_digit(lexer->lookahead)){
+            if((valid_symbols[IDENTIFIER]    ||
+                valid_symbols[BUILTIN_CONST] ||
+                valid_symbols[BUILTIN_FUNC]  ||
+                valid_symbols[BUILTIN_VARIABLE]) && non_digit(lexer->lookahead)){
                 if(lexer->lookahead == 0x03C0){ // pi
                     lexer->advance_alcha(lexer, false);
                     if(!dec_digit(lexer->lookahead) && !non_digit(lexer->lookahead)){
@@ -563,10 +566,11 @@ bool tree_sitter_alcha_external_scanner_scan(Scanner* scanner, TSLexer* lexer, c
                 TokenType type = token_tree_alcha_match(token_tree, lexer);
                 if(!dec_digit(lexer->lookahead) && !non_digit(lexer->lookahead)){
                     switch(type){
-                        case KEYWORD:       RETURN_FALSE;
-                        case BUILTIN_CONST: RETURN(BUILTIN_CONST);
-                        case BUILTIN_FUNC:  RETURN(BUILTIN_FUNC);
-                        default:            break;
+                        case KEYWORD:          RETURN_FALSE;
+                        case BUILTIN_CONST:    RETURN(BUILTIN_CONST);
+                        case BUILTIN_FUNC:     RETURN(BUILTIN_FUNC);
+                        case BUILTIN_VARIABLE: RETURN(BUILTIN_VARIABLE);
+                        default: break;
                     }
                 }
                 identifier(lexer);

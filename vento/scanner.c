@@ -12,27 +12,10 @@ void tree_sitter_vento_external_scanner_destroy(void *payload) {}
 unsigned tree_sitter_vento_external_scanner_serialize( void *payload, char *buffer) { return 0; }
 void tree_sitter_vento_external_scanner_deserialize( void *payload, const char *buffer, unsigned length) {}
 
-bool is_trim_marker(char c) {
-  switch (c) {
-    case '-':
-      return true;
-    default:
-      return false;
-  };
-}
-
 void skip_whitespace(TSLexer *lexer) {
   while (iswspace(lexer->lookahead)) {
     lexer->advance_vento(lexer, true);
   }
-}
-
-void skip_vento(TSLexer *lexer) {
-  lexer->advance_vento(lexer, true);
-}
-
-void advance_vento(TSLexer *lexer) {
-  lexer->advance_vento(lexer, false);
 }
 
 bool tree_sitter_vento_external_scanner_scan(
@@ -44,20 +27,15 @@ bool tree_sitter_vento_external_scanner_scan(
 
   if (valid_symbols[CODE]) {
 
-    if (lexer->lookahead == '\0' || lexer->lookahead == '/') {
-      return false;
-    }
-
-    if (lexer->lookahead == '-') {
-      return false;
-    }
-
-    if (lexer->lookahead == '}') {
+    if (lexer->eof(lexer) ||
+        lexer->lookahead == '/' ||
+        lexer->lookahead == '-' ||
+        lexer->lookahead == '}') {
       return false;
     }
 
     // We start in a code block, so we need to find the end of it
-    int depth = 1;
+    uint32_t depth = 1;
 
     while (depth > 0) {
       if (lexer->eof(lexer)) {
@@ -65,11 +43,11 @@ bool tree_sitter_vento_external_scanner_scan(
       }
 
       if (lexer->lookahead == '{') {
-        advance_vento(lexer);
+        lexer->advance_vento(lexer, false);
         depth++;
 
       } else if (lexer->lookahead == '}') {
-        advance_vento(lexer);
+        lexer->advance_vento(lexer, false);
 
         if (depth > 1) {
           lexer->mark_end(lexer);
@@ -78,17 +56,17 @@ bool tree_sitter_vento_external_scanner_scan(
 
       } else if (lexer->lookahead == '|') {
         lexer->mark_end(lexer);
-        advance_vento(lexer);
+        lexer->advance_vento(lexer, false);
 
         if (lexer->lookahead == '>') {
-          advance_vento(lexer);
+          lexer->advance_vento(lexer, false);
 
           lexer->result_symbol = CODE;
           return true;
         }
       } else {
-        const bool skip = iswspace(lexer->lookahead) || is_trim_marker(lexer->lookahead);
-        advance_vento(lexer);
+        const bool skip = iswspace(lexer->lookahead) || lexer->lookahead == '-';
+        lexer->advance_vento(lexer, false);
         if (!skip) {
           lexer->mark_end(lexer);
         }

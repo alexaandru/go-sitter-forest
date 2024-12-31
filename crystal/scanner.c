@@ -89,6 +89,11 @@ enum Token {
 
     REGEX_MODIFIER,
 
+    MACRO_CONTROL_START,
+    MACRO_CONTROL_END,
+    MACRO_EXPRESSION_START,
+    MACRO_EXPRESSION_END,
+
     // Never returned
     START_OF_PARENLESS_ARGS,
     END_OF_RANGE,
@@ -150,6 +155,9 @@ typedef struct Heredoc Heredoc;
 struct State {
     bool has_leading_whitespace;
     bool previous_line_continued;
+
+    bool inside_macro_expression;
+    bool inside_macro_control;
 
     // It's possible to have nested delimited literals, like
     //   %(#{%(foo)})
@@ -1111,6 +1119,20 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
 
     switch (lexer->lookahead) {
         case '{':
+            lex_advance_crystal(lexer);
+
+            // Start of a macro expression
+            if (valid_symbols[MACRO_EXPRESSION_START] && lexer->lookahead == '{') {
+                lex_advance_crystal(lexer);
+                lexer->result_symbol = MACRO_EXPRESSION_START;
+                state->inside_macro_expression = true;
+                return true;
+            } else if (valid_symbols[MACRO_CONTROL_START] && lexer->lookahead == '%') {
+                lex_advance_crystal(lexer);
+                lexer->result_symbol = MACRO_CONTROL_START;
+                state->inside_macro_control = true;
+                return true;
+            }
 
             // We expect these symbols to always be valid or not valid together
             assert(valid_symbols[START_OF_HASH_OR_TUPLE] == valid_symbols[START_OF_NAMED_TUPLE]);
@@ -1145,7 +1167,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     // could be valid, it must be the start of a block.
 
                     if (valid_symbols[START_OF_PARENLESS_ARGS]) {
-                        lex_advance_crystal(lexer);
                         lexer->result_symbol = START_OF_BRACE_BLOCK;
                         return true;
                     }
@@ -1177,8 +1198,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     return false;
 
                 } else if (BRACE_BLOCK && BRACE_TYPE) {
-
-                    lex_advance_crystal(lexer);
                     // We don't want to consume while looking ahead
                     lexer->mark_end(lexer);
 
@@ -1209,8 +1228,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     }
 
                 } else if (BRACE_EXPR && BRACE_TYPE) {
-
-                    lex_advance_crystal(lexer);
                     // We don't want to consume while looking ahead
                     lexer->mark_end(lexer);
 
@@ -1241,7 +1258,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     }
 
                 } else if (BRACE_EXPR) {
-                    lex_advance_crystal(lexer);
                     // We don't want to consume while looking ahead
                     lexer->mark_end(lexer);
                     skip_space_and_newline(state, lexer);
@@ -1259,7 +1275,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     }
 
                 } else if (BRACE_TYPE) {
-                    lex_advance_crystal(lexer);
                     // We don't want to consume while looking ahead
                     lexer->mark_end(lexer);
                     skip_space_and_newline(state, lexer);
@@ -1277,7 +1292,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     }
 
                 } else if (BRACE_BLOCK) {
-                    lex_advance_crystal(lexer);
                     lexer->result_symbol = START_OF_BRACE_BLOCK;
                     return true;
                 } else {
@@ -1710,12 +1724,21 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             break;
 
         case '%':
+            lex_advance_crystal(lexer);
+
+            // valid_symbols[MACRO_CONTROL_END] &&
+            if (lexer->lookahead == '}' && state->inside_macro_control) {
+                lex_advance_crystal(lexer);
+                lexer->result_symbol = MACRO_CONTROL_END;
+                state->inside_macro_control = false;
+                return true;
+            }
+
             if (valid_symbols[STRING_PERCENT_LITERAL_START]
                 || valid_symbols[COMMAND_PERCENT_LITERAL_START]
                 || valid_symbols[STRING_ARRAY_PERCENT_LITERAL_START]
                 || valid_symbols[SYMBOL_ARRAY_PERCENT_LITERAL_START]
                 || valid_symbols[REGEX_PERCENT_LITERAL_START]) {
-                lex_advance_crystal(lexer);
 
                 if (lexer->lookahead == '=') {
                     return false;
@@ -2045,6 +2068,17 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 return true;
             }
             break;
+
+        case '}':
+            lex_advance_crystal(lexer);
+            // valid_symbols[MACRO_EXPRESSION_END] &&
+            if (lexer->lookahead == '}' && state->inside_macro_expression) {
+                lex_advance_crystal(lexer);
+                lexer->result_symbol = MACRO_EXPRESSION_END;
+                state->inside_macro_expression = false;
+                return true;
+            }
+            break;
     }
 
     return false;
@@ -2142,6 +2176,8 @@ void *tree_sitter_crystal_external_scanner_create(void) {
 
     state->has_leading_whitespace = false;
     state->previous_line_continued = false;
+    state->inside_macro_expression = false;
+    state->inside_macro_control = false;
 
     array_init(&state->literals);
     array_init(&state->heredocs);
@@ -2172,6 +2208,8 @@ unsigned tree_sitter_crystal_external_scanner_serialize(void *payload, char *buf
 
     buffer[offset++] = (char)state->has_leading_whitespace;
     buffer[offset++] = (char)state->previous_line_continued;
+    buffer[offset++] = (char)state->inside_macro_expression;
+    buffer[offset++] = (char)state->inside_macro_control;
 
     // It's safe to cast the literal count into a char since it will always be
     // less than MAX_LITERAL_COUNT.
@@ -2235,12 +2273,16 @@ void tree_sitter_crystal_external_scanner_deserialize(void *payload, const char 
         // case we just finish resetting the state.
         state->has_leading_whitespace = false;
         state->previous_line_continued = false;
+        state->inside_macro_expression = false;
+        state->inside_macro_control = false;
         return;
     }
 
     size_t offset = 0;
     state->has_leading_whitespace = (bool)buffer[offset++];
     state->previous_line_continued = (bool)buffer[offset++];
+    state->inside_macro_expression = (bool)buffer[offset++];
+    state->inside_macro_control = (bool)buffer[offset++];
 
     // The literals array can be deserialized in one chunk.
     uint8_t literals_size = (uint8_t)buffer[offset++];

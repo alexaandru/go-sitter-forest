@@ -55,8 +55,8 @@
   },
   {
     "reference": "master",
-    "revision": "80e7001d313f578e94a93f5ad4fef5d36288c645",
-    "grammarSha": "4b6efe8b4cf8f7020c79088b97ef22c1d23f358da9fa7d18ed88c101cb78c81b",
+    "revision": "2897645989f75491788e4674123a0b8bc2b1dabb",
+    "grammarSha": "b60cad900897dc9ae604a554dd2db3212100c1f817d6977ce229894eb1221522",
     "language": "alcha",
     "url": "https://github.com/jpt13653903/tree-sitter-alcha",
     "maintainedBy": "@jpt13653903",
@@ -463,7 +463,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "89df77707b6009abbc7687ab7e990e72f0b552e9",
+    "revision": "4a7aefefaa07bf5fe40f7ceb2990f792ea1e6f91",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -756,8 +756,8 @@
   },
   {
     "reference": "main",
-    "revision": "f5a64bcb942e0e4a2d0df710a74a78505f158434",
-    "grammarSha": "4dc51f10132eea9f9e12c926d3ddd568b890e87907e75633acf83264d3371cd5",
+    "revision": "4d6da4b364bb7c9beba3e2b54afafeca452ce089",
+    "grammarSha": "82200b01210d39f22ec546cd86368db27b6e397198c657146f93acbe92255ac9",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
     "maintainedBy": "@crystal-lang-tools",
@@ -1031,7 +1031,7 @@
   },
   {
     "reference": "main",
-    "revision": "efcd7c2852c69822d625786324538b7457fafddb",
+    "revision": "ad9d7b84453426c40717c2b2c6b13d0a955d0662",
     "grammarSha": "6ce82e9a519321b0fbb6c25ea097f22c7f667dab4e1240a042d1d9e38651be43",
     "language": "editorconfig",
     "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
@@ -1281,7 +1281,7 @@
   },
   {
     "reference": "main",
-    "revision": "d834c6e744e23e251e884684917b3fc646d8883c",
+    "revision": "900fd8036b74981ff8a3c85bd660ba6ebd243deb",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1327,7 +1327,7 @@
   },
   {
     "reference": "main",
-    "revision": "971da5ff0266bfe4a6ecfb94616548032d6d1ba0",
+    "revision": "207f1c988f4649e12fe207e4a7e4f83b9da037d1",
     "grammarSha": "fd84836b4b6f85be393d9d605357dab5309478df7291f2fcbae050696eb6d3e5",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -1340,7 +1340,7 @@
   },
   {
     "reference": "main",
-    "revision": "971da5ff0266bfe4a6ecfb94616548032d6d1ba0",
+    "revision": "207f1c988f4649e12fe207e4a7e4f83b9da037d1",
     "grammarSha": "75f9690edfbd4f82c9dd3d33c4308e4c3b27e52d15f4f593dabc4371199d7798",
     "language": "fsharp_signature",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -1381,7 +1381,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1910,7 +1910,7 @@
   },
   {
     "reference": "master",
-    "revision": "8c691ded949945c3c7ad506db5e3af55ce593a07",
+    "revision": "2fda12bd3ae4eb4a4f2fba993dad3a4e4c8255a1",
     "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
     "language": "hungarian",
     "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
@@ -2182,8 +2182,8 @@
   },
   {
     "reference": "main",
-    "revision": "3fe3c8dd0f3c0dff671a045a913f58a34468331a",
-    "grammarSha": "63ab41bb67749144b506378ea9b56df7743a4fdd46e29d267978b828af37b1aa",
+    "revision": "30277be76ead22a58febceba2b3cedbf5bd2f01b",
+    "grammarSha": "d461c7f5f71fff4289deeef87468612f4b61609f2fe49ce7b228562b0a0c51d1",
     "language": "jule",
     "url": "https://github.com/TheLooped/tree-sitter-jule",
     "maintainedBy": "@TheLooped"
@@ -2556,7 +2556,7 @@
   },
   {
     "reference": "main",
-    "revision": "fa40846770c09773fd022c8cb3c43247c5bddb8b",
+    "revision": "157a490064adfe07b1c6d549403c89c9f23a45f3",
     "grammarSha": "a6aae979f589424c848b308df4bfe700d07138f965f70108d35e121d5819e1b8",
     "language": "magik",
     "url": "https://github.com/krn-robin/tree-sitter-magik",
@@ -2903,8 +2903,8 @@
   },
   {
     "reference": "main",
-    "revision": "249c39d315bd4bbe04b7b1be8d7004587b5032bd",
-    "grammarSha": "0fb5243cd29d746a2c3310823f5df4aa94155b561c629a66cf0853d42b0caf03",
+    "revision": "9822fc63a62ff87939c88ead9f381f951f092dee",
+    "grammarSha": "4f0132fbda80ba7a5b41bb8ccecfa3d2f71ed928301c4eaf46b07d7376cf9d87",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558",
@@ -3942,7 +3942,7 @@
   },
   {
     "reference": "main",
-    "revision": "764f933738022e7b7bc19f46d4d7f6d9ae22eaab",
+    "revision": "12400f3a2714fc420f48dd47239acbdccd57f56d",
     "grammarSha": "85d619333b26305164f4f3b0fc283a6a76a2a6a8ff930ea67a324fa8029e013e",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
@@ -3950,8 +3950,8 @@
   },
   {
     "reference": "main",
-    "revision": "9d9b968bfddb19bb973483bb594155a38f1428b6",
-    "grammarSha": "bafbae88639fc7ddc41bd47af0b41f75e117ce0d4449879a3154474f58ad755d",
+    "revision": "302f356b1c832a4d0452d59e061615ccbcaffc7f",
+    "grammarSha": "636f016be22fdc0842df804bb74f7ea5cc33547211c4a777641f9ea4326793f1",
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
     "maintainedBy": "@DerekStride",
@@ -3961,7 +3961,7 @@
   },
   {
     "reference": "main",
-    "revision": "2ba42d6dec85c28b934f186e20d5ac44993db898",
+    "revision": "ea7952522fc753ed6a70a09cb7d14e8704e7afe1",
     "grammarSha": "7c376b54247514c0d896408030bf9f1da1bb0497e448ecdb79177bbcfd8e4f21",
     "language": "sql_bigquery",
     "url": "https://github.com/takegue/tree-sitter-sql-bigquery",
@@ -3992,7 +3992,7 @@
   },
   {
     "reference": "main",
-    "revision": "f4aacbe4820e7ae3dda9ffbc65484b3a685f9471",
+    "revision": "73dd3fd8b8e04209769426ffe845af9e7770835a",
     "grammarSha": "6cc18a8f73b55a3caf32e4d29406b9e7f4fd28aa42e9add166defc44267393f5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
@@ -4234,7 +4234,7 @@
   },
   {
     "reference": "master",
-    "revision": "9269b5a65e79be8fb6b6669935823263343b7ba0",
+    "revision": "60310af0d788a0160d719d4aff8f146b6e6c55bd",
     "grammarSha": "a1348fe2fccc7a42e3496fa7cf993e46df36832e72262f0f86118326e61bca67",
     "language": "templ",
     "url": "https://github.com/vrischmann/tree-sitter-templ",
@@ -4555,7 +4555,7 @@
   },
   {
     "reference": "main",
-    "revision": "3321077d7446c1b3b017c294fd56ce028ed817fe",
+    "revision": "3b32474bc29584ea214e4e84b47102408263fe0e",
     "grammarSha": "25f7b4a6f62ea92b0e44647b7738ac00b798673e0865067fcfad899d662f57fa",
     "language": "vento",
     "url": "https://github.com/ventojs/tree-sitter-vento",
@@ -4574,7 +4574,7 @@
   },
   {
     "reference": "master",
-    "revision": "eb1532861767a46fc336102bd4ebc938da8773f5",
+    "revision": "63d0360d42c43b4902b8470c7ddcf323432e2dde",
     "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
     "language": "vhdl",
     "url": "https://github.com/jpt13653903/tree-sitter-vhdl",
@@ -4774,7 +4774,7 @@
   },
   {
     "reference": "master",
-    "revision": "5fd347f0b950b2d2563d41176373c610a0a5468c",
+    "revision": "7c7b03e69710a31031e02bc18a7c3c6542a010e2",
     "grammarSha": "c56111dcc2a94adab966dc18d1a9ba7490ebb1d01ce95d3a9dca492190474dc0",
     "language": "xresources",
     "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",

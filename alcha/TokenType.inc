@@ -10,6 +10,7 @@
             case IDENTIFIER:        return "IDENTIFIER";
             case BUILTIN_CONST:     return "BUILTIN_CONST";
             case BUILTIN_FUNC:      return "BUILTIN_FUNC";
+            case BUILTIN_VARIABLE:  return "BUILTIN_VARIABLE";
 
             case STRING_BYTE:       return "STRING_BYTE";
             case INTERPOLATED_BYTE: return "INTERPOLATED_BYTE";

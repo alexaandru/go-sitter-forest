@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "3321077d7446c1b3b017c294fd56ce028ed817fe",
+  "revision": "3b32474bc29584ea214e4e84b47102408263fe0e",
   "grammarSha": "25f7b4a6f62ea92b0e44647b7738ac00b798673e0865067fcfad899d662f57fa",
   "language": "vento",
   "url": "https://github.com/ventojs/tree-sitter-vento",

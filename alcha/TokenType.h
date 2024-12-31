@@ -11,6 +11,7 @@ typedef enum TokenTypeTag{
     IDENTIFIER,
     BUILTIN_CONST,
     BUILTIN_FUNC,
+    BUILTIN_VARIABLE,
 
     STRING_BYTE,
     INTERPOLATED_BYTE,

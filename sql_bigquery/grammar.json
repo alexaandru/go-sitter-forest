@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "2ba42d6dec85c28b934f186e20d5ac44993db898",
+  "revision": "ea7952522fc753ed6a70a09cb7d14e8704e7afe1",
   "grammarSha": "7c376b54247514c0d896408030bf9f1da1bb0497e448ecdb79177bbcfd8e4f21",
   "language": "sql_bigquery",
   "url": "https://github.com/takegue/tree-sitter-sql-bigquery",

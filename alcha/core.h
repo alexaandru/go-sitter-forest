@@ -139,6 +139,7 @@ static void register_functions(TokenTree* token_tree)
     token_tree_alcha_insert(token_tree, "print",      BUILTIN_FUNC);
 
     token_tree_alcha_insert(token_tree, "finally",    BUILTIN_FUNC);
+    token_tree_alcha_insert(token_tree, "hdl_map",    BUILTIN_FUNC);
 
     token_tree_alcha_insert(token_tree, "eval",       BUILTIN_FUNC);
     token_tree_alcha_insert(token_tree, "shell",      BUILTIN_FUNC);
@@ -150,12 +151,21 @@ static void register_functions(TokenTree* token_tree)
 }
 //------------------------------------------------------------------------------
 
+static void register_variables(TokenTree* token_tree)
+{
+    token_tree_alcha_insert(token_tree, "_",      BUILTIN_VARIABLE);
+    token_tree_alcha_insert(token_tree, "this",   BUILTIN_VARIABLE);
+    token_tree_alcha_insert(token_tree, "result", BUILTIN_VARIABLE);
+}
+//------------------------------------------------------------------------------
+
 void register_alcha_core(TokenTree* token_tree)
 {
     register_keywords (token_tree);
     register_constants(token_tree);
     register_specials (token_tree);
     register_functions(token_tree);
+    register_variables(token_tree);
 }
 //------------------------------------------------------------------------------
 
