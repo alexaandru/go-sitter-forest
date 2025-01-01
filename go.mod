@@ -28,7 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.1
 	github.com/alexaandru/go-sitter-forest/bara v1.9.0
-	github.com/alexaandru/go-sitter-forest/bash v1.9.3
+	github.com/alexaandru/go-sitter-forest/bash v1.9.4
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
 	github.com/alexaandru/go-sitter-forest/bend v1.9.0
@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.5
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.6
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
 	github.com/alexaandru/go-sitter-forest/gap v1.9.1
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
-	github.com/alexaandru/go-sitter-forest/gdscript v1.9.2
+	github.com/alexaandru/go-sitter-forest/gdscript v1.9.3
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
 	github.com/alexaandru/go-sitter-forest/gherkin v1.9.0
@@ -227,7 +227,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/json5 v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
-	github.com/alexaandru/go-sitter-forest/jule v1.9.2
+	github.com/alexaandru/go-sitter-forest/jule v1.9.3
 	github.com/alexaandru/go-sitter-forest/julia v1.9.8
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
@@ -363,7 +363,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.0
 	github.com/alexaandru/go-sitter-forest/rbs v1.9.0
-	github.com/alexaandru/go-sitter-forest/rcl v1.9.0
+	github.com/alexaandru/go-sitter-forest/rcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
 	github.com/alexaandru/go-sitter-forest/regex v1.9.6
@@ -427,7 +427,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sus v1.9.2
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
-	github.com/alexaandru/go-sitter-forest/swift v1.9.1
+	github.com/alexaandru/go-sitter-forest/swift v1.9.2
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
