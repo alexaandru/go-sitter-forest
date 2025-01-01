@@ -161,6 +161,9 @@
 
 (underscore) @variable.parameter.builtin
 
+(pointer_type
+  "*" @operator)
+
 ; function calls
 (call
   method: (identifier) @function.call)

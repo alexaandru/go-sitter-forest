@@ -475,7 +475,7 @@
   },
   {
     "reference": "main",
-    "revision": "39a9a7cd3b58c83b879885fa16dd532702f75a01",
+    "revision": "812c045801696fb59f16f7fbe797aed2834a4026",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -756,8 +756,8 @@
   },
   {
     "reference": "main",
-    "revision": "4d6da4b364bb7c9beba3e2b54afafeca452ce089",
-    "grammarSha": "82200b01210d39f22ec546cd86368db27b6e397198c657146f93acbe92255ac9",
+    "revision": "da3ead383dbfd70a56242aff4f29e6b39bfea417",
+    "grammarSha": "1652be179e2d36cbd4658e2c9e62e57f618c0968ac896d6591f7946083297e33",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
     "maintainedBy": "@crystal-lang-tools",
@@ -1381,7 +1381,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "3e6b97ce7ff4f6e9ec0e8d587c1e80fea75aef6c04483cf5e3347aa413934160",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1415,7 +1415,7 @@
   },
   {
     "reference": "master",
-    "revision": "bf39f1b38a234d79940fd8866abb0b132ab51b1e",
+    "revision": "48b49330888a4669b48619b211cc8da573827725",
     "grammarSha": "88e13699699d63f05bf0f0ed15e171ab3cd0c4a5f561352b87bfe0d7dd6b34b8",
     "language": "gdscript",
     "altName": "Godot (gdscript)",
@@ -2182,8 +2182,8 @@
   },
   {
     "reference": "main",
-    "revision": "30277be76ead22a58febceba2b3cedbf5bd2f01b",
-    "grammarSha": "d461c7f5f71fff4289deeef87468612f4b61609f2fe49ce7b228562b0a0c51d1",
+    "revision": "d7655daf8c43dd51070be26cd5f1b687b693e7e8",
+    "grammarSha": "793de994105ff565725326f5320e37767b5b61b7970b5ae56f6fd36dbbce9874",
     "language": "jule",
     "url": "https://github.com/TheLooped/tree-sitter-jule",
     "maintainedBy": "@TheLooped"
@@ -3491,7 +3491,7 @@
   },
   {
     "reference": "master",
-    "revision": "c7cd31054e54411165acb968091e3e44172cb65c",
+    "revision": "a2e678240cd78855134299a116990ff914ffe404",
     "grammarSha": "406663fa0d4d967b382d47ecdaf547439563ae2950fdaa2bc27528a52155f6dc",
     "language": "rcl",
     "url": "https://github.com/rcl-lang/tree-sitter-rcl",
@@ -4127,7 +4127,7 @@
   },
   {
     "reference": "main",
-    "revision": "7ca0504e6d1a3e1e2f5fa725dafecf5e5bd2b202",
+    "revision": "742723056556ec80ca4da09a6411fff86b330911",
     "grammarSha": "f0b629e7d8428eedfb2356ac049efd24837331718759217fa1b737253d3c1d5d",
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",

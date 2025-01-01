@@ -39,6 +39,7 @@ enum Token {
     BINARY_WRAPPING_PLUS,
     BINARY_WRAPPING_MINUS,
 
+    POINTER_STAR,
     UNARY_STAR,
     BINARY_STAR,
 
@@ -1135,7 +1136,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             }
 
             // We expect these symbols to always be valid or not valid together
-            assert(valid_symbols[START_OF_HASH_OR_TUPLE] == valid_symbols[START_OF_NAMED_TUPLE]);
             assert(valid_symbols[START_OF_TUPLE_TYPE] == valid_symbols[START_OF_NAMED_TUPLE_TYPE]);
 
 #define BRACE_BLOCK (valid_symbols[START_OF_BRACE_BLOCK])
@@ -1175,7 +1175,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     //   foo 1, 2, 3 .. { 4 }
                     // Crystal always considers this as a hash or tuple, not a block
                     if (valid_symbols[END_OF_RANGE]) {
-                        lex_advance_crystal(lexer);
                         // We don't want to consume while looking ahead
                         lexer->mark_end(lexer);
                         skip_space_and_newline(state, lexer);
@@ -1191,6 +1190,14 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                                 lexer->result_symbol = START_OF_HASH_OR_TUPLE;
                                 return true;
                         }
+                    }
+
+                    // This is the start of an array-like or hash-like constructor:
+                    //   MyArray { 1, 2, 3 }
+                    // Named tuples are not accepted here.
+                    if (valid_symbols[START_OF_HASH_OR_TUPLE] && !valid_symbols[START_OF_NAMED_TUPLE]) {
+                        lexer->result_symbol = START_OF_HASH_OR_TUPLE;
+                        return true;
                     }
 
                     // Is there anywhere else '{' could represent either a block or a hash/tuple?
@@ -1481,8 +1488,13 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             break;
 
         case '*':
-            if (valid_symbols[UNARY_STAR] || valid_symbols[BINARY_STAR] || valid_symbols[UNARY_DOUBLE_STAR] || valid_symbols[BINARY_DOUBLE_STAR]) {
+            if (valid_symbols[POINTER_STAR] || valid_symbols[UNARY_STAR] || valid_symbols[BINARY_STAR] || valid_symbols[UNARY_DOUBLE_STAR] || valid_symbols[BINARY_DOUBLE_STAR]) {
                 lex_advance_crystal(lexer);
+
+                if (valid_symbols[POINTER_STAR] && !valid_symbols[ERROR_RECOVERY]) {
+                    lexer->result_symbol = POINTER_STAR;
+                    return true;
+                }
 
                 if (lexer->lookahead == '=') {
                     return false;
