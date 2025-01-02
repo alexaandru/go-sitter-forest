@@ -149,6 +149,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
 	github.com/alexaandru/go-sitter-forest/gherkin v1.9.0
+	github.com/alexaandru/go-sitter-forest/ghostty v1.9.0
 	github.com/alexaandru/go-sitter-forest/git_config v1.9.0
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0

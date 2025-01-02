@@ -290,6 +290,8 @@ github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0 h1:zZ3vUpVIn8eow3jxjEj
 github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0/go.mod h1:78E+RTJeL9m5/rNR6za/CfFo3p+HEXej1stYthQgVuI=
 github.com/alexaandru/go-sitter-forest/gherkin v1.9.0 h1:YXKuaipwHqDPLhKezVbGfztJA6DpYhc4G6CQQUWaCys=
 github.com/alexaandru/go-sitter-forest/gherkin v1.9.0/go.mod h1:9uOwqXbNxJbs7OqI4zYqHocGjSOPjCGJuaVInAEEiqo=
+github.com/alexaandru/go-sitter-forest/ghostty v1.9.0 h1:N6MhBadQnB9trhnjpqwNqwn0lUfzL740cGS3iSUdrls=
+github.com/alexaandru/go-sitter-forest/ghostty v1.9.0/go.mod h1:CvQl7Hbdk+L5jPat1wE1ig9qx1c0zaW8Qlt0QSusAkQ=
 github.com/alexaandru/go-sitter-forest/git_config v1.9.0 h1:Ad0BgiXv05lv1Qo1F3rjG3GwGUPmVLrTOgW1olz4JG0=
 github.com/alexaandru/go-sitter-forest/git_config v1.9.0/go.mod h1:4ET0bF4oAbYoQxuSzI54Nko0BPXmIZdkk2BEajeAQ/o=
 github.com/alexaandru/go-sitter-forest/git_rebase v1.9.0 h1:ec3kzqic/WeNkih5LgOHRvooUrKkuK60Ch2cyOWGtVE=
