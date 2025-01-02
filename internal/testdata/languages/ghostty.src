@@ -1,0 +1,15 @@
+theme = rose-pine
+# MonaLisa
+command = zsh
+shell-integration = zsh
+mouse-hide-while-typing = true
+font-family = JetBrainsMono NF Regular
+font-family-bold = JetBrainsMono NF ExtraBold
+font-family-italic = JetBrainsMono NF Light Italic
+font-family-bold-italic = JetBrainsMono NF Bold Italic
+font-size = 10
+background-opacity = 0.96
+window-decoration = false
+window-height = 300
+window-width = 600
+window-save-state = always

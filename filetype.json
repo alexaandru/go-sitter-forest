@@ -22,6 +22,7 @@
 
   "Glob": {
     "dotenv":             [".env.*"],
+    "ghostty":            ["gohstty/config"],
     "git_config":         [".git/config"],
     "gitignore":          [".*ignore"],
     "hyprlang":           ["hypr*.conf"],

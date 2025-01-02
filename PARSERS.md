@@ -1,4 +1,4 @@
-# 502 Supported Parsers
+# 503 Supported Parsers
 
 5 pending, 6 skipped regeneration, 39 missing queries
 
@@ -153,6 +153,7 @@
 - [x] [gdshader](https://github.com/GodOfAvacyn/tree-sitter-gdshader) ✔️ (maintained by @godofavacyn)
 - [x] [gemfilelock](https://github.com/fluidattacks/tree-sitter-gemfilelock) 🗸 (maintained by @drestrepom)
 - [x] [gherkin](https://github.com/SamyAB/tree-sitter-gherkin) ✔️ (maintained by @SamyAB)
+- [x] [ghostty](https://github.com/treeman/tree-sitter-ghostty) ✔️ (maintained by @treeman)
 - [x] [git_config](https://github.com/the-mikedavis/tree-sitter-git-config) ✔️ (maintained by @amaanq)
 - [x] [git_rebase](https://github.com/the-mikedavis/tree-sitter-git-rebase) ✔️ (maintained by @gbprod)
 - [x] [gitattributes](https://github.com/tree-sitter-grammars/tree-sitter-gitattributes) ✔️ (maintained by @ObserverOfTime)

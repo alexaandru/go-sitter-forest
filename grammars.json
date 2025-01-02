@@ -1453,6 +1453,14 @@
     "maintainedBy": "@SamyAB"
   },
   {
+    "reference": "master",
+    "revision": "25e273d06a2bb1112c37902a475d9138e0b10d04",
+    "grammarSha": "5e167c5147778f335824889ef2cace708d46ce0caecaa24cbdffaf7024086591",
+    "language": "ghostty",
+    "url": "https://github.com/treeman/tree-sitter-ghostty",
+    "maintainedBy": "@treeman"
+  },
+  {
     "reference": "main",
     "revision": "9c2a1b7894e6d9eedfe99805b829b4ecd871375e",
     "grammarSha": "0a6a46bc0cf042dd45b10584b8e574a89e4cd0ccc995d53fed2f7efcc2b2119b",

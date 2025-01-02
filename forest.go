@@ -164,6 +164,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/gdshader"
 	"github.com/alexaandru/go-sitter-forest/gemfilelock"
 	"github.com/alexaandru/go-sitter-forest/gherkin"
+	"github.com/alexaandru/go-sitter-forest/ghostty"
 	"github.com/alexaandru/go-sitter-forest/git_config"
 	"github.com/alexaandru/go-sitter-forest/git_rebase"
 	"github.com/alexaandru/go-sitter-forest/gitattributes"
@@ -686,6 +687,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"gdshader":               gdshader.GetLanguage,
 	"gemfilelock":            gemfilelock.GetLanguage,
 	"gherkin":                gherkin.GetLanguage,
+	"ghostty":                ghostty.GetLanguage,
 	"git_config":             git_config.GetLanguage,
 	"git_rebase":             git_rebase.GetLanguage,
 	"gitattributes":          gitattributes.GetLanguage,
@@ -1192,6 +1194,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"gdshader":               gdshader.GetQuery,
 	"gemfilelock":            gemfilelock.GetQuery,
 	"gherkin":                gherkin.GetQuery,
+	"ghostty":                ghostty.GetQuery,
 	"git_config":             git_config.GetQuery,
 	"git_rebase":             git_rebase.GetQuery,
 	"gitattributes":          gitattributes.GetQuery,
