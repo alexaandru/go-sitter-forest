@@ -1,6 +1,6 @@
 /**************************************************************************
  *
- * Copyright (c) 2024 Stefan Möding
+ * Copyright (c) 2024, 2025 Stefan Möding
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -185,7 +185,8 @@ static bool hexadecimal_string(TSLexer *lexer) {
 
 
 /**
- * Scan for a Base85/ASCII85 string.
+ * Scan for a Base85/ASCII85 string. The valid code points go from 33 (!) to
+ * 117 (u) and also 122 (z) indicating four zeros.
  */
 
 static bool base85_string(TSLexer *lexer) {
@@ -196,7 +197,8 @@ static bool base85_string(TSLexer *lexer) {
     // We are done if the end of file is reached
     if (lexer->eof(lexer)) return false;
 
-    if ((lexer->lookahead < 33) || (lexer->lookahead > 117))
+    if ((lexer->lookahead != 122) &&
+        ((lexer->lookahead < 33) || (lexer->lookahead > 117)))
       return has_content;
 
     lexer->advance_postscript(lexer, false);

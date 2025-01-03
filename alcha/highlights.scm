@@ -110,13 +110,14 @@
   "return"
   "break"
   "continue"
-  "goto"
 ] @keyword.return
 
 [
   "stimulus"
   "emulate"
   "assert"
+  "coverbins"
+  "covergroup"
 ] @keyword.debug
 
 [
@@ -240,6 +241,16 @@
   ")" @string
   .)
 
+(import
+  (stringification
+    "$" @string.special.path))
+(import
+  (stringification
+    .
+    "$(" @string.special.path
+    ")" @string.special.path
+    .))
+
 (string
   "{" @nospell @punctuation.special
   (_)* @nospell
@@ -261,13 +272,23 @@
   (identifier) @variable.member)
 
 (type_identifier
-  (identifier)* @module
   (identifier) @type .)
+(type_identifier
+  (member_reference
+    (_)* @module
+    (identifier) @type .))
+
 (definition
   (type_identifier
-    (identifier)* @module
     (identifier) @constructor .)
   (parameter_list))
+(definition
+  (type_identifier
+    (member_reference
+      (_)* @module
+      (identifier) @constructor .))
+  (parameter_list))
+
 (class_definition
   name: (identifier) @type.definition)
 (struct_definition
@@ -283,6 +304,11 @@
   name: (identifier) @function)
 (parameter_def
   parameter: (_) @variable.parameter)
+(assigned_param
+  parameter: (_) @variable.parameter)
+
+(hdl_parameter
+  name: (_) @variable.parameter)
 
 (attribute_reference
   (_)*
@@ -291,8 +317,10 @@
 (import
   (identifier) @module)
 
-(label
-  (identifier) @label)
-(goto
-  (identifier) @label)
+(cover_bins_identifier
+  (identifier) @type .)
+(cover_bins_identifier
+  (member_reference
+    (_)* @module
+    (identifier) @variable.member .))
 

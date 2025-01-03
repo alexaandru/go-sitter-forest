@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "27d0549cb603fff04176e62e79a5439fd93a3f75",
-  "grammarSha": "86458d9150ad80439e6b585f6d01f4d4aa895b203f91c12cdda2f0c78024e7de",
+  "revision": "ebdd786b67f3fc9e2ddba9113d79b4af7f69590a",
+  "grammarSha": "9d3093779a6d63887272cb41ba102ba706e2a0b1f9d12a33bb207c6bb9d51aa3",
   "language": "gritql",
   "url": "https://github.com/getgrit/tree-sitter-gritql",
   "maintainedBy": "@getgrit",

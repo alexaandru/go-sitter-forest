@@ -1,9 +1,9 @@
 {
   "reference": "master",
-  "revision": "72e334b2630f5852825ba5ff9dfd872447175eb5",
-  "grammarSha": "750d92db099bc6bea0e5eb540ea0cada41a69c8255164e75793c124a19bbdcb7",
+  "revision": "fdfa6a1febc43c7467aa7e937b87b607956f2346",
+  "grammarSha": "fb3715ade89b9a3fc5096ecbc113149afb838b40db3fba2df73d8b57ad6dc2d7",
   "language": "smali",
-  "url": "https://git.sr.ht/~yotam/tree-sitter-smali",
+  "url": "https://github.com/tree-sitter-grammars/tree-sitter-smali",
   "maintainedBy": "@amaanq",
   "files": [
     "scanner.c"

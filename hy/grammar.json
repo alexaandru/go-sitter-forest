@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "c6ed1ff88370d7682579a60514307e2397d8cbbc",
-  "grammarSha": "79f39149af57c9d0cd64c65c296495996c533e27d7908431ffcf2a502127c574",
+  "revision": "384ac9ad1a795b835d98a99d40db04a5f99b95e7",
+  "grammarSha": "cde5442121005f300e27f2ed2dceda26eb411c5f1956ede6a95418ae2b16da85",
   "language": "hy",
   "url": "https://github.com/MinmusxMinmus/tree-sitter-hy",
   "maintainedBy": "@MinmusxMinmus",

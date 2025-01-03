@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "8a948aa2b3ec90d24dd4fba6ef59e931a4abf075",
+  "revision": "24ca5f336028989cfe9e2c5eaa18ca9833699e74",
   "grammarSha": "517106c2b351866e1096e4c34091b1bb20bc1fb8cbb10c1676abb82183d7fec2",
   "language": "postscript",
   "url": "https://github.com/smoeding/tree-sitter-postscript",

@@ -401,7 +401,7 @@
 - [x] [slang](https://github.com/tree-sitter-grammars/tree-sitter-slang) ✔️ (maintained by @theHamsta; ❌Unresolved conflict for symbol sequence: type_specifier  •  ';'  …)
 - [x] [slim](https://github.com/kolen/tree-sitter-slim) ✔️ (maintained by @kolen)
 - [x] [slint](https://github.com/slint-ui/tree-sitter-slint) ✔️ (maintained by @hunger)
-- [x] [smali](https://git.sr.ht/~yotam/tree-sitter-smali) ✔️ (maintained by @amaanq)
+- [x] [smali](https://github.com/tree-sitter-grammars/tree-sitter-smali) ✔️ (maintained by @amaanq)
 - [x] [smith](https://github.com/smith-lang/tree-sitter-smith) 🗸 (maintained by @adam-r-kowalski)
 - [x] [smithy](https://github.com/indoorvivants/tree-sitter-smithy) ✔️ (maintained by @amaanq, @keynmol)
 - [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️ (maintained by @MatthewFluet)
