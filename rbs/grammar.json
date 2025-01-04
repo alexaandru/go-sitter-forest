@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "8d8e65ac3f77fbc9e15b1cdb9f980a3e0ac3ab99",
-  "grammarSha": "a227eee7249c43e6ef385371350ae3463c69e3fbc24b54cf826ac2c9328a8c06",
+  "revision": "de893b166476205b09e79cd3689f95831269579a",
+  "grammarSha": "e67b4394e453d25eed1a4795aa25c2339581938a7d5d9a97e1f6780143e13b73",
   "language": "rbs",
   "url": "https://github.com/joker1007/tree-sitter-rbs",
   "maintainedBy": "@joker1007"

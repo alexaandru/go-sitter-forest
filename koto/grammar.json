@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "b420f7922d0d74905fd0d771e5b83be9ee8a8a9a",
-  "grammarSha": "6afe7bbde67e715644208f3c1f2c2d8d8d2cf358ee461ab70e164d3b1c041406",
+  "revision": "7258681498ac92f24b2d7ebb844b5e79dc3cf9ac",
+  "grammarSha": "93750a096f8a89c1d438ffee78b2a4fb4767abf855fe49d858674019dea8a1d3",
   "language": "koto",
   "url": "https://github.com/koto-lang/tree-sitter-koto",
   "maintainedBy": "@irh",

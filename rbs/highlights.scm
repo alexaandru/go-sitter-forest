@@ -48,9 +48,24 @@
   (method_name
     [
      (identifier)
+     (identifier_suffix)
      (constant)
+     (constant_suffix)
      (operator)
      (setter)
+     (constant_setter)
+    ] @method))
+
+(attribute_member
+  (method_name
+    [
+     (identifier)
+     (identifier_suffix)
+     (constant)
+     (constant_suffix)
+     (operator)
+     (setter)
+     (constant_setter)
     ] @method))
 
 [(ivar_name) (cvar_name)] @property
@@ -85,6 +100,8 @@
 (type (string_literal) @string)
 
 (type (integer_literal) @number)
+
+(type (record_type key: (record_key) @symbol))
 
 ; Annotation
 (annotation_text) @attribute

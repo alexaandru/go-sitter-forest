@@ -74,6 +74,7 @@
  "asm"
  (break)
  (continue)
+ "defer"
 ] @keyword
 
 ; Operators

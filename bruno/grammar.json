@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "5f35d5970be9e583eabdd1c22911953180729f84",
+  "revision": "347e99f256930213cd7fcd0efe3f9af83035c4b1",
   "grammarSha": "cb105780fffd0d2f70529d01a2095e3ffb0ecb611a6bc713ebaedd1be481c85e",
   "language": "bruno",
   "url": "https://github.com/kristoferssolo/tree-sitter-bruno",

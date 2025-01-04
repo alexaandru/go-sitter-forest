@@ -140,8 +140,4 @@
 
 (ellipsis) @variable.parameter
 
-(variable
-  type: (identifier) @type)
-
-(function
-  output_type: (identifier) @type)
+(type _ @type)

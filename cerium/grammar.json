@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "d4540a33bab1880a253a4da808f72928cb443527",
-  "grammarSha": "fe4bad3ec449da70a6a63f5b1e7a07b5076f480f0cffc5d6a06f7f283230e051",
+  "revision": "b57825366d0c7095acd048e5e685bbdaf883c964",
+  "grammarSha": "a9c470a4e5cc261eb802588c4975f19dcbd4cbd14043c07c792c0105d55ea06b",
   "language": "cerium",
   "url": "https://github.com/yhyadev/tree-sitter-cerium",
   "maintainedBy": "@yhyadev"
