@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.6
+	github.com/alexaandru/go-sitter-forest/al v1.9.7
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.5
 	github.com/alexaandru/go-sitter-forest/amber v1.9.2
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
@@ -54,7 +54,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cds v1.9.1
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
-	github.com/alexaandru/go-sitter-forest/cerium v1.9.1
+	github.com/alexaandru/go-sitter-forest/cerium v1.9.2
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.1
 	github.com/alexaandru/go-sitter-forest/cgsql v1.9.4
@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.6
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.7
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -229,7 +229,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.3
-	github.com/alexaandru/go-sitter-forest/julia v1.9.8
+	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
@@ -242,7 +242,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kon v1.9.16
 	github.com/alexaandru/go-sitter-forest/kos v1.9.0
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.2
-	github.com/alexaandru/go-sitter-forest/koto v1.9.4
+	github.com/alexaandru/go-sitter-forest/koto v1.9.5
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
 	github.com/alexaandru/go-sitter-forest/lart v1.9.0
@@ -251,7 +251,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latte v1.9.0
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
 	github.com/alexaandru/go-sitter-forest/ledger v1.9.3
-	github.com/alexaandru/go-sitter-forest/leo v1.9.2
+	github.com/alexaandru/go-sitter-forest/leo v1.9.3
 	github.com/alexaandru/go-sitter-forest/lexc v1.9.1
 	github.com/alexaandru/go-sitter-forest/lexd v1.9.0
 	github.com/alexaandru/go-sitter-forest/lilypond v1.9.1
@@ -282,7 +282,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.0
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.4
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.5
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -363,7 +363,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.0
-	github.com/alexaandru/go-sitter-forest/rbs v1.9.0
+	github.com/alexaandru/go-sitter-forest/rbs v1.9.1
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
