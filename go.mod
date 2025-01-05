@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.7
+	github.com/alexaandru/go-sitter-forest/al v1.9.8
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.5
 	github.com/alexaandru/go-sitter-forest/amber v1.9.2
 	github.com/alexaandru/go-sitter-forest/angular v1.9.0
@@ -57,7 +57,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cerium v1.9.2
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.1
-	github.com/alexaandru/go-sitter-forest/cgsql v1.9.4
+	github.com/alexaandru/go-sitter-forest/cgsql v1.9.5
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
 	github.com/alexaandru/go-sitter-forest/circom v1.9.1
 	github.com/alexaandru/go-sitter-forest/clarity v1.9.4
@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.7
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.8
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -215,7 +215,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.5
+	github.com/alexaandru/go-sitter-forest/jai v1.9.6
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -280,7 +280,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
 	github.com/alexaandru/go-sitter-forest/mermaid v1.9.0
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
-	github.com/alexaandru/go-sitter-forest/mlir v1.9.0
+	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
 	github.com/alexaandru/go-sitter-forest/moonbit v1.9.5
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
