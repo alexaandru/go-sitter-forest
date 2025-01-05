@@ -21,6 +21,7 @@
   (anonymous_enum_type "{")
   (asm_statement "{")
   (array_literal "[")
+  (index_expression "[")
   (literal)
   (assignment_parameters "(")
 ] @indent.begin
@@ -49,10 +50,6 @@
   ")"
   "]"
   "}"
-] @indent.branch @indent.end
-
-[
-  (literal "]")
 ] @indent.branch @indent.end
 
 [

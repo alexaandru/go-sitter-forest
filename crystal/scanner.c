@@ -69,6 +69,8 @@ enum Token {
 
     MODULO_OPERATOR,
 
+    UNQUOTED_SYMBOL,
+
     STRING_LITERAL_START,
     DELIMITED_STRING_CONTENTS,
     STRING_LITERAL_END,
@@ -1901,6 +1903,49 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             }
             break;
 
+        case ':':
+            if (valid_symbols[UNQUOTED_SYMBOL]) {
+                lex_advance_crystal(lexer);
+
+                int32_t lookahead = lexer->lookahead;
+
+                if (('A' <= lookahead && lookahead <= 'Z')
+                    || ('a' <= lookahead && lookahead <= 'z')
+                    || (lookahead == '_')
+                    || (0x00a0 <= lookahead && lookahead <= 0x10ffffff)) {
+
+                    // This is the start of a symbol
+                    lexer->result_symbol = UNQUOTED_SYMBOL;
+                    lex_advance_crystal(lexer);
+
+                    while (is_ident_part(lexer->lookahead)) {
+                        lex_advance_crystal(lexer);
+                    }
+
+                    switch (lexer->lookahead) {
+                        case '?':
+                            // Symbols like `:foo?` always include the trailing character
+                            lex_advance_crystal(lexer);
+                            return true;
+
+                        case '!':
+                        case '=':
+                            // Symbols like `:foo!` or `:bar=` include the trailing character,
+                            // only if the next char isn't also `=`
+                            lexer->mark_end(lexer);
+                            lex_advance_crystal(lexer);
+
+                            if (lexer->lookahead != '=') {
+                                lexer->mark_end(lexer);
+                            }
+                            return true;
+
+                        default:
+                            return true;
+                    }
+                }
+            }
+            break;
         case '.':
             if (valid_symbols[BEGINLESS_RANGE_OPERATOR] && !valid_symbols[START_OF_PARENLESS_ARGS]) {
                 lex_advance_crystal(lexer);
@@ -2150,6 +2195,7 @@ bool tree_sitter_crystal_external_scanner_scan(void *payload, TSLexer *lexer, co
     LOG_SYMBOL(REGULAR_ENSURE_KEYWORD);
     LOG_SYMBOL(MODIFIER_ENSURE_KEYWORD);
     LOG_SYMBOL(MODULO_OPERATOR);
+    LOG_SYMBOL(UNQUOTED_SYMBOL);
     LOG_SYMBOL(STRING_LITERAL_START);
     LOG_SYMBOL(DELIMITED_STRING_CONTENTS);
     LOG_SYMBOL(STRING_LITERAL_END);

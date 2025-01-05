@@ -5,12 +5,14 @@
   "#load"
 ] @include
 
+
 ; Keywords
 [
   "struct"
   "enum"
   "enum_flags"
   "if"
+  "then"
   "ifx"
   "else"
   "case"
@@ -58,6 +60,7 @@ argument: (identifier) @variable
 named_argument: (identifier) @variable
 (member_expression (identifier) @parameter)
 
+
 ((identifier) @variable.builtin
   (#any-of? @variable.builtin "context"))
 
@@ -73,6 +76,7 @@ named_argument: (identifier) @variable
 
 ; Functions
 
+; (procedure_declaration (identifier) @function (procedure (block)))
 (procedure_declaration (identifier) @function (block))
 
 (call_expression function: (identifier) @function.call)
@@ -97,7 +101,7 @@ keyword: (identifier) @keyword
 
 (enum_declaration (identifier) @type ":" ":")
 
-(const_declaration (identifier) @type ":" ":" [(array_type) (pointer_type)])
+; (const_declaration (identifier) @type ":" ":" [(array_type) (pointer_type)])
 
 (struct_literal . (identifier) @type)
 (array_literal . (identifier) @type)
@@ -216,3 +220,7 @@ keyword: (identifier) @keyword
 (ERROR) @error
 
 (block_comment) @comment
+
+
+
+(compiler_directive) @keyword

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "29a82ddde86c0d428acf971b04794c13525c4bc5",
+  "revision": "f36c1587624d6d84376c82a357c20fc319cbf02c",
   "grammarSha": "a6ba4aa22bf4d5c81053604edd70aec87b63ec511109bc06191c1680bf19e9ff",
   "language": "snakemake",
   "url": "https://github.com/osthomas/tree-sitter-snakemake",
