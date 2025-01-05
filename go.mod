@@ -122,6 +122,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
+	github.com/alexaandru/go-sitter-forest/factor v1.9.0
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.6
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.1
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
@@ -136,6 +137,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
 	github.com/alexaandru/go-sitter-forest/fortran v1.9.4
+	github.com/alexaandru/go-sitter-forest/frostlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsharp v1.9.2
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.2
@@ -280,6 +282,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
 	github.com/alexaandru/go-sitter-forest/mermaid v1.9.0
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
+	github.com/alexaandru/go-sitter-forest/mips v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
 	github.com/alexaandru/go-sitter-forest/moonbit v1.9.5
@@ -391,6 +394,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
 	github.com/alexaandru/go-sitter-forest/sdml v1.9.2
 	github.com/alexaandru/go-sitter-forest/sflog v1.9.1
+	github.com/alexaandru/go-sitter-forest/shosts v1.9.0
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
 	github.com/alexaandru/go-sitter-forest/slang v1.9.1
