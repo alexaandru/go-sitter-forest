@@ -1182,6 +1182,14 @@
     "maintainedBy": "@bryankenote"
   },
   {
+    "reference": "main",
+    "revision": "5334237ad2be73bf5d5ad4cbd55561969cce8ddb",
+    "grammarSha": "6c400775e7c05984cb715f0b89f376eec0b6d5a773fdde36208e4d37bad8ab46",
+    "language": "factor",
+    "url": "https://github.com/erochest/tree-sitter-factor",
+    "maintainedBy": "@erochest"
+  },
+  {
     "reference": "master",
     "revision": "725d08540c8b7d76a2b43bc4f8575296d1a679aa",
     "grammarSha": "b470016947731185091f2ac117aae237931a9f7ed7ecfd6065675db895b27144",
@@ -1316,6 +1324,14 @@
     "files": [
       "scanner.c"
     ]
+  },
+  {
+    "reference": "main",
+    "revision": "18c3655a316df137f1ff97b2c7a36bfe584d0393",
+    "grammarSha": "223f2ac2f0c0aae7fbbcb3f272b292c5331a3bbb75cd8538c6df213fb084de77",
+    "language": "frostlang",
+    "url": "https://github.com/oriollinan/tree-sitter-frostlang",
+    "maintainedBy": "@oriollinan"
   },
   {
     "reference": "main",
@@ -2677,6 +2693,14 @@
     "maintainedBy": "@Decodetalkers"
   },
   {
+    "reference": "main",
+    "revision": "b982ce9bcbc22e31472e1b6d3b40ecc21f97e521",
+    "grammarSha": "34b2ae7791639ed07827ee399d5613916b492b980c0c419decd32abc7cb22f20",
+    "language": "mips",
+    "url": "https://github.com/omeyenburg/tree-sitter-mips",
+    "maintainedBy": "@omeyenburg"
+  },
+  {
     "reference": "master",
     "revision": "01065decfd6877fe3c4bae05782b8892544cb73e",
     "grammarSha": "1fa4bfecac227188fc3867a1f1f1c8de15d8b46746f47ab9e506ac39132c9577",
@@ -3775,6 +3799,14 @@
     "url": "https://github.com/aheber/tree-sitter-sfapex",
     "maintainedBy": "@aheber, @xixiaofinland",
     "srcRoot": "sflog"
+  },
+  {
+    "reference": "main",
+    "revision": "909083d9a38637b8dbd1ab0eb8f1eb6d38d65856",
+    "grammarSha": "4065bd02bc5c90c452311ac2d7def9bf5144f72c48dff4f20a6c5ef92fee8f29",
+    "language": "shosts",
+    "url": "https://github.com/Smart-Hosts/tree-sitter-shosts",
+    "maintainedBy": "@linw1995"
   },
   {
     "reference": "main",

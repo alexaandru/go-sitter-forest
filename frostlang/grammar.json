@@ -1,0 +1,8 @@
+{
+  "reference": "main",
+  "revision": "18c3655a316df137f1ff97b2c7a36bfe584d0393",
+  "grammarSha": "223f2ac2f0c0aae7fbbcb3f272b292c5331a3bbb75cd8538c6df213fb084de77",
+  "language": "frostlang",
+  "url": "https://github.com/oriollinan/tree-sitter-frostlang",
+  "maintainedBy": "@oriollinan"
+}

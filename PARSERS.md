@@ -1,4 +1,4 @@
-# 503 Supported Parsers
+# 507 Supported Parsers
 
 5 pending, 6 skipped regeneration, 39 missing queries
 
@@ -126,6 +126,7 @@
 - [x] [epics_msi_template](https://github.com/epics-extensions/tree-sitter-epics) ✔️ (maintained by @minijackson)
 - [x] [erlang](https://github.com/WhatsApp/tree-sitter-erlang) ✔️ (maintained by @filmor)
 - [x] [facility](https://github.com/FacilityApi/tree-sitter-facility) ✔️ (maintained by @bryankenote)
+- [x] [factor](https://github.com/erochest/tree-sitter-factor) ✔️ (maintained by @erochest)
 - [x] [familymarkup](https://github.com/redexp/tree-sitter-familymarkup) ✔️ (maintained by @redexp)
 - [x] [fastbuild](https://github.com/pinbraerts/tree-sitter-fastbuild) ✔️ (maintained by @pinbraerts; no crash but generate never completes (15min))
 - [x] [faust](https://github.com/khiner/tree-sitter-faust) ✔️ (maintained by @khiner)
@@ -140,6 +141,7 @@
 - [x] [foam](https://github.com/FoamScience/tree-sitter-foam) ✔️ (maintained by @FoamScience)
 - [x] [forth](https://github.com/AlexanderBrevig/tree-sitter-forth) ✔️ (maintained by @amaanq)
 - [x] [fortran](https://github.com/stadelmanma/tree-sitter-fortran) ✔️ (maintained by @amaanq)
+- [x] [frostlang](https://github.com/oriollinan/tree-sitter-frostlang) ✔️ (maintained by @oriollinan)
 - [x] [fsh](https://github.com/mgramigna/tree-sitter-fsh) ✔️ (maintained by @mgramigna)
 - [x] [fsharp](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
 - [x] [fsharp_signature](https://github.com/ionide/tree-sitter-fsharp) ✔️ (maintained by @Nsidorenco)
@@ -284,6 +286,7 @@
 - [x] [merlin6502](https://github.com/dfgordon/tree-sitter-merlin6502) ✔️ (maintained by @dfgordon)
 - [x] [mermaid](https://github.com/monaqa/tree-sitter-mermaid) ✔️ (maintained by @monaqa)
 - [x] [meson](https://github.com/tree-sitter-grammars/tree-sitter-meson) ✔️ (maintained by @Decodetalkers)
+- [x] [mips](https://github.com/omeyenburg/tree-sitter-mips) ✔️ (maintained by @omeyenburg)
 - [x] [mlir](https://github.com/artagnon/tree-sitter-mlir) ✔️ (maintained by @artagnon)
 - [x] [modelica](https://github.com/modelicahub/tree-sitter-modelica) 🗸 (maintained by @nachawati)
 - [x] [moonbit](https://github.com/moonbitlang/tree-sitter-moonbit) ✔️ (maintained by @tonyfettes)
@@ -396,6 +399,7 @@
 - [x] [scss](https://github.com/serenadeai/tree-sitter-scss) ✔️ (maintained by @elianiva)
 - [x] [sdml](https://github.com/sdm-lang/tree-sitter-sdml) ✔️ (maintained by @johnstonskj)
 - [x] [sflog](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
+- [x] [shosts](https://github.com/Smart-Hosts/tree-sitter-shosts) ✔️ (maintained by @linw1995)
 - [x] [simula](https://github.com/eirslett/tree-sitter-simula) ✔️ (maintained by @eirslett)
 - [x] [sincere](https://github.com/vincentvanecchi/tree-sitter-sincere) 🗸 (maintained by @vincentvanecchi; ❌repository was removed by owner)
 - [x] [slang](https://github.com/tree-sitter-grammars/tree-sitter-slang) ✔️ (maintained by @theHamsta; ❌Unresolved conflict for symbol sequence: type_specifier  •  ';'  …)

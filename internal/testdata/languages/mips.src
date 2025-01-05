@@ -1,0 +1,8 @@
+.data
+msg:     .asciiz "Hello, World!"
+
+.text
+main: # A comment
+        li $v0, 4
+        la $a0, msg
+        syscall

@@ -1,0 +1,55 @@
+% When we see '::' we know its a type definition
+% The 'keyword' that follows represents what kind of type definition it is
+
+Vector2 :: struct {
+    x -> int
+    y -> int
+}
+
+Response :: union {
+    data -> *char
+    error -> int
+}
+
+Vector2i :: Vector2
+
+byte :: char
+
+request : (Vector2i) -> Response = v => {
+    %%
+    Not sure how to instantiate new types,
+    Feel free to leave your ideas
+    %%
+    vector: Vector2i = { x = 5, y = 10 }
+
+    % Struct access API subject to change (UNSTABLE)
+    message: string = "coords are ({vector.x}, {vector.y})"
+
+    % Array accessing (we start at 1 because we are cool)
+    % does not support negative array access
+    first: byte = message.1 % == is 'c'
+
+    { data = message }
+}
+
+%% TODO: Implement somehow `never` as type and functions with no return/params
+
+long :: int64
+
+num: long = MAX_INT_32 + 5
+
+main: () -> void ==> {
+    from num to 0 by -1 |j: long| {
+        if j is 42 {
+             next % == continue
+        }
+        if j is 8 {
+             stop % == break
+        }
+        print "long => {j}"
+    }
+
+    loop z is not 10 {
+        z = z - 1
+    }
+}

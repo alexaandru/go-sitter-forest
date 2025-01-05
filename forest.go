@@ -137,6 +137,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/epics_msi_template"
 	"github.com/alexaandru/go-sitter-forest/erlang"
 	"github.com/alexaandru/go-sitter-forest/facility"
+	"github.com/alexaandru/go-sitter-forest/factor"
 	"github.com/alexaandru/go-sitter-forest/familymarkup"
 	"github.com/alexaandru/go-sitter-forest/fastbuild"
 	"github.com/alexaandru/go-sitter-forest/faust"
@@ -151,6 +152,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/foam"
 	"github.com/alexaandru/go-sitter-forest/forth"
 	"github.com/alexaandru/go-sitter-forest/fortran"
+	"github.com/alexaandru/go-sitter-forest/frostlang"
 	"github.com/alexaandru/go-sitter-forest/fsh"
 	"github.com/alexaandru/go-sitter-forest/fsharp"
 	"github.com/alexaandru/go-sitter-forest/fsharp_signature"
@@ -297,6 +299,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/merlin6502"
 	"github.com/alexaandru/go-sitter-forest/mermaid"
 	"github.com/alexaandru/go-sitter-forest/meson"
+	"github.com/alexaandru/go-sitter-forest/mips"
 	"github.com/alexaandru/go-sitter-forest/mlir"
 	"github.com/alexaandru/go-sitter-forest/modelica"
 	"github.com/alexaandru/go-sitter-forest/moonbit"
@@ -408,6 +411,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/scss"
 	"github.com/alexaandru/go-sitter-forest/sdml"
 	"github.com/alexaandru/go-sitter-forest/sflog"
+	"github.com/alexaandru/go-sitter-forest/shosts"
 	"github.com/alexaandru/go-sitter-forest/simula"
 	"github.com/alexaandru/go-sitter-forest/sincere"
 	"github.com/alexaandru/go-sitter-forest/slang"
@@ -660,6 +664,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"epics_msi_template":     epics_msi_template.GetLanguage,
 	"erlang":                 erlang.GetLanguage,
 	"facility":               facility.GetLanguage,
+	"factor":                 factor.GetLanguage,
 	"familymarkup":           familymarkup.GetLanguage,
 	"fastbuild":              fastbuild.GetLanguage,
 	"faust":                  faust.GetLanguage,
@@ -674,6 +679,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"foam":                   foam.GetLanguage,
 	"forth":                  forth.GetLanguage,
 	"fortran":                fortran.GetLanguage,
+	"frostlang":              frostlang.GetLanguage,
 	"fsh":                    fsh.GetLanguage,
 	"fsharp":                 fsharp.GetLanguage,
 	"fsharp_signature":       fsharp_signature.GetLanguage,
@@ -818,6 +824,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"merlin6502":             merlin6502.GetLanguage,
 	"mermaid":                mermaid.GetLanguage,
 	"meson":                  meson.GetLanguage,
+	"mips":                   mips.GetLanguage,
 	"mlir":                   mlir.GetLanguage,
 	"modelica":               modelica.GetLanguage,
 	"moonbit":                moonbit.GetLanguage,
@@ -929,6 +936,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"scss":                   scss.GetLanguage,
 	"sdml":                   sdml.GetLanguage,
 	"sflog":                  sflog.GetLanguage,
+	"shosts":                 shosts.GetLanguage,
 	"simula":                 simula.GetLanguage,
 	"sincere":                sincere.GetLanguage,
 	"slang":                  slang.GetLanguage,
@@ -1167,6 +1175,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"epics_msi_template":     epics_msi_template.GetQuery,
 	"erlang":                 erlang.GetQuery,
 	"facility":               facility.GetQuery,
+	"factor":                 factor.GetQuery,
 	"familymarkup":           familymarkup.GetQuery,
 	"fastbuild":              fastbuild.GetQuery,
 	"faust":                  faust.GetQuery,
@@ -1181,6 +1190,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"foam":                   foam.GetQuery,
 	"forth":                  forth.GetQuery,
 	"fortran":                fortran.GetQuery,
+	"frostlang":              frostlang.GetQuery,
 	"fsh":                    fsh.GetQuery,
 	"fsharp":                 fsharp.GetQuery,
 	"fsharp_signature":       fsharp_signature.GetQuery,
@@ -1325,6 +1335,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"merlin6502":             merlin6502.GetQuery,
 	"mermaid":                mermaid.GetQuery,
 	"meson":                  meson.GetQuery,
+	"mips":                   mips.GetQuery,
 	"mlir":                   mlir.GetQuery,
 	"modelica":               modelica.GetQuery,
 	"moonbit":                moonbit.GetQuery,
@@ -1436,6 +1447,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"scss":                   scss.GetQuery,
 	"sdml":                   sdml.GetQuery,
 	"sflog":                  sflog.GetQuery,
+	"shosts":                 shosts.GetQuery,
 	"simula":                 simula.GetQuery,
 	"sincere":                sincere.GetQuery,
 	"slang":                  slang.GetQuery,
