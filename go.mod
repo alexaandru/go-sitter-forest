@@ -310,8 +310,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/nu v1.9.21
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
-	github.com/alexaandru/go-sitter-forest/ocaml v1.9.0
-	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.9.1
+	github.com/alexaandru/go-sitter-forest/ocaml v1.9.1
+	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.9.2
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.9.0
 	github.com/alexaandru/go-sitter-forest/odin v1.9.1
 	github.com/alexaandru/go-sitter-forest/org v1.9.0
