@@ -221,6 +221,7 @@ keyword: (identifier) @keyword
 
 (block_comment) @comment
 
-
-
 (compiler_directive) @keyword
+(heredoc_start) @none
+(heredoc_end) @none
+(heredoc_body) @string

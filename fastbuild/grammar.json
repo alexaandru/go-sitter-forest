@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "d96b1a639034190690ae4eb57c2b33ce9bf3336e",
-  "grammarSha": "29e9c0cc685c3824b90a142084b574091cabd2b2a59955ea867f8f9d82feff72",
+  "revision": "b25adf063c0eac5f594d69334325aba9d705bddd",
+  "grammarSha": "d9153f34a1067e6859e103424dad7085c299e37879ed8daa5b7178673fcbd4b1",
   "language": "fastbuild",
   "url": "https://github.com/pinbraerts/tree-sitter-fastbuild",
   "doc": "no crash but generate never completes (15min)",

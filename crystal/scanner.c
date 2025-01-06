@@ -1130,7 +1130,7 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 lexer->result_symbol = MACRO_EXPRESSION_START;
                 state->inside_macro_expression = true;
                 return true;
-            } else if (valid_symbols[MACRO_CONTROL_START] && lexer->lookahead == '%') {
+            } else if (valid_symbols[MACRO_CONTROL_START] && lexer->lookahead == '%' && !(HAS_ACTIVE_LITERAL(state) || has_active_heredoc(state))) {
                 lex_advance_crystal(lexer);
                 lexer->result_symbol = MACRO_CONTROL_START;
                 state->inside_macro_control = true;

@@ -52,6 +52,10 @@
   "}"
 ] @indent.branch @indent.end
 
+; [
+;   (literal "]")
+; ] @indent.branch @indent.end
+
 [
   (comment)
   (block_comment)

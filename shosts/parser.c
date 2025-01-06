@@ -220,10 +220,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == ',') ADVANCE(24);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(2);
-      if (lookahead == '-' ||
+      if (lookahead == '*' ||
+          lookahead == '-' ||
           lookahead == '.' ||
           ('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '?' ||
+          ('A' <= lookahead && lookahead <= ']') ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(28);
       END_STATE();
     case 2:
@@ -231,10 +233,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '#') ADVANCE(35);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(2);
-      if (lookahead == '-' ||
+      if (lookahead == '*' ||
+          lookahead == '-' ||
           lookahead == '.' ||
           ('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '?' ||
+          ('A' <= lookahead && lookahead <= ']') ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(28);
       END_STATE();
     case 3:
@@ -250,10 +254,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '#') ADVANCE(35);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(4);
-      if (lookahead == '-' ||
+      if (lookahead == '*' ||
+          lookahead == '-' ||
           lookahead == '.' ||
           ('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '?' ||
+          ('A' <= lookahead && lookahead <= ']') ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(28);
       END_STATE();
     case 5:
@@ -348,10 +354,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 28:
       ACCEPT_TOKEN(sym_domain);
-      if (lookahead == '-' ||
+      if (lookahead == '*' ||
+          lookahead == '-' ||
           lookahead == '.' ||
           ('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
+          lookahead == '?' ||
+          ('A' <= lookahead && lookahead <= ']') ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(28);
       END_STATE();
     case 29:
