@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.8
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.9
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -93,7 +93,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.1
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.0
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.1
-	github.com/alexaandru/go-sitter-forest/diff v1.9.1
+	github.com/alexaandru/go-sitter-forest/diff v1.9.2
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
 	github.com/alexaandru/go-sitter-forest/djot v1.9.1
 	github.com/alexaandru/go-sitter-forest/djot_inline v1.9.1
@@ -124,7 +124,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
 	github.com/alexaandru/go-sitter-forest/factor v1.9.0
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.6
-	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.1
+	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.2
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
 	github.com/alexaandru/go-sitter-forest/fe v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.0
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.6
+	github.com/alexaandru/go-sitter-forest/jai v1.9.7
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -394,7 +394,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
 	github.com/alexaandru/go-sitter-forest/sdml v1.9.2
 	github.com/alexaandru/go-sitter-forest/sflog v1.9.1
-	github.com/alexaandru/go-sitter-forest/shosts v1.9.0
+	github.com/alexaandru/go-sitter-forest/shosts v1.9.1
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
 	github.com/alexaandru/go-sitter-forest/slang v1.9.1
