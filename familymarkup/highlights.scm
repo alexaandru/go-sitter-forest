@@ -25,9 +25,6 @@
   (eq)
   (targets
     (name_def
-      (new_surname
-        (name) @class.family_name.ref
-      )?
       (name) @property.declaration.static.name.def
       (name_aliases
         (name) @property.declaration.static.name.def.alias

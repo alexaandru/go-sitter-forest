@@ -1,10 +1,13 @@
 (hash_bang_line) @comment
 
+(ERROR) @error
+
 (comment) @comment
 
 [(true) (false)] @constant.builtin.boolean
 
 [(nil) (nilptr)] @constant.builtin
+
 
 [
   "="
@@ -67,6 +70,7 @@
   "do"
   "return" 
   (break)
+  "in"
   "defer"
   "goto"
   (continue)
@@ -156,8 +160,8 @@
 
 (goto_location "::" @keyword.directive)
 
-(lua_statement
+(preproc_statement
   ["##[[" "]]" "##"] @keyword.directive)
 
-(lua_expression
+(preproc_expression
   ["#[" "]#" "#|" "|#"] @keyword.directive)

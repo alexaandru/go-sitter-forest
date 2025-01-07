@@ -1,6 +1,6 @@
-((lua_statement_content) @injection.content
+((preproc_statement_content) @injection.content
  (#set! injection.language "lua")
  (#set! injection.combined))
 
-((lua_expression_content) @injection.content
+((preproc_expression_content) @injection.content
  (#set! injection.language "lua"))

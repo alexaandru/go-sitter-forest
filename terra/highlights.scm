@@ -38,4 +38,5 @@
 "struct" @keyword
 
 (primitive_type) @type
-(type_identifier) @type
+
+"@" @operator

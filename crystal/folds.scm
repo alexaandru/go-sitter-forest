@@ -19,3 +19,12 @@
   (when)
   (while)
 ] @fold
+
+[
+  (array)
+  (array_like)
+  (hash)
+  (hash_like)
+  (named_tuple)
+  (tuple)
+] @fold
