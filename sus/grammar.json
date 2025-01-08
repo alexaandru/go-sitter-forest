@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "7256ff6a34b8b8278d09af31faa6c0b9955dab99",
+  "revision": "6d531e7965d81f0458618210c07c2f72b480f750",
   "grammarSha": "9312ce995a789f1d7143fd395e6b50b8920d5bc6f375d81877a4c79e7b305da7",
   "language": "sus",
   "url": "https://github.com/pc2/tree-sitter-sus",

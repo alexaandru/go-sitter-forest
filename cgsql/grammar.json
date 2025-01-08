@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "1e0c0dde79d0ad1d58bbe6e46e96523c672c5fa2",
-  "grammarSha": "aca6128b83ff4a0fe7cf2919c08ba0d9b72ec6370be931afefd594654edd440a",
+  "revision": "e1d3ee70ac926af3afb8fde5ffe037d27ca3e133",
+  "grammarSha": "eca91bb0b4d2bc64ee797517aa5a516df4dd5f33c51820ec64ee8d6d5b4609a5",
   "language": "cgsql",
   "url": "https://github.com/ricomariani/tree-sitter-cgsql",
   "maintainedBy": "@ricomariani"

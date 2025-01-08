@@ -463,7 +463,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "fa9a07b6ccac6934fba6694d5ac9bf8dfe5d3d0d",
+    "revision": "aaef5166002d6b73d81ea3418770fc1e954ed450",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -554,8 +554,8 @@
   },
   {
     "reference": "main",
-    "revision": "1e0c0dde79d0ad1d58bbe6e46e96523c672c5fa2",
-    "grammarSha": "aca6128b83ff4a0fe7cf2919c08ba0d9b72ec6370be931afefd594654edd440a",
+    "revision": "e1d3ee70ac926af3afb8fde5ffe037d27ca3e133",
+    "grammarSha": "eca91bb0b4d2bc64ee797517aa5a516df4dd5f33c51820ec64ee8d6d5b4609a5",
     "language": "cgsql",
     "url": "https://github.com/ricomariani/tree-sitter-cgsql",
     "maintainedBy": "@ricomariani"
@@ -756,7 +756,7 @@
   },
   {
     "reference": "main",
-    "revision": "bd7023310d349facaa2e816816d3f8626e2bfeab",
+    "revision": "fd151321aa90771373a1f5f7a45e9e227df0c060",
     "grammarSha": "1f8491ae298d4c088ad12d7ad00c0add567e9ed548b18288a599e6ba13f4bf16",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
@@ -1183,8 +1183,8 @@
   },
   {
     "reference": "main",
-    "revision": "5334237ad2be73bf5d5ad4cbd55561969cce8ddb",
-    "grammarSha": "6c400775e7c05984cb715f0b89f376eec0b6d5a773fdde36208e4d37bad8ab46",
+    "revision": "8d55b7fe02e2fff7245c9c2fbed58f9ecf9daa9b",
+    "grammarSha": "c64592f89f47cc689226f5eda9053dabcee377ca1d0075a0ae41dd7660dc330a",
     "language": "factor",
     "url": "https://github.com/erochest/tree-sitter-factor",
     "maintainedBy": "@erochest"
@@ -1397,7 +1397,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1714,7 +1714,7 @@
   },
   {
     "reference": "main",
-    "revision": "ebdd786b67f3fc9e2ddba9113d79b4af7f69590a",
+    "revision": "f9d98660bd7ae78c9211cb52e295bcd6531a8121",
     "grammarSha": "9d3093779a6d63887272cb41ba102ba706e2a0b1f9d12a33bb207c6bb9d51aa3",
     "language": "gritql",
     "url": "https://github.com/getgrit/tree-sitter-gritql",
@@ -1725,8 +1725,8 @@
   },
   {
     "reference": "main",
-    "revision": "b53a8cc1075e056b8223b86f3bb392e0d57ae101",
-    "grammarSha": "a790de777a3beb860a586c7910a676ea58225ea2cf97f8a028840da35c409187",
+    "revision": "1f30c3398495dfeba24c7aa3b12a2bc68c0bd419",
+    "grammarSha": "a21272eb2251f1c4f9c567d1eaff1396e2a34097a47813670161c78b6a1a6648",
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
     "maintainedBy": "@murtaza64"
@@ -2081,8 +2081,8 @@
   },
   {
     "reference": "master",
-    "revision": "56765be264f489c5a0f5c8410fdc3e1c1e6963bf",
-    "grammarSha": "2f91d76415bf2be8fd428da262446e0b47c4c6c7379255a9300967436f711b61",
+    "revision": "63f82e2fffe2dc3665377908f491dc05cdd4b425",
+    "grammarSha": "2fdda24e5c9cfac36ab349b25cd55140f7da2f82d50c0150741abb7bf405708c",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",
@@ -3408,7 +3408,7 @@
   },
   {
     "reference": "master",
-    "revision": "bffb65a8cfe4e46290331dfef0dbf0ef3679de11",
+    "revision": "409b5d671eb0ea4972eeacaaca24bbec1acf79b1",
     "grammarSha": "936af466b2b4b9883e59185ab91ee39f33036c42a5125f8bd21c212624bb8c37",
     "language": "python",
     "url": "https://github.com/tree-sitter/tree-sitter-python",
@@ -4139,7 +4139,7 @@
   },
   {
     "reference": "main",
-    "revision": "7256ff6a34b8b8278d09af31faa6c0b9955dab99",
+    "revision": "6d531e7965d81f0458618210c07c2f72b480f750",
     "grammarSha": "9312ce995a789f1d7143fd395e6b50b8920d5bc6f375d81877a4c79e7b305da7",
     "language": "sus",
     "url": "https://github.com/pc2/tree-sitter-sus",
@@ -4751,7 +4751,7 @@
   },
   {
     "reference": "main",
-    "revision": "680203a3271ca2921987e71a8b12e59754ab5a72",
+    "revision": "c10997bc18af1719fa155af9b4b027f20735766d",
     "grammarSha": "a79e2d0f4789843d712ae81b6ac9b94e730230abe26a981a57a88208e02ac372",
     "language": "wing",
     "url": "https://github.com/winglang/wing",

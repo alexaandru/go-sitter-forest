@@ -9,6 +9,8 @@
 ; Keywords
 [
   "struct"
+  "union"
+  "using"
   "enum"
   "enum_flags"
   "if"
@@ -20,6 +22,7 @@
   "while"
   "break"
   "continue"
+  "remove"
   "defer"
   "cast"
   "xx"
