@@ -57,7 +57,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cerium v1.9.2
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.1
-	github.com/alexaandru/go-sitter-forest/cgsql v1.9.5
+	github.com/alexaandru/go-sitter-forest/cgsql v1.9.6
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
 	github.com/alexaandru/go-sitter-forest/circom v1.9.1
 	github.com/alexaandru/go-sitter-forest/clarity v1.9.4
@@ -122,7 +122,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/factor v1.9.0
+	github.com/alexaandru/go-sitter-forest/factor v1.9.1
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.7
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.2
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
@@ -179,7 +179,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/graphql v1.9.0
 	github.com/alexaandru/go-sitter-forest/gren v1.9.3
 	github.com/alexaandru/go-sitter-forest/gritql v1.9.1
-	github.com/alexaandru/go-sitter-forest/groovy v1.9.1
+	github.com/alexaandru/go-sitter-forest/groovy v1.9.2
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
 	github.com/alexaandru/go-sitter-forest/haml v1.9.7
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.7
+	github.com/alexaandru/go-sitter-forest/jai v1.9.8
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -354,7 +354,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/purescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.9.0
 	github.com/alexaandru/go-sitter-forest/pyrope v1.9.1
-	github.com/alexaandru/go-sitter-forest/python v1.9.3
+	github.com/alexaandru/go-sitter-forest/python v1.9.4
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
@@ -429,7 +429,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.0
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
 	github.com/alexaandru/go-sitter-forest/surrealql v1.9.0
-	github.com/alexaandru/go-sitter-forest/sus v1.9.2
+	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
 	github.com/alexaandru/go-sitter-forest/swift v1.9.2
