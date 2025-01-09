@@ -265,6 +265,8 @@ enum LookaheadResult {
 };
 typedef enum LookaheadResult LookaheadResult;
 
+// Skip one character, which will not be included in the token emitted by the scanner.
+// WARNING: this will set the _start_ of the token range. Don't use this after mark_end!
 static void lex_skip(State *state, TSLexer *lexer) {
     state->has_leading_whitespace = true;
     lexer->advance_crystal(lexer, true);
@@ -676,18 +678,20 @@ static bool scan_regex_modifier(State *state, TSLexer *lexer) {
     return false;
 }
 
-static void skip_space(State *state, TSLexer *lexer) {
+// Advance while the next character is a space or tab
+static void advance_space(TSLexer *lexer) {
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-        lex_skip(state, lexer);
+        lex_advance_crystal(lexer);
     }
 }
 
-static void skip_space_and_newline(State *state, TSLexer *lexer) {
+// Advance while the next character is a space, tab, or newline
+static void advance_space_and_newline(TSLexer *lexer) {
     while (lexer->lookahead == ' '
         || lexer->lookahead == '\t'
         || lexer->lookahead == '\r'
         || lexer->lookahead == '\n') {
-        lex_skip(state, lexer);
+        lex_advance_crystal(lexer);
     }
 }
 
@@ -809,7 +813,7 @@ static LookaheadResult lookahead_delimiter_or_type_suffix(State *state, TSLexer 
     switch (lexer->lookahead) {
         case '.':
             lex_advance_crystal(lexer);
-            skip_space_and_newline(state, lexer);
+            advance_space_and_newline(lexer);
             if (lexer->lookahead != 'c') { return false; }
             lex_advance_crystal(lexer);
             if (lexer->lookahead != 'l') { return false; }
@@ -924,7 +928,7 @@ static LookaheadResult lookahead_start_of_named_tuple_entry(TSLexer *lexer, bool
 // could or could not be a type.
 static LookaheadResult lookahead_start_of_type(State *state, TSLexer *lexer) {
 
-    skip_space(state, lexer);
+    advance_space(lexer);
 
     if (lexer->eof(lexer)) {
         DEBUG("reached EOF");
@@ -933,7 +937,7 @@ static LookaheadResult lookahead_start_of_type(State *state, TSLexer *lexer) {
 
     while (lexer->lookahead == '{' || lexer->lookahead == '(') {
         lex_advance_crystal(lexer);
-        skip_space_and_newline(state, lexer);
+        advance_space_and_newline(lexer);
     }
 
     // Check for identifier
@@ -988,7 +992,7 @@ static LookaheadResult lookahead_start_of_type(State *state, TSLexer *lexer) {
                         return lookahead_start_of_named_tuple_entry(lexer, true);
                     }
 
-                    skip_space(state, lexer);
+                    advance_space(lexer);
                     return lookahead_delimiter_or_type_suffix(state, lexer);
                 }
             }
@@ -1008,14 +1012,14 @@ static LookaheadResult lookahead_start_of_type(State *state, TSLexer *lexer) {
 
             if (lexer->lookahead == ':') {
                 lex_advance_crystal(lexer);
-                skip_space_and_newline(state, lexer);
+                advance_space_and_newline(lexer);
                 // continue consuming const segments
             } else {
                 // named tuple start
                 return LOOKAHEAD_NAMED_TUPLE;
             }
         } else {
-            skip_space(state, lexer);
+            advance_space(lexer);
             return lookahead_delimiter_or_type_suffix(state, lexer);
         }
     }
@@ -1037,7 +1041,7 @@ static LookaheadResult lookahead_start_of_type(State *state, TSLexer *lexer) {
             break;
         case '*':
             lex_advance_crystal(lexer);
-            skip_space_and_newline(state, lexer);
+            advance_space_and_newline(lexer);
             if (lexer->lookahead == '*') {
                 // double splat is not a valid type operator
                 return LOOKAHEAD_UNKNOWN;
@@ -1179,7 +1183,7 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     if (valid_symbols[END_OF_RANGE]) {
                         // We don't want to consume while looking ahead
                         lexer->mark_end(lexer);
-                        skip_space_and_newline(state, lexer);
+                        advance_space_and_newline(lexer);
 
                         switch (lookahead_start_of_named_tuple_entry(lexer, false)) {
                             case LOOKAHEAD_NAMED_TUPLE:
@@ -1269,7 +1273,7 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 } else if (BRACE_EXPR) {
                     // We don't want to consume while looking ahead
                     lexer->mark_end(lexer);
-                    skip_space_and_newline(state, lexer);
+                    advance_space_and_newline(lexer);
 
                     switch (lookahead_start_of_named_tuple_entry(lexer, false)) {
                         case LOOKAHEAD_NAMED_TUPLE:
@@ -1286,7 +1290,7 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 } else if (BRACE_TYPE) {
                     // We don't want to consume while looking ahead
                     lexer->mark_end(lexer);
-                    skip_space_and_newline(state, lexer);
+                    advance_space_and_newline(lexer);
 
                     switch (lookahead_start_of_named_tuple_entry(lexer, false)) {
                         case LOOKAHEAD_NAMED_TUPLE:

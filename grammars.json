@@ -463,7 +463,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "aaef5166002d6b73d81ea3418770fc1e954ed450",
+    "revision": "9a5f2d734b9ca9b651e9fb39dec43d4c6c6a4575",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -756,7 +756,7 @@
   },
   {
     "reference": "main",
-    "revision": "fd151321aa90771373a1f5f7a45e9e227df0c060",
+    "revision": "cdb51394e6e2a4b5618961cd6cd205a30057c1c5",
     "grammarSha": "1f8491ae298d4c088ad12d7ad00c0add567e9ed548b18288a599e6ba13f4bf16",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
@@ -1183,8 +1183,8 @@
   },
   {
     "reference": "main",
-    "revision": "8d55b7fe02e2fff7245c9c2fbed58f9ecf9daa9b",
-    "grammarSha": "c64592f89f47cc689226f5eda9053dabcee377ca1d0075a0ae41dd7660dc330a",
+    "revision": "605c0014292973feb0687c7c7e77162bf040dc7a",
+    "grammarSha": "f1c83baf5646b484518f7d6c2717a1964ee366f6003994da3dd2378bf7c1f397",
     "language": "factor",
     "url": "https://github.com/erochest/tree-sitter-factor",
     "maintainedBy": "@erochest"
@@ -2968,8 +2968,8 @@
   },
   {
     "reference": "master",
-    "revision": "781514ec0b786e516e4da3edc64fdfcf76400e4e",
-    "grammarSha": "f64572747e642d4caf486551ab6c85d3f586eb09d951aa68b411c3543690999d",
+    "revision": "57644edfbba0edb38ac17dba2add4c243fa3539b",
+    "grammarSha": "c30a4ac59d03825c347fb02e7ad6489638f87d115a9db47469fe599e9cde59c6",
     "language": "ocaml",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "maintainedBy": "@undu",
@@ -2981,8 +2981,8 @@
   },
   {
     "reference": "master",
-    "revision": "781514ec0b786e516e4da3edc64fdfcf76400e4e",
-    "grammarSha": "f4ca6189d696b4ad22939750ff6ad67b60bde59552dc18d9cdb14df39a219027",
+    "revision": "57644edfbba0edb38ac17dba2add4c243fa3539b",
+    "grammarSha": "ad26f7c36d0f7da225380b5e308db2838a4575c28cd7d4a2dbd1035f65793826",
     "language": "ocaml_interface",
     "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
     "maintainedBy": "@undu",
