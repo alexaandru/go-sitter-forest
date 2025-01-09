@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.0
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.10
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.11
 	github.com/alexaandru/go-sitter-forest/css v1.9.1
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -122,7 +122,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/facility v1.9.0
-	github.com/alexaandru/go-sitter-forest/factor v1.9.1
+	github.com/alexaandru/go-sitter-forest/factor v1.9.2
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.7
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.2
 	github.com/alexaandru/go-sitter-forest/faust v1.9.0
@@ -244,7 +244,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kon v1.9.16
 	github.com/alexaandru/go-sitter-forest/kos v1.9.0
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.2
-	github.com/alexaandru/go-sitter-forest/koto v1.9.5
+	github.com/alexaandru/go-sitter-forest/koto v1.9.6
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
 	github.com/alexaandru/go-sitter-forest/lart v1.9.0
@@ -310,8 +310,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/nu v1.9.21
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
-	github.com/alexaandru/go-sitter-forest/ocaml v1.9.1
-	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.9.2
+	github.com/alexaandru/go-sitter-forest/ocaml v1.9.2
+	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.9.3
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.9.0
 	github.com/alexaandru/go-sitter-forest/odin v1.9.1
 	github.com/alexaandru/go-sitter-forest/org v1.9.0
