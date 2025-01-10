@@ -1,7 +1,7 @@
 {
   "reference": "main",
   "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-  "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
+  "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
   "language": "galvan",
   "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
   "maintainedBy": "@antoniusnaumann",

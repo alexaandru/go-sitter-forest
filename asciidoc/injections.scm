@@ -28,7 +28,7 @@
     (listing_block_start_marker)
     (listing_block_body) @injection.content
     (listing_block_end_marker)))
-  (#gsub! @injection.language "^[^,]*,%s*(%w+)" "%1")
+  (#gsub! @injection.language "^[^,]*,%s*(%w+).*" "%1")
   (#lua-match? @injection.language "^[^,]*,%s*%w+"))
 
 ((section_block

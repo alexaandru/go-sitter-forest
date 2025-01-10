@@ -8,6 +8,8 @@
 
 ; Keywords
 [
+  "inline"
+  "no_inline"
   "struct"
   "union"
   "using"
@@ -61,8 +63,7 @@
 name: (identifier) @variable
 argument: (identifier) @variable
 named_argument: (identifier) @variable
-(member_expression (identifier) @parameter)
-
+(member_expression (identifier) @variable)
 
 ((identifier) @variable.builtin
   (#any-of? @variable.builtin "context"))
@@ -204,6 +205,7 @@ keyword: (identifier) @keyword
 [ "[" "]" ] @punctuation.bracket
 
 [
+  "`"
   "->"
   "."
   ","
@@ -228,3 +230,4 @@ keyword: (identifier) @keyword
 (heredoc_start) @none
 (heredoc_end) @none
 (heredoc_body) @string
+

@@ -726,6 +726,16 @@ static bool matches_ordered_list(OrderedListType type, char c) {
   }
 }
 
+static bool single_letter_list_marker(OrderedListType type) {
+  switch (type) {
+  case LOWER_ALPHA:
+  case UPPER_ALPHA:
+    return true;
+  default:
+    return false;
+  }
+}
+
 // Return true if we scan any character.
 static bool scan_ordered_list_enumerator(Scanner *s, TSLexer *lexer,
                                          OrderedListType type) {
@@ -739,7 +749,11 @@ static bool scan_ordered_list_enumerator(Scanner *s, TSLexer *lexer,
       break;
     }
   }
-  return scanned > 0;
+  if (single_letter_list_marker(type)) {
+    return scanned == 1;
+  } else {
+    return scanned > 0;
+  }
 }
 
 static bool scan_ordered_list_type(Scanner *s, TSLexer *lexer,

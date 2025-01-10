@@ -33,7 +33,11 @@
   (reftext) @markup.link @markup.link.url)
 
 (xref
-  (id) @markup.link.label)
+  (id) @markup.link @markup.link.url .)
+
+(xref
+  (id) @markup.link.label
+  (reftext) @markup.link @markup.link.url)
 
 [
   (macro_name)
