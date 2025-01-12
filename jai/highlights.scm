@@ -107,9 +107,6 @@ keyword: (identifier) @keyword
 
 ; (const_declaration (identifier) @type ":" ":" [(array_type) (pointer_type)])
 
-(struct_literal . (identifier) @type)
-(array_literal . (identifier) @type)
-
 ; ; I don't like this
 ; ((identifier) @type
 ;   (#lua-match? @type "^[A-Z][a-zA-Z0-9]*$")
@@ -129,8 +126,6 @@ keyword: (identifier) @keyword
 ((identifier) @constant
   (#lua-match? @constant "^_*[A-Z][A-Z0-9_]*$")
   (#not-has-parent? @constant type parameter))
-
-(member_expression . "." (identifier) @constant)
 
 (enum_declaration "{" (identifier) @constant)
 
@@ -212,6 +207,8 @@ keyword: (identifier) @keyword
   ":"
   ";"
 ] @punctuation.delimiter
+
+(member_expression "." @keyword)
 
 ; Comments
 

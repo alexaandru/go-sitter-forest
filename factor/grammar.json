@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "605c0014292973feb0687c7c7e77162bf040dc7a",
-  "grammarSha": "f1c83baf5646b484518f7d6c2717a1964ee366f6003994da3dd2378bf7c1f397",
+  "revision": "554d8b705df61864eb41a0ecf3741e94eb9f0c54",
+  "grammarSha": "6b4aba71bb25e57d9da8417f8a662c3a071085becf2ac5382bf051ad83f89a0f",
   "language": "factor",
   "url": "https://github.com/erochest/tree-sitter-factor",
   "maintainedBy": "@erochest"

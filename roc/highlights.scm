@@ -52,7 +52,6 @@
 (back_arrow)
 (backslash)
 ] @punctuation.delimiter.structural
-(bang_expr "!" @punctuation.delimiter.structural)
 [
   ","
   ":"
@@ -222,4 +221,3 @@
 (module)@module
 
 (identifier)@variable
-

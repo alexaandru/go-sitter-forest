@@ -158,7 +158,7 @@ static bool scan_end_of_statement(Scanner *scanner, TSLexer *lexer) {
     // newline
 
     // Semicolons and EOF always end the statement
-    if (lexer->lookahead == ';' || lexer->eof(lexer)) {
+    if (lexer->eof(lexer)) {
         skip_fortran(lexer);
         lexer->result_symbol = END_OF_STATEMENT;
         return true;

@@ -95,9 +95,14 @@ typedef struct {
   uint8_t state;
 } Scanner;
 
-// States stored by bits in `state` on scanner.
-static const uint8_t STATE_BLOCK_BRACKET = 1;
-static const uint8_t STATE_FALLBACK_BRACKET_INSIDE_ELEMENT = 1 << 1;
+// Tracks if a `[` starts an inline link.
+// It's used to prune branches where it does not, fixing precedence
+// issues with multiple elements inside the destination.
+static const uint8_t STATE_BRACKET_STARTS_INLINE_LINK = 1 << 0;
+// Tracks if a `[` starts a span (the Djot element).
+// It's used to prune branches where it does not, fixing precedence
+// issues where the span wasn't chosen despite being closed first.
+static const uint8_t STATE_BRACKET_STARTS_SPAN = 1 << 1;
 
 #ifdef DEBUG
 #include <assert.h>
@@ -440,44 +445,68 @@ static bool scan_span_end_marker(TSLexer *lexer, ElementType element) {
   }
 }
 
-static bool scan_inline_link_destination(TSLexer *lexer, Element *top_element) {
-  // The `(` has already been scanned, now we should check for
-  // an ending `)`. It can also be escaped.
+// Scan until `c`, aborting if an ending marker for the `top` element is found.
+static bool scan_until(TSLexer *lexer, char c, ElementType *top) {
   while (!lexer->eof(lexer)) {
-    switch (lexer->lookahead) {
-    case '\\':
-      advance_djot_inline(lexer);
-      break;
-    case ')':
+    if (top && scan_span_end_marker(lexer, *top)) {
+      return false;
+    }
+    if (lexer->lookahead == c) {
       return true;
-    default:
-      break;
+    } else if (lexer->lookahead == '\\') {
+      advance_djot_inline(lexer);
     }
     advance_djot_inline(lexer);
   }
   return false;
 }
 
+// Updates lookahead states that are used to block the acceptance of
+// the fallback characters `(` and `{` if there's a valid inline link
+// or span to be chosen.
+static void update_square_bracket_lookahead_states(Scanner *s, TSLexer *lexer,
+                                                   Element *top) {
+  // Reset flags so we can set them later if the scanning succeeds.
+  s->state &= ~STATE_BRACKET_STARTS_INLINE_LINK;
+  s->state &= ~STATE_BRACKET_STARTS_SPAN;
+
+  ElementType *top_type = NULL;
+  if (top) {
+    top_type = &top->type;
+  }
+
+  // Scan the `[some text]` span.
+  if (!scan_until(lexer, ']', top_type)) {
+    return;
+  }
+  advance_djot_inline(lexer);
+
+  if (lexer->lookahead == '(') {
+    // An inline link may follow.
+    if (scan_until(lexer, ')', top_type)) {
+      s->state |= STATE_BRACKET_STARTS_INLINE_LINK;
+    }
+  } else if (lexer->lookahead == '{') {
+    // An inline attribute my follow, turning it into the Djot `span` type.
+    //
+    // Please note that we're not parsing the actual inline attribute
+    // that may have false positives.
+    //
+    // An invalid attribute may error out whole tree-sitter parsing
+    // because we're actively blocking fallback characters, preventing
+    // the parser from falling back to a paragraph.
+    //
+    // For a more correct implementation we should scan the inline attribute
+    // in the same way as defined in `grammar.js`.
+    if (scan_until(lexer, '}', top_type)) {
+      s->state |= STATE_BRACKET_STARTS_SPAN;
+    }
+  }
+}
+
 static bool open_bracket_before_closing_marker(TSLexer *lexer,
                                                ElementType element) {
-  // The `(` has already been scanned, now we should check for
-  // an ending `)`. It can also be escaped.
-  while (!lexer->eof(lexer)) {
-    if (scan_span_end_marker(lexer, element)) {
-      return false;
-    }
-    switch (lexer->lookahead) {
-    case '\\':
-      advance_djot_inline(lexer);
-      break;
-    case '[':
-      return true;
-    default:
-      break;
-    }
-    advance_djot_inline(lexer);
-  }
-  return false;
+  return scan_until(lexer, '[', &element);
 }
 
 static bool mark_span_begin(Scanner *s, TSLexer *lexer,
@@ -498,31 +527,33 @@ static bool mark_span_begin(Scanner *s, TSLexer *lexer,
     // symbol if we can scan ahead and see that we should be able to parse it as
     // a link, stopping the contained emphasis from being considered.
     //
-    // Additionally `fallback_bracket_inside_element` is used to allow us
-    // to detect an element ending marker inside the destination
-    // and allow that. For example here:
-    //
-    //     *[x](y*)
-    //
-    if (element == PARENS_SPAN) {
-      // Should scan ahead and if there's a valid inline link we should not
-      // allow the fallback to be parsed (favoring the link).
-      if (!(s->state & STATE_FALLBACK_BRACKET_INSIDE_ELEMENT) &&
-          scan_inline_link_destination(lexer, top)) {
-        return false;
-      }
-    }
-    if (top && element == SQUARE_BRACKET_SPAN) {
-      s->state |= STATE_FALLBACK_BRACKET_INSIDE_ELEMENT;
+    // This is done here at `[` as a fallback character so when we reach `(`
+    // we can abort and prune that branch (since we should parse it as a link).
+    if (element == SQUARE_BRACKET_SPAN) {
+      update_square_bracket_lookahead_states(s, lexer, top);
     }
 
-    if (open_bracket_before_closing_marker(lexer, element)) {
-      s->state |= STATE_BLOCK_BRACKET;
+    // This is where we've reached the `(` in:
+    //
+    //     [x](a_b_c_d_e)
+    //
+    // and if `STATE_BRACKET_CAN_START_INLINE_LINK` is true then we should prune
+    // the branch and instead treat it as a link.
+    if (element == PARENS_SPAN &&
+        (s->state & STATE_BRACKET_STARTS_INLINE_LINK)) {
+      return false;
     }
 
-    // Set `block_bracket` if we find a `]` before we find the closing marker.
-    // Then deny opening `[` if `block_bracket` is true.
-    // Reset `block_bracket` when closing an element.
+    // For spans `[text]{.class}` we use the same mechanism to solve precedence
+    // in this example:
+    //
+    //     [_]{.c}_
+    //
+    // Where we'll block at `{` if we should instead treat it as a span.
+    if (element == CURLY_BRACKET_SPAN &&
+        (s->state & STATE_BRACKET_STARTS_SPAN)) {
+      return false;
+    }
 
     // If there's multiple valid opening spans, for example:
     //
@@ -551,13 +582,13 @@ static bool mark_span_begin(Scanner *s, TSLexer *lexer,
     lexer->result_symbol = token;
     return true;
   } else {
-    if (element == SQUARE_BRACKET_SPAN && (s->state & STATE_BLOCK_BRACKET)) {
-      return false;
+    // Reset blocking states when the correct branch was chosen.
+    if (element == PARENS_SPAN) {
+      s->state &= ~STATE_BRACKET_STARTS_INLINE_LINK;
+    } else if (element == CURLY_BRACKET_SPAN) {
+      s->state &= ~STATE_BRACKET_STARTS_SPAN;
     }
-    s->state &= ~STATE_BLOCK_BRACKET;
-    s->state &= ~STATE_FALLBACK_BRACKET_INSIDE_ELEMENT;
 
-    lexer->mark_end(lexer);
     lexer->result_symbol = token;
     push_element(s, element, 0);
     return true;
@@ -834,9 +865,12 @@ static char *element_type_s(ElementType t) {
 }
 
 static void dump_scanner(Scanner *s) {
-  printf("fallback_bracket_inside_element: %u\n",
-         s->state & STATE_FALLBACK_BRACKET_INSIDE_ELEMENT);
-  printf("block_bracket: %u\n", s->state & STATE_BLOCK_BRACKET);
+  if (s->state & STATE_BRACKET_STARTS_SPAN) {
+    printf("STATE_BRACKET_STARTS_SPAN");
+  }
+  if (s->state & STATE_BRACKET_STARTS_INLINE_LINK) {
+    printf("STATE_BRACKET_STARTS_INLINE_LINK");
+  }
   printf("--- Open elements: %u (last -> first)\n", s->open_elements->size);
   for (size_t i = 0; i < s->open_elements->size; ++i) {
     Element *e = *array_get(s->open_elements, i);
