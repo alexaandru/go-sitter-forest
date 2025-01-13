@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.5
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.6
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.5
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -97,7 +97,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
 	github.com/alexaandru/go-sitter-forest/djot v1.9.3
 	github.com/alexaandru/go-sitter-forest/djot_inline v1.9.3
-	github.com/alexaandru/go-sitter-forest/dockerfile v1.9.0
+	github.com/alexaandru/go-sitter-forest/dockerfile v1.9.1
 	github.com/alexaandru/go-sitter-forest/dot v1.9.0
 	github.com/alexaandru/go-sitter-forest/dotenv v1.9.0
 	github.com/alexaandru/go-sitter-forest/doxygen v1.9.0
@@ -169,7 +169,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.2
-	github.com/alexaandru/go-sitter-forest/gomod v1.9.2
+	github.com/alexaandru/go-sitter-forest/gomod v1.9.3
 	github.com/alexaandru/go-sitter-forest/gooscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/gosum v1.9.0
 	github.com/alexaandru/go-sitter-forest/gotmpl v1.9.1
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.10
+	github.com/alexaandru/go-sitter-forest/jai v1.9.11
 	github.com/alexaandru/go-sitter-forest/janet v1.9.0
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -313,7 +313,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.3
 	github.com/alexaandru/go-sitter-forest/ocaml_interface v1.9.4
 	github.com/alexaandru/go-sitter-forest/ocamllex v1.9.0
-	github.com/alexaandru/go-sitter-forest/odin v1.9.1
+	github.com/alexaandru/go-sitter-forest/odin v1.9.2
 	github.com/alexaandru/go-sitter-forest/org v1.9.0
 	github.com/alexaandru/go-sitter-forest/ott v1.9.0
 	github.com/alexaandru/go-sitter-forest/pact v1.9.1
@@ -501,7 +501,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yadl v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaml v1.9.1
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
-	github.com/alexaandru/go-sitter-forest/yaral v1.9.0
+	github.com/alexaandru/go-sitter-forest/yaral v1.9.1
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
