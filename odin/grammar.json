@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "e8adc739b78409a99f8c31313f0bb54cc538cf73",
-  "grammarSha": "f6de53e5aa952ee0865aa260fcec2950e01c64c661baf4ff4433825c7b3fb4c0",
+  "revision": "d2ca8efb4487e156a60d5bd6db2598b872629403",
+  "grammarSha": "d60cc3c634cc6d53ac7803db0503123d58463ab523dbe02bf69dd3b27116e4cb",
   "language": "odin",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-odin",
   "maintainedBy": "@amaanq",

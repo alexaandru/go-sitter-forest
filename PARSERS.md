@@ -341,7 +341,7 @@
 - [x] [Path of Exile item filter](https://github.com/tree-sitter-grammars/tree-sitter-poe-filter) ✔️ (maintained by @ObserverOfTime)
 - [x] [pony](https://github.com/tree-sitter-grammars/tree-sitter-pony) ✔️ (maintained by @amaanq, @mfelsche)
 - [x] [postscript](https://github.com/smoeding/tree-sitter-postscript) 🗸 (maintained by @smoeding)
-- [x] [poweron](https://github.com/phileagleson/tree-sitter-poweron) ✔️ (maintained by @phileagleson; high memory usage (5GB))
+- [x] [poweron](https://github.com/phileagleson/tree-sitter-poweron) ✔️ (maintained by @phileagleson; ❌parser.c is now larger than Github max limit of 100MB)
 - [x] [powershell](https://github.com/airbus-cert/tree-sitter-powershell) ✔️ (maintained by @citronneur)
 - [x] [printf](https://github.com/tree-sitter-grammars/tree-sitter-printf) ✔️ (maintained by @ObserverOfTime)
 - [x] [prisma](https://github.com/victorhqc/tree-sitter-prisma) ✔️ (maintained by @elianiva)

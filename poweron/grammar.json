@@ -4,9 +4,10 @@
   "grammarSha": "e158b73154ff9da626faa9aeba427fa49d9cf8b85e1d4a635d48334dd34bc370",
   "language": "poweron",
   "url": "https://github.com/phileagleson/tree-sitter-poweron",
-  "doc": "high memory usage (5GB)",
+  "doc": "parser.c is now larger than Github max limit of 100MB",
   "maintainedBy": "@phileagleson",
   "files": [
     "scanner.cc"
-  ]
+  ],
+  "skipUpdate": true
 }
