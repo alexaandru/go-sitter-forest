@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.6
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.7
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.5
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -145,7 +145,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fusion v1.9.0
 	github.com/alexaandru/go-sitter-forest/gab v1.9.0
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
-	github.com/alexaandru/go-sitter-forest/gap v1.9.1
+	github.com/alexaandru/go-sitter-forest/gap v1.9.2
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
 	github.com/alexaandru/go-sitter-forest/gdscript v1.9.3
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
@@ -179,7 +179,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/graphql v1.9.0
 	github.com/alexaandru/go-sitter-forest/gren v1.9.3
 	github.com/alexaandru/go-sitter-forest/gritql v1.9.1
-	github.com/alexaandru/go-sitter-forest/groovy v1.9.2
+	github.com/alexaandru/go-sitter-forest/groovy v1.9.3
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
 	github.com/alexaandru/go-sitter-forest/haml v1.9.7
@@ -276,7 +276,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown v1.9.2
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.9.0
+	github.com/alexaandru/go-sitter-forest/matlab v1.9.1
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.9.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.9.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
@@ -303,7 +303,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/nim v1.9.0
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.9.0
 	github.com/alexaandru/go-sitter-forest/ninja v1.9.0
-	github.com/alexaandru/go-sitter-forest/nix v1.9.1
+	github.com/alexaandru/go-sitter-forest/nix v1.9.2
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.0
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
@@ -418,7 +418,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
-	github.com/alexaandru/go-sitter-forest/ssh_client_config v1.9.1
+	github.com/alexaandru/go-sitter-forest/ssh_client_config v1.9.2
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.9.2
 	github.com/alexaandru/go-sitter-forest/starlark v1.9.2
 	github.com/alexaandru/go-sitter-forest/strace v1.9.0
