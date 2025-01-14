@@ -73,6 +73,8 @@ var (
 		`"include/quick_buffer.h"`:  `"quick_buffer.h"`,
 		`"include/utils.h"`:         `"utils.h"`,
 		`"../tree_sitter/parser.h"`: `"parser.h"`,
+		// Carbon.
+		`"utils/tree_sitter/src/tree_sitter/parser.h"`: `"parser.h"`,
 	}
 
 	logFile *os.File

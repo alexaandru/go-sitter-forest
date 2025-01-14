@@ -1,11 +1,11 @@
 {
   "reference": "trunk",
-  "revision": "230a8ee598414334e224017e4d87c75061496046",
+  "revision": "9dc450e0af9920cc5bc77d1261294978c070ae7f",
   "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
   "language": "carbon",
   "url": "https://github.com/carbon-language/carbon-lang",
   "maintainedBy": "@carbon-language",
-  "srcRoot": "utils/treesitter",
+  "srcRoot": "utils/tree_sitter",
   "files": [
     "scanner.c"
   ]

@@ -337,6 +337,9 @@
 (verify_host_key_dns) @keyword
 (verify_host_key_dns_value) @constant.builtin.string
 
+(version_addendum) @keyword
+(version_addendum_value) @constant.builtin.string
+
 (visual_host_key) @keyword
 (visual_host_key_value) @constant.builtin.boolean
 
