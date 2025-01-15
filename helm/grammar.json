@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "ca52fbfc98366c585b84f4cb3745df49f33cd140",
-  "grammarSha": "42f145b0602bfe085b2832cb115600b6a217940e18ce41be73190ef9e878ae91",
+  "revision": "161e38cf9ec47109edefe99aa127e5b111e2e189",
+  "grammarSha": "d96ac2d96d0421ffc8c662315fdef74483f58b2f99040eb5cbede5e75b2bceae",
   "language": "helm",
   "url": "https://github.com/ngalaiko/tree-sitter-go-template",
   "maintainedBy": "@qvalentin",

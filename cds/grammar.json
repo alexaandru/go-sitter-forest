@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "d27023a4a4634863c2078110f5f49ee9aac788e6",
+  "revision": "e75d2fc89c2a9f63a3c446ef5fce6d9d3eecfc51",
   "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
   "language": "cds",
   "url": "https://github.com/cap-js-community/tree-sitter-cds",

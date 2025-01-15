@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "2d037f2f2bf668737f72e6be6eda4b7918b68d86",
-  "grammarSha": "c3960cc1628f05a89586fb10367e96d936e1a7a4131781872ade534a86a5ac06",
+  "revision": "e4bfd3e960de9f4b4648acb1c92e9b95b47d8cfb",
+  "grammarSha": "ef7a376a6d19062ce3ae243345c285dbdc971989dd5a0fecc1254d4acbcc8c3a",
   "language": "facility",
   "url": "https://github.com/FacilityApi/tree-sitter-facility",
   "maintainedBy": "@bryankenote"
