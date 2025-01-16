@@ -4,6 +4,7 @@
   "grammarSha": "3b321af9eda8212e9c2cf68ebddf46674aced89076a79fecd00b523942110c02",
   "language": "asciidoc",
   "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
+  "doc": "grammar.js broken",
   "maintainedBy": "@cathaysia",
   "srcRoot": "tree-sitter-asciidoc",
   "files": [
@@ -12,5 +13,6 @@
     "tree-sitter-asciidoc/src/include/base_types.h",
     "tree-sitter-asciidoc/src/include/quick_buffer.h",
     "tree-sitter-asciidoc/src/include/utils.h"
-  ]
+  ],
+  "skipUpdate": true
 }

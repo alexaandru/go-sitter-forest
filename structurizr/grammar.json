@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "4071f56cc369e173e797e14125084983b5fe9e58",
-  "grammarSha": "9d6ad38a0b80e5df2d30061e33d4cf1dc0004e12d0af40997cdf3e47f96a807f",
+  "revision": "4086b5bd182cba37f2cb8f52f6bc2941297d71f4",
+  "grammarSha": "cfaa4fd0523dc2a5de3bb411c3c1260b2d55fe4727a3bf3b65ad2676b5c6b6d5",
   "language": "structurizr",
   "url": "https://github.com/josteink/tree-sitter-structurizr",
   "maintainedBy": "@josteink"

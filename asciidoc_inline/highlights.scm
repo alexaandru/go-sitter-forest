@@ -70,3 +70,5 @@
 (term) @attribute
 
 (id_assignment) @label
+
+(super_escape) @string.special

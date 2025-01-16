@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "ded425e84d60af6f12aef4d9444aad711f74fa33",
-  "grammarSha": "228be6ea6f29cae74994ac62f11cad6bb8f5b1d195c9a14b2749b7bdd83e88b6",
+  "revision": "0b62b6e0fddb6ee7ac6940bbc967fa1956233c60",
+  "grammarSha": "8c50a7f811cfcc1842169d624c7816312647d4c1f418cb29a0bd8f3ca4d31af0",
   "language": "shosts",
   "url": "https://github.com/Smart-Hosts/tree-sitter-shosts",
   "maintainedBy": "@linw1995"

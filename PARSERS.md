@@ -19,7 +19,7 @@
 - [x] [apex](https://github.com/aheber/tree-sitter-sfapex) ✔️ (maintained by @aheber, @xixiaofinland)
 - [x] [applesoft](https://github.com/dfgordon/tree-sitter-applesoft) ✔️ (maintained by @dfgordon)
 - [x] [arduino](https://github.com/tree-sitter-grammars/tree-sitter-arduino) ✔️ (maintained by @ObserverOfTime)
-- [x] [asciidoc](https://github.com/cathaysia/tree-sitter-asciidoc) ✔️ (maintained by @cathaysia)
+- [x] [asciidoc](https://github.com/cathaysia/tree-sitter-asciidoc) ✔️ (maintained by @cathaysia; ❌grammar.js broken)
 - [x] [asciidoc_inline](https://github.com/cathaysia/tree-sitter-asciidoc) ✔️ (maintained by @cathaysia)
 - [x] [asm](https://github.com/RubixDev/tree-sitter-asm) ✔️ (maintained by @RubixDev)
 - [x] [astro](https://github.com/virchau13/tree-sitter-astro) ✔️ (maintained by @virchau13)

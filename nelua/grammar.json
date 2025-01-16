@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "0a44502e049c54e8cdd552956eb9709ac4adba0c",
-  "grammarSha": "2db483ac5addf16f232b83dc2f63252f2380bb95a9cdb75cf253b79214112094",
+  "revision": "c280767d9f743e3f6fb51bdcfa09e2ab48d5ece0",
+  "grammarSha": "3411ebac87e0c1439522f91fc6fd7c173fbf0c05dec123f1168ec0f77a0e04e8",
   "language": "nelua",
   "url": "https://github.com/kmafeni04/tree-sitter-nelua",
   "maintainedBy": "@kmafeni04"
