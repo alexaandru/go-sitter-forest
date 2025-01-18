@@ -95,7 +95,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.1
 	github.com/alexaandru/go-sitter-forest/diff v1.9.2
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
-	github.com/alexaandru/go-sitter-forest/djot v1.9.3
+	github.com/alexaandru/go-sitter-forest/djot v1.9.4
 	github.com/alexaandru/go-sitter-forest/djot_inline v1.9.3
 	github.com/alexaandru/go-sitter-forest/dockerfile v1.9.1
 	github.com/alexaandru/go-sitter-forest/dot v1.9.0
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.11
+	github.com/alexaandru/go-sitter-forest/jai v1.9.12
 	github.com/alexaandru/go-sitter-forest/janet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -230,7 +230,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/json5 v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonc v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
-	github.com/alexaandru/go-sitter-forest/jule v1.9.3
+	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
@@ -246,7 +246,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.2
 	github.com/alexaandru/go-sitter-forest/koto v1.9.7
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
-	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.0
+	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.1
 	github.com/alexaandru/go-sitter-forest/lart v1.9.0
 	github.com/alexaandru/go-sitter-forest/lat v1.9.1
 	github.com/alexaandru/go-sitter-forest/latex v1.9.1
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.7
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.8
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -423,7 +423,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/starlark v1.9.2
 	github.com/alexaandru/go-sitter-forest/strace v1.9.0
 	github.com/alexaandru/go-sitter-forest/streamdevice_proto v1.9.0
-	github.com/alexaandru/go-sitter-forest/structurizr v1.9.1
+	github.com/alexaandru/go-sitter-forest/structurizr v1.9.2
 	github.com/alexaandru/go-sitter-forest/styled v1.9.0
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.0
