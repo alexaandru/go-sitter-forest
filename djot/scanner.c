@@ -126,8 +126,6 @@ typedef struct {
   TokenType delayed_token;
   uint8_t delayed_token_width;
 
-  // The number of ` we are currently matching, or 0 when not inside.
-  uint8_t verbatim_tick_count;
 
   // What's our current block quote level?
   uint8_t block_quote_level;
@@ -1282,7 +1280,7 @@ static bool parse_heading(Scanner *s, TSLexer *lexer,
   Block *top = peek_block(s);
 
   // Avoids consuming `#` inside code/verbatim contexts.
-  if ((top && top->type == CODE_BLOCK) || s->verbatim_tick_count > 0) {
+  if ((top && top->type == CODE_BLOCK)) {
     return false;
   }
 
@@ -1736,7 +1734,6 @@ void init_djot(Scanner *s) {
   s->blocks_to_close = 0;
   s->delayed_token = IGNORED;
   s->delayed_token_width = 0;
-  s->verbatim_tick_count = 0;
   s->block_quote_level = 0;
   s->indent = 0;
 }
@@ -1764,7 +1761,6 @@ unsigned tree_sitter_djot_external_scanner_serialize(void *payload,
   buffer[size++] = (char)s->blocks_to_close;
   buffer[size++] = (char)s->delayed_token;
   buffer[size++] = (char)s->delayed_token_width;
-  buffer[size++] = (char)s->verbatim_tick_count;
   buffer[size++] = (char)s->block_quote_level;
   buffer[size++] = (char)s->indent;
 
@@ -1786,7 +1782,6 @@ void tree_sitter_djot_external_scanner_deserialize(void *payload, char *buffer,
     s->blocks_to_close = (uint8_t)buffer[size++];
     s->delayed_token = (TokenType)buffer[size++];
     s->delayed_token_width = (uint8_t)buffer[size++];
-    s->verbatim_tick_count = (uint8_t)buffer[size++];
     s->block_quote_level = (uint8_t)buffer[size++];
     s->indent = (uint8_t)buffer[size++];
 
@@ -1971,7 +1966,6 @@ static void dump_scanner(Scanner *s) {
     printf("  delayed_token: %s\n", token_type_s(s->delayed_token));
     printf("  delayed_token_width: %d\n", s->delayed_token_width);
   }
-  printf("  verbatim_tick_count: %u\n", s->verbatim_tick_count);
   printf("  block_quote_level: %u\n", s->block_quote_level);
   printf("  indent: %u\n", s->indent);
   printf("===\n");

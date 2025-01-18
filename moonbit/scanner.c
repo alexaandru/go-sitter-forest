@@ -7,13 +7,15 @@ enum TokenType {
   COMMENT,
   DOCSTRING,
   PIPE_OPERATOR,
-  DOT_OPERATOR,
+  DOT,
   COLON,
   COLON_COLON,
   QUESTION_OPERATOR,
   DERIVE,
   DOT_DOT,
-  MULTILINE_STRING_SEPARATOR
+  MULTILINE_STRING_SEPARATOR,
+  DOT_DOT_LT,
+  DOT_DOT_EQ,
 };
 
 void *tree_sitter_moonbit_external_scanner_create() { return NULL; }
@@ -92,13 +94,15 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
     valid_symbols[COMMENT] ||
     valid_symbols[DOCSTRING] ||
     valid_symbols[PIPE_OPERATOR] ||
-    valid_symbols[DOT_OPERATOR] ||
+    valid_symbols[DOT] ||
     valid_symbols[COLON] ||
     valid_symbols[COLON_COLON] ||
     valid_symbols[QUESTION_OPERATOR] ||
     valid_symbols[DERIVE] ||
     valid_symbols[DOT_DOT] ||
-    valid_symbols[MULTILINE_STRING_SEPARATOR]
+    valid_symbols[MULTILINE_STRING_SEPARATOR] ||
+    valid_symbols[DOT_DOT_LT] ||
+    valid_symbols[DOT_DOT_EQ]
   ) {
     while (iswspace(lexer->lookahead)) {
       skip_moonbit(lexer);
@@ -132,12 +136,19 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
       advance_moonbit(lexer);
       if (lexer->lookahead != '.') {
         lexer->mark_end(lexer);
-        lexer->result_symbol = DOT_OPERATOR;
+        lexer->result_symbol = DOT;
         return true;
       }
       advance_moonbit(lexer);
-      lexer->mark_end(lexer);
-      lexer->result_symbol = DOT_DOT;
+      if (lexer->lookahead == '<') {
+        lexer->result_symbol = DOT_DOT_LT;
+        advance_moonbit(lexer);
+      } else if (lexer->lookahead == '=') {
+        lexer->result_symbol = DOT_DOT_EQ;
+        advance_moonbit(lexer);
+      } else {
+        lexer->result_symbol = DOT_DOT;
+      }
       return true;
     } else if (lexer->lookahead == ':') {
       advance_moonbit(lexer);

@@ -200,10 +200,35 @@ static int range_comparator(const void *key, const void *v_range) {
 	return 0;
 }
 
+// Do not use bsearch from stdlib which is not exposed in wasm
+static void *binsearch(const void *key, const void *base, size_t nmemb,
+                       size_t size, int (*compar)(const void *, const void *)) {
+	size_t l, u, idx;
+	const void *p;
+	int comparison;
+
+	l = 0;
+	u = nmemb;
+	while (l < u) {
+		idx = (l + u) / 2;
+		p = (const void *)(((const char *)base) + (idx * size));
+		comparison = (*compar)(key, p);
+		if (comparison < 0) {
+			u = idx;
+		} else if (comparison > 0) {
+			l = idx + 1;
+		} else {
+			return (void *)p;
+		}
+	}
+
+	return NULL;
+}
+
 static bool xid_start_extended(int32_t chr) {
-	return bsearch(&chr, xid_start_class,
-	               sizeof(xid_start_class) / sizeof(struct range),
-	               sizeof(struct range), range_comparator) != NULL;
+	return binsearch(&chr, xid_start_class,
+	                 sizeof(xid_start_class) / sizeof(struct range),
+	                 sizeof(struct range), range_comparator) != NULL;
 }
 
 static bool is_xid_start(int32_t chr) {
@@ -212,9 +237,9 @@ static bool is_xid_start(int32_t chr) {
 }
 
 static bool xid_continue_extended(int32_t chr) {
-	return bsearch(&chr, xid_continue_class,
-	               sizeof(xid_continue_class) / sizeof(struct range),
-	               sizeof(struct range), range_comparator) != NULL;
+	return binsearch(&chr, xid_continue_class,
+	                 sizeof(xid_continue_class) / sizeof(struct range),
+	                 sizeof(struct range), range_comparator) != NULL;
 }
 
 static bool is_xid_continue(int32_t chr) {

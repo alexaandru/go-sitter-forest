@@ -144,7 +144,7 @@
 
 (colon) @punctuation.delimiter
 (colon_colon) @punctuation.delimiter
-(dot_operator) @punctuation.delimiter
+(dot) @punctuation.delimiter
 (dot_dot) @punctuation.delimiter
 
 [
