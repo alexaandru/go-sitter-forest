@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "1722645860a7e877fa096f7a243edd39d91f8326",
+  "revision": "9331e21b421d833755e5c752d237f003c31b1b6b",
   "grammarSha": "c6d7486d01258bca8074267376c80ac0f7b8fa71588d85984dbba137b564b1db",
   "language": "jinja",
   "url": "https://github.com/cathaysia/tree-sitter-jinja2",

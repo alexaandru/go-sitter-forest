@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "63d0360d42c43b4902b8470c7ddcf323432e2dde",
+  "revision": "da8ea8afa7899a99e43a7d61afef9f77b7a675eb",
   "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
   "language": "vhdl",
   "url": "https://github.com/jpt13653903/tree-sitter-vhdl",

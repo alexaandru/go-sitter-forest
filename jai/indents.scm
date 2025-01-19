@@ -13,43 +13,49 @@
 ; Incomplete
 
 [
-  (block)
-  (enum_declaration "{")
-  (struct_declaration "{")
-  (struct_literal "{")
-  (anonymous_struct_type "{")
-  (anonymous_enum_type "{")
-  (asm_statement "{")
-  (array_literal "[")
-  (index_expression "[")
-  (literal)
-  (assignment_parameters "(")
+    (block)
+    (enum_declaration "{")
+    (struct_or_union_block "{")
+    (struct_literal "{")
+    (anonymous_struct_type "{")
+    (anonymous_enum_type "{")
+    (asm_statement "{")
+    (array_literal "[")
+    (index_expression "[")
+    (literal)
+    (assignment_parameters "(")
 ] @indent.begin
 
-(if_statement
-  condition: (_) @indent.begin)
+((modify_block) @indent.end)
+((place_directive) @indent.branch)
 
-(if_statement
-  consequence: (_
-    ";" @indent.end) @_consequence
-  (#not-match? @_consequence "{")) @indent.begin
+(if_statement_condition_and_consequence
+    consequence: (_
+        ";" @indent.end) @_consequence
+    (#not-match? @_consequence "{")
+) @indent.begin
 
 (else_clause) @indent.branch
-((else_clause) @_elif
-  (#match? @_elif "if")) @indent.auto
 
-((if_case_statement) @indent.auto)
-((switch_case ";") @indent.begin)
+(else_clause
+    consequence: (_) @_consequence
+    (#match? @_consequence "if")
+    (#not-match? @_consequence "{")
+) @indent.auto 
+
+
+(if_case_statement) @indent.begin
+(switch_case ";") @indent.branch
 
 ((identifier) . (ERROR "(" @indent.begin))
 
 (block
-  "}" @indent.end)
+    "}" @indent.end)
 
 [
-  ")"
-  "]"
-  "}"
+    ")"
+    "]"
+    "}"
 ] @indent.branch @indent.end
 
 ; [
@@ -57,9 +63,9 @@
 ; ] @indent.branch @indent.end
 
 [
-  (comment)
-  (block_comment)
-  (string)
-  (ERROR)
+    (comment)
+    (block_comment)
+    (string)
+    (ERROR)
 ] @indent.auto
 

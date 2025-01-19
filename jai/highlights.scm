@@ -117,8 +117,6 @@ keyword: (identifier) @keyword
 
 (member_expression "." (identifier) @field)
 
-; (anonymous_struct_type "{" (identifier) @field)
-
 (assignment_statement (identifier) @field "="?)
 (update_statement (identifier) @field)
 
@@ -127,6 +125,8 @@ keyword: (identifier) @keyword
 ((identifier) @constant
   (#lua-match? @constant "^_*[A-Z][A-Z0-9_]*$")
   (#not-has-parent? @constant type parameter))
+
+(member_expression . "." (identifier) @constant)
 
 (enum_declaration "{" (identifier) @constant)
 
@@ -209,8 +209,6 @@ keyword: (identifier) @keyword
   ";"
 ] @punctuation.delimiter
 
-(member_expression "." @keyword)
-
 ; Comments
 
 [
@@ -224,8 +222,10 @@ keyword: (identifier) @keyword
 
 (block_comment) @comment
 
+directive: ("#") @keyword ; #if
+type: ("type_of") @type
+
 (compiler_directive) @keyword
 (heredoc_start) @none
 (heredoc_end) @none
 (heredoc_body) @string
-
