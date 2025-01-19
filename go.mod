@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.8
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.9
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.5
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -131,7 +131,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fidl v1.9.0
 	github.com/alexaandru/go-sitter-forest/fin v1.9.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.9.0
-	github.com/alexaandru/go-sitter-forest/fish v1.9.0
+	github.com/alexaandru/go-sitter-forest/fish v1.9.1
 	github.com/alexaandru/go-sitter-forest/flamingo v1.9.2
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.1
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
@@ -217,13 +217,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.12
+	github.com/alexaandru/go-sitter-forest/jai v1.9.13
 	github.com/alexaandru/go-sitter-forest/janet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.1
-	github.com/alexaandru/go-sitter-forest/jinja v1.9.0
-	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.0
+	github.com/alexaandru/go-sitter-forest/jinja v1.9.1
+	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/jq v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/json v1.9.0
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.0
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.8
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.9
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -360,7 +360,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.2
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.2
+	github.com/alexaandru/go-sitter-forest/query v1.9.3
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
 	github.com/alexaandru/go-sitter-forest/r v1.9.3
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
