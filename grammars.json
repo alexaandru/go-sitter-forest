@@ -477,7 +477,7 @@
   },
   {
     "reference": "main",
-    "revision": "e75d2fc89c2a9f63a3c446ef5fce6d9d3eecfc51",
+    "revision": "6305bcbe4555f76c8b5c177fa7859e26ebb22de0",
     "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -1399,7 +1399,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1983,8 +1983,8 @@
   },
   {
     "reference": "master",
-    "revision": "6858695eba0e63b9e0fceef081d291eb352abce8",
-    "grammarSha": "2d8178cf4dbb90a01e3c2a899339d5ad931b56d8a419d27c2d459f42d5a42659",
+    "revision": "af796443b66d7ab00184992daa3bdaede0955c87",
+    "grammarSha": "7b0836ae95872d89b967a2cc8c8681fb133bb5cb3a0e71f9948ff740fe5b3708",
     "language": "hyprlang",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
     "maintainedBy": "@luckasRanarison"
@@ -3972,8 +3972,8 @@
   },
   {
     "reference": "main",
-    "revision": "6b9bf9cbab91443380d2ca8a2f6c491cc7fac5bf",
-    "grammarSha": "306a27c282b6fd8f98b7101f5b3a899735d20877316b2237f52344ace8517b7f",
+    "revision": "f2af8d0dc14c6790130cceb2a20027eb41a8297c",
+    "grammarSha": "e1678952f8e8cd7ee531c1f5246a919e5fa01c6fdaac9f8adf8d130cfa861287",
     "language": "sourcepawn",
     "url": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
     "maintainedBy": "@Sarrus1",
@@ -4283,7 +4283,7 @@
   },
   {
     "reference": "master",
-    "revision": "60310af0d788a0160d719d4aff8f146b6e6c55bd",
+    "revision": "a9178bfc9cc8040c08f39b47bae5400a2bf06e50",
     "grammarSha": "a1348fe2fccc7a42e3496fa7cf993e46df36832e72262f0f86118326e61bca67",
     "language": "templ",
     "url": "https://github.com/vrischmann/tree-sitter-templ",

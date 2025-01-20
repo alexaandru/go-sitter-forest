@@ -1,5 +1,6 @@
 #include "parser.h"
 #include <wctype.h>
+#include <ctype.h>
 #include <stdio.h>
 
 enum TokenType
@@ -17,6 +18,14 @@ void tree_sitter_sourcepawn_external_scanner_deserialize(void *p, const char *b,
 
 static void advance_sourcepawn(TSLexer *lexer) { lexer->advance_sourcepawn(lexer, false); }
 static void skip_sourcepawn(TSLexer *lexer) { lexer->advance_sourcepawn(lexer, true); }
+
+static bool is_symbol_first_char(int c) {
+  return isalpha(c) || c == '_';
+}
+
+static bool is_symbol_non_first_char(int c) {
+  return iswalnum(c) || c == '_';
+}
 
 static bool scan_whitespace_and_comments(TSLexer *lexer)
 {
@@ -232,8 +241,10 @@ static bool scan_automatic_semicolon(TSLexer *lexer)
   // In this case, we don't want to insert a semicolon after Action.
 
   // We are at the beginning of a word (`action1` in our example).
-  while (iswalnum(lexer->lookahead))
+  bool first_char = true;
+  while ((first_char && is_symbol_first_char(lexer->lookahead)) || (!first_char && is_symbol_non_first_char(lexer->lookahead)))
   {
+    first_char = false;
     skip_sourcepawn(lexer);
   }
 

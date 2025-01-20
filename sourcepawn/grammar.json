@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "6b9bf9cbab91443380d2ca8a2f6c491cc7fac5bf",
-  "grammarSha": "306a27c282b6fd8f98b7101f5b3a899735d20877316b2237f52344ace8517b7f",
+  "revision": "f2af8d0dc14c6790130cceb2a20027eb41a8297c",
+  "grammarSha": "e1678952f8e8cd7ee531c1f5246a919e5fa01c6fdaac9f8adf8d130cfa861287",
   "language": "sourcepawn",
   "url": "https://github.com/nilshelmig/tree-sitter-sourcepawn",
   "maintainedBy": "@Sarrus1",
