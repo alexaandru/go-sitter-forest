@@ -510,8 +510,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
 	github.com/alexaandru/go-sitter-forest/zoomba v1.9.1
-	github.com/alexaandru/go-tree-sitter-bare v1.7.4
-	golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67
+	github.com/alexaandru/go-tree-sitter-bare v1.9.3
+	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
 	golang.org/x/sync v0.10.0
 )
 
