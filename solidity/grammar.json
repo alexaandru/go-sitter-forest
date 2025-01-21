@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "f7f5251a3f5b1d04f0799b3571b12918af177fc8",
+  "revision": "727087514eff57d92e273a24303142308bce3381",
   "grammarSha": "32a34bf9fa1c6cc0f5166732f091a2b67093de4ebc78bf1d1e79b14e9256c84b",
   "language": "solidity",
   "url": "https://github.com/JoranHonig/tree-sitter-solidity",

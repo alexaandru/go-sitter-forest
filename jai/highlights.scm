@@ -1,8 +1,8 @@
 ; Includes
 
 [
-  "#import"
-  "#load"
+  (import)
+  (load)
 ] @include
 
 
