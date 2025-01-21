@@ -120,7 +120,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_db v1.9.0
 	github.com/alexaandru/go-sitter-forest/epics_msi_substitution v1.9.0
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
-	github.com/alexaandru/go-sitter-forest/erlang v1.9.1
+	github.com/alexaandru/go-sitter-forest/erlang v1.9.2
 	github.com/alexaandru/go-sitter-forest/facility v1.9.1
 	github.com/alexaandru/go-sitter-forest/factor v1.9.3
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.7
@@ -206,7 +206,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hy v1.9.1
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
-	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.1
+	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.2
 	github.com/alexaandru/go-sitter-forest/i3config v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.2
 	github.com/alexaandru/go-sitter-forest/idris v1.9.5
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.13
+	github.com/alexaandru/go-sitter-forest/jai v1.9.14
 	github.com/alexaandru/go-sitter-forest/janet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -242,7 +242,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
 	github.com/alexaandru/go-sitter-forest/kon v1.9.16
-	github.com/alexaandru/go-sitter-forest/kos v1.9.0
+	github.com/alexaandru/go-sitter-forest/kos v1.9.1
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.2
 	github.com/alexaandru/go-sitter-forest/koto v1.9.7
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -398,7 +398,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
 	github.com/alexaandru/go-sitter-forest/slang v1.9.1
-	github.com/alexaandru/go-sitter-forest/slim v1.9.0
+	github.com/alexaandru/go-sitter-forest/slim v1.9.1
 	github.com/alexaandru/go-sitter-forest/slint v1.9.1
 	github.com/alexaandru/go-sitter-forest/smali v1.9.1
 	github.com/alexaandru/go-sitter-forest/smith v1.9.0
@@ -505,7 +505,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
-	github.com/alexaandru/go-sitter-forest/zeek v1.9.2
+	github.com/alexaandru/go-sitter-forest/zeek v1.9.3
 	github.com/alexaandru/go-sitter-forest/zig v1.9.4
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.0
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.0
