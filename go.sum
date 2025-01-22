@@ -350,8 +350,8 @@ github.com/alexaandru/go-sitter-forest/gren v1.9.3 h1:Ksfbfl6sGfYN5OsAmw741BuwJq
 github.com/alexaandru/go-sitter-forest/gren v1.9.3/go.mod h1:yYyu/gVqujPVcXgm+q3VpcJLCERPOGAVzo1zIReHNwU=
 github.com/alexaandru/go-sitter-forest/gritql v1.9.1 h1:lcBhuynrCRFJ06mRm5kXWBB5iKs5PTpwWLd+CYhJ71M=
 github.com/alexaandru/go-sitter-forest/gritql v1.9.1/go.mod h1:1aFp267zJrmuxUCQyRRS+K7Mu63QUNHmepWT5A+cqlc=
-github.com/alexaandru/go-sitter-forest/groovy v1.9.3 h1:UzURn44UMek+E+9fgBEbF5d+IFyu8O+eNJ2fo+aBZwo=
-github.com/alexaandru/go-sitter-forest/groovy v1.9.3/go.mod h1:6iFTwag6Wd4QJLJzZnvos8cowjZ9SwgIh3H/HWiLL6E=
+github.com/alexaandru/go-sitter-forest/groovy v1.9.4 h1:6QJP/QrtivUtwo73ZJQTjCruzYW+cVww0ryEsXBuENM=
+github.com/alexaandru/go-sitter-forest/groovy v1.9.4/go.mod h1:6iFTwag6Wd4QJLJzZnvos8cowjZ9SwgIh3H/HWiLL6E=
 github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0 h1:Yt+RmZzfOWO7Z2gEN6ve2mAi7YcaMB8H667TjCS55fg=
 github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0/go.mod h1:pxHf3fxNwSm4NS9J7SSI/gX7Q/JriZQ4rOJbWVJLW8o=
 github.com/alexaandru/go-sitter-forest/hack v1.9.0 h1:45q1TG5XXg2LdpTbU3+l4T0m4Q6j3IQ7robiHJxRmj0=
@@ -436,10 +436,10 @@ github.com/alexaandru/go-sitter-forest/java v1.9.3 h1:N7lQMJUJd7k6DVkRUgwtxrMXgz
 github.com/alexaandru/go-sitter-forest/java v1.9.3/go.mod h1:aWD8ZAZ6IbhsCnF7Jog1GWtx3ow//PiWkkAvVfnB8/I=
 github.com/alexaandru/go-sitter-forest/javascript v1.9.1 h1:AHkxGKFoS2LV++P77PWizUFAzK/fLMu9ewoT/iAaFZA=
 github.com/alexaandru/go-sitter-forest/javascript v1.9.1/go.mod h1:cWOFBHR7EffqM4sdVQ70WtTnFKPZxt5sAm1zS1tWaL8=
-github.com/alexaandru/go-sitter-forest/jinja v1.9.1 h1:P2Dkb2klFt5fbFeCSu/lCA6Uk0TQBKFUGdAtzXrp4iM=
-github.com/alexaandru/go-sitter-forest/jinja v1.9.1/go.mod h1:y7i9OVQydHqCpIrd08v5gICYNRioikOpqrcj7aHGx58=
-github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.1 h1:JmENJpcHxgdaf2/VX/t+LzWplJ3TbyqXSb7tn4XyKEM=
-github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.1/go.mod h1:ZRYgqMABhMSTAuLDtUm0iKOM6mlXuxOl/+TN10tqE1c=
+github.com/alexaandru/go-sitter-forest/jinja v1.9.2 h1:hdzE0NMkNF7+FiPi9TDbUTfrrIkb1RuZW6qk9ZJ2IsU=
+github.com/alexaandru/go-sitter-forest/jinja v1.9.2/go.mod h1:y7i9OVQydHqCpIrd08v5gICYNRioikOpqrcj7aHGx58=
+github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.2 h1:+09ex61TxXI492OuirQlybCvpWdW8vobv1AuA9MPInc=
+github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.2/go.mod h1:ZRYgqMABhMSTAuLDtUm0iKOM6mlXuxOl/+TN10tqE1c=
 github.com/alexaandru/go-sitter-forest/jq v1.9.0 h1:WvAy1l3ZjnG1BF25Z7nw3ue+y6QWe2HqBUIRlVpkcWA=
 github.com/alexaandru/go-sitter-forest/jq v1.9.0/go.mod h1:s+K4zavA+7PHdOqTiCcWmMVygewZhqOoGTxkXoWhN7E=
 github.com/alexaandru/go-sitter-forest/jsdoc v1.9.1 h1:KYA59jD1fZRkye9ZAbqNu1xLXTYRq1L3Gi6vb7JvP50=
@@ -476,8 +476,8 @@ github.com/alexaandru/go-sitter-forest/koka v1.9.0 h1:zYQjZd+zeKa6qcOcEqvdMEUj1I
 github.com/alexaandru/go-sitter-forest/koka v1.9.0/go.mod h1:/aiQOCV4Pq4PP+rrjMdBmRf/uCKsFkTMvnniQrJJIGE=
 github.com/alexaandru/go-sitter-forest/kon v1.9.16 h1:It+D71W4KgKBbOwgVWDe12nVse8AagPqNBtC98nknlc=
 github.com/alexaandru/go-sitter-forest/kon v1.9.16/go.mod h1:UURKnTh4vfPbK+cED3y42u42nzysk4hYk6A29ABMjrM=
-github.com/alexaandru/go-sitter-forest/kos v1.9.1 h1:Co+lrhvPlyee6g+7KmBtXnyYObhrPEKH5yEBE3wPr+U=
-github.com/alexaandru/go-sitter-forest/kos v1.9.1/go.mod h1:f27CSiEVcEmz/VAVh5P9qABYJ1ySAvLzaxxCymG7RQ4=
+github.com/alexaandru/go-sitter-forest/kos v1.9.2 h1:h+cn364Tlhxe6aoRykhq8Jgx29jMjvM1jAGfMpn/ocY=
+github.com/alexaandru/go-sitter-forest/kos v1.9.2/go.mod h1:f27CSiEVcEmz/VAVh5P9qABYJ1ySAvLzaxxCymG7RQ4=
 github.com/alexaandru/go-sitter-forest/kotlin v1.9.2 h1:r7wFzFgiEtyKLmGzj19fyba/IEOWZH1k0Q1BnexwI8E=
 github.com/alexaandru/go-sitter-forest/kotlin v1.9.2/go.mod h1:QCAC6OJsnUIRMx1akoZNzKRe+slaQq4sGSLAVwMFTuQ=
 github.com/alexaandru/go-sitter-forest/koto v1.9.7 h1:0GNN4WRSyGVWGHi8y5Vy4ztbp7kfJCIukkF29ToViak=
@@ -582,8 +582,8 @@ github.com/alexaandru/go-sitter-forest/mylang v1.9.2 h1:WPH/eFp0Fx4VbS7I5TO4STku
 github.com/alexaandru/go-sitter-forest/mylang v1.9.2/go.mod h1:/8ZNepke76gbuPZRPRExWZbAVOSb3y5rMiETcgN9b7k=
 github.com/alexaandru/go-sitter-forest/nasm v1.9.1 h1:5RJmKMo1irQLd6m6Wd2AIMp4lbMNr9OGI6Wv0X9tqSw=
 github.com/alexaandru/go-sitter-forest/nasm v1.9.1/go.mod h1:0l2XNoqQ6LBUlXmG2DgvNMKaMFA3q5Y+ZClPV6NGgg4=
-github.com/alexaandru/go-sitter-forest/nelua v1.9.4 h1:g2djfohCWtZghI3ygaN3DJCapdEnKT3YcyKKJoiRGWg=
-github.com/alexaandru/go-sitter-forest/nelua v1.9.4/go.mod h1:2Yh2chMxs08al5L+wrBa+4Xlg5q0GU3sQNaEDtPaN5M=
+github.com/alexaandru/go-sitter-forest/nelua v1.9.5 h1:q0M+BVpIDRiczEL/v+a3Ys9h14r5kD8QPNcruAxnEbo=
+github.com/alexaandru/go-sitter-forest/nelua v1.9.5/go.mod h1:2Yh2chMxs08al5L+wrBa+4Xlg5q0GU3sQNaEDtPaN5M=
 github.com/alexaandru/go-sitter-forest/nesfab v1.9.0 h1:lpdA1To2AzkYF4Tqo3OF5Gf1ysxjOiRkzPQiYUSPM5c=
 github.com/alexaandru/go-sitter-forest/nesfab v1.9.0/go.mod h1:L3Y6dWX28Hm1lT/msR/mJGfasI/pd0KLRBPwrTztLus=
 github.com/alexaandru/go-sitter-forest/nftables v1.9.0 h1:XOQWTEaD5yXMwl23ZwsmCIP2K7LJx9vuXhZOx7iN2CA=

@@ -179,7 +179,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/graphql v1.9.0
 	github.com/alexaandru/go-sitter-forest/gren v1.9.3
 	github.com/alexaandru/go-sitter-forest/gritql v1.9.1
-	github.com/alexaandru/go-sitter-forest/groovy v1.9.3
+	github.com/alexaandru/go-sitter-forest/groovy v1.9.4
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.0
 	github.com/alexaandru/go-sitter-forest/haml v1.9.7
@@ -222,8 +222,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.1
-	github.com/alexaandru/go-sitter-forest/jinja v1.9.1
-	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.1
+	github.com/alexaandru/go-sitter-forest/jinja v1.9.2
+	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.2
 	github.com/alexaandru/go-sitter-forest/jq v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/json v1.9.0
@@ -242,7 +242,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
 	github.com/alexaandru/go-sitter-forest/koka v1.9.0
 	github.com/alexaandru/go-sitter-forest/kon v1.9.16
-	github.com/alexaandru/go-sitter-forest/kos v1.9.1
+	github.com/alexaandru/go-sitter-forest/kos v1.9.2
 	github.com/alexaandru/go-sitter-forest/kotlin v1.9.2
 	github.com/alexaandru/go-sitter-forest/koto v1.9.7
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
@@ -295,7 +295,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mxml v1.9.0
 	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/nelua v1.9.4
+	github.com/alexaandru/go-sitter-forest/nelua v1.9.5
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.0
