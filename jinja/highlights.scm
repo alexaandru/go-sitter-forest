@@ -51,27 +51,33 @@
 (binary_operator) @operator
 
 [
-  "endtrans"
-  "block"
-  "endblock"
-  "with"
-  "endwith"
-  "filter"
-  "endfilter"
-  "macro"
-  "endmacro"
-  "endcall"
-  "set"
-  "endset"
-  "trans"
-  "endtrans"
-  "autoescape"
-  "endautoescape"
-  "pluralize"
   "is"
   "not"
   "and"
-] @keyword.builtin
+] @keyword.operator
+
+[
+  "block"
+  "with"
+  "filter"
+  "macro"
+  "set"
+  "trans"
+  "pluralize"
+  "autoescape"
+] @keyword
+
+[
+  "endtrans"
+  "endblock"
+  "endwith"
+  "endfilter"
+  "endmacro"
+  "endcall"
+  "endset"
+  "endtrans"
+  "endautoescape"
+] @keyword
 
 (do_statement
   "do" @keyword)
@@ -167,4 +173,4 @@
     "lt"
     "sameas"
     "upper"
-  ] @keyword.builtin)
+  ] @keyword.operator)

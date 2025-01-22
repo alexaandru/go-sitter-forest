@@ -170,7 +170,7 @@
   },
   {
     "reference": "master",
-    "revision": "9417dbfcff895abdae4b4735393044a870605ee9",
+    "revision": "a94558880d2d5d51659c1d9c2579f21af273cb3d",
     "grammarSha": "6a32c210631cfd074bc1e1dc6dd187869d1398c7ad5d3e4b275292ae745a1057",
     "language": "asciidoc_inline",
     "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
@@ -465,7 +465,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "d30957fc652e715c098118064f13362abdd1b011",
+    "revision": "fe92e3f5522b14b870e07b814d0ce008948ae223",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1291,7 +1291,7 @@
   },
   {
     "reference": "main",
-    "revision": "d4937532ff90c183925d703c7844edce5f6150a7",
+    "revision": "de8fd88b5a0f7589887859ac6622f80aae89d82c",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1399,7 +1399,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1727,8 +1727,8 @@
   },
   {
     "reference": "main",
-    "revision": "d1556e77d49df1a28cd564af5766fdaea8ab7063",
-    "grammarSha": "7d62a9b7ff3a8e105c26ae4880996d6744b2ed460d1ba0ec89d5e3da69ec171b",
+    "revision": "86911590a8e46d71301c66468e5620d9faa5b6af",
+    "grammarSha": "c43b041246659a744ab008e9bb049bc5ac4f9b29e66138f61f96b615f3b92d61",
     "language": "groovy",
     "url": "https://github.com/murtaza64/tree-sitter-groovy",
     "maintainedBy": "@murtaza64"
@@ -2094,7 +2094,7 @@
   },
   {
     "reference": "master",
-    "revision": "b4aa56fd0a2ea2708fc93062683ae5eaa4e973e6",
+    "revision": "81f17db9a8ab0a97ff20986ef9065eb628db7408",
     "grammarSha": "1b2e997b7f8459cb2165c8392a7fad3e3e7b00ef5139898065008ab9a69a7b05",
     "language": "janet",
     "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
@@ -2132,7 +2132,7 @@
   },
   {
     "reference": "master",
-    "revision": "f101bfbdbc8125ab19e26ff59a5e92a5d857326a",
+    "revision": "851741d96195ea10133885841d8215ebfe45b238",
     "grammarSha": "c6d7486d01258bca8074267376c80ac0f7b8fa71588d85984dbba137b564b1db",
     "language": "jinja",
     "url": "https://github.com/cathaysia/tree-sitter-jinja2",
@@ -2144,7 +2144,7 @@
   },
   {
     "reference": "master",
-    "revision": "f101bfbdbc8125ab19e26ff59a5e92a5d857326a",
+    "revision": "851741d96195ea10133885841d8215ebfe45b238",
     "grammarSha": "69bce2f1921de6c5db72ab810ac0beb7806941634f6973d1a71fc502e95200a5",
     "language": "jinja_inline",
     "url": "https://github.com/cathaysia/tree-sitter-jinja2",
@@ -2328,15 +2328,15 @@
   },
   {
     "reference": "main",
-    "revision": "1b7f04577651e6b62a52469f5a9cb0a6e70c8abb",
-    "grammarSha": "e916974029325cf21af78e5151476316c551d2d5398a3050ff0fad8266cfcc3d",
+    "revision": "eff4e8a6e3b5ac283b17fa8df5a67f6e024b4150",
+    "grammarSha": "d3c1571444b6aeab623badbcc7f0e2ab6c8a2470e4f30da12ae8d182e402e788",
     "language": "kos",
     "url": "https://github.com/kos-lang/tree-sitter-kos",
     "maintainedBy": "@cdragan"
   },
   {
     "reference": "main",
-    "revision": "0662afbd2ce19b17c603acf67ae707b4d69ab8f4",
+    "revision": "c4ddea359a7ff4d92360b2efcd6cfce5dc25afe6",
     "grammarSha": "d4dc2046d2ecac79227afcc39e92b473415b1bf43ece13a7aeb48f572cce3694",
     "language": "kotlin",
     "url": "https://github.com/fwcd/tree-sitter-kotlin",
@@ -2823,8 +2823,8 @@
   },
   {
     "reference": "main",
-    "revision": "c280767d9f743e3f6fb51bdcfa09e2ab48d5ece0",
-    "grammarSha": "3411ebac87e0c1439522f91fc6fd7c173fbf0c05dec123f1168ec0f77a0e04e8",
+    "revision": "04ad28fde46aea75184a26ffd4e5b4566c1d97a5",
+    "grammarSha": "c0c688bf49668220b3e4482ebbcb30b989b6146bc70b66baafe7b65718894fef",
     "language": "nelua",
     "url": "https://github.com/kmafeni04/tree-sitter-nelua",
     "maintainedBy": "@kmafeni04"

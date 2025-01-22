@@ -1,13 +1,14 @@
-(hash_bang_line) @comment
+(hash_bang) @comment
 
 (ERROR) @error
 
 (comment) @comment
 
-[(true) (false)] @constant.builtin.boolean
+(boolean) @constant.builtin.boolean
 
 [(nil) (nilptr)] @constant.builtin
 
+(vararg_expression) @constant
 
 [
   "="
@@ -56,7 +57,6 @@
 [
   "("
   ")"
-  "()"
   "{"
   "}"
   "["
@@ -91,6 +91,9 @@
   (identifier) @attribute)
 
 ["@"] @operator
+
+(variable_list
+  (identifier) @variable)
 
 ((identifier) @variable.builtin
  (#eq? @variable.builtin "self"))
@@ -127,13 +130,14 @@
 
 (escape_sequence) @constant.character.escape
 
-(function_declaration
+(function_definition
   (identifier) @function)
 
-(function_declaration
-  (dot_function_declaration (dot_field (identifier) @variable.other.member)))
 
-(parameters (identifier) @variable.parameter)
+(parameter) @variable.parameter
+
+(parameter (identifier) @variable.parameter
+  (#match? @variable.parameter "^[A-Z][A-Z_0-9]*$"))
 
 (function_call
   (identifier) @function.builtin
@@ -145,23 +149,25 @@
 (function_call
   (identifier) @function)
 
-(function_call
-  (argument) @string)
-
-(function_call
-  (dot_expression
-    (dot_field (identifier)) @variable.other.member))
-
 (dot_field
-    (identifier) @variable.other.member)
+    (field) @variable.other.member)
 
-(dot_method
-    (identifier) @function.method)
+(dot_variable
+    (field) @variable.other.member)
+
+(method_field
+    (field) @function.method)
 
 (goto_location "::" @keyword.directive)
 
 (preproc_statement
   ["##[[" "]]" "##"] @keyword.directive)
+(preproc_statement
+  ["##[=[" "]=]" "##"] @keyword.directive)
+(preproc_statement
+  ["##[==[" "]==]" "##"] @keyword.directive)
+(preproc_statement
+  ["##[===[" "]===]" "##"] @keyword.directive)
 
 (preproc_expression
   ["#[" "]#" "#|" "|#"] @keyword.directive)

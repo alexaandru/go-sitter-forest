@@ -8,43 +8,67 @@
 (string_literal_end) @string
 
 [
+    "case"
+    "default"
+    "else"
+    "if"
+    "switch"
+] @keyword.conditional
+
+[
+    "import"
+] @keyword.import
+
+[
+    "for"
+    "loop"
+    "repeat"
+    "while"
+] @keyword.repeat
+
+(for_statement
+    "in" @keyword.repeat)
+
+[
+    "class"
+] @keyword.type
+
+[
+    "return"
+    "yield"
+] @keyword.return
+
+[
+    "catch"
+    "defer"
+    "throw"
+    "try"
+] @keyword.exception
+
+[
+    "constructor"
+    "fun"
+    "=>"
+] @keyword.function
+
+[
     "_"
     (line)
     "assert"
     ;"async"
     (break_statement)
-    "case"
-    "catch"
-    "class"
     "const"
-    "constructor"
     (continue_statement)
-    "default"
-    "defer"
     "do"
-    "else"
     "extends"
     (fallthrough_statement)
-    "for"
-    "fun"
     ;"get"
-    "if"
-    "import"
-    "loop"
     ;"match"
     "public"
-    "repeat"
-    "return"
     ;"set"
     ;"static"
-    "switch"
-    "throw"
-    "try"
     "var"
-    "while"
     "with"
-    "yield"
-    "=>"
 ] @keyword
 
 [
@@ -55,6 +79,9 @@
 [
     (false)
     (true)
+] @boolean
+
+[
     (void)
 ] @constant.builtin
 
@@ -77,17 +104,29 @@
 [
     (arithmetic_assignment_operator)
     (comparison_operator)
-    (bitwise_shift_operator)
+    (bitwise_operator)
     (additive_operator)
     (multiplicative_operator)
-    (bitwise_and_operator)
-    (bitwise_or_operator)
-    (bitwise_xor_operator)
-    (logical_and_operator)
-    (logical_or_operator)
+    (logical_operator)
     (unary_operator)
     "->"
     "..."
     "="
     "?"
 ] @operator
+
+(conditional_expression
+    [
+        "?"
+        ":"
+    ] @keyword.conditional.ternary)
+
+(class_member
+    (function_decl
+        name: (identifier) @function.method))
+
+(function_decl
+    name: (identifier) @function)
+
+(class_decl
+    name: (identifier) @type)
