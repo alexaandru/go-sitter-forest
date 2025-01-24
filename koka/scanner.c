@@ -1,7 +1,7 @@
+#include "parser.h"
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
-#include "parser.h"
 
 enum TokenType {
   OpenBrace,
@@ -23,7 +23,7 @@ struct scanner {
   int *stack;
 };
 
-void scanner_reset_koka(struct scanner *scanner) {
+static void scanner_reset_koka(struct scanner *scanner) {
   scanner->close_braces_to_insert = 0;
   scanner->insert_open_brace = false;
   scanner->semis_to_insert = 0;
@@ -35,7 +35,7 @@ void scanner_reset_koka(struct scanner *scanner) {
   scanner->stack = NULL;
 }
 
-void scanner_push_indent(struct scanner *scanner, int indent_length) {
+static void scanner_push_indent(struct scanner *scanner, int indent_length) {
   if (scanner->stack_len == scanner->stack_cap) {
     // Full, so grow.
     size_t new_stack_cap = scanner->stack_cap == 0 ? 8 : scanner->stack_cap * 2;
@@ -47,7 +47,7 @@ void scanner_push_indent(struct scanner *scanner, int indent_length) {
   scanner->stack[scanner->stack_len++] = indent_length;
 }
 
-int scanner_pop_indent(struct scanner *scanner) {
+static int scanner_pop_indent(struct scanner *scanner) {
   if (scanner->stack_len == 0) {
     return -1;
   }

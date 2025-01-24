@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "fe73beef9f52f04048d8b19016fc4fbc66b4596f",
-  "grammarSha": "2de0069a8b3b22effa776ad0b8c3eb2963c3826ccbb6c9fce352247e14e61414",
+  "revision": "3518133e9ebea7c372eff4def368eda8488fad18",
+  "grammarSha": "4fcb19912044c0365a9a6d3f179e0a5144f016c265b944a6b12e5a3e8ba6fbc8",
   "language": "ziggy",
   "url": "https://github.com/kristoff-it/ziggy",
   "maintainedBy": "@rockorager",

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "96d070c3700692858035f3524cc0ad944cef2594",
+  "revision": "8c7ff12f22fd76ab8716c5b1fbd9e656042381e8",
   "grammarSha": "c415f16a05e473e7029b0b1a44bf54440f6a1183d05fc078decf2fbe387ee328",
   "language": "koka",
   "url": "https://github.com/mtoohey31/tree-sitter-koka",

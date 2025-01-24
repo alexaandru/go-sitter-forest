@@ -15,6 +15,12 @@
   (#set! "kind" "Enum")) @symbol
 
 (method_def
+  visibility: (private)
+  name: (identifier) @name
+  (#set! "kind" "Method")
+  (#set! "scope" "private")) @symbol
+
+(method_def
   name: (identifier) @name
   (#set! "kind" "Method")) @symbol
 

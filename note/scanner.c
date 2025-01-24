@@ -1,4 +1,5 @@
 #include "parser.h"
+#include <string.h>
 
 enum TokenType {
     INDENT,

@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "d329907611abe46d26ab5908e5922e7400212cb9",
+  "revision": "14e8b652612f9371a68e304b84861b55225ceae0",
   "grammarSha": "bf34d8926030ba197851690942de418f6c21d6f0bea714df3f8374e336f1fbde",
   "language": "regex",
   "url": "https://github.com/tree-sitter/tree-sitter-regex",

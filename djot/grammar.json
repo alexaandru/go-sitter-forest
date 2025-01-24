@@ -1,7 +1,7 @@
 {
   "reference": "split",
-  "revision": "e10ad91034e111620e958751804a2010f387d8df",
-  "grammarSha": "c269e3e5f443ad34a2236eaa306bed9eeb2d82708ed3b6357630684f03b2e0da",
+  "revision": "5e654beb9437e832490d07b4c4128c887a10269d",
+  "grammarSha": "906ac5f2ff3adf1dc65148bfef59c01f1dbc0fc58dfd3ed5f1b77281dcdafade",
   "language": "djot",
   "url": "https://github.com/treeman/tree-sitter-djot",
   "maintainedBy": "@NoahTheDuke",

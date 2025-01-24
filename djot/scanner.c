@@ -1,6 +1,7 @@
 #include "alloc.h"
 #include "array.h"
 #include "parser.h"
+#include <ctype.h>
 #include <stdio.h>
 
 // #define DEBUG
@@ -49,15 +50,24 @@ typedef enum {
   LIST_MARKER_UPPER_ROMAN_PARENS,
   LIST_ITEM_CONTINUATION,
   LIST_ITEM_END,
+  INDENTED_CONTENT_SPACER,
   CLOSE_PARAGRAPH,
   BLOCK_QUOTE_BEGIN,
   BLOCK_QUOTE_CONTINUATION,
   THEMATIC_BREAK_DASH,
   THEMATIC_BREAK_STAR,
   FOOTNOTE_MARK_BEGIN,
+  FOOTNOTE_CONTINUATION,
   FOOTNOTE_END,
+  TABLE_HEADER_BEGIN,
+  TABLE_SEPARATOR_BEGIN,
+  TABLE_ROW_BEGIN,
+  TABLE_CELL,
   TABLE_CAPTION_BEGIN,
   TABLE_CAPTION_END,
+  BLOCK_ATTRIBUTE_BEGIN,
+  COMMENT_END_MARKER,
+  COMMENT_CLOSE,
 
   IN_FALLBACK,
 
@@ -125,7 +135,6 @@ typedef struct {
   // before this token.
   TokenType delayed_token;
   uint8_t delayed_token_width;
-
 
   // What's our current block quote level?
   uint8_t block_quote_level;
@@ -392,19 +401,45 @@ static bool handle_blocks_to_close(Scanner *s, TSLexer *lexer) {
   }
 }
 
-// Close open list if list markers are different.
-static bool parse_list_item_continuation(Scanner *s, TSLexer *lexer,
-                                         bool is_newline) {
+static bool parse_indented_content_spacer(Scanner *s, TSLexer *lexer,
+                                          bool is_newline) {
   if (is_newline) {
+    advance_djot(s, lexer);
+    lexer->mark_end(lexer);
+  }
+  lexer->result_symbol = INDENTED_CONTENT_SPACER;
+  return true;
+}
+
+// Close open list if list markers are different.
+static bool parse_list_item_continuation(Scanner *s, TSLexer *lexer) {
+  Block *list = find_list(s);
+  if (!list) {
     return false;
   }
-  Block *list = find_list(s);
-  if (list && s->indent >= list->level) {
-    lexer->mark_end(lexer);
-    lexer->result_symbol = LIST_ITEM_CONTINUATION;
-    return true;
+
+  if (s->indent < list->level) {
+    return false;
   }
-  return false;
+
+  lexer->mark_end(lexer);
+  lexer->result_symbol = LIST_ITEM_CONTINUATION;
+  return true;
+}
+
+static bool parse_footnote_continuation(Scanner *s, TSLexer *lexer) {
+  Block *footnote = peek_block(s);
+  if (!footnote || footnote->type != FOOTNOTE) {
+    return false;
+  }
+
+  if (s->indent < footnote->level) {
+    return false;
+  }
+
+  lexer->mark_end(lexer);
+  lexer->result_symbol = FOOTNOTE_CONTINUATION;
+  return true;
 }
 
 // Close a block inside a list.
@@ -520,6 +555,11 @@ static bool parse_code_block(Scanner *s, TSLexer *lexer, uint8_t ticks) {
 
 static bool parse_backtick(Scanner *s, TSLexer *lexer,
                            const bool *valid_symbols) {
+
+  if (!valid_symbols[CODE_BLOCK_BEGIN] && !valid_symbols[CODE_BLOCK_END] &&
+      !valid_symbols[BLOCK_CLOSE]) {
+    return false;
+  }
   uint8_t ticks = consume_chars(s, lexer, '`');
   if (ticks == 0) {
     return false;
@@ -987,6 +1027,8 @@ static uint8_t consume_line_with_char_or_whitespace(Scanner *s, TSLexer *lexer,
     } else if (lexer->lookahead == '\r') {
       advance_djot(s, lexer);
     } else if (lexer->lookahead == '\n') {
+      // Blocks should consume the ending newline.
+      advance_djot(s, lexer);
       return seen;
     } else {
       return 0;
@@ -1393,6 +1435,182 @@ static bool parse_footnote_end(Scanner *s, TSLexer *lexer,
   return true;
 }
 
+static bool scan_verbatim_to_end_no_newline(Scanner *s, TSLexer *lexer,
+                                            uint8_t tick_count) {
+  while (!lexer->eof(lexer)) {
+    switch (lexer->lookahead) {
+    case '\\':
+      advance_djot(s, lexer);
+      advance_djot(s, lexer);
+      break;
+    case '`':
+      if (consume_chars(s, lexer, '`') == tick_count) {
+        return true;
+      }
+      break;
+    case '\n':
+      return false;
+    default:
+      advance_djot(s, lexer);
+    }
+  }
+  return false;
+}
+
+// Scan from a `|` to the next `|`, respecting verbatim and escapes.
+// May not contain any newline.
+static bool scan_table_cell(Scanner *s, TSLexer *lexer, bool *separator) {
+  consume_whitespace(s, lexer);
+
+  *separator = true;
+
+  bool first_char = true;
+  while (!lexer->eof(lexer)) {
+    switch (lexer->lookahead) {
+    case '\\':
+      *separator = false;
+      advance_djot(s, lexer);
+      advance_djot(s, lexer);
+      break;
+    case '\n':
+      return false;
+    case '`':
+      *separator = false;
+      // We must have ending ticks for this to be a valid table cell.
+      if (!scan_verbatim_to_end_no_newline(s, lexer,
+                                           consume_chars(s, lexer, '`'))) {
+        return false;
+      }
+      break;
+
+    case '|':
+      return true;
+    case ':':
+      advance_djot(s, lexer);
+
+      consume_whitespace(s, lexer);
+      // A `:` can begin or end a separator cell.
+      if (lexer->lookahead == '|') {
+        return true;
+      } else if (!first_char) {
+        *separator = false;
+      }
+      break;
+    case '-':
+      advance_djot(s, lexer);
+      break;
+    default:
+      *separator = false;
+      advance_djot(s, lexer);
+      break;
+    }
+
+    first_char = false;
+  }
+  return false;
+}
+
+static bool scan_separator_row(Scanner *s, TSLexer *lexer) {
+  uint8_t cell_count = 0;
+  bool curr_separator;
+  while (scan_table_cell(s, lexer, &curr_separator)) {
+    if (!curr_separator) {
+      return false;
+    }
+    ++cell_count;
+    if (lexer->lookahead == '|') {
+      advance_djot(s, lexer);
+    }
+  }
+
+  if (cell_count == 0) {
+    return false;
+  }
+
+  // Nothing but whitespace and then a newline may follow a table row.
+  consume_whitespace(s, lexer);
+  return lexer->lookahead == '\n';
+}
+
+static bool scan_table_row(Scanner *s, TSLexer *lexer, TokenType *row_type) {
+
+  uint8_t cell_count = 0;
+  bool all_separators = true;
+  bool curr_separator;
+  while (scan_table_cell(s, lexer, &curr_separator)) {
+    if (!curr_separator) {
+      all_separators = false;
+    }
+    ++cell_count;
+    if (lexer->lookahead == '|') {
+      advance_djot(s, lexer);
+    }
+  }
+
+  if (cell_count == 0) {
+    return false;
+  }
+
+  // Nothing but whitespace and then a newline may follow a table row.
+  consume_whitespace(s, lexer);
+  if (lexer->lookahead != '\n') {
+    return false;
+  }
+
+  // Consume newline.
+  advance_djot(s, lexer);
+  if (all_separators) {
+    *row_type = TABLE_SEPARATOR_BEGIN;
+  } else {
+    // We need to check the next row and if that is full of separators then
+    // this is a header, otherwise it's a regular row.
+    // We also need to check for any block quote markers on that row.
+    bool newline = false;
+    scan_block_quote_markers(s, lexer, &newline);
+
+    if (!newline && scan_separator_row(s, lexer)) {
+      *row_type = TABLE_HEADER_BEGIN;
+    } else {
+      *row_type = TABLE_ROW_BEGIN;
+    }
+  }
+  return true;
+}
+
+static bool parse_table_begin(Scanner *s, TSLexer *lexer,
+                              const bool *valid_symbols) {
+  if (lexer->lookahead != '|') {
+    return false;
+  }
+  if (!valid_symbols[TABLE_ROW_BEGIN] &&
+      !valid_symbols[TABLE_SEPARATOR_BEGIN] &&
+      !valid_symbols[TABLE_HEADER_BEGIN]) {
+    return false;
+  }
+
+  // The tokens should consume the pipe.
+  advance_djot(s, lexer);
+  lexer->mark_end(lexer);
+
+  TokenType row_type;
+  if (!scan_table_row(s, lexer, &row_type)) {
+    return false;
+  }
+
+  lexer->result_symbol = row_type;
+  return true;
+}
+
+static bool parse_table_cell(Scanner *s, TSLexer *lexer) {
+  bool separator;
+  if (!scan_table_cell(s, lexer, &separator)) {
+    return false;
+  }
+  lexer->mark_end(lexer);
+  lexer->result_symbol = TABLE_CELL;
+  return true;
+}
+
 static bool parse_table_caption_begin(Scanner *s, TSLexer *lexer) {
   if (lexer->lookahead != '^') {
     return false;
@@ -1424,6 +1642,155 @@ static bool parse_table_caption_end(Scanner *s, TSLexer *lexer) {
   remove_block(s);
   lexer->result_symbol = TABLE_CAPTION_END;
   return true;
+}
+
+static bool scan_identifier(Scanner *s, TSLexer *lexer) {
+  bool any_scanned = false;
+  while (!lexer->eof(lexer)) {
+    if (isalnum(lexer->lookahead) || lexer->lookahead == '-' ||
+        lexer->lookahead == '_') {
+      any_scanned = true;
+      advance_djot(s, lexer);
+    } else {
+      return any_scanned;
+    }
+  }
+  return any_scanned;
+}
+
+static bool scan_until_unescaped(Scanner *s, TSLexer *lexer, char c) {
+  while (!lexer->eof(lexer)) {
+    if (lexer->lookahead == c) {
+      return true;
+    } else if (lexer->lookahead == '\\') {
+      advance_djot(s, lexer);
+    }
+    advance_djot(s, lexer);
+  }
+  return false;
+}
+
+// Scan until the end of a comment, either consuming the next `%`
+// or before the ending `}`.
+static bool scan_comment(Scanner *s, TSLexer *lexer, uint8_t indent) {
+  if (lexer->lookahead != '%') {
+    return false;
+  }
+  advance_djot(s, lexer);
+
+  while (!lexer->eof(lexer)) {
+    switch (lexer->lookahead) {
+    case '%':
+      advance_djot(s, lexer);
+      return true;
+    case '}':
+      return true;
+    case '\\':
+      advance_djot(s, lexer);
+      break;
+    case '\n':
+      advance_djot(s, lexer);
+      // Need to match indent!
+      if (indent != consume_whitespace(s, lexer)) {
+        return false;
+      }
+      // Can only have one newline in a row for a valid attribute.
+      if (lexer->lookahead == '\n') {
+        return false;
+      }
+      break;
+    }
+    advance_djot(s, lexer);
+  }
+  return false;
+}
+
+static bool scan_value(Scanner *s, TSLexer *lexer) {
+  if (lexer->lookahead == '"') {
+    // First "
+    advance_djot(s, lexer);
+    if (!scan_until_unescaped(s, lexer, '"')) {
+      return false;
+    }
+    // Last "
+    advance_djot(s, lexer);
+    return true;
+  } else {
+    return scan_identifier(s, lexer);
+  }
+}
+
+static bool parse_attribute_begin(Scanner *s, TSLexer *lexer,
+                                  const bool *valid_symbols) {
+  if (!valid_symbols[BLOCK_ATTRIBUTE_BEGIN]) {
+    return false;
+  }
+  if (lexer->lookahead != '{') {
+    return false;
+  }
+  // Only consume the `{`, if successful.
+  advance_djot(s, lexer);
+  lexer->mark_end(lexer);
+
+  // Match indent to one past the `{`
+  uint8_t indent = s->indent + 1;
+
+  while (!lexer->eof(lexer)) {
+    consume_whitespace(s, lexer);
+
+    switch (lexer->lookahead) {
+    case '\\':
+      advance_djot(s, lexer);
+      advance_djot(s, lexer);
+      break;
+    case '}':
+      lexer->result_symbol = BLOCK_ATTRIBUTE_BEGIN;
+      return true;
+    case '.':
+      advance_djot(s, lexer);
+      if (!scan_identifier(s, lexer)) {
+        return false;
+      }
+      break;
+    case '#':
+      advance_djot(s, lexer);
+      if (!scan_identifier(s, lexer)) {
+        return false;
+      }
+      break;
+    case '%':
+      if (!scan_comment(s, lexer, indent)) {
+        return false;
+      }
+      break;
+    case '\n':
+      advance_djot(s, lexer);
+      // Need to match indent!
+      if (indent != consume_whitespace(s, lexer)) {
+        return false;
+      }
+      // Can only have one newline in a row for a valid attribute.
+      if (lexer->lookahead == '\n') {
+        return false;
+      }
+      break;
+    default:
+      // First scan a key
+      if (!scan_identifier(s, lexer)) {
+        return false;
+      }
+      // Must have equals
+      if (lexer->lookahead != '=') {
+        return false;
+      }
+      advance_djot(s, lexer);
+      // Then scan the value
+      if (!scan_value(s, lexer)) {
+        return false;
+      }
+    }
+  }
+  return false;
 }
 
 static bool end_paragraph_in_block_quote(Scanner *s, TSLexer *lexer) {
@@ -1564,8 +1931,22 @@ static bool parse_newline(Scanner *s, TSLexer *lexer,
     return true;
   }
 
-  // Something should already have matched, but lets not rely on that shall
-  // we?
+  // Something should already have matched, but lets not rely on that shall we?
+  return false;
+}
+
+static bool parse_comment_end(Scanner *s, TSLexer *lexer,
+                              const bool *valid_symbols) {
+  if (valid_symbols[COMMENT_END_MARKER] && lexer->lookahead == '%') {
+    advance_djot(s, lexer);
+    lexer->mark_end(lexer);
+    lexer->result_symbol = COMMENT_END_MARKER;
+    return true;
+  }
+  if (valid_symbols[COMMENT_CLOSE] && lexer->lookahead == '}') {
+    lexer->result_symbol = COMMENT_CLOSE;
+    return true;
+  }
   return false;
 }
 
@@ -1628,8 +2009,17 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
     return true;
   }
 
+  if (valid_symbols[INDENTED_CONTENT_SPACER] &&
+      parse_indented_content_spacer(s, lexer, is_newline)) {
+    return true;
+  }
+
   if (valid_symbols[LIST_ITEM_CONTINUATION] &&
-      parse_list_item_continuation(s, lexer, is_newline)) {
+      parse_list_item_continuation(s, lexer)) {
+    return true;
+  }
+  if (valid_symbols[FOOTNOTE_CONTINUATION] &&
+      parse_footnote_continuation(s, lexer)) {
     return true;
   }
 
@@ -1658,6 +2048,9 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
     return true;
   }
   if (parse_heading(s, lexer, valid_symbols)) {
+    return true;
+  }
+  if (parse_comment_end(s, lexer, valid_symbols)) {
     return true;
   }
 
@@ -1692,6 +2085,16 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
       return true;
     }
     break;
+  case '|':
+    if (parse_table_begin(s, lexer, valid_symbols)) {
+      return true;
+    }
+    break;
+  case '{':
+    if (parse_attribute_begin(s, lexer, valid_symbols)) {
+      return true;
+    }
+    break;
   default:
     break;
   }
@@ -1710,6 +2113,9 @@ bool tree_sitter_djot_external_scanner_scan(void *payload, TSLexer *lexer,
   }
   if (valid_symbols[TABLE_CAPTION_BEGIN] &&
       parse_table_caption_begin(s, lexer)) {
+    return true;
+  }
+  if (valid_symbols[TABLE_CELL] && parse_table_cell(s, lexer)) {
     return true;
   }
 
@@ -1865,6 +2271,8 @@ static char *token_type_s(TokenType t) {
     return "LIST_ITEM_CONTINUATION";
   case LIST_ITEM_END:
     return "LIST_ITEM_END";
+  case INDENTED_CONTENT_SPACER:
+    return "INDENTED_CONTENT_SPACER";
   case CLOSE_PARAGRAPH:
     return "CLOSE_PARAGRAPH";
   case BLOCK_QUOTE_BEGIN:
@@ -1875,21 +2283,33 @@ static char *token_type_s(TokenType t) {
     return "THEMATIC_BREAK_DASH";
   case THEMATIC_BREAK_STAR:
     return "THEMATIC_BREAK_STAR";
-  case FOOTNOTE_BEGIN:
-    return "FOOTNOTE_BEGIN";
+  case FOOTNOTE_MARK_BEGIN:
+    return "FOOTNOTE_MARK_BEGIN";
+  case FOOTNOTE_CONTINUATION:
+    return "FOOTNOTE_CONTINUATION";
   case FOOTNOTE_END:
     return "FOOTNOTE_END";
+  case TABLE_HEADER_BEGIN:
+    return "TABLE_HEADER_BEGIN";
+  case TABLE_SEPARATOR_BEGIN:
+    return "TABLE_SEPARATOR_BEGIN";
+  case TABLE_ROW_BEGIN:
+    return "TABLE_ROW_BEGIN";
+  case TABLE_CELL:
+    return "TABLE_CELL";
   case TABLE_CAPTION_BEGIN:
     return "TABLE_CAPTION_BEGIN";
   case TABLE_CAPTION_END:
     return "TABLE_CAPTION_END";
+  case BLOCK_ATTRIBUTE_BEGIN:
+    return "BLOCK_ATTRIBUTE_BEGIN";
 
+  case IN_FALLBACK:
+    return "IN_FALLBACK";
   case ERROR:
     return "ERROR";
   case IGNORED:
     return "IGNORED";
-  default:
-    return "NOT IMPLEMENTED";
   }
 }
 
@@ -1949,8 +2369,6 @@ static char *block_type_s(BlockType t) {
     return "LIST_LOWER_ROMAN_PARENS";
   case LIST_UPPER_ROMAN_PARENS:
     return "LIST_UPPER_ROMAN_PARENS";
-  default:
-    return "NOT IMPLEMENTED";
   }
 }
 
@@ -1982,46 +2400,46 @@ static void dump(Scanner *s, TSLexer *lexer) {
 }
 
 static void dump_valid_symbols(const bool *valid_symbols) {
-  // printf("# valid_symbols:\n");
-  // for (int i = 0; i <= ERROR; ++i) {
-  //   if (valid_symbols[i]) {
-  //     printf("%s\n", token_type_s(i));
-  //   }
-  // }
   if (valid_symbols[ERROR]) {
     printf("# In error recovery ALL SYMBOLS ARE VALID\n");
     return;
   }
-  printf("# valid_symbols (shortened):\n");
+  printf("# valid_symbols:\n");
   for (int i = 0; i <= ERROR; ++i) {
-    switch (i) {
-    case BLOCK_CLOSE:
-    // case BLOCK_QUOTE_BEGIN:
-    case BLOCK_QUOTE_CONTINUATION:
-    case CLOSE_PARAGRAPH:
-    // case FOOTNOTE_BEGIN:
-    // case FOOTNOTE_END:
-    case NEWLINE:
-    case NEWLINE_INLINE:
-    // case LIST_MARKER_TASK_BEGIN:
-    case LIST_MARKER_DASH:
-    // case LIST_MARKER_STAR:
-    // case LIST_MARKER_PLUS:
-    case LIST_ITEM_CONTINUATION:
-    case LIST_ITEM_END:
-    case EOF_OR_NEWLINE:
-    case DIV_BEGIN:
-    case DIV_END:
-      // case TABLE_CAPTION_BEGIN:
-      // case TABLE_CAPTION_END:
-      if (valid_symbols[i]) {
-        printf("%s\n", token_type_s(i));
-      }
-      break;
-    default:
-      continue;
+    if (valid_symbols[i]) {
+      printf("%s\n", token_type_s(i));
     }
   }
+  // printf("# valid_symbols (shortened):\n");
+  // for (int i = 0; i <= ERROR; ++i) {
+  //   switch (i) {
+  //   case BLOCK_CLOSE:
+  //   // case BLOCK_QUOTE_BEGIN:
+  //   case BLOCK_QUOTE_CONTINUATION:
+  //   case CLOSE_PARAGRAPH:
+  //   // case FOOTNOTE_BEGIN:
+  //   // case FOOTNOTE_END:
+  //   case NEWLINE:
+  //   case NEWLINE_INLINE:
+  //   // case LIST_MARKER_TASK_BEGIN:
+  //   case LIST_MARKER_DASH:
+  //   // case LIST_MARKER_STAR:
+  //   // case LIST_MARKER_PLUS:
+  //   case LIST_ITEM_CONTINUATION:
+  //   case LIST_ITEM_END:
+  //   case EOF_OR_NEWLINE:
+  //   case DIV_BEGIN:
+  //   case DIV_END:
+  //     // case TABLE_CAPTION_BEGIN:
+  //     // case TABLE_CAPTION_END:
+  //     if (valid_symbols[i]) {
+  //       printf("%s\n", token_type_s(i));
+  //     }
+  //     break;
+  //   default:
+  //     continue;
+  //   }
+  // }
   printf("#\n");
 }
 

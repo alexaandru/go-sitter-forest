@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "fca1e294f6dce8ec5659233a6a21f5bd0ed5b4f2",
-  "grammarSha": "b6126a8b2bdf34eb861fc00a2653ec5a4d20b4b4ee77a16bbef698c3b97dd1bc",
+  "revision": "bc5b3a10d6d27e8220a113a9a7fe9bec0a1574b0",
+  "grammarSha": "29e55be4e07adc58e3ef8910fbdc3ad1496f0a806fd4d3ad1d4e9f6736c33288",
   "language": "hack",
   "url": "https://github.com/slackhq/tree-sitter-hack",
   "maintainedBy": "@aosq",

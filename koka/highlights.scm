@@ -1,118 +1,46 @@
-; Follows helix precedence; order may need to be reversed for other editors.
-
-; Function calls
-
-(appexpr
-  function: (appexpr
-    (atom
-      (qidentifier
-        [
-          (qvarid) @function
-          (qidop) @function
-          (identifier
-            [(varid) (idop)] @function)
-        ])))
-  ["(" (block) (fnexpr)])
-
-(appexpr
-  field: (atom
-    (qidentifier
-      [
-        (qvarid) @function
-        (qidop) @function
-        (identifier
-          [(varid) (idop)] @function)
-      ])))
-
-(appexpr
-  (appexpr
-    field: (atom
-      (qidentifier
-        [
-          (qvarid) @variable
-          (qidop) @variable
-          (identifier
-            [(varid) (idop)] @variable)
-        ])))
-  "[")
+; Comment
 
 [
-  "initially"
-  "finally"
-] @function.special
+  (linecomment)
+  (blockcomment)
+] @comment
 
-; Function definitions
-
-(puredecl
-  (funid
-    (identifier
-      [(varid) (idop)] @function)))
-
-(fundecl
-  (funid
-    (identifier
-      [(varid) (idop)] @function)))
-
-(operation
-  (identifier
-    [(varid) (idop)] @function))
-
-; Identifiers
-
-(puredecl
-  (binder
-    (identifier
-      [(varid) (idop)] @constant)))
-
-; TODO: Highlight vars differently once helix has an appropriate highlight query
-; for that purpose.
-
-(pparameter
-  (pattern
-    (identifier
-      (varid) @variable.parameter)))
-
-(paramid
-  (identifier
-    (varid) @variable.parameter))
-
-(typedecl
-  "effect"
-  (varid) @type)
-
-(typeid
-  (varid) @type)
-
-(tbinder
-  (varid) @type)
-
-(typecon
-  (varid) @type)
-
-(qvarid
-  (qid) @namespace)
-
-(modulepath (varid) @namespace)
-
-(qconid) @namespace
-
-(qidop) @namespace
-
-(varid) @variable
-
-(conid) @constructor
-
-; Operators
+; Literals
 
 [
-  "!"
-  "~"
-  "="
-  ":="
-  (idop)
-  (op)
-  (qidop)
-] @operator
+  (string)
+  (char)
+] @string
+
+(escape) @constant.character.escape
+
+(float) @constant.numeric.float
+(int) @constant.numeric.integer
+
+; Delimiters
+
+(matchrule "|" @punctuation.delimiter)
+
+[
+  ","
+  "->"
+  "."
+  ":"
+  "::"
+  "<-"
+  ";"
+] @punctuation.delimiter
+
+[
+  "<"
+  ">"
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+] @punctuation.bracket
 
 ; Keywords
 
@@ -195,46 +123,113 @@
 
 "return" @keyword.control.return
 
-; Delimiters
-
-(matchrule "|" @punctuation.delimiter)
+; Operators
 
 [
-  ","
-  "->"
-  "."
-  ":"
-  "::"
-  "<-"
-  ";"
-] @punctuation.delimiter
+  "!"
+  "~"
+  "="
+  ":="
+  (idop)
+  (op)
+  (qidop)
+] @operator
+
+; Identifiers
+
+(conid) @constructor
+
+(varid) @variable
+
+(qidop) @namespace
+
+(qconid) @namespace
+
+(modulepath (varid) @namespace)
+
+(qvarid
+  (qid) @namespace)
+
+(typecon
+  (varid) @type)
+
+(tbinder
+  (varid) @type)
+
+(typeid
+  (varid) @type)
+
+(typedecl
+  "effect"
+  (varid) @type)
+
+(paramid
+  (identifier
+    (varid) @variable.parameter))
+
+(pparameter
+  (pattern
+    (identifier
+      (varid) @variable.parameter)))
+
+(puredecl
+  (binder
+    (identifier
+      [(varid) (idop)] @constant)))
+
+; Function definitions
+
+(operation
+  (identifier
+    [(varid) (idop)] @function))
+
+(fundecl
+  (funid
+    (identifier
+      [(varid) (idop)] @function)))
+
+(puredecl
+  (funid
+    (identifier
+      [(varid) (idop)] @function)))
+
+; Function calls
 
 [
-  "<"
-  ">"
-  "("
-  ")"
-  "["
-  "]"
-  "{"
-  "}"
-] @punctuation.bracket
+  "initially"
+  "finally"
+] @function.special
 
-; Literals
+(appexpr
+  (appexpr
+    field: (atom
+      (qidentifier
+        [
+          (qvarid) @variable
+          (qidop) @variable
+          (identifier
+            [(varid) (idop)] @variable)
+        ])))
+  "[")
 
-[
-  (string)
-  (char)
-] @string
+(appexpr
+  field: (atom
+    (qidentifier
+      [
+        (qvarid) @function
+        (qidop) @function
+        (identifier
+          [(varid) (idop)] @function)
+      ])))
 
-(escape) @constant.character.escape
-
-(float) @constant.numeric.float
-(int) @constant.numeric.integer
-
-; Comment
-
-[
-  (linecomment)
-  (blockcomment)
-] @comment
+(appexpr
+  function: (appexpr
+    (atom
+      (qidentifier
+        [
+          (qvarid) @function
+          (qidop) @function
+          (identifier
+            [(varid) (idop)] @function)
+        ])))
+  ["(" (block) (fnexpr)])

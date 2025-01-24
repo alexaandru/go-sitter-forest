@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "49c31006d8307dcb12bc5770f35b6d5b9e2be68e",
+  "revision": "03f4927065b3c0d71a962be87130aa7e79b35448",
   "grammarSha": "d8680217c8a6d5b1a5face6bd8e27e30b3f0f9f35296d13d121469862bdff155",
   "language": "bash",
   "url": "https://github.com/tree-sitter/tree-sitter-bash",

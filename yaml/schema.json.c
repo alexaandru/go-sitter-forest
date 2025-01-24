@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdint.h>
 
 #define SCH_STT_FRZ -1
 
