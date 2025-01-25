@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "615083bd751d900ec637a3ff68c80e1c829e6da9",
+  "revision": "7cb21a65af6cc8e5c6742b9dba42881ea1158475",
   "grammarSha": "8a9ef54b83dd5e36b4d4202c50c5bbce16fd0003871a309d7b75bd453424bc41",
   "language": "go",
   "url": "https://github.com/tree-sitter/tree-sitter-go",

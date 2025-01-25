@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "7780d05ba0b2d78882cbbda03fcadba41d1ee17f",
+  "revision": "5021edde6d0ea75aedc313e75cca2ac5aa064d41",
   "grammarSha": "17ed8fb4da2a226a52f341fb5f4c94e82494152d9cbc80f47d7792398bde86c1",
   "language": "php",
   "url": "https://github.com/tree-sitter/tree-sitter-php",

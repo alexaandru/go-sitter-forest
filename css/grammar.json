@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "44c226527406dbb138e433b17d684674b7739091",
+  "revision": "6731f030693d3698ad94865ed0228fe45df07e30",
   "grammarSha": "d07c18ee44d2d32dd1004a5b6f9e826f8718caa9ddd9a1c16da97f3f90e13e40",
   "language": "css",
   "url": "https://github.com/tree-sitter/tree-sitter-css",

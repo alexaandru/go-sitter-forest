@@ -45,6 +45,9 @@
 	"import"
 	"return"
 	"let"
+	"if"
+	"elif"
+	"else"
 ] @keyword
 
 ; Builtins.

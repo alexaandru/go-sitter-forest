@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "b33faa4de1bee66fce29854c3d50d7acdff4e7bf",
+  "revision": "677da92875756e31b3a42505d822cc8be7c5ab5e",
   "grammarSha": "b89ada7566bda16a8d7a710755c27824d6097e44b8d3b1dafbb749f3c34d13e0",
   "language": "java",
   "url": "https://github.com/tree-sitter/tree-sitter-java",

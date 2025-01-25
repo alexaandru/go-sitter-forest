@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "beeac50812da9765e29cbb2af1324783033cdca3",
+  "revision": "73f39a6d5401cfdcd143951e499336cf5ab2ffaa",
   "grammarSha": "7aac91f8a611e05f48e647fa19a2be54ce84796b5debc022331ab15fb69d62d7",
   "language": "prisma",
   "url": "https://github.com/victorhqc/tree-sitter-prisma",
