@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.1
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.14
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.15
 	github.com/alexaandru/go-sitter-forest/css v1.9.3
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
@@ -111,7 +111,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/effekt v1.9.0
 	github.com/alexaandru/go-sitter-forest/eiffel v1.9.3
 	github.com/alexaandru/go-sitter-forest/elisp v1.9.0
-	github.com/alexaandru/go-sitter-forest/elixir v1.9.3
+	github.com/alexaandru/go-sitter-forest/elixir v1.9.4
 	github.com/alexaandru/go-sitter-forest/elm v1.9.1
 	github.com/alexaandru/go-sitter-forest/elsa v1.9.0
 	github.com/alexaandru/go-sitter-forest/elvish v1.9.0
@@ -132,7 +132,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fin v1.9.0
 	github.com/alexaandru/go-sitter-forest/firrtl v1.9.0
 	github.com/alexaandru/go-sitter-forest/fish v1.9.1
-	github.com/alexaandru/go-sitter-forest/flamingo v1.9.2
+	github.com/alexaandru/go-sitter-forest/flamingo v1.9.3
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.1
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
@@ -340,7 +340,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/poweron v1.9.0
 	github.com/alexaandru/go-sitter-forest/powershell v1.9.3
 	github.com/alexaandru/go-sitter-forest/printf v1.9.0
-	github.com/alexaandru/go-sitter-forest/prisma v1.9.1
+	github.com/alexaandru/go-sitter-forest/prisma v1.9.2
 	github.com/alexaandru/go-sitter-forest/problog v1.9.0
 	github.com/alexaandru/go-sitter-forest/prolog v1.9.0
 	github.com/alexaandru/go-sitter-forest/promql v1.9.0
@@ -389,7 +389,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.5
-	github.com/alexaandru/go-sitter-forest/scfg v1.9.0
+	github.com/alexaandru/go-sitter-forest/scfg v1.9.1
 	github.com/alexaandru/go-sitter-forest/scheme v1.9.0
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
 	github.com/alexaandru/go-sitter-forest/sdml v1.9.2
