@@ -790,7 +790,7 @@
   },
   {
     "reference": "master",
-    "revision": "635e8aa3747823a0c4e9660c07cef76fe8d3ef93",
+    "revision": "757e0a61f9d38b3d9eaa299e8d866e8283ffc284",
     "grammarSha": "666c4a663fe8cf7df518953052d1ffe1139d3bc46cd18ad71460af1a586622af",
     "language": "cuda",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
@@ -1399,7 +1399,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2094,7 +2094,7 @@
   },
   {
     "reference": "master",
-    "revision": "81f17db9a8ab0a97ff20986ef9065eb628db7408",
+    "revision": "ca4785b47a4ff15653f0408a49c764dec533e0d3",
     "grammarSha": "1b2e997b7f8459cb2165c8392a7fad3e3e7b00ef5139898065008ab9a69a7b05",
     "language": "janet",
     "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
@@ -2702,7 +2702,7 @@
   },
   {
     "reference": "main",
-    "revision": "ba743834d5c33ea50078901b90853f17a75c70bd",
+    "revision": "327f41f013ce07fdd55b734ff5edbf4d789deb4f",
     "grammarSha": "34b2ae7791639ed07827ee399d5613916b492b980c0c419decd32abc7cb22f20",
     "language": "mips",
     "url": "https://github.com/omeyenburg/tree-sitter-mips",
@@ -2850,7 +2850,7 @@
   },
   {
     "reference": "main",
-    "revision": "281d184b8240b2b22670b8907b57b6d6842db6f3",
+    "revision": "989da760be05a3334af3ec88705cbf57e6a9c41d",
     "grammarSha": "e7fa39a2755a6047ce0714342cd6b4e3aeadb1c8c72922a4b4930c8ac39fed0f",
     "language": "nginx",
     "url": "https://github.com/opa-oz/tree-sitter-nginx",

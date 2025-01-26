@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "281d184b8240b2b22670b8907b57b6d6842db6f3",
+  "revision": "989da760be05a3334af3ec88705cbf57e6a9c41d",
   "grammarSha": "e7fa39a2755a6047ce0714342cd6b4e3aeadb1c8c72922a4b4930c8ac39fed0f",
   "language": "nginx",
   "url": "https://github.com/opa-oz/tree-sitter-nginx",
