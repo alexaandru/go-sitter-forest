@@ -80,7 +80,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/crystal v1.9.15
 	github.com/alexaandru/go-sitter-forest/css v1.9.3
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
-	github.com/alexaandru/go-sitter-forest/cuda v1.9.0
+	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
 	github.com/alexaandru/go-sitter-forest/cue v1.9.0
 	github.com/alexaandru/go-sitter-forest/cylc v1.9.1
 	github.com/alexaandru/go-sitter-forest/d v1.9.0
@@ -298,7 +298,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/nelua v1.9.6
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
-	github.com/alexaandru/go-sitter-forest/nginx v1.9.0
+	github.com/alexaandru/go-sitter-forest/nginx v1.9.1
 	github.com/alexaandru/go-sitter-forest/nickel v1.9.1
 	github.com/alexaandru/go-sitter-forest/nim v1.9.0
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.9.0
@@ -477,7 +477,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/v v1.9.2
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.1
-	github.com/alexaandru/go-sitter-forest/verilog v1.9.4
+	github.com/alexaandru/go-sitter-forest/verilog v1.9.5
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.3
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.1
 	github.com/alexaandru/go-sitter-forest/vim v1.9.1
