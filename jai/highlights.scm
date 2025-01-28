@@ -28,6 +28,7 @@
   "defer"
   "cast"
   "xx"
+  "push_context"
 ] @keyword
 
 [

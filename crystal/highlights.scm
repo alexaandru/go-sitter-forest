@@ -119,9 +119,15 @@
   "]"
   "{"
   "}"
+] @punctuation.bracket
+
+([
   "{{"
   "}}"
 ] @punctuation.bracket
+  ; Set priority so "a{{b}}" is highlighted as brackets, not string content
+  ;                   ^^
+  (#set! priority 105))
 
 (index_call
   method: (operator) @punctuation.bracket
