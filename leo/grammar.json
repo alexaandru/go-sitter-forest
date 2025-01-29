@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "44a061bac4d9443d75f2700c62a71cd4dcf16f05",
-  "grammarSha": "cfbf222e1f94022b6749d3a2555748df0af3b9a05edb6ac64e16844e36d16586",
+  "revision": "6bc5564917edacd070afc4d33cf5e2e677831ea9",
+  "grammarSha": "045d18b81cd73865db25303202adc8c8b92d82117573aec6800590ef19cf6abb",
   "language": "leo",
   "url": "https://github.com/r001/tree-sitter-leo",
   "maintainedBy": "@r001"

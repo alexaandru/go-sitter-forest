@@ -465,7 +465,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "0d0e202ce83ab265a020326e43389ca985e65ad2",
+    "revision": "3bd7252f29da1ff07f7387569fb90fbecad289f5",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -736,8 +736,8 @@
   },
   {
     "reference": "master",
-    "revision": "a352ed85f733f9c6cc458fe5a82bcd4c00f70eab",
-    "grammarSha": "d02422914b390597e589dcd61f21b340e3a6b407a0b278119b7d90f57595e58b",
+    "revision": "950b4fc9b3a7a59d351853acddde65a422481bc5",
+    "grammarSha": "40aab9beed1cf118201786455101c66327ce02433333717d49d8c81f2dacf027",
     "language": "cpp",
     "url": "https://github.com/tree-sitter/tree-sitter-cpp",
     "maintainedBy": "@theHamsta",
@@ -758,8 +758,8 @@
   },
   {
     "reference": "main",
-    "revision": "50195a54104e4021b0a965b877b1974f5305742f",
-    "grammarSha": "b872f45df48ec2be0566362839ff32c799188d8ded304ae6106f48a148ffebcb",
+    "revision": "77150c1e7462693285006ba32856bfc5c6043537",
+    "grammarSha": "0daf595699389792846209a7b6396fa9a17f1ea44621b89a7377840ef2123b2b",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
     "maintainedBy": "@crystal-lang-tools",
@@ -1399,7 +1399,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1629,7 +1629,7 @@
   },
   {
     "reference": "master",
-    "revision": "941955d027f1d8530501e77ce5e1d6035f5f99c1",
+    "revision": "91c55fdf325a832659e59cdf4a02bfe8a423f14c",
     "grammarSha": "0151ae11682fff4d8383ccadbe761d0aea21a5e14c50da6e9fac8435b90acdc6",
     "language": "godot_resource",
     "altName": "Godot Resources (gdresource)",
@@ -2083,8 +2083,8 @@
   },
   {
     "reference": "master",
-    "revision": "328e979037ad54d2d63cbfe50babf7410464f014",
-    "grammarSha": "83fb756d10895545715c3bb1c299e2b15add3b1ee58d77f1da70de4446b87ab4",
+    "revision": "1eed88832e4eb5f07a8839bda1a169cb1d199e06",
+    "grammarSha": "88c3730f26ff107462b252f912bcad7772200210ec8ed384fa74593d02f13349",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",
@@ -2436,8 +2436,8 @@
   },
   {
     "reference": "main",
-    "revision": "44a061bac4d9443d75f2700c62a71cd4dcf16f05",
-    "grammarSha": "cfbf222e1f94022b6749d3a2555748df0af3b9a05edb6ac64e16844e36d16586",
+    "revision": "6bc5564917edacd070afc4d33cf5e2e677831ea9",
+    "grammarSha": "045d18b81cd73865db25303202adc8c8b92d82117573aec6800590ef19cf6abb",
     "language": "leo",
     "url": "https://github.com/r001/tree-sitter-leo",
     "maintainedBy": "@r001"
@@ -4757,7 +4757,7 @@
   },
   {
     "reference": "main",
-    "revision": "983fab96ea01f161e99e06f4fd68df8b38e7ce55",
+    "revision": "bc747465d679c430f1a8b6c849e1b9e3afb47a31",
     "grammarSha": "a79e2d0f4789843d712ae81b6ac9b94e730230abe26a981a57a88208e02ac372",
     "language": "wing",
     "url": "https://github.com/winglang/wing",

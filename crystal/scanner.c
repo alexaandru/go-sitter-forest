@@ -71,6 +71,8 @@ enum Token {
 
     UNQUOTED_SYMBOL,
 
+    TYPE_FIELD_COLON,
+
     STRING_LITERAL_START,
     DELIMITED_STRING_CONTENTS,
     STRING_LITERAL_END,
@@ -368,6 +370,7 @@ static bool scan_whitespace(State *state, TSLexer *lexer, const bool *valid_symb
                     lex_advance_crystal(lexer);
                     lexer->mark_end(lexer);
                     crossed_newline = true;
+                    state->has_leading_whitespace = true;
                 } else {
                     lex_skip(state, lexer);
                 }
@@ -394,6 +397,18 @@ static bool scan_whitespace(State *state, TSLexer *lexer, const bool *valid_symb
                         }
                     } else if (lexer->lookahead == '#') {
                         // Comments don't interrupt line continuations
+                    } else if (lexer->lookahead == ':' && valid_symbols[TYPE_FIELD_COLON]) {
+                        // Check for a type field separator that comes after a newline, e.g.
+                        //   ( params )
+                        //   : ReturnType
+                        lex_advance_crystal(lexer);
+                        if (iswspace(lexer->lookahead)) {
+                            lex_advance_crystal(lexer);
+                            lexer->mark_end(lexer);
+                            lexer->result_symbol = TYPE_FIELD_COLON;
+                        } else {
+                            lexer->result_symbol = LINE_BREAK;
+                        }
                     } else {
                         lexer->result_symbol = LINE_BREAK;
                     }
@@ -2571,10 +2586,20 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             break;
 
         case ':':
-            if (valid_symbols[UNQUOTED_SYMBOL]) {
+            if (valid_symbols[UNQUOTED_SYMBOL] || valid_symbols[TYPE_FIELD_COLON]) {
                 lex_advance_crystal(lexer);
 
                 int32_t lookahead = lexer->lookahead;
+
+                if (state->has_leading_whitespace && iswspace(lookahead) && valid_symbols[TYPE_FIELD_COLON]) {
+                    lex_advance_crystal(lexer);
+                    lexer->result_symbol = TYPE_FIELD_COLON;
+                    return true;
+                }
+
+                if (!valid_symbols[UNQUOTED_SYMBOL]) {
+                    return false;
+                }
 
                 if (('A' <= lookahead && lookahead <= 'Z')
                     || ('a' <= lookahead && lookahead <= 'z')
@@ -2861,6 +2886,7 @@ bool tree_sitter_crystal_external_scanner_scan(void *payload, TSLexer *lexer, co
     LOG_SYMBOL(MODIFIER_ENSURE_KEYWORD);
     LOG_SYMBOL(MODULO_OPERATOR);
     LOG_SYMBOL(UNQUOTED_SYMBOL);
+    LOG_SYMBOL(TYPE_FIELD_COLON);
     LOG_SYMBOL(STRING_LITERAL_START);
     LOG_SYMBOL(DELIMITED_STRING_CONTENTS);
     LOG_SYMBOL(STRING_LITERAL_END);
