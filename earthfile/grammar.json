@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "a44f6f6d22ea4fe16fa37ababd90240ab87a9e0d",
-  "grammarSha": "7d4818b5d7e6ae2fec4bffde523a80366007f5a78c1da5cd7d4dcba595458c77",
+  "revision": "6695a2dfea5f8d9076b11f9bebcac8184e405e67",
+  "grammarSha": "2729f160b520da1cfe17d12f5d310f60248aa24d432f37eb177ed02f7d654e9a",
   "language": "earthfile",
   "url": "https://github.com/glehmann/tree-sitter-earthfile",
   "maintainedBy": "@glehmann"

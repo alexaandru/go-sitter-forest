@@ -1866,14 +1866,15 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                         lexer->mark_end(lexer);
                         advance_space_and_newline(lexer);
 
+                        // After a range operator, these symbols should only be valid together
+                        assert(valid_symbols[START_OF_NAMED_TUPLE] && valid_symbols[START_OF_HASH_OR_TUPLE]);
+
                         switch (lookahead_start_of_named_tuple_entry(lexer, false)) {
                             case LOOKAHEAD_NAMED_TUPLE:
-                                assert(valid_symbols[START_OF_NAMED_TUPLE]);
                                 lexer->result_symbol = START_OF_NAMED_TUPLE;
                                 return true;
 
                             default:
-                                assert(valid_symbols[START_OF_HASH_OR_TUPLE]);
                                 lexer->result_symbol = START_OF_HASH_OR_TUPLE;
                                 return true;
                         }
@@ -1931,6 +1932,9 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     // Or as a hash:
                     //   def foo : ->{'a'=>'b'}; ->{ nil } end
 
+                    // When distinguishing between type and expression, these symbols should only be valid together
+                    assert(valid_symbols[START_OF_NAMED_TUPLE] && valid_symbols[START_OF_HASH_OR_TUPLE]);
+
                     switch (lookahead_start_of_type(state, lexer)) {
                         case LOOKAHEAD_TYPE:
                             assert(valid_symbols[START_OF_TUPLE_TYPE]);
@@ -1956,14 +1960,23 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     lexer->mark_end(lexer);
                     advance_space_and_newline(lexer);
 
+                    if (valid_symbols[START_OF_HASH_OR_TUPLE] && !valid_symbols[START_OF_NAMED_TUPLE]) {
+                        // This is possible with "array-like" or "hash-like" syntax:
+                        // Const { a => 1 }
+                        lexer->result_symbol = START_OF_HASH_OR_TUPLE;
+                        return true;
+                    } else if (valid_symbols[START_OF_NAMED_TUPLE] && !valid_symbols[START_OF_HASH_OR_TUPLE]) {
+                        // NOTE(keidax): I'm not sure if this can ever occur?
+                        lexer->result_symbol = START_OF_NAMED_TUPLE;
+                        return true;
+                    }
+
                     switch (lookahead_start_of_named_tuple_entry(lexer, false)) {
                         case LOOKAHEAD_NAMED_TUPLE:
-                            assert(valid_symbols[START_OF_NAMED_TUPLE]);
                             lexer->result_symbol = START_OF_NAMED_TUPLE;
                             return true;
 
                         default:
-                            assert(valid_symbols[START_OF_HASH_OR_TUPLE]);
                             lexer->result_symbol = START_OF_HASH_OR_TUPLE;
                             return true;
                     }

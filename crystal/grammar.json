@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "77150c1e7462693285006ba32856bfc5c6043537",
-  "grammarSha": "0daf595699389792846209a7b6396fa9a17f1ea44621b89a7377840ef2123b2b",
+  "revision": "4b8a787b59715ad874b28dfa018f7296fe4f1b7d",
+  "grammarSha": "516e1db7cee5e9462205bbb53fb4f5d03ad1c167e2f32553977cba56bf3bf7e9",
   "language": "crystal",
   "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
   "maintainedBy": "@crystal-lang-tools",
