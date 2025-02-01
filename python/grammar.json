@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "44c2f7aebce0efac5867cdc5f2ea03c1d43a0305",
+  "revision": "710796b8b877a970297106e5bbc8e2afa47f86ec",
   "grammarSha": "936af466b2b4b9883e59185ab91ee39f33036c42a5125f8bd21c212624bb8c37",
   "language": "python",
   "url": "https://github.com/tree-sitter/tree-sitter-python",

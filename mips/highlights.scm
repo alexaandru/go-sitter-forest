@@ -1,9 +1,9 @@
 ;; Highlight directives
 (meta) @keyword
-(attributes) @tag
+(attribute) @tag
 
 ;; Highlight labels
-(label) @function ;label
+(label) @function
 
 ;; Highlight opcodes
 (opcode) @function.builtin
@@ -34,12 +34,9 @@
 (ERROR) @error
 
 ;; Highlight comments
-[
-  (line_comment)
-  (block_comment)
-] @comment
+(comment) @comment
 
-;; Highlight punctuation
+; Highlight punctuation
 [
   ","
   ";"

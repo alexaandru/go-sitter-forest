@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "0a4623a93fc7ca072903eb68cd2ca26fc5f41d2e",
+  "revision": "1e75b69fc8e7a2d9bfc67c2ea6b024affcb5b97c",
   "grammarSha": "7b2f5f69c1248759ba8a5db7d3aa52d60cdadfedd832dac703c764e554c8529d",
   "language": "cpp",
   "url": "https://github.com/tree-sitter/tree-sitter-cpp",

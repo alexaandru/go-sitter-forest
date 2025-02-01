@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "4b952d99ce6fc795ff3cfa48b05637f2b1751d3b",
+  "revision": "b3a88cf3e597d48c33657deca4fda7a75c0069c1",
   "grammarSha": "a62b81c1d6d2b2b2754ca6ed03fff42331710beba5d5e471859eca90d0542899",
   "language": "nix",
   "url": "https://github.com/nix-community/tree-sitter-nix",

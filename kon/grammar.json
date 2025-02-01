@@ -4,5 +4,7 @@
   "grammarSha": "bb59185eaf9a444bbe99da2c5090e2e2a494267302109a99462f2613a3d53f21",
   "language": "kon",
   "url": "https://github.com/akonwi/tree-sitter-kon",
-  "maintainedBy": "@akonwi"
+  "doc": "repository was removed by owner",
+  "maintainedBy": "@akonwi",
+  "skipUpdate": true
 }

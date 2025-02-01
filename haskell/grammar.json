@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "2c2fcb22e3b939ed59ae8d6f10500c3213c68670",
+  "revision": "0975ef72fc3c47b530309ca93937d7d143523628",
   "grammarSha": "a2d347ed28a9602407961a0e86a8f216752922bb3369542e1ddb67d43bbfaabe",
   "language": "haskell",
   "url": "https://github.com/tree-sitter/tree-sitter-haskell",

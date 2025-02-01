@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "34e60e7f45fc313463c68090d88d742a55d1bd7a",
+  "revision": "68d29aa745b68ae22cbbdb5dcb68c20232521ff6",
   "grammarSha": "60b7a79d7e58c3fe139b5cabfd9383859222798564c6f380abc33031b9c866f5",
   "language": "lua",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-lua",

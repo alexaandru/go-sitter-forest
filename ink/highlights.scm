@@ -11,7 +11,7 @@
 (return "return" @keyword)
 (global ["VAR" "CONST"] @keyword
         "=" @operator)
-(temp "temp" @keyword
+(temp_def "temp" @keyword
       name: (identifier) @variable.member) ; not really, but temp vars are the closest thing to members that ink has
 (include "INCLUDE" @keyword
          (path) @string.special)
