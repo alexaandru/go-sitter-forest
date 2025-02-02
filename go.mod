@@ -276,7 +276,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown v1.9.2
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.9.1
+	github.com/alexaandru/go-sitter-forest/matlab v1.9.2
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.9.0
 	github.com/alexaandru/go-sitter-forest/menhir v1.9.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
@@ -295,7 +295,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mxml v1.9.0
 	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/nelua v1.9.7
+	github.com/alexaandru/go-sitter-forest/nelua v1.9.8
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.1
@@ -321,7 +321,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
-	github.com/alexaandru/go-sitter-forest/perl v1.9.5
+	github.com/alexaandru/go-sitter-forest/perl v1.9.6
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.3
@@ -360,7 +360,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.2
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.3
+	github.com/alexaandru/go-sitter-forest/query v1.9.4
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
 	github.com/alexaandru/go-sitter-forest/r v1.9.3
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
@@ -466,7 +466,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.3
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.3
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/typst v1.9.3
+	github.com/alexaandru/go-sitter-forest/typst v1.9.4
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
