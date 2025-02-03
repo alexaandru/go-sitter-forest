@@ -256,7 +256,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/leo v1.9.3
 	github.com/alexaandru/go-sitter-forest/lexc v1.9.2
 	github.com/alexaandru/go-sitter-forest/lexd v1.9.1
-	github.com/alexaandru/go-sitter-forest/lilypond v1.9.1
+	github.com/alexaandru/go-sitter-forest/lilypond v1.9.2
 	github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.9.1
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/liquid v1.9.0
@@ -282,7 +282,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
 	github.com/alexaandru/go-sitter-forest/mermaid v1.9.0
 	github.com/alexaandru/go-sitter-forest/meson v1.9.0
-	github.com/alexaandru/go-sitter-forest/mips v1.9.1
+	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
 	github.com/alexaandru/go-sitter-forest/moonbit v1.9.9
@@ -360,7 +360,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.2
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.4
+	github.com/alexaandru/go-sitter-forest/query v1.9.5
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
 	github.com/alexaandru/go-sitter-forest/r v1.9.3
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
@@ -398,7 +398,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
 	github.com/alexaandru/go-sitter-forest/slang v1.9.1
-	github.com/alexaandru/go-sitter-forest/slim v1.9.1
+	github.com/alexaandru/go-sitter-forest/slim v1.9.2
 	github.com/alexaandru/go-sitter-forest/slint v1.9.1
 	github.com/alexaandru/go-sitter-forest/smali v1.9.1
 	github.com/alexaandru/go-sitter-forest/smith v1.9.0
