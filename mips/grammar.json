@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "b67045731ade7b62f0fc47e736942970f6cd2d2c",
-  "grammarSha": "73ed6c26fda9632c9707bf1528af9ea6b4b4c41035dde177d8915089ac03812c",
+  "revision": "d724d84617fe77221b6f5ea87c446262e3e8e366",
+  "grammarSha": "797e18bf0d171c66372356c4389231b0da46285e01e2d33d4a215c25a102d75a",
   "language": "mips",
   "url": "https://github.com/omeyenburg/tree-sitter-mips",
   "maintainedBy": "@omeyenburg"
