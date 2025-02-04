@@ -724,6 +724,8 @@ github.com/alexaandru/go-sitter-forest/ralph v1.9.0 h1:vcqKbzIpCL4H4/7lnPXlblFew
 github.com/alexaandru/go-sitter-forest/ralph v1.9.0/go.mod h1:piu5rh04pzzXhLQ84FeBgy2PR1yFNBwmsDxfSsx9wtQ=
 github.com/alexaandru/go-sitter-forest/rasi v1.9.0 h1:3ONwA4HCgDARKyb0IfTvWPy8k1EDJJ7gFBKXd731SJw=
 github.com/alexaandru/go-sitter-forest/rasi v1.9.0/go.mod h1:QARpMlGrUkXo4CxsHUTToRXe22Xj7gzClpC+jtV6s+o=
+github.com/alexaandru/go-sitter-forest/razor v1.9.0 h1:fiOr5axmfEyWTCfefJh/nwEy5bpNIEJ5Qqu9ZOn78Bo=
+github.com/alexaandru/go-sitter-forest/razor v1.9.0/go.mod h1:3vD6U7xhDexaYrYuIut3JdFMVcof1Dem0rvALfhDqoE=
 github.com/alexaandru/go-sitter-forest/rbs v1.9.1 h1:yum6ZGGu8WTFAw892edaRIVa0F1rdzmpPIylRv95ra0=
 github.com/alexaandru/go-sitter-forest/rbs v1.9.1/go.mod h1:uLvPXTez0qmlZISsmwqvEcnRc1ZRlyoTlYDPxts1nJU=
 github.com/alexaandru/go-sitter-forest/rcl v1.9.1 h1:umI4GNLHmG37OWULel8LRpMKccIg3HymdQtuJg+HIKg=
