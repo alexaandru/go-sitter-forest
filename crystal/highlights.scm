@@ -75,7 +75,12 @@
 (symbol) @string.special.symbol
 
 (regex
-  "/" @punctuation.special) @string.regexp
+  "/" @punctuation.bracket)
+
+(regex
+  (literal_content) @string.regexp)
+
+(regex_modifier) @character.special
 
 (heredoc_content) @string
 

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "8a5f273bfa281c66354da562f2307c2d394b6c81",
+  "revision": "770737bcff2c4aa3f624d439e32b07dbb07102d3",
   "grammarSha": "d8f1b7a23e9699b56ec5ef20b221c49e787e78c97e1a2db075ff42158faf6423",
   "language": "cue",
   "url": "https://github.com/eonpatapon/tree-sitter-cue",

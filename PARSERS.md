@@ -1,6 +1,6 @@
 # 508 Supported Parsers
 
-5 pending, 6 skipped regeneration, 40 missing queries
+5 pending, 6 skipped regeneration, 39 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -370,7 +370,7 @@
 - [x] [racket](https://github.com/6cdh/tree-sitter-racket) ✔️ (maintained by @6cdh)
 - [x] [ralph](https://github.com/alephium/tree-sitter-ralph) ✔️ (maintained by @tdroxler)
 - [x] [rasi](https://github.com/Fymyte/tree-sitter-rasi) ✔️ (maintained by @Fymyte)
-- [x] [razor](https://github.com/tris203/tree-sitter-razor) 🗸 (maintained by @tris203)
+- [x] [razor](https://github.com/tris203/tree-sitter-razor) ✔️ (maintained by @tris203)
 - [x] [rbs](https://github.com/joker1007/tree-sitter-rbs) ✔️ (maintained by @joker1007)
 - [x] [rcl](https://github.com/rcl-lang/tree-sitter-rcl) ✔️ (maintained by @ruuda)
 - [x] [re2c](https://github.com/tree-sitter-grammars/tree-sitter-re2c) ✔️ (maintained by @amaanq)

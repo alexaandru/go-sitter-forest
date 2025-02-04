@@ -439,8 +439,11 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
                 switch (active_type) {
                     case STRING:
                     case COMMAND:
-                    case REGEX:
                         return found_content;
+                    case REGEX:
+                        // No special regex escapes
+                        lex_advance_crystal(lexer);
+                        break;
                     case STRING_NO_ESCAPE:
                         break;
                     case STRING_ARRAY:
