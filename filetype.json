@@ -428,6 +428,7 @@
     "racket":             ["rkt", "rktd", "rktl"],
     "ralph":              ["ralph"],
     "rasi":               ["rasi"],
+    "razor":              ["razor"],
     "rbs":                ["rbs"],
     "rcl":                ["rcl"],
     "re2c":               ["re2c"],

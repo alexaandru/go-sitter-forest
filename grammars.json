@@ -3526,6 +3526,17 @@
   },
   {
     "reference": "main",
+    "revision": "a47cd8ca148685629739a4ab69f58864800fbdab",
+    "grammarSha": "3197f20f27aff2444668dc8ed3cfa37f3661faede9bc72f0cdc7aabdddd327d9",
+    "language": "razor",
+    "url": "https://github.com/tris203/tree-sitter-razor",
+    "maintainedBy": "@tris203",
+    "files": [
+      "scanner.c"
+    ]
+  },
+  {
+    "reference": "main",
     "revision": "de893b166476205b09e79cd3689f95831269579a",
     "grammarSha": "e67b4394e453d25eed1a4795aa25c2339581938a7d5d9a97e1f6780143e13b73",
     "language": "rbs",

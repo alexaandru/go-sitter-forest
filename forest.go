@@ -383,6 +383,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/racket"
 	"github.com/alexaandru/go-sitter-forest/ralph"
 	"github.com/alexaandru/go-sitter-forest/rasi"
+	"github.com/alexaandru/go-sitter-forest/razor"
 	"github.com/alexaandru/go-sitter-forest/rbs"
 	"github.com/alexaandru/go-sitter-forest/rcl"
 	"github.com/alexaandru/go-sitter-forest/re2c"
@@ -908,6 +909,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"racket":                 racket.GetLanguage,
 	"ralph":                  ralph.GetLanguage,
 	"rasi":                   rasi.GetLanguage,
+	"razor":                  razor.GetLanguage,
 	"rbs":                    rbs.GetLanguage,
 	"rcl":                    rcl.GetLanguage,
 	"re2c":                   re2c.GetLanguage,
@@ -1419,6 +1421,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"racket":                 racket.GetQuery,
 	"ralph":                  ralph.GetQuery,
 	"rasi":                   rasi.GetQuery,
+	"razor":                  razor.GetQuery,
 	"rbs":                    rbs.GetQuery,
 	"rcl":                    rcl.GetQuery,
 	"re2c":                   re2c.GetQuery,
