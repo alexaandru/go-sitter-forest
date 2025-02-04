@@ -40,7 +40,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bluespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/bond v1.9.1
 	github.com/alexaandru/go-sitter-forest/bp v1.9.1
-	github.com/alexaandru/go-sitter-forest/bqn v1.9.0
+	github.com/alexaandru/go-sitter-forest/bqn v1.9.1
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
@@ -77,11 +77,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.3
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.18
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.19
 	github.com/alexaandru/go-sitter-forest/css v1.9.3
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
-	github.com/alexaandru/go-sitter-forest/cue v1.9.0
+	github.com/alexaandru/go-sitter-forest/cue v1.9.1
 	github.com/alexaandru/go-sitter-forest/cylc v1.9.1
 	github.com/alexaandru/go-sitter-forest/d v1.9.0
 	github.com/alexaandru/go-sitter-forest/d2 v1.9.0
@@ -120,7 +120,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_db v1.9.0
 	github.com/alexaandru/go-sitter-forest/epics_msi_substitution v1.9.0
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
-	github.com/alexaandru/go-sitter-forest/erlang v1.9.2
+	github.com/alexaandru/go-sitter-forest/erlang v1.9.3
 	github.com/alexaandru/go-sitter-forest/facility v1.9.1
 	github.com/alexaandru/go-sitter-forest/factor v1.9.3
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.7
@@ -217,8 +217,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.19
-	github.com/alexaandru/go-sitter-forest/janet v1.9.1
+	github.com/alexaandru/go-sitter-forest/jai v1.9.20
+	github.com/alexaandru/go-sitter-forest/janet v1.9.2
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
@@ -366,7 +366,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.0
-	github.com/alexaandru/go-sitter-forest/razor v1.9.0
+	github.com/alexaandru/go-sitter-forest/razor v1.9.1
 	github.com/alexaandru/go-sitter-forest/rbs v1.9.1
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
@@ -469,7 +469,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/typst v1.9.4
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
-	github.com/alexaandru/go-sitter-forest/uiua v1.9.3
+	github.com/alexaandru/go-sitter-forest/uiua v1.9.4
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
 	github.com/alexaandru/go-sitter-forest/unison v1.9.3
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
