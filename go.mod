@@ -44,7 +44,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.10
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.11
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.5
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -236,7 +236,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
-	github.com/alexaandru/go-sitter-forest/kcl v1.9.0
+	github.com/alexaandru/go-sitter-forest/kcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/kconfig v1.9.2
 	github.com/alexaandru/go-sitter-forest/kdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/koan v1.9.0
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.1
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.3
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/rust v1.9.6
+	github.com/alexaandru/go-sitter-forest/rust v1.9.7
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.5
