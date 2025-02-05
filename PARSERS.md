@@ -1,6 +1,6 @@
 # 508 Supported Parsers
 
-5 pending, 6 skipped regeneration, 39 missing queries
+5 pending, 6 skipped regeneration, 38 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -240,7 +240,7 @@
 - [x] [kamailio_cfg](https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg) ✔️ (maintained by @IbrahimShahzad)
 - [x] [kanshi](https://github.com/marcelarie/tree-sitter-kanshi) ✔️ (maintained by @marcelarie)
 - [x] [kappa](https://github.com/Spyderisk/tree-sitter-kappa) 🗸 (maintained by @Jaso5)
-- [x] [kcl](https://github.com/kcl-lang/tree-sitter-kcl) 🗸 (maintained by @Vishalk91-4)
+- [x] [kcl](https://github.com/kcl-lang/tree-sitter-kcl) ✔️ (maintained by @Vishalk91-4)
 - [x] [kconfig](https://github.com/tree-sitter-grammars/tree-sitter-kconfig) ✔️ (maintained by @amaanq)
 - [x] [kdl](https://github.com/tree-sitter-grammars/tree-sitter-kdl) ✔️ (maintained by @amaanq)
 - [x] [koan](https://github.com/TogarashiPepper/tree-sitter-koan) ✔️ (maintained by @TogarashiPepper)

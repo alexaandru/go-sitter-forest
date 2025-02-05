@@ -406,8 +406,8 @@
   },
   {
     "reference": "main",
-    "revision": "55533d5843a0ade6b93d6a7bbf8e5deb2fbced59",
-    "grammarSha": "583858f480bc99308f2c138133f609091ff7c1295a866535158d9e87f65d278d",
+    "revision": "ed8e4ca9a6716d2b3f52ff066feb716124a2d1d1",
+    "grammarSha": "a338806531b7ee1693d68e55e975cc1e2142696f0791adc25dec8376ac75191d",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -465,7 +465,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "2729022f47b1b411d1fc28feb4f2c9ad80b6b0be",
+    "revision": "e0e0eb83746d34bed39610313c620492e8e2e097",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1166,7 +1166,7 @@
   },
   {
     "reference": "main",
-    "revision": "cd1679d6e0ab03159001a39dc599523ed4fc5971",
+    "revision": "54d95b5e7750140c42ec2c8fda4d67fe11a045c3",
     "grammarSha": "82fcfe6d3c4042d7db13b4c33c2f4c81295cba86bd9c10fb8dc7bf4f67deb2fe",
     "language": "erlang",
     "url": "https://github.com/WhatsApp/tree-sitter-erlang",
@@ -1291,7 +1291,7 @@
   },
   {
     "reference": "main",
-    "revision": "8943094a90dd3ffc65ae1bbb7661b40949729e77",
+    "revision": "3ac8ad97eeee7d6d9ae89a57ad93844891a436f0",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1345,7 +1345,7 @@
   },
   {
     "reference": "main",
-    "revision": "207f1c988f4649e12fe207e4a7e4f83b9da037d1",
+    "revision": "ad824dea984734406b50699c5f388a7412e85946",
     "grammarSha": "fd84836b4b6f85be393d9d605357dab5309478df7291f2fcbae050696eb6d3e5",
     "language": "fsharp",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -1358,7 +1358,7 @@
   },
   {
     "reference": "main",
-    "revision": "207f1c988f4649e12fe207e4a7e4f83b9da037d1",
+    "revision": "ad824dea984734406b50699c5f388a7412e85946",
     "grammarSha": "75f9690edfbd4f82c9dd3d33c4308e4c3b27e52d15f4f593dabc4371199d7798",
     "language": "fsharp_signature",
     "url": "https://github.com/ionide/tree-sitter-fsharp",
@@ -2268,7 +2268,7 @@
   },
   {
     "reference": "main",
-    "revision": "3dbc65742ae6083f173334a12c5849852fa81f59",
+    "revision": "e04d36e35c76aac66b72b95caac8afebae06dc02",
     "grammarSha": "fde9e0872f1410c4fec13fc6a6559ba38a191627144221d736440c03af1e026b",
     "language": "kcl",
     "url": "https://github.com/kcl-lang/tree-sitter-kcl",
@@ -4054,7 +4054,7 @@
   },
   {
     "reference": "main",
-    "revision": "e3652c75f4e29f69ec572590e257198a4b745118",
+    "revision": "c468a8ee7d7fd145f8964b3cc0faa35285acbf3b",
     "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
