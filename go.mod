@@ -120,7 +120,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/epics_db v1.9.0
 	github.com/alexaandru/go-sitter-forest/epics_msi_substitution v1.9.0
 	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
-	github.com/alexaandru/go-sitter-forest/erlang v1.9.3
+	github.com/alexaandru/go-sitter-forest/erlang v1.9.4
 	github.com/alexaandru/go-sitter-forest/facility v1.9.1
 	github.com/alexaandru/go-sitter-forest/factor v1.9.3
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.7
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.22
+	github.com/alexaandru/go-sitter-forest/nu v1.9.23
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.4
@@ -415,7 +415,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.1
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.5
-	github.com/alexaandru/go-sitter-forest/sql v1.9.7
+	github.com/alexaandru/go-sitter-forest/sql v1.9.8
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
@@ -480,7 +480,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vento v1.9.1
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.5
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.3
-	github.com/alexaandru/go-sitter-forest/vhs v1.9.1
+	github.com/alexaandru/go-sitter-forest/vhs v1.9.2
 	github.com/alexaandru/go-sitter-forest/vim v1.9.1
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.0
 	github.com/alexaandru/go-sitter-forest/virdant v1.9.0
