@@ -842,7 +842,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'A') ADVANCE(265);
       if (lookahead == 'E') ADVANCE(266);
       if (lookahead == 'S') ADVANCE(264);
-      if (('B' <= lookahead && lookahead <= 'Z')) ADVANCE(263);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ' ' &&
+          (lookahead < '/' || ':' < lookahead)) ADVANCE(263);
       END_STATE();
     case 12:
       if (lookahead == 'B') ADVANCE(151);
@@ -858,26 +861,41 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'E') ADVANCE(270);
       if (lookahead == 'S') ADVANCE(269);
       if (lookahead == 'T') ADVANCE(268);
-      if (('A' <= lookahead && lookahead <= 'Z')) ADVANCE(267);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ' ' &&
+          (lookahead < '/' || ':' < lookahead)) ADVANCE(267);
       END_STATE();
     case 16:
       if (lookahead == 'E') ADVANCE(270);
       if (lookahead == 'T') ADVANCE(268);
-      if (('A' <= lookahead && lookahead <= 'Z')) ADVANCE(267);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ' ' &&
+          (lookahead < '/' || ':' < lookahead)) ADVANCE(267);
       END_STATE();
     case 17:
       if (lookahead == 'E') ADVANCE(266);
       if (lookahead == 'S') ADVANCE(264);
-      if (('A' <= lookahead && lookahead <= 'Z')) ADVANCE(263);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ' ' &&
+          (lookahead < '/' || ':' < lookahead)) ADVANCE(263);
       END_STATE();
     case 18:
       if (lookahead == 'E') ADVANCE(266);
-      if (('A' <= lookahead && lookahead <= 'Z')) ADVANCE(263);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ' ' &&
+          (lookahead < '/' || ':' < lookahead)) ADVANCE(263);
       END_STATE();
     case 19:
       if (lookahead == 'E') ADVANCE(273);
       if (lookahead == 'T') ADVANCE(272);
-      if (('A' <= lookahead && lookahead <= 'Z')) ADVANCE(271);
+      if (lookahead != 0 &&
+          (lookahead < '\t' || '\r' < lookahead) &&
+          lookahead != ' ' &&
+          (lookahead < '/' || ':' < lookahead)) ADVANCE(271);
       END_STATE();
     case 20:
       if (lookahead == 'F') ADVANCE(36);
