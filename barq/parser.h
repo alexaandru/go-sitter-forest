@@ -42,7 +42,7 @@ typedef struct TSLexer TSLexer;
 struct TSLexer {
   int32_t lookahead;
   TSSymbol result_symbol;
-  void (*advance_cerium)(TSLexer *, bool);
+  void (*advance_barq)(TSLexer *, bool);
   void (*mark_end)(TSLexer *);
   uint32_t (*get_column)(TSLexer *);
   bool (*is_at_included_range_start)(const TSLexer *);
@@ -167,7 +167,7 @@ static inline bool set_contains(TSCharacterRange *ranges, uint32_t len, int32_t 
   int32_t lookahead;            \
   goto start;                   \
   next_state:                   \
-  lexer->advance_cerium(lexer, skip);  \
+  lexer->advance_barq(lexer, skip);  \
   start:                        \
   skip = false;                 \
   lookahead = lexer->lookahead;

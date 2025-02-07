@@ -1,0 +1,8 @@
+{
+  "reference": "master",
+  "revision": "f9565206a7297e1e888975e2dc45326011b86c4b",
+  "grammarSha": "f9258aadff7634e649cdfa98ce129a8d8114c5ee5f3625612a573ba3d7d2f6e4",
+  "language": "barq",
+  "url": "https://github.com/barqlang/tree-sitter-barq",
+  "maintainedBy": "@yhyadev"
+}

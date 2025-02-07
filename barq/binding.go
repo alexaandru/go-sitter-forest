@@ -1,9 +1,9 @@
 //go:build !plugin
 
-package cerium
+package barq
 
 //#include "parser.h"
-//TSLanguage *tree_sitter_cerium();
+//TSLanguage *tree_sitter_barq();
 import "C"
 
 import (
@@ -26,7 +26,7 @@ const nvimts = "nvimts__"
 var files embed.FS
 
 func GetLanguage() unsafe.Pointer {
-	return unsafe.Pointer(C.tree_sitter_cerium())
+	return unsafe.Pointer(C.tree_sitter_barq())
 }
 
 func GetQuery(kind string, opts ...byte) (out []byte) {
