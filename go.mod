@@ -20,7 +20,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
 	github.com/alexaandru/go-sitter-forest/asciidoc v1.9.2
 	github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.3
-	github.com/alexaandru/go-sitter-forest/asm v1.9.0
+	github.com/alexaandru/go-sitter-forest/asm v1.9.1
 	github.com/alexaandru/go-sitter-forest/astro v1.9.3
 	github.com/alexaandru/go-sitter-forest/august v1.9.0
 	github.com/alexaandru/go-sitter-forest/authzed v1.9.0
@@ -76,7 +76,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/core v1.9.3
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
-	github.com/alexaandru/go-sitter-forest/cpp v1.9.3
+	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
 	github.com/alexaandru/go-sitter-forest/crystal v1.9.19
 	github.com/alexaandru/go-sitter-forest/css v1.9.3
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
@@ -223,7 +223,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
 	github.com/alexaandru/go-sitter-forest/jinja v1.9.3
-	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.3
+	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.4
 	github.com/alexaandru/go-sitter-forest/jq v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.9.2
 	github.com/alexaandru/go-sitter-forest/json v1.9.1
@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
-	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.0
+	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.1
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.1
@@ -295,7 +295,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mxml v1.9.0
 	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/nelua v1.9.8
+	github.com/alexaandru/go-sitter-forest/nelua v1.9.9
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.1
