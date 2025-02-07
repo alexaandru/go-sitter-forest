@@ -28,6 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.2
 	github.com/alexaandru/go-sitter-forest/bara v1.9.0
+	github.com/alexaandru/go-sitter-forest/barq v1.9.1
 	github.com/alexaandru/go-sitter-forest/bash v1.9.5
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
@@ -54,7 +55,6 @@ require (
 	github.com/alexaandru/go-sitter-forest/cds v1.9.1
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
-	github.com/alexaandru/go-sitter-forest/cerium v1.9.3
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
 	github.com/alexaandru/go-sitter-forest/cg v1.9.2
 	github.com/alexaandru/go-sitter-forest/cgsql v1.9.6

@@ -43,6 +43,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/awatalk"
 	"github.com/alexaandru/go-sitter-forest/awk"
 	"github.com/alexaandru/go-sitter-forest/bara"
+	"github.com/alexaandru/go-sitter-forest/barq"
 	"github.com/alexaandru/go-sitter-forest/bash"
 	"github.com/alexaandru/go-sitter-forest/bass"
 	"github.com/alexaandru/go-sitter-forest/beancount"
@@ -69,7 +70,6 @@ import (
 	"github.com/alexaandru/go-sitter-forest/cds"
 	"github.com/alexaandru/go-sitter-forest/cedar"
 	"github.com/alexaandru/go-sitter-forest/cel"
-	"github.com/alexaandru/go-sitter-forest/cerium"
 	"github.com/alexaandru/go-sitter-forest/cfengine"
 	"github.com/alexaandru/go-sitter-forest/cg"
 	"github.com/alexaandru/go-sitter-forest/cgsql"
@@ -571,6 +571,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"awatalk":                awatalk.GetLanguage,
 	"awk":                    awk.GetLanguage,
 	"bara":                   bara.GetLanguage,
+	"barq":                   barq.GetLanguage,
 	"bash":                   bash.GetLanguage,
 	"bass":                   bass.GetLanguage,
 	"beancount":              beancount.GetLanguage,
@@ -597,7 +598,6 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"cds":                    cds.GetLanguage,
 	"cedar":                  cedar.GetLanguage,
 	"cel":                    cel.GetLanguage,
-	"cerium":                 cerium.GetLanguage,
 	"cfengine":               cfengine.GetLanguage,
 	"cg":                     cg.GetLanguage,
 	"cgsql":                  cgsql.GetLanguage,
@@ -1083,6 +1083,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"awatalk":                awatalk.GetQuery,
 	"awk":                    awk.GetQuery,
 	"bara":                   bara.GetQuery,
+	"barq":                   barq.GetQuery,
 	"bash":                   bash.GetQuery,
 	"bass":                   bass.GetQuery,
 	"beancount":              beancount.GetQuery,
@@ -1109,7 +1110,6 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"cds":                    cds.GetQuery,
 	"cedar":                  cedar.GetQuery,
 	"cel":                    cel.GetQuery,
-	"cerium":                 cerium.GetQuery,
 	"cfengine":               cfengine.GetQuery,
 	"cg":                     cg.GetQuery,
 	"cgsql":                  cgsql.GetQuery,

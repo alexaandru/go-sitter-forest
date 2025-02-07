@@ -44,6 +44,7 @@
   "//"
   "///"
   "^"
+  "<<"
   ">>"
   ">>>"
 ] @operator
@@ -93,6 +94,10 @@
 ["@"] @operator
 
 (variable_list
+  ((identifier) @variable.builtin
+  (#eq? @variable.builtin "self")))
+
+(variable_list
   (identifier) @variable)
 
 ((identifier) @variable.builtin
@@ -132,7 +137,6 @@
 
 (function_definition
   (identifier) @function)
-
 
 (parameter) @variable.parameter
 
