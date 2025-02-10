@@ -2,7 +2,7 @@
 
 # Various helper targets to assist with working with so many Go modules.
 
-FIND_PARSERS = find . -maxdepth 1 -type d ! -path ./.git ! -path ./internal ! -path ./tmp ! -path ./node_modules ! -path .
+FIND_PARSERS = find . -maxdepth 1 -type d ! -path ./.ccls-cache ! -path ./.git ! -path ./internal ! -path ./tmp ! -path ./node_modules ! -path .
 
 lint:
 	@golangci-lint run ./...
