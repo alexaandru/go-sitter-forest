@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "b27b091bfdc5f16d0ef76421ea5609c82a57dff0",
-  "grammarSha": "1d77f6bb17049427276408c1c984766b798750457c9001e134af016ed5b8b4e7",
+  "revision": "71011c87dc75ab996063eec72644bba7c3edbef5",
+  "grammarSha": "b18fcea826ed2d10907aeb4bd3fa1fb7e05e3456a45359b2b2a50605b9e85817",
   "language": "c_sharp",
   "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
   "doc": "high memory usage (1.7GB)",

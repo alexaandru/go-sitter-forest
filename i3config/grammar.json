@@ -4,5 +4,7 @@
   "grammarSha": "5d71bb1cc545a1fb6b42de02251932b64f1141c931f3a9a0dd5387cafa0fb905",
   "language": "i3config",
   "url": "https://github.com/abdellatif-temsamani/tree-sitter-i3config",
-  "maintainedBy": "@abdellatif-temsamani"
+  "doc": "repository was removed by owner",
+  "maintainedBy": "@abdellatif-temsamani",
+  "skipUpdate": true
 }

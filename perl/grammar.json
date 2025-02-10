@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "719c7de27b89f372186d74ad2bb4310b33585c77",
-  "grammarSha": "c021aa59562d4837ea5c6412a59bc147ebea9ecef64e4a43a130bbbd85f64854",
+  "revision": "2872c35355a17b3c13b422d6d9b04a0530558951",
+  "grammarSha": "f2dac2af92baf0b8319737564dfb597143951592831d08a8197fa80797cd7694",
   "language": "perl",
   "url": "https://github.com/tree-sitter-perl/tree-sitter-perl",
   "maintainedBy": "@RabbiVeesh, @LeoNerd",

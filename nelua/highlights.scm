@@ -94,17 +94,21 @@
 ["@"] @operator
 
 (variable_list
+  ((identifier) @constant
+  (#match? @constant "^[A-Z][A-Z_0-9]*$")))
+
+(variable_list
   ((identifier) @variable.builtin
   (#eq? @variable.builtin "self")))
 
 (variable_list
   (identifier) @variable)
 
-((identifier) @variable.builtin
- (#eq? @variable.builtin "self"))
-
 ((identifier) @constant
  (#match? @constant "^[A-Z][A-Z_0-9]*$"))
+
+((identifier) @variable.builtin
+ (#eq? @variable.builtin "self"))
 
 (record
    (record_field
@@ -154,10 +158,19 @@
   (identifier) @function)
 
 (dot_field
+    (identifier) @variable)
+
+(dot_field
     (field) @variable.other.member)
 
 (dot_variable
+    (identifier) @variable)
+
+(dot_variable
     (field) @variable.other.member)
+
+(method_field
+    (identifier) @variable)
 
 (method_field
     (field) @function.method)

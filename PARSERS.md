@@ -1,6 +1,6 @@
 # 508 Supported Parsers
 
-5 pending, 6 skipped regeneration, 38 missing queries
+6 pending, 6 skipped regeneration, 38 missing queries
 
 <!--This entire file is automatically updated via automation, do NOT edit anything in here!-->
 <!--parserinfo-->
@@ -120,6 +120,7 @@
 - [x] [elsa](https://github.com/glapa-grossklag/tree-sitter-elsa) ✔️ (maintained by @glapa-grossklag, @amaanq)
 - [x] [elvish](https://github.com/elves/tree-sitter-elvish) ✔️ (maintained by @elves)
 - [x] [embedded_template](https://github.com/tree-sitter/tree-sitter-embedded-template) ✔️ (maintained by @maxbrunsfeld)
+- [ ] [enforce](https://github.com/simonvic/tree-sitter-enforce) (maintained by @simonvic)
 - [x] [epics_cmd](https://github.com/epics-extensions/tree-sitter-epics) ✔️ (maintained by @minijackson)
 - [x] [epics_db](https://github.com/epics-extensions/tree-sitter-epics) ✔️ (maintained by @minijackson)
 - [x] [epics_msi_substitution](https://github.com/epics-extensions/tree-sitter-epics) ✔️ (maintained by @minijackson)
@@ -211,7 +212,7 @@
 - [x] [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template) ✔️ (maintained by @Hdoc1509)
 - [x] [hylo](https://github.com/natsukagami/tree-sitter-hylo) ✔️ (maintained by @natsukagami)
 - [x] [hyprlang](https://github.com/tree-sitter-grammars/tree-sitter-hyprlang) ✔️ (maintained by @luckasRanarison)
-- [x] [i3config](https://github.com/abdellatif-temsamani/tree-sitter-i3config) ✔️ (maintained by @abdellatif-temsamani)
+- [x] [i3config](https://github.com/abdellatif-temsamani/tree-sitter-i3config) ✔️ (maintained by @abdellatif-temsamani; ❌repository was removed by owner)
 - [x] [idl](https://github.com/cathaysia/tree-sitter-idl) ✔️ (maintained by @cathaysa)
 - [x] [idris](https://github.com/kayhide/tree-sitter-idris) ✔️ (maintained by @kayhide)
 - [x] [ignis](https://github.com/Ignis-lang/tree-sitter-ignis) ✔️ (maintained by @BasileusErwin)

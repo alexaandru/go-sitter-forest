@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "60d50a2247b0c1fb72b967562c64711d65c6a060",
-  "grammarSha": "b782f6d76b6bab27059c2102286d9a241a35033974b4469584e39693bbf80366",
+  "revision": "df6b69967db7d74ab338a86a9ab45c0966c5ee3c",
+  "grammarSha": "bfffefc9fad3395cc85b6b7a163823696326cf176ba76f421421c43bd7ccdc47",
   "language": "printf",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-printf",
   "maintainedBy": "@ObserverOfTime"
