@@ -9,19 +9,6 @@
 ;; ---------------------------------------------------------------------------
 
 [
- "module"
- "import"
- "assert"
- "class"
- "datatype"
- "dimension"
- "entity"
- "enum"
- "event"
- "property"
- "rdf"
- "structure"
- "union"
  "is"
  "of"
  "end"
@@ -33,19 +20,6 @@
 
 [
  "="
- ":="
- "≔"
- "¬"
- "∧"
- "∨"
- "⊻"
- "==>"
- "⇒"
- "<==>"
- "⇔"
- "∀"
- "∃"
- "∈"
  "->"
  "→"
  "<-"
@@ -57,18 +31,17 @@
 ;; Module & Imports
 ;; ---------------------------------------------------------------------------
 
-(module name: (identifier) @module.definition)
+(module "module" @keyword name: (identifier) @module.definition)
 (module "version" @keyword)
 
+(import_statement "import" @keyword)
 (import_statement [ "[" "]" ] @punctuation.bracket)
 
 (member_import name: (qualified_identifier) @type)
-(member_import "as" @keyword)
-(member_import rename: (identifier) @type)
+(member_import "as" @keyword rename: (identifier) @type)
 
 (module_import name: (identifier) @module)
-(module_import "as" @keyword)
-(module_import rename: (identifier) @module)
+(module_import "as" @keyword rename: (identifier) @module)
 
 ;; ---------------------------------------------------------------------------
 ;; Annotations and Constraints
@@ -80,17 +53,17 @@
 
 (annotation_property value: (value (identifier_reference) @type))
 
-(constraint name: (identifier) @property)
+(constraint "assert" @keyword name: (identifier) @property)
 
 (informal_constraint (quoted_string) @embedded)
 (informal_constraint language: (controlled_language_tag) @property)
 
-(constraint_environment (constraint_environment_end) @keyword)
+(constraint_environment "with" @keyword)
 
-(environment_def "def" @keyword)
-(environment_def (identifier) @function.definition . (function_def))
-(environment_def (identifier) @constant . (constant_def))
+(function_def
+ (function_signature name: (identifier) @function.definition))
 
+(function_signature "def" @keyword)
 (function_signature target: (_) @type)
 (function_signature [ "(" ")" ] @punctuation.bracket)
 
@@ -101,9 +74,11 @@
 (function_cardinality_expression (sequence_uniqueness) @keyword)
 (function_cardinality_expression [ "{" "}" ] @punctuation.bracket)
 
+(function_body (function_op_by_definition) @operator)
+
 (function_composition subject: (reserved_self) @variable.builtin)
 (function_composition name: (identifier) @function.call)
-(function_composition "." @punctuation.delimiter)
+(function_composition [ "·" "." ] @operator)
 
 (constraint_sentence [ "(" ")" ] @punctuation.bracket)
 
@@ -122,35 +97,51 @@
 
 (quantified_sentence "," @punctuation.separator)
 
-(quantified_variable source: (reserved_self) @variable.builtin)
-(quantified_variable name: (identifier) @variable.parameter)
-(quantified_variable "in" @keyword)
+(variable (identifier) @variable)
 
 (functional_term
  function: (term (identifier_reference) @function.call))
 
 (sequence_builder [ "{" "}" ] @punctuation.bracket
-                  "|" @punctuation.separator)
-
-(named_variable_set (identifier) @variable)
-
-(mapping_variable
- domain: (identifier) @variable range: (identifier) @variable)
-
-(sequence_builder_body [ "(" ")" ] @punctuation.bracket)
+                  (set_op_builder) @punctuation.separator)
 
 (sequence_of_predicate_values (identifier_reference) @type)
 (sequence_of_predicate_values [ "[" "]" ] @punctuation.bracket)
 
-(negation "not" @keyword)
-(conjunction "and" @keyword)
-(disjunction "or" @keyword)
-(exclusive_disjunction "xor" @keyword)
-(implication "implies" @keyword)
-(biconditional "iff" @keyword)
+(unary_boolean_sentence
+ [ (logical_op_negation "¬" @operator)
+   (logical_op_negation "not" @keyword) ])
 
-(universal "forall" @keyword)
-(existential "exists" @keyword)
+(binary_boolean_sentence
+ [ (logical_op_conjunction "∧" @operator)
+   (logical_op_conjunction "and" @keyword)
+   (logical_op_disjunction "∨" @operator)
+   (logical_op_disjunction "or" @keyword)
+   (logical_op_exclusive_disjunction "⊻" @operator)
+   (logical_op_exclusive_disjunction "xor" @keyword)
+   (logical_op_implication [ "==>" "⇒" ] @operator)
+   (logical_op_implication "implies" @keyword)
+   (logical_op_biconditional [ "<==>" "⇔" ] @operator)
+   (logical_op_biconditional "iff" @keyword) ])
+
+(quantified_variable_binding
+ [ (logical_quantifier_universal "∀" @operator)
+   (logical_quantifier_universal "forall" @keyword)
+   (logical_quantifier_existential "∃" @operator)
+   (logical_quantifier_existential "exists" @keyword) ])
+
+(quantified_variable
+ [ (set_op_membership "∈" @operator)
+   (set_op_membership "in" @keyword) ])
+
+;; (set_op_union "∪" @operator)
+;; (set_op_union "union" @keyword)
+
+;; (set_op_intersection "∩" @operator)
+;; (set_op_intersection "intersection" @keyword)
+
+;; (set_op_complement "∖" @operator)
+;; (set_op_complement "complement" @keyword)
 
 ;; ---------------------------------------------------------------------------
 ;; Types
@@ -161,31 +152,71 @@
  (unknown_type)
  ] @type.builtin
 
-(data_type_def name: (identifier) @type.definition)
+(data_type_def
+ "datatype" @keyword
+ name: (identifier) @type.definition)
 (data_type_def base: (identifier_reference) @type)
+(data_type_def base: (builtin_simple_type) @type.builtin)
 (data_type_def opaque: (opaque) @keyword)
 
-(dimension_def name: (identifier) @type.definition)
+;; (datatype_set_constructed_base [ "[" "]" ] @punctuation.bracket)
+;; (datatype_set_constructed_base
+;;  first: (identifier_reference) @type
+;;  rest: (identifier_reference) @type)
 
-(entity_def name: (identifier) @type.definition)
+(datatype_def_restriction [ "{" "}" ] @punctuation.bracket)
+(length_restriction_facet
+ [ "length"
+   "maxLength"
+   "minLength" ] @property
+   "=" @operator)
+(digit_restriction_facet
+ [ "fractionDigits"
+   "totalDigits" ] @property
+   "=" @operator)
+(value_restriction_facet
+ [ "maxExclusive"
+   "maxInclusive"
+   "minExclusive"
+   "minInclusive" ] @property
+   "=" @operator)
+(tz_restriction_facet
+ "explicitTimezone" @property
+ "=" @operator)
+(pattern_restriction_facet [ "[" "]" ] @punctuation.bracket)
+(pattern_restriction_facet
+ "pattern" @property
+ "=" @operator
+ (quoted_string) @string)
 
-(enum_def name: (identifier) @type.definition)
+(kw_is_fixed) @keyword
 
-(event_def name: (identifier) @type.definition)
+(tz_restriction_value) @keyword
 
-(structure_def name: (identifier) @type.definition)
+(dimension_def "dimension" @keyword name: (identifier) @type.definition)
 
-(union_def name: (identifier) @type.definition)
+(entity_def "entity" @keyword name: (identifier) @type.definition)
+
+(enum_def "enum" @keyword name: (identifier) @type.definition)
+
+(event_def "event" @keyword name: (identifier) @type.definition)
+
+(property_def "property" @keyword)
+
+(structure_def "structure" @keyword name: (identifier) @type.definition)
+
+(union_def "union" @keyword name: (identifier) @type.definition)
 
 (source_entity "source" @keyword entity: (identifier_reference) @type)
 (source_entity "with" @keyword)
+(source_entity [ "[" "]" ] @punctuation.bracket)
 (source_entity member: (identifier) @variable.field)
 
 ;; ---------------------------------------------------------------------------
 ;; RDF Definitions
 ;; ---------------------------------------------------------------------------
 
-(rdf_def name: (identifier) @type.definition)
+(rdf_def "rdf" @keyword name: (identifier) @type.definition)
 (rdf_types "type" @keyword type: (identifier_reference) @type)
 (rdf_types [ "[" "]" ] @punctuation.bracket)
 
@@ -193,18 +224,18 @@
 ;; Type Classes
 ;; ---------------------------------------------------------------------------
 
-(type_class_def name: (identifier) @type.definition)
+(type_class_def "class" @keyword name: (identifier) @type.definition)
 (type_class_def [ "(" ")" ] @punctuation.bracket)
 
 (type_variable name: (identifier) @type)
-(type_variable "+" @operator)
+(type_variable (type_op_combiner) @operator)
 
 (type_class_reference name: (identifier_reference) @type)
 
 (type_class_arguments [ "(" ")" ] @punctuation.bracket)
 
-(method_def "def" @keyword)
-(method_def name: (identifier) @method.definition)
+(method_def
+ (function_signature name: (identifier) @method.definition))
 
 (wildcard) @type.builtin
 
@@ -230,8 +261,7 @@
 (value_variant name: (identifier) @constant)
 
 (type_variant (identifier_reference) @type)
-(type_variant rename: (identifier) @type)
-(type_variant "as" @keyword)
+(type_variant "as" @keyword rename: (identifier) @type)
 
 (cardinality_expression (sequence_ordering) @keyword)
 (cardinality_expression (sequence_uniqueness) @keyword)
@@ -249,6 +279,7 @@
 (binary) @string.special
 
 [
+ (rational)
  (decimal)
  (double)
  (integer)

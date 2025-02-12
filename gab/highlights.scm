@@ -7,11 +7,10 @@
 
 (symbol) @variable
 
-(sigil) @string.special
+(sigil) @function
 
 (operator) @operator
 (send) @operator
-(message) @function
 
 [
   (string)

@@ -5,10 +5,10 @@
  (enum_def)
  (event_def)
  (property_def)
+ (rdf_def)
  (structure_def)
  (type_class_def)
  (union_def)
- (rdf_def)
  ;; ----------------
  (annotation_only_body)
  (dimension_body)
@@ -21,7 +21,7 @@
  ;; ----------------
  (formal_constraint)
  (constraint_environment)
- (environment_def)
+ (function_body)
  (constraint_sentence)
  (sequence_builder)
  ;; ----------------

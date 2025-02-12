@@ -2120,9 +2120,6 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 10:
       if (lookahead == '\'') ADVANCE(295);
-      if (lookahead == '\\') ADVANCE(111);
-      if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(10);
       END_STATE();
     case 11:
       if (lookahead == ')') ADVANCE(131);

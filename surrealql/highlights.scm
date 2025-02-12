@@ -4,7 +4,6 @@
   (keyword_from)
   (keyword_let)
   (keyword_else)
-  (keyword_end)
   (keyword_only)
   (keyword_value)
   (keyword_as)
@@ -14,7 +13,6 @@
   (keyword_parallel)
   (keyword_timeout)
   (keyword_fetch)
-  (keyword_start_at)
   (keyword_limit)
   (keyword_by)
   (keyword_rand)
@@ -30,7 +28,6 @@
   (keyword_split)
   (keyword_at)
   (keyword_group)
-  (keyword_all)
   (keyword_begin)
   (keyword_cancel)
   (keyword_commit)
@@ -152,12 +149,9 @@
   (keyword_on_duplicate_key_update)
   (keyword_count)
   (keyword_set)
-  (keyword_unset)
   (keyword_return)
-  (keyword_dimension)
-  (keyword_mtree)
-  (keyword_dist)
   (keyword_overwrite)
+  (keyword_throw)
 ] @keyword
 
 ; Operators
@@ -222,3 +216,4 @@
 (graph_path) @operator
 
 ; Errors
+(ERROR) @error

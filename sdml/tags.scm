@@ -62,8 +62,6 @@
 
 (value_variant name: (identifier) @name) @definition.constant
 
-(method_def name: (identifier) @name) @definition.method
-
 ;; ---------------------------------------------------------------------------
 ;; Annotations, Constraints, and Values
 ;; ---------------------------------------------------------------------------
@@ -91,16 +89,16 @@
 (function_composition
  name: (identifier) @name) @reference.call
 
-(environment_def name: (identifier) @name) @definition.function
-
-(quantified_variable
- source: (reserved_self) @name) @definition.variable
-(quantified_variable
- name: (identifier) @name) @definition.variable
-
-(named_variable_set (identifier) @name) @definition.variable
-
-(mapping_variable domain: (identifier) @name) @definition.variable
-(mapping_variable range: (identifier) @name) @definition.variable
+(variable (identifier) @name) @definition.variable
 
 (value (identifier_reference) @name) @reference.type
+
+;; ---------------------------------------------------------------------------
+;;Methods/Functions
+;; ---------------------------------------------------------------------------
+
+(function_def
+ (function_signature name: (identifier) @name) @definition.function)
+
+(method_def
+ (function_signature name: (identifier) @name) @definition.method)

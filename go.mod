@@ -511,9 +511,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.1
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.1
 	github.com/alexaandru/go-sitter-forest/zoomba v1.9.1
-	github.com/alexaandru/go-tree-sitter-bare v1.9.3
-	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8
-	golang.org/x/sync v0.10.0
+	github.com/alexaandru/go-tree-sitter-bare v1.10.0
+	golang.org/x/exp v0.0.0-20250210185358-939b2ce775ac
+	golang.org/x/sync v0.11.0
 )
 
 retract (
