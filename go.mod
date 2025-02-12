@@ -143,7 +143,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.2
 	github.com/alexaandru/go-sitter-forest/func v1.9.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.9.0
-	github.com/alexaandru/go-sitter-forest/gab v1.9.1
+	github.com/alexaandru/go-sitter-forest/gab v1.9.2
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
 	github.com/alexaandru/go-sitter-forest/gap v1.9.2
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
@@ -247,7 +247,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koto v1.9.7
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.1
-	github.com/alexaandru/go-sitter-forest/lart v1.9.0
+	github.com/alexaandru/go-sitter-forest/lart v1.9.1
 	github.com/alexaandru/go-sitter-forest/lat v1.9.1
 	github.com/alexaandru/go-sitter-forest/latex v1.9.1
 	github.com/alexaandru/go-sitter-forest/latte v1.9.0
@@ -393,7 +393,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/scfg v1.9.1
 	github.com/alexaandru/go-sitter-forest/scheme v1.9.0
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
-	github.com/alexaandru/go-sitter-forest/sdml v1.9.2
+	github.com/alexaandru/go-sitter-forest/sdml v1.9.3
 	github.com/alexaandru/go-sitter-forest/sflog v1.9.1
 	github.com/alexaandru/go-sitter-forest/shosts v1.9.1
 	github.com/alexaandru/go-sitter-forest/simula v1.9.0
@@ -413,7 +413,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/soql v1.9.6
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.4
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
-	github.com/alexaandru/go-sitter-forest/sparql v1.9.1
+	github.com/alexaandru/go-sitter-forest/sparql v1.9.2
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.5
 	github.com/alexaandru/go-sitter-forest/sql v1.9.8
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
@@ -429,7 +429,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.9.0
+	github.com/alexaandru/go-sitter-forest/surrealql v1.9.1
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
@@ -467,7 +467,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.3
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.3
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/typst v1.9.4
+	github.com/alexaandru/go-sitter-forest/typst v1.9.5
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.4
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
