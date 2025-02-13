@@ -152,6 +152,7 @@
   (keyword_return)
   (keyword_overwrite)
   (keyword_throw)
+  (keyword_unset)
 ] @keyword
 
 ; Operators

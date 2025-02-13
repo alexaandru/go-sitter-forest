@@ -121,7 +121,7 @@
   },
   {
     "reference": "main",
-    "revision": "85418f744a318d345db259831a75f92930e3b9f0",
+    "revision": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
     "grammarSha": "a5190fca89c7180896c790edb0aa5220c8f1fdecd8eb95bb7b34e7b2052006af",
     "language": "apex",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "2a17465e066920a1cc9235d5c411b8c9c184774e",
+    "revision": "6dda0949289a3c1bb7b1e1dc3da1e9a1723fc289",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -3824,7 +3824,7 @@
   },
   {
     "reference": "main",
-    "revision": "85418f744a318d345db259831a75f92930e3b9f0",
+    "revision": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
     "grammarSha": "66dab966b3846fb00f0cafbbcf6ae84ae4b22f9a60d33f84be9bdf5f4771d5d9",
     "language": "sflog",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -3976,7 +3976,7 @@
   },
   {
     "reference": "main",
-    "revision": "85418f744a318d345db259831a75f92930e3b9f0",
+    "revision": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
     "grammarSha": "945c22ef3b88db2897965425f5fed093aa3958478e48fc09b9d975b37c2bdf3c",
     "language": "soql",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -3985,7 +3985,7 @@
   },
   {
     "reference": "main",
-    "revision": "85418f744a318d345db259831a75f92930e3b9f0",
+    "revision": "3597575a429766dd7ecce9f5bb97f6fec4419d5d",
     "grammarSha": "2e40ab9411753fdccbd40844d889885e86fff6dda8784c9de38fa68e23b9a84e",
     "language": "sosl",
     "url": "https://github.com/aheber/tree-sitter-sfapex",
@@ -4137,7 +4137,7 @@
   },
   {
     "reference": "main",
-    "revision": "e6eba40bf54dd94d842154be0389c53a37be8dc8",
+    "revision": "9266b3131bbcc0705b3b752bcb7478871a143740",
     "grammarSha": "ed19c261e21220bd7df38f8682c1889230fd148a62b21b942aa6ec40807ff886",
     "language": "superhtml",
     "url": "https://github.com/kristoff-it/superhtml",
@@ -4158,8 +4158,8 @@
   },
   {
     "reference": "main",
-    "revision": "796f35e1506ca96b9e6c1b5c70f8f9d67f2abc39",
-    "grammarSha": "2a004353d28a02c3d915475e7b0a657eb27ceb4ebdd630251d4ab2e15f75e364",
+    "revision": "54221117ca7b6afb330b185ab47baed2fe06126a",
+    "grammarSha": "1db0846bc24e411823f44be40be89ee85259b2622029f2035a6b7d06cb3a3417",
     "language": "surrealql",
     "url": "https://github.com/Ce11an/tree-sitter-surrealql",
     "doc": "high memory usage (3.1GB)",
