@@ -429,7 +429,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.9.1
+	github.com/alexaandru/go-sitter-forest/surrealql v1.9.2
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1

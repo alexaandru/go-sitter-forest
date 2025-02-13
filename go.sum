@@ -850,8 +850,8 @@ github.com/alexaandru/go-sitter-forest/superhtml v1.9.1 h1:YTnrp+RxJv2/S4R5reWGe
 github.com/alexaandru/go-sitter-forest/superhtml v1.9.1/go.mod h1:DagPmTMm3BspppWUh3sdRevlWBmRaf3xsf/RuwNWMuw=
 github.com/alexaandru/go-sitter-forest/surface v1.9.0 h1:ZUR1enD6kpjhJFIzsEY/bPLVzPWmNbagxGpEGvcGgd0=
 github.com/alexaandru/go-sitter-forest/surface v1.9.0/go.mod h1:MmntvM5fu7n0NE5Z+AehCEONrRrNH0o0NNB0xUf8Zv0=
-github.com/alexaandru/go-sitter-forest/surrealql v1.9.1 h1:VBkGwRNNQ+yLfIwqyWP6DmveD8vYJqLCk4REplBb85s=
-github.com/alexaandru/go-sitter-forest/surrealql v1.9.1/go.mod h1:mNGn4F1dWHleZbFOQmdndx6xOnW91YH9iCEmgSd5GvI=
+github.com/alexaandru/go-sitter-forest/surrealql v1.9.2 h1:80bH8YKUExVeaLKJuXO+p7zk+z/4CrimZrrdKKfPvf4=
+github.com/alexaandru/go-sitter-forest/surrealql v1.9.2/go.mod h1:mNGn4F1dWHleZbFOQmdndx6xOnW91YH9iCEmgSd5GvI=
 github.com/alexaandru/go-sitter-forest/sus v1.9.3 h1:AB+Cf14I9pLoR5B2YLfHPiBAHsBsBiFoJ/gzTBA28s0=
 github.com/alexaandru/go-sitter-forest/sus v1.9.3/go.mod h1:2PMZ+0S9Y81nBSSiN6SKTwEdjY43upVHJWDVTb6poVQ=
 github.com/alexaandru/go-sitter-forest/svelte v1.9.1 h1:+bI1aMFiEoHuWOiefZMtHGU1gtUGZKuEIIYCK/mYQgU=
