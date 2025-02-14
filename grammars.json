@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "6dda0949289a3c1bb7b1e1dc3da1e9a1723fc289",
+    "revision": "809bcf10edc79db59e9ed36509cbce61a9cfe04a",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
+    "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2092,8 +2092,8 @@
   },
   {
     "reference": "master",
-    "revision": "dd0db3f746bebd4fe1b243f953869e902979fede",
-    "grammarSha": "87272bb231a7b3b185cbd50acf76be1745999b7cf62eaf0fd3dcb058935ec171",
+    "revision": "999cb94e0e786d3b5bda1fd332a443fd640082eb",
+    "grammarSha": "f7d6f70a9baffce75be305f76ce3c315d3e085d875adb186dc1ae4da35b16476",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",
@@ -2231,7 +2231,7 @@
   },
   {
     "reference": "master",
-    "revision": "3f9870ca1f419e480f39fc181fcfb6dad480969a",
+    "revision": "12a3aede757bc7fbdfb1909507c7a6fddd31df37",
     "grammarSha": "a46daba0d2e320c363e0f337a306e7fab99a431080dd9408eb205d1808339c18",
     "language": "julia",
     "url": "https://github.com/tree-sitter/tree-sitter-julia",
@@ -4021,7 +4021,7 @@
   },
   {
     "reference": "main",
-    "revision": "c30e2c6a85b1476c88573ed5d8e4882e75f033c1",
+    "revision": "8a4578bd200fd1ed73e8cbecbe3c5053a4bcf2f8",
     "grammarSha": "850d9120d222924c37367639d0d9cfc93851c1dbe853c3e1e4c284d6e919b07c",
     "language": "sql",
     "url": "https://github.com/DerekStride/tree-sitter-sql",
@@ -4671,7 +4671,7 @@
   },
   {
     "reference": "main",
-    "revision": "966067fe81d78071805d8e55ec836b3926c4ece4",
+    "revision": "3f202326c06f1c4d47aa82b9013a6b71aea70611",
     "grammarSha": "2eba0b4019166af32d91c0e7a2fb6fa998b3c77e49c223e676f2b8da159797f0",
     "language": "vhs",
     "url": "https://github.com/charmbracelet/tree-sitter-vhs",
