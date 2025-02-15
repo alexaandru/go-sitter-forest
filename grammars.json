@@ -425,7 +425,7 @@
   },
   {
     "reference": "master",
-    "revision": "71011c87dc75ab996063eec72644bba7c3edbef5",
+    "revision": "b5eb5742f6a7e9438bee22ce8026d6b927be2cd7",
     "grammarSha": "b18fcea826ed2d10907aeb4bd3fa1fb7e05e3456a45359b2b2a50605b9e85817",
     "language": "c_sharp",
     "url": "https://github.com/tree-sitter/tree-sitter-c-sharp",
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "809bcf10edc79db59e9ed36509cbce61a9cfe04a",
+    "revision": "a881e21432e696f4e10113b8d5051071e6a76103",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1173,7 +1173,7 @@
   },
   {
     "reference": "main",
-    "revision": "9cea919877741b2ed87cf215c0a06feb9a1930bf",
+    "revision": "370cea629eb62a8686504b9fb3252a5e1ae55313",
     "grammarSha": "41214fde29b74c1a65b85e52a4bcc9e3ff510a5ef10b4699bbf9a1664b0035e8",
     "language": "erlang",
     "url": "https://github.com/WhatsApp/tree-sitter-erlang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2721,7 +2721,7 @@
   },
   {
     "reference": "master",
-    "revision": "65bca19232744b920859ce682cd830b5006b8ccd",
+    "revision": "9d83ca263fa7ec8ac7a5fd8ad14891b2dc583a32",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
@@ -2954,8 +2954,8 @@
   },
   {
     "reference": "main",
-    "revision": "d0b26e45525016ef8e6f2ced05852437c06a00ca",
-    "grammarSha": "ea43ec1ec93725da48300aaf2b3c20ac11ae2a394cab2abc66635652bf8963ec",
+    "revision": "2a153c88d5d44d96653057c7cc14292f4e641bef",
+    "grammarSha": "01926177b36f84539bf4b828a7641e7e7f2180a1035d9161f2d9b4508580795f",
     "language": "nu",
     "url": "https://github.com/nushell/tree-sitter-nu",
     "maintainedBy": "@abhisheksingh0x558",
@@ -3693,7 +3693,7 @@
   },
   {
     "reference": "main",
-    "revision": "c0a807f052c80575e2b5e2c0e01a5c65baaaa08c",
+    "revision": "4ab78c0bb76735dbf4e1bd1a2ec43e953949edb7",
     "grammarSha": "21651304588f6094f6fed109e3a1ea5b2e18382d6e7496cf5f5e07c78a568ab5",
     "language": "rstml",
     "url": "https://github.com/rayliwell/tree-sitter-rstml",
@@ -3755,7 +3755,7 @@
   },
   {
     "reference": "main",
-    "revision": "c0a807f052c80575e2b5e2c0e01a5c65baaaa08c",
+    "revision": "4ab78c0bb76735dbf4e1bd1a2ec43e953949edb7",
     "grammarSha": "cb720e55e60bcf11606423f01730177b43c6c5e362e325fbba4845b4e0b57509",
     "language": "rust_with_rstml",
     "url": "https://github.com/rayliwell/tree-sitter-rstml",
