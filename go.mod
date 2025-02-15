@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.23
+	github.com/alexaandru/go-sitter-forest/nu v1.9.24
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.4
@@ -381,13 +381,13 @@ require (
 	github.com/alexaandru/go-sitter-forest/robots v1.9.0
 	github.com/alexaandru/go-sitter-forest/roc v1.9.2
 	github.com/alexaandru/go-sitter-forest/ron v1.9.0
-	github.com/alexaandru/go-sitter-forest/rstml v1.9.0
+	github.com/alexaandru/go-sitter-forest/rstml v1.9.1
 	github.com/alexaandru/go-sitter-forest/rsx v1.9.0
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.1
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.3
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
 	github.com/alexaandru/go-sitter-forest/rust v1.9.7
-	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.0
+	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.5
 	github.com/alexaandru/go-sitter-forest/scfg v1.9.1
