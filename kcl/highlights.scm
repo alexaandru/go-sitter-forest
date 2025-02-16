@@ -1,5 +1,8 @@
 (identifier) @variable
 
+; Reset highlighting in string interpolations
+(interpolation) @none
+
 (import_stmt
   (dotted_name
     (identifier) @namespace))
@@ -44,10 +47,24 @@
 
 (comment) @comment
 (string) @string
-(escape_sequence) @escape
+(escape_sequence) @string.escape
+
+(schema_stmt
+  body: (block
+    .
+    (string
+      (string_content) @string.documentation)))
+
+(decorator
+  (identifier) @attribute)
 
 (call_expr
-    (identifier) @function)
+  function: (identifier) @function)
+
+(call_expr
+  function: (selector_expr
+    (select_suffix
+      (identifier) @function)))
 
 [
   (integer)
@@ -57,7 +74,7 @@
 [
   (true)
   (false)
-  (none) 
+  (none)
   (undefined)
 ] @constant.builtin
 
@@ -83,6 +100,19 @@
 ] @keyword
 
 [
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+] @punctuation.bracket
+
+(interpolation
+  "${" @punctuation.special
+  "}" @punctuation.special)
+
+[
   "+"
   "-"
   "*"
@@ -103,7 +133,6 @@
   "=="
   "!="
   "@"
-;  "\\"
   "and"
   "or"
   "not"
@@ -112,3 +141,26 @@
   "="
   ":"
 ] @operator
+
+; second argument is a regex in all regex functions with at least two arguments
+(call_expr
+  function: (selector_expr
+    (identifier) @_regex)
+  arguments: (argument_list
+    (_)
+    .
+    (string
+      (string_content) @string.regexp))
+  (#eq? @_regex "regex"))
+
+; first argument is a regex in 'regex.compile' function
+(call_expr
+  .
+  function: (selector_expr
+    (identifier) @_regex
+    (select_suffix
+      (identifier) @_fn (#eq? @_fn "compile")))
+  arguments: (argument_list
+    (string
+      (string_content) @string.regexp))
+  (#eq? @_regex "regex"))

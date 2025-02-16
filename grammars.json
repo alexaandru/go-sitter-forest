@@ -414,8 +414,8 @@
   },
   {
     "reference": "main",
-    "revision": "ed8e4ca9a6716d2b3f52ff066feb716124a2d1d1",
-    "grammarSha": "a338806531b7ee1693d68e55e975cc1e2142696f0791adc25dec8376ac75191d",
+    "revision": "e877fba59ac078cf8206e8fb63db0337597f4b4c",
+    "grammarSha": "78ce2134224cab6e090e2a0d23ec6bbc1a9e9cd8fb4aa7168ac75b8951cff273",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "a881e21432e696f4e10113b8d5051071e6a76103",
+    "revision": "fe2c0b48cff80f04429ce316582bef985d274883",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2277,8 +2277,8 @@
   },
   {
     "reference": "main",
-    "revision": "e04d36e35c76aac66b72b95caac8afebae06dc02",
-    "grammarSha": "fde9e0872f1410c4fec13fc6a6559ba38a191627144221d736440c03af1e026b",
+    "revision": "b0b2eb38009e04035a6e266c7e11e541f3caab7c",
+    "grammarSha": "e5b990e81f65af8924d6de0f504c580937db1e32f470da96ee6b9666f535d406",
     "language": "kcl",
     "url": "https://github.com/kcl-lang/tree-sitter-kcl",
     "maintainedBy": "@Vishalk91-4",
@@ -4609,7 +4609,7 @@
   },
   {
     "reference": "main",
-    "revision": "92cb593652173dbb1ffb34ce48874d779850aabc",
+    "revision": "1047c9d876451c3fcf78343fff26cdfff3855b8c",
     "grammarSha": "2e636a3b4cbfdfec711b76cb4d27919d89331d025884c0ac46fb0c021147fce1",
     "language": "v",
     "url": "https://github.com/vlang/v-analyzer",

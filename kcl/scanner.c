@@ -45,7 +45,7 @@ enum TokenType {
     DEDENT,
     STRING_START,
     STRING_CONTENT,
-    ESCAPE_INTERPOLATION,
+    START_INTERPOLATION,
     STRING_END,
     COMMENT,
     CLOSE_PAREN,
@@ -159,6 +159,7 @@ typedef struct {
     indent_vec indents;
     delimiter_vec delimiters;
     bool inside_f_string;
+    bool return_interpolation_start;
 } Scanner;
 
 static inline void advance_kcl(TSLexer *lexer) { lexer->advance_kcl(lexer, false); }
@@ -175,39 +176,37 @@ bool tree_sitter_kcl_external_scanner_scan(void *payload, TSLexer *lexer,
                            valid_symbols[CLOSE_PAREN] ||
                            valid_symbols[CLOSE_BRACKET];
 
-    bool advanced_once = false;
-    if (valid_symbols[ESCAPE_INTERPOLATION] && scanner->delimiters.len > 0 &&
-        (lexer->lookahead == '{' || lexer->lookahead == '}') &&
-        !error_recovery_mode) {
-        Delimiter delimiter = VEC_BACK(scanner->delimiters);
-        if (is_format(&delimiter)) {
-            lexer->mark_end(lexer);
-            bool is_left_brace = lexer->lookahead == '{';
-            advance_kcl(lexer);
-            advanced_once = true;
-            if ((lexer->lookahead == '{' && is_left_brace) ||
-                (lexer->lookahead == '}' && !is_left_brace)) {
-                advance_kcl(lexer);
-                lexer->mark_end(lexer);
-                lexer->result_symbol = ESCAPE_INTERPOLATION;
-                return true;
-            }
-            return false;
-        }
+    if (scanner->return_interpolation_start) {
+        scanner->return_interpolation_start = false;
+        advance_kcl(lexer);
+        advance_kcl(lexer);
+        lexer->result_symbol = START_INTERPOLATION;
+        return true;
     }
 
     if (valid_symbols[STRING_CONTENT] && scanner->delimiters.len > 0 &&
         !error_recovery_mode) {
         Delimiter delimiter = VEC_BACK(scanner->delimiters);
         int32_t end_char = end_character(&delimiter);
-        bool has_content = advanced_once;
+
+        bool has_content = false;
         while (lexer->lookahead) {
-            if ((advanced_once || lexer->lookahead == '{' ||
-                 lexer->lookahead == '}') &&
+            if ((lexer->lookahead == '$') &&
                 is_format(&delimiter)) {
                 lexer->mark_end(lexer);
-                lexer->result_symbol = STRING_CONTENT;
-                return has_content;
+                advance_kcl(lexer);
+                if (lexer->lookahead == '{') {
+                    advance_kcl(lexer);
+                    if (has_content) {
+                        lexer->result_symbol = STRING_CONTENT;
+                        scanner->return_interpolation_start = true;
+                    } else {
+                        lexer->mark_end(lexer);
+                        lexer->result_symbol = START_INTERPOLATION;
+                    }
+                    return true;
+                }
+                has_content = true;
             }
             if (lexer->lookahead == '\\') {
                 if (is_raw(&delimiter)) {
@@ -228,20 +227,6 @@ bool tree_sitter_kcl_external_scanner_scan(void *payload, TSLexer *lexer,
                         advance_kcl(lexer);
                     }
                     continue;
-                }
-                if (is_bytes(&delimiter)) {
-                    lexer->mark_end(lexer);
-                    advance_kcl(lexer);
-                    if (lexer->lookahead == 'N' || lexer->lookahead == 'u' ||
-                        lexer->lookahead == 'U') {
-                        // In bytes string, \N{...}, \uXXXX and \UXXXXXXXX are
-                        // not escape sequences
-                        // https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals
-                        advance_kcl(lexer);
-                    } else {
-                        lexer->result_symbol = STRING_CONTENT;
-                        return has_content;
-                    }
                 } else {
                     lexer->mark_end(lexer);
                     lexer->result_symbol = STRING_CONTENT;
@@ -392,18 +377,13 @@ bool tree_sitter_kcl_external_scanner_scan(void *payload, TSLexer *lexer,
         Delimiter delimiter = new_delimiter();
 
         bool has_flags = false;
-        while (lexer->lookahead) {
-            if (lexer->lookahead == 'f' || lexer->lookahead == 'F') {
-                set_format(&delimiter);
-            } else if (lexer->lookahead == 'r' || lexer->lookahead == 'R') {
-                set_raw(&delimiter);
-            } else if (lexer->lookahead == 'b' || lexer->lookahead == 'B') {
-                set_bytes(&delimiter);
-            } else if (lexer->lookahead != 'u' && lexer->lookahead != 'U') {
-                break;
-            }
+        // kcl only supports 'r' flag. Any other string is a format string
+        if (lexer->lookahead == 'r' || lexer->lookahead == 'R') {
+            set_raw(&delimiter);
             has_flags = true;
             advance_kcl(lexer);
+        } else {
+            set_format(&delimiter);
         }
 
         if (lexer->lookahead == '`') {
@@ -457,6 +437,7 @@ unsigned tree_sitter_kcl_external_scanner_serialize(void *payload,
     size_t size = 0;
 
     buffer[size++] = (char)scanner->inside_f_string;
+    buffer[size++] = (char)scanner->return_interpolation_start;
 
     size_t delimiter_count = scanner->delimiters.len;
     if (delimiter_count > UINT8_MAX) {
@@ -492,6 +473,7 @@ void tree_sitter_kcl_external_scanner_deserialize(void *payload,
         size_t size = 0;
 
         scanner->inside_f_string = (bool)buffer[size++];
+        scanner->return_interpolation_start = (bool)buffer[size++];
 
         size_t delimiter_count = (uint8_t)buffer[size++];
         if (delimiter_count > 0) {
