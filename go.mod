@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.12
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.13
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.19
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.20
 	github.com/alexaandru/go-sitter-forest/css v1.9.3
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.22
+	github.com/alexaandru/go-sitter-forest/jai v1.9.23
 	github.com/alexaandru/go-sitter-forest/janet v1.9.2
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.3
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.24
+	github.com/alexaandru/go-sitter-forest/nu v1.9.25
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.4
