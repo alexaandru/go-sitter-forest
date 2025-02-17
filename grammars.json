@@ -414,8 +414,8 @@
   },
   {
     "reference": "main",
-    "revision": "e877fba59ac078cf8206e8fb63db0337597f4b4c",
-    "grammarSha": "78ce2134224cab6e090e2a0d23ec6bbc1a9e9cd8fb4aa7168ac75b8951cff273",
+    "revision": "ca5f75a606aed039d56daa1a14510d1a5ec488b8",
+    "grammarSha": "47336dae56b7f05c67d984c77d068c807fdea03932e47fe694dba46cd66de8d5",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "fe2c0b48cff80f04429ce316582bef985d274883",
+    "revision": "151bd14fd3ed19885a77a0b4b84ff6fc0f547bbe",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -758,8 +758,8 @@
   },
   {
     "reference": "main",
-    "revision": "cd3ae0751a58bca9fe875e580102578f5228a5a1",
-    "grammarSha": "a9a37a37ef7b85e4cc436ba138a5310422658210ad895e5d9662385516121621",
+    "revision": "8503ec747b59c2e0db02978501f80402488d7d32",
+    "grammarSha": "a18a61de28b49e8c36218f56a4e659bd3539e56684def7b38ee8d88f8fa79b85",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
     "maintainedBy": "@crystal-lang-tools",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2092,8 +2092,8 @@
   },
   {
     "reference": "master",
-    "revision": "999cb94e0e786d3b5bda1fd332a443fd640082eb",
-    "grammarSha": "f7d6f70a9baffce75be305f76ce3c315d3e085d875adb186dc1ae4da35b16476",
+    "revision": "13c5890286c1a4ee874ecde167e53e9a40cec5a1",
+    "grammarSha": "9eb067ff0e7e5c461625d75738ab9382afa2092fdd9a3af81d03ff7c4f2af13b",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",

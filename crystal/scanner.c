@@ -69,13 +69,17 @@ enum Token {
 
     MODULO_OPERATOR,
 
-    UNQUOTED_SYMBOL,
+    START_OF_SYMBOL,
+    UNQUOTED_SYMBOL_CONTENT,
 
     TYPE_FIELD_COLON,
 
     STRING_LITERAL_START,
     DELIMITED_STRING_CONTENTS,
     STRING_LITERAL_END,
+
+    COMMAND_LITERAL_START,
+    COMMAND_LITERAL_END,
 
     STRING_PERCENT_LITERAL_START,
     COMMAND_PERCENT_LITERAL_START,
@@ -282,6 +286,16 @@ enum LookaheadResult {
 };
 typedef enum LookaheadResult LookaheadResult;
 
+enum ScanResult {
+    // Keep scanning to match a different external token
+    SR_CONTINUE,
+    // Stop scanning and return content
+    SR_STOP,
+    // Stop scanning and don't return content (we expect non-external tokens to match)
+    SR_STOP_NO_CONTENT,
+};
+typedef enum ScanResult ScanResult;
+
 // Reset the macro state to its defaults
 static void reset_macro_state(State *state) {
     state->macro_state.in_comment = false;
@@ -419,7 +433,7 @@ static bool scan_whitespace(State *state, TSLexer *lexer, const bool *valid_symb
 }
 
 // Returns true if a string content token is found
-static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid_symbols) {
+static ScanResult scan_string_contents(State *state, TSLexer *lexer, const bool *valid_symbols) {
     bool found_content = false;
     LiteralType active_type;
 
@@ -429,7 +443,11 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
     for (;;) {
         if (lexer->eof(lexer)) {
             DEBUG("reached EOF");
-            return found_content;
+            if (found_content) {
+                return SR_STOP;
+            } else {
+                return SR_STOP_NO_CONTENT;
+            }
         }
 
         active_type = ACTIVE_LITERAL(state)->type;
@@ -439,7 +457,12 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
                 switch (active_type) {
                     case STRING:
                     case COMMAND:
-                        return found_content;
+                        if (found_content) {
+                            return SR_STOP;
+                        } else {
+                            // do the regular check for LINE_CONTINUATION
+                            return SR_CONTINUE;
+                        }
                     case REGEX:
                         // No special regex escapes
                         lex_advance_crystal(lexer);
@@ -454,7 +477,11 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
                         lexer->mark_end(lexer);
                         lex_advance_crystal(lexer);
                         if (iswspace(lexer->lookahead) || ACTIVE_LITERAL(state)->closing_char == lexer->lookahead) {
-                            return found_content;
+                            if (found_content) {
+                                return SR_STOP;
+                            } else {
+                                return SR_STOP_NO_CONTENT;
+                            }
                         }
 
                         // The backslash must be part of the word contents.
@@ -472,7 +499,11 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
                 lexer->mark_end(lexer);
                 lex_advance_crystal(lexer);
                 if (lexer->lookahead == '{') {
-                    return found_content;
+                    if (found_content) {
+                        return SR_STOP;
+                    } else {
+                        return SR_STOP_NO_CONTENT;
+                    }
                 }
 
                 found_content = true;
@@ -489,27 +520,29 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
 
                     if (found_content) {
                         // We've already found string contents, return that.
-                        return true;
+                        return SR_STOP;
                     } else if (valid_symbols[DELIMITED_ARRAY_ELEMENT_END]) {
                         // We've reached the end of an array word.
                         lexer->result_symbol = DELIMITED_ARRAY_ELEMENT_END;
-                        return true;
+                        return SR_STOP;
                     }
                 }
                 break;
             case '"':
             case '|':
+            case '`':
                 // These delimiters can't nest
                 if (ACTIVE_LITERAL(state)->closing_char == lexer->lookahead) {
                     if (found_content) {
                         // We've already found string contents, return that.
-                        return true;
+                        return SR_STOP;
                     } else if (valid_symbols[DELIMITED_ARRAY_ELEMENT_END]) {
                         // We've reached the end of an array word.
                         lexer->result_symbol = DELIMITED_ARRAY_ELEMENT_END;
-                        return true;
+                        return SR_STOP;
                     } else {
-                        return false;
+                        // The check for PERCENT_LITERAL_END comes later.
+                        return SR_CONTINUE;
                     }
                 }
                 break;
@@ -529,13 +562,14 @@ static bool scan_string_contents(State *state, TSLexer *lexer, const bool *valid
                     if (ACTIVE_LITERAL(state)->nesting_level == 0) {
                         if (found_content) {
                             // We've already found string contents, return that.
-                            return true;
+                            return SR_STOP;
                         } else if (valid_symbols[DELIMITED_ARRAY_ELEMENT_END]) {
                             // We've reached the end of an array word.
                             lexer->result_symbol = DELIMITED_ARRAY_ELEMENT_END;
-                            return true;
+                            return SR_STOP;
                         } else {
-                            return false;
+                            // The check for PERCENT_LITERAL_END comes later.
+                            return SR_CONTINUE;
                         }
                     }
 
@@ -740,16 +774,6 @@ static bool match_macro_keyword(TSLexer *lexer, const char keyword[]) {
     return true;
 }
 
-enum MacroScanResult {
-    // Stop scanning and return macro content
-    MS_STOP,
-    // Stop scanning and don't return macro content (we expect non-external tokens to match)
-    MS_STOP_NO_CONTENT,
-    // Keep scanning to match a different external token
-    MS_CONTINUE,
-};
-typedef enum MacroScanResult MacroScanResult;
-
 // Scan for macro literal content, which is treated as text instead of being parsed normally.
 // This function is modeled after Crystal::Lexer#next_macro_token. To simplify the implementation
 // here, we use grammar rules to model the nesting of different keywords.
@@ -763,13 +787,13 @@ typedef enum MacroScanResult MacroScanResult;
 // symbol is valid. We don't care about matching `end` or other keywords.
 //
 // This function may end up scanning some characters multiple times. First, it will scan until it
-// finds a nesting keyword like `begin`. It will return MS_STOP if any macro literal content has
+// finds a nesting keyword like `begin`. It will return SR_STOP if any macro literal content has
 // been consumed so far, so the overall scan has a result of MACRO_CONTENT_NESTING. Then the
 // external scanner is triggered again, starting exactly at the beginning of the keyword. The
-// keyword is matched again, and this function returns MS_STOP_NO_CONTENT. The overall scan will
+// keyword is matched again, and this function returns SR_STOP_NO_CONTENT. The overall scan will
 // not return a token on the second scan, so the grammar rule for the `begin`
 // keyword matches instead.
-static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const bool *valid_symbols) {
+static ScanResult scan_macro_contents(State *state, TSLexer *lexer, const bool *valid_symbols) {
     // Set to true if any content has been scanned with advance. This signals
     // the overall scan will return MACRO_CONTENT or MACRO_CONTENT_NESTING.
     bool found_content = false;
@@ -792,17 +816,17 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
 #define RETURN_NESTING_CONTENT                                            \
     if (nesting && !state->macro_state.in_comment && keyword_can_begin) { \
         if (found_content) {                                              \
-            return MS_STOP;                                               \
+            return SR_STOP;                                               \
         } else {                                                          \
-            return MS_STOP_NO_CONTENT;                                    \
+            return SR_STOP_NO_CONTENT;                                    \
         }                                                                 \
     }
 
 #define RETURN_CONTENT             \
     if (found_content) {           \
-        return MS_STOP;            \
+        return SR_STOP;            \
     } else {                       \
-        return MS_STOP_NO_CONTENT; \
+        return SR_STOP_NO_CONTENT; \
     }
 
     for (;;) {
@@ -850,7 +874,7 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                 //             ^
                 // let the grammar handle the rest of the macro var expressions
                 if (valid_symbols[START_OF_MACRO_VAR_EXPS] && !found_content) {
-                    return MS_STOP_NO_CONTENT;
+                    return SR_STOP_NO_CONTENT;
                 }
 
                 lex_advance_crystal(lexer);
@@ -860,7 +884,7 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                     // if/unless is a modifier.
                     state->macro_state.non_modifier_keyword_can_begin = false;
                     if (found_content) {
-                        return MS_STOP;
+                        return SR_STOP;
                     }
 
                     lex_advance_crystal(lexer);
@@ -879,7 +903,7 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                         if (lexer->lookahead == 'n') {
                             if (match_macro_keyword(lexer, "nd")) {
                                 lexer->result_symbol = MACRO_DELIMITER_END;
-                                return MS_STOP;
+                                return SR_STOP;
                             }
                         } else if (lexer->lookahead == 'l') {
                             lex_advance_crystal(lexer);
@@ -888,18 +912,18 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                                 if (lexer->lookahead == 'e') {
                                     if (match_macro_keyword(lexer, "e")) {
                                         lexer->result_symbol = MACRO_DELIMITER_ELSE;
-                                        return MS_STOP;
+                                        return SR_STOP;
                                     }
                                 } else if (lexer->lookahead == 'i') {
                                     if (match_macro_keyword(lexer, "if")) {
                                         lexer->result_symbol = MACRO_DELIMITER_ELSIF;
-                                        return MS_STOP;
+                                        return SR_STOP;
                                     }
                                 }
                             }
                         }
                     }
-                    return MS_STOP_NO_CONTENT;
+                    return SR_STOP_NO_CONTENT;
                 }
 
                 // This is the start of a tuple, brace block, etc.
@@ -973,9 +997,9 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                 if (valid_symbols[STRING_LITERAL_START]) {
                     // Delegate to string rules
                     if (found_content) {
-                        return MS_STOP;
+                        return SR_STOP;
                     } else {
-                        return MS_CONTINUE;
+                        return SR_CONTINUE;
                     }
                 }
 
@@ -1131,10 +1155,10 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                             if (found_content) {
                                 // Don't set non_modifier_keyword_can_begin yet, the scan is going
                                 // to re-enter at this point.
-                                return MS_STOP;
+                                return SR_STOP;
                             } else {
                                 state->macro_state.non_modifier_keyword_can_begin = false;
-                                return MS_STOP_NO_CONTENT;
+                                return SR_STOP_NO_CONTENT;
                             }
                         }
                     } else {
@@ -1220,10 +1244,10 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                                 if (found_content) {
                                     // Don't set non_modifier_keyword_can_begin yet, the scan is going
                                     // to re-enter at this point.
-                                    return MS_STOP;
+                                    return SR_STOP;
                                 } else {
                                     state->macro_state.non_modifier_keyword_can_begin = false;
-                                    return MS_STOP_NO_CONTENT;
+                                    return SR_STOP_NO_CONTENT;
                                 }
                             }
                         }
@@ -1233,10 +1257,10 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                                 if (found_content) {
                                     // Don't set non_modifier_keyword_can_begin yet, the scan is going
                                     // to re-enter at this point.
-                                    return MS_STOP;
+                                    return SR_STOP;
                                 } else {
                                     state->macro_state.non_modifier_keyword_can_begin = false;
-                                    return MS_STOP_NO_CONTENT;
+                                    return SR_STOP_NO_CONTENT;
                                 }
                             }
                         }
@@ -1261,10 +1285,10 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
                             if (found_content) {
                                 // Don't set non_modifier_keyword_can_begin yet, the scan is going
                                 // to re-enter at this point.
-                                return MS_STOP;
+                                return SR_STOP;
                             } else {
                                 state->macro_state.non_modifier_keyword_can_begin = false;
-                                return MS_STOP_NO_CONTENT;
+                                return SR_STOP_NO_CONTENT;
                             }
                         }
                     } else {
@@ -1335,6 +1359,47 @@ static MacroScanResult scan_macro_contents(State *state, TSLexer *lexer, const b
         keyword_can_begin = false;
         state->macro_state.non_modifier_keyword_can_begin = false;
     }
+}
+
+static ScanResult scan_symbol_content(TSLexer *lexer) {
+    int32_t lookahead = lexer->lookahead;
+
+    if (('A' <= lookahead && lookahead <= 'Z')
+        || ('a' <= lookahead && lookahead <= 'z')
+        || (lookahead == '_')
+        || (0x00a0 <= lookahead && lookahead <= 0x10ffffff)) {
+
+        lexer->result_symbol = UNQUOTED_SYMBOL_CONTENT;
+        lex_advance_crystal(lexer);
+
+        while (is_ident_part(lexer->lookahead)) {
+            lex_advance_crystal(lexer);
+        }
+
+        switch (lexer->lookahead) {
+            case '?':
+                // Symbols like `:foo?` always include the trailing character
+                lex_advance_crystal(lexer);
+                return SR_STOP;
+
+            case '!':
+            case '=':
+                // Symbols like `:foo!` or `:bar=` include the trailing character,
+                // only if the next char isn't also `=`
+                lexer->mark_end(lexer);
+                lex_advance_crystal(lexer);
+
+                if (lexer->lookahead != '=') {
+                    lexer->mark_end(lexer);
+                }
+                return SR_STOP;
+
+            default:
+                return SR_STOP;
+        }
+    }
+
+    return SR_CONTINUE;
 }
 
 static bool scan_regex_modifier(State *state, TSLexer *lexer) {
@@ -1754,8 +1819,15 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
         state->previous_line_continued = false;
     }
 
-    if (valid_symbols[DELIMITED_STRING_CONTENTS] && HAS_ACTIVE_LITERAL(state) && scan_string_contents(state, lexer, valid_symbols)) {
-        return true;
+    if (valid_symbols[DELIMITED_STRING_CONTENTS] && HAS_ACTIVE_LITERAL(state)) {
+        switch (scan_string_contents(state, lexer, valid_symbols)) {
+            case SR_STOP:
+                return true;
+            case SR_STOP_NO_CONTENT:
+                return false;
+            case SR_CONTINUE:
+                break;
+        }
     }
 
     if (valid_symbols[HEREDOC_CONTENT] && state->heredocs.size > 0 && scan_heredoc_contents(state, lexer, valid_symbols)) {
@@ -1770,11 +1842,22 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
 
     if ((valid_symbols[MACRO_CONTENT] || valid_symbols[MACRO_CONTENT_NESTING]) && !valid_symbols[ERROR_RECOVERY]) {
         switch (scan_macro_contents(state, lexer, valid_symbols)) {
-            case MS_STOP:
+            case SR_STOP:
                 return true;
-            case MS_STOP_NO_CONTENT:
+            case SR_STOP_NO_CONTENT:
                 return false;
-            case MS_CONTINUE:
+            case SR_CONTINUE:
+                break;
+        }
+    }
+
+    if (valid_symbols[UNQUOTED_SYMBOL_CONTENT] && !valid_symbols[ERROR_RECOVERY]) {
+        switch (scan_symbol_content(lexer)) {
+            case SR_STOP:
+                return true;
+            case SR_STOP_NO_CONTENT:
+                return false;
+            case SR_CONTINUE:
                 break;
         }
     }
@@ -1803,6 +1886,15 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             lex_advance_crystal(lexer);
             (void)POP_LITERAL(state);
             lexer->result_symbol = STRING_LITERAL_END;
+            return true;
+        }
+    }
+
+    if (valid_symbols[COMMAND_LITERAL_END] && HAS_ACTIVE_LITERAL(state)) {
+        if (lexer->lookahead == ACTIVE_LITERAL(state)->closing_char) {
+            lex_advance_crystal(lexer);
+            (void)POP_LITERAL(state);
+            lexer->result_symbol = COMMAND_LITERAL_END;
             return true;
         }
     }
@@ -2578,12 +2670,47 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             }
             break;
 
+        case '`':
+            if (valid_symbols[COMMAND_LITERAL_START]) {
+                lex_advance_crystal(lexer);
+
+                PUSH_LITERAL(state, ((PercentLiteral){
+                                        .opening_char = '`',
+                                        .closing_char = '`',
+                                        .type = COMMAND,
+                                        .nesting_level = 0,
+                                    }));
+
+                lexer->result_symbol = COMMAND_LITERAL_START;
+                return true;
+            } else if (valid_symbols[COMMAND_LITERAL_END]) {
+                lex_advance_crystal(lexer);
+                lexer->result_symbol = COMMAND_LITERAL_END;
+                return true;
+            }
+            break;
+
         case '\\':
             if (valid_symbols[LINE_CONTINUATION]) {
-                // Inside a string, a percent literal, or a heredoc, treat backslash + newline
-                // like other escaped string characters.
-                if (HAS_ACTIVE_LITERAL(state) || has_active_heredoc(state)) {
+                // Don't allow line continuation in a quoted heredoc
+                if (has_active_heredoc(state) && !array_get(&state->heredocs, 0)->allow_escapes) {
                     return false;
+                }
+
+                // Line continuations may be allowed in some literals
+                if (HAS_ACTIVE_LITERAL(state)) {
+                    switch (ACTIVE_LITERAL(state)->type) {
+                        case STRING_NO_ESCAPE:
+                        case REGEX:
+                        case STRING_ARRAY:
+                        case SYMBOL_ARRAY:
+                            // Line continuations aren't allowed here
+                            return false;
+                        case STRING:
+                        case COMMAND:
+                            // Continue checking for line continuation
+                            break;
+                    }
                 }
 
                 lex_advance_crystal(lexer);
@@ -2602,7 +2729,7 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
             break;
 
         case ':':
-            if (valid_symbols[UNQUOTED_SYMBOL] || valid_symbols[TYPE_FIELD_COLON]) {
+            if (valid_symbols[START_OF_SYMBOL] || valid_symbols[TYPE_FIELD_COLON]) {
                 lex_advance_crystal(lexer);
 
                 int32_t lookahead = lexer->lookahead;
@@ -2613,8 +2740,28 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     return true;
                 }
 
-                if (!valid_symbols[UNQUOTED_SYMBOL]) {
+                if (!valid_symbols[START_OF_SYMBOL]) {
                     return false;
+                }
+
+                switch (lookahead) {
+                    case '!':
+                    case '%':
+                    case '&':
+                    case '*':
+                    case '+':
+                    case '-':
+                    case '/':
+                    case '<':
+                    case '=':
+                    case '>':
+                    case '[':
+                    case '^':
+                    case '|':
+                    case '~':
+                        // start of an operator symbol
+                        lexer->result_symbol = START_OF_SYMBOL;
+                        return true;
                 }
 
                 if (('A' <= lookahead && lookahead <= 'Z')
@@ -2622,35 +2769,9 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                     || (lookahead == '_')
                     || (0x00a0 <= lookahead && lookahead <= 0x10ffffff)) {
 
-                    // This is the start of a symbol
-                    lexer->result_symbol = UNQUOTED_SYMBOL;
-                    lex_advance_crystal(lexer);
-
-                    while (is_ident_part(lexer->lookahead)) {
-                        lex_advance_crystal(lexer);
-                    }
-
-                    switch (lexer->lookahead) {
-                        case '?':
-                            // Symbols like `:foo?` always include the trailing character
-                            lex_advance_crystal(lexer);
-                            return true;
-
-                        case '!':
-                        case '=':
-                            // Symbols like `:foo!` or `:bar=` include the trailing character,
-                            // only if the next char isn't also `=`
-                            lexer->mark_end(lexer);
-                            lex_advance_crystal(lexer);
-
-                            if (lexer->lookahead != '=') {
-                                lexer->mark_end(lexer);
-                            }
-                            return true;
-
-                        default:
-                            return true;
-                    }
+                    // This is the start of an unquoted symbol
+                    lexer->result_symbol = START_OF_SYMBOL;
+                    return true;
                 }
             }
             break;
@@ -2901,11 +3022,14 @@ bool tree_sitter_crystal_external_scanner_scan(void *payload, TSLexer *lexer, co
     LOG_SYMBOL(REGULAR_ENSURE_KEYWORD);
     LOG_SYMBOL(MODIFIER_ENSURE_KEYWORD);
     LOG_SYMBOL(MODULO_OPERATOR);
-    LOG_SYMBOL(UNQUOTED_SYMBOL);
+    LOG_SYMBOL(START_OF_SYMBOL);
+    LOG_SYMBOL(UNQUOTED_SYMBOL_CONTENT);
     LOG_SYMBOL(TYPE_FIELD_COLON);
     LOG_SYMBOL(STRING_LITERAL_START);
     LOG_SYMBOL(DELIMITED_STRING_CONTENTS);
     LOG_SYMBOL(STRING_LITERAL_END);
+    LOG_SYMBOL(COMMAND_LITERAL_START);
+    LOG_SYMBOL(COMMAND_LITERAL_END);
     LOG_SYMBOL(STRING_PERCENT_LITERAL_START);
     LOG_SYMBOL(COMMAND_PERCENT_LITERAL_START);
     LOG_SYMBOL(STRING_ARRAY_PERCENT_LITERAL_START);

@@ -70,9 +70,27 @@
 (pseudo_constant) @constant.builtin
 
 ; literals
-(string) @string
+(string
+  "\"" @string)
 
-(symbol) @string.special.symbol
+(string
+  (literal_content) @string)
+
+(symbol
+  [
+   ":"
+   ":\""
+   "\""
+  ] @string.special.symbol)
+
+(symbol
+  (literal_content) @string.special.symbol)
+
+(command
+  "`" @string.special)
+
+(command
+  (literal_content) @string.special)
 
 (regex
   "/" @punctuation.bracket)
@@ -82,7 +100,8 @@
 
 (regex_modifier) @character.special
 
-(heredoc_content) @string
+(heredoc_body
+  (literal_content) @string)
 
 [
   (heredoc_start)
@@ -90,6 +109,12 @@
 ] @label
 
 (string_escape_sequence) @string.escape
+
+(char
+  "'" @character)
+
+(char
+  (literal_content) @character)
 
 (integer) @number
 

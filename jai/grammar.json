@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "999cb94e0e786d3b5bda1fd332a443fd640082eb",
-  "grammarSha": "f7d6f70a9baffce75be305f76ce3c315d3e085d875adb186dc1ae4da35b16476",
+  "revision": "13c5890286c1a4ee874ecde167e53e9a40cec5a1",
+  "grammarSha": "9eb067ff0e7e5c461625d75738ab9382afa2092fdd9a3af81d03ff7c4f2af13b",
   "language": "jai",
   "url": "https://github.com/constantitus/tree-sitter-jai",
   "maintainedBy": "@constantitus",
