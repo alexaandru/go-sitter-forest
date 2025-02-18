@@ -91,7 +91,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
 	github.com/alexaandru/go-sitter-forest/desktop v1.9.3
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.1
-	github.com/alexaandru/go-sitter-forest/dezyne v1.9.0
+	github.com/alexaandru/go-sitter-forest/dezyne v1.9.1
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.1
 	github.com/alexaandru/go-sitter-forest/diff v1.9.2
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
@@ -213,7 +213,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.7
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.2
-	github.com/alexaandru/go-sitter-forest/inko v1.9.5
+	github.com/alexaandru/go-sitter-forest/inko v1.9.6
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
@@ -366,7 +366,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/racket v1.9.0
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.0
-	github.com/alexaandru/go-sitter-forest/razor v1.9.1
+	github.com/alexaandru/go-sitter-forest/razor v1.9.2
 	github.com/alexaandru/go-sitter-forest/rbs v1.9.1
 	github.com/alexaandru/go-sitter-forest/rcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/re2c v1.9.1
