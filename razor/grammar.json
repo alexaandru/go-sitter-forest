@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "a47cd8ca148685629739a4ab69f58864800fbdab",
-  "grammarSha": "3197f20f27aff2444668dc8ed3cfa37f3661faede9bc72f0cdc7aabdddd327d9",
+  "revision": "fe46ce5ea7d844e53d59bc96f2175d33691c61c5",
+  "grammarSha": "c01db603e4e063e66782ef12ae7af740dae4bb36b7a4b8477c9bff7c5b3e4d03",
   "language": "razor",
   "url": "https://github.com/tris203/tree-sitter-razor",
   "maintainedBy": "@tris203",

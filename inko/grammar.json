@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "0b08a8f976456a9271f70d4682143328d7224115",
-  "grammarSha": "3bd9bd969d0f43f1f3f2e936cddd65ce6e85cf4fcc01ea85a892747aefe0f854",
+  "revision": "4d057a5c24d715b211c3c82de2526f041b4af66f",
+  "grammarSha": "7a35a8140e8f4108fd771c5d9901fa6cf4ab3820180e6428b77d4ab4714accce",
   "language": "inko",
   "url": "https://github.com/inko-lang/tree-sitter-inko",
   "maintainedBy": "@yorickpeterse"
