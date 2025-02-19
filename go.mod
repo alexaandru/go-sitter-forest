@@ -28,7 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.2
 	github.com/alexaandru/go-sitter-forest/bara v1.9.0
-	github.com/alexaandru/go-sitter-forest/barq v1.9.1
+	github.com/alexaandru/go-sitter-forest/barq v1.9.2
 	github.com/alexaandru/go-sitter-forest/bash v1.9.5
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.20
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.21
 	github.com/alexaandru/go-sitter-forest/css v1.9.3
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.9
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.10
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
