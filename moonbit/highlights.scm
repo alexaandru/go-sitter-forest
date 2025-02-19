@@ -8,15 +8,33 @@
 
 ;; Variables
 
-(parameter (parameter_label) @parameter)
+; Variables
+
+(parameter (parameter_label) @variable.parameter)
+(parameter (lowercase_identifier) @variable.parameter)
+((parameter (lowercase_identifier) @variable.builtin)
+ (#any-of? @variable.builtin
+           "self"))
 
 (pattern (simple_pattern (lowercase_identifier) @variable))
 
-(qualified_identifier) @variable
-
-((qualified_identifier) @variable.builtin
+(qualified_identifier (lowercase_identifier) @variable)
+((qualified_identifier (lowercase_identifier) @variable.builtin)
  (#any-of? @variable.builtin
            "self"))
+((qualified_identifier (dot_identifier) @variable)
+ (#lua-match? @variable "^\.[^A-Z]"))
+
+(value_definition (lowercase_identifier) @variable)
+
+(let_mut_expression (lowercase_identifier) @variable)
+
+; Constants
+
+(const_definition (uppercase_identifier) @constant)
+
+((qualified_identifier (dot_identifier) @constant)
+ (#lua-match? @constant "^\.[A-Z]"))
 
 ;; Types
 
@@ -32,42 +50,45 @@
 (struct_definition (identifier) @type.definition)
 (type_definition (identifier) @type.definition)
 (trait_definition (identifier) @type.definition)
+(type_alias_definition (identifier) @type.definition)
+(error_type_definition (identifier) @type.definition)
 
 ; Builtin types
 
 ((qualified_type_identifier) @type.builtin
  (#any-of? @type.builtin
+           "Unit"
            "Bool"
-           "String"
+           "Byte"
            "Int"
+           "UInt"
            "Int64"
+           "UInt64"
+           "Float"
            "Double"
+           "FixedArray"
            "Array"
-           "List"))
+           "Bytes"
+           "String"
+           "Error"
+           "Self"))
 
 ; Constructors
 
-(enum_constructor) @constructor
+(enum_constructor) @constant
 
-(constructor_expression (uppercase_identifier) @constructor)
+(constructor_expression (uppercase_identifier) @constant)
 
 ; Fields
 
 (struct_field_declaration (lowercase_identifier) @field)
-
 (struct_field_expressions (labeled_expression (lowercase_identifier) @field))
-
 (struct_field_expressions (labeled_expression_pun (lowercase_identifier) @field))
-
 (struct_field_expression (labeled_expression (lowercase_identifier) @field))
-
 (struct_field_expression (labeled_expression_pun (lowercase_identifier) @field))
-
-(struct_field_pattern (field_single_pattern (labeled_pattern (lowercase_identifier) @field)))
-
-(struct_field_pattern (field_single_pattern (labeled_pattern_pun (lowercase_identifier) @field)))
-
-(dot_identifier) @field
+(struct_pattern (struct_field_pattern (labeled_pattern (lowercase_identifier) @field)))
+(struct_pattern (struct_field_pattern (labeled_pattern_pun (lowercase_identifier) @field)))
+(access_expression (accessor (dot_identifier) @field))
 
 ;; Functions
 
@@ -77,24 +98,25 @@
 
 ; Method calls
 
-(method_expression (lowercase_identifier) @method.call)
-
-(dot_apply_expression (dot_identifier) @method.call)
+(method_expression (lowercase_identifier) @function.method.call)
+(dot_apply_expression (dot_identifier) @function.method.call)
 
 ; Function definitions
 
-(function_definition (function_identifier) @function)
-
+(function_definition (function_identifier (lowercase_identifier) @function))
 (trait_method_declaration (function_identifier) @function)
+(impl_definition (function_identifier) @function)
 
-; Builtin Functions
+; Method definitions
 
-((qualified_identifier) @function.builtin
- (#any-of? @function.builtin
-           "println"
-           "print"
-           "abort"
-           "panic"))
+(function_definition
+ (function_identifier (qualified_type_identifier) (lowercase_identifier) @function.method))
+
+;; Labels
+
+(loop_label) @label
+("continue" (parameter_label) @label)
+("break" (parameter_label) @label)
 
 ;; Operators
 
@@ -104,6 +126,7 @@
   "<" ">" ">=" "<=" "==" "!="
   "&&" "||"
   "=>" "->"
+  "!" "!!"
 ] @operator
 
 ;; Keywords
@@ -111,15 +134,15 @@
 (mutability) @keyword.modifier
 
 [
-  "struct" "enum" "type" "trait"
+  "struct" "enum" "type" "trait" "typealias"
 ] @keyword.type
 
 [
-  "pub" "priv" "readonly"
+  "pub" "priv" "readonly" "all" "open" "extern"
 ] @keyword.modifier
 
 [
-  "let" "mut"
+  "guard" "let" "mut" "const"
   "with"
 ] @keyword
 
@@ -133,7 +156,11 @@
   "if"
   "else"
   "match"
-] @conditional
+] @keyword.conditional
+
+"async" @keyword.coroutine
+
+[ "try" "raise" "catch" ] @keyword.exception
 
 ;; Delimiters
 
@@ -165,14 +192,14 @@
  "}" @punctuation.special)
 
 (integer_literal) @number
-(float_literal) @float
+(float_literal) @number.float
 (boolean_literal) @boolean
 
-; Comments
+;; Comments
 
 (comment) @comment @spell
 (docstring) @comment.documentation @spell
 
-; Errors
+;; Errors
 
 (ERROR) @error

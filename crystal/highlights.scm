@@ -76,6 +76,9 @@
 (string
   (literal_content) @string)
 
+(string
+  (escape_sequence) @string.escape)
+
 (symbol
   [
    ":"
@@ -86,11 +89,17 @@
 (symbol
   (literal_content) @string.special.symbol)
 
+(symbol
+  (escape_sequence) @character)
+
 (command
   "`" @string.special)
 
 (command
   (literal_content) @string.special)
+
+(command
+  (escape_sequence) @character)
 
 (regex
   "/" @punctuation.bracket)
@@ -103,18 +112,22 @@
 (heredoc_body
   (literal_content) @string)
 
+(heredoc_body
+  (escape_sequence) @string.escape)
+
 [
   (heredoc_start)
   (heredoc_end)
 ] @label
-
-(string_escape_sequence) @string.escape
 
 (char
   "'" @character)
 
 (char
   (literal_content) @character)
+
+(char
+  (escape_sequence) @string.escape)
 
 (integer) @number
 

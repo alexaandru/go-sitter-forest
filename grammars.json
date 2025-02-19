@@ -254,8 +254,8 @@
   },
   {
     "reference": "master",
-    "revision": "f9565206a7297e1e888975e2dc45326011b86c4b",
-    "grammarSha": "f9258aadff7634e649cdfa98ce129a8d8114c5ee5f3625612a573ba3d7d2f6e4",
+    "revision": "9e96cc0f35f5b0e0fab87363271e04013bc6ae50",
+    "grammarSha": "9f9157bb94caee2e62d3976941c2e5b7114d81a80b519efa61fc5414c6b74899",
     "language": "barq",
     "url": "https://github.com/barqlang/tree-sitter-barq",
     "maintainedBy": "@yhyadev"
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "cf29449faf3b86b83373018f2b6daa90a1262baf",
+    "revision": "e0b2f5d772a5e459e8f771b39ea2016820a5e4a2",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -758,8 +758,8 @@
   },
   {
     "reference": "main",
-    "revision": "8503ec747b59c2e0db02978501f80402488d7d32",
-    "grammarSha": "a18a61de28b49e8c36218f56a4e659bd3539e56684def7b38ee8d88f8fa79b85",
+    "revision": "2947333cf7d47ce842e8df70c709deb51ee86ae5",
+    "grammarSha": "ba89809566b02cc0f5009f3524fdcef62731b9a9b4c5b6eaf21371d0e0ca29a4",
     "language": "crystal",
     "url": "https://github.com/crystal-lang-tools/tree-sitter-crystal",
     "maintainedBy": "@crystal-lang-tools",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
+    "grammarSha": "43b07631e6542dbc68f97115f77480086343d070f8cc67acf87c5aadc5c8d180",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2721,7 +2721,7 @@
   },
   {
     "reference": "master",
-    "revision": "9d83ca263fa7ec8ac7a5fd8ad14891b2dc583a32",
+    "revision": "2a8476371ff4f8b9e451d702033fdf9410fc1a16",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
@@ -2737,8 +2737,8 @@
   },
   {
     "reference": "main",
-    "revision": "f1cb273b1d188d9433839bc48f815b939b5db6ab",
-    "grammarSha": "e3f9f49ccb339653e2265eb56b0030d01baf9a8fe138ba1ef06003b42aa37170",
+    "revision": "fcfc4be5082fec08214d2640dec7c740014d45e5",
+    "grammarSha": "7ee99214e6f774d63d93c90f5f34360259d779314e459ae7d57f707f84577cb0",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
     "maintainedBy": "@tonyfettes",
@@ -4198,7 +4198,7 @@
   },
   {
     "reference": "main",
-    "revision": "1ebc09c38f41d6aab7dd65ca0f8ea032ced0364f",
+    "revision": "48fcda87af1bed7d7a328dcd257fe8ee75933b04",
     "grammarSha": "f0b629e7d8428eedfb2356ac049efd24837331718759217fa1b737253d3c1d5d",
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",

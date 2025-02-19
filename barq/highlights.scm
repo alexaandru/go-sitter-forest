@@ -1,10 +1,7 @@
-
 ; Variables
 
 (identifier) @variable
 (member key: (identifier) @variable.member)
-
-(module_specifier (identifier) @module)
 
 ; Parameters
 
@@ -13,7 +10,9 @@
 ; Types
 
 (type (identifier) @type)
+
 (type (struct_type (struct_type_fields (identifier) @variable.member)))
+
 (type_alias (identifier) @type.definition)
 
 ; Function and Method calls
@@ -23,6 +22,8 @@
 
 (call (identifier) @function.call)
 (call (member key: (identifier) @function.method.call))
+
+(call (special_identifier) @function.builtin.call)
 
 ; Literals
 
@@ -55,12 +56,6 @@
  "enum"
  "type"
 ] @keyword.type
-
-[
- "module"
- "import"
- "pub"
-] @keyword.import
 
 [
  "extern"
