@@ -1,6 +1,7 @@
 [
   "alias"
   "annotation"
+  "asm"
   "begin"
   "break"
   "case"

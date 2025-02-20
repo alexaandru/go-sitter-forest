@@ -16,6 +16,7 @@ enum TokenType {
   MULTILINE_STRING_SEPARATOR,
   DOT_DOT_LT,
   DOT_DOT_EQ,
+  IS,
 };
 
 static const char *const token_names[] = {
@@ -32,6 +33,7 @@ static const char *const token_names[] = {
     [MULTILINE_STRING_SEPARATOR] = "MULTILINE_STRING_SEPARATOR",
     [DOT_DOT_LT] = "DOT_DOT_LT",
     [DOT_DOT_EQ] = "DOT_DOT_EQ",
+    [IS] = "IS",
 };
 
 void *tree_sitter_moonbit_external_scanner_create() { return NULL; }
@@ -102,7 +104,7 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
         advance_moonbit(lexer);
       }
       if (!is_num_char(lexer->lookahead)) {
-        return true;
+        return has_fraction;
       }
       advance_moonbit(lexer);
       while (is_num_char(lexer->lookahead)) {
@@ -110,7 +112,7 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
       }
       lexer->mark_end(lexer);
     }
-    if (!has_fraction && !has_fraction) {
+    if (!has_fraction) {
       return false;
     }
     return true;
@@ -119,7 +121,8 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
              valid_symbols[QUESTION_OPERATOR] || valid_symbols[DERIVE] ||
              valid_symbols[DOT_DOT] ||
              valid_symbols[MULTILINE_STRING_SEPARATOR] ||
-             valid_symbols[DOT_DOT_LT] || valid_symbols[DOT_DOT_EQ]) {
+             valid_symbols[DOT_DOT_LT] || valid_symbols[DOT_DOT_EQ] ||
+             valid_symbols[IS]) {
     while (iswspace(lexer->lookahead)) {
       skip_moonbit(lexer);
     }
@@ -217,6 +220,15 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
         return false;
       }
       lexer->result_symbol = MULTILINE_STRING_SEPARATOR;
+      lexer->mark_end(lexer);
+      return true;
+    } else if (lexer->lookahead == 'i') {
+      advance_moonbit(lexer);
+      if (lexer->lookahead != 's') {
+        return false;
+      }
+      advance_moonbit(lexer);
+      lexer->result_symbol = IS;
       lexer->mark_end(lexer);
       return true;
     }
