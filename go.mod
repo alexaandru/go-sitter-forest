@@ -77,8 +77,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.21
-	github.com/alexaandru/go-sitter-forest/css v1.9.3
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.22
+	github.com/alexaandru/go-sitter-forest/css v1.9.4
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
 	github.com/alexaandru/go-sitter-forest/cue v1.9.1
@@ -169,7 +169,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
 	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.2
-	github.com/alexaandru/go-sitter-forest/gomod v1.9.3
+	github.com/alexaandru/go-sitter-forest/gomod v1.9.4
 	github.com/alexaandru/go-sitter-forest/gooscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/gosum v1.9.0
 	github.com/alexaandru/go-sitter-forest/gotmpl v1.9.3
@@ -220,7 +220,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jai v1.9.23
 	github.com/alexaandru/go-sitter-forest/janet v1.9.2
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
-	github.com/alexaandru/go-sitter-forest/java v1.9.3
+	github.com/alexaandru/go-sitter-forest/java v1.9.4
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
 	github.com/alexaandru/go-sitter-forest/jinja v1.9.4
 	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.5
@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
-	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.1
+	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.2
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.2
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.10
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.11
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -317,7 +317,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/org v1.9.0
 	github.com/alexaandru/go-sitter-forest/ott v1.9.0
 	github.com/alexaandru/go-sitter-forest/pact v1.9.1
-	github.com/alexaandru/go-sitter-forest/pascal v1.9.0
+	github.com/alexaandru/go-sitter-forest/pascal v1.9.1
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
@@ -500,7 +500,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xml v1.9.5
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.2
 	github.com/alexaandru/go-sitter-forest/yadl v1.9.0
-	github.com/alexaandru/go-sitter-forest/yaml v1.9.2
+	github.com/alexaandru/go-sitter-forest/yaml v1.9.3
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.1
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
