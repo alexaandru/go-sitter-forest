@@ -109,8 +109,7 @@
 
 ; Method definitions
 
-(function_definition
- (function_identifier (qualified_type_identifier) (lowercase_identifier) @function.method))
+(function_definition (function_identifier (type_name (qualified_type_identifier)) (lowercase_identifier) @function.method))
 
 ;; Labels
 

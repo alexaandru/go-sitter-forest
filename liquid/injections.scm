@@ -13,3 +13,6 @@
 ((js_content) @injection.content
   (#set! injection.language "javascript")
   (#set! injection.combined))
+
+((front_matter) @injection.content
+  (#set! injection.language "yaml"))

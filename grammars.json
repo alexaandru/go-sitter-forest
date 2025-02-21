@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "74e1a9949f159e22c8d01ee55ae8a6dab24a38ca",
+    "revision": "8d1d491ad0c32edb6338382d8482ff5a6bbeb245",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3e6b97ce7ff4f6e9ec0e8d587c1e80fea75aef6c04483cf5e3347aa413934160",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2497,8 +2497,8 @@
   },
   {
     "reference": "main",
-    "revision": "23ac814111e2b4b4b083e2c92219af2d5b74d13d",
-    "grammarSha": "96e5eb435629d34df29fabd00810bd960b5712d3fb2471d723d57bd3c7c34ce4",
+    "revision": "d68a255c393cfefa9d3185023e2f1684a52907ed",
+    "grammarSha": "da0f276c488b1a6ebdef8d9d9a4a4ccece6cd5eee427f7875c76e123c33a20e5",
     "language": "liquid",
     "url": "https://github.com/hankthetank27/tree-sitter-liquid",
     "maintainedBy": "@hankthetank27",
@@ -2737,8 +2737,8 @@
   },
   {
     "reference": "main",
-    "revision": "1744a16fab6cb408e69cff1b266988a3308456b9",
-    "grammarSha": "d6b6aac086a84aa5b075b0b6ff6d653ad662afd05c2a8c1bd21c7934c888894e",
+    "revision": "8217455f9819d4083c2695daf1519bcbd5371650",
+    "grammarSha": "0437b5251f2a2f1401635066fb2637a4d10224376026d2a43faeb54285594011",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
     "maintainedBy": "@tonyfettes",
@@ -3414,7 +3414,7 @@
   },
   {
     "reference": "main",
-    "revision": "49f3d448bbd0b649892ed7d43fdb68526fbe2d9b",
+    "revision": "ddc0813f17ceee06b60aff6e7bea1e29515b4e8a",
     "grammarSha": "e17f8fa8766324dfb189f1f16434f2d7b2845fed598db4d615c06839871535ef",
     "language": "pyrope",
     "url": "https://github.com/masc-ucsc/tree-sitter-pyrope",
@@ -3816,7 +3816,7 @@
   },
   {
     "reference": "main",
-    "revision": "7d35c7b0ee06c4e14c15790da589a7549f49ebc2",
+    "revision": "056fc1d0b8624aa4e58967c67bb129ebdfa6d563",
     "grammarSha": "fa65e302f6f96a15b2dcb9d291645fe5755e5e465981c7304bf73547fc08689b",
     "language": "sdml",
     "url": "https://github.com/sdm-lang/tree-sitter-sdml",
@@ -4013,7 +4013,7 @@
   },
   {
     "reference": "main",
-    "revision": "e53123a37030a8669546fea704f7fa249d4d22ae",
+    "revision": "8f18cd750e121d2d15b85173733fe34da2396f92",
     "grammarSha": "85d619333b26305164f4f3b0fc283a6a76a2a6a8ff930ea67a324fa8029e013e",
     "language": "spicy",
     "url": "https://github.com/bbannier/tree-sitter-spicy",
@@ -4158,8 +4158,8 @@
   },
   {
     "reference": "main",
-    "revision": "54221117ca7b6afb330b185ab47baed2fe06126a",
-    "grammarSha": "1db0846bc24e411823f44be40be89ee85259b2622029f2035a6b7d06cb3a3417",
+    "revision": "f5e527bc8412870570494fea17fd32411ea6fa98",
+    "grammarSha": "5b73882e0f1d9dd1b643388197a7722fbe7e6a7510ef426471d9e1e3c3758a35",
     "language": "surrealql",
     "url": "https://github.com/Ce11an/tree-sitter-surrealql",
     "doc": "high memory usage (3.1GB)",
@@ -4198,7 +4198,7 @@
   },
   {
     "reference": "main",
-    "revision": "48fcda87af1bed7d7a328dcd257fe8ee75933b04",
+    "revision": "d56d844952f7317ca87c3ff9012b868def80d9ba",
     "grammarSha": "f0b629e7d8428eedfb2356ac049efd24837331718759217fa1b737253d3c1d5d",
     "language": "swift",
     "url": "https://github.com/alex-pinkus/tree-sitter-swift",
