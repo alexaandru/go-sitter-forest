@@ -42,6 +42,7 @@
   "if"
   "impl"
   "import"
+  "in"
   "let"
   "loop"
   "match"

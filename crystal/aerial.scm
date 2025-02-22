@@ -14,11 +14,12 @@
   name: (constant) @name
   (#set! "kind" "Enum")) @symbol
 
-(method_def
+(visibility_modifier
   visibility: (private)
-  name: (identifier) @name
-  (#set! "kind" "Method")
-  (#set! "scope" "private")) @symbol
+  (method_def
+    name: (identifier) @name
+    (#set! "kind" "Method")
+    (#set! "scope" "private")) @symbol)
 
 (method_def
   name: (identifier) @name

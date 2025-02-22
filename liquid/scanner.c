@@ -78,7 +78,7 @@ bool tree_sitter_liquid_external_scanner_scan(
                 } else {
                     advance_liquid(lexer);
                 }
-                // check for pluses
+                // check for dashes
                 size_t dash_count = 0;
                 while (lexer->lookahead == '-') {
                     dash_count++;
