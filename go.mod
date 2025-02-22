@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.22
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.23
 	github.com/alexaandru/go-sitter-forest/css v1.9.4
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
@@ -213,7 +213,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.7
 	github.com/alexaandru/go-sitter-forest/ini v1.9.0
 	github.com/alexaandru/go-sitter-forest/ink v1.9.2
-	github.com/alexaandru/go-sitter-forest/inko v1.9.6
+	github.com/alexaandru/go-sitter-forest/inko v1.9.7
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
@@ -259,7 +259,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lilypond v1.9.2
 	github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.9.1
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/liquid v1.9.1
+	github.com/alexaandru/go-sitter-forest/liquid v1.9.2
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.9.1
 	github.com/alexaandru/go-sitter-forest/lithia v1.9.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.9.1
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.25
+	github.com/alexaandru/go-sitter-forest/nu v1.9.26
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.4
