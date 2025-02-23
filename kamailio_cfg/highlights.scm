@@ -29,7 +29,7 @@
    "$" @keyword.operator
    var: (pseudo_content) @attribute.builtin)
 (var_
-  name: (pvar_argument) @variable.parameter
+  name: (pvar_argument) @variable.parameter)
 (avp_var
   name: (pvar_argument) @variable.parameter)
 (dlg_var
@@ -128,4 +128,3 @@
    "else"
    "default"
    "case" ] @keyword.conditional
-

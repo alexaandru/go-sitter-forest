@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "7b676cd3f4c82749076ab2a9c912753c089a23c1",
+  "revision": "de9e216bd9f32975df09b3e7e85ca749515c3a5a",
   "grammarSha": "11e7cc5a0be61dd300f6023be0edfdc480e7c4d4b396ccd20d1754e7a9c2852d",
   "language": "kamailio_cfg",
   "url": "https://github.com/IbrahimShahzad/tree-sitter-kamailio-cfg",
