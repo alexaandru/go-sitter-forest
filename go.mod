@@ -90,7 +90,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dataweave v1.9.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
 	github.com/alexaandru/go-sitter-forest/desktop v1.9.3
-	github.com/alexaandru/go-sitter-forest/devicetree v1.9.1
+	github.com/alexaandru/go-sitter-forest/devicetree v1.9.2
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.1
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.1
 	github.com/alexaandru/go-sitter-forest/diff v1.9.2
@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
-	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.2
+	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.3
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.2
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.26
+	github.com/alexaandru/go-sitter-forest/nu v1.9.27
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.4
