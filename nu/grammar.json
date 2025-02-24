@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "3673f18a834a75c655d14ed529bda5cb059e884e",
-  "grammarSha": "e236f5e912a21a6ebf679bdbeca768d73db8eeb66bdd348bd979d90d175daae4",
+  "revision": "a073ba8cd854318ca5d56e97279fc330f194be8a",
+  "grammarSha": "a339c0687796ea9ef2df337f4eeb684f3db07382089d49eb648a44e1207b1ab3",
   "language": "nu",
   "url": "https://github.com/nushell/tree-sitter-nu",
   "maintainedBy": "@abhisheksingh0x558",

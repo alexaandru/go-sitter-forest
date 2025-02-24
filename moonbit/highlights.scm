@@ -22,8 +22,7 @@
 ((qualified_identifier (lowercase_identifier) @variable.builtin)
  (#any-of? @variable.builtin
            "self"))
-((qualified_identifier (dot_identifier) @variable)
- (#lua-match? @variable "^\.[^A-Z]"))
+(qualified_identifier (dot_lowercase_identifier) @variable)
 
 (value_definition (lowercase_identifier) @variable)
 
@@ -33,8 +32,8 @@
 
 (const_definition (uppercase_identifier) @constant)
 
-((qualified_identifier (dot_identifier) @constant)
- (#lua-match? @constant "^\.[A-Z]"))
+; ((qualified_identifier (dot_lowercase_identifier) @constant)
+;  (#lua-match? @constant "^\.[A-Z]"))
 
 ;; Types
 
@@ -82,8 +81,8 @@
 ; Fields
 
 (struct_field_declaration (lowercase_identifier) @field)
-(struct_field_expressions (labeled_expression (lowercase_identifier) @field))
-(struct_field_expressions (labeled_expression_pun (lowercase_identifier) @field))
+(struct_field_expression (labeled_expression (lowercase_identifier) @field))
+(struct_field_expression (labeled_expression_pun (lowercase_identifier) @field))
 (struct_field_expression (labeled_expression (lowercase_identifier) @field))
 (struct_field_expression (labeled_expression_pun (lowercase_identifier) @field))
 (struct_pattern (struct_field_pattern (labeled_pattern (lowercase_identifier) @field)))
@@ -145,11 +144,11 @@
   "with"
 ] @keyword
 
-(derive) @keyword
+(derive_keyword) @keyword
 
 [ "fn" "test" "impl" ] @keyword.function
 "return" @keyword.return
-[ "while" "loop" "for" "break" "continue" "in" ] @repeat
+[ "while" "loop" (for_keyword) "break" "continue" "in" ] @repeat
 
 [
   "if"
