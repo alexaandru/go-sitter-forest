@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.5
-	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.3
+	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.4
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.2
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.12
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.13
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.27
+	github.com/alexaandru/go-sitter-forest/nu v1.9.28
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.4
