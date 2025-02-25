@@ -1,3 +1,5 @@
+(section_name) @tag
+
 ((section_name) @function.builtin
  (#eq? @function.builtin "include"))
 
@@ -6,15 +8,14 @@
    (subsection_name))
  (#eq? @function.builtin "includeIf"))
 
-(section_name) @tag
 (variable (name) @property)
 [(true) (false)] @constant.builtin
 (integer) @number
 
+[(string) (subsection_name)] @string
+
 ((string) @string.special.path
  (#match? @string.special.path "^(~|./|/)"))
-
-[(string) (subsection_name)] @string
 
 [
   "["

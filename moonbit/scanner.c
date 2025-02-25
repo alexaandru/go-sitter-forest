@@ -31,6 +31,7 @@ enum TokenType {
   __END__,
 };
 
+#ifndef STANDALONE
 static const char *const symbol_names[] = {
   [AUTOMATIC_NEWLINE] = "",
   [AUTOMATIC_SEMICOLON] = ";",
@@ -39,6 +40,7 @@ static const char *const symbol_names[] = {
   [FLOAT_LITERAL] = "float",
   [FOR_KEYWORD] = "for",
 };
+#endif
 
 void tree_sitter_moonbit_external_scanner_reset(void *payload) {
   struct ScannerState *context = payload;
@@ -344,68 +346,6 @@ can_insert_semi(TSLexer *lexer, struct ScannerState *state) {
     return asi_symbol(lexer, "ith");
   default:
     return ASI_INSERT;
-  }
-}
-
-static bool skip_line(TSLexer *lexer) {
-  while (lexer->lookahead != '\n' && lexer->lookahead != 0 && !lexer->eof(lexer)
-  ) {
-    skip_moonbit(lexer);
-  }
-  return true;
-}
-
-static bool scan_integer_suffix(TSLexer *lexer) {
-  switch (lexer->lookahead) {
-  case 'U':
-    advance_moonbit(lexer);
-    switch (lexer->lookahead) {
-    case 'L':
-      advance_moonbit(lexer);
-      return true;
-    default:
-      return false;
-    }
-  case 'L':
-  case 'N':
-    advance_moonbit(lexer);
-    return true;
-  default:
-    return false;
-  }
-}
-
-static bool scan_integer_literal(TSLexer *lexer, const bool *valid_symbols) {
-  skip_spaces(lexer, valid_symbols);
-  if (lexer->lookahead != '0') {
-    return false;
-  }
-  advance_moonbit(lexer);
-  switch (lexer->lookahead) {
-  case 'x':
-  case 'X':
-    advance_moonbit(lexer);
-    while (iswxdigit(lexer->lookahead) || lexer->lookahead == '_') {
-      advance_moonbit(lexer);
-    }
-    return scan_integer_suffix(lexer);
-  case 'o':
-  case 'O':
-    advance_moonbit(lexer);
-    while (lexer->lookahead >= '0' && lexer->lookahead <= '7' ||
-           lexer->lookahead == '_') {
-      advance_moonbit(lexer);
-    }
-    return scan_integer_suffix(lexer);
-  default:
-    if (!iswdigit(lexer->lookahead)) {
-      return false;
-    }
-    advance_moonbit(lexer);
-    while (iswdigit(lexer->lookahead) || lexer->lookahead == '_') {
-      advance_moonbit(lexer);
-    }
-    return scan_integer_suffix(lexer);
   }
 }
 

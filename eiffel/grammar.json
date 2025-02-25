@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "f21858d17ca80f8496754bc8de7eb5c01ab955f5",
-  "grammarSha": "f68eb52c88492aa7b0167e47055da492813da7e9a98ca16772a4230e3031c40c",
+  "revision": "d57ef0b87475af12e32c16c9276c2e25db9ae1e6",
+  "grammarSha": "5870a9ff808a5b9ded3b0c2b16a87e0ee866a6985b2786b1f72305cdf9809156",
   "language": "eiffel",
   "url": "https://github.com/imustafin/tree-sitter-eiffel",
   "maintainedBy": "@imustafin"

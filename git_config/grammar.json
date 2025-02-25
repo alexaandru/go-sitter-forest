@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "9c2a1b7894e6d9eedfe99805b829b4ecd871375e",
-  "grammarSha": "0a6a46bc0cf042dd45b10584b8e574a89e4cd0ccc995d53fed2f7efcc2b2119b",
+  "revision": "7edc5af4f7221a8754e705a3235654d1db5d1f72",
+  "grammarSha": "b1561d9c357d13c1e6c8d48541833d528a12fe6c0089db89d983af190edacd8f",
   "language": "git_config",
   "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
   "maintainedBy": "@amaanq"

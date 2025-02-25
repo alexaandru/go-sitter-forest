@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "3e50073c83f79063d08144b0bc9fcaaa1cad5895",
+  "revision": "6557729f4afaf01dec7481d4e5975515ea8f0edd",
   "grammarSha": "9e853b5fdd5ff4b5d07653d781cc6e2a23bdf6b11365902b7e43aa898ae12b77",
   "language": "devicetree",
   "url": "https://github.com/joelspadin/tree-sitter-devicetree",
