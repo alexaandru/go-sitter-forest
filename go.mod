@@ -109,7 +109,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/eds v1.9.0
 	github.com/alexaandru/go-sitter-forest/eex v1.9.0
 	github.com/alexaandru/go-sitter-forest/effekt v1.9.0
-	github.com/alexaandru/go-sitter-forest/eiffel v1.9.3
+	github.com/alexaandru/go-sitter-forest/eiffel v1.9.4
 	github.com/alexaandru/go-sitter-forest/elisp v1.9.0
 	github.com/alexaandru/go-sitter-forest/elixir v1.9.4
 	github.com/alexaandru/go-sitter-forest/elm v1.9.1
@@ -152,7 +152,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
 	github.com/alexaandru/go-sitter-forest/gherkin v1.9.0
 	github.com/alexaandru/go-sitter-forest/ghostty v1.9.0
-	github.com/alexaandru/go-sitter-forest/git_config v1.9.0
+	github.com/alexaandru/go-sitter-forest/git_config v1.9.1
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.3
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.13
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.14
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -295,7 +295,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mxml v1.9.0
 	github.com/alexaandru/go-sitter-forest/mylang v1.9.2
 	github.com/alexaandru/go-sitter-forest/nasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/nelua v1.9.10
+	github.com/alexaandru/go-sitter-forest/nelua v1.9.11
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.1
@@ -425,7 +425,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/strace v1.9.0
 	github.com/alexaandru/go-sitter-forest/streamdevice_proto v1.9.0
 	github.com/alexaandru/go-sitter-forest/structurizr v1.9.2
-	github.com/alexaandru/go-sitter-forest/styled v1.9.0
+	github.com/alexaandru/go-sitter-forest/styled v1.9.1
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
