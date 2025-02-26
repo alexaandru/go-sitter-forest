@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "e7b68572fa242d34c0b0db12b950e95631ada351",
+    "revision": "9d85b23b4bf3e9185a5a4b2b6547d9f2a6169e9f",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2599,8 +2599,8 @@
   },
   {
     "reference": "main",
-    "revision": "c60c42a9001f49ef808941b117d158bb334a6170",
-    "grammarSha": "a6aae979f589424c848b308df4bfe700d07138f965f70108d35e121d5819e1b8",
+    "revision": "6b65a2999dae9e338a8f0fedb1a0be6ca6a75eae",
+    "grammarSha": "d68561794ae3256364d386191910a4870e29de54162ea015d0bad81e72f679c0",
     "language": "magik",
     "url": "https://github.com/krn-robin/tree-sitter-magik",
     "maintainedBy": "@sebastiaanspeck"
@@ -4005,8 +4005,8 @@
   },
   {
     "reference": "main",
-    "revision": "44a1f4bee3c0c6eaab224639bc8302b0cfbf15b9",
-    "grammarSha": "211de6afd376788bfd6d07d9a5ad464c694ce71c85849eac9faaa0ae04874c32",
+    "revision": "602e08e67a5c2e1749168666fe46ca5f8f843225",
+    "grammarSha": "ff1c5563a8328cfbc86f98d78a63816a2c847091bf432e4217a75204ff6c2d5c",
     "language": "sparql",
     "url": "https://github.com/IoannisNezis/tree-sitter-sparql",
     "maintainedBy": "@BonaBeavis, @IoannisNezis"
