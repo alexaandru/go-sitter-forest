@@ -157,7 +157,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.3
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.9.3
+	github.com/alexaandru/go-sitter-forest/gleam v1.9.4
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.1
@@ -232,7 +232,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jsonnet v1.9.1
 	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
-	github.com/alexaandru/go-sitter-forest/just v1.9.5
+	github.com/alexaandru/go-sitter-forest/just v1.9.6
 	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.4
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
@@ -270,10 +270,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/luap v1.9.0
 	github.com/alexaandru/go-sitter-forest/luau v1.9.1
 	github.com/alexaandru/go-sitter-forest/m68k v1.9.0
-	github.com/alexaandru/go-sitter-forest/magik v1.9.1
+	github.com/alexaandru/go-sitter-forest/magik v1.9.2
 	github.com/alexaandru/go-sitter-forest/make v1.9.0
 	github.com/alexaandru/go-sitter-forest/mandbconfig v1.9.0
-	github.com/alexaandru/go-sitter-forest/markdown v1.9.2
+	github.com/alexaandru/go-sitter-forest/markdown v1.9.3
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
 	github.com/alexaandru/go-sitter-forest/matlab v1.9.2
@@ -413,7 +413,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/soql v1.9.6
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.4
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
-	github.com/alexaandru/go-sitter-forest/sparql v1.9.2
+	github.com/alexaandru/go-sitter-forest/sparql v1.9.3
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.5
 	github.com/alexaandru/go-sitter-forest/sql v1.9.8
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
@@ -467,7 +467,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.3
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.3
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/typst v1.9.5
+	github.com/alexaandru/go-sitter-forest/typst v1.9.6
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.4
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
