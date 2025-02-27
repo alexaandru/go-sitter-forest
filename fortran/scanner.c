@@ -12,6 +12,7 @@ enum TokenType {
     STRING_LITERAL_KIND,
     END_OF_STATEMENT,
     PREPROC_UNARY_OPERATOR,
+    HOLLERITH_CONSTANT,
 };
 
 typedef struct {
@@ -144,6 +145,70 @@ static bool scan_boz(TSLexer *lexer) {
         return true;
     }
     return false;
+}
+
+// If in the middle of a literal, '&' is required in both lines
+static bool skip_literal_continuation_sequence(TSLexer *lexer) {
+    if (lexer->lookahead != '&') {
+        return true;
+    }
+
+    skip_fortran(lexer);
+    while (iswspace(lexer->lookahead)) {
+        skip_fortran(lexer);
+    }
+    // second '&' required to continue the literal
+    if (lexer->lookahead == '&') {
+        skip_fortran(lexer);
+        return true;
+    }
+    return false;
+}
+
+/// Need to dynamically determining the length of the Hollerith constant
+static bool scan_hollerith_constant(TSLexer *lexer) {
+    // Try to parse nH<text> where n is the number of characters in <text>
+
+    // Read integer prefix 'n'
+    unsigned length = 0;
+    while (iswdigit(lexer->lookahead)) {
+        unsigned new_length = length * 10 + (lexer->lookahead - '0');
+        // The number of characters has no limit but overflow has to be handled
+        if (new_length < length) {
+            return false;
+        }
+        length = new_length;
+        advance_fortran(lexer);
+
+        if (!skip_literal_continuation_sequence(lexer)) {
+            return false;
+        }
+    }
+
+    // 0 is invalid 'n' in Hollerith constants
+    if (length == 0) {
+        return false;
+    }
+
+    // Expect 'H' or 'h'
+    if (lexer->lookahead != 'H' && lexer->lookahead != 'h') {
+        return false;
+    }
+    advance_fortran(lexer);
+
+    // Read exactly 'n' characters
+    for (int i = 0; i < length; i++) {
+        if (!lexer->lookahead || lexer->eof(lexer)) {
+            return false;
+        }
+        if (!skip_literal_continuation_sequence(lexer)) {
+            return false;
+        }
+        advance_fortran(lexer);
+    }
+    lexer->result_symbol = HOLLERITH_CONSTANT;
+    lexer->mark_end(lexer);
+    return true;
 }
 
 static bool scan_end_of_statement(Scanner *scanner, TSLexer *lexer) {
@@ -350,6 +415,13 @@ static bool scan_fortran(Scanner *scanner, TSLexer *lexer, const bool *valid_sym
             return true;
         }
     }
+
+    if (valid_symbols[HOLLERITH_CONSTANT]) {
+        if (scan_hollerith_constant(lexer)) {
+            return true;
+        }
+    }
+
 
     if (valid_symbols[INTEGER_LITERAL] || valid_symbols[FLOAT_LITERAL] ||
         valid_symbols[BOZ_LITERAL]) {
