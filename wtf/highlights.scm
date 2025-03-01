@@ -2,6 +2,7 @@
 
 [
   "func"
+  "overload"
   "test"
   "assert"
   "record"
@@ -72,6 +73,7 @@
 ] @punctuation.delimiter
 
 (func (ident) @function)
+(overload (ident) @function)
 (call (ident) @function.call)
 (member_call (member_operator) (call (ident) @method.call))
 
