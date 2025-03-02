@@ -6,7 +6,51 @@ enum TokenType {
     TOKEN_TYPE_RAW_STATR,
     TOKEN_TYPE_RAW_CHAR,
     TOKEN_TYPE_RAW_END,
+    TOKEN_INLINE_WORDS,
 };
+
+typedef struct TokenStack {
+    char ch[1024];
+    int32_t pos;
+} TokenStack;
+
+static inline TokenStack token_stack_new() {
+    TokenStack a;
+    memset(&a, 0, sizeof(a));
+    return a;
+}
+
+static inline bool token_stack_empty(TokenStack *const self) {
+    return self->pos == 0;
+}
+
+static inline bool token_stack_push(TokenStack *const self, char ch) {
+    if(self->pos == 1024) {
+        return false;
+    }
+
+    self->ch[self->pos++] = ch;
+
+    return true;
+}
+
+static inline bool token_stack_pop(TokenStack *const self) {
+    if(self->pos == 0) {
+        return false;
+    }
+
+    self->pos -= 1;
+
+    return true;
+}
+
+static inline char token_stack_top(TokenStack *const self) {
+    if(self->pos == 0) {
+        return -1;
+    }
+
+    return self->ch[self->pos - 1];
+}
 
 static inline bool skip_white_space(TSLexer *lexer, bool skip_newline);
 static inline bool is_white_space(int32_t ch);
@@ -27,6 +71,51 @@ bool tree_sitter_jinja_external_scanner_scan(void *payload, TSLexer *lexer, cons
         return false;
     }
     Scanner *s = (Scanner *)payload;
+
+    if(valid_symbols[TOKEN_INLINE_WORDS]) {
+        lexer->result_symbol = TOKEN_INLINE_WORDS;
+        TokenStack s = token_stack_new();
+        while(true) {
+            if(lexer->eof(lexer)) {
+                return true;
+            }
+            if(is_newline_jinja(lexer->lookahead)) {
+                if(token_stack_empty(&s)) {
+                    break;
+                }
+            }
+            switch(lexer->lookahead) {
+                case '(':
+                case '[':
+                case '{': {
+                    if(!token_stack_push(&s, lexer->lookahead)) {
+                        return true;
+                    }
+                    break;
+                }
+                case ')': {
+                    if(token_stack_top(&s) == '(') {
+                        token_stack_pop(&s);
+                    }
+                    break;
+                }
+                case ']': {
+                    if(token_stack_top(&s) == '[') {
+                        token_stack_pop(&s);
+                    }
+                    break;
+                }
+                case '}': {
+                    if(token_stack_top(&s) == '{') {
+                        token_stack_pop(&s);
+                    }
+                    break;
+                }
+            }
+            lexer->advance_jinja(lexer, false);
+        }
+        return true;
+    }
 
     if(valid_symbols[TOKEN_TYPE_RAW_STATR]) {
         switch(lexer->lookahead) {
