@@ -65,7 +65,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
 	github.com/alexaandru/go-sitter-forest/cloudflare v1.9.0
-	github.com/alexaandru/go-sitter-forest/cmake v1.9.0
+	github.com/alexaandru/go-sitter-forest/cmake v1.9.1
 	github.com/alexaandru/go-sitter-forest/cmdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.9.1
 	github.com/alexaandru/go-sitter-forest/cognate v1.9.0
@@ -139,8 +139,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/fortran v1.9.8
 	github.com/alexaandru/go-sitter-forest/frostlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
-	github.com/alexaandru/go-sitter-forest/fsharp v1.9.2
-	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.2
+	github.com/alexaandru/go-sitter-forest/fsharp v1.9.3
+	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.3
 	github.com/alexaandru/go-sitter-forest/func v1.9.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.9.0
 	github.com/alexaandru/go-sitter-forest/gab v1.9.2
@@ -222,8 +222,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.4
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
-	github.com/alexaandru/go-sitter-forest/jinja v1.9.4
-	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.5
+	github.com/alexaandru/go-sitter-forest/jinja v1.9.5
+	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.6
 	github.com/alexaandru/go-sitter-forest/jq v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.9.2
 	github.com/alexaandru/go-sitter-forest/json v1.9.1
@@ -233,7 +233,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jule v1.9.4
 	github.com/alexaandru/go-sitter-forest/julia v1.9.9
 	github.com/alexaandru/go-sitter-forest/just v1.9.6
-	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.4
+	github.com/alexaandru/go-sitter-forest/kamailio_cfg v1.9.5
 	github.com/alexaandru/go-sitter-forest/kanshi v1.9.0
 	github.com/alexaandru/go-sitter-forest/kappa v1.9.0
 	github.com/alexaandru/go-sitter-forest/kcl v1.9.3
@@ -415,7 +415,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.3
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.5
-	github.com/alexaandru/go-sitter-forest/sql v1.9.9
+	github.com/alexaandru/go-sitter-forest/sql v1.9.10
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
@@ -437,7 +437,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
-	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.2
+	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.3
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.6
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
