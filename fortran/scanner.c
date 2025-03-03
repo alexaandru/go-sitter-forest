@@ -361,9 +361,11 @@ static bool scan_string_literal(TSLexer *lexer) {
         // both of them
         if (lexer->lookahead == opening_quote) {
             advance_fortran(lexer);
-            // It was just one quote, so we've successfully reached the
-            // end of the literal
-            if (lexer->lookahead != opening_quote) {
+            // It was just one quote, so we've successfully reached
+            // the end of the literal. We also need to check that an
+            // escaped quote isn't split in half by a line
+            // continuation -- people do this!
+            if (skip_literal_continuation_sequence(lexer) && lexer->lookahead != opening_quote) {
                 return true;
             }
         }

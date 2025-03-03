@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "def189b2d9395d8ebfe946ff7b1765dc8899a971",
+  "revision": "e5d2133f2a750238c8a64d55e461d4a0ce01f861",
   "grammarSha": "072855291d1e822a7b0687a5ada09d4186d09bef4922894e834f50fe76b97505",
   "language": "cmake",
   "url": "https://github.com/uyha/tree-sitter-cmake",

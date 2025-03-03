@@ -625,7 +625,7 @@
   },
   {
     "reference": "master",
-    "revision": "def189b2d9395d8ebfe946ff7b1765dc8899a971",
+    "revision": "e5d2133f2a750238c8a64d55e461d4a0ce01f861",
     "grammarSha": "072855291d1e822a7b0687a5ada09d4186d09bef4922894e834f50fe76b97505",
     "language": "cmake",
     "url": "https://github.com/uyha/tree-sitter-cmake",
@@ -1084,7 +1084,7 @@
   },
   {
     "reference": "main",
-    "revision": "86ec2ed45d6d9433b4e0b88cd3d96796bd45625f",
+    "revision": "c35154687de847d977858f9fad1049a1e9420f44",
     "grammarSha": "930a986debc8b83772bab3475e363c5fdae66d540962696327839d32cef0885b",
     "language": "elixir",
     "url": "https://github.com/elixir-lang/tree-sitter-elixir",
@@ -1298,7 +1298,7 @@
   },
   {
     "reference": "main",
-    "revision": "7d3034d3a899b936ed5605946dfbe55da8ab7df9",
+    "revision": "b778866901d3babb528d8a4bc1abcf2a960de3e6",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1325,8 +1325,8 @@
   },
   {
     "reference": "master",
-    "revision": "765d82ad913e75abfffdd57837217e96f4774fba",
-    "grammarSha": "a048f0e8457bdca426891d3fe474ad3be84c99a8fc4c155a046795036d94387e",
+    "revision": "21b740801794b6570a0380f8aef22bb67214ea65",
+    "grammarSha": "de1f8a06b88228aed25ba8911a69a6d1275abeb704b04c95b99bc00596416ad7",
     "language": "fortran",
     "url": "https://github.com/stadelmanma/tree-sitter-fortran",
     "maintainedBy": "@amaanq",
@@ -2092,8 +2092,8 @@
   },
   {
     "reference": "master",
-    "revision": "13c5890286c1a4ee874ecde167e53e9a40cec5a1",
-    "grammarSha": "9eb067ff0e7e5c461625d75738ab9382afa2092fdd9a3af81d03ff7c4f2af13b",
+    "revision": "889f8b310fa005c668853ba40a1c6cfc060b1a8b",
+    "grammarSha": "5b15e1098d6f17bb96c3460401c35b39eb577ac358d5f43513a1b9c3b885e892",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",
@@ -2737,7 +2737,7 @@
   },
   {
     "reference": "main",
-    "revision": "acf5a72a019c14317cded1bf1daff54c60c7cff4",
+    "revision": "836e9369e5f7b824d4695f607bd2c98af351ea4f",
     "grammarSha": "e21260b3d34e756c67c4234d0c2f9bc7377566bea2832e7abee1c97f5b904817",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
@@ -3554,7 +3554,7 @@
   },
   {
     "reference": "master",
-    "revision": "a2e678240cd78855134299a116990ff914ffe404",
+    "revision": "e371920de7d1921a4ac9c6d78bd74ea3e94dfade",
     "grammarSha": "406663fa0d4d967b382d47ecdaf547439563ae2950fdaa2bc27528a52155f6dc",
     "language": "rcl",
     "url": "https://github.com/rcl-lang/tree-sitter-rcl",
@@ -3744,8 +3744,8 @@
   },
   {
     "reference": "master",
-    "revision": "6e883a2adea9414799300699e78c0d2f032b5c46",
-    "grammarSha": "549c0b2a16deb128c3fde268089804252052d11d20b776690f501acfc6a7f2a2",
+    "revision": "02da1b25f6dfc7341ddb80f37f708cdd9301be2d",
+    "grammarSha": "eb9cd734abf80c8268c5f16c3d4e9cedc5bb085d1e2c4795dabf121e22859e14",
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
     "maintainedBy": "@amaanq",
@@ -4645,7 +4645,7 @@
   },
   {
     "reference": "master",
-    "revision": "f3a8d69a96656bb81d803f7e6ec24fbe1aa2c313",
+    "revision": "db1d7446bd07d811981734cd501fe1994cbad99d",
     "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
     "language": "vhdl",
     "url": "https://github.com/jpt13653903/tree-sitter-vhdl",
