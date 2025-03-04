@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "4606cd81c4c31d1d02390fee530858323410a74c",
+  "revision": "d2df8a285fff95de56a91d2f8152aeceb66f40ef",
   "grammarSha": "58e1a7cee56b7a676191b07b985ec97f482540489db969e79136a5b0d6146a7d",
   "language": "rescript",
   "url": "https://github.com/rescript-lang/tree-sitter-rescript",
