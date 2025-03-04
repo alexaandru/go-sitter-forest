@@ -65,7 +65,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
 	github.com/alexaandru/go-sitter-forest/cloudflare v1.9.0
-	github.com/alexaandru/go-sitter-forest/cmake v1.9.1
+	github.com/alexaandru/go-sitter-forest/cmake v1.9.2
 	github.com/alexaandru/go-sitter-forest/cmdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.9.1
 	github.com/alexaandru/go-sitter-forest/cognate v1.9.0
@@ -273,7 +273,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/magik v1.9.2
 	github.com/alexaandru/go-sitter-forest/make v1.9.1
 	github.com/alexaandru/go-sitter-forest/mandbconfig v1.9.0
-	github.com/alexaandru/go-sitter-forest/markdown v1.9.3
+	github.com/alexaandru/go-sitter-forest/markdown v1.9.4
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.1
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
 	github.com/alexaandru/go-sitter-forest/matlab v1.9.2
@@ -373,8 +373,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/readline v1.9.0
 	github.com/alexaandru/go-sitter-forest/regex v1.9.6
 	github.com/alexaandru/go-sitter-forest/rego v1.9.0
-	github.com/alexaandru/go-sitter-forest/requirements v1.9.0
-	github.com/alexaandru/go-sitter-forest/rescript v1.9.0
+	github.com/alexaandru/go-sitter-forest/requirements v1.9.1
+	github.com/alexaandru/go-sitter-forest/rescript v1.9.1
 	github.com/alexaandru/go-sitter-forest/risor v1.9.0
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.9.0
 	github.com/alexaandru/go-sitter-forest/robot v1.9.3
