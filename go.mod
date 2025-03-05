@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.13
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.14
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -429,7 +429,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.9.3
+	github.com/alexaandru/go-sitter-forest/surrealql v1.9.4
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.1
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
@@ -506,7 +506,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
-	github.com/alexaandru/go-sitter-forest/zeek v1.9.4
+	github.com/alexaandru/go-sitter-forest/zeek v1.9.5
 	github.com/alexaandru/go-sitter-forest/zig v1.9.4
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.1
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.1
