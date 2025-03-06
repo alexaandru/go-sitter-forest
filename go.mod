@@ -11,7 +11,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/al v1.9.8
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.5
 	github.com/alexaandru/go-sitter-forest/amber v1.9.2
-	github.com/alexaandru/go-sitter-forest/angular v1.9.0
+	github.com/alexaandru/go-sitter-forest/angular v1.9.1
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
@@ -52,7 +52,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
 	github.com/alexaandru/go-sitter-forest/capnp v1.9.0
 	github.com/alexaandru/go-sitter-forest/carbon v1.9.2
-	github.com/alexaandru/go-sitter-forest/cds v1.9.1
+	github.com/alexaandru/go-sitter-forest/cds v1.9.2
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
 	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.23
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.24
 	github.com/alexaandru/go-sitter-forest/css v1.9.4
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.1
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.3
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/rust v1.9.9
+	github.com/alexaandru/go-sitter-forest/rust v1.9.10
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.5
@@ -437,7 +437,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
-	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.3
+	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.4
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.6
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.1
@@ -471,7 +471,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.4
 	github.com/alexaandru/go-sitter-forest/ungrammar v1.9.0
-	github.com/alexaandru/go-sitter-forest/unison v1.9.3
+	github.com/alexaandru/go-sitter-forest/unison v1.9.4
 	github.com/alexaandru/go-sitter-forest/ursa v1.9.0
 	github.com/alexaandru/go-sitter-forest/usd v1.9.0
 	github.com/alexaandru/go-sitter-forest/uxntal v1.9.0
