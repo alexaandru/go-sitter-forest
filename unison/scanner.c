@@ -424,6 +424,9 @@ static bool same_indent(uint32_t indent, State *state) {
  */
 static bool smaller_indent(uint32_t indent, State *state) {
   LOG(INFO, "->smaller_indent (indent = %u, indent exists = %c, col = %u, PEEK = %c, indent exists: %s)\n", indent, indent_exists(state) ? 'y' : 'n', COL, PEEK, indent_exists(state) ? "yes" : "no");
+  if (indent_exists(state)) {
+    LOG(VERBOSE, "indent exists and indent = %u, back = %u\n", indent, VEC_BACK(state->indents));
+  }
   return indent_exists(state) && (indent < VEC_BACK(state->indents));
 }
 
@@ -1553,7 +1556,7 @@ static Result numeric(State *state) {
  * If the symbol `START` is valid, starting a new layout is almost always indicated.
  *
  * If the next character is a pipe and GUARD_LAYOUT_START is valid, tokenize the zero-width GUARD_LAYOUT_START.
- * If the next character is a left brace, it is either a comment, pragma or an explicit layout. In the comment case, the
+ * If the next character is a left brace, it is either a comment, effect pattern, pragma or an explicit layout. In the comment case, the
  * it must be parsed here.
  * If the next character is a minus, it might be a comment.
  * If the next character is a +, it might be -> TODO what does this mean? + is not part of ->
@@ -1564,8 +1567,9 @@ static Result numeric(State *state) {
  * This pushes the indentation of the first non-whitespace character onto the stack.
  */
 static Result layout_start(uint32_t column, State *state) {
-    LOG(INFO, "->layout_start (col = %u, PEEK = %c)\n", COL, PEEK);
-    uint32_t columna = column;
+    LOG(INFO, "->layout_start (column = %u, col = %u, PEEK = %c)\n", column, COL, PEEK);
+    const uint32_t columna = column;
+    uint32_t offset = 0;
 
     // Need to make sure we aren't calculating a layout based on comment col
     LOG(VERBOSE, "[layout_start] before matching START (col = %u, PEEK = %c, sym(START) = %u, sym(GLS) = %u)\n", COL, PEEK, SYM(START), SYM(GUARD_LAYOUT_START));
@@ -1578,7 +1582,7 @@ static Result layout_start(uint32_t column, State *state) {
         }
     }
     if (SYM(START)) {
-        LOG(VERBOSE, "[layout_start] inside START; col = %u\n", column);
+        LOG(VERBOSE, "[layout_start] inside START; COL = %u\n", COL);
         // if (PEEK == '-') {
         //     MARK("layout_start", false, state);
         //     S_ADVANCE;
@@ -1593,8 +1597,10 @@ static Result layout_start(uint32_t column, State *state) {
                 if (PEEK == '-') {
                     return inline_comment(state);
                 }
-                if (PEEK == '>') {
+                else if (PEEK == '>') {
                     return res_fail;
+                } else {
+                  ++offset; // So we don't count the '-' as part of the indent
                 }
                 LOG(VERBOSE, "[layout_start] inside - (col = %u, PEEK = %c)\n", COL, PEEK);
                 goto foo;
@@ -1604,6 +1610,8 @@ static Result layout_start(uint32_t column, State *state) {
                 S_ADVANCE;
                 if (PEEK == '-') {
                     return multiline_comment(state);
+                } else {
+                  ++offset; // So we don't count the '{' as part of the indent
                 }
                 LOG(VERBOSE, "[layout_start] inside { (col = %u, PEEK = %c)\n", COL, PEEK);
                 goto foo;
@@ -1623,10 +1631,10 @@ static Result layout_start(uint32_t column, State *state) {
             //     }
             // }
         }
-        LOG(VERBOSE, "[layout_start] about to push col = %u\n", columna);
+        // LOG(VERBOSE, "[layout_start] about to push col = %u\n", COL - offset);
         foo:
-        LOG(VERBOSE, "[layout_start] about to push col = %u\n", columna);
-        push(COL, state);
+        LOG(VERBOSE, "[layout_start] about to push col = %u\n", COL - offset);
+        push(COL - offset, state);
         return finish(START, "layout_start");
     }
     return res_cont;

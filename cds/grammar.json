@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "4942ff4e50f02a37a795c42a427fb39e87d2f379",
-  "grammarSha": "00b51441a44181065416462657b77c68c5f61956acf996a26dff4bf86e71cf5a",
+  "revision": "bad5ad8e699feb38628794e8e85f2e1ca7a97a92",
+  "grammarSha": "766f58b685c348442cfd5385033601b1cbc289cc5a05cae2ef3c1b21a6d05252",
   "language": "cds",
   "url": "https://github.com/cap-js-community/tree-sitter-cds",
   "maintainedBy": "@bugwelle",

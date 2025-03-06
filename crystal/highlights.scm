@@ -1,3 +1,15 @@
+; Early rules
+; These patterns may be overridden later
+
+[
+  ","
+  ";"
+  "."
+  ":"
+] @punctuation.delimiter
+
+; Keywords
+
 [
   "alias"
   "annotation"
@@ -12,6 +24,7 @@
   "in"
   "include"
   "next"
+  "of"
   "select"
   "then"
   "verbatim"
@@ -82,9 +95,9 @@
 
 (symbol
   [
-   ":"
-   ":\""
-   "\""
+    ":"
+    ":\""
+    "\""
   ] @string.special.symbol)
 
 (symbol
@@ -141,25 +154,26 @@
 
 (nil) @constant.builtin
 
-(comment) @comment
+((comment) @comment
+  ; Set priority so macro expressions in comments are not grayed out
+  (#set! priority 95))
 
 ; Operators and punctuation
 [
   "="
   "=>"
   "->"
+  "&"
+  "*"
+  "**"
+  (operator)
 ] @operator
-
-[
-  ","
-  ";"
-  "."
-] @punctuation.delimiter
 
 [
   "("
   ")"
   "["
+  "@["
   "]"
   "{"
   "}"
@@ -179,6 +193,9 @@
     "]"
     "]?"
   ] @punctuation.bracket)
+
+(block
+  "|" @punctuation.bracket)
 
 [
   "{%"
@@ -202,23 +219,42 @@
 (nilable_type
   "?" @type.builtin)
 
+(union_type
+  "|" @operator)
+
 (annotation
   (constant) @attribute)
 
 (method_def
-  name: [
-    (identifier)
-    (constant)
-  ] @function.method)
+  name: (identifier) @function.method)
 
 (macro_def
-  name: [
-    (identifier)
-    (constant)
-  ] @function.method)
+  name: (identifier) @function.method)
+
+(abstract_method_def
+  name: (identifier) @function.method)
+
+(fun_def
+  name: (identifier) @function
+  real_name: (identifier)? @function)
 
 (param
   name: (identifier) @variable.parameter)
+
+(splat_param
+  name: (identifier) @variable.parameter)
+
+(double_splat_param
+  name: (identifier) @variable.parameter)
+
+(block_param
+  name: (identifier) @variable.parameter)
+
+(fun_param
+  name: (identifier) @variable.parameter)
+
+(rescue
+  variable: (identifier) @variable.parameter)
 
 (macro_var
   name: (identifier) @variable)
@@ -230,8 +266,18 @@
 
 (underscore) @variable.parameter.builtin
 
-(pointer_type
-  "*" @operator)
+(self) @variable.builtin
+
+(named_tuple
+  (named_expr
+    name: (identifier) @property))
+
+(argument_list
+  (named_expr
+    name: (identifier) @property))
+
+(named_type
+  name: (identifier) @property)
 
 ; function calls
 (call
