@@ -46,13 +46,21 @@
   ","? @_end)
   (#make-range! "parameter.outer" @parameter.inner @_end))
 
+((array_expression
+  (expression) @parameter.inner
+  .
+  ","? @_end)
+  (#make-range! "parameter.outer" @parameter.inner @_end))
+
 ((string_interpolation
   (interpolator (expression) @parameter.inner)
   @parameter.outer))
 
 ; block
 
-((block_expression (_) @block.inner) @block.outer)
+(((nonempty_block_expression) @block.inner
+   (#offset! @block.inner 0 1 0 -1))
+ @block.outer)
 
 ; assignment
 
@@ -76,20 +84,23 @@
  @function.outer)
 
 ((function_definition
-  (block_expression (_) @function.inner)
-  .)
+  ("fn"
+   (block_expression) @function.inner)
+   (#offset! @function.inner 0 1 0 -1))
  @function.outer)
 
 ((test_definition
-  (block_expression (_) @function.inner)
-  .)
+  ("test"
+   (block_expression) @function.inner)
+   (#offset! @function.inner 0 1 0 -1))
  @function.outer)
 
 (trait_method_declaration) @function.outer
 
 ((impl_definition
-  (block_expression (_) @function.inner)
-  .)
+  ("impl"
+   (block_expression) @function.inner)
+   (#offset! @function.inner 0 1 0 -1))
  @function.outer)
 
 ; call

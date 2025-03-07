@@ -254,8 +254,8 @@
   },
   {
     "reference": "master",
-    "revision": "9e96cc0f35f5b0e0fab87363271e04013bc6ae50",
-    "grammarSha": "9f9157bb94caee2e62d3976941c2e5b7114d81a80b519efa61fc5414c6b74899",
+    "revision": "17aa79f3547c5a938ab91e1cb807f42c7b978877",
+    "grammarSha": "5615c89d5a2ff92a2f03200616aff9d1d74cc56b6a3428da5237afad791687b9",
     "language": "barq",
     "url": "https://github.com/barqlang/tree-sitter-barq",
     "maintainedBy": "@yhyadev"
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "d9bee4b26d3d73c158fa0fe0458b71b2a83bfa3a",
+    "revision": "aa90ab3862d1babfed588ba28894682f834c354e",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1530,7 +1530,7 @@
   },
   {
     "reference": "main",
-    "revision": "af6043419f5aa0f8b6c2a26db0187aefa46c7f5f",
+    "revision": "e01c88449b53e2ee5dad222d4020cc7006c5b700",
     "grammarSha": "281f5125e82b4ee03ade37485c73987ba1b420cd58ed561522b9d25d287058c1",
     "language": "gleam",
     "url": "https://github.com/gleam-lang/tree-sitter-gleam",
@@ -2737,8 +2737,8 @@
   },
   {
     "reference": "main",
-    "revision": "836e9369e5f7b824d4695f607bd2c98af351ea4f",
-    "grammarSha": "e21260b3d34e756c67c4234d0c2f9bc7377566bea2832e7abee1c97f5b904817",
+    "revision": "de6e838f4ce000c72d200d7f2fd8ae1dd765084b",
+    "grammarSha": "4306dded032a604b63096abfc86412df2a77f30eaa465378a53be33df83a4cff",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
     "maintainedBy": "@tonyfettes",
@@ -3744,8 +3744,8 @@
   },
   {
     "reference": "master",
-    "revision": "5edb201282b79aba611c763d11a84dcde15fcae6",
-    "grammarSha": "a330842c3034ed502c5fb277941de6f39e2cb805f20bf5b74994b76057c09ece",
+    "revision": "e86119bdb4968b9799f6a014ca2401c178d54b5f",
+    "grammarSha": "b2249a4f810a0fd6a500cd60ede2bebc7748c13ff2b0209e0770727b547d02f0",
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
     "maintainedBy": "@amaanq",

@@ -93,15 +93,14 @@ static void skip_spaces(TSLexer *lexer, const bool *valid_symbols) {
   }
 }
 
-static void skip_blanks(TSLexer *lexer) {
+static void advance_blanks(TSLexer *lexer) {
   while (iswblank(lexer->lookahead) && !lexer->eof(lexer)) {
-    skip_moonbit(lexer);
+    advance_moonbit(lexer);
   }
 }
 
 static bool scan_decimal_float_literal_fractional_part(
-  TSLexer *lexer,
-  const bool *valid_symbols
+  TSLexer *lexer
 ) {
   if (lexer->lookahead == '.') {
     return false;
@@ -122,7 +121,7 @@ static bool scan_decimal_float_literal_fractional_part(
 }
 
 static bool
-scan_decimal_float_literal(TSLexer *lexer, const bool *valid_symbols) {
+scan_decimal_float_literal(TSLexer *lexer) {
   while (iswdigit(lexer->lookahead) || lexer->lookahead == '_') {
     advance_moonbit(lexer);
   }
@@ -130,7 +129,7 @@ scan_decimal_float_literal(TSLexer *lexer, const bool *valid_symbols) {
     return false;
   }
   advance_moonbit(lexer);
-  return scan_decimal_float_literal_fractional_part(lexer, valid_symbols);
+  return scan_decimal_float_literal_fractional_part(lexer);
 }
 
 static bool scan_float_literal(TSLexer *lexer, const bool *valid_symbols) {
@@ -145,11 +144,11 @@ static bool scan_float_literal(TSLexer *lexer, const bool *valid_symbols) {
     advance_moonbit(lexer);
     if (lexer->lookahead == '.') {
       advance_moonbit(lexer);
-      return scan_decimal_float_literal_fractional_part(lexer, valid_symbols);
+      return scan_decimal_float_literal_fractional_part(lexer);
     }
     if (iswdigit(lexer->lookahead)) {
       advance_moonbit(lexer);
-      return scan_decimal_float_literal(lexer, valid_symbols);
+      return scan_decimal_float_literal(lexer);
     }
     if (lexer->lookahead != 'x' && lexer->lookahead != 'X') {
       return false;
@@ -180,7 +179,7 @@ static bool scan_float_literal(TSLexer *lexer, const bool *valid_symbols) {
     return true;
   } else {
     advance_moonbit(lexer);
-    return scan_decimal_float_literal(lexer, valid_symbols);
+    return scan_decimal_float_literal(lexer);
   }
 }
 
@@ -238,6 +237,7 @@ can_insert_semi(TSLexer *lexer, struct ScannerState *state) {
       default:
         break;
       }
+      break;
     case '$':
       advance_moonbit(lexer);
       switch (lexer->lookahead) {
@@ -246,6 +246,7 @@ can_insert_semi(TSLexer *lexer, struct ScannerState *state) {
       default:
         break;
       }
+      break;
     default:
       break;
     }
@@ -410,7 +411,7 @@ bool tree_sitter_moonbit_external_scanner_scan(
     if (test_symbol(lexer, "for")) {
       lexer->result_symbol = FOR_KEYWORD;
       lexer->mark_end(lexer);
-      skip_blanks(lexer);
+      advance_blanks(lexer);
       if (lexer->lookahead == '\n') {
         context->remove_semi = true;
       }
