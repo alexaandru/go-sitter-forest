@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "db52ba3f7f33c9949bba115a813d7c30a359cd87",
-  "grammarSha": "ad26f7c36d0f7da225380b5e308db2838a4575c28cd7d4a2dbd1035f65793826",
+  "revision": "91708deb10cb4fe68ab3c50891426b9967dbf35a",
+  "grammarSha": "253cb6d99413cd90d11a7e78dbceb5471741f3cb14541edf659d89c1a898a0a8",
   "language": "ocaml_interface",
   "url": "https://github.com/tree-sitter/tree-sitter-ocaml",
   "maintainedBy": "@undu",

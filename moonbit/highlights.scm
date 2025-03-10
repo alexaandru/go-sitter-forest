@@ -141,7 +141,7 @@
 
 [
   "guard" "let" "mut" "const"
-  "with"
+  "with" "as" (is_keyword)
 ] @keyword
 
 (derive_keyword) @keyword

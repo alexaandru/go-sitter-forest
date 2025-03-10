@@ -53,6 +53,8 @@ func NormalizeLangPackName(gr *grammar.Grammar) (lang, pack, silencer string) {
 		lang = "cwal"
 	case "janet":
 		lang = "janet_simple"
+	case "cgsql":
+		lang = "cql"
 	case "verilog":
 		if strings.Contains(gr.URL, "systemverilog") {
 			lang = "systemverilog"

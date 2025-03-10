@@ -48,8 +48,12 @@ github.com/alexaandru/go-sitter-forest/awk v1.9.2 h1:mt71QRir2Yg2S7Ql5N1rsqKAdt8
 github.com/alexaandru/go-sitter-forest/awk v1.9.2/go.mod h1:OEweh7+GNWAeSK8BlCYb/FznbC3Qhc9LyPl0ViyOUgo=
 github.com/alexaandru/go-sitter-forest/bara v1.9.0 h1:Ws/7a26eZ/P2EMbKu7nCwFsQ7zvdVf72g2yZRs+uNSA=
 github.com/alexaandru/go-sitter-forest/bara v1.9.0/go.mod h1:URDbG2vb9sViurYn9N6dHCSThzDt/Kb8ugm9SNPgqNU=
+github.com/alexaandru/go-sitter-forest/barq v1.9.1 h1:rPk1aqAGTHRu7T2ZtCqfv9ntUXZ4IWDMW5WxQfO/WDM=
+github.com/alexaandru/go-sitter-forest/barq v1.9.1/go.mod h1:MzWu5aDC58QK9fyHB2tiL5SScgTnykSq6dqkX3Jaz5Q=
 github.com/alexaandru/go-sitter-forest/barq v1.9.2 h1:ocaML0RvleeYaHoWHL4E5uCgiP6XDi1mtkR1Yd+GKh4=
 github.com/alexaandru/go-sitter-forest/barq v1.9.2/go.mod h1:MzWu5aDC58QK9fyHB2tiL5SScgTnykSq6dqkX3Jaz5Q=
+github.com/alexaandru/go-sitter-forest/barq v1.9.3 h1:gdYjalKjyEu4g6ntBd8q7kOAtki4qHK4rRXeWjw8oA0=
+github.com/alexaandru/go-sitter-forest/barq v1.9.3/go.mod h1:MzWu5aDC58QK9fyHB2tiL5SScgTnykSq6dqkX3Jaz5Q=
 github.com/alexaandru/go-sitter-forest/bash v1.9.5 h1:mXu+rjlMv1WZ8Ptc5SzbdsTSrNCP9Mrds6uNfj2axBE=
 github.com/alexaandru/go-sitter-forest/bash v1.9.5/go.mod h1:n7akT/YMJSe0m+kKMZRzi+lQlXDjKU0vvYrrvejJ0no=
 github.com/alexaandru/go-sitter-forest/bass v1.9.0 h1:UvSfGuJIM538Dv/uYEu6CMuHDpQ/h00E1cmYhyiKAo8=

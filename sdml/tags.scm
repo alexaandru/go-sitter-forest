@@ -12,6 +12,12 @@
  name: (qualified_identifier
         module: (identifier) @name)) @reference.module
 
+(module_path_absolute
+ segment: (identifier) @name) @reference.module
+
+(module_path_relative
+ segment: (identifier) @name) @reference.module
+
 (member_import
  name: (qualified_identifier
         member: (identifier) @name)) @reference.type

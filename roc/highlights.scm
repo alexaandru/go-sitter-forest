@@ -41,7 +41,7 @@
   (#match? @type.builtin "^(F(32|64)|Dec)"))
 
 (bound_variable) @type.parameter
-(tags_type (apply_type(concrete_type) @type.enum.variant))
+(tag_type) @type.enum.variant
 
 (concrete_type) @type
 
@@ -49,8 +49,8 @@
 [
 "?"
 (arrow)
-(back_arrow)
-(backslash)
+(fat_arrow)
+("|")
 ] @punctuation.delimiter.structural
 [
   ","
@@ -122,7 +122,6 @@
   (identifier_pattern
    (identifier) @parameter.definition)))
 
-(backpassing_expr assignee: (identifier_pattern (identifier) @parameter.definition))
 
 ;----tags----
 
@@ -147,11 +146,11 @@
 "dbg"
 ] @constant.builtin
 ;----function invocations ----
-(function_call_expr
+(function_call_pnc_expr
   caller:  (variable_expr
       (identifier)@function))
 
-(function_call_expr
+(function_call_pnc_expr
   caller: (field_access_expr (identifier)@function .))
 
 (bin_op_expr (operator "|>")@operator(variable_expr(identifier)@function))
@@ -168,7 +167,7 @@
 
 ; pattern captures
 (when_is_branch pattern: (_ (identifier_pattern (identifier) @variable.parameter)))
-(range_pattern (identifier) @variable.parameter)
+(spread_pattern (identifier) @variable.parameter)
 
 
 ;;----records----
@@ -221,3 +220,5 @@
 (module)@module
 
 (identifier)@variable
+(identifier "!"@operator)
+(identifier "_"@operator)

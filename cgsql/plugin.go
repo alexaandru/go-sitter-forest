@@ -3,7 +3,7 @@
 package main
 
 //#include "parser.h"
-//TSLanguage *tree_sitter_cgsql();
+//TSLanguage *tree_sitter_cql();
 import "C"
 
 import (
@@ -26,7 +26,7 @@ const nvimts = "nvimts__"
 var files embed.FS
 
 func GetLanguage() unsafe.Pointer {
-	return unsafe.Pointer(C.tree_sitter_cgsql())
+	return unsafe.Pointer(C.tree_sitter_cql())
 }
 
 func GetQuery(kind string, opts ...byte) (out []byte) {

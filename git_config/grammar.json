@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "6d0ed53decd9d9374913fb7e49ec1ff278de71b3",
+  "revision": "edc973f498482529ff2a319249d0f43a22860321",
   "grammarSha": "3e080e3d3d2aa469263df5e5aadd57bcc1371c01b227e95c14d7ef4c7094a846",
   "language": "git_config",
   "url": "https://github.com/the-mikedavis/tree-sitter-git-config",

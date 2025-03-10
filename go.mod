@@ -28,7 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.2
 	github.com/alexaandru/go-sitter-forest/bara v1.9.0
-	github.com/alexaandru/go-sitter-forest/barq v1.9.2
+	github.com/alexaandru/go-sitter-forest/barq v1.9.3
 	github.com/alexaandru/go-sitter-forest/bash v1.9.5
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0

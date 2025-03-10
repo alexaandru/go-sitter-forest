@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "5da5bb7508ac9fd3317561670ef18c126a0fe2aa",
+  "revision": "c5cf996c23e38a1537069fbe2d4bb83a75fc7b2f",
   "grammarSha": "69b48d27d0ec0c6c9088cb3e276c4055b0e3291006882f0cad3d391efdf685b1",
   "language": "ocamllex",
   "url": "https://github.com/314eter/tree-sitter-ocamllex",

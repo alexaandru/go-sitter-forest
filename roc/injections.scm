@@ -1,5 +1,5 @@
 ;injection from function calls
-(function_call_expr
+(function_call_pnc_expr
   (variable_expr (identifier) @injection.language)
   (const [(multiline_string) (string)] @injection.content)
   (#any-of? @injection.language
