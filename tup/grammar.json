@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "5a42fe25a9cec560eb073dc5f77c0b44ea50825f",
-  "grammarSha": "770f11499cbd4ecde8dd0ae64e90d5ddda380103f410ece0fa10bdaece68a98f",
+  "revision": "f315d25a11f8bb25a6ccdf7fd0b8dead4d361695",
+  "grammarSha": "ef2d5d6b074f94beee384e2a9fd40334ef2c1ca4016139cb714dbf08a7265efd",
   "language": "tup",
   "url": "https://github.com/RoBaertschi/tree-sitter-tup",
   "maintainedBy": "@RoBaertschi",

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "64fab7586d2317a05991e0914f77bac8916bd5a7",
-  "grammarSha": "7368af832602728f6cffccde8e4f85edc859737cad4487d97b5abb7560b80d1f",
+  "revision": "d5899210c623b799a93f40439f3ff8981a7fa187",
+  "grammarSha": "5658e28e0d6b71b7a3778c4304861a4b1c1dc19c2df52c064a7a81473ff7dd36",
   "language": "systemverilog",
   "url": "https://github.com/gmlarumbe/tree-sitter-systemverilog",
   "doc": "high memory usage (3.9GB)",
