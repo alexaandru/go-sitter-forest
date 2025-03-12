@@ -211,7 +211,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/idl v1.9.3
 	github.com/alexaandru/go-sitter-forest/idris v1.9.5
 	github.com/alexaandru/go-sitter-forest/ignis v1.9.7
-	github.com/alexaandru/go-sitter-forest/ini v1.9.0
+	github.com/alexaandru/go-sitter-forest/ini v1.9.1
 	github.com/alexaandru/go-sitter-forest/ink v1.9.2
 	github.com/alexaandru/go-sitter-forest/inko v1.9.7
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.4
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
-	github.com/alexaandru/go-sitter-forest/jinja v1.9.5
+	github.com/alexaandru/go-sitter-forest/jinja v1.9.6
 	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.6
 	github.com/alexaandru/go-sitter-forest/jq v1.9.0
 	github.com/alexaandru/go-sitter-forest/jsdoc v1.9.2
@@ -307,7 +307,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.31
+	github.com/alexaandru/go-sitter-forest/nu v1.9.32
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.5
@@ -415,7 +415,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.3
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.5
-	github.com/alexaandru/go-sitter-forest/sql v1.9.10
+	github.com/alexaandru/go-sitter-forest/sql v1.9.11
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
 	github.com/alexaandru/go-sitter-forest/squirrel v1.9.0
@@ -499,7 +499,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xfst v1.9.1
 	github.com/alexaandru/go-sitter-forest/xml v1.9.5
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.2
-	github.com/alexaandru/go-sitter-forest/yadl v1.9.0
+	github.com/alexaandru/go-sitter-forest/yadl v1.9.1
 	github.com/alexaandru/go-sitter-forest/yaml v1.9.3
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.1
