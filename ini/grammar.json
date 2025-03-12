@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "962568c9efa71d25720ab42c5d36e222626ef3a6",
-  "grammarSha": "36869e24ba3d412c7d4e2a15f793a9577a092d3c6f3b1a1de6169dc6dd018d08",
+  "revision": "32b31863f222bf22eb43b07d4e9be8017e36fb31",
+  "grammarSha": "f586248a02d07e9ef7908cb0739861de95a5a04f67f05b3b2dcc391ca27ae4c6",
   "language": "ini",
   "url": "https://github.com/justinmk/tree-sitter-ini",
   "maintainedBy": "@theHamsta"
