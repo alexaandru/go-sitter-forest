@@ -36,7 +36,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bibtex v1.9.2
 	github.com/alexaandru/go-sitter-forest/bicep v1.9.1
 	github.com/alexaandru/go-sitter-forest/bitbake v1.9.1
-	github.com/alexaandru/go-sitter-forest/blade v1.9.1
+	github.com/alexaandru/go-sitter-forest/blade v1.9.2
 	github.com/alexaandru/go-sitter-forest/blueprint v1.9.0
 	github.com/alexaandru/go-sitter-forest/bluespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/bond v1.9.1
@@ -65,7 +65,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
 	github.com/alexaandru/go-sitter-forest/cloudflare v1.9.0
-	github.com/alexaandru/go-sitter-forest/cmake v1.9.2
+	github.com/alexaandru/go-sitter-forest/cmake v1.9.3
 	github.com/alexaandru/go-sitter-forest/cmdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.9.1
 	github.com/alexaandru/go-sitter-forest/cognate v1.9.0
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.16
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.17
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -354,7 +354,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/purescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.9.0
 	github.com/alexaandru/go-sitter-forest/pyrope v1.9.2
-	github.com/alexaandru/go-sitter-forest/python v1.9.6
+	github.com/alexaandru/go-sitter-forest/python v1.9.7
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
@@ -440,7 +440,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.5
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.6
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
-	github.com/alexaandru/go-sitter-forest/tact v1.9.1
+	github.com/alexaandru/go-sitter-forest/tact v1.9.2
 	github.com/alexaandru/go-sitter-forest/talon v1.9.0
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.1
 	github.com/alexaandru/go-sitter-forest/teal v1.9.1
