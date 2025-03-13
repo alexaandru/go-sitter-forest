@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "16c43068ec30828c5aed11e87262c56f36782595",
+  "revision": "4c2a1d00126a9672f6ddd855850a913f3fae32c9",
   "grammarSha": "603d01c414ca0ec8f0a807f463bec36f7554ebffdd64fb6d2ee73485aed8de50",
   "language": "bp",
   "url": "https://github.com/ambroisie/tree-sitter-bp",

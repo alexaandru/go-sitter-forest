@@ -29,6 +29,13 @@
 (let_statement
   name: (identifier) @local.definition)
 
+(destruct_bind
+  name: (identifier) @local.definition)
+
+(destruct_bind
+  name: (identifier) @local.definition
+  bind: (identifier) @local.definition)
+
 (parameter
   name: (identifier) @local.definition)
 

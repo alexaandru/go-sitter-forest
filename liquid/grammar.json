@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "6e03a054a71cd419d9702725243137641e97ba51",
+  "revision": "d269f4d52cd08f6cbc6636ee23cc30a9f6c32e42",
   "grammarSha": "da0f276c488b1a6ebdef8d9d9a4a4ccece6cd5eee427f7875c76e123c33a20e5",
   "language": "liquid",
   "url": "https://github.com/hankthetank27/tree-sitter-liquid",

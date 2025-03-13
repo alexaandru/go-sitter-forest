@@ -109,5 +109,7 @@
       name: (identifier) @name)
     (initOf
       name: (identifier) @name)
+    (codeOf
+      name: (identifier) @name)
   ] @reference.class
 )

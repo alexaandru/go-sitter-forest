@@ -28,6 +28,10 @@
 
 (let_mut_expression (lowercase_identifier) @variable)
 
+(for_in_expression (for_keyword) (lowercase_identifier) @variable "in")
+
+(for_binder (lowercase_identifier) @variable)
+
 ; Constants
 
 (const_definition (uppercase_identifier) @constant)
@@ -80,14 +84,28 @@
 
 ; Fields
 
-(struct_field_declaration (lowercase_identifier) @field)
-(struct_field_expression (labeled_expression (lowercase_identifier) @field))
-(struct_field_expression (labeled_expression_pun (lowercase_identifier) @field))
-(struct_field_expression (labeled_expression (lowercase_identifier) @field))
-(struct_field_expression (labeled_expression_pun (lowercase_identifier) @field))
-(struct_pattern (struct_field_pattern (labeled_pattern (lowercase_identifier) @field)))
-(struct_pattern (struct_field_pattern (labeled_pattern_pun (lowercase_identifier) @field)))
-(access_expression (accessor (dot_identifier) @field))
+(struct_field_declaration (lowercase_identifier) @variable.member)
+(struct_expression (labeled_expression (lowercase_identifier) @variable.member))
+(struct_expression (labeled_expression_pun (lowercase_identifier) @variable.member))
+(struct_expression (labeled_expression (lowercase_identifier) @variable.member))
+(struct_expression (labeled_expression_pun (lowercase_identifier) @variable.member))
+(struct_field_expression (labeled_expression (lowercase_identifier) @variable.member))
+(struct_field_expression (labeled_expression_pun (lowercase_identifier) @variable.member))
+(struct_field_expression (labeled_expression (lowercase_identifier) @variable.member))
+(struct_field_expression (labeled_expression_pun (lowercase_identifier) @variable.member))
+(struct_pattern (struct_field_pattern (labeled_pattern (lowercase_identifier) @variable.member)))
+(struct_pattern (struct_field_pattern (labeled_pattern_pun (lowercase_identifier) @variable.member)))
+(access_expression (accessor (dot_identifier) @variable.member))
+
+; Attributes
+
+(attribute) @attribute
+((attribute) @attribute.builtin
+ (#eq? @attribute.builtin
+          "#coverage.skip"))
+((attribute) @attribute.builtin
+ (#match? @attribute.builtin
+          "^#deprecated\\(.*\\)"))
 
 ;; Functions
 
@@ -192,6 +210,7 @@
 (integer_literal) @number
 (float_literal) @number.float
 (boolean_literal) @boolean
+(char_literal) @character
 
 ;; Comments
 
