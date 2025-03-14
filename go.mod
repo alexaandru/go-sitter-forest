@@ -155,7 +155,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/git_config v1.9.2
 	github.com/alexaandru/go-sitter-forest/git_rebase v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
-	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.3
+	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.4
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
 	github.com/alexaandru/go-sitter-forest/gleam v1.9.5
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
@@ -330,7 +330,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pic v1.9.9
 	github.com/alexaandru/go-sitter-forest/pint v1.9.1
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/pkl v1.9.1
+	github.com/alexaandru/go-sitter-forest/pkl v1.9.2
 	github.com/alexaandru/go-sitter-forest/plantuml v1.9.0
 	github.com/alexaandru/go-sitter-forest/po v1.9.0
 	github.com/alexaandru/go-sitter-forest/pod v1.9.0
@@ -354,7 +354,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/purescript v1.9.0
 	github.com/alexaandru/go-sitter-forest/pymanifest v1.9.0
 	github.com/alexaandru/go-sitter-forest/pyrope v1.9.2
-	github.com/alexaandru/go-sitter-forest/python v1.9.7
+	github.com/alexaandru/go-sitter-forest/python v1.9.8
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
@@ -450,7 +450,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
 	github.com/alexaandru/go-sitter-forest/textproto v1.9.0
 	github.com/alexaandru/go-sitter-forest/thrift v1.9.1
-	github.com/alexaandru/go-sitter-forest/tiger v1.9.0
+	github.com/alexaandru/go-sitter-forest/tiger v1.9.1
 	github.com/alexaandru/go-sitter-forest/tlaplus v1.9.3
 	github.com/alexaandru/go-sitter-forest/tmux v1.9.0
 	github.com/alexaandru/go-sitter-forest/tnsl v1.9.0
@@ -466,7 +466,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twolc v1.9.1
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.4
 	github.com/alexaandru/go-sitter-forest/typespec v1.9.4
-	github.com/alexaandru/go-sitter-forest/typoscript v1.9.0
+	github.com/alexaandru/go-sitter-forest/typoscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/typst v1.9.6
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
 	github.com/alexaandru/go-sitter-forest/uiua v1.9.4
