@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "59003a5d4c40c8c294d40b54f2928ec49365bc10",
+    "revision": "ce08e4d9a1400c53f228d67ce586cf392f693814",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "3e6b97ce7ff4f6e9ec0e8d587c1e80fea75aef6c04483cf5e3347aa413934160",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1511,8 +1511,8 @@
   },
   {
     "reference": "main",
-    "revision": "db0e0c4fb9095fdc42a7af34019c0616c071e9eb",
-    "grammarSha": "b8ccfe3408b03e7e702a40a13edf9f3ffcb9bdc3204399f35a5e8b65d75c9948",
+    "revision": "a716678c0f00645fed1e6f1d0eb221481dbd6f6d",
+    "grammarSha": "7dbd3baacd2d3c3e2daa66bd971dc5196ae763d57eee16b4d7d248df09326b7d",
     "language": "gitcommit",
     "url": "https://github.com/gbprod/tree-sitter-gitcommit",
     "maintainedBy": "@gbprod",
@@ -3195,8 +3195,8 @@
   },
   {
     "reference": "main",
-    "revision": "8bf9a9f4778d40f0f9d33630badab360dded405d",
-    "grammarSha": "52b5e744564bccd97abc181cec2d78d6d755c459994bb65b440da7210e5340a9",
+    "revision": "d03bb79cd25bc2ea5c71e0003fe81aaa3907aea4",
+    "grammarSha": "834487ef1f80687adce797b7c72921aca57bcfe3db26dfe63ab14ade44d58b6c",
     "language": "pkl",
     "url": "https://github.com/apple/tree-sitter-pkl",
     "maintainedBy": "@bioball",
@@ -4063,7 +4063,7 @@
   },
   {
     "reference": "main",
-    "revision": "ba1ae2e90600558b94fb62e471c9efacac15dfec",
+    "revision": "64d329dfe0d24bc67639a20e3a595b142c086940",
     "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
@@ -4366,8 +4366,8 @@
   },
   {
     "reference": "main",
-    "revision": "a7f11d946b44244f71df41d2a78af0665d618dae",
-    "grammarSha": "85c67802125a4a995da9d4adb723d7a2b1379e26d84fe481b8aaa34d58faf4bd",
+    "revision": "4a77b2d7a004587646bddc4e854779044b6db459",
+    "grammarSha": "aceaf353666c0f4dad7c65d328090c561ee3a836da24660e2c1cfed772576956",
     "language": "tiger",
     "url": "https://github.com/ambroisie/tree-sitter-tiger",
     "maintainedBy": "@ambroisie",
@@ -4521,8 +4521,8 @@
   },
   {
     "reference": "main",
-    "revision": "43b221c0b76e77244efdaa9963e402a17c930fbc",
-    "grammarSha": "60569ad8b4b835c2603c2ec55f03d575905d2cf9bebff8343edc7838294913a9",
+    "revision": "5d8fde870b0ded1f429ba5bb249a9d9f8589ff5f",
+    "grammarSha": "6bc0cdb892723f7b99637efa758c815deca709b98553ef317ec8f9b93e9de9e7",
     "language": "typoscript",
     "url": "https://github.com/Teddytrombone/tree-sitter-typoscript",
     "maintainedBy": "@Teddytrombone"

@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "a7f11d946b44244f71df41d2a78af0665d618dae",
-  "grammarSha": "85c67802125a4a995da9d4adb723d7a2b1379e26d84fe481b8aaa34d58faf4bd",
+  "revision": "4a77b2d7a004587646bddc4e854779044b6db459",
+  "grammarSha": "aceaf353666c0f4dad7c65d328090c561ee3a836da24660e2c1cfed772576956",
   "language": "tiger",
   "url": "https://github.com/ambroisie/tree-sitter-tiger",
   "maintainedBy": "@ambroisie",

@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "db0e0c4fb9095fdc42a7af34019c0616c071e9eb",
-  "grammarSha": "b8ccfe3408b03e7e702a40a13edf9f3ffcb9bdc3204399f35a5e8b65d75c9948",
+  "revision": "a716678c0f00645fed1e6f1d0eb221481dbd6f6d",
+  "grammarSha": "7dbd3baacd2d3c3e2daa66bd971dc5196ae763d57eee16b4d7d248df09326b7d",
   "language": "gitcommit",
   "url": "https://github.com/gbprod/tree-sitter-gitcommit",
   "maintainedBy": "@gbprod",
