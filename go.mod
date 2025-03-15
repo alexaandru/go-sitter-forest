@@ -437,7 +437,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
-	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.5
+	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.6
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.6
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.0
 	github.com/alexaandru/go-sitter-forest/tact v1.9.2

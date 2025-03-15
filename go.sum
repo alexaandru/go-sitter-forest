@@ -866,8 +866,8 @@ github.com/alexaandru/go-sitter-forest/syphon v1.9.1 h1:3Bn/TQBhRILSC3M2k/cfWokJ
 github.com/alexaandru/go-sitter-forest/syphon v1.9.1/go.mod h1:G3bS4bp8QjJMF0N4SYaTeBBLXn1BQcVLqm3ZqNFhARM=
 github.com/alexaandru/go-sitter-forest/systemtap v1.9.0 h1:wZ7G7XNhCghxnKIzxExA+kKQKIFe+XRHG++F5iOzkt4=
 github.com/alexaandru/go-sitter-forest/systemtap v1.9.0/go.mod h1:uBa9xxMcHV5NRP2TBpEYgqxUn3/cDuOsusThiS0eMuY=
-github.com/alexaandru/go-sitter-forest/systemverilog v1.9.5 h1:Hvf6/j9ChSyfQiCpuJhzrgRPH1620+xu4zjioKxSA7I=
-github.com/alexaandru/go-sitter-forest/systemverilog v1.9.5/go.mod h1:G26dEGCboAdg/sHXGWES6AsF1GQ/GzbobiAp6DtXR7g=
+github.com/alexaandru/go-sitter-forest/systemverilog v1.9.6 h1:Wkk5MlmgVkIZNMq7FPTarImF01SXwoWik5HgxnOGQ74=
+github.com/alexaandru/go-sitter-forest/systemverilog v1.9.6/go.mod h1:G26dEGCboAdg/sHXGWES6AsF1GQ/GzbobiAp6DtXR7g=
 github.com/alexaandru/go-sitter-forest/t32 v1.9.6 h1:UHK4XFqKw4nsZaPZn1tWGUOe56/hmyoYtBe2+qYobA8=
 github.com/alexaandru/go-sitter-forest/t32 v1.9.6/go.mod h1:+JhRR/0bUbItVySqnjreXwRCEssXzDmFfz0rEVCBoho=
 github.com/alexaandru/go-sitter-forest/tablegen v1.9.0 h1:h4cK0OLf8vC3CEMtGmZhSldH7nJuBVD48pdcn6Z+E6o=
