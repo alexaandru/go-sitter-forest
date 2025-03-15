@@ -408,7 +408,7 @@
 - [x] [slim](https://github.com/kolen/tree-sitter-slim) ✔️ (maintained by @kolen)
 - [x] [slint](https://github.com/slint-ui/tree-sitter-slint) ✔️ (maintained by @hunger)
 - [x] [smali](https://github.com/tree-sitter-grammars/tree-sitter-smali) ✔️ (maintained by @amaanq)
-- [x] [smith](https://github.com/smith-lang/tree-sitter-smith) 🗸 (maintained by @adam-r-kowalski)
+- [x] [smith](https://github.com/smith-lang/tree-sitter-smith) 🗸 (maintained by @adam-r-kowalski; ❌repository was removed by owner)
 - [x] [smithy](https://github.com/indoorvivants/tree-sitter-smithy) ✔️ (maintained by @amaanq, @keynmol)
 - [x] [sml](https://github.com/MatthewFluet/tree-sitter-sml) ✔️ (maintained by @MatthewFluet)
 - [x] [snakemake](https://github.com/osthomas/tree-sitter-snakemake) ✔️ (maintained by @osthomas)
