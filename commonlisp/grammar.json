@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "bf2a65b1c119898a1a17389e07f2a399c05cdc0c",
+  "revision": "32323509b3d9fe96607d151c2da2c9009eb13a2f",
   "grammarSha": "67694aa144004e79088da09c29652bca050b6600097cb79be4e2f164bd5c6882",
   "language": "commonlisp",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",

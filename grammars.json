@@ -414,8 +414,8 @@
   },
   {
     "reference": "main",
-    "revision": "618cda420a164bab091ddbdf969d0432eb204213",
-    "grammarSha": "ba73c8d4a44cf2d290f9b33a6bb4b512a85fe54404be0345c3537029c9161fc9",
+    "revision": "a07b0de1d5e82fda24b87357182200e632fefb80",
+    "grammarSha": "25439479c67e00ade597b90e612139f1defba2014fd48f2cf850867638c9823c",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "fdedbb037d9a6d9fbd841bbe251953ff08ed30ca",
+    "revision": "fcd38a4d7f5264d869737cd765b14a16be1e397f",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -679,7 +679,7 @@
   },
   {
     "reference": "master",
-    "revision": "bf2a65b1c119898a1a17389e07f2a399c05cdc0c",
+    "revision": "32323509b3d9fe96607d151c2da2c9009eb13a2f",
     "grammarSha": "67694aa144004e79088da09c29652bca050b6600097cb79be4e2f164bd5c6882",
     "language": "commonlisp",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-commonlisp",
@@ -790,7 +790,7 @@
   },
   {
     "reference": "master",
-    "revision": "757e0a61f9d38b3d9eaa299e8d866e8283ffc284",
+    "revision": "014628ae8d2df391b88ddb9fa0260fd97f770829",
     "grammarSha": "666c4a663fe8cf7df518953052d1ffe1139d3bc46cd18ad71460af1a586622af",
     "language": "cuda",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-cuda",
@@ -995,7 +995,7 @@
   },
   {
     "reference": "master",
-    "revision": "2128a0b249263e238d88cb894dad00c3168fea37",
+    "revision": "0d9a8099c963ed53e183425c1b47fa2622c8eaf7",
     "grammarSha": "9356ec140bd75d8aacdc8daed3ae376022e5d963004247aecccc1f7a1cac9fa0",
     "language": "dtd",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
@@ -1298,7 +1298,7 @@
   },
   {
     "reference": "main",
-    "revision": "ec3ea51be83fac52a132a9c37006336c7efed21f",
+    "revision": "6ff6cbeba1bf25a4d77945f255ce7f05aaa6f447",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1584,7 +1584,7 @@
   },
   {
     "reference": "master",
-    "revision": "66aec57f7119c7e8e40665b723cd7af5594f15ee",
+    "revision": "24a6c8ef698e4480fecf8340d771fbcb5de8fbb4",
     "grammarSha": "8e4348daa59e73aab734a074b66bb84808629bdd38dbb2bb8ed27faf32ff75a6",
     "language": "glsl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-glsl",
@@ -2092,8 +2092,8 @@
   },
   {
     "reference": "master",
-    "revision": "889f8b310fa005c668853ba40a1c6cfc060b1a8b",
-    "grammarSha": "5b15e1098d6f17bb96c3460401c35b39eb577ac358d5f43513a1b9c3b885e892",
+    "revision": "048d78773f75b38ad1831754ad737bb418e53484",
+    "grammarSha": "e40a8eb571d067adfc0eff7acfbf343e9290b445be7fdeaae24042f54b3b5056",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",
@@ -2834,8 +2834,8 @@
   },
   {
     "reference": "main",
-    "revision": "3156fdcad62fb0d961b92fdeac0227f839cbed17",
-    "grammarSha": "3c56f3a44b2f87f0f4049087cbe890d4d35efe7a8abb6814ea3e1434265136fe",
+    "revision": "1dbd50e7cbafc6c5d9e12cefb0d431c9ed4709f7",
+    "grammarSha": "1d13141fce80ae6ab0c1c31476bdab267c5dfe1982c6cf93ab131196640bb216",
     "language": "nelua",
     "url": "https://github.com/kmafeni04/tree-sitter-nelua",
     "maintainedBy": "@kmafeni04"
@@ -4139,7 +4139,7 @@
   },
   {
     "reference": "main",
-    "revision": "91d92846e8baaafc8854d2b9d0ac436bc16234db",
+    "revision": "240cc44b5fcd8e9e01180f1cbdcdd0f909a27275",
     "grammarSha": "ed19c261e21220bd7df38f8682c1889230fd148a62b21b942aa6ec40807ff886",
     "language": "superhtml",
     "url": "https://github.com/kristoff-it/superhtml",
@@ -4834,7 +4834,7 @@
   },
   {
     "reference": "master",
-    "revision": "2128a0b249263e238d88cb894dad00c3168fea37",
+    "revision": "0d9a8099c963ed53e183425c1b47fa2622c8eaf7",
     "grammarSha": "ea80bbb235b63a1b87437520ea6d95c71aac00c21dface7f795d5684d4f7a676",
     "language": "xml",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-xml",
@@ -4938,7 +4938,7 @@
   },
   {
     "reference": "main",
-    "revision": "00958faeaeb97d9b7beb76f128a5401441182204",
+    "revision": "8a29017169f43dc2c3526817e98142eb9a335087",
     "grammarSha": "4fcb19912044c0365a9a6d3f179e0a5144f016c265b944a6b12e5a3e8ba6fbc8",
     "language": "ziggy",
     "url": "https://github.com/kristoff-it/ziggy",
@@ -4947,7 +4947,7 @@
   },
   {
     "reference": "main",
-    "revision": "00958faeaeb97d9b7beb76f128a5401441182204",
+    "revision": "8a29017169f43dc2c3526817e98142eb9a335087",
     "grammarSha": "cfcd336f97fec522b5f4f43881783a59a484f0c2f1cbf176f33bb243e36a243c",
     "language": "ziggy_schema",
     "url": "https://github.com/kristoff-it/ziggy",
