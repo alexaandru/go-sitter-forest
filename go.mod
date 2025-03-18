@@ -136,7 +136,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.1
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
-	github.com/alexaandru/go-sitter-forest/fortran v1.9.9
+	github.com/alexaandru/go-sitter-forest/fortran v1.9.10
 	github.com/alexaandru/go-sitter-forest/frostlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsharp v1.9.3
@@ -159,8 +159,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
 	github.com/alexaandru/go-sitter-forest/gleam v1.9.5
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
-	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.0
-	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.1
+	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.1
+	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.2
 	github.com/alexaandru/go-sitter-forest/glint v1.9.0
 	github.com/alexaandru/go-sitter-forest/glsl v1.9.1
 	github.com/alexaandru/go-sitter-forest/gn v1.9.0
@@ -217,7 +217,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.25
+	github.com/alexaandru/go-sitter-forest/jai v1.9.26
 	github.com/alexaandru/go-sitter-forest/janet v1.9.2
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.4
@@ -338,7 +338,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pony v1.9.0
 	github.com/alexaandru/go-sitter-forest/postscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/poweron v1.9.0
-	github.com/alexaandru/go-sitter-forest/powershell v1.9.3
+	github.com/alexaandru/go-sitter-forest/powershell v1.9.4
 	github.com/alexaandru/go-sitter-forest/printf v1.9.1
 	github.com/alexaandru/go-sitter-forest/prisma v1.9.2
 	github.com/alexaandru/go-sitter-forest/problog v1.9.0
