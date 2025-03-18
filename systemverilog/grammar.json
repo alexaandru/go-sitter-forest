@@ -4,6 +4,7 @@
   "grammarSha": "07be90944cc35330d37475a723446e542ea3f56cb2988b84df066f11ce15becc",
   "language": "systemverilog",
   "url": "https://github.com/gmlarumbe/tree-sitter-systemverilog",
-  "doc": "high memory usage (3.9GB)",
-  "maintainedBy": "@gmlarumbe"
+  "doc": "high memory usage (3.9GB); grammar.js broken",
+  "maintainedBy": "@gmlarumbe",
+  "skipUpdate": true
 }

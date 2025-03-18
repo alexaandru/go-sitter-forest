@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "fcd38a4d7f5264d869737cd765b14a16be1e397f",
+    "revision": "dfe1c880eaea8e2006a0490145d41465ca172e75",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1325,8 +1325,8 @@
   },
   {
     "reference": "master",
-    "revision": "21b740801794b6570a0380f8aef22bb67214ea65",
-    "grammarSha": "de1f8a06b88228aed25ba8911a69a6d1275abeb704b04c95b99bc00596416ad7",
+    "revision": "64e11001d7ef3e8ac18e55a3a2d811fe36430923",
+    "grammarSha": "ee0a2f01c43adb64740eb80be6fcc2370ddfc390cb014a2cda20054bc1d535d1",
     "language": "fortran",
     "url": "https://github.com/stadelmanma/tree-sitter-fortran",
     "maintainedBy": "@amaanq",
@@ -1553,8 +1553,8 @@
   },
   {
     "reference": "main",
-    "revision": "7e8ea8cf39fc360cb97bd253442cd48e4f7a9ce3",
-    "grammarSha": "0a6f2bb79a88db91432066c4fb486deb5898d6d80e70b68a5bff5261fd3d6ad4",
+    "revision": "4801ac4d0a611502001035f45d1cba5cb57d272f",
+    "grammarSha": "a10a6afd64694159d2d4c981b899d6d3ba37ce3137bdfa38a801f71e8c4d52a0",
     "language": "glimmer_javascript",
     "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
     "maintainedBy": "@NullVoxPopuli",
@@ -1564,8 +1564,8 @@
   },
   {
     "reference": "main",
-    "revision": "4006128790efb58ca82a4492d8ef0983b260fc6a",
-    "grammarSha": "a63bf7b026f1091fadd7483370f3b9b90bb35b33c5d82ade9600b6f079e3e85e",
+    "revision": "c011b053626f27a0fe5cc99eeae4185399a572f9",
+    "grammarSha": "6ba54855d41d9d4e27fcfb536149aa06da414ea6a8a86d9c1ae518880e470ec2",
     "language": "glimmer_typescript",
     "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
     "maintainedBy": "@NullVoxPopuli",
@@ -2092,8 +2092,8 @@
   },
   {
     "reference": "master",
-    "revision": "048d78773f75b38ad1831754ad737bb418e53484",
-    "grammarSha": "e40a8eb571d067adfc0eff7acfbf343e9290b445be7fdeaae24042f54b3b5056",
+    "revision": "b2bc3e848967af042f61d8884878f6a9e16ddcf3",
+    "grammarSha": "c1dc0f8f989ec952f46cc5bb324ec9dda99286452978ee9164f8965e1ef781b4",
     "language": "jai",
     "url": "https://github.com/constantitus/tree-sitter-jai",
     "maintainedBy": "@constantitus",
@@ -2543,7 +2543,7 @@
   },
   {
     "reference": "master",
-    "revision": "405c5eb50bb91228e7926ce93bf2e63309842eda",
+    "revision": "05df079c157232f00642f6979579f9a65bfab9db",
     "grammarSha": "b6a0b5811b4280e51c2bda1f7da79a66b0e6579ee22857667083377fa3d4f698",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -3277,8 +3277,8 @@
   },
   {
     "reference": "main",
-    "revision": "e904962e25858b7e8e19c653e737ad3b7d1c55bd",
-    "grammarSha": "d96e5dae4d2da4850d5790771c984a51d32b2caeb27d9c29322f17b11cb9dead",
+    "revision": "66d5e61126989c0aca57ff77d19b2064919b51e1",
+    "grammarSha": "a16efced630e9e544da194136e584640b7e784aa62f25bc1dee2131e9740dd90",
     "language": "powershell",
     "url": "https://github.com/airbus-cert/tree-sitter-powershell",
     "maintainedBy": "@citronneur",
@@ -4239,8 +4239,9 @@
     "grammarSha": "07be90944cc35330d37475a723446e542ea3f56cb2988b84df066f11ce15becc",
     "language": "systemverilog",
     "url": "https://github.com/gmlarumbe/tree-sitter-systemverilog",
-    "doc": "high memory usage (3.9GB)",
-    "maintainedBy": "@gmlarumbe"
+    "doc": "high memory usage (3.9GB); grammar.js broken",
+    "maintainedBy": "@gmlarumbe",
+    "skipUpdate": true
   },
   {
     "reference": "main",

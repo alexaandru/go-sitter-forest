@@ -365,7 +365,8 @@ static bool scan_string_literal(TSLexer *lexer) {
             // the end of the literal. We also need to check that an
             // escaped quote isn't split in half by a line
             // continuation -- people do this!
-            if (skip_literal_continuation_sequence(lexer) && lexer->lookahead != opening_quote) {
+            skip_literal_continuation_sequence(lexer);
+            if (lexer->lookahead != opening_quote) {
                 return true;
             }
         }
