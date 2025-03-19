@@ -28,7 +28,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awatalk v1.9.0
 	github.com/alexaandru/go-sitter-forest/awk v1.9.2
 	github.com/alexaandru/go-sitter-forest/bara v1.9.0
-	github.com/alexaandru/go-sitter-forest/barq v1.9.3
+	github.com/alexaandru/go-sitter-forest/barq v1.9.4
 	github.com/alexaandru/go-sitter-forest/bash v1.9.5
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
@@ -44,8 +44,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/bqn v1.9.1
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.2
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
-	github.com/alexaandru/go-sitter-forest/c v1.9.3
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.15
+	github.com/alexaandru/go-sitter-forest/c v1.9.4
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.16
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
@@ -321,7 +321,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
-	github.com/alexaandru/go-sitter-forest/perl v1.9.7
+	github.com/alexaandru/go-sitter-forest/perl v1.9.8
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.4
@@ -482,7 +482,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.4
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.2
 	github.com/alexaandru/go-sitter-forest/vim v1.9.1
-	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.0
+	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/virdant v1.9.0
 	github.com/alexaandru/go-sitter-forest/virgil v1.9.0
 	github.com/alexaandru/go-sitter-forest/vrl v1.9.0
