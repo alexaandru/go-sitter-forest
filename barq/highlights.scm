@@ -3,6 +3,10 @@
 (identifier) @variable
 (member key: (identifier) @variable.member)
 
+; Attributes
+
+(attribute (special_identifier) @attribute)
+
 ; Parameters
 
 (parameters (identifier) @variable.parameter)
@@ -45,6 +49,7 @@
  "if"
  "else"
  "switch"
+  "then"
 ] @keyword.conditional
 
 [
@@ -62,10 +67,6 @@
  (continue)
  "defer"
 ] @keyword
-
-[
- "@foreign"
-] @attribute
 
 ; Operators
 

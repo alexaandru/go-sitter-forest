@@ -254,8 +254,8 @@
   },
   {
     "reference": "master",
-    "revision": "17aa79f3547c5a938ab91e1cb807f42c7b978877",
-    "grammarSha": "5615c89d5a2ff92a2f03200616aff9d1d74cc56b6a3428da5237afad791687b9",
+    "revision": "f065394ed8fb493a6993190d9be1bc3f93c0fc7c",
+    "grammarSha": "c78bbba006a8131e2b3536616f3fd8300f3240529342ecfeb7f8a770e2c9ae29",
     "language": "barq",
     "url": "https://github.com/barqlang/tree-sitter-barq",
     "maintainedBy": "@yhyadev"
@@ -414,8 +414,8 @@
   },
   {
     "reference": "main",
-    "revision": "a07b0de1d5e82fda24b87357182200e632fefb80",
-    "grammarSha": "25439479c67e00ade597b90e612139f1defba2014fd48f2cf850867638c9823c",
+    "revision": "abb8a7f2e6d6edafad761203575934a57592f5eb",
+    "grammarSha": "f52856e6fb74229125470f9e19f9d9f620b30c64d591d4ec093ba1ba009f95d1",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "dfe1c880eaea8e2006a0490145d41465ca172e75",
+    "revision": "5724407e4d56a649ebce7caeda242567c8225ce6",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2543,7 +2543,7 @@
   },
   {
     "reference": "master",
-    "revision": "05df079c157232f00642f6979579f9a65bfab9db",
+    "revision": "d651e50f0b4c5ee0def61b751970b6b5a81e4dca",
     "grammarSha": "b6a0b5811b4280e51c2bda1f7da79a66b0e6579ee22857667083377fa3d4f698",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -3480,7 +3480,7 @@
   },
   {
     "reference": "master",
-    "revision": "0555ac0da902abff06076e40501102cee3ba68bd",
+    "revision": "930202c2a80965a7a9ca018b5b2a08b25dfa7f12",
     "grammarSha": "1c611df1e3a4f4b77b16fb1e4724232508ea8acc1d3d4fe206f6bff793f08dcf",
     "language": "query",
     "altName": "Tree-Sitter query language",
@@ -4694,7 +4694,7 @@
   },
   {
     "reference": "master",
-    "revision": "d2e4b5c172a109966c2ce0378f73df6cede39400",
+    "revision": "2694c3d27e2ca98a0ccde72f33887394300d524e",
     "grammarSha": "a6df3ee4e877bf744a7c21af0507231e4fa325eba2e0ebd04ff60b18a6b56534",
     "language": "vimdoc",
     "url": "https://github.com/neovim/tree-sitter-vimdoc",
