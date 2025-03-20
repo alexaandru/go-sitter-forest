@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "5724407e4d56a649ebce7caeda242567c8225ce6",
+    "revision": "d431e1fbf42b182a502c1bd71e2d56546e5d24e6",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2705,7 +2705,7 @@
   },
   {
     "reference": "master",
-    "revision": "03fd2216bc52976c9b92ca64b5ec2e1f06408f7e",
+    "revision": "9c74e8e8917b83d90e38ac040949079437ec0043",
     "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "language": "meson",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
@@ -3778,7 +3778,7 @@
   },
   {
     "reference": "master",
-    "revision": "ed939ed550ebff7d4ad8aafb4d5aad44de69965d",
+    "revision": "041dea1ca8b25f20fa564854922ac6a99c050ec6",
     "grammarSha": "d051671b8f241d024f73ef06675b7817118ca473741be9f39824290544db7ca8",
     "language": "scala",
     "url": "https://github.com/tree-sitter/tree-sitter-scala",
@@ -4139,7 +4139,7 @@
   },
   {
     "reference": "main",
-    "revision": "240cc44b5fcd8e9e01180f1cbdcdd0f909a27275",
+    "revision": "fc7c594f52528e4a4a08671137850143d55a5bf2",
     "grammarSha": "ed19c261e21220bd7df38f8682c1889230fd148a62b21b942aa6ec40807ff886",
     "language": "superhtml",
     "url": "https://github.com/kristoff-it/superhtml",
