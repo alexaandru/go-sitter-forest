@@ -389,7 +389,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rust v1.9.12
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
-	github.com/alexaandru/go-sitter-forest/scala v1.9.5
+	github.com/alexaandru/go-sitter-forest/scala v1.9.6
 	github.com/alexaandru/go-sitter-forest/scfg v1.9.1
 	github.com/alexaandru/go-sitter-forest/scheme v1.9.0
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
