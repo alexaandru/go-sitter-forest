@@ -78,7 +78,7 @@
 (function_cardinality_expression (sequence_uniqueness) @keyword)
 (function_cardinality_expression [ "{" "}" ] @punctuation.bracket)
 
-(function_body (function_op_by_definition) @operator)
+(function_body (":=") @operator)
 
 (function_composition subject: (reserved_self) @variable.builtin)
 (function_composition name: (identifier) @function.call)
@@ -232,7 +232,7 @@
 (type_class_def [ "(" ")" ] @punctuation.bracket)
 
 (type_variable name: (identifier) @type)
-(type_variable (type_op_combiner) @operator)
+(type_variable_restriction (type_op_combiner) @operator)
 
 (type_class_reference name: (identifier_reference) @type)
 

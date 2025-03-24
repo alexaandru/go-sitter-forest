@@ -50,6 +50,8 @@ enum TokenType {
   OPEN_SUBSCRIPT_BRACKET,
   // '(' at the start of a method call, or a type constraint
   OPEN_ARGUMENT_PAREN,
+  // binary minus ('-') operator
+  BINARY_MINUS
 };
 
 void *tree_sitter_pkl_external_scanner_create() { return NULL; }
@@ -230,7 +232,7 @@ static bool parse_mlx_string_chars(TSLexer *lexer, int num_pounds) {
   }
 }
 
-static bool parse_open_subscript_or_argument(TSLexer *lexer, bool open_subscript_bracket, bool open_argument_paren) {
+static bool parse_symbol_no_preceding_newline_or_semicolon(TSLexer *lexer, bool open_subscript_bracket, bool open_argument_paren, bool binary_minus) {
   if (lexer->eof(lexer)) {
     return false;
   }
@@ -252,6 +254,12 @@ static bool parse_open_subscript_or_argument(TSLexer *lexer, bool open_subscript
         if (open_argument_paren) {
           advance_pkl(lexer);
           lexer->result_symbol = OPEN_ARGUMENT_PAREN;
+          return true;
+        }
+      case '-':
+        if (binary_minus) {
+          advance_pkl(lexer);
+          lexer->result_symbol = BINARY_MINUS;
           return true;
         }
       default:
@@ -277,8 +285,9 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   bool ml6 = valid_symbols[ML6_STRING_CHARS];
   bool osb = valid_symbols[OPEN_SUBSCRIPT_BRACKET];
   bool oap = valid_symbols[OPEN_ARGUMENT_PAREN];
+  bool bminus = valid_symbols[BINARY_MINUS];
   
-  if (sl && sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oap) {
+  if (sl && sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oap && bminus) {
     // error recovery mode -> don't match any string chars
     return false;
   }
@@ -325,9 +334,9 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   if (ml6) {
     return parse_mlx_string_chars(lexer, 6);
   }
-  // both can possibly be true
-  if (osb || oap) {
-    return parse_open_subscript_or_argument(lexer, osb, oap);
+  // either possibly be true
+  if (osb || oap || bminus) {
+    return parse_symbol_no_preceding_newline_or_semicolon(lexer, osb, oap, bminus);
   }
   return false;
 }

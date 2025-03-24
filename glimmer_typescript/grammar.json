@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "c011b053626f27a0fe5cc99eeae4185399a572f9",
-  "grammarSha": "6ba54855d41d9d4e27fcfb536149aa06da414ea6a8a86d9c1ae518880e470ec2",
+  "revision": "48c60295f1ee34ea4ed6e5177102be6d24bfc9d0",
+  "grammarSha": "07851ff006fa3d9e487ba4285b8eaecbe6dabf1c00b5b72ff7fe84bb272b2f5a",
   "language": "glimmer_typescript",
   "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
   "maintainedBy": "@NullVoxPopuli",

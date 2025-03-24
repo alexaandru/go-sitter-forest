@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "6b1ebb86c97fca00835e7fce4a95c5069172145e",
+  "revision": "aca5a52aa3cab858944d3c02701ccf5b2d8fd0f9",
   "grammarSha": "f0b629e7d8428eedfb2356ac049efd24837331718759217fa1b737253d3c1d5d",
   "language": "swift",
   "url": "https://github.com/alex-pinkus/tree-sitter-swift",

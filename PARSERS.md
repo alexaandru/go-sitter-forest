@@ -164,7 +164,7 @@
 - [x] [gitignore](https://github.com/shunsambongi/tree-sitter-gitignore) ✔️ (maintained by @theHamsta)
 - [x] [gleam](https://github.com/gleam-lang/tree-sitter-gleam) ✔️ (maintained by @amaanq)
 - [x] [Glimmer and Ember](https://github.com/ember-tooling/tree-sitter-glimmer) ✔️ (maintained by @NullVoxPopuli)
-- [x] [glimmer_javascript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript) ✔️ (maintained by @NullVoxPopuli)
+- [x] [glimmer_javascript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript) ✔️ (maintained by @NullVoxPopuli; ❌need to figure out scanner.h)
 - [x] [glimmer_typescript](https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript) ✔️ (maintained by @NullVoxPopuli)
 - [x] [glint](https://github.com/LensPlaysGames/tree-sitter-glint) ✔️ (maintained by @LensPlaysGames)
 - [x] [glsl](https://github.com/tree-sitter-grammars/tree-sitter-glsl) ✔️ (maintained by @theHamsta)

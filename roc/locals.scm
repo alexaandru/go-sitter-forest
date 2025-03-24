@@ -1,4 +1,6 @@
 (expr_body) @local.scope
+(file) @local.scope
+(provides_list (identifier)@local.reference)
 
 
 (value_declaration(decl_left 

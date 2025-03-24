@@ -1,11 +1,13 @@
 {
   "reference": "main",
-  "revision": "4801ac4d0a611502001035f45d1cba5cb57d272f",
-  "grammarSha": "a10a6afd64694159d2d4c981b899d6d3ba37ce3137bdfa38a801f71e8c4d52a0",
+  "revision": "babba3fc0c822a633261ce9e96a4d7986050eb0c",
+  "grammarSha": "92303a3fd6c4a22d474ff1055ca162c0ec87fb7863111a6f08b56bb60fa55418",
   "language": "glimmer_javascript",
   "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-javascript",
+  "doc": "need to figure out scanner.h",
   "maintainedBy": "@NullVoxPopuli",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skipUpdate": true
 }

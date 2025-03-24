@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "f3cd62d8bd043ef20507e84bb6b4b53731ccf3a7",
+  "revision": "11b688a1f0e97c0c4e3dbabf4a38016335f4d237",
   "grammarSha": "167dd195e0283b0e39605e952170d815f3eba3279b3b8a1e3b6f3581994306ab",
   "language": "vim",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-vim",

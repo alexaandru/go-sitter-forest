@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "93c69d2f84d8a167c0a3f4a8d51ccefe365a4dc8",
-  "grammarSha": "ec667b76436719cb657e091772187aa15cc96825377a8146b3441f7fadce9b74",
+  "revision": "d8d415f6a1cf80ca138524bcc395810b176d40fa",
+  "grammarSha": "761a7a059c994593186b551f06e5997fa93e599d0061941db2bb302d515fa697",
   "language": "prolog",
   "url": "https://codeberg.org/foxy/tree-sitter-prolog",
   "maintainedBy": "@foxyseta",

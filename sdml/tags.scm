@@ -46,6 +46,7 @@
 
 (union_def name: (identifier) @name) @definition.union
 
+;; common to dimension and event
 (source_entity entity: (identifier_reference) @name) @reference.entity
 (source_entity member: (identifier) @name) @reference.field
 

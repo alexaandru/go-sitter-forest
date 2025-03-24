@@ -661,7 +661,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 7:
       if (lookahead == '*') ADVANCE(7);
-      if (lookahead == '/') ADVANCE(96);
+      if (lookahead == '/') ADVANCE(94);
       if (lookahead != 0) ADVANCE(8);
       END_STATE();
     case 8:
@@ -678,14 +678,14 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 11:
       if (lookahead == '-') ADVANCE(43);
-      if (lookahead == ':') ADVANCE(97);
+      if (lookahead == ':') ADVANCE(96);
       END_STATE();
     case 12:
       if (lookahead == '-') ADVANCE(59);
       END_STATE();
     case 13:
       if (lookahead == '-') ADVANCE(58);
-      if (lookahead == ':') ADVANCE(97);
+      if (lookahead == ':') ADVANCE(96);
       END_STATE();
     case 14:
       if (lookahead == '.') ADVANCE(65);
@@ -857,7 +857,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 48:
       ACCEPT_TOKEN(aux_sym_atom_token1);
       if (lookahead == '*') ADVANCE(48);
-      if (lookahead == '/') ADVANCE(49);
+      if (lookahead == '/') ADVANCE(55);
       if ((set_contains(aux_sym_atom_token1_character_set_1, 9, lookahead)) &&
           lookahead != '!' &&
           lookahead != '\'' &&
@@ -1107,11 +1107,6 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead != 0) ADVANCE(1);
       END_STATE();
     case 96:
-      ACCEPT_TOKEN(sym_comment);
-      if (lookahead == '*') ADVANCE(7);
-      if (lookahead != 0) ADVANCE(8);
-      END_STATE();
-    case 97:
       ACCEPT_TOKEN(anon_sym_COLON_COLON);
       END_STATE();
     default:

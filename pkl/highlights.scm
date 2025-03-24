@@ -9,11 +9,6 @@
   "<" @punctuation.bracket
   ">" @punctuation.bracket)
 
-; Method calls
-
-(methodCallExpr
-  (identifier) @function.method)
-
 ; Method definitions
 
 (classMethod (methodHeader (identifier)) @function.method)
@@ -107,7 +102,7 @@
 "hidden" @keyword
 "if" @keyword
 (importExpr "import" @function.method.builtin)
-(importGlobExpr "import*" @function.method.builtin)
+(importExpr "import*" @function.method.builtin)
 "import" @keyword
 "import*" @keyword
 "in" @keyword

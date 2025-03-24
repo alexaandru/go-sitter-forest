@@ -34,5 +34,5 @@
 
 ; References
 
-(variableExpr 
+(unqualifiedAccessExpr 
   (identifier) @local.reference)
