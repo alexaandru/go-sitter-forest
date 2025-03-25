@@ -330,7 +330,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pic v1.9.9
 	github.com/alexaandru/go-sitter-forest/pint v1.9.1
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
-	github.com/alexaandru/go-sitter-forest/pkl v1.9.3
+	github.com/alexaandru/go-sitter-forest/pkl v1.9.4
 	github.com/alexaandru/go-sitter-forest/plantuml v1.9.0
 	github.com/alexaandru/go-sitter-forest/po v1.9.0
 	github.com/alexaandru/go-sitter-forest/pod v1.9.0
@@ -506,7 +506,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
 	github.com/alexaandru/go-sitter-forest/yuck v1.9.0
 	github.com/alexaandru/go-sitter-forest/zathurarc v1.9.0
-	github.com/alexaandru/go-sitter-forest/zeek v1.9.5
+	github.com/alexaandru/go-sitter-forest/zeek v1.9.6
 	github.com/alexaandru/go-sitter-forest/zig v1.9.4
 	github.com/alexaandru/go-sitter-forest/ziggy v1.9.1
 	github.com/alexaandru/go-sitter-forest/ziggy_schema v1.9.1
