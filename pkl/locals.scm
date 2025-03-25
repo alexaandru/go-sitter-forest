@@ -4,7 +4,7 @@
 (clazz) @local.scope
 (classMethod) @local.scope
 (objectMethod) @local.scope
-(functionLiteral) @local.scope
+(functionLiteralExpr) @local.scope
 (objectBody) @local.scope
 (letExpr) @local.scope
 (forGenerator) @local.scope

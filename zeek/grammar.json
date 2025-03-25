@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "b480c1684dba431c4692130d7b0e2005396017e0",
-  "grammarSha": "fd96abf6d7d71c2aadc204101121b1202c0b72c11299452b3b15c2c21b5d92ee",
+  "revision": "041d869f6af3fd854dec4e9952e5bdbbfb8cfb9d",
+  "grammarSha": "621acd746350adfb82a80905a8d3903edc864c5f8b487f5df6fbc51a9ec6e06d",
   "language": "zeek",
   "url": "https://github.com/zeek/tree-sitter-zeek",
   "maintainedBy": "@bbannier"

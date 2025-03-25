@@ -249,18 +249,29 @@ static bool parse_symbol_no_preceding_newline_or_semicolon(TSLexer *lexer, bool 
           advance_pkl(lexer);
           lexer->result_symbol = OPEN_SUBSCRIPT_BRACKET;
           return true;
+        } else {
+          return false;
         }
       case '(':
         if (open_argument_paren) {
           advance_pkl(lexer);
           lexer->result_symbol = OPEN_ARGUMENT_PAREN;
           return true;
+        } else {
+          return false;
         }
       case '-':
         if (binary_minus) {
           advance_pkl(lexer);
+          lexer->mark_end(lexer);
+          // avoid parsing `->` as binary minus
+          if (lexer->lookahead == '>') {
+            return false;
+          }
           lexer->result_symbol = BINARY_MINUS;
           return true;
+        } else {
+          return false;
         }
       default:
         return false;
@@ -286,7 +297,7 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   bool osb = valid_symbols[OPEN_SUBSCRIPT_BRACKET];
   bool oap = valid_symbols[OPEN_ARGUMENT_PAREN];
   bool bminus = valid_symbols[BINARY_MINUS];
-  
+
   if (sl && sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oap && bminus) {
     // error recovery mode -> don't match any string chars
     return false;

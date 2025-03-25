@@ -27,23 +27,23 @@
 ; Literals
 
 (stringConstant) @string
-(slStringLiteral) @string
-(mlStringLiteral) @string
+(slStringLiteralExpr) @string
+(mlStringLiteralExpr) @string
 
 (escapeSequence) @escape
 
-(intLiteral) @number
-(floatLiteral) @number
+(intLiteralExpr) @number
+(floatLiteralExpr) @number
 
-(interpolationExpr
+(stringInterpolation
   "\\(" @punctuation.special
   ")" @punctuation.special) @embedded
 
-(interpolationExpr
+(stringInterpolation
  "\\#(" @punctuation.special
  ")" @punctuation.special) @embedded
 
-(interpolationExpr
+(stringInterpolation
   "\\##(" @punctuation.special
   ")" @punctuation.special) @embedded
 
@@ -96,7 +96,7 @@
 "else" @keyword
 "extends" @keyword
 "external" @keyword
-(falseLiteral) @constant.builtin
+(falseLiteralExpr) @constant.builtin
 "for" @keyword
 "function" @keyword
 "hidden" @keyword
@@ -112,7 +112,7 @@
 (moduleExpr "module" @type.builtin)
 "module" @keyword
 "new" @keyword
-(nullLiteral) @constant.builtin
+(nullLiteralExpr) @constant.builtin
 "open" @keyword
 "out" @keyword
 (outerExpr) @variable.builtin
@@ -123,6 +123,6 @@
 (thisExpr) @variable.builtin
 "throw" @function.method.builtin
 "trace" @function.method.builtin
-(trueLiteral) @constant.builtin
+(trueLiteralExpr) @constant.builtin
 "typealias" @keyword
 "when" @keyword

@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "c1522f635b855fbf75e8a8c2afed27d8017a2ece",
-  "grammarSha": "516e54469071855e443d2b1dadc63a73612212335102a14840e84e297712b0eb",
+  "revision": "2698a1db81beaf980cea8e52aec39311f34f4f8e",
+  "grammarSha": "76ead5d0bc73d3e361d3b500b7c2476aa0d02bcd4d3c593bf6cea78c3d5ae587",
   "language": "pkl",
   "url": "https://github.com/apple/tree-sitter-pkl",
   "maintainedBy": "@bioball",
