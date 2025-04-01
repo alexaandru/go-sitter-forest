@@ -32,6 +32,7 @@
 ] @keyword)
 
 "defer" @keyword
+"goto" @keyword
 "emit" @keyword
 "var" @keyword
 "union" @keyword

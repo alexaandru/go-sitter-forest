@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "a19be2d4c1956e12facfc717e28f13a6ad0860e0",
+  "revision": "47af20264abbd24ea282ded0f8ee9cad3cf3bf2f",
   "grammarSha": "a69e0e9c013310e979e9d05587e4dc328afe40a78af158ff66347c0963758fa9",
   "language": "tact",
   "url": "https://github.com/tact-lang/tree-sitter-tact",

@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "9c74e8e8917b83d90e38ac040949079437ec0043",
+  "revision": "a56af662e8540412fed5e40cc20435b2b9a20502",
   "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
   "language": "meson",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",

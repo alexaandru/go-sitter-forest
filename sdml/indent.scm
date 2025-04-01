@@ -27,7 +27,8 @@
 
 (sequence_builder "{" @indent "}" @indent.end)
 
-(actual_arguments "(" @indent ")" @indent.end)
+(atomic_sentence "(" @indent ")" @indent.end)
+(functional_term "(" @indent ")" @indent.end)
 
 (sequence_of_predicate_values "[" @indent "]" @indent.end)
 

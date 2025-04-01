@@ -2453,6 +2453,28 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 lex_advance_crystal(lexer);
 
                 if (lexer->lookahead == '=') {
+                    if (valid_symbols[REGEX_START] || valid_symbols[BINARY_SLASH]) {
+                        if (valid_symbols[REGEX_START] && !valid_symbols[BINARY_SLASH]) {
+                            // This is a case like `foo = /=` or `foo(/=`.
+                            // We can unambiguously prefer a regex here.
+                            lexer->result_symbol = REGEX_START;
+                            return true;
+                        } else if (valid_symbols[BINARY_SLASH] && !valid_symbols[REGEX_START]) {
+                            // This might be a case like `@foo /=`. We assume that `@a /= b` is valid
+                            // everywhere `@a / b` is valid, but `/=` is not an external symbol so return false.
+                            return false;
+                        } else {
+                            if (valid_symbols[START_OF_PARENLESS_ARGS]) {
+                                // This is a case like `a.b /=`. The Crystal parser uses
+                                // `slash_is_not_regex!` in this scenario, so return false.
+                                return false;
+                            } else {
+                                // This could be a case like `a .. /=`. The Crystal parser doesn't
+                                // recognize the `/=` token here, so just return false.
+                                return false;
+                            }
+                        }
+                    }
                     return false;
                 }
 
@@ -2538,15 +2560,16 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 return false;
             }
 
+            // `%=` is not an external token
+            if (lexer->lookahead == '=') {
+                return false;
+            }
+
             if (valid_symbols[STRING_PERCENT_LITERAL_START]
                 || valid_symbols[COMMAND_PERCENT_LITERAL_START]
                 || valid_symbols[STRING_ARRAY_PERCENT_LITERAL_START]
                 || valid_symbols[SYMBOL_ARRAY_PERCENT_LITERAL_START]
                 || valid_symbols[REGEX_PERCENT_LITERAL_START]) {
-
-                if (lexer->lookahead == '=') {
-                    return false;
-                }
 
                 LiteralType type = STRING;
                 Token return_symbol = STRING_PERCENT_LITERAL_START;
@@ -2639,12 +2662,6 @@ static bool inner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols)
                 }
 
             } else if (valid_symbols[MODULO_OPERATOR]) {
-                lex_advance_crystal(lexer);
-
-                if (lexer->lookahead == '=') {
-                    return false;
-                }
-
                 lexer->result_symbol = MODULO_OPERATOR;
                 return true;
             }

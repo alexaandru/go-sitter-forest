@@ -88,9 +88,8 @@
 
 (atomic_sentence
  predicate: (term (identifier_reference) @function.call))
-
-(actual_arguments [ "(" ")" ] @punctuation.bracket)
-(actual_arguments
+(atomic_sentence [ "(" ")" ] @punctuation.bracket)
+(atomic_sentence
  argument: (term (identifier_reference (identifier) @variable)))
 
 (term (reserved_self) @variable.builtin)
@@ -105,6 +104,9 @@
 
 (functional_term
  function: (term (identifier_reference) @function.call))
+(functional_term [ "(" ")" ] @punctuation.bracket)
+(functional_term
+ argument: (term (identifier_reference (identifier) @variable)))
 
 (sequence_builder [ "{" "}" ] @punctuation.bracket
                   (set_op_builder) @punctuation.separator)

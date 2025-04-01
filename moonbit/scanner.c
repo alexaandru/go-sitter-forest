@@ -16,10 +16,12 @@ struct ScannerState {
   bool multiline_string;
 };
 
+#if __STDC_VERSION__ >= 201112L
 _Static_assert(
   sizeof(struct ScannerState) <= TREE_SITTER_SERIALIZATION_BUFFER_SIZE,
   "Context too large"
 );
+#endif
 
 enum TokenType {
   AUTOMATIC_NEWLINE,
@@ -48,7 +50,7 @@ void tree_sitter_moonbit_external_scanner_reset(void *payload) {
   context->multiline_string = false;
 }
 
-void *tree_sitter_moonbit_external_scanner_create() {
+void *tree_sitter_moonbit_external_scanner_create(void) {
   struct ScannerState *context = malloc(sizeof(struct ScannerState));
   tree_sitter_moonbit_external_scanner_reset(context);
   return context;

@@ -1,9 +1,11 @@
 ; Identifiers
 (identifier) @variable
 
-; Function and sub declarations
+; Function declaration
 (function_statement
   name: (identifier) @function)
+
+; Sub declaration
 (sub_statement
   name: (identifier) @function)
 
@@ -12,24 +14,24 @@
   function: (prefix_exp
     (identifier) @function.call))
 
-; Nested function calls in property access
-; (function_call
-;   function: (prefix_exp
-;     (prefix_exp
-;       (prefix_exp
-;         (identifier) @variable)
-;       (identifier) @property)
-;     (identifier) @function.call))
-
 ; Parameters
 (parameter
-  name: (identifier) @parameter)
+  name: (identifier) @variable.parameter)
 
 ; Types
 (type_specifier) @type
 
 ; Variables
 (variable_declarator) @variable
+
+(multiplicative_expression
+  operator: (_) @keyword.operator)
+
+(logical_not_expression
+  operator: (_) @keyword.operator)
+
+(logical_expression
+  operator: (_) @keyword.operator)
 
 ; Property access
 (prefix_exp
@@ -38,15 +40,25 @@
   (identifier) @property)
 
 ; Statements
-(if_statement) @conditional
-(conditional_compl) @conditional
-(for_statement) @repeat
-(while_statement) @repeat
-(try_statement) @exception
+(if_statement) @keyword.conditional
+
+(conditional_compl) @keyword.conditional
+
+(for_statement) @keyword.repeat
+
+(while_statement) @keyword.repeat
+
+(try_statement) @keyword.exception
+
 (return_statement) @keyword.return
-(throw_statement) @keyword.throw
+
+(throw_statement) @keyword.exception
+
 (assignment_statement) @operator
+
 (print_statement) @function.builtin
+
+(constant) @constant
 
 ; Keywords
 [
@@ -63,6 +75,7 @@
   (while_start)
   (try_start)
   (try_catch)
+  (as)
 ] @keyword
 
 ; Operators
@@ -81,24 +94,41 @@
 
 ; Literals
 (boolean) @boolean
+
 (number) @number
+
 (string) @string
+
 (invalid) @constant.builtin
 
 ; Comments
 (comment) @comment
 
 ; Punctuation
-["(" ")" "[" "]" "{" "}" "." "," "?." "?["] @punctuation.delimiter
+[
+  "("
+  ")"
+  "["
+  "]"
+  "{"
+  "}"
+  "."
+  ","
+  "?."
+  "?["
+ ] @punctuation.delimiter
 
 ; Special highlights for library statements
-(library_statement) @include
+(library_statement) @keyword.import
+
 (library_statement
-  path: (string) @string.special)
+  path: (string) @module)
 
 ; Array and associative array literals
 (array) @constructor
+
 (assoc_array) @constructor
+
 (assoc_array_element
   key: (identifier) @property)
 
@@ -133,7 +163,13 @@
 ] @keyword
 
 ; Special keywords (these might still need to be strings if not defined as separate nodes)
-["then" "else" "else if" "#else" "#else if"] @keyword
+[
+  "then"
+  "else"
+  "else if"
+  "#else"
+  "#else if"
+] @keyword
 
 ; Exit statements
 [

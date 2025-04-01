@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "041dea1ca8b25f20fa564854922ac6a99c050ec6",
-  "grammarSha": "d051671b8f241d024f73ef06675b7817118ca473741be9f39824290544db7ca8",
+  "revision": "c1189954df854977c3a52003ca8a247c5f4729ba",
+  "grammarSha": "cc1ded2d52232167188924c63b37fedec24bc43be2ac2eb5f1ecf1d37327bec4",
   "language": "scala",
   "url": "https://github.com/tree-sitter/tree-sitter-scala",
   "maintainedBy": "@stevanmilic",

@@ -53,8 +53,13 @@
 (struct_definition (identifier) @type.definition)
 (type_definition (identifier) @type.definition)
 (trait_definition (identifier) @type.definition)
-(type_alias_definition (identifier) @type.definition)
+(type_alias_targets (identifier) @type.definition)
+(type_alias_targets (dot_identifier) @type.definition)
+(type_alias_target (identifier) @type.definition)
 (error_type_definition (identifier) @type.definition)
+(trait_alias_targets (identifier) @type.definition)
+(trait_alias_targets (dot_identifier) @type.definition)
+(trait_alias_target (identifier) @type.definition)
 
 ; Builtin types
 
@@ -121,6 +126,10 @@
 ; Function definitions
 
 (function_definition (function_identifier (lowercase_identifier) @function))
+(function_alias_targets (lowercase_identifier) @function)
+(function_alias_targets (dot_lowercase_identifier) @function)
+(function_alias_targets (dot_lowercase_identifier) @function)
+(function_alias_target (lowercase_identifier) @function)
 (trait_method_declaration (function_identifier) @function)
 (impl_definition (function_identifier) @function)
 
