@@ -50,6 +50,7 @@
   "as"
   "component"
   "default"
+  "final"
   "import"
   "on"
   "pragma"

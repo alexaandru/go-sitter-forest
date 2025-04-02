@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "1056d50e7b8d65a62704ecf83a74b2464aa77388",
+    "revision": "bc439ad0929e0f0ab4aacfb305f0b853f2e86cb2",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1173,7 +1173,7 @@
   },
   {
     "reference": "main",
-    "revision": "364e323b32d098ad0e7b29e7adb4005c2bb5cf34",
+    "revision": "416ca60d7d2a824c0d346163541153e230710780",
     "grammarSha": "58b7e9041930798895369e78f8dd4d026dff01e2e7b174fa7879268f520aa0b4",
     "language": "erlang",
     "url": "https://github.com/WhatsApp/tree-sitter-erlang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1566,7 +1566,7 @@
   },
   {
     "reference": "main",
-    "revision": "48c60295f1ee34ea4ed6e5177102be6d24bfc9d0",
+    "revision": "12d98944c1d5077b957cbdb90d663a7c4d50118c",
     "grammarSha": "07851ff006fa3d9e487ba4285b8eaecbe6dabf1c00b5b72ff7fe84bb272b2f5a",
     "language": "glimmer_typescript",
     "url": "https://github.com/NullVoxPopuli/tree-sitter-glimmer-typescript",
@@ -3128,7 +3128,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7cf7348737d8cff1b13407a0bfedce02ee7b046",
+    "revision": "576a56fa7f8b68c91524cdd211eb2ffc43e7bb11",
     "grammarSha": "cad60ead1f46007ac4b115a33031c9ee6468644e394fd70dbf7814956e0b7efd",
     "language": "php",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -3141,7 +3141,7 @@
   },
   {
     "reference": "master",
-    "revision": "f7cf7348737d8cff1b13407a0bfedce02ee7b046",
+    "revision": "576a56fa7f8b68c91524cdd211eb2ffc43e7bb11",
     "grammarSha": "65a8817a803f3adf5d49078cc78655426d8b7df888fb91db5b3ae31ad446872c",
     "language": "php_only",
     "url": "https://github.com/tree-sitter/tree-sitter-php",
@@ -3462,8 +3462,8 @@
   },
   {
     "reference": "master",
-    "revision": "8fef30e231d74b65c713bcbac21956156d8963da",
-    "grammarSha": "9d1418c0953dcce5abb05dc1e9c9fc0da73bd6728cf1ee7a8eb3fe6d53dae7a5",
+    "revision": "0889da4632bba3ec6f39ef4102625654890c15c1",
+    "grammarSha": "69249de99e8b5f106583df6404d91a55500b8c12ae26d8c892f9dd3aebbf3786",
     "language": "qmljs",
     "url": "https://github.com/yuja/tree-sitter-qmljs",
     "maintainedBy": "@Decodetalkers",
@@ -3746,8 +3746,8 @@
   },
   {
     "reference": "master",
-    "revision": "e86119bdb4968b9799f6a014ca2401c178d54b5f",
-    "grammarSha": "b2249a4f810a0fd6a500cd60ede2bebc7748c13ff2b0209e0770727b547d02f0",
+    "revision": "3691201b01cacb2f96ffca4c632c4e938bfacd88",
+    "grammarSha": "89e73563ab0636c18e6137eeb0508b2e1d37322ee702634aaa1c47e32a5e1364",
     "language": "rust",
     "url": "https://github.com/tree-sitter/tree-sitter-rust",
     "maintainedBy": "@amaanq",

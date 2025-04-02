@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "e86119bdb4968b9799f6a014ca2401c178d54b5f",
-  "grammarSha": "b2249a4f810a0fd6a500cd60ede2bebc7748c13ff2b0209e0770727b547d02f0",
+  "revision": "3691201b01cacb2f96ffca4c632c4e938bfacd88",
+  "grammarSha": "89e73563ab0636c18e6137eeb0508b2e1d37322ee702634aaa1c47e32a5e1364",
   "language": "rust",
   "url": "https://github.com/tree-sitter/tree-sitter-rust",
   "maintainedBy": "@amaanq",

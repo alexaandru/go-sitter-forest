@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "364e323b32d098ad0e7b29e7adb4005c2bb5cf34",
+  "revision": "416ca60d7d2a824c0d346163541153e230710780",
   "grammarSha": "58b7e9041930798895369e78f8dd4d026dff01e2e7b174fa7879268f520aa0b4",
   "language": "erlang",
   "url": "https://github.com/WhatsApp/tree-sitter-erlang",

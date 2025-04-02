@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "8fef30e231d74b65c713bcbac21956156d8963da",
-  "grammarSha": "9d1418c0953dcce5abb05dc1e9c9fc0da73bd6728cf1ee7a8eb3fe6d53dae7a5",
+  "revision": "0889da4632bba3ec6f39ef4102625654890c15c1",
+  "grammarSha": "69249de99e8b5f106583df6404d91a55500b8c12ae26d8c892f9dd3aebbf3786",
   "language": "qmljs",
   "url": "https://github.com/yuja/tree-sitter-qmljs",
   "maintainedBy": "@Decodetalkers",
