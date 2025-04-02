@@ -708,8 +708,8 @@ github.com/alexaandru/go-sitter-forest/ql v1.9.0 h1:t/himrj1ov7gdcS5FBwgkJwqhpMc
 github.com/alexaandru/go-sitter-forest/ql v1.9.0/go.mod h1:jNkSD6xIdx+ef7sn3/CmMOJAcLVfPMR8NGQ/HzrYJZg=
 github.com/alexaandru/go-sitter-forest/qmldir v1.9.0 h1:rSWLfRuBNlbAC+8UXOXWx4d9S791NUhryNSx/Lg7bas=
 github.com/alexaandru/go-sitter-forest/qmldir v1.9.0/go.mod h1:kMEngfXpIA4et6Lg4GvQPGJsn6hIk/TMvjlPrAPM4eA=
-github.com/alexaandru/go-sitter-forest/qmljs v1.9.2 h1:ucwhRPRVb3+976aY9MwQsJqqf/2iJ/cz8v2mJ7Pgg7o=
-github.com/alexaandru/go-sitter-forest/qmljs v1.9.2/go.mod h1:223A7TGlMLa3N7ecpatvH7BCXY0I9sP2J4ZIeOM88lU=
+github.com/alexaandru/go-sitter-forest/qmljs v1.9.3 h1:7OOSJvHggtXh8DEHJx1vimGRvuufBXSTo/P61iI4ip0=
+github.com/alexaandru/go-sitter-forest/qmljs v1.9.3/go.mod h1:223A7TGlMLa3N7ecpatvH7BCXY0I9sP2J4ZIeOM88lU=
 github.com/alexaandru/go-sitter-forest/quakec v1.9.0 h1:+w8S3Ub2jDAFoGfVdRRH5FZ5LOq9HFD7CtSHEuYpLno=
 github.com/alexaandru/go-sitter-forest/quakec v1.9.0/go.mod h1:a9nSMurXWvr3HHwUd5CGvd2PWVC3yluB1Fpy5i7BpIA=
 github.com/alexaandru/go-sitter-forest/query v1.9.5 h1:p/ujXAjFnsQvyzIqVCsiO3qtOCEzdEFZ/Xd3glSY8GQ=
@@ -764,8 +764,8 @@ github.com/alexaandru/go-sitter-forest/ruby v1.9.3 h1:3GdkatWtd0jXvhnxdqJCdM+9Jw
 github.com/alexaandru/go-sitter-forest/ruby v1.9.3/go.mod h1:h+TaY3e2ayXHy1jgwLZ+Jnho97roJzmaefSZjFvUM9k=
 github.com/alexaandru/go-sitter-forest/runescript v1.9.1 h1:EAg7ZeyBiRCQq1V8SKqbM6bzjUO1+pNg4BIN+9AdBRs=
 github.com/alexaandru/go-sitter-forest/runescript v1.9.1/go.mod h1:UcnMgTo//Zy2Zw/Bs8+AzW4oqez8jyrAv+XDU4SQaq0=
-github.com/alexaandru/go-sitter-forest/rust v1.9.12 h1:asu1avUDVHiWlA32n9NBvFc8O/K8Z0vkvotCox3Ji10=
-github.com/alexaandru/go-sitter-forest/rust v1.9.12/go.mod h1:ZKZRL1Yfy6siuWMvv2h/F9lt/8kMKn6VHnGj00PPNmM=
+github.com/alexaandru/go-sitter-forest/rust v1.9.13 h1:orVZVXQ+IkXkIvzeyO6YvHBwujEvbYFvpMRNAGulHmw=
+github.com/alexaandru/go-sitter-forest/rust v1.9.13/go.mod h1:ZKZRL1Yfy6siuWMvv2h/F9lt/8kMKn6VHnGj00PPNmM=
 github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1 h1:tHxUGOulr952Ctb8F5mRe/JwV6gBHIkQTXqb0vgn2I8=
 github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1/go.mod h1:YYWTic0sk6110kU6WF7r1Wbu7a933qGxqseIMJQc7LU=
 github.com/alexaandru/go-sitter-forest/sage v1.9.0 h1:2OLYMFoUiPcbPcsSfy6B+4UjZg4PaqktonvCS+qPrkQ=

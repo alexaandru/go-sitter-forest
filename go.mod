@@ -358,7 +358,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qbe v1.9.0
 	github.com/alexaandru/go-sitter-forest/ql v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
-	github.com/alexaandru/go-sitter-forest/qmljs v1.9.2
+	github.com/alexaandru/go-sitter-forest/qmljs v1.9.3
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
 	github.com/alexaandru/go-sitter-forest/query v1.9.5
 	github.com/alexaandru/go-sitter-forest/quint v1.9.0
@@ -386,7 +386,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rtx v1.9.1
 	github.com/alexaandru/go-sitter-forest/ruby v1.9.3
 	github.com/alexaandru/go-sitter-forest/runescript v1.9.1
-	github.com/alexaandru/go-sitter-forest/rust v1.9.12
+	github.com/alexaandru/go-sitter-forest/rust v1.9.13
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
 	github.com/alexaandru/go-sitter-forest/scala v1.9.7
