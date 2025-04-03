@@ -371,8 +371,8 @@
   },
   {
     "reference": "main",
-    "revision": "2b7323eaf0d115d5697c623b4348ffc2bf43c91b",
-    "grammarSha": "603d01c414ca0ec8f0a807f463bec36f7554ebffdd64fb6d2ee73485aed8de50",
+    "revision": "ee641d15390183d7535777947ce0f2f1fbcee69f",
+    "grammarSha": "25433b9e9c528ec0eb90b8acf2ffffa99b0321c405a9b2f88fc5932e4e37f084",
     "language": "bp",
     "url": "https://github.com/ambroisie/tree-sitter-bp",
     "maintainedBy": "@ambroisie"
@@ -473,7 +473,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "bc439ad0929e0f0ab4aacfb305f0b853f2e86cb2",
+    "revision": "c33adfafd32ed65bc0693bebeb5ae5656624c83c",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1406,7 +1406,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2707,7 +2707,7 @@
   },
   {
     "reference": "master",
-    "revision": "a56af662e8540412fed5e40cc20435b2b9a20502",
+    "revision": "e39eeb2b1d8bcedb85c1a7f83ac6de6012a5f22b",
     "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "language": "meson",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
@@ -2739,8 +2739,8 @@
   },
   {
     "reference": "main",
-    "revision": "8c17b59f16adaf87813972df0cbf193825825f47",
-    "grammarSha": "59d84382b3edece61c5cb784e1d4d4f6593c685ef3b35703d192441a09535d7e",
+    "revision": "290094725390a4e5f4fdb0524d1be037016890ba",
+    "grammarSha": "14b4d24d3292f23f3d02764ba0d29d85b323b5090a09fc8e348e9abec6140664",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
     "maintainedBy": "@tonyfettes",
@@ -3154,7 +3154,7 @@
   },
   {
     "reference": "master",
-    "revision": "fe3202e468bc17332bec8969f2b50ff1f1da3a46",
+    "revision": "03bb10330704b0b371b044e937d5cc7cd40b4999",
     "grammarSha": "fd894576b64ed97f88005dc39b8720e5de9c092bdb8ff7ae810dc7b3657e49d9",
     "language": "phpdoc",
     "url": "https://github.com/claytonrcarter/tree-sitter-phpdoc",
@@ -4288,7 +4288,7 @@
   },
   {
     "reference": "main",
-    "revision": "f15e711167661d1ba541d4f62b9dbfc4ce61ec56",
+    "revision": "ef80d41fdbebd6c705925a7b25602a69b1de9dc3",
     "grammarSha": "5f4c584d0f1ba581af224f1607d2b92adc8632532bd27a2f1f15a877cb5c279d",
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
