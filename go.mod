@@ -40,7 +40,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/blueprint v1.9.0
 	github.com/alexaandru/go-sitter-forest/bluespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/bond v1.9.1
-	github.com/alexaandru/go-sitter-forest/bp v1.9.1
+	github.com/alexaandru/go-sitter-forest/bp v1.9.2
 	github.com/alexaandru/go-sitter-forest/bqn v1.9.1
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.3
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
@@ -285,7 +285,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.18
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.19
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -326,7 +326,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.4
 	github.com/alexaandru/go-sitter-forest/php_only v1.9.5
-	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.1
+	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.2
 	github.com/alexaandru/go-sitter-forest/pic v1.9.9
 	github.com/alexaandru/go-sitter-forest/pint v1.9.1
 	github.com/alexaandru/go-sitter-forest/pioasm v1.9.1
