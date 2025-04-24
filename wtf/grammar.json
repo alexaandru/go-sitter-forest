@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "1a6d67ff23b10e2ef0e016e491488573a670678f",
-  "grammarSha": "ddebbd4c0c4a89c33b9891464d017a876bf6a7bcfa456b07845ddbbedd11e760",
+  "revision": "3696dfcaef18408f643d50e3f62d5d00f7d673b8",
+  "grammarSha": "ebb6c594d061f0a94148bf83c86abebc06d59ba337632cca1515735bff60e524",
   "language": "wtf",
   "url": "https://github.com/antoniusnaumann/tree-sitter-wtf",
   "maintainedBy": "@antoniusnaumann"

@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "cfbfa478dc2dbef267ee94ae4323d9c886f45e94",
+  "revision": "de06b9ad366f0186080056109a8c3be980129538",
   "grammarSha": "fa81af822484ef87c6d6d9f928bfd1488cae5720e76caac300d9beee48dbf34d",
   "language": "fennel",
   "url": "https://github.com/alexmozaidze/tree-sitter-fennel",

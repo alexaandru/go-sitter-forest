@@ -39,6 +39,16 @@
 
 "expr" @function.builtin @function
 
+; Highlight switch arguments as string
+(command
+    name: (simple_word) @keyword
+    arguments:
+        (word_list
+            (braced_word
+                (command
+                    name: (simple_word) @string)))
+    (#eq? @keyword "switch"))
+
 (command
   name: (simple_word) @function.builtin @function
   (#any-of? @function.builtin
@@ -55,6 +65,14 @@
    "subst"
    "trace"
    "source"))
+
+; Highlight unset and variable arguments as variables
+(command
+    name: (simple_word) @keyword
+    arguments: (word_list) @variable
+    (#any-of? @keyword
+        "unset"
+        "variable"))
 
 (command name: (simple_word) @keyword
          (#any-of? @keyword
@@ -83,17 +101,18 @@
           "lsort"
           "package"
           "return"
-          "switch"
-          "throw"
-          "unset"
-          "variable"))
+          "trap"
+          "throw"))
 
 [
+ "catch"
  "error"
+ "global"
  "namespace"
  "on"
  "set"
  "try"
+ "finally"
  ] @keyword
 
 (unpack) @operator

@@ -153,6 +153,12 @@
   (keyword_overwrite)
   (keyword_throw)
   (keyword_unset)
+  (keyword_always)
+  (keyword_alter)
+  (keyword_break)
+  (keyword_continue)
+  (keyword_sleep)
+  (keyword_kill)
 ] @keyword
 
 ; Operators
@@ -203,7 +209,10 @@
   "{"
   "}"
 ] @punctuation.bracket
-"," @punctuation.delimiter
+[
+ ","
+ "|"
+] @punctuation.delimiter
 
 ; Types
 [

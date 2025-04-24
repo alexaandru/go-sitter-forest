@@ -1,7 +1,7 @@
 [
   "="
   "-"
-] @operator
+] @keyword
 
 (attribute_name) @attribute
 (tag_name) @tag

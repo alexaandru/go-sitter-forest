@@ -1,14 +1,31 @@
+#include <string.h>
+#include "alloc.h"
 #include "parser.h"
 #include <wctype.h>
 
-enum TokenType { BRACKET_ARGUMENT, BRACKET_COMMENT, LINE_COMMENT };
+enum TokenType {
+  BRACKET_ARGUMENT_OPEN,
+  BRACKET_ARGUMENT_CONTENT,
+  BRACKET_ARGUMENT_CLOSE,
+  BRACKET_COMMENT_OPEN,
+  BRACKET_COMMENT_CONTENT,
+  BRACKET_COMMENT_CLOSE,
+  LINE_COMMENT,
+};
 
-static void skip_cmake(TSLexer *lexer) {
-  lexer->advance_cmake(lexer, true);
-}
+struct TreeSitterCMakeState {
+  unsigned level;
+  enum TokenType token;
+};
 
-static void advance_cmake(TSLexer *lexer) {
-  lexer->advance_cmake(lexer, false);
+#define STATE_SIZE sizeof(struct TreeSitterCMakeState)
+
+static void skip_cmake(TSLexer *lexer) { lexer->advance_cmake(lexer, true); }
+static void advance_cmake(TSLexer *lexer) { lexer->advance_cmake(lexer, false); }
+static void mark_end(TSLexer *lexer) { lexer->mark_end(lexer); }
+static void advance_mark(TSLexer *lexer) {
+  advance_cmake(lexer);
+  mark_end(lexer);
 }
 
 static void skip_wspace(TSLexer *lexer) {
@@ -17,15 +34,17 @@ static void skip_wspace(TSLexer *lexer) {
   }
 }
 
-static bool is_bracket_argument(TSLexer *lexer) {
+static bool is_open_brackets(struct TreeSitterCMakeState *state,
+                             TSLexer *lexer) {
   if (lexer->lookahead != '[') {
     return false;
   }
+
   advance_cmake(lexer);
 
-  int open_level = 0;
+  unsigned level = 0;
   while (lexer->lookahead == '=') {
-    ++open_level;
+    ++level;
     advance_cmake(lexer);
   }
 
@@ -33,66 +52,141 @@ static bool is_bracket_argument(TSLexer *lexer) {
     return false;
   }
 
-  while (lexer->lookahead != '\0') {
-    advance_cmake(lexer);
-    if (lexer->lookahead == ']') {
-      advance_cmake(lexer);
+  advance_mark(lexer);
 
-      int close_level = 0;
-      while (lexer->lookahead == '=') {
-        ++close_level;
-        advance_cmake(lexer);
-      }
-
-      if (lexer->lookahead == ']' && close_level == open_level) {
-        advance_cmake(lexer);
-        return true;
-      }
-    }
-  }
-  return false;
+  state->level = level;
+  return true;
 }
 
-static bool scan_cmake(UNUSED void *payload, TSLexer *lexer, bool const *valid_symbols) {
-  skip_wspace(lexer);
+static void parse_bracketed_content(struct TreeSitterCMakeState *state,
+                                    TSLexer *lexer) {
+  while (lexer->lookahead) {
+    if (lexer->lookahead == ']') {
+      mark_end(lexer);
 
-  if (lexer->lookahead != '#' && valid_symbols[BRACKET_ARGUMENT]) {
-    if (is_bracket_argument(lexer)) {
-      lexer->result_symbol = BRACKET_ARGUMENT;
-      return true;
-    }
-  }
-  if (lexer->lookahead == '#' && (valid_symbols[BRACKET_COMMENT] || valid_symbols[LINE_COMMENT])) {
-    advance_cmake(lexer);
-    if (is_bracket_argument(lexer)) {
-      lexer->result_symbol = BRACKET_COMMENT;
-      return true;
-    } else {
-      while (lexer->lookahead != '\r' && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+      unsigned level = 0;
+      advance_cmake(lexer);
+      while (lexer->lookahead == '=') {
+        ++level;
         advance_cmake(lexer);
       }
-      lexer->result_symbol = LINE_COMMENT;
-      return true;
+
+      if (level == state->level && lexer->lookahead == ']') {
+        break;
+      }
     }
+
+    advance_mark(lexer);
+  }
+}
+
+static bool is_close_brackets(struct TreeSitterCMakeState *state,
+                              TSLexer *lexer) {
+  if (lexer->lookahead != ']') {
+    return false;
   }
 
-  return false;
+  unsigned level = 0;
+  advance_cmake(lexer);
+  while (lexer->lookahead == '=') {
+    ++level;
+    advance_cmake(lexer);
+  }
+
+  if (level != state->level || lexer->lookahead != ']') {
+    return false;
+  }
+
+  advance_mark(lexer);
+
+  state->level = 0;
+  return true;
 }
 
 void *tree_sitter_cmake_external_scanner_create() {
-  return NULL;
+  return ts_malloc(sizeof(struct TreeSitterCMakeState));
 }
 
-void tree_sitter_cmake_external_scanner_destroy(UNUSED void *payload) {}
-
-unsigned tree_sitter_cmake_external_scanner_serialize(UNUSED void *payload, UNUSED char *buffer) {
-  return 0;
+void tree_sitter_cmake_external_scanner_destroy(void *payload) {
+  ts_free(payload);
 }
 
-void tree_sitter_cmake_external_scanner_deserialize(UNUSED void *payload,
-                                                    UNUSED char const *buffer,
-                                                    UNUSED unsigned length) {}
+unsigned tree_sitter_cmake_external_scanner_serialize(void *payload,
+                                                      char *buffer) {
+  memcpy(buffer, payload, STATE_SIZE);
+  return STATE_SIZE;
+}
 
-bool tree_sitter_cmake_external_scanner_scan(void *payload, TSLexer *lexer, bool const *valid_symbols) {
-  return scan_cmake(payload, lexer, valid_symbols);
+void tree_sitter_cmake_external_scanner_deserialize(void *payload,
+                                                    char const *buffer,
+                                                    unsigned length) {
+  if (length == STATE_SIZE) {
+    memcpy(payload, buffer, length);
+  } else {
+    struct TreeSitterCMakeState *state = payload;
+    state->level = 0;
+  }
+}
+
+bool tree_sitter_cmake_external_scanner_scan(void *payload, TSLexer *lexer,
+                                             bool const *valid_symbols) {
+
+  struct TreeSitterCMakeState *state = payload;
+
+  skip_wspace(lexer);
+
+  if (valid_symbols[BRACKET_ARGUMENT_OPEN]) {
+    if (is_open_brackets(payload, lexer)) {
+      state->token = lexer->result_symbol = BRACKET_ARGUMENT_OPEN;
+      return true;
+    }
+  }
+  if (valid_symbols[BRACKET_ARGUMENT_CONTENT] &&
+      state->token == BRACKET_ARGUMENT_OPEN) {
+    parse_bracketed_content(payload, lexer);
+    state->token = lexer->result_symbol = BRACKET_ARGUMENT_CONTENT;
+    return true;
+  }
+  if (valid_symbols[BRACKET_ARGUMENT_CLOSE] &&
+      state->token == BRACKET_ARGUMENT_CONTENT) {
+    if (is_close_brackets(payload, lexer)) {
+      lexer->result_symbol = BRACKET_ARGUMENT_CLOSE;
+      return true;
+    }
+  }
+  if (lexer->lookahead == '#') {
+    if (!valid_symbols[BRACKET_COMMENT_OPEN] && !valid_symbols[LINE_COMMENT]) {
+      return false;
+    }
+
+    advance_cmake(lexer);
+    if (is_open_brackets(payload, lexer)) {
+      state->token = lexer->result_symbol = BRACKET_COMMENT_OPEN;
+      return true;
+    }
+
+    while (lexer->lookahead != '\r' && lexer->lookahead != '\n' &&
+           lexer->lookahead != '\0') {
+      advance_cmake(lexer);
+    }
+
+    mark_end(lexer);
+    lexer->result_symbol = LINE_COMMENT;
+    return true;
+  }
+  if (valid_symbols[BRACKET_COMMENT_CONTENT] &&
+      state->token == BRACKET_COMMENT_OPEN) {
+    parse_bracketed_content(payload, lexer);
+    state->token = lexer->result_symbol = BRACKET_COMMENT_CONTENT;
+    return true;
+  }
+  if (valid_symbols[BRACKET_COMMENT_CLOSE] &&
+      state->token == BRACKET_COMMENT_CONTENT) {
+    if (is_close_brackets(payload, lexer)) {
+      lexer->result_symbol = BRACKET_COMMENT_CLOSE;
+      return true;
+    }
+  }
+
+  return false;
 }

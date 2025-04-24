@@ -10,11 +10,15 @@
   "enum"
   "variant"
   "constructor"
+  ;; TODO: Find out if there is a suitable subgroup for these
+  "and"
+  "or"
+  "not"
 ] @keyword
 
 [
- "let"
- "var"
+  "let"
+  "var"
 ] @keyword.storage
 
 [

@@ -101,6 +101,7 @@
 (quantified_sentence "," @punctuation.separator)
 
 (variable (identifier) @variable)
+(variable range: (identifier_reference) @type)
 
 (functional_term
  function: (term (identifier_reference) @function.call))
@@ -111,8 +112,11 @@
 (sequence_builder [ "{" "}" ] @punctuation.bracket
                   (set_op_builder) @punctuation.separator)
 
+(sequence_of_predicate_values [ "{" "}" ] @punctuation.bracket)
+(sequence_of_predicate_values (sequence_ordering) @keyword)
+(sequence_of_predicate_values (sequence_uniqueness) @keyword)
+(sequence_of_predicate_values  [ "[" "]" ] @punctuation.bracket)
 (sequence_of_predicate_values (identifier_reference) @type)
-(sequence_of_predicate_values [ "[" "]" ] @punctuation.bracket)
 
 (unary_boolean_sentence
  [ (logical_op_negation "¬" @operator)
@@ -299,8 +303,11 @@
 
 (value (identifier_reference) @type)
 
-(sequence_of_values (identifier_reference) @type)
+(sequence_of_values [ "{" "}" ] @punctuation.bracket)
+(sequence_of_values (sequence_ordering) @keyword)
+(sequence_of_values (sequence_uniqueness) @keyword)
 (sequence_of_values  [ "[" "]" ] @punctuation.bracket)
+(sequence_of_values (identifier_reference) @type)
 
 ;; ---------------------------------------------------------------------------
 ;; Errors

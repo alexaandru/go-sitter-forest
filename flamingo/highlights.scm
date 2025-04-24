@@ -48,6 +48,9 @@
 	"if"
 	"elif"
 	"else"
+	"for"
+	(break)
+	(continue)
 ] @keyword
 
 ; Builtins.
@@ -74,6 +77,13 @@
 
 (call
 	callable: (expression (access accessor: (identifier) @function.method))
+)
+
+; For loops.
+
+(for_loop
+  cur_var_name: (identifier) @variable
+  "in" @keyword
 )
 
 ; Declarations.

@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "3555706cef8b98d3e4c7379d7260548ff03ad363",
-  "grammarSha": "322f2fb4c0b593afb6ef849ec2f0972daa9a3e57604b0274eee789e8b087d312",
+  "revision": "85eae6644d25bcbdd19f4a35c9946abc71c2d6fe",
+  "grammarSha": "5ee6386ad0b72cb3034a2fc90311d245306962570d916296e831258614cb084c",
   "language": "comment",
   "url": "https://github.com/stsewd/tree-sitter-comment",
   "maintainedBy": "@stsewd",

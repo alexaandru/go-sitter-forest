@@ -5,11 +5,13 @@
   "*"
   "/"
   "%"
+  "^"
   "+="
   "-="
   "*="
   "/="
   "%="
+  "^="
   "=="
   "!="
   "<"
@@ -19,6 +21,7 @@
   ".."
   "..="
   "->"
+  (null_check)
 ] @operator
 
 [
@@ -79,9 +82,12 @@
   "|"
 ] @punctuation.bracket
 
+(string (interpolation ["{" "}"] @punctuation.special))
+
 [
   ";"
   ":"
+  ","
 ] @punctuation.delimiter
 
 (identifier) @variable
@@ -96,10 +102,16 @@
   (identifier) @module)
 
 (chain
-  lookup: (identifier) @variable.member)
+  start: (identifier) @function)
 
 (chain
-  start: (identifier) @function.call)
+  lookup: (identifier) @variable.member)
+
+(call
+  function: (identifier)) @function
+
+(call_arg
+  (identifier) @function.method)
 
 [
   (true)
@@ -135,9 +147,10 @@
 
 (self) @variable.builtin
 
+(type
+  _ @type)
+
 (arg
   (_ (identifier) @variable.parameter))
 
 (ellipsis) @variable.parameter
-
-(type _ @type)

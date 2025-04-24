@@ -1,3 +1,9 @@
+((ruby_code) @content
+  (#set! language ruby))
+
+((ruby_attributes) @content
+  (#set! language ruby))
+
 (filter
-  (filter_name) @injection.language
-  (filter_body) @injection.content)
+  (filter_name) @language
+  (filter_body) @content)

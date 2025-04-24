@@ -8,5 +8,6 @@
   "srcRoot": "tree-sitter-jinja_inline",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skipUpdate": true
 }

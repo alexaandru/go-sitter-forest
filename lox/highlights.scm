@@ -2,7 +2,7 @@
 
 (this_expression) @variable.builtin
 
-(parameters
+(parameter_list
   (identifier) @variable.parameter)
 
 (get_expression

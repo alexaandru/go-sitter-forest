@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "c35fd9c90e5300e87926847fb9314a14b9ed6a2f",
+  "revision": "5e617ae1b2ece79d1c5b555e160ae44f0feda620",
   "grammarSha": "fb12505123719a29927aa0239f0fa245be47cfc55fe54686cc2cb372b4d81e19",
   "language": "uiua",
   "url": "https://github.com/shnarazk/tree-sitter-uiua",

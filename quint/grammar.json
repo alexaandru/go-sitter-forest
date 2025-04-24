@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "aec71d9491200ac81085f68f8938a75ef94d4e04",
+  "revision": "228f411597d2001c8f1fefb25f692007e4b5ea77",
   "grammarSha": "63d01da692dc509f209e981763ad4873c04517e660cca46cad999413f01983b3",
   "language": "quint",
   "url": "https://github.com/gruhn/tree-sitter-quint",

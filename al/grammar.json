@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "41d1a1488eebb8a40cebdc8857de8d53676cc1ef",
-  "grammarSha": "b7cb7b8a797a11924dae52621f938541ef7b2d7ed473fd082facc6538c1a79ee",
+  "revision": "890d708ca2318206b95858423336887c62b8f0d6",
+  "grammarSha": "3fcdaafcfa21e224f3e74e484609d5e9525feca618b4d468156c2b47fd42a428",
   "language": "al",
   "url": "https://github.com/SShadowS/tree-sitter-al",
   "maintainedBy": "@SShadowS"

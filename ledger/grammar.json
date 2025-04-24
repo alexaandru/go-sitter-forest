@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "d313153eef68c557ba4538b20de2d0e92f3ef6f8",
+  "revision": "4d828c87e8bf3f7cef9927417b47ce1126c1ca29",
   "grammarSha": "b83aadd7976337b6ef0ba62092de59347102fed3e29587e96f7bc6a249be2028",
   "language": "ledger",
   "url": "https://github.com/cbarrete/tree-sitter-ledger",
