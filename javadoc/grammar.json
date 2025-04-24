@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "d162cc3344a9be8196b72d8780478474c4e0fd55",
+  "grammarSha": "9d240519a3929b0da9f6fc82af9f119122b0d05a4834c1b3867f827bdcc31b0e",
+  "language": "javadoc",
+  "url": "https://github.com/rmuir/tree-sitter-javadoc",
+  "maintainedBy": "@rmuir",
+  "files": [
+    "scanner.c"
+  ]
+}

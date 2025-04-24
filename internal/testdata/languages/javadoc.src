@@ -1,0 +1,68 @@
+/**
+ * <h1>DataProcessor</h1>
+ * <p>
+ * The {@code DataProcessor} class provides methods to process and transform data.
+ * </p>
+ *
+ * <p>
+ * This class demonstrates the use of:
+ * <ul>
+ *   <li>Block tags like {@code @param}, {@code @return}, {@code @throws}</li>
+ *   <li>Inline tags like {@code {@link}}, {@code {@linkplain}}, {@code {@value}}, {@code {@code}}, {@code {@literal}}</li>
+ *   <li>HTML formatting like <b>bold</b>, <i>italic</i>, <code>code</code>, and <pre>preformatted text</pre></li>
+ * </ul>
+ * </p>
+ *
+ * <pre>
+ * Example usage:
+ * {@code
+ *   DataProcessor processor = new DataProcessor();
+ *   processor.process("input");
+ * }
+ * </pre>
+ *
+ * @author John Doe
+ * @version 1.0
+ * @since 2025-01-01
+ * @see java.util.List
+ * @see <a href="https://example.com/DataProcessor">DataProcessor Docs</a>
+ */
+public class DataProcessor {
+
+    /**
+     * Processes the input data and returns the result.
+     *
+     * @param input the data to be processed; must not be {@code null}
+     * @param <T> the type of data being processed
+     * @return the processed result as a {@link String}
+     * @throws IllegalArgumentException if the input is {@code null}
+     * @deprecated This method will be removed in future versions. Use {@link #transform(String)} instead.
+     * @see #transform(String)
+     */
+    @Deprecated
+    public <T> String process(T input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input must not be null");
+        }
+        return input.toString().toUpperCase();
+    }
+
+    /**
+     * Transforms the given string input.
+     * This is the recommended replacement for {@link #process(Object)}.
+     *
+     * @param input the string to be transformed
+     * @return the transformed string
+     * @throws NullPointerException if {@code input} is null
+     */
+    public String transform(String input) {
+        return input.trim().toLowerCase();
+    }
+
+    /**
+     * The default transformation message.
+     *
+     * @value
+     */
+    public static final String DEFAULT_MESSAGE = "Transform complete";
+}

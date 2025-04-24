@@ -1,4 +1,4 @@
-# 508 Supported Parsers
+# 510 Supported Parsers
 
 6 pending, 6 skipped regeneration, 38 missing queries
 
@@ -49,6 +49,7 @@
 - [x] [c3](https://github.com/cbuttner/tree-sitter-c3) ✔️ (maintained by @cbuttner)
 - [x] [c_sharp](https://github.com/tree-sitter/tree-sitter-c-sharp) ✔️ (maintained by @Luxed; high memory usage (1.7GB))
 - [x] [ca65](https://github.com/babasbot/tree-sitter-ca65) ✔️ (maintained by @babasbot)
+- [x] [caddy](https://github.com/opa-oz/tree-sitter-caddy) ✔️ (maintained by @opa-oz)
 - [x] [cairo](https://github.com/tree-sitter-grammars/tree-sitter-cairo) ✔️ (maintained by @amaanq)
 - [x] [calc](https://github.com/zeromake/tree-sitter-calc) 🗸 (maintained by @zeromake)
 - [x] [capnp](https://github.com/tree-sitter-grammars/tree-sitter-capnp) ✔️ (maintained by @amaanq)
@@ -226,6 +227,7 @@
 - [x] [janet](https://github.com/sogaiu/tree-sitter-janet-simple) ✔️ (maintained by @sogaiu)
 - [x] [jasmin](https://github.com/y4cer/tree-sitter-jasmin) ✔️ (maintained by @y4cer)
 - [x] [java](https://github.com/tree-sitter/tree-sitter-java) ✔️ (maintained by @p00f)
+- [x] [javadoc](https://github.com/rmuir/tree-sitter-javadoc) ✔️ (maintained by @rmuir)
 - [x] [javascript](https://github.com/tree-sitter/tree-sitter-javascript) ✔️ (maintained by @steelsojka)
 - [x] [jinja](https://github.com/cathaysia/tree-sitter-jinja2) ✔️ (maintained by @cathaysia)
 - [x] [jinja_inline](https://github.com/cathaysia/tree-sitter-jinja2) ✔️ (maintained by @cathaysia)

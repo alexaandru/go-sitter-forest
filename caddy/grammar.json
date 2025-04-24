@@ -1,0 +1,11 @@
+{
+  "reference": "main",
+  "revision": "2686186edb61be47960431c93a204fb249681360",
+  "grammarSha": "ac1df2b223d4f4e546e91dded0de64edff4c1f3cb6c481f6e0f823703cf5c723",
+  "language": "caddy",
+  "url": "https://github.com/opa-oz/tree-sitter-caddy",
+  "maintainedBy": "@opa-oz",
+  "files": [
+    "scanner.c"
+  ]
+}

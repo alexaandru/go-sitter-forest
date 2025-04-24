@@ -63,6 +63,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/c3"
 	"github.com/alexaandru/go-sitter-forest/c_sharp"
 	"github.com/alexaandru/go-sitter-forest/ca65"
+	"github.com/alexaandru/go-sitter-forest/caddy"
 	"github.com/alexaandru/go-sitter-forest/cairo"
 	"github.com/alexaandru/go-sitter-forest/calc"
 	"github.com/alexaandru/go-sitter-forest/capnp"
@@ -238,6 +239,7 @@ import (
 	"github.com/alexaandru/go-sitter-forest/janet"
 	"github.com/alexaandru/go-sitter-forest/jasmin"
 	"github.com/alexaandru/go-sitter-forest/java"
+	"github.com/alexaandru/go-sitter-forest/javadoc"
 	"github.com/alexaandru/go-sitter-forest/javascript"
 	"github.com/alexaandru/go-sitter-forest/jinja"
 	"github.com/alexaandru/go-sitter-forest/jinja_inline"
@@ -591,6 +593,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"c3":                     c3.GetLanguage,
 	"c_sharp":                c_sharp.GetLanguage,
 	"ca65":                   ca65.GetLanguage,
+	"caddy":                  caddy.GetLanguage,
 	"cairo":                  cairo.GetLanguage,
 	"calc":                   calc.GetLanguage,
 	"capnp":                  capnp.GetLanguage,
@@ -764,6 +767,7 @@ var languageFuncs = map[string]func() unsafe.Pointer{
 	"janet":                  janet.GetLanguage,
 	"jasmin":                 jasmin.GetLanguage,
 	"java":                   java.GetLanguage,
+	"javadoc":                javadoc.GetLanguage,
 	"javascript":             javascript.GetLanguage,
 	"jinja":                  jinja.GetLanguage,
 	"jinja_inline":           jinja_inline.GetLanguage,
@@ -1103,6 +1107,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"c3":                     c3.GetQuery,
 	"c_sharp":                c_sharp.GetQuery,
 	"ca65":                   ca65.GetQuery,
+	"caddy":                  caddy.GetQuery,
 	"cairo":                  cairo.GetQuery,
 	"calc":                   calc.GetQuery,
 	"capnp":                  capnp.GetQuery,
@@ -1276,6 +1281,7 @@ var queryFuncs = map[string]func(string, ...byte) []byte{
 	"janet":                  janet.GetQuery,
 	"jasmin":                 jasmin.GetQuery,
 	"java":                   java.GetQuery,
+	"javadoc":                javadoc.GetQuery,
 	"javascript":             javascript.GetQuery,
 	"jinja":                  jinja.GetQuery,
 	"jinja_inline":           jinja_inline.GetQuery,
