@@ -48,7 +48,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/c3 v1.9.16
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
-	github.com/alexaandru/go-sitter-forest/caddy v0.0.0-20250424072152-60468474a385
+	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
 	github.com/alexaandru/go-sitter-forest/cairo v1.9.0
 	github.com/alexaandru/go-sitter-forest/calc v1.9.0
 	github.com/alexaandru/go-sitter-forest/capnp v1.9.0
@@ -222,7 +222,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/janet v1.9.2
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.5
-	github.com/alexaandru/go-sitter-forest/javadoc v0.0.0-20250424072152-60468474a385
+	github.com/alexaandru/go-sitter-forest/javadoc v1.9.0
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
 	github.com/alexaandru/go-sitter-forest/jinja v1.9.6
 	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.6
