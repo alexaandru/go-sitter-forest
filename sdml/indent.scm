@@ -13,7 +13,11 @@
  (function_body)
  ] @indent.auto
 
+(import_statement "[" @indent "]" @indent.end)
+
 (datatype_def_restriction "{" @indent "}" @indent.end)
+
+(from_definition_clause "[" @indent "]" @indent.end)
 
 (source_entity "[" @indent "]" @indent.end)
 

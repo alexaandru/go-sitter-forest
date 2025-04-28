@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "71a6a809b1c610cf8a5cd2a45cd75b95a1a088c9",
-  "grammarSha": "3723875df9176765798b6b15dca936794534fc254a2be541f5e04773aba36895",
+  "revision": "04055d849435467553f99596ea8c3db86f505987",
+  "grammarSha": "109e185d659c9f3946cc8542c514bd05e56452904ddd00b8f712a4940e55ee1f",
   "language": "surrealql",
   "url": "https://github.com/Ce11an/tree-sitter-surrealql",
   "doc": "high memory usage (3.1GB)",

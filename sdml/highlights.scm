@@ -39,7 +39,9 @@
 (module_path_root_only "::" @punctuation.separator)
 (module_path_relative "::" @punctuation.separator)
 (module_path_relative segment: (identifier) @module.special)
-(module_path_absolute "::" @punctuation.separator segment: (identifier) @module.special)
+(module_path_absolute
+ "::" @punctuation.separator
+ segment: (identifier) @module.special)
 
 (import_statement "import" @keyword)
 (import_statement [ "[" "]" ] @punctuation.bracket)
@@ -78,7 +80,7 @@
 (function_cardinality_expression (sequence_uniqueness) @keyword)
 (function_cardinality_expression [ "{" "}" ] @punctuation.bracket)
 
-(function_body (":=") @operator)
+(function_body [ ":=" "≔" ] @operator)
 
 (function_composition subject: (reserved_self) @variable.builtin)
 (function_composition name: (identifier) @function.call)
@@ -109,8 +111,9 @@
 (functional_term
  argument: (term (identifier_reference (identifier) @variable)))
 
-(sequence_builder [ "{" "}" ] @punctuation.bracket
-                  (set_op_builder) @punctuation.separator)
+(sequence_builder
+ [ "{" "}" ] @punctuation.bracket
+ (set_op_builder) @punctuation.separator)
 
 (sequence_of_predicate_values [ "{" "}" ] @punctuation.bracket)
 (sequence_of_predicate_values (sequence_ordering) @keyword)
@@ -216,6 +219,13 @@
 (structure_def "structure" @keyword name: (identifier) @type.definition)
 
 (union_def "union" @keyword name: (identifier) @type.definition)
+
+(from_definition_clause
+ "from" @keyword
+ from: (identifier_reference) @type
+ "with" @keyword)
+(from_definition_clause wildcard: (_)  @type.builtin)
+(from_definition_clause member: (identifier)  @variable)
 
 (source_entity "source" @keyword entity: (identifier_reference) @type)
 (source_entity "with" @keyword)

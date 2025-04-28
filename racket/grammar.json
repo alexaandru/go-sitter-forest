@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "5b211bf93021d1c45f39aa96898be9f794f087e4",
+  "revision": "78e147ac9be60e8e752fffaafa22293a785ac3dc",
   "grammarSha": "bd25d380082b2571ce038550f52727d17834d82f67aabb9c9eba9c8efd6e8838",
   "language": "racket",
   "url": "https://github.com/6cdh/tree-sitter-racket",

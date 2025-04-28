@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "73cfcbdef6b6a22dd4b48c306a47a34cf4ddfae3",
-  "grammarSha": "5da76167b0d927e425bec89a0ee8caf142f696885fa6f592a4b0f46ab555b863",
+  "revision": "50aea75d0dc20f4c8cb5feae71fdf95b609ed3a6",
+  "grammarSha": "1689615977a17d1f2cee462c9618a740c3e856f50412bcf9b32e17553cca6025",
   "language": "sdml",
   "url": "https://github.com/sdm-lang/tree-sitter-sdml",
   "maintainedBy": "@johnstonskj"

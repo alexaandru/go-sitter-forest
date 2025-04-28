@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "d51f07e2d1b5a0aa588d6ab2ef45f4bbe3fba3fb",
+  "revision": "00d0d0e3835d197a8feeebef51302b311b2020ad",
   "grammarSha": "96614acb6d25e745b012e5385ab7d5f97fe5e362b82649d4a195f72a3e161fae",
   "language": "lox",
   "url": "https://github.com/marcuscaisey/lox",
