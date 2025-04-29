@@ -2,21 +2,21 @@
 
 ; Functions
 
-(function_definition (function_identifier) @local.definition.function)
+(function_definition (function_identifier) @local.definition)
 
 ; Variables
 
-(value_definition (lowercase_identifier) @local.definition.var)
-(parameter (parameter_label) @local.definition.parameter)
-(let_expression (pattern (simple_pattern (lowercase_identifier)) @local.definition.var))
-(let_mut_expression (lowercase_identifier) @local.definition.var)
+(value_definition (lowercase_identifier) @local.definition)
+(parameter (parameter_label) @local.definition)
+(let_expression (pattern (simple_pattern (lowercase_identifier)) @local.definition))
+(let_mut_expression (lowercase_identifier) @local.definition)
 
 ; Types
 
-(struct_definition (identifier) @local.definition.type)
-(enum_definition (identifier) @local.definition.enum)
-(type_definition (identifier) @local.definition.type)
-(type_identifier) @local.definition.type
+(struct_definition (identifier) @local.definition)
+(enum_definition (identifier) @local.definition)
+(type_definition (identifier) @local.definition)
+(type_identifier) @local.definition
 
 ;; References
 

@@ -27,7 +27,7 @@
 
 ":" @punctuation.delimiter
 
-(intrinsic_attributes) @string.special
+(replacement) @string.special
 
 (xref
   (reftext) @markup.link @markup.link.url)

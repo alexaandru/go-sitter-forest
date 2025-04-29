@@ -2,13 +2,18 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <wctype.h>
+
 #if defined(__wasi__) || defined(__EMSCRIPTEN__)
-#define STANDALONE
 #else
-#define STANDALONE
 #endif
-#ifndef STANDALONE
+
+#ifdef DEBUG
 #include <stdio.h>
+#define trace(string) printf(string)
+#define tracef(format, ...) printf(format, __VA_ARGS__)
+#else
+#define trace(string)
+#define tracef(format, ...)
 #endif
 
 struct ScannerState {
@@ -17,10 +22,9 @@ struct ScannerState {
 };
 
 #if __STDC_VERSION__ >= 201112L
-_Static_assert(
-  sizeof(struct ScannerState) <= TREE_SITTER_SERIALIZATION_BUFFER_SIZE,
-  "Context too large"
-);
+_Static_assert(sizeof(struct ScannerState) <=
+                   TREE_SITTER_SERIALIZATION_BUFFER_SIZE,
+               "Context too large");
 #endif
 
 enum TokenType {
@@ -33,14 +37,14 @@ enum TokenType {
   __END__,
 };
 
-#ifndef STANDALONE
+#ifdef DEBUG
 static const char *const symbol_names[] = {
-  [AUTOMATIC_NEWLINE] = "",
-  [AUTOMATIC_SEMICOLON] = ";",
-  [MULTILINE_STRING_SEPARATOR] = "#|",
-  [MULTILINE_INTERPOLATION_SEPARATOR] = "$|",
-  [FLOAT_LITERAL] = "float",
-  [FOR_KEYWORD] = "for",
+    [AUTOMATIC_NEWLINE] = "",
+    [AUTOMATIC_SEMICOLON] = ";",
+    [MULTILINE_STRING_SEPARATOR] = "#|",
+    [MULTILINE_INTERPOLATION_SEPARATOR] = "$|",
+    [FLOAT_LITERAL] = "float",
+    [FOR_KEYWORD] = "for",
 };
 #endif
 
@@ -60,19 +64,16 @@ void tree_sitter_moonbit_external_scanner_destroy(void *payload) {
   free(payload);
 }
 
-unsigned
-tree_sitter_moonbit_external_scanner_serialize(void *payload, char *buffer) {
-#ifndef STANDALONE
-  printf("serializing\n");
-#endif
+unsigned tree_sitter_moonbit_external_scanner_serialize(void *payload,
+                                                        char *buffer) {
+  trace("serializing\n");
   *(struct ScannerState *)buffer = *(struct ScannerState *)payload;
   return sizeof(struct ScannerState);
 }
-void tree_sitter_moonbit_external_scanner_deserialize(
-  void *payload,
-  const char *buffer,
-  unsigned length
-) {
+
+void tree_sitter_moonbit_external_scanner_deserialize(void *payload,
+                                                      const char *buffer,
+                                                      unsigned length) {
   tree_sitter_moonbit_external_scanner_reset(payload);
   if (length != sizeof(struct ScannerState)) {
     return;
@@ -101,11 +102,16 @@ static void advance_blanks(TSLexer *lexer) {
   }
 }
 
-static bool scan_decimal_float_literal_fractional_part(
-  TSLexer *lexer
-) {
+enum FloatLiteralResult {
+  FLOAT_LITERAL_OK,
+  FLOAT_LITERAL_NOT,
+  FLOAT_LITERAL_ERR
+};
+
+static enum FloatLiteralResult
+scan_decimal_float_literal_fractional_part(TSLexer *lexer) {
   if (lexer->lookahead == '.') {
-    return false;
+    return FLOAT_LITERAL_ERR;
   }
   while (iswdigit(lexer->lookahead) || lexer->lookahead == '_') {
     advance_moonbit(lexer);
@@ -119,28 +125,27 @@ static bool scan_decimal_float_literal_fractional_part(
       advance_moonbit(lexer);
     }
   }
-  return true;
+  return FLOAT_LITERAL_OK;
 }
 
-static bool
-scan_decimal_float_literal(TSLexer *lexer) {
+static enum FloatLiteralResult scan_decimal_float_literal(TSLexer *lexer) {
   while (iswdigit(lexer->lookahead) || lexer->lookahead == '_') {
     advance_moonbit(lexer);
   }
   if (lexer->lookahead != '.') {
-    return false;
+    return FLOAT_LITERAL_ERR;
   }
   advance_moonbit(lexer);
   return scan_decimal_float_literal_fractional_part(lexer);
 }
 
-static bool scan_float_literal(TSLexer *lexer, const bool *valid_symbols) {
+static enum FloatLiteralResult scan_float_literal(TSLexer *lexer,
+                                                  const bool *valid_symbols) {
   skip_spaces(lexer, valid_symbols);
-#ifndef STANDALONE
-  printf("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
-#endif
+  tracef("scan_float_literal: lookahead: %c @ %d\n", lexer->lookahead,
+         lexer->get_column(lexer));
   if (!iswdigit(lexer->lookahead)) {
-    return false;
+    return FLOAT_LITERAL_NOT;
   }
   if (lexer->lookahead == '0') {
     advance_moonbit(lexer);
@@ -153,18 +158,18 @@ static bool scan_float_literal(TSLexer *lexer, const bool *valid_symbols) {
       return scan_decimal_float_literal(lexer);
     }
     if (lexer->lookahead != 'x' && lexer->lookahead != 'X') {
-      return false;
+      return FLOAT_LITERAL_ERR;
     }
     advance_moonbit(lexer);
     while (iswxdigit(lexer->lookahead) || lexer->lookahead == '_') {
       advance_moonbit(lexer);
     }
     if (lexer->lookahead != '.') {
-      return false;
+      return FLOAT_LITERAL_ERR;
     }
     advance_moonbit(lexer);
     if (lexer->lookahead == '.') {
-      return false;
+      return FLOAT_LITERAL_ERR;
     }
     while (iswxdigit(lexer->lookahead) || lexer->lookahead == '_') {
       advance_moonbit(lexer);
@@ -178,7 +183,7 @@ static bool scan_float_literal(TSLexer *lexer, const bool *valid_symbols) {
         advance_moonbit(lexer);
       }
     }
-    return true;
+    return FLOAT_LITERAL_OK;
   } else {
     advance_moonbit(lexer);
     return scan_decimal_float_literal(lexer);
@@ -190,6 +195,14 @@ enum AsiResult {
   ASI_INSERT,
   ASI_SKIP,
 };
+
+#ifdef DEBUG
+static const char *asi_result_to_string[] = {
+    [ASI_REMOVE] = "ASI_REMOVE",
+    [ASI_INSERT] = "ASI_INSERT",
+    [ASI_SKIP] = "ASI_SKIP",
+};
+#endif
 
 static bool test_symbol_end(TSLexer *lexer) {
   if (iswalpha(lexer->lookahead) || lexer->lookahead == '_') {
@@ -227,8 +240,8 @@ static enum AsiResult asi_symbol(TSLexer *lexer, const char *expected) {
   return asi_symbol_end(lexer);
 }
 
-static enum AsiResult
-can_insert_semi(TSLexer *lexer, struct ScannerState *state) {
+static enum AsiResult can_insert_semi(TSLexer *lexer,
+                                      struct ScannerState *state) {
   if (state->multiline_string) {
     switch (lexer->lookahead) {
     case '#':
@@ -352,38 +365,50 @@ can_insert_semi(TSLexer *lexer, struct ScannerState *state) {
   }
 }
 
-bool tree_sitter_moonbit_external_scanner_scan(
-  void *payload,
-  TSLexer *lexer,
-  const bool *valid_symbols
-) {
+#ifdef DEBUG
+static bool trace_valid_symbols(const bool *valid_symbols) {
+  for (int i = AUTOMATIC_NEWLINE; i < __END__; i++) {
+    printf("valid_symbols[%s]: %s\n", symbol_names[i],
+           valid_symbols[i] ? "true" : "false");
+  }
+  return false;
+}
+#define trace_valid_symbols(...) trace_valid_symbols(valid_symbols)
+#else
+#define trace_valid_symbols(...)
+#endif
+
+bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
+                                               const bool *valid_symbols) {
   struct ScannerState *context = (struct ScannerState *)payload;
 
-#ifndef STANDALONE
-  printf("==========\n");
-  printf("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
-  for (int i = AUTOMATIC_NEWLINE; i < __END__; i++) {
-    printf("valid_symbols[%s]: %d\n", symbol_names[i], valid_symbols[i]);
-  }
-#endif
+  trace("==========\n");
+  tracef("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
+  trace_valid_symbols(valid_symbols);
 
   if (lexer->eof(lexer)) {
     return false;
   }
 
   if (valid_symbols[FLOAT_LITERAL]) {
-    if (scan_float_literal(lexer, valid_symbols)) {
+    switch (scan_float_literal(lexer, valid_symbols)) {
+    case FLOAT_LITERAL_OK:
       lexer->mark_end(lexer);
       lexer->result_symbol = FLOAT_LITERAL;
+      trace("parsed float_literal\n");
       return true;
+    case FLOAT_LITERAL_ERR:
+      return false;
+    case FLOAT_LITERAL_NOT:
+      break;
     }
   }
 
-  if (valid_symbols[MULTILINE_STRING_SEPARATOR] || valid_symbols[MULTILINE_INTERPOLATION_SEPARATOR]) {
+  if (valid_symbols[MULTILINE_STRING_SEPARATOR] ||
+      valid_symbols[MULTILINE_INTERPOLATION_SEPARATOR]) {
     skip_spaces(lexer, valid_symbols);
-#ifndef STANDALONE
-    printf("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
-#endif
+    tracef("multiline: lookahead: %c @ %d\n", lexer->lookahead,
+           lexer->get_column(lexer));
     if (valid_symbols[MULTILINE_STRING_SEPARATOR] && lexer->lookahead == '#') {
       advance_moonbit(lexer);
       if (lexer->lookahead == '|') {
@@ -391,18 +416,19 @@ bool tree_sitter_moonbit_external_scanner_scan(
         lexer->result_symbol = MULTILINE_STRING_SEPARATOR;
         lexer->mark_end(lexer);
         context->multiline_string = true;
-#ifndef STANDALONE
-        printf("setting multiline_string to true\n");
-#endif
+        tracef("setting multiline_string to %s\n", "true");
+        trace("parsed multiline_string_separator\n");
         return true;
       }
-    } else if (valid_symbols[MULTILINE_INTERPOLATION_SEPARATOR] && lexer->lookahead == '$') {
+    } else if (valid_symbols[MULTILINE_INTERPOLATION_SEPARATOR] &&
+               lexer->lookahead == '$') {
       advance_moonbit(lexer);
       if (lexer->lookahead == '|') {
         advance_moonbit(lexer);
         lexer->result_symbol = MULTILINE_INTERPOLATION_SEPARATOR;
         lexer->mark_end(lexer);
         context->multiline_string = true;
+        trace("parsed multiline_interpolation_separator\n");
         return true;
       }
     }
@@ -417,6 +443,7 @@ bool tree_sitter_moonbit_external_scanner_scan(
       if (lexer->lookahead == '\n') {
         context->remove_semi = true;
       }
+      trace("parsed for_keyword\n");
       return true;
     }
   }
@@ -425,41 +452,22 @@ bool tree_sitter_moonbit_external_scanner_scan(
     while (iswblank(lexer->lookahead)) {
       skip_moonbit(lexer);
     }
-#ifndef STANDALONE
-    printf("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
-#endif
+    tracef("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
     if (lexer->lookahead != '\n') {
       return false;
     }
     advance_moonbit(lexer);
     lexer->result_symbol = AUTOMATIC_SEMICOLON;
     lexer->mark_end(lexer);
-#ifndef STANDALONE
-    printf("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
-#endif
+    tracef("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
     while (iswspace(lexer->lookahead)) {
       advance_moonbit(lexer);
     }
-#ifndef STANDALONE
-    printf("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
-#endif
+    tracef("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
     enum AsiResult insert_semi = can_insert_semi(lexer, context);
-#ifndef STANDALONE
-    switch (insert_semi) {
-    case ASI_REMOVE:
-      printf("insert_semi: ASI_REMOVE\n");
-      break;
-    case ASI_INSERT:
-      printf("insert_semi: ASI_INSERT\n");
-      break;
-    case ASI_SKIP:
-      printf("insert_semi: ASI_SKIP\n");
-      break;
-    }
-    printf("insert_semi: %s\n", insert_semi == ASI_INSERT ? "true" : "false");
-    printf("remove_semi: %s\n", context->remove_semi ? "true" : "false");
-    printf("multiline  : %s\n", context->multiline_string ? "true" : "false");
-#endif
+    tracef("insert_semi: %s\n", asi_result_to_string[insert_semi]);
+    tracef("remove_semi: %s\n", context->remove_semi ? "true" : "false");
+    tracef("multiline  : %s\n", context->multiline_string ? "true" : "false");
     if (insert_semi == ASI_SKIP) {
       return false;
     }
@@ -470,6 +478,7 @@ bool tree_sitter_moonbit_external_scanner_scan(
       tree_sitter_moonbit_external_scanner_reset(context);
       if (insert_semi == false) {
         lexer->result_symbol = AUTOMATIC_NEWLINE;
+        trace("parsed automatic_newline\n");
         return true;
       }
     }
