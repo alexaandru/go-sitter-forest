@@ -19,7 +19,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/applesoft v1.9.0
 	github.com/alexaandru/go-sitter-forest/arduino v1.9.0
 	github.com/alexaandru/go-sitter-forest/asciidoc v1.9.2
-	github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.3
+	github.com/alexaandru/go-sitter-forest/asciidoc_inline v1.9.4
 	github.com/alexaandru/go-sitter-forest/asm v1.9.1
 	github.com/alexaandru/go-sitter-forest/astro v1.9.3
 	github.com/alexaandru/go-sitter-forest/august v1.9.0
@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.16
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.17
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -245,7 +245,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/koka v1.9.1
 	github.com/alexaandru/go-sitter-forest/kon v1.9.16
 	github.com/alexaandru/go-sitter-forest/kos v1.9.2
-	github.com/alexaandru/go-sitter-forest/kotlin v1.9.3
+	github.com/alexaandru/go-sitter-forest/kotlin v1.9.4
 	github.com/alexaandru/go-sitter-forest/koto v1.9.9
 	github.com/alexaandru/go-sitter-forest/kusto v1.9.0
 	github.com/alexaandru/go-sitter-forest/lalrpop v1.9.1
@@ -287,7 +287,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.19
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.20
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -446,7 +446,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/talon v1.9.1
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.3
 	github.com/alexaandru/go-sitter-forest/teal v1.9.2
-	github.com/alexaandru/go-sitter-forest/templ v1.9.3
+	github.com/alexaandru/go-sitter-forest/templ v1.9.4
 	github.com/alexaandru/go-sitter-forest/tera v1.9.3
 	github.com/alexaandru/go-sitter-forest/terra v1.9.5
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
