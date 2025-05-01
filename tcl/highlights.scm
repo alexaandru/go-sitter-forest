@@ -154,8 +154,12 @@
  ";"
  ] @punctuation.bracket @punctuation.delimiter
 
+(number) @number
+
 ((simple_word) @number
-               (#match? @number "^[0-9]+$"))
+               (#match? @number
+                   "^[0-9]+$|^[+-]?[0-9]+$"))
+
 
 ((simple_word) @boolean
                (#any-of? @boolean "true" "false"))

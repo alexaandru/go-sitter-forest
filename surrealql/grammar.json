@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "04055d849435467553f99596ea8c3db86f505987",
+  "revision": "52aea8808eba2ce7c026db14d94992358accc8e2",
   "grammarSha": "109e185d659c9f3946cc8542c514bd05e56452904ddd00b8f712a4940e55ee1f",
   "language": "surrealql",
   "url": "https://github.com/Ce11an/tree-sitter-surrealql",

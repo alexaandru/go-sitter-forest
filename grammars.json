@@ -414,8 +414,8 @@
   },
   {
     "reference": "main",
-    "revision": "ad433ff7a28382cabde0d6a77c8e68ed0e0dd397",
-    "grammarSha": "82300038a32338d671d9243c9c506723ee785c950297869ba5801f89235de0b1",
+    "revision": "0bc58398fdc9decefe1f24551bc022666d2a2d15",
+    "grammarSha": "5e32a476d0f238dba1b080175ddc463f059dece351dc2f538936421d28ab2a78",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "7c85397f8bfe4cc5137a056d99e3a8acc24cb42a",
+    "revision": "797b14eb8e19bac31f3a67942cea480a67e8eab5",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1451,8 +1451,8 @@
   },
   {
     "reference": "master",
-    "revision": "48b49330888a4669b48619b211cc8da573827725",
-    "grammarSha": "88e13699699d63f05bf0f0ed15e171ab3cd0c4a5f561352b87bfe0d7dd6b34b8",
+    "revision": "33d37a577e1e9f473602a63f06f97119aa5cd710",
+    "grammarSha": "7c7b3679d75f12bf773b46b63a344bd1ef3bf95e50cb70a6269bd96ecca76b3d",
     "language": "gdscript",
     "altName": "Godot (gdscript)",
     "url": "https://github.com/PrestonKnopp/tree-sitter-gdscript",
@@ -2734,7 +2734,7 @@
   },
   {
     "reference": "master",
-    "revision": "0e5919d240fd639d81ddc9778152bf487bb9efc7",
+    "revision": "8212b10366236987899e04645e572779ec0d0170",
     "grammarSha": "dc3ccfc00944102fa08d72842cc9709b119638771001ca709837732252eca5ee",
     "language": "meson",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-meson",
@@ -3662,8 +3662,8 @@
   },
   {
     "reference": "master",
-    "revision": "17c2300e91fc9da4ba14c16558bf4292941dc074",
-    "grammarSha": "eb07e7923330f78acaeb5dd77d88bf74c70e573498d62d2f37522d2e320502ba",
+    "revision": "c6c1a2d07840edd001b8d888e9aea621132141e1",
+    "grammarSha": "ddf60bc3bfdbec8ea129b853970a1875c058bb94236fd70085def688c5b01234",
     "language": "robot",
     "url": "https://github.com/Hubro/tree-sitter-robot",
     "maintainedBy": "@Hubro"
@@ -4189,7 +4189,7 @@
   },
   {
     "reference": "main",
-    "revision": "04055d849435467553f99596ea8c3db86f505987",
+    "revision": "52aea8808eba2ce7c026db14d94992358accc8e2",
     "grammarSha": "109e185d659c9f3946cc8542c514bd05e56452904ddd00b8f712a4940e55ee1f",
     "language": "surrealql",
     "url": "https://github.com/Ce11an/tree-sitter-surrealql",
@@ -4274,8 +4274,8 @@
   },
   {
     "reference": "main",
-    "revision": "dc2a9a3bcc4ad29fff36d3f3bbc62ae117e83028",
-    "grammarSha": "77a299e6f6529519c1eb0af57731ffbc0638f762ef0175506f199be13f9b3ca9",
+    "revision": "fd70d50f0b4789fd2bafc61e24057087336f4f68",
+    "grammarSha": "5c1769eaeb4dff92d126e45c25f65647843c95490cb5bcdf43e3e9237b2076ed",
     "language": "t32",
     "url": "https://gitlab.com/xasc/tree-sitter-t32",
     "maintainedBy": "@xasc",
@@ -4315,8 +4315,8 @@
   },
   {
     "reference": "main",
-    "revision": "2b7caac46a25e45e6f8ec9c2e1fa4bfc998ae21b",
-    "grammarSha": "333c03a59e7a998508fa887e3ca2b0c50233d81678e7237498189d3dcd5b6ba3",
+    "revision": "93ad361b77faa39af410052e1ece22b9e6b8136c",
+    "grammarSha": "45b27b5b6cb50b331669484235d8c5a7c949320af14ae5a11499cb12a6eb55c9",
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "maintainedBy": "@lewis6991",
