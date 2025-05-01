@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.17
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.18
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -148,7 +148,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
 	github.com/alexaandru/go-sitter-forest/gap v1.9.2
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
-	github.com/alexaandru/go-sitter-forest/gdscript v1.9.3
+	github.com/alexaandru/go-sitter-forest/gdscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
 	github.com/alexaandru/go-sitter-forest/gherkin v1.9.0
@@ -185,7 +185,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hack v1.9.1
 	github.com/alexaandru/go-sitter-forest/haml v1.9.8
 	github.com/alexaandru/go-sitter-forest/hare v1.9.0
-	github.com/alexaandru/go-sitter-forest/haskell v1.9.1
+	github.com/alexaandru/go-sitter-forest/haskell v1.9.2
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
 	github.com/alexaandru/go-sitter-forest/haxe v1.9.0
 	github.com/alexaandru/go-sitter-forest/hcl v1.9.2
@@ -379,7 +379,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rescript v1.9.1
 	github.com/alexaandru/go-sitter-forest/risor v1.9.0
 	github.com/alexaandru/go-sitter-forest/rnoweb v1.9.0
-	github.com/alexaandru/go-sitter-forest/robot v1.9.3
+	github.com/alexaandru/go-sitter-forest/robot v1.9.4
 	github.com/alexaandru/go-sitter-forest/robots v1.9.0
 	github.com/alexaandru/go-sitter-forest/roc v1.9.6
 	github.com/alexaandru/go-sitter-forest/ron v1.9.0
@@ -431,7 +431,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.9.6
+	github.com/alexaandru/go-sitter-forest/surrealql v1.9.7
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.2
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
@@ -440,11 +440,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.6
-	github.com/alexaandru/go-sitter-forest/t32 v1.9.6
+	github.com/alexaandru/go-sitter-forest/t32 v1.9.7
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.1
 	github.com/alexaandru/go-sitter-forest/tact v1.9.4
 	github.com/alexaandru/go-sitter-forest/talon v1.9.1
-	github.com/alexaandru/go-sitter-forest/tcl v1.9.3
+	github.com/alexaandru/go-sitter-forest/tcl v1.9.4
 	github.com/alexaandru/go-sitter-forest/teal v1.9.2
 	github.com/alexaandru/go-sitter-forest/templ v1.9.4
 	github.com/alexaandru/go-sitter-forest/tera v1.9.3
