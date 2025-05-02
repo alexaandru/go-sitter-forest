@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.18
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.19
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -148,7 +148,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
 	github.com/alexaandru/go-sitter-forest/gap v1.9.2
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
-	github.com/alexaandru/go-sitter-forest/gdscript v1.9.4
+	github.com/alexaandru/go-sitter-forest/gdscript v1.9.5
 	github.com/alexaandru/go-sitter-forest/gdshader v1.9.0
 	github.com/alexaandru/go-sitter-forest/gemfilelock v1.9.0
 	github.com/alexaandru/go-sitter-forest/gherkin v1.9.0
@@ -183,7 +183,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/groovy v1.9.4
 	github.com/alexaandru/go-sitter-forest/gstlaunch v1.9.0
 	github.com/alexaandru/go-sitter-forest/hack v1.9.1
-	github.com/alexaandru/go-sitter-forest/haml v1.9.8
+	github.com/alexaandru/go-sitter-forest/haml v1.9.9
 	github.com/alexaandru/go-sitter-forest/hare v1.9.0
 	github.com/alexaandru/go-sitter-forest/haskell v1.9.2
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
@@ -442,11 +442,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.6
 	github.com/alexaandru/go-sitter-forest/t32 v1.9.7
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.1
-	github.com/alexaandru/go-sitter-forest/tact v1.9.4
+	github.com/alexaandru/go-sitter-forest/tact v1.9.5
 	github.com/alexaandru/go-sitter-forest/talon v1.9.1
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.4
 	github.com/alexaandru/go-sitter-forest/teal v1.9.2
-	github.com/alexaandru/go-sitter-forest/templ v1.9.4
+	github.com/alexaandru/go-sitter-forest/templ v1.9.5
 	github.com/alexaandru/go-sitter-forest/tera v1.9.3
 	github.com/alexaandru/go-sitter-forest/terra v1.9.5
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
@@ -483,7 +483,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.5
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.4
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.3
-	github.com/alexaandru/go-sitter-forest/vim v1.9.2
+	github.com/alexaandru/go-sitter-forest/vim v1.9.3
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/virdant v1.9.0
 	github.com/alexaandru/go-sitter-forest/virgil v1.9.0
