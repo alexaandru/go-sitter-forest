@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "c6c1a2d07840edd001b8d888e9aea621132141e1",
+  "revision": "e34def7cb0d8a66a59ec5057fe17bb4e6b17b56a",
   "grammarSha": "ddf60bc3bfdbec8ea129b853970a1875c058bb94236fd70085def688c5b01234",
   "language": "robot",
   "url": "https://github.com/Hubro/tree-sitter-robot",

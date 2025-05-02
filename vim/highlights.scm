@@ -127,6 +127,7 @@
   "view"
   "eval"
   "sign"
+  "substitute"
 ] @keyword
 
 (map_statement

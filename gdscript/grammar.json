@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "33d37a577e1e9f473602a63f06f97119aa5cd710",
-  "grammarSha": "7c7b3679d75f12bf773b46b63a344bd1ef3bf95e50cb70a6269bd96ecca76b3d",
+  "revision": "25dadb2beaa2bb0f53d5fe97d2588a01e9b0f0b5",
+  "grammarSha": "ac2313ca81a169da57f50fb310c08311dc4090a4b89b5e9ab9b4f60a8f5a1fcd",
   "language": "gdscript",
   "altName": "Godot (gdscript)",
   "url": "https://github.com/PrestonKnopp/tree-sitter-gdscript",

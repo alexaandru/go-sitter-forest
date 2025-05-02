@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "0f31cb98e5c0cb3707e097bf95a04c0c2aac573d",
-  "grammarSha": "167dd195e0283b0e39605e952170d815f3eba3279b3b8a1e3b6f3581994306ab",
+  "revision": "4a91a65ec02713e7c85f1f85bdbd20aae4428b66",
+  "grammarSha": "5af9d550caf3c9085bb3706cfe99459c7e0dd75a7d2db7c71b766169f30ba984",
   "language": "vim",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-vim",
   "maintainedBy": "@clason",
