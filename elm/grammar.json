@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "3b373a3ccb48f31aa4b7ddc9092e2f5e24ab7aed",
+  "revision": "6e3c6d51f13168f9d7794c8e8add7dfdd07d20b8",
   "grammarSha": "5975e9b252eb5f65a54ea5d84013f504cb557d2d7b727520f5999dcefd600ff8",
   "language": "elm",
   "url": "https://github.com/elm-tooling/tree-sitter-elm",

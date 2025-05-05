@@ -8,5 +8,6 @@
   "files": [
     "scanner.c",
     "unicode.h"
-  ]
+  ],
+  "skipUpdate": true
 }

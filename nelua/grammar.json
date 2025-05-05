@@ -4,5 +4,6 @@
   "grammarSha": "97f326c99d37ab2a4f5b2ac9fa870930b7d93e870c70182fe42be05aea2c8d26",
   "language": "nelua",
   "url": "https://github.com/kmafeni04/tree-sitter-nelua",
-  "maintainedBy": "@kmafeni04"
+  "maintainedBy": "@kmafeni04",
+  "skipUpdate": true
 }

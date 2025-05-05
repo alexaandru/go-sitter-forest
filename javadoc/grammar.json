@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "5ae22c17a9a60ffbf674f00d0080d4304fde2231",
+  "revision": "e49c8f0e26dc79afc999f377121ecceb30ffcc74",
   "grammarSha": "9d240519a3929b0da9f6fc82af9f119122b0d05a4834c1b3867f827bdcc31b0e",
   "language": "javadoc",
   "url": "https://github.com/rmuir/tree-sitter-javadoc",

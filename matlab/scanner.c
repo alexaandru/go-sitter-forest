@@ -1,5 +1,8 @@
 #include "parser.h"
+
 #include <ctype.h>
+#include <stddef.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <wctype.h>
@@ -354,8 +357,8 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
                 '|',
             };
             bool is_invalid = false;
-            for (int i = 0; i < sizeof(operators); i++) {
-                if (first == operators[i]) {
+            for (size_t i = 0; i < sizeof(operators); i++) {
+                if (first == (uint32_t)operators[i]) {
                     is_invalid = true;
                     break;
                 }
@@ -401,7 +404,7 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
         };
 
         for (int i = 0; i < 12; i++) {
-            if (operators[i][0] == first && operators[i][1] == second) {
+            if ((uint32_t)operators[i][0] == first && (uint32_t)operators[i][1] == second) {
                 return false;
             }
         }
@@ -593,8 +596,8 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
         const char* end_tokens = "cdeEfgGosuxX";
         while (!lexer->eof(lexer) && lexer->lookahead != '\n' && lexer->lookahead != '\r') {
             bool is_valid = false;
-            for (int i = 0; i < strlen(valid_tokens); i++) {
-                if (valid_tokens[i] == lexer->lookahead) {
+            for (size_t i = 0; i < strlen(valid_tokens); i++) {
+                if ((int32_t)valid_tokens[i] == lexer->lookahead) {
                     is_valid = true;
                     break;
                 }
@@ -796,8 +799,8 @@ static bool scan_entry_delimiter(TSLexer* lexer, int skipped)
     // surely continue OR we need to just leave the char there and the internal
     // parser will do the rest.
     const char no_end[] = {']', '}', '&', '|', '=', '<', '>', '*', '/', '\\', '^', ';', ':'};
-    for (int i = 0; i < sizeof(no_end); i++) {
-        if (no_end[i] == lexer->lookahead) {
+    for (size_t i = 0; i < sizeof(no_end); i++) {
+        if ((int32_t)no_end[i] == lexer->lookahead) {
             return false;
         }
     }
@@ -808,8 +811,8 @@ static bool scan_entry_delimiter(TSLexer* lexer, int skipped)
     }
 
     const char maybe_end[] = {'+', '-'};
-    for (int i = 0; i < sizeof(maybe_end); i++) {
-        if (maybe_end[i] == lexer->lookahead) {
+    for (size_t i = 0; i < sizeof(maybe_end); i++) {
+        if ((int32_t)maybe_end[i] == lexer->lookahead) {
             advance_matlab(lexer);
             if (lexer->lookahead == ' ') {
                 return false;

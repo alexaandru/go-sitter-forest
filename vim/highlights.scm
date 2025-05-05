@@ -42,9 +42,8 @@
   function: (identifier) @function.call)
 
 (call_expression
-  function:
-    (scoped_identifier
-      (identifier) @function.call))
+  function: (scoped_identifier
+    (identifier) @function.call))
 
 (parameters
   (identifier) @variable.parameter)
@@ -210,7 +209,7 @@
 
 (command_attribute
   val: (behavior
-         _ @constant))
+    _ @constant))
 
 ; Edit command
 (plus_plus_opt
@@ -309,6 +308,9 @@
 
 (binary_operation
   "." @operator)
+
+(lua_statement
+  "=" @keyword)
 
 ; Punctuation
 [

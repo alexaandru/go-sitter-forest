@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "06389ece5bc7344ed3931dc516bb609d8864dd2a",
+  "revision": "c36aac51a915fdfcaf178128ba1e9c2205b25930",
   "grammarSha": "84fbbe8caa836686005ed8bbdd80cc5df22b267219257f5cb0014b6ccdfae73d",
   "language": "gren",
   "url": "https://github.com/MaeBrooks/tree-sitter-gren",

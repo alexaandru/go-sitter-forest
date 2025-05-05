@@ -23,10 +23,10 @@
 (identifier) @variable.parameter
 
 ((identifier) @function
-  (#match? @function "^@"))
+  (#lua-match? @function "^@"))
 
 ((identifier) @type
-  (#match? @type "^#"))
+  (#lua-match? @type "^#"))
 
 (identifier
   namespace: (identifier) @module) @property
