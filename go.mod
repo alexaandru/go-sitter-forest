@@ -70,7 +70,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cmdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.9.1
 	github.com/alexaandru/go-sitter-forest/cognate v1.9.0
-	github.com/alexaandru/go-sitter-forest/comment v1.9.1
+	github.com/alexaandru/go-sitter-forest/comment v1.9.2
 	github.com/alexaandru/go-sitter-forest/commonlisp v1.9.1
 	github.com/alexaandru/go-sitter-forest/context v1.9.0
 	github.com/alexaandru/go-sitter-forest/cooklang v1.9.0
@@ -169,7 +169,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/go v1.9.4
 	github.com/alexaandru/go-sitter-forest/gobra v1.9.2
 	github.com/alexaandru/go-sitter-forest/goctl v1.9.0
-	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.2
+	github.com/alexaandru/go-sitter-forest/godot_resource v1.9.3
 	github.com/alexaandru/go-sitter-forest/gomod v1.9.4
 	github.com/alexaandru/go-sitter-forest/gooscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/gosum v1.9.0
@@ -254,7 +254,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/latex v1.9.2
 	github.com/alexaandru/go-sitter-forest/latte v1.9.0
 	github.com/alexaandru/go-sitter-forest/ldg v1.9.0
-	github.com/alexaandru/go-sitter-forest/ledger v1.9.4
+	github.com/alexaandru/go-sitter-forest/ledger v1.9.5
 	github.com/alexaandru/go-sitter-forest/leo v1.9.3
 	github.com/alexaandru/go-sitter-forest/lexc v1.9.2
 	github.com/alexaandru/go-sitter-forest/lexd v1.9.1
@@ -278,8 +278,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown v1.9.5
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.2
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.9.2
-	github.com/alexaandru/go-sitter-forest/mcfuncx v1.9.0
+	github.com/alexaandru/go-sitter-forest/matlab v1.9.3
+	github.com/alexaandru/go-sitter-forest/mcfuncx v1.9.1
 	github.com/alexaandru/go-sitter-forest/menhir v1.9.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
 	github.com/alexaandru/go-sitter-forest/mermaid v1.9.0
@@ -435,7 +435,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.2
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
-	github.com/alexaandru/go-sitter-forest/swift v1.9.3
+	github.com/alexaandru/go-sitter-forest/swift v1.9.4
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
@@ -483,8 +483,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.5
 	github.com/alexaandru/go-sitter-forest/vhdl v1.9.4
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.3
-	github.com/alexaandru/go-sitter-forest/vim v1.9.3
-	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.1
+	github.com/alexaandru/go-sitter-forest/vim v1.9.4
+	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.2
 	github.com/alexaandru/go-sitter-forest/virdant v1.9.0
 	github.com/alexaandru/go-sitter-forest/virgil v1.9.0
 	github.com/alexaandru/go-sitter-forest/vrl v1.9.0
