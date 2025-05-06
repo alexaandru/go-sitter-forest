@@ -36,7 +36,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/bibtex v1.9.3
 	github.com/alexaandru/go-sitter-forest/bicep v1.9.1
 	github.com/alexaandru/go-sitter-forest/bitbake v1.9.1
-	github.com/alexaandru/go-sitter-forest/blade v1.9.2
+	github.com/alexaandru/go-sitter-forest/blade v1.9.3
 	github.com/alexaandru/go-sitter-forest/blueprint v1.9.0
 	github.com/alexaandru/go-sitter-forest/bluespec v1.9.0
 	github.com/alexaandru/go-sitter-forest/bond v1.9.1
@@ -78,7 +78,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
-	github.com/alexaandru/go-sitter-forest/crystal v1.9.28
+	github.com/alexaandru/go-sitter-forest/crystal v1.9.29
 	github.com/alexaandru/go-sitter-forest/css v1.9.4
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
@@ -92,7 +92,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
 	github.com/alexaandru/go-sitter-forest/desktop v1.9.3
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.2
-	github.com/alexaandru/go-sitter-forest/dezyne v1.9.1
+	github.com/alexaandru/go-sitter-forest/dezyne v1.9.2
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.2
 	github.com/alexaandru/go-sitter-forest/diff v1.9.2
 	github.com/alexaandru/go-sitter-forest/disassembly v1.9.0
