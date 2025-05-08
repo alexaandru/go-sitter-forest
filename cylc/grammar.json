@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "8b895c278f98d05e67997f5e3a43fb5531933023",
-  "grammarSha": "aa92dfe02638bc425249a2734167d8ff27fa6662b5f92e32c11260fb782676fe",
+  "revision": "1f3cb70200b4e238e19652705336e7f2c52b8e2f",
+  "grammarSha": "621451b5cbab66d2cd56d4e25d7461bf09596c457782edaff2310ece7b9258bc",
   "language": "cylc",
   "url": "https://github.com/elliotfontaine/tree-sitter-cylc",
   "maintainedBy": "@elliotfontaine"
