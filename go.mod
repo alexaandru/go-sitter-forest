@@ -83,7 +83,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
 	github.com/alexaandru/go-sitter-forest/cuda v1.9.1
 	github.com/alexaandru/go-sitter-forest/cue v1.9.1
-	github.com/alexaandru/go-sitter-forest/cylc v1.9.1
+	github.com/alexaandru/go-sitter-forest/cylc v1.9.2
 	github.com/alexaandru/go-sitter-forest/d v1.9.0
 	github.com/alexaandru/go-sitter-forest/d2 v1.9.0
 	github.com/alexaandru/go-sitter-forest/dale v1.9.0
@@ -362,7 +362,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.3
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.5
+	github.com/alexaandru/go-sitter-forest/query v1.9.6
 	github.com/alexaandru/go-sitter-forest/quint v1.9.1
 	github.com/alexaandru/go-sitter-forest/r v1.9.3
 	github.com/alexaandru/go-sitter-forest/racket v1.9.1
@@ -431,7 +431,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.9.7
+	github.com/alexaandru/go-sitter-forest/surrealql v1.9.8
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.2
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
