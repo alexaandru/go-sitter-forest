@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "1bb5fe73f0b35bdfebe2ce11b151c2ca179a6681",
+    "revision": "71715263ce68b7d12580431e1fd19ce86f68f345",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "3e6b97ce7ff4f6e9ec0e8d587c1e80fea75aef6c04483cf5e3347aa413934160",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -4276,8 +4276,8 @@
   },
   {
     "reference": "main",
-    "revision": "fd70d50f0b4789fd2bafc61e24057087336f4f68",
-    "grammarSha": "5c1769eaeb4dff92d126e45c25f65647843c95490cb5bcdf43e3e9237b2076ed",
+    "revision": "61607b32915fdeda275b2346e6a76a7c9b363251",
+    "grammarSha": "0b3127e7d905a7c82190eb792fe2546dad6e143428f87b3c7aec7765b988802d",
     "language": "t32",
     "url": "https://gitlab.com/xasc/tree-sitter-t32",
     "maintainedBy": "@xasc",
