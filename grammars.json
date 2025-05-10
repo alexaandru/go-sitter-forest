@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "71715263ce68b7d12580431e1fd19ce86f68f345",
+    "revision": "ccc94439e5e96cfe21659d2ea173b6d5feed99af",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -747,8 +747,8 @@
   },
   {
     "reference": "master",
-    "revision": "e5cea0ec884c5c3d2d1e41a741a66ce13da4d945",
-    "grammarSha": "59dd1ae537c2800cc3203bd40b6bd24a7096e04ebaba17a8e652e9cec136d0b9",
+    "revision": "56455f4245baf4ea4e0881c5169de69d7edd5ae7",
+    "grammarSha": "1d994a444045fccbb27dab69084a561fb97e2f3e546977542f1dfc963b7b1d9b",
     "language": "cpp",
     "url": "https://github.com/tree-sitter/tree-sitter-cpp",
     "maintainedBy": "@theHamsta",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3e6b97ce7ff4f6e9ec0e8d587c1e80fea75aef6c04483cf5e3347aa413934160",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2003,8 +2003,8 @@
   },
   {
     "reference": "master",
-    "revision": "d719158abe537b1916daaea6fa03287089f0b601",
-    "grammarSha": "c11f6dfdb2a93c39da09a169cd5586b14c6d9de2b0d4290aa7fb72387fdbf070",
+    "revision": "d0441fd4b883ecc0e70140723a1cf5907992639a",
+    "grammarSha": "605b3473ab5ea8270256be1ba38e58504c20c218bb1af44760f723affdecd454",
     "language": "hyprlang",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-hyprlang",
     "maintainedBy": "@luckasRanarison"
@@ -2750,7 +2750,7 @@
   },
   {
     "reference": "master",
-    "revision": "a6ebbe50145120da1e72f732010c1e39adb98596",
+    "revision": "fdaa92565f5902afe81d958a48049f56721fd928",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
@@ -4096,7 +4096,7 @@
   },
   {
     "reference": "main",
-    "revision": "adf443b5c5b22ea78729125f2203d898fce806c1",
+    "revision": "ba80e22370a7c672efcd6516a4d97b47f654f3db",
     "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
