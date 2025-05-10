@@ -146,8 +146,8 @@ github.com/alexaandru/go-sitter-forest/corn v1.9.0 h1:mEvhXPBQ3pOcZfvVIY+X3zymQG
 github.com/alexaandru/go-sitter-forest/corn v1.9.0/go.mod h1:amXoa83QIgvHLYUUkW70GqTGK5LUlvdDcg8xFHb4Sig=
 github.com/alexaandru/go-sitter-forest/cpon v1.9.0 h1:z1h+ptBFTF108Cmxp5RHMSLt1nbTuB2ntt1UUswa5jk=
 github.com/alexaandru/go-sitter-forest/cpon v1.9.0/go.mod h1:+f6qL15fsVbKU3S765O21PEC+smQwGSme1HwOqkiX/0=
-github.com/alexaandru/go-sitter-forest/cpp v1.9.4 h1:q80DGE3w2oQKxK+Ac29mCecUKqifMWmUBtOe9d6BcwM=
-github.com/alexaandru/go-sitter-forest/cpp v1.9.4/go.mod h1:OVmJ399hre2mWHm+n0iOOZVcw9MHG2RuldxIvQKlbQ0=
+github.com/alexaandru/go-sitter-forest/cpp v1.9.5 h1:GudtwF4yPlT5NANI8+rU7xS3ilm03wVWghmuaorMzEw=
+github.com/alexaandru/go-sitter-forest/cpp v1.9.5/go.mod h1:OVmJ399hre2mWHm+n0iOOZVcw9MHG2RuldxIvQKlbQ0=
 github.com/alexaandru/go-sitter-forest/crystal v1.9.29 h1:Cdow/MZfN+VGQk8kHT8lgCio0DtUw0t8EdmZngv/JV8=
 github.com/alexaandru/go-sitter-forest/crystal v1.9.29/go.mod h1:LTW73FI3gh1zQ1ctJTABi6DN6F/OhqGIDznReZGvuSw=
 github.com/alexaandru/go-sitter-forest/css v1.9.4 h1:MBdaNeWhmIBqrxetO0HBiyit9Sfxw4WBukUPqHGA/Ho=
@@ -406,8 +406,8 @@ github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1 h1:K2Re/cHLdgS0/qWP
 github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1/go.mod h1:Wk+y3QWoYnD3vxr2Db6ThOkYkqmO/DpBScqUDelMscM=
 github.com/alexaandru/go-sitter-forest/hylo v1.9.0 h1:K4j/Le54gDQSqg7X8gj4tOVForL58VRAZkNkh3evlaw=
 github.com/alexaandru/go-sitter-forest/hylo v1.9.0/go.mod h1:sgvdGcbHy0X8TcNy5SA35cF5PIDGpZaOfoT1oi5tXJU=
-github.com/alexaandru/go-sitter-forest/hyprlang v1.9.3 h1:YcNorzsB6T2yu9zL6CobhP9o+CWG6cDsvRlX8DValc0=
-github.com/alexaandru/go-sitter-forest/hyprlang v1.9.3/go.mod h1:qcaksoN4pW/mnTxel57rzhMD9b4wA1gb1L1vTpTzgy8=
+github.com/alexaandru/go-sitter-forest/hyprlang v1.9.4 h1:l4/bc9oIyZxTB8xYSzbuRqiDJgxiaBd8DZfEvmD4bqU=
+github.com/alexaandru/go-sitter-forest/hyprlang v1.9.4/go.mod h1:qcaksoN4pW/mnTxel57rzhMD9b4wA1gb1L1vTpTzgy8=
 github.com/alexaandru/go-sitter-forest/i3config v1.9.0 h1:x1bLXtPKevaL9YvROQXXJygoP2ZffJsMbrnCr98jBD8=
 github.com/alexaandru/go-sitter-forest/i3config v1.9.0/go.mod h1:vPy2DCUYYNBABIa7rXexk9aZ4tRpGfbmho64O8rxa/k=
 github.com/alexaandru/go-sitter-forest/idl v1.9.3 h1:p2bOWZDfi6sxI7XeKtdT+fVodE6D3itFAP/OlDIIBJM=

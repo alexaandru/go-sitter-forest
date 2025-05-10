@@ -77,7 +77,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/core v1.9.3
 	github.com/alexaandru/go-sitter-forest/corn v1.9.0
 	github.com/alexaandru/go-sitter-forest/cpon v1.9.0
-	github.com/alexaandru/go-sitter-forest/cpp v1.9.4
+	github.com/alexaandru/go-sitter-forest/cpp v1.9.5
 	github.com/alexaandru/go-sitter-forest/crystal v1.9.29
 	github.com/alexaandru/go-sitter-forest/css v1.9.4
 	github.com/alexaandru/go-sitter-forest/csv v1.9.0
@@ -207,7 +207,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/hy v1.9.1
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/hylo v1.9.0
-	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.3
+	github.com/alexaandru/go-sitter-forest/hyprlang v1.9.4
 	github.com/alexaandru/go-sitter-forest/i3config v1.9.0
 	github.com/alexaandru/go-sitter-forest/idl v1.9.3
 	github.com/alexaandru/go-sitter-forest/idris v1.9.5
