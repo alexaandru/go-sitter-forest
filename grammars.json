@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "ccc94439e5e96cfe21659d2ea173b6d5feed99af",
+    "revision": "b6a55c0818b118d49d2aad1525a7e72a7fe8a228",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -4191,8 +4191,8 @@
   },
   {
     "reference": "main",
-    "revision": "dfd34406cd1724b4badfaba66ffd03627dde0c22",
-    "grammarSha": "4d169ed471d3b04aeb4906f1196f39799beeebdf7d504008e3546904ac320c8b",
+    "revision": "49f5586e9690ca7176d697db9418a83ff3c206d3",
+    "grammarSha": "979ecea560c2a57f11650e8b4de4b2abdcc998f3d99c7354a52bfa616997ccb0",
     "language": "surrealql",
     "url": "https://github.com/Ce11an/tree-sitter-surrealql",
     "doc": "high memory usage (3.1GB)",

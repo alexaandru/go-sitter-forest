@@ -171,6 +171,19 @@
   (keyword_editor)
   (keyword_viewer)
   (keyword_duration)
+  (keyword_enforced)
+  (keyword_algorithm)
+  (keyword_key)
+  (keyword_url)
+  (keyword_jwt)
+  (keyword_signup)
+  (keyword_issuer)
+  (keyword_refresh)
+  (keyword_record)
+  (keyword_bearer)
+  (keyword_authenticate)
+  (keyword_grant)
+  (keyword_access)
 ] @keyword
 
 ; Operators
