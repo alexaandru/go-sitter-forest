@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1498,8 +1498,8 @@
   },
   {
     "reference": "main",
-    "revision": "edc973f498482529ff2a319249d0f43a22860321",
-    "grammarSha": "3e080e3d3d2aa469263df5e5aadd57bcc1371c01b227e95c14d7ef4c7094a846",
+    "revision": "0fbc9f99d5a28865f9de8427fb0672d66f9d83a5",
+    "grammarSha": "ac6332ff18879fc03889066bfd3b0d19c19a9e636ea75d4ced396210f7550db8",
     "language": "git_config",
     "url": "https://github.com/the-mikedavis/tree-sitter-git-config",
     "maintainedBy": "@amaanq"
@@ -2143,7 +2143,7 @@
   },
   {
     "reference": "main",
-    "revision": "e49c8f0e26dc79afc999f377121ecceb30ffcc74",
+    "revision": "001a8e4f8e839b640201c49046fbf5957fe1ee2c",
     "grammarSha": "9d240519a3929b0da9f6fc82af9f119122b0d05a4834c1b3867f827bdcc31b0e",
     "language": "javadoc",
     "url": "https://github.com/rmuir/tree-sitter-javadoc",
@@ -2750,7 +2750,7 @@
   },
   {
     "reference": "master",
-    "revision": "fdaa92565f5902afe81d958a48049f56721fd928",
+    "revision": "8de479509f490dbdbaacf479968472f3559eb00d",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
