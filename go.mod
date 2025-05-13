@@ -405,12 +405,12 @@ require (
 	github.com/alexaandru/go-sitter-forest/slint v1.9.1
 	github.com/alexaandru/go-sitter-forest/smali v1.9.1
 	github.com/alexaandru/go-sitter-forest/smith v1.9.0
-	github.com/alexaandru/go-sitter-forest/smithy v1.9.0
+	github.com/alexaandru/go-sitter-forest/smithy v1.9.1
 	github.com/alexaandru/go-sitter-forest/sml v1.9.0
 	github.com/alexaandru/go-sitter-forest/snakemake v1.9.2
 	github.com/alexaandru/go-sitter-forest/snl v1.9.0
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
-	github.com/alexaandru/go-sitter-forest/solidity v1.9.2
+	github.com/alexaandru/go-sitter-forest/solidity v1.9.3
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
 	github.com/alexaandru/go-sitter-forest/soql v1.9.6
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.4

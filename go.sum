@@ -802,8 +802,8 @@ github.com/alexaandru/go-sitter-forest/smali v1.9.1 h1:7YeFdbciSVxWaPzhGmuUBDsM5
 github.com/alexaandru/go-sitter-forest/smali v1.9.1/go.mod h1:AT/sFM6G1JHR8qVohi19bCCad6l8WFGX7SBXDEVWJ6k=
 github.com/alexaandru/go-sitter-forest/smith v1.9.0 h1:MH6U0sCXS68bzqti7jQA7O0wnYgg98HMe6k03Lbs4Nk=
 github.com/alexaandru/go-sitter-forest/smith v1.9.0/go.mod h1:mbgYYR2RIVe8r91Km1TsScj1FUv2IytuXmZC4G7DWOA=
-github.com/alexaandru/go-sitter-forest/smithy v1.9.0 h1:QFhaWks1nbQYQM4xyUtkoSwrzJFsptNRtnRn5QAQP2k=
-github.com/alexaandru/go-sitter-forest/smithy v1.9.0/go.mod h1:LL66DDoowCKhHRLGjVqY5skFG5yc0fR0IBqzUS4lXek=
+github.com/alexaandru/go-sitter-forest/smithy v1.9.1 h1:gj65hC7gipdN3KivaGAzPBQjA3deElygKTnUhlJkr3M=
+github.com/alexaandru/go-sitter-forest/smithy v1.9.1/go.mod h1:LL66DDoowCKhHRLGjVqY5skFG5yc0fR0IBqzUS4lXek=
 github.com/alexaandru/go-sitter-forest/sml v1.9.0 h1:Tc5w6yZbzSvhCa7uS/LhVxydAmyd/Ina49VL6eDDU4E=
 github.com/alexaandru/go-sitter-forest/sml v1.9.0/go.mod h1:YkgxDxmD0mWdYNS1+vlxrKysWu0jfdKu6VoIRnnfics=
 github.com/alexaandru/go-sitter-forest/snakemake v1.9.2 h1:UN3h/cvtcDxqCOEUfoNR3AolmQECqXZwsGfLMpQ9on4=
@@ -812,8 +812,8 @@ github.com/alexaandru/go-sitter-forest/snl v1.9.0 h1:nEIAvFx4KbThpYcl9A+/V0UbEh3
 github.com/alexaandru/go-sitter-forest/snl v1.9.0/go.mod h1:DyuH2g5z2/YoaUIu4dosN1jM1ELQaHoXCQ6fH1LFf/w=
 github.com/alexaandru/go-sitter-forest/sol v1.9.0 h1:S6c2scBJ4zt+CqZKcbYJfk6QYCNjRY/K6F6VMJpW8fU=
 github.com/alexaandru/go-sitter-forest/sol v1.9.0/go.mod h1:rLzJeFrkzFLX/ShCeupd6Mu96EVSBC3MGkDcoeDtvwg=
-github.com/alexaandru/go-sitter-forest/solidity v1.9.2 h1:IAC3qRX40WyxnsE/2dbyyjJMo2fg6QAV4EA0t75ABp8=
-github.com/alexaandru/go-sitter-forest/solidity v1.9.2/go.mod h1:xgtvbHqDS1hOYGes7viEAfi2pphvkimG6xgPFekTz0g=
+github.com/alexaandru/go-sitter-forest/solidity v1.9.3 h1:fCFT0kdUD3lBftoMc5DcSQ3izC9sopQMBNZ8XIx0JtU=
+github.com/alexaandru/go-sitter-forest/solidity v1.9.3/go.mod h1:xgtvbHqDS1hOYGes7viEAfi2pphvkimG6xgPFekTz0g=
 github.com/alexaandru/go-sitter-forest/sop v1.9.0 h1:r92HSfcpvfODG7tdoIvkK528UMzWCZ/Jvr9ePlUPOOw=
 github.com/alexaandru/go-sitter-forest/sop v1.9.0/go.mod h1:sDf2c1WjLcF7koysQZUIAfpTbU82AFrQ7gOinnWxrrQ=
 github.com/alexaandru/go-sitter-forest/soql v1.9.6 h1:uuKIxJgPQeWEKk1rX8powkUjD5B7TiRpO3lyXQ8n3tA=
