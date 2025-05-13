@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "b6a55c0818b118d49d2aad1525a7e72a7fe8a228",
+    "revision": "2f81858a36d3300b4d09272235a85cf352e8bfaa",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -496,7 +496,7 @@
   },
   {
     "reference": "main",
-    "revision": "faadf4590f0f70f8fc411151586bb9f3cc972522",
+    "revision": "eecc2b365cf33835a3532c054571c1ae1257882a",
     "grammarSha": "766f58b685c348442cfd5385033601b1cbc289cc5a05cae2ef3c1b21a6d05252",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -1309,7 +1309,7 @@
   },
   {
     "reference": "main",
-    "revision": "1ca7a86a194ff026e271755483a636370ff1569f",
+    "revision": "80eee84dbf33f25a8903c0ffd1d5beca98043e1c",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2628,7 +2628,7 @@
   },
   {
     "reference": "main",
-    "revision": "e58a7b9e940056ac0726413b8f1df93db3dcb532",
+    "revision": "38356927c162fceadbc403dfd3e6f21de8085a63",
     "grammarSha": "d68561794ae3256364d386191910a4870e29de54162ea015d0bad81e72f679c0",
     "language": "magik",
     "url": "https://github.com/krn-robin/tree-sitter-magik",
@@ -3511,7 +3511,7 @@
   },
   {
     "reference": "master",
-    "revision": "eba45dd965e119cb7cd3d5eea584e5d04bbef9a4",
+    "revision": "20806904e7f59003e87f36548b05900c9c8a6b0a",
     "grammarSha": "0a7017d94c67f197966cd573a60c13cc5bc51e33928de80f898d5e97690cd13e",
     "language": "query",
     "altName": "Tree-Sitter query language",
@@ -3946,7 +3946,7 @@
   },
   {
     "reference": "main",
-    "revision": "fa898ac0885d1da9a253695c3e0e91f5efc587cd",
+    "revision": "43235bc783b52b3f28ccf1f73de9926397ee3df7",
     "grammarSha": "c2fcc45eb965b76e4832e12f6bbbd4d58d5e08291218d837213f6194ff6a4383",
     "language": "smithy",
     "url": "https://github.com/indoorvivants/tree-sitter-smithy",
@@ -4096,7 +4096,7 @@
   },
   {
     "reference": "main",
-    "revision": "ba80e22370a7c672efcd6516a4d97b47f654f3db",
+    "revision": "6ea80aa3ef5eae0864d80beea1c9248ba3d906cb",
     "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",

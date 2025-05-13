@@ -1,3 +1,4 @@
+
 ; Preproc
 
 (control_key) @preproc
@@ -11,17 +12,6 @@
 [
   "use"
 ] @include
-
-; Builtins
-
-(primitive) @type.builtin
-[
-  "enum"
-  "intEnum"
-  "list"
-  "map"
-  "set"
-] @type.builtin
 
 ; Fields (Members)
 
@@ -61,16 +51,34 @@
 ; Keywords
 
 [
-  "namespace"
-  "service"
-  "structure"
-  "operation"
-  "union"
-  "resource"
-  "metadata"
   "apply"
   "for"
+  "metadata"
+  "namespace"
   "with"
+  ; shape types
+  "bigDecimal"
+  "bigInteger"
+  "blob"
+  "boolean"
+  "byte"
+  "document"
+  "double"
+  "enum"
+  "float"
+  "intEnum"
+  "integer"
+  "list"
+  "map"
+  "operation"
+  "resource"
+  "service"
+  "set"
+  "short"
+  "string"
+  "structure"
+  "timestamp"
+  "union"
 ] @keyword
 
 ; Literals
@@ -109,4 +117,4 @@
 [
   (comment)
   (documentation_comment)
-] @comment @spell
+] @spell @comment
