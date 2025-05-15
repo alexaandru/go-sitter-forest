@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "43235bc783b52b3f28ccf1f73de9926397ee3df7",
+  "revision": "ec4fe14586f2b0a1bc65d6db17f8d8acd8a90433",
   "grammarSha": "c2fcc45eb965b76e4832e12f6bbbd4d58d5e08291218d837213f6194ff6a4383",
   "language": "smithy",
   "url": "https://github.com/indoorvivants/tree-sitter-smithy",

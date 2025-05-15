@@ -91,14 +91,14 @@ static inline void reset_state(State *state) {
 }
 
 unsigned tree_sitter_teal_external_scanner_serialize(void *payload, char *buffer) {
-    *(State *)buffer = *(State *)payload;
+    memcpy(buffer, payload, sizeof(State));
     return sizeof(State);
 }
 
 void tree_sitter_teal_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
     if (length < sizeof(State))
         return;
-    *(State *)payload = *(State *)buffer;
+    memcpy(payload, buffer, sizeof(State));
 }
 
 static bool scan_short_string_start(State *state, TSLexer *lexer) {

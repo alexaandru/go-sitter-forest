@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "3db655924b2ff1c54fdf6371b5425ea6b5dccefe",
-  "grammarSha": "6da7198a5b30c0e1727454b6f1971a562b7dccc75f67a1d6d77ba8b5f09b1666",
+  "revision": "05d276e737055e6f77a21335b7573c9d3c091e2f",
+  "grammarSha": "cd14e0076af3716a0d4e9d5169a626a61ea0913a0494facf75142db50608e9e4",
   "language": "teal",
   "url": "https://github.com/euclidianAce/tree-sitter-teal",
   "maintainedBy": "@euclidianAce",

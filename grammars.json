@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "2f81858a36d3300b4d09272235a85cf352e8bfaa",
+    "revision": "9d5575c92059ce3f7177ed2fae89dc69c9739bf2",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1451,7 +1451,7 @@
   },
   {
     "reference": "master",
-    "revision": "25dadb2beaa2bb0f53d5fe97d2588a01e9b0f0b5",
+    "revision": "e964ce912b5b835f1caedb600df9d5be77e803a8",
     "grammarSha": "ac2313ca81a169da57f50fb310c08311dc4090a4b89b5e9ab9b4f60a8f5a1fcd",
     "language": "gdscript",
     "altName": "Godot (gdscript)",
@@ -1649,7 +1649,7 @@
   },
   {
     "reference": "master",
-    "revision": "99417ca9f4eccbf49e4ce5a69d89228811593bf5",
+    "revision": "a1a7295b376fbd2531601f4ffff191b031ffc795",
     "grammarSha": "57ee2563cd667900a772e9e93bb1ed2a6163a8671be14dfe3eedfd43d2bbd2e4",
     "language": "godot_resource",
     "altName": "Godot Resources (gdresource)",
@@ -2191,8 +2191,8 @@
   },
   {
     "reference": "main",
-    "revision": "13990f530e8e6709b7978503da9bc8701d366791",
-    "grammarSha": "618ea236fc5e2b79ff461bb189c81d5d6444154f83c1979d650dd451f1f5845c",
+    "revision": "c204e36d2c3c6fce1f57950b12cabcc24e5cc4d9",
+    "grammarSha": "0ed82c0f768e9b890bc2d1241615d6ad68b5f14452d1d04c9f89d2c4b18927f6",
     "language": "jq",
     "url": "https://github.com/flurie/tree-sitter-jq",
     "maintainedBy": "@ObserverOfTime"
@@ -2556,7 +2556,7 @@
   },
   {
     "reference": "main",
-    "revision": "c14cb839003348692158b845db9edda201374548",
+    "revision": "1ac83114e71839fa67f4cce2f864ebbbdf6e2a4f",
     "grammarSha": "05e7db1bcd55456667f2219bfed634fdd5479e1866b917b5998584c32ce891ad",
     "language": "llvm",
     "url": "https://github.com/benwilliamgraham/tree-sitter-llvm",
@@ -2572,7 +2572,7 @@
   },
   {
     "reference": "master",
-    "revision": "cfa61423b3cd6860f7624c94a3683f8f9cc68d93",
+    "revision": "e0eec29a97c36ec71dc9d4df38a7d33eefb61e9a",
     "grammarSha": "96614acb6d25e745b012e5385ab7d5f97fe5e362b82649d4a195f72a3e161fae",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -2766,7 +2766,7 @@
   },
   {
     "reference": "main",
-    "revision": "7153a024132dc7a4223599e5dbad2cac25ba307e",
+    "revision": "1909c29999d3a0a3fd42384a4748b2a04cefbf0f",
     "grammarSha": "cdd51eefbeaac8f1439fb86d05f67b0459637b476a55137201941cfd83309509",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
@@ -3946,7 +3946,7 @@
   },
   {
     "reference": "main",
-    "revision": "43235bc783b52b3f28ccf1f73de9926397ee3df7",
+    "revision": "ec4fe14586f2b0a1bc65d6db17f8d8acd8a90433",
     "grammarSha": "c2fcc45eb965b76e4832e12f6bbbd4d58d5e08291218d837213f6194ff6a4383",
     "language": "smithy",
     "url": "https://github.com/indoorvivants/tree-sitter-smithy",
@@ -4317,8 +4317,8 @@
   },
   {
     "reference": "main",
-    "revision": "93ad361b77faa39af410052e1ece22b9e6b8136c",
-    "grammarSha": "45b27b5b6cb50b331669484235d8c5a7c949320af14ae5a11499cb12a6eb55c9",
+    "revision": "8f11ac7206a54ed11210491cee1e0657e2962c47",
+    "grammarSha": "fba37eefaf114080467566530385e81a770ce7a2275139f3492110b014c4acc8",
     "language": "tcl",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-tcl",
     "maintainedBy": "@lewis6991",
@@ -4328,8 +4328,8 @@
   },
   {
     "reference": "main",
-    "revision": "3db655924b2ff1c54fdf6371b5425ea6b5dccefe",
-    "grammarSha": "6da7198a5b30c0e1727454b6f1971a562b7dccc75f67a1d6d77ba8b5f09b1666",
+    "revision": "05d276e737055e6f77a21335b7573c9d3c091e2f",
+    "grammarSha": "cd14e0076af3716a0d4e9d5169a626a61ea0913a0494facf75142db50608e9e4",
     "language": "teal",
     "url": "https://github.com/euclidianAce/tree-sitter-teal",
     "maintainedBy": "@euclidianAce",

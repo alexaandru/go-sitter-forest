@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "c14cb839003348692158b845db9edda201374548",
+  "revision": "1ac83114e71839fa67f4cce2f864ebbbdf6e2a4f",
   "grammarSha": "05e7db1bcd55456667f2219bfed634fdd5479e1866b917b5998584c32ce891ad",
   "language": "llvm",
   "url": "https://github.com/benwilliamgraham/tree-sitter-llvm",

@@ -69,6 +69,7 @@
   "intEnum"
   "integer"
   "list"
+  "long"
   "map"
   "operation"
   "resource"
