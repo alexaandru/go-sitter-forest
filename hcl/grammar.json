@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "41a2e702413a53f2614533b2aa9c187816116cbc",
-  "grammarSha": "4a818b95914e0c8c5a3a70a9821a582d75da3e402f1a1e485d09c21929f03188",
+  "revision": "009def4ae38ec30e5b40beeae26efe93484ab286",
+  "grammarSha": "7a3a13ee2c7bf23e3c6bb1389aed21b2b75aaad31758a0c11c567b26fdc93138",
   "language": "hcl",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-hcl",
   "maintainedBy": "@MichaHoffmann",
