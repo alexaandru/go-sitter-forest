@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.19
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.20
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -362,7 +362,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.3
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.6
+	github.com/alexaandru/go-sitter-forest/query v1.9.7
 	github.com/alexaandru/go-sitter-forest/quint v1.9.1
 	github.com/alexaandru/go-sitter-forest/r v1.9.3
 	github.com/alexaandru/go-sitter-forest/racket v1.9.1
