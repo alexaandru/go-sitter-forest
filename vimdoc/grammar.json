@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "6dab95ab84a006e8adfd6966c5fd9dde48224725",
+  "revision": "9f6191a98702edc1084245abd5523279d4b681fb",
   "grammarSha": "ef4b79e1d33ae1b0c154798e11c916148ccaf3ef0704b91d336365b66cae13af",
   "language": "vimdoc",
   "url": "https://github.com/neovim/tree-sitter-vimdoc",
