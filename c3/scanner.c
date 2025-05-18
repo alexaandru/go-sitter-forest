@@ -3,7 +3,6 @@
 enum TokenType {
   BLOCK_COMMENT_TEXT,
   DOC_COMMENT_TEXT,
-  DOC_COMMENT_CONTRACT_TEXT,
   REAL_LITERAL,
 };
 
@@ -76,36 +75,6 @@ static bool scan_doc_comment_text(TSLexer *lexer) {
       prev_c = c;
     } else if (c == '\n') {
       prev_c = c;
-    }
-  }
-  return false;
-}
-
-static bool scan_doc_comment_contract_text(TSLexer *lexer) {
-  // We stop at EOF, newline or '*>'
-  bool has_text = false;
-  while (true) {
-    if (lexer->eof(lexer)) {
-      lexer->mark_end(lexer);
-      return false;
-    }
-
-    int32_t c = lexer->lookahead;
-    if (c == '\n') {
-      return has_text;
-    } else if (c == '*') {
-      lexer->advance_c3(lexer, false);
-      if (lexer->lookahead == '>') {
-        return has_text;
-      }
-    }
-
-    bool whitespace = is_whitespace(c);
-    bool skip = !has_text && whitespace;
-    lexer->advance_c3(lexer, skip);
-    if (!is_whitespace(c)) {
-      lexer->mark_end(lexer);
-      has_text = true;
     }
   }
   return false;
@@ -290,12 +259,6 @@ bool tree_sitter_c3_external_scanner_scan(void *payload, TSLexer *lexer,
                                           const bool *valid_symbols) {
   if (valid_symbols[BLOCK_COMMENT_TEXT] && scan_block_comment(lexer)) {
     lexer->result_symbol = BLOCK_COMMENT_TEXT;
-    return true;
-  }
-
-  // Before consuming whitespace because we need newlines
-  if (valid_symbols[DOC_COMMENT_CONTRACT_TEXT] && scan_doc_comment_contract_text(lexer)) {
-    lexer->result_symbol = DOC_COMMENT_CONTRACT_TEXT;
     return true;
   }
 

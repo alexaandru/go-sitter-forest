@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "9cf4b04cd13fb2af037a0535b5d36abc6d6d3042",
-  "grammarSha": "0cfd0248b01bff62e282a43d87536781cb849a8e68f011cc140ca1062c131415",
+  "revision": "d8befd98726e5efa0971c02ddeebe33a745f4ea6",
+  "grammarSha": "8cf6a64e664d440346c930f1a3effa50363e0fd9bed9ace9f286bcc631439013",
   "language": "c3",
   "url": "https://github.com/cbuttner/tree-sitter-c3",
   "maintainedBy": "@cbuttner",

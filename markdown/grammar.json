@@ -1,6 +1,6 @@
 {
   "reference": "split_parser",
-  "revision": "071b3b70baad138aa28832cf02d16ca48f2e6f4d",
+  "revision": "efb075cbd57ce33f694c2bb264b99cdba0f31789",
   "grammarSha": "20398dfcbc3c975821d8093638477815d8374ff41dc32cdbc08cbed5d3c71c53",
   "language": "markdown",
   "altName": "markdown (basic highlighting)",

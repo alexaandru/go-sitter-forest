@@ -23,9 +23,10 @@
 ; argument
 
 ((apply_expression
-  (argument) @parameter.inner
-  .
-  ","? @_end)
+  (arguments
+   (argument) @parameter.inner
+   .
+   ","? @_end))
   (#make-range! "parameter.outer" @parameter.inner @_end))
 
 ((dot_apply_expression
@@ -106,10 +107,11 @@
 ; call
 
 (((apply_expression
-   "("
-   (_) @_start (_)? @_end
-   . ")"
-   (#make-range! "call.inner" @_start @_end)))
+   (arguments
+    "("
+    (_) @_start (_)? @_end
+    . ")"
+    (#make-range! "call.inner" @_start @_end))))
  @call.outer)
 
 (((dot_apply_expression

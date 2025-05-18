@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "4fbec840c34149b7d5fe10097c93a320ee4af053",
-  "grammarSha": "60b7a79d7e58c3fe139b5cabfd9383859222798564c6f380abc33031b9c866f5",
+  "revision": "e5e406935ff3e36529545955e2972646ed97f9e2",
+  "grammarSha": "d32301fa7f61085341fcf66611402c37cb4f56dd45c085332c171eaaba3c3bfe",
   "language": "lua",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-lua",
   "maintainedBy": "@MunifTanjim",

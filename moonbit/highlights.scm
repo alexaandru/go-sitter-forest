@@ -10,9 +10,20 @@
 
 ; Variables
 
-(parameter (parameter_label) @variable.parameter)
-(parameter (lowercase_identifier) @variable.parameter)
-((parameter (lowercase_identifier) @variable.parameter.builtin)
+(positional_parameter (lowercase_identifier) @variable.parameter)
+(labelled_parameter (label (lowercase_identifier)) @variable.parameter)
+(optional_parameter (optional_label (lowercase_identifier)) @variable.parameter)
+(optional_parameter_with_default (label (lowercase_identifier)) @variable.parameter)
+((positional_parameter (lowercase_identifier) @variable.parameter.builtin)
+ (#any-of? @variable.parameter.builtin
+           "self"))
+((labelled_parameter (label (lowercase_identifier)) @variable.parameter.builtin)
+ (#any-of? @variable.parameter.builtin
+           "self"))
+((optional_parameter (optional_label (lowercase_identifier)) @variable.parameter.builtin)
+ (#any-of? @variable.parameter.builtin
+           "self"))
+((optional_parameter_with_default (label (lowercase_identifier)) @variable.parameter.builtin)
  (#any-of? @variable.parameter.builtin
            "self"))
 
@@ -144,8 +155,8 @@
 ;; Labels
 
 (loop_label) @label
-("continue" (parameter_label) @label)
-("break" (parameter_label) @label)
+("continue" (label) @label)
+("break" (label) @label)
 
 ;; Operators
 
