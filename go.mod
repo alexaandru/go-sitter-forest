@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.20
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.21
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.0
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.4
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.9.6
+	github.com/alexaandru/go-sitter-forest/gleam v1.9.7
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.3
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.4
@@ -267,7 +267,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/llvm v1.9.2
 	github.com/alexaandru/go-sitter-forest/lookml v1.9.0
 	github.com/alexaandru/go-sitter-forest/lox v1.9.2
-	github.com/alexaandru/go-sitter-forest/lua v1.9.2
+	github.com/alexaandru/go-sitter-forest/lua v1.9.3
 	github.com/alexaandru/go-sitter-forest/luadoc v1.9.0
 	github.com/alexaandru/go-sitter-forest/luap v1.9.0
 	github.com/alexaandru/go-sitter-forest/luau v1.9.1
@@ -287,7 +287,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.21
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.22
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -362,7 +362,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.3
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.7
+	github.com/alexaandru/go-sitter-forest/query v1.9.8
 	github.com/alexaandru/go-sitter-forest/quint v1.9.1
 	github.com/alexaandru/go-sitter-forest/r v1.9.3
 	github.com/alexaandru/go-sitter-forest/racket v1.9.1
