@@ -10,7 +10,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
 	github.com/alexaandru/go-sitter-forest/al v1.9.9
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.5
-	github.com/alexaandru/go-sitter-forest/amber v1.9.2
+	github.com/alexaandru/go-sitter-forest/amber v1.9.3
 	github.com/alexaandru/go-sitter-forest/angular v1.9.2
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.21
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.22
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -323,7 +323,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
 	github.com/alexaandru/go-sitter-forest/pem v1.9.0
-	github.com/alexaandru/go-sitter-forest/perl v1.9.8
+	github.com/alexaandru/go-sitter-forest/perl v1.9.9
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
 	github.com/alexaandru/go-sitter-forest/php v1.9.4
