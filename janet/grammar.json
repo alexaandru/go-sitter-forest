@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "b08b402207fba0037d5152ce7c521351147f4388",
+  "revision": "7e28cbf1ca061887ea43591a2898001f4245fddf",
   "grammarSha": "5f6ee54702eec88495ab37250c4d6f1715e12b3d3cdc5670ec9966df361d8ae9",
   "language": "janet",
   "url": "https://github.com/sogaiu/tree-sitter-janet-simple",
