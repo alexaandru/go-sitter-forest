@@ -49,6 +49,7 @@ typedef enum {
     R_SGL_PLN_BOL_BLK, BR_SGL_PLN_BOL_BLK, B_SGL_PLN_BOL_BLK, R_SGL_PLN_BOL_FLW, BR_SGL_PLN_BOL_FLW,
     R_SGL_PLN_INT_BLK, BR_SGL_PLN_INT_BLK, B_SGL_PLN_INT_BLK, R_SGL_PLN_INT_FLW, BR_SGL_PLN_INT_FLW,
     R_SGL_PLN_FLT_BLK, BR_SGL_PLN_FLT_BLK, B_SGL_PLN_FLT_BLK, R_SGL_PLN_FLT_FLW, BR_SGL_PLN_FLT_FLW,
+    R_SGL_PLN_TMS_BLK, BR_SGL_PLN_TMS_BLK, B_SGL_PLN_TMS_BLK, R_SGL_PLN_TMS_FLW, BR_SGL_PLN_TMS_FLW,
     R_SGL_PLN_STR_BLK, BR_SGL_PLN_STR_BLK, B_SGL_PLN_STR_BLK, R_SGL_PLN_STR_FLW, BR_SGL_PLN_STR_FLW,
 
     R_MTL_PLN_STR_BLK,  BR_MTL_PLN_STR_BLK,
@@ -125,12 +126,22 @@ typedef enum {
         }                                                                                                              \
     }
 
+#if HAS_TIMESTAMP
 #define SGL_PLN_SYM(POS, CTX)                                                                                          \
-    (scanner->rlt_sch == RS_NULL    ? POS##_SGL_PLN_NUL_##CTX                                                          \
-     : scanner->rlt_sch == RS_BOOL  ? POS##_SGL_PLN_BOL_##CTX                                                          \
-     : scanner->rlt_sch == RS_INT   ? POS##_SGL_PLN_INT_##CTX                                                          \
-     : scanner->rlt_sch == RS_FLOAT ? POS##_SGL_PLN_FLT_##CTX                                                          \
-                                    : POS##_SGL_PLN_STR_##CTX)
+    (scanner->rlt_sch == RS_NULL        ? POS##_SGL_PLN_NUL_##CTX                                                      \
+     : scanner->rlt_sch == RS_BOOL      ? POS##_SGL_PLN_BOL_##CTX                                                      \
+     : scanner->rlt_sch == RS_INT       ? POS##_SGL_PLN_INT_##CTX                                                      \
+     : scanner->rlt_sch == RS_FLOAT     ? POS##_SGL_PLN_FLT_##CTX                                                      \
+     : scanner->rlt_sch == RS_TIMESTAMP ? POS##_SGL_PLN_TMS_##CTX                                                      \
+                                        : POS##_SGL_PLN_STR_##CTX)
+#else
+#define SGL_PLN_SYM(POS, CTX)                                                                                          \
+    (scanner->rlt_sch == RS_NULL        ? POS##_SGL_PLN_NUL_##CTX                                                      \
+     : scanner->rlt_sch == RS_BOOL      ? POS##_SGL_PLN_BOL_##CTX                                                      \
+     : scanner->rlt_sch == RS_INT       ? POS##_SGL_PLN_INT_##CTX                                                      \
+     : scanner->rlt_sch == RS_FLOAT     ? POS##_SGL_PLN_FLT_##CTX                                                      \
+                                        : POS##_SGL_PLN_STR_##CTX)
+#endif
 
 typedef struct {
     int16_t row;
