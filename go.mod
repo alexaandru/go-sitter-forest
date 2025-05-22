@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.22
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.23
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -502,7 +502,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xml v1.9.5
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.2
 	github.com/alexaandru/go-sitter-forest/yadl v1.9.1
-	github.com/alexaandru/go-sitter-forest/yaml v1.9.4
+	github.com/alexaandru/go-sitter-forest/yaml v1.9.5
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.1
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
