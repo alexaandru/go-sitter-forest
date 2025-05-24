@@ -66,7 +66,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
 	github.com/alexaandru/go-sitter-forest/cloudflare v1.9.0
-	github.com/alexaandru/go-sitter-forest/cmake v1.9.4
+	github.com/alexaandru/go-sitter-forest/cmake v1.9.5
 	github.com/alexaandru/go-sitter-forest/cmdl v1.9.0
 	github.com/alexaandru/go-sitter-forest/cobol v1.9.1
 	github.com/alexaandru/go-sitter-forest/cognate v1.9.0
@@ -261,7 +261,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lilypond v1.9.2
 	github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.9.2
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.9.0
-	github.com/alexaandru/go-sitter-forest/liquid v1.9.2
+	github.com/alexaandru/go-sitter-forest/liquid v1.9.3
 	github.com/alexaandru/go-sitter-forest/liquidsoap v1.9.1
 	github.com/alexaandru/go-sitter-forest/lithia v1.9.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.9.2
@@ -287,7 +287,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.22
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.23
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -406,7 +406,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smali v1.9.1
 	github.com/alexaandru/go-sitter-forest/smith v1.9.0
 	github.com/alexaandru/go-sitter-forest/smithy v1.9.2
-	github.com/alexaandru/go-sitter-forest/sml v1.9.0
+	github.com/alexaandru/go-sitter-forest/sml v1.9.1
 	github.com/alexaandru/go-sitter-forest/snakemake v1.9.2
 	github.com/alexaandru/go-sitter-forest/snl v1.9.0
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
@@ -446,7 +446,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/talon v1.9.1
 	github.com/alexaandru/go-sitter-forest/tcl v1.9.4
 	github.com/alexaandru/go-sitter-forest/teal v1.9.3
-	github.com/alexaandru/go-sitter-forest/templ v1.9.5
+	github.com/alexaandru/go-sitter-forest/templ v1.9.6
 	github.com/alexaandru/go-sitter-forest/tera v1.9.3
 	github.com/alexaandru/go-sitter-forest/terra v1.9.5
 	github.com/alexaandru/go-sitter-forest/test v1.9.0
@@ -502,7 +502,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/xml v1.9.5
 	github.com/alexaandru/go-sitter-forest/xresources v1.9.2
 	github.com/alexaandru/go-sitter-forest/yadl v1.9.1
-	github.com/alexaandru/go-sitter-forest/yaml v1.9.5
+	github.com/alexaandru/go-sitter-forest/yaml v1.9.6
 	github.com/alexaandru/go-sitter-forest/yang v1.9.0
 	github.com/alexaandru/go-sitter-forest/yaral v1.9.1
 	github.com/alexaandru/go-sitter-forest/yarnlock v1.9.1
