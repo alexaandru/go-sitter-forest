@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "2db31dc300a1d5f0462abd0fcc9b1772324a6c19",
+  "revision": "9e350ad00d5f5a7e73e58ac2b0837f8c92f19741",
   "grammarSha": "ac93db0f9f115773aabcd93402f2accf71073993680131caf3ea28afb3a7ac10",
   "language": "c3",
   "url": "https://github.com/cbuttner/tree-sitter-c3",

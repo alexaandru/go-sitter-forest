@@ -34,7 +34,7 @@ enum TokenType {
   MULTILINE_INTERPOLATION_SEPARATOR,
   FLOAT_LITERAL,
   FOR_KEYWORD,
-  __END__,
+  ERROR_SENTINEL,
 };
 
 #ifdef DEBUG
@@ -379,7 +379,7 @@ static enum AsiResult can_insert_semi(TSLexer *lexer,
 
 #ifdef DEBUG
 static bool trace_valid_symbols(const bool *valid_symbols) {
-  for (int i = AUTOMATIC_NEWLINE; i < __END__; i++) {
+  for (int i = AUTOMATIC_NEWLINE; i < ERROR_SENTINEL; i++) {
     printf("valid_symbols[%s]: %s\n", symbol_names[i],
            valid_symbols[i] ? "true" : "false");
   }
@@ -399,6 +399,10 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
   trace_valid_symbols(valid_symbols);
 
   if (lexer->eof(lexer)) {
+    return false;
+  }
+
+  if (valid_symbols[ERROR_SENTINEL]) {
     return false;
   }
 
