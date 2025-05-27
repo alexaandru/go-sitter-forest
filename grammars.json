@@ -47,15 +47,15 @@
   },
   {
     "reference": "main",
-    "revision": "890d708ca2318206b95858423336887c62b8f0d6",
-    "grammarSha": "3fcdaafcfa21e224f3e74e484609d5e9525feca618b4d468156c2b47fd42a428",
+    "revision": "c34d41345d0c39a3a5a5ae3f104a7e30d0817d23",
+    "grammarSha": "76d683d5aa5411d689108f07d8a5777e2e79c2fde1b7ea09a8bb8480b17783f0",
     "language": "al",
     "url": "https://github.com/SShadowS/tree-sitter-al",
     "maintainedBy": "@SShadowS"
   },
   {
     "reference": "master",
-    "revision": "5d460f46ef234476086726de4259b6c04aa065ff",
+    "revision": "fe5b9bf407d913bfcf02d1a337c73b7541ebb3cf",
     "grammarSha": "90ec30451ea04c396900f572ab51b96391177789d7f047e8ff1a910936276b43",
     "language": "alcha",
     "url": "https://github.com/jpt13653903/tree-sitter-alcha",
@@ -406,7 +406,7 @@
   },
   {
     "reference": "master",
-    "revision": "2a265d69a4caf57108a73ad2ed1e6922dd2f998c",
+    "revision": "7fa1be1b694b6e763686793d97da01f36a0e5c12",
     "grammarSha": "f362b9fe06db321464fc77f1e5ba2ce089baec9d18f4defddb0c9ca87885e546",
     "language": "c",
     "url": "https://github.com/tree-sitter/tree-sitter-c",
@@ -414,8 +414,8 @@
   },
   {
     "reference": "main",
-    "revision": "9e350ad00d5f5a7e73e58ac2b0837f8c92f19741",
-    "grammarSha": "ac93db0f9f115773aabcd93402f2accf71073993680131caf3ea28afb3a7ac10",
+    "revision": "02d80569f0b713c8059e00e1719658950493cd35",
+    "grammarSha": "54c929e3fc6e231b633b5e98b1ced4f3c1accb15f3128c2f7105540839bdd635",
     "language": "c3",
     "url": "https://github.com/cbuttner/tree-sitter-c3",
     "maintainedBy": "@cbuttner",
@@ -496,7 +496,7 @@
   },
   {
     "reference": "main",
-    "revision": "eecc2b365cf33835a3532c054571c1ae1257882a",
+    "revision": "8afa6719b707a5c09fb5425ea1e9b8195082a017",
     "grammarSha": "766f58b685c348442cfd5385033601b1cbc289cc5a05cae2ef3c1b21a6d05252",
     "language": "cds",
     "url": "https://github.com/cap-js-community/tree-sitter-cds",
@@ -620,7 +620,7 @@
   },
   {
     "reference": "master",
-    "revision": "f4236d4da8aa92bc105d9c118746474c608e6af7",
+    "revision": "40c5fc2e2a0f511a802a82002553c5de00feeaf4",
     "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
     "language": "clojure",
     "url": "https://github.com/sogaiu/tree-sitter-clojure",
@@ -890,7 +890,7 @@
   },
   {
     "reference": "master",
-    "revision": "afec3093f6102b83a72aece728c53d17d3fcb2d4",
+    "revision": "752bab671c3a4ad0e566fa2c680af895f7fd1b77",
     "grammarSha": "a9a007b765b2160714a944f0c25b625395a96acd3d069f62c9f1175af8e05867",
     "language": "desktop",
     "url": "https://github.com/ValdezFOmar/tree-sitter-desktop",
@@ -1044,7 +1044,7 @@
   },
   {
     "reference": "main",
-    "revision": "65de8da4ff21a8be40adb5dadcd7a0f39d2f0747",
+    "revision": "301edd3fff4486acca5ca9991ba76ba372059451",
     "grammarSha": "6ce82e9a519321b0fbb6c25ea097f22c7f667dab4e1240a042d1d9e38651be43",
     "language": "editorconfig",
     "url": "https://github.com/ValdezFOmar/tree-sitter-editorconfig",
@@ -1309,7 +1309,7 @@
   },
   {
     "reference": "main",
-    "revision": "3d4098e458b28609477dce51dbc95f29de79facd",
+    "revision": "f638c39f346a5e3c95f87370b10965146cdb67d7",
     "grammarSha": "5683ab0a51b62336b7261a216203c5ef8dd0e40500ffffe51a484aad23c07e76",
     "language": "fluentbit",
     "url": "https://github.com/sh-cho/tree-sitter-fluentbit",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "8eeb436cb090510cd9f734a823b922d27095a4386e87d295dc35c6cc39699f8b",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -1956,7 +1956,7 @@
   },
   {
     "reference": "master",
-    "revision": "8a0262dbc6b708bf10124b184eea9fc9190b7997",
+    "revision": "d6a50c918997777fbf02fe348620e86ce38e4e67",
     "grammarSha": "99f367ac31c44791d6e2e29bd2f0cd5af6907dc7884de2b822e532522c18af6f",
     "language": "hungarian",
     "url": "https://github.com/jpt13653903/tree-sitter-hungarian",
@@ -2766,8 +2766,8 @@
   },
   {
     "reference": "main",
-    "revision": "c4091f41a7d08c666981ac2dddf9f387a9f94584",
-    "grammarSha": "3d17d3ea9e9cedaf8dfb98f94d12dcbbe3beee8ce8e36e9f8f0c12d52addef5b",
+    "revision": "194e4d49d020f21d6c650fcf580a73c57a0613fd",
+    "grammarSha": "8107cace0e0fed12105dced7c765286e5d75a646ce9c84e2e448c9e8196cca96",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
     "maintainedBy": "@tonyfettes",
@@ -3828,7 +3828,7 @@
   },
   {
     "reference": "main",
-    "revision": "1e4d38d650bf6b53930ec9d41a7000775c134039",
+    "revision": "e35b41a183164f4a12e10da3d0c430e837c3d75a",
     "grammarSha": "7cf24fd1e03da19f573c18cbcd51cb2fa44753a76e0ad926b97d6dd841c8c900",
     "language": "scheme",
     "url": "https://github.com/6cdh/tree-sitter-scheme",
@@ -3917,7 +3917,7 @@
   },
   {
     "reference": "master",
-    "revision": "3493309534cd08ae176c7b917ec79068dca2c1c9",
+    "revision": "a6066efeac2c9ddc9ef5019611846ebe8e25711e",
     "grammarSha": "60221e2fdff04a8918235d8e82d1ce4406dcb03b07274bb201dd908e6ae3959d",
     "language": "slint",
     "url": "https://github.com/slint-ui/tree-sitter-slint",
@@ -4679,7 +4679,7 @@
   },
   {
     "reference": "master",
-    "revision": "35ed277d3e98836796bc764010dc3fb800d14ee4",
+    "revision": "ec2cb14f68053cf49d1d18cd5742af8e81771ebb",
     "grammarSha": "78eda24ceb19d323cade89a8dc9608412dd48c0d6a3261540eb1d318d0969b2b",
     "language": "vhdl",
     "url": "https://github.com/jpt13653903/tree-sitter-vhdl",
@@ -4879,7 +4879,7 @@
   },
   {
     "reference": "master",
-    "revision": "dcbce0c5dde0fca01dd83a8f497ebe4d053eab1d",
+    "revision": "d09b560bb78a3304211db5110f9bd6b053becba4",
     "grammarSha": "c56111dcc2a94adab966dc18d1a9ba7490ebb1d01ce95d3a9dca492190474dc0",
     "language": "xresources",
     "url": "https://github.com/ValdezFOmar/tree-sitter-xresources",

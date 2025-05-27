@@ -28,8 +28,9 @@ _Static_assert(sizeof(struct ScannerState) <=
 #endif
 
 enum TokenType {
-  AUTOMATIC_NEWLINE,
+  SCANNER_RESET,
   AUTOMATIC_SEMICOLON,
+  SEMICOLON,
   MULTILINE_STRING_SEPARATOR,
   MULTILINE_INTERPOLATION_SEPARATOR,
   FLOAT_LITERAL,
@@ -39,12 +40,13 @@ enum TokenType {
 
 #ifdef DEBUG
 static const char *const symbol_names[] = {
-    [AUTOMATIC_NEWLINE] = "",
-    [AUTOMATIC_SEMICOLON] = ";",
-    [MULTILINE_STRING_SEPARATOR] = "#|",
-    [MULTILINE_INTERPOLATION_SEPARATOR] = "$|",
-    [FLOAT_LITERAL] = "float",
-    [FOR_KEYWORD] = "for",
+    [SCANNER_RESET] = "$._scanner_reset",
+    [AUTOMATIC_SEMICOLON] = "$._automatic_semicolon",
+    [SEMICOLON] = "\";\"",
+    [MULTILINE_STRING_SEPARATOR] = "\"#|\"",
+    [MULTILINE_INTERPOLATION_SEPARATOR] = "\"$|\"",
+    [FLOAT_LITERAL] = "$.float_literal",
+    [FOR_KEYWORD] = "\"for\"",
 };
 #endif
 
@@ -379,7 +381,7 @@ static enum AsiResult can_insert_semi(TSLexer *lexer,
 
 #ifdef DEBUG
 static bool trace_valid_symbols(const bool *valid_symbols) {
-  for (int i = AUTOMATIC_NEWLINE; i < ERROR_SENTINEL; i++) {
+  for (int i = SCANNER_RESET; i < ERROR_SENTINEL; i++) {
     printf("valid_symbols[%s]: %s\n", symbol_names[i],
            valid_symbols[i] ? "true" : "false");
   }
@@ -455,11 +457,21 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
     if (test_symbol(lexer, "for")) {
       lexer->result_symbol = FOR_KEYWORD;
       lexer->mark_end(lexer);
-      advance_blanks(lexer);
-      if (lexer->lookahead == '\n') {
-        context->remove_semi = true;
-      }
+      context->remove_semi = true;
       trace("parsed for_keyword\n");
+      return true;
+    }
+  }
+
+  if (valid_symbols[SEMICOLON]) {
+    skip_spaces(lexer, valid_symbols);
+    tracef("lookahead: %c @ %d\n", lexer->lookahead, lexer->get_column(lexer));
+    if (lexer->lookahead == ';') {
+      advance_moonbit(lexer);
+      lexer->result_symbol = SEMICOLON;
+      lexer->mark_end(lexer);
+      context->remove_semi = true;
+      trace("parsed semicolon\n");
       return true;
     }
   }
@@ -493,12 +505,21 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
     if (context->remove_semi || context->multiline_string) {
       tree_sitter_moonbit_external_scanner_reset(context);
       if (insert_semi == false) {
-        lexer->result_symbol = AUTOMATIC_NEWLINE;
+        lexer->result_symbol = SCANNER_RESET;
         trace("parsed automatic_newline\n");
         return true;
       }
     }
     return insert_semi == ASI_INSERT;
+  }
+
+  if (valid_symbols[SCANNER_RESET] && context->remove_semi) {
+    lexer->result_symbol = SCANNER_RESET;
+    lexer->mark_end(lexer);
+    trace("parsed automatic_newline\n");
+    context->remove_semi = false;
+    tree_sitter_moonbit_external_scanner_reset(context);
+    return true;
   }
 
   return false;
