@@ -8,8 +8,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.9
-	github.com/alexaandru/go-sitter-forest/alcha v1.9.5
+	github.com/alexaandru/go-sitter-forest/al v1.9.10
+	github.com/alexaandru/go-sitter-forest/alcha v1.9.6
 	github.com/alexaandru/go-sitter-forest/amber v1.9.3
 	github.com/alexaandru/go-sitter-forest/angular v1.9.2
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
@@ -45,7 +45,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/brightscript v1.9.4
 	github.com/alexaandru/go-sitter-forest/bruno v1.9.1
 	github.com/alexaandru/go-sitter-forest/c v1.9.4
-	github.com/alexaandru/go-sitter-forest/c3 v1.9.23
+	github.com/alexaandru/go-sitter-forest/c3 v1.9.24
 	github.com/alexaandru/go-sitter-forest/c_sharp v1.9.6
 	github.com/alexaandru/go-sitter-forest/ca65 v1.9.0
 	github.com/alexaandru/go-sitter-forest/caddy v1.9.0
@@ -64,7 +64,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/clarity v1.9.4
 	github.com/alexaandru/go-sitter-forest/cleancopy v1.9.0
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
-	github.com/alexaandru/go-sitter-forest/clojure v1.9.0
+	github.com/alexaandru/go-sitter-forest/clojure v1.9.1
 	github.com/alexaandru/go-sitter-forest/cloudflare v1.9.0
 	github.com/alexaandru/go-sitter-forest/cmake v1.9.5
 	github.com/alexaandru/go-sitter-forest/cmdl v1.9.0
@@ -202,7 +202,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/htmldjango v1.9.1
 	github.com/alexaandru/go-sitter-forest/http v1.9.4
 	github.com/alexaandru/go-sitter-forest/http2 v1.9.6
-	github.com/alexaandru/go-sitter-forest/hungarian v1.9.1
+	github.com/alexaandru/go-sitter-forest/hungarian v1.9.2
 	github.com/alexaandru/go-sitter-forest/hurl v1.9.0
 	github.com/alexaandru/go-sitter-forest/hy v1.9.1
 	github.com/alexaandru/go-sitter-forest/hygen_template v1.9.1
@@ -287,7 +287,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.23
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.24
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
 	github.com/alexaandru/go-sitter-forest/move v1.9.2
@@ -481,7 +481,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/vala v1.9.0
 	github.com/alexaandru/go-sitter-forest/vento v1.9.1
 	github.com/alexaandru/go-sitter-forest/verilog v1.9.5
-	github.com/alexaandru/go-sitter-forest/vhdl v1.9.4
+	github.com/alexaandru/go-sitter-forest/vhdl v1.9.5
 	github.com/alexaandru/go-sitter-forest/vhs v1.9.3
 	github.com/alexaandru/go-sitter-forest/vim v1.9.4
 	github.com/alexaandru/go-sitter-forest/vimdoc v1.9.2
