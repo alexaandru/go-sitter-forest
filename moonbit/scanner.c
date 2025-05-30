@@ -3,6 +3,16 @@
 #include <stdlib.h>
 #include <wctype.h>
 
+#ifndef TREE_SITTER_LANGUAGE
+#define TREE_SITTER_LANGUAGE moonbit
+#endif
+#define tree_sitter___external_scanner(language, symbol) \
+  tree_sitter_##language##_external_scanner_##symbol
+#define tree_sitter__external_scanner(language, symbol) \
+  tree_sitter___external_scanner(language, symbol)
+#define tree_sitter_external_scanner(symbol) \
+  tree_sitter__external_scanner(TREE_SITTER_LANGUAGE, symbol)
+
 #if defined(__wasi__) || defined(__EMSCRIPTEN__)
 #else
 #endif
@@ -50,33 +60,33 @@ static const char *const symbol_names[] = {
 };
 #endif
 
-void tree_sitter_moonbit_external_scanner_reset(void *payload) {
+void tree_sitter_external_scanner(reset)(void *payload) {
   struct ScannerState *context = payload;
   context->remove_semi = false;
   context->multiline_string = false;
 }
 
-void *tree_sitter_moonbit_external_scanner_create(void) {
+void *tree_sitter_external_scanner(create)(void) {
   struct ScannerState *context = malloc(sizeof(struct ScannerState));
-  tree_sitter_moonbit_external_scanner_reset(context);
+  tree_sitter_external_scanner(reset)(context);
   return context;
 }
 
-void tree_sitter_moonbit_external_scanner_destroy(void *payload) {
+void tree_sitter_external_scanner(destroy)(void *payload) {
   free(payload);
 }
 
-unsigned tree_sitter_moonbit_external_scanner_serialize(void *payload,
+unsigned tree_sitter_external_scanner(serialize)(void *payload,
                                                         char *buffer) {
   trace("serializing\n");
   *(struct ScannerState *)buffer = *(struct ScannerState *)payload;
   return sizeof(struct ScannerState);
 }
 
-void tree_sitter_moonbit_external_scanner_deserialize(void *payload,
+void tree_sitter_external_scanner(deserialize)(void *payload,
                                                       const char *buffer,
                                                       unsigned length) {
-  tree_sitter_moonbit_external_scanner_reset(payload);
+  tree_sitter_external_scanner(reset)(payload);
   if (length != sizeof(struct ScannerState)) {
     return;
   }
@@ -95,12 +105,6 @@ static void skip_spaces(TSLexer *lexer, const bool *valid_symbols) {
     while (iswblank(lexer->lookahead) && !lexer->eof(lexer)) {
       skip_moonbit(lexer);
     }
-  }
-}
-
-static void advance_blanks(TSLexer *lexer) {
-  while (iswblank(lexer->lookahead) && !lexer->eof(lexer)) {
-    advance_moonbit(lexer);
   }
 }
 
@@ -392,7 +396,7 @@ static bool trace_valid_symbols(const bool *valid_symbols) {
 #define trace_valid_symbols(...)
 #endif
 
-bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
+bool tree_sitter_external_scanner(scan)(void *payload, TSLexer *lexer,
                                                const bool *valid_symbols) {
   struct ScannerState *context = (struct ScannerState *)payload;
 
@@ -503,7 +507,7 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
       insert_semi = ASI_REMOVE;
     }
     if (context->remove_semi || context->multiline_string) {
-      tree_sitter_moonbit_external_scanner_reset(context);
+      tree_sitter_external_scanner(reset)(context);
       if (insert_semi == false) {
         lexer->result_symbol = SCANNER_RESET;
         trace("parsed automatic_newline\n");
@@ -518,7 +522,7 @@ bool tree_sitter_moonbit_external_scanner_scan(void *payload, TSLexer *lexer,
     lexer->mark_end(lexer);
     trace("parsed automatic_newline\n");
     context->remove_semi = false;
-    tree_sitter_moonbit_external_scanner_reset(context);
+    tree_sitter_external_scanner(reset)(context);
     return true;
   }
 

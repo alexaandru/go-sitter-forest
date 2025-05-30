@@ -76,9 +76,9 @@
 (function_parameter name: (identifier) @variable.parameter)
 (function_parameter target: (_) @type)
 
-(function_cardinality_expression (sequence_ordering) @keyword)
-(function_cardinality_expression (sequence_uniqueness) @keyword)
-(function_cardinality_expression [ "{" "}" ] @punctuation.bracket)
+(cardinality_reference_expression (sequence_ordering) @keyword)
+(cardinality_reference_expression (sequence_uniqueness) @keyword)
+(cardinality_reference_expression [ "{" "}" ] @punctuation.bracket)
 
 (function_body [ ":=" "≔" ] @operator)
 
@@ -220,12 +220,16 @@
 
 (union_def "union" @keyword name: (identifier) @type.definition)
 
-(from_definition_clause
- "from" @keyword
- from: (identifier_reference) @type
- "with" @keyword)
-(from_definition_clause wildcard: (_)  @type.builtin)
-(from_definition_clause member: (identifier)  @variable)
+(from_definition_clause "from" @keyword from: (identifier_reference) @type)
+
+(from_definition_with "with" @keyword)
+(from_definition_with wildcard: (_)  @type.builtin)
+(from_definition_with member: (identifier)  @variable)
+(from_definition_with [ "[" "]" ] @punctuation.bracket)
+
+(from_definition_without "without" @keyword)
+(from_definition_without member: (identifier)  @variable)
+(from_definition_without [ "[" "]" ] @punctuation.bracket)
 
 (source_entity "source" @keyword entity: (identifier_reference) @type)
 (source_entity "with" @keyword)
@@ -247,12 +251,13 @@
 (type_class_def "class" @keyword name: (identifier) @type.definition)
 (type_class_def [ "(" ")" ] @punctuation.bracket)
 
-(type_variable name: (identifier) @type)
-(type_variable_restriction (type_op_combiner) @operator)
+(type_parameter name: (identifier) @type.definition)
+(type_parameter (type_op_combiner) @operator)
 
-(type_class_reference name: (identifier_reference) @type)
+(type_parameter_restriction class: (identifier_reference) @type)
+(type_parameter_restriction [ "(" ")" ] @punctuation.bracket)
 
-(type_class_arguments [ "(" ")" ] @punctuation.bracket)
+(type_restriction_argument (identifier) @type.definition)
 
 (method_def
  (function_signature name: (identifier) @method.definition))
@@ -276,7 +281,7 @@
 (dimension_parent
  "parent" @keyword
  name: (identifier) @variable.field
- entity: (identifier_reference) @type)
+ parent: (identifier_reference) @type)
 
 (value_variant name: (identifier) @constant)
 

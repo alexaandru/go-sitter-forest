@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "08c5caaeb34e5ccd614706d3b5359a78f1c9e275",
+  "revision": "3431ec21da1dde751bab55520963cf3a4f1121f3",
   "grammarSha": "9253d2da55b42b745b366bcfb3cc7bdf18b25a46c85f7b876d3436e1ea0e3a4b",
   "language": "yaml",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-yaml",

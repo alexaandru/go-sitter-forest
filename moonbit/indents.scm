@@ -4,7 +4,6 @@
   (match_expression)
   (nonempty_block_expression)
   (struct_expression)
-  (structure_item)
 ] @indent.begin
 
 [

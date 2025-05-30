@@ -48,13 +48,13 @@
   (#make-range! "parameter.outer" @parameter.inner @_end))
 
 ((array_expression
-  (expression) @parameter.inner
+  (_) @parameter.inner
   .
   ","? @_end)
   (#make-range! "parameter.outer" @parameter.inner @_end))
 
 ((string_interpolation
-  (interpolator (expression) @parameter.inner)
+  (interpolator (_) @parameter.inner)
   @parameter.outer))
 
 ; block
@@ -68,13 +68,15 @@
 ((let_expression
   .
   ((pattern) @assignment.lhs)
-  ((expression) @assignment.inner @assignment.rhs))
+  "="
+  ((_) @assignment.inner @assignment.rhs))
  @assignment.outer)
 
 ((assign_expression
   .
   ((left_value) @assignment.lhs)
-  ((expression) @assignment.inner @assignment.rhs))
+  (assign_operator)
+  ((_) @assignment.inner @assignment.rhs))
  @assignment.outer)
 
 ; function
@@ -152,23 +154,28 @@
 ; conditional
 
 ((if_expression
+  "if"
+  (_) @conditional.inner
   .
-  (compound_expression) @conditional.inner)
+  (block_expression))
  @conditional.outer)
 
 ((if_expression
-  (block_expression ((_) @conditional.inner))
+  ((block_expression) @conditional.inner)
+  (#offset! @conditional.inner 0 1 0 -1)
   . (_)?)
  @conditional.outer)
 
 ((if_expression
-  (else_clause (block_expression
-                ((_) @conditional.inner))))
+  (else_clause
+    ((block_expression) @conditional.inner))
+  (#offset! @conditional.inner 0 1 0 -1))
  @conditional.outer)
 
 ((match_expression
+  "match"
   .
-  ((compound_expression) @conditional.inner))
+  ((_) @conditional.inner))
  @conditional.outer)
 
 ((match_expression

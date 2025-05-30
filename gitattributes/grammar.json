@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "5425944fd61bf2b3bad2c17c2dc9f53172b0f01d",
+  "revision": "f23072a51e1c764d6c5bf461194a775c8a5c7a95",
   "grammarSha": "d00d0900dff4e22727776d441d206684a399e6c445c000c601876df0e0302015",
   "language": "gitattributes",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-gitattributes",

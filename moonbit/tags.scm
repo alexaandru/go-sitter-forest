@@ -37,7 +37,8 @@
 
 (impl_definition (type) @name) @reference.class
 
-(apply_expression (simple_expression (qualified_identifier) @name)) @reference.call
+(apply_expression (lowercase_identifier) @name) @reference.call
+(apply_expression (qualified_identifier) @name) @reference.call
 (method_expression (lowercase_identifier) @name) @reference.call
 
 ((dot_apply_expression (dot_identifier) @name) @reference.call

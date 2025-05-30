@@ -17,7 +17,8 @@
 
 (datatype_def_restriction "{" @indent "}" @indent.end)
 
-(from_definition_clause "[" @indent "]" @indent.end)
+(from_definition_with "[" @indent "]" @indent.end)
+(from_definition_without "[" @indent "]" @indent.end)
 
 (source_entity "[" @indent "]" @indent.end)
 
