@@ -137,7 +137,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.1
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
-	github.com/alexaandru/go-sitter-forest/fortran v1.9.11
+	github.com/alexaandru/go-sitter-forest/fortran v1.9.12
 	github.com/alexaandru/go-sitter-forest/frostlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsharp v1.9.3
@@ -364,7 +364,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
 	github.com/alexaandru/go-sitter-forest/query v1.9.8
 	github.com/alexaandru/go-sitter-forest/quint v1.9.1
-	github.com/alexaandru/go-sitter-forest/r v1.9.4
+	github.com/alexaandru/go-sitter-forest/r v1.9.5
 	github.com/alexaandru/go-sitter-forest/racket v1.9.1
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.1
@@ -440,7 +440,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
 	github.com/alexaandru/go-sitter-forest/systemverilog v1.9.6
-	github.com/alexaandru/go-sitter-forest/t32 v1.9.8
+	github.com/alexaandru/go-sitter-forest/t32 v1.9.9
 	github.com/alexaandru/go-sitter-forest/tablegen v1.9.1
 	github.com/alexaandru/go-sitter-forest/tact v1.9.5
 	github.com/alexaandru/go-sitter-forest/talon v1.9.1
