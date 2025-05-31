@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "77afd0678baae83da8610dddff286739d271e18e",
+    "revision": "e3738eb1969041a141c9ce239eac01a905704f82",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1336,8 +1336,8 @@
   },
   {
     "reference": "master",
-    "revision": "c687ba7b469cc22e22db6c90396ff2c98ba00d3b",
-    "grammarSha": "02dfc821c895dbeb8c1803fb5382f23514962c0fa7759809bfb2b7bc8f874816",
+    "revision": "ab9aa007a8d982a5a7926663a8ab989cea0f5d9e",
+    "grammarSha": "6eb0451c5c267c565bb94c875f7102c2d88cc0739b3587f2972be88c8d9af44c",
     "language": "fortran",
     "url": "https://github.com/stadelmanma/tree-sitter-fortran",
     "maintainedBy": "@amaanq",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
+    "grammarSha": "7e06d4d22f6b9368497f469230d3f65815beeeda46c636203b2451a20f059991",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2750,7 +2750,7 @@
   },
   {
     "reference": "master",
-    "revision": "56753db408dbcc098e514c73cbb2351d344039e0",
+    "revision": "0f77bc710f61ec6be658ddf51851b2ed2cdaa20d",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
@@ -2781,7 +2781,8 @@
     "grammarSha": "4a8aabfd92f14edc7165233b02eae562e795553b6e05c054b5bcf288894abc1a",
     "language": "moonscript",
     "url": "https://github.com/kmafeni04/tree-sitter-moonscript",
-    "maintainedBy": "@kmafeni04"
+    "maintainedBy": "@kmafeni04",
+    "skipUpdate": true
   },
   {
     "reference": "main",
@@ -3528,7 +3529,7 @@
   },
   {
     "reference": "main",
-    "revision": "7a7d4e04a325b336d53dbfef508918edba5ba240",
+    "revision": "29c816328a086ef056799e3924ef6e09e6a9a8cb",
     "grammarSha": "c58241eaf599070ef17ee2504cb484be39d856b93eb454f5fb079880db819642",
     "language": "r",
     "url": "https://github.com/r-lib/tree-sitter-r",
@@ -4096,7 +4097,7 @@
   },
   {
     "reference": "main",
-    "revision": "2e4c2bd23a8252bcfd83ebc65ef30d227796e0b7",
+    "revision": "5c242e32e1c59b8d558323ce29d2b06f2733a7d4",
     "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",
@@ -4276,8 +4277,8 @@
   },
   {
     "reference": "main",
-    "revision": "61607b32915fdeda275b2346e6a76a7c9b363251",
-    "grammarSha": "0b3127e7d905a7c82190eb792fe2546dad6e143428f87b3c7aec7765b988802d",
+    "revision": "15f0032f3eadf95988293338e883c095fd5936f6",
+    "grammarSha": "65014e1f2531497d77a10badfdda182ddde8ce3a128c79e3c6bc38e916cbec7f",
     "language": "t32",
     "url": "https://gitlab.com/xasc/tree-sitter-t32",
     "maintainedBy": "@xasc",

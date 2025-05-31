@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "c687ba7b469cc22e22db6c90396ff2c98ba00d3b",
-  "grammarSha": "02dfc821c895dbeb8c1803fb5382f23514962c0fa7759809bfb2b7bc8f874816",
+  "revision": "ab9aa007a8d982a5a7926663a8ab989cea0f5d9e",
+  "grammarSha": "6eb0451c5c267c565bb94c875f7102c2d88cc0739b3587f2972be88c8d9af44c",
   "language": "fortran",
   "url": "https://github.com/stadelmanma/tree-sitter-fortran",
   "maintainedBy": "@amaanq",

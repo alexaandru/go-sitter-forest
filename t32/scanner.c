@@ -751,14 +751,24 @@ static bool ScanPathLiteral(
 		is_option = false;
 	}
 
-	if (is_expression || is_comment || is_line_continuation || is_option || is_symbol) {
+	if (is_comment || is_line_continuation || is_option || is_symbol) {
+		return false;
+	}
+
+	// Differentiate between paths with macros and expressions.
+	// We prioritize paths that start with a directory.
+	if (scan->has_dir_shorthand ||
+	    (scan->has_drive && ii > 2u)  // Drive letter + ':' + '\\'
+	) {
+		return true;
+	}
+
+	if (is_expression) {
 		return false;
 	}
 
 	return (
-		scan->has_dir_shorthand ||
 		scan->has_file_suffix ||
-		(scan->has_drive && ii > 2u) ||  // Drive letter + ':' + '\\'
 		scan->has_wildcard ||
 		(scan->has_root && scan->has_letters && scan->num_total_slashes > 1u)
 	);

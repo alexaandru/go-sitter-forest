@@ -62,23 +62,23 @@ static bool scan_int(TSLexer *lexer) {
     while (iswdigit(lexer->lookahead)) {
         advance_fortran(lexer); // store all digits
     }
+    lexer->mark_end(lexer);
 
     // handle line continuations
     if (lexer->lookahead == '&') {
-      skip_fortran(lexer);
+      advance_fortran(lexer);
       while (iswspace(lexer->lookahead)) {
-        skip_fortran(lexer);
+        advance_fortran(lexer);
       }
       // second '&' required to continue the literal
       if (lexer->lookahead == '&') {
-        skip_fortran(lexer);
+        advance_fortran(lexer);
         // don't return here, as we may have finished literal on first
         // line but still have second '&'
         scan_int(lexer);
       }
     }
 
-    lexer->mark_end(lexer);
     return true;
 }
 
@@ -106,11 +106,11 @@ static bool scan_number(TSLexer *lexer) {
             advance_fortran(lexer);
             if (lexer->lookahead == '+' || lexer->lookahead == '-') {
                 advance_fortran(lexer);
+                lexer->mark_end(lexer);
             }
             if (!scan_int(lexer)) {
                 return true; // valid number token with junk after it
             }
-            lexer->mark_end(lexer);
             lexer->result_symbol = FLOAT_LITERAL;
         }
     }
@@ -153,13 +153,13 @@ static bool skip_literal_continuation_sequence(TSLexer *lexer) {
         return true;
     }
 
-    skip_fortran(lexer);
+    advance_fortran(lexer);
     while (iswspace(lexer->lookahead)) {
-        skip_fortran(lexer);
+        advance_fortran(lexer);
     }
-    // second '&' required to continue the literal
+    // second '&' technically required to continue the literal
     if (lexer->lookahead == '&') {
-        skip_fortran(lexer);
+        advance_fortran(lexer);
         return true;
     }
     return false;
@@ -197,7 +197,7 @@ static bool scan_hollerith_constant(TSLexer *lexer) {
     advance_fortran(lexer);
 
     // Read exactly 'n' characters
-    for (int i = 0; i < length; i++) {
+    for (unsigned i = 0; i < length; i++) {
         if (!lexer->lookahead || lexer->eof(lexer)) {
             return false;
         }
@@ -365,6 +365,7 @@ static bool scan_string_literal(TSLexer *lexer) {
             // the end of the literal. We also need to check that an
             // escaped quote isn't split in half by a line
             // continuation -- people do this!
+            lexer->mark_end(lexer);
             skip_literal_continuation_sequence(lexer);
             if (lexer->lookahead != opening_quote) {
                 return true;
