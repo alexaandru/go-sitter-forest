@@ -9,5 +9,6 @@
   "files": [
     "scanner.c",
     "common/scanner.h"
-  ]
+  ],
+  "skipUpdate": true
 }
