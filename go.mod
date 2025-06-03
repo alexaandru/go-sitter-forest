@@ -11,7 +11,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/al v1.9.11
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.6
 	github.com/alexaandru/go-sitter-forest/amber v1.9.3
-	github.com/alexaandru/go-sitter-forest/angular v1.9.2
+	github.com/alexaandru/go-sitter-forest/angular v1.9.3
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
@@ -29,7 +29,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/awk v1.9.2
 	github.com/alexaandru/go-sitter-forest/bara v1.9.0
 	github.com/alexaandru/go-sitter-forest/barq v1.9.4
-	github.com/alexaandru/go-sitter-forest/bash v1.9.5
+	github.com/alexaandru/go-sitter-forest/bash v1.9.6
 	github.com/alexaandru/go-sitter-forest/bass v1.9.0
 	github.com/alexaandru/go-sitter-forest/beancount v1.9.0
 	github.com/alexaandru/go-sitter-forest/bend v1.9.0
@@ -301,7 +301,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/nesfab v1.9.0
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.1
-	github.com/alexaandru/go-sitter-forest/nickel v1.9.1
+	github.com/alexaandru/go-sitter-forest/nickel v1.9.2
 	github.com/alexaandru/go-sitter-forest/nim v1.9.0
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.9.0
 	github.com/alexaandru/go-sitter-forest/ninja v1.9.0
@@ -326,8 +326,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/perl v1.9.9
 	github.com/alexaandru/go-sitter-forest/perm v1.9.0
 	github.com/alexaandru/go-sitter-forest/pgn v1.9.0
-	github.com/alexaandru/go-sitter-forest/php v1.9.4
-	github.com/alexaandru/go-sitter-forest/php_only v1.9.5
+	github.com/alexaandru/go-sitter-forest/php v1.9.5
+	github.com/alexaandru/go-sitter-forest/php_only v1.9.6
 	github.com/alexaandru/go-sitter-forest/phpdoc v1.9.2
 	github.com/alexaandru/go-sitter-forest/pic v1.9.9
 	github.com/alexaandru/go-sitter-forest/pint v1.9.1
