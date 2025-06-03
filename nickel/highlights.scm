@@ -63,7 +63,7 @@
 (interpolation_start) @punctuation.bracket
 (interpolation_end) @punctuation.bracket
 
-(record_field) @field
+(field_decl) @field
 
 (builtin) @function.builtin
 
