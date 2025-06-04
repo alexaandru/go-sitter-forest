@@ -11,7 +11,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/al v1.9.11
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.6
 	github.com/alexaandru/go-sitter-forest/amber v1.9.3
-	github.com/alexaandru/go-sitter-forest/angular v1.9.3
+	github.com/alexaandru/go-sitter-forest/angular v1.9.4
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
 	github.com/alexaandru/go-sitter-forest/anzu v1.9.0
@@ -56,7 +56,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cds v1.9.2
 	github.com/alexaandru/go-sitter-forest/cedar v1.9.0
 	github.com/alexaandru/go-sitter-forest/cel v1.9.0
-	github.com/alexaandru/go-sitter-forest/cfengine v1.9.0
+	github.com/alexaandru/go-sitter-forest/cfengine v1.9.1
 	github.com/alexaandru/go-sitter-forest/cg v1.9.3
 	github.com/alexaandru/go-sitter-forest/cgsql v1.9.7
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
