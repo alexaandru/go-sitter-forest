@@ -8,7 +8,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.11
+	github.com/alexaandru/go-sitter-forest/al v1.9.12
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.6
 	github.com/alexaandru/go-sitter-forest/amber v1.9.3
 	github.com/alexaandru/go-sitter-forest/angular v1.9.4
@@ -416,7 +416,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.4
 	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.3
-	github.com/alexaandru/go-sitter-forest/spicy v1.9.5
+	github.com/alexaandru/go-sitter-forest/spicy v1.9.6
 	github.com/alexaandru/go-sitter-forest/sql v1.9.13
 	github.com/alexaandru/go-sitter-forest/sql_bigquery v1.9.1
 	github.com/alexaandru/go-sitter-forest/sqlite v1.9.0
