@@ -90,7 +90,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/dart v1.9.4
 	github.com/alexaandru/go-sitter-forest/dataweave v1.9.0
 	github.com/alexaandru/go-sitter-forest/dbml v1.9.0
-	github.com/alexaandru/go-sitter-forest/desktop v1.9.3
+	github.com/alexaandru/go-sitter-forest/desktop v1.9.4
 	github.com/alexaandru/go-sitter-forest/devicetree v1.9.2
 	github.com/alexaandru/go-sitter-forest/dezyne v1.9.2
 	github.com/alexaandru/go-sitter-forest/dhall v1.9.2
@@ -117,10 +117,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/elsa v1.9.0
 	github.com/alexaandru/go-sitter-forest/elvish v1.9.0
 	github.com/alexaandru/go-sitter-forest/embedded_template v1.9.1
-	github.com/alexaandru/go-sitter-forest/epics_cmd v1.9.0
-	github.com/alexaandru/go-sitter-forest/epics_db v1.9.0
-	github.com/alexaandru/go-sitter-forest/epics_msi_substitution v1.9.0
-	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.0
+	github.com/alexaandru/go-sitter-forest/epics_cmd v1.9.1
+	github.com/alexaandru/go-sitter-forest/epics_db v1.9.1
+	github.com/alexaandru/go-sitter-forest/epics_msi_substitution v1.9.1
+	github.com/alexaandru/go-sitter-forest/epics_msi_template v1.9.1
 	github.com/alexaandru/go-sitter-forest/erlang v1.9.7
 	github.com/alexaandru/go-sitter-forest/facility v1.9.1
 	github.com/alexaandru/go-sitter-forest/factor v1.9.3
@@ -362,9 +362,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/qmldir v1.9.0
 	github.com/alexaandru/go-sitter-forest/qmljs v1.9.3
 	github.com/alexaandru/go-sitter-forest/quakec v1.9.0
-	github.com/alexaandru/go-sitter-forest/query v1.9.8
+	github.com/alexaandru/go-sitter-forest/query v1.9.9
 	github.com/alexaandru/go-sitter-forest/quint v1.9.1
-	github.com/alexaandru/go-sitter-forest/r v1.9.5
+	github.com/alexaandru/go-sitter-forest/r v1.9.6
 	github.com/alexaandru/go-sitter-forest/racket v1.9.1
 	github.com/alexaandru/go-sitter-forest/ralph v1.9.0
 	github.com/alexaandru/go-sitter-forest/rasi v1.9.1
@@ -408,7 +408,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/smithy v1.9.2
 	github.com/alexaandru/go-sitter-forest/sml v1.9.1
 	github.com/alexaandru/go-sitter-forest/snakemake v1.9.2
-	github.com/alexaandru/go-sitter-forest/snl v1.9.0
+	github.com/alexaandru/go-sitter-forest/snl v1.9.1
 	github.com/alexaandru/go-sitter-forest/sol v1.9.0
 	github.com/alexaandru/go-sitter-forest/solidity v1.9.3
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
@@ -425,7 +425,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/ssh_config v1.9.2
 	github.com/alexaandru/go-sitter-forest/starlark v1.9.2
 	github.com/alexaandru/go-sitter-forest/strace v1.9.0
-	github.com/alexaandru/go-sitter-forest/streamdevice_proto v1.9.0
+	github.com/alexaandru/go-sitter-forest/streamdevice_proto v1.9.1
 	github.com/alexaandru/go-sitter-forest/structurizr v1.9.2
 	github.com/alexaandru/go-sitter-forest/styled v1.9.1
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
