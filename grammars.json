@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "a508b00883d43219538f1d0bbecfd929997bbea2",
+    "revision": "1e9e148c3b005bb95148cb632cc1db191edd2bb9",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -890,8 +890,8 @@
   },
   {
     "reference": "master",
-    "revision": "6eb323a20db2f1e8736c3a05915afe1687283965",
-    "grammarSha": "a9a007b765b2160714a944f0c25b625395a96acd3d069f62c9f1175af8e05867",
+    "revision": "b2cad1212116f23b3e8d0607b628bc6f72224c51",
+    "grammarSha": "11ba34d930a659a11bf832a8beed66db951fb8a49c239750e64f3c1c130b3a43",
     "language": "desktop",
     "url": "https://github.com/ValdezFOmar/tree-sitter-desktop",
     "maintainedBy": "@ValdezFOmar"
@@ -1148,8 +1148,8 @@
   },
   {
     "reference": "master",
-    "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
-    "grammarSha": "9bcf57797452536ed0fc426d264d0319297f62f479001c28d627fec2ffa43518",
+    "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
+    "grammarSha": "ac92c1a65e11a436688f3b3d14dd55561b4a48dd2ead5253885b45ef9034788b",
     "language": "epics_cmd",
     "url": "https://github.com/epics-extensions/tree-sitter-epics",
     "maintainedBy": "@minijackson",
@@ -1157,8 +1157,8 @@
   },
   {
     "reference": "master",
-    "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
-    "grammarSha": "f5feca222b98f8a1c8442eeafa01d878245d8dbe08d1c5c5f4f1c991e097b58e",
+    "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
+    "grammarSha": "02c784f3758248f8d992e6b6c91363fe0aea955556e33dc4bea21f67e8cb48ec",
     "language": "epics_db",
     "url": "https://github.com/epics-extensions/tree-sitter-epics",
     "maintainedBy": "@minijackson",
@@ -1166,8 +1166,8 @@
   },
   {
     "reference": "master",
-    "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
-    "grammarSha": "b14db6903a9c862b16db07c75ca6c2690efe6a4855017763cf4d7e6da3903fee",
+    "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
+    "grammarSha": "b271d0f20ae93851b33bd8373222138bf0c78aad1070ce87998cceef5b156e0a",
     "language": "epics_msi_substitution",
     "url": "https://github.com/epics-extensions/tree-sitter-epics",
     "maintainedBy": "@minijackson",
@@ -1175,7 +1175,7 @@
   },
   {
     "reference": "master",
-    "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
+    "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
     "grammarSha": "859dcae5fe396f933c34c960198e68d5c1d535fe2cdb0426bbe2fe99693f638e",
     "language": "epics_msi_template",
     "url": "https://github.com/epics-extensions/tree-sitter-epics",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "ce39ef794c947464f1979caa9fb6689e4ecf73b7c92605b5c6b47be26ab68bee",
+    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2766,7 +2766,7 @@
   },
   {
     "reference": "main",
-    "revision": "9f601460330450c83ac35a51ace9554eeb3ba413",
+    "revision": "2ae65572ecc111655a30ffa6dcfc48d2ee37c3e1",
     "grammarSha": "01a268f5e6363127c5690723372d018fa3a0c4c01190ffbd76fc99597ba177ba",
     "language": "moonbit",
     "url": "https://github.com/moonbitlang/tree-sitter-moonbit",
@@ -3514,8 +3514,8 @@
   },
   {
     "reference": "master",
-    "revision": "55baffbdc6bd00bf177b796950497a01bb496241",
-    "grammarSha": "cc292a9cb34c4c74faca35055dbb54992b35de2c25dcaad49da2537fa49fbb02",
+    "revision": "2b3669919b22f1a6e5bfcf3753caaa63fd14e8ec",
+    "grammarSha": "826de5beb8900965d239d1b15595265adb8fb9906a4d4e281a88e4161a744d13",
     "language": "query",
     "altName": "Tree-Sitter query language",
     "url": "https://github.com/tree-sitter-grammars/tree-sitter-query",
@@ -3531,8 +3531,8 @@
   },
   {
     "reference": "main",
-    "revision": "29c816328a086ef056799e3924ef6e09e6a9a8cb",
-    "grammarSha": "c58241eaf599070ef17ee2504cb484be39d856b93eb454f5fb079880db819642",
+    "revision": "9b5e330cc322641f98b387335fa336b6e28a0b10",
+    "grammarSha": "3c6be6b08e382cc07d433a6756d73611a3d33efcd32b0c4c96545fe414fa98f7",
     "language": "r",
     "url": "https://github.com/r-lib/tree-sitter-r",
     "maintainedBy": "@echasnovski",
@@ -3979,7 +3979,7 @@
   },
   {
     "reference": "master",
-    "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
+    "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
     "grammarSha": "cba95bf7374dda029dd9549f68f8087c096a798cd4485d5d6beebdad22d9b871",
     "language": "snl",
     "url": "https://github.com/epics-extensions/tree-sitter-epics",
@@ -4134,7 +4134,7 @@
   },
   {
     "reference": "master",
-    "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
+    "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
     "grammarSha": "edc3258f086561a51e8d548c28b8dacaf064d295a213339c01d288f22267f205",
     "language": "streamdevice_proto",
     "url": "https://github.com/epics-extensions/tree-sitter-epics",

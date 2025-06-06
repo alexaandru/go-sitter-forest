@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "693df55b52d286a32709512c189cde0ccc7b1cae",
-  "grammarSha": "b14db6903a9c862b16db07c75ca6c2690efe6a4855017763cf4d7e6da3903fee",
+  "revision": "971a7f53d7f784d583ad1675a11315cb9c5177f6",
+  "grammarSha": "b271d0f20ae93851b33bd8373222138bf0c78aad1070ce87998cceef5b156e0a",
   "language": "epics_msi_substitution",
   "url": "https://github.com/epics-extensions/tree-sitter-epics",
   "maintainedBy": "@minijackson",

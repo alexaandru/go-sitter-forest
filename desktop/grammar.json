@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "6eb323a20db2f1e8736c3a05915afe1687283965",
-  "grammarSha": "a9a007b765b2160714a944f0c25b625395a96acd3d069f62c9f1175af8e05867",
+  "revision": "b2cad1212116f23b3e8d0607b628bc6f72224c51",
+  "grammarSha": "11ba34d930a659a11bf832a8beed66db951fb8a49c239750e64f3c1c130b3a43",
   "language": "desktop",
   "url": "https://github.com/ValdezFOmar/tree-sitter-desktop",
   "maintainedBy": "@ValdezFOmar"
