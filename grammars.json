@@ -47,8 +47,8 @@
   },
   {
     "reference": "main",
-    "revision": "21b3bc8476776fb7dbee5579250e76465f977b13",
-    "grammarSha": "97c7e98bd0367234de3760597604e1274db2753180886df2b0de783c843a2720",
+    "revision": "e3533e5f9bd8232a330dd8d5296b8383db9b30bb",
+    "grammarSha": "f424528a8dc7d88c07e1014f748e6d1497d826bcc274f90ae935c56cbb7b5248",
     "language": "al",
     "url": "https://github.com/SShadowS/tree-sitter-al",
     "maintainedBy": "@SShadowS"
@@ -484,7 +484,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "1e9e148c3b005bb95148cb632cc1db191edd2bb9",
+    "revision": "766ef7077da5743a9da4a39efe47f7d7effe43ad",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -823,7 +823,7 @@
   },
   {
     "reference": "main",
-    "revision": "1f3cb70200b4e238e19652705336e7f2c52b8e2f",
+    "revision": "5517ecade85b1de85ed8e0cb742b81decc64183a",
     "grammarSha": "621451b5cbab66d2cd56d4e25d7461bf09596c457782edaff2310ece7b9258bc",
     "language": "cylc",
     "url": "https://github.com/elliotfontaine/tree-sitter-cylc",
@@ -2091,7 +2091,8 @@
     "maintainedBy": "@srghma",
     "files": [
       "scanner.c"
-    ]
+    ],
+    "skipUpdate": true
   },
   {
     "reference": "master",
@@ -2750,7 +2751,7 @@
   },
   {
     "reference": "master",
-    "revision": "0f77bc710f61ec6be658ddf51851b2ed2cdaa20d",
+    "revision": "3b55a8870fd90f6c55b6c15fcaaf8d78d1fbc922",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
@@ -3531,7 +3532,7 @@
   },
   {
     "reference": "main",
-    "revision": "9b5e330cc322641f98b387335fa336b6e28a0b10",
+    "revision": "95aff097aa927a66bb357f715b58cde821be8867",
     "grammarSha": "3c6be6b08e382cc07d433a6756d73611a3d33efcd32b0c4c96545fe414fa98f7",
     "language": "r",
     "url": "https://github.com/r-lib/tree-sitter-r",
@@ -4099,7 +4100,7 @@
   },
   {
     "reference": "main",
-    "revision": "3c34216878359c7ecb1e18e1c2f6046b16233b29",
+    "revision": "34da34ef5dce78fac14ff343e263db2e3f9eb6e4",
     "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
     "language": "ssh_client_config",
     "url": "https://github.com/metio/tree-sitter-ssh-client-config",

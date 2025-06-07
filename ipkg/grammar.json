@@ -7,5 +7,6 @@
   "maintainedBy": "@srghma",
   "files": [
     "scanner.c"
-  ]
+  ],
+  "skipUpdate": true
 }
