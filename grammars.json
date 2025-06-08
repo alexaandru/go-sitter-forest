@@ -47,7 +47,7 @@
   },
   {
     "reference": "main",
-    "revision": "e3533e5f9bd8232a330dd8d5296b8383db9b30bb",
+    "revision": "de08245780a635fbbe88155ede2d09085466ef1b",
     "grammarSha": "f424528a8dc7d88c07e1014f748e6d1497d826bcc274f90ae935c56cbb7b5248",
     "language": "al",
     "url": "https://github.com/SShadowS/tree-sitter-al",
@@ -1417,7 +1417,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "3df3c871777955c004cc02864231c1aaf41cb162655d6666a64f21f570ee2918",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2573,7 +2573,7 @@
   },
   {
     "reference": "master",
-    "revision": "e0eec29a97c36ec71dc9d4df38a7d33eefb61e9a",
+    "revision": "1a0459853aa87572479deab502f52d2b739ee62b",
     "grammarSha": "96614acb6d25e745b012e5385ab7d5f97fe5e362b82649d4a195f72a3e161fae",
     "language": "lox",
     "url": "https://github.com/marcuscaisey/lox",
@@ -2653,7 +2653,7 @@
   },
   {
     "reference": "split_parser",
-    "revision": "efb075cbd57ce33f694c2bb264b99cdba0f31789",
+    "revision": "9dca2b6834df9be17bed2ec0fc05c215fa10acf3",
     "grammarSha": "20398dfcbc3c975821d8093638477815d8374ff41dc32cdbc08cbed5d3c71c53",
     "language": "markdown",
     "altName": "markdown (basic highlighting)",
@@ -2666,7 +2666,7 @@
   },
   {
     "reference": "split_parser",
-    "revision": "efb075cbd57ce33f694c2bb264b99cdba0f31789",
+    "revision": "9dca2b6834df9be17bed2ec0fc05c215fa10acf3",
     "grammarSha": "0a0d8aa0e2431a810cd0e9097e5345333c37728ef53033f9ec85da7dc03f55aa",
     "language": "markdown_inline",
     "altName": "markdown_inline (needed for full highlighting)",
@@ -2751,7 +2751,7 @@
   },
   {
     "reference": "master",
-    "revision": "3b55a8870fd90f6c55b6c15fcaaf8d78d1fbc922",
+    "revision": "3e214fc380b1159dd157cd6ed489a3b8fd8888a8",
     "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
     "language": "mlir",
     "url": "https://github.com/artagnon/tree-sitter-mlir",
