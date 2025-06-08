@@ -544,8 +544,8 @@ github.com/alexaandru/go-sitter-forest/mandbconfig v1.9.0 h1:dZD3rkw2zlWisLI5QIF
 github.com/alexaandru/go-sitter-forest/mandbconfig v1.9.0/go.mod h1:JfO0sK6ZoU/X6KRhIJKLy2flWEVhXkLRNyfMoZ1Jdr4=
 github.com/alexaandru/go-sitter-forest/markdown v1.9.5 h1:59eqvaWljYcTZcbSFhx6RcYy9scZxHBuq0+vHhgcXpY=
 github.com/alexaandru/go-sitter-forest/markdown v1.9.5/go.mod h1:qoQhsERwq18jIqWiSgiP6LuCvFK4VqA5lBkCFKaZL44=
-github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.2 h1:N6j325X8hyYr2E1K0EmwiyZ57g3Wz+bugjKo0yun1Vw=
-github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.2/go.mod h1:H6lsu3iiG9FRghlpQo2uaMbttw4/3PTPeUKvaZnVbdY=
+github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.3 h1:iBIQaM7jus0lINLJwOIHTQGt9JYR0/TWx3T60LUWIeg=
+github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.3/go.mod h1:H6lsu3iiG9FRghlpQo2uaMbttw4/3PTPeUKvaZnVbdY=
 github.com/alexaandru/go-sitter-forest/marte v1.9.0 h1:wBojxbOIBue7iLObj7d+9vc72n8Bd9oMUiDedX3IFWw=
 github.com/alexaandru/go-sitter-forest/marte v1.9.0/go.mod h1:Klphy9q+LX5y4Bu6vauIkax1w1z0A7kh0AQXyHJgdzk=
 github.com/alexaandru/go-sitter-forest/matlab v1.9.3 h1:lnjLTzeEP//uzoJwQGlTqnByrpy3vd16A3BtOGT99kc=
