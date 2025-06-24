@@ -1,5 +1,5 @@
 ; Builtins
-((atom) @constant.macro
+((ident) @constant.macro
     (#any-of? @constant.macro
         "CHARSET_ASCII"
         "CHARSET_LATIN1"
@@ -106,7 +106,7 @@
 
 (s_expression (s_expression_head) @function)
 
-((atom) @constant
+((ident) @constant
  (#match? @constant "^[A-Z_][A-Z\\d_]+$"))
 
 
@@ -139,8 +139,8 @@
 (parameter_identifier) @variable.parameter
 (let_variable_identifier) @variable.parameter
 
-(s_expression_head (atom) @function.method)
-(s_expression_head (atom) @module . (atom) @function.method.call)
+(s_expression_head (ident) @function.method)
+(s_expression_head (ident) @module . (ident) @function.method.call)
 
 (reference) @variable.reference
-(reference (atom) @module . (atom) @variable.member)
+(reference (ident) @module . (ident) @variable.member)

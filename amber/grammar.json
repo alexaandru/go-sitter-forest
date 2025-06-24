@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "015204a37bfda1e099d4385014e08f4832f46a4f",
-  "grammarSha": "e478616b9d5f50f166bfa3873995ec0b75341d6fdedcc6f489113662755c37b0",
+  "revision": "cafa15e6224fcb43cc88275e1afaf33179a4f393",
+  "grammarSha": "7342eae49792dce9248b6b9a5f24edf85988636d06fe5139250f5559b49d56a8",
   "language": "amber",
   "url": "https://github.com/amber-lang/tree-sitter-amber",
   "maintainedBy": "@Ph0enixKM"

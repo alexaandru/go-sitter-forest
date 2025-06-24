@@ -35,9 +35,8 @@
 
 (impl_definition (type_name) @name) @reference.implementation
 
-(impl_definition (type) @name) @reference.class
+(impl_definition "for" (_type) @name "with") @reference.class
 
-(apply_expression (lowercase_identifier) @name) @reference.call
 (apply_expression (qualified_identifier) @name) @reference.call
 (method_expression (lowercase_identifier) @name) @reference.call
 

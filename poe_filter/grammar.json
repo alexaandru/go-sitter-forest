@@ -1,7 +1,7 @@
 {
   "reference": "master",
-  "revision": "2902dc45439125b9386812c1089a8e9b5f71c4ab",
-  "grammarSha": "b413c463daefd61dffe48e642fae24922f4216656882c924a6576e951e559a10",
+  "revision": "7435c4d68ab61f6c313c8ed909e9f5af4a77a8e7",
+  "grammarSha": "3629ceecde077cc55b52e581f11f284628f7aa43b03b8b8737135276f2fc3110",
   "language": "poe_filter",
   "altName": "Path of Exile item filter",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-poe-filter",

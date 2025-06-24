@@ -1,8 +1,10 @@
 {
   "reference": "main",
-  "revision": "de08245780a635fbbe88155ede2d09085466ef1b",
+  "revision": "e6e761e2bb0758f22669c252ccb8480bd05d486f",
   "grammarSha": "f424528a8dc7d88c07e1014f748e6d1497d826bcc274f90ae935c56cbb7b5248",
   "language": "al",
   "url": "https://github.com/SShadowS/tree-sitter-al",
-  "maintainedBy": "@SShadowS"
+  "doc": "TODO: requires latest TreeSitter",
+  "maintainedBy": "@SShadowS",
+  "skip": true
 }

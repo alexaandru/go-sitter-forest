@@ -11,7 +11,7 @@
 (labelled_parameter (label (lowercase_identifier)) @local.definition)
 (optional_parameter (optional_label (lowercase_identifier)) @local.definition)
 (optional_parameter_with_default (label (lowercase_identifier)) @local.definition)
-(let_expression (pattern (simple_pattern (lowercase_identifier)) @local.definition))
+(_pattern (lowercase_identifier) @local.definition)
 (let_mut_expression (lowercase_identifier) @local.definition)
 
 ; Types

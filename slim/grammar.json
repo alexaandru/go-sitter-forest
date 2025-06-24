@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "ef0bc4caf18fab234c40630829fc38a1fb4f2232",
+  "revision": "28d42b574336b64b8c0155bf0a29e4dc346aa8af",
   "grammarSha": "5d5d3fac60aee98b22b1cec65f30c7cdea17fe7a5c1822d02a151ef210fa525b",
   "language": "slim",
   "url": "https://github.com/kolen/tree-sitter-slim",

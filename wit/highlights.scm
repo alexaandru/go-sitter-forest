@@ -1,4 +1,3 @@
-(comment) @comment @spell
 
 (ty
   (id)) @type
@@ -109,12 +108,16 @@
 ] @keyword.type
 
 "static" @keyword.modifier
+"async" @keyword.coroutine
+
+(uint) @constant
 
 [
   "include"
   "import"
   "export"
   "as"
+  "with"
 ] @keyword.import
 
 [
@@ -128,17 +131,25 @@
   "s64"
   "f32"
   "f64"
-  "float32" ; deprecated
-  "float64" ; deprecated
   "char"
   "bool"
   "string"
+] @type.builtin
+
+[
   "tuple"
   "list"
   "option"
   "result"
   "borrow"
-] @type.builtin
+  "future"
+  "stream"
+] @type
+
+"_" @variable.parameter.builtin
+
+
+"_" @variable.parameter.builtin
 
 
 "_" @variable.parameter.builtin
@@ -148,13 +159,13 @@
 ] @punctuation.special
 
 [
-  "/"
   ";"
   ":"
   ","
   "."
   "->"
 ] @punctuation.delimiter
+(use_path "/" @punctuation.delimiter)
 
 [
   "{"
@@ -166,3 +177,8 @@
 ] @punctuation.bracket
 
 "=" @operator
+
+[(line_comment) (block_comment)] @comment @spell
+
+(line_comment (doc_comment)) @comment.documentation
+(block_comment (doc_comment)) @comment.documentation

@@ -9,4 +9,3 @@
 ; Indent inside square brackets (e.g., multi-line array or set literals)
 "[" @indent.start
 "]" @indent.end
-

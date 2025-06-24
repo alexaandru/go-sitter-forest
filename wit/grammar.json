@@ -1,8 +1,11 @@
 {
   "reference": "main",
-  "revision": "37bf43c7f11d2b4af7a78d98a19e6d5c2cf04ad2",
-  "grammarSha": "4adcabf408b97ec8db703c78169f7cfaf3cf79e34b0d3cd4af3a9f10fe9b6729",
+  "revision": "e69c329caddb6d21c762944a9f211e7d3c3f6704",
+  "grammarSha": "731e2555dd6074c8cbef289be8a8068e678cef0f5db5f1e668ea72a3f19a10bd",
   "language": "wit",
   "url": "https://github.com/liamwh/tree-sitter-wit",
-  "maintainedBy": "@liamwh"
+  "maintainedBy": "@liamwh",
+  "files": [
+    "scanner.c"
+  ]
 }

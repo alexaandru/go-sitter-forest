@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "34da34ef5dce78fac14ff343e263db2e3f9eb6e4",
+  "revision": "b49a2286a25a114804e77d38f6ad8864a5dbc80b",
   "grammarSha": "2e4d01b79491a9735d4a432d794ad95f2a693266f7d1ac334a05468d05df6df5",
   "language": "ssh_client_config",
   "url": "https://github.com/metio/tree-sitter-ssh-client-config",

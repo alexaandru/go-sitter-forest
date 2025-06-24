@@ -27,7 +27,13 @@
  (#any-of? @variable.parameter.builtin
            "self"))
 
-(pattern (simple_pattern (lowercase_identifier) @variable))
+(tuple_pattern (lowercase_identifier) @variable)
+(constructor_pattern_argument . (lowercase_identifier) @variable .)
+(constructor_pattern_argument "=" (lowercase_identifier) @variable)
+(constructor_pattern_argument (label (lowercase_identifier) @variable))
+(case_clause (lowercase_identifier) @variable "=>")
+(matrix_case_clause (lowercase_identifier) @variable "=>")
+(let_expression (lowercase_identifier) @variable)
 
 (qualified_identifier (lowercase_identifier) @variable)
 ((qualified_identifier (lowercase_identifier) @variable.builtin)
@@ -36,11 +42,8 @@
 (qualified_identifier (dot_lowercase_identifier) @variable)
 
 (value_definition (lowercase_identifier) @variable)
-
 (let_mut_expression (lowercase_identifier) @variable)
-
 (for_in_expression "for" (lowercase_identifier) @variable "in")
-
 (for_binder (lowercase_identifier) @variable)
 
 ; Constructors
@@ -114,6 +117,8 @@
 (struct_pattern (struct_field_pattern (labeled_pattern (lowercase_identifier) @variable.member)))
 (struct_pattern (struct_field_pattern (labeled_pattern_pun (lowercase_identifier) @variable.member)))
 (access_expression (accessor (dot_identifier) @variable.member))
+(constructor_pattern_argument (lowercase_identifier) @variable.member "=")
+(apply_expression (constructor_expression) (arguments (argument (labelled_argument (lowercase_identifier) @variable.member "="))))
 
 ; Attributes
 
@@ -129,7 +134,6 @@
 
 ; Function calls
 
-(apply_expression (lowercase_identifier) @function.call)
 (apply_expression (qualified_identifier (lowercase_identifier) @function.call))
 (apply_expression (qualified_identifier (dot_lowercase_identifier) @function.call))
 

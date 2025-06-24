@@ -184,6 +184,17 @@ static bool scan_comment(TSLexer* lexer, bool entry_delimiter)
     }
 
     if (block) {
+        while (!lexer->eof(lexer) && iswspace_matlab(lexer->lookahead)) {
+            advance_matlab(lexer);
+        }
+
+        if (!consume_char('\n', lexer) && !consume_char('\r', lexer)) {
+            consume_comment_line(lexer);
+                lexer->result_symbol = COMMENT;
+                lexer->mark_end(lexer);
+                return true;
+        }
+
         while (!lexer->eof(lexer)) {
             consume_comment_line(lexer);
             advance_matlab(lexer);
@@ -212,11 +223,8 @@ static bool scan_comment(TSLexer* lexer, bool entry_delimiter)
             lexer->result_symbol = COMMENT;
             advance_matlab(lexer);
         } else {
-            while (lexer->lookahead == '\r' || lexer->lookahead == '\n') {
-                advance_matlab(lexer);
-            }
-            lexer->mark_end(lexer);
             lexer->result_symbol = LINE_CONTINUATION;
+            return true;
         }
 
         // Merges consecutive comments into one token, unless they are
@@ -358,7 +366,7 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
             };
             bool is_invalid = false;
             for (size_t i = 0; i < sizeof(operators); i++) {
-                if (first == (uint32_t)operators[i]) {
+                if (first == (uint32_t) operators[i]) {
                     is_invalid = true;
                     break;
                 }
@@ -404,7 +412,7 @@ static bool scan_command(Scanner* scanner, TSLexer* lexer)
         };
 
         for (int i = 0; i < 12; i++) {
-            if ((uint32_t)operators[i][0] == first && (uint32_t)operators[i][1] == second) {
+            if ((uint32_t) operators[i][0] == first && (uint32_t) operators[i][1] == second) {
                 return false;
             }
         }
@@ -597,7 +605,7 @@ static bool scan_string_close(Scanner* scanner, TSLexer* lexer)
         while (!lexer->eof(lexer) && lexer->lookahead != '\n' && lexer->lookahead != '\r') {
             bool is_valid = false;
             for (size_t i = 0; i < strlen(valid_tokens); i++) {
-                if ((int32_t)valid_tokens[i] == lexer->lookahead) {
+                if ((int32_t) valid_tokens[i] == lexer->lookahead) {
                     is_valid = true;
                     break;
                 }
@@ -800,7 +808,7 @@ static bool scan_entry_delimiter(TSLexer* lexer, int skipped)
     // parser will do the rest.
     const char no_end[] = {']', '}', '&', '|', '=', '<', '>', '*', '/', '\\', '^', ';', ':'};
     for (size_t i = 0; i < sizeof(no_end); i++) {
-        if ((int32_t)no_end[i] == lexer->lookahead) {
+        if ((int32_t) no_end[i] == lexer->lookahead) {
             return false;
         }
     }
@@ -812,7 +820,7 @@ static bool scan_entry_delimiter(TSLexer* lexer, int skipped)
 
     const char maybe_end[] = {'+', '-'};
     for (size_t i = 0; i < sizeof(maybe_end); i++) {
-        if ((int32_t)maybe_end[i] == lexer->lookahead) {
+        if ((int32_t) maybe_end[i] == lexer->lookahead) {
             advance_matlab(lexer);
             if (lexer->lookahead == ' ') {
                 return false;
@@ -831,7 +839,7 @@ bool tree_sitter_matlab_external_scanner_scan(void* payload, TSLexer* lexer, con
         int skipped = skip_whitespaces(lexer);
 
         if ((scanner->line_continuation || !scanner->is_inside_command) && valid_symbols[COMMENT]
-            && (lexer->lookahead == '%' || lexer->lookahead == '.')) {
+            && (lexer->lookahead == '%' || ((skipped & 2) == 0 && lexer->lookahead == '.'))) {
             return scan_comment(lexer, valid_symbols[ENTRY_DELIMITER]);
         }
 

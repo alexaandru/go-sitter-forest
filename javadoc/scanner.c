@@ -8,11 +8,12 @@ enum TokenType { INLINE_DESCRIPTION_TOKEN };
 
 void *tree_sitter_javadoc_external_scanner_create() { return NULL; }
 
-void tree_sitter_javadoc_external_scanner_destroy(void *payload) {}
+void tree_sitter_javadoc_external_scanner_destroy(void *payload UNUSED) {}
 
-unsigned tree_sitter_javadoc_external_scanner_serialize(void *payload, char *buffer) { return 0; }
+unsigned tree_sitter_javadoc_external_scanner_serialize(void *payload UNUSED, char *buffer UNUSED) { return 0; }
 
-void tree_sitter_javadoc_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {}
+void tree_sitter_javadoc_external_scanner_deserialize(void *payload UNUSED, const char *buffer UNUSED,
+                                                      unsigned length UNUSED) {}
 
 // Scan to the next balanced `}` character.
 static bool scan_for_inline_description(TSLexer *lexer) {
@@ -30,7 +31,7 @@ static bool scan_for_inline_description(TSLexer *lexer) {
             case '}':
                 stack--;
                 if (stack == -1) {
-                    return seen > 0; 
+                    return seen > 0;
                 }
                 break;
             case '\0':
@@ -38,13 +39,12 @@ static bool scan_for_inline_description(TSLexer *lexer) {
                 return false;
             default:
                 seen++;
-                ;
         }
         lexer->advance_javadoc(lexer, false);
     }
 }
 
-bool tree_sitter_javadoc_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
+bool tree_sitter_javadoc_external_scanner_scan(void *payload UNUSED, TSLexer *lexer, const bool *valid_symbols) {
     if (valid_symbols[INLINE_DESCRIPTION_TOKEN] && scan_for_inline_description(lexer)) {
         lexer->result_symbol = INLINE_DESCRIPTION_TOKEN;
         lexer->mark_end(lexer);

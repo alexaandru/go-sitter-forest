@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "3e214fc380b1159dd157cd6ed489a3b8fd8888a8",
+  "revision": "eb78968fdb3728510f9260129a2dd57b7c04f761",
   "grammarSha": "12ec1333cce4f463bd355f35ab519263329e2ffcfd7c63051b6ff1709f024357",
   "language": "mlir",
   "url": "https://github.com/artagnon/tree-sitter-mlir",

@@ -17,7 +17,7 @@
 
 ; References
 ;------------
-(reference (atom) @local.reference)
+(reference (ident) @local.reference)
 (def_identifier) @local.definition.function
 (schema_field_identifier) @local.definition
 (module_identifier) @local.definition

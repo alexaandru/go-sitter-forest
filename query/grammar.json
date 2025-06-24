@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "2b3669919b22f1a6e5bfcf3753caaa63fd14e8ec",
+  "revision": "8a43889f89fd0667289936341bff3a77bafade17",
   "grammarSha": "826de5beb8900965d239d1b15595265adb8fb9906a4d4e281a88e4161a744d13",
   "language": "query",
   "altName": "Tree-Sitter query language",

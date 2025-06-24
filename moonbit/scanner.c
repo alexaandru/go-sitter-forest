@@ -6,11 +6,11 @@
 #ifndef TREE_SITTER_LANGUAGE
 #define TREE_SITTER_LANGUAGE moonbit
 #endif
-#define tree_sitter___external_scanner(language, symbol) \
+#define tree_sitter___external_scanner(language, symbol)                       \
   tree_sitter_##language##_external_scanner_##symbol
-#define tree_sitter__external_scanner(language, symbol) \
+#define tree_sitter__external_scanner(language, symbol)                        \
   tree_sitter___external_scanner(language, symbol)
-#define tree_sitter_external_scanner(symbol) \
+#define tree_sitter_external_scanner(symbol)                                   \
   tree_sitter__external_scanner(TREE_SITTER_LANGUAGE, symbol)
 
 #if defined(__wasi__) || defined(__EMSCRIPTEN__)
@@ -72,20 +72,17 @@ void *tree_sitter_external_scanner(create)(void) {
   return context;
 }
 
-void tree_sitter_external_scanner(destroy)(void *payload) {
-  free(payload);
-}
+void tree_sitter_external_scanner(destroy)(void *payload) { free(payload); }
 
-unsigned tree_sitter_external_scanner(serialize)(void *payload,
-                                                        char *buffer) {
+unsigned tree_sitter_external_scanner(serialize)(void *payload, char *buffer) {
   trace("serializing\n");
   *(struct ScannerState *)buffer = *(struct ScannerState *)payload;
   return sizeof(struct ScannerState);
 }
 
 void tree_sitter_external_scanner(deserialize)(void *payload,
-                                                      const char *buffer,
-                                                      unsigned length) {
+                                               const char *buffer,
+                                               unsigned length) {
   tree_sitter_external_scanner(reset)(payload);
   if (length != sizeof(struct ScannerState)) {
     return;
@@ -185,7 +182,7 @@ static enum FloatLiteralResult scan_float_literal(TSLexer *lexer,
       if (lexer->lookahead == '+' || lexer->lookahead == '-') {
         advance_moonbit(lexer);
       }
-      while (iswxdigit(lexer->lookahead)) {
+      while (iswdigit(lexer->lookahead)) {
         advance_moonbit(lexer);
       }
     }
@@ -397,7 +394,7 @@ static bool trace_valid_symbols(const bool *valid_symbols) {
 #endif
 
 bool tree_sitter_external_scanner(scan)(void *payload, TSLexer *lexer,
-                                               const bool *valid_symbols) {
+                                        const bool *valid_symbols) {
   struct ScannerState *context = (struct ScannerState *)payload;
 
   trace("==========\n");

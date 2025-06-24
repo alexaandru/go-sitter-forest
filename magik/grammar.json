@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "034b543b210f1c115f20a287b7562f742f8038fc",
+  "revision": "761da4194518c113ef1a0c2acc14a7fb7f12ec99",
   "grammarSha": "d68561794ae3256364d386191910a4870e29de54162ea015d0bad81e72f679c0",
   "language": "magik",
   "url": "https://github.com/krn-robin/tree-sitter-magik",

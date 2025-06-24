@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "0dd3c7e9f301758f6c69a6efde43d3048deb4d8a",
+  "revision": "2d620d0ad636705800cf0ddb92c30afe703cd84f",
   "grammarSha": "0333fc9cce5c8edb99be2e62fdf8e794ccf867439765faefbe5805a4646a10a4",
   "language": "ssh_config",
   "url": "https://github.com/tree-sitter-grammars/tree-sitter-ssh-config",

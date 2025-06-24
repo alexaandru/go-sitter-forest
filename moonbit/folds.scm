@@ -1,7 +1,6 @@
 [
   (block_expression)
   (match_expression)
-  (nonempty_block_expression)
   (struct_definition)
   (enum_definition)
   (function_definition)

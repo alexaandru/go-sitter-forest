@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "8e06e5ff61a89609d98de48b2b55c9a363223b9f",
-  "grammarSha": "ae5860b8f4b2837a69c1f5f0b7d1d4e85473ed8c60868204762c2f1c1f94a5d9",
+  "revision": "e7c0b3a98e03e0606a266950d468af6a33be6716",
+  "grammarSha": "410c8e114f614679e181cbf5eb553fa685465546046c37c0265f130a5b7afe9a",
   "language": "gab",
   "url": "https://github.com/TeddyRandby/tree-sitter-gab",
   "maintainedBy": "@TeddyRandby"

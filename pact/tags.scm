@@ -22,4 +22,4 @@
 (type_annotation
   (type_identifier) @name) @reference.type
 
-(reference (atom) @name (_)) @reference.class
+(reference (ident) @name (_)) @reference.class

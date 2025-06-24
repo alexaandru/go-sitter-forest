@@ -1,7 +1,7 @@
 {
   "reference": "main",
-  "revision": "88ccb5ee90711e9961582d421c42bc8c6bd53f59",
-  "grammarSha": "4d00e6b0b183063d3e2f5bbfaabfda74b072b3bcfb24b7782c8b71c2a013ca63",
+  "revision": "d5fd97c7aec0881d3429642a240ad536c74582b9",
+  "grammarSha": "26b81e1eeadd64ded62313a660acb5a0606ec07ea62ba431653ab4c13edc1849",
   "language": "matlab",
   "url": "https://github.com/acristoffers/tree-sitter-matlab",
   "maintainedBy": "@acristoffers",

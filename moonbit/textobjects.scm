@@ -42,7 +42,7 @@
   (#make-range! "parameter.outer" @parameter.inner @_end))
 
 ((type_arguments
-  (type) @parameter.inner
+  (_type) @parameter.inner
   .
   ","? @_end)
   (#make-range! "parameter.outer" @parameter.inner @_end))
@@ -59,7 +59,7 @@
 
 ; block
 
-(((nonempty_block_expression) @block.inner
+(((block_expression) @block.inner
    (#offset! @block.inner 0 1 0 -1))
  @block.outer)
 
@@ -67,7 +67,7 @@
 
 ((let_expression
   .
-  ((pattern) @assignment.lhs)
+  ((_pattern) @assignment.lhs)
   "="
   ((_) @assignment.inner @assignment.rhs))
  @assignment.outer)

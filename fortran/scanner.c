@@ -48,6 +48,8 @@ static bool is_exp_sentinel(char chr) {
         case 'd':
         case 'E':
         case 'e':
+        case 'Q':
+        case 'q':
             return true;
         default:
             return false;
