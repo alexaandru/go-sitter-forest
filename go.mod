@@ -8,9 +8,9 @@ require (
 	github.com/alexaandru/go-sitter-forest/ada v1.9.0
 	github.com/alexaandru/go-sitter-forest/agda v1.9.0
 	github.com/alexaandru/go-sitter-forest/aiken v1.9.0
-	github.com/alexaandru/go-sitter-forest/al v1.9.13
+	github.com/alexaandru/go-sitter-forest/al v1.9.14
 	github.com/alexaandru/go-sitter-forest/alcha v1.9.6
-	github.com/alexaandru/go-sitter-forest/amber v1.9.3
+	github.com/alexaandru/go-sitter-forest/amber v1.9.4
 	github.com/alexaandru/go-sitter-forest/angular v1.9.4
 	github.com/alexaandru/go-sitter-forest/animationtxt v1.9.0
 	github.com/alexaandru/go-sitter-forest/ansible v1.9.0
@@ -126,7 +126,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/factor v1.9.3
 	github.com/alexaandru/go-sitter-forest/familymarkup v1.9.7
 	github.com/alexaandru/go-sitter-forest/fastbuild v1.9.2
-	github.com/alexaandru/go-sitter-forest/faust v1.9.0
+	github.com/alexaandru/go-sitter-forest/faust v1.9.1
 	github.com/alexaandru/go-sitter-forest/fe v1.9.0
 	github.com/alexaandru/go-sitter-forest/fennel v1.9.1
 	github.com/alexaandru/go-sitter-forest/fidl v1.9.0
@@ -137,14 +137,14 @@ require (
 	github.com/alexaandru/go-sitter-forest/fluentbit v1.9.1
 	github.com/alexaandru/go-sitter-forest/foam v1.9.0
 	github.com/alexaandru/go-sitter-forest/forth v1.9.0
-	github.com/alexaandru/go-sitter-forest/fortran v1.9.12
+	github.com/alexaandru/go-sitter-forest/fortran v1.9.13
 	github.com/alexaandru/go-sitter-forest/frostlang v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsh v1.9.0
 	github.com/alexaandru/go-sitter-forest/fsharp v1.9.3
 	github.com/alexaandru/go-sitter-forest/fsharp_signature v1.9.3
 	github.com/alexaandru/go-sitter-forest/func v1.9.0
 	github.com/alexaandru/go-sitter-forest/fusion v1.9.0
-	github.com/alexaandru/go-sitter-forest/gab v1.9.3
+	github.com/alexaandru/go-sitter-forest/gab v1.9.4
 	github.com/alexaandru/go-sitter-forest/galvan v1.9.1
 	github.com/alexaandru/go-sitter-forest/gap v1.9.2
 	github.com/alexaandru/go-sitter-forest/gaptst v1.9.1
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.1
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.4
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.9.7
+	github.com/alexaandru/go-sitter-forest/gleam v1.9.8
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.3
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.4
@@ -188,8 +188,8 @@ require (
 	github.com/alexaandru/go-sitter-forest/haskell v1.9.2
 	github.com/alexaandru/go-sitter-forest/haskell_persistent v1.9.0
 	github.com/alexaandru/go-sitter-forest/haxe v1.9.0
-	github.com/alexaandru/go-sitter-forest/hcl v1.9.2
-	github.com/alexaandru/go-sitter-forest/heex v1.9.2
+	github.com/alexaandru/go-sitter-forest/hcl v1.9.3
+	github.com/alexaandru/go-sitter-forest/heex v1.9.3
 	github.com/alexaandru/go-sitter-forest/helm v1.9.4
 	github.com/alexaandru/go-sitter-forest/hjson v1.9.0
 	github.com/alexaandru/go-sitter-forest/hl7 v1.9.0
@@ -218,11 +218,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/integerbasic v1.9.0
 	github.com/alexaandru/go-sitter-forest/ipkg v1.9.1
 	github.com/alexaandru/go-sitter-forest/ispc v1.9.1
-	github.com/alexaandru/go-sitter-forest/jai v1.9.26
+	github.com/alexaandru/go-sitter-forest/jai v1.9.27
 	github.com/alexaandru/go-sitter-forest/janet v1.9.2
 	github.com/alexaandru/go-sitter-forest/jasmin v1.9.0
 	github.com/alexaandru/go-sitter-forest/java v1.9.5
-	github.com/alexaandru/go-sitter-forest/javadoc v1.9.0
+	github.com/alexaandru/go-sitter-forest/javadoc v1.9.1
 	github.com/alexaandru/go-sitter-forest/javascript v1.9.2
 	github.com/alexaandru/go-sitter-forest/jinja v1.9.6
 	github.com/alexaandru/go-sitter-forest/jinja_inline v1.9.6
@@ -262,7 +262,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/lilypond_scheme v1.9.2
 	github.com/alexaandru/go-sitter-forest/linkerscript v1.9.0
 	github.com/alexaandru/go-sitter-forest/liquid v1.9.3
-	github.com/alexaandru/go-sitter-forest/liquidsoap v1.9.1
+	github.com/alexaandru/go-sitter-forest/liquidsoap v1.9.2
 	github.com/alexaandru/go-sitter-forest/lithia v1.9.0
 	github.com/alexaandru/go-sitter-forest/llvm v1.9.2
 	github.com/alexaandru/go-sitter-forest/lookml v1.9.0
@@ -278,7 +278,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/markdown v1.9.5
 	github.com/alexaandru/go-sitter-forest/markdown_inline v1.9.3
 	github.com/alexaandru/go-sitter-forest/marte v1.9.0
-	github.com/alexaandru/go-sitter-forest/matlab v1.9.3
+	github.com/alexaandru/go-sitter-forest/matlab v1.9.4
 	github.com/alexaandru/go-sitter-forest/mcfuncx v1.9.1
 	github.com/alexaandru/go-sitter-forest/menhir v1.9.0
 	github.com/alexaandru/go-sitter-forest/merlin6502 v1.9.0
@@ -287,10 +287,10 @@ require (
 	github.com/alexaandru/go-sitter-forest/mips v1.9.2
 	github.com/alexaandru/go-sitter-forest/mlir v1.9.1
 	github.com/alexaandru/go-sitter-forest/modelica v1.9.0
-	github.com/alexaandru/go-sitter-forest/moonbit v1.9.25
+	github.com/alexaandru/go-sitter-forest/moonbit v1.9.26
 	github.com/alexaandru/go-sitter-forest/moonscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/motoko v1.9.0
-	github.com/alexaandru/go-sitter-forest/move v1.9.2
+	github.com/alexaandru/go-sitter-forest/move v1.9.3
 	github.com/alexaandru/go-sitter-forest/move_on_aptos v1.9.1
 	github.com/alexaandru/go-sitter-forest/mustache v1.9.0
 	github.com/alexaandru/go-sitter-forest/muttrc v1.9.0
@@ -309,7 +309,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/norg v1.9.0
 	github.com/alexaandru/go-sitter-forest/note v1.9.1
 	github.com/alexaandru/go-sitter-forest/nqc v1.9.1
-	github.com/alexaandru/go-sitter-forest/nu v1.9.33
+	github.com/alexaandru/go-sitter-forest/nu v1.9.34
 	github.com/alexaandru/go-sitter-forest/objc v1.9.1
 	github.com/alexaandru/go-sitter-forest/objdump v1.9.0
 	github.com/alexaandru/go-sitter-forest/ocaml v1.9.6
@@ -318,7 +318,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/odin v1.9.2
 	github.com/alexaandru/go-sitter-forest/org v1.9.0
 	github.com/alexaandru/go-sitter-forest/ott v1.9.0
-	github.com/alexaandru/go-sitter-forest/pact v1.9.1
+	github.com/alexaandru/go-sitter-forest/pact v1.9.2
 	github.com/alexaandru/go-sitter-forest/pascal v1.9.2
 	github.com/alexaandru/go-sitter-forest/passwd v1.9.0
 	github.com/alexaandru/go-sitter-forest/pdxinfo v1.9.0
@@ -336,11 +336,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/plantuml v1.9.0
 	github.com/alexaandru/go-sitter-forest/po v1.9.0
 	github.com/alexaandru/go-sitter-forest/pod v1.9.0
-	github.com/alexaandru/go-sitter-forest/poe_filter v1.9.1
+	github.com/alexaandru/go-sitter-forest/poe_filter v1.9.2
 	github.com/alexaandru/go-sitter-forest/pony v1.9.0
 	github.com/alexaandru/go-sitter-forest/postscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/poweron v1.9.0
-	github.com/alexaandru/go-sitter-forest/powershell v1.9.4
+	github.com/alexaandru/go-sitter-forest/powershell v1.9.5
 	github.com/alexaandru/go-sitter-forest/printf v1.9.1
 	github.com/alexaandru/go-sitter-forest/prisma v1.9.2
 	github.com/alexaandru/go-sitter-forest/problog v1.9.1
@@ -391,7 +391,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/rust v1.9.13
 	github.com/alexaandru/go-sitter-forest/rust_with_rstml v1.9.1
 	github.com/alexaandru/go-sitter-forest/sage v1.9.0
-	github.com/alexaandru/go-sitter-forest/scala v1.9.7
+	github.com/alexaandru/go-sitter-forest/scala v1.9.8
 	github.com/alexaandru/go-sitter-forest/scfg v1.9.1
 	github.com/alexaandru/go-sitter-forest/scheme v1.9.1
 	github.com/alexaandru/go-sitter-forest/scss v1.9.0
@@ -402,7 +402,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sincere v1.9.0
 	github.com/alexaandru/go-sitter-forest/slang v1.9.1
 	github.com/alexaandru/go-sitter-forest/slim v1.9.2
-	github.com/alexaandru/go-sitter-forest/slint v1.9.1
+	github.com/alexaandru/go-sitter-forest/slint v1.9.2
 	github.com/alexaandru/go-sitter-forest/smali v1.9.1
 	github.com/alexaandru/go-sitter-forest/smith v1.9.0
 	github.com/alexaandru/go-sitter-forest/smithy v1.9.2
@@ -414,7 +414,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/sop v1.9.0
 	github.com/alexaandru/go-sitter-forest/soql v1.9.6
 	github.com/alexaandru/go-sitter-forest/sosl v1.9.4
-	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.1
+	github.com/alexaandru/go-sitter-forest/sourcepawn v1.9.2
 	github.com/alexaandru/go-sitter-forest/sparql v1.9.3
 	github.com/alexaandru/go-sitter-forest/spicy v1.9.6
 	github.com/alexaandru/go-sitter-forest/sql v1.9.13
@@ -431,11 +431,11 @@ require (
 	github.com/alexaandru/go-sitter-forest/supercollider v1.9.0
 	github.com/alexaandru/go-sitter-forest/superhtml v1.9.1
 	github.com/alexaandru/go-sitter-forest/surface v1.9.0
-	github.com/alexaandru/go-sitter-forest/surrealql v1.9.9
+	github.com/alexaandru/go-sitter-forest/surrealql v1.9.10
 	github.com/alexaandru/go-sitter-forest/sus v1.9.3
 	github.com/alexaandru/go-sitter-forest/svelte v1.9.2
 	github.com/alexaandru/go-sitter-forest/sway v1.9.1
-	github.com/alexaandru/go-sitter-forest/swift v1.9.4
+	github.com/alexaandru/go-sitter-forest/swift v1.9.5
 	github.com/alexaandru/go-sitter-forest/sxhkdrc v1.9.1
 	github.com/alexaandru/go-sitter-forest/syphon v1.9.1
 	github.com/alexaandru/go-sitter-forest/systemtap v1.9.0
@@ -467,7 +467,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/twig v1.9.0
 	github.com/alexaandru/go-sitter-forest/twolc v1.9.1
 	github.com/alexaandru/go-sitter-forest/typescript v1.9.4
-	github.com/alexaandru/go-sitter-forest/typespec v1.9.5
+	github.com/alexaandru/go-sitter-forest/typespec v1.9.6
 	github.com/alexaandru/go-sitter-forest/typoscript v1.9.1
 	github.com/alexaandru/go-sitter-forest/typst v1.9.7
 	github.com/alexaandru/go-sitter-forest/udev v1.9.1
@@ -494,7 +494,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.9.1
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.9.0
 	github.com/alexaandru/go-sitter-forest/wing v1.9.1
-	github.com/alexaandru/go-sitter-forest/wit v1.9.2
+	github.com/alexaandru/go-sitter-forest/wit v1.9.3
 	github.com/alexaandru/go-sitter-forest/woml v1.9.0
 	github.com/alexaandru/go-sitter-forest/wtf v1.9.3
 	github.com/alexaandru/go-sitter-forest/xcompose v1.9.0
