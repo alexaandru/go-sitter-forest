@@ -172,7 +172,7 @@
   },
   {
     "reference": "master",
-    "revision": "5b6ccea9953b939959f447f7bfea699ae6968a99",
+    "revision": "6946ac68ba1a04af9b961e37b8412bb72c44223d",
     "grammarSha": "c73cdf31dfae57c390621f88655044bc93c2e16126cf1fd751b65727383dbf40",
     "language": "asciidoc_inline",
     "url": "https://github.com/cathaysia/tree-sitter-asciidoc",
@@ -486,7 +486,7 @@
   },
   {
     "reference": "trunk",
-    "revision": "4b8ac429a7030fd18922fb75b771587d1e6060dc",
+    "revision": "72cd8717e38cac12636d2fc6b950bc5c282f8860",
     "grammarSha": "cd21c14ed7c6bd86d418617b04e8f1602bb8bdf1f1c3823147df5c7a162149ed",
     "language": "carbon",
     "url": "https://github.com/carbon-language/carbon-lang",
@@ -1419,7 +1419,7 @@
   {
     "reference": "main",
     "revision": "18cc0d198f338c518a41745d87736411081eb1ea",
-    "grammarSha": "d11ec86c779ff6a222e70c663f08821cdce9481d06cf47812c5b805e2f4cc639",
+    "grammarSha": "47da707a00fe0eeb541ab51ca49688d761f7bb62093d9c3334724bec547bd2e4",
     "language": "galvan",
     "url": "https://github.com/antoniusnaumann/tree-sitter-galvan",
     "maintainedBy": "@antoniusnaumann",
@@ -2023,7 +2023,7 @@
   },
   {
     "reference": "master",
-    "revision": "b14e7971cfbd64fa0ebcdeaa4dfbb3cb0bfabd7c",
+    "revision": "da50751d826030fcf8b1424de9f56cec2a274b38",
     "grammarSha": "a6baa689903191a78ff872a56288cc506d5855d53c9ecaa20b4d4a05f9c457cf",
     "language": "idl",
     "url": "https://github.com/cathaysia/tree-sitter-idl",
@@ -4831,8 +4831,8 @@
   },
   {
     "reference": "main",
-    "revision": "e69c329caddb6d21c762944a9f211e7d3c3f6704",
-    "grammarSha": "731e2555dd6074c8cbef289be8a8068e678cef0f5db5f1e668ea72a3f19a10bd",
+    "revision": "6c06119d5be8da0a82ecb8f7728ab5e952dca657",
+    "grammarSha": "0d89ec32feee1eeea7817bbdf786ffc9805ac9f2de8c900f0fa35eca8e241d52",
     "language": "wit",
     "url": "https://github.com/liamwh/tree-sitter-wit",
     "maintainedBy": "@liamwh",

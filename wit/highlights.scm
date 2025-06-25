@@ -1,11 +1,37 @@
-
 (ty
   (id)) @type
 
 (package_decl
   (id) @module)
 
-(valid_semver) @string.special
+(version) @string.special
+
+(use_path
+  [
+    "@"
+    "/"
+  ] @punctuation.delimiter)
+
+(package_decl
+  [
+    "@"
+    "/"
+  ] @punctuation.delimiter)
+
+; feature gates with leading `@`
+(_
+  .
+  "@" @punctuation.special
+  .
+  [
+    "since"
+    "unstable"
+    "deprecated"
+  ] @attribute.builtin)
+
+
+(unstable_gate
+  feature: (id) @string)
 
 (world_item
   name: (id) @module)
@@ -16,7 +42,7 @@
 (import_item
   name: (id) @module
   (extern_type
-    (interface_body)))
+    (body)))
 
 (import_item
   name: (id) @function
@@ -26,7 +52,7 @@
 (export_item
   name: (id) @module
   (extern_type
-    (interface_body)))
+    (body)))
 
 (export_item
   name: (id) @function
@@ -54,7 +80,7 @@
 (flags_items
   name: (id) @type)
 
-(flags_body
+(body
   (id) @variable.member)
 
 (variant_items
@@ -108,6 +134,7 @@
 ] @keyword.type
 
 "static" @keyword.modifier
+
 "async" @keyword.coroutine
 
 (uint) @constant
@@ -149,15 +176,6 @@
 "_" @variable.parameter.builtin
 
 
-"_" @variable.parameter.builtin
-
-
-"_" @variable.parameter.builtin
-
-[
-  "@"
-] @punctuation.special
-
 [
   ";"
   ":"
@@ -165,7 +183,9 @@
   "."
   "->"
 ] @punctuation.delimiter
-(use_path "/" @punctuation.delimiter)
+
+(use_path
+  "/" @punctuation.delimiter)
 
 [
   "{"
@@ -178,7 +198,13 @@
 
 "=" @operator
 
-[(line_comment) (block_comment)] @comment @spell
+[
+  (line_comment)
+  (block_comment)
+] @comment @spell
 
-(line_comment (doc_comment)) @comment.documentation
-(block_comment (doc_comment)) @comment.documentation
+(line_comment
+  (doc_comment)) @comment.documentation
+
+(block_comment
+  (doc_comment)) @comment.documentation
