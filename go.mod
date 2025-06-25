@@ -494,7 +494,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/wgsl v1.9.1
 	github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.9.0
 	github.com/alexaandru/go-sitter-forest/wing v1.9.1
-	github.com/alexaandru/go-sitter-forest/wit v1.9.3
+	github.com/alexaandru/go-sitter-forest/wit v1.9.4
 	github.com/alexaandru/go-sitter-forest/woml v1.9.0
 	github.com/alexaandru/go-sitter-forest/wtf v1.9.3
 	github.com/alexaandru/go-sitter-forest/xcompose v1.9.0

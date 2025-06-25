@@ -980,8 +980,8 @@ github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.9.0 h1:JMeQjDgiDPE+E3KoYfDM1
 github.com/alexaandru/go-sitter-forest/wgsl_bevy v1.9.0/go.mod h1:zM3nhujHxxdlfQEiem7Qvg4ze+o1C1jw6h22nxI9zDE=
 github.com/alexaandru/go-sitter-forest/wing v1.9.1 h1:L++xTKC50G+rvI+Yuu+XeuMJ7UqXgW/H2/X34WMC2xM=
 github.com/alexaandru/go-sitter-forest/wing v1.9.1/go.mod h1:/cYfhLvuxiccG4aVu8Vr3h/NNXhcOSmSp/C5F0YN6S4=
-github.com/alexaandru/go-sitter-forest/wit v1.9.3 h1:npl3lvwGG4JkMF1zulyep7a13a6e7xOUmnmhU7OYRF8=
-github.com/alexaandru/go-sitter-forest/wit v1.9.3/go.mod h1:hawfo/L9n7qdFvL5TEpS3yQm9ToDsqvhunUzPPSjZdk=
+github.com/alexaandru/go-sitter-forest/wit v1.9.4 h1:bnPMXiMNb7fapDb3OOGWlObXyX5G++iGMgzSfyDksw0=
+github.com/alexaandru/go-sitter-forest/wit v1.9.4/go.mod h1:hawfo/L9n7qdFvL5TEpS3yQm9ToDsqvhunUzPPSjZdk=
 github.com/alexaandru/go-sitter-forest/woml v1.9.0 h1:g4EoPidpyOT+rjlTknRFJEBl/80775xYT+xmdn832i0=
 github.com/alexaandru/go-sitter-forest/woml v1.9.0/go.mod h1:2Fn/lK3Zb066UA/K2p8TBjPbHUqK+aeswNIU0+4jFYE=
 github.com/alexaandru/go-sitter-forest/wtf v1.9.3 h1:GeUQViIjwPXgev8Xz+ZPB/MptV+ZE+RWsAnTW7+5b6A=
