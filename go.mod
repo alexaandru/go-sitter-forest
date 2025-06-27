@@ -61,7 +61,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/cgsql v1.9.7
 	github.com/alexaandru/go-sitter-forest/chatito v1.9.1
 	github.com/alexaandru/go-sitter-forest/circom v1.9.1
-	github.com/alexaandru/go-sitter-forest/clarity v1.9.4
+	github.com/alexaandru/go-sitter-forest/clarity v1.9.5
 	github.com/alexaandru/go-sitter-forest/cleancopy v1.9.0
 	github.com/alexaandru/go-sitter-forest/clingo v1.9.0
 	github.com/alexaandru/go-sitter-forest/clojure v1.9.1
@@ -158,7 +158,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/gitattributes v1.9.1
 	github.com/alexaandru/go-sitter-forest/gitcommit v1.9.4
 	github.com/alexaandru/go-sitter-forest/gitignore v1.9.0
-	github.com/alexaandru/go-sitter-forest/gleam v1.9.8
+	github.com/alexaandru/go-sitter-forest/gleam v1.9.9
 	github.com/alexaandru/go-sitter-forest/glimmer v1.9.0
 	github.com/alexaandru/go-sitter-forest/glimmer_javascript v1.9.3
 	github.com/alexaandru/go-sitter-forest/glimmer_typescript v1.9.4
@@ -302,7 +302,7 @@ require (
 	github.com/alexaandru/go-sitter-forest/nftables v1.9.0
 	github.com/alexaandru/go-sitter-forest/nginx v1.9.1
 	github.com/alexaandru/go-sitter-forest/nickel v1.9.2
-	github.com/alexaandru/go-sitter-forest/nim v1.9.0
+	github.com/alexaandru/go-sitter-forest/nim v1.9.1
 	github.com/alexaandru/go-sitter-forest/nim_format_string v1.9.0
 	github.com/alexaandru/go-sitter-forest/ninja v1.9.0
 	github.com/alexaandru/go-sitter-forest/nix v1.9.4
