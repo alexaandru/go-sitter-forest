@@ -1,6 +1,6 @@
 {
   "reference": "main",
-  "revision": "4ab78c0bb76735dbf4e1bd1a2ec43e953949edb7",
+  "revision": "2d4c2bc84a40d99a4e099ff7c6cf7f1bc5dc7806",
   "grammarSha": "cb720e55e60bcf11606423f01730177b43c6c5e362e325fbba4845b4e0b57509",
   "language": "rust_with_rstml",
   "url": "https://github.com/rayliwell/tree-sitter-rstml",

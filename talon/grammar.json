@@ -1,6 +1,6 @@
 {
   "reference": "dev",
-  "revision": "d11441571f4d8fc6a8ca9ed03b16a0adbc3865ca",
+  "revision": "e407adf2b0383191de3cb76aec5166c2b87bffe8",
   "grammarSha": "550e9ceea63a5801345b591f8373426bb3ee63714c2ee54a16d7a0003c7523aa",
   "language": "talon",
   "url": "https://github.com/wenkokke/tree-sitter-talon",

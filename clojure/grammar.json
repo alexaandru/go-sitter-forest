@@ -1,6 +1,6 @@
 {
   "reference": "master",
-  "revision": "40c5fc2e2a0f511a802a82002553c5de00feeaf4",
+  "revision": "be514eec2c86d560c18fab146e9298e21b8eab62",
   "grammarSha": "4f6968791deac4357d59d59b50ddb78ae73665a19fa2941c47f070ee8427ce16",
   "language": "clojure",
   "url": "https://github.com/sogaiu/tree-sitter-clojure",
