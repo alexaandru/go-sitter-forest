@@ -3,8 +3,8 @@
   "revision": "33c333f7ff4cac4138c0786198481b33d2880656",
   "grammarSha": "c415f16a05e473e7029b0b1a44bf54440f6a1183d05fc078decf2fbe387ee328",
   "language": "koka",
-  "url": "https://github.com/mtoohey31/tree-sitter-koka",
-  "maintainedBy": "@mtoohey31",
+  "url": "https://github.com/koka-community/tree-sitter-koka",
+  "maintainedBy": "@koka-community",
   "files": [
     "scanner.c"
   ]
