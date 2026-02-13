@@ -247,7 +247,7 @@
 - [x] [kconfig](https://github.com/tree-sitter-grammars/tree-sitter-kconfig) ✔️ (maintained by @amaanq)
 - [x] [kdl](https://github.com/tree-sitter-grammars/tree-sitter-kdl) ✔️ (maintained by @amaanq)
 - [x] [koan](https://github.com/TogarashiPepper/tree-sitter-koan) ✔️ (maintained by @TogarashiPepper)
-- [x] [koka](https://github.com/mtoohey31/tree-sitter-koka) ✔️ (maintained by @mtoohey31)
+- [x] [koka](https://github.com/koka-community/tree-sitter-koka) ✔️ (maintained by @koka-community)
 - [x] [kon](https://github.com/akonwi/tree-sitter-kon) 🗸 (maintained by @akonwi; ❌repository was removed by owner)
 - [x] [kos](https://github.com/kos-lang/tree-sitter-kos) ✔️ (maintained by @cdragan)
 - [x] [kotlin](https://github.com/fwcd/tree-sitter-kotlin) ✔️ (maintained by @SalBakraa)
